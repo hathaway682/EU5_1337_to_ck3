@@ -1,0 +1,2470 @@
+﻿# The houses of the shogunate's daimyo, written as the base game writes Japan's: a
+# noble family each, landless and never a primary. Written by _fix_politics_output.py.
+
+@never_primary_score = -1000
+
+c_nf_yamato = {
+	color = { 200 15 70 }
+	capital = c_yamashiro
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_yamato_stc = {
+	color = { 190 190 15 }
+	capital = c_yamato
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kou = {
+	color = { 250 130 50 }
+	capital = c_yamato
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_hosokawa = {
+	color = { 49 103 69 }
+	capital = c_settsu
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_akamatsu = {
+	color = { 137 195 235 }
+	capital = c_settsu
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_nitsuki = {
+	color = { 195 195 25 }
+	capital = c_ise
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kitabatake = {
+	color = { 113 104 108 }
+	capital = c_ise
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_chuujou = {
+	color = { 90 150 225 }
+	capital = c_owari
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_imagawa = {
+	color = { 220 203 24 }
+	capital = c_tootoumi
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_ishidou = {
+	color = { 220 20 55 }
+	capital = c_suruga
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_takeda = {
+	color = { 234 85 6 }
+	capital = c_kai
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_shiba = {
+	color = { 0 163 175 }
+	capital = c_kazusa
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_chiba = {
+	color = { 120 120 164 }
+	capital = c_shimousa
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_satake = {
+	color = { 2 135 96 }
+	capital = c_hitachi
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kyougoku = {
+	color = { 110 65 45 }
+	capital = c_oumi
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_toki = {
+	color = { 86 84 162 }
+	capital = c_mino
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_ogasawara = {
+	color = { 201 126 145 }
+	capital = c_shinano
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_uesugi = {
+	color = { 61 205 203 }
+	capital = c_kouzuke
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_oyama = {
+	color = { 50 155 40 }
+	capital = c_shimotsuke
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_togashi = {
+	color = { 175 80 185 }
+	capital = c_kaga
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_yoshimi = {
+	color = { 20 120 210 }
+	capital = c_noto_japan
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_momonoi = {
+	color = { 255 229 180 }
+	capital = c_tajima
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kira = {
+	color = { 148 97 78 }
+	capital = c_inaba
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_yamana = {
+	color = { 140 72 128 }
+	capital = c_houki
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_enya = {
+	color = { 160 230 210 }
+	capital = c_izumo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_ueno = {
+	color = { 95 205 50 }
+	capital = c_iwami
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_matsuda = {
+	color = { 120 45 20 }
+	capital = c_bizen
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_minami = {
+	color = { 205 215 90 }
+	capital = c_bicchuu
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_asayama = {
+	color = { 20 130 80 }
+	capital = c_bingo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_washizu = {
+	color = { 120 10 140 }
+	capital = c_suou
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kotou = {
+	color = { 85 170 90 }
+	capital = c_nagato
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_hatakeyama = {
+	color = { 105 130 27 }
+	capital = c_kii
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kawano = {
+	color = { 22 94 131 }
+	capital = c_iyo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_shouni = {
+	color = { 89 185 198 }
+	capital = c_chikuzen
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kii = {
+	color = { 140 145 105 }
+	capital = c_chikugo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_ootomo = {
+	color = { 123 71 65 }
+	capital = c_bungo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_shimazu = {
+	color = { 101 49 142 }
+	capital = c_oosumi
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_nanbu = {
+	color = { 39 100 157 }
+	capital = c_rikuou
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kudou = {
+	color = { 35 30 185 }
+	capital = c_rikuou
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_oosaki = {
+	color = { 125 130 55 }
+	capital = c_rikuchuu
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_mogami = {
+	color = { 70 170 105 }
+	capital = c_uzen
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kasai = {
+	color = { 155 80 90 }
+	capital = c_rikuzen
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_souma = {
+	color = { 120 15 30 }
+	capital = c_iwaki
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_date = {
+	color = { 105 176 118 }
+	capital = c_iwase
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_ashina = {
+	color = { 148 134 181 }
+	capital = c_iwase
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_yuuki = {
+	color = { 103 209 136 }
+	capital = c_shimousa
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_ooida = {
+	color = { 110 180 140 }
+	capital = c_echigo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_oguni = {
+	color = { 103 73 109 }
+	capital = c_echigo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_utsunomiya = {
+	color = { 222 183 97 }
+	capital = c_shimotsuke
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_ii = {
+	color = { 225 220 105 }
+	capital = c_tootoumi
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_anenokouji = {
+	color = { 70 100 80 }
+	capital = c_hida
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kusunoki = {
+	color = { 225 10 10 }
+	capital = c_yamato
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_isshiki = {
+	color = { 230 230 110 }
+	capital = c_mikawa
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_nawa = {
+	color = { 70 125 170 }
+	capital = c_houki
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_masuda = {
+	color = { 165 210 125 }
+	capital = c_iwami
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_oouchi = {
+	color = { 216 145 145 }
+	capital = c_suou
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_tokunou = {
+	color = { 180 90 190 }
+	capital = c_iyo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_doi = {
+	color = { 107 186 93 }
+	capital = c_iyo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kutsuna = {
+	color = { 85 90 110 }
+	capital = c_iyo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_shijou = {
+	color = { 240 75 100 }
+	capital = c_iyo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_yamashiro = {
+	color = { 100 180 20 }
+	capital = c_hizen
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kikuchi = {
+	color = { 248 184 98 }
+	capital = c_higo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_aso = {
+	color = { 220 160 220 }
+	capital = c_higo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_sagara = {
+	color = { 100 180 70 }
+	capital = c_higo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_ijuuin = {
+	color = { 130 15 30 }
+	capital = c_satsuma
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kimotsuki = {
+	color = { 85 185 120 }
+	capital = c_oosumi
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_sou = {
+	color = { 231 96 158 }
+	capital = c_tsushima
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_nagai = {
+	color = { 60 50 130 }
+	capital = c_uzen
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_hei = {
+	color = { 50 70 170 }
+	capital = c_rikuchuu
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_asonuma = {
+	color = { 170 50 30 }
+	capital = c_rikuchuu
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_tozawa = {
+	color = { 100 50 30 }
+	capital = c_ugo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_waga = {
+	color = { 60 100 40 }
+	capital = c_rikuchuu
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_hienuki = {
+	color = { 240 220 20 }
+	capital = c_rikuchuu
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_sagae = {
+	color = { 200 220 30 }
+	capital = c_uzen
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_daihouji = {
+	color = { 180 50 80 }
+	capital = c_uzen
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_naganuma = {
+	color = { 185 185 110 }
+	capital = c_iwase
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_nikaidou = {
+	color = { 90 230 115 }
+	capital = c_sagami
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_tamura = {
+	color = { 50 180 230 }
+	capital = c_iwaki
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_inawashiro = {
+	color = { 200 70 185 }
+	capital = c_iwase
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_ishikawa = {
+	color = { 180 230 230 }
+	capital = c_iwaki
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_miura = {
+	color = { 130 110 50 }
+	capital = c_sagami
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_suwa = {
+	color = { 80 190 180 }
+	capital = c_shinano
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_rokkaku = {
+	color = { 138 95 117 }
+	capital = c_oumi
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_miya = {
+	color = { 225 200 65 }
+	capital = c_bingo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kikkawa = {
+	color = { 150 100 170 }
+	capital = c_aki
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_munakata = {
+	color = { 210 190 130 }
+	capital = c_chikuzen
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_asakura = {
+	color = { 56 180 139 }
+	capital = c_tajima
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_chousokabe = {
+	color = { 115 75 62 }
+	capital = c_tosa
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_ise = {
+	color = { 150 75 20 }
+	capital = c_ise
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_ikeda = {
+	color = { 178 140 110 }
+	capital = c_settsu
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_itou = {
+	color = { 82 70 156 }
+	capital = c_izu
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_mori = {
+	color = { 230 180 34 }
+	capital = c_aki
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_oda = {
+	color = { 224 4 27 }
+	capital = c_echizen
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_andou = {
+	color = { 200 85 84 }
+	capital = c_ugo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_isa = {
+	color = { 230 60 70 }
+	capital = c_hitachi
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_daijou = {
+	color = { 30 50 220 }
+	capital = c_hitachi
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kawanobe = {
+	color = { 175 100 70 }
+	capital = c_hitachi
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_hatta = {
+	color = { 70 230 80 }
+	capital = c_hitachi
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_mashiko = {
+	color = { 30 150 170 }
+	capital = c_shimotsuke
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_takou = {
+	color = { 220 100 80 }
+	capital = c_shimotsuke
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_nasu = {
+	color = { 230 100 240 }
+	capital = c_shimotsuke
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_oogo = {
+	color = { 160 130 150 }
+	capital = c_kouzuke
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_nitta = {
+	color = { 130 170 160 }
+	capital = c_kouzuke
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_yamaguchi = {
+	color = { 177 82 119 }
+	capital = c_musashi
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_toshima = {
+	color = { 190 60 70 }
+	capital = c_musashi
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_honma = {
+	color = { 240 240 190 }
+	capital = c_sado
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_unnou = {
+	color = { 30 180 60 }
+	capital = c_shinano
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kousaka = {
+	color = { 67 142 116 }
+	capital = c_shinano
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_tooyama = {
+	color = { 50 180 90 }
+	capital = c_mino
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_tou = {
+	color = { 230 50 210 }
+	capital = c_mino
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_ema = {
+	color = { 60 150 130 }
+	capital = c_hida
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_nakajima = {
+	color = { 150 10 20 }
+	capital = c_owari
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_ooba = {
+	color = { 180 82 86 }
+	capital = c_sagami
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_nagano = {
+	color = { 20 120 30 }
+	capital = c_ise
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_takashima = {
+	color = { 140 60 10 }
+	capital = c_oumi
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_aisu = {
+	color = { 170 10 160 }
+	capital = c_kii
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_yuasa = {
+	color = { 98 72 78 }
+	capital = c_kii
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_yabe = {
+	color = { 220 60 80 }
+	capital = c_inaba
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_ogamo = {
+	color = { 60 210 190 }
+	capital = c_houki
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_suetsugu = {
+	color = { 150 220 60 }
+	capital = c_izumo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_mizawa = {
+	color = { 80 110 230 }
+	capital = c_izumo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_mitoya = {
+	color = { 70 240 60 }
+	capital = c_izumo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_akana = {
+	color = { 230 40 50 }
+	capital = c_izumo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_gotou = {
+	color = { 180 100 60 }
+	capital = c_mimasaka
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_shou = {
+	color = { 60 170 150 }
+	capital = c_bicchuu
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_hiraga = {
+	color = { 110 100 105 }
+	capital = c_aki
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kobayakawa = {
+	color = { 100 190 80 }
+	capital = c_aki
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_wachi = {
+	color = { 190 210 220 }
+	capital = c_bingo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_miyoshi = {
+	color = { 230 100 120 }
+	capital = c_bingo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_sue = {
+	color = { 30 50 210 }
+	capital = c_suou
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_migita = {
+	color = { 50 100 20 }
+	capital = c_suou
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kagawa = {
+	color = { 180 50 160 }
+	capital = c_sanuki
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kouzai = {
+	color = { 150 20 60 }
+	capital = c_sanuki
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kaneko = {
+	color = { 20 150 170 }
+	capital = c_iyo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_aki = {
+	color = { 240 190 220 }
+	capital = c_tosa
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_oohira = {
+	color = { 150 230 210 }
+	capital = c_tosa
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_buzen_nagano = {
+	color = { 230 150 50 }
+	capital = c_buzen
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_akizuki = {
+	color = { 210 60 150 }
+	capital = c_chikuzen
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_taku = {
+	color = { 150 220 210 }
+	capital = c_hizen
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_hata = {
+	color = { 210 50 70 }
+	capital = c_hizen
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_arima = {
+	color = { 230 200 190 }
+	capital = c_hizen
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_ookura = {
+	color = { 30 150 210 }
+	capital = c_bungo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_tsuchimochi = {
+	color = { 180 130 10 }
+	capital = c_hyuuga
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_kajiki = {
+	color = { 230 190 180 }
+	capital = c_oosumi
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+c_nf_hishikari = {
+	color = { 240 80 70 }
+	capital = c_oosumi
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+
+	dlc_feature = all_under_heaven
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+

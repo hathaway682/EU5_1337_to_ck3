@@ -1,0 +1,966 @@
+CK3 Procedural Map Tool — generation record
+Tool version:  0.96
+Started:       2026-10-15 15:49:37 +08:00
+Finished:      2026-10-15 16:02:30 +08:00
+Outcome:       completed
+Mod name:      EU5_Modern_Borders_noshape
+Mod folder:    D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape
+Game folder:   E:\SteamLibrary\steamapps\common\Crusader Kings III\game
+Seed:          1
+Heightmap:     D:\Documents\Paradox Interactive\Crusader Kings III\mod\Global_modern_map\eu5_export\eu5_global_heightmap_16bit.png
+Quick:         (not a Quick world)
+Azgaar:        (none)
+History:       written
+Packed map:    written
+Command line:  "D:\Documents\Paradox Interactive\Crusader Kings III\mod\Global_modern_map\_eu5_fork\bin\Release\net10.0-windows\Ck3MapGen.dll" --heightmap "D:\Documents\Paradox Interactive\Crusader Kings III\mod\Global_modern_map\eu5_export\eu5_global_heightmap_16bit.png" --eu5 "D:\Documents\Paradox Interactive\Crusader Kings III\mod\Global_modern_map\eu5_export" --mod EU5_Modern_Borders_noshape --game "E:\SteamLibrary\steamapps\common\Crusader Kings III\game" --allow-unverified-size --province-downscale 1 --province-downscale-override 1 --relief-scale 0.5 --strict-farmland --field-reach 1 --equator-position 0.572519083969466 --latitude-span 131 --shelf-top-255 14 --no-shore-smoothing --no-river-shelf --no-sink-islets --no-relief-terrain-promotion --no-flatmap-ink --no-flatmap-feather
+Machine:       DESKTOP-CDT18A1, Microsoft Windows NT 10.0.26200.0, 12 cores, .NET 10.0.11
+
+==== Settings (preset JSON; save as .json and load as a preset) ====
+{
+  "AdditionalBookmarks": false,
+  "AdministrativeEmpireShare": 0.25,
+  "AdministrativeMinStartYear": 899,
+  "AllowMinorityRaces": true,
+  "AllowNaturalPrimitivism": false,
+  "AnimalDensity": 1,
+  "AnimalScale": 1,
+  "AzgaarBaroniesFromTowns": true,
+  "AzgaarJsonPath": "",
+  "AzgaarMaxBaronyArea": 8,
+  "AzgaarUseClimate": true,
+  "BalanceNeighbourLods": false,
+  "BaronyPixelsAtVanilla": 2043,
+  "CalendarEnabled": true,
+  "CalendarEraName": "",
+  "CalendarEraShort": "",
+  "CalendarMonths": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "CliffCoastReach": 8,
+  "CliffSlopeShare": 0.02,
+  "CoastalCliffReach": 5,
+  "CoastalCliffSmoothing": 0.65,
+  "CoastalRiverShelf": false,
+  "CoastalShelfTop255": 14,
+  "CoastalShoreSmoothing": false,
+  "ContentSource": 0,
+  "ContinentalityPixels": 900,
+  "ConvectiveRainStrength": 1.5,
+  "CountiesPerCulture": 18,
+  "CountiesPerFaith": 26,
+  "CountyScale": 1.25,
+  "CultureAestheticsTheme": 0,
+  "CultureTerrainWeight": 1,
+  "CulturesPerHeritage": 2,
+  "CustomRaceMix": false,
+  "DeJureColorCoding": true,
+  "DetailFadeBias": 5,
+  "DevelopmentBareShare": 0.25,
+  "DevelopmentBase": 0,
+  "DevelopmentCoastBonus": 0.12,
+  "DevelopmentScale": 1,
+  "DevelopmentSkew": 1.5,
+  "DevelopmentSpread": 22,
+  "DisableTerrainWarp": true,
+  "DominantLook": 0,
+  "DuchyTitleShare": 0.5,
+  "DynasticCycle": true,
+  "EmpireTitleShare": 0.15,
+  "EnableAdministrativeEmpires": true,
+  "EnableAdventurers": true,
+  "EnableAnimals": true,
+  "EnableChronicle": true,
+  "EnableCityScatter": true,
+  "EnableFantasyEthnicities": false,
+  "EnableGallopingHorses": true,
+  "EnableGeneratedRetinues": true,
+  "EnableMagic": true,
+  "EnableMajorRivers": false,
+  "EnableMinorRivers": false,
+  "EnableNomadHordes": true,
+  "EnableRuins": true,
+  "EnableSocieties": false,
+  "EnableSocietyPrototype": false,
+  "EnableStartingRetinues": false,
+  "EnableStartingWars": true,
+  "EnableWilderness": true,
+  "EnableWorldCenters": true,
+  "EnvEffectDensity": 0.35,
+  "EnvEffectScale": 0.9,
+  "EquatorPosition": 0.572519083969466,
+  "EquatorTemperatureC": 26,
+  "EraAnchorYear": 0,
+  "Eu5ExportPath": "D:\\Documents\\Paradox Interactive\\Crusader Kings III\\mod\\Global_modern_map\\eu5_export",
+  "FaithShaping": 0,
+  "FaithTerrainWeight": 0.45,
+  "FaithsPerReligion": 2.5,
+  "FarmlandBlendReach": 1,
+  "FarmlandShare": 0.02,
+  "FlatMapHandoffBias": 5,
+  "FlatmapCoastInk": false,
+  "FlatmapFeather": false,
+  "FlatmapFlourishes": false,
+  "FlatmapHachures": false,
+  "FlatmapRoads": false,
+  "FormationTurbulence": 0.5,
+  "FormationYears": 600,
+  "Gender": 0,
+  "GenerateFaithIcons": true,
+  "GeneratedSees": true,
+  "GuaranteedRaceCount": 10,
+  "HabitabilitySizeWeight": 0.75,
+  "HeadOfFaithShare": 0.3,
+  "Height": 8192,
+  "HeightmapSagBudget": 0.5,
+  "HeightmapTileStep": 0,
+  "HillProvinceShare": 0.19,
+  "HoldingScale": 1,
+  "HolySitesPerFaith": 5,
+  "ImpassableAutoCut": true,
+  "ImpassableCeilingHeight": 400,
+  "ImpassableCliffSlope": 10,
+  "ImpassableCrestFollow": 0.8,
+  "ImpassableCrestReachBaronies": 3,
+  "ImpassableFootRelief": 0.45,
+  "ImpassableGateHeight": 238,
+  "ImpassableHeightFraction": 0.98,
+  "ImpassableKnobBaronies": 4,
+  "ImpassableLiftScale": 200,
+  "ImpassableMaskMinShare": 0,
+  "ImpassableMaskMode": 0,
+  "ImpassableMaskPath": "",
+  "ImpassableMaxShareOfLand": 0.15,
+  "ImpassableMinMountainGround": 0.1,
+  "ImpassableMinMountainShare": 0.35,
+  "ImpassableMinRuggedness": 1,
+  "ImpassableMinSlope": 1.5,
+  "ImpassableMinWallBaronies": 1.5,
+  "ImpassableMountainPlateaus": true,
+  "ImpassablePaintMode": 0,
+  "ImpassableRangeMaxBaronies": 8,
+  "ImpassableRanking": 0,
+  "ImpassableScoreDeviations": 1.5,
+  "ImpassableShareOfLand": 0.08,
+  "ImpassableSlopeLine": 3.5,
+  "ImpassableSlopeWeight": 0.65,
+  "KingdomTitleShare": 0.25,
+  "LakeOutletMinSeaZones": 0.1,
+  "LandFloorDensity": 0.1,
+  "LandTop": 255,
+  "LandTopPercentile": 99.99,
+  "LocatorCentroidPull": 0.75,
+  "LocatorInteriorFraction": 0.6,
+  "LocatorMaxSlope": 5,
+  "MajorRiverDensity": 1,
+  "MandalaShare": 0.2,
+  "MapLatitudeSpan": 131,
+  "MapTableClearance": 50,
+  "MapTableProps": true,
+  "MapTablePropsOffMap": true,
+  "MaxBaroniesPerCounty": 7,
+  "MaxStruggles": 2,
+  "MedianRainfallMm": 550,
+  "MenuPortraits": true,
+  "MeritocraticShare": 0.5,
+  "MinBaroniesPerCounty": 3,
+  "MinChildrenPerTitle": 4,
+  "MinOutletSeaZones": 0.5,
+  "MinPhysicalSlope": 0.15,
+  "MinProvincePixels": 32,
+  "MonotheistShare": 0.35,
+  "MountainLineShare": 0.035,
+  "MountainPassMaxThickness": 1.5,
+  "MountainPassMinDetour": 5,
+  "MountainPasses": true,
+  "MountainProvinceShare": 0.14,
+  "MountainSnowAmount": 1,
+  "MountainSnowFullPercentile": 0.993,
+  "MountainSnowMode": 0,
+  "MountainSnowPrecipitationInfluence": 0.4,
+  "MountainSnowStartPercentile": 0.95,
+  "MountainSnowSummerFullC": -3,
+  "MountainSnowSummerStartC": 5,
+  "NativeRankTitles": false,
+  "NativeRankTooltips": true,
+  "NativeRealmNames": false,
+  "NomadSteppeShare": 0.3,
+  "Normalization": 1,
+  "OasisShare": 0.06,
+  "OceanBorder": 0,
+  "OrographicRainStrength": 0.85,
+  "PeakElevation": 520,
+  "PeakElevationMetres": 4000,
+  "PoleTemperatureC": -20,
+  "PromoteTerrainByReliefOverride": false,
+  "ProvinceBorderSmoothing": 3,
+  "ProvinceDownscale": 1,
+  "ProvinceDownscaleOverride": 1,
+  "ProvinceRelaxIterations": 1,
+  "ProvinceSizeRegionPixels": 2600,
+  "ProvinceSizeVariance": 6,
+  "ProvinceTerrainCost": 1.5,
+  "ProvinceTerrainSmoothPixels": 8,
+  "RaceMixDuskElves": 50,
+  "RaceMixDwarves": 50,
+  "RaceMixGiantkin": 50,
+  "RaceMixGnomes": 50,
+  "RaceMixHighElves": 50,
+  "RaceMixHornkin": 50,
+  "RaceMixHumanShare": 0,
+  "RaceMixOrcs": 50,
+  "RaceMixWoodElves": 50,
+  "RaceMode": 1,
+  "RaceTerrain": 1,
+  "RainoutPer100Pixels": 0.08,
+  "ReliefDetailRadius": 32,
+  "ReliefPromotionFloor": 0.05,
+  "ReliefScaleOverride": 0.5,
+  "ReligionTooltips": true,
+  "RemoveTinyIslands": true,
+  "RepublicShare": 0.1,
+  "RiverChannelWidthMax": 13,
+  "RiverChannelWidthMin": 7,
+  "RiverDensity": 0.1,
+  "RiverFloodplainWidth": 0.75,
+  "RiverMaxRiseAboveSea": 120,
+  "RiverProvinceLength": 35,
+  "RiverTraceMinFlow": 350,
+  "RiverValleyMaxReach": 45,
+  "RiverValleyWallSlope": 1.5,
+  "RiverWidthVariation": 0.25,
+  "RiverWidthVariationScale": 150,
+  "RuinsShare": 0,
+  "ScaleHandoffToDetail": false,
+  "ScaleReliefWithMapSize": false,
+  "SeaBridgePixelsAtVanilla": 110,
+  "SeaFloorElevation": -250,
+  "SeaZonePixelsAtVanilla": 25000,
+  "SeasonalRangeC": 44,
+  "Seed": 1,
+  "SetPiece": "",
+  "ShatteredWorld": false,
+  "SimulateFormation": true,
+  "SinkDrownedIslets": false,
+  "SkipCoastlineMatch": false,
+  "SkipCoastlineShaping": false,
+  "SoftProvinceEffects": true,
+  "SoryoShare": 0.3,
+  "SourceSeaLevel": 19,
+  "SpecialBuildingOffset": 9,
+  "StartYear": 900,
+  "StartingHegemony": false,
+  "StartingWarsCount": 3,
+  "SteepLineShare": 0.2,
+  "SteppeAdminShare": 0.2,
+  "StraitPixelsAtVanilla": 28,
+  "StrictFarmlandBoundary": true,
+  "StruggleMinTension": 8,
+  "SurroundDepthTest": true,
+  "TemperatureDriftC": 1,
+  "TerrainBlendReach": 44,
+  "TieRaceToHeritage": true,
+  "TinyIslandMaxArea": 64,
+  "TreeDensity": 1.65,
+  "UnreformedTribalShare": 0.34,
+  "VanillaCamera": false,
+  "VanillaRegion": "",
+  "WanuaShare": 0.2,
+  "WeaponPoolSizePerKind": 16,
+  "Width": 16384,
+  "WildernessAvoidRealmInteriors": 0.6,
+  "WildernessEdgeBias": 0.75,
+  "WildernessHolySiteShare": 0.15,
+  "WildernessMinClump": 2,
+  "WildernessShare": 0.12,
+  "WildernessTerrainWeight": 0.75,
+  "WorldCenterDevPeak": 30,
+  "WorldCentersCount": 5,
+  "WorldHeight": 512,
+  "WorldWidth": 1024
+}
+
+==== Generation log ====
+  UNVERIFIED SIZE: Heightmap is 16384x8192, not one of 4096x2048, 5120x2560, 6144x3072, 8192x4096, 9216x4608 or 18432x9216. Building it anyway to test whether CK3 renders it. In game, check the map's north and east edges for missing terrain; if it is clean, add the size to TileFit.Known.
+Heightmap eu5_global_heightmap_16bit.png: 16384x8192, provinces 16384x8192, climate grid 1024x512
+  scale: 1 heightmap px per world unit (vanilla 2), world 16383 units wide, MapScale 1.778
+  decoded in 2598 ms
+  as decoded: 0.00% exactly 0 (vanilla 40.14), 67.63% water (vanilla 47.18); land p50 35, p75 49, p90 70, p99 153, max 167 (vanilla 36 / 57 / 87 / 143 / 191); water p50 8 (vanilla 0)
+  normalised (Shift): source sea 19/255 (67.63% of the map at or below it) → 19/255
+  land floor detected at 21.00/255 (lowest land pixel 19.00)
+  tiny islands: removed 2,597 islands (194,489 px) of 1,024 px or fewer at 16384x8192
+  relief scaled by 0.500 (map is 50 % of vanilla's width): detail compressed about the land mean over +/-64 px, mountain mass left at full height, 21,174,480 px raised out of hollows
+  elevation -238..335 (sea 36), 32.2% land
+  world grid 1024x512: elevation -234..335, land 32.2%, mountain cells 3177
+  38 mountain ranges, 219 landmasses (largest 101542 cells), 18630 beach
+  province raster: 32.2% land
+  climate: map spans 75° to -56° latitude (131° tall, equator at 57% down)
+    land temperature p10 -4°C / median 13°C / p90 23°C
+    land rainfall p10 227 / median 550 / p90 1773 mm (46065 ms)
+  drainage: 2714 water bodies, 2705 of them lakes (644,254 cells) draining over their rims to the sea
+  drainage: 43.3M land cells, 56.4% filled
+  discharge on land: p50 3, p90 52, p99 4,786, p99.9 177,828, max 3,710,683
+  EU5 lakes: 918 locations mapped from default.map
+  province raster: 32.2% land
+  28573 provinces total
+  eu5 de-jure loaded: 6 roots, 25624 titles
+  eu5 baronies: 21046 renumbered onto the map's own ids
+Writing mod to D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape
+  cleared 8 folders and 5 files from D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape
+  blanked 961 vanilla files bound to the old map
+  terrain classes (share of land): Hills 15.0%, Drylands 14.1%, Mountains 13.6%, Forest 11.8%, Desert 11.4%, Taiga 10.2%, Plains 5.6%, Jungle 5.5%, Wetlands 5.4%, Steppe 4.5%, DesertMountains 2.1%, Farmlands 0.8%, Floodplains 0.1%
+  relief promotion: mountains from off of a province above the mountain line, hills from off above the hill line
+  province terrain (share of 21046 baronies): hills 20.6%, forest 20.0%, plains 11.4%, mountains 11.0%, drylands 7.1%, wetlands 6.2%, jungle 5.2%, steppe 5.0%, desert 4.7%, taiga 3.9%, farmlands 3.2%, desert_mountains 1.4%, floodplains 0.4%
+    vanilla for comparison: plains 19.6%, hills 19.2%, mountains 12.2%, drylands 9.5%, forest 8.0%, desert 6.8%, jungle 5.3%, taiga 5.2%, steppe 3.2%, wetlands 2.8%, desert_mountains 2.5%, farmlands 2.2%, floodplains 2.2%, oasis 0.5%
+  vocabulary: 7 ethos, 138 traditions, 244 looks
+  religion vocabulary: 49 doctrine groups, 97 tenets, 67 doctrines with a can_pick clash, 98 faith icons, 10 temple art sets
+  innovations harvested: 23 tribal, 17 early medieval, 19 high medieval, 17 late medieval
+  men-at-arms harvested: 88 regiments across 11 archetypes, 67 icons
+  heraldry: 407 templates, 114 emblem lists, 1586 emblems, 42 patterns from the installed game
+  county seats: 2665 of 3819 moved off the cluster seed
+  development: min 0, median 5, p90 18, max 23 (vanilla 867 counties that set one: median 6, p90 12, ordinary top 20, peak 30)
+  wilderness: 476 counties in 39 regions (12.5 % of the map, target 12 %), 86 absorbed to keep titles whole
+    terrain under it: Mountains 43%, Desert 15%, Hills 14%, DesertMountains 7%, Drylands 6%, Forest 5%, Jungle 3%, Plains 2%, Steppe 2%, Wetlands 1%, Farmlands 1%, Taiga 0%, Floodplains 0%
+  ruins: none at the start date; the system ships and the holder stands empty
+  eu5 peoples: 2087 cultures, 293 religions, 640 name lists, 3819 counties (stamp 1090cb696ebbac2c)
+  cultures: 221 in 106 heritages over 3819 counties — smallest 2, median 15, largest 67 counties (1242 ms)
+    dress: 219 of 221 cultures wear clothing made for their climate, 62 re-dressed away from their heritage's; 62 re-housed, 47 re-equipped
+  eu5 cultures: 2087 written in 245 heritages, 3819 counties from EU5, 0 kept from the generator
+  title tiers: 0 cultures took the export's own words, 1115 drew one, 972 kept Kingdom and Duchy; 0 states named their own title
+  ethnicities: 923 culture(s) hold only wilderness — kept human and out of every race roll
+  human looks: 193 heritage(s) placed by climate — caucasian 48 (25 % of land), african 48 (23 % of land), asian 49 (25 % of land), mena 48 (26 % of land)
+  human looks: 1092 of 1164 culture(s) wear a look made for their climate (mean fit 0.63)
+  ethnicities: 2087 cultures across 1 distinct races -> 2087 Human
+  world centers: 5 great metropolises established across the realm
+    · Segilderick: The Victory Pillar of Jaramla (ImperialPalace) -> fp4_legendary_heroes_pillar_india_01_a_mesh
+    · TongLa: The Three Pagodas of TongLa (Sanctuary) -> building_special_three_pagodas_dali_01_mesh
+    · DjegYo: The Founders' Stones of DjegYo (ImperialPalace) -> fp4_legendary_norse_runestone_01_b_mesh
+    · MytsaTit: The Sky Citadel of Pobe_ne_ (Citadel) -> fp3_building_special_falak_ol_aflak_citadel_01_a_mesh
+    · Hantehamani: The Hall of Learning of Hantehamani (GreatLibrary) -> fp3_building_special_house_of_wisdom_01_a_mesh
+  development: min 0, median 5, p90 18, max 31 (vanilla 867 counties that set one: median 6, p90 12, ordinary top 20, peak 30)
+  realm capitals: 527 titles above county had their capital moved
+  formation: 24 epochs, 300 to 900 — 3819 chiefdoms became 598 realms (336 independent, largest 24 counties), 15699 events
+  realms: 0 vassals could not reach their lord (set free), 113 had no tier to stand on (folded into their lord's realm)
+  realms: 485 simulated realms titled — 37 internal duchies, 2837 vassal counties
+  rulers: 0 emperors (0 indep), 31 kings (31 indep), 366 dukes (234 petty kings), 2962 counts (81 indep) — 346 independent realms, 3013 vassals total
+  realms: vassalage by origin — 3023 conquest
+  governments: 1847 tribal, 719 clan, 635 feudal, 330 nomad, 214 wanua, 49 mandala, 16 republic, 9 japan_feudal
+  faiths: 152 in 59 religions (18 monotheist, 9 Abrahamic-shaped, 4 lay clergy, 93 unreformed, 11 heads of faith, 1 temporal) over 3819 counties — smallest 1, median 15, largest 183 counties (69 ms)
+  eu5 faiths: 445 written in 88 religions, 0 counties from EU5, 3819 kept from the generator
+  heads of faith: 0 seated on land, 0 counties, 0 under a protector
+  sees: 0 clerical regions for 0 faiths, 0 regional rites
+  prince-bishops: 0 on the start date
+  cultivation: EU5 farmlands kept, procedural farmland/oasis skipped
+  crossings: 1304 straits up to 50 px and 0 river crossings up to 150 px wide
+  landmark: Great Sea of Embai (water, 0 baronies)
+  landmark: Great Sea of Santuyin (water, 0 baronies)
+  landmark: Yawani Ocean (water, 0 baronies)
+  landmark: Deya Ocean (water, 0 baronies)
+  ethnicities written: 289 base templates and 2389 child variants to 99_generated_ethnicities.txt
+  governments: nomad realms keep their own names (uses_culture_and_house_head_named_realms off)
+  holdings: 16754 none, 2061 tribal_holding, 1363 castle_holding, 330 nomad_holding, 260 church_holding, 229 city_holding, 49 temple_citadel_holding
+  winter: baronies with none 63.1%, mild at most 20.3%, normal at most 14.4%, harsh possible 2.1%, mean bias 0.19; impassable mean 0.21
+    vanilla for comparison (passable): none 41.8%, mild 12.9%, normal 35.5%, harsh 9.7%, mean 0.37
+  wonder index: gui\gen_wonder_index.gui — wrote 2 widget(s)
+  decisions: none (no empire with enough settled land to be worth forming)
+  retinues: 193 heritage regiments, 655 elites earned of 2087 cultures
+  retinue archetypes: 176 heavy_infantry, 119 skirmishers, 81 archer_cavalry, 80 pikemen, 79 archers, 79 heavy_cavalry, 79 light_cavalry, 78 camel_cavalry, 77 elephant_cavalry
+  retinue innovations: 655 written, 473 already discovered at the start date
+  culture history: 13.6 starting innovations per culture across 2 eras
+  cultures written: 2088 cultures, 245 heritages and languages
+  defines: GOVERNMENT_TYPES 22 entries (20 vanilla + wilderness + colony)
+  defines: WORLD_EXTENTS 16383 x 50 x 8191, WATERLEVEL 3 (vanilla 9215 x 50 x 4607, 3)
+  camera: panning 16160 x 8348, look at 8192,4096, zoom step 33 (9714), flat map at step 26 (3838) (vanilla 9090 x 4696, 5000,2300, 33, 21)
+  camera: terrain LOD 8.00 octaves (16383 world units / 64-unit finest node, vanilla 8.17); handoff bias +5 steps, detail correction OFF, terrain to 23.4% of world width (vanilla 23.4% at this bias)
+  camera: zoom ladder scaled to 124..11556 world units (vanilla 70..6500), so every vanilla zoom-step index — pan-to, water borders, flat map — frames the same share of the map it does there
+  entities: zoom indices matched back onto vanilla's camera heights (-5 steps at the army cutoff), then +5 out to the handoff — army meshes fade to nothing by step 15 (1399 world units, vanilla 15/787), banners to 16 (vanilla 16), holdings to 10 (vanilla 8), flat map at 26 (vanilla 21)
+  detail: trees and map objects fade by step 10 (805 world units, vanilla 9/396), +5 past vanilla's height; realm colour fills 10-16 (vanilla 9-15)
+  surround: inner rect 888.9 1777.8 888.9 6577.8 (vanilla 500.0 1000.0 500.0 3700.0)
+  camera: tilt widened 8 deg, closest step 32-78, furthest 42-89 (vanilla 40-70, 50-89)
+  calendar: dates suffixed "AR" (Athoules Reckoning)
+  calendar: months Jonidas, Euphnepi, Svethata, Hepidas, Lasilcile, Ardas, Ebius, Venie, Theoprale, Jonileric, Spinimon, Chalevanti
+  natural disasters: 42 of 42 regions over 153 counties (mean 3.6), 0 reaching the hegemon's realm
+  re-declared 700 geographical regions (7 graphical: mena 7598, india 3891, western 3460, mediterranean 2742, east_asia 2048, steppe 915, siberia 392)
+  holy sites: 283 re-declared, 273 rebound onto 543 holy site counties
+  decision blocks: 83 of 501 vanilla decisions hidden (completely_controls against a landless shim)
+  historical setup: 4 vanilla effects stubbed (set_up_historical_monastic_orders_effect, set_up_historical_military_orders_effect, spawn_historical_characters_effect, create_artifact_fp2_votive_crowns_effect)
+  holy order types: 2 faith-specific files blanked (no procedural faith can found those orders)
+  great steppe: 5 regions, 524 counties, 330 nomadic
+    steppe_far_west: Lenteusah Steppe — 79 counties; no frontier to expand into
+    steppe_west: Ka_hu-G_o_e Steppe — 52 counties; can expand into Huenkunray (5), PotiraLand (16), Alonanga (9), Kinanga (7), Tutsirai (11), Katanga (8)
+    steppe_central: Khiragaogo Steppe — 145 counties; can expand into Arapa (10), Xelostine (36), Monayya (22), Mingetato (85)
+    steppe_east: Kawtsubayd Steppe — 92 counties; can expand into Susaidmbek (50), Hubab (5), Arahrouz (55), Roden (17), Ko_ppairunaran (23)
+    steppe_far_east: Juanfen Steppe — 156 counties; no frontier to expand into
+  vanilla identity (migration): events\mpo_misc.txt — patched leave_behind_heritage_culture_effect
+  vanilla identity (nomad visitors): events\dlc\mpo\mpo_nomads_flavour_events.txt — patched nomad_events.0140 trigger, nomad_events.0250 trigger
+  vanilla identity guard: Mongol and Seljuk invasions off
+  the wilds: none (no unsettled county to make a frontier of)
+  silk road: 807 counties in six stops, 43 road segments; the source is the hegemony's seat, TongLa
+    china: Juanfen — bazaar at TongLa (c_jingzhao), 188 counties, 37 on the road
+    tibet: Zhongen — bazaar at Kenchykhan (c_lhasa), 100 counties, 20 on the road
+    india: Khirlasbay — bazaar at Tygrynkev (c_lahur), 19 counties, 4 on the road
+    central_asia: Kalush-Man — bazaar at Dicaktani (c_shazhou), 203 counties, 44 on the road
+    transcaspia: Suwaysbad — bazaar at Orayya (c_khiva), 193 counties, 37 on the road
+    occident: Ka_hu-G_o_e — bazaar at Alubanga (c_dvin), 104 counties, 18 on the road
+  hegemony flavour: SKIPPED (no hegemony on this map)
+  music pools: common\scripted_triggers\music_triggers.txt — patched dynastic cycle branch x2, chinese buildings x1, indian buildings x1, south-east asian buildings x1, tibetan buildings x1, japanese buildings x1, should_use_norse_music_trigger OR, should_use_iberian_music_trigger OR, should_use_iranian_music_trigger OR, should_use_byzantine_music_trigger OR, should_use_nomadic_music_trigger OR, should_use_chinese_music_trigger OR, should_use_asian_music_trigger OR, should_use_broadly_european_music_trigger OR
+  patron saints: decision opened to 88 generated religions with Dulia
+  routes: 657 markets (312 ports), 902 roads and 180 sea lanes (649 backbone, 433 shortcuts, 216 trunk, 81 roads use a crossing) in 8 systems; 13 touching pairs still cut off; 191 drawn as map-mode arrows
+  tenet text: 36 generated-religion names and descriptions
+  tenets: 26 installed By God Alone definitions opened to 89 generated religions (DLC gates preserved)
+  faith icons: 833 rendered for 446 faiths (88 designs, 29 motif families) in 45955 ms
+  faiths written: 446 faiths in 89 religions, 2225 holy sites
+  hierarchical clergy: 27 article(s) fixed
+  cathedral stories: events\dlc\pam\pam_great_projects_events.txt — patched fresco saint, stained glass saint, faith event theme x12, institutional sermon access x1
+  legation office: common\domiciles\buildings\11_ecclesiastical_domicile_buildings.txt — patched chancery_legation_01 previous_building
+  legatine mission: common\decisions\dlc_decisions\pam\pam_decisions.txt — patched pam_send_legatine_mission_decision is_shown
+  ecumenical council: common\activities\activity_types\ecumenical_council.txt — patched on_invalidated host unlanded
+  investiture council: common\activities\activity_types\pam_investiture_council.txt — patched on_invalidated host unlanded
+  chaplain titles: common\customizable_localization\00_divinity_custom_loc.txt — patched GetActualBishopTitle head-of-faith early-out, GetActualBishopTitlePossessive head-of-faith early-out
+  chaplain titles: 89 generated religion(s) name their own chaplains
+  coronations: 67 religions crown, 22 use regalia
+  titular guard: 1668 shims stamped, stripped on any title gain
+  titulars: 1680 vanilla e_/k_/d_/h_ keys re-declared as landless
+  locator anchors: median depth into province 1 -> 9 px, median slope under it 2.14 -> 0.15
+  locator anchors: 17 holding(s) moved off ground steeper than 5.0/px (0 of them out of their province's core); 3 province(s) have nothing gentler and keep their least steep ground
+  special building anchors: 22195/22861 offset 9.0 world units (257 shortened, 666 left on the holding)
+  locators: 8 files, 22861 land (+5712 sea on combat/stack layers)
+  war rules: common\character_interactions\00_war.txt — patched declare_war is_shown, declare_war is_valid_showing_failures_only
+  war rules (migration): common\character_interactions\09_mpo_interactions.txt — patched migration_interaction is_valid_showing_failures_only
+  war rules (dominate title): common\decisions\dlc_decisions\mpo\mpo_decisions.txt — patched dominate title candidate filter, dominate title war target list
+  war rules (coronation warhound): events\activities\coronation_activity\coronation_events_6.txt — patched coronation_events_6020_foe_trigger
+  war rules (conqueror decision): common\decisions\dlc_decisions\ep_3\06_ep3_laamp_decisions.txt — patched become_conqueror_decision is_valid_showing_failures_only
+  war rules (groups): common\casus_belli_groups\00_casus_belli_groups.txt — patched religious, religious_disorganised, religious_script_only, de_jure, debug, claim, civil_war, invasion, vassalization, conquest, struggle, subjugation, independence, event, artifact, migration, humiliation, mandala, celestial
+  war rules (types: 00_casus_belli_types.txt): common\casus_belli_types\00_casus_belli_types.txt — patched debug_war, debug_artifact_war
+  war rules (types: 00_civil_war.txt): common\casus_belli_types\00_civil_war.txt — patched independence_faction_war, liberty_faction_war, populist_war, claimant_faction_war, depose_war, refused_liege_demand_war, independence_war, nation_fracturing_faction_war, nomadic_war
+  war rules (types: 00_claim.txt): common\casus_belli_types\00_claim.txt — patched claim_cb
+  war rules (types: 00_conquest.txt): common\casus_belli_types\00_conquest.txt — patched county_conquest_cb, duchy_conquest_cb, ducal_conquest_cb, ireland_laudabiliter_conquest_cb
+  war rules (types: 00_dejure_war.txt): common\casus_belli_types\00_dejure_war.txt — patched de_jure_cb, individual_county_de_jure_cb, individual_duchy_de_jure_cb, imperial_reconquest_cb, dismantle_holy_pretender_cb, dismantle_byz_pretender_cb
+  war rules (types: 00_dissolve_empire_cb.txt): common\casus_belli_types\00_dissolve_empire_cb.txt — patched dissolve_empire_war
+  war rules (types: 00_event_war.txt): common\casus_belli_types\00_event_war.txt — patched norman_conquest_cb, norwegian_invasion_cb, sons_of_lothbrok_invasion_cb, hungarian_migration_cb, azariqa_rebellion_cb, raiktor_claim_cb, raiktor_conquest_cb, fp1_scandi_adventurer_conquest, diarch_vassalisation_cb, remove_regent_cb
+  war rules (types: 00_invasion_war.txt): common\casus_belli_types\00_invasion_war.txt — patched invasion_war, clan_invasion_war, mongol_invasion_war, mongol_realm_invasion_war, pax_romana_invasion_war
+  war rules (types: 00_nomadic_conquest.txt): common\casus_belli_types\00_nomadic_conquest.txt — patched nomadic_conquest_cb, nomadic_conquest_duchy_cb
+  war rules (types: 00_peasant_war_new.txt): common\casus_belli_types\00_peasant_war_new.txt — patched peasant_war
+  war rules (types: 00_religious_war.txt): common\casus_belli_types\00_religious_war.txt — patched minor_religious_war, religious_war, major_religious_war, excommunication_war, flowery_war_cb, undirected_great_holy_war, directed_great_holy_war
+  war rules (types: 00_struggle_war.txt): common\casus_belli_types\00_struggle_war.txt — patched county_struggle_cb
+  war rules (types: 00_subjugation.txt): common\casus_belli_types\00_subjugation.txt — patched tribal_subjugation_cb
+  war rules (types: 00_tributarize.txt): common\casus_belli_types\00_tributarize.txt — patched make_tributary_cb, tributary_independence_war
+  war rules (types: 00_vassalization.txt): common\casus_belli_types\00_vassalization.txt — patched vassalization_cb
+  war rules (types: 01_ep1_wars.txt): common\casus_belli_types\01_ep1_wars.txt — patched artifact_war, reclaim_relic_artifact_war
+  war rules (types: 01_fp1_wars.txt): common\casus_belli_types\01_fp1_wars.txt — patched fp1_varangian_adventurer_conquest
+  war rules (types: 03_fp2_wars.txt): common\casus_belli_types\03_fp2_wars.txt — patched fp2_border_raid, fp2_expel_interloper, fp2_mediterranean_conquest_cb
+  war rules (types: 05_fp3_wars.txt): common\casus_belli_types\05_fp3_wars.txt — patched fp3_install_loyalist_cb, fp3_turkic_invasion_cb, fp3_seljuk_invasion_cb, fp3_free_house_member_cb, fp3_unify_house_cb, fp3_zanj_rebellion_war
+  war rules (types: 06_ce1_wars.txt): common\casus_belli_types\06_ce1_wars.txt — patched mythical_ancestor_war, legendary_adventure, leg_demand_fealty_cb
+  war rules (types: 07_ep3_admin_cbs.txt): common\casus_belli_types\07_ep3_admin_cbs.txt — patched expansion_cb, duchy_expansion_cb, naval_expansion_cb, naval_duchy_expansion_cb, influence_war_cb
+  war rules (types: 07_ep3_wars.txt): common\casus_belli_types\07_ep3_wars.txt — patched ep3_laamp_adventurer_county_invasion, ep3_laamp_adventurer_duchy_invasion, ep3_laamp_adventurer_kingdom_invasion, ep3_laamp_adventurer_empire_invasion, ep3_laamp_raid_contract_cb, crusading_claim_cb, ep3_hasan_assassin_war, imperial_expedition_cb, ep3_pillaging_foray, ep3_roman_empire_border_war, ep3_laamp_apprehend_adventurer_cb, greek_anarchy_cb, ep3_laamp_peasant_war, admin_barbarian_conquest_cb
+  war rules (types: 09_mpo_wars.txt): common\casus_belli_types\09_mpo_wars.txt — patched migration_cb, mpo_nomad_invasion_cb, mpo_nomad_duchy_invasion_cb, humiliation_cb, retaliation_cb, domination_cb, de_jure_cb_nomadic, sovereignty_cb, mpo_great_war_of_defiance_cb, mpo_gok_onslaught_cb
+  war rules (types: 10_tgp_china_wars.txt): common\casus_belli_types\10_tgp_china_wars.txt — patched china_seize_county_cb, china_hegemon_seize_county_cb, china_seize_duchy_cb, china_hegemon_seize_duchy_cb, claim_the_mandate_cb, chinese_consolidation_cb, chinese_reunification_cb, silk_road_vassalization_cb, grand_campaign_kingdom_invasion_cb
+  war rules (types: 10_tgp_faction_wars.txt): common\casus_belli_types\10_tgp_faction_wars.txt — patched replace_ceremonial_regent_faction_war, restore_ceremonial_liege_faction_war, ceremonial_claimant_faction_war, imperial_policy_faction_war
+  war rules (types: 10_tgp_japan_wars.txt): common\casus_belli_types\10_tgp_japan_wars.txt — patched japan_install_bloc_member_cb, japan_soryo_conquest_county_landless_cb, japan_soryo_conquest_county_cb, japan_demand_administrative_cb, japan_imperial_expansion_cb, japan_imperial_reconquest_cb, japan_refused_ritsuryo_cb, eradicate_house_cb, japan_establish_soryo_administration_cb, japan_bloc_war_cb
+  war rules (types: pam_wars.txt): common\casus_belli_types\pam_wars.txt — patched pam_humiliation_cb, pam_challenge_hof_cb, pam_antiking_cb, pam_investiture_conflict_cb
+  war rules (types: tgp_eastasia_wars.txt): common\casus_belli_types\tgp_eastasia_wars.txt — patched mandala_plunder_cb, mandala_raze_capital_structure_cb
+  war rules (types): 126 casus belli types guarded across 28 files
+  war rules: common\scripted_triggers\00_war_and_peace_triggers.txt — patched herders_and_tributary_constraints
+  council tasks (court chaplain): common\council_tasks\00_court_chaplain_tasks.txt — patched task_fabricate_claim potential_county, task_conversion potential_county
+  council tasks (de jure): common\council_tasks\00_steward_tasks.txt — patched task_convince_dejure potential_county
+  faction rules: common\factions\00_populist_faction.txt — patched populist_faction can_county_create, populist_faction is_valid, escalated_peasant_faction can_county_create, escalated_peasant_faction is_valid
+  faction rules: common\factions\00_peasant_faction_new.txt — patched peasant_faction can_county_create, peasant_faction is_valid
+  faction rules: common\factions\00_nomadic_faction.txt — patched nomadic_faction can_county_create, nomadic_faction is_valid
+  frontend: main-menu portraits kept (trial), info box injected
+  gui: gui\window_county_view.gui — patched holder, move-capital button, holding taxes, holding loot, stats, modifiers, build-holding prompt, settle button
+  gui: gui\window_character.gui — patched window body, placeholder
+  gui: SKIPPED gui\window_title.gui — no anchor for rulers in region portrait (not found). Vanilla has changed shape; not shipping a partial override.
+  gui: gui\window_council.gui — patched chancellor/steward row, marshal/spymaster row, court chaplain seat, warden seat, quartermaster/speaker row
+  gui: gui\frontend_bookmarks.gui — patched date tab year, date tab subtitle
+  gui: gui\window_artifact_details.gui — patched reforge button
+  gui: gui\window_inventory.gui — patched inventory window layer, inventory window
+  gui: gui\window_silk_road.gui — patched silk road window dynastic cycle link
+  gui: gui\window_dynasty_house.gui — patched dynasty house list row, house sort dropdown
+  gui: gui\window_situation.gui — patched situation window phase end date, situation window selected sub-region panel, situation window root, situation window show state, situation window hide state
+  gui: hud.gui — widened 7 IsRightWindowOpen check(s)
+  gui: gui\hud_sidebars.gui — patched right sidebar backdrop
+  gui: hud_notification_templates.gui — widened 4 IsRightWindowOpen check(s)
+  gui: gui\hud_notification_templates.gui — patched 
+  gui: hud_outliner.gui — widened 1 IsRightWindowOpen check(s)
+  gui: gui\hud_outliner.gui — patched 
+  gui: gui\hud.gui — patched domain limit row, domain limit number, debug map modes, debug map modes, last tab group, tab group spacer
+  artifact index: gui\gen_artifact_index.gui — wrote 2 widget(s)
+  settings panel: gui\gen_settings_panel.gui — wrote 2 widget(s)
+  chronicle window: gui\gen_chronicle_window.gui — wrote 2 widget(s)
+  poetry interactions: common\character_interactions\00_poetry_interactions.txt — patched send_poem is_shown
+  map gfx: water/foam rebuilt, snow mask from the climate (59 % of the map too warm for snow), realistic surround mask generated
+  surround depth test: gfx\FX\surroundmap.shader — patched default DepthStencilState, Effect surroundmap, Effect surroundmapLowSpec
+  soft province effects: gfx\FX\province_effects.fxh — patched vanilla bilinear sampler x1, vanilla point sampler x1, soft samplers after vanilla's
+  flatmap: loaded texture from 'D:\Documents\Paradox Interactive\Crusader Kings III\mod\Global_modern_map\_eu5_fork\bin\Release\net10.0-windows\assets\parchment.dds' (2048x2048)
+  flatmap: rendered illuminated flatmaps (16384x8192)
+  thumbnail: 1024x1024, 756 KB, "EU5_Modern_Borders_noshape"
+  lakes guarded: 9 px ring of source land/water kept
+  coastline: 183,652 macro-mismatch pixels reconciled (0.14%), 8K sub-pixel contours preserved
+  islets: heightmap coastline kept as authored (sink off)
+  shore distances: whole pixels only (smoothing off)
+  coastline shaping: underwater shelf plunged to deep bed over 7 px (2 px in major river channels), land coast smoothed over 9 px
+  heightmap as shipped: 0.00% exactly 0 (vanilla 40.14), 67.68% water (vanilla 47.18); land p50 33, p75 47, p90 67, p99 149, max 164 (vanilla 36 / 57 / 87 / 143 / 191); water p50 8 (vanilla 0)
+  heightmap packed: 256x128 tiles into 5720x5694 (32.6M px, vanilla 3185x4061 = 12.9M)
+  level shares: 21.34 / 4.93 / 2.84 / 2.77 / 68.12 % (vanilla 2.56 / 11.93 / 14.71 / 11.67 / 59.13)
+  32,768 tiles share 13,464 atlas slots (2.43x reuse, vanilla 1.53x); empty tile at 0,0
+  terrain error: worst 0.50 world units either way, against a 0.50u budget
+  map_data written: 21046 baronied + 1815 impassable land, 0 major river provinces, 5712 sea zones
+  terrain: ecotone reach p10/p50/p90 78/150/313 px (band 78)
+  mountain snow: Auto, amount 1, summer 5.0 to -3.0 C, precipitation influence 40 %
+  terrain: hill rock from gradient 0.68 (full at 3.44), measured over 1 px
+  terrain: detail_index + detail_intensity 16384x8192, 95 materials blended, band 78 px
+  terrain: coastal cliffs from gradient 9.9 (full at 17.6), within 14 px of water
+  terrain: colormap 16384x8192
+  terrain masks: 95 painted (4 farmland raw; fieldReach controls edge), 26 blanked (masks + masks_gen), 1 non-mask files carried
+  trees: 1,679,678 instances across 19 generators in 19 files (2,697 rejected below the waterline, 0 within 3 u of a major river, 38,235 on ground too steep for their footprint)
+  animals: 1,608 instances in 313 herds across 3 species (53 on ground open enough to gallop)
+  env_effects: 487 instances across 11 effect groups (scaled x0.90 for 16384x8192 map)
+  bridges: 0 over 0 major river course(s) from 0 candidate sites (0 off the water, 0 too narrow, 0 too wide for a span, 0 with uneven banks, 0 too close to another; no water measured)
+  city scatter: 3188 pieces around 1465 holdings (1011 mena, 658 western, 306 iberian, 289 chinese, 274 persian, 228 india, 127 mediterranean, 108 se_asia, 99 japanese, 88 byzantine; 21 holdings placed fewer than rolled — cramped or steep ground)
+  map tables: 15 objects in 4 files placed at 1.778x / 1.778x vanilla's world, mesh 1.778x, dropped 50.0 below the map (props kept)
+  map table props: ce1: tucked ce1_tabletop_entity 523, ce1_tabletop_props_entity 7127 triangles; untouched: ce1_tabletop_candles_entity (140 triangles over the paper; has locators, left vanilla)
+  map table props: ep3: nothing over the paper; untouched: tabletop_props_entity (1072 triangles over the paper; has locators, left vanilla)
+  map table props: tgp: tucked tgp_tabletop_01_a_entity 1199 triangles
+  map table props: western: tucked tabletop_west_basic_props_entity 4076 triangles
+  layer fades: 4 map-table and 11 map-object thresholds moved onto this map's zoom ladder
+  holding models: vanilla size, nothing written
+  pre-history: 41 blood brothers and 65 sworn friends bound to their khans
+  pre-history: 3382 dynasties, 3395 houses (13 cadet branches), 2954 marriages, 5847 heirs/children, 18 blood feuds, 146 rivalries/quarrels, 2968 amities/friendships (remaining dynasties indifferent), 3 active wars
+  pre-history: 6 noble families seated across 1 bureaucratic government(s)
+  pre-history: 4358 kin who never ruled (3230 alive at the start)
+  adventurers: 12 camp leaders across the bookmarks (outside simulation)
+  forged weapons (composed): 236 recoloured, 1.99 materials mean, 40 single-colour
+  composed weapons: 59 mask(s) shared across 4 bands, 177 duplicate(s) removed
+  forged weapons: shipped 6 non-vanilla texture(s) - cc_executioner_sword_01_diffuse.dds, cc_executioner_sword_01_normal.dds, cc_executioner_sword_01_properties.dds, ext_zweihander_01_diffuse.dds, ext_zweihander_01_normal.dds, ext_zweihander_01_properties.dds
+  composed weapons: 891 pairings from 119 shared meshes across 5 kind(s)
+  artifacts generated: 1772 procedural items across 1566 rulers (1235 common, 420 masterwork, 84 famed, 33 illustrious)
+  legendary artifacts generated:
+    'The Raissamu Point' (MartialRelics) -> Holder: Rawa of Bamaogo (Primary Title: c_gen_bamaogo, Character: gen_char_62, 3 history entries)
+    'The Forgotten Codex of Sandombua' (SacredScriptures) -> Holder: Kiguisiya of Sandombua (Primary Title: d_gen_sandombua, Character: gen_char_509, 3 history entries)
+    'The Yekuno Se Fang' (MartialRelics) -> Holder: Mara_Takla of Javichasha (Primary Title: c_gen_javichasha_742, Character: gen_char_742, 3 history entries)
+    'The Bitter Canon' (SacredScriptures) -> Holder: Zayd of Ara-Tan (Primary Title: k_gen_ara_tan_12832, Character: gen_char_1485, 3 history entries)
+    'Motosan's Point' (MartialRelics) -> Holder: Kibuila of Ndupetyi (Primary Title: k_gen_ndupetyi_2214, Character: gen_char_2192, 3 history entries)
+    'The Gnounpo Revelation' (SacredScriptures) -> Holder: Raissa of DjegYo (Primary Title: c_gen_djegyo_2788, Character: gen_char_2788, 3 history entries)
+    'The Sleepless Psalter of Kistakumat' (SacredScriptures) -> Holder: Tlawanah of Kistakumat (Primary Title: c_gen_kistakumat_6297, Character: gen_char_6297, 3 history entries)
+    'The Nule Register' (ScholarlyWorks) -> Holder: Ilkay of Nuramal (Primary Title: c_gen_nuramal_8571, Character: gen_char_8571, 3 history entries)
+    'The Bonereaver Wreath' (SovereignJewels) -> Holder: Eldecyuk of Kalush-Man (Primary Title: k_gen_kalush_man_8471, Character: gen_char_8760, 3 history entries)
+    'The Drowned Almanac of Kalush-Man' (ScholarlyWorks) -> Holder: Eldecyuk of Kalush-Man (Primary Title: k_gen_kalush_man_8471, Character: gen_char_8760, 3 history entries)
+    'The Kindly Psalter' (SacredScriptures) -> Holder: Xin of TongLa (Primary Title: c_jingzhao, Character: gen_char_9076, 3 history entries)
+    'The Yune Guard' (MartialRelics) -> Holder: Motoyasu of Yasahide (Primary Title: c_gen_yasahide_9729, Character: gen_char_9729, 3 history entries)
+    'Emberclaw' (MartialRelics) -> Holder: Masako of Kinori (Primary Title: c_gen_kinori_10068, Character: gen_char_10068, 3 history entries)
+    'The Bitter Testament' (SacredScriptures) -> Holder: Tolui of Kolandayar (Primary Title: d_gen_kolandayar_10580, Character: gen_char_10730, 3 history entries)
+    'The Nyibbu Edge' (MartialRelics) -> Holder: Munyu of Jojusse (Primary Title: c_gen_jojusse_11975, Character: gen_char_11975, 3 history entries)
+    'The Unyielding Almanac' (ScholarlyWorks) -> Holder: Johan of Tahddin (Primary Title: d_gen_tahddin_13907, Character: gen_char_13143, 3 history entries)
+    'The Hollow Answer of Jasayma' (MartialRelics) -> Holder: Najib of Jasayma (Primary Title: c_gen_jasayma_13409, Character: gen_char_13409, 3 history entries)
+    'The Wintering Point' (MartialRelics) -> Holder: Memyl of Cheynatgyrgyn (Primary Title: d_gen_cheynatgyrgyn_14443, Character: gen_char_14430, 3 history entries)
+    'The Rytval Canon' (SacredScriptures) -> Holder: Bakatgyrgyn of Tinylgyrgyn (Primary Title: d_gen_tinylgyrgyn_14402, Character: gen_char_14582, 3 history entries)
+    'The Prthi Fang' (MartialRelics) -> Holder: Sayid_Hanif of Abir_alamba (Primary Title: c_gen_abir_alamba_15947, Character: gen_char_15947, 3 history entries)
+    'The Unyielding Treatise' (ScholarlyWorks) -> Holder: Lat of Sri_panrman (Primary Title: d_gen_sri_panrman_17862, Character: gen_char_16997, 3 history entries)
+    'The Bitter Gospel of Shannareak' (SacredScriptures) -> Holder: Darany of Shannareak (Primary Title: c_gen_shannareak_17201, Character: gen_char_17201, 3 history entries)
+    'Idingah's Mail' (MartialRelics) -> Holder: Timbang_Paseban of Patah_padung (Primary Title: c_gen_patah_padung_17836, Character: gen_char_17836, 3 history entries)
+    'The Nameless Mace' (MartialRelics) -> Holder: Ratna of Angga (Primary Title: c_gen_angga_18041, Character: gen_char_18041, 3 history entries)
+    'The Unbroken Edge of Qaya' (MartialRelics) -> Holder: Zamir of Qaya (Primary Title: c_gen_qaya_20711, Character: gen_char_20711, 3 history entries)
+    'The First Psalter' (SacredScriptures) -> Holder: James of AnnisYurt (Primary Title: c_gen_annisyurt_21220, Character: gen_char_21220, 3 history entries)
+    'The Crowned Revelation' (SacredScriptures) -> Holder: William of AntoMi (Primary Title: c_gen_antomi_21310, Character: gen_char_21310, 3 history entries)
+    'The Answer of Fury' (MartialRelics) -> Holder: William of AntoMi (Primary Title: c_gen_antomi_21310, Character: gen_char_21310, 3 history entries)
+    'Jolas's Edge' (MartialRelics) -> Holder: Johan of Lonia (Primary Title: c_gen_lonia_21377, Character: gen_char_21377, 3 history entries)
+    'Ruth's Edge' (MartialRelics) -> Holder: Henrik of JoyTi (Primary Title: c_gen_joyti_21775, Character: gen_char_21775, 3 history entries)
+    'The Silent Shell' (MartialRelics) -> Holder: Ithel of JodeRö (Primary Title: d_gen_jodero_22006, Character: gen_char_22011, 3 history entries)
+    'The Last Point' (MartialRelics) -> Holder: Emmerich of Boletnius (Primary Title: c_gen_boletnius_22740, Character: gen_char_22740, 3 history entries)
+    'Wata's Survey' (ScholarlyWorks) -> Holder: Warip of FatNi (Primary Title: c_gen_fatni_25324, Character: gen_char_25324, 3 history entries)
+  composed weapons: gen_hero_sword_00 <- cc_executioner_sword_01 on fp2_iberian_muslim_sword_01_a (masterwork)
+  composed weapons: gen_hero_sword_01 <- cc_executioner_sword_01 on prop_afr_marshal_sword_01 (masterwork)
+  composed weapons: gen_hero_sword_02 <- cc_executioner_sword_01 on prop_ccp5_french_sword_02 (masterwork)
+  composed weapons: gen_hero_axe_03 <- ep1_african_axe_01_a on ep1_steppe_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_04 <- ep1_african_axe_01_a on ep1_western_axe_01_a (masterwork)
+  composed weapons: gen_hero_mace_05 <- ep1_african_mace_01_a on ep1_western_hammer_01_a (masterwork)
+  composed weapons: gen_hero_mace_06 <- ep1_african_mace_01_a on ep1_western_mace_01_a (masterwork)
+  composed weapons: gen_hero_mace_07 <- ep1_african_mace_01_a on ep2_northern_mace_01_a (masterwork)
+  composed weapons: gen_hero_spear_08 <- ep1_african_spear_01_a on ep2_boar_spear_01_b (masterwork)
+  composed weapons: gen_hero_spear_09 <- ep1_african_spear_01_a on ep2_lance_01_a (masterwork)
+  composed weapons: gen_hero_mace_10 <- ep1_byzantine_mace_01_a on ep1_western_hammer_01_a (masterwork)
+  composed weapons: gen_hero_mace_11 <- ep1_byzantine_mace_01_a on ep1_western_mace_01_a (masterwork)
+  composed weapons: gen_hero_sword_12 <- ep1_byzantine_sword_01_a on tgp_sword_of_goujian_01_a (illustrious)
+  composed weapons: gen_hero_axe_13 <- ep1_indian_axe_01_a on ep1_northern_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_14 <- ep1_indian_axe_01_a on ep1_steppe_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_15 <- ep1_indian_axe_01_a on ep1_western_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_16 <- ep1_indian_axe_01_a on tgp_chinese_axe_01_a (famed)
+  composed weapons: gen_hero_dagger_17 <- ep1_indian_dagger_01_a on prop_afr_spymaster_dagger_01 (masterwork)
+  composed weapons: gen_hero_dagger_18 <- ep1_indian_dagger_01_a on prop_western_dagger_01 (masterwork)
+  composed weapons: gen_hero_dagger_19 <- ep1_indian_dagger_01_a on tgp_chinese_dagger_01_a (masterwork)
+  composed weapons: gen_hero_spear_20 <- ep1_indian_spear_01_a on ep2_boar_spear_01_a (masterwork)
+  composed weapons: gen_hero_spear_21 <- ep1_indian_spear_01_a on ep2_boar_spear_01_b (masterwork)
+  composed weapons: gen_hero_spear_22 <- ep1_indian_spear_01_a on ep2_lance_01_a (masterwork)
+  composed weapons: gen_hero_axe_23 <- ep1_mediterranean_axe_01_a on ep1_northern_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_24 <- ep1_mediterranean_axe_01_a on ep1_steppe_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_25 <- ep1_mediterranean_axe_01_a on ep1_western_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_26 <- ep1_mena_axe_01_a on ep1_northern_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_27 <- ep1_mena_axe_01_a on ep1_steppe_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_28 <- ep1_mena_axe_01_a on ep1_western_axe_01_a (masterwork)
+  composed weapons: gen_hero_dagger_29 <- ep1_mena_dagger_01_a on prop_western_dagger_01 (masterwork)
+  composed weapons: gen_hero_dagger_30 <- ep1_mena_dagger_01_a on tgp_chinese_dagger_01_a (masterwork)
+  composed weapons: gen_hero_mace_31 <- ep1_mena_hammer_01_a on ep1_western_hammer_01_a (masterwork)
+  composed weapons: gen_hero_mace_32 <- ep1_mena_hammer_01_a on ep1_western_mace_01_a (masterwork)
+  composed weapons: gen_hero_mace_33 <- ep1_mena_hammer_01_a on ep2_northern_mace_01_a (masterwork)
+  composed weapons: gen_hero_mace_34 <- ep1_mena_hammer_01_a on ep2_northern_mace_01_b (famed)
+  composed weapons: gen_hero_mace_35 <- ep1_mena_mace_01_a on ep1_western_hammer_01_a (masterwork)
+  composed weapons: gen_hero_mace_36 <- ep1_mena_mace_01_a on ep1_western_mace_01_a (masterwork)
+  composed weapons: gen_hero_mace_37 <- ep1_mena_mace_01_a on ep2_northern_mace_01_b (famed)
+  composed weapons: gen_hero_spear_38 <- ep1_mena_spear_01_a on ep2_boar_spear_01_a (masterwork)
+  composed weapons: gen_hero_spear_39 <- ep1_mena_spear_01_a on ep2_boar_spear_01_b (masterwork)
+  composed weapons: gen_hero_spear_40 <- ep1_mena_spear_01_a on tgp_chinese_polearm_02 (famed)
+  composed weapons: gen_hero_sword_41 <- ep1_mena_sword_01_a on prop_fp1_marshal_sword_01 (masterwork)
+  composed weapons: gen_hero_sword_42 <- ep1_mena_sword_01_a on prop_pol_royal_sword_01 (masterwork)
+  composed weapons: gen_hero_sword_43 <- ep1_mena_sword_01_a on prop_western_sword_02 (masterwork)
+  composed weapons: gen_hero_axe_44 <- ep1_northern_axe_01_a on ep1_northern_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_45 <- ep1_northern_axe_01_a on ep1_steppe_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_46 <- ep1_northern_axe_01_a on ep1_western_axe_01_a (famed)
+  composed weapons: gen_hero_axe_47 <- ep1_northern_axe_01_a on tgp_chinese_axe_01_a (illustrious)
+  composed weapons: gen_hero_sword_48 <- ep1_northern_sword_01_a on prop_fp1_marshal_sword_01 (masterwork)
+  composed weapons: gen_hero_axe_49 <- ep1_steppe_axe_01_a on ep1_northern_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_50 <- ep1_steppe_axe_01_a on ep1_steppe_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_51 <- ep1_steppe_axe_01_a on ep1_western_axe_01_a (famed)
+  composed weapons: gen_hero_mace_52 <- ep1_steppe_mace_01_a on ep1_western_hammer_01_a (masterwork)
+  composed weapons: gen_hero_mace_53 <- ep1_steppe_mace_01_a on ep1_western_mace_01_a (masterwork)
+  composed weapons: gen_hero_sword_54 <- ep1_steppe_sword_01_a on tgp_japanese_sword_01_a (famed)
+  composed weapons: gen_hero_axe_55 <- ep1_western_axe_01_a on ep1_northern_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_56 <- ep1_western_axe_01_a on ep1_steppe_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_57 <- ep1_western_axe_01_a on ep1_western_axe_01_a (famed)
+  composed weapons: gen_hero_dagger_58 <- ep1_western_dagger_01_a on prop_western_dagger_01 (masterwork)
+  composed weapons: gen_hero_dagger_59 <- ep1_western_dagger_01_a on tgp_chinese_dagger_01_a (masterwork)
+  composed weapons: gen_hero_dagger_60 <- ep1_western_dagger_01_a on tgp_japanese_dagger_01_a (famed)
+  composed weapons: gen_hero_mace_61 <- ep1_western_hammer_01_a on ep1_steppe_mace_01_a (masterwork)
+  composed weapons: gen_hero_mace_62 <- ep1_western_hammer_01_a on ep1_western_hammer_01_a (masterwork)
+  composed weapons: gen_hero_mace_63 <- ep1_western_hammer_01_a on ep1_western_mace_01_a (masterwork)
+  composed weapons: gen_hero_mace_64 <- ep1_western_hammer_01_a on ep2_northern_mace_01_b (illustrious)
+  composed weapons: gen_hero_mace_65 <- ep1_western_mace_01_a on ep1_western_hammer_01_a (masterwork)
+  composed weapons: gen_hero_mace_66 <- ep1_western_mace_01_a on ep1_western_mace_01_a (masterwork)
+  composed weapons: gen_hero_spear_67 <- ep1_western_spear_01_a on ep2_boar_spear_01_a (masterwork)
+  composed weapons: gen_hero_spear_68 <- ep1_western_spear_01_a on ep2_boar_spear_01_b (masterwork)
+  composed weapons: gen_hero_spear_69 <- ep1_western_spear_01_a on ep2_lance_01_a (masterwork)
+  composed weapons: gen_hero_spear_70 <- ep1_western_spear_01_a on tgp_chinese_polearm_02 (famed)
+  composed weapons: gen_hero_sword_71 <- ep1_western_sword_01_a on prop_ccp5_french_sword_02 (masterwork)
+  composed weapons: gen_hero_sword_72 <- ep1_western_sword_01_a on prop_western_sword_02 (masterwork)
+  composed weapons: gen_hero_sword_73 <- ep1_western_sword_02_a on fp2_iberian_muslim_sword_01_a (masterwork)
+  composed weapons: gen_hero_sword_74 <- ep1_western_sword_02_a on prop_afr_marshal_sword_01 (masterwork)
+  composed weapons: gen_hero_sword_75 <- ep1_western_sword_02_a on prop_pol_royal_sword_01 (masterwork)
+  composed weapons: gen_hero_sword_76 <- ep1_western_sword_04_a on fp2_iberian_muslim_sword_01_a (masterwork)
+  composed weapons: gen_hero_sword_77 <- ep1_western_sword_04_a on prop_afr_marshal_sword_01 (masterwork)
+  composed weapons: gen_hero_sword_78 <- ep1_western_sword_04_a on prop_western_sword_02 (masterwork)
+  composed weapons: gen_hero_spear_79 <- ep2_boar_spear_01_a on ep2_boar_spear_01_a (masterwork)
+  composed weapons: gen_hero_spear_80 <- ep2_boar_spear_01_a on ep2_boar_spear_01_b (masterwork)
+  composed weapons: gen_hero_spear_81 <- ep2_boar_spear_01_b on ep2_boar_spear_01_a (masterwork)
+  composed weapons: gen_hero_spear_82 <- ep2_boar_spear_01_b on ep2_boar_spear_01_b (masterwork)
+  composed weapons: gen_hero_spear_83 <- ep2_boar_spear_01_b on ep2_lance_01_a (famed)
+  composed weapons: gen_hero_spear_84 <- ep2_boar_spear_01_b on tgp_chinese_polearm_02 (illustrious)
+  composed weapons: gen_hero_dagger_85 <- ep2_hunting_knife_01_a on prop_western_dagger_01 (masterwork)
+  composed weapons: gen_hero_spear_86 <- ep2_lance_01_a on ep2_boar_spear_01_a (masterwork)
+  composed weapons: gen_hero_spear_87 <- ep2_lance_01_a on ep2_boar_spear_01_b (masterwork)
+  composed weapons: gen_hero_spear_88 <- ep2_lance_01_a on ep2_lance_01_a (famed)
+  composed weapons: gen_hero_mace_89 <- ep2_northern_mace_01_a on ep1_steppe_mace_01_a (masterwork)
+  composed weapons: gen_hero_mace_90 <- ep2_northern_mace_01_a on ep1_western_mace_01_a (masterwork)
+  composed weapons: gen_hero_mace_91 <- ep2_northern_mace_01_a on ep2_northern_mace_01_a (famed)
+  composed weapons: gen_hero_mace_92 <- ep2_northern_mace_01_a on ep2_northern_mace_01_b (illustrious)
+  composed weapons: gen_hero_mace_93 <- ep2_northern_mace_01_b on ep1_steppe_mace_01_a (masterwork)
+  composed weapons: gen_hero_mace_94 <- ep2_northern_mace_01_b on ep1_western_hammer_01_a (masterwork)
+  composed weapons: gen_hero_mace_95 <- ep2_northern_mace_01_b on ep1_western_mace_01_a (masterwork)
+  composed weapons: gen_hero_mace_96 <- ep2_northern_mace_01_b on ep2_northern_mace_01_b (illustrious)
+  composed weapons: gen_hero_sword_97 <- ep2_western_longsword_01_a on fp2_iberian_muslim_sword_01_a (masterwork)
+  composed weapons: gen_hero_sword_98 <- ep2_western_longsword_01_a on prop_ccp5_french_sword_02 (masterwork)
+  composed weapons: gen_hero_sword_99 <- ep2_western_longsword_01_a on prop_pol_royal_sword_01 (masterwork)
+  composed weapons: gen_hero_sword_100 <- ext_zweihander_01 on fp2_iberian_christian_sword_01_a (masterwork)
+  composed weapons: gen_hero_sword_101 <- ext_zweihander_01 on prop_ccp5_french_sword_02 (masterwork)
+  composed weapons: gen_hero_sword_102 <- ext_zweihander_01 on prop_pol_royal_sword_01 (masterwork)
+  composed weapons: gen_hero_sword_103 <- fp2_iberian_christian_sword_01_a on fp2_iberian_muslim_sword_01_a (masterwork)
+  composed weapons: gen_hero_sword_104 <- fp2_iberian_christian_sword_01_a on prop_pol_royal_sword_01 (masterwork)
+  composed weapons: gen_hero_sword_105 <- fp2_iberian_christian_sword_01_a on prop_western_sword_02 (masterwork)
+  composed weapons: gen_hero_dagger_106 <- fp2_iberian_muslim_dagger_01_a on prop_afr_spymaster_dagger_01 (masterwork)
+  composed weapons: gen_hero_dagger_107 <- fp2_iberian_muslim_dagger_01_a on prop_western_dagger_01 (masterwork)
+  composed weapons: gen_hero_sword_108 <- fp2_iberian_muslim_sword_01_a on prop_western_sword_02 (masterwork)
+  composed weapons: gen_hero_sword_109 <- fp2_iberian_muslim_sword_01_a on tgp_chinese_sword_01_a (famed)
+  composed weapons: gen_hero_sword_110 <- fp3_sassanian_sword_01_a on prop_fp1_marshal_sword_01 (masterwork)
+  composed weapons: gen_hero_sword_111 <- prop_afr_marshal_sword_01 on prop_afr_marshal_sword_01 (masterwork)
+  composed weapons: gen_hero_sword_112 <- prop_afr_marshal_sword_01 on prop_ccp5_french_sword_02 (masterwork)
+  composed weapons: gen_hero_dagger_113 <- prop_afr_spymaster_dagger_01 on prop_afr_spymaster_dagger_01 (masterwork)
+  composed weapons: gen_hero_dagger_114 <- prop_afr_spymaster_dagger_01 on prop_western_dagger_01 (masterwork)
+  composed weapons: gen_hero_dagger_115 <- prop_afr_spymaster_dagger_01 on tgp_japanese_dagger_01_a (illustrious)
+  composed weapons: gen_hero_sword_116 <- prop_fp1_marshal_sword_01 on prop_ccp5_french_sword_02 (masterwork)
+  composed weapons: gen_hero_sword_117 <- prop_fp1_marshal_sword_01 on prop_western_sword_02 (masterwork)
+  composed weapons: gen_hero_sword_118 <- prop_pol_royal_sword_01 on fp2_iberian_christian_sword_01_a (masterwork)
+  composed weapons: gen_hero_sword_119 <- prop_pol_royal_sword_01 on prop_afr_marshal_sword_01 (masterwork)
+  composed weapons: gen_hero_dagger_120 <- prop_western_dagger_01 on fp2_iberian_muslim_dagger_01_a (masterwork)
+  composed weapons: gen_hero_dagger_121 <- prop_western_dagger_01 on prop_afr_spymaster_dagger_01 (masterwork)
+  composed weapons: gen_hero_dagger_122 <- prop_western_dagger_01 on prop_western_dagger_01 (masterwork)
+  composed weapons: gen_hero_dagger_123 <- prop_western_dagger_01 on tgp_japanese_dagger_01_a (illustrious)
+  composed weapons: gen_hero_sword_124 <- prop_western_sword_02 on ext_zweihander_01 (masterwork)
+  composed weapons: gen_hero_sword_125 <- prop_western_sword_02 on fp2_iberian_christian_sword_01_a (masterwork)
+  composed weapons: gen_hero_axe_126 <- tgp_chinese_axe_01_a on ep1_northern_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_127 <- tgp_chinese_axe_01_a on ep1_steppe_axe_01_a (masterwork)
+  composed weapons: gen_hero_axe_128 <- tgp_chinese_axe_01_a on ep1_western_axe_01_a (famed)
+  composed weapons: gen_hero_axe_129 <- tgp_chinese_axe_01_a on tgp_chinese_axe_01_a (illustrious)
+  composed weapons: gen_hero_dagger_130 <- tgp_chinese_dagger_01_a on fp2_iberian_muslim_dagger_01_a (masterwork)
+  composed weapons: gen_hero_dagger_131 <- tgp_chinese_dagger_01_a on prop_afr_spymaster_dagger_01 (masterwork)
+  composed weapons: gen_hero_dagger_132 <- tgp_chinese_dagger_01_a on prop_western_dagger_01 (masterwork)
+  composed weapons: gen_hero_dagger_133 <- tgp_chinese_dagger_01_a on tgp_chinese_dagger_01_a (famed)
+  composed weapons: gen_hero_spear_134 <- tgp_chinese_polearm_02 on ep2_boar_spear_01_a (masterwork)
+  composed weapons: gen_hero_sword_135 <- tgp_chinese_sword_01_a on ext_zweihander_01 (masterwork)
+  composed weapons: gen_hero_sword_136 <- tgp_chinese_sword_01_a on tgp_japanese_ceremonial_sword_01_a (famed)
+  composed weapons: gen_hero_sword_137 <- tgp_japanese_ceremonial_sword_01_a on prop_afr_marshal_sword_01 (masterwork)
+  composed weapons: gen_hero_dagger_138 <- tgp_japanese_dagger_01_a on fp2_iberian_muslim_dagger_01_a (masterwork)
+  composed weapons: gen_hero_dagger_139 <- tgp_japanese_dagger_01_a on prop_afr_spymaster_dagger_01 (masterwork)
+  composed weapons: gen_hero_dagger_140 <- tgp_japanese_dagger_01_a on prop_western_dagger_01 (masterwork)
+  composed weapons: gen_hero_dagger_141 <- tgp_japanese_dagger_01_a on tgp_chinese_dagger_01_a (famed)
+  composed weapons: gen_hero_sword_142 <- tgp_japanese_sword_01_a on ext_zweihander_01 (masterwork)
+  composed weapons: gen_hero_sword_143 <- tgp_japanese_sword_01_a on fp2_iberian_muslim_sword_01_a (masterwork)
+  composed weapons: gen_hero_sword_144 <- tgp_japanese_sword_01_a on tgp_sword_of_goujian_01_a (illustrious)
+  composed weapons: gen_hero_sword_145 <- tgp_sword_of_goujian_01_a on prop_afr_marshal_sword_01 (masterwork)
+  composed weapons: gen_hero_sword_146 <- tgp_sword_of_goujian_01_a on prop_fp1_marshal_sword_01 (masterwork)
+  composed weapons: gen_hero_sword_147 <- tgp_sword_of_goujian_01_a on prop_pol_royal_sword_01 (masterwork)
+  forged weapons (hero): 28 recoloured, 1.93 materials mean, 9 single-colour
+  composed weapons: 28 merged and fully recoloured at famed+, 148 icon(s) at masterwork+, 743 on stock art
+    gene templates: 251 x <=200 per sex (50112 male, 50112 female accessories) - one list per template must stay under the engine's 255 weight sum
+  forged armour: 100224 look(s) over 44 garment(s), 2088 culture(s) x 6 material(s) x 4 rarit(ies), 6 icon(s)
+    f_clothes_sec_ccp5_english_war_nob_01_coa  [vanilla mask]  cover r0.58 g0.03 b0.19 a0.10  scale x0.65/0.90/1.08/0.80  lead rbag  <- ladakh_culture
+    f_clothes_sec_ccp5_french_war_nob_01  [vanilla mask]  cover r0.57 g0.22 b0.10 a0.11  scale x0.79/0.80/1.27/0.81  lead rgab  <- adhari_culture, ashalaho_culture, chehalis_culture, dine_culture, georgian_culture, hende_culture, hohokam_culture, hupe_culture, kalapuyan_culture, karachay_culture, kazani, kuccuntikka_culture, lak_culture, laz_culture, lezgin_culture, mishar, nimiipuu_culture, numu_culture, nuuchi_culture, nuwuvu_culture, palouse_culture, saleesh_culture, sinixt_culture, spokane_culture, takelma_culture, tanoan_culture, tetadeka_culture, twana_culture, wiyimpihtikka_culture, yakama_culture
+    f_clothes_sec_ccp5_french_war_nob_02_coa  [vanilla mask]  cover r0.63 g0.03 b0.21 a0.11  scale x0.64/0.90/1.05/0.65  lead rbag  <- abkhazian_culture, alsea_culture, ashshipite_culture, avar_culture, chinook_culture, circassian_culture, crimean, dargin_culture, ewksikni_culture, kaigwu_culture, kalispel_culture, keres_culture, kuhtsutuuka_culture, kusiutta_culture, lummi_culture, nakh_culture, nanwuinenan_culture, nlakapamuk_culture, nueta_culture, opata_culture, penkwitikka_culture, sahaptin_culture, sinkiuse_culture, squamish_culture, svan_culture, yapahruka_culture, yattinde_culture, zuni_culture
+    f_clothes_sec_ccp5_french_war_nob_02_low_coa  [vanilla mask]  cover r0.63 g0.03 b0.21 a0.11  scale x0.64/0.90/1.05/0.65  lead rbag  <- abazin_culture, agaideka_culture, alene_culture, astrakhani, balkar_culture, bannock_culture, beothuk_culture, haivodika_culture, hopi_culture, hualapai_culture, inde_culture, kumyk_culture, mingrelian_culture, molalla_culture, nuwuvi_culture, pima_culture, saanich_culture, sklallam_culture, tillamook_culture, tukudeka_culture, watatikka_culture
+    f_clothes_sec_dde_abbasid_war_nob_01_hi  [vanilla mask]  cover r0.39 g0.18 b0.09 a0.20  scale x0.65/0.68/1.08/0.95  lead ragb  <- nivkh_culture
+    f_clothes_sec_dde_abbasid_war_nob_01_roy  [vanilla mask]  cover r0.39 g0.18 b0.09 a0.20  scale x0.65/0.68/1.08/0.95  lead ragb  <- ainu_culture
+    f_clothes_sec_dde_hre_war_nob_01_hi  [vanilla mask]  cover r0.33 g0.38 b0.10 a0.10  scale x0.66/1.27/0.82/0.63  lead grba  <- amdowa_culture, anglo_irish, burusho, chitrali, danish, irish, norn_culture, norwegian, pamiri_culture, rma_culture, shina_culture, swedish
+    f_clothes_sec_ep2_indian_war_nob_01_hi  [vanilla mask]  cover r0.21 g0.09 b0.03 a0.22  scale x0.78/0.95/1.13/0.59  lead argb  <- abipones_culture, ache_culture, aikana_culture, ajie_culture, akwe_culture, alabama_culture, amarak_culture, ambundu, amkoe_culture, anambe_culture, ancestral_pueblo_culture, anggamudi_culture, anguthimri_culture, apalachee_culture, apiaka_culture, apyawa_culture, arua_culture, ashenika_culture, atacame_culture, atikum_culture, ava_culture, awa_brazil_culture, awa_canoeiro_culture, awaete_culture, badimaya_culture, badtjala_culture, bagua_culture, bahrani_culture, baiyungu_culture, balotipone_culture, banggarla_culture, baraba_baraba_culture, baradha_culture, bardi_culture, bare_culture, barna_culture, barunggam_culture, bashilele, baure_culture, bayali_culture, bazombo, beary, bidjara_culture, bidwell_culture, bilinara_culture, bindal_culture, biripi_culture, boe_culture, bohan_culture, boon_wurrung_culture, brahui_culture, buandig_culture, bundjalung_culture, bwende, calusa_culture, canta_culture, casma_culture, catagua_culture, cayubaba_culture, chana_culture, changde_culture, charka_culture, charrua_culture, chatot_culture, chhattisgarhi, chillque_culture, chimbus_culture, chiribaya_culture, chol_culture, cholon_culture, chu_culture, ciboney, ciguayo_culture, coahuilteco_culture, collique_culture, comecrudo_culture, coremas_culture, coweta_culture, cumanagoto_culture, cusabo_culture, dainggatti_culture, damara_culture, dangbon_culture, darumbal_culture, dharug_culture, dhofari_culture, djabuganjdji_culture, djeoromitxi_culture, djirbalngan_culture, domari_culture, doolboong_culture, drehu_culture, enawene_nawe_culture, enenlhet_culture, enepas_culture, enlhet_culture, enxet_culture, eora_culture, erzya_culture, eseejja_culture, eufaula_culture, fulnio_culture, gadubanud_culture, gamberre_culture, gan_culture, ganggalida_culture, gangulu_culture, geawegal_culture, giraiwurung_culture, giya_culture, gooniyandi_culture, guaikuru_culture, guaitaka_culture, guale_culture, guana_culture, guanahatabey, guarasugwe_culture, guaribes_culture, guarijio_culture, guasave_culture, guato_culture, guayacundo_culture, guayupe_culture, gubbi_gubbi_culture, guenoa_culture, gulidjan_culture, gumbaynggirr_culture, gunbalang_culture, gunditjmara_culture, gundungurra_culture, gunindiri_culture, gunwinggu_culture, gureng_gureng_culture, gurindji_culture, gurji, guugu_yimidhirr_culture, guwa_culture, guwahiyi_culture, guwinmal_culture, gxana_culture, haida_culture, haliti_culture, hambatus_culture, henia_culture, herero, hitchiti_culture, ho_culture, ikpeng_culture, iny_culture, issati_culture, italki, itonama_culture, jabirrjabirr_culture, jaitmatang_culture, jaminjung_culture, jardwadjali_culture, jaru_culture, jingili_culture, jukun_culture, kaantju_culture, kaapor_culture, kadjerong_culture, kaete_culture, kagwahiva_culture, kajkwakratxi_culture, kalaamaya_culture, kalanga_culture, kaliji_culture, kalkadoon_culture, kambeba_culture, kambiwa_culture, kamiare_culture, kanhgag_culture, kaninde_culture, kanisian_culture, kaqchikel_culture, karajarri_culture, karangpurru_culture, karankawa_culture, kaurna_pangkarra_culture, kawaiwete_culture, kaxarari_culture, kaxixo_culture, kayambi_culture, khond_culture, khwe_culture, kija_culture, kinja_culture, kiriri_culture, kochini, kodaga, kofan_culture, kokomini_culture, kokowarra_culture, konbudj_culture, kongo, kren_culture, kuikuro_culture, kukakma_culture, kukatj_culture, kukra_culture, kuku_yalanji_culture, kung_culture, kungarakany_culture, kunjen_culture, kura_culture, kurnai_culture, kurrama_culture, kurtjar_culture, kurukh_culture, kuthant_culture, kuuku_yau_culture, kwaza_culture, kwini_culture, kyushu_culture, lahu_culture, laklano_culture, lamalama_culture, larrakia_culture, latje_latje_culture, lenca_culture, limilngan_culture, lomari_culture, lozi_culture, lucayo, lule_culture, lumnana_culture, luthigh_culture, luvale, mache_culture, macorix_culture, makas_culture, makurap_culture, malkana_culture, malpa_culture, malto_culture, mam_culture, manoki_culture, maori_culture, mara_culture, marathi_culture, marrithiyel_culture, martuthunira_culture, matagalpa_culture, matsigenka_culture, maung_culture, maxakali_culture, mayangna_culture, mayi_culture, mbara_culture, mbunda, mbuun, mebengokre_culture, mehri_culture, meschera_culture, mingin_culture, miranha_culture, mirning_culture, miskito_culture, mixtec_culture, moksha_culture, moqoit_culture, movima_culture, moxo_culture, mudbarra_culture, mura_culture, murrinh_patha_culture, mustaarabi, mutumui_culture, muzo_culture, naayeri_culture, najdi_culture, nakara_culture, nambikwara_culture, napuruna_culture, narangga_culture, nari_nari_culture, nawu_culture, nenlhet_culture, ngadjuri_culture, ngalakan_culture, ngaliwuru_culture, ngalkbun_culture, ngandi_culture, ngandji_culture, nganyaywana_culture, ngargad_culture, ngarinman_culture, ngarinyin_culture, ngarluma_culture, ngarrindjeri_culture, ngatjumay_culture, ngoorabul_culture, ngumbarl_culture, ngunawal_culture, nguni_culture, ngurraiillam_culture, nhanta_culture, nhuwala_culture, nimanburu_culture, nomatsigenga_culture, noongar_culture, nukunu_culture, nunggubuyu_culture, nyamal_culture, nyangumarda_culture, nyawaygi_culture, nyikina_culture, oconee_culture, ofaie_culture, omaguaca_culture, omani_culture, orissan, ovimbundu, owambo_culture, pacahuara_culture, paiter_culture, palawa_culture, panara_culture, panatahuas_culture, pankara_culture, pankararu_culture, paredarerme_culture, pashash_culture, pazioca_culture, pech_culture, pegas_culture, pemon_culture, pipil_culture, pitaguary_culture, pitlaxa_culture, potiguara_culture, purduna_culture, puri_culture, purubora_culture, pyemmairrener_culture, qayfengi, quandamooka_culture, quitu_culture, rembarnga_culture, rikbaktsa_culture, romani_culture, romanyoti, sanaviron_culture, satere_mawe_culture, sauzas_culture, sawokli_culture, sephardi, shihhi_culture, soqotri_culture, taaqtam_culture, tabajara_culture, tahue_culture, tai_lu_culture, takana_culture, tamathli_culture, tamauliteco_culture, tapachultec_culture, tapajo_culture, tapiiete_culture, tarairiu_culture, tastil_culture, tatuy_culture, taxliswet_culture, teimani, telugu, tenetehara_culture, tepecan_culture, terena_culture, thalanyji_culture, tharawal_culture, timbira_culture, timbisha_culture, timucua_culture, tocobaga_culture, toltec_culture, tolupan_culture, tonga_oceania_culture, tongva_culture, tonokote_culture, toogee_culture, totorame_culture, tougoku_culture, touhoku_culture, towa_panka_culture, tremembe_culture, truka_culture, tsimanes_culture, tsonga_culture, tswana_culture, tuckabatchee_culture, tumbalala_culture, tupinamba_culture, tupiniquim_culture, turrbal_culture, txapakura_culture, uakambalelte_culture, uitoto_culture, ulwas_culture, umida_culture, umpila_culture, unggarangi_culture, uni_culture, uru_culture, uutaalnganu_culture, venda_culture, waanyi_culture, wagiman_culture, waiwai_culture, wajuru_culture, wakaya_culture, wangan_culture, wappo_culture, wardaman_culture, wargamaygan_culture, warluwarra_culture, warnindilyakwa_culture, warpe_culture, warumungu_culture, warwa_culture, wathaurong_culture, watjarri_culture, waveroo_culture, wayuu_culture, wemba_wemba_culture, wergaia_culture, wichi_culture, wik_culture, wiradjuri_culture, wirangu_culture, wiyot_culture, worimi_culture, worla_culture, wulgurukaba_culture, wunambul_culture, wunumara_culture, wurundjeri_culture, wuthathi_culture, xeta_culture, xinka_culture, xinxiang_culture, xixime_culture, xllang_culture, xoco_culture, xumani_culture, yadhaigana_culture, yagalingu_culture, yaka, yalarrnga_culture, yamasee_culture, yampara_culture, yanda_culture, yanga_culture, yangga_culture, yangman_culture, yanyuwa_culture, yaqui_culture, yarigui_culture, yidinjdji_culture, yiiji_culture, yilba_culture, yinggarda_culture, yinwum_culture, yir_yoront_culture, yirandali_culture, yitha_yitha_culture, yjxa_culture, yoli_culture, yolngu_culture, yorta_yorta_culture, yuin_culture, yuki_culture, yukpa_culture, yuracare_culture, yuri_culture, yurok_culture, yuru_culture, yuwi_culture, zoe_culture, zoque_culture
+    f_clothes_sec_ep2_mena_war_nob_01_hi  [vanilla mask]  cover r0.13 g0.22 b0.06 a0.26  scale x0.14/0.64/1.49/0.93  lead agrb  <- achomi_culture, chuukese_culture, enana_culture, kajoor_ri_majel_culture, kosrae_culture, lavongai_culture, maohi_culture, median, neapolitan, pohnpeian_culture, refaluwasch_culture, sardinian, sicilian, tuamotus_culture
+    f_clothes_sec_ep2_steppe_war_nob_01_hi  [vanilla mask]  cover r0.18 g0.02 b0.27 a0.21  scale x0.60/0.78/0.57/0.75  lead barg  <- alan_culture, aukstaitian, bashkir, besermyan, bjarmian, botos_culture, chelkans_culture, coptic_culture, cossack_culture, cunco_culture, curonian, dorset_culture, eastern_pomeranian, estonian, funj_culture, halychian_culture, ingrian, innu_culture, inuit_culture, jasz_culture, kashubian, katapas_culture, khanty_culture, kvens, kyrgyz_culture, latvian, lesser_polish, liv, mandean_culture, manekenk_culture, mansi_culture, mari_culture, mazovian, merya_culture, muscovite, naskapi_culture, nganasan_culture, nimchan_culture, nogai, novgorodian, oirat_culture, polatskian_culture, polesian_culture, prussian, pruthenian, rusyn_culture, ruthenian, ryazanian, samaritan_culture, samogitian, severian, smolenskian_culture, sudovian, tavgi_culture, telengit_culture, teleut_culture, tises_culture, tubalar_culture, udmurt, uyghur_culture, uzbek_culture, vepsian, volhynian_culture, votian, yaros_culture, yerle_qaliq_culture
+    f_clothes_sec_ep2_western_era1_war_nob_01_hi  [vanilla mask]  cover r0.13 g0.06 b0.07 a0.33  scale x0.68/0.68/1.29/0.71  lead arbg  <- ahtna_culture, akainaa_culture, balti_culture, changpa_culture, dan_ke_culture, dan_ki_culture, danezaa_culture, denesoline_culture, eyak_culture, haen_culture, haisla_culture, holsatian, hupa_culture, ket_culture, khampa_culture, ktunaxa_culture, kwakiutl_culture, lillooet_culture, lower_saxon, makah_culture, markish, nabesna_culture, nootka_culture, okanagan_culture, oowekyala_culture, selkup_culture, soyot_culture, tanaina_culture, tebbu_culture, tolowa_culture, tsimshian_culture, tuvan_culture, unalaska_culture, western_pomeranian
+    f_clothes_sec_ep2_western_era1_war_nob_02_hi  [vanilla mask]  cover r0.13 g0.06 b0.07 a0.33  scale x0.68/0.68/1.29/0.71  lead arbg  <- buryat_culture, chilcotin_culture, chugash_culture, dakelh_culture, dehcho_culture, dunezza_culture, enets_culture, frisian, gutnish, halkomelem_culture, heiltsuk_culture, inuinnait_culture, inuviluq_culture, k_omoks_culture, kaniag_culture, kaska_culture, khakas_culture, khamag_culture, komi, lushootseed_culture, matiyinini_culture, nahani_culture, nenets_culture, nongatl_culture, nuxalc_culture, ogul_culture, piikani_culture, sahtu_culture, sekani_culture, shuswap_culture, siksika_culture, sym_culture, tlicho_culture, tlingit_culture, tsatsaotine_culture, tsnungwe_culture, tsuutina_culture, wetsuweten_culture
+    f_clothes_sec_ep2_western_era2_war_nob_01_hi  [vanilla mask]  cover r0.23 g0.11 b0.06 a0.36  scale x0.61/1.36/2.63/0.83  lead argb  <- abau_culture, abitibi_culture, abun_culture, acaxee_culture, accomac_culture, acehnese_culture, achagua_culture, acolapissa_culture, adamawa_culture, adzera_culture, aekyom_culture, aeta_culture, afar_culture, agaw_culture, agob_culture, agojuda_culture, aimara_culture, ais_culture, ajan, akan, akei_culture, algerian, alor_culture, alyutor_culture, amaimon_culture, ambae_culture, ambrym_culture, amhara, amuzgo_culture, anauls_culture, anccara_culture, andalusi, andamanese_culture, andaqui_culture, anejom_culture, angevin, angoram_culture, antaifasy_culture, antaisaka_culture, antambahoaka_culture, antankarana_culture, antanosy_culture, anuak_culture, aondironon_culture, apma_culture, arandai_culture, arawak_culture, arendaronon_culture, arop_culture, arosi_culture, aru_culture, aruamu_culture, asinikawithini_culture, asmat_culture, atakapa_culture, ataronchronon_culture, atavillos_culture, atchakangouen_culture, atikamekw_culture, atka_culture, atoni_culture, atrakwaye_culture, attignawantan_culture, attigneenongnahac_culture, attu_culture, avoyel_culture, awa_culture, awad_bing_culture, awyi_culture, awyu_culture, ayamanes_culture, ayoreo_culture, bacan_culture, baga_culture, baganda_culture, baguirmi_culture, baham_culture, bahau_culture, bahnar_culture, bai_culture, baima_culture, baining_culture, baka_culture, bakele, balanta, balinese_culture, bambara, bamu_culture, banaro_culture, banda_culture, bandjabi, banggai_culture, bangi, banjar_culture, bannoni_culture, bantoid, bara_culture, barbakoan_culture, barem_culture, bariba, baruga_culture, basingui, bassa_culture, batak_culture, bauzi_culture, baxoje_culture, bayagoula_culture, bayono_culture, beami_culture, beja_culture, belauan_culture, bemba, bembe, bena_culture, bena_lwalwa, benue, berta_culture, betsileo_culture, betsimisaraka_culture, beyte_yisrael, bezanozano_culture, bhil, biak_culture, bicolano_culture, bidayuh_culture, bife_culture, bilala_culture, bima_culture, binandere_culture, bindji, bitur_culture, blaan_culture, blang_culture, bo_culture, bobo, bodewadomik_culture, boholano_culture, boiken_culture, bola_culture, bomassa_culture, bontoc_culture, boruca_culture, breton, bru_culture, bubi_culture, buginese_culture, bugkalot_culture, buka_culture, bukawa_culture, bukidnon_culture, bukiyip_culture, bullom, bulu_culture, bunak_culture, bungku_culture, burji_culture, burmese_culture, buru_culture, buruwai_culture, buton_culture, butuanon_culture, cabecar_culture, cabinda, caddo_culture, cahokia_culture, calima_culture, caquetio_culture, cara_culture, carantouan_culture, carib, castilian, catalan, catawba_culture, caxcan_culture, cebuano_culture, cemuhi_culture, chaima_culture, chakchiuma_culture, chalahgawtha_culture, cham_culture, chamoru_culture, chancay_culture, chango_culture, chanka_culture, chaoui, chaozhou_culture, cheke_holo_culture, cherokee_culture, chewa_culture, chiapanec_culture, chicha_culture, chickasaw_culture, chimu_culture, chincha_culture, chitarero_culture, chitimacha_culture, choctaw_culture, chokwe, chono_culture, chontal_culture, chorotega_culture, chorti_culture, chukchi_culture, churajon_culture, chuvan_culture, chuwi_culture, chuzhou_culture, coosa_culture, croatan_culture, cueva_culture, cuicas_culture, cuitlatec_culture, cunhua_culture, cuyonon_culture, daga_papua_culture, dagbani, dahalo_culture, dai_culture, dambro_culture, dan, danu_culture, danzhou_culture, degar_culture, derung_culture, dhaasanac_culture, dhivehi_culture, dinga, dinka_culture, doeg_culture, dogon, dompu_culture, dongjiang_culture, duau_culture, dusun_culture, dyula, eastern_abenaki_culture, eastern_amazigh, eastern_kru, edo, embera_culture, enggano_culture, erielhonan_culture, eshira, ette_ennaka_culture, ewe, fang_culture, fang_gabun, fas_papua_culture, fataluku_culture, finnish, fon, formosan_culture, french, fulao_culture, fulbe, funing_culture, fur_culture, futuna_culture, fuzhou_culture, fwai_culture, gaddang_culture, galela_culture, galician, gallo, gaozhou_culture, gatiya_pain_culture, gayo_culture, gayogohono_culture, gbari, gbaya_culture, gedeo_culture, gela_culture, gen_culture_unsettled, ghari_culture, giangan_culture, godala_culture, gogodala_culture, gola, gond, gonga_culture, gonja, gorontalo_culture, gresi_culture, guachichil_culture, guahibo_culture, guamar_culture, guancavilca_culture, guanche, guangxin_culture, guayabe_culture, guibei_culture, guinan_culture, gujarati, gula_iro_culture, gumuz_culture, guna_culture, gurage, gurma, gurunsi, gwichin_culture, gyalrong_culture, gyele_culture, hadhrami_culture, hadiya_culture, hamtai_culture, haneka_humbe, harla_culture, hassaniya, hatam_culture, hathawekela_culture, hausa, hawu_culture, haya_culture, helong_culture, hemba, hengzhou_culture, highland, hijazi_culture, hiligaynon_culture, hlai_culture, hocak_culture, honniasont_culture, huaihai_culture, huancapampa_culture, huarco_culture, huastec_culture, huayla_culture, huazhou_culture, huetar_culture, hui_muslim_culture, huichol_culture, huizhou_hakka_culture, i_kiribati_culture, ibaloi_culture, iban_culture, ibanag_culture, icelandic, idoma, ifugao_culture, igala, igbo, igneri, ijaw, ikog_culture, ikoot_culture, ilili_culture, ilnu_culture, ilocano_culture, inga_culture, ingalik_culture, inka_culture, inoka_culture, inupiaq_culture, iranun_culture, irarutu_culture, iresim_culture, irritila_culture, isnag_culture, itaukei_culture, itelmen_culture, itneg_culture, itza_culture, ivatan_culture, iwal_culture, iwur_culture, iyiniyu_culture, iyiyiyu_culture, iztachichimecah_culture, jama_coaque_culture, javanese_culture, jianghuai_culture, jiangshan_culture, jianning_culture, jiaodong_culture, jingpo_culture, jino_culture, jirajaran_culture, jixi_culture, jola, juang_culture, kabiye, kabyle, kado_culture, kadu_culture, kaeti_culture, kahokiaki_culture, kaialig_culture, kaili_culture, kakongo, kalaw_lagaw_ya_culture, kalenjin_culture, kalinga_culture, kallawaya_culture, kam_culture, kambaata_culture, kamoro_culture, kanari_culture, kandas_culture, kanembu_culture, kanienkehaka_culture, kankanaey_culture, kannadiga, kansa_culture, kanum_culture, kapampangan_culture, karapana_culture, karelian, karen_culture, karkar_culture, kasayi, kaskankaham_culture, kaskinampo_culture, kate_culture, katla_culture, kaulong_culture, kaviag_culture, kavieng_culture, kaweinag_culture, kayagar_culture, kayan_culture, kei_culture, kejia_culture, kentaientonga_culture, kenyah_culture, kerek_culture, kerewo_culture, kete, khandeshi, kharia_culture, khmer_culture, khmu_culture, khon_muang_culture, khoromboy_culture, kiche_culture, kichesipirini_culture, kilivila_culture, killaka_culture, killke_culture, kimaama_culture, kinug_culture, kispoko_culture, kissi, kitikitish_culture, kitsai_culture, kiwigapawa_culture, koasati_culture, koiali_culture, kol_papua_culture, kolla_culture, kolo_culture, kolyms_culture, kombai_culture, komo, konkani, kono_cul, korean_culture, korku_culture, koroa_culture, koryak_culture, kota_gabun, kowoj_culture, koyukon_culture, kpelle, kuba, kuiba_culture, kumalu_culture, kunama_culture, kunda, kuot_culture, kuskokwag_culture, kusu_culture, kutai_culture, kuy_culture, kuyu, kwaio_culture, kwaraae_culture, kwerba_culture, kwesten_culture, kwomtari_culture, lamaholot_culture, lamogai_culture, lampung_culture, lamtuna_culture, lao_culture, laoxiang_culture, lawa_culture, lega, leizhou_culture, lenakel_culture, leonese, lewo_culture, liaodong_culture, licanantay_culture, lio_culture, lisu_culture, luba, luchazi_culture, lugbara_culture, luhya_culture, lunda, luo_culture, lwalwa, maanyan_culture, maasai_culture, maaya_culture, maba_africa_culture, maba_culture, maden_culture, madi_culture, madurese_culture, maewo_culture, magahi, magemiut_culture, maguindanao_culture, mahafaly_culture, mahican_culture, mai_culture_culture, maia_culture, maisouna_culture, maithili_culture, maiwa_papua_culture, makasae_culture, makassarese_culture, makhuwa_culture, malakula_culture, malao_culture, malay_culture, malayali, maleku_culture, malemiut_culture, malibu_culture, mamaceqtaw_culture, mambai_culture, mamprusi, mamusi_culture, manaos_culture, mandara_culture, mandarese_culture, mandaya_culture, mandinka, mandja_culture, mangareva_culture, manggarai_culture, mangyan_culture, manjak, manjiang_culture, manobo_culture, manta_culture, manubara_culture, manus_culture, maonan_culture, marajo_culture, marind_culture, marlew_culture, marovo_culture, marwari, masalit_culture, mascouten_culture, masmuda, massachusett_culture, matlatzinca_culture, matuumbi_culture, maybrat_culture, mayo_culture, mbaka, mbala, mbay_culture, mboma, mbugu_culture, meitei_culture, mekoche_culture, melamela_culture, melanau_culture, melpa_culture, mengen_papua_culture, mentawai_culture, mephaa_culture, merina_culture, meskwaki_culture, messufa_culture, mewari, meyah_culture, mi_niah_culture, mikmaq_culture, minahasan_culture, minangkabau_culture, minnan_culture, mishmi_culture, misima_culture, missisage_culture, mitsogo, mixe_culture, mobile_culture, moi_culture, mollo_culture, mon_culture, monacan_culture, moneton_culture, mongondow_culture, monkox_culture, mono_culture, mopan_culture, moratau_culture, mori_culture, moroccan, moronene_culture, moru_culture, moskona_culture, mossi, mozabite, mu_ngava_culture, mubami_culture, muisca_culture, mulam_culture, mum_culture, muna_culture, munda_culture, munsee_culture, muong_culture, murut_culture, muscogee_culture, mushikongo, mussau_culture, muyu_culture, muyua_culture, mwotlap_culture, myaamia_culture, naasioi_culture, nahua_culture, nakanamanga_culture, namau_culture, nambu_culture, namo_me_culture, nansemond_culture, nanticoke_culture, narraganset_culture, nashi_culture, naso_culture, natchez_culture, natugu_culture, ndom_culture, ndrumbea_culture, nduke_culture, nehina_culture, nengone_culture, ngabe_culture, ngacang_culture, ngaju_culture, ngbandi_culture, nias_culture, nicarao_culture, nicobarese_culture, nidula_culture, nihithaw_culture, nipissing_culture, nisa_culture, niuachi_culture, niuean_culture, nivacle_culture, norman, norse_gael, nottoway_culture, nsenga, nsudi, nu_culture, nubian, nuer_culture, numee_culture, nunivag_culture, nupe, nushag_culture, nutabe_culture, nyamwezi_culture, nyelayu_culture, nyimang_culture, odawa_culture, ofo_culture, ojibwe_culture, olo_culture, olyuben_culture, omaha_culture, ometo_culture, omiene, omo_culture, omok_culture, ongamo_culture, onghniaahra_culture, onoid_culture, onojutta_culture, onondagega_culture, onondowaga_culture, onyotaaka_culture, orang_asli_culture, orang_laut_culture, orang_rimba_culture, orokaiva_culture, oromo_culture, osaakiiwaki_culture, osage_culture, osheaga_culture, otali_culture, otomanguean_culture, otuho_culture, ouhai_culture, paici_culture, palaung_culture, palawan_culture, palta_culture, pame_culture, pamlico_culture, pamona_culture, panche_culture, pangasinan_culture, passamaquoddy_culture, pasto_culture, patpatar_culture, peewareewa_culture, pekowi_culture, pende, pennacook_culture, penobscot_culture, pequot_culture, piankeshaw_culture, picard, pijao_culture, piscataway_culture, pochutec_culture, pocumtuck_culture, pomor, ponca_culture, popoloca_culture, poqom_culture, portuguese, powhatan_culture, puben_culture, pukamuru_culture, pume_culture, pumi_culture, punan_culture, purepecha_culture, puruha_culture, putun_culture, qanjobal_culture, qeqchi_culture, qhara_qhara_culture, qiong_culture, qiwu_culture, quapaw_culture, quasmigdo_culture, quimbaya_culture, quiripi_culture, quzhou_culture, rama_culture, rao_culture, rapa_nui_culture, rappahannock_culture, rawa_papua_culture, rejang_culture, rendille_culture, riantana_culture, romblomanon_culture, roon_culture, rotenese_culture, rotokas_culture, roviana_culture, rukwa_culture, rumu_culture, runga_culture, rutara_culture, ruvu_culture, rwanda_culture, ryukyu_culture, saa_culture, sacha_p_qulla_culture, saigoku_culture, sakalava_culture, sakao_culture, saluan_culture, sama_culture, sambal_culture, sangirese_culture, sanhaja, santal_culture, sao_culture, sapmi, sara_culture, sasak_culture, savonian, scottish, sedang_culture, sempan_culture, sena_culture, senufo, seramese_culture, serer, seru_culture, seuta_culture, she_culture, sherbro, sherpa_culture, shi_culture, shilluk_culture, shona_culture, shoromba_culture, shu_culture, shuar_culture, siar_culture, sidama_culture, sie_culture, sihanaka_culture, sikka_culture, sinaugoro_culture, singa_culture, sinhalese, sinu_culture, skarureh_culture, solongo, somali_culture, songhai, songye, soninke, sora_culture, sougb_culture, south_cushitic_culture, stadaconan_culture, suau_culture, subanon_culture, suena_culture, sui_culture, suki_culture, suku, sula_culture, sumba_culture, sumbawa_culture, sumuri_culture, sundanese_culture, surigaonon_culture, surma_culture, susu, sutagao_culture, swahili_culture, tabwa, taensa_culture, tagakaulo_culture, tagalog_culture, tagata_samoa_culture, tagbanwa_culture, tagula_culture, tahami_culture, tai_long_culture, tai_nua_culture, taino_culture, taizhou_wu_culture, talaud_culture, tallan_culture, tama_culture, tamambo_culture, tamil, tamna_culture, tanala_culture, tanana_culture, tandroy_culture, taneks_culture, tangga_culture, tani_culture, tanimbar_culture, taontaenrat_culture, taovaya_culture, tatoga_culture, tausug_culture, tavastian, tayrona_culture, tboli_culture, teco_culture, teke, tem, temne, tenda_culture, tepehuan_culture, ternate_culture, tetum_culture, thai_culture, tidore_culture, tidung_culture, tigre, tigrinya, timanae_culture, timiscaming_culture, tinputz_culture, tionontate_culture, tiou_culture, tiri_culture, tlaxcaltec_culture, toaripi_culture, tobelo_culture, togiag_culture, tojolabal_culture, tokelauan_culture, tolaki_culture, tolimec_culture, tolomako_culture, tomini_culture, tonala_culture, tonga, tongtai_culture, toquegua_culture, torajan_culture, totonac_culture, toubou_culture, tsachila_culture, tsaukambo_culture, tsimihety_culture, tsoyaha_culture, tuareg, tubai_culture, tujia_culture, tula_culture, tuluva, tumaco_culture, tumbuka_culture, tunica_culture, tunisian, tunjur_culture, tunxi_culture, turkana_culture, tutelo_culture, tuvaluan_culture, twa_culture, tzeltal_culture, tzotzil_culture, tzutujil_culture, ughele_culture, ukaragma_culture, umboi_culture, unalachtigo_culture, unalig_culture, unami_culture, uwa_culture, vadul_culture, vaghua_culture, valpei_culture, vangunu_culture, vazimba_culture, vezo_culture, vietnamese_culture, vili, wa_culture, waccamaw_culture, waima_culture, wamesa_culture, wampanoag_culture, wampar_culture, wanka_culture, wapaji_culture, wapishana_culture, warao_culture, waray_culture, wari_culture, waropen_culture, waunana_culture, waxiang_culture, wea_culture, wenrohronon_culture, weskarini_culture, western_abenaki_culture, western_kru, wetarese_culture, wipi_culture, wogamusin_culture, wolastoqiyik_culture, wolof, wu_culture, wuchuan_culture, wumbu, wuyjuyu_culture, wuzhou_culture, xaracuu_culture, xauxa_culture, xianxi_culture, xindonga, xinghua_culture, xinhui_culture, xuanzhou_culture, yandin_culture, yandyr_culture, yanesha_culture, yangjiang_culture, yao_china_culture, yao_culture, yap_culture, yapen_culture, yaqay_culture, yareba_culture, yaro_culture, yaur_culture, yawyu_culture, yazoo_culture, ychsma_culture, yei_culture, yela_culture, yelmek_culture, yemeni_culture, yombe, yongzhou_culture, yoruba, yshyr_culture, yuanga_culture, yucatec_culture, yue_wu_culture, yuehai_culture, yulin_culture, yupighyt_culture, zacatecah_culture, zafiraminia_culture, zaghawa_culture, zande_culture, zapotec_culture, zenati, zhongyuan_culture, zhuang_culture, zo_culture
+    f_clothes_sec_ep3_byzantine_era2_war_nob_01_hi  [vanilla mask]  cover r0.16 g0.06 b0.04 a0.29  scale x1.51/1.54/1.48/1.54  lead argb  <- afghan_culture, aonikenk_culture, armenian_culture, arpitan, awadhi, azeri_culture, bagheli, bagri, banjara, bengali, bhojpuri_culture, bodo_culture, bolghar_culture, braji, bundeli, chakma_culture, chutia_culture, chuvash_culture, cornish, dehlavi, dehwar_culture, deori_culture, dhundhari, dimasa_culture, english, farsi_culture, garo_culture, gilak_culture, gonaqua_culture, guaiteco_culture, gununa_kune_culture, hadza_culture, hai_om_culture, halbi, harauti, haryanvi_culture, hazara_culture, het_culture, iraqi_culture, kalimi, kamarupi, kangri, kannauji, karbi_culture, kashmiri_culture, kawesqar_culture, khas_culture, khasi_culture, khoemana_culture, khorasani_culture, khorezmian_culture, kirati_culture, koch_culture, kohistani, kumandin_culture, kurdish_culture, liang_culture, limbu_culture, lur_culture, magar_culture, malvi, mapuche_culture, mazanderani_culture, mewati, monpa_culture, n_ng_culture, naga_culture, nagpuri_culture, nama_culture, naro_culture, ngalop_culture, nimadi, northumbrian, nuristani_culture, ormur_culture, pashayi_culture, pehuenche_culture, pikumche_culture, punjabi, purun_awqa_culture, qashqai_culture, quirandi_culture, rabha_culture, rakhine_culture, salar_culture, sandawe_culture, selknam_culture, semnani_culture, shekhawati, shor_culture, shua_culture, sikkim_culture, sotho_culture, syriac_culture, tajik_culture, talysh_culture, tamang_culture, tenesch_culture, teushen_culture, tharu_culture, tiwa_culture, tripuri_culture, tshwa_culture, tumed_culture, turkmen_culture, turkoman_culture, vedda, welsh, williche_culture, xam_culture, xegwi_culture, xhosa_culture, xoon_culture, xuukhoe_culture, yaghan_culture, zaza_culture
+    f_clothes_sec_fp2_iberian_christian_war_nob_01_hi  [vanilla mask]  cover r0.33 g0.14 b0.13 a0.15  scale x0.77/0.08/2.07/0.93  lead ragb  <- achomawi_culture, angrian, ashkenazi, brandenburgish, chumash_culture, cochimi_culture, cocopa_culture, coos_culture, czech, danube_bavarian, east_franconian, eastphalian, foothill_yokut_culture, garhwali, german_baltic, german_carpathian, german_silesian, greater_polish, guaicura_culture, gurung_culture, hanseatic, high_alemannic, kanaka_maoli_culture, karuk_culture, kawaiisu_culture, kiliwa_culture, koyoongkawi_culture, kumaoni, kumiai_culture, lorrain, low_franconian, maiduan_culture, mattole_culture, miwok_culture, modokni_culture, moldovan, monachi_culture, mongui_culture, moravian, moselle_franconian, newar_culture, nisenan_culture, nomlaki_culture, north_valley_yokut_culture, ohlone_culture, paipai_culture, patwin_culture, pericu_culture, piipaash_culture, pomo_culture, quechan_culture, rhine_alemannic, rhine_franconian, ripuarian_franconian, romansh, salinan_culture, saxon, seri_culture, shastan_culture, silesian, sorbian, south_valley_yokut_culture, southern_bavarian, swabian, tulumni_culture, tututni_culture, upper_palatine, utsang_culture, waashiw_culture, walloon, westphalian, willetpoos_culture, wintuan_culture, xalychidom_culture, yavapai_culture
+    f_clothes_sec_fp2_iberian_muslim_war_nob_01_hi  [vanilla mask]  cover r0.46 g0.19 b0.09 a0.06  scale x0.74/0.14/1.04/0.94  lead rgba  <- alawite_culture, baloch_culture, bedouin_culture, daju_culture, gelao_culture, hani_culture, hmong_culture, jilu_culture, jin_culture, levantine_culture, libyan_arabic_culture, lower_egyptian_culture, mizrahi, nuba, sindhi, sudanese_arab, upper_egyptian_culture, yi_culture
+    f_clothes_sec_fp3_iranian_war_nob_01  [vanilla mask]  cover r0.38 g0.05 b0.05 a0.05  scale x0.68/1.10/0.71/1.09  lead rabg  <- acciaioli_bank_culture, aromanian, bardi_bank_culture, bdewekhantunwan_culture, beldet_culture, bonan_culture, bosnian, cemdal_culture, chiyalik_culture, corsican, croatian, cuman_culture, dalmatian, daur_culture, emilian, evenk_culture, evesel_culture, friulian, fuglyad_culture, german_transylvanian, haaninin_culture, haixi_culture, hinonoeino_culture, hiraaca_culture, hungarian, hurga_culture, innini_culture, istroromanian, ithanktunwan_culture, ithanktunwanna_culture, jurchen_culture, kantakul_culture, kharchin_culture, kindigir_culture, kondogir_culture, ladin, lahkota_culture, lalagir_culture, lamutk_culture, ligurian, lombard, mahmikiwini_culture, maltese, managir_culture, memel_culture, mongolian_culture, monguor_culture, nakawe_culture, nakoda_culture, nalyagir_culture, nanagir_culture, nyurilc_culture, nyurmgan_culture, obgints_culture, oroch_culture, oroqen_culture, peruzzi_bank_culture, piedmontese, pochegor_culture, romagnol, sahnish_culture, sarta_culture, selogon_culture, sibe_culture, silyagir_culture, sisithunwan_culture, skiri_culture, slovak, slovene, sotaeoo_culture, southern_gallo_italic, szekely_culture, transylvanian, tsetsehesahese_culture, tugochar_culture, tuscan, udege_culture, ulch_culture, vargagaits_culture, venetian, vitimske_culture, waghtochtatta_culture, wahpekhute_culture, wahpetunwan_culture, wallachian, yugur_culture
+    f_clothes_sec_mpo_mongol_war_01  [vanilla mask]  cover r0.02 g0.21 b0.41 a0.17  scale x1.19/0.49/1.31/1.29  lead bgar  <- aldan_culture, ayan_mai_culture, ilimpeya_culture, olyokma_culture, sakha_culture, sakkyryr_culture, uchami_culture
+    f_clothes_sec_tgp_chinese_war_nob_01  [vanilla mask]  cover r0.11 g0.19 b0.10 a0.18  scale x0.70/0.67/0.92/0.72  lead garb  <- aragonese, auvergnat, basque, gascon, pontic_greek_culture, saintongeais, turkish_culture, vivaro_alpine, yan_culture
+    f_clothes_sec_tgp_chinese_war_nob_02  [vanilla mask]  cover r0.18 g0.00 b0.11 a0.03  scale x0.63/0.68/0.70/0.69  lead rbag  <- berrichon, languedocien, limousin, poitevin, provencal
+    f_clothes_sec_tgp_japanese_war_nob_01  [vanilla mask]  cover r0.01 g0.01 b0.03 a0.08  scale x2.39/0.72/2.38/0.76  lead abgr  <- bulgarian, burgundian, cappadocian_greek_culture, champenais, franc_comtois, gothic_culture, greek_culture, griko_culture, pitahwarita_culture, qin_culture, sclavene, tawakoni_culture, tickanwatic_culture, tinde_culture, toboso_culture, tsawi_culture
+    f_clothes_sec_tgp_japanese_war_nob_02  [vanilla mask]  cover r0.23 g0.20 b0.15 a0.03  scale x1.80/1.11/0.70/0.65  lead rgba  <- albanian, cayas_culture, kitkehaki_culture, lepai_nde_culture, naadahende_culture, polabian, raramuri_culture, roman_culture, serbian
+    m_clothes_sec_ccp5_english_war_nob_01_low_coa  [vanilla mask]  cover r0.58 g0.03 b0.19 a0.10  scale x0.63/0.90/1.05/0.75  lead rbag  <- ladakh_culture
+    m_clothes_sec_ccp5_french_war_nob_01  [vanilla mask]  cover r0.57 g0.22 b0.10 a0.11  scale x0.76/0.76/1.13/0.78  lead rgab  <- adhari_culture, ashalaho_culture, chehalis_culture, dine_culture, georgian_culture, hende_culture, hohokam_culture, hupe_culture, kalapuyan_culture, karachay_culture, kazani, kuccuntikka_culture, lak_culture, laz_culture, lezgin_culture, mishar, nimiipuu_culture, numu_culture, nuuchi_culture, nuwuvu_culture, palouse_culture, saleesh_culture, sinixt_culture, spokane_culture, takelma_culture, tanoan_culture, tetadeka_culture, twana_culture, wiyimpihtikka_culture, yakama_culture
+    m_clothes_sec_ccp5_french_war_nob_02_coa  [vanilla mask]  cover r0.63 g0.03 b0.21 a0.11  scale x0.63/0.90/1.05/0.61  lead rbag  <- abkhazian_culture, alsea_culture, ashshipite_culture, avar_culture, chinook_culture, circassian_culture, crimean, dargin_culture, ewksikni_culture, kaigwu_culture, kalispel_culture, keres_culture, kuhtsutuuka_culture, kusiutta_culture, lummi_culture, nakh_culture, nanwuinenan_culture, nlakapamuk_culture, nueta_culture, opata_culture, penkwitikka_culture, sahaptin_culture, sinkiuse_culture, squamish_culture, svan_culture, yapahruka_culture, yattinde_culture, zuni_culture
+    m_clothes_sec_ccp5_french_war_nob_02_low_coa  [vanilla mask]  cover r0.63 g0.03 b0.21 a0.11  scale x0.63/0.90/1.05/0.61  lead rbag  <- abazin_culture, agaideka_culture, alene_culture, astrakhani, balkar_culture, bannock_culture, beothuk_culture, haivodika_culture, hopi_culture, hualapai_culture, inde_culture, kumyk_culture, mingrelian_culture, molalla_culture, nuwuvi_culture, pima_culture, saanich_culture, sklallam_culture, tillamook_culture, tukudeka_culture, watatikka_culture
+    m_clothes_sec_dde_abbasid_war_nob_01_hi  [vanilla mask]  cover r0.39 g0.18 b0.09 a0.20  scale x0.59/0.60/1.06/0.94  lead ragb  <- nivkh_culture
+    m_clothes_sec_dde_abbasid_war_nob_01_roy  [vanilla mask]  cover r0.39 g0.18 b0.09 a0.20  scale x0.59/0.60/1.06/0.94  lead ragb  <- ainu_culture
+    m_clothes_sec_dde_hre_war_nob_01_hi  [vanilla mask]  cover r0.33 g0.38 b0.10 a0.10  scale x0.61/1.17/0.77/0.58  lead grba  <- amdowa_culture, anglo_irish, burusho, chitrali, danish, irish, norn_culture, norwegian, pamiri_culture, rma_culture, shina_culture, swedish
+    m_clothes_sec_ep2_indian_war_nob_01_hi  [vanilla mask]  cover r0.21 g0.09 b0.03 a0.22  scale x0.75/0.91/1.07/0.59  lead argb  <- abipones_culture, ache_culture, aikana_culture, ajie_culture, akwe_culture, alabama_culture, amarak_culture, ambundu, amkoe_culture, anambe_culture, ancestral_pueblo_culture, anggamudi_culture, anguthimri_culture, apalachee_culture, apiaka_culture, apyawa_culture, arua_culture, ashenika_culture, atacame_culture, atikum_culture, ava_culture, awa_brazil_culture, awa_canoeiro_culture, awaete_culture, badimaya_culture, badtjala_culture, bagua_culture, bahrani_culture, baiyungu_culture, balotipone_culture, banggarla_culture, baraba_baraba_culture, baradha_culture, bardi_culture, bare_culture, barna_culture, barunggam_culture, bashilele, baure_culture, bayali_culture, bazombo, beary, bidjara_culture, bidwell_culture, bilinara_culture, bindal_culture, biripi_culture, boe_culture, bohan_culture, boon_wurrung_culture, brahui_culture, buandig_culture, bundjalung_culture, bwende, calusa_culture, canta_culture, casma_culture, catagua_culture, cayubaba_culture, chana_culture, changde_culture, charka_culture, charrua_culture, chatot_culture, chhattisgarhi, chillque_culture, chimbus_culture, chiribaya_culture, chol_culture, cholon_culture, chu_culture, ciboney, ciguayo_culture, coahuilteco_culture, collique_culture, comecrudo_culture, coremas_culture, coweta_culture, cumanagoto_culture, cusabo_culture, dainggatti_culture, damara_culture, dangbon_culture, darumbal_culture, dharug_culture, dhofari_culture, djabuganjdji_culture, djeoromitxi_culture, djirbalngan_culture, domari_culture, doolboong_culture, drehu_culture, enawene_nawe_culture, enenlhet_culture, enepas_culture, enlhet_culture, enxet_culture, eora_culture, erzya_culture, eseejja_culture, eufaula_culture, fulnio_culture, gadubanud_culture, gamberre_culture, gan_culture, ganggalida_culture, gangulu_culture, geawegal_culture, giraiwurung_culture, giya_culture, gooniyandi_culture, guaikuru_culture, guaitaka_culture, guale_culture, guana_culture, guanahatabey, guarasugwe_culture, guaribes_culture, guarijio_culture, guasave_culture, guato_culture, guayacundo_culture, guayupe_culture, gubbi_gubbi_culture, guenoa_culture, gulidjan_culture, gumbaynggirr_culture, gunbalang_culture, gunditjmara_culture, gundungurra_culture, gunindiri_culture, gunwinggu_culture, gureng_gureng_culture, gurindji_culture, gurji, guugu_yimidhirr_culture, guwa_culture, guwahiyi_culture, guwinmal_culture, gxana_culture, haida_culture, haliti_culture, hambatus_culture, henia_culture, herero, hitchiti_culture, ho_culture, ikpeng_culture, iny_culture, issati_culture, italki, itonama_culture, jabirrjabirr_culture, jaitmatang_culture, jaminjung_culture, jardwadjali_culture, jaru_culture, jingili_culture, jukun_culture, kaantju_culture, kaapor_culture, kadjerong_culture, kaete_culture, kagwahiva_culture, kajkwakratxi_culture, kalaamaya_culture, kalanga_culture, kaliji_culture, kalkadoon_culture, kambeba_culture, kambiwa_culture, kamiare_culture, kanhgag_culture, kaninde_culture, kanisian_culture, kaqchikel_culture, karajarri_culture, karangpurru_culture, karankawa_culture, kaurna_pangkarra_culture, kawaiwete_culture, kaxarari_culture, kaxixo_culture, kayambi_culture, khond_culture, khwe_culture, kija_culture, kinja_culture, kiriri_culture, kochini, kodaga, kofan_culture, kokomini_culture, kokowarra_culture, konbudj_culture, kongo, kren_culture, kuikuro_culture, kukakma_culture, kukatj_culture, kukra_culture, kuku_yalanji_culture, kung_culture, kungarakany_culture, kunjen_culture, kura_culture, kurnai_culture, kurrama_culture, kurtjar_culture, kurukh_culture, kuthant_culture, kuuku_yau_culture, kwaza_culture, kwini_culture, kyushu_culture, lahu_culture, laklano_culture, lamalama_culture, larrakia_culture, latje_latje_culture, lenca_culture, limilngan_culture, lomari_culture, lozi_culture, lucayo, lule_culture, lumnana_culture, luthigh_culture, luvale, mache_culture, macorix_culture, makas_culture, makurap_culture, malkana_culture, malpa_culture, malto_culture, mam_culture, manoki_culture, maori_culture, mara_culture, marathi_culture, marrithiyel_culture, martuthunira_culture, matagalpa_culture, matsigenka_culture, maung_culture, maxakali_culture, mayangna_culture, mayi_culture, mbara_culture, mbunda, mbuun, mebengokre_culture, mehri_culture, meschera_culture, mingin_culture, miranha_culture, mirning_culture, miskito_culture, mixtec_culture, moksha_culture, moqoit_culture, movima_culture, moxo_culture, mudbarra_culture, mura_culture, murrinh_patha_culture, mustaarabi, mutumui_culture, muzo_culture, naayeri_culture, najdi_culture, nakara_culture, nambikwara_culture, napuruna_culture, narangga_culture, nari_nari_culture, nawu_culture, nenlhet_culture, ngadjuri_culture, ngalakan_culture, ngaliwuru_culture, ngalkbun_culture, ngandi_culture, ngandji_culture, nganyaywana_culture, ngargad_culture, ngarinman_culture, ngarinyin_culture, ngarluma_culture, ngarrindjeri_culture, ngatjumay_culture, ngoorabul_culture, ngumbarl_culture, ngunawal_culture, nguni_culture, ngurraiillam_culture, nhanta_culture, nhuwala_culture, nimanburu_culture, nomatsigenga_culture, noongar_culture, nukunu_culture, nunggubuyu_culture, nyamal_culture, nyangumarda_culture, nyawaygi_culture, nyikina_culture, oconee_culture, ofaie_culture, omaguaca_culture, omani_culture, orissan, ovimbundu, owambo_culture, pacahuara_culture, paiter_culture, palawa_culture, panara_culture, panatahuas_culture, pankara_culture, pankararu_culture, paredarerme_culture, pashash_culture, pazioca_culture, pech_culture, pegas_culture, pemon_culture, pipil_culture, pitaguary_culture, pitlaxa_culture, potiguara_culture, purduna_culture, puri_culture, purubora_culture, pyemmairrener_culture, qayfengi, quandamooka_culture, quitu_culture, rembarnga_culture, rikbaktsa_culture, romani_culture, romanyoti, sanaviron_culture, satere_mawe_culture, sauzas_culture, sawokli_culture, sephardi, shihhi_culture, soqotri_culture, taaqtam_culture, tabajara_culture, tahue_culture, tai_lu_culture, takana_culture, tamathli_culture, tamauliteco_culture, tapachultec_culture, tapajo_culture, tapiiete_culture, tarairiu_culture, tastil_culture, tatuy_culture, taxliswet_culture, teimani, telugu, tenetehara_culture, tepecan_culture, terena_culture, thalanyji_culture, tharawal_culture, timbira_culture, timbisha_culture, timucua_culture, tocobaga_culture, toltec_culture, tolupan_culture, tonga_oceania_culture, tongva_culture, tonokote_culture, toogee_culture, totorame_culture, tougoku_culture, touhoku_culture, towa_panka_culture, tremembe_culture, truka_culture, tsimanes_culture, tsonga_culture, tswana_culture, tuckabatchee_culture, tumbalala_culture, tupinamba_culture, tupiniquim_culture, turrbal_culture, txapakura_culture, uakambalelte_culture, uitoto_culture, ulwas_culture, umida_culture, umpila_culture, unggarangi_culture, uni_culture, uru_culture, uutaalnganu_culture, venda_culture, waanyi_culture, wagiman_culture, waiwai_culture, wajuru_culture, wakaya_culture, wangan_culture, wappo_culture, wardaman_culture, wargamaygan_culture, warluwarra_culture, warnindilyakwa_culture, warpe_culture, warumungu_culture, warwa_culture, wathaurong_culture, watjarri_culture, waveroo_culture, wayuu_culture, wemba_wemba_culture, wergaia_culture, wichi_culture, wik_culture, wiradjuri_culture, wirangu_culture, wiyot_culture, worimi_culture, worla_culture, wulgurukaba_culture, wunambul_culture, wunumara_culture, wurundjeri_culture, wuthathi_culture, xeta_culture, xinka_culture, xinxiang_culture, xixime_culture, xllang_culture, xoco_culture, xumani_culture, yadhaigana_culture, yagalingu_culture, yaka, yalarrnga_culture, yamasee_culture, yampara_culture, yanda_culture, yanga_culture, yangga_culture, yangman_culture, yanyuwa_culture, yaqui_culture, yarigui_culture, yidinjdji_culture, yiiji_culture, yilba_culture, yinggarda_culture, yinwum_culture, yir_yoront_culture, yirandali_culture, yitha_yitha_culture, yjxa_culture, yoli_culture, yolngu_culture, yorta_yorta_culture, yuin_culture, yuki_culture, yukpa_culture, yuracare_culture, yuri_culture, yurok_culture, yuru_culture, yuwi_culture, zoe_culture, zoque_culture
+    m_clothes_sec_ep2_mena_war_nob_01_hi  [vanilla mask]  cover r0.13 g0.22 b0.06 a0.26  scale x0.13/0.59/0.98/0.81  lead agrb  <- achomi_culture, chuukese_culture, enana_culture, kajoor_ri_majel_culture, kosrae_culture, lavongai_culture, maohi_culture, median, neapolitan, pohnpeian_culture, refaluwasch_culture, sardinian, sicilian, tuamotus_culture
+    m_clothes_sec_ep2_steppe_war_nob_01_hi  [vanilla mask]  cover r0.18 g0.02 b0.27 a0.21  scale x0.56/0.75/0.54/0.71  lead barg  <- alan_culture, aukstaitian, bashkir, besermyan, bjarmian, botos_culture, chelkans_culture, coptic_culture, cossack_culture, cunco_culture, curonian, dorset_culture, eastern_pomeranian, estonian, funj_culture, halychian_culture, ingrian, innu_culture, inuit_culture, jasz_culture, kashubian, katapas_culture, khanty_culture, kvens, kyrgyz_culture, latvian, lesser_polish, liv, mandean_culture, manekenk_culture, mansi_culture, mari_culture, mazovian, merya_culture, muscovite, naskapi_culture, nganasan_culture, nimchan_culture, nogai, novgorodian, oirat_culture, polatskian_culture, polesian_culture, prussian, pruthenian, rusyn_culture, ruthenian, ryazanian, samaritan_culture, samogitian, severian, smolenskian_culture, sudovian, tavgi_culture, telengit_culture, teleut_culture, tises_culture, tubalar_culture, udmurt, uyghur_culture, uzbek_culture, vepsian, volhynian_culture, votian, yaros_culture, yerle_qaliq_culture
+    m_clothes_sec_ep2_western_era1_war_nob_01_hi  [vanilla mask]  cover r0.13 g0.06 b0.07 a0.33  scale x0.63/0.64/1.21/0.67  lead arbg  <- ahtna_culture, akainaa_culture, balti_culture, changpa_culture, dan_ke_culture, dan_ki_culture, danezaa_culture, denesoline_culture, eyak_culture, haen_culture, haisla_culture, holsatian, hupa_culture, ket_culture, khampa_culture, ktunaxa_culture, kwakiutl_culture, lillooet_culture, lower_saxon, makah_culture, markish, nabesna_culture, nootka_culture, okanagan_culture, oowekyala_culture, selkup_culture, soyot_culture, tanaina_culture, tebbu_culture, tolowa_culture, tsimshian_culture, tuvan_culture, unalaska_culture, western_pomeranian
+    m_clothes_sec_ep2_western_era1_war_nob_02_hi  [vanilla mask]  cover r0.13 g0.06 b0.07 a0.33  scale x0.63/0.64/1.21/0.67  lead arbg  <- buryat_culture, chilcotin_culture, chugash_culture, dakelh_culture, dehcho_culture, dunezza_culture, enets_culture, frisian, gutnish, halkomelem_culture, heiltsuk_culture, inuinnait_culture, inuviluq_culture, k_omoks_culture, kaniag_culture, kaska_culture, khakas_culture, khamag_culture, komi, lushootseed_culture, matiyinini_culture, nahani_culture, nenets_culture, nongatl_culture, nuxalc_culture, ogul_culture, piikani_culture, sahtu_culture, sekani_culture, shuswap_culture, siksika_culture, sym_culture, tlicho_culture, tlingit_culture, tsatsaotine_culture, tsnungwe_culture, tsuutina_culture, wetsuweten_culture
+    m_clothes_sec_ep2_western_era2_war_nob_01_hi  [vanilla mask]  cover r0.23 g0.11 b0.06 a0.36  scale x0.57/1.48/2.16/0.74  lead argb  <- abau_culture, abitibi_culture, abun_culture, acaxee_culture, accomac_culture, acehnese_culture, achagua_culture, acolapissa_culture, adamawa_culture, adzera_culture, aekyom_culture, aeta_culture, afar_culture, agaw_culture, agob_culture, agojuda_culture, aimara_culture, ais_culture, ajan, akan, akei_culture, algerian, alor_culture, alyutor_culture, amaimon_culture, ambae_culture, ambrym_culture, amhara, amuzgo_culture, anauls_culture, anccara_culture, andalusi, andamanese_culture, andaqui_culture, anejom_culture, angevin, angoram_culture, antaifasy_culture, antaisaka_culture, antambahoaka_culture, antankarana_culture, antanosy_culture, anuak_culture, aondironon_culture, apma_culture, arandai_culture, arawak_culture, arendaronon_culture, arop_culture, arosi_culture, aru_culture, aruamu_culture, asinikawithini_culture, asmat_culture, atakapa_culture, ataronchronon_culture, atavillos_culture, atchakangouen_culture, atikamekw_culture, atka_culture, atoni_culture, atrakwaye_culture, attignawantan_culture, attigneenongnahac_culture, attu_culture, avoyel_culture, awa_culture, awad_bing_culture, awyi_culture, awyu_culture, ayamanes_culture, ayoreo_culture, bacan_culture, baga_culture, baganda_culture, baguirmi_culture, baham_culture, bahau_culture, bahnar_culture, bai_culture, baima_culture, baining_culture, baka_culture, bakele, balanta, balinese_culture, bambara, bamu_culture, banaro_culture, banda_culture, bandjabi, banggai_culture, bangi, banjar_culture, bannoni_culture, bantoid, bara_culture, barbakoan_culture, barem_culture, bariba, baruga_culture, basingui, bassa_culture, batak_culture, bauzi_culture, baxoje_culture, bayagoula_culture, bayono_culture, beami_culture, beja_culture, belauan_culture, bemba, bembe, bena_culture, bena_lwalwa, benue, berta_culture, betsileo_culture, betsimisaraka_culture, beyte_yisrael, bezanozano_culture, bhil, biak_culture, bicolano_culture, bidayuh_culture, bife_culture, bilala_culture, bima_culture, binandere_culture, bindji, bitur_culture, blaan_culture, blang_culture, bo_culture, bobo, bodewadomik_culture, boholano_culture, boiken_culture, bola_culture, bomassa_culture, bontoc_culture, boruca_culture, breton, bru_culture, bubi_culture, buginese_culture, bugkalot_culture, buka_culture, bukawa_culture, bukidnon_culture, bukiyip_culture, bullom, bulu_culture, bunak_culture, bungku_culture, burji_culture, burmese_culture, buru_culture, buruwai_culture, buton_culture, butuanon_culture, cabecar_culture, cabinda, caddo_culture, cahokia_culture, calima_culture, caquetio_culture, cara_culture, carantouan_culture, carib, castilian, catalan, catawba_culture, caxcan_culture, cebuano_culture, cemuhi_culture, chaima_culture, chakchiuma_culture, chalahgawtha_culture, cham_culture, chamoru_culture, chancay_culture, chango_culture, chanka_culture, chaoui, chaozhou_culture, cheke_holo_culture, cherokee_culture, chewa_culture, chiapanec_culture, chicha_culture, chickasaw_culture, chimu_culture, chincha_culture, chitarero_culture, chitimacha_culture, choctaw_culture, chokwe, chono_culture, chontal_culture, chorotega_culture, chorti_culture, chukchi_culture, churajon_culture, chuvan_culture, chuwi_culture, chuzhou_culture, coosa_culture, croatan_culture, cueva_culture, cuicas_culture, cuitlatec_culture, cunhua_culture, cuyonon_culture, daga_papua_culture, dagbani, dahalo_culture, dai_culture, dambro_culture, dan, danu_culture, danzhou_culture, degar_culture, derung_culture, dhaasanac_culture, dhivehi_culture, dinga, dinka_culture, doeg_culture, dogon, dompu_culture, dongjiang_culture, duau_culture, dusun_culture, dyula, eastern_abenaki_culture, eastern_amazigh, eastern_kru, edo, embera_culture, enggano_culture, erielhonan_culture, eshira, ette_ennaka_culture, ewe, fang_culture, fang_gabun, fas_papua_culture, fataluku_culture, finnish, fon, formosan_culture, french, fulao_culture, fulbe, funing_culture, fur_culture, futuna_culture, fuzhou_culture, fwai_culture, gaddang_culture, galela_culture, galician, gallo, gaozhou_culture, gatiya_pain_culture, gayo_culture, gayogohono_culture, gbari, gbaya_culture, gedeo_culture, gela_culture, gen_culture_unsettled, ghari_culture, giangan_culture, godala_culture, gogodala_culture, gola, gond, gonga_culture, gonja, gorontalo_culture, gresi_culture, guachichil_culture, guahibo_culture, guamar_culture, guancavilca_culture, guanche, guangxin_culture, guayabe_culture, guibei_culture, guinan_culture, gujarati, gula_iro_culture, gumuz_culture, guna_culture, gurage, gurma, gurunsi, gwichin_culture, gyalrong_culture, gyele_culture, hadhrami_culture, hadiya_culture, hamtai_culture, haneka_humbe, harla_culture, hassaniya, hatam_culture, hathawekela_culture, hausa, hawu_culture, haya_culture, helong_culture, hemba, hengzhou_culture, highland, hijazi_culture, hiligaynon_culture, hlai_culture, hocak_culture, honniasont_culture, huaihai_culture, huancapampa_culture, huarco_culture, huastec_culture, huayla_culture, huazhou_culture, huetar_culture, hui_muslim_culture, huichol_culture, huizhou_hakka_culture, i_kiribati_culture, ibaloi_culture, iban_culture, ibanag_culture, icelandic, idoma, ifugao_culture, igala, igbo, igneri, ijaw, ikog_culture, ikoot_culture, ilili_culture, ilnu_culture, ilocano_culture, inga_culture, ingalik_culture, inka_culture, inoka_culture, inupiaq_culture, iranun_culture, irarutu_culture, iresim_culture, irritila_culture, isnag_culture, itaukei_culture, itelmen_culture, itneg_culture, itza_culture, ivatan_culture, iwal_culture, iwur_culture, iyiniyu_culture, iyiyiyu_culture, iztachichimecah_culture, jama_coaque_culture, javanese_culture, jianghuai_culture, jiangshan_culture, jianning_culture, jiaodong_culture, jingpo_culture, jino_culture, jirajaran_culture, jixi_culture, jola, juang_culture, kabiye, kabyle, kado_culture, kadu_culture, kaeti_culture, kahokiaki_culture, kaialig_culture, kaili_culture, kakongo, kalaw_lagaw_ya_culture, kalenjin_culture, kalinga_culture, kallawaya_culture, kam_culture, kambaata_culture, kamoro_culture, kanari_culture, kandas_culture, kanembu_culture, kanienkehaka_culture, kankanaey_culture, kannadiga, kansa_culture, kanum_culture, kapampangan_culture, karapana_culture, karelian, karen_culture, karkar_culture, kasayi, kaskankaham_culture, kaskinampo_culture, kate_culture, katla_culture, kaulong_culture, kaviag_culture, kavieng_culture, kaweinag_culture, kayagar_culture, kayan_culture, kei_culture, kejia_culture, kentaientonga_culture, kenyah_culture, kerek_culture, kerewo_culture, kete, khandeshi, kharia_culture, khmer_culture, khmu_culture, khon_muang_culture, khoromboy_culture, kiche_culture, kichesipirini_culture, kilivila_culture, killaka_culture, killke_culture, kimaama_culture, kinug_culture, kispoko_culture, kissi, kitikitish_culture, kitsai_culture, kiwigapawa_culture, koasati_culture, koiali_culture, kol_papua_culture, kolla_culture, kolo_culture, kolyms_culture, kombai_culture, komo, konkani, kono_cul, korean_culture, korku_culture, koroa_culture, koryak_culture, kota_gabun, kowoj_culture, koyukon_culture, kpelle, kuba, kuiba_culture, kumalu_culture, kunama_culture, kunda, kuot_culture, kuskokwag_culture, kusu_culture, kutai_culture, kuy_culture, kuyu, kwaio_culture, kwaraae_culture, kwerba_culture, kwesten_culture, kwomtari_culture, lamaholot_culture, lamogai_culture, lampung_culture, lamtuna_culture, lao_culture, laoxiang_culture, lawa_culture, lega, leizhou_culture, lenakel_culture, leonese, lewo_culture, liaodong_culture, licanantay_culture, lio_culture, lisu_culture, luba, luchazi_culture, lugbara_culture, luhya_culture, lunda, luo_culture, lwalwa, maanyan_culture, maasai_culture, maaya_culture, maba_africa_culture, maba_culture, maden_culture, madi_culture, madurese_culture, maewo_culture, magahi, magemiut_culture, maguindanao_culture, mahafaly_culture, mahican_culture, mai_culture_culture, maia_culture, maisouna_culture, maithili_culture, maiwa_papua_culture, makasae_culture, makassarese_culture, makhuwa_culture, malakula_culture, malao_culture, malay_culture, malayali, maleku_culture, malemiut_culture, malibu_culture, mamaceqtaw_culture, mambai_culture, mamprusi, mamusi_culture, manaos_culture, mandara_culture, mandarese_culture, mandaya_culture, mandinka, mandja_culture, mangareva_culture, manggarai_culture, mangyan_culture, manjak, manjiang_culture, manobo_culture, manta_culture, manubara_culture, manus_culture, maonan_culture, marajo_culture, marind_culture, marlew_culture, marovo_culture, marwari, masalit_culture, mascouten_culture, masmuda, massachusett_culture, matlatzinca_culture, matuumbi_culture, maybrat_culture, mayo_culture, mbaka, mbala, mbay_culture, mboma, mbugu_culture, meitei_culture, mekoche_culture, melamela_culture, melanau_culture, melpa_culture, mengen_papua_culture, mentawai_culture, mephaa_culture, merina_culture, meskwaki_culture, messufa_culture, mewari, meyah_culture, mi_niah_culture, mikmaq_culture, minahasan_culture, minangkabau_culture, minnan_culture, mishmi_culture, misima_culture, missisage_culture, mitsogo, mixe_culture, mobile_culture, moi_culture, mollo_culture, mon_culture, monacan_culture, moneton_culture, mongondow_culture, monkox_culture, mono_culture, mopan_culture, moratau_culture, mori_culture, moroccan, moronene_culture, moru_culture, moskona_culture, mossi, mozabite, mu_ngava_culture, mubami_culture, muisca_culture, mulam_culture, mum_culture, muna_culture, munda_culture, munsee_culture, muong_culture, murut_culture, muscogee_culture, mushikongo, mussau_culture, muyu_culture, muyua_culture, mwotlap_culture, myaamia_culture, naasioi_culture, nahua_culture, nakanamanga_culture, namau_culture, nambu_culture, namo_me_culture, nansemond_culture, nanticoke_culture, narraganset_culture, nashi_culture, naso_culture, natchez_culture, natugu_culture, ndom_culture, ndrumbea_culture, nduke_culture, nehina_culture, nengone_culture, ngabe_culture, ngacang_culture, ngaju_culture, ngbandi_culture, nias_culture, nicarao_culture, nicobarese_culture, nidula_culture, nihithaw_culture, nipissing_culture, nisa_culture, niuachi_culture, niuean_culture, nivacle_culture, norman, norse_gael, nottoway_culture, nsenga, nsudi, nu_culture, nubian, nuer_culture, numee_culture, nunivag_culture, nupe, nushag_culture, nutabe_culture, nyamwezi_culture, nyelayu_culture, nyimang_culture, odawa_culture, ofo_culture, ojibwe_culture, olo_culture, olyuben_culture, omaha_culture, ometo_culture, omiene, omo_culture, omok_culture, ongamo_culture, onghniaahra_culture, onoid_culture, onojutta_culture, onondagega_culture, onondowaga_culture, onyotaaka_culture, orang_asli_culture, orang_laut_culture, orang_rimba_culture, orokaiva_culture, oromo_culture, osaakiiwaki_culture, osage_culture, osheaga_culture, otali_culture, otomanguean_culture, otuho_culture, ouhai_culture, paici_culture, palaung_culture, palawan_culture, palta_culture, pame_culture, pamlico_culture, pamona_culture, panche_culture, pangasinan_culture, passamaquoddy_culture, pasto_culture, patpatar_culture, peewareewa_culture, pekowi_culture, pende, pennacook_culture, penobscot_culture, pequot_culture, piankeshaw_culture, picard, pijao_culture, piscataway_culture, pochutec_culture, pocumtuck_culture, pomor, ponca_culture, popoloca_culture, poqom_culture, portuguese, powhatan_culture, puben_culture, pukamuru_culture, pume_culture, pumi_culture, punan_culture, purepecha_culture, puruha_culture, putun_culture, qanjobal_culture, qeqchi_culture, qhara_qhara_culture, qiong_culture, qiwu_culture, quapaw_culture, quasmigdo_culture, quimbaya_culture, quiripi_culture, quzhou_culture, rama_culture, rao_culture, rapa_nui_culture, rappahannock_culture, rawa_papua_culture, rejang_culture, rendille_culture, riantana_culture, romblomanon_culture, roon_culture, rotenese_culture, rotokas_culture, roviana_culture, rukwa_culture, rumu_culture, runga_culture, rutara_culture, ruvu_culture, rwanda_culture, ryukyu_culture, saa_culture, sacha_p_qulla_culture, saigoku_culture, sakalava_culture, sakao_culture, saluan_culture, sama_culture, sambal_culture, sangirese_culture, sanhaja, santal_culture, sao_culture, sapmi, sara_culture, sasak_culture, savonian, scottish, sedang_culture, sempan_culture, sena_culture, senufo, seramese_culture, serer, seru_culture, seuta_culture, she_culture, sherbro, sherpa_culture, shi_culture, shilluk_culture, shona_culture, shoromba_culture, shu_culture, shuar_culture, siar_culture, sidama_culture, sie_culture, sihanaka_culture, sikka_culture, sinaugoro_culture, singa_culture, sinhalese, sinu_culture, skarureh_culture, solongo, somali_culture, songhai, songye, soninke, sora_culture, sougb_culture, south_cushitic_culture, stadaconan_culture, suau_culture, subanon_culture, suena_culture, sui_culture, suki_culture, suku, sula_culture, sumba_culture, sumbawa_culture, sumuri_culture, sundanese_culture, surigaonon_culture, surma_culture, susu, sutagao_culture, swahili_culture, tabwa, taensa_culture, tagakaulo_culture, tagalog_culture, tagata_samoa_culture, tagbanwa_culture, tagula_culture, tahami_culture, tai_long_culture, tai_nua_culture, taino_culture, taizhou_wu_culture, talaud_culture, tallan_culture, tama_culture, tamambo_culture, tamil, tamna_culture, tanala_culture, tanana_culture, tandroy_culture, taneks_culture, tangga_culture, tani_culture, tanimbar_culture, taontaenrat_culture, taovaya_culture, tatoga_culture, tausug_culture, tavastian, tayrona_culture, tboli_culture, teco_culture, teke, tem, temne, tenda_culture, tepehuan_culture, ternate_culture, tetum_culture, thai_culture, tidore_culture, tidung_culture, tigre, tigrinya, timanae_culture, timiscaming_culture, tinputz_culture, tionontate_culture, tiou_culture, tiri_culture, tlaxcaltec_culture, toaripi_culture, tobelo_culture, togiag_culture, tojolabal_culture, tokelauan_culture, tolaki_culture, tolimec_culture, tolomako_culture, tomini_culture, tonala_culture, tonga, tongtai_culture, toquegua_culture, torajan_culture, totonac_culture, toubou_culture, tsachila_culture, tsaukambo_culture, tsimihety_culture, tsoyaha_culture, tuareg, tubai_culture, tujia_culture, tula_culture, tuluva, tumaco_culture, tumbuka_culture, tunica_culture, tunisian, tunjur_culture, tunxi_culture, turkana_culture, tutelo_culture, tuvaluan_culture, twa_culture, tzeltal_culture, tzotzil_culture, tzutujil_culture, ughele_culture, ukaragma_culture, umboi_culture, unalachtigo_culture, unalig_culture, unami_culture, uwa_culture, vadul_culture, vaghua_culture, valpei_culture, vangunu_culture, vazimba_culture, vezo_culture, vietnamese_culture, vili, wa_culture, waccamaw_culture, waima_culture, wamesa_culture, wampanoag_culture, wampar_culture, wanka_culture, wapaji_culture, wapishana_culture, warao_culture, waray_culture, wari_culture, waropen_culture, waunana_culture, waxiang_culture, wea_culture, wenrohronon_culture, weskarini_culture, western_abenaki_culture, western_kru, wetarese_culture, wipi_culture, wogamusin_culture, wolastoqiyik_culture, wolof, wu_culture, wuchuan_culture, wumbu, wuyjuyu_culture, wuzhou_culture, xaracuu_culture, xauxa_culture, xianxi_culture, xindonga, xinghua_culture, xinhui_culture, xuanzhou_culture, yandin_culture, yandyr_culture, yanesha_culture, yangjiang_culture, yao_china_culture, yao_culture, yap_culture, yapen_culture, yaqay_culture, yareba_culture, yaro_culture, yaur_culture, yawyu_culture, yazoo_culture, ychsma_culture, yei_culture, yela_culture, yelmek_culture, yemeni_culture, yombe, yongzhou_culture, yoruba, yshyr_culture, yuanga_culture, yucatec_culture, yue_wu_culture, yuehai_culture, yulin_culture, yupighyt_culture, zacatecah_culture, zafiraminia_culture, zaghawa_culture, zande_culture, zapotec_culture, zenati, zhongyuan_culture, zhuang_culture, zo_culture
+    m_clothes_sec_ep3_byzantine_era2_war_nob_01_hi  [vanilla mask]  cover r0.16 g0.04 b0.06 a0.29  scale x1.45/1.40/1.26/1.45  lead arbg  <- afghan_culture, aonikenk_culture, armenian_culture, arpitan, awadhi, azeri_culture, bagheli, bagri, banjara, bengali, bhojpuri_culture, bodo_culture, bolghar_culture, braji, bundeli, chakma_culture, chutia_culture, chuvash_culture, cornish, dehlavi, dehwar_culture, deori_culture, dhundhari, dimasa_culture, english, farsi_culture, garo_culture, gilak_culture, gonaqua_culture, guaiteco_culture, gununa_kune_culture, hadza_culture, hai_om_culture, halbi, harauti, haryanvi_culture, hazara_culture, het_culture, iraqi_culture, kalimi, kamarupi, kangri, kannauji, karbi_culture, kashmiri_culture, kawesqar_culture, khas_culture, khasi_culture, khoemana_culture, khorasani_culture, khorezmian_culture, kirati_culture, koch_culture, kohistani, kumandin_culture, kurdish_culture, liang_culture, limbu_culture, lur_culture, magar_culture, malvi, mapuche_culture, mazanderani_culture, mewati, monpa_culture, n_ng_culture, naga_culture, nagpuri_culture, nama_culture, naro_culture, ngalop_culture, nimadi, northumbrian, nuristani_culture, ormur_culture, pashayi_culture, pehuenche_culture, pikumche_culture, punjabi, purun_awqa_culture, qashqai_culture, quirandi_culture, rabha_culture, rakhine_culture, salar_culture, sandawe_culture, selknam_culture, semnani_culture, shekhawati, shor_culture, shua_culture, sikkim_culture, sotho_culture, syriac_culture, tajik_culture, talysh_culture, tamang_culture, tenesch_culture, teushen_culture, tharu_culture, tiwa_culture, tripuri_culture, tshwa_culture, tumed_culture, turkmen_culture, turkoman_culture, vedda, welsh, williche_culture, xam_culture, xegwi_culture, xhosa_culture, xoon_culture, xuukhoe_culture, yaghan_culture, zaza_culture
+    m_clothes_sec_fp2_iberian_christian_war_nob_01_hi  [vanilla mask]  cover r0.27 g0.15 b0.11 a0.11  scale x0.56/0.95/1.95/0.94  lead rgab  <- achomawi_culture, angrian, ashkenazi, brandenburgish, chumash_culture, cochimi_culture, cocopa_culture, coos_culture, czech, danube_bavarian, east_franconian, eastphalian, foothill_yokut_culture, garhwali, german_baltic, german_carpathian, german_silesian, greater_polish, guaicura_culture, gurung_culture, hanseatic, high_alemannic, kanaka_maoli_culture, karuk_culture, kawaiisu_culture, kiliwa_culture, koyoongkawi_culture, kumaoni, kumiai_culture, lorrain, low_franconian, maiduan_culture, mattole_culture, miwok_culture, modokni_culture, moldovan, monachi_culture, mongui_culture, moravian, moselle_franconian, newar_culture, nisenan_culture, nomlaki_culture, north_valley_yokut_culture, ohlone_culture, paipai_culture, patwin_culture, pericu_culture, piipaash_culture, pomo_culture, quechan_culture, rhine_alemannic, rhine_franconian, ripuarian_franconian, romansh, salinan_culture, saxon, seri_culture, shastan_culture, silesian, sorbian, south_valley_yokut_culture, southern_bavarian, swabian, tulumni_culture, tututni_culture, upper_palatine, utsang_culture, waashiw_culture, walloon, westphalian, willetpoos_culture, wintuan_culture, xalychidom_culture, yavapai_culture
+    m_clothes_sec_fp2_iberian_muslim_war_nob_01_hi  [vanilla mask]  cover r0.37 g0.13 b0.15 a0.13  scale x0.63/0.34/0.84/0.79  lead rbga  <- alawite_culture, baloch_culture, bedouin_culture, daju_culture, gelao_culture, hani_culture, hmong_culture, jilu_culture, jin_culture, levantine_culture, libyan_arabic_culture, lower_egyptian_culture, mizrahi, nuba, sindhi, sudanese_arab, upper_egyptian_culture, yi_culture
+    m_clothes_sec_fp3_iranian_war_nob_01  [vanilla mask]  cover r0.38 g0.05 b0.05 a0.05  scale x0.61/0.96/0.61/0.97  lead rabg  <- acciaioli_bank_culture, aromanian, bardi_bank_culture, bdewekhantunwan_culture, beldet_culture, bonan_culture, bosnian, cemdal_culture, chiyalik_culture, corsican, croatian, cuman_culture, dalmatian, daur_culture, emilian, evenk_culture, evesel_culture, friulian, fuglyad_culture, german_transylvanian, haaninin_culture, haixi_culture, hinonoeino_culture, hiraaca_culture, hungarian, hurga_culture, innini_culture, istroromanian, ithanktunwan_culture, ithanktunwanna_culture, jurchen_culture, kantakul_culture, kharchin_culture, kindigir_culture, kondogir_culture, ladin, lahkota_culture, lalagir_culture, lamutk_culture, ligurian, lombard, mahmikiwini_culture, maltese, managir_culture, memel_culture, mongolian_culture, monguor_culture, nakawe_culture, nakoda_culture, nalyagir_culture, nanagir_culture, nyurilc_culture, nyurmgan_culture, obgints_culture, oroch_culture, oroqen_culture, peruzzi_bank_culture, piedmontese, pochegor_culture, romagnol, sahnish_culture, sarta_culture, selogon_culture, sibe_culture, silyagir_culture, sisithunwan_culture, skiri_culture, slovak, slovene, sotaeoo_culture, southern_gallo_italic, szekely_culture, transylvanian, tsetsehesahese_culture, tugochar_culture, tuscan, udege_culture, ulch_culture, vargagaits_culture, venetian, vitimske_culture, waghtochtatta_culture, wahpekhute_culture, wahpetunwan_culture, wallachian, yugur_culture
+    m_clothes_sec_mpo_mongol_war_01  [vanilla mask]  cover r0.02 g0.21 b0.41 a0.17  scale x1.16/0.49/1.30/1.28  lead bgar  <- aldan_culture, ayan_mai_culture, ilimpeya_culture, olyokma_culture, sakha_culture, sakkyryr_culture, uchami_culture
+    m_clothes_sec_tgp_chinese_war_nob_01  [vanilla mask]  cover r0.11 g0.19 b0.10 a0.18  scale x0.69/0.68/0.91/0.70  lead garb  <- aragonese, auvergnat, basque, gascon, pontic_greek_culture, saintongeais, turkish_culture, vivaro_alpine, yan_culture
+    m_clothes_sec_tgp_chinese_war_nob_02  [vanilla mask]  cover r0.18 g0.00 b0.11 a0.03  scale x0.60/0.63/0.66/0.65  lead rbag  <- berrichon, languedocien, limousin, poitevin, provencal
+    m_clothes_sec_tgp_japanese_war_nob_01  [vanilla mask]  cover r0.01 g0.01 b0.03 a0.08  scale x2.22/0.68/2.21/0.70  lead abgr  <- bulgarian, burgundian, cappadocian_greek_culture, champenais, franc_comtois, gothic_culture, greek_culture, griko_culture, pitahwarita_culture, qin_culture, sclavene, tawakoni_culture, tickanwatic_culture, tinde_culture, toboso_culture, tsawi_culture
+    m_clothes_sec_tgp_japanese_war_nob_02  [vanilla mask]  cover r0.23 g0.20 b0.15 a0.03  scale x1.69/1.09/0.65/0.65  lead rgba  <- albanian, cayas_culture, kitkehaki_culture, lepai_nde_culture, naadahende_culture, polabian, raramuri_culture, roman_culture, serbian
+  custom armour: custom_breastplate_01.mesh - 134 of 134 bone(s) renamed to the male portrait rig
+  custom armour: gambeson_01.mesh - 134 of 134 bone(s) renamed to the male portrait rig
+  custom armour: assembled plate01_set from 5 part(s) - plate01_legs, plate01_boots, plate01_vambrace, plate01_gloves, plate01_cuirass
+  custom armour: plate01_set.mesh - 134 of 134 bone(s) renamed to the male portrait rig
+  custom armour: assembled plate01hi_set from 5 part(s) - plate01hi_cuirass, plate01hi_legs, plate01hi_boots, plate01hi_vambrace, plate01hi_gloves
+  custom armour: plate01hi_set.mesh - 134 of 134 bone(s) renamed to the male portrait rig
+  custom armour: gambeson_01 is the base layer (tightest to the body); everything else layers over it
+  custom armour: combined gambeson_01 + plate01_set into plate01_set_over_gambeson_01, one garment in one slot
+  custom armour: plate01_set_over_gambeson_01.mesh - 0 of 134 bone(s) renamed to the male portrait rig
+  custom armour: combined gambeson_01 + plate01hi_set into plate01hi_set_over_gambeson_01, one garment in one slot
+  custom armour: plate01hi_set_over_gambeson_01.mesh - 0 of 134 bone(s) renamed to the male portrait rig
+  custom armour: custom_breastplate_01.asset asked for a pattern shader but declares no portrait_accessory - dropped the pattern stage, which would otherwise sample whatever texture was left bound
+  custom armour: 6 piece(s) - custom_breastplate_01 (male, cloaks, own asset), gambeson_01 (male, clothes, own asset), plate01_set (male, cloaks), plate01hi_set (male, cloaks), plate01_set_over_gambeson_01 (male, clothes), plate01hi_set_over_gambeson_01 (male, clothes) - wearable via the pmg_wear_custom_armor flag
+    gothic: no _elbow_r mesh, mirroring gothic_elbow_l.mesh onto bn_r_elbow - author one to override
+    gothic: no _forearm_r mesh, mirroring gothic_forearm_l.mesh onto bn_r_forearm - author one to override
+    gothic: no _shoulder_r mesh, mirroring gothic_shoulder_l.mesh onto bn_r_shoulder - author one to override
+    lamellar: no _forearm_r mesh, mirroring lamellar_forearm_l.mesh onto bn_r_forearm - author one to override
+    lamellar: no _shoulder_r mesh, mirroring lamellar_shoulder_l.mesh onto bn_r_shoulder - author one to override
+    sunburst: no _elbow_r mesh, mirroring sunburst_elbow_l.mesh onto bn_r_elbow - author one to override
+    sunburst: no _forearm_r mesh, mirroring sunburst_forearm_l.mesh onto bn_r_forearm - author one to override
+    sunburst: no _shoulder_r mesh, mirroring sunburst_shoulder_l.mesh onto bn_r_shoulder - author one to override
+    gothic: repacked its own textures to gen_piece_gothic_diffuse.dds and two more
+    lamellar: repacked its own textures to gen_piece_lamellar_diffuse.dds and two more, plus a heraldry mask - coloured by the wearer's coat of arms
+    sunburst: repacked its own textures to gen_piece_sunburst_diffuse.dds and two more, plus a heraldry mask - coloured by the wearer's coat of arms
+    10 fat blend shape(s) on bs_body_fat_1 - slots chest/neck
+    21 female-fitted piece(s), sets gothic, lamellar, sunburst
+  bone pieces: 42 piece(s), 3 set(s) (gothic, lamellar, sunburst), slots chest/elbow_l/elbow_r/forearm_l/forearm_r/neck/shoulder_l/shoulder_r, 0 copied + 3 repacked texture set(s), whole on illustrious armour, 1 group(s) on famed
+    gothic: 706 culture(s)
+    lamellar: 706 culture(s)
+    sunburst: 676 culture(s)
+  forged weapons: 600 sword(s), 81 dagger(s), 64 axe(s), 82 mace(s), 64 spear(s) in the artifact pool
+    bands: 467 common, 272 masterwork, 111 famed, 41 illustrious
+  bookmark tab: The Rise of Peterda — 900 AR, An Age of Chieftains
+  bookmark bm_char_hegemon: Margaret of Peterda — medium (+3 beside them)
+  bookmark bm_char_frontier: Heng of Yinen — easy (+1 beside them)
+  bookmark bm_char_vassal: Takawira of Tutsirai — hard (+2 beside them)
+  bookmark bm_char_magnate: Siubdato of MytsaTit — hard (+3 beside them)
+  bookmark bm_char_warlord: Chegau of Nucka-Waquisht — easy (+2 beside them)
+  bookmark challenge_character_generated: Artur of Fernald — hard (+3 beside them)
+  founding saints: 354; tombs registered at campaign start in occupied holdings
+  arms: 6783 coats from 116 of vanilla's 407 heraldry templates
+  eu5 politics: 2337 countries, 8592 characters, 1279 dynasties, 3819 counties, 936 relations (stamp 7d2d9bce3de54390)
+  eu5 politics: 1279 dynasties, 8592 characters, 2570 counties seated, 718 sworn to a liege, 1220 left to the wilderness, 255 titular titles, 11 primary titles, 119 tributaries
+  chronicle: 15916 events across 4578 titles (3184 contested)
+  points of interest: 8 grand cities, 6 historical battlefields
+  title lore: 4578 titles given a chronicle, 274 of them inside a struggle; the world's past, 16 lines
+  struggle phase icons: 8 copied from vanilla
+  struggle backgrounds: 8 cut from the flatmap
+  struggle: The Quarrel of Petchick-Bukon — 26 duchies, 99 cultures, 11 faiths, tension 347, starting in Open Enmity
+  struggle: The Long Dispute of Supha — 7 duchies, 31 cultures, 4 faiths, tension 301, starting in Bloodshed
+  chronicle (runtime): 38 line templates, 12 slots per title, 30 for the world
+  portraits: 20 culture-matched portraits written to bookmark_portraits and dna_data
+  buildings: strip effect covers 486 keys
+  copied 212 static files (112 from Core, 84 from Wilderness, 7 from Ruins, 9 from Procedural; 16 excluded via ignore.txt; 6 left alone, already generated)
+  debug panel: 171 shipped event(s) listed
+  debug panel: gui\gen_debug_panel.gui — wrote 2 widget(s)
+  debug panel events: gui\gen_debug_events.gui — wrote 1 widget(s)
+  done in 573411 ms
+
+Where the time went (773.0 s total):
+  314107 ms   40.6%  history and bookmarks
+  281042 ms   36.4%    · armour forge
+  147266 ms   19.1%  terrain textures
+  120562 ms   15.6%  terrain masks
+  108442 ms   14.0%  drainage
+   50448 ms    6.5%  climate
+   46142 ms    6.0%  religion files
+   34381 ms    4.4%    · colormap smooth
+   26415 ms    3.4%  debug panel
+   24873 ms    3.2%    · detail tga encode
+   23086 ms    3.0%  map_data (heightmap, provinces, rivers)
+   22090 ms    2.9%  vanilla vocabulary
+   21078 ms    2.7%  trees
+   18801 ms    2.4%  watermark
+   18625 ms    2.4%    · heightmap
+   14874 ms    1.9%  hierarchical clergy
+   13750 ms    1.8%  cultures
+   12202 ms    1.6%  province anchors
+   11235 ms    1.5%    · reconcile + scatter
+   10048 ms    1.3%  compatibility
+    9011 ms    1.2%  flatmap
+    8458 ms    1.1%  winter
+    8396 ms    1.1%  realms
+    7682 ms    1.0%  water naming
+    7181 ms    0.9%  thumbnail
+    7039 ms    0.9%    · weapon icons
+    6980 ms    0.9%      · coastline + shaping
+    6712 ms    0.9%    · colormap encode
+    6179 ms    0.8%      · heightmap.png encode
+    5207 ms    0.7%  map graphics
+    5051 ms    0.7%    · weapon forge
+    4422 ms    0.6%  crossings
+    3997 ms    0.5%  culture files
+    3968 ms    0.5%  province elevation
+    3743 ms    0.5%        · shape coastline
+    3624 ms    0.5%    · portraits
+    3616 ms    0.5%    · provinces.png
+    3223 ms    0.4%          · coast distances
+    2818 ms    0.4%      · pack atlas
+    2603 ms    0.3%  heightmap decode
+    2315 ms    0.3%      · packed + indirection encode
+    2204 ms    0.3%    · character history
+    2177 ms    0.3%  env effects
+    1983 ms    0.3%        · match provinces
+    1929 ms    0.2%  rendered heightmap
+    1820 ms    0.2%    · bookmarks
+    1644 ms    0.2%  GUI changes
+    1570 ms    0.2%  prehistory
+    1425 ms    0.2%    · struggle art
+    1363 ms    0.2%  map table
+    1212 ms    0.2%  province terrain vote
+    1138 ms    0.1%  routes
+     925 ms    0.1%  casus belli
+     863 ms    0.1%  animals
+     777 ms    0.1%    · rivers.png
+     620 ms    0.1%  county seats
+     500 ms    0.1%  wilderness
+     474 ms    0.1%  titles, history and localisation
+     456 ms    0.1%  building strip
+     368 ms    0.0%  locators
+     344 ms    0.0%  ethnicities
+     334 ms    0.0%  chronicle
+     331 ms    0.0%        · to 16-bit
+     308 ms    0.0%  blank vanilla data
+     304 ms    0.0%  recompute province elevation
+     302 ms    0.0%  land mask
+     295 ms    0.0%  city scatter
+     294 ms    0.0%  realm capitals
+     294 ms    0.0%  static files
+     284 ms    0.0%    · strict farmland
+     269 ms    0.0%  faction rules
+     207 ms    0.0%  recompute land mask
+     190 ms    0.0%  title hierarchy
+     177 ms    0.0%  vanilla titulars
+     167 ms    0.0%  coarse world summary
+     137 ms    0.0%  governments
+     111 ms    0.0%  great steppe
+      94 ms    0.0%  faiths
+      87 ms    0.0%  title tiers
+      86 ms    0.0%    · artifacts
+      84 ms    0.0%  route files
+      80 ms    0.0%  ethnicity files
+      75 ms    0.0%  retinues
+      70 ms    0.0%  eu5 peoples
+      66 ms    0.0%  council tasks
+      65 ms    0.0%  sees
+      61 ms    0.0%  rulers
+      59 ms    0.0%  points of interest
+      58 ms    0.0%    · definition.csv
+      55 ms    0.0%  silk road
+      54 ms    0.0%  poetry interactions
+      48 ms    0.0%  struggles
+      44 ms    0.0%  frontend
+      43 ms    0.0%  vanilla identity guard
+      36 ms    0.0%  bridges
+      30 ms    0.0%  development
+      30 ms    0.0%  silk road files
+      28 ms    0.0%  world centers
+      27 ms    0.0%    · chronicle (runtime)
+      24 ms    0.0%  patron saints
+      23 ms    0.0%  terrain classification
+      23 ms    0.0%  great steppe files
+      22 ms    0.0%  men-at-arms
+      20 ms    0.0%  government overrides
+      17 ms    0.0%  chaplain titles
+      16 ms    0.0%  adventurers
+      15 ms    0.0%  wonder index
+       8 ms    0.0%  generated innovations
+       8 ms    0.0%  coronation files
+       6 ms    0.0%  race morph modifiers
+       5 ms    0.0%  wonders
+       4 ms    0.0%  gender
+       4 ms    0.0%  adjacencies
+       3 ms    0.0%  the wilds files
+       3 ms    0.0%  music pools
+       3 ms    0.0%    · artifact visuals
+       3 ms    0.0%  holding models
+       2 ms    0.0%  frontier
+       2 ms    0.0%  decisions
+       2 ms    0.0%  institutional faith mechanics
+       2 ms    0.0%  mountain passes
+       1 ms    0.0%  race head shapes
+       1 ms    0.0%  landmarks
+       1 ms    0.0%  starting retinues
+       0 ms    0.0%  azgaar hierarchy plan
+       0 ms    0.0%  native ranks
+       0 ms    0.0%  cultivation
+       0 ms    0.0%  dynastic cycle
+       0 ms    0.0%  hegemony flavour
+   79698 ms   10.3%  (unaccounted — startup, JIT, everything not phased)
