@@ -93,10 +93,17 @@ CK3 全面转换 mod：把 EU5（Europa Universalis V）的 1337 年开局政治
     koine→byzantine_rite(主礼不写)、geez→ethiopian_rite、armenian→armenian_rite。
   - 伊斯兰 `religious_school`：什叶 jafari/imamiya→imami、ismaili→ismaili、zaidi→zayidi、nizari/mustali/alevism/alawi；
     逊尼 hanafi/hanbali/maliki/shafii；ibadi→ibadi(父信仰 kharijite)。
+  - ★ **伊斯兰法理判定优先用 `sharia_law`**（`laws = { sharia_law = <X>_policy }`，纯法理学派、无教团干扰，
+    用户 2026-10-17 指出）。优先级：`sharia_law` > `religious_school`（后者混了神学派 maturidi/ashari 和苏菲
+    教团 qadiri/chishti/mevlevi，不能直接定 madhhab）。唯一冲突：TUR(maturidi→hanafi_policy)、
+    TDE(qadiri→shafii_policy)，恰好是历史事实（奥斯曼=哈乃斐、索马里=沙斐仪）。
   - 格鲁吉亚四国 GEO/IME/SME/AAI 没写礼仪语言 → georgian_rite（"看好格鲁吉亚礼就行"）。
 - **波斯尼亚 BOS → 独立信仰 `bosnian_church`**（不是东正教 rite；EU5 里 BOS 的 religion 就是 bosnian_church）。
 - **被异教徒统治找不到 rite 的县 → 相连信仰块地理传播**（province 级接壤 BFS，找最近同 religion 且已确定 rite 的县）。
   覆盖东正教（被逊尼/天主教/异教统治）+ 什叶派/伊巴德派（被逊尼统治，这是用户强调的重点）。
+- ★ **父信仰匹配铁律**：owner/国家的学派（sharia_law 或 religious_school）必须与「县/人物 的 religion」父信仰
+  一致才采用。逊尼县只认逊尼学派，什叶县只认什叶学派。否则「什叶国家统治的逊尼县」会被错定成什叶 rite
+  （曾把麦加麦地那错定成 zayidi，修好后正确落到 hanbali）。
 - **天主教伦巴第/爱尔兰/anglo_irish/AMA/toledo 特殊规则保持现状，不按国家礼仪语言**（ambrosian/insular/roman/mozarabic）。
 - **主礼不写**：byzantine_rite（orthodox 的 main_rite）不冗余写；一性论内部差异（埃塞/科普特/安条克/亚美尼亚）
   是地域性，**不靠地理传播**，按文化+黎凡特地理兜底。
@@ -105,3 +112,8 @@ CK3 全面转换 mod：把 EU5（Europa Universalis V）的 1337 年开局政治
 - ★ 地理传播的固有限制：只能找「最近的同宗教确定县」，无法保证历史分支正确（如呼罗珊被传播到里海沿岸的
   zayidi 而非历史上的 imami）。这类历史归属偏差要单独向用户披露。
 - ★ 只用 `envs/gis` venv 跑邻接/栅格脚本（numpy+PIL）；管线脚本用裸 python（无 numpy）。
+- ★ **CK3 的 faith/rite 两级结构**：`faith` 只有 **sunni / shia / kharijite**（定义在 `common/religion/faith_types/00_faith_types.txt`，
+  每块首行 `main_rite = <key>`）；四大教法学派与什叶各派都是 **rite**（定义在 `common/religion/rite_types/00_rite_types.txt`，
+  每项 `faith = <parent>`）。vanilla：`sunni→hanafi`、`shia→ismaili`、`kharijite→ibadi`。
+  **本项目已把 `shia.main_rite` 改为 `imami`**（2026-10-17，理由：1337 年十二伊玛目派已是什叶主流）；
+  该文件是 mod 里 vanilla 的全量拷贝，改它即覆盖 vanilla。sunni/kharijite 未动。
