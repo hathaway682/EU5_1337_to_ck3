@@ -1841,7 +1841,6 @@ types gen_debug_events {
 		button_tab = {
 			layoutpolicy_horizontal = expanding
 			size = { 0 31 }
-			onclick = "[GetVariableSystem.Toggle( 'gen_debug_evgrp_zz_gen_armor_custom_events' )]"
 			hbox = {
 				layoutpolicy_horizontal = expanding
 				margin = { 15 0 }
@@ -1849,7 +1848,6 @@ types gen_debug_events {
 				button_expand = {
 					size = { 22 22 }
 					alwaystransparent = yes
-					frame = "[Select_int32( GetVariableSystem.Exists( 'gen_debug_evgrp_zz_gen_armor_custom_events' ), '(int32)2', '(int32)1' )]"
 				}
 				text_single = {
 					layoutpolicy_horizontal = expanding
@@ -1869,13 +1867,9 @@ types gen_debug_events {
 			spacing = 2
 			margin_left = 24
 			margin_bottom = 6
-			visible = "[GetVariableSystem.Exists( 'gen_debug_evgrp_zz_gen_armor_custom_events' )]"
 			button_standard = {
 				size = { 360 28 }
 				margin_bottom = 2
-				text = "GEN_DEBUG_EV_gen_armor_custom_0001"
-				tooltip = "GEN_DEBUG_EV_gen_armor_custom_0001_TT"
-				onclick = "[GetScriptedGui('gen_dbg_fire_gen_armor_custom_0001').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 			}
 		}
 		button_tab = {
