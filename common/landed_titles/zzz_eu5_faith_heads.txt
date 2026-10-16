@@ -1,0 +1,82 @@
+﻿# The heads of the Christian faiths the conversion keeps: the Pope, and the four patriarchs EU5
+# seats at Constantinople, Alexandria, Sis and Mosul. Written by _fix_politics_output.py.
+#
+# The keys are vanilla's own (k_papal_state, k_orthodox, d_coptic_papacy, d_apostolic_church,
+# d_patriarchate_in_the_east) because a vanilla faith names its head of rite by key — a faith whose
+# head title nobody declares has no head at all. Each is declared in vanilla's head-of-faith shape:
+# landless, so the seat is a de jure pointer and nobody's ground, and with the heir fields the
+# engine reads to keep the office filled across a succession.
+#
+# The same keys used to be landless shims in zz_vanilla_titulars.txt, and the titular guard strips
+# a shim the moment it is held — which for a head of faith is the first day of the game. So the
+# shims and their guard entries were removed, and the real declarations moved here.
+
+k_papal_state = {
+	color = { 133 20 24 }
+	capital = c_avignonnais
+	landless = yes
+	allow_domicile = no
+	definite_form = yes
+	ruler_uses_title_name = no
+	can_use_nomadic_naming = no
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	ai_primary_priority = { add = 1000 }
+}
+
+k_orthodox = {
+	color = { 183 60 155 }
+	capital = c_constantinople
+	landless = yes
+	allow_domicile = no
+	definite_form = yes
+	ruler_uses_title_name = no
+	can_use_nomadic_naming = no
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	ai_primary_priority = { add = 1000 }
+}
+
+d_coptic_papacy = {
+	color = { 217 155 177 }
+	capital = c_alexandria
+	landless = yes
+	allow_domicile = no
+	definite_form = yes
+	ruler_uses_title_name = no
+	can_use_nomadic_naming = no
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	ai_primary_priority = { add = 1000 }
+}
+
+d_apostolic_church = {
+	color = { 200 115 167 }
+	capital = c_sis
+	landless = yes
+	allow_domicile = no
+	definite_form = yes
+	ruler_uses_title_name = no
+	can_use_nomadic_naming = no
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	ai_primary_priority = { add = 1000 }
+}
+
+d_patriarchate_in_the_east = {
+	color = { 180 137 97 }
+	capital = c_mosul
+	landless = yes
+	allow_domicile = no
+	definite_form = yes
+	ruler_uses_title_name = no
+	can_use_nomadic_naming = no
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	ai_primary_priority = { add = 1000 }
+}

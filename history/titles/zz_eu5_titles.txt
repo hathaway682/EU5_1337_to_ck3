@@ -1962,7 +1962,7 @@ k_eu5_otc = {
 	}
 }
 
-k_eu5_pap = {
+k_papal_state = {
 	1119.2.2 = {
 		holder = pap_callisto_ii
 	}
@@ -1995,6 +1995,35 @@ k_eu5_pap = {
 	}
 	1337.1.1 = {
 		government = theocracy_government
+	}
+}
+
+# The autocephalous patriarchs, each EU5's own man seated at his see: the Ecumenical Patriarch at
+# Constantinople, the Coptic Pope at Alexandria, the Armenian Catholicos at Sis. Each is the seat
+# country's own vassal, the shape vanilla gives k_orthodox: landless, so a liege is the only thing
+# that places him, and ecclesiastical_government, the one a head of faith carries. Mosul's Nestorian
+# see is left vacant — EU5 names no patriarch for it, seating one out of the clergy at runtime.
+k_orthodox = {
+	1337.1.1 = {
+		holder = byz_john_xiv_kalekas
+		liege = byz_andronikos_iii_palaiologos
+		government = ecclesiastical_government
+	}
+}
+
+d_coptic_papacy = {
+	1337.1.1 = {
+		holder = mam_benjamin_ii_alexandria
+		liege = mam_an_nasir_bahri
+		government = ecclesiastical_government
+	}
+}
+
+d_apostolic_church = {
+	1337.1.1 = {
+		holder = arm_jacob_ii_of_cilicia
+		liege = cil_leo_iv
+		government = ecclesiastical_government
 	}
 }
 
