@@ -26,7 +26,11 @@ CK3 全面转换 mod：把 EU5（Europa Universalis V）的 1337 年开局政治
 - 首府 ← `eu5_politics.json` 的 `counties[c].capital`（= CK3 `00_landed_titles.txt` 里该县**第一个**男爵领）
 - 人口 ← 原版 `main_menu/setup/start/06_pops.txt` 每个 location 内 `size =` 之和
 - 海陆 ← `map_data/definition.csv` 第 5 列前缀：`prov_*` 陆地 / `sea_*` 水域
-- **CK3 province id** 只在 `history/titles/zz_eu5_titles.txt` 的 `b_x = { province = N }`（≠ mapping 里 b_x 的 province，那是 EU5 location id）
+- **CK3 province id** 在 `common/landed_titles/00_landed_titles.txt` 的 `b_x = { province = N }`（1-21046，共 21046 个；
+  有 barony 的陆地 province）。≠ mapping.json 里 b_x 的 province（那是 EU5 location id）。
+- **province 邻接**：`Global_modern_map/eu5_export/_ck3_province_adjacency.json`（`_build_ck3_adjacency.py` 从
+  mod `map_data/provinces.png` 推，50913 对/20613 节点）。★ provinces.png 像素颜色 = `definition.csv` 的 RGB，
+  **不是** R+G*256+B*65536 编码；正确链路 = 像素 RGB →(查 definition.csv 第0列)→ CK3 province id。
 - location 持有者 ← 复刻 `export_politics.py` L574-582：遍历各国 `holds` 全部类别，按 `OWN_ORDER` 取 (rank,tag) 最小者
   （`OWN_ORDER` = own_control_core / own_core / own_control_integrated / own_integrated / own_control_conquered /
   own_conquered / control_core / control / own_control_colony / own_colony；`control*` 只用来定归属，不计国家大小）
@@ -81,3 +85,23 @@ CK3 全面转换 mod：把 EU5（Europa Universalis V）的 1337 年开局政治
 - 改成品 → 再回改脚本，使重跑结果一致。
 - 报告要给数字和文件名。
 - 备份：重大操作前备份；但既然有 git，不要无限膨胀。
+
+## rite 判定方法论（★ 2026-10-16 定稿，替代旧「按文化分」）
+- **按国家分**：人物 id 前缀 = 国家 tag 小写（`bul_chaka`→BUL；`eu5_regent_<tag>`/`eu5_rep_<tag>` 也认，tag 在第 3 段）。
+- **国家按礼仪语言/教法学派分**：
+  - 基督教 `liturgical_language`（EU5 `10_countries.txt`）：church_slavonic→slavic_rite、
+    koine→byzantine_rite(主礼不写)、geez→ethiopian_rite、armenian→armenian_rite。
+  - 伊斯兰 `religious_school`：什叶 jafari/imamiya→imami、ismaili→ismaili、zaidi→zayidi、nizari/mustali/alevism/alawi；
+    逊尼 hanafi/hanbali/maliki/shafii；ibadi→ibadi(父信仰 kharijite)。
+  - 格鲁吉亚四国 GEO/IME/SME/AAI 没写礼仪语言 → georgian_rite（"看好格鲁吉亚礼就行"）。
+- **波斯尼亚 BOS → 独立信仰 `bosnian_church`**（不是东正教 rite；EU5 里 BOS 的 religion 就是 bosnian_church）。
+- **被异教徒统治找不到 rite 的县 → 相连信仰块地理传播**（province 级接壤 BFS，找最近同 religion 且已确定 rite 的县）。
+  覆盖东正教（被逊尼/天主教/异教统治）+ 什叶派/伊巴德派（被逊尼统治，这是用户强调的重点）。
+- **天主教伦巴第/爱尔兰/anglo_irish/AMA/toledo 特殊规则保持现状，不按国家礼仪语言**（ambrosian/insular/roman/mozarabic）。
+- **主礼不写**：byzantine_rite（orthodox 的 main_rite）不冗余写；一性论内部差异（埃塞/科普特/安条克/亚美尼亚）
+  是地域性，**不靠地理传播**，按文化+黎凡特地理兜底。
+- 脚本：县层 `_apply_christian_rites.py`（东正/一性论/波斯尼亚）+ `_apply_islamic_geo_spread.py`（什叶/伊巴德地理传播）；
+  人物层 `_apply_christian_rites_chars.py`（按 id 前缀→国家，含伊斯兰人物 rite）。三个脚本都幂等 + 无变化不写。
+- ★ 地理传播的固有限制：只能找「最近的同宗教确定县」，无法保证历史分支正确（如呼罗珊被传播到里海沿岸的
+  zayidi 而非历史上的 imami）。这类历史归属偏差要单独向用户披露。
+- ★ 只用 `envs/gis` venv 跑邻接/栅格脚本（numpy+PIL）；管线脚本用裸 python（无 numpy）。

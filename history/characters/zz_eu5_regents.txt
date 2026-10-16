@@ -74,6 +74,7 @@ eu5_regent_tps = {
 	name = "Toropets Regent"
 	culture = novgorodian
 	religion = orthodox
+    rite = slavic_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -81,6 +82,7 @@ eu5_regent_sts = {
 	name = "Starodub-Siverskyi Regent"
 	culture = severian
 	religion = orthodox
+    rite = slavic_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -88,6 +90,7 @@ eu5_regent_nvs = {
 	name = "Novgorod-Siverskyi Regent"
 	culture = severian
 	religion = orthodox
+    rite = slavic_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -95,6 +98,7 @@ eu5_regent_ryl = {
 	name = "Rylsk Regent"
 	culture = severian
 	religion = orthodox
+    rite = slavic_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -102,6 +106,7 @@ eu5_regent_vyt = {
 	name = "Vyatka Regent"
 	culture = novgorodian
 	religion = orthodox
+    rite = slavic_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -221,6 +226,7 @@ eu5_regent_bsh = {
 	name = "Bashkir Regent"
 	culture = bashkir
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -242,6 +248,7 @@ eu5_regent_mab = {
 	name = "Ma'bar Regent"
 	culture = haryanvi_culture
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -277,6 +284,7 @@ eu5_regent_rjr = {
 	name = "Rajouri Regent"
 	culture = kashmiri_culture
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -312,6 +320,7 @@ eu5_regent_swt = {
 	name = "Swat Regent"
 	culture = kashmiri_culture
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -333,6 +342,7 @@ eu5_regent_sma = {
 	name = "Samma Regent"
 	culture = sindhi
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -340,6 +350,7 @@ eu5_regent_snd = {
 	name = "Sindh Regent"
 	culture = sindhi
 	religion = shia
+    rite = ismaili
 	1300.1.1 = { birth = yes }
 }
 
@@ -375,6 +386,7 @@ eu5_regent_hnv = {
 	name = "Honnavara Regent"
 	culture = konkani
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -437,7 +449,7 @@ eu5_regent_knk = {
 eu5_regent_zmr = {
 	name = "Kozhikode Regent"
 	culture = malayali
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -451,28 +463,28 @@ eu5_regent_klt = {
 eu5_regent_pdu = {
 	name = "Cochin Regent"
 	culture = malayali
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_vnd = {
 	name = "Venad Regent"
 	culture = malayali
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ktn = {
 	name = "Kuttanad Regent"
 	culture = malayali
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_kdu = {
 	name = "Padinjattedathu Regent"
 	culture = malayali
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -486,21 +498,21 @@ eu5_regent_kya = {
 eu5_regent_vld = {
 	name = "Valluvanad Regent"
 	culture = malayali
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ela = {
 	name = "Elayadathu Regent"
 	culture = malayali
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_vdk = {
 	name = "Vadakkumkur Regent"
 	culture = malayali
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -606,6 +618,7 @@ eu5_regent_bia = {
 	name = "Baia Regent"
 	culture = moldovan
 	religion = orthodox
+    rite = slavic_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -613,6 +626,7 @@ eu5_regent_bld = {
 	name = "Bârlad Regent"
 	culture = moldovan
 	religion = orthodox
+    rite = slavic_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -620,6 +634,7 @@ eu5_regent_hsc = {
 	name = "Hansca Regent"
 	culture = moldovan
 	religion = orthodox
+    rite = slavic_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -627,6 +642,7 @@ eu5_regent_htn = {
 	name = "Hotin Regent"
 	culture = moldovan
 	religion = orthodox
+    rite = slavic_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -634,6 +650,7 @@ eu5_regent_ias = {
 	name = "Iaşi Regent"
 	culture = moldovan
 	religion = orthodox
+    rite = slavic_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -641,6 +658,7 @@ eu5_regent_src = {
 	name = "Soroca Regent"
 	culture = moldovan
 	religion = orthodox
+    rite = slavic_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -648,6 +666,7 @@ eu5_regent_ssi = {
 	name = "Străşineţ Regent"
 	culture = moldovan
 	religion = orthodox
+    rite = slavic_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -669,6 +688,7 @@ eu5_regent_tgt = {
 	name = "Touggourt Regent"
 	culture = mozabite
 	religion = kharijite
+    rite = ibadi
 	1300.1.1 = { birth = yes }
 }
 
@@ -676,6 +696,7 @@ eu5_regent_mzb = {
 	name = "Mzab Regent"
 	culture = mozabite
 	religion = kharijite
+    rite = ibadi
 	1300.1.1 = { birth = yes }
 }
 
@@ -683,6 +704,7 @@ eu5_regent_dje = {
 	name = "Djerid Regent"
 	culture = eastern_amazigh
 	religion = kharijite
+    rite = ibadi
 	1300.1.1 = { birth = yes }
 }
 
@@ -690,6 +712,7 @@ eu5_regent_ogl = {
 	name = "Ouargla Regent"
 	culture = mozabite
 	religion = kharijite
+    rite = ibadi
 	1300.1.1 = { birth = yes }
 }
 
@@ -697,6 +720,7 @@ eu5_regent_tat = {
 	name = "Touat Regent"
 	culture = zenati
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -739,6 +763,7 @@ eu5_regent_zzz = {
 	name = "Zazzau Regent"
 	culture = hausa
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -872,6 +897,7 @@ eu5_regent_dfn = {
 	name = "Diafunu Regent"
 	culture = soninke
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -879,6 +905,7 @@ eu5_regent_gha = {
 	name = "Ghana Regent"
 	culture = soninke
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -886,6 +913,7 @@ eu5_regent_bmr = {
 	name = "Bambara Regent"
 	culture = bambara
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -893,6 +921,7 @@ eu5_regent_kbr = {
 	name = "Kabura Regent"
 	culture = bambara
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -900,6 +929,7 @@ eu5_regent_zgh = {
 	name = "Zagha Regent"
 	culture = bambara
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -907,6 +937,7 @@ eu5_regent_bbk = {
 	name = "Bambuk Regent"
 	culture = soninke
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -914,6 +945,7 @@ eu5_regent_tfk = {
 	name = "Tirafka Regent"
 	culture = songhai
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -921,6 +953,7 @@ eu5_regent_sgh = {
 	name = "Sanghana Regent"
 	culture = godala_culture
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -928,6 +961,7 @@ eu5_regent_tkr = {
 	name = "Takrur Regent"
 	culture = fulbe
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -935,6 +969,7 @@ eu5_regent_tmk = {
 	name = "Tadmekka Regent"
 	culture = tuareg
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -942,6 +977,7 @@ eu5_regent_trg = {
 	name = "Tuareg Regent"
 	culture = tuareg
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -949,6 +985,7 @@ eu5_regent_son = {
 	name = "Songhai Regent"
 	culture = songhai
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -1012,6 +1049,7 @@ eu5_regent_kan = {
 	name = "Kano Regent"
 	culture = hausa
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -1019,6 +1057,7 @@ eu5_regent_kts = {
 	name = "Katsina Regent"
 	culture = hausa
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -1026,6 +1065,7 @@ eu5_regent_zam = {
 	name = "Zamfara Regent"
 	culture = hausa
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -1033,6 +1073,7 @@ eu5_regent_ran = {
 	name = "Rano Regent"
 	culture = hausa
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -1040,6 +1081,7 @@ eu5_regent_gob = {
 	name = "Gobir Regent"
 	culture = hausa
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -1047,6 +1089,7 @@ eu5_regent_daa = {
 	name = "Daura Regent"
 	culture = hausa
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -1054,6 +1097,7 @@ eu5_regent_yao = {
 	name = "Bilala Regent"
 	culture = bilala_culture
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -1089,6 +1133,7 @@ eu5_regent_dam = {
 	name = "Damot Regent"
 	culture = gonga_culture
 	religion = miaphysitism
+    rite = ethiopian_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -1096,6 +1141,7 @@ eu5_regent_enn = {
 	name = "Ennarea Regent"
 	culture = gonga_culture
 	religion = miaphysitism
+    rite = ethiopian_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -1103,6 +1149,7 @@ eu5_regent_dbe = {
 	name = "Dobe'a Regent"
 	culture = tigrinya
 	religion = miaphysitism
+    rite = ethiopian_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -1110,6 +1157,7 @@ eu5_regent_afa = {
 	name = "Dankali Regent"
 	culture = afar_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1117,6 +1165,7 @@ eu5_regent_dhk = {
 	name = "Dahlak Regent"
 	culture = tigre
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1124,6 +1173,7 @@ eu5_regent_hrl = {
 	name = "Harla Regent"
 	culture = harla_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1131,6 +1181,7 @@ eu5_regent_ble = {
 	name = "Bale Regent"
 	culture = sidama_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1138,6 +1189,7 @@ eu5_regent_daw = {
 	name = "Dawaro Regent"
 	culture = harla_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1145,6 +1197,7 @@ eu5_regent_abw = {
 	name = "Al-Abwab Regent"
 	culture = nubian
 	religion = miaphysitism
+    rite = ethiopian_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -1152,6 +1205,7 @@ eu5_regent_alo = {
 	name = "Alodia Regent"
 	culture = nubian
 	religion = miaphysitism
+    rite = ethiopian_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -1159,6 +1213,7 @@ eu5_regent_bql = {
 	name = "Baqlin Regent"
 	culture = beja_culture
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -1166,6 +1221,7 @@ eu5_regent_bzn = {
 	name = "Bazin Regent"
 	culture = beja_culture
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -1173,6 +1229,7 @@ eu5_regent_jrn = {
 	name = "Jarin Regent"
 	culture = beja_culture
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -1180,6 +1237,7 @@ eu5_regent_nqs = {
 	name = "Naqis Regent"
 	culture = beja_culture
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -1187,6 +1245,7 @@ eu5_regent_qta = {
 	name = "Qata Regent"
 	culture = beja_culture
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -1243,6 +1302,7 @@ eu5_regent_mli = {
 	name = "Malindi Regent"
 	culture = yemeni_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1257,6 +1317,7 @@ eu5_regent_sfa = {
 	name = "Sofala Regent"
 	culture = swahili_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1264,6 +1325,7 @@ eu5_regent_mba = {
 	name = "Mombassa Regent"
 	culture = swahili_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1271,6 +1333,7 @@ eu5_regent_ged = {
 	name = "Gedi Regent"
 	culture = swahili_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1278,6 +1341,7 @@ eu5_regent_ugw = {
 	name = "Ungwana Regent"
 	culture = swahili_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1285,6 +1349,7 @@ eu5_regent_lam = {
 	name = "Lamu Regent"
 	culture = swahili_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1292,6 +1357,7 @@ eu5_regent_pem = {
 	name = "Pemba Regent"
 	culture = swahili_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1299,6 +1365,7 @@ eu5_regent_zzb = {
 	name = "Zanzibar Regent"
 	culture = swahili_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1306,6 +1373,7 @@ eu5_regent_bmb = {
 	name = "Bambao Regent"
 	culture = swahili_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1313,6 +1381,7 @@ eu5_regent_agh = {
 	name = "Angoche Regent"
 	culture = swahili_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1320,6 +1389,7 @@ eu5_regent_qlm = {
 	name = "Quelimane Regent"
 	culture = swahili_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1327,6 +1397,7 @@ eu5_regent_moz = {
 	name = "Mozambique Regent"
 	culture = swahili_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -1509,6 +1580,7 @@ eu5_regent_dgh = {
 	name = "Dughlat Regent"
 	culture = mongolian_culture
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -1523,6 +1595,7 @@ eu5_regent_krg = {
 	name = "Karategin Regent"
 	culture = mongolian_culture
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -2307,6 +2380,7 @@ eu5_regent_ahi = {
 	name = "Ahis Regent"
 	culture = turkish_culture
 	religion = shia
+    rite = alevi
 	1300.1.1 = { birth = yes }
 }
 
@@ -2363,6 +2437,7 @@ eu5_regent_atz = {
 	name = "Artaz Regent"
 	culture = armenian_culture
 	religion = armenian_apostolic
+    rite = armenian_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -2377,6 +2452,7 @@ eu5_regent_ihb = {
 	name = "Ispahbad Regent"
 	culture = talysh_culture
 	religion = shia
+    rite = zayidi
 	1300.1.1 = { birth = yes }
 }
 
@@ -2384,6 +2460,7 @@ eu5_regent_ard = {
 	name = "Ardalan Regent"
 	culture = kurdish_culture
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -2391,6 +2468,7 @@ eu5_regent_hny = {
 	name = "Hasnuya Regent"
 	culture = kurdish_culture
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -2398,6 +2476,7 @@ eu5_regent_klr = {
 	name = "Kalhor Regent"
 	culture = kurdish_culture
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -2405,6 +2484,7 @@ eu5_regent_kel = {
 	name = "Kelali Regent"
 	culture = kurdish_culture
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -2412,6 +2492,7 @@ eu5_regent_mkw = {
 	name = "Merkewan Regent"
 	culture = kurdish_culture
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -2419,6 +2500,7 @@ eu5_regent_dge = {
 	name = "Döger Regent"
 	culture = turkoman_culture
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -2496,6 +2578,7 @@ eu5_regent_mso = {
 	name = "Mesocco Regent"
 	culture = lombard
 	religion = catholic
+    rite = ambrosian_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -2909,6 +2992,7 @@ eu5_regent_dru = {
 	name = "Drutsk Regent"
 	culture = polatskian_culture
 	religion = orthodox
+    rite = slavic_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -2916,6 +3000,7 @@ eu5_regent_msv = {
 	name = "Mstislavl Regent"
 	culture = smolenskian_culture
 	religion = orthodox
+    rite = slavic_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -5820,7 +5905,7 @@ eu5_regent_lig = {
 eu5_regent_lgk = {
 	name = "Langkasuka Regent"
 	culture = malay_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -5981,14 +6066,14 @@ eu5_regent_zhu = {
 eu5_regent_bes = {
 	name = "Beruas Regent"
 	culture = malay_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_mnj = {
 	name = "Manjung Regent"
 	culture = malay_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -6101,6 +6186,7 @@ eu5_regent_sgn = {
 	name = "Sonargaon Regent"
 	culture = bengali
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -6108,6 +6194,7 @@ eu5_regent_stn = {
 	name = "Saptagram Regent"
 	culture = bengali
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -6143,6 +6230,7 @@ eu5_regent_trf = {
 	name = "Taraf Regent"
 	culture = bengali
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -6184,14 +6272,14 @@ eu5_regent_kkr = {
 eu5_regent_dti = {
 	name = "Doti Regent"
 	culture = kumaoni
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_srm = {
 	name = "Nahan Regent"
 	culture = garhwali
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -6220,6 +6308,7 @@ eu5_regent_dgl = {
 	name = "Maldives Regent"
 	culture = dhivehi_culture
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -6332,6 +6421,7 @@ eu5_regent_atj = {
 	name = "Aceh Regent"
 	culture = acehnese_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -6339,6 +6429,7 @@ eu5_regent_psa = {
 	name = "Pasai Regent"
 	culture = acehnese_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -6346,6 +6437,7 @@ eu5_regent_aru = {
 	name = "Aru Regent"
 	culture = batak_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -6388,27 +6480,28 @@ eu5_regent_lge = {
 	name = "Linge Regent"
 	culture = gayo_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tjp = {
 	name = "Tanjungpura Regent"
 	culture = malay_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_krp = {
 	name = "Kuripan Regent"
 	culture = banjar_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_smb = {
 	name = "Sambas Regent"
 	culture = bidayuh_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -6429,21 +6522,21 @@ eu5_regent_mnu = {
 eu5_regent_sbg = {
 	name = "Santubong Regent"
 	culture = iban_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_sgu = {
 	name = "Sanggau Regent"
 	culture = bidayuh_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_lnk = {
 	name = "Landak Regent"
 	culture = bidayuh_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -6555,35 +6648,35 @@ eu5_regent_pkr = {
 eu5_regent_slp = {
 	name = "Selaparang Regent"
 	culture = sasak_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_bim = {
 	name = "Bima Regent"
 	culture = bima_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_dom = {
 	name = "Dompu Regent"
 	culture = dompu_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ngl = {
 	name = "Ngali Regent"
 	culture = sumbawa_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tlw = {
 	name = "Taliwang Regent"
 	culture = sumbawa_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -6639,7 +6732,7 @@ eu5_regent_moo = {
 eu5_regent_sul = {
 	name = "Lupah Sug Regent"
 	culture = tausug_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -6653,21 +6746,21 @@ eu5_regent_myi = {
 eu5_regent_ceb = {
 	name = "Cebu Regent"
 	culture = cebuano_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tdo = {
 	name = "Tondo Regent"
 	culture = tagalog_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_mna = {
 	name = "Maynila Regent"
 	culture = tagalog_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -6688,7 +6781,7 @@ eu5_regent_pgs = {
 eu5_regent_btu = {
 	name = "Butuan Regent"
 	culture = butuanon_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -6779,7 +6872,7 @@ eu5_regent_bol = {
 eu5_regent_sml = {
 	name = "Sanmalan Regent"
 	culture = subanon_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -7809,6 +7902,7 @@ eu5_regent_fmn = {
 	name = "Fuman Regent"
 	culture = gilak_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -7816,6 +7910,7 @@ eu5_regent_rnk = {
 	name = "Ranekouh Regent"
 	culture = gilak_culture
 	religion = sunni
+    rite = hanbali
 	1300.1.1 = { birth = yes }
 }
 
@@ -7823,6 +7918,7 @@ eu5_regent_rsh = {
 	name = "Rasht Regent"
 	culture = gilak_culture
 	religion = sunni
+    rite = hanbali
 	1300.1.1 = { birth = yes }
 }
 
@@ -7830,6 +7926,7 @@ eu5_regent_tlm = {
 	name = "Tulam Regent"
 	culture = gilak_culture
 	religion = shia
+    rite = zayidi
 	1300.1.1 = { birth = yes }
 }
 
@@ -7837,6 +7934,7 @@ eu5_regent_bmp = {
 	name = "Bampūr Regent"
 	culture = baloch_culture
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -7844,6 +7942,7 @@ eu5_regent_bla = {
 	name = "Buleda Regent"
 	culture = baloch_culture
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -7851,6 +7950,7 @@ eu5_regent_klw = {
 	name = "Kolwa Regent"
 	culture = baloch_culture
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -7858,6 +7958,7 @@ eu5_regent_khz = {
 	name = "Khuzdar Regent"
 	culture = sindhi
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -7865,6 +7966,7 @@ eu5_regent_kla = {
 	name = "Kalāt Regent"
 	culture = brahui_culture
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -7872,6 +7974,7 @@ eu5_regent_lst = {
 	name = "Larestan Regent"
 	culture = achomi_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -7879,6 +7982,7 @@ eu5_regent_mrv = {
 	name = "$merv$ Regent"
 	culture = tajik_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -7886,6 +7990,7 @@ eu5_regent_khf = {
 	name = "Khaf Regent"
 	culture = farsi_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -7893,6 +7998,7 @@ eu5_regent_ngd = {
 	name = "Negüderi Regent"
 	culture = mongolian_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -7900,6 +8006,7 @@ eu5_regent_qun = {
 	name = "Qara'unas Regent"
 	culture = mongolian_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -7907,6 +8014,7 @@ eu5_regent_bsd = {
 	name = "Besüd Regent"
 	culture = mongolian_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -7914,6 +8022,7 @@ eu5_regent_art = {
 	name = "Arlat Regent"
 	culture = mongolian_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -7921,6 +8030,7 @@ eu5_regent_apd = {
 	name = "Apardi Regent"
 	culture = mongolian_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -7928,6 +8038,7 @@ eu5_regent_sld = {
 	name = "Suldus Regent"
 	culture = mongolian_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -7935,6 +8046,7 @@ eu5_regent_brl = {
 	name = "Barlas Regent"
 	culture = mongolian_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -7942,6 +8054,7 @@ eu5_regent_ysu = {
 	name = "Yasa'uri Regent"
 	culture = mongolian_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -7949,6 +8062,7 @@ eu5_regent_ktt = {
 	name = "Khuttal Regent"
 	culture = mongolian_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -7956,6 +8070,7 @@ eu5_regent_jly = {
 	name = "Jalayirs Regent"
 	culture = mongolian_culture
 	religion = sunni
+    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -7963,6 +8078,7 @@ eu5_regent_avr = {
 	name = "Avaria Regent"
 	culture = avar_culture
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -7970,6 +8086,7 @@ eu5_regent_trk = {
 	name = "Tarki Regent"
 	culture = kumyk_culture
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -7977,6 +8094,7 @@ eu5_regent_vdz = {
 	name = "Vayots Dzor Regent"
 	culture = armenian_culture
 	religion = armenian_apostolic
+    rite = armenian_rite
 	1300.1.1 = { birth = yes }
 }
 
@@ -8026,6 +8144,7 @@ eu5_regent_ski = {
 	name = "Shaki Regent"
 	culture = adhari_culture
 	religion = sunni
+    rite = hanafi
 	1300.1.1 = { birth = yes }
 }
 
@@ -8082,6 +8201,7 @@ eu5_regent_shm = {
 	name = "Shammar Regent"
 	culture = najdi_culture
 	religion = sunni
+    rite = hanbali
 	1300.1.1 = { birth = yes }
 }
 
@@ -8089,6 +8209,7 @@ eu5_regent_anz = {
 	name = "Anizah Regent"
 	culture = najdi_culture
 	religion = sunni
+    rite = hanbali
 	1300.1.1 = { birth = yes }
 }
 
@@ -8096,6 +8217,7 @@ eu5_regent_hut = {
 	name = "Hutaym Regent"
 	culture = najdi_culture
 	religion = sunni
+    rite = hanbali
 	1300.1.1 = { birth = yes }
 }
 
@@ -8103,6 +8225,7 @@ eu5_regent_hrb = {
 	name = "Harb Regent"
 	culture = hijazi_culture
 	religion = sunni
+    rite = hanbali
 	1300.1.1 = { birth = yes }
 }
 
@@ -8110,6 +8233,7 @@ eu5_regent_mut = {
 	name = "Mutayr Regent"
 	culture = najdi_culture
 	religion = sunni
+    rite = hanbali
 	1300.1.1 = { birth = yes }
 }
 
@@ -8117,6 +8241,7 @@ eu5_regent_utb = {
 	name = "Otaibah Regent"
 	culture = hijazi_culture
 	religion = sunni
+    rite = hanbali
 	1300.1.1 = { birth = yes }
 }
 
@@ -8124,6 +8249,7 @@ eu5_regent_dws = {
 	name = "Dawasir Regent"
 	culture = najdi_culture
 	religion = sunni
+    rite = hanbali
 	1300.1.1 = { birth = yes }
 }
 
@@ -8131,6 +8257,7 @@ eu5_regent_qht = {
 	name = "Qahtān Regent"
 	culture = yemeni_culture
 	religion = shia
+    rite = ismaili
 	1300.1.1 = { birth = yes }
 }
 
@@ -8138,6 +8265,7 @@ eu5_regent_sby = {
 	name = "Subay Regent"
 	culture = najdi_culture
 	religion = sunni
+    rite = hanbali
 	1300.1.1 = { birth = yes }
 }
 
@@ -8145,6 +8273,7 @@ eu5_regent_mrh = {
 	name = "Al Murrah Regent"
 	culture = najdi_culture
 	religion = sunni
+    rite = hanbali
 	1300.1.1 = { birth = yes }
 }
 
@@ -8152,6 +8281,7 @@ eu5_regent_yam = {
 	name = "Yām Regent"
 	culture = yemeni_culture
 	religion = shia
+    rite = ismaili
 	1300.1.1 = { birth = yes }
 }
 
@@ -8159,6 +8289,7 @@ eu5_regent_yas = {
 	name = "Yas Regent"
 	culture = kaliji_culture
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -8166,6 +8297,7 @@ eu5_regent_klb = {
 	name = "Kilab Regent"
 	culture = najdi_culture
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -8173,6 +8305,7 @@ eu5_regent_aad = {
 	name = "Al A'idh Regent"
 	culture = najdi_culture
 	religion = sunni
+    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -8180,6 +8313,7 @@ eu5_regent_bnl = {
 	name = "Lam Regent"
 	culture = najdi_culture
 	religion = sunni
+    rite = hanbali
 	1300.1.1 = { birth = yes }
 }
 
@@ -8187,6 +8321,7 @@ eu5_regent_azf = {
 	name = "Al-Zafir Regent"
 	culture = najdi_culture
 	religion = sunni
+    rite = hanbali
 	1300.1.1 = { birth = yes }
 }
 
@@ -8194,6 +8329,7 @@ eu5_regent_zib = {
 	name = "Zi'b Regent"
 	culture = najdi_culture
 	religion = sunni
+    rite = hanbali
 	1300.1.1 = { birth = yes }
 }
 
