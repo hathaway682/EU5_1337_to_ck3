@@ -2367,7 +2367,7 @@ arm_avag = {
 	name = "name_avag"
 	dynasty = zakarid_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = arm_ivane_i
 	1180.1.1 = { birth = yes }
 	1250.1.1 = { death = yes }
@@ -2377,7 +2377,7 @@ arm_ivane_i = {
 	name = "name_john"
 	dynasty = zakarid_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = arm_sargis
 	1155.1.1 = { birth = yes }
 	1227.1.1 = { death = yes }
@@ -2387,7 +2387,7 @@ arm_ivane_ii = {
 	name = "name_john"
 	dynasty = zakarid_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = arm_shahnshah
 	1225.1.1 = { birth = yes }
 	1270.1.1 = { death = yes }
@@ -2396,7 +2396,7 @@ arm_ivane_ii = {
 arm_jacob_ii_of_cilicia = {
 	name = "name_james"
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	1275.1.1 = { birth = yes }
 }
 
@@ -2404,7 +2404,7 @@ arm_sargis = {
 	name = "name_sergius"
 	dynasty = zakarid_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = arm_zakare_i
 	1130.1.1 = { birth = yes }
 	1187.1.1 = { death = yes }
@@ -2414,7 +2414,7 @@ arm_shahnshah = {
 	name = "name_shahnshan"
 	dynasty = zakarid_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = arm_zakare_ii
 	1197.1.1 = { birth = yes }
 	1261.1.1 = { death = yes }
@@ -2424,7 +2424,7 @@ arm_shahnshah_heir = {
 	name = "name_shahnshan"
 	dynasty = zakarid_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = arm_zakare_iv
 	1305.1.1 = { birth = yes }
 }
@@ -2433,7 +2433,7 @@ arm_shahnshah_ii = {
 	name = "name_shahnshan"
 	dynasty = zakarid_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = arm_ivane_ii
 	1250.1.1 = { birth = yes }
 	1320.1.1 = { death = yes }
@@ -2443,7 +2443,7 @@ arm_vahram = {
 	name = "name_vahram"
 	dynasty = zakarid_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = arm_ivane_ii
 	1260.1.1 = { birth = yes }
 }
@@ -2452,7 +2452,7 @@ arm_zakare_i = {
 	name = "name_zechariah"
 	dynasty = zakarid_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	1110.1.1 = { birth = yes }
 	1160.1.1 = { death = yes }
 }
@@ -2461,7 +2461,7 @@ arm_zakare_ii = {
 	name = "name_zechariah"
 	dynasty = zakarid_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = arm_sargis
 	1150.1.1 = { birth = yes }
 	1212.1.1 = { death = yes }
@@ -2471,7 +2471,7 @@ arm_zakare_iii = {
 	name = "name_zechariah"
 	dynasty = zakarid_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = arm_shahnshah
 	1220.1.1 = { birth = yes }
 	1261.1.1 = { death = yes }
@@ -2481,7 +2481,7 @@ arm_zakare_iv = {
 	name = "name_zechariah"
 	dynasty = zakarid_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = arm_vahram
 	1285.1.1 = { birth = yes }
 }
@@ -4491,7 +4491,7 @@ bht_izz_al_din = {
 	name = "Izz_al_Din"
 	dynasty = bohtan_dynasty
 	culture = kurdish_culture
-	religion = pagan
+	religion = yazidi_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -8161,7 +8161,7 @@ byz_alexander_severus = {
 	name = "name_alexander"
 	dynasty = severan_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	208.10.1 = { birth = yes }
 	235.3.19 = { death = yes }
 }
@@ -8491,7 +8491,7 @@ byz_antoninus_pius = {
 	name = "name_antoninus"
 	dynasty = nerva_antonine_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	86.9.19 = { birth = yes }
 	161.3.7 = { death = yes }
 }
@@ -8527,7 +8527,7 @@ byz_arcadius = {
 byz_aurelian = {
 	name = "name_aurelian"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	214.9.9 = { birth = yes }
 	275.9.25 = { death = yes }
 }
@@ -8535,7 +8535,7 @@ byz_aurelian = {
 byz_balbinus = {
 	name = "name_balbinus"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	166.1.1 = { birth = yes }
 	238.7.29 = { death = yes }
 }
@@ -8579,7 +8579,7 @@ byz_caligula = {
 	name = "name_gaius"
 	dynasty = julio_claudian_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	12.8.31 = { birth = yes }
 	41.1.24 = { death = yes }
 }
@@ -8588,7 +8588,7 @@ byz_caracalla = {
 	name = "name_antoninus"
 	dynasty = severan_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	father = byz_septimius_severus
 	188.4.4 = { birth = yes }
 	217.4.8 = { death = yes }
@@ -8613,7 +8613,7 @@ byz_chandrenos = {
 byz_claudius_gothicus = {
 	name = "name_claude"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	214.5.10 = { birth = yes }
 	270.1.1 = { death = yes }
 }
@@ -8622,7 +8622,7 @@ byz_commodus = {
 	name = "name_commodus"
 	dynasty = nerva_antonine_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	father = byz_marcus_aurelius
 	161.8.31 = { birth = yes }
 	192.12.31 = { death = yes }
@@ -8759,7 +8759,7 @@ byz_constantius_i = {
 	name = "name_constantius"
 	dynasty = constantinian_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	250.3.31 = { birth = yes }
 	306.7.25 = { death = yes }
 }
@@ -8777,7 +8777,7 @@ byz_constantius_ii = {
 byz_decius = {
 	name = "name_decius"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	201.1.1 = { birth = yes }
 	251.7.1 = { death = yes }
 }
@@ -8805,7 +8805,7 @@ byz_demetrios_palaiologos = {
 byz_didius_julianus = {
 	name = "name_didius"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	133.1.30 = { birth = yes }
 	193.6.1 = { death = yes }
 }
@@ -8813,7 +8813,7 @@ byz_didius_julianus = {
 byz_diocletian = {
 	name = "name_diocletian"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	244.12.22 = { birth = yes }
 	311.12.3 = { death = yes }
 }
@@ -8822,7 +8822,7 @@ byz_domitian = {
 	name = "name_domitian"
 	dynasty = flavian_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	father = byz_vespasian
 	51.10.24 = { birth = yes }
 	96.9.18 = { death = yes }
@@ -8886,7 +8886,7 @@ byz_elagabalus = {
 	name = "name_elagabalus"
 	dynasty = severan_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	204.1.1 = { birth = yes }
 	222.3.11 = { death = yes }
 }
@@ -8980,7 +8980,7 @@ byz_francesca_sanudo = {
 byz_galerius = {
 	name = "name_galerius"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	258.1.1 = { birth = yes }
 	311.5.1 = { death = yes }
 }
@@ -8988,7 +8988,7 @@ byz_galerius = {
 byz_gallienus = {
 	name = "name_gallienus"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	father = byz_valerian
 	218.1.1 = { birth = yes }
 	268.9.1 = { death = yes }
@@ -9017,7 +9017,7 @@ byz_geta = {
 	name = "name_geta"
 	dynasty = severan_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	father = byz_septimius_severus
 	189.3.7 = { birth = yes }
 	211.12.26 = { death = yes }
@@ -9036,7 +9036,7 @@ byz_giovanni_vassallo_paleologo = {
 byz_gordian_i = {
 	name = "name_gordian"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	159.1.1 = { birth = yes }
 	238.4.12 = { death = yes }
 }
@@ -9044,7 +9044,7 @@ byz_gordian_i = {
 byz_gordian_ii = {
 	name = "name_gordian"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	father = byz_gordian_i
 	192.1.1 = { birth = yes }
 	238.4.12 = { death = yes }
@@ -9053,7 +9053,7 @@ byz_gordian_ii = {
 byz_gordian_iii = {
 	name = "name_gordian"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	225.1.20 = { birth = yes }
 	244.2.25 = { death = yes }
 }
@@ -9071,7 +9071,7 @@ byz_hadrian = {
 	name = "name_adrian"
 	dynasty = nerva_antonine_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	father = byz_trajan
 	76.1.24 = { birth = yes }
 	138.7.10 = { death = yes }
@@ -9421,7 +9421,7 @@ byz_julian_apostate = {
 	name = "name_julian"
 	dynasty = constantinian_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	331.11.6 = { birth = yes }
 	363.6.26 = { death = yes }
 }
@@ -9629,7 +9629,7 @@ byz_leontios = {
 byz_licinius = {
 	name = "name_licinius"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	263.1.1 = { birth = yes }
 	325.3.1 = { death = yes }
 }
@@ -9638,7 +9638,7 @@ byz_lucius_verus = {
 	name = "name_lucius"
 	dynasty = nerva_antonine_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	father = byz_antoninus_pius
 	130.12.15 = { birth = yes }
 	169.2.1 = { death = yes }
@@ -9647,7 +9647,7 @@ byz_lucius_verus = {
 byz_macrinus = {
 	name = "name_macrinus"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	165.1.1 = { birth = yes }
 	218.6.8 = { death = yes }
 }
@@ -9744,7 +9744,7 @@ byz_marcus_aurelius = {
 	name = "name_mark.name_aurelius"
 	dynasty = nerva_antonine_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	father = byz_antoninus_pius
 	121.4.26 = { birth = yes }
 	180.3.17 = { death = yes }
@@ -9812,7 +9812,7 @@ byz_maurice = {
 byz_maximinus_thrax = {
 	name = "name_maximinus"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	173.1.1 = { birth = yes }
 	238.4.1 = { death = yes }
 }
@@ -9955,7 +9955,7 @@ byz_nero = {
 	name = "name_nero"
 	dynasty = julio_claudian_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	37.12.15 = { birth = yes }
 	68.6.9 = { death = yes }
 }
@@ -9964,7 +9964,7 @@ byz_nerva = {
 	name = "name_nerva"
 	dynasty = nerva_antonine_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	30.11.8 = { birth = yes }
 	98.1.25 = { death = yes }
 }
@@ -10032,7 +10032,7 @@ byz_nikephoros_palaiologos = {
 byz_otho = {
 	name = "name_otto"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	32.4.28 = { birth = yes }
 	69.4.16 = { death = yes }
 }
@@ -10040,7 +10040,7 @@ byz_otho = {
 byz_pertinax = {
 	name = "name_pertinax"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	126.8.1 = { birth = yes }
 	193.3.28 = { death = yes }
 }
@@ -10048,7 +10048,7 @@ byz_pertinax = {
 byz_philip_the_arab = {
 	name = "name_philip"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	204.1.1 = { birth = yes }
 	249.9.1 = { death = yes }
 }
@@ -10072,7 +10072,7 @@ byz_phocas = {
 byz_probus = {
 	name = "name_probus"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	232.8.19 = { birth = yes }
 	282.10.1 = { death = yes }
 }
@@ -10080,7 +10080,7 @@ byz_probus = {
 byz_pupienus = {
 	name = "name_pupienus"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	164.1.1 = { birth = yes }
 	238.7.29 = { death = yes }
 }
@@ -10143,7 +10143,7 @@ byz_septimius_severus = {
 	name = "name_septimius"
 	dynasty = severan_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	145.4.11 = { birth = yes }
 	211.2.4 = { death = yes }
 }
@@ -10369,7 +10369,7 @@ byz_titus = {
 	name = "name_titus"
 	dynasty = flavian_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	father = byz_vespasian
 	39.12.30 = { birth = yes }
 	81.9.13 = { death = yes }
@@ -10379,7 +10379,7 @@ byz_trajan = {
 	name = "name_trajan"
 	dynasty = nerva_antonine_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	father = byz_nerva
 	53.9.18 = { birth = yes }
 	117.8.9 = { death = yes }
@@ -10388,7 +10388,7 @@ byz_trajan = {
 byz_trebonianus_gallus = {
 	name = "name_trebonianus"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	206.1.1 = { birth = yes }
 	253.8.1 = { death = yes }
 }
@@ -10413,7 +10413,7 @@ byz_valentinian_i = {
 byz_valerian = {
 	name = "name_valerian"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	200.1.1 = { birth = yes }
 	264.1.1 = { death = yes }
 }
@@ -10422,7 +10422,7 @@ byz_vespasian = {
 	name = "name_vespasian"
 	dynasty = flavian_dynasty
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	9.11.17 = { birth = yes }
 	79.6.23 = { death = yes }
 }
@@ -10430,7 +10430,7 @@ byz_vespasian = {
 byz_vitellius = {
 	name = "name_vitellius"
 	culture = roman_culture
-	religion = pagan
+	religion = hellenic_pagan
 	15.9.7 = { birth = yes }
 	69.12.22 = { death = yes }
 }
@@ -11843,7 +11843,7 @@ chg_changsi = {
 	name = "name_changshi"
 	dynasty = borjigin_dynasty
 	culture = mongolian_culture
-	religion = pagan
+	religion = nestorian
 	father = chg_ebugen
 	1300.1.1 = { birth = yes }
 }
@@ -12351,7 +12351,7 @@ cil_alids_of_korikos = {
 	name = "name_alice"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_oshin_of_korikos_regent
 	mother = cil_marguerite_ibelin
 	1305.1.1 = { birth = yes }
@@ -12363,7 +12363,7 @@ cil_alids_of_neghir = {
 	name = "name_alice"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_bolduin_of_neghir
 	1312.2.7 = { birth = yes }
 }
@@ -12392,7 +12392,7 @@ cil_bolduin_of_neghir = {
 	name = "name_baldwin"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_kostandin_of_neghir
 	1290.1.1 = { birth = yes }
 	1336.12.12 = { death = yes }
@@ -12402,7 +12402,7 @@ cil_djoffrey_of_neghir = {
 	name = "name_godfrey"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_hethum_of_neghir
 	1323.1.1 = { birth = yes }
 }
@@ -12411,7 +12411,7 @@ cil_euphemia_of_neghir = {
 	name = "name_euphemia"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_bolduin_of_neghir
 	1325.5.7 = { birth = yes }
 }
@@ -12433,7 +12433,7 @@ cil_hethum_hethumid = {
 	name = "name_hethum"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_leo_iv
 	mother = cil_alids_of_korikos
 	1322.1.1 = { birth = yes }
@@ -12444,7 +12444,7 @@ cil_hethum_i_hethumid = {
 	name = "name_hethum"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_kostandin_hethumid
 	1213.1.1 = { birth = yes }
 	1270.10.21 = { death = yes }
@@ -12454,7 +12454,7 @@ cil_hethum_ii_hetumid = {
 	name = "name_hethum"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_leo_ii_hetumid
 	1266.1.1 = { birth = yes }
 	1307.11.17 = { death = yes }
@@ -12464,7 +12464,7 @@ cil_hethum_of_korikos = {
 	name = "name_hethum"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_oshin_of_korikos
 	1240.1.1 = { birth = yes }
 	1310.1.1 = { death = yes }
@@ -12474,7 +12474,7 @@ cil_hethum_of_neghir = {
 	name = "name_hethum"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_kostandin_of_neghir
 	1300.1.1 = { birth = yes }
 }
@@ -12503,7 +12503,7 @@ cil_kostandin_hethumid = {
 	name = "name_constantine"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	1180.1.1 = { birth = yes }
 	1263.1.1 = { death = yes }
 }
@@ -12512,7 +12512,7 @@ cil_kostandin_i_hetumid = {
 	name = "name_constantine"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_leo_ii_hetumid
 	1278.1.1 = { birth = yes }
 	1310.1.1 = { death = yes }
@@ -12522,7 +12522,7 @@ cil_kostandin_iii_hethumid = {
 	name = "name_constantine"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_bolduin_of_neghir
 	1313.4.17 = { birth = yes }
 }
@@ -12531,7 +12531,7 @@ cil_kostandin_iv_hethumid = {
 	name = "name_constantine"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_hethum_of_neghir
 	1324.1.1 = { birth = yes }
 }
@@ -12540,7 +12540,7 @@ cil_kostandin_of_neghir = {
 	name = "name_constantine"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_kostandin_hethumid
 	1230.1.1 = { birth = yes }
 	1308.1.1 = { death = yes }
@@ -12550,7 +12550,7 @@ cil_leo_ii_hetumid = {
 	name = "name_leon"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_hethum_i_hethumid
 	mother = cil_zabel_i_roupenid
 	1236.1.1 = { birth = yes }
@@ -12561,7 +12561,7 @@ cil_leo_iii_hetumid = {
 	name = "name_leon"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_thoros_iii_hetumid
 	mother = cil_marguerite_lusignan
 	1289.1.1 = { birth = yes }
@@ -12572,7 +12572,7 @@ cil_leo_iv = {
 	name = "name_leon"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_oshin_hetumid
 	mother = cil_zabel_of_korikos
 	1309.1.1 = { birth = yes }
@@ -12582,7 +12582,7 @@ cil_levon_i_roupenid = {
 	name = "name_leon"
 	dynasty = roupenid_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	1150.1.1 = { birth = yes }
 	1219.5.2 = { death = yes }
 }
@@ -12623,7 +12623,7 @@ cil_mariyam_of_korikos = {
 	name = "name_mary"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_oshin_of_korikos_regent
 	mother = cil_giovanna_taranto
 	1321.1.1 = { birth = yes }
@@ -12633,7 +12633,7 @@ cil_oshin_hetumid = {
 	name = "name_oshin"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_leo_ii_hetumid
 	1282.1.1 = { birth = yes }
 	1320.7.20 = { death = yes }
@@ -12643,7 +12643,7 @@ cil_oshin_of_korikos = {
 	name = "name_oshin"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_kostandin_hethumid
 	1215.1.1 = { birth = yes }
 	1265.12.25 = { death = yes }
@@ -12653,7 +12653,7 @@ cil_oshin_of_korikos_regent = {
 	name = "name_oshin"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_hethum_of_korikos
 	mother = cil_zabel_ibelin
 	1287.1.1 = { birth = yes }
@@ -12673,7 +12673,7 @@ cil_smbat_hetumid = {
 	name = "name_simbad"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_leo_ii_hetumid
 	1277.1.1 = { birth = yes }
 	1310.1.1 = { death = yes }
@@ -12683,7 +12683,7 @@ cil_sybille_lusignan = {
 	name = "name_sybil"
 	dynasty = lusignan_dynasty
 	culture = poitevin
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = koj_aimery_ii_lusignan
 	1198.1.1 = { birth = yes }
 	1230.1.1 = { death = yes }
@@ -12705,7 +12705,7 @@ cil_thoros_iii_hetumid = {
 	name = "name_theodore"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_leo_ii_hetumid
 	1271.1.1 = { birth = yes }
 	1298.7.23 = { death = yes }
@@ -12715,7 +12715,7 @@ cil_zabel_hethumid = {
 	name = "name_elizabeth"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_leo_ii_hetumid
 	1280.1.1 = { birth = yes }
 	1323.4.8 = { death = yes }
@@ -12726,7 +12726,7 @@ cil_zabel_i_roupenid = {
 	name = "name_elizabeth"
 	dynasty = roupenid_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_levon_i_roupenid
 	1216.1.27 = { birth = yes }
 	1252.1.23 = { death = yes }
@@ -12749,7 +12749,7 @@ cil_zabel_of_korikos = {
 	name = "name_elizabeth"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_hethum_of_korikos
 	mother = cil_zabel_ibelin
 	1285.1.1 = { birth = yes }
@@ -14550,7 +14550,7 @@ cyp_mariyam_hethumid = {
 	name = "name_leon"
 	dynasty = hetumids_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	father = cil_hethum_i_hethumid
 	mother = cil_zabel_i_roupenid
 	1246.1.1 = { birth = yes }
@@ -15781,7 +15781,7 @@ dml_kalti = {
 	name = "Kalti"
 	dynasty = domboli_dynasty
 	culture = kurdish_culture
-	religion = pagan
+	religion = yazidi_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -16253,7 +16253,7 @@ dsn_ala_al_din_kurk_ibn_ibrahim = {
 	name = "Ala_al_Din"
 	dynasty = dasni_dynasty
 	culture = kurdish_culture
-	religion = pagan
+	religion = yazidi_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -18158,7 +18158,7 @@ eu5_regent_aad = {
 eu5_regent_aar = {
 	name = "Abdari Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -18207,7 +18207,7 @@ eu5_regent_adg = {
 eu5_regent_ado = {
 	name = "Ado Regent"
 	culture = yoruba
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -18263,7 +18263,7 @@ eu5_regent_ahy = {
 eu5_regent_aid = {
 	name = "Aidan Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -18277,7 +18277,7 @@ eu5_regent_ajc = {
 eu5_regent_akr = {
 	name = "Akure Regent"
 	culture = yoruba
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -18291,7 +18291,7 @@ eu5_regent_alb = {
 eu5_regent_ali = {
 	name = "Kǎilǐ Regent"
 	culture = hmong_culture
-	religion = pagan
+	religion = dab_qhuas
 	1300.1.1 = { birth = yes }
 }
 
@@ -18424,7 +18424,7 @@ eu5_regent_ast = {
 eu5_regent_asu = {
 	name = "Asu Regent"
 	culture = hurga_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -18473,7 +18473,7 @@ eu5_regent_att = {
 eu5_regent_atz = {
 	name = "Artaz Regent"
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	1300.1.1 = { birth = yes }
 }
 
@@ -18494,7 +18494,7 @@ eu5_regent_avr = {
 eu5_regent_awo = {
 	name = "Awori Regent"
 	culture = yoruba
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -18550,7 +18550,7 @@ eu5_regent_bat = {
 eu5_regent_bay = {
 	name = "Bayan Regent"
 	culture = hurga_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -18564,7 +18564,7 @@ eu5_regent_bbk = {
 eu5_regent_ben = {
 	name = "Benin Regent"
 	culture = edo
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -18725,7 +18725,7 @@ eu5_regent_bna = {
 eu5_regent_bni = {
 	name = "Báiní Regent"
 	culture = hmong_culture
-	religion = pagan
+	religion = dab_qhuas
 	1300.1.1 = { birth = yes }
 }
 
@@ -18739,21 +18739,21 @@ eu5_regent_bnl = {
 eu5_regent_bol = {
 	name = "Dapitan Regent"
 	culture = boholano_culture
-	religion = pagan
+	religion = dayawism
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_bon = {
 	name = "Bonoman Regent"
 	culture = akan
-	religion = pagan
+	religion = akom_pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_bor = {
 	name = "Borgu Regent"
 	culture = bariba
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -19110,7 +19110,7 @@ eu5_regent_cnl = {
 eu5_regent_cnt = {
 	name = "Cainta Regent"
 	culture = tagalog_culture
-	religion = pagan
+	religion = dayawism
 	1300.1.1 = { birth = yes }
 }
 
@@ -19124,7 +19124,7 @@ eu5_regent_coc = {
 eu5_regent_cog = {
 	name = "Cǎotáng Regent"
 	culture = hmong_culture
-	religion = pagan
+	religion = dab_qhuas
 	1300.1.1 = { birth = yes }
 }
 
@@ -19404,7 +19404,7 @@ eu5_regent_dje = {
 eu5_regent_dla = {
 	name = "Dala Regent"
 	culture = hurga_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -19418,7 +19418,7 @@ eu5_regent_dln = {
 eu5_regent_dmb = {
 	name = "Domboli-Bokht Regent"
 	culture = kurdish_culture
-	religion = pagan
+	religion = yazidi_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -19502,7 +19502,7 @@ eu5_regent_dyn = {
 eu5_regent_dzh = {
 	name = "Dǐzhài Regent"
 	culture = hmong_culture
-	religion = pagan
+	religion = dab_qhuas
 	1300.1.1 = { birth = yes }
 }
 
@@ -19516,7 +19516,7 @@ eu5_regent_dzk = {
 eu5_regent_eji = {
 	name = "Ejimi Regent"
 	culture = haixi_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -19579,7 +19579,7 @@ eu5_regent_fal = {
 eu5_regent_fln = {
 	name = "Fulun Regent"
 	culture = hurga_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -19621,14 +19621,14 @@ eu5_regent_fur = {
 eu5_regent_fut = {
 	name = "Futi Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_fuy = {
 	name = "Fuyu Regent"
 	culture = haixi_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -19684,7 +19684,7 @@ eu5_regent_gha = {
 eu5_regent_gil = {
 	name = "Gilemi Regent"
 	culture = hurga_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -19901,14 +19901,14 @@ eu5_regent_hhp = {
 eu5_regent_hij = {
 	name = "Hijan Regent"
 	culture = hurga_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_hiy = {
 	name = "Haiyan Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -19936,14 +19936,14 @@ eu5_regent_hlf = {
 eu5_regent_hln = {
 	name = "Halan Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_hnc = {
 	name = "Huncun Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -19978,7 +19978,7 @@ eu5_regent_hor = {
 eu5_regent_hot = {
 	name = "Hotonggi Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20013,7 +20013,7 @@ eu5_regent_hrl = {
 eu5_regent_hro = {
 	name = "Horo Regent"
 	culture = hurga_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20062,14 +20062,14 @@ eu5_regent_htz = {
 eu5_regent_hui = {
 	name = "Huiba Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_hur = {
 	name = "Hūrga Regent"
 	culture = hurga_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20132,7 +20132,7 @@ eu5_regent_ias = {
 eu5_regent_ibl = {
 	name = "Ibalon Regent"
 	culture = bicolano_culture
-	religion = pagan
+	religion = dayawism
 	1300.1.1 = { birth = yes }
 }
 
@@ -20146,7 +20146,7 @@ eu5_regent_icm = {
 eu5_regent_ife = {
 	name = "Ife Regent"
 	culture = yoruba
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20160,35 +20160,35 @@ eu5_regent_ihb = {
 eu5_regent_ijb = {
 	name = "Ijebu Regent"
 	culture = yoruba
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ije = {
 	name = "Ijero Regent"
 	culture = yoruba
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ijs = {
 	name = "Ijesha Regent"
 	culture = yoruba
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ilu = {
 	name = "Ilu Regent"
 	culture = hurga_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_imn = {
 	name = "Imanka Regent"
 	culture = hurga_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20223,14 +20223,14 @@ eu5_regent_isl = {
 eu5_regent_iso = {
 	name = "Isedo Regent"
 	culture = yoruba
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_itu = {
 	name = "Itun Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20258,7 +20258,7 @@ eu5_regent_ixt = {
 eu5_regent_iya = {
 	name = "Ila Yara Regent"
 	culture = yoruba
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20300,7 +20300,7 @@ eu5_regent_jhi = {
 eu5_regent_jht = {
 	name = "Juru Hoton Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20377,7 +20377,7 @@ eu5_regent_jur = {
 eu5_regent_jus = {
 	name = "Jusheri Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20461,7 +20461,7 @@ eu5_regent_ker = {
 eu5_regent_ket = {
 	name = "Ketu Regent"
 	culture = yoruba
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20517,7 +20517,7 @@ eu5_regent_kil = {
 eu5_regent_kim = {
 	name = "Kiliman Regent"
 	culture = tagakaulo_culture
-	religion = pagan
+	religion = dayawism
 	1300.1.1 = { birth = yes }
 }
 
@@ -20622,7 +20622,7 @@ eu5_regent_klw = {
 eu5_regent_kml = {
 	name = "Kumalarang Regent"
 	culture = sama_culture
-	religion = pagan
+	religion = dayawism
 	1300.1.1 = { birth = yes }
 }
 
@@ -20769,7 +20769,7 @@ eu5_regent_lac = {
 eu5_regent_lal = {
 	name = "Lalin Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20832,7 +20832,7 @@ eu5_regent_lgk = {
 eu5_regent_lgq = {
 	name = "Lóngquán Regent"
 	culture = hmong_culture
-	religion = pagan
+	religion = dab_qhuas
 	1300.1.1 = { birth = yes }
 }
 
@@ -20846,7 +20846,7 @@ eu5_regent_lgt = {
 eu5_regent_lgz = {
 	name = "Lóngzhōu Regent"
 	culture = rma_culture
-	religion = pagan
+	religion = rrmeaism
 	1300.1.1 = { birth = yes }
 }
 
@@ -20902,7 +20902,7 @@ eu5_regent_lls = {
 eu5_regent_llu = {
 	name = "Lalu Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20923,7 +20923,7 @@ eu5_regent_lnk = {
 eu5_regent_lno = {
 	name = "Lanao Regent"
 	culture = iranun_culture
-	religion = pagan
+	religion = dayawism
 	1300.1.1 = { birth = yes }
 }
 
@@ -21042,7 +21042,7 @@ eu5_regent_mac = {
 eu5_regent_mah = {
 	name = "Mahiyan Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -21091,7 +21091,7 @@ eu5_regent_mci = {
 eu5_regent_mdy = {
 	name = "Madya-as Regent"
 	culture = hiligaynon_culture
-	religion = pagan
+	religion = dayawism
 	1300.1.1 = { birth = yes }
 }
 
@@ -21112,7 +21112,7 @@ eu5_regent_met = {
 eu5_regent_mgd = {
 	name = "Wenduling Regent"
 	culture = maguindanao_culture
-	religion = pagan
+	religion = dayawism
 	1300.1.1 = { birth = yes }
 }
 
@@ -21196,7 +21196,7 @@ eu5_regent_mhu = {
 eu5_regent_mic = {
 	name = "Michen Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -21378,7 +21378,7 @@ eu5_regent_mpr = {
 eu5_regent_mre = {
 	name = "Muren Regent"
 	culture = hurga_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -21441,7 +21441,7 @@ eu5_regent_mto = {
 eu5_regent_muh = {
 	name = "Muhiya Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -21525,7 +21525,7 @@ eu5_regent_mzt = {
 eu5_regent_nal = {
 	name = "Nalaji Regent"
 	culture = haixi_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -21560,14 +21560,14 @@ eu5_regent_nel = {
 eu5_regent_nem = {
 	name = "Nemer Regent"
 	culture = haixi_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ney = {
 	name = "Neyen Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -21651,7 +21651,7 @@ eu5_regent_nri = {
 eu5_regent_nro = {
 	name = "Noro Regent"
 	culture = hurga_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -21679,7 +21679,7 @@ eu5_regent_ntl = {
 eu5_regent_nup = {
 	name = "Nupe Regent"
 	culture = nupe
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -21763,7 +21763,7 @@ eu5_regent_ohk = {
 eu5_regent_oke = {
 	name = "Oke-Ila Regent"
 	culture = yoruba
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -21777,7 +21777,7 @@ eu5_regent_omt = {
 eu5_regent_ond = {
 	name = "Ondo Regent"
 	culture = yoruba
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -21826,7 +21826,7 @@ eu5_regent_oua = {
 eu5_regent_owo = {
 	name = "Owo Regent"
 	culture = yoruba
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -21840,7 +21840,7 @@ eu5_regent_oxt = {
 eu5_regent_oyo = {
 	name = "Oyo Regent"
 	culture = yoruba
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -21910,7 +21910,7 @@ eu5_regent_pcr = {
 eu5_regent_pdg = {
 	name = "Píngdìng Regent"
 	culture = hmong_culture
-	religion = pagan
+	religion = dab_qhuas
 	1300.1.1 = { birth = yes }
 }
 
@@ -21945,7 +21945,7 @@ eu5_regent_pem = {
 eu5_regent_pgb = {
 	name = "Píngbà Regent"
 	culture = hmong_culture
-	religion = pagan
+	religion = dab_qhuas
 	1300.1.1 = { birth = yes }
 }
 
@@ -22001,7 +22001,7 @@ eu5_regent_plk = {
 eu5_regent_pll = {
 	name = "Pulilu Regent"
 	culture = tagalog_culture
-	religion = pagan
+	religion = dayawism
 	1300.1.1 = { birth = yes }
 }
 
@@ -22085,14 +22085,14 @@ eu5_regent_ptp = {
 eu5_regent_ptz = {
 	name = "Píngtóuzhekě Regent"
 	culture = hmong_culture
-	religion = pagan
+	religion = dab_qhuas
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_pye = {
 	name = "Píngyuè Regent"
 	culture = hmong_culture
-	religion = pagan
+	religion = dab_qhuas
 	1300.1.1 = { birth = yes }
 }
 
@@ -22211,7 +22211,7 @@ eu5_regent_rgm = {
 eu5_regent_rgs = {
 	name = "Rongshan Regent"
 	culture = hmong_culture
-	religion = pagan
+	religion = dab_qhuas
 	1300.1.1 = { birth = yes }
 }
 
@@ -22351,7 +22351,7 @@ eu5_regent_sco = {
 eu5_regent_sdg = {
 	name = "Shǔidōng Regent"
 	culture = hmong_culture
-	religion = pagan
+	religion = dab_qhuas
 	1300.1.1 = { birth = yes }
 }
 
@@ -22428,7 +22428,7 @@ eu5_regent_shg = {
 eu5_regent_shi = {
 	name = "Shilin Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -22463,7 +22463,7 @@ eu5_regent_sig = {
 eu5_regent_sir = {
 	name = "Sirin Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -22526,7 +22526,7 @@ eu5_regent_sml = {
 eu5_regent_smn = {
 	name = "Shilimian Regent"
 	culture = hurga_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -22540,7 +22540,7 @@ eu5_regent_sms = {
 eu5_regent_snc = {
 	name = "Sancaha Regent"
 	culture = haixi_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -22659,7 +22659,7 @@ eu5_regent_sts = {
 eu5_regent_sui = {
 	name = "Suifun Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -22764,7 +22764,7 @@ eu5_regent_tao = {
 eu5_regent_tas = {
 	name = "Tashan Regent"
 	culture = haixi_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -23093,7 +23093,7 @@ eu5_regent_tnz = {
 eu5_regent_tod = {
 	name = "Todo Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -23114,7 +23114,7 @@ eu5_regent_toh = {
 eu5_regent_tox = {
 	name = "Ton Regent"
 	culture = hurga_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -23303,7 +23303,7 @@ eu5_regent_txp = {
 eu5_regent_tyy = {
 	name = "Taytay Regent"
 	culture = cuyonon_culture
-	religion = pagan
+	religion = dayawism
 	1300.1.1 = { birth = yes }
 }
 
@@ -23450,7 +23450,7 @@ eu5_regent_uri = {
 eu5_regent_uss = {
 	name = "Ussuri Regent"
 	culture = hurga_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -23478,7 +23478,7 @@ eu5_regent_vdu = {
 eu5_regent_vdz = {
 	name = "Vayots Dzor Regent"
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	1300.1.1 = { birth = yes }
 }
 
@@ -23548,14 +23548,14 @@ eu5_regent_wei = {
 eu5_regent_wej = {
 	name = "Weji Regent"
 	culture = haixi_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_wek = {
 	name = "Weken Regent"
 	culture = hurga_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -23576,7 +23576,7 @@ eu5_regent_wie = {
 eu5_regent_wmo = {
 	name = "Wēimào Regent"
 	culture = rma_culture
-	religion = pagan
+	religion = rrmeaism
 	1300.1.1 = { birth = yes }
 }
 
@@ -23639,14 +23639,14 @@ eu5_regent_wun = {
 eu5_regent_wuy = {
 	name = "Wuyewu Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_wzh = {
 	name = "Wǔzhài Regent"
 	culture = hmong_culture
-	religion = pagan
+	religion = dab_qhuas
 	1300.1.1 = { birth = yes }
 }
 
@@ -23744,14 +23744,14 @@ eu5_regent_xlt = {
 eu5_regent_xng = {
 	name = "Xianning Regent"
 	culture = hmong_culture
-	religion = pagan
+	religion = dab_qhuas
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_xnl = {
 	name = "Xinlong Regent"
 	culture = hmong_culture
-	religion = pagan
+	religion = dab_qhuas
 	1300.1.1 = { birth = yes }
 }
 
@@ -23842,7 +23842,7 @@ eu5_regent_ygs = {
 eu5_regent_yim = {
 	name = "Yimahu Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -23905,7 +23905,7 @@ eu5_regent_yok = {
 eu5_regent_yoo = {
 	name = "Yoose Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -23919,7 +23919,7 @@ eu5_regent_ypz = {
 eu5_regent_yrn = {
 	name = "Yaran Regent"
 	culture = jurchen_culture
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -51136,7 +51136,7 @@ kcn_ivane_ii = {
 	name = "name_john"
 	dynasty = hasan_jalalyan_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	1310.1.1 = { birth = yes }
 }
 
@@ -51429,7 +51429,7 @@ kie_algimantas = {
 	name = "name_algimantas"
 	dynasty = alseniskiai_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = kie_mindaugas_holshanski
 	1290.1.1 = { birth = yes }
 	1331.1.1 = { death = yes }
@@ -51569,7 +51569,7 @@ kie_mindaugas_holshanski = {
 	name = "name_mindaugas"
 	dynasty = alseniskiai_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	1270.1.1 = { birth = yes }
 	1324.1.1 = { death = yes }
 }
@@ -53404,7 +53404,7 @@ lit_butigeidis_gediminids = {
 	name = "name_butigeidis"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = lit_skalmantas_gediminids
 	1249.1.1 = { birth = yes }
 	1291.1.1 = { death = yes }
@@ -53414,7 +53414,7 @@ lit_butvydas = {
 	name = "name_butvydas"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = lit_skalmantas_gediminids
 	1240.1.1 = { birth = yes }
 	1295.1.1 = { death = yes }
@@ -53434,7 +53434,7 @@ lit_gediminas_gediminids = {
 	name = "name_gediminas"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = lit_butvydas
 	1275.1.1 = { birth = yes }
 	1296.1.1 = { add_spouse = lit_jaune_polotsk }
@@ -53454,7 +53454,7 @@ lit_jaunutis_gediminds = {
 	name = "name_john"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = lit_gediminas_gediminids
 	mother = lit_jaune_polotsk
 	1306.1.1 = { birth = yes }
@@ -53464,7 +53464,7 @@ lit_kestutis_gediminds = {
 	name = "name_kestutis"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = lit_gediminas_gediminids
 	mother = lit_jaune_polotsk
 	1297.1.1 = { birth = yes }
@@ -53474,7 +53474,7 @@ lit_liubartas_gediminds = {
 	name = "name_liubartas"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = lit_gediminas_gediminids
 	1308.1.1 = { birth = yes }
 }
@@ -53483,7 +53483,7 @@ lit_manvydas_gediminds = {
 	name = "name_manvydas"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = lit_gediminas_gediminids
 	mother = lit_vida
 	1299.1.1 = { birth = yes }
@@ -53493,7 +53493,7 @@ lit_margiris_gediminids = {
 	name = "name_margiris"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = lit_butvydas
 	1270.1.1 = { birth = yes }
 	1336.2.25 = { death = yes }
@@ -53503,7 +53503,7 @@ lit_skalmantas_gediminids = {
 	name = "name_skalmantas"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	1210.1.1 = { birth = yes }
 	1260.1.1 = { death = yes }
 }
@@ -53511,7 +53511,7 @@ lit_skalmantas_gediminids = {
 lit_vida = {
 	name = "name_vita"
 	culture = curonian
-	religion = pagan
+	religion = baltic_pagan
 	1278.1.1 = { birth = yes }
 	1294.1.1 = { add_spouse = lit_gediminas_gediminids }
 }
@@ -53520,7 +53520,7 @@ lit_vytenis_gediminids = {
 	name = "name_vytenis"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = lit_butvydas
 	1260.1.1 = { birth = yes }
 	1316.1.1 = { death = yes }
@@ -53530,7 +53530,7 @@ lit_zvelgutis_gediminids = {
 	name = "name_zvelgutis"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = lit_vytenis_gediminids
 	1280.1.1 = { birth = yes }
 	1310.1.1 = { death = yes }
@@ -56458,7 +56458,7 @@ mkl_niklot_of_the_obrotites = {
 	name = "name_niklot"
 	dynasty = mecklenburg_dynasty
 	culture = western_pomeranian
-	religion = pagan
+	religion = baltic_pagan
 	1090.1.1 = { birth = yes }
 	1160.8.1 = { death = yes }
 }
@@ -56507,7 +56507,7 @@ mkl_wertislaw_of_the_obrotites = {
 	name = "name_vratislav"
 	dynasty = mecklenburg_dynasty
 	culture = western_pomeranian
-	religion = pagan
+	religion = baltic_pagan
 	father = mkl_niklot_of_the_obrotites
 	1130.1.1 = { birth = yes }
 	1164.6.1 = { death = yes }
@@ -57663,7 +57663,7 @@ mos_augusta_gediminds = {
 	name = "name_augusta"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = lit_gediminas_gediminids
 	1320.1.1 = { birth = yes }
 	1336.1.1 = { add_spouse = mos_simeon_ivanovich_gordyy_rurikovich }
@@ -61109,7 +61109,7 @@ nrk_karijotas_gediminds = {
 	name = "name_karijotas"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = lit_gediminas_gediminids
 	mother = lit_jaune_polotsk
 	1305.1.1 = { birth = yes }
@@ -61119,7 +61119,7 @@ nrk_koriatovich_gediminds = {
 	name = "name_george"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = nrk_karijotas_gediminds
 	1330.1.1 = { birth = yes }
 }
@@ -62472,7 +62472,7 @@ otc_nayan_borjigin = {
 	name = "name_nayan"
 	dynasty = borjigin_dynasty
 	culture = mongolian_culture
-	religion = pagan
+	religion = nestorian
 	father = otc_ajul_borjigin
 	1257.1.1 = { birth = yes }
 	1287.7.1 = { death = yes }
@@ -62492,7 +62492,7 @@ otc_toqto_borjigin = {
 	name = "name_toqta"
 	dynasty = borjigin_dynasty
 	culture = mongolian_culture
-	religion = pagan
+	religion = nestorian
 	father = otc_nayan_borjigin
 	1280.1.1 = { birth = yes }
 	1328.11.14 = { death = yes }
@@ -65214,7 +65214,7 @@ pok_liubko_gediminids = {
 	name = "name_liubko"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = pok_vainius_gediminids
 	1299.1.1 = { birth = yes }
 }
@@ -65243,7 +65243,7 @@ pok_vainius_gediminids = {
 	name = "name_vainius"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = lit_butvydas
 	1276.1.1 = { birth = yes }
 	1336.1.1 = { death = yes }
@@ -72861,7 +72861,7 @@ syu_biurtel = {
 	name = "name_burtel"
 	dynasty = orbelian_dynasty
 	culture = armenian_culture
-	religion = miaphysitism
+	religion = armenian_apostolic
 	1280.1.1 = { birth = yes }
 }
 
@@ -76385,7 +76385,7 @@ vbk_algirdas_gediminds = {
 	name = "name_algirdas"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = lit_gediminas_gediminids
 	mother = lit_vida
 	1296.1.1 = { birth = yes }
@@ -76395,7 +76395,7 @@ vbk_andrius_gediminds = {
 	name = "name_andrew"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = vbk_algirdas_gediminds
 	mother = vbk_maria_of_vitebsk
 	1325.1.1 = { birth = yes }
@@ -76425,7 +76425,7 @@ vbk_constantine_gediminds = {
 	name = "name_constantine"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = vbk_algirdas_gediminds
 	mother = vbk_maria_of_vitebsk
 	1330.1.1 = { birth = yes }
@@ -76445,7 +76445,7 @@ vbk_dmitrijus_gediminds = {
 	name = "name_demetrius"
 	dynasty = gediminid_dynasty
 	culture = aukstaitian
-	religion = pagan
+	religion = baltic_pagan
 	father = vbk_algirdas_gediminds
 	mother = vbk_maria_of_vitebsk
 	1327.1.1 = { birth = yes }
