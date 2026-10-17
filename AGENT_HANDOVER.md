@@ -189,8 +189,26 @@ CK3 侧头衔 key 的规则：`{rank}_eu5_{tag小写}`，只给 d/k/e 建；c �
 
 ### 3.8 地区政体
 
-- 东南亚（`indochina_region` + `indonesia_region`，128 国）：非伊斯兰封建 → `mandala_government`
-  （首府地产 `temple_citadel_holding`）；部落 → `wanua_government`；**该区所有附庸改成朝贡，等级不变**。
+- 东南亚（EU5 `sub_continent:south_east_asia`，= `indochina_region` + `indonesia_region`，1586 地点 /
+  190 县）**加美拉尼西亚**（`oceania/pacific_islands/melanesia_region`，562 地点 / 46 县 —— 新几内亚、
+  所罗门、瓦努阿图、新喀里多尼亚、斐济，合计 **2148 地点 / 236 县**）：
+  **由 EU5 的 `mandala_system` 政府改革决定**（★ 2026-10-18 起，取代旧的"单县无附庸判村社"）：
+  - 开局 `reforms` 里带 `mandala_system` 的 tag → `mandala_government`，县首府 `temple_citadel_holding`；
+  - 其余一律 → `wanua_government`，县首府 `tribal_holding`（与 EU5 政体无关，clan/herder/feudal 也照改）。
+  - `reforms` 写在 tag 的 `government = { ... }` 里，很多 tag 靠 `include = "indonesia_monarchy"` 等模板带进来，
+    必须展开 include 才算（展开后 61 个 tag，只在 tag 块里直接数只有 BTU/MYI 两个）。
+  - 该区所有附庸改成朝贡，等级不变。
+  - **例外：EU5 `government = meritocratic` 的国家一律不动**（全图仅 2 个：越南 `DAI` 大越、高丽 `KOR`）。
+    越南 13 县 + `k_eu5_dai` 保持 `meritocratic_government`、首府 `castle_holding`；它没有 `mandala_system`，
+    按"其余→村社"会被错改成 wanua。高丽不在区内，但同一条豁免一起写死。
+  - ⚠️ **不要按 tag 缩写猜国家**：`VTN` 是**万象 Vientiane**（老挝），不是越南；越南是 `DAI`。认国家一律读
+    `eu5_politics.json` 的 `name_en` / `name_zh`（或 EU5 本地化），不要看三字母码联想。
+  - 美拉尼西亚 46 县里只有 1 个县有国家：`c_doberai` 的**马登 Maden（`MAD`，EU5 `herder`）**，本次改为
+    `wanua_government` + 首府 `tribal_holding`（province 20994）；其余 45 县是 `gen_wilderness_holder` 荒野。
+  - `common/governments/zz_gen_wanua_government.txt` 的 `primary_heritages` 因此从 5 组扩到 8 组：
+    austronesian / shan / thai / tibeto_burman / austroasiatic + **papuan / micronesian / polynesian**
+    （马登的 `abun_culture` 是 `papuan_group`，不加会让 wanua 对该统治者 invalid）。
+  - 落点 `Global_modern_map/eu5_export/_apply_sea_governments.py`（幂等）。
 - 格尔米扬 `GRM` 的 3 个附庸同样改成朝贡（模拟历史势力范围瓦解）。
 
 ### 3.9 EU5 政体 → CK3 政体/地产

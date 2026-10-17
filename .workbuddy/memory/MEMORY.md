@@ -80,6 +80,39 @@ CK3 全面转换 mod：把 EU5（Europa Universalis V）的 1337 年开局政治
   要让自由市（WRM/BSC/ULM/NUR 等）留下来，就**改伯爵领首府**，让它在原县里保留自己的城市男爵领。
 - 改县主 = 两件事一起做：`history/titles` 换 holder（整条链）+ `landed_titles` 换首府 barony。
 
+## 东南亚政体（★ 2026-10-18 定稿，取代"单县无附庸判村社"）
+- 判据 = EU5 政府改革 `mandala_system`（`in_game/common/government_reforms/country_specific.txt`，
+  `major = yes`，potential = 首都 `sub_continent:south_east_asia` + dharmic/theravada/mahayana/satsana_phi）。
+  - 有 → CK3 `mandala_government` + 县首府 `temple_citadel_holding`
+  - 其余一律 → `wanua_government` + 县首府 `tribal_holding`
+- **`reforms` 写在 tag 的 `government = { ... }` 里，且大半由 `include = "模板"` 带入**
+  （`main_menu/setup/templates/*.txt`）。**必须递归展开 include**：只 grep tag 块字面量只有 BTU/MYI 两个，
+  展开后 **61 个 tag**。tag 自己写 `reforms` 覆盖模板。`indonesia_monarchy` 带 mandala，
+  `indonesia_limited_monarchy` 不带。
+- 区域 = `definitions.txt` 的 `south_east_asia` 子块（= indochina_region + indonesia_region，
+  1586 location / 190 县 / 1038 barony province）。
+- 覆盖 c_ 县持有者 + 只持 b_ 的男爵持有者；`gen_wilderness_holder` 跳过。
+- 落点 `eu5_export/_apply_sea_governments.py`（幂等，排在 `_fix_politics_output.py` 之后）。
+  实测 120 领主（60 mandala / 60 wanua）、188 头衔。地产只改已建的（none/wilderness 不动），
+  等价于生成器 `Governments.CapitalHolding`。
+
+## 东南亚政体判定（★ 2026-10-18）
+- 判据 = EU5 政府改革 `mandala_system`（`government_reforms/country_specific.txt`，61 个 tag，靠
+  `include = "模板"` 展开才数得全）。有 → `mandala_government` + `temple_citadel_holding`；
+  其余 → `wanua_government` + `tribal_holding`。脚本 `eu5_export/_apply_sea_governments.py`。
+- **区域 = `south_east_asia` + `melanesia_region`**（后者在 `oceania/pacific_islands` 下，不是 asia 的
+  sub_continent）：1586 + 562 地点 = **2148 地点 / 236 县**。美拉尼西亚 46 县里只有 `c_doberai`
+  有国家（马登 Maden / `MAD`），其余是荒野。
+- `common/governments/zz_gen_wanua_government.txt` 的 `primary_heritages` = **8 组**：
+  austronesian / shan / thai / tibeto_burman / austroasiatic / papuan / micronesian / polynesian。
+- **`VTN` 是万象 Vientiane（老挝），不是越南；越南 tag = `DAI`**（大越）。
+- **`government = meritocratic` 的国家一律豁免**：全图只有 DAI（越南）和 KOR（高丽），
+  保持 `meritocratic_government` + `castle_holding`。越南没有 `mandala_system`，
+  不豁免就会被"其余→村社"吞掉。高丽不在 SEA 区，但同一豁免写死。
+- ★ **不要按 tag 缩写猜国家**，认国家读 `eu5_politics.json` 的 `name_en` / `name_zh`。
+- ★ 县没有 `1337.1.1` 条目（领主死在中途、没写继承人）时 = 开局无主，**不能给它写政府**；
+  `holder_at_1337()` 必须只认 1337 条目，不能取"最后一个日期的 holder"（曾因此在 `c_bomberai` 崩）。
+
 ## 工作方式约定（用户）
 - 先讲判断再动手；一次做完，不要半吊子中间态。
 - 改成品 → 再回改脚本，使重跑结果一致。
@@ -117,3 +150,31 @@ CK3 全面转换 mod：把 EU5（Europa Universalis V）的 1337 年开局政治
   每项 `faith = <parent>`）。vanilla：`sunni→hanafi`、`shia→ismaili`、`kharijite→ibadi`。
   **本项目已把 `shia.main_rite` 改为 `imami`**（2026-10-17，理由：1337 年十二伊玛目派已是什叶主流）；
   该文件是 mod 里 vanilla 的全量拷贝，改它即覆盖 vanilla。sunni/kharijite 未动。
+
+## 附庸关系与朝贡（`export_politics.py`）
+- `relations[].ck3` 只有三种：`vassal` / `union` / `tributary`。C# `Emit/History/Eu5PoliticsWriter`
+  和 `_fix_politics_output.py` **只读 json 的这个字段**，不自己重算 → 改 `export_politics.py` 一处即全链路。
+- `tributary` 在 CK3 里靠 `common/on_action/zz_eu5_tributaries.txt` 开局 effect
+  （`break_subject_contract_and_establish_tributary_effect`）建立，**双方必须都是独立统治者**
+  （limit `is_independent_ruler = yes`），所以 tributary 国家在头衔历史里不能有 `liege =`。
+- ★ **两个判定必须分开（2026-10-18 血泪）**：
+  - `tributary_by_nature(vassal, lord)` = 曼陀罗地区（SEA_TAGS）+ GRM，**这是 `raised`/`lowered`/
+    `own_vassals` 推断头衔等级的依据**；
+  - `written_as_tribute(vassal, lord)` = 上面这个 **or `is_horde(vassal)` or `is_horde(lord)`**，
+    只在写最终 `ck3` 字段时用。
+  把 horde 直接加进前者会连带改等级（实测 CRS d→None、QCH d→k）。用户要求"游牧底下改朝贡，
+  **头衔等级不变**"，所以拆开。36 个 `steppe_horde`，60 条 vassal→tributary，rank 零变化。
+
+## 东南亚村社制（2026-10-18）
+- CK3「村社制」= `wanua_government`（vanilla TGP）。判定脚本 `eu5_export/_apply_sea_wanua.py`，
+  挂在 `run_ei2_variant.ps1` **最后**（`_fix_politics_output.py` 之后，因为后者会重写
+  `zz_eu5_government.txt`）。规则：SEA 地区（EU5 `indochina_region`/`indonesia_region`）内，CK3 只持
+  1 个 `c_` 或 1 个 `b_`、且该人对应 EU5 tag 不在 relations 的 `first`（无 vassal/朝贡）→ 政府 wanua、
+  地产 tribal。实测 83 人（44 单县 + 39 单男爵）。
+- ★ **必须覆盖 `wanua_government`**：vanilla 的 `primary_heritages = { heritage_austronesian }` 与 mod
+  生成文化的 `austronesian_group` 一套 heritage key 对不上，不覆盖则 wanua 对全图 invalid。
+  覆盖文件 `common/governments/zz_gen_wanua_government.txt`（五个组：austronesian/shan/thai/
+  tibeto_burman/austroasiatic），做法同 `zz_gen_japan_government_types.txt` 去掉 heritage_japonic。
+- `required_county_holdings` 只约束建造、不是政府合法性；39 个男爵都不是县首府，所以改他们不动县主的
+  mandala `primary_holding`。
+

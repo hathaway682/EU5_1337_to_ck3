@@ -1,0 +1,97 @@
+# =========================================================
+# wanua_government, re-declared so the generated cultures can reach it.
+# =========================================================
+#
+# Whole-object override of vanilla's wanua_government
+# (common/governments/00_government_types.txt). The database is last-wins and this directory has
+# no subfolders, so a zz_ file here replaces the object without touching the vanilla file.
+#
+# ---- What changed ----
+#
+# 1. `primary_heritages = { heritage_austronesian }` became the heritages this map's cultures
+#    actually carry. The generated cultures are built from EU5's culture groups and never carry a
+#    vanilla `heritage_*` pillar, so leaving vanilla's list in place makes wanua invalid for every
+#    ruler on this map -- a village chief set to wanua in the title history would be read as an
+#    illegal government on load. Same reason zz_gen_japan_government_types.txt drops
+#    heritage_japonic from the two Japanese governments.
+#
+#    The eight are the heritages of the men the SEA conversion hands wanua to: the Malay and
+#    Philippine courts, the Shan, the Thai, the Burmese, the Mon -- and, since Melanesia counts as
+#    South-East Asia too, the Papuan, Micronesian and Polynesian islanders (28 / 15 / 3 of the 46
+#    Melanesian counties). Nothing else is granted it.
+#
+# 2. Everything else is vanilla's definition verbatim. Re-copy from vanilla when the game patches
+#    this object.
+
+wanua_government = { # "Wanua"
+	government_rules = {
+		rulers_should_have_dynasty = yes
+		legitimacy = yes
+		always_use_patronym = yes
+		affected_by_development = no
+		gain_legitimacy_becoming_tributary = yes
+		regiments_use_barter_goods_as_gold = yes
+		barter = yes
+		allow_accolades = yes
+	}
+
+	royal_court = any
+
+	supply_limit_mult_for_others = -0.5
+	primary_holding = tribal_holding
+	required_county_holdings = { tribal_holding }
+	primary_heritages = {
+		austronesian_group
+		shan_group
+		thai_group
+		tibeto_burman_group
+		austroasiatic_group
+		papuan_group
+		micronesian_group
+		polynesian_group
+	}
+
+	valid_holdings = { city_holding castle_holding temple_citadel_holding }
+
+	prestige_opinion_override = { -10 0 3 5 10 20 }
+
+	vassal_contract_group = wanua_vassal
+
+	ai = {
+		use_legends = yes
+	}
+
+	character_modifier = {
+		title_creation_cost_mult = -0.5
+
+		embarkation_cost_mult = -1
+
+		sea_travel_danger = medium_sea_danger_reduction
+		coastal_sea_travel_danger = medium_sea_danger_reduction
+
+		ai_war_chance = -0.5
+
+		domain_limit_max = 2
+		vassal_limit_max = 2
+	}
+
+	can_get_government = {
+		has_tgp_dlc_trigger = yes
+	}
+
+	flags = {
+		government_is_tribal
+		government_is_wanua
+		government_is_settled
+		government_can_raid_rule
+		government_use_barter_goods
+		government_enables_naval_raiding
+		government_enables_river_travel
+		may_elevate_co_monarch
+		government_uses_tribal_authority
+	}
+
+	color = rgb{ 85 207 198 }
+	realm_mask_offset = { 0.0 0.09 }
+	realm_mask_scale = { 0.9 0.9 }
+}
