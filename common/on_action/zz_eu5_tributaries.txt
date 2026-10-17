@@ -93,6 +93,244 @@ eu5_start_tributaries = {
 				}
 			}
 		}
+		character:chg_changsi = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_apd = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:chg_changsi = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_art = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:chg_changsi = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_bkh = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:chg_changsi = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_brl = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:chg_changsi = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_bsd = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:chg_changsi = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_dgh = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:chg_changsi = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_jly = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:chg_changsi = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_krg = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:chg_changsi = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_ktt = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:chg_changsi = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_ngd = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:chg_changsi = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_qun = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:chg_changsi = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_sld = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:chg_changsi = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_ysu = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:chg_changsi = {
+			save_scope_as = eu5_suzerain
+			character:qch_uruktemur = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
 		character:ere_eretna = {
 			save_scope_as = eu5_suzerain
 			character:eu5_regent_bfr = {
@@ -181,6 +419,40 @@ eu5_start_tributaries = {
 		character:eth_amedee_i_solomon = {
 			save_scope_as = eu5_suzerain
 			character:ifa_jamal_i_walashma = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:eu5_regent_dgh = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_mnl = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:eu5_regent_dgh = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_srl = {
 				if = {
 					limit = {
 						is_alive = yes
@@ -639,6 +911,23 @@ eu5_start_tributaries = {
 		}
 		character:glh_giyas_al_din_mohammed_oz_beg_borjigin = {
 			save_scope_as = eu5_suzerain
+			character:eu5_regent_avr = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:glh_giyas_al_din_mohammed_oz_beg_borjigin = {
+			save_scope_as = eu5_suzerain
 			character:eu5_regent_bia = {
 				if = {
 					limit = {
@@ -724,6 +1013,40 @@ eu5_start_tributaries = {
 		}
 		character:glh_giyas_al_din_mohammed_oz_beg_borjigin = {
 			save_scope_as = eu5_suzerain
+			character:eu5_regent_lek = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:glh_giyas_al_din_mohammed_oz_beg_borjigin = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_sms = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:glh_giyas_al_din_mohammed_oz_beg_borjigin = {
+			save_scope_as = eu5_suzerain
 			character:eu5_regent_src = {
 				if = {
 					limit = {
@@ -742,6 +1065,23 @@ eu5_start_tributaries = {
 		character:glh_giyas_al_din_mohammed_oz_beg_borjigin = {
 			save_scope_as = eu5_suzerain
 			character:eu5_regent_ssi = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:glh_giyas_al_din_mohammed_oz_beg_borjigin = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_trk = {
 				if = {
 					limit = {
 						is_alive = yes
@@ -1147,6 +1487,176 @@ eu5_start_tributaries = {
 				}
 			}
 		}
+		character:grg_togha_temur = {
+			save_scope_as = eu5_suzerain
+			character:asr_shaikh_ali = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:grg_togha_temur = {
+			save_scope_as = eu5_suzerain
+			character:hdn_mahmud_qutlugh = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:grg_togha_temur = {
+			save_scope_as = eu5_suzerain
+			character:jkr_arghun_shah = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:grg_togha_temur = {
+			save_scope_as = eu5_suzerain
+			character:kht_abd_allah = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:grg_togha_temur = {
+			save_scope_as = eu5_suzerain
+			character:krt_mu_izz_uddin_husayn_ibn_ghiyath_uddin = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:grg_togha_temur = {
+			save_scope_as = eu5_suzerain
+			character:ksa_latif_allah = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:grg_togha_temur = {
+			save_scope_as = eu5_suzerain
+			character:mzn_hasan = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:grg_togha_temur = {
+			save_scope_as = eu5_suzerain
+			character:qom_tal_al_din_ali = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:grg_togha_temur = {
+			save_scope_as = eu5_suzerain
+			character:sbz_ala_ad_din_muhammad = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:grg_togha_temur = {
+			save_scope_as = eu5_suzerain
+			character:sfr_shaikh_ali_qushji = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
 		character:grm_yakub_i = {
 			save_scope_as = eu5_suzerain
 			character:ayd_umur = {
@@ -1198,6 +1708,23 @@ eu5_start_tributaries = {
 				}
 			}
 		}
+		character:hlg_musa_khan = {
+			save_scope_as = eu5_suzerain
+			character:hll_ahmad_rumaythah = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
 		character:hse_sao_san_noi = {
 			save_scope_as = eu5_suzerain
 			character:eu5_regent_mgt = {
@@ -1235,6 +1762,329 @@ eu5_start_tributaries = {
 		character:ifa_jamal_i_walashma = {
 			save_scope_as = eu5_suzerain
 			character:war_ibrahim = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:dml_kalti = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:ere_eretna = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_ard = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_atz = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_hny = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_ihb = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_kel = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_kkl = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_klr = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:eu5_regent_mkw = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:hbn_abdallah_ibn_shahab_al_din_zani = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:hdr_taj_al_din_hadhur_bin_suleyman = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:kri_muhammed = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:ktw_sayf_al_din_abu_bakr = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:rkl_jamal_al_din_talan = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:sli_burek_ibn_izz_al_din_resu_ibn_mahmud = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:sut_hajji_taghay = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:syy_shuja_al_din_abu_bakr_ramaki = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:jal_hasan_buzurg = {
+			save_scope_as = eu5_suzerain
+			character:zbr_shahab_al_din_ibn_badr_al_din = {
 				if = {
 					limit = {
 						is_alive = yes
