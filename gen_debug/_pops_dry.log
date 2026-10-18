@@ -1,0 +1,43 @@
+provinces mapped: 21046 counties: 3819
+locations with pops: 20792
+
+== result ==
+counties with pop data: 3801 / 3819 | no pop data: 18
+culture changed: 639 | faith changed: 672 | both changed: 213
+
+samples (county: cur_cult/cur_faith -> new_cult/new_faith  [eu5_rel, pop, locs, baronies]):
+  c_boali                    gbaya_culture/pagan -> ngbandi_culture/pagan  [ngbandi_religion, 172.5, 4, 4]
+  c_bomokandi                madi_culture/kushitism_pagan -> madi_culture/pagan  [ori_religion, 202.2, 4, 4]
+  c_bouar                    gbaya_culture/pagan -> sara_culture/pagan  [sao_religion, 107.9, 5, 5]
+  c_djemah                   zande_culture/kushitism_pagan -> banda_culture/pagan  [banda_religion, 62.2, 3, 3]
+  c_niari                    bakele/pagan -> yombe/pagan  [bantu_religion, 32.3, 6, 6]
+  c_wadai                    maba_africa_culture/kushitism_pagan -> daju_culture/kushitism_pagan  [kalge_religion, 73.3, 5, 5]
+  c_kinhasa                  kongo/pagan -> nsudi/pagan  [bantu_religion, 300.2, 9, 9]
+  c_lower_moshiko            lozi_culture/pagan -> lunda/pagan  [bantu_religion, 30.5, 8, 8]
+  c_mbegela                  herero/pagan -> ovimbundu/pagan  [bantu_religion, 36.8, 6, 6]
+  c_south_moxico             chokwe/pagan -> luchazi_culture/pagan  [bantu_religion, 73.9, 17, 17]
+  c_anbamba                  ambundu/pagan -> ovimbundu/pagan  [bantu_religion, 20.7, 7, 7]
+  c_kassai                   chokwe/pagan -> lunda/pagan  [bantu_religion, 75.2, 8, 8]
+  c_lasta                    amhara/miaphysitism -> agaw_culture/miaphysitism  [miaphysite, 63.7, 3, 3]
+  c_semien                   agaw_culture/rabbinic_faith -> amhara/miaphysitism  [miaphysite, 53.4, 3, 3]
+  c_balaw                    tigre/sunni -> tigre/miaphysitism  [miaphysite, 41.5, 3, 3]
+  c_enderta                  tigrinya/miaphysitism -> afar_culture/sunni  [sunni, 25.1, 4, 4]
+  c_hamasien                 tigre/miaphysitism -> tigrinya/miaphysitism  [miaphysite, 43.2, 3, 3]
+  c_tigray                   tigrinya/miaphysitism -> agaw_culture/miaphysitism  [miaphysite, 51.8, 4, 4]
+  c_ennarea                  gonga_culture/waaqism_pagan -> gonga_culture/miaphysitism  [miaphysite, 48.6, 5, 5]
+  c_hadiya                   gonga_culture/waaqism_pagan -> gurage/sunni  [sunni, 55.2, 4, 4]
+  c_metekel                  gumuz_culture/waaqism_pagan -> agaw_culture/miaphysitism  [miaphysite, 29.7, 3, 3]
+  c_shewa                    harla_culture/sunni -> gurage/sunni  [sunni, 78.5, 3, 3]
+  c_sidamo                   gonga_culture/waaqism_pagan -> ometo_culture/waaqism_pagan  [omo_religion, 106.1, 6, 6]
+  c_ewaso_ngiro              dahalo_culture/ngaiism_pagan -> maasai_culture/ngaiism_pagan  [maasai_religion, 163.4, 4, 4]
+  c_lukuga                   bindji/pagan -> songye/pagan  [bantu_religion, 120.3, 10, 10]
+  c_rift_valley              maasai_culture/ngaiism_pagan -> tatoga_culture/ngaiism_pagan  [asis_religion, 195.4, 3, 3]
+  c_albert_nile              luo_culture/ngaiism_pagan -> luo_culture/pagan  [nyasaye_religion, 467.2, 4, 4]
+  c_katonga                  baganda_culture/pagan -> rutara_culture/pagan  [cwezi_religion, 292.6, 4, 4]
+  c_lower_kagera             haya_culture/pagan -> rutara_culture/pagan  [cwezi_religion, 112.1, 5, 5]
+  c_antemoro                 antaifasy_culture/pagan -> tanala_culture/sunni  [sunni, 33.0, 5, 5]
+
+[dry-run] 未写文件。加 --apply 才写。
+report: D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\gen_debug\_culture_by_pops_report.txt
+diff csv: D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\gen_debug\_culture_by_pops_diff.csv
+no-pop-data counties (18): c_azores, c_bermuda, c_bougainville, c_cape_verde, c_changtang, c_falklands, c_galapagos, c_guamontey, c_madeira, c_mascarene_islands, c_middle_settlement, c_motu_maha, c_outter_islands, c_papakena, c_qikiqtaaluk, c_saint_helena, c_tsaidam, c_vestribygd

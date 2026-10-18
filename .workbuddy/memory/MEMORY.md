@@ -154,6 +154,34 @@
   barony 之间的行**（县自己的 `color = {..}`）
 - 产物完整性：看 `gfx/ gui/ localization/ events/` 四个目录
 
+## 配准 / 经纬度（★2026-10-18 用户纠正，pagan 匹配翻车根因）
+- **CK3 侧 province 图必须用 Miller 投影 mod 的图**：`E:\SteamLibrary\steamapps\workshop\content\1158310\2320354406\map_data\provinces.png`
+  ＝ `F:\新建文件夹\ArcGIS_Miller_Gall_Georeference\miller_provinces.png`（3,875,348 B，同一份）。
+  **绝不能用原版 `game\map_data\provinces.png`**——那个投影是 P 社乱拼接的（旋转/斜切）。
+- **EU5 侧 = Gall 立体投影**：`F:\新建文件夹\ArcGIS_Miller_Gall_Georeference\gall_provinces.png`（8,737,202 B）
+  ＝ `Global_modern_map\eu5_export\provinces.png`。
+- **正确变换 = `eu5_export\_georef.py` 的真反算**（Miller `miller_px_to_lonlat` / Gall `eu5_px_to_lonlat`）；
+  参考实现 `_geo_bridge.py`（CK3 Miller 质心 → lonlat → Gall 像素 → EU5 location）。
+- ★ **禁止用线性拟合 `v_ll`/`m_ll` 代替真投影**（`_apply_ck3_pagan_match.py` 就错在这）：
+  vanilla 拟合 lon 混 `-11.686*y`、lat 混 `-9.390*x` 正是拼接图斜切的指纹；mod 侧 `lon≈359.6*x` 才正常。
+
+## CK3 非洲 religion/culture 来源（★2026-10-18 用户：province_mapping）
+- CK3 非洲的宗教/文化**不是**逐省写在 `history/provinces`，而是靠
+  `history/province_mapping/00_{guinea,egypt,arabia,persia,sapmi,sri_lanka}.txt`：
+  格式 `目标省 = 代表省`（如 `6992 = 6733`），被映射省**继承代表省的 culture/rite**，自己块里不写。
+  实证：`6733 = { culture = malinke; rite = west_african_pagan }`（在 `k_mali.txt`），而 `6992` 在
+  `history/provinces` 里**无块**。
+- 覆盖不全/有脏：`00_arabia` 20 条中 9 条注释掉（不可通行）；`00_guinea` 344 条但有 **4 个源省映射到
+  不同代表省**（如 `8141` 同时 `=6722` / `=8222`）；`xx = xx` = 恒等/未填。
+  → **不能把 CK3 非洲当"每省都有具体原始宗教"的可靠源**。
+- ★ 旧 `_apply_ck3_pagan_match.py` 直接读 `history/provinces` → 漏掉全部被映射省（如 6992），叠加投影
+  错误，故全歪。注意 vanilla 用 `rite =`（如 `rite = west_african_pagan`），不是 `faith =`。
+- ★ **覆盖率实测（2026-10-18）**：非洲 1466 省（32 个 k_* 王国历史 ∪ 00_guinea/00_egypt 映射）=
+  有信仰 941（604 自带 + 337 映射）、冲突 5、**无人荒地 519（holding=none/空块）**、**真正缺信仰仅 1（685）**、pagan 616。
+  撒哈拉以南（guinea/ghana/mali/jenne/takrur/songhay/gur/gurma/hausaland/igbo-benue/yorubaland/akan/kanem/
+  borgu/sao/kong/darfur）**100% 自带、0 缺口**；"none" 全在北非/东非（maghreb/egypt/nubia/abyssinia/adal…）
+  且几乎都是荒地。→ **CK3 非洲人口省数据其实是齐的，"没填"是无人省**。
+
 ## 工作方式约定（用户）
 - 先讲判断再动手；一次做完，不留半吊子中间态。改成品 → 再回改脚本
 - **诊断默认只读**，先报告 + 给改法，等说"改"才动手

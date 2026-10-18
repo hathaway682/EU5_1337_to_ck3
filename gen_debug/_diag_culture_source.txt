@@ -1,0 +1,21 @@
+province file: 21046 blocks, 21046 culture, 21046 faith
+definition.csv: 28573 pid->location
+landed_titles: 3819 counties, 21046 provinces total
+pops: 20792 locations with culture pops, 20792 with religion pops
+
+== key overlap ==
+province culture distinct=1163 | eu5 cultures=2087 | intersect=1163
+  province-culture NOT in eu5 (0): []
+province faith distinct=49 | eu5 religions=293 | intersect=9
+  province-faith NOT in eu5 (40): ['akom_pagan', 'aluk', 'armenian_apostolic', 'baltic_pagan', 'bilikuism', 'bon_faith', 'confucian_faith', 'dab_qhuas', 'dayawism', 'donyipoloism', 'finnish_pagan', 'hantuism', 'kaharingan', 'kamuyism_pagan', 'kharijite', 'kiratism', 'kushitism_pagan', 'mahayana_faith', 'miaphysitism', 'ngaiism_pagan', 'north_african_acham_pagan', 'pagan', 'rabbinic_faith', 'rrmeaism', 'shaiva_faith']
+
+== granularity ==
+counties with >1 distinct culture among baronies: 0 / 3819
+counties with >1 distinct faith among baronies: 0 / 3819
+  c_central_adamawa: [(13337, 'adamawa_culture', 'pagan', 'milwat'), (13338, 'adamawa_culture', 'pagan', 'kapurthala'), (13339, 'adamawa_culture', 'pagan', 'pathankot'), (13340, 'adamawa_culture', 'pagan', 'nurpur'), (13341, 'adamawa_culture', 'pagan', 'palampur')]
+  c_eastern_adamawa: [(13343, 'adamawa_culture', 'pagan', 'naggar'), (13344, 'adamawa_culture', 'pagan', 'bajaura'), (13345, 'adamawa_culture', 'pagan', 'suket'), (13346, 'adamawa_culture', 'pagan', 'mandi'), (13347, 'adamawa_culture', 'pagan', 'kutlehar')]
+  c_western_adamawa: [(13349, 'benue', 'pagan', 'nahan'), (13350, 'benue', 'pagan', 'sarahan'), (13351, 'benue', 'pagan', 'soonpur'), (13352, 'benue', 'pagan', 'lahore'), (13353, 'benue', 'pagan', 'sultanwind')]
+
+== pops coverage ==
+mod locations: 28573 | with pops: 20791 (72.8%)
+  no pops (7782) sample: ['east_taurus_9', 'kaga_coast', 'shoshonne', 'tellatlas', 'chagos_high_sea_6', 'south_china_sea2', 'gulf_terracina', 'atlantic_capricorn_tropic', 'atlantic_gulf_stream24', 'sahel_corridor02', 'canada_high_sea10', 'futuna_coast_1', 'parita_gulf', 'malden', 'west_taurus_4', 'atlantic_southcurrent30', 'imuruk_lake', 'syrian_desert_corridor6', 'atlantic_southcurrent40', 'tampa_bay', 'lake_bardawil', 'yasawa_atoll', 'north_eastern_atlantic55', 'negra_point', 'niua_high_sea_3', 'pennines_01', 'kujira_cape', 'lake_matano', 'belau_atoll', 'qaradagh_mountains1']

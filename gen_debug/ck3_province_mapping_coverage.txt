@@ -1,0 +1,33 @@
+CK3 vanilla province_mapping faith coverage (effective at 1337.12.31)
+
+file              targets     ok  no-data  conflict  identity  commented   faiths
+00_arabia.txt          11     11        0         0         1          9        2
+00_egypt.txt            4      3        1         0         0          0        1
+00_guinea.txt         340    336        0         4         0          0        6
+00_persia.txt          39     36        3         0         0          0        2
+00_sapmi.txt           35     21       14         0         0          0        1
+00_sri_lanka.txt       20     20        0         0         0          0        1
+
+TOTAL targets=449 ok=427 no_data=18 conflict=4 identity=1 commented=9
+
+distinct faiths across all mapped provinces:
+  west_african_pagan                         89
+  akom_pagan                                 87
+  west_african_orisha_pagan                  80
+  west_african_roog_pagan                    55
+  mahayana                                   28
+  finnish_pagan                              21
+  west_african_bori_pagan                    20
+  theravada                                  20
+  shafii                                     13
+  hanafi                                     8
+  west_african_bidu_pagan                    5
+  ibadi                                      1
+
+--- gaps by file (province ids) ---
+00_egypt.txt: no-data=[667] conflict=[]
+00_guinea.txt: no-data=[] conflict=['8015=8000|8034', '8141=6722|8222', '8142=6722|8222', '8146=6722|8222']
+00_persia.txt: no-data=[667, 4024, 4025] conflict=[]
+00_sapmi.txt: no-data=[377, 401, 402, 403, 404, 405, 406, 407, 408, 411, 412, 415, 416, 429] conflict=[]
+
+CSV: D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\gen_debug\ck3_province_mapping_coverage.csv

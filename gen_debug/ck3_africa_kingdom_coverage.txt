@@ -1,0 +1,65 @@
+CK3 vanilla AFRICA province faith coverage (effective at 1337.12.31)
+scope = 非洲王国历史文件(k_*)里的省  UNION  00_guinea/00_egypt 映射涉及的省
+source: own=自带块  mapped=靠映射继承  conflict=映射冲突
+        waste=无人省(holding=none/空块)  missing=有块但无信仰(真正的缺口)
+
+kingdom           provs   own  mapped conflict  waste  missing   pagan
+k_maghreb            82    24       0        0     58        0       3
+k_africa             71    21       0        0     50        0       0
+k_tahert             64    19       0        0     45        0       0
+k_sahara             49    15       0        0     34        0       3
+k_egypt              88    28       0        0     60        0       0
+k_nubia              78    23       0        0     55        0       1
+k_anbiya             29    11       0        0     18        0       0
+k_blemmyia           37    13       2        0     22        0       1
+k_darfur             52    52       0        0      0        0      43
+k_abyssinia          68    20       0        0     48        0       3
+k_adal               54    18       0        0     36        0       6
+k_ajuraan            40    13       0        0     27        0       5
+k_damot              34    11       0        0     23        0       9
+k_bale               30     9       0        0     21        0       8
+k_zanj               36    14       0        0     22        0       8
+k_guinea              4     4       0        0      0        0       4
+k_ghana              48    48       0        0      0        0       8
+k_mali               34    34       0        0      0        0      17
+k_jenne              19    19       0        0      0        0       6
+k_takrur             18    18       0        0      0        0       1
+k_songhay            24    24       0        0      0        0      11
+k_gur                 3     3       0        0      0        0       3
+k_gurma              37    37       0        0      0        0      36
+k_hausaland          27    27       0        0      0        0      23
+k_igbo-benue         10    10       0        0      0        0      10
+k_yorubaland          3     3       0        0      0        0       3
+k_akan                2     2       0        0      0        0       2
+k_kanem              36    36       0        0      0        0      19
+k_borgu               5     5       0        0      0        0       5
+k_sao                42    42       0        0      0        0      42
+k_kong                1     1       0        0      0        0       1
+(mapping-only)      341     0     335        5      0        1     335
+
+TOTAL provs=1466  has_faith=941 (64.2%)  own=604 mapped=337 conflict=5 waste=519 missing=1  pagan=616
+
+distinct faiths across African provinces:
+  west_african_pagan                         139
+  maliki                                     136
+  west_african_bori_pagan                    129
+  west_african_orisha_pagan                  92
+  akom_pagan                                 90
+  masmudi                                    61
+  shafii                                     61
+  west_african_roog_pagan                    57
+  coptic_rite                                39
+  west_african_bidu_pagan                    35
+  kushitism_pagan                            33
+  waaqism_pagan                              31
+  ibadi                                      14
+  ethiopian_rite                             9
+  ngaiism_pagan                              7
+  haymanot                                   4
+  north_african_acham_pagan                  3
+  ismaili                                    1
+
+--- missing (有块但无信仰，真正缺口) by kingdom ---
+(mapping-only) (1): [685]
+
+CSV: D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\gen_debug\ck3_africa_kingdom_coverage.csv

@@ -1,0 +1,42 @@
+﻿EU5 -> CK3 coat_of_arms generator
+EU5   : D:\Program Files (x86)\Steam\steamapps\common\Europa Universalis V\game
+mod   : D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape
+
+EU5 CoA blocks parsed : 2984   (top-level @vars: 114)
+EU5 named colours     : 49
+
+CSV rows              : 6979 (kinds used: country, japan_house)
+tag -> key resolved   : 1427
+tag has NO EU5 CoA    : 509
+key shared by 2 tags  : 0
+declared title keys   : 27550
+dropped (key not in mod's landed_titles): 3
+    country      PAP  -> k_eu5_pap
+    country      QCH  -> d_eu5_qch
+    country      TMK  -> c_ifoghas
+sub definitions emitted: 9
+
+distinct textures referenced: 1187  (148.5 MB)
+    colored_emblems    943/ 943   118.0 MB  missing=0 []
+    textured_emblems   220/ 220    27.5 MB  missing=0 []
+    patterns            24/  24     3.0 MB  missing=0 []
+
+overlap with other mod CoA files: 118
+    09_eu5_imported_titles.txt               118
+    e.g. c_julich                         in 09_eu5_imported_titles.txt
+    e.g. c_eastern_upper_swabia           in 09_eu5_imported_titles.txt
+    e.g. c_marche                         in 09_eu5_imported_titles.txt
+    e.g. c_frankische_schweiz             in 09_eu5_imported_titles.txt
+    e.g. c_inner_livonia                  in 09_eu5_imported_titles.txt
+    e.g. c_alessandria                    in 09_eu5_imported_titles.txt
+    e.g. c_auxerrois                      in 09_eu5_imported_titles.txt
+    e.g. c_avaria                         in 09_eu5_imported_titles.txt
+    e.g. c_lower_carinthia                in 09_eu5_imported_titles.txt
+    e.g. c_barrois                        in 09_eu5_imported_titles.txt
+
+wrote D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\common\coat_of_arms\coat_of_arms\zz_eu5_countries.txt (635434 bytes)
+wrote D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\common\named_colors\zz_eu5_coa_colors.txt (1950 bytes)
+textures copied=0 skipped(unchanged)=1187
+
+tags without EU5 CoA (509), first 60:
+    AAR ABD ABT ABV ADG ADO ADR AGJ AGN AGW AHY AID AIM AKG AKR AKW AKY ANI ANL APA APD ARN ASH ASP ASR ASU ATC ATG AVA AVY AWO AYA BAT BAU BAY BBA BDK BGI BGT BHM BHP BIT BJG BKH BKT BLA BMK BMP BNI BOL BOW BRK BSD BSM BTE BTS BTU BUG BWL BXJ
