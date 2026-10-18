@@ -1,0 +1,85 @@
+== 区域映射表 ==
+  [africa] 21 条
+  [sea] 21 条
+  跳过（样本不足/不明确/无法定 faith）： 11
+    africa   sunni                    best=masmudi                  61/150 41%
+    africa   rebba_religion           best=waaqism_pagan            1/1 100%
+    africa   odinala_religion         best=west_african_orisha_pagan 1/1 100%
+    africa   abwoi_religion           best=west_african_bori_pagan  1/1 100%
+    sea      satsana_phi              best=shaivism                 3/8 38%
+    sea      orang_asli_religion      best=shaivism                 1/1 100%
+    sea      naurus_religion          best=tolotang                 1/1 100%
+    sea      momolianism_religion     best=shaivism                 1/1 100%
+    sea      ipok_religion            best=mahayana                 1/1 100%
+    sea      sunni                    best=vajrayana                1/1 100%
+    sea      besavik_religion         best=kaharingan               1/1 100%
+
+== 目标：消灭 faith = pagan ==
+  当前 pagan 省: 7203  计划处理: 1502  残留: 5701
+
+  region       pagan      处理        
+    africa       1182       1182       残留 0
+    sea          297        161        残留 136
+    other        5724       159        残留 5565
+
+  残留按 EU5 宗教：
+    other      midewiwin_religion           766
+    other      mississippian_ceremonial     462
+    other      dreamtime_religion           449
+    other      zemi_religion                198
+    other      dene_shamanism               181
+    other      paiute_shamanism             175
+    other      doi_wahire_religion          175
+    other      tunpa_religion               163
+    other      namandu_religion             155
+    other      iroquoian_totemism           149
+    other      inti                         140
+    other      great_plains_shamanism       137
+    other      salishan_totemism            128
+    other      nahuatl                      127
+    other      mayan                        116
+    other      imunu_religion               109
+    other      tapu_religion                101
+    other      bantu_religion               98
+    other      mesoamerican                 95
+    other      pomo_shamanism               93
+    other      tain_feyentun_religion       74
+    other      chichimecah_religion         72
+    other      cahita_religion              67
+    other      yastay_religion              61
+    other      kenos_religion               58
+    other      chibcha_religion             55
+    other      samoyedic_paganism           50
+    other      coahuilteco_religion         49
+    other      kachina_religion             47
+    other      (no pops)                    45
+
+faith 变 1502 | rite 变 1487 | 两者都变 1487
+
+top faith transitions:
+  pagan                      -> west_african_pagan         1072
+  pagan                      -> mahayana_faith             65
+  pagan                      -> shaiva_faith               51
+  pagan                      -> akom_pagan                 41
+  pagan                      -> west_african_bori_pagan    38
+  pagan                      -> tolotang                   36
+  pagan                      -> satsana_phi                31
+  pagan                      -> west_african_roog_pagan    28
+  pagan                      -> siberian_pagan             28
+  pagan                      -> vajrayana_faith            25
+  pagan                      -> tengri_pagan               21
+  pagan                      -> finnish_pagan              18
+  pagan                      -> sunni                      18
+  pagan                      -> orthodox                   8
+  pagan                      -> theravada_faith            6
+  pagan                      -> miaphysitism               4
+  pagan                      -> christian_faith            4
+  pagan                      -> kushitism_pagan            3
+  pagan                      -> sedism                     2
+  pagan                      -> dab_qhuas                  1
+  pagan                      -> shangqing_faith            1
+  pagan                      -> kaharingan                 1
+
+plan csv: D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\gen_debug\_africa_sea_faith_plan.csv
+
+[dry-run] 未写文件。加 --apply 才写。

@@ -14,7 +14,7 @@ MOD = r"D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borde
 CU = r"E:\SteamLibrary\steamapps\workshop\content\1158310\3811443965"
 OURS = os.path.join(MOD, "history", "provinces", "00_generated_provinces.txt")
 OUTDIR = os.path.join(MOD, "gen_debug")
-START = (867, 1, 1)
+START = (1337, 1, 1)   # 本 mod 开局 1337.1.1（common/bookmarks/bookmarks/00_bookmarks.txt）
 
 BLOCK = re.compile(r"([A-Za-z0-9_]+)\s*=\s*\{")
 

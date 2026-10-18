@@ -198,3 +198,16 @@
   无 pops 的 255 个省用 location 声明值兜底。脚本 `gen_debug/_apply_culture_by_pops.py`。
 - `eu5_ck3_faith_map.csv` 里 **211/293 条映射成通用 `pagan`**（欧亚北部/非洲/澳洲/美洲 folk 宗教），
   这是「pagan matching」待补的部分，不是 bug。
+
+## ★ 宗教两层模型 + pagan 清理口径（2026-10-18 定）
+- 本 mod 的宗教是 **faith + rite 两层**：`common/religion/faith_types`（103 个，province 的 `faith =` 用它）
+  和 `common/religion/rite_types`（152 个，province 的 `rite =` 用它）。
+- ★ **rite → faith 必须用 `faith.main_rite` 反查**（`catholic.main_rite = roman_rite`、
+  `orthodox → byzantine_rite`、`sunni → hanafi`、`miaphysitism → coptic_rite`）。
+  **不能**用 rite 块里声明的 `faith =`——那会把 catholic/orthodox 全打成 `christian_faith`。
+- 外部参照 `CrusaderUniversalis`（工坊 **3811443965**，"王国风云"）：同一张 EU5 地图，CK3 原版文化/信仰
+  投到 EU5 上。**只写伯爵领首府**（2527 块 + 384 条 province_mapping），按 barony 名匹配本 mod 得 2858 个。
+  **求值日期只能到 1178.1.1**：CU 里 >1178 的块（146 个，最晚 1400）是作者自造，不是原版数据。
+  它的文化键是 CK3 原版那套（`persian`/`japanese`），本 mod 是 EU5 派生（`farsi_culture`），**文化不能直接用**。
+- pagan 清理：只改 `faith = pagan` 的省，不动别的。非洲兜底 `west_african_pagan`（努比亚用 `kushitism_pagan`）；
+  原版范围内 CU 只有 wilderness 的省，用**同王国多数信仰**补。脚本 `gen_debug/_apply_africa_sea_faith.py`。
