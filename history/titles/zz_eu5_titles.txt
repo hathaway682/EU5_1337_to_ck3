@@ -11593,102 +11593,19 @@ c_bear_river = {
 }
 
 c_bearn_bigorre = {
-	751.10.9 = {
-		holder = fra_pepin_the_short
+	1240.4.26 = {
+		holder = foi_roger_bernard_iii_foix
 	}
-	768.9.24 = {
-		holder = fra_charlemagne
+	1302.3.3 = {
+		holder = foi_gaston_i_foix
 	}
-	814.1.28 = {
-		holder = fra_louis_i
-	}
-	840.6.20 = {
-		holder = fra_charles_ii
-	}
-	877.10.6 = {
-		holder = fra_louis_ii
-	}
-	879.4.11 = {
-		holder = fra_louis_iii
-	}
-	882.8.5 = {
-		holder = fra_carloman_ii
-	}
-	884.12.12 = {
-		holder = fra_charles_iii
-	}
-	888.2.29 = {
-		holder = fra_odo
-	}
-	898.1.3 = {
-		holder = fra_charles_iii
-	}
-	922.6.29 = {
-		holder = fra_robert
-	}
-	923.7.1 = {
-		holder = fra_rudolph
-	}
-	936.6.19 = {
-		holder = fra_louis_iv
-	}
-	954.10.12 = {
-		holder = fra_lothair
-	}
-	986.3.8 = {
-		holder = fra_louis_v
-	}
-	987.7.3 = {
-		holder = fra_hugues_capet
-	}
-	996.10.24 = {
-		holder = fra_robert_ii_capet
-	}
-	1031.7.20 = {
-		holder = fra_henri_i_capet
-	}
-	1060.8.4 = {
-		holder = fra_philippe_i_capet
-	}
-	1108.9.18 = {
-		holder = fra_louis_vi_capet
-	}
-	1137.8.1 = {
-		holder = fra_louis_vii_capet
-	}
-	1180.9.18 = {
-		holder = fra_philippe_ii_auguste_capet
-	}
-	1223.7.14 = {
-		holder = fra_louis_viii_capet
-	}
-	1226.11.8 = {
-		holder = fra_louis_ix_capet
-	}
-	1270.8.25 = {
-		holder = fra_philippe_iii_capet
-	}
-	1285.10.5 = {
-		holder = fra_philippe_iv_capet
-	}
-	1314.11.29 = {
-		holder = fra_louis_x_capet
-	}
-	1316.11.15 = {
-		holder = fra_jean_i_capet
-	}
-	1316.11.20 = {
-		holder = fra_philippe_v_capet
-	}
-	1322.1.3 = {
-		holder = fra_charles_iv_capet
-	}
-	1328.4.1 = {
-		holder = fra_philip_vi_valois
+	1315.12.13 = {
+		holder = foi_gaston_ii_foix
 	}
 	1337.1.1 = {
-		holder = fra_philip_vi_valois
+		holder = foi_gaston_ii_foix
 		government = feudal_government
+		liege = k_eu5_fra
 	}
 }
 
@@ -20970,7 +20887,7 @@ c_cuauhtochco = {
 
 c_cuchumatan = {
 	1337.1.1 = {
-		holder = eu5_regent_mmm
+		holder = kic_kokaib
 		government = feudal_government
 	}
 }
@@ -23374,8 +23291,8 @@ c_doaba = {
 
 c_dobea = {
 	1337.1.1 = {
-		holder = eu5_regent_afa
-		government = clan_government
+		holder = eu5_regent_dbe
+		government = feudal_government
 	}
 }
 
@@ -26033,13 +25950,12 @@ c_etzanoa = {
 }
 
 c_euboea = {
-	1318.1.1 = {
-		holder = sao_alfons_frederic_de_arago
+	1323.1.1 = {
+		holder = neg_pietro_dalle_carceri
 	}
 	1337.1.1 = {
-		holder = sao_alfons_frederic_de_arago
+		holder = neg_pietro_dalle_carceri
 		government = feudal_government
-		liege = d_eu5_neo
 	}
 }
 
@@ -27122,11 +27038,16 @@ c_firuzabad = {
 }
 
 c_flaming = {
-	1337.1.1 = {
-		holder = mag_otto_von_hessen
+	1260.1.1 = {
+		holder = swb_albrecht_ii_askanier
+	}
+	1298.1.1 = {
+		holder = swb_rudolf_askanier
 	}
 	1337.1.1 = {
-		liege = e_hre
+		holder = swb_rudolf_askanier
+		government = feudal_government
+		liege = d_eu5_mag
 	}
 }
 
@@ -28172,8 +28093,11 @@ c_garha_mandla = {
 }
 
 c_garhwal = {
+	1330.1.1 = {
+		holder = gwl_anant_pal_ii
+	}
 	1337.1.1 = {
-		holder = eu5_regent_srm
+		holder = gwl_anant_pal_ii
 		government = feudal_government
 	}
 }
@@ -31277,8 +31201,7 @@ c_harz = {
 	}
 	1337.1.1 = {
 		holder = hdh_heinrich_iii_von_braunschweig_luneburg
-	}
-	1337.1.1 = {
+		government = theocracy_government
 		liege = e_hre
 	}
 }
@@ -32430,9 +32353,8 @@ c_hogohega = {
 
 c_hohenloher_ebene = {
 	1337.1.1 = {
-		holder = wur_ulrich_iii_wurttemberg
-	}
-	1337.1.1 = {
+		holder = oet_ludwig_vi_von_oettingen
+		government = feudal_government
 		liege = e_hre
 	}
 }
@@ -33167,52 +33089,12 @@ c_humboldt = {
 }
 
 c_hunsruck = {
-	1047.1.1 = {
-		holder = lor_adalbert_alsace
-	}
-	1048.11.11 = {
-		holder = lor_gerard_alsace
-	}
-	1070.4.14 = {
-		holder = lor_thierry_ii_lorraine
-	}
-	1115.12.30 = {
-		holder = lor_simon_i_lorraine
-	}
-	1139.1.13 = {
-		holder = lor_mathieu_i_lorraine
-	}
-	1176.5.13 = {
-		holder = lor_simon_ii_lorraine
-	}
-	1207.1.4 = {
-		holder = lor_ferry_i_lorraine
-	}
-	1207.4.7 = {
-		holder = lor_ferry_ii_lorraine
-	}
-	1213.10.10 = {
-		holder = lor_thiebaud_i_lorraine
-	}
-	1220.2.17 = {
-		holder = lor_mathieu_ii_lorraine
-	}
-	1251.2.9 = {
-		holder = lor_ferry_iii_lorraine
-	}
-	1303.12.31 = {
-		holder = lor_thiebaud_ii_lorraine
-	}
-	1312.5.13 = {
-		holder = lor_ferry_iv_lorraine
-	}
-	1329.8.23 = {
-		holder = lor_raoul_lorraine
+	1307.11.23 = {
+		holder = tri_balduin_von_luxembourg
 	}
 	1337.1.1 = {
-		holder = lor_raoul_lorraine
-	}
-	1337.1.1 = {
+		holder = tri_balduin_von_luxembourg
+		government = theocracy_government
 		liege = e_hre
 	}
 }
@@ -36389,19 +36271,18 @@ c_kabylia = {
 
 c_kachari = {
 	1337.1.1 = {
-		holder = aho_sukhrangpha
+		holder = eu5_regent_jnt
 		government = feudal_government
 	}
 }
 
 c_kachen = {
-	1300.1.1 = {
-		holder = syu_biurtel
+	1332.1.1 = {
+		holder = jal_hasan_buzurg
 	}
 	1337.1.1 = {
-		holder = syu_biurtel
-		government = feudal_government
-		liege = d_eu5_arm
+		holder = jal_hasan_buzurg
+		government = nomad_government
 	}
 }
 
@@ -40275,11 +40156,59 @@ c_kyiv = {
 }
 
 c_la_marche = {
-	1318.1.1 = {
-		holder = rcc_jean_de_rochechouart
+	955.1.1 = {
+		holder = per_boson_i_perigord
+	}
+	988.1.1 = {
+		holder = per_adalbert_i_perigord
+	}
+	997.1.1 = {
+		holder = per_boson_ii_perigord
+	}
+	1009.1.1 = {
+		holder = mrc_bernard_i_lamarche
+	}
+	1047.1.1 = {
+		holder = mrc_adalbert_ii_lamarche
+	}
+	1088.1.1 = {
+		holder = mrc_boson_iii_lamarche
+	}
+	1091.1.1 = {
+		holder = mrc_eudes_lamarche
+	}
+	1098.1.1 = {
+		holder = mrc_almodis_lamarche
+	}
+	1199.1.1 = {
+		holder = mrc_hugues_ix_lusignan
+	}
+	1219.8.11 = {
+		holder = mrc_hugues_x_lusignan
+	}
+	1249.6.5 = {
+		holder = mrc_hugues_xi_lusignan
+	}
+	1250.4.6 = {
+		holder = mrc_hugues_xii_lusignan
+	}
+	1270.8.25 = {
+		holder = mrc_hugues_xiii_lusignan
+	}
+	1303.11.1 = {
+		holder = mrc_guy_i_lusignan
+	}
+	1308.11.1 = {
+		holder = fra_yolande_lusignan
+	}
+	1314.10.12 = {
+		holder = fra_charles_iv_capet
+	}
+	1322.1.3 = {
+		holder = bou_louis_i_bourbon
 	}
 	1337.1.1 = {
-		holder = rcc_jean_de_rochechouart
+		holder = bou_louis_i_bourbon
 		government = feudal_government
 		liege = k_eu5_fra
 	}
@@ -41176,25 +41105,18 @@ c_leicestershire = {
 }
 
 c_leine = {
-	1269.1.1 = {
-		holder = gbh_albrecht_i_braunschweig
-	}
-	1279.8.15 = {
+	1291.1.1 = {
 		holder = gbh_heinrich_i_braunschweig_grubenhagen
 	}
-	1291.1.1 = {
-		holder = bru_wilhelm_i_braunschweig
+	1322.9.7 = {
+		holder = gbh_heinrich_ii_braunschweig_grubenhagen
 	}
-	1292.9.30 = {
-		holder = bru_albrecht_ii_braunschweig_wolfenbuttel_gottingen
-	}
-	1318.11.22 = {
-		holder = bru_otto_i_braunschweig_gottingen
+	1325.1.1 = {
+		holder = gbh_heinrich_ii_braunschweig_grubenhagen
 	}
 	1337.1.1 = {
-		holder = bru_otto_i_braunschweig_gottingen
-	}
-	1337.1.1 = {
+		holder = gbh_heinrich_ii_braunschweig_grubenhagen
+		government = feudal_government
 		liege = e_hre
 	}
 }
@@ -42437,8 +42359,7 @@ c_liping = {
 c_lippe = {
 	1337.1.1 = {
 		holder = kol_walram_von_julich
-	}
-	1337.1.1 = {
+		government = theocracy_government
 		liege = e_hre
 	}
 }
@@ -42451,9 +42372,9 @@ c_liptako = {
 
 c_lithang = {
 	1337.1.1 = {
-		holder = eu5_regent_ckl
+		holder = eu5_regent_ltn
 		government = tribal_government
-		liege = e_eu5_chi
+		liege = k_eu5_tib
 	}
 }
 
@@ -42947,10 +42868,33 @@ c_lower_cagayan = {
 }
 
 c_lower_carinthia = {
-	1337.1.1 = {
-		holder = bam_leopold_ii_von_egloffstein
+	1276.11.1 = {
+		holder = hab_rudolf_i_habsburg
+	}
+	1282.12.1 = {
+		holder = hab_albrecht_i_habsburg
+	}
+	1283.6.1 = {
+		holder = hab_albrecht_i_habsburg
+	}
+	1298.11.21 = {
+		holder = hab_albrecht_i_habsburg
+	}
+	1307.7.3 = {
+		holder = hab_albrecht_i_habsburg
+	}
+	1308.5.1 = {
+		holder = hab_friedrich_i_habsburg
+	}
+	1326.2.28 = {
+		holder = hab_friedrich_i_habsburg
+	}
+	1330.1.13 = {
+		holder = hab_albrecht_ii_habsburg
 	}
 	1337.1.1 = {
+		holder = hab_albrecht_ii_habsburg
+		government = feudal_government
 		liege = e_hre
 	}
 }
@@ -43463,8 +43407,8 @@ c_lower_mackenzie = {
 
 c_lower_mahakam = {
 	1337.1.1 = {
-		holder = nsr_neno
-		government = wanua_government
+		holder = mrp_wijaya_warman
+		government = mandala_government
 	}
 }
 
@@ -43767,13 +43711,33 @@ c_lower_sindh = {
 }
 
 c_lower_styria = {
-	1177.1.1 = {
-		holder = mai_konrad_i_wittelsbach
+	1276.11.1 = {
+		holder = hab_rudolf_i_habsburg
+	}
+	1282.12.1 = {
+		holder = hab_albrecht_i_habsburg
+	}
+	1283.6.1 = {
+		holder = hab_albrecht_i_habsburg
+	}
+	1298.11.21 = {
+		holder = hab_albrecht_i_habsburg
+	}
+	1307.7.3 = {
+		holder = hab_albrecht_i_habsburg
+	}
+	1308.5.1 = {
+		holder = hab_friedrich_i_habsburg
+	}
+	1326.2.28 = {
+		holder = hab_friedrich_i_habsburg
+	}
+	1330.1.13 = {
+		holder = hab_albrecht_ii_habsburg
 	}
 	1337.1.1 = {
-		holder = slz_friedrich_von_leibnitz
-	}
-	1337.1.1 = {
+		holder = hab_albrecht_ii_habsburg
+		government = feudal_government
 		liege = e_hre
 	}
 }
@@ -45123,8 +45087,14 @@ c_majar = {
 }
 
 c_majerteen = {
+	1300.1.1 = {
+		holder = tde_hobanle
+	}
+	1320.1.1 = {
+		holder = tde_dirir
+	}
 	1337.1.1 = {
-		holder = ifa_jamal_i_walashma
+		holder = tde_dirir
 		government = clan_government
 	}
 }
@@ -46487,7 +46457,7 @@ c_megantic = {
 
 c_meghalaya = {
 	1337.1.1 = {
-		holder = eu5_regent_jnt
+		holder = eu5_regent_lur
 		government = feudal_government
 	}
 }
@@ -46993,8 +46963,7 @@ c_middle_styria = {
 c_middle_weser = {
 	1337.1.1 = {
 		holder = mun_ludwig_ii_hessen
-	}
-	1337.1.1 = {
+		government = theocracy_government
 		liege = e_hre
 	}
 }
@@ -47322,7 +47291,7 @@ c_minab = {
 
 c_mindanao = {
 	1337.1.1 = {
-		holder = eu5_regent_kim
+		holder = eu5_regent_mgd
 		government = wanua_government
 	}
 }
@@ -52264,10 +52233,33 @@ c_ober_dem_manhartsberg = {
 }
 
 c_ober_dem_wienerwald = {
-	1337.1.1 = {
-		holder = pss_albert_ii_von_sachsen_wittenberg
+	1276.11.1 = {
+		holder = hab_rudolf_i_habsburg
+	}
+	1282.12.1 = {
+		holder = hab_albrecht_i_habsburg
+	}
+	1283.6.1 = {
+		holder = hab_albrecht_i_habsburg
+	}
+	1298.11.21 = {
+		holder = hab_albrecht_i_habsburg
+	}
+	1307.7.3 = {
+		holder = hab_albrecht_i_habsburg
+	}
+	1308.5.1 = {
+		holder = hab_friedrich_i_habsburg
+	}
+	1326.2.28 = {
+		holder = hab_friedrich_i_habsburg
+	}
+	1330.1.13 = {
+		holder = hab_albrecht_ii_habsburg
 	}
 	1337.1.1 = {
+		holder = hab_albrecht_ii_habsburg
+		government = feudal_government
 		liege = e_hre
 	}
 }
@@ -52366,26 +52358,19 @@ c_oberpfalzer_wald = {
 }
 
 c_oberwallis = {
-	1234.1.1 = {
-		holder = sav_pierre_ii_savoy
+	1289.1.1 = {
+		holder = sit_boniface_de_challant
 	}
-	1268.5.16 = {
-		holder = sav_beatrix_faucigny
+	1308.7.1 = {
+		holder = sit_aymon_de_chatillon
 	}
-	1271.1.1 = {
-		holder = sav_philippe_i_savoy_achaia
-	}
-	1281.9.1 = {
-		holder = sav_louis_i_savoy_vaud
-	}
-	1302.1.13 = {
-		holder = sav_louis_ii_savoy_vaud
+	1323.7.19 = {
+		holder = sit_aymon_iv_de_la_tour_dit_de_chatillon
 	}
 	1337.1.1 = {
-		holder = sav_louis_ii_savoy_vaud
-	}
-	1337.1.1 = {
-		liege = d_eu5_sav
+		holder = sit_aymon_iv_de_la_tour_dit_de_chatillon
+		government = theocracy_government
+		liege = e_hre
 	}
 }
 
@@ -55414,47 +55399,23 @@ c_peoria = {
 
 c_perak = {
 	1337.1.1 = {
-		holder = eu5_regent_lgk
+		holder = eu5_regent_mnj
 		government = mandala_government
 	}
 }
 
 c_perche = {
-	1038.1.1 = {
-		holder = mtb_louis_scarpone
+	1268.3.1 = {
+		holder = ale_pierre_i_capet
 	}
-	1093.1.21 = {
-		holder = mtb_thierry_i_scarpone
+	1291.1.1 = {
+		holder = fra_charles_valois
 	}
-	1103.2.1 = {
-		holder = bar_renaud_i_scarpone
-	}
-	1149.3.10 = {
-		holder = bar_renaud_ii_scarpone
-	}
-	1170.7.25 = {
-		holder = bar_henri_i_scarpone
-	}
-	1190.10.1 = {
-		holder = bar_thiebaut_i_scarpone
-	}
-	1214.2.13 = {
-		holder = bar_henri_ii_scarpone
-	}
-	1239.11.13 = {
-		holder = bar_thiebaut_ii_scarpone
-	}
-	1291.10.1 = {
-		holder = bar_henri_iii_scarpone
-	}
-	1302.9.1 = {
-		holder = bar_edouard_i_scarpone
-	}
-	1336.11.11 = {
-		holder = bar_henry_iv_de_bar
+	1325.12.16 = {
+		holder = ale_charles_ii_valois
 	}
 	1337.1.1 = {
-		holder = bar_henry_iv_de_bar
+		holder = ale_charles_ii_valois
 		government = feudal_government
 		liege = k_eu5_fra
 	}
@@ -57958,11 +57919,11 @@ c_powhatan = {
 }
 
 c_powys = {
-	1331.1.1 = {
-		holder = eng_richard_fitzalan_ii
+	1309.1.1 = {
+		holder = eng_john_de_charlton_1st_baron_charlton
 	}
 	1337.1.1 = {
-		holder = eng_richard_fitzalan_ii
+		holder = eng_john_de_charlton_1st_baron_charlton
 		liege = d_eu5_wls
 	}
 }
@@ -58603,11 +58564,8 @@ c_pungwe = {
 }
 
 c_punjab_hills = {
-	1301.1.1 = {
-		holder = ksh_suhadeva_lohara
-	}
 	1337.1.1 = {
-		holder = ksh_haidar_khan_lohara
+		holder = ksw_brahm_sen
 		government = feudal_government
 	}
 }
@@ -61502,19 +61460,15 @@ c_ruenya = {
 }
 
 c_ruhr = {
-	1275.1.10 = {
-		holder = kle_dietrich_vi_von_kleve
+	1308.7.4 = {
+		holder = gmk_engelbert_ii_von_der_mark
 	}
-	1305.1.10 = {
-		holder = kle_otto_von_kleve
-	}
-	1310.1.1 = {
-		holder = kle_dietrich_vii_von_kleve
+	1328.7.18 = {
+		holder = gmk_adolf_ii_von_der_mark
 	}
 	1337.1.1 = {
-		holder = kle_dietrich_vii_von_kleve
-	}
-	1337.1.1 = {
+		holder = gmk_adolf_ii_von_der_mark
+		government = feudal_government
 		liege = e_hre
 	}
 }
@@ -62938,10 +62892,12 @@ c_satsunan_islands = {
 }
 
 c_sauerland = {
-	1337.1.1 = {
-		holder = kol_walram_von_julich
+	1303.7.1 = {
+		holder = nss_henry_i_nassau
 	}
 	1337.1.1 = {
+		holder = nss_henry_i_nassau
+		government = feudal_government
 		liege = e_hre
 	}
 }
@@ -64882,9 +64838,8 @@ c_siine = {
 
 c_sikkim = {
 	1337.1.1 = {
-		holder = tib_namkha_lekpa
-		government = theocracy_government
-		liege = e_eu5_chi
+		holder = eu5_regent_skk
+		government = tribal_government
 	}
 }
 
@@ -68343,10 +68298,27 @@ c_svir = {
 }
 
 c_swabian_alb = {
-	1337.1.1 = {
-		holder = wur_ulrich_iii_wurttemberg
+	1139.1.1 = {
+		holder = hhb_burkhard_ii_hohenberg
+	}
+	1152.1.1 = {
+		holder = hhb_burkhard_iii_hohenberg
+	}
+	1193.7.4 = {
+		holder = hhb_burkhard_iv_hohenberg
+	}
+	1225.1.1 = {
+		holder = hhb_burkhard_v_hohenberg
+	}
+	1253.7.14 = {
+		holder = hhb_albrecht_ii_hohenberg_rotenburg
+	}
+	1298.4.17 = {
+		holder = hhb_rudolf_hohenberg_rotenburg
 	}
 	1337.1.1 = {
+		holder = hhb_margaretha_hohenberg_rotenburg
+		government = feudal_government
 		liege = e_hre
 	}
 }
@@ -69777,17 +69749,16 @@ c_taubate = {
 }
 
 c_tauberfranken = {
-	1324.7.6 = {
-		holder = teu_werner_von_orseln
+	1285.1.1 = {
+		holder = uff_albrecht_ii_von_hohenlohe
 	}
-	1331.2.17 = {
-		holder = teu_luther_von_braunschweig_grubenhagen
-	}
-	1335.4.18 = {
-		holder = teu_dietrich_von_altenburg
+	1314.1.1 = {
+		holder = uff_ludwig_von_hohenlohe
 	}
 	1337.1.1 = {
-		holder = teu_dietrich_von_altenburg
+		holder = uff_ludwig_von_hohenlohe
+		government = feudal_government
+		liege = e_hre
 	}
 }
 
@@ -70999,34 +70970,12 @@ c_thubun = {
 }
 
 c_thurgau = {
-	1276.11.1 = {
-		holder = hab_rudolf_i_habsburg
-	}
-	1282.12.1 = {
-		holder = hab_albrecht_i_habsburg
-	}
-	1283.6.1 = {
-		holder = hab_albrecht_i_habsburg
-	}
-	1298.11.21 = {
-		holder = hab_albrecht_i_habsburg
-	}
-	1307.7.3 = {
-		holder = hab_albrecht_i_habsburg
-	}
-	1308.5.1 = {
-		holder = hab_friedrich_i_habsburg
-	}
-	1326.2.28 = {
-		holder = hab_friedrich_i_habsburg
-	}
-	1330.1.13 = {
-		holder = hab_albrecht_ii_habsburg
+	1336.6.8 = {
+		holder = zur_rudolf_brun
 	}
 	1337.1.1 = {
-		holder = hab_albrecht_ii_habsburg
-	}
-	1337.1.1 = {
+		holder = zur_rudolf_brun
+		government = republic_government
 		liege = e_hre
 	}
 }
@@ -71445,7 +71394,7 @@ c_tkaronto = {
 
 c_tlachquiauhco = {
 	1337.1.1 = {
-		holder = eu5_regent_mix
+		holder = eu5_regent_tzl
 		government = feudal_government
 	}
 }
@@ -72062,62 +72011,25 @@ c_torgovytsia = {
 }
 
 c_torino = {
-	967.1.1 = {
-		holder = mfa_aleramo_monferrato
+	1189.3.4 = {
+		holder = sav_thomas_i_savoy
 	}
-	983.1.1 = {
-		holder = mfa_aleramo_monferrato
+	1233.3.1 = {
+		holder = sav_thomas_ii_piedmont
 	}
-	991.1.1 = {
-		holder = mfa_anselmo_i_monferrato
+	1259.2.7 = {
+		holder = sav_thomas_iii_piedmont
 	}
-	991.6.1 = {
-		holder = mfa_anselmo_i_monferrato
+	1282.5.16 = {
+		holder = sav_philippe_i_savoy_achaia
 	}
-	998.1.1 = {
-		holder = mfa_guglielmo_iii_monferrato
-	}
-	1042.1.1 = {
-		holder = mfa_enrico_i_monferrato
-	}
-	1045.1.1 = {
-		holder = mfa_ottone_ii_monferrato
-	}
-	1084.11.20 = {
-		holder = mfa_guglielmo_iv_monferrato
-	}
-	1100.1.1 = {
-		holder = mfa_ranieri_i_monferrato
-	}
-	1137.1.1 = {
-		holder = mfa_guglielmo_v_monferrato
-	}
-	1191.1.1 = {
-		holder = koj_corrado_i_monferrato
-	}
-	1192.4.28 = {
-		holder = the_bonifacio_i_monferrato
-	}
-	1207.1.1 = {
-		holder = mfa_guglielmo_vi_monferrato
-	}
-	1226.9.17 = {
-		holder = mfa_bonifacio_ii_monferrato
-	}
-	1253.6.12 = {
-		holder = mfa_guglielmo_vii_monferrato
-	}
-	1292.2.6 = {
-		holder = mfa_giovanni_i_monferrato
-	}
-	1305.1.9 = {
-		holder = mfa_teodoro_i_palaiologos
+	1334.9.25 = {
+		holder = sav_jacques_savoy_achaia
 	}
 	1337.1.1 = {
-		holder = mfa_teodoro_i_palaiologos
-	}
-	1337.1.1 = {
-		liege = e_hre
+		holder = sav_jacques_savoy_achaia
+		government = feudal_government
+		liege = d_eu5_sav
 	}
 }
 
@@ -74557,10 +74469,48 @@ c_upper_cagayan = {
 }
 
 c_upper_carinthia = {
-	1337.1.1 = {
-		holder = bam_leopold_ii_von_egloffstein
+	1090.1.1 = {
+		holder = gor_engelbert_i_gorizia
+	}
+	1122.12.14 = {
+		holder = gor_meinhard_i_gorizia
+	}
+	1142.1.1 = {
+		holder = gor_heinrich_ii_gorizia
+	}
+	1149.10.11 = {
+		holder = gor_engelbert_ii_gorizia
+	}
+	1191.4.1 = {
+		holder = gor_meinhard_ii_gorizia
+	}
+	1220.1.1 = {
+		holder = gor_meinhard_ii_gorizia
+	}
+	1231.1.1 = {
+		holder = gor_meinhard_iii_gorizia
+	}
+	1258.7.22 = {
+		holder = tir_meinhard_gorizia
+	}
+	1271.1.1 = {
+		holder = gor_albert_i_gorizia
+	}
+	1304.4.1 = {
+		holder = gor_henry_iii_gorizia
+	}
+	1314.1.1 = {
+		holder = gor_henry_iii_gorizia
+	}
+	1320.1.1 = {
+		holder = gor_henry_iii_gorizia
+	}
+	1323.4.24 = {
+		holder = gor_albert_ii_gorizia
 	}
 	1337.1.1 = {
+		holder = gor_john_henry_iv_gorizia
+		government = feudal_government
 		liege = e_hre
 	}
 }
@@ -77980,22 +77930,51 @@ c_vorpommern = {
 }
 
 c_vosges = {
-	1033.1.1 = {
-		holder = mtz_gerard_bouzonville
-	}
-	1045.1.1 = {
+	1047.1.1 = {
 		holder = lor_adalbert_alsace
 	}
 	1048.11.11 = {
 		holder = lor_gerard_alsace
 	}
-	1319.5.4 = {
-		holder = dau_henri_dauphin
+	1070.4.14 = {
+		holder = lor_thierry_ii_lorraine
+	}
+	1115.12.30 = {
+		holder = lor_simon_i_lorraine
+	}
+	1139.1.13 = {
+		holder = lor_mathieu_i_lorraine
+	}
+	1176.5.13 = {
+		holder = lor_simon_ii_lorraine
+	}
+	1207.1.4 = {
+		holder = lor_ferry_i_lorraine
+	}
+	1207.4.7 = {
+		holder = lor_ferry_ii_lorraine
+	}
+	1213.10.10 = {
+		holder = lor_thiebaud_i_lorraine
+	}
+	1220.2.17 = {
+		holder = lor_mathieu_ii_lorraine
+	}
+	1251.2.9 = {
+		holder = lor_ferry_iii_lorraine
+	}
+	1303.12.31 = {
+		holder = lor_thiebaud_ii_lorraine
+	}
+	1312.5.13 = {
+		holder = lor_ferry_iv_lorraine
+	}
+	1329.8.23 = {
+		holder = lor_raoul_lorraine
 	}
 	1337.1.1 = {
-		holder = mtz_aymar_adhemar_de_la_garde
-	}
-	1337.1.1 = {
+		holder = lor_raoul_lorraine
+		government = feudal_government
 		liege = e_hre
 	}
 }
@@ -78812,13 +78791,9 @@ c_wenzhou = {
 }
 
 c_wesermarch = {
-	1328.1.1 = {
-		holder = tck_nikolaus_i_tecklenburg
-	}
 	1337.1.1 = {
-		holder = tck_nikolaus_i_tecklenburg
-	}
-	1337.1.1 = {
+		holder = bre_burchard_grelle
+		government = theocracy_government
 		liege = e_hre
 	}
 }
@@ -84740,7 +84715,7 @@ c_zhytomyr = {
 
 c_zinacantan = {
 	1337.1.1 = {
-		holder = eu5_regent_lac
+		holder = eu5_regent_xol
 		government = tribal_government
 	}
 }
@@ -85162,17 +85137,7 @@ b_antsohihy = {
 	}
 }
 
-b_ardagh = {
-	1337.1.1 = {
-		holder = ann_giolla_na_naiomh_o_farrell
-	}
-}
 
-b_argun = {
-	1337.1.1 = {
-		holder = eu5_regent_dzk
-	}
-}
 
 
 b_arnsberg = {
@@ -85193,11 +85158,6 @@ b_aruni = {
 	}
 }
 
-b_as_suwayriqiyah = {
-	1337.1.1 = {
-		holder = eu5_regent_hrb
-	}
-}
 
 b_ascolipiceno = {
 	1337.1.1 = {
@@ -85265,17 +85225,7 @@ b_aztatlan = {
 	}
 }
 
-b_bada = {
-	1337.1.1 = {
-		holder = eu5_regent_shg
-	}
-}
 
-b_bahadamer = {
-	1337.1.1 = {
-		holder = mrw_chhadaji_rathore
-	}
-}
 
 b_baini = {
 	1337.1.1 = {
@@ -85350,11 +85300,6 @@ b_beichlingen = {
 	}
 }
 
-b_belfast = {
-	1337.1.1 = {
-		holder = cla_einri_o_neill
-	}
-}
 
 b_bellinzona = {
 	1337.1.1 = {
@@ -85424,11 +85369,6 @@ b_bielefeld = {
 	}
 }
 
-b_birkenfeld = {
-	1337.1.1 = {
-		holder = spo_johann_ii_sponheim_kreuznach
-	}
-}
 
 b_blankenburg = {
 	1337.1.1 = {
@@ -85436,17 +85376,7 @@ b_blankenburg = {
 	}
 }
 
-b_bled = {
-	1337.1.1 = {
-		holder = bxn_matthaus_an_der_Gassen
-	}
-}
 
-b_bludenz = {
-	1337.1.1 = {
-		holder = wer_albrecht_werdenberg
-	}
-}
 
 b_boai = {
 	1337.1.1 = {
@@ -85503,11 +85433,6 @@ b_bremen = {
 	}
 }
 
-b_brig = {
-	1337.1.1 = {
-		holder = sit_aymon_iv_de_la_tour_dit_de_chatillon
-	}
-}
 
 b_bruchsal = {
 	1337.1.1 = {
@@ -85599,11 +85524,6 @@ b_cesena = {
 	}
 }
 
-b_cetatea_tetina = {
-	1337.1.1 = {
-		holder = eu5_regent_htn
-	}
-}
 
 b_ceva = {
 	1337.1.1 = {
@@ -85611,11 +85531,6 @@ b_ceva = {
 	}
 }
 
-b_chacchoben = {
-	1337.1.1 = {
-		holder = eu5_regent_uay
-	}
-}
 
 b_chakanbakan = {
 	1337.1.1 = {
@@ -85768,11 +85683,6 @@ b_cosamaloapan = {
 	}
 }
 
-b_crailsheim = {
-	1337.1.1 = {
-		holder = uff_ludwig_von_hohenlohe
-	}
-}
 
 b_cuauhcuetzpaltepec = {
 	1337.1.1 = {
@@ -85843,18 +85753,7 @@ b_dahlak = {
 	}
 }
 
-b_dang = {
-	1337.1.1 = {
-		holder = eu5_regent_bgl
-	}
-}
 
-b_daratan = {
-	1337.1.1 = {
-		holder = eu5_regent_moo
-		government = wanua_government
-	}
-}
 
 b_datian_shizhou = {
 	1337.1.1 = {
@@ -85880,11 +85779,6 @@ b_denbigh = {
 	}
 }
 
-b_detmold = {
-	1337.1.1 = {
-		holder = lpp_simon_i_lippe
-	}
-}
 
 b_dharampur = {
 	1337.1.1 = {
@@ -85916,11 +85810,6 @@ b_dinkelsbuhl = {
 	}
 }
 
-b_dir = {
-	1337.1.1 = {
-		holder = crl_kriznook
-	}
-}
 
 b_disentis = {
 	1337.1.1 = {
@@ -85959,11 +85848,6 @@ b_dreux = {
 	}
 }
 
-b_dunamase = {
-	1337.1.1 = {
-		holder = fly_muirchertach_og_mac_muircherartaig_o_conchobhair
-	}
-}
 
 b_durgyeling = {
 	1337.1.1 = {
@@ -85971,11 +85855,6 @@ b_durgyeling = {
 	}
 }
 
-b_egil = {
-	1337.1.1 = {
-		holder = egl_isa
-	}
-}
 
 b_eichstatt = {
 	1337.1.1 = {
@@ -85983,11 +85862,6 @@ b_eichstatt = {
 	}
 }
 
-b_einbeck = {
-	1337.1.1 = {
-		holder = gbh_heinrich_ii_braunschweig_grubenhagen
-	}
-}
 
 b_eisleben = {
 	1337.1.1 = {
@@ -86085,11 +85959,6 @@ b_ferrette = {
 	}
 }
 
-b_finalborgo = {
-	1337.1.1 = {
-		holder = crr_giorgio_del_carretto
-	}
-}
 
 b_frankfurt = {
 	1337.1.1 = {
@@ -86139,11 +86008,6 @@ b_fuzhou_guangnan = {
 	}
 }
 
-b_gadegara = {
-	1337.1.1 = {
-		holder = kbd_taceddin_altunbas
-	}
-}
 
 b_gedi = {
 	1337.1.1 = {
@@ -86151,11 +86015,6 @@ b_gedi = {
 	}
 }
 
-b_genc = {
-	1337.1.1 = {
-		holder = bin_shap
-	}
-}
 
 b_gera = {
 	1337.1.1 = {
@@ -86163,11 +86022,6 @@ b_gera = {
 	}
 }
 
-b_gerze = {
-	1337.1.1 = {
-		holder = eu5_regent_bfr
-	}
-}
 
 b_glauchau = {
 	1337.1.1 = {
@@ -86217,11 +86071,6 @@ b_guide = {
 	}
 }
 
-b_guihua = {
-	1337.1.1 = {
-		holder = eu5_regent_znx
-	}
-}
 
 b_gustrow = {
 	1337.1.1 = {
@@ -86235,11 +86084,6 @@ b_guzhou = {
 	}
 }
 
-b_gwaram = {
-	1337.1.1 = {
-		holder = eu5_regent_ran
-	}
-}
 
 b_hachberg = {
 	1337.1.1 = {
@@ -86271,11 +86115,6 @@ b_hailun = {
 	}
 }
 
-b_hajjiabad = {
-	1337.1.1 = {
-		holder = eu5_regent_ugh
-	}
-}
 
 b_halberstadt = {
 	1337.1.1 = {
@@ -86295,11 +86134,6 @@ b_hamburg = {
 	}
 }
 
-b_hamm = {
-	1337.1.1 = {
-		holder = gmk_adolf_ii_von_der_mark
-	}
-}
 
 b_hanau = {
 	1337.1.1 = {
@@ -86307,11 +86141,6 @@ b_hanau = {
 	}
 }
 
-b_hawraman = {
-	1337.1.1 = {
-		holder = eu5_regent_ard
-	}
-}
 
 b_hazro = {
 	1337.1.1 = {
@@ -86415,17 +86244,7 @@ b_hulin = {
 	}
 }
 
-b_hunfeld = {
-	1337.1.1 = {
-		holder = fld_heinrich_vi_von_hohenberg
-	}
-}
 
-b_huth = {
-	1337.1.1 = {
-		holder = eu5_regent_yam
-	}
-}
 
 b_hvlan = {
 	1337.1.1 = {
@@ -86451,11 +86270,6 @@ b_ikere = {
 	}
 }
 
-b_ikorundu = {
-	1337.1.1 = {
-		holder = eu5_regent_ijb
-	}
-}
 
 b_ilanz = {
 	1337.1.1 = {
@@ -86469,11 +86283,6 @@ b_ilesa = {
 	}
 }
 
-b_illereichen = {
-	1337.1.1 = {
-		holder = eu5_regent_kir
-	}
-}
 
 b_imanka = {
 	1337.1.1 = {
@@ -86547,11 +86356,6 @@ b_ixtapan = {
 	}
 }
 
-b_ixtlahuaca = {
-	1337.1.1 = {
-		holder = eu5_regent_mat
-	}
-}
 
 b_ixtlan = {
 	1337.1.1 = {
@@ -86565,11 +86369,6 @@ b_iztachacalapan = {
 	}
 }
 
-b_javanrud = {
-	1337.1.1 = {
-		holder = kri_muhammed
-	}
-}
 
 b_jawhar = {
 	1337.1.1 = {
@@ -86589,17 +86388,7 @@ b_jever = {
 	}
 }
 
-b_jhunjhunu = {
-	1337.1.1 = {
-		holder = drw_motay_rao_chauhan
-	}
-}
 
-b_jicayan = {
-	1337.1.1 = {
-		holder = eu5_regent_ych
-	}
-}
 
 b_jishi = {
 	1337.1.1 = {
@@ -86711,18 +86500,7 @@ b_kempten = {
 	}
 }
 
-b_kendari = {
-	1337.1.1 = {
-		holder = eu5_regent_knw
-		government = wanua_government
-	}
-}
 
-b_kerhiretarhu = {
-	1337.1.1 = {
-		holder = eu5_regent_xil
-	}
-}
 
 b_keylong = {
 	1337.1.1 = {
@@ -86730,17 +86508,7 @@ b_keylong = {
 	}
 }
 
-b_khargerd = {
-	1337.1.1 = {
-		holder = eu5_regent_khf
-	}
-}
 
-b_kharturan = {
-	1337.1.1 = {
-		holder = srb_abd_al_razzaq_ibn_fazlullah
-	}
-}
 
 b_khawr_baraka = {
 	1337.1.1 = {
@@ -86766,11 +86534,6 @@ b_khunj = {
 	}
 }
 
-b_kishtwar = {
-	1337.1.1 = {
-		holder = ksw_brahm_sen
-	}
-}
 
 b_klin = {
 	1337.1.1 = {
@@ -86778,11 +86541,6 @@ b_klin = {
 	}
 }
 
-b_kocevje = {
-	1337.1.1 = {
-		holder = eu5_regent_ort
-	}
-}
 
 b_kodungallur = {
 	1337.1.1 = {
@@ -86822,11 +86580,6 @@ b_kottarakkara = {
 	}
 }
 
-b_kozle = {
-	1337.1.1 = {
-		holder = bym_wladislaw_i_piast
-	}
-}
 
 b_kozluk = {
 	1337.1.1 = {
@@ -86889,11 +86642,6 @@ b_lantu = {
 	}
 }
 
-b_lasko = {
-	1337.1.1 = {
-		holder = cli_friderik
-	}
-}
 
 b_lausanne = {
 	1337.1.1 = {
@@ -86955,11 +86703,6 @@ b_lichtenberg_veldenz = {
 	}
 }
 
-b_lichuan = {
-	1337.1.1 = {
-		holder = eu5_regent_zgl
-	}
-}
 
 b_lihua = {
 	1337.1.1 = {
@@ -87000,12 +86743,6 @@ b_loloda = {
 	}
 }
 
-b_lombok = {
-	1337.1.1 = {
-		holder = eu5_regent_slp
-		government = mandala_government
-	}
-}
 
 b_longquanping = {
 	1337.1.1 = {
@@ -87051,19 +86788,7 @@ b_maastricht = {
 	}
 }
 
-b_maba_celebes = {
-	1337.1.1 = {
-		holder = eu5_regent_jlo
-		government = wanua_government
-	}
-}
 
-b_mabein = {
-	1337.1.1 = {
-		holder = eu5_regent_mgt
-		government = mandala_government
-	}
-}
 
 b_macerata = {
 	1337.1.1 = {
@@ -87077,11 +86802,6 @@ b_madin_bani_sulaym = {
 	}
 }
 
-b_maerkang = {
-	1337.1.1 = {
-		holder = eu5_regent_tsk
-	}
-}
 
 
 b_mahajanga = {
@@ -87096,11 +86816,6 @@ b_mahilaka = {
 	}
 }
 
-b_mahoba = {
-	1337.1.1 = {
-		holder = jjk_viravarman_ii_chandela
-	}
-}
 
 b_malacatos = {
 	1337.1.1 = {
@@ -87108,17 +86823,7 @@ b_malacatos = {
 	}
 }
 
-b_malapuram = {
-	1337.1.1 = {
-		holder = eu5_regent_zmr
-	}
-}
 
-b_malekan = {
-	1337.1.1 = {
-		holder = hbn_abdallah_ibn_shahab_al_din_zani
-	}
-}
 
 b_malindi = {
 	1337.1.1 = {
@@ -87162,11 +86867,6 @@ b_mapa = {
 	}
 }
 
-b_marawah = {
-	1337.1.1 = {
-		holder = eu5_regent_yas
-	}
-}
 
 b_markahuamachuco = {
 	1337.1.1 = {
@@ -87211,11 +86911,6 @@ b_mbanza_mbata = {
 	}
 }
 
-b_mbanza_nsundi = {
-	1337.1.1 = {
-		holder = eu5_regent_nsu
-	}
-}
 
 b_melahuacan = {
 	1337.1.1 = {
@@ -87253,11 +86948,6 @@ b_mesudiye = {
 	}
 }
 
-b_metzquititlan = {
-	1337.1.1 = {
-		holder = eu5_regent_mit
-	}
-}
 
 b_miahuatlan = {
 	1337.1.1 = {
@@ -87301,11 +86991,6 @@ b_mirande = {
 	}
 }
 
-b_mishan = {
-	1337.1.1 = {
-		holder = eu5_regent_mre
-	}
-}
 
 b_mizantla = {
 	1337.1.1 = {
@@ -87325,12 +87010,6 @@ b_monfort_lamaury = {
 	}
 }
 
-b_mongyang = {
-	1337.1.1 = {
-		holder = eu5_regent_mya
-		government = mandala_government
-	}
-}
 
 b_mont_de_marsan = {
 	1337.1.1 = {
@@ -87467,11 +87146,6 @@ b_naumburg = {
 	}
 }
 
-b_nazok_olya = {
-	1337.1.1 = {
-		holder = eu5_regent_atz
-	}
-}
 
 b_nemeri = {
 	1337.1.1 = {
@@ -87504,11 +87178,6 @@ b_niemodlin = {
 	}
 }
 
-b_nienburg = {
-	1337.1.1 = {
-		holder = nie_johann_ii_hoya
-	}
-}
 
 b_ningguta = {
 	1337.1.1 = {
@@ -87528,17 +87197,7 @@ b_nogule = {
 	}
 }
 
-b_nopiloa = {
-	1337.1.1 = {
-		holder = eu5_regent_ptl
-	}
-}
 
-b_nordhausen = {
-	1337.1.1 = {
-		holder = eu5_regent_nhs
-	}
-}
 
 b_nowogard = {
 	1337.1.1 = {
@@ -87667,11 +87326,6 @@ b_owo = {
 	}
 }
 
-b_oxitlan = {
-	1337.1.1 = {
-		holder = eu5_regent_tta
-	}
-}
 
 b_oxtlipan = {
 	1337.1.1 = {
@@ -87697,11 +87351,6 @@ b_pal_lahara = {
 	}
 }
 
-b_palampur = {
-	1337.1.1 = {
-		holder = kgr_prithvi_chandra_katoch
-	}
-}
 
 b_palitana = {
 	1337.1.1 = {
@@ -87777,11 +87426,6 @@ b_pinneberg = {
 	}
 }
 
-b_pismachi = {
-	1337.1.1 = {
-		holder = kic_kokaib
-	}
-}
 
 b_pistoia = {
 	1337.1.1 = {
@@ -87851,11 +87495,6 @@ b_puri_simao = {
 	}
 }
 
-b_putna = {
-	1337.1.1 = {
-		holder = eu5_regent_ssi
-	}
-}
 
 b_qijiang = {
 	1337.1.1 = {
@@ -87906,11 +87545,6 @@ b_ras_mkumbuu = {
 	}
 }
 
-b_rasyal = {
-	1337.1.1 = {
-		holder = eu5_regent_rjr
-	}
-}
 
 b_ratzeburg = {
 	1337.1.1 = {
@@ -88047,11 +87681,6 @@ b_sanggau = {
 	}
 }
 
-b_sangqu = {
-	1337.1.1 = {
-		holder = eu5_regent_khg
-	}
-}
 
 b_sanmao = {
 	1337.1.1 = {
@@ -88083,11 +87712,6 @@ b_schleiden = {
 	}
 }
 
-b_schweinitz = {
-	1337.1.1 = {
-		holder = swb_rudolf_askanier
-	}
-}
 
 
 b_selimbau = {
@@ -88122,17 +87746,7 @@ b_shanjir = {
 	}
 }
 
-b_sheberghan = {
-	1337.1.1 = {
-		holder = eu5_regent_apd
-	}
-}
 
-b_shendi = {
-	1337.1.1 = {
-		holder = eu5_regent_abw
-	}
-}
 
 b_shiewhibak = {
 	1337.1.1 = {
@@ -88176,17 +87790,7 @@ b_shizong = {
 	}
 }
 
-b_shkhancheriekhabl = {
-	1337.1.1 = {
-		holder = eu5_regent_kda
-	}
-}
 
-b_shuangyashan = {
-	1337.1.1 = {
-		holder = eu5_regent_nro
-	}
-}
 
 b_sidenreng = {
 	1337.1.1 = {
@@ -88220,11 +87824,6 @@ b_simmern = {
 	}
 }
 
-b_sirnak = {
-	1337.1.1 = {
-		holder = bht_izz_al_din
-	}
-}
 
 b_skreen = {
 	1337.1.1 = {
@@ -88238,12 +87837,6 @@ b_sligo = {
 	}
 }
 
-b_solimandungan = {
-	1337.1.1 = {
-		holder = bln_mokodoludut
-		government = wanua_government
-	}
-}
 
 b_solothurn = {
 	1337.1.1 = {
@@ -88264,11 +87857,6 @@ b_soras = {
 	}
 }
 
-b_sotk = {
-	1337.1.1 = {
-		holder = eu5_regent_vdz
-	}
-}
 
 b_speyer = {
 	1337.1.1 = {
@@ -88300,11 +87888,6 @@ b_stockach = {
 	}
 }
 
-b_stormarn = {
-	1337.1.1 = {
-		holder = shl_gerhard_iii_holstein_rendsburg
-	}
-}
 
 b_strasbourg = {
 	1337.1.1 = {
@@ -88318,11 +87901,6 @@ b_strzelce_opolskie = {
 	}
 }
 
-b_sui = {
-	1337.1.1 = {
-		holder = eu5_regent_jhi
-	}
-}
 
 b_suket = {
 	1337.1.1 = {
@@ -88380,24 +87958,8 @@ b_tamtoc = {
 	}
 }
 
-b_tamu = {
-	1337.1.1 = {
-		holder = eu5_regent_hhp
-		government = mandala_government
-	}
-}
 
-b_tarhasi = {
-	1337.1.1 = {
-		holder = eu5_regent_cer
-	}
-}
 
-b_tarinkot = {
-	1337.1.1 = {
-		holder = eu5_regent_bsd
-	}
-}
 
 b_taubonto = {
 	1337.1.1 = {
@@ -88436,11 +87998,6 @@ b_tenamaxtlan = {
 	}
 }
 
-b_teozacualco = {
-	1337.1.1 = {
-		holder = eu5_regent_tzl
-	}
-}
 
 b_tepactitlan = {
 	1337.1.1 = {
@@ -88508,18 +88065,7 @@ b_tianping = {
 	}
 }
 
-b_tillantonco = {
-	1337.1.1 = {
-		holder = eu5_regent_tcq
-	}
-}
 
-b_tinco = {
-	1337.1.1 = {
-		holder = rru_petta_cakkeawo
-		government = wanua_government
-	}
-}
 
 b_tirschenreuth = {
 	1337.1.1 = {
@@ -88660,11 +88206,6 @@ b_tullamore = {
 	}
 }
 
-b_turin = {
-	1337.1.1 = {
-		holder = sav_jacques_savoy_achaia
-	}
-}
 
 b_tutotepec = {
 	1337.1.1 = {
@@ -88678,17 +88219,7 @@ b_tuzantla = {
 	}
 }
 
-b_tuzapan = {
-	1337.1.1 = {
-		holder = tot_catoxcan
-	}
-}
 
-b_tuzara = {
-	1337.1.1 = {
-		holder = eu5_regent_hsc
-	}
-}
 
 b_tzapotzingo = {
 	1337.1.1 = {
@@ -88732,11 +88263,6 @@ b_usingen = {
 	}
 }
 
-b_vaihingen = {
-	1337.1.1 = {
-		holder = oet_ludwig_vi_von_oettingen
-	}
-}
 
 b_vakhs = {
 	1337.1.1 = {
@@ -89051,11 +88577,6 @@ b_zhanyi = {
 	}
 }
 
-b_zhenkang = {
-	1337.1.1 = {
-		holder = eu5_regent_mhk
-	}
-}
 
 b_ziebice = {
 	1337.1.1 = {
@@ -89081,11 +88602,6 @@ b_zompanco = {
 	}
 }
 
-b_zurich = {
-	1337.1.1 = {
-		holder = zur_rudolf_brun
-	}
-}
 
 b_zutphen = {
 	1337.1.1 = {
@@ -89099,11 +88615,6 @@ b_zweibrucken = {
 	}
 }
 
-b_zywiec = {
-	1337.1.1 = {
-		holder = osw_jan_piast
-	}
-}
 
 b_ado_ekiti = {
 	1337.1.1 = {
@@ -89141,23 +88652,8 @@ b_cempoala = {
 	}
 }
 
-b_chisobibra = {
-	1337.1.1 = {
-		holder = eu5_regent_lur
-	}
-}
 
-b_diphu = {
-	1337.1.1 = {
-		holder = eu5_regent_dim
-	}
-}
 
-b_eretreia = {
-	1337.1.1 = {
-		holder = neg_pietro_dalle_carceri
-	}
-}
 
 b_fosdinovo = {
 	1337.1.1 = {
@@ -89165,11 +88661,6 @@ b_fosdinovo = {
 	}
 }
 
-b_gongjiang_jurchen = {
-	1337.1.1 = {
-		holder = eu5_regent_wuy
-	}
-}
 
 b_gruyere = {
 	1337.1.1 = {
@@ -89177,17 +88668,7 @@ b_gruyere = {
 	}
 }
 
-b_gueret = {
-	1337.1.1 = {
-		holder = bou_louis_i_bourbon
-	}
-}
 
-b_haterk = {
-	1337.1.1 = {
-		holder = kcn_ivane_ii
-	}
-}
 
 b_havelberg = {
 	1337.1.1 = {
@@ -89195,11 +88676,6 @@ b_havelberg = {
 	}
 }
 
-b_hayq = {
-	1337.1.1 = {
-		holder = eu5_regent_dbe
-	}
-}
 
 b_huaman_karpa = {
 	1337.1.1 = {
@@ -89213,12 +88689,6 @@ b_huncun = {
 	}
 }
 
-b_jembayan = {
-	1337.1.1 = {
-		holder = kkg_paduka_nira
-		government = mandala_government
-	}
-}
 
 b_jianshui = {
 	1337.1.1 = {
@@ -89244,11 +88714,6 @@ b_juxtlahuaca = {
 	}
 }
 
-b_kaxa_marca = {
-	1337.1.1 = {
-		holder = eu5_regent_cui
-	}
-}
 
 b_kedang = {
 	1337.1.1 = {
@@ -89262,12 +88727,6 @@ b_khunzakh = {
 	}
 }
 
-b_kuta_watu = {
-	1337.1.1 = {
-		holder = eu5_regent_mgd
-		government = wanua_government
-	}
-}
 
 b_lahasusu = {
 	1337.1.1 = {
@@ -89275,18 +88734,7 @@ b_lahasusu = {
 	}
 }
 
-b_litang = {
-	1337.1.1 = {
-		holder = eu5_regent_ltn
-	}
-}
 
-b_manjung = {
-	1337.1.1 = {
-		holder = eu5_regent_mnj
-		government = mandala_government
-	}
-}
 
 b_monaghan = {
 	1337.1.1 = {
@@ -89294,17 +88742,7 @@ b_monaghan = {
 	}
 }
 
-b_montgomery = {
-	1337.1.1 = {
-		holder = eng_john_de_charlton_1st_baron_charlton
-	}
-}
 
-b_mortagne = {
-	1337.1.1 = {
-		holder = ale_charles_ii_valois
-	}
-}
 
 b_nurpur = {
 	1337.1.1 = {
@@ -89318,11 +88756,6 @@ b_ozumacin = {
 	}
 }
 
-b_pau = {
-	1337.1.1 = {
-		holder = foi_gaston_ii_foix
-	}
-}
 
 b_qaladiza = {
 	1337.1.1 = {
@@ -89336,23 +88769,8 @@ b_quechula = {
 	}
 }
 
-b_ras_hafun = {
-	1337.1.1 = {
-		holder = tde_dirir
-	}
-}
 
-b_soddo = {
-	1337.1.1 = {
-		holder = eu5_regent_dam
-	}
-}
 
-b_srinagar_garhwal = {
-	1337.1.1 = {
-		holder = gwl_anant_pal_ii
-	}
-}
 
 b_taximaroa = {
 	1337.1.1 = {
@@ -89367,26 +88785,597 @@ b_taytay = {
 	}
 }
 
-b_udamphur = {
+
+
+
+
+
+
+
+b_oswestry = {
 	1337.1.1 = {
-		holder = eu5_regent_dog
+		holder = eng_richard_fitzalan_ii
 	}
 }
 
-b_xelahuh = {
+b_rochechouart = {
+	1337.1.1 = {
+		holder = rcc_jean_de_rochechouart
+	}
+}
+
+b_yverdon_les_bains = {
+	1337.1.1 = {
+		holder = sav_louis_ii_savoy_vaud
+	}
+}
+
+
+
+b_napinaica = {
+	1337.1.1 = {
+		holder = eu5_regent_lac
+	}
+}
+
+b_nienburg = {
+	1337.1.1 = {
+		holder = nie_johann_ii_hoya
+	}
+}
+
+b_nordhausen = {
+	1337.1.1 = {
+		holder = eu5_regent_nhs
+	}
+}
+
+b_amchok = {
+	1337.1.1 = {
+		holder = eu5_regent_khg
+	}
+}
+
+b_andkhoy = {
+	1337.1.1 = {
+		holder = eu5_regent_apd
+	}
+}
+
+b_bafra = {
+	1337.1.1 = {
+		holder = eu5_regent_bfr
+	}
+}
+
+b_bamberg = {
+	1337.1.1 = {
+		holder = bam_leopold_ii_von_egloffstein
+	}
+}
+
+b_baoning_maozhou = {
+	1337.1.1 = {
+		holder = eu5_regent_tsk
+	}
+}
+
+b_barru = {
+	1337.1.1 = {
+		holder = rru_petta_cakkeawo
+		government = wanua_government
+	}
+}
+
+b_belang = {
+	1337.1.1 = {
+		holder = bln_mokodoludut
+		government = wanua_government
+	}
+}
+
+b_bingol = {
+	1337.1.1 = {
+		holder = bin_shap
+	}
+}
+
+b_bonga = {
+	1337.1.1 = {
+		holder = eu5_regent_dam
+	}
+}
+
+b_brixen = {
+	1337.1.1 = {
+		holder = bxn_matthaus_an_der_Gassen
+	}
+}
+
+b_bytom = {
+	1337.1.1 = {
+		holder = bym_wladislaw_i_piast
+	}
+}
+
+b_cairo_montenotte = {
+	1337.1.1 = {
+		holder = crr_giorgio_del_carretto
+	}
+}
+
+b_celje = {
+	1337.1.1 = {
+		holder = cli_friderik
+	}
+}
+
+b_chisinau = {
+	1337.1.1 = {
+		holder = eu5_regent_hsc
+	}
+}
+
+b_cizre = {
+	1337.1.1 = {
+		holder = bht_izz_al_din
+	}
+}
+
+b_daingean = {
+	1337.1.1 = {
+		holder = fly_muirchertach_og_mac_muircherartaig_o_conchobhair
+	}
+}
+
+b_deh_kundi = {
+	1337.1.1 = {
+		holder = eu5_regent_bsd
+	}
+}
+
+b_dimapur = {
+	1337.1.1 = {
+		holder = eu5_regent_dim
+	}
+}
+
+b_ed_damer = {
+	1337.1.1 = {
+		holder = eu5_regent_abw
+	}
+}
+
+b_erbach_swabia = {
+	1337.1.1 = {
+		holder = eu5_regent_kir
+	}
+}
+
+b_fulda = {
+	1337.1.1 = {
+		holder = fld_heinrich_vi_von_hohenberg
+	}
+}
+
+b_gandzasar = {
+	1337.1.1 = {
+		holder = kcn_ivane_ii
+	}
+}
+
+b_girin_ula = {
+	1337.1.1 = {
+		holder = eu5_regent_wuy
+	}
+}
+
+b_gladzor = {
+	1337.1.1 = {
+		holder = eu5_regent_vdz
+	}
+}
+
+b_haresabad = {
+	1337.1.1 = {
+		holder = srb_abd_al_razzaq_ibn_fazlullah
+	}
+}
+
+b_hotin = {
+	1337.1.1 = {
+		holder = eu5_regent_htn
+	}
+}
+
+b_ijebu_ode = {
+	1337.1.1 = {
+		holder = eu5_regent_ijb
+	}
+}
+
+b_jailolo = {
+	1337.1.1 = {
+		holder = eu5_regent_jlo
+		government = wanua_government
+	}
+}
+
+b_jixi = {
+	1337.1.1 = {
+		holder = eu5_regent_mre
+	}
+}
+
+b_kakol_kiej = {
 	1337.1.1 = {
 		holder = eu5_regent_kaq
 	}
 }
 
-b_yuksom = {
+b_kalinjar = {
 	1337.1.1 = {
-		holder = eu5_regent_skk
+		holder = jjk_viravarman_ii_chandela
 	}
 }
 
-b_yushu = {
+b_kathua = {
+	1337.1.1 = {
+		holder = eu5_regent_dog
+	}
+}
+
+b_khalis_medina = {
+	1337.1.1 = {
+		holder = eu5_regent_hrb
+	}
+}
+
+b_khed = {
+	1337.1.1 = {
+		holder = mrw_chhadaji_rathore
+	}
+}
+
+b_kleve = {
+	1337.1.1 = {
+		holder = kle_dietrich_vii_von_kleve
+	}
+}
+
+b_kongwei = {
+	1337.1.1 = {
+		holder = eu5_regent_mhk
+	}
+}
+
+b_kozhikode = {
+	1337.1.1 = {
+		holder = eu5_regent_zmr
+	}
+}
+
+b_kreuznach = {
+	1337.1.1 = {
+		holder = spo_johann_ii_sponheim_kreuznach
+	}
+}
+
+b_kutai_lama = {
+	1337.1.1 = {
+		holder = kkg_paduka_nira
+		government = mandala_government
+	}
+}
+
+b_kuzhyb = {
+	1337.1.1 = {
+		holder = eu5_regent_kda
+	}
+}
+
+b_ladik_pontus = {
+	1337.1.1 = {
+		holder = kbd_taceddin_altunbas
+	}
+}
+
+b_lippstadt = {
+	1337.1.1 = {
+		holder = lpp_simon_i_lippe
+	}
+}
+
+b_liwa = {
+	1337.1.1 = {
+		holder = eu5_regent_yas
+	}
+}
+
+b_longford = {
+	1337.1.1 = {
+		holder = ann_giolla_na_naiomh_o_farrell
+	}
+}
+
+b_maku = {
+	1337.1.1 = {
+		holder = eu5_regent_atz
+	}
+}
+
+b_mangbu = {
+	1337.1.1 = {
+		holder = eu5_regent_znx
+	}
+}
+
+b_masinga = {
+	1337.1.1 = {
+		holder = eu5_regent_nsu
+	}
+}
+
+b_mitic = {
+	1337.1.1 = {
+		holder = eu5_regent_mit
+	}
+}
+
+b_mongmit = {
+	1337.1.1 = {
+		holder = eu5_regent_mgt
+		government = mandala_government
+	}
+}
+
+b_monhyin = {
+	1337.1.1 = {
+		holder = eu5_regent_mya
+		government = mandala_government
+	}
+}
+
+b_moro = {
+	1337.1.1 = {
+		holder = eu5_regent_moo
+		government = wanua_government
+	}
+}
+
+b_nagarkot = {
+	1337.1.1 = {
+		holder = kgr_prithvi_chandra_katoch
+	}
+}
+
+b_najran = {
+	1337.1.1 = {
+		holder = eu5_regent_yam
+	}
+}
+
+b_newtownards = {
+	1337.1.1 = {
+		holder = cla_einri_o_neill
+	}
+}
+
+b_nuoluo = {
+	1337.1.1 = {
+		holder = eu5_regent_nro
+	}
+}
+
+b_oswiecim = {
+	1337.1.1 = {
+		holder = osw_jan_piast
+	}
+}
+
+b_papantla = {
+	1337.1.1 = {
+		holder = tot_catoxcan
+	}
+}
+
+b_puctlan = {
+	1337.1.1 = {
+		holder = eu5_regent_ptl
+	}
+}
+
+b_qasr_shirin = {
+	1337.1.1 = {
+		holder = kri_muhammed
+	}
+}
+
+b_qatruyeh = {
+	1337.1.1 = {
+		holder = eu5_regent_ugh
+	}
+}
+
+b_rajouri = {
+	1337.1.1 = {
+		holder = eu5_regent_rjr
+	}
+}
+
+b_rano = {
+	1337.1.1 = {
+		holder = eu5_regent_ran
+	}
+}
+
+b_rendsburg = {
+	1337.1.1 = {
+		holder = shl_gerhard_iii_holstein_rendsburg
+	}
+}
+
+b_rohtas = {
+	1337.1.1 = {
+		holder = eu5_regent_cer
+	}
+}
+
+b_salagiri = {
+	1337.1.1 = {
+		holder = eu5_regent_bgl
+	}
+}
+
+b_salameh = {
+	1337.1.1 = {
+		holder = eu5_regent_khf
+	}
+}
+
+b_salona = {
+	1337.1.1 = {
+		holder = sao_alfons_frederic_de_arago
+	}
+}
+
+b_sanandaj = {
+	1337.1.1 = {
+		holder = eu5_regent_ard
+	}
+}
+
+b_sasak = {
+	1337.1.1 = {
+		holder = eu5_regent_slp
+		government = mandala_government
+	}
+}
+
+b_shangjing = {
 	1337.1.1 = {
 		holder = eu5_regent_lal
+	}
+}
+
+b_sivrice = {
+	1337.1.1 = {
+		holder = egl_isa
+	}
+}
+
+b_spittal = {
+	1337.1.1 = {
+		holder = eu5_regent_ort
+	}
+}
+
+b_storozhynets = {
+	1337.1.1 = {
+		holder = eu5_regent_ssi
+	}
+}
+
+b_suratgarh = {
+	1337.1.1 = {
+		holder = eu5_regent_jhi
+	}
+}
+
+b_tantaricuy = {
+	1337.1.1 = {
+		holder = eu5_regent_cui
+	}
+}
+
+b_taranagar = {
+	1337.1.1 = {
+		holder = drw_motay_rao_chauhan
+	}
+}
+
+b_teutila = {
+	1337.1.1 = {
+		holder = eu5_regent_tta
+	}
+}
+
+b_thaungdut = {
+	1337.1.1 = {
+		holder = eu5_regent_hhp
+		government = mandala_government
+	}
+}
+
+b_tixmul = {
+	1337.1.1 = {
+		holder = eu5_regent_uay
+	}
+}
+
+b_tlachquiauhco = {
+	1337.1.1 = {
+		holder = eu5_regent_tcq
+	}
+}
+
+b_tollohcan = {
+	1337.1.1 = {
+		holder = eu5_regent_mat
+	}
+}
+
+b_tsontaroy_kala = {
+	1337.1.1 = {
+		holder = eu5_regent_dzk
+	}
+}
+
+b_ujan = {
+	1337.1.1 = {
+		holder = hbn_abdallah_ibn_shahab_al_din_zani
+	}
+}
+
+b_unaaha = {
+	1337.1.1 = {
+		holder = eu5_regent_knw
+		government = wanua_government
+	}
+}
+
+b_urtsun = {
+	1337.1.1 = {
+		holder = crl_kriznook
+	}
+}
+
+b_werdenberg = {
+	1337.1.1 = {
+		holder = wer_albrecht_werdenberg
+	}
+}
+
+b_xilin = {
+	1337.1.1 = {
+		holder = eu5_regent_shg
+	}
+}
+
+b_xilotepec = {
+	1337.1.1 = {
+		holder = eu5_regent_xil
+	}
+}
+
+b_zacatepec = {
+	1337.1.1 = {
+		holder = eu5_regent_ych
+	}
+}
+
+b_zhonglu = {
+	1337.1.1 = {
+		holder = eu5_regent_zgl
 	}
 }

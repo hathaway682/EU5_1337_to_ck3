@@ -1,0 +1,48 @@
+﻿# The title every ruler EU5 leaves holding several of one tier wears.
+
+on_game_start = {
+	on_actions = {
+		eu5_start_primary_titles
+	}
+}
+
+eu5_start_primary_titles = {
+	effect = {
+		character:bry_gleb_svyatoslavich_rurikovich = {
+			if = {
+				limit = { is_alive = yes }
+				set_primary_title_to = title:d_eu5_bry
+			}
+		}
+		character:hun_karoly_robert = {
+			if = {
+				limit = { is_alive = yes }
+				set_primary_title_to = title:k_eu5_hun
+			}
+		}
+		character:lit_gediminas_gediminids = {
+			if = {
+				limit = { is_alive = yes }
+				set_primary_title_to = title:d_eu5_lit
+			}
+		}
+		character:mos_ivan_i_danilovich_kalita_rurikovich = {
+			if = {
+				limit = { is_alive = yes }
+				set_primary_title_to = title:k_eu5_mos
+			}
+		}
+		character:swe_magnus_eriksson = {
+			if = {
+				limit = { is_alive = yes }
+				set_primary_title_to = title:k_eu5_swe
+			}
+		}
+		character:vol_boleslaw_jerzy_ii_piast = {
+			if = {
+				limit = { is_alive = yes }
+				set_primary_title_to = title:k_eu5_vol
+			}
+		}
+	}
+}
