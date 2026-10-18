@@ -27,6 +27,11 @@
 - `history/characters/` — 209 个文件 18MB，角色 `name = "Catherine"` 直接是名字
 - 注意：本地化里 `japanese_*` 是命名 dynasty，欧洲多用数字 ID；**重名家族常见**
   （Bourbon 329 有 COA / 100146 没有），引用前必须按 name 键二次确认。
+- **"安茹"有两把别名的陷阱**：`dynn_Anjou`(723)=安茹 Anjou（安茹系王室/金雀花/耶路撒冷王室，
+  查 `history/titles/k_jerusalem.txt` 那些国王 dynasty 全是 723）= `anjou_jerusalem` 用它；
+  `dynn_Robertine`(743)=罗贝尔 = `robertian` 用它。**`dynn_Angevin` 是坑**：中文也译"安茹"、
+  英文 Angevin，但只在文化命名池(`common/culture/name_lists/00_frankish.txt`)出现，
+  **没有任何 dynasty/house 引用、无对应 COA**——别拿它当 dynasty name，会变成无纹章的捏造名。
 
 ## EU5 角色名本地化——人名翻译的真相之源（重要约定）
 
@@ -48,3 +53,10 @@
 3. 人名本地化补齐：1382 个 `name_eu5_*` key，中英两份 yml
 4. 挂 vanilla COA：29 条写入 + 6 条自动生效，共 36 个支系拿到真实纹章
 5. 154 个复合君主名按 EU5 本地化重译（脱花帖木儿 等），11 语言文件全部修正
+6. **宗族（dynasty）层对齐原版（B 路）全部完成**：27 个可锚定宗族全部对齐原版（3 个先前 + 24 个批量，清单见 `gen_debug/dynasty_alignment_plan.md`）。做法=保留 42 宗族归并，仅把每个父宗族 `name` 改 vanilla 本地化键、在 `common/coat_of_arms/coat_of_arms/95_zz_eu5_dynasty_aliases.txt`（手写"接线"，95_ 晚于 vanilla 90_ 加载）追加纹章别名（有原版 COA 的 21 个挂别名；无原版 COA 的 6 个仅改名）。15 个无原版对应（ivree/nakamura/utsunomiya/kawano/sanjou/shimazu/al_fadl/asturleonesa/chuujou/deste/montfort_feldkirch/seljukids/sratsimir/vatatzes/zovneski）保持 mod 自定义。批量脚本 `gen_debug/align_dynasties.py`（CRLF+BOM 安全、带备份、逐键自检）。
+
+## EU5 素材版权隔离架构（2026-10-18 定）
+
+- master = 发布分支，**不含任何 EU5 纹章素材**（贴图/定义/调色板/别名全在 eu5-coa 分支）；用户：「不敢上创意工坊而已，GitHub 我怕啥」。
+- 远程：github.com/hathaway682/EU5_1337_to_ck3（公开库），分支 master / eu5-coa / pop。
+- 用户日常用 GitHub Desktop 提交推送，会和我的 git 操作并发——push 前必 fetch。
