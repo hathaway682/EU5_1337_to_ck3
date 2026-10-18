@@ -188,3 +188,13 @@
 - 报告给数字和文件名；重大操作前备份（有 git 就别无限膨胀）
 - 全量生成**别一遍遍重复**，第一遍有问题直接汇报
 - 别按 tag 猜国家；别顺手扩大任务范围
+
+## ★ province ↔ EU5 location 映射（唯一可靠口径，2026-10-18 定）
+- **`b_<name>` 去掉 `b_` == EU5 location 名 `<name>`**，1:1 无重名（21046 个 barony 全唯一）。
+- **`mod_prov_to_loc.csv` 是错的，禁止再用**（它把 13337 映射到 `paat` 信德，实际是 Adamawa 的 Yola）。
+- EU5 pops 在 `Europa Universalis V\game\main_menu\setup\start\06_pops.txt`：
+  `location = { define_pop = { type=.. size=N culture=C religion=R } }`，覆盖 20792 个 location。
+- 文化/宗教的**权威填法 = 逐 province 取自己 location 的 pops 多数**（不是 location 声明值，也不是县级聚合）。
+  无 pops 的 255 个省用 location 声明值兜底。脚本 `gen_debug/_apply_culture_by_pops.py`。
+- `eu5_ck3_faith_map.csv` 里 **211/293 条映射成通用 `pagan`**（欧亚北部/非洲/澳洲/美洲 folk 宗教），
+  这是「pagan matching」待补的部分，不是 bug。

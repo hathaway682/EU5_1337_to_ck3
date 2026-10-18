@@ -1,0 +1,40 @@
+provinces mapped: 21046 counties: 3819
+locations with pops: 20792
+
+== result (per-province) ==
+provinces with pop data: 20791 / 21046 | no pop data: 255
+culture changed: 4215 | faith changed: 919 | both changed: 696
+
+samples (province: cur_cult/cur_faith -> new_cult/new_faith  [eu5_rel, pop, #cand]):
+  13348   adamawa_culture       /pagan                -> gbaya_culture         /pagan                [bantu_religion, 16.4, 1]
+  13349   benue                 /pagan                -> hausa                 /west_african_bori_pagan [bori_religion, 39.4, 1]
+  13351   benue                 /pagan                -> adamawa_culture       /pagan                [adamawa_religion, 29.4, 1]
+  13353   benue                 /pagan                -> adamawa_culture       /pagan                [adamawa_religion, 32.6, 1]
+  13383   bantoid               /pagan                -> bomassa_culture       /pagan                [bantu_religion, 11.8, 1]
+  13384   bantoid               /pagan                -> bassa_culture         /pagan                [bantu_religion, 10.9, 1]
+  13374   bantoid               /pagan                -> adamawa_culture       /pagan                [adamawa_religion, 18.0, 1]
+  13375   bantoid               /pagan                -> benue                 /pagan                [abwoi_religion, 7.2, 1]
+  13300   ngbandi_culture       /pagan                -> gbaya_culture         /pagan                [adamawa_religion, 51.1, 1]
+  13301   ngbandi_culture       /pagan                -> gbaya_culture         /pagan                [adamawa_religion, 26.6, 1]
+  13323   madi_culture          /pagan                -> zande_culture         /kushitism_pagan      [mbori_religion, 52.7, 1]
+  13326   madi_culture          /pagan                -> zande_culture         /kushitism_pagan      [mbori_religion, 45.5, 2]
+  13304   sara_culture          /pagan                -> gbaya_culture         /pagan                [bantu_religion, 12.1, 1]
+  13306   sara_culture          /pagan                -> mbay_culture          /pagan                [sao_religion, 22.1, 2]
+  13307   sara_culture          /pagan                -> gbaya_culture         /pagan                [adamawa_religion, 16.2, 1]
+  13308   sara_culture          /pagan                -> mandja_culture        /pagan                [adamawa_religion, 27.8, 1]
+  13320   banda_culture         /pagan                -> zande_culture         /kushitism_pagan      [mbori_religion, 10.1, 2]
+  13321   banda_culture         /pagan                -> zande_culture         /kushitism_pagan      [mbori_religion, 14.7, 1]
+  13318   banda_culture         /pagan                -> mandja_culture        /pagan                [adamawa_religion, 10.8, 1]
+  13293   bomassa_culture       /pagan                -> bassa_culture         /pagan                [bantu_religion, 2.9, 1]
+  13295   bomassa_culture       /pagan                -> gbaya_culture         /pagan                [adamawa_religion, 8.5, 1]
+  13310   tunjur_culture        /kushitism_pagan      -> gula_iro_culture      /pagan                [bua_religion, 12.1, 1]
+  13312   tunjur_culture        /kushitism_pagan      -> gula_iro_culture      /pagan                [bua_religion, 15.8, 1]
+  13313   tunjur_culture        /kushitism_pagan      -> sara_culture          /pagan                [sao_religion, 11.1, 1]
+  13371   sao_culture           /pagan                -> mandara_culture       /pagan                [sao_religion, 15.1, 2]
+
+report: D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\gen_debug\_culture_by_pops_report.txt
+diff csv: D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\gen_debug\_culture_by_pops_diff.csv
+
+APPLIED (per-province). changed_lines=5134
+backup: D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\history\provinces\00_generated_provinces.txt.bak_popsmajority_20261018_123407
+braces: 21046 21046
