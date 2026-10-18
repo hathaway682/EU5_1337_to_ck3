@@ -1,0 +1,32 @@
+# =========================================================
+# 宗族纹章别名（手写，非生成）
+# 让 mod 的自定义宗族直接复用原版（vanilla）纹章：
+#   seiwa_genji_dynasty   ->  japanese_minamoto_seiwa  (蓝底龙胆纹)
+#   robertian_dynasty     ->  743 Robertine            (蓝/黄棋盘纹)
+#   anjou_jerusalem_dynasty -> 723 Anjou               (安茹纹章；保留为独立主家，不并入 robertian)
+# 用 95_ 前缀确保晚于 vanilla 的 90_dynasties.txt 加载，别名目标必然已存在。
+# =========================================================
+
+seiwa_genji_dynasty = japanese_minamoto_seiwa
+robertian_dynasty = 743
+anjou_jerusalem_dynasty = 723
+
+# --- batch aligned (B-path) ---
+kudou_dynasty = japanese_kudo
+uda_genji_dynasty = japanese_minamoto_uda
+saga_genji_dynasty = japanese_minamoto_saga
+murakami_genji_dynasty = japanese_minamoto_murakami
+ooe_dynasty = japanese_oe
+saitou_dynasty = japanese_saito
+takashina_dynasty = japanese_takashina
+hatano_dynasty = japanese_hatano
+yamato_dynasty = japanese_yamato
+aleramici_dynasty = 206
+angelos_dynasty = 195
+blois_dynasty = 721
+hohenzollern_dynasty = 12476
+de_brienne_dynasty = 80
+taira_dynasty = japanese_taira_kanmu
+fujiwara_dynasty = japanese_fujiwara
+orsini_dynasty = 2
+barcelona_dynasty = 100204
