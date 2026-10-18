@@ -1,0 +1,197 @@
+================================================================================
+支系(house)关系对家族复用置信度的提升  —— 完整分析
+================================================================================
+vanilla house 总数        : 582
+vanilla dynasty 总数      : 10386
+被归并 child 总数         : 168
+归并 parent 宗族数        : 42
+
+【关键背景】v2 的 272 条匹配只覆盖「数字 ID 型」vanilla dynasty。
+           vanilla 的日本家族全部是命名 key（japanese_fujiwara / japanese_minamoto_*），
+           因此日本系在 v2 里 100% 缺失。本分析补上这一块。
+
+168 个被归并 child 中，日本系 = 84 个，非日本系 = 84 个
+
+【一】原始证据等级（v2 口径）
+    STRONG  : 8
+    NAME    : 5
+    WEAK    : 9
+    NONE    : 146
+
+【二】S1 铁证：vanilla 有同名 house 且 parent 对得上 → 10 个
+【三】vanilla 有同名 house（含 parent 对不上的）→ 22 个
+      其中 parent 对不上 → 12 个
+
+【四】可提升置信度的家族：33 个（原有强证据的 8 个不算在内）
+
+    NONE   + S2同名house                  : 10 个
+    NONE   + S1铁证                       : 9 个
+    WEAK   + S3父锚定                      : 3 个
+    NAME   + S4兄弟锚定                     : 2 个
+    WEAK   + S4兄弟锚定                     : 2 个
+    NONE   + S4兄弟锚定                     : 2 个
+    NONE   + S3父锚定                      : 1 个
+    NONE   + S2同名house+S4兄弟锚定           : 1 个
+    NAME   + S2同名house+S4兄弟锚定           : 1 个
+    NONE   + S1铁证+S3父锚定+S4兄弟锚定          : 1 个
+    NAME   + S3父锚定                      : 1 个
+
+================================================================================
+【五】S1 铁证清单（vanilla house 已存在 + 父宗族一致 → 可直接复用 vanilla house key）
+================================================================================
+chiba_dynasty                      -> taira_dynasty            [NONE]
+    复用目标 : house_taira_chiba  (name=dynn_Taira_Chiba, parent=japanese_taira_kanmu dynn_Taira)
+    自身证据 : strong=0 name_hits=0 mod_n=0 van_n=0
+
+ishikawa_dynasty                   -> seiwa_genji_dynasty      [NONE]
+    复用目标 : house_minamoto_ishikawa  (name=dynn_Minamoto_Ishikawa, parent=japanese_minamoto_seiwa dynn_Minamoto)
+    自身证据 : strong=0 name_hits=0 mod_n=0 van_n=0
+
+kaneko_dynasty                     -> taira_dynasty            [NONE]
+    复用目标 : house_taira_kaneko  (name=dynn_Taira_Kaneko, parent=japanese_taira_kanmu dynn_Taira)
+    自身证据 : strong=0 name_hits=0 mod_n=0 van_n=0
+
+komnenos_doukas_dynasty            -> angelos_dynasty          [NONE]
+    复用目标 : house_komnenos_doukas  (name=dynn_Komnenos_Doukas, parent=195 dynn_Angelos)
+    自身证据 : strong=0 name_hits=0 mod_n=0 van_n=0
+
+miura_dynasty                      -> taira_dynasty            [NONE]
+    复用目标 : house_taira_miura  (name=dynn_Taira_Miura, parent=japanese_taira_kanmu dynn_Taira)
+    自身证据 : strong=0 name_hits=0 mod_n=0 van_n=0
+
+plantagenet_dynasty                -> anjou_jerusalem_dynasty  [NONE]
+    复用目标 : house_plantagenet  (name=dynn_Plantagenet, parent=723 dynn_Anjou)
+    自身证据 : strong=0 name_hits=0 mod_n=0 van_n=0
+
+sasaki_dynasty                     -> uda_genji_dynasty        [NONE]
+    复用目标 : house_minamoto_sasaki  (name=dynn_Minamoto_Sasaki, parent=japanese_minamoto_uda dynn_Minamoto)
+    自身证据 : strong=0 name_hits=0 mod_n=0 van_n=0
+
+toki_dynasty                       -> seiwa_genji_dynasty      [NONE]
+    复用目标 : house_minamoto_toki  (name=dynn_Minamoto_Toki, parent=japanese_minamoto_seiwa dynn_Minamoto)
+    自身证据 : strong=0 name_hits=0 mod_n=0 van_n=0
+
+urgell_dynasty                     -> barcelona_dynasty        [NONE]
+    复用目标 : house_urgell  (name=dynn_Urgell, parent=100204 dynn_Barcelona)
+    自身证据 : strong=0 name_hits=0 mod_n=0 van_n=0
+
+watanabe_dynasty                   -> saga_genji_dynasty       [NONE]
+    复用目标 : house_minamoto_watanabe  (name=dynn_Minamoto_Watanabe, parent=japanese_minamoto_saga dynn_Minamoto)
+    自身证据 : strong=0 name_hits=0 mod_n=0 van_n=0
+
+
+================================================================================
+【六】S2 同名 house 但父宗族不一致（需人工判定，可能是同姓不同流）
+================================================================================
+armagnac_dynasty                   mod_parent=lomagne_dynasty        vanilla_house=house_armagnac
+    vanilla parent = 388 (dynn_Vasconia)   mod parent 对应 = 5100
+
+ashikaga_dynasty                   mod_parent=seiwa_genji_dynasty    vanilla_house=house_fujiwara_ashikaga
+    vanilla parent = japanese_fujiwara (dynn_Fujiwara)   mod parent 对应 = japanese_minamoto_seiwa
+
+capet_dynasty                      mod_parent=robertian_dynasty      vanilla_house=house_capet
+    vanilla parent = 743 (dynn_Robertine)   mod parent 对应 = -
+
+carretto_dynasty                   mod_parent=aleramici_dynasty      vanilla_house=house_carretto
+    vanilla parent = 206 (dynn_Aleramicci)   mod parent 对应 = -
+
+ceva_dynasty                       mod_parent=aleramici_dynasty      vanilla_house=house_ceva
+    vanilla parent = 206 (dynn_Aleramicci)   mod parent 对应 = -
+
+chalon_dynasty                     mod_parent=ivree_dynasty          vanilla_house=house_chalon
+    vanilla parent = 733 (dynn_Auvergne)   mod parent 对应 = -
+
+dreux_dynasty                      mod_parent=robertian_dynasty      vanilla_house=house_dreux
+    vanilla parent = 743 (dynn_Robertine)   mod parent 对应 = -
+
+hatakeyama_dynasty                 mod_parent=seiwa_genji_dynasty    vanilla_house=house_taira_hatakeyama
+    vanilla parent = japanese_taira_kanmu (dynn_Taira)   mod parent 对应 = japanese_minamoto_seiwa
+
+hiraga_dynasty                     mod_parent=fujiwara_dynasty       vanilla_house=house_minamoto_hiraga
+    vanilla parent = japanese_minamoto_seiwa (dynn_Minamoto)   mod parent 对应 = japanese_fujiwara
+
+irie_dynasty                       mod_parent=kudou_dynasty          vanilla_house=house_kudo_irie
+    vanilla parent = japanese_kudo (dynn_KudO_)   mod parent 对应 = -
+
+kikkawa_dynasty                    mod_parent=kudou_dynasty          vanilla_house=house_kudo_kikkawa
+    vanilla parent = japanese_kudo (dynn_KudO_)   mod parent 对应 = -
+
+lancia_dynasty                     mod_parent=aleramici_dynasty      vanilla_house=house_lancia
+    vanilla parent = 206 (dynn_Aleramicci)   mod parent 对应 = -
+
+================================================================================
+【七】S3/S4 间接提升（无同名 house，靠父/兄弟传递）
+================================================================================
+bourbon_dynasty                    -> robertian_dynasty        [NAME] S4兄弟锚定
+    强证据兄弟: anjou_dynasty, artois_dynasty, courtenay_dynasty, valois_dynasty
+
+montfort_dynasty                   -> robertian_dynasty        [NAME] S4兄弟锚定
+    强证据兄弟: anjou_dynasty, artois_dynasty, courtenay_dynasty, valois_dynasty
+
+orsini_monterotondo_dynasty        -> orsini_dynasty           [NAME] S3父锚定
+
+apostolico_orsini_dynasty          -> orsini_dynasty           [NONE] S3父锚定
+
+de_evreux_dynasty                  -> robertian_dynasty        [NONE] S4兄弟锚定
+    强证据兄弟: anjou_dynasty, artois_dynasty, courtenay_dynasty, valois_dynasty
+
+hohenberg_dynasty                  -> hohenzollern_dynasty     [NONE] S4兄弟锚定
+    强证据兄弟: hohenzollern_nurnberg_dynasty
+
+burgundy_dynasty                   -> robertian_dynasty        [WEAK] S4兄弟锚定
+    强证据兄弟: anjou_dynasty, artois_dynasty, courtenay_dynasty, valois_dynasty
+
+burgundy_portuguese_dynasty        -> robertian_dynasty        [WEAK] S4兄弟锚定
+    强证据兄弟: anjou_dynasty, artois_dynasty, courtenay_dynasty, valois_dynasty
+
+champlitte_dynasty                 -> blois_dynasty            [WEAK] S3父锚定
+
+orsini_aldobrandeschi_dynasty      -> orsini_dynasty           [WEAK] S3父锚定
+
+sully_dynasty                      -> blois_dynasty            [WEAK] S3父锚定
+
+================================================================================
+【八】42 个 parent 宗族：vanilla 对应 + 支系覆盖
+================================================================================
+seiwa_genji_dynasty          NONE    支系=29  S1=2   同名house=4   vanilla=japanese_minamoto_seiwa
+taira_dynasty                NONE    支系=20  S1=3   同名house=3   vanilla=japanese_taira_kanmu
+fujiwara_dynasty             NONE    支系=19  S1=0   同名house=1   vanilla=japanese_fujiwara
+robertian_dynasty            NONE    支系=11  S1=0   同名house=2   vanilla=-
+uda_genji_dynasty            NONE    支系=6   S1=1   同名house=1   vanilla=japanese_minamoto_uda
+kudou_dynasty                NONE    支系=6   S1=0   同名house=2   vanilla=-
+ivree_dynasty                NONE    支系=5   S1=0   同名house=1   vanilla=-
+aleramici_dynasty            NONE    支系=5   S1=0   同名house=3   vanilla=-
+kondou_dynasty               NONE    支系=4   S1=0   同名house=0   vanilla=-
+saitou_dynasty               NONE    支系=4   S1=0   同名house=0   vanilla=-
+saga_genji_dynasty           NONE    支系=4   S1=1   同名house=1   vanilla=japanese_minamoto_saga
+tatara_dynasty               NONE    支系=4   S1=0   同名house=0   vanilla=-
+murakami_genji_dynasty       NONE    支系=3   S1=0   同名house=0   vanilla=japanese_minamoto_murakami
+orsini_dynasty               STRONG  支系=3   S1=0   同名house=0   vanilla=2,7215
+nakamura_dynasty             NONE    支系=3   S1=0   同名house=0   vanilla=-
+utsunomiya_dynasty           NONE    支系=3   S1=0   同名house=0   vanilla=-
+ooe_dynasty                  NONE    支系=3   S1=0   同名house=0   vanilla=-
+sanjou_dynasty               NONE    支系=2   S1=0   同名house=0   vanilla=-
+blois_dynasty                STRONG  支系=2   S1=0   同名house=0   vanilla=721
+kawano_dynasty               NONE    支系=2   S1=0   同名house=0   vanilla=-
+barcelona_dynasty            NAME    支系=2   S1=1   同名house=1   vanilla=100204,629
+hohenzollern_dynasty         NAME    支系=2   S1=0   同名house=0   vanilla=12476
+shimazu_dynasty              NONE    支系=2   S1=0   同名house=0   vanilla=-
+angelos_dynasty              STRONG  支系=2   S1=1   同名house=1   vanilla=195
+takashina_dynasty            NONE    支系=2   S1=0   同名house=0   vanilla=japanese_takashina
+anjou_jerusalem_dynasty      NAME    支系=2   S1=1   同名house=1   vanilla=723,81
+hatano_dynasty               NONE    支系=2   S1=0   同名house=0   vanilla=-
+oyama_dynasty                NONE    支系=2   S1=0   同名house=0   vanilla=-
+al_fadl_dynasty              NONE    支系=1   S1=0   同名house=0   vanilla=-
+lomagne_dynasty              WEAK    支系=1   S1=0   同名house=1   vanilla=5100
+de_brienne_dynasty           NONE    支系=1   S1=0   同名house=0   vanilla=-
+antelminelli_dynasty         WEAK    支系=1   S1=0   同名house=0   vanilla=101817
+zovneski_dynasty             NONE    支系=1   S1=0   同名house=0   vanilla=-
+sratsimir_dynasty            NONE    支系=1   S1=0   同名house=0   vanilla=-
+seljukids_dynasty            NONE    支系=1   S1=0   同名house=0   vanilla=-
+vatatzes_dynasty             NONE    支系=1   S1=0   同名house=0   vanilla=-
+montfort_feldkirch_dynasty   NONE    支系=1   S1=0   同名house=0   vanilla=-
+yamato_dynasty               NONE    支系=1   S1=0   同名house=0   vanilla=japanese_yamato
+asturleonesa_dynasty         NONE    支系=1   S1=0   同名house=0   vanilla=-
+chuujou_dynasty              NONE    支系=1   S1=0   同名house=0   vanilla=-
+deste_dynasty                NONE    支系=1   S1=0   同名house=0   vanilla=-
+subic_dynasty                NONE    支系=1   S1=0   同名house=0   vanilla=-
