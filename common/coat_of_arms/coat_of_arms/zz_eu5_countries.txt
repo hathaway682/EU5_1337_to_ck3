@@ -27039,172 +27039,6 @@ c_nf_tou = {
 	}
 }
 
-eu5_sub_FRA_fleury = {
-	pattern = "eu5_pattern_solid.dds"
-	color1 = "eu5_blue"
-	color2 = "eu5_yellow"
-
-	colored_emblem = {
-		texture = "eu5_ce_fleur_de_lis.dds"
-		color1 = color2
-		color2 = color2
-		instance = { position = { 0.10 0.00 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.30 0.00 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.50 0.00 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.70 0.00 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.90 0.00 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.00 0.20 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.20 0.20 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.40 0.20 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.60 0.20 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.80 0.20 } scale = { 0.27 0.27 } }
-		instance = { position = { 1.00 0.20 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.10 0.40 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.30 0.40 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.50 0.40 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.70 0.40 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.90 0.40 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.00 0.60 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.20 0.60 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.40 0.60 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.60 0.60 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.80 0.60 } scale = { 0.27 0.27 } }
-		instance = { position = { 1.00 0.60 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.10 0.80 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.30 0.80 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.50 0.80 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.70 0.80 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.90 0.80 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.00 1.00 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.20 1.00 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.40 1.00 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.60 1.00 } scale = { 0.27 0.27 } }
-		instance = { position = { 0.80 1.00 } scale = { 0.27 0.27 } }
-		instance = { position = { 1.00 1.00 } scale = { 0.27 0.27 } }
-	}
-}
-
-eu5_sub_TCK = {
-	pattern = "eu5_pattern_solid.dds"
-	color1 = "eu5_white"
-	color2 = "eu5_red"
-
-	colored_emblem = {
-		texture = "eu5_ce_waterlily_leaf.dds"
-		color1 = color2
-		color2 = color2
-		instance = { position = { 0.32 0.28 } scale = { 0.6 0.6 }  }
-		instance = { position = { 0.68 0.28 } scale = { 0.6 0.6 }  }
-		instance = { position = { 0.5 0.70 } scale = { 0.6 0.6 }  }
-	}
-}
-
-eu5_sub_chinese_dragon = {
-	pattern = "eu5_pattern_special_chinese_dragon.dds"
-	color1 = "eu5_yellow"
-	color2 = "eu5_green"
-	color3 = "eu5_red_mid"
-	color4 = "eu5_pearl"
-	color5 = "eu5_orange"
-
-	colored_emblem = {
-		texture = "eu5_ce_solid.dds"
-		color1 = color1
-		color2 = color1
-	}
-	colored_emblem = {
-		texture = "eu5_ce_dragon_chasing_flaming_pearl.dds"
-		color1 = color2
-		color2 = color3
-		color3 = color4
-	}
-	colored_emblem = {
-		texture = "eu5_ce_dragon_chasing_flaming_pearl.dds"
-		color1 = "eu5_pearl"
-		color2 = "eu5_cyan"
-		color3 = color4
-		mask = { 2 }
-	}
-	colored_emblem = {
-		texture = "eu5_ce_dragon_chasing_flaming_pearl.dds"
-		color1 = "eu5_red"
-		color2 = "eu5_orange"
-		color3 = "eu5_red_light"
-		mask = { 3 }
-	}
-}
-
-eu5_sub_canton_castle = {
-	pattern = "eu5_pattern_solid.dds"
-	color1 = "eu5_red"
-	color2 = "eu5_yellow"
-
-	colored_emblem = {
-		texture = "eu5_ce_castle_short.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color1
-		instance = { position = { 0.5 0.51 } scale = { 1.0 1.0 } }
-	}
-	colored_emblem = {
-		texture = "eu5_ce_divider_quarterly.dds"
-		color1 = color1
-		instance = { position = { 0.99 0.985 } scale = { 2.0 2.0 } }
-	}
-}
-
-eu5_sub_canton_lion = {
-	pattern = "eu5_pattern_solid.dds"
-	color1 = "eu5_red"
-	color2 = "eu5_white"
-	color3 = "eu5_red_dark"
-
-	colored_emblem = {
-		texture = "eu5_ce_lion_wide.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color1
-		instance = { position = { 0.5 0.51 } scale = { 1.05 1.05 } }
-	}
-	colored_emblem = {
-		texture = "eu5_ce_solid.dds"
-		color1 = color3
-		color2 = color3
-		instance = { position = { 0.5 0.99 } scale = { 1.0 0.02 } }
-		instance = { position = { 0.994 0.5 } scale = { 0.02 1.0 } }
-	}
-}
-
-eu5_sub_border_roundelly = {
-	color1 = "eu5_red"
-	color2 = "eu5_white"
-
-	colored_emblem = {
-		texture = "eu5_ce_border.dds"
-		color1 = color1
-		color2 = color1
-	}
-	colored_emblem = {
-		texture = "eu5_ce_roundel.dds"
-		color1 = color2
-		color2 = color2
-		instance = { position = { 0.05 0.075 } scale = { 0.125 0.125 } }
-		instance = { position = { 0.05 0.358 } scale = { 0.125 0.125 } }
-		instance = { position = { 0.05 0.642 } scale = { 0.125 0.125 } }
-		instance = { position = { 0.05 0.925 } scale = { 0.125 0.125 } }
-		instance = { position = { 0.95 0.075 } scale = { 0.125 0.125 } }
-		instance = { position = { 0.95 0.358 } scale = { 0.125 0.125 } }
-		instance = { position = { 0.95 0.642 } scale = { 0.125 0.125 } }
-		instance = { position = { 0.95 0.925 } scale = { 0.125 0.125 } }
-		instance = { position = { 0.275 0.925 } scale = { 0.125 0.125 } }
-		instance = { position = { 0.500 0.925 } scale = { 0.125 0.125 } }
-		instance = { position = { 0.725 0.925 } scale = { 0.125 0.125 } }
-		instance = { position = { 0.275 0.075 } scale = { 0.125 0.125 } }
-		instance = { position = { 0.500 0.075 } scale = { 0.125 0.125 } }
-		instance = { position = { 0.725 0.075 } scale = { 0.125 0.125 } }
-	}
-}
-
 eu5_sub_ANJ_fleury = {
 	pattern = "eu5_pattern_solid.dds"
 	color1 = "eu5_blue"
@@ -27266,6 +27100,172 @@ eu5_sub_ENG_cross = {
 		texture = "eu5_ce_cross.dds"
 		color1 = color2
 		color2 = color2
+	}
+}
+
+eu5_sub_FRA_fleury = {
+	pattern = "eu5_pattern_solid.dds"
+	color1 = "eu5_blue"
+	color2 = "eu5_yellow"
+
+	colored_emblem = {
+		texture = "eu5_ce_fleur_de_lis.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.10 0.00 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.30 0.00 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.50 0.00 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.70 0.00 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.90 0.00 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.00 0.20 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.20 0.20 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.40 0.20 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.60 0.20 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.80 0.20 } scale = { 0.27 0.27 } }
+		instance = { position = { 1.00 0.20 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.10 0.40 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.30 0.40 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.50 0.40 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.70 0.40 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.90 0.40 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.00 0.60 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.20 0.60 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.40 0.60 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.60 0.60 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.80 0.60 } scale = { 0.27 0.27 } }
+		instance = { position = { 1.00 0.60 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.10 0.80 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.30 0.80 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.50 0.80 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.70 0.80 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.90 0.80 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.00 1.00 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.20 1.00 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.40 1.00 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.60 1.00 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.80 1.00 } scale = { 0.27 0.27 } }
+		instance = { position = { 1.00 1.00 } scale = { 0.27 0.27 } }
+	}
+}
+
+eu5_sub_TCK = {
+	pattern = "eu5_pattern_solid.dds"
+	color1 = "eu5_white"
+	color2 = "eu5_red"
+
+	colored_emblem = {
+		texture = "eu5_ce_waterlily_leaf.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.32 0.28 } scale = { 0.6 0.6 }  }
+		instance = { position = { 0.68 0.28 } scale = { 0.6 0.6 }  }
+		instance = { position = { 0.5 0.70 } scale = { 0.6 0.6 }  }
+	}
+}
+
+eu5_sub_border_roundelly = {
+	color1 = "eu5_red"
+	color2 = "eu5_white"
+
+	colored_emblem = {
+		texture = "eu5_ce_border.dds"
+		color1 = color1
+		color2 = color1
+	}
+	colored_emblem = {
+		texture = "eu5_ce_roundel.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.05 0.075 } scale = { 0.125 0.125 } }
+		instance = { position = { 0.05 0.358 } scale = { 0.125 0.125 } }
+		instance = { position = { 0.05 0.642 } scale = { 0.125 0.125 } }
+		instance = { position = { 0.05 0.925 } scale = { 0.125 0.125 } }
+		instance = { position = { 0.95 0.075 } scale = { 0.125 0.125 } }
+		instance = { position = { 0.95 0.358 } scale = { 0.125 0.125 } }
+		instance = { position = { 0.95 0.642 } scale = { 0.125 0.125 } }
+		instance = { position = { 0.95 0.925 } scale = { 0.125 0.125 } }
+		instance = { position = { 0.275 0.925 } scale = { 0.125 0.125 } }
+		instance = { position = { 0.500 0.925 } scale = { 0.125 0.125 } }
+		instance = { position = { 0.725 0.925 } scale = { 0.125 0.125 } }
+		instance = { position = { 0.275 0.075 } scale = { 0.125 0.125 } }
+		instance = { position = { 0.500 0.075 } scale = { 0.125 0.125 } }
+		instance = { position = { 0.725 0.075 } scale = { 0.125 0.125 } }
+	}
+}
+
+eu5_sub_canton_castle = {
+	pattern = "eu5_pattern_solid.dds"
+	color1 = "eu5_red"
+	color2 = "eu5_yellow"
+
+	colored_emblem = {
+		texture = "eu5_ce_castle_short.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.51 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "eu5_ce_divider_quarterly.dds"
+		color1 = color1
+		instance = { position = { 0.99 0.985 } scale = { 2.0 2.0 } }
+	}
+}
+
+eu5_sub_canton_lion = {
+	pattern = "eu5_pattern_solid.dds"
+	color1 = "eu5_red"
+	color2 = "eu5_white"
+	color3 = "eu5_red_dark"
+
+	colored_emblem = {
+		texture = "eu5_ce_lion_wide.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.51 } scale = { 1.05 1.05 } }
+	}
+	colored_emblem = {
+		texture = "eu5_ce_solid.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.99 } scale = { 1.0 0.02 } }
+		instance = { position = { 0.994 0.5 } scale = { 0.02 1.0 } }
+	}
+}
+
+eu5_sub_chinese_dragon = {
+	pattern = "eu5_pattern_special_chinese_dragon.dds"
+	color1 = "eu5_yellow"
+	color2 = "eu5_green"
+	color3 = "eu5_red_mid"
+	color4 = "eu5_pearl"
+	color5 = "eu5_orange"
+
+	colored_emblem = {
+		texture = "eu5_ce_solid.dds"
+		color1 = color1
+		color2 = color1
+	}
+	colored_emblem = {
+		texture = "eu5_ce_dragon_chasing_flaming_pearl.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color4
+	}
+	colored_emblem = {
+		texture = "eu5_ce_dragon_chasing_flaming_pearl.dds"
+		color1 = "eu5_pearl"
+		color2 = "eu5_cyan"
+		color3 = color4
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "eu5_ce_dragon_chasing_flaming_pearl.dds"
+		color1 = "eu5_red"
+		color2 = "eu5_orange"
+		color3 = "eu5_red_light"
+		mask = { 3 }
 	}
 }
 

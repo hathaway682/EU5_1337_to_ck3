@@ -1,0 +1,232 @@
+================================================================================
+补齐 v2 盲区：vanilla 日本家族是命名 key（japanese_*），不是数字 ID
+================================================================================
+vanilla dynasty 总数（含命名 key）: 10386
+  其中 japanese_* 命名 dynasty   : 173
+vanilla house 总数               : 582
+168 个被归并 child
+
+【A】能在 vanilla 找到同名独立 dynasty : 14 个
+      其中日本系 japanese_*          : 14 个
+【B】能在 vanilla 找到同名 house       : 25 个
+【C】两类都有（vanilla 既有 dynasty 又有 house）: 0 个
+【D】两类都没有                       : 129 个
+
+================================================================================
+【A】同名独立 dynasty 清单（→ 可直接用 vanilla 命名 key 复用）
+================================================================================
+[JP] gotou_dynasty                      -> japanese_goto
+      vanilla name=['dynn_GotO_'] culture=['japanese']   自身证据=NONE  mod_parent=saitou_dynasty
+[JP] hata_dynasty                       -> japanese_hata
+      vanilla name=['dynn_Hata'] culture=['japanese']   自身证据=NONE  mod_parent=saga_genji_dynasty
+[JP] ii_dynasty                         -> japanese_ii
+      vanilla name=['dynn_Ii'] culture=['japanese']   自身证据=NONE  mod_parent=fujiwara_dynasty
+[JP] ise_dynasty                        -> japanese_ise
+      vanilla name=['dynn_Ise'] culture=['japanese']   自身证据=NONE  mod_parent=taira_dynasty
+[JP] itou_dynasty                       -> japanese_ito
+      vanilla name=['dynn_ItO_'] culture=['japanese']   自身证据=NONE  mod_parent=kudou_dynasty
+[JP] katou_dynasty                      -> japanese_kato
+      vanilla name=['dynn_KatO_'] culture=['japanese']   自身证据=NONE  mod_parent=saitou_dynasty
+[JP] kikuchi_dynasty                    -> japanese_kikuchi
+      vanilla name=['dynn_Kikuchi'] culture=['japanese']   自身证据=NONE  mod_parent=fujiwara_dynasty
+[JP] matsura_dynasty                    -> japanese_matsura
+      vanilla name=['dynn_Matsura'] culture=['japanese']   自身证据=NONE  mod_parent=saga_genji_dynasty
+[JP] miyoshi_dynasty                    -> japanese_miyoshi
+      vanilla name=['dynn_Miyoshi'] culture=['japanese']   自身证据=NONE  mod_parent=fujiwara_dynasty
+[JP] nasu_dynasty                       -> japanese_nasu
+      vanilla name=['dynn_Nasu'] culture=['japanese']   自身证据=NONE  mod_parent=fujiwara_dynasty
+[JP] oouchi_dynasty                     -> japanese_ochi,japanese_ouchi
+      vanilla name=['dynn_Ochi', 'dynn_O_uchi'] culture=['japanese', 'japanese']   自身证据=NONE  mod_parent=tatara_dynasty
+[JP] togashi_dynasty                    -> japanese_togashi
+      vanilla name=['dynn_Togashi'] culture=['japanese']   自身证据=NONE  mod_parent=saitou_dynasty
+[JP] toshima_dynasty                    -> japanese_toshima
+      vanilla name=['dynn_Toshima'] culture=['japanese']   自身证据=NONE  mod_parent=taira_dynasty
+[JP] yuasa_dynasty                      -> japanese_yuasa
+      vanilla name=['dynn_Yuasa'] culture=['japanese']   自身证据=NONE  mod_parent=fujiwara_dynasty
+
+================================================================================
+【B】同名 house 清单（→ 可复用 vanilla house key，保留归并结构）
+================================================================================
+armagnac_dynasty                   -> house_armagnac
+      vanilla house name=dynn_Armagnac  parent=388(dynn_Vasconia)  mod_parent=lomagne_dynasty
+ashikaga_dynasty                   -> house_fujiwara_ashikaga
+      vanilla house name=dynn_Fujiwara_Ashikaga  parent=japanese_fujiwara(dynn_Fujiwara)  mod_parent=seiwa_genji_dynasty
+capet_dynasty                      -> house_capet
+      vanilla house name=dynn_Capet  parent=743(dynn_Robertine)  mod_parent=robertian_dynasty
+carretto_dynasty                   -> house_carretto
+      vanilla house name=dynn_Caretto  parent=206(dynn_Aleramicci)  mod_parent=aleramici_dynasty
+ceva_dynasty                       -> house_ceva
+      vanilla house name=dynn_Ceva  parent=206(dynn_Aleramicci)  mod_parent=aleramici_dynasty
+chalon_dynasty                     -> house_chalon
+      vanilla house name=dynn_Chalon  parent=733(dynn_Auvergne)  mod_parent=ivree_dynasty
+chiba_dynasty                      -> house_taira_chiba
+      vanilla house name=dynn_Taira_Chiba  parent=japanese_taira_kanmu(dynn_Taira)  mod_parent=taira_dynasty
+dreux_dynasty                      -> house_dreux
+      vanilla house name=dynn_Dreux  parent=743(dynn_Robertine)  mod_parent=robertian_dynasty
+hatakeyama_dynasty                 -> house_taira_hatakeyama
+      vanilla house name=dynn_Hatakeyama  parent=japanese_taira_kanmu(dynn_Taira)  mod_parent=seiwa_genji_dynasty
+hiraga_dynasty                     -> house_minamoto_hiraga
+      vanilla house name=dynn_Minamoto_Hiraga  parent=japanese_minamoto_seiwa(dynn_Minamoto)  mod_parent=fujiwara_dynasty
+houjou_dynasty                     -> house_taira_hojo
+      vanilla house name=dynn_Taira_HO_jO_  parent=japanese_taira_kanmu(dynn_Taira)  mod_parent=taira_dynasty
+irie_dynasty                       -> house_kudo_irie
+      vanilla house name=dynn_Irie  parent=japanese_kudo(dynn_KudO_)  mod_parent=kudou_dynasty
+ishikawa_dynasty                   -> house_minamoto_ishikawa,house_minamoto_oshu_ishikawa,house_soga_ishikawa
+      vanilla house name=dynn_Minamoto_Ishikawa  parent=japanese_minamoto_seiwa(dynn_Minamoto)  mod_parent=seiwa_genji_dynasty
+kaneko_dynasty                     -> house_taira_kaneko
+      vanilla house name=dynn_Taira_Kaneko  parent=japanese_taira_kanmu(dynn_Taira)  mod_parent=taira_dynasty
+kikkawa_dynasty                    -> house_kudo_kikkawa
+      vanilla house name=dynn_Kikkawa  parent=japanese_kudo(dynn_KudO_)  mod_parent=kudou_dynasty
+komnenos_doukas_dynasty            -> house_komnenos_doukas
+      vanilla house name=dynn_Komnenos_Doukas  parent=195(dynn_Angelos)  mod_parent=angelos_dynasty
+lancia_dynasty                     -> house_lancia
+      vanilla house name=dynn_Lancia  parent=206(dynn_Aleramicci)  mod_parent=aleramici_dynasty
+miura_dynasty                      -> house_taira_miura
+      vanilla house name=dynn_Taira_Miura  parent=japanese_taira_kanmu(dynn_Taira)  mod_parent=taira_dynasty
+nikaidou_dynasty                   -> house_kudo_nikaido
+      vanilla house name=dynn_Nikaido  parent=japanese_kudo(dynn_KudO_)  mod_parent=kudou_dynasty
+plantagenet_dynasty                -> house_plantagenet
+      vanilla house name=dynn_Plantagenet  parent=723(dynn_Anjou)  mod_parent=anjou_jerusalem_dynasty
+sasaki_dynasty                     -> house_minamoto_sasaki
+      vanilla house name=dynn_Minamoto_Sasaki  parent=japanese_minamoto_uda(dynn_Minamoto)  mod_parent=uda_genji_dynasty
+shijou_dynasty                     -> house_fujiwara_shijo
+      vanilla house name=dynn_Fujiwara_ShijO_  parent=japanese_fujiwara(dynn_Fujiwara)  mod_parent=fujiwara_dynasty
+toki_dynasty                       -> house_minamoto_toki
+      vanilla house name=dynn_Minamoto_Toki  parent=japanese_minamoto_seiwa(dynn_Minamoto)  mod_parent=seiwa_genji_dynasty
+urgell_dynasty                     -> house_urgell
+      vanilla house name=dynn_Urgell  parent=100204(dynn_Barcelona)  mod_parent=barcelona_dynasty
+watanabe_dynasty                   -> house_minamoto_watanabe
+      vanilla house name=dynn_Minamoto_Watanabe  parent=japanese_minamoto_saga(dynn_Minamoto)  mod_parent=saga_genji_dynasty
+
+================================================================================
+【D】两边都找不到的 129 个
+================================================================================
+  aisu_dynasty                       parent=seiwa_genji_dynasty
+  akamatsu_dynasty                   parent=murakami_genji_dynasty
+  al_ali_dynasty                     parent=al_fadl_dynasty
+  anenokouji_dynasty                 parent=fujiwara_dynasty
+  anjou_dynasty                      parent=robertian_dynasty
+  ano_dynasty                        parent=sanjou_dynasty
+  apostolico_orsini_dynasty          parent=orsini_dynasty
+  arima_dynasty                      parent=fujiwara_dynasty
+  artois_dynasty                     parent=robertian_dynasty
+  asayama_dynasty                    parent=fujiwara_dynasty
+  ashina_dynasty                     parent=taira_dynasty
+  asonuma_dynasty                    parent=fujiwara_dynasty
+  beaumont_dynasty                   parent=de_brienne_dynasty
+  bourbon_dynasty                    parent=robertian_dynasty
+  burgundy_castile_dynasty           parent=ivree_dynasty
+  burgundy_dynasty                   parent=robertian_dynasty
+  burgundy_portuguese_dynasty        parent=robertian_dynasty
+  buzen_nagano_dynasty               parent=taira_dynasty
+  castracani_dynasty                 parent=antelminelli_dynasty
+  celjiski_dynasty                   parent=zovneski_dynasty
+  cerda_dynasty                      parent=ivree_dynasty
+  champlitte_dynasty                 parent=blois_dynasty
+  courtenay_dynasty                  parent=robertian_dynasty
+  daihouji_dynasty                   parent=kondou_dynasty
+  daijou_dynasty                     parent=taira_dynasty
+  date_dynasty                       parent=nakamura_dynasty
+  de_evreux_dynasty                  parent=robertian_dynasty
+  del_vasto_dynasty                  parent=aleramici_dynasty
+  doi_dynasty                        parent=kawano_dynasty
+  enriquez_castile_dynasty           parent=ivree_dynasty
+  enya_dynasty                       parent=uda_genji_dynasty
+  fadrique_dynasty                   parent=barcelona_dynasty
+  hatta_dynasty                      parent=utsunomiya_dynasty
+  hei_dynasty                        parent=seiwa_genji_dynasty
+  hienuki_dynasty                    parent=nakamura_dynasty
+  hishikari_dynasty                  parent=fujiwara_dynasty
+  hohenberg_dynasty                  parent=hohenzollern_dynasty
+  hohenzollern_nurnberg_dynasty      parent=hohenzollern_dynasty
+  hosokawa_dynasty                   parent=seiwa_genji_dynasty
+  ijuuin_dynasty                     parent=shimazu_dynasty
+  imagawa_dynasty                    parent=seiwa_genji_dynasty
+  inawashiro_dynasty                 parent=taira_dynasty
+  isa_dynasty                        parent=nakamura_dynasty
+  ishidou_dynasty                    parent=seiwa_genji_dynasty
+  isshiki_dynasty                    parent=seiwa_genji_dynasty
+  kajiki_dynasty                     parent=fujiwara_dynasty
+  kasai_dynasty                      parent=taira_dynasty
+  kii_dynasty                        parent=utsunomiya_dynasty
+  kira_dynasty                       parent=seiwa_genji_dynasty
+  kitabatake_dynasty                 parent=murakami_genji_dynasty
+  kobayakawa_dynasty                 parent=taira_dynasty
+  komnenos_asen_dynasty              parent=sratsimir_dynasty
+  kou_dynasty                        parent=takashina_dynasty
+  kouzai_dynasty                     parent=fujiwara_dynasty
+  kubadids_dynasty                   parent=seljukids_dynasty
+  kutsuna_dynasty                    parent=fujiwara_dynasty
+  kyougoku_dynasty                   parent=uda_genji_dynasty
+  lancaster_dynasty                  parent=anjou_jerusalem_dynasty
+  laskaris_dynasty                   parent=vatatzes_dynasty
+  masuda_dynasty                     parent=fujiwara_dynasty
+  matsuda_dynasty                    parent=hatano_dynasty
+  migita_dynasty                     parent=tatara_dynasty
+  mikamoto_dynasty                   parent=fujiwara_dynasty
+  minami_dynasty                     parent=takashina_dynasty
+  mitoya_dynasty                     parent=seiwa_genji_dynasty
+  mizawa_dynasty                     parent=seiwa_genji_dynasty
+  mogami_dynasty                     parent=seiwa_genji_dynasty
+  momonoi_dynasty                    parent=seiwa_genji_dynasty
+  montfort_bregenz_dynasty           parent=montfort_feldkirch_dynasty
+  montfort_dynasty                   parent=robertian_dynasty
+  mori_dynasty                       parent=ooe_dynasty
+  munakata_dynasty                   parent=yamato_dynasty
+  nagai_dynasty                      parent=ooe_dynasty
+  nagano_dynasty                     parent=kudou_dynasty
+  naganuma_dynasty                   parent=oyama_dynasty
+  nanbu_dynasty                      parent=seiwa_genji_dynasty
+  nawa_dynasty                       parent=murakami_genji_dynasty
+  niiro_dynasty                      parent=shimazu_dynasty
+  nitsuki_dynasty                    parent=seiwa_genji_dynasty
+  nitta_dynasty                      parent=seiwa_genji_dynasty
+  oda_dynasty                        parent=taira_dynasty
+  ogasawara_dynasty                  parent=seiwa_genji_dynasty
+  oguni_dynasty                      parent=seiwa_genji_dynasty
+  oogimachisanjou_dynasty            parent=sanjou_dynasty
+  oogo_dynasty                       parent=fujiwara_dynasty
+  oohira_dynasty                     parent=kondou_dynasty
+  ooida_dynasty                      parent=seiwa_genji_dynasty
+  oosaki_dynasty                     parent=seiwa_genji_dynasty
+  ootomo_dynasty                     parent=kondou_dynasty
+  orsini_aldobrandeschi_dynasty      parent=orsini_dynasty
+  orsini_monterotondo_dynasty        parent=orsini_dynasty
+  palaiologos_dynasty                parent=angelos_dynasty
+  pelagia_dynasty                    parent=asturleonesa_dynasty
+  peralta_dynasty                    parent=aleramici_dynasty
+  rokkaku_dynasty                    parent=uda_genji_dynasty
+  sagae_dynasty                      parent=ooe_dynasty
+  sagara_dynasty                     parent=kudou_dynasty
+  sahara_dynasty                     parent=taira_dynasty
+  satake_dynasty                     parent=seiwa_genji_dynasty
+  satomi_dynasty                     parent=seiwa_genji_dynasty
+  shiba_dynasty                      parent=seiwa_genji_dynasty
+  shouni_dynasty                     parent=kondou_dynasty
+  sou_dynasty                        parent=taira_dynasty
+  souma_dynasty                      parent=taira_dynasty
+  sue_dynasty                        parent=tatara_dynasty
+  suetsugu_dynasty                   parent=uda_genji_dynasty
+  sully_dynasty                      parent=blois_dynasty
+  takashima_dynasty                  parent=uda_genji_dynasty
+  take_dynasty                       parent=taira_dynasty
+  takeda_dynasty                     parent=seiwa_genji_dynasty
+  takou_dynasty                      parent=utsunomiya_dynasty
+  taku_dynasty                       parent=taira_dynasty
+  tokunou_dynasty                    parent=kawano_dynasty
+  tooyama_dynasty                    parent=saitou_dynasty
+  tou_dynasty                        parent=taira_dynasty
+  tozawa_dynasty                     parent=taira_dynasty
+  trastamara_dynasty                 parent=ivree_dynasty
+  ueno_dynasty                       parent=seiwa_genji_dynasty
+  uesugi_dynasty                     parent=fujiwara_dynasty
+  valois_dynasty                     parent=robertian_dynasty
+  wachi_dynasty                      parent=hatano_dynasty
+  waga_dynasty                       parent=chuujou_dynasty
+  washizu_dynasty                    parent=tatara_dynasty
+  welfen_dynasty                     parent=deste_dynasty
+  yamana_dynasty                     parent=seiwa_genji_dynasty
+  yamashiro_dynasty                  parent=saga_genji_dynasty
+  yoshimi_dynasty                    parent=seiwa_genji_dynasty
+  yuuki_dynasty                      parent=oyama_dynasty
+  zrinski_dynasty                    parent=subic_dynasty

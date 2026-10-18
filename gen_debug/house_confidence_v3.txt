@@ -1,0 +1,267 @@
+======================================================================================
+支系关系能提升多少置信度 —— 最终结论
+======================================================================================
+vanilla dynasty 总数            : 10386   (japanese_* : 173)
+vanilla house 总数              : 582
+mod 被归并 child                : 168
+mod 归并 parent                 : 42
+parent 锚定到 vanilla           : 23 / 42
+
+【v2 原分析的盲区】272 条匹配只覆盖「数字 ID」型 dynasty；
+                  vanilla 日本家族全部是命名 key（japanese_*），日本系 0 覆盖。
+
+【本轮新增锚定依据】
+  史实映射（非猜测）：
+    seiwa_genji_dynasty    = 清和源氏 = japanese_minamoto_seiwa
+    uda_genji_dynasty      = 宇多源氏 = japanese_minamoto_uda
+    saga_genji_dynasty     = 嵯峨源氏 = japanese_minamoto_saga
+    murakami_genji_dynasty = 村上源氏 = japanese_minamoto_murakami
+    taira_dynasty          = 平氏     = japanese_taira_kanmu（桓武平氏，最主流）
+  其余：vanilla 命名 key 与 mod 短名做长音规范化后精确比对
+
+======================================================================================
+【一】168 个 child 分级
+======================================================================================
+  A1 结构对齐   :  15  vanilla 本来就是 house 且父宗族一致 → 可无损复用 house key
+  B1 父宗族冲突 :  10  vanilla 有同名 house，但挂在别的宗族下 → 同姓不同流，需裁决
+  B2 结构降级冲突:  14  vanilla 认为它是独立 dynasty，mod 却降成了支系 → 需裁决
+  C  间接支持   : 100  靠 parent 锚定 / 兄弟强证据传递
+  D  无新证据   :  29
+
+  → 相比 v2 原来的「强证据 8 / 中 5 / 待核 90 / 无法判定 64」口径，
+    现在有 39 个拿到了具体 vanilla 对应物，
+    另有 100 个拿到间接支持。
+
+======================================================================================
+【二】A1 结构对齐（最可信，可无损复用 vanilla house key）
+======================================================================================
+chiba_dynasty                    -> house_taira_chiba              parent=japanese_taira_kanmu  (parent_prefix)
+houjou_dynasty                   -> house_taira_hojo               parent=japanese_taira_kanmu  (parent_prefix)
+irie_dynasty                     -> house_kudo_irie                parent=japanese_kudo  (parent_prefix)
+ishikawa_dynasty                 -> house_minamoto_ishikawa        parent=japanese_minamoto_seiwa  (parent_prefix)
+kaneko_dynasty                   -> house_taira_kaneko             parent=japanese_taira_kanmu  (parent_prefix)
+kikkawa_dynasty                  -> house_kudo_kikkawa             parent=japanese_kudo  (parent_prefix)
+komnenos_doukas_dynasty          -> house_komnenos_doukas          parent=195  (exact)
+miura_dynasty                    -> house_taira_miura              parent=japanese_taira_kanmu  (parent_prefix)
+nikaidou_dynasty                 -> house_kudo_nikaido             parent=japanese_kudo  (parent_prefix)
+plantagenet_dynasty              -> house_plantagenet              parent=723  (exact)
+sasaki_dynasty                   -> house_minamoto_sasaki          parent=japanese_minamoto_uda  (parent_prefix)
+shijou_dynasty                   -> house_fujiwara_shijo           parent=japanese_fujiwara  (parent_prefix)
+toki_dynasty                     -> house_minamoto_toki            parent=japanese_minamoto_seiwa  (parent_prefix)
+urgell_dynasty                   -> house_urgell                   parent=100204  (exact)
+watanabe_dynasty                 -> house_minamoto_watanabe        parent=japanese_minamoto_saga  (parent_prefix)
+
+======================================================================================
+【三】B1 父宗族冲突：vanilla 有同名 house 但挂在别的宗族下
+======================================================================================
+armagnac_dynasty               mod 归到 lomagne_dynasty          / vanilla 挂在 house_armagnac → 388
+ashikaga_dynasty               mod 归到 seiwa_genji_dynasty      / vanilla 挂在 house_fujiwara_ashikaga → japanese_fujiwara
+capet_dynasty                  mod 归到 robertian_dynasty        / vanilla 挂在 house_capet → 743
+carretto_dynasty               mod 归到 aleramici_dynasty        / vanilla 挂在 house_carretto → 206
+ceva_dynasty                   mod 归到 aleramici_dynasty        / vanilla 挂在 house_ceva → 206
+chalon_dynasty                 mod 归到 ivree_dynasty            / vanilla 挂在 house_chalon → 733
+dreux_dynasty                  mod 归到 robertian_dynasty        / vanilla 挂在 house_dreux → 743
+hatakeyama_dynasty             mod 归到 seiwa_genji_dynasty      / vanilla 挂在 house_taira_hatakeyama → japanese_taira_kanmu
+hiraga_dynasty                 mod 归到 fujiwara_dynasty         / vanilla 挂在 house_minamoto_hiraga → japanese_minamoto_seiwa
+lancia_dynasty                 mod 归到 aleramici_dynasty        / vanilla 挂在 house_lancia → 206
+
+======================================================================================
+【四】B2 结构降级冲突：vanilla 是独立 dynasty，mod 已降成支系
+======================================================================================
+gotou_dynasty                  mod 归到 saitou_dynasty           / vanilla 独立 dynasty = japanese_goto (dynn_GotO_)
+hata_dynasty                   mod 归到 saga_genji_dynasty       / vanilla 独立 dynasty = japanese_hata (dynn_Hata)
+ii_dynasty                     mod 归到 fujiwara_dynasty         / vanilla 独立 dynasty = japanese_ii (dynn_Ii)
+ise_dynasty                    mod 归到 taira_dynasty            / vanilla 独立 dynasty = japanese_ise (dynn_Ise)
+itou_dynasty                   mod 归到 kudou_dynasty            / vanilla 独立 dynasty = japanese_ito (dynn_ItO_)
+katou_dynasty                  mod 归到 saitou_dynasty           / vanilla 独立 dynasty = japanese_kato (dynn_KatO_)
+kikuchi_dynasty                mod 归到 fujiwara_dynasty         / vanilla 独立 dynasty = japanese_kikuchi (dynn_Kikuchi)
+matsura_dynasty                mod 归到 saga_genji_dynasty       / vanilla 独立 dynasty = japanese_matsura (dynn_Matsura)
+miyoshi_dynasty                mod 归到 fujiwara_dynasty         / vanilla 独立 dynasty = japanese_miyoshi (dynn_Miyoshi)
+nasu_dynasty                   mod 归到 fujiwara_dynasty         / vanilla 独立 dynasty = japanese_nasu (dynn_Nasu)
+oouchi_dynasty                 mod 归到 tatara_dynasty           / vanilla 独立 dynasty = japanese_ochi,japanese_ouchi (dynn_Ochi)
+togashi_dynasty                mod 归到 saitou_dynasty           / vanilla 独立 dynasty = japanese_togashi (dynn_Togashi)
+toshima_dynasty                mod 归到 taira_dynasty            / vanilla 独立 dynasty = japanese_toshima (dynn_Toshima)
+yuasa_dynasty                  mod 归到 fujiwara_dynasty         / vanilla 独立 dynasty = japanese_yuasa (dynn_Yuasa)
+
+======================================================================================
+【五】C 间接支持
+======================================================================================
+palaiologos_dynasty            -> angelos_dynasty          父=195
+lancaster_dynasty              -> anjou_jerusalem_dynasty  父=723,81
+castracani_dynasty             -> antelminelli_dynasty     父=101817
+fadrique_dynasty               -> barcelona_dynasty        父=100204,629
+champlitte_dynasty             -> blois_dynasty            父=721
+sully_dynasty                  -> blois_dynasty            父=721
+anenokouji_dynasty             -> fujiwara_dynasty         父=japanese_fujiwara
+arima_dynasty                  -> fujiwara_dynasty         父=japanese_fujiwara
+asayama_dynasty                -> fujiwara_dynasty         父=japanese_fujiwara
+asonuma_dynasty                -> fujiwara_dynasty         父=japanese_fujiwara
+hishikari_dynasty              -> fujiwara_dynasty         父=japanese_fujiwara
+kajiki_dynasty                 -> fujiwara_dynasty         父=japanese_fujiwara
+kouzai_dynasty                 -> fujiwara_dynasty         父=japanese_fujiwara
+kutsuna_dynasty                -> fujiwara_dynasty         父=japanese_fujiwara
+masuda_dynasty                 -> fujiwara_dynasty         父=japanese_fujiwara
+mikamoto_dynasty               -> fujiwara_dynasty         父=japanese_fujiwara
+oogo_dynasty                   -> fujiwara_dynasty         父=japanese_fujiwara
+uesugi_dynasty                 -> fujiwara_dynasty         父=japanese_fujiwara
+matsuda_dynasty                -> hatano_dynasty           父=japanese_hatano
+wachi_dynasty                  -> hatano_dynasty           父=japanese_hatano
+hohenberg_dynasty              -> hohenzollern_dynasty     父=12476 | 兄弟强证=hohenzollern_nurnberg_dynasty
+hohenzollern_nurnberg_dynasty  -> hohenzollern_dynasty     父=12476
+daihouji_dynasty               -> kondou_dynasty           父=japanese_kondo
+oohira_dynasty                 -> kondou_dynasty           父=japanese_kondo
+ootomo_dynasty                 -> kondou_dynasty           父=japanese_kondo
+shouni_dynasty                 -> kondou_dynasty           父=japanese_kondo
+nagano_dynasty                 -> kudou_dynasty            父=japanese_kudo
+sagara_dynasty                 -> kudou_dynasty            父=japanese_kudo
+akamatsu_dynasty               -> murakami_genji_dynasty   父=japanese_minamoto_murakami
+kitabatake_dynasty             -> murakami_genji_dynasty   父=japanese_minamoto_murakami
+nawa_dynasty                   -> murakami_genji_dynasty   父=japanese_minamoto_murakami
+mori_dynasty                   -> ooe_dynasty              父=japanese_oe
+nagai_dynasty                  -> ooe_dynasty              父=japanese_oe
+sagae_dynasty                  -> ooe_dynasty              父=japanese_oe
+apostolico_orsini_dynasty      -> orsini_dynasty           父=2,7215
+orsini_aldobrandeschi_dynasty  -> orsini_dynasty           父=2,7215
+orsini_monterotondo_dynasty    -> orsini_dynasty           父=2,7215
+naganuma_dynasty               -> oyama_dynasty            父=japanese_oyama
+yuuki_dynasty                  -> oyama_dynasty            父=japanese_oyama
+anjou_dynasty                  -> robertian_dynasty        兄弟强证=artois_dynasty,courtenay_dynasty
+artois_dynasty                 -> robertian_dynasty        兄弟强证=anjou_dynasty,courtenay_dynasty
+bourbon_dynasty                -> robertian_dynasty        兄弟强证=anjou_dynasty,artois_dynasty
+burgundy_dynasty               -> robertian_dynasty        兄弟强证=anjou_dynasty,artois_dynasty
+burgundy_portuguese_dynasty    -> robertian_dynasty        兄弟强证=anjou_dynasty,artois_dynasty
+courtenay_dynasty              -> robertian_dynasty        兄弟强证=anjou_dynasty,artois_dynasty
+de_evreux_dynasty              -> robertian_dynasty        兄弟强证=anjou_dynasty,artois_dynasty
+montfort_dynasty               -> robertian_dynasty        兄弟强证=anjou_dynasty,artois_dynasty
+valois_dynasty                 -> robertian_dynasty        兄弟强证=anjou_dynasty,artois_dynasty
+yamashiro_dynasty              -> saga_genji_dynasty       父=japanese_minamoto_saga
+tooyama_dynasty                -> saitou_dynasty           父=japanese_saito
+aisu_dynasty                   -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+hei_dynasty                    -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+hosokawa_dynasty               -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+imagawa_dynasty                -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+ishidou_dynasty                -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+isshiki_dynasty                -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+kira_dynasty                   -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+mitoya_dynasty                 -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+mizawa_dynasty                 -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+mogami_dynasty                 -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+momonoi_dynasty                -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+nanbu_dynasty                  -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+nitsuki_dynasty                -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+nitta_dynasty                  -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+ogasawara_dynasty              -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+oguni_dynasty                  -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+ooida_dynasty                  -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+oosaki_dynasty                 -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+satake_dynasty                 -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+satomi_dynasty                 -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+shiba_dynasty                  -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+takeda_dynasty                 -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+ueno_dynasty                   -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+yamana_dynasty                 -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+yoshimi_dynasty                -> seiwa_genji_dynasty      父=japanese_minamoto_seiwa
+ashina_dynasty                 -> taira_dynasty            父=japanese_taira_kanmu
+buzen_nagano_dynasty           -> taira_dynasty            父=japanese_taira_kanmu
+daijou_dynasty                 -> taira_dynasty            父=japanese_taira_kanmu
+inawashiro_dynasty             -> taira_dynasty            父=japanese_taira_kanmu
+kasai_dynasty                  -> taira_dynasty            父=japanese_taira_kanmu
+kobayakawa_dynasty             -> taira_dynasty            父=japanese_taira_kanmu
+oda_dynasty                    -> taira_dynasty            父=japanese_taira_kanmu
+sahara_dynasty                 -> taira_dynasty            父=japanese_taira_kanmu
+sou_dynasty                    -> taira_dynasty            父=japanese_taira_kanmu
+souma_dynasty                  -> taira_dynasty            父=japanese_taira_kanmu
+take_dynasty                   -> taira_dynasty            父=japanese_taira_kanmu
+taku_dynasty                   -> taira_dynasty            父=japanese_taira_kanmu
+tou_dynasty                    -> taira_dynasty            父=japanese_taira_kanmu
+tozawa_dynasty                 -> taira_dynasty            父=japanese_taira_kanmu
+kou_dynasty                    -> takashina_dynasty        父=japanese_takashina
+minami_dynasty                 -> takashina_dynasty        父=japanese_takashina
+migita_dynasty                 -> tatara_dynasty           父=japanese_tatara
+sue_dynasty                    -> tatara_dynasty           父=japanese_tatara
+washizu_dynasty                -> tatara_dynasty           父=japanese_tatara
+enya_dynasty                   -> uda_genji_dynasty        父=japanese_minamoto_uda
+kyougoku_dynasty               -> uda_genji_dynasty        父=japanese_minamoto_uda
+rokkaku_dynasty                -> uda_genji_dynasty        父=japanese_minamoto_uda
+suetsugu_dynasty               -> uda_genji_dynasty        父=japanese_minamoto_uda
+takashima_dynasty              -> uda_genji_dynasty        父=japanese_minamoto_uda
+munakata_dynasty               -> yamato_dynasty           父=japanese_yamato
+
+======================================================================================
+【六】D 无新证据 29 个
+======================================================================================
+al_ali_dynasty                 -> al_fadl_dynasty
+del_vasto_dynasty              -> aleramici_dynasty
+peralta_dynasty                -> aleramici_dynasty
+pelagia_dynasty                -> asturleonesa_dynasty
+waga_dynasty                   -> chuujou_dynasty
+beaumont_dynasty               -> de_brienne_dynasty
+welfen_dynasty                 -> deste_dynasty
+burgundy_castile_dynasty       -> ivree_dynasty
+cerda_dynasty                  -> ivree_dynasty
+enriquez_castile_dynasty       -> ivree_dynasty
+trastamara_dynasty             -> ivree_dynasty
+doi_dynasty                    -> kawano_dynasty
+tokunou_dynasty                -> kawano_dynasty
+montfort_bregenz_dynasty       -> montfort_feldkirch_dynasty
+date_dynasty                   -> nakamura_dynasty
+hienuki_dynasty                -> nakamura_dynasty
+isa_dynasty                    -> nakamura_dynasty
+ano_dynasty                    -> sanjou_dynasty
+oogimachisanjou_dynasty        -> sanjou_dynasty
+kubadids_dynasty               -> seljukids_dynasty
+ijuuin_dynasty                 -> shimazu_dynasty
+niiro_dynasty                  -> shimazu_dynasty
+komnenos_asen_dynasty          -> sratsimir_dynasty
+zrinski_dynasty                -> subic_dynasty
+hatta_dynasty                  -> utsunomiya_dynasty
+kii_dynasty                    -> utsunomiya_dynasty
+takou_dynasty                  -> utsunomiya_dynasty
+laskaris_dynasty               -> vatatzes_dynasty
+celjiski_dynasty               -> zovneski_dynasty
+
+======================================================================================
+【七】42 个 parent 宗族锚定明细
+======================================================================================
+OK seiwa_genji_dynasty            支系=29  史实               japanese_minamoto_seiwa
+OK taira_dynasty                  支系=20  史实               japanese_taira_kanmu
+OK fujiwara_dynasty               支系=19  key同名            japanese_fujiwara
+-- robertian_dynasty              支系=11  -                -
+OK kudou_dynasty                  支系=6   key同名            japanese_kudo
+OK uda_genji_dynasty              支系=6   史实               japanese_minamoto_uda
+-- aleramici_dynasty              支系=5   -                -
+-- ivree_dynasty                  支系=5   -                -
+OK kondou_dynasty                 支系=4   key同名            japanese_kondo
+OK saga_genji_dynasty             支系=4   史实               japanese_minamoto_saga
+OK saitou_dynasty                 支系=4   key同名            japanese_saito
+OK tatara_dynasty                 支系=4   key同名            japanese_tatara
+OK murakami_genji_dynasty         支系=3   史实               japanese_minamoto_murakami
+-- nakamura_dynasty               支系=3   -                -
+OK ooe_dynasty                    支系=3   key同名            japanese_oe
+OK orsini_dynasty                 支系=3   v2数字ID           2,7215
+-- utsunomiya_dynasty             支系=3   -                -
+OK angelos_dynasty                支系=2   v2数字ID           195
+OK anjou_jerusalem_dynasty        支系=2   v2数字ID           723,81
+OK barcelona_dynasty              支系=2   v2数字ID           100204,629
+OK blois_dynasty                  支系=2   v2数字ID           721
+OK hatano_dynasty                 支系=2   key同名            japanese_hatano
+OK hohenzollern_dynasty           支系=2   v2数字ID           12476
+-- kawano_dynasty                 支系=2   -                -
+OK oyama_dynasty                  支系=2   key同名            japanese_oyama
+-- sanjou_dynasty                 支系=2   -                -
+-- shimazu_dynasty                支系=2   -                -
+OK takashina_dynasty              支系=2   key同名            japanese_takashina
+-- al_fadl_dynasty                支系=1   -                -
+OK antelminelli_dynasty           支系=1   v2数字ID           101817
+-- asturleonesa_dynasty           支系=1   -                -
+-- chuujou_dynasty                支系=1   -                -
+-- de_brienne_dynasty             支系=1   -                -
+-- deste_dynasty                  支系=1   -                -
+OK lomagne_dynasty                支系=1   v2数字ID           5100
+-- montfort_feldkirch_dynasty     支系=1   -                -
+-- seljukids_dynasty              支系=1   -                -
+-- sratsimir_dynasty              支系=1   -                -
+-- subic_dynasty                  支系=1   -                -
+-- vatatzes_dynasty               支系=1   -                -
+OK yamato_dynasty                 支系=1   key同名            japanese_yamato
+-- zovneski_dynasty               支系=1   -                -
