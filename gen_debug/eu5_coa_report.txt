@@ -15,7 +15,11 @@ dropped (key not in mod's landed_titles): 3
     country      QCH  -> d_eu5_qch
     country      TMK  -> c_ifoghas
 sub definitions emitted: 9
-vertical squash       : off (default; --squash to experiment)
+horizontal widen      : ON (content aspect <= 1.10, |position.x-0.5| <= 0.05)
+  instances widened  : 750
+  instance-less emblems given an explicit instance: 46
+  emblems skipped (off-centre): 307
+  unknown textures   : 0
 
 distinct textures referenced: 1187  (148.5 MB)
     colored_emblems    943/ 943   118.0 MB  missing=0 []
@@ -35,7 +39,7 @@ overlap with other mod CoA files: 118
     e.g. c_lower_carinthia                in 09_eu5_imported_titles.txt
     e.g. c_barrois                        in 09_eu5_imported_titles.txt
 
-wrote D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\common\coat_of_arms\coat_of_arms\zz_eu5_countries.txt (635434 bytes)
+wrote D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\common\coat_of_arms\coat_of_arms\zz_eu5_countries.txt (638322 bytes)
 wrote D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\common\named_colors\zz_eu5_coa_colors.txt (1950 bytes)
 textures copied=0 skipped(unchanged)=1187
 
