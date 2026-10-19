@@ -18,6 +18,12 @@
   手动覆盖（imami / 也门 / `REGION_OVERRIDES`，**按省**）→ 逐省 BFS 补漏（只认同父信仰的源）。
 - **孤岛传不动**：`_ck3_province_adjacency.json` 只有陆路，没有海路。`adj=[]` 的省
   （拉克沙、马斯克林、nosy_be 等）BFS 一步都走不了，只能靠 `REGION_OVERRIDES` 显式落。
+- **印度教分化（faith，不是 rite）的数据上限**：CU 的 `_cu_vs_ours.csv` 只有 2858 行
+  （CU 本身只给 2527 个 province 写了 culture/faith 块），其中**印度教 rite 仅 116 行**，
+  对应到我们 1242 个印度教省只有 84 个能定派别；剩下 1156 个只能走地区兜底
+  （印度→vaishnava_faith、东南亚→shaiva_faith）。**这是 CU 数据本身的覆盖上限，
+  不是脚本漏读**——旧 CK3 县色方案只解出 160 县（136 vaishnava + 24 shaiva，无 shakta/smartism），
+  所以 CU 方案已经是净改善。脚本 `Global_modern_map/eu5_export/_apply_hindu_faith_cu.py`。
 
 ## CK3 数据结构约定（从踩坑中确认）
 
@@ -79,3 +85,18 @@
 - master = 发布分支，**不含任何 EU5 纹章素材**（贴图/定义/调色板/别名全在 eu5-coa 分支）；用户：「不敢上创意工坊而已，GitHub 我怕啥」。
 - 远程：github.com/hathaway682/EU5_1337_to_ck3（公开库），分支 master / eu5-coa / pop。
 - 用户日常用 GitHub Desktop 提交推送，会和我的 git 操作并发——push 前必 fetch。
+
+## Git 分支操作铁律（2026-10-19 用事故换的）
+
+- **禁止 `git worktree`**：worktree = 整库完整检出。本仓库 1GB+，D 盘常期紧张
+  （2026-10-19 一度 0 可用），一个 worktree 就能把盘撑爆。跨分支带改动的正确做法：
+  只把目标分支的**单个文件** `git show <branch>:<path>` dump 到 C 盘临时文件，改完用
+  plumbing 提交（`GIT_INDEX_FILE` 临时索引 → `git read-tree <branch>` →
+  `update-index --cacheinfo` → `write-tree` → `commit-tree` → `update-ref`），
+  基点一致的其他文件直接 `cacheinfo` 引用源分支提交里的 blob。全程零检出。
+- **staging 前先 `git status` 核对每个文件的改动归属**：工作区常同时存在别的会话/
+  用户本人的未提交改动。只能逐个 `git add <明确文件>`；`git add 整文件` 前必须确认
+  该文件的 diff 全是本次自己的（用备份/基线 diff 验证行数与内容）。
+- 生成器升级导致的重导产物（如对照表 CSV 换 schema 的整表 churn）不属于单个修复提交，
+  按「只补不改」只改目标行列。
+- sandbox 代理可能连不上 GitHub（502），push 失败时如实报告，不要反复重试轰炸。

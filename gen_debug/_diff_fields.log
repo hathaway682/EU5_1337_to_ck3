@@ -1,0 +1,30 @@
+﻿备份链:
+  00_generated_cultures.txt.bak_aesthetics_20261019_232210  (1501889 bytes)
+  00_generated_cultures.txt.bak_heritagerestore_20261019_230159  (1497130 bytes)
+  00_generated_cultures.txt.bak_langrestore_20261019_182659  (1570351 bytes)
+
+行数: 63522 -> 63522
+
+变化的行按字段分类:
+  coa_gfx                  1167
+  unit_gfx                 1086
+  clothing_gfx             1047
+  building_gfx             1016
+
+samples:
+  L27     coa_gfx = { west_african_group_coa_gfx }
+           -> coa_gfx = { burman_group_coa_gfx }
+  L28     building_gfx = { african_building_gfx mena_building_gfx }
+           -> building_gfx = { southeast_asian_building_gfx }
+  L29     clothing_gfx = { african_clothing_gfx }
+           -> clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+  L30     unit_gfx = { mena_unit_gfx }
+           -> unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+  L58     coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
+           -> coa_gfx = { byzantine_group_coa_gfx }
+  L59     building_gfx = { western_building_gfx }
+           -> building_gfx = { caucasian_building_gfx byzantine_building_gfx }
+  L60     clothing_gfx = { french_clothing_gfx western_clothing_gfx }
+           -> clothing_gfx = { byzantine_clothing_gfx }
+  L61     unit_gfx = { western_unit_gfx }
+           -> unit_gfx = { eastern_unit_gfx }

@@ -1,0 +1,29 @@
+_cu_barony_detail 行数: 3411
+列: ['region', 'eu5_religion', 'province', 'barony', 'county', 'our_faith', 'cu_rite', 'kingdom']
+
+其中 our_faith 是印度教系: 130
+
+==== cu_rite 分布（印度教系行）====
+  (空)                          108
+  shaivism                     13
+  mahayana                     6
+  kaharingan                   3
+
+==== 按 eu5_religion ====
+  hindu                        130
+
+==== 按 region ====
+  sea                          130
+
+==== eu5_religion == hindu 且 cu_rite 是印度教的 ====
+  13 行
+
+==== eu5_religion 分布（全部行，看 hindu 有多少 barony）====
+  eu5_religion==hindu 的 barony 行: 130
+  其中 cu_rite 有值: 22
+    (空)                      108
+    shaivism                 13
+    mahayana                 6
+    kaharingan               3
+
+==== 当前 shaiva_faith 的 68 个省在哪 ====
