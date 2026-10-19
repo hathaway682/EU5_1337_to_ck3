@@ -27,6 +27,16 @@
 
 ## CK3 数据结构约定（从踩坑中确认）
 
+- **术语红线（用户 2026-10-20 定，汇报/注释/脚本一律遵守）**：
+  CK3 侧说 **伯爵领（county）/ 男爵领（barony）**；EU5 侧说 **省份（province）/ 地点（location）**。
+  禁止把 CK3 的 county 叫"县"、province 叫"省"。也别说什么"县粒度/省粒度"——
+  CK3 的 history/provinces 条目就是男爵领，说"男爵领粒度"。
+- **★ CK3 只读伯爵领首府男爵领的 religion/culture**（landed_titles 里该 county 下
+  第一个 barony 即首府）。非首府男爵领写了 faith/rite 不影响伯爵领显示。
+  判 rite 时逐男爵领判 culture 即覆盖首府；但如果要改"伯爵领显示什么教会"，
+  必须动首府男爵领那一条（例如加济安泰普首府 b_ayntab 是 syriac_culture，
+  同领的 dluk 是 armenian 也白搭）。
+
 - **dynasty 是宗族，house 是支系**。角色指支系必须写 `dynasty_house = house_xxx`；
   写 `dynasty = house_xxx` 会让游戏去找同名 dynasty，找不到就 fallback 到 `dynn_adam`。
 - **COA 按 key 自动匹配**，没有 `coat_of_arms_id` 字段。`common/coat_of_arms/coat_of_arms/` 里
