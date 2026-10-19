@@ -209,6 +209,13 @@ CK3 侧头衔 key 的规则：`{rank}_eu5_{tag小写}`，只给 d/k/e 建；c �
     austronesian / shan / thai / tibeto_burman / austroasiatic + **papuan / micronesian / polynesian**
     （马登的 `abun_culture` 是 `papuan_group`，不加会让 wanua 对该统治者 invalid）。
   - 落点 `Global_modern_map/eu5_export/_apply_sea_governments.py`（幂等）。
+- **土司（EU5 relation `type: tusi`，126 条）另有一道覆盖，跑在上面这条之后**（★ 2026-10-19）：
+  `Global_modern_map/eu5_export/_apply_tusi_governments.py`（幂等，默认 dry-run，`--apply` 落盘）。
+  把 126 个土司属国的统治者一律改成 `tribal_government`：头衔历史 `government` 行（ck3_holder 是土司统治者的
+  150 个头衔）+ `zz_eu5_government.txt` 的 `change_government`（126 条）+ 首府地产 `tribal_holding`
+  （110 处，只改已建成的 castle/temple_citadel/tribal/herder 地面；city/church 不动，同 SEA 规则）。
+  ⚠️ 顺序必须是"先 SEA 后土司"：西南边缘（车里 CHH、勐汀 MTG）在 EU5 的 `south_east_asia` 里，
+  会被 SEA 脚本错改成 `wanua_government`（村社），土司覆盖再把它按回来部落制。跑反了等于没修。
 - 格尔米扬 `GRM` 的 3 个附庸同样改成朝贡（模拟历史势力范围瓦解）。
 
 ### 3.9 EU5 政体 → CK3 政体/地产
