@@ -1,0 +1,65 @@
+﻿rite_types: 152 个（有 faith 指向 152）
+faith_types: 103 个（有 main_rite 91，有 origin 2）
+
+province 块 21046 | 带 rite 4468
+rite 键在 rite_types 里找不到的: 0
+rite 的家族 != 块内 faith 的 origin 的: 3314
+    faith=sunni                    rite=hanafi            682   (faith.origin=None / rite.faith=sunni)
+    faith=sunni                    rite=maliki            595   (faith.origin=None / rite.faith=sunni)
+    faith=sunni                    rite=shafii            509   (faith.origin=None / rite.faith=sunni)
+    faith=tengri_pagan             rite=hanafi            405   (faith.origin=None / rite.faith=sunni)
+    faith=orthodox                 rite=hanafi            101   (faith.origin=christian_faith / rite.faith=sunni)
+    faith=miaphysitism             rite=armenian_rite     95   (faith.origin=None / rite.faith=armenian_apostolic)
+    faith=shia                     rite=imami             93   (faith.origin=None / rite.faith=shia)
+    faith=sunni                    rite=hanbali           88   (faith.origin=None / rite.faith=sunni)
+    faith=pagan                    rite=hanafi            67   (faith.origin=None / rite.faith=sunni)
+    faith=miaphysitism             rite=ethiopian_rite    57   (faith.origin=None / rite.faith=miaphysitism)
+    faith=finnish_pagan            rite=slavic_rite       57   (faith.origin=None / rite.faith=christian_faith)
+    faith=shia                     rite=hanbali           51   (faith.origin=None / rite.faith=sunni)
+    faith=shia                     rite=zayidi            45   (faith.origin=None / rite.faith=shia)
+    faith=vaishnava_faith          rite=hanafi            38   (faith.origin=None / rite.faith=sunni)
+    faith=tengri_pagan             rite=slavic_rite       36   (faith.origin=None / rite.faith=christian_faith)
+    faith=shia                     rite=shafii            34   (faith.origin=None / rite.faith=sunni)
+    faith=kharijite                rite=ibadi             34   (faith.origin=None / rite.faith=kharijite)
+    faith=sunni                    rite=imami             34   (faith.origin=None / rite.faith=shia)
+    faith=shia                     rite=hanafi            25   (faith.origin=None / rite.faith=sunni)
+    faith=siberian_pagan           rite=siberian_pagan    22   (faith.origin=None / rite.faith=siberian_pagan)
+    faith=sunni                    rite=coptic_rite       18   (faith.origin=None / rite.faith=miaphysitism)
+    faith=west_african_pagan       rite=west_african_pagan  18   (faith.origin=None / rite.faith=west_african_pagan)
+    faith=kharijite                rite=maliki            17   (faith.origin=None / rite.faith=sunni)
+    faith=miaphysitism             rite=coptic_rite       16   (faith.origin=None / rite.faith=miaphysitism)
+    faith=miaphysitism             rite=hanafi            14   (faith.origin=None / rite.faith=sunni)
+    faith=sunni                    rite=armenian_rite     13   (faith.origin=None / rite.faith=armenian_apostolic)
+    faith=pagan                    rite=slavic_rite       11   (faith.origin=None / rite.faith=christian_faith)
+    faith=miaphysitism             rite=antiochian_rite   10   (faith.origin=None / rite.faith=miaphysitism)
+    faith=west_african_bidu_pagan  rite=west_african_bidu_pagan  9   (faith.origin=None / rite.faith=west_african_bidu_pagan)
+    faith=sunni                    rite=antiochian_rite   9   (faith.origin=None / rite.faith=miaphysitism)
+
+faith 本身没有 main_rite 且块内没写 rite 的: 1346
+   按 faith 统计: {'confucian_faith': 1346}
+
+当前 rite 分布 top30:
+   hanafi                 1338
+   slavic_rite            1099
+   maliki                 631
+   shafii                 563
+   hanbali                139
+   imami                  127
+   armenian_rite          116
+   ethiopian_rite         65
+   georgian_rite          57
+   zayidi                 45
+   antiochian_rite        39
+   ibadi                  37
+   insular_celtic         36
+   ambrosian_rite         35
+   coptic_rite            34
+   roman_rite             34
+   siberian_pagan         22
+   west_african_pagan     18
+   west_african_bidu_pagan 9
+   mozarabic_church       8
+   west_african_bori_pagan 5
+   ismaili                5
+   west_african_roog_pagan 3
+   shamanism              3

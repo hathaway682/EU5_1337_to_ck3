@@ -1,0 +1,206 @@
+province blocks: 21046
+counties: 3819
+loc keys: 38718
+
+==== 名字匹配的 county ====
+c_ifat                         伊法特          duchy=d_northern_somalia       kingdom=k_somalia
+c_cafa                         卡法           duchy=d_crimea                 kingdom=k_steppes
+c_halar                        哈拉尔          duchy=d_saurashtra             kingdom=k_western_india
+c_hadiya                       哈迪亚          duchy=d_southern_ethiopia      kingdom=k_ethiopia
+c_essex                        埃塞克斯         duchy=d_east_anglia            kingdom=k_great_britain
+c_eseka                        埃塞卡          duchy=d_gulf_of_guinea         kingdom=k_guinea
+c_essequibo                    埃塞奎博         duchy=d_guayana                kingdom=k_colombia
+c_gojjam                       戈贾姆          duchy=d_southern_ethiopia      kingdom=k_ethiopia
+c_tigray                       提格雷          duchy=d_northern_ethiopia      kingdom=k_ethiopia
+c_wellega                      沃莱加          duchy=d_southern_ethiopia      kingdom=k_ethiopia
+c_zubala                       祖巴莱          duchy=d_hail                   kingdom=k_arabia
+c_kordofan                     科尔多凡         duchy=d_darfur                 kingdom=k_nubia
+c_shewa                        绍阿           duchy=d_southern_ethiopia      kingdom=k_ethiopia
+c_damot                        达莫特          duchy=d_southern_ethiopia      kingdom=k_ethiopia
+c_sidamo                       锡达莫          duchy=d_southern_ethiopia      kingdom=k_ethiopia
+c_amhara                       阿姆哈拉         duchy=d_central_ethiopia       kingdom=k_ethiopia
+c_adal                         阿达尔          duchy=d_inner_somalia          kingdom=k_somalia
+c_makuria                      马库里亚         duchy=d_nubia_proper           kingdom=k_nubia
+
+==== 目标 county 详情 ====
+
+-- c_ifat  伊法特   duchy=d_northern_somalia kingdom=k_somalia
+   b_zeila                    p14090  faith=sunni                  rite=shafii
+   b_ali_sabieh               p14091  faith=sunni                  rite=shafii
+   b_amud                     p14092  faith=sunni                  rite=shafii
+   b_el_sheikh                p14093  faith=sunni                  rite=shafii
+   b_hargeisa                 p14094  faith=sunni                  rite=shafii
+
+-- c_cafa  卡法   duchy=d_crimea kingdom=k_steppes
+   b_kaffa                    p3863   faith=orthodox               rite=None
+   b_soldaia                  p3864   faith=orthodox               rite=None
+   b_vosporo                  p3865   faith=orthodox               rite=None
+   b_seyitler                 p3866   faith=tengri_pagan           rite=None
+   b_solkhat                  p3867   faith=sunni                  rite=hanafi  <<< HANAFI
+
+-- c_halar  哈拉尔   duchy=d_saurashtra kingdom=k_western_india
+   b_nagnes                   p11849  faith=vaishnava_faith        rite=None
+   b_dwarka                   p11850  faith=vaishnava_faith        rite=None
+   b_bhanvad                  p11851  faith=vaishnava_faith        rite=None
+   b_gondal                   p11852  faith=vaishnava_faith        rite=None
+   b_morvi                    p11853  faith=vaishnava_faith        rite=None
+
+-- c_hadiya  哈迪亚   duchy=d_southern_ethiopia kingdom=k_ethiopia
+   b_hadiya                   p13931  faith=sunni                  rite=shafii
+   b_fofa                     p13932  faith=miaphysitism           rite=ethiopian_rite
+   b_jibat                    p13933  faith=miaphysitism           rite=ethiopian_rite
+   b_worabe                   p13934  faith=sunni                  rite=shafii
+
+-- c_essex  埃塞克斯   duchy=d_east_anglia kingdom=k_great_britain
+   b_colchester               p1383   faith=catholic               rite=None
+   b_chelmsford               p1384   faith=catholic               rite=None
+   b_prittlewell              p1385   faith=catholic               rite=None
+   b_hedingham                p1386   faith=catholic               rite=None
+   b_walden                   p1387   faith=catholic               rite=None
+   b_barking                  p1388   faith=catholic               rite=None
+
+-- c_eseka  埃塞卡   duchy=d_gulf_of_guinea kingdom=k_guinea
+   b_eseka                    p15330  faith=pagan                  rite=None
+   b_edea                     p15331  faith=pagan                  rite=None
+   b_ebolowa                  p15332  faith=pagan                  rite=None
+   b_nyong                    p15333  faith=pagan                  rite=None
+   b_bakas                    p15334  faith=pagan                  rite=None
+
+-- c_essequibo  埃塞奎博   duchy=d_guayana kingdom=k_colombia
+   b_essequibo                p19092  faith=pagan                  rite=None
+   b_demerara                 p19093  faith=pagan                  rite=None
+   b_berbice                  p19094  faith=pagan                  rite=None
+   b_tumatumari               p19095  faith=pagan                  rite=None
+   b_neekeari                 p19096  faith=pagan                  rite=None
+
+-- c_gojjam  戈贾姆   duchy=d_southern_ethiopia kingdom=k_ethiopia
+   b_dima                     p13926  faith=miaphysitism           rite=ethiopian_rite
+   b_bahir_dar                p13927  faith=miaphysitism           rite=ethiopian_rite
+   b_dangila                  p13928  faith=miaphysitism           rite=ethiopian_rite
+   b_debra_warq               p13929  faith=miaphysitism           rite=ethiopian_rite
+   b_enjebara                 p13930  faith=miaphysitism           rite=ethiopian_rite
+
+-- c_tigray  提格雷   duchy=d_northern_ethiopia kingdom=k_ethiopia
+   b_axum                     p13914  faith=miaphysitism           rite=ethiopian_rite
+   b_abiy_addi                p13915  faith=miaphysitism           rite=ethiopian_rite
+   b_adwa                     p13916  faith=miaphysitism           rite=ethiopian_rite
+   b_shire                    p13917  faith=miaphysitism           rite=ethiopian_rite
+
+-- c_wellega  沃莱加   duchy=d_southern_ethiopia kingdom=k_ethiopia
+   b_fazughli                 p13947  faith=kushitism_pagan        rite=None
+   b_gimbi                    p13948  faith=waaqism_pagan          rite=None
+   b_nekemte                  p13949  faith=waaqism_pagan          rite=None
+
+-- c_zubala  祖巴莱   duchy=d_hail kingdom=k_arabia
+   b_zubala                   p6393   faith=sunni                  rite=hanafi  <<< HANAFI
+   b_al_labbah                p6394   faith=sunni                  rite=hanafi  <<< HANAFI
+   b_al_thulayma              p6395   faith=sunni                  rite=hanafi  <<< HANAFI
+   b_al_waqbi                 p6396   faith=sunni                  rite=hanafi  <<< HANAFI
+   b_linah                    p6397   faith=sunni                  rite=hanafi  <<< HANAFI
+   b_lowqah                   p6398   faith=sunni                  rite=hanafi  <<< HANAFI
+
+-- c_kordofan  科尔多凡   duchy=d_darfur kingdom=k_nubia
+   b_el_obeid                 p13974  faith=kushitism_pagan        rite=None
+   b_barah                    p13975  faith=kushitism_pagan        rite=None
+   b_dilling                  p13976  faith=kushitism_pagan        rite=None
+   b_kadugli                  p13977  faith=kushitism_pagan        rite=None
+   b_kosa                     p13978  faith=miaphysitism           rite=armenian_rite
+   b_nuba_sud                 p13979  faith=kushitism_pagan        rite=None
+   b_teqali                   p13980  faith=kushitism_pagan        rite=None
+   b_waylula                  p13981  faith=miaphysitism           rite=armenian_rite
+   b_wadi_el_melik            p13982  faith=sunni                  rite=maliki
+   b_zankor                   p13983  faith=kushitism_pagan        rite=None
+
+-- c_shewa  绍阿   duchy=d_southern_ethiopia kingdom=k_ethiopia
+   b_barara                   p13938  faith=sunni                  rite=shafii
+   b_sharka                   p13939  faith=sunni                  rite=shafii
+   b_ziqwala                  p13940  faith=sunni                  rite=shafii
+
+-- c_damot  达莫特   duchy=d_southern_ethiopia kingdom=k_ethiopia
+   b_maldarede                p13918  faith=waaqism_pagan          rite=None
+   b_bilo                     p13919  faith=miaphysitism           rite=ethiopian_rite
+   b_gambo                    p13920  faith=miaphysitism           rite=ethiopian_rite
+
+-- c_sidamo  锡达莫   duchy=d_southern_ethiopia kingdom=k_ethiopia
+   b_bossa                    p13942  faith=sunni                  rite=shafii
+   b_bonga                    p13941  faith=waaqism_pagan          rite=None
+   b_gamo                     p13943  faith=sunni                  rite=shafii
+   b_konso                    p13944  faith=waaqism_pagan          rite=None
+   b_omo                      p13945  faith=waaqism_pagan          rite=None
+   b_soddo                    p13946  faith=waaqism_pagan          rite=None
+
+-- c_amhara  阿姆哈拉   duchy=d_central_ethiopia kingdom=k_ethiopia
+   b_kubar                    p13855  faith=miaphysitism           rite=ethiopian_rite
+   b_aheyya_fagg              p13856  faith=miaphysitism           rite=ethiopian_rite
+   b_gannata_giyorgis         p13857  faith=miaphysitism           rite=ethiopian_rite
+   b_tadbaba                  p13858  faith=miaphysitism           rite=ethiopian_rite
+
+-- c_adal  阿达尔   duchy=d_inner_somalia kingdom=k_somalia
+   b_harar                    p14052  faith=sunni                  rite=shafii
+   b_arabi                    p14053  faith=sunni                  rite=shafii
+   b_awbare                   p14054  faith=sunni                  rite=shafii
+   b_dakkar                   p14055  faith=sunni                  rite=shafii
+   b_dire_dawa                p14056  faith=sunni                  rite=shafii
+   b_jeldesa                  p14057  faith=sunni                  rite=shafii
+
+-- c_makuria  马库里亚   duchy=d_nubia_proper kingdom=k_nubia
+   b_dongola                  p14027  faith=miaphysitism           rite=coptic_rite
+   b_abu_hamed                p14028  faith=sunni                  rite=maliki
+   b_berber                   p14029  faith=sunni                  rite=maliki
+   b_kerma                    p14030  faith=miaphysitism           rite=coptic_rite
+   b_karima                   p14031  faith=miaphysitism           rite=coptic_rite
+
+==== 全图 hanafi 按 duchy 聚合（前 50）====
+d_fars                     k=k_persia                   59  法尔斯
+d_baluchistan              k=k_persia                   55  俾路支斯坦
+d_iraq_ajam                k=k_persia                   49  阿贾姆伊拉克
+d_kerman                   k=k_persia                   49  克尔曼
+d_central_anatolia         k=k_anatolia                 46  中安纳托利亚
+d_azerbaijan               k=k_persia                   39  阿塞拜疆
+d_sistan                   k=k_persia                   35  锡斯坦
+d_iraq_arabi               k=k_crescent                 33  阿拉伯伊拉克
+d_hail                     k=k_arabia                   32  哈伊勒
+d_levant                   k=k_crescent                 30  黎凡特
+d_cappadocia               k=k_anatolia                 24  卡帕多西亚
+d_jazira                   k=k_crescent                 23  杰济拉
+d_kordestan                k=k_persia                   21  库尔德斯坦
+d_punjab                   k=k_hindustan                21  旁遮普
+d_shirvan                  k=k_caucasus                 21  希尔凡
+d_samara                   k=k_russian                  18  萨马拉
+d_transoxiana              k=k_khorasan                 16  河中
+d_western_khorasan         k=k_khorasan                 13  西呼罗珊
+d_eastern_khorasan         k=k_khorasan                 12  东呼罗珊
+d_bolghar                  k=k_ural                     12  保加尔
+d_mazandaran               k=k_persia                   11  马赞达兰
+d_lower_don                k=k_steppes                  11  下顿河
+d_pontus                   k=k_anatolia                 10  本都
+d_khuzestan                k=k_persia                    9  胡齐斯坦‑卢里斯坦
+d_sindh                    k=k_western_india             9  信德
+d_bashkiria                k=k_ural                      8  巴什基尔
+d_hexi                     k=k_west_china                7  河西
+d_northern_caucasus        k=k_caucasus                  7  北高加索
+d_quhestan                 k=k_persia                    6  库希斯坦
+d_tambov                   k=k_russian                   6  坦波夫
+d_kazan                    k=k_ural                      6  喀山
+d_badakhshan               k=k_khorasan                  5  巴达赫尚
+d_astrakhan                k=k_steppes                   5  阿斯特拉罕
+d_lower_yik                k=k_steppes                   5  下伊克
+d_marmara                  k=k_anatolia                  4  马尔马拉
+d_armenia                  k=k_caucasus                  4  亚美尼亚
+d_khwarazm                 k=k_khorasan                  3  花剌子模
+d_longyou                  k=k_west_china                3  陇右
+d_cilicia                  k=k_anatolia                  3  奇里乞亚
+d_malabar                  k=k_deccan                    3  马拉巴尔
+d_crimea                   k=k_steppes                   3  克里米亚
+d_upper_indus              k=k_hindustan                 2  印度河源
+d_armenian_highlands       k=k_caucasus                  2  亚美尼亚高地
+d_azov                     k=k_steppes                   2  亚速
+d_west_anatolia            k=k_anatolia                  1  西安纳托利亚
+d_bahrein                  k=k_arabia                    1  巴林
+d_majar                    k=k_steppes                   1  马加尔
+
+==== 东非/尼罗河上游 duchy 的 hanafi 明细 ====
+
+==== 埃塞一带（kingdom ethiopia / nubia）各 rite 统计 ====
+k_ethiopia     {'ethiopian_rite': 54, 'shafii': 25, None: 12, 'armenian_rite': 3, 'maliki': 1}
+k_nubia        {None: 45, 'maliki': 17, 'ethiopian_rite': 17, 'coptic_rite': 16, 'armenian_rite': 3, 'ismaili': 3, 'shafii': 1}

@@ -1,0 +1,125 @@
+CU province history files: 175
+  99_cu_neighbor_reassigned.txt (29904 bytes)
+  e_japan.txt (7524 bytes)
+  e_kambuja.txt (2940 bytes)
+  h_china.txt (32312 bytes)
+  k_abyssinia.txt (1100 bytes)
+  k_adal.txt (651 bytes)
+  k_africa.txt (1560 bytes)
+  k_ajuraan.txt (842 bytes)
+  k_akan.txt (634 bytes)
+  k_amdo.txt (631 bytes)
+  k_amur.txt (684 bytes)
+  k_anatolia.txt (2280 bytes)
+  k_anbiya.txt (1167 bytes)
+  k_andalusia.txt (3514 bytes)
+  k_andhra.txt (498 bytes)
+  k_angara.txt (395 bytes)
+  k_aquitaine.txt (5369 bytes)
+  k_arabia.txt (2723 bytes)
+  k_aragon.txt (2661 bytes)
+  k_armenia.txt (1506 bytes)
+  k_badajoz.txt (2168 bytes)
+  k_bale.txt (301 bytes)
+  k_balhae.txt (1681 bytes)
+  k_bashkiria.txt (674 bytes)
+  k_bavaria.txt (4423 bytes)
+  k_bengal.txt (908 bytes)
+  k_bihar.txt (1225 bytes)
+  k_bjarmaland.txt (1012 bytes)
+  k_blemmyia.txt (987 bytes)
+  k_bohemia.txt (2471 bytes)
+  k_borgu.txt (169 bytes)
+  k_borneo.txt (1419 bytes)
+  k_brittany.txt (754 bytes)
+  k_bulgaria.txt (2968 bytes)
+  k_burgundy.txt (2380 bytes)
+  k_buryatia.txt (637 bytes)
+  k_caspian_steppe.txt (1421 bytes)
+  k_castille.txt (1673 bytes)
+  k_caucasus.txt (1737 bytes)
+  k_croatia.txt (1808 bytes)
+files containing culture=: 175 / 175
+distinct culture values: 222
+top 40: [('han', 186), ('greek', 101), ('visigothic', 73), ('russian', 69), ('japanese', 64), ('french', 63), ('bedouin', 53), ('butr', 50), ('norse', 50), ('andalusian', 47), ('mongol', 45), ('bodpa', 43), ('occitan', 43), ('anglo_saxon', 40), ('franconian', 39), ('goryeo', 39), ('english', 38), ('persian', 36), ('khitan', 34), ('levantine', 33), ('hungarian', 33), ('tajik', 31), ('polish', 31), ('castilian', 29), ('turkish', 29), ('cisalpine', 28), ('polabian', 28), ('saxon', 28), ('sogdian', 27), ('yi', 25), ('bouxcuengh', 25), ('vlach', 25), ('khazar', 25), ('armenian', 24), ('bavarian', 24), ('cuman', 24), ('malay', 23), ('jurchen', 22), ('qiang', 22), ('goguryeo', 22)]
+
+--- sample from 99_cu_neighbor_reassigned.txt ---
+orlov
+	holding = tribal_holding
+}
+
+5562 = { # b_lalsk, c_lalsk
+	holding = tribal_holding
+}
+
+5563 = { # b_podosinovets, c_lalsk
+	holding = tribal_holding
+}
+
+5564 = { # b_obyachevo, c_lalsk
+	holding = tribal_holding
+}
+
+5565 = { # b_koygorodok, c_lalsk
+	holding = tribal_holding
+}
+
+5566 = { # b_vizinga, c_lalsk
+	holding = tribal_holding
+}
+
+5568 = { # b_cherdyn, c_cherdyn
+	holding = wilderness_holding
+	culture = gen_wilderness_culture
+	faith = gen_wilderness_faith
+}
+
+5569 = { # b_lupya, c_cherdyn
+	holding = wilderness_holding
+}
+
+5570 = { # b_ust_kulom, c_cherdyn
+	holding = wilderness_holding
+}
+
+5571 = { # b_chernaya, c_cherdyn
+	holding = wilderness_holding
+}
+
+5572 = { # b_nyrob, c_cherdyn
+	holding = wilderness_holding
+}
+
+6131 = { # b_shighnan, c_sighnan
+	holding = castle_holding
+}
+
+6132 = { # b_gunt, c_sighnan
+	holding = castle_holding
+}
+
+6133 = { # b_murghab, c_sighnan
+	holding = castle_holding
+}
+
+6134 = { # b_oksu, c_sighnan
+	holding = castle_holding
+}
+
+6135 = { # b_shiveh, c_sighnan
+	holding = castle_holding
+}
+
+6136 = {
+
+== our landed_titles ==
+len=1853181  e_=19 k_=77 d_=657 c_=3819 b_=21046
+
+== our province 1 ==
+1 = {
+    culture = swedish
+    faith = catholic
+    holding = castle_holding
+}
+
+our province-file distinct culture: 2008  top20: [('greek_culture', 234), ('farsi_culture', 171), ('novgorodian', 165), ('castilian', 164), ('mongolian_culture', 161), ('zhongyuan_culture', 151), ('jin_culture', 144), ('khorezmian_culture', 141), ('shu_culture', 141), ('najdi_culture', 135), ('korean_culture', 132), ('saigoku_culture', 129), ('uzbek_culture', 122), ('english', 119), ('muscovite', 116), ('armenian_culture', 112), ('norwegian', 110), ('jilu_culture', 109), ('qin_culture', 108), ('crimean', 108)]

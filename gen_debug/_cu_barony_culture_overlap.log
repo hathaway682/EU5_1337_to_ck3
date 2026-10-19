@@ -1,0 +1,286 @@
+﻿EU5 cultures: 2097 | CU 有 culture 的县: 2900 | CU 有文化的男爵领名: 13852 | CU 有块头的县: 2886
+我们的男爵领: 21046
+同名县 931 个，其中男爵领名可交叉验证 815 个（87.5%）
+
+== 全局 ==
+男爵领 21046 | 男爵领名匹配有文化 13698 (65.1%) | 县名匹配有文化 4783 (22.7%) | 缺 culture 字段 0
+
+== 按我们的大区(empire) ==
+empire                     男爵领     有CU     重合%
+east_asia                 3146    3111    98.9
+north_america             3084       0     0.0
+western_europe            2773    2686    96.9
+eastern_europe            2517    2439    96.9
+south_america             1357       0     0.0
+middle_east               1288    1208    93.8
+south_asia                1230    1221    99.3
+south_east_asia           1044    1028    98.5
+north_asia                 876     234    26.7
+east_africa                615     288    46.8
+west_africa                598     564    94.3
+central_africa             563      42     7.5
+australasia                492       0     0.0
+north_africa               453     426    94.0
+central_asia               417     405    97.1
+pacific_islands            298      46    15.4
+southern_africa            293       0     0.0
+north_atlantic_ocean_sub_continent       1       0     0.0
+south_atlantic_sub_continent       1       0     0.0
+
+== 按 EU5 文化组（全局合并，>=20 男爵领）==
+eu5_group                  language                   男爵领     有CU     重合%  CU多数文化                    占比%    种类
+arabian_group              peninsular_dialect         367     314    85.6  bedouin                  83.4     3
+iranian_group              persian_language           361     341    94.5  persian                  58.1    10
+chinese_group              northern_mandarin_dialect     358     358   100.0  han                      85.5     8
+pama_nyungan_group         pama_nyungan_language      354       0     0.0  -                         0.0     0
+mongolian_group            mongolian_language         349     336    96.3  mongol                   39.9    16
+japanese_group             japanese_language          339     338    99.7  japanese                 92.3     2
+tungusic_group             evenk_language             331      81    24.5  buryat                   63.0     5
+tatar_group                kipchak_language           324     321    99.1  cuman                    36.1    14
+cree_group                 cree_language              307       0     0.0  -                         0.0     0
+chinese_group              southern_mandarin_dialect     277     276    99.6  han                      99.3     2
+amazigh_group              tamazight_language         269     258    95.9  butr                     51.2     9
+nadene_group               nadene_language            261       0     0.0  -                         0.0     0
+greek_group                greek_language             258     254    98.4  greek                    95.3     5
+tibetan_group              tibetan_language           255     255   100.0  bodpa                    54.1    11
+macro_je_group             macro_je_language          250       0     0.0  -                         0.0     0
+turkic_group               kipchak_language           242     233    96.3  kimek                    21.0    13
+tupi_group                 tupi_language              216       0     0.0  -                         0.0     0
+russian_group              ukrainian_dialect          214     212    99.1  russian                  73.6     6
+russian_group              belarusian_dialect         209     209   100.0  russian                  98.1     2
+                           yukaghir_language          193       0     0.0  -                         0.0     0
+russian_group              novgorodian_dialect        190     190   100.0  vepsian                  60.5     4
+german_group               low_german_dialect         184     180    97.8  saxon                    58.9     7
+german_group               central_german_dialect     183     179    97.8  franconian               88.3     6
+russian_group              russian_dialect            174     170    97.7  russian                  37.6     7
+german_group               upper_german_dialect       166     163    98.2  bavarian                 70.6     6
+iberian_group              castilian_dialect          164     156    95.1  andalusian               57.7     4
+indian_group               hindustani_language        157     156    99.4  hindustani               61.5     7
+abenakian_group            abenakian_language         152       0     0.0  -                         0.0     0
+hungarian_group            hungarian_language         150     142    94.7  hungarian                67.6     7
+finnic_group               finnish_dialect            147     144    98.0  finnish                  40.3     6
+chinese_group              jin_language               144     144   100.0  han                      59.7     4
+turkic_group               karluk_language            141     140    99.3  tajik                    33.6    10
+chinese_group              shu_language               141     141   100.0  han                      75.9     4
+confucian_group            korean_language            134     134   100.0  goryeo                  100.0     1
+arabic_group               maghrebi_dialect           133     131    98.5  butr                     39.7     4
+polish_group               polish_dialect             128     126    98.4  polish                   88.9     4
+caddoan_group              caddoan_language           120       0     0.0  -                         0.0     0
+british_group              english_dialect            119     119   100.0  english                  93.3     3
+tibeto_burman_group        yi_language                117     117   100.0  yi                       41.0     6
+romanian_group             romanian_language          116     115    99.1  vlach                    53.9     7
+french_group               occitan_dialect            114     112    98.2  occitan                  96.4     3
+turkic_group               turkic_language            113      68    60.2  uyghur                   42.6    10
+caucasian_group            armenian_language          112     111    99.1  armenian                 52.3     6
+nahua_group                nahuatl_language           111       0     0.0  -                         0.0     0
+scandinavian_group         norwegian_dialect          110     107    97.3  norwegian                95.3     3
+bantu_group                kongo_language             106       0     0.0  -                         0.0     0
+anishinabe_group           anishinabe_language        105       0     0.0  -                         0.0     0
+chinese_group              wu_language                102     102   100.0  han                      89.2     2
+scandinavian_group         swedish_dialect            102      96    94.1  swedish                  93.8     3
+west_african_group         mande_language             101      99    98.0  soninke                  32.3    10
+dravidian_group            telugu_language            100      98    98.0  telugu                   71.4     5
+maya_group                 maya_language               97       0     0.0  -                         0.0     0
+austronesian_group         malay_dialect               97      93    95.9  malay                    82.8     5
+thai_group                 zhuang_language             96      96   100.0  yi                       54.2     4
+                           sami_language               94      94   100.0  sami                     83.0     4
+quechuan_group             quechuan_language           92       0     0.0  -                         0.0     0
+                           chukotko_kamchatkan_language      92       0     0.0  -                         0.0     0
+celtic_group               irish_dialect               92      92   100.0  irish                    91.3     2
+arabic_group               egyptian_dialect            91      79    86.8  egyptian                 58.2     8
+salishan_group             salishan_language           91       0     0.0  -                         0.0     0
+jurchen_group              jurchen_language            91      91   100.0  jurchen                  50.5     4
+indian_group               punjabi_language            90      90   100.0  punjabi                  67.8     5
+malagasy_group             malagasy_language           89       0     0.0  -                         0.0     0
+muskogee_group             muskogee_language           89       0     0.0  -                         0.0     0
+tutelo_group               tutelo_language             89       0     0.0  -                         0.0     0
+khoisan_group              khoe_language               87       0     0.0  -                         0.0     0
+chinese_group              gan_language                87      87   100.0  han                      66.7     2
+turkic_group               turkish_dialect             86      86   100.0  greek                    68.6     2
+bantu_group                luba_language               85       0     0.0  -                         0.0     0
+bantu_group                kavango_language            85       0     0.0  -                         0.0     0
+shoshoni_group             shoshoni_language           84       0     0.0  -                         0.0     0
+bantu_group                chokwe_language             82       0     0.0  -                         0.0     0
+west_african_group         gur_language                81      81   100.0  gur                      48.1     6
+slavic_group               bulgarian_language          81      80    98.8  bulgarian                67.5     3
+french_group               francique_dialect           81      80    98.8  french                   98.8     2
+aymara_group               aymara_language             77       0     0.0  -                         0.0     0
+cushitic_group             somali_dialect              76      74    97.4  somali                   95.9     4
+                           ainu_language               76      75    98.7  ainu                     94.7     2
+chibchan_group             chibchan_language           74       0     0.0  -                         0.0     0
+dravidian_group            kannada_language            74      73    98.6  kannada                  95.9     2
+penutian_group             penutian_language           72       0     0.0  -                         0.0     0
+iranian_group              afghani_language            72      72   100.0  afghan                   62.5     5
+indian_group               bihari_language             70      70   100.0  bengali                  75.7     6
+permic_group               permic_language             70      58    82.9  komi                     81.0     3
+slavic_group               serbian_dialect             69      65    94.2  serbian                  60.0     7
+indian_group               marathi_language            68      65    95.6  marathi                  60.0     3
+iranian_group              kurdish_language            67      67   100.0  kurdish                  71.6     5
+iranian_group              balochi_language            67      67   100.0  baloch                   59.7     3
+indian_group               bengali_language            67      67   100.0  bengali                  77.6     3
+iberian_group              portuguese_dialect          66      63    95.5  portuguese               47.6     3
+tshon_group                tshon_language              65       0     0.0  -                         0.0     0
+iranian_group              adharic_language            65      65   100.0  persian                  47.7     6
+bantu_group                shona_dialect               64       0     0.0  -                         0.0     0
+hmong_mien_group           hmong_language              64      64   100.0  yi                       39.1     5
+chinese_group              yue_language                63      63   100.0  bouxcuengh               77.8     3
+                           nenets_language             62      24    38.7  kirghiz                  45.8     3
+ta_arawakan_group          ciguayo_language            61       0     0.0  -                         0.0     0
+chinese_group              min_language                61      61   100.0  han                      63.9     4
+dravidian_group            tamil_language              61      60    98.4  tamil                    91.7     3
+volta_niger_group          nigerian_language           60      52    86.7  yoruba                   51.9     6
+atlantic_group             senegambian_language        60      54    90.0  wolof                    53.7     5
+indian_group               oriya_language              59      59   100.0  oriya                   100.0     1
+bantu_group                sotho_dialect               58       0     0.0  -                         0.0     0
+bohemian_group             czech_dialect               58      57    98.3  czech                   100.0     1
+lithuanian_group           lithuanian_dialect          57      57   100.0  lithuanian               78.9     3
+coahuilteco_group          coahuilteco_language        56       0     0.0  -                         0.0     0
+tibeto_burman_group        burmese_language            56      55    98.2  burmese                  89.1     4
+otopamean_group            otopamean_language          55       0     0.0  -                         0.0     0
+french_group               french_language             55      54    98.2  french                   85.2     2
+haudenosaunee_group        haudenosaunee_language      54       0     0.0  -                         0.0     0
+italian_group              neapolitan_dialect          53      51    96.2  sicilian                 84.3     3
+yupik_group                yupik_language              52       0     0.0  -                         0.0     0
+chinese_group              kejia_language              52      52   100.0  yao                      61.5     2
+caucasian_group            georgian_language           52      52   100.0  georgian                 86.5     4
+netherlandish_group        dutch_dialect               52      49    94.2  dutch                    63.3     2
+bantu_group                rukwa_language              51       0     0.0  -                         0.0     0
+chinese_group              xiang_language              51      51   100.0  han                      54.9     3
+arabic_group               iraqi_dialect               51      41    80.4  levantine                63.4     2
+arabic_group               levantine_dialect           51      51   100.0  levantine                82.4     3
+indian_group               rajasthani_language         51      51   100.0  rajput                   92.2     4
+german_group               alemannic_dialect           51      50    98.0  swabian                  98.0     2
+eastern_otomanguean_group  eastern_otomanguean_language      50       0     0.0  -                         0.0     0
+austroasiatic_group        palaungic_language          50      50   100.0  tai                      44.0     6
+austroasiatic_group        khmer_language              50      50   100.0  khmer                    94.0     3
+iberian_group              catalan_dialect             50      47    94.0  catalan                  66.0     3
+inuit_group                inuit_language              49       0     0.0  -                         0.0     0
+dakota_group               dakota_language             49       0     0.0  -                         0.0     0
+mapudungun_group           mapudungun_language         49       0     0.0  -                         0.0     0
+iberian_group              leonese_dialect             49      47    95.9  asturleonese             57.4     5
+bohemian_group             silesian_dialect            48      47    97.9  polish                   95.7     2
+scandinavian_group         icelandic_dialect           47      25    53.2  norse                    84.0     3
+west_african_group         hausa_language              46      45    97.8  hausa                    80.0     3
+ta_arawakan_group          ta_arawakan_language        46       0     0.0  -                         0.0     0
+scandinavian_group         danish_dialect              46      46   100.0  danish                  100.0     1
+turkic_group               oghuric_language            45      43    95.6  bolghar                  95.3     2
+french_group               arpitan_dialect             44      44   100.0  french                   65.9     4
+                           ugrian_language             43      33    76.7  khanty                   84.8     3
+polynesian_group           maori_language              43       0     0.0  -                         0.0     0
+tibeto_burman_group        meitei_language             42      42   100.0  assamese                 31.0     5
+austroasiatic_group        mon_language                42      42   100.0  mon                      85.7     2
+french_group               burgundian_dialect          41      39    95.1  french                   94.9     2
+siksika_group              siksika_language            40       0     0.0  -                         0.0     0
+celtic_group               scottish_gaelic_dialect      40      39    97.5  gaelic                   82.1     2
+                           nubian_language             39      29    74.4  nubian                   79.3     3
+lenape_group               lenape_language             39       0     0.0  -                         0.0     0
+iroquoian_group            iroquoian_language          38       0     0.0  -                         0.0     0
+mataco_guaicuru_group      mataco_guaicuru_language      38       0     0.0  -                         0.0     0
+shan_group                 shan_dialect                38      38   100.0  tai                      42.1     5
+indian_group               gujarati_language           38      38   100.0  gujarati                 71.1     4
+mordvinic_group            mordvinic_language          38      32    84.2  mordvin                  56.2     4
+bantu_group                bangi_language              37       0     0.0  -                         0.0     0
+powhatan_group             powhatan_language           37       0     0.0  -                         0.0     0
+indian_group               sindhi_language             37      37   100.0  sindhi                   83.8     4
+bantu_group                swahili_language            36      19    52.8  swahili                  68.4     2
+kwa_group                  kwa_language                36      30    83.3  akan                     50.0     5
+hokan_group                hokan_language              36       0     0.0  -                         0.0     0
+dhegiha_group              dhegiha_language            36       0     0.0  -                         0.0     0
+shawnee_group              shawnee_language            36       0     0.0  -                         0.0     0
+italian_group              lombard_dialect             36      35    97.2  cisalpine                80.0     2
+yutonahua_group            corachol_language           35       0     0.0  -                         0.0     0
+indian_group               malvi_language              35      35   100.0  malvi                    48.6     5
+indian_group               kashmiri_language           35      35   100.0  kashmiri                 88.6     3
+austronesian_group         bornean_language            35      35   100.0  dayak                   100.0     1
+bantu_group                tsogo_language              34       0     0.0  -                         0.0     0
+bantu_group                nyasa_language              34       0     0.0  -                         0.0     0
+wendat_group               wendat_language             34       0     0.0  -                         0.0     0
+ta_arawakan_group          taino_language              34       0     0.0  -                         0.0     0
+caribe_group               cariban_language            34       0     0.0  -                         0.0     0
+arabic_group               aramaic_language            34      34   100.0  levantine                50.0     5
+indian_group               pahari_language             34      34   100.0  nepali                   47.1     4
+austroasiatic_group        vietnamese_language         34      34   100.0  viet                    100.0     1
+west_african_group         saharan_language            33      33   100.0  zaghawa                  45.5     5
+yutonahua_group            nadene_language             33       0     0.0  -                         0.0     0
+italian_group              sicilian_dialect            33      32    97.0  sicilian                 81.2     2
+nuuchi_nuwu_group          nuuchi_nuwu_language        32       0     0.0  -                         0.0     0
+slavic_group               croatian_dialect            32      32   100.0  croatian                 65.6     4
+pyrenean_group             gascon_dialect              32      32   100.0  occitan                  84.4     3
+west_african_group         adamawa_language            31       9    29.0  hausa                    66.7     3
+bantu_group                nguni_dialect               31       0     0.0  -                         0.0     0
+chickasaw_choctaw_group    chickasaw_choctaw_language      31       0     0.0  -                         0.0     0
+turkic_group               turkmen_dialect             31      29    93.5  turkish                  44.8     7
+austroasiatic_group        katuic_language             31      31   100.0  khmu                     51.6     2
+italian_group              median_dialect              31      29    93.5  italian                 100.0     1
+ethiopian_group            ethiopic_language           30      30   100.0  ethiopian                76.7     3
+bantu_group                rwanda_language             30       0     0.0  -                         0.0     0
+ktunaxa_group              ktunaxa_language            30       0     0.0  -                         0.0     0
+cacan_group                cacan_language              30       0     0.0  -                         0.0     0
+austronesian_group         cham_dialect                30      30   100.0  cham                     70.0     3
+baltic_group               western_baltic_dialect      30      28    93.3  prussian                 50.0     4
+finnic_group               estonian_dialect            30      28    93.3  estonian                 85.7     2
+polish_group               kashubian_dialect           30      22    73.3  pommeranian             100.0     1
+                           mari_language               30      22    73.3  mari                     50.0     4
+french_group               angevin_dialect             30      30   100.0  french                   53.3     2
+misumalpan_group           misumalpan_language         29       0     0.0  -                         0.0     0
+tibeto_burman_group        tujia_language              29      29   100.0  hmong                    44.8     3
+indian_group               brahmaputran_language       29      29   100.0  assamese                 69.0     3
+austronesian_group         javanese_language           29      29   100.0  javanese                100.0     1
+iberian_group              aragonese_dialect           29      29   100.0  andalusian               69.0     2
+italian_group              tuscan_dialect              29      27    93.1  italian                  70.4     2
+caribe_group               ta_arawakan_language        28       0     0.0  -                         0.0     0
+myaamia_group              myaamia_language            28       0     0.0  -                         0.0     0
+thai_group                 kam_language                28      28   100.0  bouxcuengh               46.4     3
+french_group               poitevin_dialect            28      28   100.0  occitan                  78.6     3
+french_group               norman_dialect              28      28   100.0  norman                  100.0     1
+west_african_group         sao_language                27      26    96.3  sao                      96.2     2
+bantu_group                makhuwa_dialect             27       0     0.0  -                         0.0     0
+khoisan_group              tuu_language                27       0     0.0  -                         0.0     0
+yutonahua_group            tepiman_language            27       0     0.0  -                         0.0     0
+timucua_group              timucua_language            27       0     0.0  -                         0.0     0
+purepecha_group            purepecha_language          27       0     0.0  -                         0.0     0
+                           lamut_language              27       0     0.0  -                         0.0     0
+austronesian_group         barito_language             27      27   100.0  dayak                    88.9     2
+british_group              northumbrian_dialect        27      27   100.0  english                 100.0     1
+atlantic_group             mel_language                26      26   100.0  mel                      84.6     3
+shoshoni_group             paiute_language             26       0     0.0  -                         0.0     0
+austronesian_group         ilocano_language            26      26   100.0  iloko                    92.3     2
+austronesian_group         batak_language              26      26   100.0  malay                    42.3     3
+italian_group              emilian_dialect             26      26   100.0  cisalpine                96.2     2
+volta_niger_group          bantoid_language            25      13    52.0  igbo                     76.9     3
+west_african_group         tamazight_language          25      25   100.0  butr                     72.0     3
+natchez_group              natchez_language            25       0     0.0  -                         0.0     0
+hinonoeitiit_group         hinonoeitiit_language       25       0     0.0  -                         0.0     0
+totozoquean_group          totozoquean_language        25       0     0.0  -                         0.0     0
+austronesian_group         celebic_language            25      25   100.0  toraja                   52.0     2
+celtic_group               welsh_dialect               25      23    92.0  welsh                    91.3     2
+bantu_group                bassa_language              24       2     8.3  igbo                    100.0     1
+yutonahua_group            tarahumaran_language        24       0     0.0  -                         0.0     0
+massachusett_group         massachusett_language       24       0     0.0  -                         0.0     0
+austronesian_group         kayanic_language            24      24   100.0  dayak                   100.0     1
+iberian_group              galician_dialect            24      23    95.8  galician                 95.7     2
+chiwere_group              chiwere_language            23       0     0.0  -                         0.0     0
+austronesian_group         formosan_language           23      23   100.0  amis                    100.0     1
+jurchen_group              nanai_language              23      23   100.0  jurchen                 100.0     1
+thai_group                 thai_dialect                23      23   100.0  malay                    47.8     3
+austronesian_group         buginese_language           23      23   100.0  bugis                    91.3     2
+iberian_group              maghrebi_dialect            23      22    95.7  andalusian              100.0     1
+italian_group              sardinian_dialect           23      23   100.0  sardinian               100.0     1
+tsehesenestsestotse_group  tsehesenestsestotse_language      22       0     0.0  -                         0.0     0
+ckunsa_group               ckunsa_language             22       0     0.0  -                         0.0     0
+charrua_group              charrua_language            22       0     0.0  -                         0.0     0
+indian_group               sinhala_language            22      22   100.0  sinhala                 100.0     1
+carpathian_group           slovak_dialect              22      21    95.5  slovien                  61.9     2
+polynesian_group           paumotu_language            22       0     0.0  -                         0.0     0
+iranian_group              tabaristani_language        21      21   100.0  daylamite                81.0     2
+dravidian_group            malayalam_language          21      20    95.2  tamil                   100.0     1
+baltic_group               latvian_dialect             21      21   100.0  latgalian                52.4     3
+iberian_group              basque_language             21      21   100.0  basque                   85.7     2
+australian_group           gunwinyguan_language        21       0     0.0  -                         0.0     0
+bantu_group                nyamwezi_language           20       0     0.0  -                         0.0     0
+west_african_group         songhai_language            20      20   100.0  songhai                  90.0     2
+apsaalooke_hiraaca_group   apsaalooke_hiraaca_language      20       0     0.0  -                         0.0     0
+caucasian_group            circassian_language         20      20   100.0  alan                     70.0     3
+italian_group              venetian_dialect            20      20   100.0  cisalpine               100.0     1
+
+csv: D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\gen_debug\_cu_barony_culture_overlap.csv

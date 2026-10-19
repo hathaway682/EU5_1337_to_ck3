@@ -1,0 +1,27 @@
+﻿c_gorgan 的 barony 顺序（landed_titles 里出现的顺序，第一个通常就是首府）:
+   1) b_gorgan                 p6883
+   2) b_aliabad_katul          p6884
+   3) b_astarabad              p6885
+   4) b_etrek                  p6886
+   5) b_incheh_borun           p6887
+   6) b_minudasht              p6888
+   7) b_mubarakabad            p6889
+   8) b_nardin                 p6890
+   9) b_tammisha               p6891
+
+各 province 现状:
+   b_gorgan                 p6883   faith=sunni        rite=None
+   b_aliabad_katul          p6884   faith=shia         rite=ismaili
+   b_astarabad              p6885   faith=shia         rite=ismaili
+   b_etrek                  p6886   faith=sunni        rite=None
+   b_incheh_borun           p6887   faith=sunni        rite=None
+   b_minudasht              p6888   faith=shia         rite=ismaili
+   b_mubarakabad            p6889   faith=sunni        rite=None
+   b_nardin                 p6890   faith=shia         rite=ismaili
+   b_tammisha               p6891   faith=shia         rite=ismaili
+
+eu5_peoples.json 的 county_religion[c_gorgan] = shia
+   counties[c_gorgan] = {'culture': 'turkmen_culture', 'culture_share': 0.4444, 'religion': 'shia', 'religion_share': 0.5556, 'locations': 9}
+   county_culture[c_gorgan] = turkmen_culture
+
+首府 barony = b_gorgan (p6883)，faith = sunni

@@ -1,0 +1,41 @@
+provinces mapped: 21046 counties: 3819
+locations with pops: 20792
+fallback (_orig_label_provinces.txt): 255 provinces, 255 与现值相同, 0 会被改回标注值
+
+== result (per-province) ==
+provinces with pop data: 20791 / 21046 | no pop data: 0
+culture changed: 0 | faith changed: 740 | both changed: 0
+
+samples (province: cur_cult/cur_faith -> new_cult/new_faith  [eu5_rel, pop, #cand]):
+  8071    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 21.9, 1]
+  8072    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 11.2, 1]
+  8073    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 14.2, 1]
+  8074    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 25.5, 1]
+  8075    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 9.8, 1]
+  8076    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 18.8, 1]
+  8077    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 18.9, 1]
+  8078    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 37.0, 1]
+  8079    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 31.5, 1]
+  8080    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 37.6, 2]
+  8081    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 19.8, 2]
+  8082    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 50.3, 2]
+  8083    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 28.0, 2]
+  7955    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 19.7, 1]
+  7956    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 23.2, 1]
+  7957    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 27.5, 1]
+  8089    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 26.2, 2]
+  8090    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 29.4, 2]
+  8091    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 20.1, 1]
+  8092    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 10.7, 2]
+  8093    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 6.4, 1]
+  8094    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 20.9, 1]
+  8095    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 30.9, 2]
+  8096    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 44.6, 2]
+  8097    jurchen_culture       /siberian_pagan       -> jurchen_culture       /shamanism            [tungusic_shamanism, 30.5, 2]
+
+report: D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\gen_debug\_culture_by_pops_report.txt
+diff csv: D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\gen_debug\_culture_by_pops_diff.csv
+
+APPLIED (per-province). changed_lines=740
+backup: D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\history\provinces\00_generated_provinces.txt.bak_popsmajority_20261019_174004
+braces: 21046 21046

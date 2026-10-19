@@ -1,5 +1,24 @@
 # 项目长期记忆（EU5_Modern_Borders_noshape）
 
+## 宗教 / 礼（rite）关键机制
+
+- **省份只写 `faith = X` 而没有 `rite =` 行时，游戏按该 faith 的 `main_rite` 显示**
+  （`common/religion/faith_types/00_faith_types.txt`）：
+  `sunni.main_rite = hanafi`、`shia.main_rite = imami`、`orthodox → byzantine_rite`、
+  `miaphysitism → armenian_rite`、`coptic → coptic_rite` 等。
+  → **凡「某地莫名是 X 礼」，第一件事就是查该省有没有 `rite =` 行；没有就是回落，不是被填错了。**
+- 伊斯兰礼的生成是**四段式**：`_eu5_schools.py` → `_apply_rites.py` →
+  `_apply_christian_rites.py` → `_apply_islamic_geo_spread.py`。只有后两个会碰 `rite` 行；
+  且**任何一段都不得改 `faith`**（改完用 `gen_debug/_snap_faith.py` 校验，必须 0 差异）。
+- **反复踩的同一个坑：按「县」判定，按「省」落地。** 县级依据是 EU5 的 `county_religion`
+  （人口多数宗教），但 `faith` 是逐省按人口判的，一个县里可能混着 sunni / shia / 异教省。
+  已知 5 例：戈尔甘、库法、西沃里尼亚、吉赞/希尔达、多贝亚/锡达莫。
+  → 加地区规则时必须问自己：这条规则该按县还是按省？
+- 伊斯兰层的落点优先级：县级确定性（owner 的 `sharia_law` > `religious_school`）→
+  手动覆盖（imami / 也门 / `REGION_OVERRIDES`，**按省**）→ 逐省 BFS 补漏（只认同父信仰的源）。
+- **孤岛传不动**：`_ck3_province_adjacency.json` 只有陆路，没有海路。`adj=[]` 的省
+  （拉克沙、马斯克林、nosy_be 等）BFS 一步都走不了，只能靠 `REGION_OVERRIDES` 显式落。
+
 ## CK3 数据结构约定（从踩坑中确认）
 
 - **dynasty 是宗族，house 是支系**。角色指支系必须写 `dynasty_house = house_xxx`；

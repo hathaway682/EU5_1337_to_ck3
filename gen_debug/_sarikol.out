@@ -1,0 +1,18 @@
+b_sarikol -> p10135   county=c_sarikol (萨雷阔勒)  duchy=d_tarim kingdom=k_xinjiang  EU5县宗教=sunni
+  mapping: ('tarim', 'xinjiang')
+  faith=shia  rite=imami
+
+==== 该县全部省 ====
+   b_sarikol                p10135  faith=shia           rite=imami
+   b_akto                   p10136  faith=sunni          rite=maliki
+   b_kizilsu                p10137  faith=sunni          rite=maliki
+
+==== p10135 的邻居 ====
+   p5328                          瓦罕           faith=shia           rite=imami      duchy=d_badakhshan
+   p10105                         喀喇昆仑         faith=tengri_pagan   rite=None       duchy=d_tarim
+   p10136                         萨雷阔勒         faith=sunni          rite=maliki     duchy=d_tarim
+   p5322                          锡格纳希         faith=shia           rite=imami      duchy=d_badakhshan
+   p11275                         罕萨           faith=shia           rite=imami      duchy=d_upper_indus
+
+==== 同县/同 duchy 里所有 shia 省 ====
+   c_sarikol              p10135  b_sarikol              萨雷阔勒         rite=imami

@@ -1,0 +1,46 @@
+﻿=== 全部 kingdom ===
+  alaska, anatolia, andes, antarctic_ocean, arabia, aridoamerica, australia, balkan, baltic, bengal, brazil, canada, caribbean, carpathia, caucasus, central_africa, central_america, central_india, chaco, colombia, crescent, deccan, east_china, east_coast, east_siberia, egypt, ethiopia, france, great_britain, great_lakes, great_plains, guinea, hindustan, iberia, indian_ocean, indochina, indonesia, ireland, italy, japan, khorasan, kongo, korea, la_plata, macaronesia, madagascar, maghreb, manchuria, melanesia, mesoamerica, micronesia, mongolia, new_zealand, north_atlantic_islands, north_atlantic_ocean, north_china, north_german, north_pacific_ocean, nubia, persia, polynesia, russian, ruthenia, sahel, scandinavian, somalia, south_atlantic, south_china, south_german, south_pacific_ocean, southern_africa, southern_africa_islands, steppes, swahili_coast, tibet, ural, west_china, west_coast, west_siberia, western_india, xinjiang, zimbabwe
+
+=== 含 'levant' 的层级键 ===
+  duchy      ['levant', 'levantine_sea']
+  province   ['levant_coast_sea_province', 'levante_province', 'levantine_sea_province']
+
+=== 含 'egypt' 的层级键 ===
+  kingdom    ['egypt']
+  duchy      ['lower_egypt', 'upper_egypt']
+
+=== 含 'syria' 的层级键 ===
+
+=== 含 'huaxi' 的层级键 ===
+
+=== 含 'sichuan' 的层级键 ===
+  province   ['bazhou_sichuan_province', 'changzhou_sichuan_province', 'fuzhou_sichuan_province', 'hezhou_sichuan_province', 'lizhou_sichuan_province', 'luzhou_sichuan_province', 'qiongzhou_sichuan_province', 'sichuan_province', 'xinzhou_sichuan_province', 'xuzhou_sichuan_province']
+
+=== 含 'china' 的层级键 ===
+  kingdom    ['east_china', 'indochina', 'north_china', 'south_china', 'west_china']
+  duchy      ['east_china_coastline', 'north_china_coastline', 'south_china_coastline']
+  province   ['chinali_province', 'cuauhchinanco_province', 'east_china_sea_province', 'south_china_sea_province']
+
+=== 含 'anatol' 的层级键 ===
+  kingdom    ['anatolia']
+  duchy      ['central_anatolia', 'west_anatolia']
+  province   ['anatolian_coast_province']
+
+=== 含 'rum' 的层级键 ===
+  province   ['corum_province', 'darumbal_province', 'darumbal_province_coast', 'erzurum_province', 'kuruman_province']
+
+=== 含 'sham' 的层级键 ===
+  province   ['shamokin_province']
+
+=== 含 'misr' 的层级键 ===
+  province   ['misratah_province']
+
+=== 按 location 名反查（cairo / alexandria / jerusalem / damascus / antioch）===
+  cairo        kingdom=egypt        duchy=lower_egypt      province=cairo_province
+  alexandria   kingdom=egypt        duchy=lower_egypt      province=alexandria_province
+  jerusalem    kingdom=crescent     duchy=levant           province=filastin_province
+  damascus     kingdom=crescent     duchy=levant           province=shaam_province
+  aleppo       kingdom=crescent     duchy=levant           province=halab_province
+  antioch      kingdom=crescent     duchy=levant           province=antakya_province
+  tripoli      kingdom=maghreb      duchy=tripolitania     province=tripolitania_province
+  gaza         kingdom=crescent     duchy=levant           province=filastin_province

@@ -1,0 +1,61 @@
+==== 两个县的 EU5 县宗教（mapping.json）====
+  dobea        {None: 5}
+  sidamo       {None: 6}
+
+==== 4 个目标省：新旧对比 + 邻居 ====
+
+-- dobea  p13866
+   旧: faith=sunni            rite=None
+   新: faith=sunni            rite=shafii
+   邻居 6 个:
+      p13872  faith=miaphysitism       rite=ethiopian_rite
+      p13901  faith=sunni              rite=shafii      <<< 同父信仰的已知源（shafii）
+      p13869  faith=miaphysitism       rite=ethiopian_rite
+      p13903  faith=miaphysitism       rite=ethiopian_rite
+      p13867  faith=sunni              rite=shafii      <<< 同父信仰的已知源（shafii）
+      p13904  faith=sunni              rite=shafii      <<< 同父信仰的已知源（shafii）
+
+-- dobea  p13867
+   旧: faith=sunni            rite=None
+   新: faith=sunni            rite=shafii
+   邻居 7 个:
+      p13870  faith=miaphysitism       rite=ethiopian_rite
+      p13887  faith=sunni              rite=shafii      <<< 同父信仰的已知源（shafii）
+      p13876  faith=sunni              rite=shafii      <<< 同父信仰的已知源（shafii）
+      p13868  faith=miaphysitism       rite=ethiopian_rite
+      p13901  faith=sunni              rite=shafii      <<< 同父信仰的已知源（shafii）
+      p13866  faith=sunni              rite=shafii      <<< 同父信仰的已知源（shafii）
+      p13869  faith=miaphysitism       rite=ethiopian_rite
+
+-- sidamo  p13942
+   旧: faith=sunni            rite=None
+   新: faith=sunni            rite=shafii
+   邻居 6 个:
+      p13934  faith=sunni              rite=shafii      <<< 同父信仰的已知源（shafii）
+      p13946  faith=waaqism_pagan      rite=None      
+      p13931  faith=sunni              rite=shafii      <<< 同父信仰的已知源（shafii）
+      p14061  faith=sunni              rite=shafii      <<< 同父信仰的已知源（shafii）
+      p13943  faith=sunni              rite=shafii      <<< 同父信仰的已知源（shafii）
+      p14074  faith=sunni              rite=shafii      <<< 同父信仰的已知源（shafii）
+
+-- sidamo  p13943
+   旧: faith=sunni            rite=None
+   新: faith=sunni            rite=shafii
+   邻居 4 个:
+      p14074  faith=sunni              rite=shafii      <<< 同父信仰的已知源（shafii）
+      p13944  faith=waaqism_pagan      rite=None      
+      p13942  faith=sunni              rite=shafii      <<< 同父信仰的已知源（shafii）
+      p14075  faith=waaqism_pagan      rite=None      
+
+==== 这两个县在 EU5 的 owner / 宗教 ====
+  manadeley              county=dobea      owner=None   religion=None           kingdom=ethiopia
+  afrera                 county=dobea      owner=None   religion=None           kingdom=ethiopia
+  amora_gadal            county=dobea      owner=None   religion=None           kingdom=ethiopia
+  chercher               county=dobea      owner=None   religion=None           kingdom=ethiopia
+  hayq                   county=dobea      owner=None   religion=None           kingdom=ethiopia
+  bonga                  county=sidamo     owner=None   religion=None           kingdom=ethiopia
+  bossa                  county=sidamo     owner=None   religion=None           kingdom=ethiopia
+  gamo                   county=sidamo     owner=None   religion=None           kingdom=ethiopia
+  konso                  county=sidamo     owner=None   religion=None           kingdom=ethiopia
+  omo                    county=sidamo     owner=None   religion=None           kingdom=ethiopia
+  soddo                  county=sidamo     owner=None   religion=None           kingdom=ethiopia
