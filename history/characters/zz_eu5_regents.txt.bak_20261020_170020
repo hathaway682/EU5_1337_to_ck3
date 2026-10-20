@@ -1,0 +1,256 @@
+﻿# EU5 regents: the ruler moves his landless regent to his court (set_employer) and
+# then designates him regent (vanilla recipe from
+# events/bookmark_events.txt: designate_diarch + try_start_diarchy = regency).
+# Written from eu5_politics.json countries[].regent; regents who hold land
+# elsewhere and are not vassals of the country are excluded.
+
+# regent of ALB, ANT
+alb_charles_durazzo = {
+	1337.1.1 = {
+		effect = {
+			character:alb_agnes_perigord = {
+				set_employer = character:alb_charles_durazzo
+			}
+			designate_diarch = alb_agnes_perigord
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of AST
+ast_centule_iv_astarac = {
+	1337.1.1 = {
+		effect = {
+			character:mfa_cecilia_comminges = {
+				set_employer = character:ast_centule_iv_astarac
+			}
+			designate_diarch = mfa_cecilia_comminges
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of AUV, BGN
+auv_jeanne_auvergne = {
+	1337.1.1 = {
+		effect = {
+			character:auv_margaret_evreux = {
+				set_employer = character:auv_jeanne_auvergne
+			}
+			designate_diarch = auv_margaret_evreux
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of CHZ
+chz_seii = {
+	1337.1.1 = {
+		effect = {
+			character:chz_tamagusuku_spouse = {
+				set_employer = character:chz_seii
+			}
+			designate_diarch = chz_tamagusuku_spouse
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of COM
+com_jean_comminges = {
+	1337.1.1 = {
+		effect = {
+			character:alb_agnes_perigord = {
+				set_employer = character:com_jean_comminges
+			}
+			designate_diarch = alb_agnes_perigord
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of DAN
+dan_valdemar_atterdag = {
+	1337.1.1 = {
+		effect = {
+			designate_diarch = shl_gerhard_iii_holstein_rendsburg
+			try_start_diarchy = regency
+		}
+	}
+}
+
+# regent of ETA
+eta_louis_evreux = {
+	1337.1.1 = {
+		effect = {
+			character:ale_maria_burgundy_castile = {
+				set_employer = character:eta_louis_evreux
+			}
+			designate_diarch = ale_maria_burgundy_castile
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of GOR
+gor_john_henry_iv_gorizia = {
+	1337.1.1 = {
+		effect = {
+			character:gor_beatrix_of_lower_bavaria = {
+				set_employer = character:gor_john_henry_iv_gorizia
+			}
+			designate_diarch = gor_beatrix_of_lower_bavaria
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of HHB
+hhb_rudolf_iii_hohenberg_rotenburg = {
+	1337.1.1 = {
+		effect = {
+			character:hhb_margaretha_nassau_hademar = {
+				set_employer = character:hhb_rudolf_iii_hohenberg_rotenburg
+			}
+			designate_diarch = hhb_margaretha_nassau_hademar
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of ASN
+jap_ashina_naomori = {
+	1337.1.1 = {
+		effect = {
+			character:jap_ashina_morimune_spouse = {
+				set_employer = character:jap_ashina_naomori
+			}
+			designate_diarch = jap_ashina_morimune_spouse
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of NTC
+jap_koumyou_tenno = {
+	1337.1.1 = {
+		effect = {
+			character:jap_kougon_tenno = {
+				set_employer = character:jap_koumyou_tenno
+			}
+			designate_diarch = jap_kougon_tenno
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of MGM
+jap_mogami_kaneyori = {
+	1337.1.1 = {
+		effect = {
+			character:jap_shiba_iekane = {
+				set_employer = character:jap_mogami_kaneyori
+			}
+			designate_diarch = jap_shiba_iekane
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of MRI
+jap_mori_motoharu = {
+	1337.1.1 = {
+		effect = {
+			character:jap_mori_chikahira = {
+				set_employer = character:jap_mori_motoharu
+			}
+			designate_diarch = jap_mori_chikahira
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of OKI
+jap_oosaki_tadamochi = {
+	1337.1.1 = {
+		effect = {
+			character:jap_shiba_iekane = {
+				set_employer = character:jap_oosaki_tadamochi
+			}
+			designate_diarch = jap_shiba_iekane
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of OYM
+jap_oyama_tomosato = {
+	1337.1.1 = {
+		effect = {
+			character:jap_oyama_hidetomo_spouse = {
+				set_employer = character:jap_oyama_tomosato
+			}
+			designate_diarch = jap_oyama_hidetomo_spouse
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of SUW
+jap_suwa_yoritsugu = {
+	1337.1.1 = {
+		effect = {
+			character:jap_suwa_nobutsugu = {
+				set_employer = character:jap_suwa_yoritsugu
+			}
+			designate_diarch = jap_suwa_nobutsugu
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of YUK
+jap_yuuki_naotomo = {
+	1337.1.1 = {
+		effect = {
+			character:jap_yuuki_tomosuke_spouse = {
+				set_employer = character:jap_yuuki_naotomo
+			}
+			designate_diarch = jap_yuuki_tomosuke_spouse
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of KSH
+ksh_haidar_khan_lohara = {
+	1337.1.1 = {
+		effect = {
+			character:ksh_kota_rani_lohara = {
+				set_employer = character:ksh_haidar_khan_lohara
+			}
+			designate_diarch = ksh_kota_rani_lohara
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of LEU
+leu_ulrich_ii_leuchtenberg = {
+	1337.1.1 = {
+		effect = {
+			character:leu_anna_von_nurnberg = {
+				set_employer = character:leu_ulrich_ii_leuchtenberg
+			}
+			designate_diarch = leu_anna_von_nurnberg
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of RSO
+rso_andrei_fedorovich_rostovsky_rurikovich = {
+	1337.1.1 = {
+		effect = {
+			character:rso_konstantin_vasilievich_rurikovich = {
+				set_employer = character:rso_andrei_fedorovich_rostovsky_rurikovich
+			}
+			designate_diarch = rso_konstantin_vasilievich_rurikovich
+			try_start_diarchy = regency
+		}
+	}
+}
+# regent of SCO
+sco_david_ii = {
+	1337.1.1 = {
+		effect = {
+			character:sco_andrew_murray = {
+				set_employer = character:sco_david_ii
+			}
+			try_start_diarchy = regency
+			set_diarch = character:sco_andrew_murray
+		}
+	}
+}
