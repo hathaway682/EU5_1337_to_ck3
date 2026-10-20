@@ -214,39 +214,47 @@ A("上表只列显示名与 key 明显不同的；`turkmen`（土库曼）、`ka
   "`bodpa`（吐蕃）等 key 与显示名一致的未列出，但它们同样被用作目标。")
 A("")
 
-# —— 4.5 藏区 / 喜马拉雅 与 突厥语支 的细分 ——
-# 这两块原先都是「一个语言规则吞掉整片」：藏语一律→bodpa、突厥语一律→cuman。
-# 依据 CK3 原版 history/provinces/k_*.txt 里各王国的 culture 分布重新落点。
+# —— 4.5 按 CK3 原版落点细分的几处 ——
+# 这几块原先都是「一个语言/文化组规则吞掉整片」：藏语一律→bodpa、突厥语一律→cuman、
+# 柏柏尔一律→butr。依据 CK3 原版 history/provinces/k_*.txt 里各王国的 culture 分布重新落点。
 TIBET_BLOCK = ["utsang_culture", "khampa_culture", "changpa_culture", "amdowa_culture",
                "tebbu_culture", "ladakh_culture", "balti_culture", "ngalop_culture",
                "sikkim_culture", "monpa_culture", "newar_culture", "magar_culture",
                "gurung_culture", "tamang_culture", "limbu_culture", "sherpa_culture"]
-TURKIC_BLOCK = ["kyrgyz_culture", "kazani", "uzbek_culture", "nogai", "astrakhani", "mishar"]
-A("### 4.5 按 CK3 原版王国文化分布细分的两处（藏区 / 突厥语支）")
+KIPCHAK_BLOCK = ["cuman_culture", "astrakhani", "crimean", "kazani", "mishar", "nogai",
+                 "balkar_culture", "bashkir", "karachay_culture", "kumyk_culture",
+                 "kyrgyz_culture", "telengit_culture", "teleut_culture", "uzbek_culture",
+                 "yerle_qaliq_culture"]
+BERBER_BLOCK = ["zenati", "mozabite", "chaoui", "eastern_amazigh", "kabyle",
+                "lamtuna_culture", "godala_culture", "messufa_culture", "tuareg",
+                "sanhaja", "masmuda", "guanche"]
+RUS_BLOCK = ["novgorodian", "pomor", "vepsian", "prussian"]
+SUDAN_BLOCK = ["sudanese_arab"]
+A("### 4.5 按 CK3 原版落点细分的几处（藏区 / 钦察语 / 柏柏尔 / 罗斯 / 苏丹）")
 A("")
-A("原先「藏语→bodpa」「突厥语→cuman」两条语言规则把整片语族并成一个文化。"
-  "按 CK3 原版 `history/provinces/k_{u,tsang,kham,amdo,guge,gyalrong,lhomon,himalaya,maryul}.txt`"
-  " 的实际 culture 分布重新落点：")
+A("原先「藏语→bodpa」「突厥语→cuman」「柏柏尔→butr」三条语言规则把整片语族并成一个文化。"
+  "按 CK3 原版 `history/provinces/k_*.txt` 的实际 culture 分布重新落点：")
 A("")
-A("**藏区 / 喜马拉雅（16 个）**")
-A("")
-A("| 文化 | 男爵领 | 类别 | 目标 | 依据 |")
-A("|---|---:|---:|---|---|")
 _ix = {x["culture"]: x for x in rows}
-for k in TIBET_BLOCK:
-    x = _ix.get(k)
-    if x:
-        A("| %s | %s | %s | %s | %s |" % (nm(x), x["baronies"], x["category"], tg(x), x["note"][:60]))
-A("")
-A("**突厥语支（6 个，其余无 CK3 对应者仍留 cuman）**")
-A("")
-A("| 文化 | 男爵领 | 类别 | 目标 | 依据 |")
-A("|---|---:|---:|---|---|")
-for k in TURKIC_BLOCK:
-    x = _ix.get(k)
-    if x:
-        A("| %s | %s | %s | %s | %s |" % (nm(x), x["baronies"], x["category"], tg(x), x["note"][:60]))
-A("")
+
+
+def _tbl(title, keys):
+    A("**%s**" % title)
+    A("")
+    A("| 文化 | 男爵领 | 类别 | 目标 | 依据 |")
+    A("|---|---:|---:|---|---|")
+    for k in keys:
+        x = _ix.get(k)
+        if x:
+            A("| %s | %s | %s | %s | %s |" % (nm(x), x["baronies"], x["category"], tg(x), x["note"][:60]))
+    A("")
+
+
+_tbl("藏区 / 喜马拉雅（16 个）", TIBET_BLOCK)
+_tbl("钦察语（15 个：库曼只留 cuman_culture，草原组→kazakh 融合，其余→kipchak）", KIPCHAK_BLOCK)
+_tbl("柏柏尔（12 个：马格里布/撒哈拉→butr，摩洛哥→baranis，加那利→guanches）", BERBER_BLOCK)
+_tbl("罗斯 / 普鲁士（4 个：ilmenian 原版 0 省份不可用，诺夫哥罗德归罗斯；普鲁士从萨克森分离）", RUS_BLOCK)
+_tbl("苏丹-阿拉伯（1 个：阿拉伯+努比亚融合）", SUDAN_BLOCK)
 
 io.open(OUT, "w", encoding="utf-8", newline="\n").write("\n".join(L) + "\n")
 print("写出", OUT)

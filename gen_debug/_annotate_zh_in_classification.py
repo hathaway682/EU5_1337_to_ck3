@@ -94,6 +94,7 @@ MANUAL = {
     "unsettled":      "无主之地",
     "gen_culture_unsettled": "无主之地",
     "iraqw":          "伊拉库",
+    "prussian_german": "德意志普鲁士",
 }
 
 
@@ -117,8 +118,17 @@ def expand(s, depth=0):
     return RE_VAR.sub(sub, s)
 
 
+# CK3 官方中文里少数译名与我们的用法冲突，这里强制覆盖（优先于所有来源）
+# kazakh 是钦察-蒙古融合名，CK3 官方中文写成「乌兹别克」，会与真正的 uzbek 混淆
+ZH_OVERRIDE = {
+    "kazakh": "哈萨克",
+}
+
+
 def zh_of(k):
     """返回 (中文名, 来源)，取不到 (None, None)。"""
+    if k in ZH_OVERRIDE:
+        return ZH_OVERRIDE[k], "mod覆盖"
     if k in ck3_names:
         return ck3_names[k], "CK3文化名"
     if k + "_name" in ck3_hybrid:

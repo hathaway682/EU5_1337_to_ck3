@@ -102,7 +102,7 @@ CULT_RULE = {
     "rusyn_culture":        r(7, "volhynian", "鲁塞尼亚人，按地理入沃里尼亚"),
     "ukrainian":            r(7, "volhynian", "乌克兰，按地理入沃里尼亚"),
     "belarusian":           r(7, "severian", "白俄罗斯，按地理入谢韦里安"),
-    "novgorodian":          r(2, "ilmenian", "诺夫哥罗德=伊尔门"),
+    "novgorodian":          r(2, "russian", "诺夫哥罗德=罗斯；CK3 的 ilmenian 虽有定义但原版 0 省份，不能当落点"),
     "udmurt":               r(6, "komi", "彼尔姆文化组，CK3 只有科米"),
     "moksha":               r(4, "mordvin", "莫尔多瓦语支"),
     "erzya":                r(4, "mordvin", "莫尔多瓦语支"),
@@ -173,7 +173,7 @@ CULT_RULE = {
     # —— 同名异族（名字撞上 CK3，但不是同一个人群，必须显式拦下）——
     "yao_culture":          r(10, "yao_malawi", "非洲瑶族（班图语支，马拉维/莫桑比克），与 CK3 瑶族（苗语支）同名异族", "high"),
     "avar_culture":         r(9, "caucasian_avar", "高加索阿瓦尔人（东北高加索语），与 CK3 潘诺尼亚阿瓦尔（突厥/乌古尔语）同名异族", "high"),
-    "prussian":             r(5, "saxon", "EU5 普鲁士为德语人口（低地德语），非 CK3 的波罗的普鲁士人", "high"),
+    "prussian":             r(9, "prussian_german", "EU5 普鲁士是低地德语的德意志人口，与 CK3 波罗的普鲁士（原版仅 k_lithuania 10 省）同名异族，从萨克森分离另立", "high"),
     "merya":                r(1, "merya", "CK3 有 merya，同名同地"),
     "mossi":                r(1, "mossi", "CK3 有 mossi，同名同地"),
     "she_culture":          r(4, "han", "畲族无 EU5 数据、0 男爵领，按汉语并入汉（另可选 hmong）", "medium"),
@@ -210,15 +210,35 @@ CULT_RULE = {
 
     # —— 突厥语支细分 ——
     # 原先 language_turkic 一律→cuman，把乌兹别克/诺盖/喀山/吉尔吉斯全吞进库曼。
-    # CK3 突厥传承共 19 个（bashkir bolghar chuvash cuman karluk kazak khazar kimek
-    # kipchak kirghiz laktan pecheneg turkish turkmen uyghur yughur uriankhai avar shatuo），
-    # 下列 5 个与 CK3 有明确对应，其余（无 CK3 对应者）仍留 cuman。
-    "kyrgyz_culture":       r(2, "kirghiz", "吉尔吉斯=黠戛斯，CK3 有 kirghiz"),
-    "kazani":               r(7, "bolghar", "喀山鞑靼=伏尔加保加尔后裔，CK3 有 bolghar"),
-    "uzbek_culture":        r(7, "karluk", "乌兹别克属葛逻禄-察合台支，CK3 有 karluk"),
-    "nogai":                r(7, "kipchak", "诺盖属钦察支，CK3 有 kipchak"),
-    "astrakhani":           r(7, "kipchak", "阿斯特拉罕为钦察/诺盖故地，CK3 有 kipchak"),
-    "mishar":               r(7, "kipchak", "米沙鞑靼属钦察支，CK3 有 kipchak"),
+    # 库曼只留 CK3 的 cuman_culture（3 男爵领在匈牙利，符合库曼人西迁史实）。
+    # 钦察语其余文化：带草原族群文化组（steppe_group）的 5 个鞑靼-钦察游牧与蒙古混居，
+    # 对应 CK3 融合名 kazakh（哈萨克＝钦察-蒙古融合体）；不带草原组的走 kipchak。
+    # 注意：CK3 官方中文把 kazakh 译作「乌兹别克」，与本 mod 用法冲突，本地化需覆盖为「哈萨克」。
+    "astrakhani":           r(8, "kazakh", "阿斯特拉罕鞑靼，草原组，钦察-蒙古融合"),
+    "crimean":              r(8, "kazakh", "克里米亚鞑靼，草原组，钦察-蒙古融合"),
+    "kazani":               r(8, "kazakh", "喀山鞑靼，草原组，钦察-蒙古融合"),
+    "mishar":               r(8, "kazakh", "米沙鞑靼，草原组，钦察-蒙古融合"),
+    "nogai":                r(8, "kazakh", "诺盖，草原组，钦察-蒙古融合"),
+
+    # —— 柏柏尔：按地理分配 ——
+    # CK3 原版落点：butr 在 k_tahert(17) k_africa(12) k_anbiya(11) k_sahara(9) k_egypt(7)
+    #   k_maghreb(6) k_hausaland(4) k_songhay(4) k_ghana(1)；
+    # baranis 只在 k_maghreb(15) k_africa(7) k_tahert(2)，即摩洛哥一带。
+    # 故阿尔及利亚/突尼斯/撒哈拉诸族→butr，摩洛哥诸族→baranis。
+    "zenati":               r(6, "butr", "泽纳塔，阿尔及利亚/突尼斯内陆，落 k_tahert（butr 17 : baranis 2）"),
+    "mozabite":             r(6, "butr", "姆扎卜在阿尔及利亚北部撒哈拉，同 k_tahert/k_sahara 的 butr"),
+    "chaoui":               r(6, "butr", "沙维在奥雷斯山（阿尔及利亚东部），同 k_tahert 的 butr"),
+    "eastern_amazigh":      r(6, "butr", "东柏柏尔在突尼斯/的黎波里塔尼亚，CK3 k_africa/k_anbiya 为 butr"),
+    "kabyle":               r(6, "butr", "卡比利亚在阿尔及利亚北部，落 k_tahert（butr 17 : baranis 2）"),
+    "lamtuna_culture":      r(6, "butr", "兰图纳在毛里塔尼亚/西撒哈拉，CK3 k_sahara/k_ghana 为 butr"),
+    "godala_culture":       r(6, "butr", "古达拉在毛里塔尼亚，同 k_sahara/k_songhay 的 butr"),
+    "messufa_culture":      r(6, "butr", "梅苏法在撒哈拉西部，同 k_sahara 的 butr"),
+    "tuareg":               r(6, "butr", "图阿雷格在撒哈拉，同 k_sahara 的 butr"),
+    "sanhaja":              r(6, "baranis", "桑哈贾在摩洛哥/西撒哈拉，CK3 k_maghreb 主体 baranis（15）"),
+    "masmuda":              r(6, "baranis", "马斯穆达为摩洛哥主体柏柏尔，CK3 k_maghreb 主体 baranis（15）"),
+
+    # —— 苏丹-阿拉伯：阿拉伯人 + 努比亚人融合 ——
+    "sudanese_arab":        r(8, "sudanese_arab", "苏丹阿拉伯＝阿拉伯+努比亚融合，CK3 无对应，建融合文化"),
 }
 
 # 名字与 CK3 撞车但不是同一人群的，禁止走「自动同名」
@@ -361,7 +381,7 @@ LANG_RULE = {
     "ancient_greek":            r(1, "macedonian", "古希腊语"),
     # —— 斯拉夫 ——
     "russian_dialect":          r(1, "russian", "俄语"),
-    "novgorodian_dialect":      r(2, "ilmenian", "诺夫哥罗德=伊尔门"),
+    "novgorodian_dialect":      r(2, "russian", "诺夫哥罗德方言=罗斯（ilmenian 原版 0 省份，不可作落点）"),
     "ukrainian_dialect":        r(7, "volhynian", "乌克兰按地理入沃里尼亚"),
     "belarusian_dialect":       r(7, "severian", "白俄罗斯按地理入谢韦里安"),
     "polish_dialect":           r(1, "polish", "波兰语"),
@@ -391,7 +411,7 @@ LANG_RULE = {
     "iraqi_dialect":            r(4, "levantine", "伊拉克阿拉伯语并入黎凡特"),
     "south_arabic_language":    r(4, "yemeni", "南阿拉伯语→也门"),
     "aramaic_language":         r(4, "assyrian", "阿拉米语→亚述"),
-    "tamazight_language":       r(6, "butr", "柏柏尔文化组"),
+    "tamazight_language":       r(6, "butr", "柏柏尔语（兜底 butr；具体文化见 CULT_RULE 按地理分流）"),
     "coptic_language":          r(4, "egyptian", "科普特语属埃及语族"),
     # —— 伊朗 ——
     "persian_language":         r(1, "persian", "波斯语"),
@@ -407,7 +427,7 @@ LANG_RULE = {
     "alan_language":            r(1, "alan", "阿兰语"),
     "daylamite_language":       r(1, "daylamite", "德莱木语"),
     # —— 突厥 / 蒙古 ——
-    "kipchak_language":         r(4, "cuman", "钦察语并入库曼"),
+    "kipchak_language":         r(4, "kipchak", "钦察语→钦察（库曼只留给 cuman_culture，草原组另走 kazakh 融合）"),
     "turkmen_dialect":          r(2, "turkmen", "突厥蛮=土库曼"),
     "oghhuric_language":        r(6, "bolghar", "乌古尔语支→保加尔"),
     "oguric_language":          r(6, "bolghar", "乌古尔语支→保加尔"),
@@ -760,7 +780,7 @@ GROUP_RULE = {
     "shan_group": r(9, "shan", "掸文化，从傣分离"),
     "romani_group": r(9, "romani", "CK3 无罗姆文化"),
     "rhaetian_group": r(7, "cisalpine", "雷蒂亚语按地理入内高卢"),
-    "tatar_group": r(4, "cuman", "鞑靼诸文化并入库曼"),
+    "tatar_group": r(4, "kipchak", "鞑靼诸文化并入钦察（草原组已在 CULT_RULE 分流到 kazakh）"),
     "jewish_group": r(4, "radhanite", "犹太散居，按语言分流（默认拉丹尼特）"),
     "amazigh_group": r(6, "butr", "柏柏尔文化组"),
     "permic_group": r(2, "komi", "彼尔姆语支→科米"),
