@@ -37,6 +37,14 @@
   必须动首府男爵领那一条（例如加济安泰普首府 b_ayntab 是 syriac_culture，
   同领的 dluk 是 armenian 也白搭）。
 
+- **`DEFAULT_MAX_TRADITIONS = 5`**（`common/defines/00_defines.txt`）：文化定义里 traditions
+  最多 5 个。设计新文化时必须数一遍，超了要砍掉一个。
+- **`roman` 有定义无人物**：CK3 原版 `00_latin.txt` 里有 `roman`，但 `history/characters/`
+  全库 0 个角色使用、原版 0 个省份。**`romani` 连文化定义都没有，罗姆人角色也是 0**
+  （`culture = romani|roma|gypsy` 计数为 0，正则只会误撞伏尔加芬兰语的 `muroma`）。
+- **新文化抢显示名时，原版文化必须改名**：已定 `pommeranian`（原「波美拉尼亚」，
+  实为卡舒比人）→「卡舒比」；`prussian`（原「普鲁士」，留给西波罗的古普鲁士）→「古普鲁士」。
+  新文化 `pomeranian` / `prussian_german` 取「波美拉尼亚」/「普鲁士」。
 - **dynasty 是宗族，house 是支系**。角色指支系必须写 `dynasty_house = house_xxx`；
   写 `dynasty = house_xxx` 会让游戏去找同名 dynasty，找不到就 fallback 到 `dynn_adam`。
 - **COA 按 key 自动匹配**，没有 `coat_of_arms_id` 字段。`common/coat_of_arms/coat_of_arms/` 里
@@ -47,6 +55,26 @@
 - 文件名 `zz_` 前缀保证在 `00_` 之后加载，覆盖生效。
 - `common/dynasty_houses/zz_eu5_merged_houses.txt` 被归并成 house 的条目已注释掉，
   分析脚本要读 culture 必须从备份取。
+
+## 文化分类工具链（三段式，顺序不能错）
+
+- `gen_debug/_classify_cultures.py`（出 15 列）→ `_annotate_zh_in_classification.py --apply`
+  （补 name_zh / target_zh / target_zh_src）→ `_culture_classification_report.py`（出 md 报告）。
+  **跳过中间那步，中文三列会被分类器整个冲掉。**
+- **CK3 原版有 22 个「0 省份文化」**：有 culture 定义，但 `history/provinces/*.txt` 里 0 条引用，
+  不能当分类落点（用户 2026-10-20 点名 ilmenian）。清单：gothic ancient_egyptian hebrew hunnic
+  trojan macedonian carthaginian ilmenian severian volhynian frankish suebi ashkenazi sephardi
+  kochinim bavlim roman langobard serer tujia kazak old_saxon。
+  **★ 统计时必须用 `re.finditer(r'(?<![a-z_])culture\s*=\s*(\w+)', line)`，不能只匹配行首。**
+  CK3 大量文化写在日期块里，形如 `960.1.1 = {	culture = norman }`，行首匹配会把
+  norman(7) andalusian(51) galician(10) asturleonese(10) aragonese(6) songhai(21) german(1)
+  全部误判成 0 省份——我第一版就是这么错的，被用户当场纠正。
+- 另一类陷阱：`novgorodian` / `ruthenian` / `belarusian` / `red_ruthenian` 只在
+  `common/culture/creation_names/00_names.txt`（分离文化名）里，**没有 culture 定义**，
+  写进 province 文件是无效 key。CK3 原版东斯拉夫全用 `russian`（k_ruthenia 22 省全 russian，
+  k_novgorod 是 russian 5 + vepsian 5）。
+- CK3 官方中文有怪译：`kazakh_name = "乌兹别克"`（实为钦察-蒙古融合名，应作「哈萨克」），
+  已在 annotate 的 ZH_OVERRIDE 里覆盖。
 
 ## 生成器纪律
 

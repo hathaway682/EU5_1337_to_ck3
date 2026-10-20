@@ -6,17 +6,17 @@
 
 | 类别 | 名称 | 文化数 | 男爵领 | 占比 |
 |---:|---|---:|---:|---:|
-| 1 | 同名同地 | 129 | 4918 | 23.4% |
+| 1 | 同名同地 | 126 | 4785 | 22.7% |
 | 2 | 异名同族 | 29 | 816 | 3.9% |
 | 3 | 同名错位 | 2 | 167 | 0.8% |
-| 4 | 按语言并入 | 320 | 4434 | 21.1% |
-| 5 | 按方言并入 | 42 | 1283 | 6.1% |
-| 6 | 按文化组并入 | 17 | 406 | 1.9% |
-| 7 | 按地理并入 | 145 | 980 | 4.7% |
-| 8 | 需建融合文化 | 23 | 694 | 3.3% |
-| 9 | 需建分离文化 | 75 | 472 | 2.2% |
+| 4 | 按语言并入 | 323 | 4515 | 21.5% |
+| 5 | 按方言并入 | 40 | 1249 | 5.9% |
+| 6 | 按文化组并入 | 18 | 406 | 1.9% |
+| 7 | 按地理并入 | 153 | 1185 | 5.6% |
+| 8 | 需建融合文化 | 17 | 576 | 2.7% |
+| 9 | 需建分离文化 | 73 | 471 | 2.2% |
 | 10 | 图外可参考 | 351 | 1560 | 7.4% |
-| 11 | 图外自创 | 955 | 5316 | 25.3% |
+| 11 | 图外自创 | 956 | 5316 | 25.3% |
 | | **合计** | **2088** | **21046** | **100%** |
 
 ## 二、按大洲 / 大区 × 类别（文化数）
@@ -26,7 +26,7 @@
 | 大洲 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 合计 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | 亚洲 | 56 | 11 | 2 | 211 | 14 | 4 | 128 | 7 | 39 | 29 | 18 | 519 |
-| 欧洲 | 50 | 13 | 0 | 46 | 28 | 2 | 16 | 12 | 3 | 0 | 0 | 170 |
+| 欧洲 | 47 | 13 | 0 | 49 | 26 | 3 | 24 | 6 | 1 | 0 | 1 | 170 |
 | 非洲 | 23 | 5 | 0 | 63 | 0 | 11 | 0 | 4 | 33 | 122 | 19 | 280 |
 | 北美洲 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 462 | 462 |
 | 南美洲 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 268 | 268 |
@@ -45,16 +45,16 @@
 | 东亚 | 8 | 3 | 0 | 80 | 13 | 0 | 1 | 0 | 0 | 3 | 0 | 108 |
 | 中亚北亚 | 8 | 3 | 0 | 13 | 1 | 4 | 3 | 4 | 21 | 21 | 17 | 95 |
 | 南亚 | 14 | 1 | 0 | 43 | 0 | 0 | 28 | 0 | 5 | 0 | 0 | 91 |
-| 西欧 | 25 | 3 | 0 | 21 | 23 | 0 | 9 | 8 | 1 | 0 | 0 | 90 |
+| 西欧 | 24 | 3 | 0 | 23 | 21 | 0 | 14 | 5 | 0 | 0 | 0 | 90 |
 | 中东 | 14 | 2 | 2 | 42 | 0 | 0 | 0 | 4 | 14 | 0 | 0 | 78 |
-| 东欧 | 21 | 5 | 0 | 18 | 2 | 2 | 7 | 4 | 10 | 0 | 0 | 69 |
+| 东欧 | 19 | 5 | 0 | 19 | 2 | 3 | 10 | 1 | 9 | 0 | 1 | 69 |
 | 北欧波罗的 | 7 | 5 | 0 | 10 | 3 | 0 | 0 | 0 | 1 | 0 | 0 | 26 |
 | 无地块 | 1 | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 4 |
 
 
 ## 三、各类别目标文化 Top
 
-### 8 需建融合文化（23 个）
+### 8 需建融合文化（17 个）
 
 | 文化 | 男爵领 | 目标 | 依据 |
 |---|---:|---|---|
@@ -62,27 +62,21 @@
 | turkish_culture（土耳其） | 86 | NEW:anatolian_turkish（安纳托利亚突厥） | EU5 土耳其=突厥蛮+希腊融合，对应 CK3 融合名 anatolian_turkish |
 | nogai（诺盖） | 73 | NEW:kazakh（哈萨克） | 诺盖，草原组，钦察-蒙古融合 |
 | astrakhani（阿斯特拉罕） | 70 | NEW:kazakh（哈萨克） | 阿斯特拉罕鞑靼，草原组，钦察-蒙古融合 |
-| neapolitan（那不勒斯） | 53 | NEW:neapolitan_hybrid（那不勒斯） | 对应 CK3 融合文化名 neapolitan_hybrid |
-| arpitan（阿尔卑坦） | 44 | NEW:arpitan_hybrid（阿尔卑坦） | 对应 CK3 融合文化名 arpitan_hybrid |
 | kazani（喀山） | 41 | NEW:kazakh（哈萨克） | 喀山鞑靼，草原组，钦察-蒙古融合 |
 | tunisian（突尼斯） | 40 | NEW:tunisian_hybrid（突尼斯） | 对应 CK3 融合文化名 tunisian_hybrid |
 | mishar（米萨） | 32 | NEW:kazakh（哈萨克） | 米沙鞑靼，草原组，钦察-蒙古融合 |
 | moroccan（摩洛哥） | 28 | NEW:moroccan_hybrid（摩洛哥） | 对应 CK3 融合文化名 moroccan_hybrid |
+| western_pomeranian（西波美拉尼亚） | 25 | NEW:pomeranian（波美拉尼亚） | 西波美拉尼亚（低地德语）：萨克森+卡舒比融合文化，用户定 |
 | algerian（阿尔及利亚） | 16 | NEW:algerian_hybrid（阿尔及利亚） | 对应 CK3 融合文化名 algerian_hybrid |
-| angevin（安茹） | 16 | NEW:angevin_hybrid（安茹） | 对应 CK3 融合文化名 angevin_hybrid |
-| transylvanian（特兰西瓦尼亚） | 16 | NEW:transylvanian（特兰西瓦尼亚） | 对应 CK3 融合文化名 transylvanian |
-| gallo（加洛） | 14 | NEW:gallo（加洛） | 对应 CK3 融合文化名 gallo |
+| walloon（瓦隆） | 12 | NEW:walloon（瓦隆） | 瓦隆：法兰西+荷兰融合文化（用户定，以法兰西为基础，加乡土观念） |
 | gyalrong_culture（嘉绒） | 11 | NEW:gyalrong（嘉绒） | 对应 CK3 融合文化名 gyalrong |
 | azeri_culture（阿塞拜疆） | 9 | NEW:azeri_hybrid（阿塞拜疆） | 对应 CK3 融合文化名 azeri_hybrid |
-| dalmatian（达尔马提亚） | 9 | NEW:dalmatian_hybrid（达尔马提亚） | 对应 CK3 融合文化名 dalmatian_hybrid |
-| romansh（罗曼什） | 9 | NEW:romansh_hybrid（罗曼什） | 对应 CK3 融合文化名 romansh_hybrid |
+| eastern_pomeranian（东波美拉尼亚） | 9 | NEW:pomeranian（波美拉尼亚） | 东波美拉尼亚（低地德语）：萨克森+卡舒比融合文化，用户定 |
 | sudanese_arab（苏丹‑阿拉伯） | 7 | NEW:sudanese_arab（苏丹‑阿拉伯） | 苏丹阿拉伯＝阿拉伯+努比亚融合，CK3 无对应，建融合文化 |
 | norse_gael（诺斯‑盖尔） | 6 | NEW:norse_gael（诺斯‑盖尔） | 与 CK 融合名同名 |
 | anglo_irish（盎格鲁‑爱尔兰） | 3 | NEW:anglo_irish（盎格鲁‑爱尔兰） | 英爱融合 |
-| aromanian（阿罗马尼亚） | 3 | NEW:aromanian（阿罗马尼亚） | 对应 CK3 融合文化名 aromanian |
-| griko_culture（格里科） | 0 | NEW:griko_hybrid（意大利‑希腊） | 对应 CK3 融合文化名 griko_hybrid |
 
-### 9 需建分离文化（75 个）
+### 9 需建分离文化（73 个）
 
 | 文化 | 男爵领 | 目标 | 依据 |
 |---|---:|---|---|
@@ -149,7 +143,7 @@
 | makassarese_culture（望加锡） | 3 | bugis（布吉） | 布吉语=布吉斯 |
 | mandarese_culture（曼达里） | 3 | bugis（布吉） | 布吉语=布吉斯 |
 
-### 6 按文化组并入（17 个）
+### 6 按文化组并入（18 个）
 
 | 文化 | 男爵领 | 目标 | 依据 |
 |---|---:|---|---|
@@ -170,36 +164,37 @@
 | messufa_culture（梅苏法） | 7 | butr（布特尔） | 梅苏法在撒哈拉西部，同 k_sahara 的 butr |
 | godala_culture（戈达拉） | 6 | butr（布特尔） | 古达拉在毛里塔尼亚，同 k_sahara/k_songhay 的 butr |
 | oroch_culture（奥罗奇） | 4 | jurchen（女真） | 乌德盖属通古斯，并入女真 |
+| besermyan（贝谢尔曼） | 0 | komi（彼尔姆） | 别谢尔米亚人属彼尔姆文化组（乌德穆尔特一支），随彼尔姆 |
 
-### 7 按地理并入（145 个）
+### 7 按地理并入（153 个）
 
 | 文化 | 男爵领 | 目标 | 依据 |
 |---|---:|---|---|
-| smolenskian_culture（斯摩棱斯克） | 80 | severian（谢韦里亚） | 白俄罗斯按地理入谢韦里安 |
-| ruthenian（鲁塞尼亚） | 76 | volhynian（沃利尼亚） | 乌克兰按地理入沃里尼亚 |
-| polesian_culture（波列西耶） | 70 | severian（谢韦里亚） | 白俄罗斯按地理入谢韦里安 |
+| smolenskian_culture（斯摩棱斯克） | 80 | russian（罗斯） | 白俄罗斯方言，CK3 原版东斯拉夫一律 russian（severian 原版 0 省份） |
+| ruthenian（鲁塞尼亚） | 76 | russian（罗斯） | 乌克兰方言，CK3 原版东斯拉夫一律 russian（volhynian 原版 0 省份） |
+| polesian_culture（波列西耶） | 70 | russian（罗斯） | 白俄罗斯方言，CK3 原版东斯拉夫一律 russian（severian 原版 0 省份） |
 | amdowa_culture（安多） | 65 | sumpa（苏毗） | 安多，CK3 k_amdo 有 sumpa（30），苏毗即安多/青唐故地 |
-| polatskian_culture（波洛茨克） | 59 | severian（谢韦里亚） | 白俄罗斯按地理入谢韦里安 |
-| halychian_culture（哈利奇） | 35 | volhynian（沃利尼亚） | 乌克兰按地理入沃里尼亚 |
-| emilian（艾米利亚） | 26 | cisalpine（山南） | 艾米利亚按地理入内高卢 |
+| polatskian_culture（波洛茨克） | 59 | russian（罗斯） | 白俄罗斯方言，CK3 原版东斯拉夫一律 russian（severian 原版 0 省份） |
+| severian（谢韦里亚） | 56 | russian（罗斯） | 谢韦里安，CK3 的 severian 原版 0 省份，k_ruthenia 22 省全 russian |
+| neapolitan（那不勒斯） | 53 | sicilian（西西里） | 那不勒斯语，按用户定入西西里（新文化列为备选，意大利 DLC 未出） |
+| volhynian_culture（沃里尼亚） | 41 | russian（罗斯） | 沃里尼亚，CK3 的 volhynian 原版 0 省份，k_ruthenia 22 省全 russian |
+| lombard（伦巴第） | 36 | cisalpine（山南） | 伦巴第语属高卢-意大利语支，按用户定入山南 |
+| halychian_culture（哈利奇） | 35 | russian（罗斯） | 乌克兰方言，CK3 原版东斯拉夫一律 russian（volhynian 原版 0 省份） |
+| emilian（艾米利亚） | 26 | cisalpine（山南） | 艾米利亚语属高卢-意大利语支，入山南 |
 | kayan_culture（卡扬） | 23 | dayak（达雅） | 卡扬语按地理入达雅 |
 | ngaju_culture（雅朱） | 22 | dayak（达雅） | 巴里托语按地理入达雅 |
-| venetian（威尼斯） | 20 | cisalpine（山南） | 威尼托按地理入内高卢 |
+| venetian（威尼斯） | 20 | cisalpine（山南） | 威尼托语属高卢-意大利语支，入山南 |
 | newar_culture（尼瓦尔） | 19 | nepali（尼波罗） | 尼瓦尔，CK3 k_himalaya 有 culture = nepali #Newar |
 | batak_culture（巴塔克） | 17 | malay（末罗瑜） | 巴塔克语按地理入马来 |
 | minangkabau_culture（米南加保） | 17 | malay（末罗瑜） | 米南加保语按地理入马来 |
 | bhil（比尔） | 16 | rajput（罗阇萨傥那） | 比尔语按地理入拉杰普特 |
-| piedmontese（皮埃蒙特） | 16 | cisalpine（山南） | 皮埃蒙特按地理入内高卢 |
+| piedmontese（皮埃蒙特） | 16 | cisalpine（山南） | 皮埃蒙特语属高卢-意大利语支，入山南 |
 | sundanese_culture（巽他） | 16 | javanese（阇婆） | 巽他语按地理入爪哇 |
 | banjar_culture（班贾尔） | 15 | malay（末罗瑜） | 班贾尔语按地理入马来 |
 | dusun_culture（杜顺） | 15 | dayak（达雅） | 婆罗洲语按地理入达雅 |
 | sorbian（索布） | 13 | polabian（波拉布） | 索布与波拉布地理相邻 |
 | iban_culture（伊班） | 11 | dayak（达雅） | 伊班语按地理入达雅 |
 | lampung_culture（楠榜） | 11 | malay（末罗瑜） | 楠榜语按地理入马来 |
-| romagnol（罗马涅） | 10 | cisalpine（山南） | 罗马涅按地理入内高卢 |
-| ligurian（利古里亚） | 9 | cisalpine（山南） | 利古里亚按地理入内高卢 |
-| ngalop_culture（阿洛） | 9 | lhomon（珞门） | 阿洛=不丹主体民族，CK3 k_lhomon 全为 lhomon |
-| corsican（科西嘉） | 8 | cisalpine（山南） | 科西嘉按地理入内高卢 |
 
 ## 四、需人工裁定
 
@@ -214,7 +209,7 @@
 |---|---:|---|---|
 | avar_culture（阿瓦尔） | 9 | NEW:caucasian_avar（高加索阿瓦尔） | 高加索阿瓦尔人（东北高加索语），与 CK3 潘诺尼亚阿瓦尔（突厥/乌古尔语）同名异族 |
 | khorezmian_culture（花剌子模） | 3 | karluk（葛逻禄） | CK3 khwarezmian 是东伊朗语（斯基泰语支），EU5 花剌子模已突厥化、讲葛逻禄语 |
-| prussian（普鲁士） | 9 | NEW:prussian_german（德意志普鲁士） | EU5 普鲁士是低地德语的德意志人口，与 CK3 波罗的普鲁士（原版仅 k_lithuania 10 省）同名异族，从萨克森分离另立 |
+| prussian（普鲁士） | 9 | NEW:prussian_german（德意志普鲁士） | EU5 普鲁士是低地德语的德意志人口，与 CK3 波罗的普鲁士（原版仅 k_lithuania 10 省）同名异族，从萨克森分离另立（圣战产 |
 | turkmen_culture（土库曼） | 3 | turkish（乌古斯） | EU5 土库曼≠CK 同名 turkmen；CK3 的 turkish 显示名就是「乌古斯」，指乌古斯人 |
 | yao_culture（亚奥） | 9 | NEW:yao_malawi（马拉维瑶） | 非洲瑶族（班图语支，马拉维/莫桑比克），与 CK3 瑶族（苗语支）同名异族；CK3 地图内，从同语系文化分离 |
 
@@ -357,4 +352,80 @@
 | 文化 | 男爵领 | 类别 | 目标 | 依据 |
 |---|---:|---:|---|---|
 | sudanese_arab（苏丹‑阿拉伯） | 7 | 8 | NEW:sudanese_arab（苏丹‑阿拉伯） | 苏丹阿拉伯＝阿拉伯+努比亚融合，CK3 无对应，建融合文化 |
+
+### 4.6 欧洲落实方案（2026-10-21 用户定）
+
+本节把用户的欧洲方案落到分类表。**新文化的 definition 与本地化尚未落游戏**，只在分类层确定落点与设计。
+
+#### 一、本轮改动的落点
+
+| 文化 | 男爵领 | 原落点 | 现落点 | 依据 |
+|---|---:|---|---|---|
+| walloon（瓦隆） | 12 | 4 法兰西 | NEW:walloon（瓦隆） | 瓦隆：法兰西+荷兰融合文化（用户定，以法兰西为基础，加乡土观念） |
+| gallo（加洛） | 14 | 8 加洛 | french（法兰西） | 加洛属奥依语；融合文化列为备选（规模过小），暂并入法兰西 |
+| angevin（安茹） | 16 | 8 安茹 | french（法兰西） | 安茹方言属奥依语；安茹融合列为备选，暂并入法兰西 |
+| arpitan（阿尔卑坦） | 44 | 8 阿尔卑坦 | occitan（奥克） | 阿尔卑坦语属奥克-罗曼；因意大利 DLC 暂不建，按语支入奥克 |
+| lombard（伦巴第） | 36 | 1 伦巴第 | cisalpine（山南） | 伦巴第语属高卢-意大利语支，按用户定入山南 |
+| southern_gallo_italic（高卢‑意大利） | 0 | 4 伦巴第 | cisalpine（山南） | 南高卢-意大利语，按用户定入山南 |
+| corsican（科西嘉） | 8 | 7 山南 | sardinian（撒丁） | 科西嘉语，按用户定与萨丁同归撒丁 |
+| neapolitan（那不勒斯） | 53 | 8 那不勒斯 | sicilian（西西里） | 那不勒斯语，按用户定入西西里（新文化列为备选，意大利 DLC 未出） |
+| maltese（马耳他） | 1 | 9 马耳他 | sicilian（西西里） | 马耳他语，按用户定入西西里（仅一个岛，不单独建文化） |
+| romansh（罗曼什） | 9 | 8 罗曼什 | cisalpine（山南） | 罗曼什属雷蒂亚语；新文化列为备选（意大利 DLC 未出），按语支入山南 |
+| griko_culture（格里科） | 0 | 8 格里科 | italian（意大利） | 格里科（南意希腊语残留）人数过少无地块，不建文化，归意大利 |
+| italki（意大利犹太） | 0 | 4 伦巴第 | radhanite（拉赞尼亚） | 意大利犹太人语言，属犹太散居，随拉丹尼特 |
+| transylvanian（特兰西瓦尼亚） | 16 | 8 特兰西瓦尼亚 | vlach（瓦拉几亚） | 特兰西瓦尼亚（罗马尼亚+匈牙利）列为备选，本轮并入瓦拉几亚 |
+| aromanian（阿罗马尼亚） | 3 | 8 阿罗马尼亚 | vlach（瓦拉几亚） | 阿罗马尼亚人数过少，不建，并入瓦拉几亚 |
+| dalmatian（达尔马提亚） | 9 | 8 达尔马提亚 | croatian（克罗地亚） | 达尔马提亚语规模过小不建，按地理入克罗地亚 |
+| western_pomeranian（西波美拉尼亚） | 25 | 5 萨克森 | NEW:pomeranian（波美拉尼亚） | 西波美拉尼亚（低地德语）：萨克森+卡舒比融合文化，用户定 |
+| eastern_pomeranian（东波美拉尼亚） | 9 | 5 萨克森 | NEW:pomeranian（波美拉尼亚） | 东波美拉尼亚（低地德语）：萨克森+卡舒比融合文化，用户定 |
+| ingrian（英格里亚） | 6 | 4 芬兰 | karelian（卡累利阿） | 因格里亚，用户定与卡累利阿同归卡累利阿 |
+| besermyan（贝谢尔曼） | 0 | 4 芬兰 | komi（彼尔姆） | 别谢尔米亚人属彼尔姆文化组（乌德穆尔特一支），随彼尔姆 |
+| romani_culture（罗姆） | 0 | 9 罗姆 | NEW:romani（罗姆） | CK3 原版无 romani 文化定义、无罗姆人角色（已查 history/characters），且 0  |
+
+语言规则层同步修正：`francique_dialect` 由法兰克尼亚改为法兰西（EU5 的 francique 实为奥依语支，语言柱误挂 `language_high_german`）；`lombard_dialect` 由伦巴第改为山南；`maltese_dialect` 由马耳他改为西西里。
+
+#### 二、确定新建的 5 个文化
+
+| key | 中文 | 类型 | 来源 | heritage | language | ethos | traditions（基础文化原版 → 调整后） |
+|---|---|---|---|---|---|---|---|
+| `anglo_irish` | 盎格鲁-爱尔兰 | 融合 | 英格兰 + 爱尔兰 | west_germanic | anglic | bureaucratic | 英格兰 4（hereditary_hierarchy / chivalry / castle_keepers / longbow_competitions） − 长弓竞赛 + 牧人 / 优美诗歌 / 海洋重商主义 = **6 个（超上限，见第五节）** |
+| `norse_gael` | 诺斯-盖尔 | 融合 | 诺斯 + 盖尔 | goidelic | goidelic | bellicose | 盖尔 5（fishermen / hill_dwellers / highland_warriors / strong_kinship / concubines） − 高地战士 − 丘陵居民 + 沿海战士 / 海洋重商主义 = **5 个** |
+| `pomeranian` | 波美拉尼亚 | 融合 | 萨克森 + 卡舒比 | central_germanic | saxon | stoic | 萨克森 3（stand_and_fight / ruling_caste / religious_patronage） − 统治阶层 + 海洋重商主义 = **3 个** |
+| `walloon` | 瓦隆 | 融合 | 法兰西 + 荷兰 | frankish | french | courtly | 法兰西 3（chanson_de_geste / hereditary_hierarchy / chivalry） + 乡土观念 = **4 个** |
+| `prussian_german` | 普鲁士 | 分离 | 萨克森（不融合，圣战产物） | central_germanic | saxon | stoic | 萨克森 3（stand_and_fight / ruling_caste / religious_patronage） + 以剑之名 = **4 个** |
+
+traditions 中文对照：长弓竞赛 `tradition_longbow_competitions`、牧人 `tradition_pastoralists`、优美诗歌 `tradition_poetry`、海洋重商主义 `tradition_maritime_mercantilism`、统治阶层 `tradition_ruling_caste`、高地战士 `tradition_highland_warriors`、丘陵居民 `tradition_hill_dwellers`、沿海战士 `tradition_fp1_coastal_warriors`、乡土观念 `tradition_parochialism`、以剑之名 `tradition_by_the_sword`。
+
+#### 三、备选新文化（本轮不建）与设计提议
+
+| key | 中文 | 来源 | 提议的 traditions | 理由 |
+|---|---|---|---|---|
+| `silesian` | 西里西亚 | 波兰 + 捷克 | hussar / xenophilic / mountaineer_ruralism / hard_working | 波兰原版只有 hussar + xenophilic；补苏台德山地的「山地农田」与捷克的「勤劳」，贴合三方交界的矿区山地 |
+| `northumbrian` | 诺森伯兰 | 英格兰 + 诺斯 | chivalry / castle_keepers / longbow_competitions / stand_and_fight | 去掉英格兰的 hereditary_hierarchy，保留边境城堡与长弓，加诺斯的「坚守阵地」体现丹麦法区血统 |
+| `anjou` | 安茹 | 法兰西 + 诺曼 | chanson_de_geste / hereditary_hierarchy / chivalry / ruling_caste | 以法兰西三项为底，取诺曼的「统治阶层」对应安茹帝国跨海而治的贵族结构 |
+| `gallo` | 加洛 | 法兰西 + 布列塔尼 | chanson_de_geste / hereditary_hierarchy / chivalry / storytellers | 以法兰西三项为底，取布列塔尼的「说书人」体现布列塔尼边疆的奥依语口传传统 |
+| `transylvanian` | 特兰西瓦尼亚 | 罗马尼亚 + 匈牙利 | pastoralists / zealous_people / xenophilic / mountaineer_ruralism | 瓦拉几亚四项去 hussar（轻骑兵是匈牙利特征），换「山地农田」贴合喀尔巴阡山内盆地 |
+
+#### 四、不建清单与原因（用户定）
+
+| 文化 | 原因 |
+|---|---|
+| 格里科 | 人数过少、无省份；意大利将在下个 DLC 更新，谨慎行事 |
+| 阿尔卑坦 | 意大利 DLC 原因 |
+| 那不勒斯 | 意大利 DLC 原因 |
+| 罗曼什 | 意大利 DLC 原因 |
+| 达尔马提亚 | 规模过小 |
+| 阿罗马尼亚 | 人数实在过少 |
+| 马耳他 | 只有一个岛，太小 |
+| 喀山 | 和其他草原民族一并处理，不算欧洲事务 |
+| 罗姆 | 流浪者文化，无地且难以设计 |
+| 安茹 / 加洛 / 特兰西瓦尼亚 / 西里西亚 / 诺森伯兰 | 列为备选，本轮不建 |
+
+#### 五、可行性检验结论
+
+1. **罗姆人无人物**：CK3 原版 `common/culture/cultures/` 无 `romani` 定义；`history/characters/` 全库 `culture = romani|roma|gypsy` 计数为 **0**（正则只误撞到伏尔加芬兰语的 `muroma`）。故 `romani_culture` 无落点，标 cat11 占位，0 男爵领。
+2. **罗马有定义无人物**：CK3 原版 `roman` 在 `00_latin.txt` 有定义，但 `history/characters/` 里 **0 个角色**使用、原版 **0 个省份**。`roman_culture → roman` 可以落，但游戏里不会有历史角色自带该文化，也不会自动出现在地图上。
+3. **两处本地化必须让位**：CK3 `pommeranian`（显示「波美拉尼亚」）实为 EU5 卡舒比，新融合文化 `pomeranian` 也要「波美拉尼亚」→ 原 `pommeranian` 本地化需改为「卡舒比」；CK3 `prussian`（显示「普鲁士」）留给西波罗的，新分离文化 `prussian_german` 要「普鲁士」→ 原 `prussian` 本地化需改为「古普鲁士」。两者若不改会重名。
+4. **traditions 上限 5**：`common/defines/00_defines.txt` 的 `DEFAULT_MAX_TRADITIONS = 5`。盎格鲁-爱尔兰按用户配方为 6 个，超 1 个，需从 hereditary_hierarchy / chivalry / castle_keepers 三者中再砍一个（建议砍 castle_keepers，诺曼城堡特征与英爱边疆殖民者气质最远）。
+5. **沿海战士属 DLC 内容**：`tradition_fp1_coastal_warriors` 定义在 `01_fp1_traditions.txt`，为 Fate of Iberia 的内容。mod 假定全 DLC 可用；若需照顾无 DLC 环境，可换 `tradition_seafaring`（航海家）。
 

@@ -91,22 +91,25 @@ CULT_RULE = {
     "kochini":              r(2, "kochinim", "科钦犹太人"),
     "gothic_culture":       r(1, "gothic", "克里米亚哥特"),
     "coptic_culture":       r(4, "egyptian", "科普特语属埃及语族"),
-    "maltese":              r(9, "maltese", "马耳他语为阿拉伯语支，CK3 无对应"),
-    "romani":               r(9, "romani", "CK3 无罗姆文化"),
+    "maltese":              r(7, "sicilian", "马耳他语，按用户定入西西里（仅一个岛，不单独建文化）"),
+    "romani":               r(11, "romani", "CK3 原版无 romani 文化定义、无罗姆人角色（已查 history/characters），且 0 男爵领，不建"),
     "icelandic":            r(4, "norwegian", "CK3 无冰岛文化，按北日耳曼并入挪威"),
     "silesian":             r(5, "polish", "西里西亚方言属莱赫语支"),
     "sorbian":              r(7, "polabian", "索布与波拉布地理相邻"),
     "sorb":                 r(7, "polabian", "索布与波拉布地理相邻"),
     "kashubian":            r(2, "pommeranian", "卡舒比=波美拉尼亚"),
     "slovak":               r(2, "slovien", "斯洛伐克=slovien"),
-    "rusyn_culture":        r(7, "volhynian", "鲁塞尼亚人，按地理入沃里尼亚"),
-    "ukrainian":            r(7, "volhynian", "乌克兰，按地理入沃里尼亚"),
-    "belarusian":           r(7, "severian", "白俄罗斯，按地理入谢韦里安"),
+    "rusyn_culture":        r(7, "russian", "鲁塞尼亚人，CK3 原版东斯拉夫一律 russian（volhynian 原版 0 省份）"),
+    "ukrainian":            r(7, "russian", "乌克兰，CK3 原版东斯拉夫一律 russian（volhynian 原版 0 省份）"),
+    "belarusian":           r(7, "russian", "白俄罗斯，CK3 原版东斯拉夫一律 russian（severian 原版 0 省份）"),
+    "volhynian_culture":    r(7, "russian", "沃里尼亚，CK3 的 volhynian 原版 0 省份，k_ruthenia 22 省全 russian"),
+    "severian":             r(7, "russian", "谢韦里安，CK3 的 severian 原版 0 省份，k_ruthenia 22 省全 russian"),
     "novgorodian":          r(2, "russian", "诺夫哥罗德=罗斯；CK3 的 ilmenian 虽有定义但原版 0 省份，不能当落点"),
     "udmurt":               r(6, "komi", "彼尔姆文化组，CK3 只有科米"),
     "moksha":               r(4, "mordvin", "莫尔多瓦语支"),
     "erzya":                r(4, "mordvin", "莫尔多瓦语支"),
-    "ingrian":              r(4, "finnish", "因格里亚芬兰语"),
+    "ingrian":              r(4, "karelian", "因格里亚，用户定与卡累利阿同归卡累利阿"),
+    "besermyan":            r(6, "komi", "别谢尔米亚人属彼尔姆文化组（乌德穆尔特一支），随彼尔姆"),
     "livonian":             r(4, "estonian", "利沃尼亚语属南芬兰语支"),
     "votic":                r(4, "finnish", "沃提克语属芬兰语支"),
     "gutnish":              r(4, "swedish", "哥特兰语属北日耳曼"),
@@ -115,29 +118,56 @@ CULT_RULE = {
     "montenegrin":          r(4, "serbian", "黑山属塞尔维亚语"),
     "megleno_romanian":     r(4, "vlach", "属弗拉赫"),
     "istroromanian":        r(4, "vlach", "属弗拉赫"),
-    "ladin":                r(7, "cisalpine", "拉登语按地理入内高卢"),
-    "friulian":             r(7, "cisalpine", "弗留利按地理入内高卢"),
-    "cosentino":            r(7, "sicilian", "南意按地理入西西里"),
+    # —— 巴尔干（用户 2026-10-21 定）——
+    # 罗马尼亚语系一律 → 瓦拉几亚（vlach）；匈牙利+塞凯伊 → 匈牙利；希腊语 → 希腊。
+    # 特兰西瓦尼亚 / 阿罗马尼亚 / 达尔马提亚均为备选，本轮不建。
+    "transylvanian":        r(4, "vlach", "特兰西瓦尼亚（罗马尼亚+匈牙利）列为备选，本轮并入瓦拉几亚"),
+    "aromanian":            r(4, "vlach", "阿罗马尼亚人数过少，不建，并入瓦拉几亚"),
+    "dalmatian":            r(7, "croatian", "达尔马提亚语规模过小不建，按地理入克罗地亚"),
+    # —— 意大利（用户 2026-10-21 定）——
+    # 高卢-意大利语支 → 山南（cisalpine）；西西里/那不勒斯/马耳他 → 西西里；
+    # 撒丁/科西嘉 → 撒丁；其余意大利语 → 意大利。
+    # 意大利 DLC 未出，本轮不建任何新意大利文化（格里科/那不勒斯/罗曼什/阿尔卑坦一律不建）。
+    "ladin":                r(7, "cisalpine", "拉登语属雷蒂亚语，按地理入山南"),
+    "friulian":             r(7, "cisalpine", "弗留利语属雷蒂亚语，按地理入山南"),
+    "romansh":              r(7, "cisalpine", "罗曼什属雷蒂亚语；新文化列为备选（意大利 DLC 未出），按语支入山南"),
+    "lombard":              r(7, "cisalpine", "伦巴第语属高卢-意大利语支，按用户定入山南"),
+    "southern_gallo_italic": r(7, "cisalpine", "南高卢-意大利语，按用户定入山南"),
+    "venetian":             r(7, "cisalpine", "威尼托语属高卢-意大利语支，入山南"),
+    "ligurian":             r(7, "cisalpine", "利古里亚语属高卢-意大利语支，入山南"),
+    "piedmontese":          r(7, "cisalpine", "皮埃蒙特语属高卢-意大利语支，入山南"),
+    "emilian":              r(7, "cisalpine", "艾米利亚语属高卢-意大利语支，入山南"),
+    "romagnol":             r(7, "cisalpine", "罗马涅语属高卢-意大利语支，入山南"),
+    "marchigiano":          r(7, "cisalpine", "马尔凯语属高卢-意大利语支，入山南"),
+    "cosentino":            r(7, "sicilian", "南意卡拉布里亚，按用户定入西西里"),
+    "neapolitan":           r(7, "sicilian", "那不勒斯语，按用户定入西西里（新文化列为备选，意大利 DLC 未出）"),
     "sicilian":             r(1, "sicilian", "同名"),
-    "venetian":             r(7, "cisalpine", "威尼托按地理入内高卢"),
-    "ligurian":             r(7, "cisalpine", "利古里亚按地理入内高卢"),
-    "piedmontese":          r(7, "cisalpine", "皮埃蒙特按地理入内高卢"),
-    "emilian":              r(7, "cisalpine", "艾米利亚按地理入内高卢"),
-    "romagnol":             r(7, "cisalpine", "罗马涅按地理入内高卢"),
-    "marchigiano":          r(7, "cisalpine", "马尔凯按地理入内高卢"),
     "tuscan":               r(4, "italian", "托斯卡纳语=意大利标准语"),
-    "median_dialect":       r(4, "italian", "中意大利方言"),
-    "corsican":             r(7, "cisalpine", "科西嘉按地理入内高卢"),
+    "median_dialect":       r(4, "italian", "中意大利方言，归意大利"),
+    "corsican":             r(7, "sardinian", "科西嘉语，按用户定与萨丁同归撒丁"),
     "sardinian":            r(1, "sardinian", "同名"),
     "sassarese":            r(1, "sardinian", "撒丁岛"),
     "gallurese":            r(1, "sardinian", "撒丁岛"),
-    "walloon":              r(4, "french", "瓦隆语属奥依语（EU5 归法兰克方言，取罗曼实际）"),
+    "griko_culture":        r(4, "italian", "格里科（南意希腊语残留）人数过少无地块，不建文化，归意大利"),
+    "italki":               r(4, "radhanite", "意大利犹太人语言，属犹太散居，随拉丹尼特"),
+    # 无地意大利银行家族文化（0 男爵领），用户定一律归意大利
+    "acciaioli_bank_culture": r(4, "italian", "佛罗伦萨阿恰约利银行家族，无地，归意大利"),
+    "bardi_bank_culture":     r(4, "italian", "佛罗伦萨巴尔迪银行家族，无地，归意大利"),
+    "peruzzi_bank_culture":   r(4, "italian", "佛罗伦萨佩鲁齐银行家族，无地，归意大利"),
+    # 拉丁（EU5 roman_culture，拜占庭境内的拉丁语人群）→ CK3 roman
+    # 注：CK3 原版 roman 有文化定义，但 history/characters 里 0 个角色使用、0 个省份，属空定义文化
+    "roman_culture":          r(2, "roman", "拉丁＝罗马；CK3 原版 roman 有定义但无省份无角色，用户点名要 roman"),
+    "walloon":              r(8, "walloon", "瓦隆：法兰西+荷兰融合文化（用户定，以法兰西为基础，加乡土观念）"),
     # EU5 的 francique_dialect 是奥依语支（francien，含香槟/洛林/皮卡第/瓦隆），
     # 不是日耳曼的法兰克尼亚。语言柱被错挂成 language_high_german
     # （见 _eu5_language_to_ck3.py 第 92 行），此处按实际语支落 french。
     "champenais":           r(5, "french", "香槟方言属奥依语（语言柱误挂 high_german，实为 francique=奥依）"),
     "lorrain":              r(5, "french", "洛林方言属奥依语（同上）"),
     "picard":               r(5, "french", "皮卡第方言属奥依语（同上）"),
+    # —— 法国：用户 2026-10-21 定的备选新文化，本轮均不建，回到所属语支 ——
+    "gallo":                r(4, "french", "加洛属奥依语；融合文化列为备选（规模过小），暂并入法兰西"),
+    "angevin":              r(4, "french", "安茹方言属奥依语；安茹融合列为备选，暂并入法兰西"),
+    "arpitan":              r(4, "occitan", "阿尔卑坦语属奥克-罗曼；因意大利 DLC 暂不建，按语支入奥克"),
     "luxembourgeois":       r(5, "franconian", "卢森堡语属中德方言"),
     "alsatian":             r(5, "swabian", "阿尔萨斯语属阿勒曼尼"),
     "swiss_german":         r(5, "swabian", "瑞士德语属阿勒曼尼"),
@@ -173,7 +203,15 @@ CULT_RULE = {
     # —— 同名异族（名字撞上 CK3，但不是同一个人群，必须显式拦下）——
     "yao_culture":          r(10, "yao_malawi", "非洲瑶族（班图语支，马拉维/莫桑比克），与 CK3 瑶族（苗语支）同名异族", "high"),
     "avar_culture":         r(9, "caucasian_avar", "高加索阿瓦尔人（东北高加索语），与 CK3 潘诺尼亚阿瓦尔（突厥/乌古尔语）同名异族", "high"),
-    "prussian":             r(9, "prussian_german", "EU5 普鲁士是低地德语的德意志人口，与 CK3 波罗的普鲁士（原版仅 k_lithuania 10 省）同名异族，从萨克森分离另立", "high"),
+    # —— 德国波罗的海沿岸（用户 2026-10-21 定）——
+    # EU5 的波美拉尼亚（western/eastern_pomeranian）是低地德语的德意志人口，
+    # 与 CK3 的 pommeranian（实为莱赫语的卡舒比人，见 kashubian）不是同一人群
+    # → 新建 萨克森+卡舒比 融合文化，本地化取「波美拉尼亚」。
+    # EU5 的 prussian 是低地德语德意志人口，与 CK3 波罗的古普鲁士同名异族
+    # → 从萨克森分离（圣战产物，不融合），本地化取「普鲁士」。
+    "western_pomeranian":   r(8, "pomeranian", "西波美拉尼亚（低地德语）：萨克森+卡舒比融合文化，用户定"),
+    "eastern_pomeranian":   r(8, "pomeranian", "东波美拉尼亚（低地德语）：萨克森+卡舒比融合文化，用户定"),
+    "prussian":             r(9, "prussian_german", "EU5 普鲁士是低地德语的德意志人口，与 CK3 波罗的普鲁士（原版仅 k_lithuania 10 省）同名异族，从萨克森分离另立（圣战产物，不融合）", "high"),
     "merya":                r(1, "merya", "CK3 有 merya，同名同地"),
     "mossi":                r(1, "mossi", "CK3 有 mossi，同名同地"),
     "she_culture":          r(4, "han", "畲族无 EU5 数据、0 男爵领，按汉语并入汉（另可选 hmong）", "medium"),
@@ -326,7 +364,10 @@ LANG_RULE = {
     "central_german_dialect":   r(5, "franconian", "中德方言→法兰克尼亚"),
     "upper_german_dialect":     r(5, "bavarian", "上德方言→巴伐利亚"),
     "alemannic_dialect":        r(5, "swabian", "阿勒曼尼→施瓦本"),
-    "francique_dialect":        r(5, "franconian", "法兰克方言→法兰克尼亚"),
+    # EU5 的 francique 是奥依语支（francien，含香槟/洛林/皮卡第/瓦隆），
+    # 不是日耳曼的法兰克尼亚。语言柱被错挂成 language_high_german
+    # （见 _eu5_language_to_ck3.py 第 92 行），此处按实际语支落 french。
+    "francique_dialect":        r(5, "french", "法兰克方言实为奥依语支→法兰西（语言柱误挂 high_german）"),
     "dutch_dialect":            r(1, "dutch", "荷兰语"),
     "frisian_language":         r(1, "frisian", "弗里斯兰语"),
     "yiddish_dialect":          r(2, "ashkenazi", "意第绪=阿什肯纳兹"),
@@ -362,7 +403,7 @@ LANG_RULE = {
     "roman_dialect":            r(1, "roman", "罗马"),
     "sicilian_dialect":         r(1, "sicilian", "西西里"),
     "neapolitan_dialect":       r(7, "sicilian", "那不勒斯按地理入西西里"),
-    "lombard_dialect":          r(1, "lombard", "伦巴第"),
+    "lombard_dialect":          r(7, "cisalpine", "伦巴第语属高卢-意大利语支→山南"),
     "ligurian_dialect":         r(7, "cisalpine", "利古里亚→内高卢"),
     "piedmontese_dialect":      r(7, "cisalpine", "皮埃蒙特→内高卢"),
     "emilian_dialect":          r(7, "cisalpine", "艾米利亚→内高卢"),
@@ -372,7 +413,7 @@ LANG_RULE = {
     "median_dialect":           r(4, "italian", "中意大利方言"),
     "dalmatian_dialect":        r(7, "croatian", "达尔马提亚按地理入克罗地亚"),
     "rhaetian_dialect":         r(7, "cisalpine", "雷蒂亚语→内高卢"),
-    "maltese_dialect":          r(9, "maltese", "马耳他语需独立文化"),
+    "maltese_dialect":          r(7, "sicilian", "马耳他语按用户定入西西里"),
     "istriot_dialect":          r(7, "cisalpine", "伊斯特里亚→内高卢"),
     "sardinian_dialect":        r(1, "sardinian", "撒丁"),
     # —— 希腊 ——
@@ -382,8 +423,8 @@ LANG_RULE = {
     # —— 斯拉夫 ——
     "russian_dialect":          r(1, "russian", "俄语"),
     "novgorodian_dialect":      r(2, "russian", "诺夫哥罗德方言=罗斯（ilmenian 原版 0 省份，不可作落点）"),
-    "ukrainian_dialect":        r(7, "volhynian", "乌克兰按地理入沃里尼亚"),
-    "belarusian_dialect":       r(7, "severian", "白俄罗斯按地理入谢韦里安"),
+    "ukrainian_dialect":        r(7, "russian", "乌克兰方言，CK3 原版东斯拉夫一律 russian（volhynian 原版 0 省份）"),
+    "belarusian_dialect":       r(7, "russian", "白俄罗斯方言，CK3 原版东斯拉夫一律 russian（severian 原版 0 省份）"),
     "polish_dialect":           r(1, "polish", "波兰语"),
     "kashubian_dialect":        r(2, "pommeranian", "卡舒比=波美拉尼亚"),
     "slovak_dialect":           r(2, "slovien", "斯洛伐克=slovien"),

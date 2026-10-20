@@ -95,6 +95,9 @@ MANUAL = {
     "gen_culture_unsettled": "无主之地",
     "iraqw":          "伊拉库",
     "prussian_german": "德意志普鲁士",
+    # 新融合文化：萨克森+卡舒比。本地化取「波美拉尼亚」，原 CK3 pommeranian
+    # （实为卡舒比人）的本地化需改为「卡舒比」，两者不可同名。
+    "pomeranian":     "波美拉尼亚",
 }
 
 
