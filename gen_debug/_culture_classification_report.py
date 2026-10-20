@@ -24,7 +24,7 @@ for r, ks in {
     "中亚北亚": "steppes xinjiang tibet mongolia manchuria west_siberia east_siberia",
     "东亚": "north_china south_china east_china west_china korea japan",
     "东南亚": "indochina indonesia",
-    "北美": "alaska canada great_lakes great_plains east_coast west_coast aridoamerica mesoamerica central_america caribbean",
+    "北美": "alaska canada great_plains east_coast west_coast aridoamerica mesoamerica central_america caribbean",
     "南美": "andes colombia brazil la_plata chaco",
     "大洋洲": "australia new_zealand melanesia micronesia polynesia",
     "海域": "north_atlantic_ocean south_atlantic",
@@ -95,17 +95,42 @@ for cat in range(0, 12):
 A("| | **合计** | **%d** | **%d** | **100%%** |" % (len(rows), tot_b))
 A("")
 
-A("## 二、按大区 × 类别（文化数）")
+A("## 二、按大洲 / 大区 × 类别（文化数）")
 A("")
 cats = [c for c in range(0, 12) if any(int(x["category"]) == c for x in rows)]
-A("| 大区 | " + " | ".join(str(c) for c in cats) + " | 合计 |")
-A("|---|" + "---:|" * len(cats) + "---:|")
-mat = collections.defaultdict(lambda: collections.Counter())
-for x in rows:
-    mat[REGION.get(dom_kingdom(x["kingdoms"]), "无地块")][int(x["category"])] += 1
-for reg in sorted(mat, key=lambda r: -sum(mat[r].values())):
-    row = mat[reg]
-    A("| %s | %s | %d |" % (reg, " | ".join(str(row.get(c, 0)) for c in cats), sum(row.values())))
+
+
+def emit_matrix(group_of, head, order=None):
+    A("**%s**" % head)
+    A("")
+    A("| %s | " % head.split("×")[0].strip() + " | ".join(str(c) for c in cats) + " | 合计 |")
+    A("|---|" + "---:|" * len(cats) + "---:|")
+    mat = collections.defaultdict(lambda: collections.Counter())
+    for x in rows:
+        mat[group_of(x)][int(x["category"])] += 1
+    keys = order or sorted(mat, key=lambda r: -sum(mat[r].values()))
+    for reg in keys:
+        if reg not in mat:
+            continue
+        row = mat[reg]
+        A("| %s | %s | %d |" % (reg, " | ".join(str(row.get(c, 0)) for c in cats), sum(row.values())))
+    A("")
+
+
+# 0 男爵领的文化没有王国字段，用 EU5 人口最多的王国兜底（同分类器口径）
+POPK = {}
+_pc = os.path.join(MOD, "gen_debug", "_culture_pop_continent.csv")
+if os.path.exists(_pc):
+    for r in csv.DictReader(io.open(_pc, encoding="utf-8-sig")):
+        POPK[r["culture"]] = r["top_kingdom"]
+
+
+def region_of(x):
+    return REGION.get(dom_kingdom(x["kingdoms"]) or POPK.get(x["culture"], ""), "无地块")
+
+CONT_ORDER = ["亚洲", "欧洲", "非洲", "北美洲", "南美洲", "大洋洲", "无地块"]
+emit_matrix(lambda x: x.get("continent") or "无地块", "大洲 × 类别", CONT_ORDER)
+emit_matrix(region_of, "大区 × 类别")
 A("")
 
 A("## 三、各类别目标文化 Top")

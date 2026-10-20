@@ -68,7 +68,11 @@ if os.path.exists(p):
 ck3_culture = load_yml(os.path.join(CK3_LOC, "cultures_l_simp_chinese.yml"))
 ck3_hybrid = load_yml(os.path.join(CK3_LOC, "culture_creation_names_l_simp_chinese.yml"))
 our_loc = load_yml(OUR_LOC)
-eu5_loc = load_dir(os.path.join(EU5_LOC, "*.yml"))
+# EU5 官方中文：只需要语言/文化表和地名表，不必把 119 个文件全读进来
+eu5_loc = {}
+for _f in ("cultural_and_languages_l_simp_chinese.yml", "province_names_l_simp_chinese.yml"):
+    for _k, _v in load_yml(os.path.join(EU5_LOC, _f)).items():
+        eu5_loc.setdefault(_k, _v)
 
 eu5_zh = {}
 p = os.path.join(GD, "_eu5_culture_zh.csv")

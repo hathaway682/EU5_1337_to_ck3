@@ -934,7 +934,7 @@ for row in rows:
         "eu5_groups": row["eu5_groups"],
         "baronies": row["baronies"],
         "kingdoms": row["kingdoms"],
-        "continent": CONTINENT.get(dom_kingdom(row["kingdoms"]), "无地块"),
+        "continent": CONTINENT.get(dom_kingdom(row["kingdoms"]), ""),
         "category": cat,
         "cat_label": CAT_LABEL.get(cat, "未判定"),
         "target": target,
@@ -942,6 +942,46 @@ for row in rows:
         "confidence": conf,
         "rule_source": src,
     })
+
+# ============ 大洲回退 ============
+# 0 男爵领的文化没有主导王国，按下面顺序补：
+#   1) EU5 人口最多的那个王国（_culture_pop_continent.csv，由 _build_culture_pop_continent.py 生成）
+#   2) 同传承文化里最常见的大洲
+#   3) 仍然没有 → 无地块（只有占位文化 gen_culture_unsettled 会走到这里）
+POP_CONT = {}
+_pc = os.path.join(os.path.dirname(os.path.abspath(__file__)), "_culture_pop_continent.csv")
+if os.path.exists(_pc):
+    for _r in csv.DictReader(io.open(_pc, encoding="utf-8-sig")):
+        POP_CONT[_r["culture"]] = _r["top_kingdom"]
+
+for x in out:
+    if x["continent"]:
+        continue
+    k = POP_CONT.get(x["culture"])
+    if k:
+        x["continent"] = CONTINENT.get(k, "")
+
+_by_her = collections.defaultdict(collections.Counter)
+for x in out:
+    if x["continent"]:
+        _by_her[x["heritage"]][x["continent"]] += 1
+for x in out:
+    if x["continent"] or x["culture"] == "gen_culture_unsettled":
+        continue
+    ctr = _by_her.get(x["heritage"])
+    if ctr:
+        x["continent"] = ctr.most_common(1)[0][0]
+# 既无男爵领、EU5 里又没有 pops 的，只能手工定（目前就这一个）：
+# roman_culture「拉丁」是拜占庭境内的拉丁语人群，按拜占庭传承多数会被判成亚洲，改回欧洲。
+CONTINENT_MANUAL = {
+    "roman_culture": "欧洲",
+}
+for x in out:
+    if x["culture"] in CONTINENT_MANUAL:
+        x["continent"] = CONTINENT_MANUAL[x["culture"]]
+for x in out:
+    if not x["continent"]:
+        x["continent"] = "无地块"
 
 try:
     with io.open(OUT, "w", encoding="utf-8-sig", newline="") as fp:
