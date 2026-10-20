@@ -70,6 +70,10 @@ LANG_OVERRIDE = {
     # EU5 把这两个文化放进 german_group，CK3 原版另有归类
     "czech_dialect": "heritage_west_slavic",
     "yiddish_dialect": "heritage_israelite",
+    # 奥克语系：EU5 gascon 同时挂 pyrenean_group / french_group，
+    # 按书写顺序取到 pyrenean_group（→ heritage_iberian），但加斯科涅语是奥克语方言，
+    # 原版说同一语言的 occitan 是 heritage_frankish。按语言纠回。
+    "gascon_dialect": "heritage_frankish",
 }
 
 # 文化级硬覆盖（个别 EU5 分组与原版明显冲突的）

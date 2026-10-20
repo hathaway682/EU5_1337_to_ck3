@@ -1,0 +1,49 @@
+﻿gfx 行改写: 4（文化 1316 个：heritage 驱动 1107 / tag 驱动 209）
+保持原样: 771 个文化 | 无 gfx 行的块: 0
+
+samples:
+  gascon                     coa_gfx        iberian_group_coa_gfx western_coa_gfx          -> frankish_group_coa_gfx western_coa_gfx   [heritage_frankish]
+  gascon                     building_gfx   iberian_building_gfx                           -> western_building_gfx   [heritage_frankish]
+  gascon                     clothing_gfx   iberian_christian_clothing_gfx western_clothing_gfx -> french_clothing_gfx western_clothing_gfx   [heritage_frankish]
+  gascon                     unit_gfx       iberian_christian_unit_gfx                     -> western_unit_gfx   [heritage_frankish]
+
+保持原样的文化按 heritage 分组 top20:
+  nadene_group                     39
+  tupi_group                       38
+  macro_je_group                   30
+  ta_arawakan_group                26
+  penutian_group                   25
+  yutonahua_group                  24
+  salishan_group                   21
+  maya_group                       21
+  hokan_group                      19
+  chibchan_group                   19
+  caribe_group                     19
+  muskogee_group                   16
+  quechuan_group                   15
+  cree_group                       14
+  yupik_group                      14
+  shoshoni_group                   13
+  caddoan_group                    13
+  anishinabe_group                 11
+  aymara_group                     10
+  powhatan_group                    9
+
+四件套分布 top15:
+   1624  burman_group_coa_gfx | southeast_asian_building_gfx | malay_clothing_gfx southeast_asian_clothing_gfx | southeast_asian_unit_gfx indian_unit_gfx
+    748  burman_group_coa_gfx | southeast_asian_building_gfx | papuan_clothing_gfx southeast_asian_clothing_gfx | southeast_asian_unit_gfx indian_unit_gfx
+    516  east_african_group_coa_gfx | african_building_gfx mena_building_gfx | african_clothing_gfx | mena_unit_gfx
+    380  west_african_group_coa_gfx | african_building_gfx mena_building_gfx | african_clothing_gfx | sub_sahran_unit_gfx
+    248  chinese_group_coa_gfx | chinese_building_gfx | chinese_clothing_gfx | chinese_unit_gfx
+    196  indo_aryan_group_coa_gfx | indian_building_gfx | indian_clothing_gfx | indian_unit_gfx
+    144  mongol_coa_gfx steppe_coa_gfx | amuric_building_gfx steppe_building_gfx | jurchen_clothing_gfx nivkh_clothing_gfx mongol_clothing_gfx | mongol_unit_gfx
+    128  turkic_group_coa_gfx steppe_coa_gfx | steppe_building_gfx | turkic_clothing_gfx mongol_clothing_gfx | mongol_unit_gfx
+    116  german_group_coa_gfx western_coa_gfx | western_building_gfx | dde_hre_clothing_gfx western_clothing_gfx | western_unit_gfx
+    100  arabic_group_coa_gfx | arabic_group_building_gfx mena_building_gfx | dde_abbasid_clothing_gfx mena_clothing_gfx | mena_unit_gfx
+     84  latin_group_coa_gfx western_coa_gfx | mediterranean_building_gfx | western_clothing_gfx | western_unit_gfx
+     76  iranian_group_coa_gfx | iranian_building_gfx | iranian_clothing_gfx mena_clothing_gfx | iranian_unit_gfx
+     76  frankish_group_coa_gfx western_coa_gfx | western_building_gfx | french_clothing_gfx western_clothing_gfx | western_unit_gfx
+     68  central_african_group_coa_gfx | african_building_gfx mena_building_gfx | african_clothing_gfx | sub_sahran_unit_gfx
+     68  tibetan_group_coa_gfx | tibetan_building_gfx | mongol_clothing_gfx | mongol_unit_gfx
+
+[dry-run] 未写文件。加 --apply 才写。
