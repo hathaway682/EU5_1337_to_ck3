@@ -188,12 +188,18 @@ print("命中 %d 对，写出 %s" % (len(rows), OUT))
 # 只收「中文完全相同」的配对；3 个假朋友不进这张表。
 # aluk 是用户点名补进来的：键干相同、明显同一宗教（托拉查 Aluk To Dolo），
 # 只是中文一个译「阿卢克」一个译「阿鲁克」，不算同名，故显式追加。
+# satsana_phi 是用户点名补进来的（2026-10-21）：**键完全相同**，但中文译名不同
+# （EU5「丕教」/ CK3「守护灵教」），自动比对收不到，故显式追加。
 MAP = os.path.join(MOD, "gen_debug", "_same_name_religion_map.csv")
 EXTRA = [
     {"eu5_religion": "aluk_religion", "eu5_zh": "阿鲁克古道",
      "ck3_faith": "aluk", "ck3_zh": "阿卢克古道",
      "依据": "键干相同 + 译字不一致（卢/鲁）", "字面同名": "",
      "ck3在mod内": "是" if "aluk" in used else ""},
+    {"eu5_religion": "satsana_phi", "eu5_zh": "丕教",
+     "ck3_faith": "satsana_phi", "ck3_zh": "守护灵教",
+     "依据": "键完全相同 + 译名不同（丕教/守护灵教）", "字面同名": "",
+     "ck3在mod内": "是" if "satsana_phi" in used else ""},
 ]
 mp = [x for x in rows if "中文完全相同" in x["关系"]]
 mp.sort(key=lambda x: (x["键关系"] != "同名", x["eu5"]))

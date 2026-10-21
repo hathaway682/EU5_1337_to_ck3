@@ -4579,7 +4579,8 @@ bkz_alam_al_din_ali = {
 	name = "name_ali"
 		dynasty = abdallah_kanz_el_dawla_dynasty
 	culture = bedouin_culture
-	religion = shia
+	religion = sunni
+	rite = maliki
 	mother = bkz_daughter_nasr
 	1311.1.1 = { birth = yes }
 }
@@ -4588,7 +4589,8 @@ bkz_daughter_nasr = {
 	name = "name_eu5_bkz_daughter_nasr"
 		dynasty = abdallah_kanz_el_dawla_dynasty
 	culture = bedouin_culture
-	religion = shia
+	religion = sunni
+	rite = maliki
 	father = bkz_shujah_al_din_nasr
 	1275.1.1 = { birth = yes }
 	1326.1.1 = { death = yes }
@@ -4598,7 +4600,8 @@ bkz_rukn_al_din_al_husayn = {
 	name = "name_husayn"
 		dynasty = abdallah_kanz_el_dawla_dynasty
 	culture = bedouin_culture
-	religion = shia
+	religion = sunni
+	rite = maliki
 	father = bkz_shujah_al_din_nasr
 	1278.1.1 = { birth = yes }
 	1334.1.1 = { death = yes }
@@ -4608,7 +4611,8 @@ bkz_sayf_al_din_abu_abdallah_muhammad = {
 	name = "name_muhammad"
 		dynasty = abdallah_kanz_el_dawla_dynasty
 	culture = bedouin_culture
-	religion = shia
+	religion = sunni
+	rite = maliki
 	father = bkz_shujah_al_din_nasr
 	1280.1.1 = { birth = yes }
 	1333.1.1 = { death = yes }
@@ -4618,7 +4622,8 @@ bkz_shujah_al_din_nasr = {
 	name = "name_nasr"
 		dynasty = abdallah_kanz_el_dawla_dynasty
 	culture = bedouin_culture
-	religion = shia
+	religion = sunni
+	rite = maliki
 	1255.1.1 = { birth = yes }
 	1300.1.1 = { death = yes }
 }
@@ -4627,7 +4632,8 @@ bkz_umm_al_hayr = {
 	name = "Umm_al_Khayr"
 		dynasty = abdallah_kanz_el_dawla_dynasty
 	culture = bedouin_culture
-	religion = shia
+	religion = sunni
+	rite = maliki
 	father = bkz_rukn_al_din_al_husayn
 	1308.1.1 = { birth = yes }
 	1327.1.1 = { add_spouse = bkz_alam_al_din_ali }
@@ -4940,7 +4946,7 @@ bln_mokodoludut = {
 	name = "Mokodoludut"
 		dynasty = bolaang_dynasty
 	culture = mongondow_culture
-	religion = pagan
+	religion = kaharingan
 	1300.1.1 = { birth = yes }
 }
 
@@ -6185,7 +6191,7 @@ bow_mokodoludu = {
 	name = "Mokodoludu"
 		dynasty = bowontehu_dynasty
 	culture = minahasan_culture
-	religion = pagan
+	religion = kaharingan
 	1310.1.1 = { birth = yes }
 }
 
@@ -11896,7 +11902,7 @@ chd_hir_singh_chanda = {
 	name = "name_hir.name_singh"
 		dynasty = chanda_dynasty
 	culture = gond
-	religion = pagan
+	religion = kiratism
 	1300.1.1 = { birth = yes }
 }
 
@@ -18784,14 +18790,14 @@ eu5_regent_azl = {
 eu5_regent_bac = {
 	name = "name_eu5_bacan"
 	culture = bacan_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_bai = {
 	name = "name_eu5_banggai"
 	culture = banggai_culture
-	religion = pagan
+	religion = aluk
 	1300.1.1 = { birth = yes }
 }
 
@@ -18842,7 +18848,7 @@ eu5_regent_bfr = {
 eu5_regent_bgg = {
 	name = "name_eu5_bangga"
 	culture = kaili_culture
-	religion = pagan
+	religion = aluk
 	1300.1.1 = { birth = yes }
 }
 
@@ -18906,7 +18912,7 @@ eu5_regent_bir = {
 eu5_regent_bjg = {
 	name = "name_eu5_baojing"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -19077,7 +19083,7 @@ eu5_regent_bsk = {
 eu5_regent_bsm = {
 	name = "name_eu5_boussouma"
 	culture = mossi
-	religion = pagan
+	religion = west_african_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -19091,7 +19097,7 @@ eu5_regent_btg = {
 eu5_regent_btn = {
 	name = "name_eu5_buton"
 	culture = buton_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
@@ -19119,7 +19125,7 @@ eu5_regent_bwl = {
 eu5_regent_bzh = {
 	name = "name_eu5_beisheng"
 	culture = nashi_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -19520,7 +19526,7 @@ eu5_regent_cuo = {
 eu5_regent_cut = {
 	name = "name_eu5_chutia"
 	culture = chutia_culture
-	religion = pagan
+	religion = donyipoloism
 	1300.1.1 = { birth = yes }
 }
 
@@ -19563,7 +19569,7 @@ eu5_regent_daa = {
 eu5_regent_daj = {
 	name = "name_eu5_daju"
 	culture = daju_culture
-	religion = pagan
+	religion = kushitism_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -19616,7 +19622,7 @@ eu5_regent_dfn = {
 eu5_regent_dgb = {
 	name = "name_eu5_dagbon"
 	culture = dagbani
-	religion = pagan
+	religion = west_african_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -19655,7 +19661,7 @@ eu5_regent_dhk = {
 eu5_regent_dim = {
 	name = "name_eu5_dimasa"
 	culture = dimasa_culture
-	religion = pagan
+	religion = donyipoloism
 	1300.1.1 = { birth = yes }
 }
 
@@ -19755,7 +19761,7 @@ eu5_regent_dtm = {
 eu5_regent_dwg = {
 	name = "name_eu5_dawang"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -19777,7 +19783,7 @@ eu5_regent_dyg = {
 eu5_regent_dyn = {
 	name = "name_eu5_duyun"
 	culture = sui_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -19791,7 +19797,7 @@ eu5_regent_dzh = {
 eu5_regent_dzk = {
 	name = "name_eu5_durdzuketia"
 	culture = nakh_culture
-	religion = pagan
+	religion = tengri_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -19978,7 +19984,7 @@ eu5_regent_gil = {
 eu5_regent_glu = {
 	name = "name_eu5_gaoluo"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -20056,7 +20062,7 @@ eu5_regent_grr = {
 eu5_regent_grt = {
 	name = "name_eu5_gorontalo"
 	culture = gorontalo_culture
-	religion = pagan
+	religion = kaharingan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20077,14 +20083,14 @@ eu5_regent_gug = {
 eu5_regent_gur = {
 	name = "name_eu5_fada_n_gourma"
 	culture = gurma
-	religion = pagan
+	religion = west_african_pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_gwi = {
 	name = "name_eu5_gwiriko"
 	culture = mossi
-	religion = pagan
+	religion = west_african_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20112,7 +20118,7 @@ eu5_regent_gyt = {
 eu5_regent_gzh = {
 	name = "name_eu5_guzhou"
 	culture = kam_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -20399,7 +20405,7 @@ eu5_regent_hyt = {
 eu5_regent_hzh = {
 	name = "name_eu5_hongzhou"
 	culture = kam_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -20621,7 +20627,7 @@ eu5_regent_jlm = {
 eu5_regent_jlo = {
 	name = "name_eu5_jailolo"
 	culture = tobelo_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
@@ -20694,7 +20700,7 @@ eu5_regent_jux = {
 eu5_regent_kab = {
 	name = "name_eu5_kaabu"
 	culture = balanta
-	religion = pagan
+	religion = west_african_roog_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20908,7 +20914,7 @@ eu5_regent_klr = {
 eu5_regent_kls = {
 	name = "name_eu5_kalisusu"
 	culture = buton_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
@@ -20972,7 +20978,7 @@ eu5_regent_knk = {
 eu5_regent_knw = {
 	name = "name_eu5_konawe"
 	culture = tolaki_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
@@ -21201,7 +21207,7 @@ eu5_regent_lin = {
 eu5_regent_ljg = {
 	name = "name_eu5_lijiang"
 	culture = nashi_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -21250,21 +21256,21 @@ eu5_regent_lno = {
 eu5_regent_lol = {
 	name = "name_eu5_loloda"
 	culture = galela_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_lpg = {
 	name = "name_eu5_liping"
 	culture = kam_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_lrt = {
 	name = "name_eu5_larantuka"
 	culture = lamaholot_culture
-	religion = pagan
+	religion = hantuism
 	1300.1.1 = { birth = yes }
 }
 
@@ -21286,7 +21292,7 @@ eu5_regent_ltn = {
 eu5_regent_ltu = {
 	name = "name_eu5_lantu"
 	culture = sui_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -21654,7 +21660,7 @@ eu5_regent_mnl = {
 eu5_regent_mnu = {
 	name = "name_eu5_melanau"
 	culture = melanau_culture
-	religion = pagan
+	religion = kaharingan
 	1300.1.1 = { birth = yes }
 }
 
@@ -21675,7 +21681,7 @@ eu5_regent_mom = {
 eu5_regent_moo = {
 	name = "name_eu5_moro"
 	culture = galela_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
@@ -21697,7 +21703,7 @@ eu5_regent_mpe = {
 eu5_regent_mpr = {
 	name = "name_eu5_mamprugu"
 	culture = mamprusi
-	religion = pagan
+	religion = west_african_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -21719,7 +21725,7 @@ eu5_regent_mrh = {
 eu5_regent_mrn = {
 	name = "name_eu5_moronene"
 	culture = moronene_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
@@ -21978,7 +21984,7 @@ eu5_regent_nqs = {
 eu5_regent_nri = {
 	name = "name_eu5_nri"
 	culture = igbo
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -22155,7 +22161,7 @@ eu5_regent_ota = {
 eu5_regent_oua = {
 	name = "name_eu5_wagadugu"
 	culture = mossi
-	religion = pagan
+	religion = west_african_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -22218,7 +22224,7 @@ eu5_regent_pan = {
 eu5_regent_pcd = {
 	name = "name_eu5_pingchadong"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -22303,7 +22309,7 @@ eu5_regent_pig = {
 eu5_regent_pjt = {
 	name = "name_eu5_pudjananti"
 	culture = kaili_culture
-	religion = pagan
+	religion = aluk
 	1300.1.1 = { birth = yes }
 }
 
@@ -22380,7 +22386,7 @@ eu5_regent_poo = {
 eu5_regent_prm = {
 	name = "name_eu5_perm"
 	culture = komi
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -22444,7 +22450,7 @@ eu5_regent_qan = {
 eu5_regent_qgs = {
 	name = "name_eu5_qiongshui"
 	culture = kam_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -22547,7 +22553,7 @@ eu5_regent_reg = {
 eu5_regent_rgm = {
 	name = "name_eu5_rongmei"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -22766,7 +22772,7 @@ eu5_regent_sgu = {
 eu5_regent_sgz = {
 	name = "name_eu5_sangzhi"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -22962,7 +22968,7 @@ eu5_regent_src = {
 eu5_regent_srg = {
 	name = "name_eu5_sarangarh"
 	culture = gond
-	religion = pagan
+	religion = kiratism
 	1300.1.1 = { birth = yes }
 }
 
@@ -23085,7 +23091,7 @@ eu5_regent_szg = {
 eu5_regent_szh = {
 	name = "name_eu5_sizhou"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -23099,7 +23105,7 @@ eu5_regent_szi = {
 eu5_regent_szu = {
 	name = "name_eu5_shizhu"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -23233,7 +23239,7 @@ eu5_regent_tem = {
 eu5_regent_ten = {
 	name = "name_eu5_tenkodogo"
 	culture = mossi
-	religion = pagan
+	religion = west_african_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -23262,7 +23268,7 @@ eu5_regent_tfk = {
 eu5_regent_tgr = {
 	name = "name_eu5_tongren"
 	culture = kam_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -23277,7 +23283,7 @@ eu5_regent_tgt = {
 eu5_regent_tgy = {
 	name = "name_eu5_tangya"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -23298,7 +23304,7 @@ eu5_regent_tht = {
 eu5_regent_tid = {
 	name = "name_eu5_tidore"
 	culture = tidore_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
@@ -23434,7 +23440,7 @@ eu5_regent_tnn = {
 eu5_regent_tnp = {
 	name = "name_eu5_tianping"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -23661,7 +23667,7 @@ eu5_regent_twi = {
 eu5_regent_txi = {
 	name = "name_eu5_tixi"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -23981,7 +23987,7 @@ eu5_regent_wnt = {
 eu5_regent_wrg = {
 	name = "name_eu5_wairagarh"
 	culture = gond
-	religion = pagan
+	religion = kiratism
 	1300.1.1 = { birth = yes }
 }
 
@@ -24009,7 +24015,7 @@ eu5_regent_wtz = {
 eu5_regent_wun = {
 	name = "name_eu5_muna"
 	culture = muna_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
@@ -24149,7 +24155,7 @@ eu5_regent_xol = {
 eu5_regent_xsy = {
 	name = "name_eu5_xishanyang"
 	culture = kam_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -24193,7 +24199,7 @@ eu5_regent_yas = {
 eu5_regent_yat = {
 	name = "name_eu5_yatenga"
 	culture = mossi
-	religion = pagan
+	religion = west_african_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -24214,7 +24220,7 @@ eu5_regent_ydz = {
 eu5_regent_ygs = {
 	name = "name_eu5_yongshun"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -24228,21 +24234,21 @@ eu5_regent_yim = {
 eu5_regent_yji = {
 	name = "name_eu5_yanjing"
 	culture = nashi_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_yng = {
 	name = "name_eu5_yongning_2"
 	culture = nashi_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ynh = {
 	name = "name_eu5_yanhe"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -24320,7 +24326,7 @@ eu5_regent_ysu = {
 eu5_regent_yyg = {
 	name = "name_eu5_youyang"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -24385,7 +24391,7 @@ eu5_regent_zgh = {
 eu5_regent_zgl = {
 	name = "name_eu5_zhonglu"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -24414,7 +24420,7 @@ eu5_regent_zip = {
 eu5_regent_zld = {
 	name = "name_eu5_zhonglindong"
 	culture = kam_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -24456,7 +24462,7 @@ eu5_regent_znx = {
 eu5_regent_znz = {
 	name = "name_eu5_zhenzhou"
 	culture = sui_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -51271,7 +51277,7 @@ jol_ndiadiane_ndiaye = {
 	name = "Ndiadiane"
 		dynasty = ndiaye_dynasty
 	culture = wolof
-	religion = pagan
+	religion = west_african_roog_pagan
 	1315.1.1 = { birth = yes }
 }
 
@@ -51375,7 +51381,7 @@ kam_adi = {
 	name = "name_adi"
 		dynasty = kaimana_dynasty
 	culture = buruwai_culture
-	religion = pagan
+	religion = tolotang
 	father = kam_patimunin
 	1330.1.1 = { birth = yes }
 }
@@ -51384,7 +51390,7 @@ kam_patimunin = {
 	name = "name_patimunin"
 		dynasty = kaimana_dynasty
 	culture = buruwai_culture
-	religion = pagan
+	religion = tolotang
 	1270.1.1 = { birth = yes }
 }
 
@@ -55527,7 +55533,7 @@ mal_maghan_konate = {
 	name = "name_maghan"
 		dynasty = keita_dynasty
 	culture = mandinka
-	religion = pagan
+	religion = west_african_pagan
 	1148.1.1 = { birth = yes }
 	1218.1.1 = { death = yes }
 }
@@ -55587,7 +55593,7 @@ mal_sundiata = {
 	name = "name_sundiata"
 		dynasty = keita_dynasty
 	culture = mandinka
-	religion = pagan
+	religion = west_african_pagan
 	father = mal_maghan_konate
 	1217.1.1 = { birth = yes }
 	1255.1.1 = { death = yes }
@@ -56983,7 +56989,7 @@ mkg_sangia_melanga = {
 	name = "Sangia_Melanga"
 		dynasty = mekongga_dynasty
 	culture = tolaki_culture
-	religion = pagan
+	religion = tolotang
 	1310.1.1 = { birth = yes }
 }
 
@@ -57221,7 +57227,7 @@ mlb_telheipa = {
 	name = "Telheipa"
 		dynasty = kangleipak_dynasty
 	culture = meitei_culture
-	religion = pagan
+	religion = sedism
 	1285.1.1 = { birth = yes }
 }
 
@@ -72092,7 +72098,8 @@ skn_zayd_ibn_abi_numayy_ibn_ajlan = {
 	name = "name_zayd"
 		dynasty = qatadid_dynasty
 	culture = hijazi_culture
-	religion = shia
+	religion = sunni
+	rite = maliki
 	father = mec_muhammad_abu_numayy_ibn_abi_sad_al_hasan_ibn_ali_ibn_qatadah_al_hasani
 	1280.1.1 = { birth = yes }
 }
@@ -74216,7 +74223,7 @@ ter_boheyat = {
 	name = "Boheyat"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_siding_arif
 	1290.1.1 = { birth = yes }
 }
@@ -74225,7 +74232,7 @@ ter_gapi_baguna = {
 	name = "Gapi_Baguna"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_siding_arif
 	1310.1.1 = { birth = yes }
 }
@@ -74234,7 +74241,7 @@ ter_gapi_malamo = {
 	name = "Gapi_Malamo"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_siding_arif
 	1305.1.1 = { birth = yes }
 }
@@ -74243,7 +74250,7 @@ ter_kalabata = {
 	name = "Kalabata"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	1230.1.1 = { birth = yes }
 	1304.1.1 = { death = yes }
 }
@@ -74252,7 +74259,7 @@ ter_momole = {
 	name = "Momole"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_siding_arif
 	1295.1.1 = { birth = yes }
 }
@@ -74261,7 +74268,7 @@ ter_ngolo_ma_caya = {
 	name = "Ngolo_ma_Caya"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_siding_arif
 	1300.1.1 = { birth = yes }
 }
@@ -74270,7 +74277,7 @@ ter_patsaranga_malamo = {
 	name = "Patsaranga"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_kalabata
 	1255.1.1 = { birth = yes }
 	1322.1.1 = { death = yes }
@@ -74280,7 +74287,7 @@ ter_putri = {
 	name = "Putri"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_kalabata
 	1250.1.1 = { birth = yes }
 }
@@ -74289,7 +74296,7 @@ ter_siding_arif = {
 	name = "Siding_Arif"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	mother = ter_putri
 	1270.1.1 = { birth = yes }
 	1331.1.1 = { death = yes }
@@ -74299,7 +74306,7 @@ ter_syah_alam = {
 	name = "Syah_Alam"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_patsaranga_malamo
 	1280.1.1 = { birth = yes }
 }
@@ -74308,7 +74315,7 @@ ter_tolu_malamo = {
 	name = "Tolu_Malamo"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_patsaranga_malamo
 	1290.1.1 = { birth = yes }
 }
