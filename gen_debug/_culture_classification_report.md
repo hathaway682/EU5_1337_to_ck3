@@ -89,7 +89,7 @@
 | bassa_culture（巴萨） | 14 | NEW:bassa（巴萨） | 巴萨，CK3 无对应 |
 | sym_culture（瑟姆） | 14 | NEW:evenk（鄂温克） | 鄂温克诸部，CK3 无对应，从靺鞨/女真分离 |
 | obgints_culture（奥布金茨） | 11 | NEW:evenk（鄂温克） | 鄂温克诸部，CK3 无对应，从靺鞨/女真分离 |
-| prussian（普鲁士） | 11 | NEW:prussian_german（德意志普鲁士） | EU5 普鲁士是低地德语的德意志人口，与 CK3 波罗的普鲁士（原版仅 k_lithuania 10 省）同名异族，从萨 |
+| prussian（普鲁士） | 11 | NEW:teutonic（普鲁士） | EU5 普鲁士是低地德语的德意志人口，与 CK3 波罗的普鲁士（原版仅 k_lithuania 10 省）同名异族，从萨 |
 | silyagir_culture（希利亚吉尔） | 11 | NEW:evenk（鄂温克） | 鄂温克诸部，CK3 无对应，从靺鞨/女真分离 |
 | vargagaits_culture（瓦尔加盖茨） | 11 | NEW:evenk（鄂温克） | 鄂温克诸部，CK3 无对应，从靺鞨/女真分离 |
 | selogon_culture（谢洛贡） | 10 | NEW:evenk（鄂温克） | 鄂温克诸部，CK3 无对应，从靺鞨/女真分离 |
@@ -209,7 +209,7 @@
 |---|---:|---|---|
 | avar_culture（阿瓦尔） | 9 | NEW:caucasian_avar（高加索阿瓦尔） | 高加索阿瓦尔人（东北高加索语），与 CK3 潘诺尼亚阿瓦尔（突厥/乌古尔语）同名异族 |
 | khorezmian_culture（花剌子模） | 3 | karluk（葛逻禄） | CK3 khwarezmian 是东伊朗语（斯基泰语支），EU5 花剌子模已突厥化、讲葛逻禄语 |
-| prussian（普鲁士） | 9 | NEW:prussian_german（德意志普鲁士） | EU5 普鲁士是低地德语的德意志人口，与 CK3 波罗的普鲁士（原版仅 k_lithuania 10 省）同名异族，从萨克森分离另立（圣战产 |
+| prussian（普鲁士） | 9 | NEW:teutonic（普鲁士） | EU5 普鲁士是低地德语的德意志人口，与 CK3 波罗的普鲁士（原版仅 k_lithuania 10 省）同名异族，从萨克森分离另立（条顿骑 |
 | turkmen_culture（土库曼） | 3 | turkish（乌古斯） | EU5 土库曼≠CK 同名 turkmen；CK3 的 turkish 显示名就是「乌古斯」，指乌古斯人 |
 | yao_culture（亚奥） | 9 | NEW:yao_malawi（马拉维瑶） | 非洲瑶族（班图语支，马拉维/莫桑比克），与 CK3 瑶族（苗语支）同名异族；CK3 地图内，从同语系文化分离 |
 
@@ -345,7 +345,7 @@
 | novgorodian（诺夫哥罗德） | 165 | 2 | russian（罗斯） | 诺夫哥罗德=罗斯；CK3 的 ilmenian 虽有定义但原版 0 省份，不能当落点 |
 | pomor（波莫尔） | 25 | 2 | russian（罗斯） | 诺夫哥罗德方言=罗斯（ilmenian 原版 0 省份，不可作落点） |
 | vepsian（韦普斯） | 21 | 1 | vepsian（韦普斯） | 同名同地 |
-| prussian（普鲁士） | 11 | 9 | NEW:prussian_german（德意志普鲁士） | EU5 普鲁士是低地德语的德意志人口，与 CK3 波罗的普鲁士（原版仅 k_lithuania 10 省）同名异族，从萨 |
+| prussian（普鲁士） | 11 | 9 | NEW:teutonic（普鲁士） | EU5 普鲁士是低地德语的德意志人口，与 CK3 波罗的普鲁士（原版仅 k_lithuania 10 省）同名异族，从萨 |
 
 **苏丹-阿拉伯（1 个：阿拉伯+努比亚融合）**
 
@@ -355,7 +355,7 @@
 
 ### 4.6 欧洲落实方案（2026-10-21 用户定）
 
-本节把用户的欧洲方案落到分类表。**新文化的 definition 与本地化尚未落游戏**，只在分类层确定落点与设计。
+本节把用户的欧洲方案落到分类表。**已落游戏（2026-10-21 01:34）**：省份 culture 改动 3309 行（129 个文化、113 组映射），新文化定义写入 `common/culture/cultures/zz_eu5_culture_merge.txt`，本地化写入 `localization/simp_chinese/zz_eu5_culture_merge_l_simp_chinese.yml`，省份备份 `00_generated_provinces.txt.bak_eumerge_20261021_013418`。范围仅限欧洲计划内的文化；欧洲以外与 cat1 一一对应的文化一律未动。
 
 #### 一、本轮改动的落点
 
@@ -388,13 +388,13 @@
 
 | key | 中文 | 类型 | 来源 | heritage | language | ethos | traditions（基础文化原版 → 调整后） |
 |---|---|---|---|---|---|---|---|
-| `anglo_irish` | 盎格鲁-爱尔兰 | 融合 | 英格兰 + 爱尔兰 | west_germanic | anglic | bureaucratic | 英格兰 4（hereditary_hierarchy / chivalry / castle_keepers / longbow_competitions） − 长弓竞赛 + 牧人 / 优美诗歌 / 海洋重商主义 = **6 个（超上限，见第五节）** |
-| `norse_gael` | 诺斯-盖尔 | 融合 | 诺斯 + 盖尔 | goidelic | goidelic | bellicose | 盖尔 5（fishermen / hill_dwellers / highland_warriors / strong_kinship / concubines） − 高地战士 − 丘陵居民 + 沿海战士 / 海洋重商主义 = **5 个** |
+| `anglo_irish` | 盎格鲁-爱尔兰 | 融合 | 英格兰 + 爱尔兰 | west_germanic | anglic | bureaucratic | 英格兰 4（hereditary_hierarchy / chivalry / castle_keepers / longbow_competitions） − 长弓竞赛 + 牧人 / 优美诗歌 / 海洋重商主义 = **6 个** |
+| `norse_gael` | 诺斯-盖尔 | 融合 | 诺斯 + 盖尔 | goidelic | goidelic | bellicose | 盖尔 5（fishermen / hill_dwellers / highland_warriors / strong_kinship / concubines） − 高地战士 − 丘陵居民 + 沿海战士 / 海洋重商主义 / 说书人 = **6 个** |
 | `pomeranian` | 波美拉尼亚 | 融合 | 萨克森 + 卡舒比 | central_germanic | saxon | stoic | 萨克森 3（stand_and_fight / ruling_caste / religious_patronage） − 统治阶层 + 海洋重商主义 = **3 个** |
 | `walloon` | 瓦隆 | 融合 | 法兰西 + 荷兰 | frankish | french | courtly | 法兰西 3（chanson_de_geste / hereditary_hierarchy / chivalry） + 乡土观念 = **4 个** |
-| `prussian_german` | 普鲁士 | 分离 | 萨克森（不融合，圣战产物） | central_germanic | saxon | stoic | 萨克森 3（stand_and_fight / ruling_caste / religious_patronage） + 以剑之名 = **4 个** |
+| `teutonic` | 普鲁士 | 分离 | 萨克森（不融合，圣战产物） | central_germanic | saxon | stoic | 萨克森 3（stand_and_fight / ruling_caste / religious_patronage） + 以剑之名 = **4 个** |
 
-traditions 中文对照：长弓竞赛 `tradition_longbow_competitions`、牧人 `tradition_pastoralists`、优美诗歌 `tradition_poetry`、海洋重商主义 `tradition_maritime_mercantilism`、统治阶层 `tradition_ruling_caste`、高地战士 `tradition_highland_warriors`、丘陵居民 `tradition_hill_dwellers`、沿海战士 `tradition_fp1_coastal_warriors`、乡土观念 `tradition_parochialism`、以剑之名 `tradition_by_the_sword`。
+traditions 中文对照：长弓竞赛 `tradition_longbow_competitions`、牧人 `tradition_pastoralists`、优美诗歌 `tradition_poetry`、海洋重商主义 `tradition_maritime_mercantilism`、统治阶层 `tradition_ruling_caste`、高地战士 `tradition_highland_warriors`、丘陵居民 `tradition_hill_dwellers`、沿海战士 `tradition_fp1_coastal_warriors`、乡土观念 `tradition_parochialism`、以剑之名 `tradition_by_the_sword`、说书人 `tradition_storytellers`。
 
 #### 三、备选新文化（本轮不建）与设计提议
 
@@ -425,7 +425,7 @@ traditions 中文对照：长弓竞赛 `tradition_longbow_competitions`、牧人
 
 1. **罗姆人无人物**：CK3 原版 `common/culture/cultures/` 无 `romani` 定义；`history/characters/` 全库 `culture = romani|roma|gypsy` 计数为 **0**（正则只误撞到伏尔加芬兰语的 `muroma`）。故 `romani_culture` 无落点，标 cat11 占位，0 男爵领。
 2. **罗马有定义无人物**：CK3 原版 `roman` 在 `00_latin.txt` 有定义，但 `history/characters/` 里 **0 个角色**使用、原版 **0 个省份**。`roman_culture → roman` 可以落，但游戏里不会有历史角色自带该文化，也不会自动出现在地图上。
-3. **两处本地化必须让位**：CK3 `pommeranian`（显示「波美拉尼亚」）实为 EU5 卡舒比，新融合文化 `pomeranian` 也要「波美拉尼亚」→ 原 `pommeranian` 本地化需改为「卡舒比」；CK3 `prussian`（显示「普鲁士」）留给西波罗的，新分离文化 `prussian_german` 要「普鲁士」→ 原 `prussian` 本地化需改为「古普鲁士」。两者若不改会重名。
-4. **traditions 上限 5**：`common/defines/00_defines.txt` 的 `DEFAULT_MAX_TRADITIONS = 5`。盎格鲁-爱尔兰按用户配方为 6 个，超 1 个，需从 hereditary_hierarchy / chivalry / castle_keepers 三者中再砍一个（建议砍 castle_keepers，诺曼城堡特征与英爱边疆殖民者气质最远）。
+3. **本地化让位**：CK3 `pommeranian`（显示「波美拉尼亚」）实为 EU5 卡舒比，新融合文化 `pomeranian` 也要「波美拉尼亚」→ 原 `pommeranian` 本地化需改为「卡舒比」。`prussian` 显示「普鲁赛尼亚」——波罗的普鲁士人（pruthenian 普鲁赛尼亚 / sudovian 苏多维亚 / curonian 库罗尼亚）还在地图上，不能作古；德意志那一支另用 `teutonic`，显示「普鲁士」。
+4. **traditions 上限**：`DEFAULT_MAX_TRADITIONS = 5` 只是开局值，随时代解锁会继续增加，所以盎格鲁-爱尔兰 6 个、诺斯-盖尔 6 个都不需要砍。
 5. **沿海战士属 DLC 内容**：`tradition_fp1_coastal_warriors` 定义在 `01_fp1_traditions.txt`，为 Fate of Iberia 的内容。mod 假定全 DLC 可用；若需照顾无 DLC 环境，可换 `tradition_seafaring`（航海家）。
 

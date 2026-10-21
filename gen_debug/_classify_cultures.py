@@ -211,7 +211,7 @@ CULT_RULE = {
     # → 从萨克森分离（圣战产物，不融合），本地化取「普鲁士」。
     "western_pomeranian":   r(8, "pomeranian", "西波美拉尼亚（低地德语）：萨克森+卡舒比融合文化，用户定"),
     "eastern_pomeranian":   r(8, "pomeranian", "东波美拉尼亚（低地德语）：萨克森+卡舒比融合文化，用户定"),
-    "prussian":             r(9, "prussian_german", "EU5 普鲁士是低地德语的德意志人口，与 CK3 波罗的普鲁士（原版仅 k_lithuania 10 省）同名异族，从萨克森分离另立（圣战产物，不融合）", "high"),
+    "prussian":             r(9, "teutonic", "EU5 普鲁士是低地德语的德意志人口，与 CK3 波罗的普鲁士（原版仅 k_lithuania 10 省）同名异族，从萨克森分离另立（条顿骑士团圣战产物，不融合）", "high"),
     "merya":                r(1, "merya", "CK3 有 merya，同名同地"),
     "mossi":                r(1, "mossi", "CK3 有 mossi，同名同地"),
     "she_culture":          r(4, "han", "畲族无 EU5 数据、0 男爵领，按汉语并入汉（另可选 hmong）", "medium"),

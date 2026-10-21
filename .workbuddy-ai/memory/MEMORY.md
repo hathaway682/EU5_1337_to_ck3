@@ -37,14 +37,25 @@
   必须动首府男爵领那一条（例如加济安泰普首府 b_ayntab 是 syriac_culture，
   同领的 dluk 是 armenian 也白搭）。
 
-- **`DEFAULT_MAX_TRADITIONS = 5`**（`common/defines/00_defines.txt`）：文化定义里 traditions
-  最多 5 个。设计新文化时必须数一遍，超了要砍掉一个。
+- **`DEFAULT_MAX_TRADITIONS = 5`**（`common/defines/00_defines.txt`）是**开局上限**，
+  随时代解锁会继续增加，文化定义里写 6 个 tradition 没问题（用户 2026-10-21 明确）。
 - **`roman` 有定义无人物**：CK3 原版 `00_latin.txt` 里有 `roman`，但 `history/characters/`
   全库 0 个角色使用、原版 0 个省份。**`romani` 连文化定义都没有，罗姆人角色也是 0**
   （`culture = romani|roma|gypsy` 计数为 0，正则只会误撞伏尔加芬兰语的 `muroma`）。
-- **新文化抢显示名时，原版文化必须改名**：已定 `pommeranian`（原「波美拉尼亚」，
-  实为卡舒比人）→「卡舒比」；`prussian`（原「普鲁士」，留给西波罗的古普鲁士）→「古普鲁士」。
-  新文化 `pomeranian` / `prussian_german` 取「波美拉尼亚」/「普鲁士」。
+- **新文化抢显示名时，原版文化必须改名**：`pommeranian`（原「波美拉尼亚」，实为卡舒比人）
+  →「卡舒比」，新融合 `pomeranian` 取「波美拉尼亚」。
+- **普鲁士四兄弟的最终定名（用户 2026-10-21 逐句拍定，不要再动）**：
+  | key | 中文 | 男爵领 | 性质 |
+  |---|---|---:|---|
+  | `prussian` | **普鲁赛尼亚** | 30 | 波罗的（pruthenian 15 + sudovian 9 + curonian 6） |
+  | `teutonic` | **普鲁士** | 11 | 德意志（萨克森分离，条顿骑士团圣战产物） |
+  | `pommeranian` | **卡舒比** | 30 | EU5 kashubian |
+  | `pomeranian` | **波美拉尼亚** | 34 | 萨克森+卡舒比融合 |
+  - 曾经叫过 `prussian_german`，用户要求换 key 为 `teutonic`（本地化不变→再定为「普鲁士」）。
+  - `prussian` **不许叫「古普鲁士」**：波罗的普鲁士人还在地图上，用户原话
+    「波罗地普鲁士人还没死呢，文化名里别让他们作古了」。
+  - `prussian` 的定义必须在 `zz_eu5_culture_merge.txt` 里**覆盖回波罗的**
+    （`heritage_baltic`/`language_baltic`），因为生成物里那份是按 EU5 德意志普鲁士建的。
 - **dynasty 是宗族，house 是支系**。角色指支系必须写 `dynasty_house = house_xxx`；
   写 `dynasty = house_xxx` 会让游戏去找同名 dynasty，找不到就 fallback 到 `dynn_adam`。
 - **COA 按 key 自动匹配**，没有 `coat_of_arms_id` 字段。`common/coat_of_arms/coat_of_arms/` 里
@@ -58,9 +69,25 @@
 
 ## 文化分类工具链（三段式，顺序不能错）
 
+- **mod 的文化定义有两个来源，欧洲落地后必须清掉生成物里的同名覆盖**：
+  `common/culture/cultures/00_generated_cultures.txt`（Ck3MapGen 按 EU5 文化生成的 2088→1919 块）
+  与 `zz_eu5_culture_merge.txt`（6 块：5 个新文化 + prussian 覆盖）。
+  **凡 key 与 CK3 原版同名的生成块都会覆盖原版定义**（swabian/english/french/saxon…），
+  这是「旧的欧洲文化干扰」的真身 → 用 `gen_debug/_purge_eu_generated_cultures.py` 删掉，
+  删除条件必须同时满足「属欧洲」且「原版或 zz 里有定义」，否则会删出死引用。
+  **`kazani` 例外**：草原组按亚洲方案处理，还没落地，118 处引用全指着它，不能删。
+  该文件是 **BOM + LF**（不是 CRLF），改写时别统一成 CRLF。
+- **CK3 只加载 `.txt`**：`common/culture/cultures/` 里一堆 `.bak_*` 后缀不会生效，可以当备份放着。
 - `gen_debug/_classify_cultures.py`（出 15 列）→ `_annotate_zh_in_classification.py --apply`
   （补 name_zh / target_zh / target_zh_src）→ `_culture_classification_report.py`（出 md 报告）。
   **跳过中间那步，中文三列会被分类器整个冲掉。**
+- **★ 校验 culture 引用必须同时吃引号与裸值**：`^\s*culture\s*=\s*"?([A-Za-z0-9_]+)"?`。
+  宗族文件写 `culture = "greek_culture"`（带引号），adventurers 之类写裸值；
+  只匹配裸值的正则会把整批带引号的引用漏掉，误报「缺定义 0」（2026-10-21 踩过：
+  宗族层实际有 788 处死 key，校验却报 12 处全正常）。
+- **culture 改 key 的四个落点**：`history/provinces`、`history/characters`、
+  `common/dynasties`、`common/dynasty_houses`（原版 house 不写 culture，但 mod 的
+  `zz_eu5_merged_houses.txt` 写了 168 处）。删定义前必须四处都扫。
 - **CK3 原版有 22 个「0 省份文化」**：有 culture 定义，但 `history/provinces/*.txt` 里 0 条引用，
   不能当分类落点（用户 2026-10-20 点名 ilmenian）。清单：gothic ancient_egyptian hebrew hunnic
   trojan macedonian carthaginian ilmenian severian volhynian frankish suebi ashkenazi sephardi
@@ -81,6 +108,12 @@
 - 用户手改过的文件绝不覆盖；写前比对内容，无变化就连 mtime 都不动，有变化才备份。
 - 生成物按 key 排序、带 BOM（CK3 的 yml 和 common 脚本都要）。
 - 生成脚本默认 dry run，显式 `--apply` 才落盘。
+- **★ 正则批量改字段值时，group(1) 必须包含字段名本身。** 事故（2026-10-21）：
+  `re.compile(r"(?<![a-z_])culture(\s*=\s*)([A-Za-z0-9_]+)")` 的 group(1) 只是 `" = "`，
+  用 `group(1)+new` 替换后 6889 行角色数据变成 `\t = teutonic`（`culture` 字段名被吃掉），
+  CK3 会静默忽略这些行。正确写法：`m.group(0)` 里替换值，或 group(1) 含前缀。
+  **验证方式不是看脚本报了多少处，而是改完回读文件 grep `^\t = ` 看有没有残骸。**
+  修复脚本：`re.sub(r'(?m)^\t = ', '\tculture = ', t)`。
 
 ## vanilla 数据清单（E:/SteamLibrary/steamapps/common/Crusader Kings III/game）
 
