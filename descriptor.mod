@@ -1,9 +1,9 @@
-﻿version="1.0.0"
+version="1.0.0"
 tags={
 	"Total Conversion"
 	"Map"
 }
-name="EU5_Modern_Borders_noshape"
+name="Project_EU5_to_CK3"
 picture="thumbnail.png"
 replace_path="gfx/map/map_object_data"
 replace_path="gfx/map/map_object_data/generated"
@@ -25,3 +25,4 @@ replace_path="history/struggles"
 replace_path="history/situations"
 replace_path="history/faiths"
 supported_version="1.20.*"
+remote_file_id="3824157073"
