@@ -251,28 +251,138 @@ def _tbl(title, keys):
 
 
 _tbl("藏区 / 喜马拉雅（16 个）", TIBET_BLOCK)
-_tbl("钦察语（15 个：库曼只留 cuman_culture，草原组→kazakh 融合，其余→kipchak）", KIPCHAK_BLOCK)
+_tbl("钦察语（15 个：伏尔加系→bolghar，黑海—里海系→cuman，其余→kipchak）", KIPCHAK_BLOCK)
 _tbl("柏柏尔（12 个：马格里布/撒哈拉→butr，摩洛哥→baranis，加那利→guanches）", BERBER_BLOCK)
-_tbl("罗斯 / 普鲁士（4 个：ilmenian 原版 0 省份不可用，诺夫哥罗德归罗斯；普鲁士从萨克森分离）", RUS_BLOCK)
-_tbl("苏丹-阿拉伯（1 个：阿拉伯+努比亚融合）", SUDAN_BLOCK)
+_tbl("罗斯 / 普鲁士（4 个：ilmenian 原版 0 省份不可用，诺夫哥罗德归罗斯；EU5 德意志普鲁士入萨克森）", RUS_BLOCK)
+_tbl("苏丹-阿拉伯（1 个：入贝都因）", SUDAN_BLOCK)
 
-# ============ 4.6 欧洲落实方案 ============
-A("### 4.6 欧洲落实方案（2026-10-21 用户定）")
+# ============ 4.6 欧洲与融合文化落实方案 ============
+A("### 4.6 文化落地（2026-10-22 定稿：CK3 原版地图内全部并入已有文化）")
 A("")
-A("本节把用户的欧洲方案落到分类表。**已落游戏（2026-10-21 01:34）**："
-  "省份 culture 改动 3309 行（129 个文化、113 组映射），"
-  "新文化定义写入 `common/culture/cultures/zz_eu5_culture_merge.txt`，"
-  "本地化写入 `localization/simp_chinese/zz_eu5_culture_merge_l_simp_chinese.yml`，"
-  "省份备份 `00_generated_provinces.txt.bak_eumerge_20261021_013418`。"
-  "范围仅限欧洲计划内的文化；欧洲以外与 cat1 一一对应的文化一律未动。")
+A("**已落游戏（2026-10-22）**：范围是 **CK3 原版地图内的全部文化（cat1-cat9）**，"
+  "共 781 个文化 / 14170 男爵领，其中 **686 条映射**把 EU5 文化并入 CK3 已有文化，"
+  "省份改写 11728 行、人物层（角色 + 宗族 + 支系）16879 行。"
+  "一个新建文化都没有，`zz_eu5_culture_merge.txt` 只剩 `prussian` 一个波罗的覆盖块。")
 A("")
-A("#### 一、本轮改动的落点")
+A("**范围**：cat1-cat9 = CK3 原版地图内，全部落地；"
+  "cat10（图外可参考，351 个 / 1560 省）与 cat11（图外自创，956 个 / 5316 省）"
+  "的 target 都是 `NEW:`，保持 EU5 key 不动，其定义本来就在 `00_generated_cultures.txt` 里。"
+  "cat9 从 66 个降到 **35 个 / 154 省**，剩下的全在非洲（33 个），"
+  "另有 2 个是 `domari` / `lomari`（罗姆两支，0 省，无地可落）。")
 A("")
+A("**方案为什么改**：CK3 新版官方将加入 `norse_gael`、`arpitan` 等文化，"
+  "自建同名文化会与官方撞车。所以原计划的 5 个新文化全部取消，"
+  "17 个 cat8 融合文化也一并改为并入已有文化。")
+A("")
+A("#### 一、取消的 5 个新文化及其落点")
+A("")
+A("| 原 key | 中文 | 类型 | 省份 | 落点 | 依据 |")
+A("|---|---|---|---:|---|---|")
+CANCELLED = [
+    (["anglo_irish"], "盎格鲁-爱尔兰", "融合", "english", "爱尔兰的英格兰移民后裔；新版官方将加入同名文化"),
+    (["norse_gael"], "诺斯-盖尔", "融合", "gaelic", "1337 群岛领主已盖尔化；新版官方将加入同名文化"),
+    (["western_pomeranian", "eastern_pomeranian"], "波美拉尼亚", "融合", "saxon", "低地德语的德意志化人口，与卡舒比不同族"),
+    (["walloon"], "瓦隆", "融合", "french", "瓦隆语属奥依语；新版官方将加入同名文化"),
+    (["prussian"], "普鲁士（德意志）", "分离", "saxon", "低地德语，与波罗的普鲁士人同名异族"),
+]
+for _ks, _zh, _ty, _to, _why in CANCELLED:
+    _b = sum(int(_ix[x]["baronies"]) for x in _ks if x in _ix)
+    A("| `%s` | %s | %s | %d | `%s` | %s |" % (" / ".join(_ks), _zh, _ty, _b, _to, _why))
+A("")
+A("`prussian` 这个 key 本身保留，但只装波罗的普鲁士人"
+  "（pruthenian 15 + sudovian 9 + curonian 6 = 30 省），"
+  "定义在 `zz_eu5_culture_merge.txt` 里覆盖回 `heritage_baltic` / `language_baltic`。"
+  "EU5 的德意志普鲁士（11 省）已并入 `saxon`。")
+A("")
+A("#### 二、17 个融合文化（cat8）改为并入")
+A("")
+A("| 文化 | 男爵领 | 洲 | 落点 | 依据 |")
+A("|---|---:|---|---|---|")
+MERGED = ["anglo_irish", "norse_gael", "western_pomeranian", "eastern_pomeranian", "walloon",
+          "kazani", "mishar", "crimean", "astrakhani", "nogai",
+          "turkish_culture", "azeri_culture", "gyalrong_culture",
+          "algerian", "moroccan", "tunisian", "sudanese_arab"]
+for _k in MERGED:
+    _x = _ix.get(_k)
+    if _x:
+        A("| %s | %s | %s | %s | %s |" % (nm(_x), _x["baronies"], _x["continent"], tg(_x), _x["note"][:52]))
+A("")
+A("草原按 EU5 的草原族群文化组（`steppe_group`）分东西支（用户 2026-10-22 定）："
+  "**带 `steppe_group` 的 → `cuman`（库曼，西支）** —— 阿斯特拉罕 70 / 克里米亚 108 / 诺盖 73；"
+  "**不带的 → `kipchak`（钦察，东支）** —— 乌兹别克 122 / 库梅克 5 / 巴尔卡尔 3 / 卡拉恰伊 3 / "
+  "帖良古惕 11 / 铁列乌特 9 / 叶尔喀勒 38。"
+  "`kipchak_language` 里带草原组的只有这 5 个（另有喀山 41、米萨 32）。")
+A("")
+A("**能独立的一律保留**（用户：「能自己独立的还是保留」）—— CK3 `00_turkic.txt` 里已有独立文化的，"
+  "不并入上面两支：`bashkir` 25 省、`bolghar` 110 省（喀山 + 米萨，伏尔加保加尔）、"
+  "`chuvash` 8 省、`uyghur` 32 省、`kirghiz` 26 省（黠戛斯，原版有，原先错并进 kipchak 已改回）、"
+  "`cuman` 3 省（库曼本体，匈牙利）。不落 `kazakh`：1337 年还没有哈萨克汗国，那是 15 世纪的事。")
+A("")
+A("马札尔另有一条：`chiyalik_culture`（奇亚利克，马札尔文化组仅存文化，40 省）→ `mogyer`（马扎尔），"
+  "不是 `hungarian`。CK3 里 `mogyer` 是 `hungarian` 的父文化（`00_magyar.txt`："
+  "`hungarian.created = 1000.1.1`、`parents = { mogyer }`），比匈牙利更早。")
+A("")
+A("三条按本地化改名：`turkish_culture`（土耳其）→ `turkmen`（土库曼）、"
+  "`azeri_culture`（阿塞拜疆）→ `turkish`（乌古斯）、`gyalrong_culture`（嘉绒）→ `qiang`（羌）。"
+  "CK3 的 `turkish` 显示名是「乌古斯」不是「土耳其」，判名一律以本地化为准。")
+A("")
+A("#### 三、亚洲按语族并入（2026-10-22 用户定：按 eu5_language 语族整体落）")
+A("")
+A("口径：CK3 原版地图内的亚洲 cat9 文化，一律按 EU5 的 `eu5_language`（语族）"
+  "整体并入 CK3 已有文化，不建新文化。落点全部取自 CK3 原版 `00_*.txt`，多数是 0 省的空文化。"
+  "**37 个 / 306 省，现已全部落地。**")
+A("")
+A("| 语族（eu5_language） | 个数 | 省份 | 落点 | 依据 |")
+A("|---|---:|---:|---|---|")
+ASIA = [
+    ("`evenk_language`（通古斯）", 2, 72, "`jurchen`", "鄂温克 / 鄂伦春主体在满洲，属女真组（用户定）"),
+    ("`evenk_language`（通古斯）", 11, 99, "`mohe`", "西西伯利亚通古斯诸族，非女真组（用户定）"),
+    ("`meitei_language`（藏缅）", 6, 46, "`lhomon`", "CK3 lhomon 原版注释直接含 Lhoba / Mishmi，正对珞巴与僜"),
+    ("`turkic_language`（突厥）", 6, 37, "`uriankhai`", "CK3 uriankhai 原版注释点名 Khakas 与 Tuvans"),
+    ("`circassian_language`（西北高加索）", 3, 20, "`alan`", "CK3 缺西北高加索文化，按地理贴北高加索（用户定）"),
+    ("`dagestanian_language`（东北高加索）", 5, 19, "`alan`", "同上（用户定）"),
+    ("`georgian_language`（卡特维尔）", 3, 12, "`georgian`", "拉兹 / 斯万 / 明格列尔同属卡特维尔语系"),
+    ("`shan_dialect`（掸语支）", 1, 1, "`tai`", "傣隆，入 CK3 tai（傣）"),
+]
+for _lang, _n, _b, _to, _why in ASIA:
+    A("| %s | %d | %d | %s | %s |" % (_lang, _n, _b, _to, _why))
+A("")
+A("两条是 CK3 原版注释直接点名的，不必猜：")
+A("")
+A("- **`uriankhai`（兀良孩）** 的定义里写着「these are western \"Uriankhai\", in this case "
+  "**specifically the Khakas and the Tuvans**」—— 原版设计来装的就是哈卡斯与图瓦，"
+  "正好覆盖 `turkic_language` 那 6 个南西伯利亚突厥（哈卡斯 16 / 图瓦 10 / 切尔坎 5 / "
+  "图巴拉尔 3 / 绍尔 2 / 库曼丁 1）。这个文化此前 0 省。")
+A("- **`lhomon`（珞门）** 的定义里写着「Lhomon (**Monpa; Lhoba; Kho-Bwa; Mishmi**; Memba; etc.)」"
+  "—— 直接含珞巴（`tani`）与僜（`mishmi`）；佐 / 那加 / 米基尔 / 梅泰同属东北印度藏缅山地，"
+  "CK3 无更细落点，一并入珞门。")
+A("")
+A("**通古斯为什么拆两支**：CK3 通古斯只有 `jurchen` 与 `mohe` 两个文化。"
+  "鄂温克（65 省，38 省在满洲）、鄂伦春（7 省全在满洲）是女真组，落 `jurchen`（并入后 228 省）；"
+  "其余 11 个西西伯利亚通古斯小族（瑟姆、奥布金茨、希利亚吉尔、瓦尔加盖茨、谢洛贡、"
+  "切姆达尔、纳纳吉尔、乌恰米、锡尼格尔、纽里尔茨、孔多吉尔）落 `mohe`（并入后 99 省）。"
+  "`mohe` 并入前是 0 省的空文化。")
+A("")
+A("**高加索为什么都进 `alan`**：CK3 的 `heritage_caucasian` 只有 `georgian` 与 `armenian` 两个文化，"
+  "西北高加索（切尔克斯 / 阿布哈兹 / 阿巴扎）与东北高加索（列兹金 / 纳赫 / 阿瓦尔 / 达尔金 / 拉克）"
+  "在原版没有任何对应文化。用户定：这两组按地理贴北高加索的 `alan`（阿兰，并入 39 省后共 43 省），"
+  "只有卡特维尔语系的拉兹 / 斯万 / 明格列尔按语族入 `georgian`。")
+A("")
+A("注意 `avar_culture`（高加索阿瓦尔，东北高加索语）与 CK3 的 `avar`（潘诺尼亚阿瓦尔，突厥/乌古尔语）"
+  "是**同名异族**，`SAME_NAME_DIFF` 里已拦住自动同名，本轮显式落 `alan`。")
+A("")
+A("落地结果：省份 306 行 / 37 组，人物层（角色 + 宗族 + 支系）421 行。"
+  "落点省份数：`jurchen` 228、`mohe` 99、`tai` 80、`lhomon` 64、`georgian` 52、`alan` 43、`uriankhai` 37。"
+  "37 个旧 key 在省份层残留为 0。")
+A("")
+A("#### 四、欧洲其他落点（2026-10-21 决定，本轮未变）")
+A("")
+A("| 文化 | 男爵领 | 原落点 | 现落点 | 依据 |")
+A("|---|---:|---|---|---|")
 EU_CHANGES = [
-    ("walloon", "4 法兰西", "8 瓦隆"),
-    ("gallo", "8 加洛", "4 法兰西"),
-    ("angevin", "8 安茹", "4 法兰西"),
-    ("arpitan", "8 阿尔卑坦", "4 奥克"),
+    ("gallo", "4 法兰西", "7 布列塔尼"),
+    ("angevin", "4 法兰西", "4 法兰西"),
+    ("arpitan", "4 奥克", "4 奥克"),
     ("lombard", "1 伦巴第", "7 山南"),
     ("southern_gallo_italic", "4 伦巴第", "7 山南"),
     ("corsican", "7 山南", "7 撒丁"),
@@ -284,14 +394,10 @@ EU_CHANGES = [
     ("transylvanian", "8 特兰西瓦尼亚", "4 瓦拉几亚"),
     ("aromanian", "8 阿罗马尼亚", "4 瓦拉几亚"),
     ("dalmatian", "8 达尔马提亚", "7 克罗地亚"),
-    ("western_pomeranian", "5 萨克森", "8 波美拉尼亚"),
-    ("eastern_pomeranian", "5 萨克森", "8 波美拉尼亚"),
     ("ingrian", "4 芬兰", "4 卡累利阿"),
     ("besermyan", "4 芬兰", "6 彼尔姆"),
     ("romani_culture", "9 罗姆", "11 罗姆（不建）"),
 ]
-A("| 文化 | 男爵领 | 原落点 | 现落点 | 依据 |")
-A("|---|---:|---|---|---|")
 for _k, _old, _new in EU_CHANGES:
     _x = _ix.get(_k)
     if _x:
@@ -301,78 +407,41 @@ A("语言规则层同步修正：`francique_dialect` 由法兰克尼亚改为法
   "（EU5 的 francique 实为奥依语支，语言柱误挂 `language_high_german`）；"
   "`lombard_dialect` 由伦巴第改为山南；`maltese_dialect` 由马耳他改为西西里。")
 A("")
-A("#### 二、确定新建的 5 个文化")
-A("")
-A("| key | 中文 | 类型 | 来源 | heritage | language | ethos | traditions（基础文化原版 → 调整后） |")
-A("|---|---|---|---|---|---|---|---|")
-A("| `anglo_irish` | 盎格鲁-爱尔兰 | 融合 | 英格兰 + 爱尔兰 | west_germanic | anglic | bureaucratic | "
-  "英格兰 4（hereditary_hierarchy / chivalry / castle_keepers / longbow_competitions）"
-  " − 长弓竞赛 + 牧人 / 优美诗歌 / 海洋重商主义 = **6 个** |")
-A("| `norse_gael` | 诺斯-盖尔 | 融合 | 诺斯 + 盖尔 | goidelic | goidelic | bellicose | "
-  "盖尔 5（fishermen / hill_dwellers / highland_warriors / strong_kinship / concubines）"
-  " − 高地战士 − 丘陵居民 + 沿海战士 / 海洋重商主义 / 说书人 = **6 个** |")
-A("| `pomeranian` | 波美拉尼亚 | 融合 | 萨克森 + 卡舒比 | central_germanic | saxon | stoic | "
-  "萨克森 3（stand_and_fight / ruling_caste / religious_patronage）"
-  " − 统治阶层 + 海洋重商主义 = **3 个** |")
-A("| `walloon` | 瓦隆 | 融合 | 法兰西 + 荷兰 | frankish | french | courtly | "
-  "法兰西 3（chanson_de_geste / hereditary_hierarchy / chivalry）"
-  " + 乡土观念 = **4 个** |")
-A("| `teutonic` | 普鲁士 | 分离 | 萨克森（不融合，圣战产物） | central_germanic | saxon | stoic | "
-  "萨克森 3（stand_and_fight / ruling_caste / religious_patronage）"
-  " + 以剑之名 = **4 个** |")
-A("")
-A("traditions 中文对照：长弓竞赛 `tradition_longbow_competitions`、牧人 `tradition_pastoralists`、"
-  "优美诗歌 `tradition_poetry`、海洋重商主义 `tradition_maritime_mercantilism`、"
-  "统治阶层 `tradition_ruling_caste`、高地战士 `tradition_highland_warriors`、"
-  "丘陵居民 `tradition_hill_dwellers`、沿海战士 `tradition_fp1_coastal_warriors`、"
-  "乡土观念 `tradition_parochialism`、以剑之名 `tradition_by_the_sword`、说书人 `tradition_storytellers`。")
-A("")
-A("#### 三、备选新文化（本轮不建）与设计提议")
-A("")
-A("| key | 中文 | 来源 | 提议的 traditions | 理由 |")
-A("|---|---|---|---|---|")
-A("| `silesian` | 西里西亚 | 波兰 + 捷克 | hussar / xenophilic / mountaineer_ruralism / hard_working | "
-  "波兰原版只有 hussar + xenophilic；补苏台德山地的「山地农田」与捷克的「勤劳」，贴合三方交界的矿区山地 |")
-A("| `northumbrian` | 诺森伯兰 | 英格兰 + 诺斯 | chivalry / castle_keepers / longbow_competitions / stand_and_fight | "
-  "去掉英格兰的 hereditary_hierarchy，保留边境城堡与长弓，加诺斯的「坚守阵地」体现丹麦法区血统 |")
-A("| `anjou` | 安茹 | 法兰西 + 诺曼 | chanson_de_geste / hereditary_hierarchy / chivalry / ruling_caste | "
-  "以法兰西三项为底，取诺曼的「统治阶层」对应安茹帝国跨海而治的贵族结构 |")
-A("| `gallo` | 加洛 | 法兰西 + 布列塔尼 | chanson_de_geste / hereditary_hierarchy / chivalry / storytellers | "
-  "以法兰西三项为底，取布列塔尼的「说书人」体现布列塔尼边疆的奥依语口传传统 |")
-A("| `transylvanian` | 特兰西瓦尼亚 | 罗马尼亚 + 匈牙利 | pastoralists / zealous_people / xenophilic / mountaineer_ruralism | "
-  "瓦拉几亚四项去 hussar（轻骑兵是匈牙利特征），换「山地农田」贴合喀尔巴阡山内盆地 |")
-A("")
-A("#### 四、不建清单与原因（用户定）")
+A("#### 五、不建清单（用户定）")
 A("")
 A("| 文化 | 原因 |")
 A("|---|---|")
+A("| 盎格鲁-爱尔兰 / 诺斯-盖尔 / 瓦隆 | **新版官方将加入，自建会撞车** |")
 A("| 格里科 | 人数过少、无省份；意大利将在下个 DLC 更新，谨慎行事 |")
-A("| 阿尔卑坦 | 意大利 DLC 原因 |")
-A("| 那不勒斯 | 意大利 DLC 原因 |")
-A("| 罗曼什 | 意大利 DLC 原因 |")
+A("| 阿尔卑坦 / 那不勒斯 / 罗曼什 | 意大利 DLC 原因（本轮并入奥克 / 西西里 / 山南） |")
 A("| 达尔马提亚 | 规模过小 |")
 A("| 阿罗马尼亚 | 人数实在过少 |")
 A("| 马耳他 | 只有一个岛，太小 |")
-A("| 喀山 | 和其他草原民族一并处理，不算欧洲事务 |")
 A("| 罗姆 | 流浪者文化，无地且难以设计 |")
-A("| 安茹 / 加洛 / 特兰西瓦尼亚 / 西里西亚 / 诺森伯兰 | 列为备选，本轮不建 |")
+A("| 安茹 / 西里西亚 / 诺森伯兰 / 特兰西瓦尼亚 | 列为备选，本轮不建 |")
 A("")
-A("#### 五、可行性检验结论")
+A("#### 六、落地结果与检验")
 A("")
-A("1. **罗姆人无人物**：CK3 原版 `common/culture/cultures/` 无 `romani` 定义；"
-  "`history/characters/` 全库 `culture = romani|roma|gypsy` 计数为 **0**"
-  "（正则只误撞到伏尔加芬兰语的 `muroma`）。故 `romani_culture` 无落点，标 cat11 占位，0 男爵领。")
-A("2. **罗马有定义无人物**：CK3 原版 `roman` 在 `00_latin.txt` 有定义，但 `history/characters/` 里 "
-  "**0 个角色**使用、原版 **0 个省份**。`roman_culture → roman` 可以落，"
-  "但游戏里不会有历史角色自带该文化，也不会自动出现在地图上。")
-A("3. **本地化让位**：CK3 `pommeranian`（显示「波美拉尼亚」）实为 EU5 卡舒比，"
-  "新融合文化 `pomeranian` 也要「波美拉尼亚」→ 原 `pommeranian` 本地化需改为「卡舒比」。"
-  "`prussian` 显示「普鲁赛尼亚」——波罗的普鲁士人（pruthenian 普鲁赛尼亚 / sudovian 苏多维亚 / "
-  "curonian 库罗尼亚）还在地图上，不能作古；德意志那一支另用 `teutonic`，显示「普鲁士」。")
-A("4. **traditions 上限**：`DEFAULT_MAX_TRADITIONS = 5` 只是开局值，随时代解锁会继续增加，"
-  "所以盎格鲁-爱尔兰 6 个、诺斯-盖尔 6 个都不需要砍。")
-A("5. **沿海战士属 DLC 内容**：`tradition_fp1_coastal_warriors` 定义在 `01_fp1_traditions.txt`，"
-  "为 Fate of Iberia 的内容。mod 假定全 DLC 可用；若需照顾无 DLC 环境，可换 `tradition_seafaring`（航海家）。")
+A("| 层 | 引用总数 | 不同 key |")
+A("|---|---:|---:|")
+A("| 省份 `history/provinces/00_generated_provinces.txt` | 21046 | 1508 |")
+A("| 角色 `history/characters/*.txt` | 29766 | 925 |")
+A("| 宗族 `common/dynasties/*.txt` | 4118 | 799 |")
+A("| 支系 `common/dynasty_houses/*.txt` | 168 | 21 |")
+A("")
+A("1. **死 key 0**：四层合计 55098 处引用（不含注释行），并集（mod 1920 个定义 + CK3 原版 244 个）"
+  "2140 个文化，全部有定义。cat1-cat7 里除了刻意保留的 `prussian` 30 省，"
+  "没有任何一条 `target != 自身` 的映射被漏掉。")
+A("2. **旧新文化清零**：`anglo_irish` / `norse_gael` / `walloon` / `pomeranian` / "
+  "`teutonic` / `anatolian_turkish` / `kazakh` / `sudanese_arab` / `gyalrong` "
+  "在四层里引用全部为 0；对应 `history/cultures/*.txt` 三个孤儿文件已删。")
+A("3. **本地化**：`pommeranian` 改「卡舒比」（原版这个 key 装的就是 EU5 卡舒比人，"
+  "名字仍对得上）；`prussian` 显示「普鲁赛尼亚」（波罗的普鲁士人还在地图上，不能作古）。")
+A("4. **罗马皇帝**：EU5 `roman_culture`（中文「拉丁」）→ CK3 `roman`（罗马）。"
+  "CK3 原版 `roman` 有定义但 0 个原生角色，mod 里那 62 个 `byz_*` 罗马皇帝"
+  "（卡利古拉、尼禄、图拉真…）就是 `roman_culture` 改过来的。")
+A("5. **`kazani` 定义成了孤儿**：`00_generated_cultures.txt` 里还留着 1 个块，"
+  "但引用已归零（全部并入 `bolghar`）。留着无害，删不删待定。")
 A("")
 
 io.open(OUT, "w", encoding="utf-8", newline="\n").write("\n".join(L) + "\n")

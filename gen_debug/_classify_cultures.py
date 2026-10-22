@@ -80,11 +80,13 @@ CULT_RULE = {
     "turkoman_culture":     r(2, "turkmen", "突厥蛮=CK 土库曼（CK3 turkmen 显示名「土库曼」）"),
     "turkmen_culture":      r(3, "turkish", "EU5 土库曼≠CK 同名 turkmen；CK3 的 turkish 显示名就是「乌古斯」，指乌古斯人"),
     "khorezmian_culture":   r(3, "karluk", "CK3 khwarezmian 是东伊朗语（斯基泰语支），EU5 花剌子模已突厥化、讲葛逻禄语"),
-    "chiyalik_culture":     r(6, "hungarian", "奇亚利克是马扎尔文化组仅存文化"),
-    "norse_gael":           r(8, "norse_gael", "与 CK 融合名同名"),
-    "anglo_irish":          r(8, "anglo_irish", "英爱融合"),
+    "chiyalik_culture":     r(6, "mogyer", "奇亚利克是马札尔文化组仅存文化；落 CK3 mogyer（马扎尔）——它是 hungarian 的父文化（created 1000.1.1），比匈牙利更早，用户定"),
+    # —— 新版官方要加的文化，本轮一律不建，全部落已有文化（用户 2026-10-22 定）——
+    "norse_gael":           r(7, "gaelic", "诺斯-盖尔：新版官方将加入 norse_gael，不建；1337 群岛领主已盖尔化，用户定入盖尔"),
+    "anglo_irish":          r(7, "english", "盎格鲁-爱尔兰：新版官方将加入，不建；爱尔兰的英格兰移民后裔，用户定入英格兰"),
     "turkish":              r(8, "anatolian_turkish", "突厥蛮+希腊融合，对应安纳托利亚突厥"),
-    "turkish_culture":      r(8, "anatolian_turkish", "EU5 土耳其=突厥蛮+希腊融合，对应 CK3 融合名 anatolian_turkish"),
+    "turkish_culture":      r(4, "turkmen", "EU5 土耳其＝安纳托利亚突厥，用户定入 CK3 turkmen（土库曼）；注意 CK3 turkish 显示名是「乌古斯」不是土耳其"),
+    "azeri_culture":        r(4, "turkish", "阿塞拜疆（乌古斯-伊朗），用户定入 CK3 turkish（显示名「乌古斯」）"),
     # —— 其他关键个案 ——
     "andalusi":             r(2, "andalusian", "安达卢西=安达卢西亚"),
     "leonese":              r(2, "asturleonese", "莱昂=阿斯图里亚斯-莱昂"),
@@ -157,7 +159,7 @@ CULT_RULE = {
     # 拉丁（EU5 roman_culture，拜占庭境内的拉丁语人群）→ CK3 roman
     # 注：CK3 原版 roman 有文化定义，但 history/characters 里 0 个角色使用、0 个省份，属空定义文化
     "roman_culture":          r(2, "roman", "拉丁＝罗马；CK3 原版 roman 有定义但无省份无角色，用户点名要 roman"),
-    "walloon":              r(8, "walloon", "瓦隆：法兰西+荷兰融合文化（用户定，以法兰西为基础，加乡土观念）"),
+    "walloon":              r(4, "french", "瓦隆语属奥依语；新版官方将加入 walloon，不建融合文化，用户定入法兰西"),
     # EU5 的 francique_dialect 是奥依语支（francien，含香槟/洛林/皮卡第/瓦隆），
     # 不是日耳曼的法兰克尼亚。语言柱被错挂成 language_high_german
     # （见 _eu5_language_to_ck3.py 第 92 行），此处按实际语支落 french。
@@ -165,7 +167,7 @@ CULT_RULE = {
     "lorrain":              r(5, "french", "洛林方言属奥依语（同上）"),
     "picard":               r(5, "french", "皮卡第方言属奥依语（同上）"),
     # —— 法国：用户 2026-10-21 定的备选新文化，本轮均不建，回到所属语支 ——
-    "gallo":                r(4, "french", "加洛属奥依语；融合文化列为备选（规模过小），暂并入法兰西"),
+    "gallo":                r(7, "breton", "上布列塔尼的加洛语（奥依语），用户 2026-10-22 定按地理入布列塔尼"),
     "angevin":              r(4, "french", "安茹方言属奥依语；安茹融合列为备选，暂并入法兰西"),
     "arpitan":              r(4, "occitan", "阿尔卑坦语属奥克-罗曼；因意大利 DLC 暂不建，按语支入奥克"),
     "luxembourgeois":       r(5, "franconian", "卢森堡语属中德方言"),
@@ -202,16 +204,15 @@ CULT_RULE = {
     "gen_culture_unsettled": r(11, "unsettled", "无主之地占位文化，保持原样"),
     # —— 同名异族（名字撞上 CK3，但不是同一个人群，必须显式拦下）——
     "yao_culture":          r(10, "yao_malawi", "非洲瑶族（班图语支，马拉维/莫桑比克），与 CK3 瑶族（苗语支）同名异族", "high"),
-    "avar_culture":         r(9, "caucasian_avar", "高加索阿瓦尔人（东北高加索语），与 CK3 潘诺尼亚阿瓦尔（突厥/乌古尔语）同名异族", "high"),
-    # —— 德国波罗的海沿岸（用户 2026-10-21 定）——
+    # avar_culture 见文末「亚洲按语族并入」段（高加索阿瓦尔 → alan）
+    # —— 德国波罗的海沿岸（用户 2026-10-22 定，不建新文化）——
     # EU5 的波美拉尼亚（western/eastern_pomeranian）是低地德语的德意志人口，
-    # 与 CK3 的 pommeranian（实为莱赫语的卡舒比人，见 kashubian）不是同一人群
-    # → 新建 萨克森+卡舒比 融合文化，本地化取「波美拉尼亚」。
-    # EU5 的 prussian 是低地德语德意志人口，与 CK3 波罗的古普鲁士同名异族
-    # → 从萨克森分离（圣战产物，不融合），本地化取「普鲁士」。
-    "western_pomeranian":   r(8, "pomeranian", "西波美拉尼亚（低地德语）：萨克森+卡舒比融合文化，用户定"),
-    "eastern_pomeranian":   r(8, "pomeranian", "东波美拉尼亚（低地德语）：萨克森+卡舒比融合文化，用户定"),
-    "prussian":             r(9, "teutonic", "EU5 普鲁士是低地德语的德意志人口，与 CK3 波罗的普鲁士（原版仅 k_lithuania 10 省）同名异族，从萨克森分离另立（条顿骑士团圣战产物，不融合）", "high"),
+    # 与 CK3 的 pommeranian（实为莱赫语的卡舒比人，见 kashubian）不是同一人群 → 入萨克森。
+    # EU5 的 prussian 同样是低地德语德意志人口，与 CK3 波罗的古普鲁士同名异族 → 也入萨克森。
+    # CK3 的 prussian 保留给波罗的普鲁士人（pruthenian/sudovian/curonian 的落点）。
+    "western_pomeranian":   r(7, "saxon", "西波美拉尼亚（低地德语），用户定入萨克森（不建融合文化）"),
+    "eastern_pomeranian":   r(7, "saxon", "东波美拉尼亚（低地德语），用户定入萨克森（不建融合文化）"),
+    "prussian":             r(7, "saxon", "EU5 普鲁士是低地德语的德意志人口，用户定入萨克森；CK3 prussian 留给波罗的普鲁士人", "high"),
     "merya":                r(1, "merya", "CK3 有 merya，同名同地"),
     "mossi":                r(1, "mossi", "CK3 有 mossi，同名同地"),
     "she_culture":          r(4, "han", "畲族无 EU5 数据、0 男爵领，按汉语并入汉（另可选 hmong）", "medium"),
@@ -245,18 +246,24 @@ CULT_RULE = {
     "tamang_culture":       r(7, "kirati", "塔芒同上，随罽罗多"),
     "limbu_culture":        r(7, "kirati", "林布是罽罗多核心族群"),
     "sherpa_culture":       r(7, "tsangpa", "夏尔巴，CK3 k_himalaya 有 culture = tsangpa #Sherpa"),
+    "gyalrong_culture":     r(7, "qiang", "嘉绒（羌-藏过渡），用户定入羌（k_gyalrong 原版 qiang 25 省）"),
 
-    # —— 突厥语支细分 ——
-    # 原先 language_turkic 一律→cuman，把乌兹别克/诺盖/喀山/吉尔吉斯全吞进库曼。
-    # 库曼只留 CK3 的 cuman_culture（3 男爵领在匈牙利，符合库曼人西迁史实）。
-    # 钦察语其余文化：带草原族群文化组（steppe_group）的 5 个鞑靼-钦察游牧与蒙古混居，
-    # 对应 CK3 融合名 kazakh（哈萨克＝钦察-蒙古融合体）；不带草原组的走 kipchak。
-    # 注意：CK3 官方中文把 kazakh 译作「乌兹别克」，与本 mod 用法冲突，本地化需覆盖为「哈萨克」。
-    "astrakhani":           r(8, "kazakh", "阿斯特拉罕鞑靼，草原组，钦察-蒙古融合"),
-    "crimean":              r(8, "kazakh", "克里米亚鞑靼，草原组，钦察-蒙古融合"),
-    "kazani":               r(8, "kazakh", "喀山鞑靼，草原组，钦察-蒙古融合"),
-    "mishar":               r(8, "kazakh", "米沙鞑靼，草原组，钦察-蒙古融合"),
-    "nogai":                r(8, "kazakh", "诺盖，草原组，钦察-蒙古融合"),
+    # —— 突厥语支细分（用户 2026-10-22 定，不建融合文化）——
+    # 按 EU5 的草原族群文化组（steppe_group）分东西支：
+    #   带 steppe_group（tatar_group;turkic_group;steppe_group）→ CK3 cuman（库曼，西支）
+    #   不带 steppe_group 的钦察语 → CK3 kipchak（钦察，东支）
+    # 即：astrakhani / crimean / nogai → cuman；uzbek / kyrgyz / kumyk / balkar /
+    #     karachay / telengit / teleut / yerle_qaliq → kipchak。
+    # 例外：kazani / mishar 虽然也带 steppe_group，但它们是伏尔加保加尔底子
+    #       （喀山汗国的前身），另归 bolghar，不参与这条东西支划分。
+    # 不并入 kazakh（哈萨克）：1337 年还没有哈萨克汗国，那是 15 世纪的事。
+    "astrakhani":           r(7, "cuman", "阿斯特拉罕鞑靼，带 steppe_group，西支入库曼"),
+    "crimean":              r(7, "cuman", "克里米亚鞑靼，带 steppe_group，西支入库曼"),
+    "kazani":               r(7, "bolghar", "喀山鞑靼＝伏尔加保加尔底子，入保加尔（虽带草原组，不参与东西支划分）"),
+    "mishar":               r(7, "bolghar", "米沙鞑靼属伏尔加系，随喀山入保加尔"),
+    "nogai":                r(7, "cuman", "诺盖，带 steppe_group，西支入库曼"),
+    # 能独立的一律保留：CK3 00_turkic.txt 有 kirghiz（黠戛斯），不并进 kipchak。
+    "kyrgyz_culture":       r(2, "kirghiz", "吉尔吉斯＝CK3 kirghiz（黠戛斯，叶尼塞/天山吉尔吉斯），原版有独立文化，保留"),
 
     # —— 柏柏尔：按地理分配 ——
     # CK3 原版落点：butr 在 k_tahert(17) k_africa(12) k_anbiya(11) k_sahara(9) k_egypt(7)
@@ -275,8 +282,76 @@ CULT_RULE = {
     "sanhaja":              r(6, "baranis", "桑哈贾在摩洛哥/西撒哈拉，CK3 k_maghreb 主体 baranis（15）"),
     "masmuda":              r(6, "baranis", "马斯穆达为摩洛哥主体柏柏尔，CK3 k_maghreb 主体 baranis（15）"),
 
-    # —— 苏丹-阿拉伯：阿拉伯人 + 努比亚人融合 ——
-    "sudanese_arab":        r(8, "sudanese_arab", "苏丹阿拉伯＝阿拉伯+努比亚融合，CK3 无对应，建融合文化"),
+    # —— 马格里布三国（用户 2026-10-22 定，不建融合文化）——
+    # 与已定的 libyan_arabic→maghrebi 同一口径：整个马格里布阿拉伯语区落 CK3 maghrebi。
+    "algerian":             r(7, "maghrebi", "阿尔及利亚阿拉伯语，入马格里布（不建 algerian_hybrid）"),
+    "moroccan":             r(7, "maghrebi", "摩洛哥阿拉伯语，入马格里布（不建 moroccan_hybrid）"),
+    "tunisian":             r(7, "maghrebi", "突尼斯阿拉伯语，入马格里布（不建 tunisian_hybrid）"),
+
+    # —— 苏丹-阿拉伯（用户 2026-10-22 定）——
+    "sudanese_arab":        r(7, "bedouin", "苏丹阿拉伯，用户定入贝都因（不建融合文化）"),
+
+    # ============ 亚洲按语族并入（用户 2026-10-22 定）============
+    # 口径：CK3 原版地图内，按 EU5 的 eu5_language（语族）整体落，不建新文化。
+    # 落点全部取自 CK3 原版 00_*.txt 已有文化，且多数是 0 省空文化。
+
+    # —— 通古斯语族（evenk_language，tungusic_group）13 个 / 171 省 ——
+    # CK3 通古斯只有 jurchen（女真）和 mohe（靺鞨）两个文化。
+    # 用户拍板：女真组的（满洲一带的鄂温克、鄂伦春）→ jurchen，其余西伯利亚诸族 → mohe。
+    "evenk_culture":        r(7, "jurchen", "鄂温克主体在满洲（38/65 省），属女真组，用户定入女真"),
+    "oroqen_culture":       r(7, "jurchen", "鄂伦春在大小兴安岭（7 省全在满洲），属女真组，用户定入女真"),
+    "sym_culture":          r(7, "mohe", "瑟姆（西西伯利亚通古斯），非女真组，用户定入靺鞨"),
+    "obgints_culture":      r(7, "mohe", "奥布金茨（西西伯利亚通古斯），非女真组，用户定入靺鞨"),
+    "silyagir_culture":     r(7, "mohe", "希利亚吉尔（西西伯利亚通古斯），非女真组，用户定入靺鞨"),
+    "vargagaits_culture":   r(7, "mohe", "瓦尔加盖茨（西西伯利亚通古斯），非女真组，用户定入靺鞨"),
+    "selogon_culture":      r(7, "mohe", "谢洛贡（西西伯利亚通古斯），非女真组，用户定入靺鞨"),
+    "cemdal_culture":       r(7, "mohe", "切姆达尔（西西伯利亚通古斯），非女真组，用户定入靺鞨"),
+    "nanagir_culture":      r(7, "mohe", "纳纳吉尔（东西伯利亚通古斯），非女真组，用户定入靺鞨"),
+    "uchami_culture":       r(7, "mohe", "乌恰米（西西伯利亚通古斯），非女真组，用户定入靺鞨"),
+    "ilimpeya_culture":     r(7, "mohe", "锡尼格尔（西西伯利亚通古斯），非女真组，用户定入靺鞨"),
+    "nyurilc_culture":      r(7, "mohe", "纽里尔茨（西西伯利亚通古斯），非女真组，用户定入靺鞨"),
+    "kondogir_culture":     r(7, "mohe", "孔多吉尔（西西伯利亚通古斯），非女真组，用户定入靺鞨"),
+
+    # —— 藏缅语族（meitei_language，tibeto_burman_group）6 个 / 46 省 ——
+    # CK3 lhomon 原版注释：Lhomon (Monpa; Lhoba; Kho-Bwa; Mishmi; Memba; etc.)，
+    # 正是阿萨姆-藏南这条线，tani（珞巴）和 mishmi（僜）直接命中。
+    # zo（佐/库基-钦）在孟加拉东部-印缅边境，那加/米基尔/梅泰同属东北印度藏缅山地，
+    # CK3 无更细落点，一并入 lhomon。
+    "tani_culture":         r(7, "lhomon", "珞巴，CK3 lhomon 注释直接含 Lhoba"),
+    "mishmi_culture":       r(7, "lhomon", "僜，CK3 lhomon 注释直接含 Mishmi"),
+    "zo_culture":           r(7, "lhomon", "佐（库基-钦），东北印度藏缅山地，随珞门"),
+    "naga_culture":         r(7, "lhomon", "那加，东北印度藏缅山地，随珞门"),
+    "karbi_culture":        r(7, "lhomon", "米基尔（阿萨姆山地藏缅），随珞门"),
+    "meitei_culture":       r(7, "lhomon", "梅泰（曼尼普尔藏缅），随珞门"),
+
+    # —— 突厥语族南西伯利亚（turkic_language，turkic_group）6 个 / 37 省 ——
+    # CK3 uriankhai 原版注释：「these are western "Uriankhai", in this case
+    # specifically the Khakas and the Tuvans」—— 原版点名要装的就是这两个。
+    "khakas_culture":       r(7, "uriankhai", "哈卡斯，CK3 uriankhai 注释点名 Khakas"),
+    "tuvan_culture":        r(7, "uriankhai", "图瓦，CK3 uriankhai 注释点名 Tuvans"),
+    "chelkans_culture":     r(7, "uriankhai", "切尔坎（阿尔泰北部突厥），随兀良孩"),
+    "tubalar_culture":      r(7, "uriankhai", "图巴拉尔（阿尔泰北部突厥），随兀良孩"),
+    "shor_culture":         r(7, "uriankhai", "绍尔（库兹涅茨克突厥），随兀良孩"),
+    "kumandin_culture":     r(7, "uriankhai", "库曼丁（阿尔泰北部突厥），随兀良孩"),
+
+    # —— 高加索诸语族（caucasian_group）11 个 / 51 省 ——
+    # CK3 的 heritage_caucasian 只有 georgian / armenian 两个文化，缺西北与东北高加索。
+    # 用户拍板：西北（切尔克斯/阿布哈兹/阿巴扎）+ 东北（达吉斯坦五族）都落 alan（阿兰），
+    # 按地理贴北高加索；卡特维尔语系（拉兹/斯万/明格列尔）落 georgian。
+    "circassian_culture":   r(7, "alan", "切尔克斯（西北高加索），CK3 无对应文化，用户定入阿兰"),
+    "abkhazian_culture":    r(7, "alan", "阿布哈兹（西北高加索），用户定入阿兰"),
+    "abazin_culture":       r(7, "alan", "阿巴扎（西北高加索），用户定入阿兰"),
+    "lezgin_culture":       r(7, "alan", "列兹金（达吉斯坦），CK3 无对应文化，用户定入阿兰"),
+    "nakh_culture":         r(7, "alan", "纳赫（车臣-印古什，东北高加索），用户定入阿兰"),
+    "avar_culture":         r(7, "alan", "高加索阿瓦尔（达吉斯坦），与 CK3 潘诺尼亚阿瓦尔同名异族，用户定入阿兰"),
+    "dargin_culture":       r(7, "alan", "达尔金（达吉斯坦），用户定入阿兰"),
+    "lak_culture":          r(7, "alan", "拉克（达吉斯坦），用户定入阿兰"),
+    "laz_culture":          r(7, "georgian", "拉兹（卡特维尔语系，格鲁吉亚西南），入格鲁吉亚"),
+    "svan_culture":         r(7, "georgian", "斯万（卡特维尔语系），入格鲁吉亚"),
+    "mingrelian_culture":   r(7, "georgian", "明格列尔（卡特维尔语系），入格鲁吉亚"),
+
+    # —— 傣语（shan_dialect，shan_group;thai_group）1 个 / 1 省 ——
+    "tai_long_culture":     r(4, "tai", "傣隆（掸语支），入 CK3 tai（傣）"),
 }
 
 # 名字与 CK3 撞车但不是同一人群的，禁止走「自动同名」
