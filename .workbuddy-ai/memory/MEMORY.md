@@ -5,11 +5,23 @@
 ## 一、宗教 / faith / rite
 - 地理树 `EU5/game/in_game/map_data/definitions.txt`（tab 缩进）**必须栈解析**：`next(x for x in reversed(stack) if x.endswith(("_region","_area","_province")))`；只认行内列表只能解析到 17032/27418。易错：`andaman_province`→north_sumatra_area、`sumatran_islands_province`→south_sumatra_area、苏拉威西 area=`celebes_area`、米佐丘陵在 bengal_region 下叫 `hill_area`。
 - faith 映射表（religion→faith 逐宗教整体落）：`Global_modern_map/eu5_export/eu5_ck3_faith_map_zh.csv`（293 行带中文）；**三表必须同步**：`_build_faith_map.py` CURATED / CSV / `_apply_*_faith.py` REL_RULE——加 CSV 不等于省会变。已映射 195 / 保留 pagan 98。中文名别混：CK3 `satsana_phi`=守护灵教，EU5 同名宗教叫丕教。「门顿教」是 religion 名（`mundhum_religion`）。
-- 落盘坑：省只写 `faith` 无 `rite=` 时按 faith 的 main_rite 回落；印度教分化必须**整县染色**（`_apply_hindu_faith_cu.py`）；反复踩的坑是**按县判定、按省落地**（戈尔甘、库法、西沃里尼亚、吉赞/希尔达、多贝亚/锡达莫）；写盘必须**保 CRLF**（rb→decode→split→join→encode，不要 replace \n）；保存点用 `gen_debug/_religion_checkpoint.py`。
+- 落盘坑：省只写 `faith` 无 `rite=` 时按 faith 的 main_rite 回落；印度教分化必须**整县染色**（`_apply_hindu_faith_branch.py`；CU 分法 `_apply_hindu_faith_cu.py` 已被用户舍弃删除）；反复踩的坑是**按县判定、按省落地**（戈尔甘、库法、西沃里尼亚、吉赞/希尔达、多贝亚/锡达莫）；写盘必须**保 CRLF**（rb→decode→split→join→encode，不要 replace \n）；保存点用 `gen_debug/_religion_checkpoint.py`。
+- **东亚系 rite 分配（2026-10-22，`Global_modern_map/eu5_export/_apply_sect_rite.py`）**：按 EU5 `main_menu/setup/start/15_international_organizations.txt` 的 23 个 `type = sect` 实例成员分。**sect 身份 = laws 首个元素**（藏传实例 `laws = { sakya_policy mulasarvastivada_policy vajrayana_policy }`，首個才是宗派，后两个是共享次级 law）。用户拍板：**DAI/KOR→dhyana（禅宗）、SSG→sukhavati（净土宗）**（三者各跨 3 个 sect：儒家+净土+禅宗 / 华严+禅宗+巫堂 / 儒家+净土+巫堂）。**vajrayana_faith 的 main_rite 已改 lamaism**（藏传佛教，faith_types 第 358 行），藏传五派+觉囊成员的省自动落 lamaism 不写行。根本说一切有部 10 成员（苏门答腊/马来佛国：BUS/INR/JMB/PLB/PNI/SGT/PAH/MUA/MYI/PGS）52 省写 `rite = vinaya`。rite/faith 不符一律走主流兜底（musok→mu 但 TMN 省是 mahayana；sakya→lamaism 但 CHI 1310 省是 confucian）。**confucian_faith 无 main_rite 字段**，由 `history/faiths/00_eastern_misc.txt` 按日期定（867=jingxue、1066.9.15=daoxue），1337 开局=daoxue；maitreya_faith 同理。东亚 2511 省共 4017 个 rite 行（209 个新写 + 3808 旧）。
+- **佛教地理传播（2026-10-22，`_apply_buddhist_geo_spread.py`）**：伊斯兰学派范式的佛教版。**只有 mahayana_faith 需要补**——theravada_faith 的 main_rite=theravada、vajrayana_faith 的 main_rite=lamaism，回落即正确，不写行。源省 = mahayana_faith + 已有具体宗派（dhyana/vinaya/sukhavati/pundarika/avatamsaka/yogacara）；待补 = mahayana_faith 无具体宗派 + **owner 非佛教国家**（EU5 religion_definition ∉ {mahayana,theravada,tibetan_buddhism}）；owner 是佛教国家的省一律不动 = **保留主流大乘兜底（用户：「高昌可不动」）**。多源分层 BFS 沿接壤只走 mahayana_faith 省、最近优先。结果写 25 省 `rite = vinaya`（马来半岛+苏门答腊 Riau，斯里维贾系），26 省传播不到保留主流（c_riau_islands `adj=[]` 孤岛、c_kedah/c_perak 被 hantuism/sunni 隔断，**不是 bug**）。父信仰守卫：mahayana 系 7 个 rite 只写 mahayana_faith，vajrayana 系 5 个只写 vajrayana_faith。
+- **佛教传播三层（2026-10-22 用户拍板）**：① 接壤 BFS（无限制）；② **近距离隔空/跨海：质心直线距离 ≤ 300 km**，中间隔海或隔非佛教省都行，**只做一步不递归**（阈值是到源的直线距离，不是每跳可累积）；③ **阿吒力教特批跨 faith 替换 mahayana**——`acharya` 绑 vajrayana_faith，写入时**删掉 `faith = mahayana_faith` 行、只留 `rite = acharya`**（按「有 rite 就不写 faith」）。acharya 的 8 个省没有 faith 行，必须从 `prov_rite` 单独捞（`ACHARYA_SOURCES`）才能当源。最终补 11 省 vinaya + 4 省 acharya（滇西 c_shunning/c_yongchang/c_lijiang/c_lanzhou），剩 10 省保留主流大乘。
+- **质心缓存 `_ck3_province_centroid.json`**：由 `_build_province_centroid.py` 从 `map_data/provinces.png`（16384×8192，step=2）算，28569 省。**json 的 int 键读回来会变字符串，必须 `{int(k): v ...}`**。换算：宽 16384 px = 360°，赤道 1 px ≈ 2.446 km，经度方向按 cos(lat) 收缩。
+- **★★ `history/provinces/00_generated_provinces.txt` 是纯 CRLF**：`newline=""` 读入后每行尾带 `\r`，行级正则必须写 `^(\d+) = \{\r?$`，**插入的新行也必须自带 `\r`**；否则 stat 全空、误报「无变化」、或写出混合行尾。（`_apply_islamic_geo_spread.py` 写盘正则同样缺 `\r?`，当年文件是 LF 才没暴露。）
+- **EU5 `religion_definition = mahayana #Azhaliism` 的 `#Azhaliism` 是注释**，宗教值仍是 mahayana（`east_asia.txt` 第 1392/1400/2168 行 = YAN/HQG/CDL）；阿吒力教 sect 在 `15_international_organizations.txt` 第 1362 行，成员 `CDL YAN HQG`、`laws = { azhaliism_policy vajrayana_policy }`、`provinces = { dali_province }`。
 - 国家宗教看 `setup/countries/*.txt` 的 `religion_definition`，`religious_school` 只是教法学派；判学派看 `common/religious_schools/*.txt` 的 `enabled_for_country`。什叶国家 22 个（含 maliki 2：BKZ/SKN，已按用户指示改 sunni+maliki）。跨宗教执政全库 201 人。
 - 宗教兜底链：pops 人口多数 → location 自己的 religion 标注 → 同省其它 location 多数。`location_templates.txt` 20918 个 location 带 religion。
 
 ## 二、CK3 数据结构约定
+- **★ 本地化永远比 key 值权威（2026-10-22 用户两次强调）**：判断一个 rite/faith/头衔是什么，
+  **先看本地化**，绝不按 key 字面意思脑补。实例：`acharya` 从 key 看像「阿阇梨」，
+  本地化实际是**阿吒力教**（EU5 azhaliism sect 对应的 CK3 rite）；`satsana_phi` 也不能按
+  key 猜。原话："不要根据key值擅自下定论，本地化永远比key值权威，你没记住吗"。
+  找法：`grep -rn "<key>" localization/simp_chinese/`，没有就查 vanilla 中文 loc，
+  都没有再问用户，不许自己编名字。
 - 术语红线：CK3 说**伯爵领/男爵领**，EU5 说**省份/地点**。**CK3 只读伯爵领块内第一个 b_ 当首府**，faith/culture/holding/县易主全跟随它。
 - dynasty=宗族、house=支系；COA 按 key 自动匹配。统计文化引用必须 `re.finditer(r'(?<![a-z_])culture\s*=\s*(\w+)', line)`。角色块解析先按大括号深度切顶层块。
 
