@@ -196,7 +196,7 @@ for ch in missing:
         continue
     added.append((ch, gv))
     block = (f"{ch} = {{{entry_eol}"
-             f"\t1337.1.1 = {{{entry_eol}"
+             f"\t1337.4.1 = {{{entry_eol}"
              f"\t\teffect = {{{entry_eol}"
              f"\t\t\tchange_government = {gv}{entry_eol}"
              f"\t\t}}{entry_eol}"

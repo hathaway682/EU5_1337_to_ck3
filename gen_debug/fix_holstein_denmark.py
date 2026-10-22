@@ -3,8 +3,8 @@
 
 1. landed_titles: b_rendsburg becomes the first barony of c_holstein (capital).
 2. zz_eu5_titles.txt:
-   - c_holstein 1337.1.1: holder -> Gerhard III (HTR), liege -> k_eu5_dan
-     (Holstein becomes Denmark's vassal; the HRE liege line on the 1337.1.1
+   - c_holstein 1337.4.1: holder -> Gerhard III (HTR), liege -> k_eu5_dan
+     (Holstein becomes Denmark's vassal; the HRE liege line on the 1337.4.1
      entry only is replaced -- historical entries untouched).
    - b_kiel: new block, holder Johann III of Holstein-Kiel (demoted to baron).
 
@@ -20,7 +20,7 @@ Provinces 608/611 are already castle_holding -- nothing to do there.
    the manual arrangements): inside the Holy Roman Empire a county is led from
    the town it is named for, whoever holds it. The barony whose name is the
    county's own name -- or a piece of it -- becomes the county's first barony,
-   and the county's 1337.1.1 holder follows it there. A county counts as inside
+   and the county's 1337.4.1 holder follows it there. A county counts as inside
    the Empire only when every location in it is held by an HRE member. Five
    counties move:
      c_chrudimsko        caslav -> chrudim           (BOH, holder unchanged)
@@ -98,7 +98,7 @@ eol = eol_of(t)
 cm = re.search(r"(?ms)^c_holstein = \{.*?^\}", t)
 assert cm, "c_holstein history block not found"
 em = re.search(r"(?ms)^\t1337\.1\.1 = \{.*?^\t\}", cm.group(0))
-assert em, "c_holstein has no 1337.1.1 entry"
+assert em, "c_holstein has no 1337.4.1 entry"
 seg = em.group(0)
 seg2 = seg.replace("holder = " + JOHANN, "holder = " + GERHARD)
 seg2 = re.sub(r"(\t\tliege = )e_hre(\r?\n)", r"\g<1>k_eu5_dan\2", seg2, count=1)
@@ -111,7 +111,7 @@ if re.search(r"(?m)^b_kiel = \{", t2):
     t3 = t2
 else:
     marks = [(m.group(1), m.start()) for m in re.finditer(r"(?m)^(b_[A-Za-z0-9_]+) = \{", t2)]
-    block = eol.join(["b_kiel = {", "\t1337.1.1 = {",
+    block = eol.join(["b_kiel = {", "\t1337.4.1 = {",
                       "\t\tholder = " + JOHANN, "\t}", "}", ""])
     after = sorted(k for k, _ in marks if k > "b_kiel")
     at = next(m[1] for m in marks if m[0] == after[0]) if after else len(t2)
@@ -297,7 +297,7 @@ def reorder_seat(path, county, barony):
 
 
 def move_county_holder(county, new_char, new_gov):
-    """The county's 1337.1.1 entry follows the seat: holder, and the government with it.
+    """The county's 1337.4.1 entry follows the seat: holder, and the government with it.
 
     The character decides it: the county's 1337 holder is the seat-holder's ruler already --
     c_alessandria's is eu5_regent_asd, ASD's own ruler, whose id carries no tag to read --
@@ -307,7 +307,7 @@ def move_county_holder(county, new_char, new_gov):
     cm = re.search(r"(?ms)^c_%s = \{.*?^\}" % county, t)
     assert cm, "c_%s history block not found" % county
     em = re.search(r"(?ms)^\t1337\.1\.1 = \{.*?^\t\}", cm.group(0))
-    assert em, "c_%s has no 1337.1.1 entry" % county
+    assert em, "c_%s has no 1337.4.1 entry" % county
     seg = em.group(0)
     old = re.search(r"holder = (\w+)", seg)
     assert old, "c_%s 1337 entry has no holder" % county
