@@ -1,0 +1,68 @@
+{
+  "mod_root": "D:/Documents/Paradox Interactive/Crusader Kings III/mod/EU5_Modern_Borders_noshape",
+  "out": "D:/Documents/Paradox Interactive/Crusader Kings III/mod/EU5_Modern_Borders_noshape/gen_debug/viz_majority_c",
+  "title": "若 major 需真多数才能拿走伯爵领（口径C：比其他任何单个持有者都多）",
+  "subtitle": "红色 = 39 个 fallback 首府中将失去 pick 的 31 个县；绿色 = 仍成立的 8 个",
+  "layer": "county",
+  "groups": [
+    {
+      "name": "将失去 pick（31）",
+      "color": "#D64545",
+      "titles": [
+        "c_atepec",
+        "c_avaria",
+        "c_erzgebirge",
+        "c_garmian",
+        "c_glamorgan",
+        "c_graubunden",
+        "c_harz",
+        "c_hegau",
+        "c_huaman_karpa",
+        "c_kachari",
+        "c_kachen",
+        "c_kakol_kiej",
+        "c_lalin",
+        "c_lippe",
+        "c_lower_styria",
+        "c_marche",
+        "c_markahuamachuco",
+        "c_middle_songhua",
+        "c_middle_weser",
+        "c_muling",
+        "c_north_benin",
+        "c_oriel",
+        "c_palawan",
+        "c_prignitz",
+        "c_sanjiang",
+        "c_seenplatte",
+        "c_sidamo",
+        "c_taozhou",
+        "c_upper_alsace",
+        "c_vogelsberg",
+        "c_wesermarch"
+      ]
+    },
+    {
+      "name": "仍成立（8）",
+      "color": "#3FA34D",
+      "titles": [
+        "c_brecon",
+        "c_koslin",
+        "c_limburg",
+        "c_lower_alsace",
+        "c_lower_mahakam",
+        "c_thuringer_becken",
+        "c_western_upper_swabia",
+        "c_zinacantan"
+      ]
+    }
+  ],
+  "on_conflict": "first",
+  "base": {
+    "unassigned": "#F2F2F2"
+  },
+  "legend": {
+    "enabled": true,
+    "unit": "counties"
+  }
+}
