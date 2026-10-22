@@ -106,3 +106,12 @@ CK3 原版 22 个「0 省份文化」不能当落点：gothic ancient_egyptian h
 - **改规则后四步链路**：① `_capital_correct.py --barony-order rank_state`（重写 RANK_STATE.json+导出树）→ ② `_apply_rank_state_seats.py --old-picks <旧json>` 作用于每棵树（把不再 pick 的县还原 definitions 序）→ ③ `export_politics.py`（stamp 含 RANK_STATE.json，自动重建）→ ④ `_reassign_counties.py --mod <mod> --export .`（同步 history/titles/zz_eu5_titles.txt 持有者，先 dry-run）。
 - 注意：`history/characters/zz_eu5_titles.txt` 是 10-18 陈旧副本，管线不维护；导出树 LF 无 BOM，mod 树 BOM+CRLF（`_apply_rank_state_seats.py` 保encoding）。
 - **★ `_reassign_counties.py` 排除名单**：`<mod>/gen_debug/eu5_reassign_keep.json`（BOM+CRLF）里列名的 title 一律不碰——县重写循环跳过、男爵领不写不删。现名单 `["c_holstein", "b_kiel"]`（`fix_holstein_denmark.py` 的丹麦摄政安排：c_holstein 1337=格哈德三世/liege k_eu5_dan；导出对不在 RANK_STATE.json 的县用 definitions 首府=kiel 算 capital 产出 HPL，每次跑都会冲）。**新增手改安排后要同步往这个名单加键**。其他读 eu5_politics.json 的脚本（`_grant_landed_duchies.py` 等）未审，有同类风险。
+- **★★ 土司首府两条规则：2026-10-22 已全回滚，作废勿再实施**（用户原话："土司相关全回滚，你的改动很失败"）。曾实现：① 土司全部视为 minor；② 全县皆土司的县首府改判当地人口最多的土司首都 location（RANK_STATE 67→93 picks）。回滚后：`_capital_correct.py` 无土司代码、RANK_STATE.json=67 picks、mod 树两文件与 git HEAD 逐字节一致（c_linan→xisha/NGZ、c_sichuan→jianchang_sichuan/LLS、c_gyelrong→zhanggu/CKL）。作废前审计结论（如需重做先读）：实现有 2 个漏洞——洞1 linan（土司被从 majors 一并拿掉，该移没移）、洞2 sichuan（封臣守卫只查直属封君，CHI 抢了传递封臣 LLS 的县）；修复方案 fixB（解耦 minor/majors + 传递封臣链守卫 + 土司 pass 只填空缺）已模拟验证但随回滚作废。**嘉绒问题回到起点**（c_gyelrong 首府仍是打箭炉/明正 CKL）。回滚细节见 2026-10-22.md "06:0x"。
+- **★ 链路第⑤步**：`_reassign_counties.py` 按 EU5 government 写政府，土司县会被写成 feudal_government，**必须重跑** `_apply_tusi_governments.py --export . --apply` 改回 tribal。凡是土司县换主都要重跑。
+- **既定约定（勿当 bug）**：export_politics「仍有县者不降男爵领」——还拥有别的县的国家，其在别县残余地不建 b_ 块（如 CKL 的 zhanggu 不建块，随 GYE 县主）。
+
+## 十、地图可视化（ck3-mapviz skill，2026-10-22）
+- **「把 XX 画到世界地图上」一律先用 skill `ck3-mapviz`**（`C:\Users\DELL\.workbuddy-ai\skills\ck3-mapviz\scripts\ck3mapviz.py`，scan/dump/diff/render/init）。render 后台跑约 20s。
+- 用法：spec 里 `groups` + `color.mode="direct"`，`titles` 给头衔 id（county 默认 expand 整棵子树=全县所有男爵领省份一起涂色），`on_conflict:"first"` 决定重叠时谁赢。产物 `_full.png`（图+图例）是给人看的那张。
+- **严禁自己算投影/质心打点**（2026-10-22 用户两次发火：「点一堆点给谁看呢，上色整个伯爵领」「怎么还算起投影来了」）。按 province 色块涂色直接用 skill，不要碰 heightmap/provinces.png 自己拼。
+- **统计出图前先看 `00_landed_titles.txt` mtime**：用户在边跑边改，旧数据出的图会含已修掉的县（如 c_guanxi）。
