@@ -28,7 +28,7 @@ from _faith_heads import country_title_key
 
 MOD = r"D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape"
 EXPORT = r"D:\Documents\Paradox Interactive\Crusader Kings III\mod\Global_modern_map\eu5_export"
-DATE = "1337.1.1"
+DATE = "1337.4.1"
 
 ap = argparse.ArgumentParser()
 g = ap.add_mutually_exclusive_group()

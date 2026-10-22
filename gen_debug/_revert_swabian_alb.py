@@ -41,7 +41,7 @@ def revert_title(path):
     i = text.find(marker)
     assert i != -1, "c_swabian_alb not found in " + path
     rest = text[i:]
-    j = rest.find("1337.1.1 = {")
+    j = rest.find("1337.4.1 = {")
     assert j != -1, "1337 block not found in " + path
     k = j
     depth = 0
