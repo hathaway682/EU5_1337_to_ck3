@@ -73,6 +73,29 @@ MAP = {
     # 行尾注释盘点后采纳的 2 条
     "emei": "b_emei",                 # 峨眉山 → 嘉定府峨眉（原 c_rongzhou 融州，广西融水；本块原无 barony 行，需插入）
     "bumiayu": "b_bumi_ayu",          # 南苏门答腊 Candi Bumiayu → 布米阿尤（c_ogan 奥甘，原 b_musi 上穆西）
+    # 无中文本地化那批（原版 simp_chinese 缺 holy_site_<key>_name，名字匹配从没覆盖过）
+    "armagh": "b_armagh",             # 阿马 → 阿马（原 b_dundalk 邓多克，同县 c_oriel）
+    "yamama": "b_al_yamamah",         # 耶马迈 → 耶马迈（原 b_ad_dilam 迪勒姆，同县 c_yamama）
+    "badrinath": "b_badrinath",       # 伯德里纳特 → 伯德里纳特（原 b_uttarkashi 北加希，同县 c_garhwal）
+    "shringeri": "b_sringeri",        # 斯灵盖里 → 斯灵盖里（原 b_basavapattana，同县 c_banavasi）
+    "sparta": "b_mystras",            # 斯巴达 → 米斯特拉斯（原 b_kythira 基西拉岛，同县 c_laconia）
+    "suzhou": "b_wuxian",             # 苏州 → 吴县（苏州城；原 b_changshu 常熟。注意 b_suzhou 是四川黎州）
+    "hangzhou": "b_hangzhou",         # 杭州 → 杭州（原 b_fuyang_hangzhou 富阳，同县 c_hangzhou）
+    "jiuhua": "b_qingyang",           # 九华山 → 池州青阳（mod 译作「庆阳」；原 b_dongliu 东流，同县 c_chizhou）
+    "bulguksa": "b_gyeongju",         # 佛国寺 → 庆州（原 b_boseongbu 宝城府，同县 c_gyeongju）
+    "putuo": "b_changguo",            # 普陀山 → 昌国州（舟山，元属庆元路；原 b_baling 巴陵，岳阳，完全错）
+    "nanhua": "b_qujiang",            # 南华寺 → 韶州曲江（c_shaozhou 中文名误作「邵州」；原 b_jiyin 济阴，山东，完全错）
+    "tate": "b_niikawa",              # 立山 → 越中新川郡（原 b_tsukama 筑摩，信浓，错）
+    "jianchang": "b_nancheng",        # 建昌府 → 南城（原 b_jingchuan 泾川，甘肃，完全错）
+    "zhuolu": "b_baoan_baoan",        # 涿鹿 → 保安州（元涿鹿属保安州；原 b_baideng 白登，大同，错）
+    "quzhou": "b_xian_quzhou",        # 衢州 → 衢州西安县（原 b_liujiang 流江，四川广安，完全错）
+    "dongting": "b_baling",           # 洞庭湖 → 岳州巴陵（原 b_langzhong 阆中，四川，完全错）
+    "mogao": "b_shazhou",             # 莫高窟 → 沙州敦煌（原 b_anding_suzhou 安定，同县 c_shazhou）
+    "heiankyo": "b_kyoto",            # 平安京 → 京都（原 b_kuse 久世，同县 c_yamashiro）
+    "mount_kunyu": "b_wendeng",       # 昆嵛山 → 宁海州文登（原 b_penglai 蓬莱，登州，隔了一座山）
+    # 用户拍板（2026-10-23）：取最近的可用男爵领
+    "hiei": "b_kurita",               # 比叡山 → 近江栗太郡（草津，紧邻滋贺郡；原 b_takashima 高岛在近江最北）
+    "linzi": "b_zichuan",             # 临淄 → 青州淄川（淄博；原 b_yidu_qingzhou 益都偏东）
 }
 
 
