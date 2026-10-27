@@ -20,6 +20,7 @@
 - **CK3 文化文件首行带 BOM**（`00_bantu.txt`/`00_nakkavaram.txt`/`00_somalian.txt`），`^[a-z_]+ = \{` 匹配不到第一个文化，统计会漏。
 
 ## 三、文化
+- **改文化先看 skill `ck3-culture-pipeline`**（`.workbuddy-ai/skills/`）：流程 + 体检/改落点/批量归并三个脚本 + 判据与踩坑参考。
 - 工具链：`_classify_cultures.py` → `_annotate_zh_in_classification.py --apply` → `_culture_classification_report.py`。CK3 原版 22 个「0 省份文化」不能当落点。
 - **判据优先级**：`CULT_RULE > 自动同名 > GROUP_RULE_STRONG > LANG_RULE > GROUP_RULE > 自动（语言唯一/传承唯一）`。
   要压住 LANG_RULE 就写 CULT_RULE；想让某个「文化组」整体决断，写 `GROUP_RULE_STRONG`（现有 tungusic→mohe、nilosahelian→daju、bantu→east_bantu、khoisan→khoisan、malagasy→malagasy、papuan→papuan）。
@@ -30,7 +31,7 @@
 - **★ 图内口径 = 原则上并入 CK3 原版文化**；`NEW:` 前缀保留 EU5 key，落地脚本跳过。**CU 地图范围内已清零**；图外仍有约 610 个 EU5 key（美洲/大洋洲正在按组收）。
 - **例外：用户指定新建的 `khoisan` / `malagasy`**（CK3 原版没有）。定义手写在 **`common/culture/cultures/zz_eu5_culture_new.txt`**（BOM+CRLF），本地化在 **`localization/simp_chinese/zz_eu5_culture_new_l_simp_chinese.yml`**。**不要写进 `zz_eu5_culture_merge.txt`**——那个文件由 `_apply_eu_culture_merge.py` 重跑覆盖。支柱复用 `khoisan_group`/`eu5_heritage_khoisan_group`、`malagasy_group`/`eu5_heritage_malagasy_group`（`00_generated_pillars.txt` 已有）。name_list 与 ethnicities 只能复用同组资源。
   **tradition 坑**：在 CK3 目录有定义但 mod 里 0 次使用的疑为 DLC，选 tradition 前先 grep `00_generated_cultures.txt` 确认已在用（如 `tradition_tgp_rice_cultivators`/`tradition_fp3_irrigation_experts`/`tradition_stratified_society`）。
-- 落点速查（易错项）：anglo_irish→english、norse_gael→gaelic、walloon→french、(western/eastern_)pomeranian→saxon、EU5 prussian(德意志)→saxon、kazani/mishar→bolghar、gyalrong→qiang、sudanese_arab→bedouin。
+- 落点速查（易错项）：anglo_irish→english、norse_gael→gaelic、walloon→french、pomeranian→saxon、EU5 prussian(德意志)→saxon、kazani/mishar→bolghar、gyalrong→qiang、sudanese_arab→bedouin。
   **`arpitan`（阿尔卑坦）→ french**：EU5 把它放在 `french_group;swiss_group`、`arpitan_dialect`，是法语支不是奥克-罗曼；2026-10-27 用户纠正，CULT_RULE 与 LANG_RULE 两条都要写 french。奥克只留 auvergnat/gascon/languedocien/limousin/provencal/vivaro_alpine。
 - **`prussian` 双义（省份层+人物层都要 skip）**：省里现存的 30 个 prussian 是波罗的普鲁士人，**再跑会误改成萨克森**，脚本 `KEEP_IN_PROV`+`KEEP_IN_PEOPLE` 双重排除。
 - 判文化名一律先查本地化：CK3 `turkish`=乌古斯、`kazak`=喀扎克、`kirghiz`=黠戛斯、`uriankhai`=兀良孩、`kimek`=基马克、`bouxcuengh`=布僮、`shiwei`=室韦、`tai`=傣、`hlai`=黎；`samoyed` 显示「Bjarmian」、`maluku` 显示「文老古」、`nakkavaram` 显示「那旺」。
@@ -38,28 +39,36 @@
 - 草原东西支：带 `steppe_group`→cuman（astrakhani/crimean/nogai）；不带→kipchak（uzbek/telengit/teleut/yerle_qaliq）。**例外：balkar/karachay/kumyk 只 turkic_group、无 steppe_group，2026-10-27 用户定 → `khazar`（可萨）**（语言是 kipchak_language，必须 CULT_RULE 覆盖；原先一度定 alan，已改口）。能独立保留：bashkir/bolghar/chuvash/uyghur/kirghiz/cuman。
 - **侗台三分（不建新文化）**：台语支 `shan_dialect`→**tai**；侗水 `kam_language` + 仡央 `kra_language`→**bouxcuengh**（`00_tai.txt:47`）。`tai_lu`/`tai_nua` 的 `NEW:shan` 已作废。
 - **通古斯三分（组判定优先于语言判定）**：① 含 `jurchen_group`→**jurchen**；② 同时含 `mongolian_group`+`tungusic_group`→**shiwei**（`00_mongolic.txt:225`）；③ 只有 `tungusic_group`→**mohe**（`GROUP_RULE_STRONG`，16 个鄂温克诸部自动命中）。
-- 亚洲按语族并入：uriankhai→收南西伯利亚突厥（sakha/soyot/khakas）；lhomon→meitei 6 个；高加索 circassian/abkhazian/abazin+lezgin/nakh/avar/dargin/lak→alan，laz/svan/mingrelian→georgian；`avar_culture` 是高加索阿瓦尔、与 CK3 `avar` 同名异族，落 alan；tai_long→tai。
+- 亚洲按语族并入：uriankhai→收南西伯利亚突厥（sakha/soyot/khakas）；lhomon→meitei 6 个；高加索 circassian/abkhazian/abazin+lezgin/nakh/avar/dargin/lak→alan，laz/svan/mingrelian→georgian；tai_long→tai。
 - **`khakas_culture`→uriankhai**（CK3 原版注释 "specifically the Khakas and the Tuvans"）。2026-10-27 一度改 kirghiz 又改回，**勿再动**。
-- **西伯利亚东北部收尾**：`lamut_language`→**mohe**、`yukaghir_language`→**nivkh**、`chukotko_kamchatkan_language`→**nivkh**、`nicobarese_language`→**nakkavaram**（尼科巴与安达曼同处理）。落值：nivkh 307、mohe 387、uriankhai 70、kirghiz 33。
-- **尼罗-撒哈拉 → daju**：`GROUP_RULE_STRONG["nilosahelian_group"]`（成员 berta/fur/gumuz/kadu/katla/kunama/moru/nuba/nyimang/surma 另在 CULT_RULE 逐个补）；`tunjur`/`funj` 的 eu5_groups 为空，按 cat7 显式落 daju。**EU5 把 tunjur/funj/fur/gumuz/kunama 误标 `egyptian_dialect`** —— 这就是撒南出现埃及文化的原因。
-- **撒哈拉语族 → zaghawa（用户 2026-10-27）**：`saharan_language` 7 成员（bilala/kanembu/maba_africa/masalit/runga/toubou/zaghawa），`LANG_RULE` 由 kanuri 改 **zaghawa**；**必须显式写两条 CULT_RULE**：`kanembu→kanuri`（唯一例外）、`toubou→zaghawa`（挂 nilosahelian_group，强组层在 LANG_RULE 之前，不写会被截成 daju）。
+- **西伯利亚东北部**：`lamut_language`→mohe、`yukaghir_language`→nivkh、`chukotko_kamchatkan_language`→nivkh、`nicobarese_language`→nakkavaram。
+- **尼罗-撒哈拉 → daju**：`GROUP_RULE_STRONG["nilosahelian_group"]`（成员 berta/fur/gumuz/kadu/katla/kunama/moru/nuba/nyimang/surma 另在 CULT_RULE 逐个补）；`tunjur`/`funj` 组为空，按 cat7 显式落 daju。**EU5 把 tunjur/funj/fur/gumuz/kunama 误标 `egyptian_dialect`** —— 撒南出现埃及文化的原因。
+- **撒哈拉语族 → zaghawa**：`saharan_language` 7 成员，`LANG_RULE` 由 kanuri 改 **zaghawa**；**必须显式写两条 CULT_RULE**：`kanembu→kanuri`（唯一例外）、`toubou→zaghawa`（挂 nilosahelian_group，强组层在 LANG_RULE 之前，不写会被截成 daju）。
 - **非洲收尾（非洲 NEW 已清零）**：库希特→somali、尼罗特→welayta、中非/双组→sao、纯中非→daju、dogon→**marka**、senufo→**bobo**（按 CU）、ijaw→igbo、bantoid/benue→east_bantu、ket→mohe、andamanese→**nakkavaram**。**完整成员清单以 `_classify_cultures.py` 的 CULT_RULE 为准**（约 60 条），见 2026-10-27 日志。
   **这些刻意不写组级**：cushitic 17、nilotic 11、west_african;central_african 13，组级会冲掉 afar/beja/welayta/ethiopian 等已落对的。
   **CK3 安达曼群岛 = `nakkavaram`（那旺）**：`00_nakkavaram.txt:1`。
 - **班图语族 → `east_bantu`（除斯瓦希里）**：`00_bantu.txt:1`（带 BOM），本地化已覆盖成「班图」。`swahili_culture` 在 CULT_RULE 显式保 `swahili`。
 - **科普特 → `ancient_egyptian`**（`00_dead.txt:36`）。**但 coptic 从不是任何 EU5 province 的人口第一**，省份层仍是 0 省。
 - **大洋洲/台湾**：`formosan_culture`→**amis**（`00_malayic.txt:396`）。**`GROUP_RULE_STRONG["papuan_group"]`=papuan**（2026-10-27 用户定），覆盖 139 个成员。bife/buruwai/iwur/kamoro/kimaama/marind/moi/wamesa 那 8 条 CULT_RULE 与组规则一致、保留无害；**alor/makasae/bunak/fataluku→maluku 那 4 条已删**（CULT_RULE 优先级更高，不删会挡住组规则）。
-- **文化本地化一律不带「人」**：`_collective_noun` 等直接写族名。改的是 `localization/simp_chinese/zz_eu5_culture_merge_l_simp_chinese.yml` **和生成器** `gen_debug/_apply_eu_culture_merge.py` 的 LOC 模板（模板不改，重跑会把「人」写回来）。CK3 原版只有 `yeren`（野人）带「人」，是文化本名，不动。
-- 已知历史遗留（未动）：`00_bookmarks.txt` 引 languedocien、`00_generated_challenge.txt` 引 highland（两 key 无定义）。
+- **文化本地化一律不带「人」**：`_collective_noun` 等直接写族名。要同时改 `zz_eu5_culture_merge_l_simp_chinese.yml` **和生成器** `_apply_eu_culture_merge.py` 的 LOC 模板（不改模板重跑会写回「人」）。CK3 原版只有 `yeren`（野人）是文化本名，不动。
+- 已知遗留：`00_bookmarks.txt` 引 languedocien、`00_generated_challenge.txt` 引 highland（两 key 无定义）。
 - **省份层落地口径 = 按 EU5 province 人口多数、同省统一**（`gen_debug/_apply_province_pop_culture.py`，支持 `--classif`、默认 dry run）：pops `size` 按 culture 累加 → province 多数 → 该 province 下所有男爵领写同一值；无 pop 的 110 县 fallback「同县当前多数」。**同目录 `_apply_county_majority_culture.py` 是错误第一版（location 个数投票），已废弃**。
 - CSV 改法必须保 BOM+CRLF：`csv.reader(io.StringIO(io.open(P,"rb").read().decode("utf-8-sig")))` → `csv.writer(out, lineterminator="\r\n")` → `write(out.getvalue().encode("utf-8-sig"))`。Excel 独占锁会 WinError 32，先写 `.tmp_new` 用 `--classif` 指过去。
 
 ## 四、宗教 / faith / rite
-- faith 映射 `Global_modern_map/eu5_export/eu5_ck3_faith_map_zh.csv`；**三表必须同步**：`_build_faith_map.py` CURATED / CSV / `_apply_*_faith.py` REL_RULE。已映射 195 / 保留 pagan 98。CK3 `satsana_phi`=守护灵教（EU5 同名宗教叫丕教）；「门顿教」是 religion 名（mundhum_religion）。
-- 落盘坑：省只写 faith 无 rite= 时按 main_rite 回落；印度教分化必须**整县染色**（`_apply_hindu_faith_branch.py`）；**按县判定、按省落地**是反复踩的坑；写盘**保 CRLF**。
-- 东亚 rite（`_apply_sect_rite.py`）：**sect 身份 = laws 首个元素**。DAI/KOR→dhyana、SSG→sukhavati。vajrayana_faith 的 main_rite 已改 lamaism，藏传五派+觉囊自动落不写行。根本说一切有部 10 成员 52 省写 vinaya。confucian_faith / maitreya_faith 无 main_rite，由 `history/faiths/00_eastern_misc.txt` 按日期定（1337=daoxue）。
-- 佛教传播（`_apply_buddhist_geo_spread.py`）：只有 mahayana 需要补。三层：① 接壤 BFS；② 质心直线 ≤300 km 隔空、只做一步不递归；③ 阿吒力特批跨 faith 替换 mahayana（acharya 绑 vajrayana_faith，写时删 faith 行只留 rite，8 省须从 prov_rite 单独捞）。父信仰守卫：mahayana 系 7 rite 只写 mahayana_faith，vajrayana 系 5 个只写 vajrayana_faith。
-- EU5 `religion_definition = mahayana #Azhaliism` 的 `#Azhaliism` 是注释。国家宗教看 `setup/countries/*.txt`；什叶 22 国（BKZ/SKN 已改 sunni+maliki）。兜底链：pops 多数→location 标注→同省其它 location 多数。
+- **改宗教先看 skill `ck3-religion-pipeline`**（`.workbuddy-ai/skills/`）：`SKILL.md` 是入口，
+  `references/pipeline.md` 有 10 层执行顺序表，`references/rites.md` 是 rite/faith 中文名全表，
+  `references/cu-source.md` 是 CU 四层取数，`references/pitfalls.md` 是 18 条坑。
+  脚本：`religion_audit.py`（只读体检）、`religion_set.py`（外科手术式改 faith/rite，默认 dry-run）。
+- **判 rite 能不能挂到某省看 religion 不看 faith**：基督教 9 个礼全绑伞形 faith `christian_faith`，
+  省份写 `orthodox`/`catholic` 是正常的（曾经按 faith 严格比对误报 1325 省）。
+  只有 21 个 faith 有多个 rite，其余 82 个「一 faith 一同名 rite」不用写 rite 行。
+- **`shangqing_faith`=上清派（faith 名）、`quanzhen`=全真派（rite 名）**；省写 `faith = shangqing_faith`
+  游戏显示「上清派」。`confucian_faith`/`maitreya_faith` 无 main_rite，靠 `history/faiths/00_eastern_misc.txt`（1337=daoxue）。
+- 唯一真源 `eu5_ck3_faith_map.csv`（生成器 `_build_faith_map.py` 的 `CURATED`）；**三表必须同步**。
+  CK3 `satsana_phi`=守护灵教（EU5 同名宗教叫丕教）；「门顿教」是 religion 名。
+- 落盘坑：省只写 faith 无 rite 时按 main_rite 回落；印度教**整县染色**；**按县判定、按省落地**；写盘保 CRLF。
+- **文件状态可能被用户自己回滚**（实测过一次：CU 三教转换成果整体还原）。任何「已知数字」都要当场 `religion_audit.py` 核。
 
 ## 五、CU 对照表（「按 csv 分」指这个）
 `gen_debug/_cu_vs_ours.csv`（2858 行 = 2858 barony，列 `barony, our_province, our_county, our_culture, our_faith, cu_culture, cu_rite, cu_county, cu_province`）：先把 cu_rite 挂到整个 province，再按 location 数取主体；拿 barony 名直接匹配只命中首府一格。

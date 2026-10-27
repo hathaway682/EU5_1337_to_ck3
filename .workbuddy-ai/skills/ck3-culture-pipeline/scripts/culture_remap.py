@@ -24,15 +24,19 @@ import sys
 import _common as C
 
 
-def find_rule_lines(culture):
-    """在规则文件里找这个 culture 出现在哪些表的哪一行（绝对行号）。"""
+def find_rule_lines(culture, language=None):
+    """在规则文件里找这个 culture（及其 EU5 语言）出现在哪些表的哪一行（绝对行号）。"""
     out = []
     table = None
+    keys = {'"%s"' % culture}
+    if language:
+        keys.add('"%s"' % language)
     for i, line in enumerate(open(C.RULES, encoding="utf-8").read().split("\n"), 1):
         m = re.match(r"^([A-Z_]+)\s*=\s*\{", line)
         if m:
             table = m.group(1)
-        if re.match(r'^\s*"%s"\s*:' % re.escape(culture), line):
+        head = line.strip().split(":")[0].strip()
+        if head in keys and table:
             out.append((i, table, line.strip()))
     return out
 
@@ -72,9 +76,9 @@ def main():
     print("模式        : %s\n" % ("APPLY 落盘" if apply else "DRY RUN"))
 
     # ---- 规则文件提示 ----
-    hits = find_rule_lines(eu5)
+    hits = find_rule_lines(eu5, row.get("eu5_language", "").strip() or None)
     if hits:
-        print("规则文件里出现 %d 处（改完请同步，否则重跑分类会冲掉）：" % len(hits))
+        print("规则文件里相关 %d 处（改完请同步，否则重跑分类会冲掉）：" % len(hits))
         for ln, table, text in hits:
             print("    绝对行 %-5d [%s] %s" % (ln, table, text))
     else:
