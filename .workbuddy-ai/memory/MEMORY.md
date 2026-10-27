@@ -54,6 +54,8 @@
 - **EU5 原始记录字面是 1337.1.1 的保留**（"只知年份取年初"占位）；**我们钉的「开局触发」基线写 1337.4.1**。EU5 setup 里 `1337.4.1` 一次不出现（引擎起点常量），setup 语义=4.1 快照。已拆分：改 4.1 共 12430、保留 112（脚本 `gen_debug/_split_start_date_1337.py`）。
 - **查日本头衔必须 grep 三个 z 的 `history/titles/zzz_eu5_japan_noble_families.txt`**（145 个 `c_nf_*`），只 grep `zz_eu5_titles.txt` 会漏、进而误判"某国无头衔"。
 - **重跑风险**：15 个脚本的日期字面量已统一为 4.1，它们按 4.1 找开局块会跳过保留的 112 条 1.1；`_fix_politics_output.py` 重跑会重写 regents/bookmark 并丢毛利来源标记；`_export_title_map.py` 会把 58 个头衔记为开局无人持有。
+- **拆分脚本的粒度坑（2026-10-27 已修）**：`_split_start_date_1337.py` 的 `process_titles` 只改日期行文本，块内其余行（尤其 `liege`）跟着 holder 的 EU5 `ruler_term start_date` 整块走。6 个头衔因此把 liege 留在 1.1，而 liege 指向的头衔 holder 钉在 4.1 → CK3 建封臣关系时领主头衔无人持有，开局无上级领主（格拉摩根、热那亚）。已用 `gen_debug/_fix_liege_date.py`（幂等）把 liege 摘到独立 4.1 块。
+- **CK3 liege 的来源**：① `EU5/main_menu/setup/start/12_diplomacy.txt` 的 `dependency`（652 条，仅 28 条带 start_date）；② HRE 成员身份（`export_politics.py` 1018–1024，`_org["type"]=="hre"` 的 members 即使无 dependency 也算皇帝臣属）。**关系本身没有日期**，写进哪个日期块只由生成器/拆分脚本决定。热那亚挂 `e_hre` 是 HRE 成员，不是 vassal dependency。
 
 ## 九、摄政周期（2026-10-23 修）
 - **CK3 的 regency diarchy 不会自动结束**（`CK3/game/common/diarchies/diarchy_types/00_regencies.txt`：`start = { always = yes }` / `end = { always = no }`），只写 `try_start_diarchy` 会挂到游戏结束，必须显式 `end_diarchy`。
