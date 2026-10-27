@@ -44,7 +44,17 @@ ap.add_argument("--defs", default=DEFS)
 ap.add_argument("--landed", default=LANDED)
 ap.add_argument("--provinces", default=PROV)
 ap.add_argument("--classif", default=CLASSIF)
+# 可选过滤：默认只跑图内（cat 1-9）。美洲/大洋洲图外批次需要 --cats 10,11
+ap.add_argument("--cats", default="123456789",
+                help="逗号分隔的 category 白名单，默认 123456789（图内）")
+ap.add_argument("--continents", default="",
+                help="逗号分隔的 continent 白名单，空=全部")
+ap.add_argument("--only-selected", action="store_true",
+                help="只改写 EU5 主体文化落在 --cats/--continents 白名单内的县，其余县一律不碰")
 args = ap.parse_args()
+
+CATS = set(x.strip() for x in args.cats.split(",") if x.strip())
+CONT = set(x.strip() for x in args.continents.split(",") if x.strip())
 
 # ---------- 1) location -> {culture: size} ----------
 RE_LOC = re.compile(r"^\s*([a-z0-9_]+)\s*=\s*\{\s*$")
@@ -81,15 +91,22 @@ for pv, locs in prov_locs.items():
 print("provinces with pop majority: %d" % len(prov_cult))
 
 # ---------- 4) EU5 culture -> CK3 culture ----------
+# cmap：白名单内的行（默认图内 cat 1-9）一定进；--only-selected 时把白名单本身也并进来。
+# sel ：--only-selected 下允许改写的 EU5 culture 集合。
 cmap = {}
+sel = set()
 for r in csv.DictReader(io.open(args.classif, encoding="utf-8-sig")):
-    if r["category"] not in INSIDE_CATS:
-        continue
     c, t = r["culture"], r["target"]
     if not t or t.startswith("NEW:") or t == c:
         continue
-    cmap[c] = t
-print("culture map: %d" % len(cmap))
+    in_cat = r["category"] in (INSIDE_CATS | CATS)
+    in_cont = (not CONT) or r.get("continent", "") in CONT
+    if in_cat:
+        cmap[c] = t
+    if r["category"] in CATS and in_cont:
+        sel.add(c)
+        cmap[c] = t
+print("culture map: %d | 本次可改写 %d" % (len(cmap), len(sel) if args.only_selected else len(cmap)))
 
 # ---------- 5) county -> [barony 名] ----------
 county_bar = collections.defaultdict(list)
@@ -187,7 +204,13 @@ for cty, bars in county_bar.items():
             eu5 = prov_cult[pv]
             src["pop"] += 1
     if eu5:
+        if args.only_selected and eu5 not in sel:
+            src["skip_not_selected"] += 1
+            continue
         target[cty] = cmap.get(eu5, eu5)
+        continue
+    if args.only_selected:
+        src["skip_not_selected"] += 1
         continue
     # fallback：该 county 当前各男爵领的多数，保证同县仍统一
     vals = [cult_now[p] for p in county_pids.get(cty, []) if p in cult_now]
@@ -195,8 +218,8 @@ for cty, bars in county_bar.items():
         target[cty] = min(collections.Counter(vals).items(), key=lambda kv: (-kv[1], kv[0]))[0]
         src["fallback_unified"] += 1
 
-print("county 目标：人口多数 %d | fallback（同县多数）%d | 总计 %d"
-      % (src["pop"], src["fallback_unified"], len(target)))
+print("county 目标：人口多数 %d | fallback（同县多数）%d | 跳过 %d | 总计 %d"
+      % (src["pop"], src["fallback_unified"], src["skip_not_selected"], len(target)))
 
 # ---------- 9) 生成改动 ----------
 changes = []

@@ -1,0 +1,84 @@
+﻿# =========================================================
+# 用户 2026-10-27 指定新建的文化
+#
+# CK3 原版没有 khoisan / malagasy（_ck3_vanilla_cultures.csv 查无），
+# 而 EU5 里各自有 19 个部族文化同属一个文化组，按用户口径统一成一个文化。
+#
+# 文化特征按真实民族特点编写，不是生成器的随机组合：
+#   科伊桑（Khoisan）：南非/纳米比亚/博茨瓦纳的狩猎采集者与牧牛人，
+#     搭嘴音语言、无酋长权威的平等社会、萨满治病舞、卡拉哈里半干旱环境。
+#   马尔加什（Malagasy）：南岛先民渡海定居马达加斯加后与东非班图融合，
+#     高地水稻梯田与灌溉、祖先崇拜（famadihana 翻尸节）、
+#     andriana / hova / andevo 三级等级社会。
+#
+# heritage / language 用 00_generated_pillars.txt 里已有的
+# khoisan_group / eu5_heritage_khoisan_group、malagasy_group / eu5_heritage_malagasy_group；
+# 中文名「科伊桑」「马尔加什」在 gen_cultures_l_simp_chinese.yml 已存在。
+#
+# name_list 与 ethnicities 只能复用同组已有资源（新建名字池/民族外貌要成百上千条
+# 数据，不属于文化特征），其余字段均为手写。
+# 所选 tradition 全部是 mod 里已在使用的 key，避免引用未启用 DLC 的内容。
+# =========================================================
+
+khoisan = {
+	color = { 186 148 96 }
+
+	ethos = ethos_egalitarian
+	heritage = khoisan_group
+	language = eu5_heritage_khoisan_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	# 狩猎采集是生计核心 / 南部非洲岩画与狩猎仪式 / 无首领的平等社会 /
+	# 卡拉哈里半干旱环境 / 桑人药理知识极发达
+	traditions = {
+		tradition_hunters
+		tradition_sacred_hunts
+		tradition_equitable
+		tradition_dryland_dwellers
+		tradition_medicinal_plants
+	}
+
+	name_list = name_list_nama_culture
+
+	coa_gfx = { west_african_group_coa_gfx }
+	building_gfx = { african_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { sub_sahran_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_283_nama_culture_0
+	}
+}
+
+malagasy = {
+	color = { 152 76 52 }
+
+	ethos = ethos_spiritual
+	heritage = malagasy_group
+	language = eu5_heritage_malagasy_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	# 高地水稻农耕 / 梯田灌溉 / 祖先崇拜 / 南岛先民渡海传统 / andriana 贵族等级
+	traditions = {
+		tradition_agrarian
+		tradition_polders
+		tradition_mystical_ancestors
+		tradition_seafaring
+		tradition_ruling_caste
+	}
+
+	name_list = name_list_sakalava_culture
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_20
+
+	ethnicities = {
+		100 = gen_ethnicity_294_sakalava_culture_0
+	}
+}

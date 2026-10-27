@@ -346,7 +346,7 @@ ahmed_tekuder_borjigin = {
 aho_sukhaangphaa = {
 	name = "Sukhaangphaa"
 		dynasty = ahom_dynasty
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	1280.1.1 = { birth = yes }
 	1332.1.1 = { death = yes }
@@ -355,7 +355,7 @@ aho_sukhaangphaa = {
 aho_sukhrangpha = {
 	name = "Sukhrangpha"
 		dynasty = ahom_dynasty
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	father = aho_sukhaangphaa
 	1315.1.1 = { birth = yes }
@@ -364,7 +364,7 @@ aho_sukhrangpha = {
 aho_sutuphaa = {
 	name = "Sutuphaa"
 		dynasty = ahom_dynasty
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	father = aho_sukhaangphaa
 	1325.1.1 = { birth = yes }
@@ -373,7 +373,7 @@ aho_sutuphaa = {
 aho_tyao_khamti = {
 	name = "Tyao_Khamti"
 		dynasty = ahom_dynasty
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	father = aho_sukhaangphaa
 	1330.1.1 = { birth = yes }
@@ -3584,7 +3584,7 @@ aux_tristan_chalon = {
 
 aya_chimbo_orma = {
 	name = "name_chimbo"
-	culture = wari_culture
+	culture = quechuan
 	religion = pagan
 	1292.1.1 = { birth = yes }
 	1308.1.1 = { add_spouse = aya_tocay_capac }
@@ -3593,7 +3593,7 @@ aya_chimbo_orma = {
 aya_curi_hilpay = {
 	name = "name_curi"
 		dynasty = ayarmaca_dynasty
-	culture = wari_culture
+	culture = quechuan
 	religion = pagan
 	father = aya_tocay_capac
 	mother = aya_curi_uqllu
@@ -3602,7 +3602,7 @@ aya_curi_hilpay = {
 
 aya_curi_uqllu = {
 	name = "name_curi"
-	culture = inka_culture
+	culture = quechuan
 	religion = pagan
 	1301.1.1 = { birth = yes }
 	1317.1.1 = { add_spouse = aya_tocay_capac }
@@ -3611,7 +3611,7 @@ aya_curi_uqllu = {
 aya_mama_chiquia = {
 	name = "name_mama"
 		dynasty = ayarmaca_dynasty
-	culture = wari_culture
+	culture = quechuan
 	religion = pagan
 	father = aya_tocay_capac
 	mother = aya_chimbo_orma
@@ -3621,7 +3621,7 @@ aya_mama_chiquia = {
 aya_tocay_capac = {
 	name = "name_tocay"
 		dynasty = ayarmaca_dynasty
-	culture = wari_culture
+	culture = quechuan
 	religion = pagan
 	1283.1.1 = { birth = yes }
 }
@@ -3676,7 +3676,7 @@ ayurbarwada_buyantu_borjigin = {
 azt_acamapichtli_tenochcatl = {
 	name = "name_acamapichtli"
 		dynasty = tenochcatl_dynasty
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	father = azt_opochtli_iztahuatzin
 	mother = azt_atotoztli
@@ -3686,7 +3686,7 @@ azt_acamapichtli_tenochcatl = {
 azt_atotoztli = {
 	name = "name_atotoztli"
 		dynasty = colhua_dynasty
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	father = cul_coxcoxtli
 	1298.1.1 = { birth = yes }
@@ -3696,7 +3696,7 @@ azt_atotoztli = {
 azt_opochtli_iztahuatzin = {
 	name = "name_opochtli"
 		dynasty = tenochcatl_dynasty
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1294.1.1 = { birth = yes }
 }
@@ -3704,7 +3704,7 @@ azt_opochtli_iztahuatzin = {
 azt_tenoch = {
 	name = "Tenoch"
 		dynasty = mixcoatl_dynasty
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1299.1.1 = { birth = yes }
 }
@@ -7327,7 +7327,7 @@ bud_heinrich_ii_isenburg = {
 bug_chwa_nabakka = {
 	name = "Chwa"
 		dynasty = buganda_dynasty
-	culture = baganda_culture
+	culture = east_bantu
 	religion = pagan
 	father = bug_katu_kintu
 	mother = bug_nambi_nantuttululu
@@ -7337,7 +7337,7 @@ bug_chwa_nabakka = {
 bug_gguluddene = {
 	name = "Gguluddene"
 		dynasty = buganda_dynasty
-	culture = baganda_culture
+	culture = east_bantu
 	religion = pagan
 	father = bug_katu_kintu
 	mother = bug_nambi_nantuttululu
@@ -7348,7 +7348,7 @@ bug_gguluddene = {
 bug_kalemeera = {
 	name = "Kalemeera"
 		dynasty = buganda_dynasty
-	culture = baganda_culture
+	culture = east_bantu
 	religion = pagan
 	father = bug_chwa_nabakka
 	mother = bug_nakiwala
@@ -7358,7 +7358,7 @@ bug_kalemeera = {
 bug_katu_kintu = {
 	name = "Kato"
 		dynasty = buganda_dynasty
-	culture = baganda_culture
+	culture = east_bantu
 	religion = pagan
 	1275.1.1 = { birth = yes }
 	1305.1.1 = { death = yes }
@@ -7366,7 +7366,7 @@ bug_katu_kintu = {
 
 bug_naabakyaala_nakku = {
 	name = "Naabakyaala"
-	culture = baganda_culture
+	culture = east_bantu
 	religion = pagan
 	1308.1.1 = { birth = yes }
 	1324.1.1 = { add_spouse = bug_chwa_nabakka }
@@ -7374,7 +7374,7 @@ bug_naabakyaala_nakku = {
 
 bug_nakiwala = {
 	name = "Nakiwala"
-	culture = baganda_culture
+	culture = east_bantu
 	religion = pagan
 	1300.1.1 = { birth = yes }
 	1316.1.1 = { add_spouse = bug_chwa_nabakka }
@@ -7382,7 +7382,7 @@ bug_nakiwala = {
 
 bug_nambi_nantuttululu = {
 	name = "Nambi"
-	culture = baganda_culture
+	culture = east_bantu
 	religion = pagan
 	1275.1.1 = { birth = yes }
 	1291.1.1 = { add_spouse = bug_katu_kintu }
@@ -7391,7 +7391,7 @@ bug_nambi_nantuttululu = {
 bug_wakayima = {
 	name = "Wakayima"
 		dynasty = buganda_dynasty
-	culture = baganda_culture
+	culture = east_bantu
 	religion = pagan
 	father = bug_katu_kintu
 	mother = bug_nambi_nantuttululu
@@ -14199,7 +14199,7 @@ crt_viago_zeno = {
 csu_chimpu_uqllu = {
 	name = "name_chimpu"
 		dynasty = hurin_qusqu_dynasty
-	culture = inka_culture
+	culture = quechuan
 	religion = pagan
 	mother = csu_curu_yaya
 	1307.1.1 = { birth = yes }
@@ -14209,7 +14209,7 @@ csu_chimpu_uqllu = {
 csu_curu_yaya = {
 	name = "name_curu"
 		dynasty = hurin_qusqu_dynasty
-	culture = inka_culture
+	culture = quechuan
 	religion = pagan
 	father = csu_mayta_qhapaq
 	1278.1.1 = { birth = yes }
@@ -14218,7 +14218,7 @@ csu_curu_yaya = {
 csu_cusi_chimbo = {
 	name = "name_cusi"
 		dynasty = ayarmaca_dynasty
-	culture = inka_culture
+	culture = quechuan
 	religion = pagan
 	father = aya_tocay_capac
 	mother = aya_chimbo_orma
@@ -14229,7 +14229,7 @@ csu_cusi_chimbo = {
 csu_inka_roqa = {
 	name = "name_inka"
 		dynasty = hanan_qusqu_dynasty
-	culture = inka_culture
+	culture = quechuan
 	religion = pagan
 	1313.1.1 = { birth = yes }
 }
@@ -14237,7 +14237,7 @@ csu_inka_roqa = {
 csu_lluqi_yupanki = {
 	name = "name_lluqi"
 		dynasty = hurin_qusqu_dynasty
-	culture = inka_culture
+	culture = quechuan
 	religion = pagan
 	father = csu_sinchi_ruqa
 	1240.1.1 = { birth = yes }
@@ -14247,7 +14247,7 @@ csu_lluqi_yupanki = {
 csu_manco_qhapaq = {
 	name = "name_manco"
 		dynasty = hurin_qusqu_dynasty
-	culture = inka_culture
+	culture = quechuan
 	religion = pagan
 	1170.1.1 = { birth = yes }
 	1230.1.1 = { death = yes }
@@ -14256,7 +14256,7 @@ csu_manco_qhapaq = {
 csu_mayta_qhapaq = {
 	name = "name_mayta"
 		dynasty = hurin_qusqu_dynasty
-	culture = inka_culture
+	culture = quechuan
 	religion = pagan
 	father = csu_lluqi_yupanki
 	1262.1.1 = { birth = yes }
@@ -14265,7 +14265,7 @@ csu_mayta_qhapaq = {
 csu_qhapaq_yupanki = {
 	name = "name_qhapaq"
 		dynasty = hurin_qusqu_dynasty
-	culture = inka_culture
+	culture = quechuan
 	religion = pagan
 	mother = csu_curu_yaya
 	1305.1.1 = { birth = yes }
@@ -14274,7 +14274,7 @@ csu_qhapaq_yupanki = {
 csu_sinchi_ruqa = {
 	name = "name_sinchi"
 		dynasty = hurin_qusqu_dynasty
-	culture = inka_culture
+	culture = quechuan
 	religion = pagan
 	father = csu_manco_qhapaq
 	1200.1.1 = { birth = yes }
@@ -14284,7 +14284,7 @@ csu_sinchi_ruqa = {
 csu_tarco_huaman = {
 	name = "name_tarco"
 		dynasty = hurin_qusqu_dynasty
-	culture = inka_culture
+	culture = quechuan
 	religion = pagan
 	father = csu_mayta_qhapaq
 	1280.1.1 = { birth = yes }
@@ -14303,7 +14303,7 @@ ctr_shah_nadir_rais = {
 cul_achitomecatl_teomecatl_ii = {
 	name = "name_achitomecatl"
 		dynasty = colhua_dynasty
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	father = cul_huehue_acamapichtli
 	1316.1.1 = { birth = yes }
@@ -14312,7 +14312,7 @@ cul_achitomecatl_teomecatl_ii = {
 cul_coxcoxtli = {
 	name = "name_coxcoxtli"
 		dynasty = colhua_dynasty
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1270.1.1 = { birth = yes }
 }
@@ -14320,7 +14320,7 @@ cul_coxcoxtli = {
 cul_huehue_acamapichtli = {
 	name = "name_huehue"
 		dynasty = colhua_dynasty
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	father = cul_coxcoxtli
 	1296.1.1 = { birth = yes }
@@ -18418,7 +18418,7 @@ eu5_regent_aba = {
 
 eu5_regent_abv = {
 	name = "name_eu5_ambovontany"
-	culture = tandroy_culture
+	culture = malagasy
 	religion = sunni
 	1300.1.1 = { birth = yes }
 }
@@ -18433,14 +18433,14 @@ eu5_regent_abw = {
 
 eu5_regent_aca = {
 	name = "name_eu5_acatic"
-	culture = tonala_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_aco = {
 	name = "name_eu5_aak_u"
-	culture = keres_culture
+	culture = puebloan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -18499,7 +18499,7 @@ eu5_regent_ahi = {
 
 eu5_regent_ahu = {
 	name = "name_eu5_ahuacatlan"
-	culture = huichol_culture
+	culture = yutonahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -18520,7 +18520,7 @@ eu5_regent_aid = {
 
 eu5_regent_ajc = {
 	name = "name_eu5_axochitlan"
-	culture = cuitlatec_culture
+	culture = cuitlatec
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -18577,28 +18577,28 @@ eu5_regent_amd = {
 
 eu5_regent_ame = {
 	name = "name_eu5_amecan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_aml = {
 	name = "name_eu5_amollan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_amp = {
 	name = "name_eu5_amapila"
-	culture = otomanguean_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_amt = {
 	name = "name_eu5_amacoztitlan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -18612,7 +18612,7 @@ eu5_regent_anc = {
 
 eu5_regent_ani = {
 	name = "name_eu5_aruni"
-	culture = wari_culture
+	culture = quechuan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -18702,28 +18702,28 @@ eu5_regent_atj = {
 
 eu5_regent_atl = {
 	name = "name_eu5_autlan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ato = {
 	name = "name_eu5_atocpan"
-	culture = iztachichimecah_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_atp = {
 	name = "name_eu5_atepec"
-	culture = mixe_culture
+	culture = totozoquean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_att = {
 	name = "name_eu5_atitlan"
-	culture = mixe_culture
+	culture = totozoquean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -18760,14 +18760,14 @@ eu5_regent_awo = {
 
 eu5_regent_axc = {
 	name = "name_eu5_axochiapan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ayo = {
 	name = "name_eu5_ayotlan"
-	culture = mephaa_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -18782,7 +18782,7 @@ eu5_regent_azf = {
 
 eu5_regent_azl = {
 	name = "name_eu5_aztatlan"
-	culture = naayeri_culture
+	culture = yutonahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -18875,7 +18875,7 @@ eu5_regent_bgr = {
 
 eu5_regent_bhm = {
 	name = "name_eu5_bhamo"
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
@@ -18941,7 +18941,7 @@ eu5_regent_bld = {
 
 eu5_regent_ble = {
 	name = "name_eu5_bale"
-	culture = sidama_culture
+	culture = somali
 	religion = sunni
     rite = shafii
 	1300.1.1 = { birth = yes }
@@ -19146,14 +19146,14 @@ eu5_regent_bzu = {
 
 eu5_regent_cau = {
 	name = "name_eu5_cuauhtlan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_cav = {
 	name = "name_eu5_calva"
-	culture = palta_culture
+	culture = chicham
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -19167,21 +19167,21 @@ eu5_regent_cbk = {
 
 eu5_regent_ccl = {
 	name = "name_eu5_cocollan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ccn = {
 	name = "name_eu5_cuicatlan"
-	culture = mixtec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ccp = {
 	name = "name_eu5_cuauhcuetzpaltepec"
-	culture = zoque_culture
+	culture = totozoquean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -19245,35 +19245,35 @@ eu5_regent_cgz = {
 
 eu5_regent_chh = {
 	name = "name_eu5_chiang_hung"
-	culture = tai_lu_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_chj = {
 	name = "name_eu5_churajon"
-	culture = churajon_culture
+	culture = aymara
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_chk = {
 	name = "name_eu5_cahokia"
-	culture = cahokia_culture
+	culture = dhegiha
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_chm = {
 	name = "name_eu5_chimu"
-	culture = chimu_culture
+	culture = quingnam
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_cht = {
 	name = "name_eu5_chorti"
-	culture = chorti_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -19294,14 +19294,14 @@ eu5_regent_chz = {
 
 eu5_regent_cic = {
 	name = "name_eu5_chincha"
-	culture = chincha_culture
+	culture = quechuan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_cih = {
 	name = "name_eu5_cihuatlan"
-	culture = cuitlatec_culture
+	culture = cuitlatec
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -19322,14 +19322,14 @@ eu5_regent_ckl = {
 
 eu5_regent_ckp = {
 	name = "name_eu5_chakan_putum"
-	culture = putun_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_clc = {
 	name = "name_eu5_chalco"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -19343,42 +19343,42 @@ eu5_regent_cle = {
 
 eu5_regent_cll = {
 	name = "name_eu5_cholollan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_clm = {
 	name = "name_eu5_coliman"
-	culture = teco_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_clp = {
 	name = "name_eu5_chilapa"
-	culture = mephaa_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_clq = {
 	name = "name_eu5_collique"
-	culture = collique_culture
+	culture = muchik
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_cnc = {
 	name = "name_eu5_canchi"
-	culture = wari_culture
+	culture = quechuan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_cnl = {
 	name = "name_eu5_ah_canul"
-	culture = yucatec_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -19392,7 +19392,7 @@ eu5_regent_cnt = {
 
 eu5_regent_coc = {
 	name = "name_eu5_cocom"
-	culture = yucatec_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -19406,7 +19406,7 @@ eu5_regent_cog = {
 
 eu5_regent_coi = {
 	name = "name_eu5_yodzo_coo"
-	culture = mixtec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -19420,7 +19420,7 @@ eu5_regent_com = {
 
 eu5_regent_con = {
 	name = "name_eu5_coinan"
-	culture = tonala_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -19434,21 +19434,21 @@ eu5_regent_cpa = {
 
 eu5_regent_cpn = {
 	name = "name_eu5_tzoapan"
-	culture = popoloca_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_cra = {
 	name = "name_eu5_charka"
-	culture = charka_culture
+	culture = pukina
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_crk = {
 	name = "name_eu5_churumekua"
-	culture = purepecha_culture
+	culture = purepecha
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -19462,63 +19462,63 @@ eu5_regent_crs = {
 
 eu5_regent_csm = {
 	name = "name_eu5_cozamaloapan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ctc = {
 	name = "name_eu5_coatlicamac"
-	culture = zoque_culture
+	culture = totozoquean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_cte = {
 	name = "name_eu5_cuitzeo"
-	culture = purepecha_culture
+	culture = purepecha
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ctl = {
 	name = "name_eu5_chiyautla"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ctm = {
 	name = "name_eu5_chaak_te_eemal"
-	culture = putun_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ctx = {
 	name = "name_eu5_cuetlaxtlan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ctz = {
 	name = "name_eu5_coatzacualco"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_cui = {
 	name = "name_eu5_cuismancu"
-	culture = wari_culture
+	culture = quechuan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_cuo = {
 	name = "name_eu5_cuauhtochco"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -19532,28 +19532,28 @@ eu5_regent_cut = {
 
 eu5_regent_cuu = {
 	name = "name_eu5_cuauhnahuac"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_cuz = {
 	name = "name_eu5_cutzamala"
-	culture = purepecha_culture
+	culture = purepecha
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_cya = {
 	name = "name_eu5_sacha_p_qulla"
-	culture = sacha_p_qulla_culture
+	culture = caribe
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_czl = {
 	name = "name_eu5_cozalapan"
-	culture = otomanguean_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -19846,7 +19846,7 @@ eu5_regent_eta = {
 
 eu5_regent_etz = {
 	name = "name_eu5_etzatlan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -19939,7 +19939,7 @@ eu5_regent_gaz = {
 
 eu5_regent_gch = {
 	name = "name_eu5_cuauhchinanco"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20054,7 +20054,7 @@ eu5_regent_grk = {
 
 eu5_regent_grr = {
 	name = "name_eu5_garrochamba"
-	culture = palta_culture
+	culture = chicham
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20103,7 +20103,7 @@ eu5_regent_gye = {
 
 eu5_regent_gyo = {
 	name = "name_eu5_gayogohono"
-	culture = gayogohono_culture
+	culture = haudenosaunee
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20152,7 +20152,7 @@ eu5_regent_hbr = {
 
 eu5_regent_hch = {
 	name = "name_eu5_huamachuco"
-	culture = wari_culture
+	culture = quechuan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20166,7 +20166,7 @@ eu5_regent_heh = {
 
 eu5_regent_hel = {
 	name = "name_eu5_chel"
-	culture = yucatec_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20187,7 +20187,7 @@ eu5_regent_hhb = {
 
 eu5_regent_hhp = {
 	name = "name_eu5_hsawng_hsup"
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
@@ -20208,14 +20208,14 @@ eu5_regent_hiy = {
 
 eu5_regent_hjz = {
 	name = "name_eu5_huexotzinco"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_hkm = {
 	name = "name_eu5_hkamti"
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
@@ -20243,7 +20243,7 @@ eu5_regent_hnc = {
 
 eu5_regent_hnk = {
 	name = "name_eu5_hanan_chanka"
-	culture = chanka_culture
+	culture = quechuan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20295,7 +20295,7 @@ eu5_regent_hrb = {
 
 eu5_regent_hrc = {
 	name = "name_eu5_huarco"
-	culture = huarco_culture
+	culture = quechuan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20332,7 +20332,7 @@ eu5_regent_hsi = {
 
 eu5_regent_hst = {
 	name = "name_eu5_teayotlan"
-	culture = huastec_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20354,7 +20354,7 @@ eu5_regent_hty = {
 
 eu5_regent_htz = {
 	name = "name_eu5_huitzquilic"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20383,14 +20383,14 @@ eu5_regent_hut = {
 
 eu5_regent_hux = {
 	name = "name_eu5_huaxtepec"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_hyc = {
 	name = "name_eu5_hueyacocotla"
-	culture = huastec_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20442,7 +20442,7 @@ eu5_regent_ibl = {
 
 eu5_regent_icm = {
 	name = "name_eu5_ichma"
-	culture = ychsma_culture
+	culture = quechuan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20499,7 +20499,7 @@ eu5_regent_imn = {
 
 eu5_regent_inh = {
 	name = "name_eu5_inhambane"
-	culture = tsonga_culture
+	culture = east_bantu
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20520,7 +20520,7 @@ eu5_regent_ird = {
 
 eu5_regent_isl = {
 	name = "name_eu5_shiewhibak"
-	culture = keres_culture
+	culture = puebloan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20541,21 +20541,21 @@ eu5_regent_itu = {
 
 eu5_regent_ixa = {
 	name = "name_eu5_iztapan"
-	culture = tolimec_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ixl = {
 	name = "name_eu5_ixtlan"
-	culture = mixtec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ixt = {
 	name = "name_eu5_ixtacamaxtitlan"
-	culture = totonac_culture
+	culture = totozoquean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20569,14 +20569,14 @@ eu5_regent_iya = {
 
 eu5_regent_izc = {
 	name = "name_eu5_iztachacalapan"
-	culture = zoque_culture
+	culture = totozoquean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_izo = {
 	name = "name_eu5_itzohcan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20692,7 +20692,7 @@ eu5_regent_jus = {
 
 eu5_regent_jux = {
 	name = "name_eu5_yodzo_cuiya"
-	culture = mixtec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20713,7 +20713,7 @@ eu5_regent_kai = {
 
 eu5_regent_kal = {
 	name = "name_eu5_kale"
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
@@ -20728,7 +20728,7 @@ eu5_regent_kan = {
 
 eu5_regent_kaq = {
 	name = "name_eu5_kaqchikel"
-	culture = kaqchikel_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20765,7 +20765,7 @@ eu5_regent_kel = {
 
 eu5_regent_ker = {
 	name = "name_eu5_tsi_ya"
-	culture = keres_culture
+	culture = puebloan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20861,14 +20861,14 @@ eu5_regent_kja = {
 
 eu5_regent_kka = {
 	name = "name_eu5_kanien_kehaka"
-	culture = kanienkehaka_culture
+	culture = haudenosaunee
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_kke = {
 	name = "name_eu5_killke"
-	culture = killke_culture
+	culture = quechuan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20956,7 +20956,7 @@ eu5_regent_kmp = {
 
 eu5_regent_kna = {
 	name = "name_eu5_kana"
-	culture = aimara_culture
+	culture = aymara
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -20991,7 +20991,7 @@ eu5_regent_knz = {
 
 eu5_regent_kow = {
 	name = "name_eu5_kowoj"
-	culture = kowoj_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21013,7 +21013,7 @@ eu5_regent_krg = {
 
 eu5_regent_krk = {
 	name = "name_eu5_karanka"
-	culture = aimara_culture
+	culture = aymara
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21071,7 +21071,7 @@ eu5_regent_ktz = {
 
 eu5_regent_kus = {
 	name = "name_eu5_kuskatan"
-	culture = pipil_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21085,7 +21085,7 @@ eu5_regent_kya = {
 
 eu5_regent_lac = {
 	name = "name_eu5_sotz_leb"
-	culture = tzotzil_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21185,7 +21185,7 @@ eu5_regent_lhl = {
 
 eu5_regent_lhn = {
 	name = "name_eu5_lahaina"
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21305,7 +21305,7 @@ eu5_regent_lub = {
 
 eu5_regent_lup = {
 	name = "name_eu5_lupijaki"
-	culture = aimara_culture
+	culture = aymara
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21376,7 +21376,7 @@ eu5_regent_mah = {
 
 eu5_regent_mat = {
 	name = "name_eu5_tollohcan"
-	culture = matlatzinca_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21398,14 +21398,14 @@ eu5_regent_mba = {
 
 eu5_regent_mbd = {
 	name = "name_eu5_manabondro"
-	culture = antaisaka_culture
+	culture = malagasy
 	religion = sunni
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_mcc = {
 	name = "name_eu5_michuachapanco"
-	culture = huastec_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21433,7 +21433,7 @@ eu5_regent_mem = {
 
 eu5_regent_met = {
 	name = "name_eu5_metztitlan"
-	culture = otomanguean_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21454,42 +21454,42 @@ eu5_regent_mgg = {
 
 eu5_regent_mgk = {
 	name = "name_eu5_mong_ku"
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_mgn = {
 	name = "name_eu5_mong_ngum"
-	culture = tai_lu_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_mgt = {
 	name = "name_eu5_mong_mit"
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_mha = {
 	name = "name_eu5_mong_hsa"
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_mhc = {
 	name = "name_eu5_melahuacan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_mhk = {
 	name = "name_eu5_mong_hkeng"
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
@@ -21503,14 +21503,14 @@ eu5_regent_mhl = {
 
 eu5_regent_mhn = {
 	name = "name_eu5_mong_hten"
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_mht = {
 	name = "name_eu5_miahuatlan"
-	culture = zapotec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21531,14 +21531,14 @@ eu5_regent_mic = {
 
 eu5_regent_mit = {
 	name = "name_eu5_mitic"
-	culture = tonala_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_mix = {
 	name = "name_eu5_yucu_dzaa"
-	culture = mixtec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21552,14 +21552,14 @@ eu5_regent_mju = {
 
 eu5_regent_mka = {
 	name = "name_eu5_mong_kawng"
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_mkn = {
 	name = "name_eu5_mong_kong"
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
@@ -21603,28 +21603,28 @@ eu5_regent_mli = {
 
 eu5_regent_mlm = {
 	name = "name_eu5_mong_lem"
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_mln = {
 	name = "name_eu5_malinalco"
-	culture = matlatzinca_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_mlt = {
 	name = "name_eu5_malacato"
-	culture = palta_culture
+	culture = chicham
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_mmm = {
 	name = "name_eu5_mam"
-	culture = mam_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21673,7 +21673,7 @@ eu5_regent_mnz = {
 
 eu5_regent_mom = {
 	name = "name_eu5_momboares"
-	culture = solongo
+	culture = east_bantu
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21695,7 +21695,7 @@ eu5_regent_moz = {
 
 eu5_regent_mpe = {
 	name = "name_eu5_maguela"
-	culture = mboma
+	culture = east_bantu
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21762,7 +21762,7 @@ eu5_regent_msv = {
 
 eu5_regent_mtg = {
 	name = "name_eu5_mong_ting"
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
@@ -21783,7 +21783,7 @@ eu5_regent_muh = {
 
 eu5_regent_mui = {
 	name = "name_eu5_maui"
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21812,21 +21812,21 @@ eu5_regent_mut = {
 
 eu5_regent_mwo = {
 	name = "name_eu5_mong_wo"
-	culture = tai_lu_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_mxt = {
 	name = "name_eu5_mexticacan"
-	culture = tonala_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_mya = {
 	name = "name_eu5_mong_yang"
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
@@ -21840,7 +21840,7 @@ eu5_regent_myi = {
 
 eu5_regent_mym = {
 	name = "name_eu5_mayonmarka"
-	culture = wari_culture
+	culture = quechuan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21855,7 +21855,7 @@ eu5_regent_mzb = {
 
 eu5_regent_mzt = {
 	name = "name_eu5_mizantla"
-	culture = totonac_culture
+	culture = totozoquean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21954,7 +21954,7 @@ eu5_regent_nlu = {
 
 eu5_regent_nnd = {
 	name = "name_eu5_nuu_ndiyi"
-	culture = zapotec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -21997,14 +21997,14 @@ eu5_regent_nro = {
 
 eu5_regent_nsu = {
 	name = "name_eu5_nsudi"
-	culture = nsudi
+	culture = east_bantu
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_nta = {
 	name = "name_eu5_canta"
-	culture = canta_culture
+	culture = muchik
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22068,7 +22068,7 @@ eu5_regent_nyz = {
 
 eu5_regent_oap = {
 	name = "name_eu5_oapan"
-	culture = mephaa_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22097,7 +22097,7 @@ eu5_regent_ogl = {
 
 eu5_regent_ohk = {
 	name = "name_eu5_ohkwee_owingeh"
-	culture = tanoan_culture
+	culture = puebloan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22111,7 +22111,7 @@ eu5_regent_oke = {
 
 eu5_regent_omt = {
 	name = "name_eu5_ometepec"
-	culture = amuzgo_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22125,21 +22125,21 @@ eu5_regent_ond = {
 
 eu5_regent_onn = {
 	name = "name_eu5_onondowa_ga"
-	culture = onondowaga_culture
+	culture = haudenosaunee
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ono = {
 	name = "name_eu5_ononda_gega"
-	culture = onondagega_culture
+	culture = haudenosaunee
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ony = {
 	name = "name_eu5_onyota_aka"
-	culture = onyotaaka_culture
+	culture = haudenosaunee
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22153,7 +22153,7 @@ eu5_regent_ort = {
 
 eu5_regent_ota = {
 	name = "name_eu5_otatitlan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22174,7 +22174,7 @@ eu5_regent_owo = {
 
 eu5_regent_oxt = {
 	name = "name_eu5_oxtlipan"
-	culture = huastec_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22188,21 +22188,21 @@ eu5_regent_oyo = {
 
 eu5_regent_ozl = {
 	name = "name_eu5_ozuluama"
-	culture = huastec_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ozt = {
 	name = "name_eu5_oztoman"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ozu = {
 	name = "name_eu5_ozumatzin"
-	culture = mixtec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22230,21 +22230,21 @@ eu5_regent_pcd = {
 
 eu5_regent_pcj = {
 	name = "name_eu5_paka_jaqis"
-	culture = aimara_culture
+	culture = aymara
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_pco = {
 	name = "name_eu5_parinacocha"
-	culture = wari_culture
+	culture = quechuan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_pcr = {
 	name = "name_eu5_pocra"
-	culture = wari_culture
+	culture = quechuan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22301,7 +22301,7 @@ eu5_regent_pgs = {
 
 eu5_regent_pig = {
 	name = "name_eu5_pinagua"
-	culture = wari_culture
+	culture = quechuan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22414,14 +22414,14 @@ eu5_regent_psz = {
 
 eu5_regent_ptl = {
 	name = "name_eu5_puctlan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ptp = {
 	name = "name_eu5_pantepec"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22442,7 +22442,7 @@ eu5_regent_pye = {
 
 eu5_regent_qan = {
 	name = "name_eu5_q_anjob_al"
-	culture = qanjobal_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22464,7 +22464,7 @@ eu5_regent_qht = {
 
 eu5_regent_qig = {
 	name = "name_eu5_quiegoqui"
-	culture = mixtec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22478,7 +22478,7 @@ eu5_regent_qjg = {
 
 eu5_regent_qll = {
 	name = "name_eu5_quauhquechollan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22501,7 +22501,7 @@ eu5_regent_qta = {
 
 eu5_regent_qua = {
 	name = "name_eu5_cuauhtemallan"
-	culture = pipil_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22515,7 +22515,7 @@ eu5_regent_qub = {
 
 eu5_regent_qul = {
 	name = "name_eu5_qulla"
-	culture = aimara_culture
+	culture = aymara
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22662,7 +22662,7 @@ eu5_regent_sab = {
 
 eu5_regent_sam = {
 	name = "name_eu5_samoa"
-	culture = tagata_samoa_culture
+	culture = polynesian
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22676,7 +22676,7 @@ eu5_regent_saw = {
 
 eu5_regent_say = {
 	name = "name_eu5_sayollan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22923,7 +22923,7 @@ eu5_regent_snp = {
 
 eu5_regent_snt = {
 	name = "name_eu5_sentispac"
-	culture = huichol_culture
+	culture = yutonahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -22952,7 +22952,7 @@ eu5_regent_spg = {
 
 eu5_regent_sra = {
 	name = "name_eu5_sora"
-	culture = wari_culture
+	culture = quechuan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23040,7 +23040,7 @@ eu5_regent_sul = {
 
 eu5_regent_sur = {
 	name = "name_eu5_sura"
-	culture = aimara_culture
+	culture = aymara
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23111,21 +23111,21 @@ eu5_regent_szu = {
 
 eu5_regent_taa = {
 	name = "name_eu5_tlalpan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tai = {
 	name = "name_eu5_tairona"
-	culture = tayrona_culture
+	culture = tayrona
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tao = {
 	name = "name_eu5_ia_ophaybo"
-	culture = tanoan_culture
+	culture = puebloan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23147,7 +23147,7 @@ eu5_regent_tat = {
 
 eu5_regent_tax = {
 	name = "name_eu5_taximaroa"
-	culture = purepecha_culture
+	culture = purepecha
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23168,35 +23168,35 @@ eu5_regent_tba = {
 
 eu5_regent_tcc = {
 	name = "name_eu5_tepecoacuilco"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tch = {
 	name = "name_eu5_tlachco"
-	culture = chontal_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tcp = {
 	name = "name_eu5_tlacopan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tcq = {
 	name = "name_eu5_ndisi_nuu"
-	culture = mixtec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tcy = {
 	name = "name_eu5_tlapacoyan"
-	culture = totonac_culture
+	culture = totozoquean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23217,14 +23217,14 @@ eu5_regent_tdo = {
 
 eu5_regent_tee = {
 	name = "name_eu5_tetela"
-	culture = totonac_culture
+	culture = totozoquean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tel = {
 	name = "name_eu5_caxcan"
-	culture = caxcan_culture
+	culture = yutonahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23245,14 +23245,14 @@ eu5_regent_ten = {
 
 eu5_regent_teo = {
 	name = "name_eu5_teotitlan"
-	culture = popoloca_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tey = {
 	name = "name_eu5_teypana"
-	culture = tanoan_culture
+	culture = puebloan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23296,7 +23296,7 @@ eu5_regent_thd = {
 
 eu5_regent_tht = {
 	name = "name_eu5_tehuantepec"
-	culture = zapotec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23325,14 +23325,14 @@ eu5_regent_tkr = {
 
 eu5_regent_tla = {
 	name = "name_eu5_tixtla"
-	culture = mephaa_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tll = {
 	name = "name_eu5_tetellan"
-	culture = cuitlatec_culture
+	culture = cuitlatec
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23347,28 +23347,28 @@ eu5_regent_tlm = {
 
 eu5_regent_tlo = {
 	name = "name_eu5_teloloapan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tlp = {
 	name = "name_eu5_tlapan"
-	culture = mephaa_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tlq = {
 	name = "name_eu5_tlatlauquitepec"
-	culture = totonac_culture
+	culture = totozoquean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tlt = {
 	name = "name_eu5_tlacotlalpan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23382,14 +23382,14 @@ eu5_regent_tlw = {
 
 eu5_regent_tly = {
 	name = "name_eu5_tlapacoya"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tlz = {
 	name = "name_eu5_tlalcozauhtitlan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23411,28 +23411,28 @@ eu5_regent_tmn = {
 
 eu5_regent_tms = {
 	name = "name_eu5_temascaltepec"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tmt = {
 	name = "name_eu5_tomatlan"
-	culture = otomanguean_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tnl = {
 	name = "name_eu5_tonallan"
-	culture = tonala_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tnn = {
 	name = "name_eu5_tano"
-	culture = tanoan_culture
+	culture = puebloan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23453,7 +23453,7 @@ eu5_regent_tnq = {
 
 eu5_regent_tnx = {
 	name = "name_eu5_tenamaztlan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23474,14 +23474,14 @@ eu5_regent_tod = {
 
 eu5_regent_tog = {
 	name = "name_eu5_tu_i_tonga"
-	culture = tonga_oceania_culture
+	culture = polynesian
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_toh = {
 	name = "name_eu5_tochtepec"
-	culture = mixtec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23495,7 +23495,7 @@ eu5_regent_tox = {
 
 eu5_regent_toz = {
 	name = "name_eu5_toztlan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23509,14 +23509,14 @@ eu5_regent_tpg = {
 
 eu5_regent_tpl = {
 	name = "name_eu5_teposcocula"
-	culture = mixtec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tpn = {
 	name = "name_eu5_tecpatitlan"
-	culture = tonala_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23531,21 +23531,21 @@ eu5_regent_tps = {
 
 eu5_regent_tpt = {
 	name = "name_eu5_tecpantepec"
-	culture = cuitlatec_culture
+	culture = cuitlatec
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tpx = {
 	name = "name_eu5_tepexic"
-	culture = popoloca_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tpy = {
 	name = "name_eu5_tepeyacac"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23575,7 +23575,7 @@ eu5_regent_trk = {
 
 eu5_regent_tse = {
 	name = "name_eu5_tesechoacan"
-	culture = zoque_culture
+	culture = totozoquean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23596,21 +23596,21 @@ eu5_regent_tsm = {
 
 eu5_regent_tst = {
 	name = "name_eu5_tuf_shur_tia"
-	culture = tanoan_culture
+	culture = puebloan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tta = {
 	name = "name_eu5_teutila"
-	culture = popoloca_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ttc = {
 	name = "name_eu5_tamtoc"
-	culture = huastec_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23645,14 +23645,14 @@ eu5_regent_tul = {
 
 eu5_regent_tut = {
 	name = "name_eu5_tototepec"
-	culture = huastec_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tuz = {
 	name = "name_eu5_tozantlan"
-	culture = purepecha_culture
+	culture = purepecha
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23673,7 +23673,7 @@ eu5_regent_txi = {
 
 eu5_regent_txp = {
 	name = "name_eu5_tuxpan"
-	culture = huastec_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23687,77 +23687,77 @@ eu5_regent_tyy = {
 
 eu5_regent_tzc = {
 	name = "name_eu5_tollantzinco"
-	culture = iztachichimecah_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tze = {
 	name = "name_eu5_tzeltal"
-	culture = tzeltal_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tzh = {
 	name = "name_eu5_tziuhcoac"
-	culture = huastec_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tzi = {
 	name = "name_eu5_tzitacuaro"
-	culture = purepecha_culture
+	culture = purepecha
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tzl = {
 	name = "name_eu5_teozacoalco"
-	culture = mixtec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tzm = {
 	name = "name_eu5_tamazollan"
-	culture = purepecha_culture
+	culture = purepecha
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tzp = {
 	name = "name_eu5_tetzapotitlan"
-	culture = huastec_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tzu = {
 	name = "name_eu5_tz_utujil"
-	culture = tzutujil_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_tzz = {
 	name = "name_eu5_tzapotzingo"
-	culture = huichol_culture
+	culture = yutonahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_uau = {
 	name = "name_eu5_cuauhteopan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_uay = {
 	name = "name_eu5_uaymil"
-	culture = yucatec_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23808,14 +23808,14 @@ eu5_regent_uls = {
 
 eu5_regent_uma = {
 	name = "name_eu5_umasuyus"
-	culture = aimara_culture
+	culture = aymara
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_urc = {
 	name = "name_eu5_urin_chanka"
-	culture = chanka_culture
+	culture = quechuan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23873,7 +23873,7 @@ eu5_regent_vld = {
 
 eu5_regent_vna = {
 	name = "name_eu5_vunda"
-	culture = mboma
+	culture = east_bantu
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23965,7 +23965,7 @@ eu5_regent_wmo = {
 
 eu5_regent_wna = {
 	name = "name_eu5_wanga"
-	culture = luhya_culture
+	culture = east_bantu
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -23979,7 +23979,7 @@ eu5_regent_wng = {
 
 eu5_regent_wnt = {
 	name = "name_eu5_wuntho"
-	culture = tai_nua_culture
+	culture = tai
 	religion = satsana_phi
 	1300.1.1 = { birth = yes }
 }
@@ -24035,14 +24035,14 @@ eu5_regent_wzh = {
 
 eu5_regent_xal = {
 	name = "name_eu5_xalisco"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_xap = {
 	name = "name_eu5_xalapan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -24056,49 +24056,49 @@ eu5_regent_xcg = {
 
 eu5_regent_xch = {
 	name = "name_eu5_xochimilco"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_xcp = {
 	name = "name_eu5_xochiapan"
-	culture = popoloca_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_xct = {
 	name = "name_eu5_xochitepec"
-	culture = huichol_culture
+	culture = yutonahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_xic = {
 	name = "name_eu5_xicochimalco"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_xih = {
 	name = "name_eu5_xiuhtlan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_xil = {
 	name = "name_eu5_xilotepec"
-	culture = otomanguean_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_xiu = {
 	name = "name_eu5_tutul_xiu"
-	culture = yucatec_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -24112,14 +24112,14 @@ eu5_regent_xlg = {
 
 eu5_regent_xll = {
 	name = "name_eu5_xllang"
-	culture = xllang_culture
+	culture = muchik
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_xlt = {
 	name = "name_eu5_xalostotitlan"
-	culture = tonala_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -24140,14 +24140,14 @@ eu5_regent_xnl = {
 
 eu5_regent_xoc = {
 	name = "name_eu5_xochipillan"
-	culture = caxcan_culture
+	culture = yutonahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_xol = {
 	name = "name_eu5_ch_ol"
-	culture = chol_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -24161,7 +24161,7 @@ eu5_regent_xsy = {
 
 eu5_regent_yah = {
 	name = "name_eu5_yahualican"
-	culture = tonala_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -24183,7 +24183,7 @@ eu5_regent_yan = {
 
 eu5_regent_yap = {
 	name = "name_eu5_yap"
-	culture = yap_culture
+	culture = micronesian
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -24205,14 +24205,14 @@ eu5_regent_yat = {
 
 eu5_regent_ych = {
 	name = "name_eu5_yucu_satuta"
-	culture = mixtec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ydz = {
 	name = "name_eu5_yodzocahi"
-	culture = mixtec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -24275,14 +24275,14 @@ eu5_regent_ynn = {
 
 eu5_regent_yoh = {
 	name = "name_eu5_yohualtepec"
-	culture = mixtec_culture
+	culture = eastern_otomanguean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_yok = {
 	name = "name_eu5_yoko_t_aanob"
-	culture = chontal_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -24296,7 +24296,7 @@ eu5_regent_yoo = {
 
 eu5_regent_ypz = {
 	name = "name_eu5_yopitzinco"
-	culture = mephaa_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -24347,35 +24347,35 @@ eu5_regent_zam = {
 
 eu5_regent_zaq = {
 	name = "name_eu5_chunsua"
-	culture = muisca_culture
+	culture = chibchan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_zat = {
 	name = "name_eu5_zacatlan"
-	culture = otomanguean_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_zct = {
 	name = "name_eu5_zacatollan"
-	culture = tolimec_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_zcz = {
 	name = "name_eu5_zacazonapan"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_zfi = {
 	name = "name_eu5_vohipeno"
-	culture = zafiraminia_culture
+	culture = malagasy
 	religion = sunni
 	1300.1.1 = { birth = yes }
 }
@@ -24405,14 +24405,14 @@ eu5_regent_zib = {
 
 eu5_regent_zin = {
 	name = "name_eu5_zinapecuaro"
-	culture = otomanguean_culture
+	culture = otopamean
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_zip = {
 	name = "name_eu5_muyquyta"
-	culture = muisca_culture
+	culture = chibchan
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -24433,7 +24433,7 @@ eu5_regent_zmr = {
 
 eu5_regent_zmw = {
 	name = "name_eu5_zimbabwe"
-	culture = shona_culture
+	culture = east_bantu
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -24468,7 +24468,7 @@ eu5_regent_znz = {
 
 eu5_regent_zom = {
 	name = "name_eu5_tzompanco"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -32188,7 +32188,7 @@ ham_kizhir = {
 haw_kahaimoelea_pili = {
 	name = "name_kahaimoelea"
 		dynasty = pili_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	father = haw_kalapana_pili
 	mother = haw_malamaihanaae
@@ -32199,7 +32199,7 @@ haw_kahaimoelea_pili = {
 haw_kalapana_pili = {
 	name = "name_kalapana"
 		dynasty = pili_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	1220.1.1 = { birth = yes }
 	1270.1.1 = { death = yes }
@@ -32208,7 +32208,7 @@ haw_kalapana_pili = {
 haw_kalaunuiohua_pili = {
 	name = "name_kalaunuiohua"
 		dynasty = pili_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	father = haw_kahaimoelea_pili
 	mother = haw_kapo
@@ -32217,7 +32217,7 @@ haw_kalaunuiohua_pili = {
 
 haw_kapo = {
 	name = "name_kapo"
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	1250.1.1 = { birth = yes }
 	1320.1.1 = { death = yes }
@@ -32225,7 +32225,7 @@ haw_kapo = {
 
 haw_malamaihanaae = {
 	name = "name_malamaihanaae"
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	1220.1.1 = { birth = yes }
 	1300.1.1 = { death = yes }
@@ -32358,7 +32358,7 @@ hdr_taj_al_din_hadhur_bin_suleyman = {
 hdy_amano = {
 	name = "Amano"
 		dynasty = garaad_dynasty
-	culture = hadiya_culture
+	culture = somali
 	religion = sunni
     rite = shafii
 	1294.1.1 = { birth = yes }
@@ -33191,7 +33191,7 @@ hrn_willem_v_van_horne = {
 hse_sao_san_noi = {
 	name = "Sao_San_Noi"
 		dynasty = hsenwi_dynasty
-	culture = tai_nua_culture
+	culture = tai
 	religion = theravada_faith
 	1270.1.1 = { birth = yes }
 }
@@ -34135,7 +34135,7 @@ inj_sharaf_al_din_mahmud_shah = {
 itz_kan_ek = {
 	name = "Kan_Ek"
 		dynasty = itza_dynasty
-	culture = itza_culture
+	culture = maya
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -51380,7 +51380,7 @@ kai_vasily_mikhailovich_rurikovich = {
 kam_adi = {
 	name = "name_adi"
 		dynasty = kaimana_dynasty
-	culture = buruwai_culture
+	culture = papuan
 	religion = tolotang
 	father = kam_patimunin
 	1330.1.1 = { birth = yes }
@@ -51389,7 +51389,7 @@ kam_adi = {
 kam_patimunin = {
 	name = "name_patimunin"
 		dynasty = kaimana_dynasty
-	culture = buruwai_culture
+	culture = papuan
 	religion = tolotang
 	1270.1.1 = { birth = yes }
 }
@@ -51488,7 +51488,7 @@ kar_suleyman = {
 kau_luanuu = {
 	name = "name_luanuu"
 		dynasty = luanuu_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	1300.1.1 = { birth = yes }
 }
@@ -51893,7 +51893,7 @@ kht_abd_allah = {
 kic_ajkan = {
 	name = "Ajkan"
 		dynasty = kiche_dynasty
-	culture = kiche_culture
+	culture = maya
 	religion = pagan
 	1275.1.1 = { birth = yes }
 }
@@ -51901,7 +51901,7 @@ kic_ajkan = {
 kic_kokaib = {
 	name = "Kokaib"
 		dynasty = kiche_dynasty
-	culture = kiche_culture
+	culture = maya
 	religion = pagan
 	father = kic_ajkan
 	1298.1.1 = { birth = yes }
@@ -52547,7 +52547,7 @@ kie_yuri_rurikovich = {
 kit_bukuku_bachwezi = {
 	name = "Bukuku"
 		dynasty = baranzi_dynasty
-	culture = rutara_culture
+	culture = east_bantu
 	religion = pagan
 	1280.1.1 = { birth = yes }
 }
@@ -52555,7 +52555,7 @@ kit_bukuku_bachwezi = {
 kit_ndahura_bachwezi = {
 	name = "Ndahura"
 		dynasty = bachwezi_dynasty
-	culture = rutara_culture
+	culture = east_bantu
 	religion = pagan
 	mother = kit_nyinamwiru
 	1320.1.1 = { birth = yes }
@@ -52564,7 +52564,7 @@ kit_ndahura_bachwezi = {
 kit_nyinamwiru = {
 	name = "Nyinamwiru"
 		dynasty = baranzi_dynasty
-	culture = rutara_culture
+	culture = east_bantu
 	religion = pagan
 	father = kit_bukuku_bachwezi
 	1302.1.1 = { birth = yes }
@@ -53176,7 +53176,7 @@ ksw_brahm_sen = {
 ktg_sao_lak_hpa = {
 	name = "Sao_Lak_Hpa"
 		dynasty = kengtung_dynasty
-	culture = tai_lu_culture
+	culture = tai
 	religion = theravada_faith
 	1270.1.1 = { birth = yes }
 }
@@ -54978,7 +54978,7 @@ luc_ruggero_antelminelli = {
 lukeni_luansanze_nsaku = {
 	name = "Lukeni"
 		dynasty = nsaku_dynasty
-	culture = kongo
+	culture = east_bantu
 	religion = pagan
 	father = nsaku_lau
 	1329.1.1 = { birth = yes }
@@ -57233,7 +57233,7 @@ mlb_telheipa = {
 
 mlk_hinakeha = {
 	name = "name_hinakeha"
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	1200.1.1 = { birth = yes }
 	1240.1.1 = { death = yes }
@@ -57242,7 +57242,7 @@ mlk_hinakeha = {
 mlk_hualani_wakea = {
 	name = "name_hualani"
 		dynasty = wakea_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	father = mlk_laniaiku
 	mother = mlk_kamauliwahine_wakea
@@ -57252,7 +57252,7 @@ mlk_hualani_wakea = {
 mlk_kamauaua_wakea = {
 	name = "name_kamauaua"
 		dynasty = wakea_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	1190.1.1 = { birth = yes }
 	1240.1.1 = { death = yes }
@@ -57261,7 +57261,7 @@ mlk_kamauaua_wakea = {
 mlk_kamauliwahine_wakea = {
 	name = "name_kamauliwahine"
 		dynasty = wakea_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	father = mlk_lanileo
 	mother = mlk_kapau_wakea
@@ -57272,7 +57272,7 @@ mlk_kamauliwahine_wakea = {
 mlk_kapau_wakea = {
 	name = "name_kapau"
 		dynasty = wakea_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	father = mlk_keoloewa_wakea
 	mother = mlk_nuakea
@@ -57283,7 +57283,7 @@ mlk_kapau_wakea = {
 mlk_keoloewa_wakea = {
 	name = "name_keoloewa"
 		dynasty = wakea_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	father = mlk_kamauaua_wakea
 	mother = mlk_hinakeha
@@ -57293,7 +57293,7 @@ mlk_keoloewa_wakea = {
 
 mlk_laniaiku = {
 	name = "name_laniaiku"
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	1270.1.1 = { birth = yes }
 	1320.1.1 = { death = yes }
@@ -57301,7 +57301,7 @@ mlk_laniaiku = {
 
 mlk_lanileo = {
 	name = "name_lanileo"
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	1250.1.1 = { birth = yes }
 	1300.1.1 = { death = yes }
@@ -57310,7 +57310,7 @@ mlk_lanileo = {
 mlk_nuakea = {
 	name = "name_nuakea"
 		dynasty = maweke_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	father = oah_keaunui_maweke
 	1230.1.1 = { birth = yes }
@@ -61627,7 +61627,7 @@ nie_johann_ii_hoya = {
 nimi_nzima = {
 	name = "Nzima"
 		dynasty = nimi_dynasty
-	culture = cabinda
+	culture = east_bantu
 	religion = pagan
 	1313.1.1 = { birth = yes }
 }
@@ -61781,7 +61781,7 @@ nov_vysheslav_rurikovich = {
 npukuan_suku_nsaku = {
 	name = "Npukuan"
 		dynasty = nsaku_dynasty
-	culture = kongo
+	culture = east_bantu
 	religion = pagan
 	father = nsaku_lau
 	1325.1.1 = { birth = yes }
@@ -62031,7 +62031,7 @@ nsa_otto_i_nassau = {
 nsaku_lau = {
 	name = "Lau"
 		dynasty = nsaku_dynasty
-	culture = kongo
+	culture = east_bantu
 	religion = pagan
 	1301.1.1 = { birth = yes }
 }
@@ -62207,7 +62207,7 @@ nzn_ufusato = {
 oah_elepuukahonua_maweke = {
 	name = "name_elepuukahonua"
 		dynasty = maweke_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	father = oah_kumuhonua_maweke
 	mother = oah_hainakolo
@@ -62217,7 +62217,7 @@ oah_elepuukahonua_maweke = {
 
 oah_hainakolo = {
 	name = "name_hainakolo"
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	1190.1.1 = { birth = yes }
 	1230.1.1 = { death = yes }
@@ -62225,7 +62225,7 @@ oah_hainakolo = {
 
 oah_hikilena = {
 	name = "name_hikilena"
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	1220.1.1 = { birth = yes }
 	1260.1.1 = { death = yes }
@@ -62234,7 +62234,7 @@ oah_hikilena = {
 oah_hookamalii_maweke = {
 	name = "name_hookamalii"
 		dynasty = maweke_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	father = oah_moikeha_maweke
 	1250.1.1 = { birth = yes }
@@ -62244,7 +62244,7 @@ oah_hookamalii_maweke = {
 oah_kahai_maweke = {
 	name = "name_kahai"
 		dynasty = maweke_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	father = oah_hookamalii_maweke
 	1270.1.1 = { birth = yes }
@@ -62254,7 +62254,7 @@ oah_kahai_maweke = {
 oah_kahokupohakano = {
 	name = "name_kahokupohakano"
 		dynasty = maweke_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	father = oah_elepuukahonua_maweke
 	mother = oah_hikilena
@@ -62264,7 +62264,7 @@ oah_kahokupohakano = {
 
 oah_kalanimoeikawaikai = {
 	name = "name_kalanimoeikawaikai"
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	1300.1.1 = { birth = yes }
 	1316.1.1 = { add_spouse = oah_nawele_maweke }
@@ -62272,7 +62272,7 @@ oah_kalanimoeikawaikai = {
 
 oah_kaumana_maweke = {
 	name = "name_kaumana"
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	1250.1.1 = { birth = yes }
 	1290.1.1 = { death = yes }
@@ -62281,7 +62281,7 @@ oah_kaumana_maweke = {
 oah_keaunui_maweke = {
 	name = "name_keaunui"
 		dynasty = maweke_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	father = oah_maweke_maweke
 	mother = oah_naiolaukea
@@ -62291,7 +62291,7 @@ oah_keaunui_maweke = {
 
 oah_kekupahaikala = {
 	name = "name_kekupahaikala"
-	culture = maohi_culture
+	culture = polynesian
 	religion = pagan
 	1100.1.1 = { birth = yes }
 	1130.1.1 = { death = yes }
@@ -62300,7 +62300,7 @@ oah_kekupahaikala = {
 oah_kumuhonua_maweke = {
 	name = "name_kumuhonua"
 		dynasty = maweke_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	father = oah_mulielealii_maweke
 	mother = oah_wehelani
@@ -62310,7 +62310,7 @@ oah_kumuhonua_maweke = {
 
 oah_maihikea = {
 	name = "name_maihikea"
-	culture = maohi_culture
+	culture = polynesian
 	religion = pagan
 	1100.1.1 = { birth = yes }
 	1130.1.1 = { death = yes }
@@ -62319,7 +62319,7 @@ oah_maihikea = {
 oah_maweke_maweke = {
 	name = "name_maweke"
 		dynasty = maweke_dynasty
-	culture = maohi_culture
+	culture = polynesian
 	religion = pagan
 	father = oah_kekupahaikala
 	mother = oah_maihikea
@@ -62330,7 +62330,7 @@ oah_maweke_maweke = {
 oah_moikeha_maweke = {
 	name = "name_moikeha"
 		dynasty = maweke_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	father = oah_kumuhonua_maweke
 	mother = oah_hainakolo
@@ -62341,7 +62341,7 @@ oah_moikeha_maweke = {
 oah_mulielealii_maweke = {
 	name = "name_mulielealii"
 		dynasty = maweke_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	father = oah_maweke_maweke
 	mother = oah_naiolaukea
@@ -62351,7 +62351,7 @@ oah_mulielealii_maweke = {
 
 oah_naiolaukea = {
 	name = "name_naiolaukea"
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	1130.1.1 = { birth = yes }
 	1160.1.1 = { death = yes }
@@ -62360,7 +62360,7 @@ oah_naiolaukea = {
 oah_nawele_maweke = {
 	name = "name_nawele"
 		dynasty = maweke_dynasty
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	father = oah_kahokupohakano
 	mother = oah_kaumana_maweke
@@ -62369,7 +62369,7 @@ oah_nawele_maweke = {
 
 oah_wehelani = {
 	name = "name_wehelani"
-	culture = kanaka_maoli_culture
+	culture = polynesian
 	religion = pagan
 	1160.1.1 = { birth = yes }
 	1190.1.1 = { death = yes }
@@ -63350,7 +63350,7 @@ otc_yanashiri_borjigin = {
 oto_pantictzin = {
 	name = "Pantictzin"
 		dynasty = of_xaltocan_dynasty
-	culture = otomanguean_culture
+	culture = otopamean
 	religion = pagan
 	1289.1.1 = { birth = yes }
 }
@@ -63358,7 +63358,7 @@ oto_pantictzin = {
 oto_tzompantzin = {
 	name = "Tzompantzin"
 		dynasty = of_xaltocan_dynasty
-	culture = otomanguean_culture
+	culture = otopamean
 	religion = pagan
 	father = oto_pantictzin
 	1315.1.1 = { birth = yes }
@@ -73968,7 +73968,7 @@ szl_yuri_andreevich_rurikovich = {
 
 tar_curatame_mother = {
 	name = "name_eu5_tar_curatame_mother"
-	culture = purepecha_culture
+	culture = purepecha
 	religion = pagan
 	1250.1.1 = { birth = yes }
 	1300.1.1 = { death = yes }
@@ -73978,7 +73978,7 @@ tar_curatame_mother = {
 tar_curatame_uanacaze = {
 	name = "Curatame"
 		dynasty = uanacaze_dynasty
-	culture = purepecha_culture
+	culture = purepecha
 	religion = pagan
 	father = tar_uapeani_uanacaze
 	mother = tar_curatame_mother
@@ -73989,7 +73989,7 @@ tar_curatame_uanacaze = {
 
 tar_pauacume_ii_mother = {
 	name = "name_eu5_tar_pauacume_ii_mother"
-	culture = purepecha_culture
+	culture = purepecha
 	religion = pagan
 	1270.1.1 = { birth = yes }
 	1320.1.1 = { death = yes }
@@ -73998,7 +73998,7 @@ tar_pauacume_ii_mother = {
 
 tar_pauacume_ii_spouse = {
 	name = "name_eu5_tar_pauacume_ii_spouse"
-	culture = purepecha_culture
+	culture = purepecha
 	religion = pagan
 	1317.1.1 = { birth = yes }
 	1333.1.1 = { add_spouse = tar_pauacume_ii_uanacaze }
@@ -74007,7 +74007,7 @@ tar_pauacume_ii_spouse = {
 tar_pauacume_ii_uanacaze = {
 	name = "Pauacume"
 		dynasty = uanacaze_dynasty
-	culture = purepecha_culture
+	culture = purepecha
 	religion = pagan
 	father = tar_curatame_uanacaze
 	mother = tar_pauacume_ii_mother
@@ -74018,7 +74018,7 @@ tar_pauacume_ii_uanacaze = {
 tar_pauacume_uanacaze = {
 	name = "Pauacume"
 		dynasty = uanacaze_dynasty
-	culture = purepecha_culture
+	culture = purepecha
 	religion = pagan
 	1220.1.1 = { birth = yes }
 	1270.1.1 = { death = yes }
@@ -74027,7 +74027,7 @@ tar_pauacume_uanacaze = {
 tar_tariacuri_uanacaze = {
 	name = "Tariacuri"
 		dynasty = uanacaze_dynasty
-	culture = purepecha_culture
+	culture = purepecha
 	religion = pagan
 	father = tar_pauacume_ii_uanacaze
 	1336.8.1 = { birth = yes }
@@ -74035,7 +74035,7 @@ tar_tariacuri_uanacaze = {
 
 tar_uapeani_mother = {
 	name = "name_eu5_tar_uapeani_mother"
-	culture = purepecha_culture
+	culture = purepecha
 	religion = pagan
 	1220.1.1 = { birth = yes }
 	1270.1.1 = { death = yes }
@@ -74045,7 +74045,7 @@ tar_uapeani_mother = {
 tar_uapeani_uanacaze = {
 	name = "Uapeani"
 		dynasty = uanacaze_dynasty
-	culture = purepecha_culture
+	culture = purepecha
 	religion = pagan
 	father = tar_pauacume_uanacaze
 	mother = tar_uapeani_mother
@@ -74197,14 +74197,14 @@ temur_oljeyitu_borjigin = {
 tep_acolnahuacatl_tepanecatl = {
 	name = "Acolnahuacatl"
 		dynasty = tepanecatl_dynasty
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1280.1.1 = { birth = yes }
 }
 
 tep_cuetlaxochitzin = {
 	name = "Cuetlaxochitzin"
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1293.1.1 = { birth = yes }
 	1309.1.1 = { add_spouse = tep_acolnahuacatl_tepanecatl }
@@ -74213,7 +74213,7 @@ tep_cuetlaxochitzin = {
 tep_tezozomoc_tepanecatl = {
 	name = "Tezozomoc"
 		dynasty = tepanecatl_dynasty
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	father = tep_acolnahuacatl_tepanecatl
 	1320.1.1 = { birth = yes }
@@ -75006,7 +75006,7 @@ tle_abu_tashufin = {
 tlx_culhuatecuhtli = {
 	name = "Culhuatecuhtli"
 		dynasty = of_tlaxcallan_dynasty
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1286.1.1 = { birth = yes }
 }
@@ -75228,14 +75228,14 @@ toqta_borjigin = {
 tot_catoxcan = {
 	name = "Catoxcan"
 		dynasty = of_cempoala_dynasty
-	culture = totonac_culture
+	culture = totozoquean
 	religion = pagan
 	1288.1.1 = { birth = yes }
 }
 
 tot_ixcahuitl = {
 	name = "Ixcahuitl"
-	culture = totonac_culture
+	culture = totozoquean
 	religion = pagan
 	father = tot_catoxcan
 	1323.1.1 = { birth = yes }
@@ -75243,7 +75243,7 @@ tot_ixcahuitl = {
 
 tot_nahuacatl = {
 	name = "Nahuacatl"
-	culture = totonac_culture
+	culture = totozoquean
 	religion = pagan
 	father = tot_catoxcan
 	1321.1.1 = { birth = yes }
@@ -75807,7 +75807,7 @@ tte_pasquale_vedano = {
 ttz_quinatzin_chichimecayotl = {
 	name = "Quinatzin"
 		dynasty = chichimecayotl_dynasty
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	1252.1.1 = { birth = yes }
 }
@@ -75815,7 +75815,7 @@ ttz_quinatzin_chichimecayotl = {
 ttz_techotlalatzin_chichimecayotl = {
 	name = "Techotlalatzin"
 		dynasty = chichimecayotl_dynasty
-	culture = nahua_culture
+	culture = nahua
 	religion = pagan
 	father = ttz_quinatzin_chichimecayotl
 	1323.1.1 = { birth = yes }
@@ -82049,7 +82049,7 @@ zan_suleiman_ibn_hassan_mahdali = {
 
 zap_huijatoo = {
 	name = "Huijatoo"
-	culture = otomanguean_culture
+	culture = otopamean
 	religion = pagan
 	father = zap_ozomatli
 	1318.1.1 = { birth = yes }
@@ -82058,7 +82058,7 @@ zap_huijatoo = {
 zap_ozomatli = {
 	name = "Ozomatli"
 		dynasty = of_yucucui_dynasty
-	culture = otomanguean_culture
+	culture = otopamean
 	religion = pagan
 	1284.1.1 = { birth = yes }
 }

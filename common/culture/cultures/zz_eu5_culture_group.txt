@@ -1,0 +1,3880 @@
+﻿# =========================================================
+# 美洲 / 大洋洲：按 EU5 文化组（eu5_groups 首位组）归并后的文化定义
+# 由 gen_debug/_gen_group_cultures.py 生成；983 个 EU5 文化 -> 129 个组文化
+# 定义体（ethos/traditions/name_list/gfx/ethnicities）直接取自组内 barony 最多的成员，
+# heritage/language 统一指向该组的支柱 <group>_group / eu5_heritage_<group>_group。
+# =========================================================
+
+abenakian = {
+	color = { 218 100 81 }
+
+	ethos = ethos_bureaucratic
+	heritage = abenakian_group
+	language = eu5_heritage_abenakian_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_culinary_art
+		tradition_hunters
+		tradition_sacred_groves
+	}
+
+	name_list = name_list_mikmaq_culture
+
+	coa_gfx = { dravidian_group_coa_gfx }
+	building_gfx = { arabic_group_building_gfx mena_building_gfx }
+	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { mena_unit_gfx }
+	house_coa_frame = house_frame_08
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = gen_ethnicity_385_mikmaq_culture_0
+	}
+}
+
+aikana = {
+	color = { 71 212 42 }
+
+	ethos = ethos_spiritual
+	heritage = aikana_group
+	language = eu5_heritage_aikana_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_aikana_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_264_aikana_culture_0
+	}
+}
+
+aingae = {
+	color = { 249 46 89 }
+
+	ethos = ethos_spiritual
+	heritage = aingae_group
+	language = eu5_heritage_aingae_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_kofan_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_444_kofan_culture_0
+	}
+}
+
+algic = {
+	color = { 200 50 30 }
+
+	ethos = ethos_spiritual
+	heritage = algic_group
+	language = eu5_heritage_algic_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_wiyot_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_523_wiyot_culture_0
+	}
+}
+
+andean = {
+	color = { 121 169 33 }
+
+	ethos = ethos_spiritual
+	heritage = andean_group
+	language = eu5_heritage_andean_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_chillque_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_357_chillque_culture_0
+	}
+}
+
+anishinabe = {
+	color = { 121 200 140 }
+
+	ethos = ethos_bellicose
+	heritage = anishinabe_group
+	language = eu5_heritage_anishinabe_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_winter_warriors
+		tradition_sacred_groves
+		tradition_hunters
+	}
+
+	name_list = name_list_weskarini_culture
+
+	coa_gfx = { berber_group_coa_gfx }
+	building_gfx = { berber_group_building_gfx mena_building_gfx }
+	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { mena_unit_gfx }
+	house_coa_frame = house_frame_06
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = gen_ethnicity_248_weskarini_culture_0
+	}
+}
+
+apsaalooke_hiraaca = {
+	color = { 147 92 94 }
+
+	ethos = ethos_egalitarian
+	heritage = apsaalooke_hiraaca_group
+	language = eu5_heritage_apsaalooke_hiraaca_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_forest_fighters
+		tradition_warriors_of_the_dry
+		tradition_wetlanders
+		tradition_forest_folk
+	}
+
+	name_list = name_list_hiraaca_culture
+
+	coa_gfx = { iranian_group_coa_gfx }
+	building_gfx = { iranian_building_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { iranian_unit_gfx }
+	house_coa_frame = house_frame_12
+	house_coa_mask_offset = { 0.0 -0.04 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_299_hiraaca_culture_0
+	}
+}
+
+atacame = {
+	color = { 151 148 9 }
+
+	ethos = ethos_spiritual
+	heritage = atacame_group
+	language = eu5_heritage_atacame_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_atacame_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_302_atacame_culture_0
+	}
+}
+
+atakapa = {
+	color = { 184 183 153 }
+
+	ethos = ethos_egalitarian
+	heritage = atakapa_group
+	language = eu5_heritage_atakapa_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_amharic_highlanders
+		tradition_dryland_dwellers
+		tradition_fishermen
+	}
+
+	name_list = name_list_atakapa_culture
+
+	coa_gfx = { japanese_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_japan
+
+	ethnicities = {
+		100 = gen_ethnicity_303_atakapa_culture_0
+	}
+}
+
+atallan = {
+	color = { 170 146 75 }
+
+	ethos = ethos_bellicose
+	heritage = atallan_group
+	language = eu5_heritage_atallan_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_medicinal_plants
+		tradition_sacred_groves
+		tradition_ruling_caste
+		tradition_castle_keepers
+	}
+
+	name_list = name_list_guancavilca_culture
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_frame_30
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_405_guancavilca_culture_0
+	}
+}
+
+australian = {
+	color = { 44 48 177 }
+
+	ethos = ethos_communal
+	heritage = australian_group
+	language = eu5_heritage_australian_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_forest_fighters
+		tradition_agrarian
+		tradition_language_scholars
+	}
+
+	name_list = name_list_ganggalida_culture
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { papuan_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_322_ganggalida_culture_0
+	}
+}
+
+aymara = {
+	color = { 185 33 37 }
+
+	ethos = ethos_bellicose
+	heritage = aymara_group
+	language = eu5_heritage_aymara_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_jungle_warriors
+		tradition_ancient_miners
+		tradition_forest_folk
+		tradition_mountain_homes
+		tradition_forest_fighters
+	}
+
+	name_list = name_list_aimara_culture
+
+	coa_gfx = { east_african_group_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	unit_gfx = { mena_unit_gfx }
+	house_coa_frame = house_frame_07
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_265_aimara_culture_0
+	}
+}
+
+bagua = {
+	color = { 28 199 144 }
+
+	ethos = ethos_spiritual
+	heritage = bagua_group
+	language = eu5_heritage_bagua_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_bagua_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_316_bagua_culture_0
+	}
+}
+
+barbakoan = {
+	color = { 46 187 45 }
+
+	ethos = ethos_bellicose
+	heritage = barbakoan_group
+	language = eu5_heritage_barbakoan_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_medicinal_plants
+		tradition_sacred_groves
+		tradition_ruling_caste
+		tradition_castle_keepers
+	}
+
+	name_list = name_list_cara_culture
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_frame_30
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_310_cara_culture_0
+	}
+}
+
+besiro = {
+	color = { 138 44 190 }
+
+	ethos = ethos_spiritual
+	heritage = besiro_group
+	language = eu5_heritage_besiro_group
+	martial_custom = martial_custom_female_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_forest_folk
+		tradition_agrarian
+		tradition_jungle_warriors
+		tradition_winter_warriors
+		tradition_highland_warriors
+	}
+
+	name_list = name_list_monkox_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	unit_gfx = { iberian_muslim_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_468_monkox_culture_0
+	}
+}
+
+bora_huitoto = {
+	color = { 136 38 132 }
+
+	ethos = ethos_spiritual
+	heritage = bora_huitoto_group
+	language = eu5_heritage_bora_huitoto_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_uitoto_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_465_uitoto_culture_0
+	}
+}
+
+cacan = {
+	color = { 93 102 152 }
+
+	ethos = ethos_spiritual
+	heritage = cacan_group
+	language = eu5_heritage_cacan_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_pazioca_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_484_pazioca_culture_0
+	}
+}
+
+caddoan = {
+	color = { 125 32 29 }
+
+	ethos = ethos_egalitarian
+	heritage = caddoan_group
+	language = eu5_heritage_caddoan_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_amharic_highlanders
+		tradition_dryland_dwellers
+		tradition_fishermen
+	}
+
+	name_list = name_list_caddo_culture
+
+	coa_gfx = { japanese_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_japan
+
+	ethnicities = {
+		100 = gen_ethnicity_337_caddo_culture_0
+	}
+}
+
+calima = {
+	color = { 13 185 240 }
+
+	ethos = ethos_bellicose
+	heritage = calima_group
+	language = eu5_heritage_calima_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_medicinal_plants
+		tradition_sacred_groves
+		tradition_ruling_caste
+		tradition_castle_keepers
+	}
+
+	name_list = name_list_calima_culture
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_frame_30
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_339_calima_culture_0
+	}
+}
+
+caribe = {
+	color = { 0 255 60 }
+
+	ethos = ethos_bellicose
+	heritage = caribe_group
+	language = eu5_heritage_caribe_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_medicinal_plants
+		tradition_sacred_groves
+		tradition_ruling_caste
+		tradition_castle_keepers
+	}
+
+	name_list = name_list_carib
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_frame_30
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_343_carib_0
+	}
+}
+
+charrua = {
+	color = { 78 6 159 }
+
+	ethos = ethos_spiritual
+	heritage = charrua_group
+	language = eu5_heritage_charrua_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_guenoa_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_348_guenoa_culture_0
+	}
+}
+
+cherokee = {
+	color = { 98 147 191 }
+
+	ethos = ethos_egalitarian
+	heritage = cherokee_group
+	language = eu5_heritage_cherokee_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_amharic_highlanders
+		tradition_dryland_dwellers
+		tradition_fishermen
+	}
+
+	name_list = name_list_otali_culture
+
+	coa_gfx = { japanese_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_japan
+
+	ethnicities = {
+		100 = gen_ethnicity_354_otali_culture_0
+	}
+}
+
+chibchan = {
+	color = { 130 219 67 }
+
+	ethos = ethos_communal
+	heritage = chibchan_group
+	language = eu5_heritage_chibchan_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_jungle_warriors
+		tradition_dryland_dwellers
+		tradition_hill_dwellers
+		tradition_medicinal_plants
+	}
+
+	name_list = name_list_ngabe_culture
+
+	coa_gfx = { west_african_group_coa_gfx }
+	building_gfx = { african_building_gfx mena_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { sub_sahran_unit_gfx }
+	house_coa_frame = house_frame_29
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_290_ngabe_culture_0
+	}
+}
+
+chicham = {
+	color = { 27 147 100 }
+
+	ethos = ethos_bellicose
+	heritage = chicham_group
+	language = eu5_heritage_chicham_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_medicinal_plants
+		tradition_sacred_groves
+		tradition_ruling_caste
+		tradition_castle_keepers
+	}
+
+	name_list = name_list_shuar_culture
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_frame_30
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_422_shuar_culture_0
+	}
+}
+
+chickasaw_choctaw = {
+	color = { 21 237 85 }
+
+	ethos = ethos_egalitarian
+	heritage = chickasaw_choctaw_group
+	language = eu5_heritage_chickasaw_choctaw_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_amharic_highlanders
+		tradition_dryland_dwellers
+		tradition_fishermen
+	}
+
+	name_list = name_list_choctaw_culture
+
+	coa_gfx = { japanese_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_japan
+
+	ethnicities = {
+		100 = gen_ethnicity_257_choctaw_culture_0
+	}
+}
+
+chitimacha = {
+	color = { 121 150 120 }
+
+	ethos = ethos_egalitarian
+	heritage = chitimacha_group
+	language = eu5_heritage_chitimacha_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_amharic_highlanders
+		tradition_dryland_dwellers
+		tradition_fishermen
+	}
+
+	name_list = name_list_bayagoula_culture
+
+	coa_gfx = { japanese_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_japan
+
+	ethnicities = {
+		100 = gen_ethnicity_267_bayagoula_culture_0
+	}
+}
+
+chiwere = {
+	color = { 130 106 108 }
+
+	ethos = ethos_egalitarian
+	heritage = chiwere_group
+	language = eu5_heritage_chiwere_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_forest_fighters
+		tradition_warriors_of_the_dry
+		tradition_wetlanders
+		tradition_forest_folk
+	}
+
+	name_list = name_list_waghtochtatta_culture
+
+	coa_gfx = { iranian_group_coa_gfx }
+	building_gfx = { iranian_building_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { iranian_unit_gfx }
+	house_coa_frame = house_frame_12
+	house_coa_mask_offset = { 0.0 -0.04 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_323_waghtochtatta_culture_0
+	}
+}
+
+choco = {
+	color = { 191 240 116 }
+
+	ethos = ethos_bellicose
+	heritage = choco_group
+	language = eu5_heritage_choco_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_medicinal_plants
+		tradition_sacred_groves
+		tradition_ruling_caste
+		tradition_castle_keepers
+	}
+
+	name_list = name_list_embera_culture
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_frame_30
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_387_embera_culture_0
+	}
+}
+
+chono = {
+	color = { 99 125 127 }
+
+	ethos = ethos_bellicose
+	heritage = chono_group
+	language = eu5_heritage_chono_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_festivities
+		tradition_ancient_miners
+		tradition_mountaineers
+	}
+
+	name_list = name_list_chono_culture
+
+	coa_gfx = { west_african_group_coa_gfx }
+	building_gfx = { african_building_gfx mena_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { sub_sahran_unit_gfx }
+	house_coa_frame = house_frame_20
+	house_coa_mask_offset = { 0.0 0.025 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_364_chono_culture_0
+	}
+}
+
+chumashan = {
+	color = { 175 190 167 }
+
+	ethos = ethos_bellicose
+	heritage = chumashan_group
+	language = eu5_heritage_chumashan_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_ancient_miners
+		tradition_xenophilic
+		tradition_wedding_ceremonies
+		tradition_forest_folk
+		tradition_dryland_dwellers
+	}
+
+	name_list = name_list_chumash_culture
+
+	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
+	building_gfx = { iberian_building_gfx }
+	clothing_gfx = { iberian_christian_clothing_gfx western_clothing_gfx }
+	unit_gfx = { iberian_christian_unit_gfx }
+	house_coa_frame = house_frame_03
+	house_coa_mask_offset = { 0.0 0.055 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_366_chumash_culture_0
+	}
+}
+
+ckunsa = {
+	color = { 214 217 176 }
+
+	ethos = ethos_spiritual
+	heritage = ckunsa_group
+	language = eu5_heritage_ckunsa_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_forest_folk
+		tradition_agrarian
+		tradition_jungle_warriors
+		tradition_winter_warriors
+		tradition_highland_warriors
+	}
+
+	name_list = name_list_licanantay_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	unit_gfx = { iberian_muslim_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_356_licanantay_culture_0
+	}
+}
+
+coahuilteco = {
+	color = { 100 36 36 }
+
+	ethos = ethos_communal
+	heritage = coahuilteco_group
+	language = eu5_heritage_coahuilteco_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_mountain_homes
+		tradition_forest_fighters
+		tradition_hit_and_run
+		tradition_horse_breeder
+	}
+
+	name_list = name_list_coahuilteco_culture
+
+	coa_gfx = { japanese_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_japan
+
+	ethnicities = {
+		100 = gen_ethnicity_368_coahuilteco_culture_0
+	}
+}
+
+cree = {
+	color = { 212 129 225 }
+
+	ethos = ethos_communal
+	heritage = cree_group
+	language = eu5_heritage_cree_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_sacred_mountains
+		tradition_mountaineers
+		tradition_wetlanders
+		tradition_polders
+	}
+
+	name_list = name_list_innu_culture
+
+	coa_gfx = { chinese_group_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
+	unit_gfx = { norse_unit_gfx }
+	house_coa_frame = house_china
+
+	ethnicities = {
+		100 = gen_ethnicity_300_innu_culture_0
+	}
+}
+
+cuicas = {
+	color = { 33 96 75 }
+
+	ethos = ethos_spiritual
+	heritage = cuicas_group
+	language = eu5_heritage_cuicas_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_ancient_miners
+		tradition_medicinal_plants
+		tradition_pacifism
+		tradition_agrarian
+		tradition_fishermen
+	}
+
+	name_list = name_list_cuicas_culture
+
+	coa_gfx = { west_african_group_coa_gfx }
+	building_gfx = { african_building_gfx mena_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { sub_sahran_unit_gfx }
+	house_coa_frame = house_frame_20
+	house_coa_mask_offset = { 0.0 0.025 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_372_cuicas_culture_0
+	}
+}
+
+cuitlatec = {
+	color = { 142 78 124 }
+
+	ethos = ethos_spiritual
+	heritage = cuitlatec_group
+	language = eu5_heritage_cuitlatec_group
+	martial_custom = martial_custom_female_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_festivities
+		tradition_chivalry
+		tradition_highland_warriors
+		tradition_mountaineers
+		tradition_equal_inheritance
+	}
+
+	name_list = name_list_cuitlatec_culture
+
+	coa_gfx = { central_african_group_coa_gfx }
+	building_gfx = { african_building_gfx mena_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { sub_sahran_unit_gfx }
+	house_coa_frame = house_frame_20
+	house_coa_mask_offset = { 0.0 0.025 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_373_cuitlatec_culture_0
+	}
+}
+
+culli = {
+	color = { 121 119 232 }
+
+	ethos = ethos_spiritual
+	heritage = culli_group
+	language = eu5_heritage_culli_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_pashash_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_344_pashash_culture_0
+	}
+}
+
+dakota = {
+	color = { 168 104 84 }
+
+	ethos = ethos_egalitarian
+	heritage = dakota_group
+	language = eu5_heritage_dakota_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_forest_fighters
+		tradition_warriors_of_the_dry
+		tradition_wetlanders
+		tradition_forest_folk
+	}
+
+	name_list = name_list_nakoda_culture
+
+	coa_gfx = { iranian_group_coa_gfx }
+	building_gfx = { iranian_building_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { iranian_unit_gfx }
+	house_coa_frame = house_frame_12
+	house_coa_mask_offset = { 0.0 -0.04 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_324_nakoda_culture_0
+	}
+}
+
+dhegiha = {
+	color = { 105 171 199 }
+
+	ethos = ethos_spiritual
+	heritage = dhegiha_group
+	language = eu5_heritage_dhegiha_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_forest_folk
+		tradition_mendicant_mystics
+		tradition_culinary_art
+		tradition_martial_admiration
+	}
+
+	name_list = name_list_cahokia_culture
+
+	coa_gfx = { berber_group_coa_gfx }
+	building_gfx = { berber_group_building_gfx mena_building_gfx }
+	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { mena_unit_gfx }
+	house_coa_frame = house_frame_06
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = gen_ethnicity_338_cahokia_culture_0
+	}
+}
+
+eastern_otomanguean = {
+	color = { 158 18 120 }
+
+	ethos = ethos_stoic
+	heritage = eastern_otomanguean_group
+	language = eu5_heritage_eastern_otomanguean_group
+	martial_custom = martial_custom_female_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_medicinal_plants
+		tradition_forest_fighters
+		tradition_hill_dwellers
+		tradition_equal_inheritance
+	}
+
+	name_list = name_list_mixtec_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_284_mixtec_culture_0
+	}
+}
+
+guahibo = {
+	color = { 140 211 84 }
+
+	ethos = ethos_bellicose
+	heritage = guahibo_group
+	language = eu5_heritage_guahibo_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_medicinal_plants
+		tradition_sacred_groves
+		tradition_ruling_caste
+		tradition_castle_keepers
+	}
+
+	name_list = name_list_guahibo_culture
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_frame_30
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_403_guahibo_culture_0
+	}
+}
+
+haida = {
+	color = { 60 65 185 }
+
+	ethos = ethos_spiritual
+	heritage = haida_group
+	language = eu5_heritage_haida_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_haida_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_414_haida_culture_0
+	}
+}
+
+haudenosaunee = {
+	color = { 27 244 223 }
+
+	ethos = ethos_bellicose
+	heritage = haudenosaunee_group
+	language = eu5_heritage_haudenosaunee_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_mountain_homes
+		tradition_wetlanders
+		tradition_ancient_miners
+	}
+
+	name_list = name_list_kanienkehaka_culture
+
+	coa_gfx = { berber_group_coa_gfx }
+	building_gfx = { berber_group_building_gfx mena_building_gfx }
+	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { mena_unit_gfx }
+	house_coa_frame = house_frame_06
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = gen_ethnicity_306_kanienkehaka_culture_0
+	}
+}
+
+henia_kamiare = {
+	color = { 91 106 81 }
+
+	ethos = ethos_spiritual
+	heritage = henia_kamiare_group
+	language = eu5_heritage_henia_kamiare_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_henia_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_417_henia_culture_0
+	}
+}
+
+hinonoeitiit = {
+	color = { 156 78 82 }
+
+	ethos = ethos_egalitarian
+	heritage = hinonoeitiit_group
+	language = eu5_heritage_hinonoeitiit_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_forest_fighters
+		tradition_warriors_of_the_dry
+		tradition_wetlanders
+		tradition_forest_folk
+	}
+
+	name_list = name_list_haaninin_culture
+
+	coa_gfx = { iranian_group_coa_gfx }
+	building_gfx = { iranian_building_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { iranian_unit_gfx }
+	house_coa_frame = house_frame_12
+	house_coa_mask_offset = { 0.0 -0.04 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_413_haaninin_culture_0
+	}
+}
+
+hokan = {
+	color = { 59 131 189 }
+
+	ethos = ethos_bellicose
+	heritage = hokan_group
+	language = eu5_heritage_hokan_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_ancient_miners
+		tradition_xenophilic
+		tradition_wedding_ceremonies
+		tradition_forest_folk
+		tradition_dryland_dwellers
+	}
+
+	name_list = name_list_cochimi_culture
+
+	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
+	building_gfx = { iberian_building_gfx }
+	clothing_gfx = { iberian_christian_clothing_gfx western_clothing_gfx }
+	unit_gfx = { iberian_christian_unit_gfx }
+	house_coa_frame = house_frame_03
+	house_coa_mask_offset = { 0.0 0.055 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_255_cochimi_culture_0
+	}
+}
+
+inuit = {
+	color = { 160 116 245 }
+
+	ethos = ethos_communal
+	heritage = inuit_group
+	language = eu5_heritage_inuit_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_sacred_mountains
+		tradition_mountaineers
+		tradition_wetlanders
+		tradition_polders
+	}
+
+	name_list = name_list_dorset_culture
+
+	coa_gfx = { chinese_group_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
+	unit_gfx = { norse_unit_gfx }
+	house_coa_frame = house_frame_09
+
+	ethnicities = {
+		25 = gen_ethnicity_384_dorset_culture_0
+		15 = gen_ethnicity_384_dorset_culture_1
+		35 = gen_ethnicity_384_dorset_culture_2
+		25 = gen_ethnicity_384_dorset_culture_3
+	}
+}
+
+iroquoian = {
+	color = { 73 70 103 }
+
+	ethos = ethos_bureaucratic
+	heritage = iroquoian_group
+	language = eu5_heritage_iroquoian_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_culinary_art
+		tradition_hunters
+		tradition_sacred_groves
+	}
+
+	name_list = name_list_stadaconan_culture
+
+	coa_gfx = { dravidian_group_coa_gfx }
+	building_gfx = { arabic_group_building_gfx mena_building_gfx }
+	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { mena_unit_gfx }
+	house_coa_frame = house_frame_08
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = gen_ethnicity_296_stadaconan_culture_0
+	}
+}
+
+jirajaran = {
+	color = { 12 175 83 }
+
+	ethos = ethos_spiritual
+	heritage = jirajaran_group
+	language = eu5_heritage_jirajaran_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_ancient_miners
+		tradition_medicinal_plants
+		tradition_pacifism
+		tradition_agrarian
+		tradition_fishermen
+	}
+
+	name_list = name_list_jirajaran_culture
+
+	coa_gfx = { west_african_group_coa_gfx }
+	building_gfx = { african_building_gfx mena_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { sub_sahran_unit_gfx }
+	house_coa_frame = house_frame_20
+	house_coa_mask_offset = { 0.0 0.025 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_312_jirajaran_culture_0
+	}
+}
+
+kambiwa = {
+	color = { 92 37 224 }
+
+	ethos = ethos_spiritual
+	heritage = kambiwa_group
+	language = eu5_heritage_kambiwa_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_kambiwa_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_431_kambiwa_culture_0
+	}
+}
+
+kanisian = {
+	color = { 87 223 107 }
+
+	ethos = ethos_spiritual
+	heritage = kanisian_group
+	language = eu5_heritage_kanisian_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_kanisian_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_432_kanisian_culture_0
+	}
+}
+
+kawesqar = {
+	color = { 30 144 68 }
+
+	ethos = ethos_communal
+	heritage = kawesqar_group
+	language = eu5_heritage_kawesqar_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_horse_breeder
+		tradition_monogamous
+	}
+
+	name_list = name_list_kawesqar_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { mena_building_gfx }
+	clothing_gfx = { byzantine_clothing_gfx }
+	unit_gfx = { eastern_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_404_kawesqar_culture_0
+	}
+}
+
+kayambi = {
+	color = { 169 20 23 }
+
+	ethos = ethos_spiritual
+	heritage = kayambi_group
+	language = eu5_heritage_kayambi_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_kayambi_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_437_kayambi_culture_0
+	}
+}
+
+ktunaxa = {
+	color = { 131 37 154 }
+
+	ethos = ethos_egalitarian
+	heritage = ktunaxa_group
+	language = eu5_heritage_ktunaxa_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_chivalry
+		tradition_caravaneers
+		tradition_collective_lands
+		tradition_runestones
+	}
+
+	name_list = name_list_ktunaxa_culture
+
+	coa_gfx = { iranian_group_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx }
+	unit_gfx = { northern_unit_gfx }
+	house_coa_frame = house_frame_12
+	house_coa_mask_offset = { 0.0 -0.04 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_447_ktunaxa_culture_0
+	}
+}
+
+kwaza = {
+	color = { 127 71 85 }
+
+	ethos = ethos_spiritual
+	heritage = kwaza_group
+	language = eu5_heritage_kwaza_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_kwaza_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_449_kwaza_culture_0
+	}
+}
+
+lenape = {
+	color = { 209 176 156 }
+
+	ethos = ethos_bellicose
+	heritage = lenape_group
+	language = eu5_heritage_lenape_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_mountain_homes
+		tradition_wetlanders
+		tradition_ancient_miners
+	}
+
+	name_list = name_list_munsee_culture
+
+	coa_gfx = { berber_group_coa_gfx }
+	building_gfx = { berber_group_building_gfx mena_building_gfx }
+	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { mena_unit_gfx }
+	house_coa_frame = house_frame_06
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = gen_ethnicity_454_munsee_culture_0
+	}
+}
+
+lule = {
+	color = { 37 203 236 }
+
+	ethos = ethos_spiritual
+	heritage = lule_group
+	language = eu5_heritage_lule_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_lule_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		75 = gen_ethnicity_453_lule_culture_0
+		25 = gen_ethnicity_453_lule_culture_1
+	}
+}
+
+macro_je = {
+	color = { 241 196 180 }
+
+	ethos = ethos_spiritual
+	heritage = macro_je_group
+	language = eu5_heritage_macro_je_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_kanhgag_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_271_kanhgag_culture_0
+	}
+}
+
+malibu = {
+	color = { 219 248 206 }
+
+	ethos = ethos_bellicose
+	heritage = malibu_group
+	language = eu5_heritage_malibu_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_medicinal_plants
+		tradition_sacred_groves
+		tradition_ruling_caste
+		tradition_castle_keepers
+	}
+
+	name_list = name_list_malibu_culture
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_frame_30
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_455_malibu_culture_0
+	}
+}
+
+manoki = {
+	color = { 123 199 79 }
+
+	ethos = ethos_stoic
+	heritage = manoki_group
+	language = eu5_heritage_manoki_group
+	martial_custom = martial_custom_female_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_wetlanders
+		tradition_mountaineers
+		tradition_hunters
+		tradition_hard_working
+		tradition_forest_folk
+	}
+
+	name_list = name_list_manoki_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_458_manoki_culture_0
+	}
+}
+
+mapudungun = {
+	color = { 158 246 129 }
+
+	ethos = ethos_communal
+	heritage = mapudungun_group
+	language = eu5_heritage_mapudungun_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_horse_breeder
+		tradition_monogamous
+	}
+
+	name_list = name_list_het_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { mena_building_gfx }
+	clothing_gfx = { byzantine_clothing_gfx }
+	unit_gfx = { eastern_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_418_het_culture_0
+	}
+}
+
+maskoy = {
+	color = { 33 33 170 }
+
+	ethos = ethos_spiritual
+	heritage = maskoy_group
+	language = eu5_heritage_maskoy_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_enlhet_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_389_enlhet_culture_0
+	}
+}
+
+massachusett = {
+	color = { 92 178 141 }
+
+	ethos = ethos_bellicose
+	heritage = massachusett_group
+	language = eu5_heritage_massachusett_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_mountain_homes
+		tradition_wetlanders
+		tradition_ancient_miners
+	}
+
+	name_list = name_list_pequot_culture
+
+	coa_gfx = { berber_group_coa_gfx }
+	building_gfx = { berber_group_building_gfx mena_building_gfx }
+	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { mena_unit_gfx }
+	house_coa_frame = house_frame_06
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = gen_ethnicity_462_pequot_culture_0
+	}
+}
+
+mataco_guaicuru = {
+	color = { 255 167 70 }
+
+	ethos = ethos_spiritual
+	heritage = mataco_guaicuru_group
+	language = eu5_heritage_mataco_guaicuru_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_guaikuru_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_247_guaikuru_culture_0
+	}
+}
+
+maya = {
+	color = { 32 70 110 }
+
+	ethos = ethos_spiritual
+	heritage = maya_group
+	language = eu5_heritage_maya_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_forest_folk
+		tradition_wetlanders
+		tradition_jungle_warriors
+		tradition_ce1_ritual_washing
+		tradition_equal_inheritance
+	}
+
+	name_list = name_list_yucatec_culture
+
+	coa_gfx = { west_african_group_coa_gfx }
+	building_gfx = { african_building_gfx mena_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { mena_unit_gfx }
+	house_coa_frame = house_frame_29
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_362_yucatec_culture_0
+	}
+}
+
+micronesian = {
+	color = { 49 152 252 }
+
+	ethos = ethos_spiritual
+	heritage = micronesian_group
+	language = eu5_heritage_micronesian_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_sacred_groves
+		tradition_forest_fighters
+		tradition_medicinal_plants
+		tradition_hill_dwellers
+	}
+
+	name_list = name_list_kajoor_ri_majel_culture
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_frame_29
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_269_kajoor_ri_majel_culture_0
+	}
+}
+
+misumalpan = {
+	color = { 175 202 91 }
+
+	ethos = ethos_stoic
+	heritage = misumalpan_group
+	language = eu5_heritage_misumalpan_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_medicinal_plants
+		tradition_forest_fighters
+		tradition_hill_dwellers
+		tradition_equal_inheritance
+	}
+
+	name_list = name_list_lenca_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_448_lenca_culture_0
+	}
+}
+
+moseten = {
+	color = { 174 101 231 }
+
+	ethos = ethos_spiritual
+	heritage = moseten_group
+	language = eu5_heritage_moseten_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_tsimanes_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_513_tsimanes_culture_0
+	}
+}
+
+movima = {
+	color = { 42 97 166 }
+
+	ethos = ethos_spiritual
+	heritage = movima_group
+	language = eu5_heritage_movima_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_cayubaba_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_346_cayubaba_culture_0
+	}
+}
+
+muchik = {
+	color = { 203 121 8 }
+
+	ethos = ethos_spiritual
+	heritage = muchik_group
+	language = eu5_heritage_muchik_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_xllang_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_341_xllang_culture_0
+	}
+}
+
+mura = {
+	color = { 56 129 128 }
+
+	ethos = ethos_spiritual
+	heritage = mura_group
+	language = eu5_heritage_mura_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_mura_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_469_mura_culture_0
+	}
+}
+
+muskogee = {
+	color = { 23 35 144 }
+
+	ethos = ethos_egalitarian
+	heritage = muskogee_group
+	language = eu5_heritage_muskogee_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_amharic_highlanders
+		tradition_dryland_dwellers
+		tradition_fishermen
+	}
+
+	name_list = name_list_coosa_culture
+
+	coa_gfx = { japanese_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_japan
+
+	ethnicities = {
+		100 = gen_ethnicity_272_coosa_culture_0
+	}
+}
+
+myaamia = {
+	color = { 120 187 29 }
+
+	ethos = ethos_spiritual
+	heritage = myaamia_group
+	language = eu5_heritage_myaamia_group
+	martial_custom = martial_custom_female_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_forest_folk
+		tradition_mendicant_mystics
+		tradition_culinary_art
+		tradition_martial_admiration
+	}
+
+	name_list = name_list_myaamia_culture
+
+	coa_gfx = { berber_group_coa_gfx }
+	building_gfx = { berber_group_building_gfx mena_building_gfx }
+	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { mena_unit_gfx }
+	house_coa_frame = house_frame_06
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = gen_ethnicity_304_myaamia_culture_0
+	}
+}
+
+nadene = {
+	color = { 168 252 27 }
+
+	ethos = ethos_egalitarian
+	heritage = nadene_group
+	language = eu5_heritage_nadene_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hill_dwellers
+		tradition_fishermen
+		tradition_adaptive_skirmishing
+		tradition_hunters
+		tradition_equal_inheritance
+	}
+
+	name_list = name_list_denesoline_culture
+
+	coa_gfx = { iranian_group_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	house_coa_frame = house_frame_12
+	house_coa_mask_offset = { 0.0 -0.04 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		50 = gen_ethnicity_263_denesoline_culture_0
+		25 = gen_ethnicity_263_denesoline_culture_1
+		25 = gen_ethnicity_263_denesoline_culture_2
+	}
+}
+
+nahua = {
+	color = { 48 149 21 }
+
+	ethos = ethos_communal
+	heritage = nahua_group
+	language = eu5_heritage_nahua_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_ancient_miners
+		tradition_polders
+		tradition_court_eunuchs
+	}
+
+	name_list = name_list_nahua_culture
+
+	coa_gfx = { west_african_group_coa_gfx }
+	building_gfx = { african_building_gfx mena_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { sub_sahran_unit_gfx }
+	house_coa_frame = house_frame_20
+	house_coa_mask_offset = { 0.0 0.025 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_426_nahua_culture_0
+	}
+}
+
+napuruna = {
+	color = { 164 218 116 }
+
+	ethos = ethos_spiritual
+	heritage = napuruna_group
+	language = eu5_heritage_napuruna_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_napuruna_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_471_napuruna_culture_0
+	}
+}
+
+natchez = {
+	color = { 232 185 117 }
+
+	ethos = ethos_egalitarian
+	heritage = natchez_group
+	language = eu5_heritage_natchez_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_amharic_highlanders
+		tradition_dryland_dwellers
+		tradition_fishermen
+	}
+
+	name_list = name_list_natchez_culture
+
+	coa_gfx = { japanese_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_japan
+
+	ethnicities = {
+		100 = gen_ethnicity_309_natchez_culture_0
+	}
+}
+
+nuuchi_nuwu = {
+	color = { 40 86 143 }
+
+	ethos = ethos_communal
+	heritage = nuuchi_nuwu_group
+	language = eu5_heritage_nuuchi_nuwu_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		tradition_chanson_de_geste
+		tradition_hereditary_hierarchy
+		tradition_hunters
+		tradition_pastoralists
+	}
+
+	name_list = name_list_nuuchi_culture
+
+	coa_gfx = { occitan_coa_gfx frankish_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	house_coa_frame = house_frame_03
+	house_coa_mask_offset = { 0.0 0.055 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_436_nuuchi_culture_0
+	}
+}
+
+otopamean = {
+	color = { 68 127 241 }
+
+	ethos = ethos_communal
+	heritage = otopamean_group
+	language = eu5_heritage_otopamean_group
+	martial_custom = martial_custom_female_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_dryland_dwellers
+		tradition_poetry
+		tradition_welcoming
+		tradition_winter_warriors
+	}
+
+	name_list = name_list_otomanguean_culture
+
+	coa_gfx = { central_african_group_coa_gfx }
+	building_gfx = { african_building_gfx mena_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { sub_sahran_unit_gfx }
+	house_coa_frame = house_frame_20
+	house_coa_mask_offset = { 0.0 0.025 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_355_otomanguean_culture_0
+	}
+}
+
+paiute = {
+	color = { 60 180 100 }
+
+	ethos = ethos_bellicose
+	heritage = paiute_group
+	language = eu5_heritage_paiute_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_ancient_miners
+		tradition_xenophilic
+		tradition_wedding_ceremonies
+		tradition_forest_folk
+		tradition_dryland_dwellers
+	}
+
+	name_list = name_list_monachi_culture
+
+	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
+	building_gfx = { iberian_building_gfx }
+	clothing_gfx = { iberian_christian_clothing_gfx western_clothing_gfx }
+	unit_gfx = { iberian_christian_unit_gfx }
+	house_coa_frame = house_frame_03
+	house_coa_mask_offset = { 0.0 0.055 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_467_monachi_culture_0
+	}
+}
+
+pama_nyungan = {
+	color = { 62 104 83 }
+
+	ethos = ethos_communal
+	heritage = pama_nyungan_group
+	language = eu5_heritage_pama_nyungan_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_forest_fighters
+		tradition_agrarian
+		tradition_language_scholars
+	}
+
+	name_list = name_list_noongar_culture
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { papuan_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_279_noongar_culture_0
+	}
+}
+
+panche = {
+	color = { 132 13 226 }
+
+	ethos = ethos_bellicose
+	heritage = panche_group
+	language = eu5_heritage_panche_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_medicinal_plants
+		tradition_sacred_groves
+		tradition_ruling_caste
+		tradition_castle_keepers
+	}
+
+	name_list = name_list_panche_culture
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_frame_30
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_483_panche_culture_0
+	}
+}
+
+pano = {
+	color = { 229 0 30 }
+
+	ethos = ethos_spiritual
+	heritage = pano_group
+	language = eu5_heritage_pano_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_uni_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_394_uni_culture_0
+	}
+}
+
+panzaleo = {
+	color = { 229 74 114 }
+
+	ethos = ethos_spiritual
+	heritage = panzaleo_group
+	language = eu5_heritage_panzaleo_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_quitu_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_358_quitu_culture_0
+	}
+}
+
+penutian = {
+	color = { 218 178 211 }
+
+	ethos = ethos_communal
+	heritage = penutian_group
+	language = eu5_heritage_penutian_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hill_dwellers
+		tradition_mountaineers
+		tradition_ancient_miners
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_nimiipuu_culture
+
+	coa_gfx = { occitan_coa_gfx frankish_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	house_coa_frame = house_frame_03
+	house_coa_mask_offset = { 0.0 0.055 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_360_nimiipuu_culture_0
+	}
+}
+
+pijao = {
+	color = { 121 175 204 }
+
+	ethos = ethos_bellicose
+	heritage = pijao_group
+	language = eu5_heritage_pijao_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_medicinal_plants
+		tradition_sacred_groves
+		tradition_ruling_caste
+		tradition_castle_keepers
+	}
+
+	name_list = name_list_pijao_culture
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_frame_30
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_485_pijao_culture_0
+	}
+}
+
+polynesian = {
+	color = { 137 220 31 }
+
+	ethos = ethos_communal
+	heritage = polynesian_group
+	language = eu5_heritage_polynesian_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_caravaneers
+		tradition_seafaring
+		tradition_sacred_mountains
+		tradition_dryland_dwellers
+	}
+
+	name_list = name_list_maori_culture
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_388_maori_culture_0
+	}
+}
+
+powhatan = {
+	color = { 229 119 114 }
+
+	ethos = ethos_bureaucratic
+	heritage = powhatan_group
+	language = eu5_heritage_powhatan_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_culinary_art
+		tradition_hunters
+		tradition_sacred_groves
+	}
+
+	name_list = name_list_pamlico_culture
+
+	coa_gfx = { dravidian_group_coa_gfx }
+	building_gfx = { arabic_group_building_gfx mena_building_gfx }
+	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { mena_unit_gfx }
+	house_coa_frame = house_frame_08
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = gen_ethnicity_251_pamlico_culture_0
+	}
+}
+
+puebloan = {
+	color = { 6 57 113 }
+
+	ethos = ethos_bellicose
+	heritage = puebloan_group
+	language = eu5_heritage_puebloan_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_horse_breeder
+		tradition_festivities
+		tradition_warrior_culture
+		tradition_desert_nomads
+	}
+
+	name_list = name_list_hohokam_culture
+
+	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	house_coa_frame = house_frame_03
+	house_coa_mask_offset = { 0.0 0.055 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_420_hohokam_culture_0
+	}
+}
+
+pukina = {
+	color = { 198 131 244 }
+
+	ethos = ethos_spiritual
+	heritage = pukina_group
+	language = eu5_heritage_pukina_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_charka_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_352_charka_culture_0
+	}
+}
+
+pume = {
+	color = { 21 1 120 }
+
+	ethos = ethos_spiritual
+	heritage = pume_group
+	language = eu5_heritage_pume_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_ancient_miners
+		tradition_medicinal_plants
+		tradition_pacifism
+		tradition_agrarian
+		tradition_fishermen
+	}
+
+	name_list = name_list_pume_culture
+
+	coa_gfx = { west_african_group_coa_gfx }
+	building_gfx = { african_building_gfx mena_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { sub_sahran_unit_gfx }
+	house_coa_frame = house_frame_20
+	house_coa_mask_offset = { 0.0 0.025 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_488_pume_culture_0
+	}
+}
+
+purepecha = {
+	color = { 158 18 20 }
+
+	ethos = ethos_communal
+	heritage = purepecha_group
+	language = eu5_heritage_purepecha_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_dryland_dwellers
+		tradition_poetry
+		tradition_welcoming
+		tradition_winter_warriors
+	}
+
+	name_list = name_list_purepecha_culture
+
+	coa_gfx = { central_african_group_coa_gfx }
+	building_gfx = { african_building_gfx mena_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { sub_sahran_unit_gfx }
+	house_coa_frame = house_frame_20
+	house_coa_mask_offset = { 0.0 0.025 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_489_purepecha_culture_0
+	}
+}
+
+quechuan = {
+	color = { 69 198 164 }
+
+	ethos = ethos_bellicose
+	heritage = quechuan_group
+	language = eu5_heritage_quechuan_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_jungle_warriors
+		tradition_ancient_miners
+		tradition_forest_folk
+		tradition_mountain_homes
+		tradition_forest_fighters
+	}
+
+	name_list = name_list_wari_culture
+
+	coa_gfx = { east_african_group_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	unit_gfx = { mena_unit_gfx }
+	house_coa_frame = house_frame_07
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_286_wari_culture_0
+	}
+}
+
+quingnam = {
+	color = { 39 123 126 }
+
+	ethos = ethos_bellicose
+	heritage = quingnam_group
+	language = eu5_heritage_quingnam_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_festivities
+		tradition_ancient_miners
+		tradition_mountaineers
+	}
+
+	name_list = name_list_chimu_culture
+
+	coa_gfx = { west_african_group_coa_gfx }
+	building_gfx = { african_building_gfx mena_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { sub_sahran_unit_gfx }
+	house_coa_frame = house_frame_20
+	house_coa_mask_offset = { 0.0 0.025 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_359_chimu_culture_0
+	}
+}
+
+salishan = {
+	color = { 55 45 28 }
+
+	ethos = ethos_communal
+	heritage = salishan_group
+	language = eu5_heritage_salishan_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_metal_craftsmanship
+		tradition_hill_dwellers
+		tradition_frugal_armorsmiths
+	}
+
+	name_list = name_list_shuswap_culture
+
+	coa_gfx = { swedish_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx }
+	unit_gfx = { northern_unit_gfx }
+	house_coa_frame = house_frame_21
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 1.0 1.0 }
+
+	ethnicities = {
+		25 = gen_ethnicity_277_shuswap_culture_0
+		15 = gen_ethnicity_277_shuswap_culture_1
+		35 = gen_ethnicity_277_shuswap_culture_2
+		25 = gen_ethnicity_277_shuswap_culture_3
+	}
+}
+
+seeptsa = {
+	color = { 60 116 29 }
+
+	ethos = ethos_spiritual
+	heritage = seeptsa_group
+	language = eu5_heritage_seeptsa_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_cholon_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_363_cholon_culture_0
+	}
+}
+
+shawnee = {
+	color = { 102 52 49 }
+
+	ethos = ethos_spiritual
+	heritage = shawnee_group
+	language = eu5_heritage_shawnee_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_mountaineers
+		tradition_polders
+		tradition_zealous_people
+		tradition_forest_folk
+	}
+
+	name_list = name_list_chalahgawtha_culture
+
+	coa_gfx = { berber_group_coa_gfx }
+	building_gfx = { berber_group_building_gfx mena_building_gfx }
+	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { mena_unit_gfx }
+	house_coa_frame = house_frame_06
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = gen_ethnicity_347_chalahgawtha_culture_0
+	}
+}
+
+shoshoni = {
+	color = { 236 250 137 }
+
+	ethos = ethos_communal
+	heritage = shoshoni_group
+	language = eu5_heritage_shoshoni_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hill_dwellers
+		tradition_mountaineers
+		tradition_ancient_miners
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_numu_culture
+
+	coa_gfx = { occitan_coa_gfx frankish_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	house_coa_frame = house_frame_03
+	house_coa_mask_offset = { 0.0 0.055 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_260_numu_culture_0
+	}
+}
+
+sihni = {
+	color = { 174 179 216 }
+
+	ethos = ethos_spiritual
+	heritage = sihni_group
+	language = eu5_heritage_sihni_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_itonama_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_428_itonama_culture_0
+	}
+}
+
+siksika = {
+	color = { 130 2 77 }
+
+	ethos = ethos_egalitarian
+	heritage = siksika_group
+	language = eu5_heritage_siksika_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_chivalry
+		tradition_caravaneers
+		tradition_collective_lands
+		tradition_runestones
+	}
+
+	name_list = name_list_siksika_culture
+
+	coa_gfx = { iranian_group_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx }
+	unit_gfx = { northern_unit_gfx }
+	house_coa_frame = house_frame_12
+	house_coa_mask_offset = { 0.0 -0.04 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_270_siksika_culture_0
+	}
+}
+
+sinu = {
+	color = { 12 117 121 }
+
+	ethos = ethos_bellicose
+	heritage = sinu_group
+	language = eu5_heritage_sinu_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_medicinal_plants
+		tradition_sacred_groves
+		tradition_ruling_caste
+		tradition_castle_keepers
+	}
+
+	name_list = name_list_sinu_culture
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_frame_30
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_501_sinu_culture_0
+	}
+}
+
+skarureh = {
+	color = { 189 251 169 }
+
+	ethos = ethos_egalitarian
+	heritage = skarureh_group
+	language = eu5_heritage_skarureh_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_polders
+		tradition_forest_folk
+		tradition_sacred_groves
+		tradition_wetlanders
+	}
+
+	name_list = name_list_skarureh_culture
+
+	coa_gfx = { berber_group_coa_gfx }
+	building_gfx = { berber_group_building_gfx mena_building_gfx }
+	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { mena_unit_gfx }
+	house_coa_frame = house_frame_06
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = gen_ethnicity_477_skarureh_culture_0
+	}
+}
+
+ta_arawakan = {
+	color = { 120 60 0 }
+
+	ethos = ethos_stoic
+	heritage = ta_arawakan_group
+	language = eu5_heritage_ta_arawakan_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_wetlanders
+		tradition_fishermen
+		tradition_mountaineers
+		tradition_hard_working
+		tradition_horse_breeder
+	}
+
+	name_list = name_list_ciboney
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_253_ciboney_0
+	}
+}
+
+takic = {
+	color = { 219 175 211 }
+
+	ethos = ethos_spiritual
+	heritage = takic_group
+	language = eu5_heritage_takic_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_timbisha_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_503_timbisha_culture_0
+	}
+}
+
+tanoan = {
+	color = { 135 196 198 }
+
+	ethos = ethos_communal
+	heritage = tanoan_group
+	language = eu5_heritage_tanoan_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		tradition_chanson_de_geste
+		tradition_hereditary_hierarchy
+		tradition_hunters
+		tradition_pastoralists
+	}
+
+	name_list = name_list_kaigwu_culture
+
+	coa_gfx = { occitan_coa_gfx frankish_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	house_coa_frame = house_frame_03
+	house_coa_mask_offset = { 0.0 0.055 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_430_kaigwu_culture_0
+	}
+}
+
+tarairiu = {
+	color = { 72 125 45 }
+
+	ethos = ethos_spiritual
+	heritage = tarairiu_group
+	language = eu5_heritage_tarairiu_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_tarairiu_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_505_tarairiu_culture_0
+	}
+}
+
+tayrona = {
+	color = { 70 254 129 }
+
+	ethos = ethos_bellicose
+	heritage = tayrona_group
+	language = eu5_heritage_tayrona_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_medicinal_plants
+		tradition_sacred_groves
+		tradition_ruling_caste
+		tradition_castle_keepers
+	}
+
+	name_list = name_list_tayrona_culture
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_frame_30
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		100 = gen_ethnicity_508_tayrona_culture_0
+	}
+}
+
+timoto = {
+	color = { 133 10 116 }
+
+	ethos = ethos_spiritual
+	heritage = timoto_group
+	language = eu5_heritage_timoto_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_tatuy_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_506_tatuy_culture_0
+	}
+}
+
+timucua = {
+	color = { 146 81 142 }
+
+	ethos = ethos_stoic
+	heritage = timucua_group
+	language = eu5_heritage_timucua_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_wetlanders
+		tradition_fishermen
+		tradition_mountaineers
+		tradition_hard_working
+		tradition_horse_breeder
+	}
+
+	name_list = name_list_timucua_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_340_timucua_culture_0
+	}
+}
+
+totozoquean = {
+	color = { 48 49 121 }
+
+	ethos = ethos_communal
+	heritage = totozoquean_group
+	language = eu5_heritage_totozoquean_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_ancient_miners
+		tradition_polders
+		tradition_court_eunuchs
+	}
+
+	name_list = name_list_totonac_culture
+
+	coa_gfx = { west_african_group_coa_gfx }
+	building_gfx = { african_building_gfx mena_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { sub_sahran_unit_gfx }
+	house_coa_frame = house_frame_20
+	house_coa_mask_offset = { 0.0 0.025 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_423_totonac_culture_0
+	}
+}
+
+truka = {
+	color = { 1 221 194 }
+
+	ethos = ethos_spiritual
+	heritage = truka_group
+	language = eu5_heritage_truka_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_truka_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_511_truka_culture_0
+	}
+}
+
+tsehesenestsestotse = {
+	color = { 127 114 211 }
+
+	ethos = ethos_egalitarian
+	heritage = tsehesenestsestotse_group
+	language = eu5_heritage_tsehesenestsestotse_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_forest_fighters
+		tradition_warriors_of_the_dry
+		tradition_wetlanders
+		tradition_forest_folk
+	}
+
+	name_list = name_list_tsetsehesahese_culture
+
+	coa_gfx = { iranian_group_coa_gfx }
+	building_gfx = { iranian_building_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { iranian_unit_gfx }
+	house_coa_frame = house_frame_12
+	house_coa_mask_offset = { 0.0 -0.04 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		25 = gen_ethnicity_512_tsetsehesahese_culture_0
+		15 = gen_ethnicity_512_tsetsehesahese_culture_1
+		35 = gen_ethnicity_512_tsetsehesahese_culture_2
+		25 = gen_ethnicity_512_tsetsehesahese_culture_3
+	}
+}
+
+tshon = {
+	color = { 146 147 127 }
+
+	ethos = ethos_communal
+	heritage = tshon_group
+	language = eu5_heritage_tshon_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_horse_breeder
+		tradition_monogamous
+	}
+
+	name_list = name_list_gununa_kune_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { mena_building_gfx }
+	clothing_gfx = { byzantine_clothing_gfx }
+	unit_gfx = { eastern_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_408_gununa_kune_culture_0
+	}
+}
+
+tsimshian = {
+	color = { 147 23 172 }
+
+	ethos = ethos_communal
+	heritage = tsimshian_group
+	language = eu5_heritage_tsimshian_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_metal_craftsmanship
+		tradition_hill_dwellers
+		tradition_frugal_armorsmiths
+	}
+
+	name_list = name_list_tsimshian_culture
+
+	coa_gfx = { swedish_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx }
+	unit_gfx = { northern_unit_gfx }
+	house_coa_frame = house_frame_21
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 1.0 1.0 }
+
+	ethnicities = {
+		100 = gen_ethnicity_514_tsimshian_culture_0
+	}
+}
+
+tucanoan = {
+	color = { 8 42 186 }
+
+	ethos = ethos_spiritual
+	heritage = tucanoan_group
+	language = eu5_heritage_tucanoan_group
+	martial_custom = martial_custom_female_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_ancient_miners
+		tradition_medicinal_plants
+		tradition_pacifism
+		tradition_agrarian
+		tradition_fishermen
+	}
+
+	name_list = name_list_karapana_culture
+
+	coa_gfx = { west_african_group_coa_gfx }
+	building_gfx = { african_building_gfx mena_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { sub_sahran_unit_gfx }
+	house_coa_frame = house_frame_20
+	house_coa_mask_offset = { 0.0 0.025 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_399_karapana_culture_0
+	}
+}
+
+tupi = {
+	color = { 42 174 101 }
+
+	ethos = ethos_spiritual
+	heritage = tupi_group
+	language = eu5_heritage_tupi_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_ava_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_254_ava_culture_0
+	}
+}
+
+tutelo = {
+	color = { 242 99 43 }
+
+	ethos = ethos_egalitarian
+	heritage = tutelo_group
+	language = eu5_heritage_tutelo_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_amharic_highlanders
+		tradition_dryland_dwellers
+		tradition_fishermen
+	}
+
+	name_list = name_list_tsoyaha_culture
+
+	coa_gfx = { japanese_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	house_coa_frame = house_japan
+
+	ethnicities = {
+		10 = gen_ethnicity_345_tsoyaha_culture_0
+	}
+}
+
+txapakura = {
+	color = { 160 114 222 }
+
+	ethos = ethos_spiritual
+	heritage = txapakura_group
+	language = eu5_heritage_txapakura_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_tribe_unity
+		tradition_diasporic
+		tradition_medicinal_plants
+		tradition_fishermen
+		tradition_jungle_dwellers
+	}
+
+	name_list = name_list_txapakura_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_510_txapakura_culture_0
+	}
+}
+
+uru = {
+	color = { 79 61 157 }
+
+	ethos = ethos_spiritual
+	heritage = uru_group
+	language = eu5_heritage_uru_group
+	martial_custom = martial_custom_female_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_uru_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_517_uru_culture_0
+	}
+}
+
+wakashan = {
+	color = { 50 25 175 }
+
+	ethos = ethos_communal
+	heritage = wakashan_group
+	language = eu5_heritage_wakashan_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_metal_craftsmanship
+		tradition_hill_dwellers
+		tradition_frugal_armorsmiths
+	}
+
+	name_list = name_list_kwakiutl_culture
+
+	coa_gfx = { swedish_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx }
+	unit_gfx = { northern_unit_gfx }
+	house_coa_frame = house_frame_21
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 1.0 1.0 }
+
+	ethnicities = {
+		45 = gen_ethnicity_415_kwakiutl_culture_0
+		5 = gen_ethnicity_415_kwakiutl_culture_1
+		35 = gen_ethnicity_415_kwakiutl_culture_2
+		15 = gen_ethnicity_415_kwakiutl_culture_3
+	}
+}
+
+waqha = {
+	color = { 169 106 161 }
+
+	ethos = ethos_spiritual
+	heritage = waqha_group
+	language = eu5_heritage_waqha_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_tonokote_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_496_tonokote_culture_0
+	}
+}
+
+warao = {
+	color = { 16 152 250 }
+
+	ethos = ethos_spiritual
+	heritage = warao_group
+	language = eu5_heritage_warao_group
+	martial_custom = martial_custom_female_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_ancient_miners
+		tradition_medicinal_plants
+		tradition_pacifism
+		tradition_agrarian
+		tradition_fishermen
+	}
+
+	name_list = name_list_warao_culture
+
+	coa_gfx = { west_african_group_coa_gfx }
+	building_gfx = { african_building_gfx mena_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { sub_sahran_unit_gfx }
+	house_coa_frame = house_frame_20
+	house_coa_mask_offset = { 0.0 0.025 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		100 = gen_ethnicity_521_warao_culture_0
+	}
+}
+
+warpe = {
+	color = { 236 252 252 }
+
+	ethos = ethos_spiritual
+	heritage = warpe_group
+	language = eu5_heritage_warpe_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_warpe_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_522_warpe_culture_0
+	}
+}
+
+wendat = {
+	color = { 144 101 111 }
+
+	ethos = ethos_communal
+	heritage = wendat_group
+	language = eu5_heritage_wendat_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_diasporic
+		tradition_warrior_culture
+		tradition_loyal_soldiers
+	}
+
+	name_list = name_list_attigneenongnahac_culture
+
+	coa_gfx = { berber_group_coa_gfx }
+	building_gfx = { berber_group_building_gfx mena_building_gfx }
+	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { mena_unit_gfx }
+	house_coa_frame = house_frame_06
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = gen_ethnicity_262_attigneenongnahac_culture_0
+	}
+}
+
+xinka = {
+	color = { 132 30 220 }
+
+	ethos = ethos_spiritual
+	heritage = xinka_group
+	language = eu5_heritage_xinka_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_xinka_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_524_xinka_culture_0
+	}
+}
+
+yaghan = {
+	color = { 133 158 158 }
+
+	ethos = ethos_communal
+	heritage = yaghan_group
+	language = eu5_heritage_yaghan_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_horse_breeder
+		tradition_monogamous
+	}
+
+	name_list = name_list_yaghan_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { mena_building_gfx }
+	clothing_gfx = { byzantine_clothing_gfx }
+	unit_gfx = { eastern_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		10 = gen_ethnicity_525_yaghan_culture_0
+	}
+}
+
+yuki = {
+	color = { 97 213 144 }
+
+	ethos = ethos_spiritual
+	heritage = yuki_group
+	language = eu5_heritage_yuki_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_hunters
+		tradition_caravaneers
+		tradition_fishermen
+		tradition_warriors_of_the_dry
+	}
+
+	name_list = name_list_wappo_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		70 = gen_ethnicity_520_wappo_culture_0
+		15 = gen_ethnicity_520_wappo_culture_1
+		10 = gen_ethnicity_520_wappo_culture_2
+		5 = gen_ethnicity_520_wappo_culture_3
+	}
+}
+
+yupik = {
+	color = { 233 136 11 }
+
+	ethos = ethos_spiritual
+	heritage = yupik_group
+	language = eu5_heritage_yupik_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_caravaneers
+		tradition_forest_folk
+		tradition_seafaring
+		tradition_winter_warriors
+	}
+
+	name_list = name_list_kaniag_culture
+
+	coa_gfx = { anglo_saxon_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	house_coa_frame = house_frame_24
+	house_coa_mask_offset = { 0.0 0.055 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		45 = gen_ethnicity_307_kaniag_culture_0
+		5 = gen_ethnicity_307_kaniag_culture_1
+		35 = gen_ethnicity_307_kaniag_culture_2
+		15 = gen_ethnicity_307_kaniag_culture_3
+	}
+}
+
+yutonahua = {
+	color = { 137 172 118 }
+
+	ethos = ethos_communal
+	heritage = yutonahua_group
+	language = eu5_heritage_yutonahua_group
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_mountain_homes
+		tradition_forest_fighters
+		tradition_hit_and_run
+		tradition_horse_breeder
+	}
+
+	name_list = name_list_xumani_culture
+
+	coa_gfx = { japanese_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_japan
+
+	ethnicities = {
+		100 = gen_ethnicity_287_xumani_culture_0
+	}
+}
+
+zamuco = {
+	color = { 148 61 140 }
+
+	ethos = ethos_spiritual
+	heritage = zamuco_group
+	language = eu5_heritage_zamuco_group
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_forest_folk
+		tradition_agrarian
+		tradition_jungle_warriors
+		tradition_winter_warriors
+		tradition_highland_warriors
+	}
+
+	name_list = name_list_ayoreo_culture
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	unit_gfx = { iberian_muslim_unit_gfx }
+	house_coa_frame = house_frame_17
+
+	ethnicities = {
+		100 = gen_ethnicity_313_ayoreo_culture_0
+	}
+}
+
