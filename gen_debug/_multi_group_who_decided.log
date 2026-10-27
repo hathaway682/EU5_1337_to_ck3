@@ -1,0 +1,33 @@
+﻿多组文化 575 = 各组同解 177 + 全无映射 204 + 真冲突 194
+
+最终值 = 第一个有映射的组 : 171
+最终值 = 语言覆盖表纠正    : 23
+最终值 = 保留 EU5 组名     : 0
+其他                        : 0
+
+== 被语言覆盖改掉「第一个组」结论的 ==
+  dimasa_culture           组顺序 indian_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_burman
+  bodo_culture             组顺序 indian_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_burman
+  garo_culture             组顺序 indian_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_burman
+  rabha_culture            组顺序 indian_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_burman
+  deori_culture            组顺序 indian_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_burman
+  tiwa_culture             组顺序 indian_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_burman
+  koch_culture             组顺序 indian_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_burman
+  chutia_culture           组顺序 indian_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_burman
+  tripuri_culture          组顺序 indian_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_burman
+  karbi_culture            组顺序 indian_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_burman
+  newar_culture            组顺序 indian_group,nepali_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_tibetan
+  magar_culture            组顺序 nepali_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_tibetan
+  tamang_culture           组顺序 nepali_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_tibetan
+  gurung_culture           组顺序 nepali_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_tibetan
+  limbu_culture            组顺序 nepali_group,tibetan_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_tibetan
+  welsh                    组顺序 celtic_group,british_group | 第一组给 heritage_goidelic        -> 实际 heritage_brythonic
+  cornish                  组顺序 celtic_group,british_group | 第一组给 heritage_goidelic        -> 实际 heritage_brythonic
+  sherpa_culture           组顺序 nepali_group,tibetan_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_tibetan
+  kirati_culture           组顺序 nepali_group,tibetan_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_tibetan
+  sikkim_culture           组顺序 nepali_group,tibetan_group,tibeto_burman_group | 第一组给 heritage_indo_aryan      -> 实际 heritage_tibetan
+  breton                   组顺序 celtic_group,french_group | 第一组给 heritage_goidelic        -> 实际 heritage_brythonic
+  ashkenazi                组顺序 german_group,jewish_group | 第一组给 heritage_central_germanic -> 实际 heritage_israelite
+  kochini                  组顺序 jewish_group,indian_group | 第一组给 heritage_israelite       -> 实际 heritage_dravidian
+
+== 其他 ==

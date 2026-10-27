@@ -1,0 +1,25 @@
+==== YAM 的 location -> b_ / 县 / 省 / 礼 ====
+  al_mahjal        -> b_al_mahjal        p6432   county=c_sana          (萨那) faith=shia       rite=zayidi    EU5县宗教=shia owner=YEM
+  dhahran          -> b_dhahran          p6433   county=c_sana          (萨那) faith=shia       rite=zayidi    EU5县宗教=shia owner=YEM
+  huth             -> b_huth             p6434   county=c_sana          (萨那) faith=shia       rite=zayidi    EU5县宗教=shia owner=YEM
+  main             -> b_main             p6435   county=c_sana          (萨那) faith=shia       rite=zayidi    EU5县宗教=shia owner=YEM
+  najran           -> b_najran           p6436   county=c_sana          (萨那) faith=shia       rite=zayidi    EU5县宗教=shia owner=YEM
+  sadah            -> b_sadah            p6437   county=c_sana          (萨那) faith=shia       rite=zayidi    EU5县宗教=shia owner=YEM
+  suq_al_ghinan    -> b_suq_al_ghinan    p6438   county=c_sana          (萨那) faith=shia       rite=zayidi    EU5县宗教=shia owner=YEM
+
+==== 这些县的全部省 ====
+
+-- c_sana (萨那) owner=YEM EU5县宗教=shia
+   b_sana_yemen             p6430   faith=shia       rite=zayidi
+   b_al_husayniyah          p6431   faith=shia       rite=zayidi
+   b_al_mahjal              p6432   faith=shia       rite=zayidi
+   b_dhahran                p6433   faith=shia       rite=zayidi
+   b_huth                   p6434   faith=shia       rite=zayidi
+   b_main                   p6435   faith=shia       rite=zayidi
+   b_najran                 p6436   faith=shia       rite=zayidi
+   b_sadah                  p6437   faith=shia       rite=zayidi
+   b_suq_al_ghinan          p6438   faith=shia       rite=zayidi
+   b_thula                  p6439   faith=shia       rite=zayidi
+
+==== d_north_yemen / d_south_yemen 里 shia 无 rite 的省 ====
+   b_farasan                p6421   county=c_jazan (吉赞)

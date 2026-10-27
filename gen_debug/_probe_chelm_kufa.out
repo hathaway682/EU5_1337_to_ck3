@@ -1,0 +1,47 @@
+﻿============================================================
+c_chelm  owner=VOL  eu5_religion=catholic
+   b_chelm              p3555   faith=orthodox       rite=slavic_rite
+   b_krasnystaw         p3556   faith=orthodox       rite=slavic_rite
+   b_liuboml            p3557   faith=orthodox       rite=slavic_rite
+   b_ratne              p3558   faith=orthodox       rite=slavic_rite
+   b_shatsk             p3559   faith=orthodox       rite=slavic_rite
+   b_ugrovesk           p3560   faith=orthodox       rite=slavic_rite
+============================================================
+c_kufa  owner=HLL  eu5_religion=sunni
+   b_kufa               p5995   faith=shia           rite=imami
+   b_al_udayb           p5996   faith=sunni          rite=hanafi
+   b_ayn_tamr           p5997   faith=sunni          rite=hanafi
+   b_hillah             p5998   faith=shia           rite=imami
+   b_karbala            p5999   faith=sunni          rite=hanafi
+   b_qadisiyyah         p6000   faith=shia           rite=imami
+
+相关 EU5 国家的字段:
+   HLL   {'religious_school': 'zaidi_school', 'sharia_law': 'zaidi_policy', 'capital': 'hillah'}
+   VOL   {'liturgical_language': 'church_slavonic_language', 'capital': 'lviv'}
+
+伊拉克/希拉一带的县与 rite:
+   c_uzboy                  owner=GRG  eu5rel=sunni    sunni/hanafi sunni/hanafi sunni/hanafi
+   c_bojnurd                owner=GRG  eu5rel=shia     shia/imami shia/imami shia/imami sunni/hanafi sunni/hanafi shia/imami
+   c_faraveh                owner=GRG  eu5rel=sunni    sunni/hanafi sunni/hanafi sunni/hanafi sunni/hanafi sunni/hanafi sunni/hanafi sunni/hanafi
+   c_konjikala              owner=GRG  eu5rel=sunni    sunni/hanafi sunni/hanafi sunni/hanafi sunni/hanafi
+   c_abha                   owner=QHT  eu5rel=shia     shia/zayidi shia/zayidi shia/zayidi shia/zayidi shia/zayidi
+   c_hirda                  owner=YEM  eu5rel=sunni    shia/zayidi shia/zayidi shia/zayidi shia/zayidi shia/zayidi
+   c_jazan                  owner=YEM  eu5rel=sunni    shia/zayidi shia/zayidi shia/zayidi shia/None shia/zayidi shia/zayidi
+   c_sana                   owner=YEM  eu5rel=shia     shia/zayidi shia/zayidi shia/zayidi shia/zayidi shia/zayidi shia/zayidi shia/zayidi shia/zayidi shia/zayidi shia/zayidi
+   c_tathlith               owner=QHT  eu5rel=shia     shia/zayidi shia/zayidi shia/zayidi shia/zayidi shia/zayidi shia/zayidi
+   c_aden                   owner=YEM  eu5rel=sunni    sunni/shafii sunni/shafii sunni/shafii sunni/shafii sunni/shafii
+   c_birali                 owner=YEM  eu5rel=sunni    sunni/shafii sunni/shafii sunni/shafii sunni/shafii sunni/shafii sunni/shafii sunni/shafii
+   c_dathina                owner=YEM  eu5rel=sunni    sunni/shafii sunni/shafii sunni/shafii sunni/shafii sunni/shafii
+   c_hadramawt              owner=YEM  eu5rel=sunni    sunni/shafii sunni/shafii sunni/shafii sunni/shafii sunni/shafii sunni/shafii sunni/shafii sunni/shafii sunni/shafii
+   c_hudaida                owner=YEM  eu5rel=sunni    sunni/shafii sunni/shafii sunni/shafii shia/zayidi shia/zayidi
+   c_ibb                    owner=YEM  eu5rel=sunni    sunni/shafii shia/zayidi shia/zayidi sunni/shafii sunni/shafii
+   c_marib                  owner=YEM  eu5rel=shia     shia/zayidi shia/zayidi shia/zayidi shia/zayidi shia/zayidi
+   c_sayhad                 owner=YEM  eu5rel=sunni    sunni/shafii sunni/shafii shia/zayidi sunni/shafii sunni/shafii
+   c_taizz                  owner=YEM  eu5rel=sunni    sunni/shafii sunni/shafii sunni/shafii sunni/shafii sunni/shafii
+   c_zabid                  owner=YEM  eu5rel=sunni    sunni/shafii sunni/shafii shia/zayidi shia/zayidi sunni/shafii
+   c_kufa                   owner=HLL  eu5rel=sunni    shia/imami sunni/hanafi sunni/hanafi shia/imami sunni/hanafi shia/imami
+   c_borujerd               owner=LCK  eu5rel=sunni    shia/imami sunni/hanafi shia/imami shia/imami shia/imami sunni/hanafi
+   c_khorramabad            owner=LCK  eu5rel=shia     shia/imami shia/imami shia/imami shia/imami shia/imami
+   c_damghan                owner=GRG  eu5rel=sunni    sunni/hanafi sunni/hanafi shia/zayidi sunni/hanafi shia/zayidi
+   c_daylam                 owner=GRG  eu5rel=sunni    sunni/hanafi sunni/hanafi sunni/hanafi sunni/hanafi
+   c_gorgan                 owner=GRG  eu5rel=shia     sunni/hanafi shia/imami shia/imami sunni/hanafi sunni/hanafi shia/imami sunni/hanafi shia/imami shia/imami

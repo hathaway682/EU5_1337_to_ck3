@@ -1,0 +1,117 @@
+provinces: 21046 counties: 3819
+CU baronies with rite: 2879
+
+== africa ==  provinces=2378  CU 有数据的=333 (14%)
+== sea ==  provinces=1044  CU 有数据的=220 (21%)
+== melanesia ==  provinces=200  CU 有数据的=29 (14%)
+
+== 每个 EU5 宗教的多数 CU rite（非洲 + 东南亚）==
+  eu5_religion               majority_rite              hit    tot    share
+  sunni                      masmudi                    61     151    40%   masmudi:61; shafii:22; west_african_bidu_pagan:19; maliki:17
+  theravada                  theravada                  31     51     61%   theravada:31; shaivism:11; mahayana:6; satsana_phi:3
+  miaphysite                 ethiopian_rite             22     28     79%   ethiopian_rite:22; haymanot:3; waaqism_pagan:2; shafii:1
+  bori_religion              west_african_bori_pagan    24     24     100%   west_african_bori_pagan:24
+  hindu                      shaivism                   13     22     59%   shaivism:13; mahayana:6; kaharingan:3
+  mahayana                   dhyana                     18     22     82%   dhyana:18; shaivism:2; vajrayana:2
+  isese_religion             west_african_orisha_pagan  13     21     62%   west_african_orisha_pagan:13; west_african_bori_pagan:6; west_african_bidu_pagan:2
+  bantu_religion             west_african_pagan         11     16     69%   west_african_pagan:11; west_african_orisha_pagan:5
+  kaharingan_religion        kaharingan                 14     16     88%   kaharingan:14; shaivism:2
+  rogo_miki_religion         west_african_pagan         10     13     77%   west_african_pagan:10; west_african_bidu_pagan:3
+  anitism_religion           shaivism                   7      12     58%   shaivism:7; tengri_pagan:5
+  moism                      dhyana                     10     10     100%   dhyana:10
+  palaung_religion           satsana_phi                10     10     100%   satsana_phi:10
+  nyesoa_religion            akom_pagan                 9      9      100%   akom_pagan:9
+  bru_religion               shaivism                   8      8      100%   shaivism:8
+  kan_khwan_religion         mahayana                   6      8      75%   mahayana:6; shaivism:2
+  muonyjang_religion         waaqism_pagan              8      8      100%   waaqism_pagan:8
+  satsana_phi                shaivism                   3      8      38%   shaivism:3; dhyana:3; satsana_phi:2
+  ibadi                      masmudi                    5      7      71%   masmudi:5; ibadi:2
+  ijaw_religion              west_african_orisha_pagan  7      7      100%   west_african_orisha_pagan:7
+  naga_religion              satsana_phi                7      7      100%   satsana_phi:7
+  nhaala_religion            west_african_roog_pagan    7      7      100%   west_african_roog_pagan:7
+  vodun_religion             akom_pagan                 7      7      100%   akom_pagan:7
+  karen_religion             satsana_phi                5      6      83%   satsana_phi:5; theravada:1
+  a_fat_roog_religion        west_african_roog_pagan    5      5      100%   west_african_roog_pagan:5
+  adat_puun_religion         mahayana                   5      5      100%   mahayana:5
+  geno_religion              west_african_roog_pagan    4      5      80%   west_african_roog_pagan:4; west_african_bidu_pagan:1
+  degar_religion             shaivism                   4      4      100%   shaivism:4
+  mitu_religion              tolotang                   4      4      100%   tolotang:4
+  muong_religion             dhyana                     4      4      100%   dhyana:4
+  nyama_religion             west_african_pagan         4      4      100%   west_african_pagan:4
+  omo_religion               waaqism_pagan              4      4      100%   waaqism_pagan:4
+  pelebegu_religion          vajrayana                  4      4      100%   vajrayana:4
+  sao_religion               west_african_bori_pagan    4      4      100%   west_african_bori_pagan:4
+  bahnar_religion            shaivism                   3      3      100%   shaivism:3
+  kuru_masaba_religion       akom_pagan                 3      3      100%   akom_pagan:3
+  nyang_serai_religion       mahayana                   3      3      100%   mahayana:3
+  orang_rimba_religion       mahayana                   3      3      100%   mahayana:3
+  anna_religion              shafii                     2      2      100%   shafii:2
+  buyli_religion             west_african_pagan         2      2      100%   west_african_pagan:2
+  eso_religion               west_african_pagan         2      2      100%   west_african_pagan:2
+  mizo_religion              satsana_phi                2      2      100%   satsana_phi:2
+  naa_wuni_religion          west_african_pagan         2      2      100%   west_african_pagan:2
+  pengarap_asal_religion     shaivism                   2      2      100%   shaivism:2
+  abwoi_religion             west_african_bori_pagan    1      1      100%   west_african_bori_pagan:1
+  besavik_religion           kaharingan                 1      1      100%   kaharingan:1
+  ipok_religion              mahayana                   1      1      100%   mahayana:1
+  momolianism_religion       shaivism                   1      1      100%   shaivism:1
+  naurus_religion            tolotang                   1      1      100%   tolotang:1
+  odinala_religion           west_african_orisha_pagan  1      1      100%   west_african_orisha_pagan:1
+  orang_asli_religion        shaivism                   1      1      100%   shaivism:1
+  rebba_religion             waaqism_pagan              1      1      100%   waaqism_pagan:1
+
+== 现有 faith map 里这些 EU5 宗教是什么 ==
+  sunni                      now=sunni                    -> suggest=masmudi
+  theravada                  now=theravada_faith          -> suggest=theravada
+  miaphysite                 now=miaphysitism             -> suggest=ethiopian_rite
+  bori_religion              now=west_african_bori_pagan  -> suggest=west_african_bori_pagan
+  hindu                      now=vaishnava_faith          -> suggest=shaivism
+  mahayana                   now=mahayana_faith           -> suggest=dhyana
+  isese_religion             now=west_african_orisha_pagan -> suggest=west_african_orisha_pagan
+  bantu_religion             now=pagan                    -> suggest=west_african_pagan
+  kaharingan_religion        now=kaharingan               -> suggest=kaharingan
+  rogo_miki_religion         now=west_african_bidu_pagan  -> suggest=west_african_pagan
+  anitism_religion           now=dayawism                 -> suggest=shaivism
+  moism                      now=moism                    -> suggest=dhyana
+  palaung_religion           now=pagan                    -> suggest=satsana_phi
+  nyesoa_religion            now=pagan                    -> suggest=akom_pagan
+  bru_religion               now=pagan                    -> suggest=shaivism
+  kan_khwan_religion         now=pagan                    -> suggest=mahayana
+  muonyjang_religion         now=kushitism_pagan          -> suggest=waaqism_pagan
+  satsana_phi                now=satsana_phi              -> suggest=shaivism
+  ibadi                      now=kharijite                -> suggest=masmudi
+  ijaw_religion              now=west_african_orisha_pagan -> suggest=west_african_orisha_pagan
+  naga_religion              now=pagan                    -> suggest=satsana_phi
+  nhaala_religion            now=pagan                    -> suggest=west_african_roog_pagan
+  vodun_religion             now=west_african_orisha_pagan -> suggest=akom_pagan
+  karen_religion             now=satsana_phi              -> suggest=satsana_phi
+  a_fat_roog_religion        now=west_african_roog_pagan  -> suggest=west_african_roog_pagan
+  adat_puun_religion         now=pagan                    -> suggest=mahayana
+  geno_religion              now=pagan                    -> suggest=west_african_roog_pagan
+  degar_religion             now=pagan                    -> suggest=shaivism
+  mitu_religion              now=pagan                    -> suggest=tolotang
+  muong_religion             now=pagan                    -> suggest=dhyana
+  nyama_religion             now=pagan                    -> suggest=west_african_pagan
+  omo_religion               now=waaqism_pagan            -> suggest=waaqism_pagan
+  pelebegu_religion          now=pagan                    -> suggest=vajrayana
+  sao_religion               now=pagan                    -> suggest=west_african_bori_pagan
+  bahnar_religion            now=pagan                    -> suggest=shaivism
+  kuru_masaba_religion       now=pagan                    -> suggest=akom_pagan
+  nyang_serai_religion       now=pagan                    -> suggest=mahayana
+  orang_rimba_religion       now=pagan                    -> suggest=mahayana
+  anna_religion              now=waaqism_pagan            -> suggest=shafii
+  buyli_religion             now=pagan                    -> suggest=west_african_pagan
+  eso_religion               now=pagan                    -> suggest=west_african_pagan
+  mizo_religion              now=pagan                    -> suggest=satsana_phi
+  naa_wuni_religion          now=pagan                    -> suggest=west_african_pagan
+  pengarap_asal_religion     now=pagan                    -> suggest=shaivism
+  abwoi_religion             now=pagan                    -> suggest=west_african_bori_pagan
+  besavik_religion           now=pagan                    -> suggest=kaharingan
+  ipok_religion              now=pagan                    -> suggest=mahayana
+  momolianism_religion       now=pagan                    -> suggest=shaivism
+  naurus_religion            now=pagan                    -> suggest=tolotang
+  odinala_religion           now=west_african_orisha_pagan -> suggest=west_african_orisha_pagan
+  orang_asli_religion        now=pagan                    -> suggest=shaivism
+  rebba_religion             now=waaqism_pagan            -> suggest=waaqism_pagan
+
+csv: D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\gen_debug\_africa_sea_faith_suggest.csv

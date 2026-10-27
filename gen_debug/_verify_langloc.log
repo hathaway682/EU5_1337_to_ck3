@@ -1,0 +1,19 @@
+﻿BOM: True | CRLF: 52155 | LF-only: 0
+keys: 52148 | dup: none
+eu5_language_* entries: 313
+格式异常行: none
+python.exe : Traceback (most recent call last):
+所在位置 行:508 字符: 90
++ ... NG="utf-8"; & "C:\Users\DELL\.workbuddy-ai\binaries\python\versions\3 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last) 
+   ::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Bord
+ers_noshape\gen_debug\_verify_langloc.py", line 23, in <module>
+    o = io.open(BAK, encoding="utf-8-sig").read()
+        ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Documents\\Paradox
+ Interactive\\Crusader Kings III\\mod\\EU5_Modern_Borders_noshape\\localization
+\\english\\gen_cultures_l_english.yml.bak_langloc_20261020_011702'

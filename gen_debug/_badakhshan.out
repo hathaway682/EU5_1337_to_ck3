@@ -1,0 +1,84 @@
+==== d_badakhshan 全部县 / 省 ====
+
+-- c_badakhshan             巴达赫尚         duchy=d_badakhshan kingdom=k_khorasan  EU5县宗教=sunni
+   b_fayzabad               p5291   faith=sunni            rite=shafii    
+   b_araska                 p5292   faith=sunni            rite=shafii    
+   b_jurm                   p5293   faith=sunni            rite=shafii    
+   b_sar_sang               p5294   faith=shia             rite=imami       <<< shia
+   b_zebak                  p5295   faith=shia             rite=imami       <<< shia
+
+-- c_darvaz                 达尔瓦兹         duchy=d_badakhshan kingdom=k_khorasan  EU5县宗教=sunni
+   b_qalai_khumb            p5296   faith=sunni            rite=shafii    
+   b_kham_bahar             p5297   faith=sunni            rite=shafii    
+   b_ragh                   p5298   faith=sunni            rite=shafii    
+   b_vanch                  p5299   faith=sunni            rite=shafii    
+
+-- c_hissar                 吉萨尔          duchy=d_badakhshan kingdom=k_khorasan  EU5县宗教=sunni
+   b_hissar                 p5300   faith=sunni            rite=shafii    
+   b_aiwanj                 p5301   faith=sunni            rite=shafii    
+   b_basand                 p5302   faith=sunni            rite=shafii    
+   b_darzanji               p5303   faith=sunni            rite=shafii    
+   b_denov                  p5304   faith=sunni            rite=shafii    
+   b_qubodijon              p5305   faith=sunni            rite=shafii    
+   b_shuman                 p5306   faith=sunni            rite=shafii    
+   b_termez                 p5307   faith=sunni            rite=shafii    
+
+-- c_kulab                  库洛布          duchy=d_badakhshan kingdom=k_khorasan  EU5县宗教=sunni
+   b_kulob                  p5308   faith=sunni            rite=shafii    
+   b_farkhor                p5309   faith=sunni            rite=shafii    
+   b_hulbuk                 p5310   faith=sunni            rite=shafii    
+   b_munk                   p5311   faith=sunni            rite=shafii    
+   b_vakhs                  p5312   faith=sunni            rite=shafii    
+   b_wesgird                p5313   faith=sunni            rite=shafii    
+
+-- c_qarategin              喀尔提锦         duchy=d_badakhshan kingdom=k_khorasan  EU5县宗教=sunni
+   b_gharm                  p5314   faith=sunni            rite=hanafi    
+   b_daroot_korgon          p5315   faith=sunni            rite=hanafi    
+   b_karakol                p5316   faith=sunni            rite=hanafi    
+   b_muksu                  p5317   faith=sunni            rite=hanafi    
+   b_sangvor                p5318   faith=sunni            rite=hanafi    
+
+-- c_sighnan                锡格纳希         duchy=d_badakhshan kingdom=k_khorasan  EU5县宗教=shia
+   b_shighnan               p5319   faith=shia             rite=imami       <<< shia
+   b_gunt                   p5320   faith=shia             rite=imami       <<< shia
+   b_murghab                p5321   faith=shia             rite=imami       <<< shia
+   b_oksu                   p5322   faith=shia             rite=imami       <<< shia
+   b_shiveh                 p5323   faith=sunni            rite=shafii    
+   b_vamar                  p5324   faith=shia             rite=imami       <<< shia
+
+-- c_wakhan                 瓦罕           duchy=d_badakhshan kingdom=k_khorasan  EU5县宗教=shia
+   b_qila_panjeh            p5325   faith=shia             rite=imami       <<< shia
+   b_ishkashim              p5326   faith=shia             rite=imami       <<< shia
+   b_roshtqala              p5327   faith=shia             rite=imami       <<< shia
+   b_sarhad                 p5328   faith=shia             rite=imami       <<< shia
+
+==== 呼罗珊(kingdom) 里所有 shia 省，按 duchy 聚合 ====
+d_western_khorasan         24   西呼罗珊
+      p5590   c_bojnurd              博季努尔德        rite=imami
+      p5591   c_bojnurd              博季努尔德        rite=imami
+      p5592   c_bojnurd              博季努尔德        rite=imami
+      p5595   c_bojnurd              博季努尔德        rite=imami
+      p5601   c_esfarayen            埃斯法拉延        rite=imami
+      p5596   c_esfarayen            埃斯法拉延        rite=imami
+      p5597   c_esfarayen            埃斯法拉延        rite=imami
+      p5598   c_esfarayen            埃斯法拉延        rite=imami
+      p5599   c_esfarayen            埃斯法拉延        rite=imami
+      p5600   c_esfarayen            埃斯法拉延        rite=imami
+      p5602   c_esfarayen            埃斯法拉延        rite=imami
+      p5614   c_mashhad              马什哈德         rite=imami
+d_badakhshan               11   巴达赫尚
+      p5294   c_badakhshan           巴达赫尚         rite=imami
+      p5295   c_badakhshan           巴达赫尚         rite=imami
+      p5319   c_sighnan              锡格纳希         rite=imami
+      p5320   c_sighnan              锡格纳希         rite=imami
+      p5321   c_sighnan              锡格纳希         rite=imami
+      p5322   c_sighnan              锡格纳希         rite=imami
+      p5324   c_sighnan              锡格纳希         rite=imami
+      p5327   c_wakhan               瓦罕           rite=imami
+      p5325   c_wakhan               瓦罕           rite=imami
+      p5326   c_wakhan               瓦罕           rite=imami
+      p5328   c_wakhan               瓦罕           rite=imami
+d_eastern_khorasan          3   东呼罗珊
+      p5438   c_herat                赫拉特          rite=imami
+      p5442   c_herat                赫拉特          rite=imami
+      p5443   c_herat                赫拉特          rite=imami

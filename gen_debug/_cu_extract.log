@@ -1,0 +1,33 @@
+== 读取 CrusaderUniversalis ==
+  baronies: 21017
+  province 历史块（含文化或信仰）: 2527
+  province_mapping 条数: 384
+  barony 名 -> (culture, rite) 可解析: 2901
+== 本 mod ==
+  baronies: 21046
+  按 barony 名匹配上: 2858
+  仅本 mod 有: 18188  仅 CU 有: 43
+
+== 差异 ==
+  culture 会变: 2639  faith/rite 会变: 2581
+  样例:
+    aachen                 ripuarian_franconian/catholic -> franconian/carolingian_christianity
+    aalborg                danish/catholic -> norse/norse_pagan
+    aarhus                 danish/catholic -> norse/norse_pagan
+    abadan                 iraqi_culture/sunni -> bedouin/hanafi
+    abala                  afar_culture/sunni -> ethiopian/ethiopian_rite
+    abarkuh                farsi_culture/sunni -> persian/hanafi
+    abe                    tougoku_culture/shinto_faith -> japanese/shugendo
+    abengourou             akan/akom_pagan -> akan/akom_pagan
+    abiz                   khorasani_culture/sunni -> tajik/azariqa
+    abomey                 fon/west_african_orisha_pagan -> ewe/west_african_orisha_pagan
+    abu_hamed              sudanese_arab/sunni -> nubian/coptic_rite
+    abu_rakah              hijazi_culture/shia -> bedouin/shafii
+    abuta                  ainu_culture/kamuyism_pagan -> ainu/kamuyism_pagan
+    achit_nuur             oirat_culture/tengri_pagan -> naiman/tengri_pagan
+    acre                   levantine_culture/sunni -> levantine/antiochian_rite
+
+csv: D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\gen_debug\_cu_vs_ours.csv
+
+CU 的 culture 不在本 mod 定义里: 160 ['acehnese', 'afar', 'afghan', 'ainu', 'alan', 'amis', 'andalusian', 'anglo_saxon', 'armenian', 'assamese', 'assyrian', 'asturleonese', 'avar', 'baekje', 'bai']
+CU 的 rite    不在本 mod 定义里: 1 ['gen_wilderness_faith']

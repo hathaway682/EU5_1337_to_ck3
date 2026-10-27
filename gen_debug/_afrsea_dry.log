@@ -1,0 +1,44 @@
+== 区域映射表 ==
+  [africa] 21 条
+  [sea] 21 条
+  跳过（样本不足/不明确/无法定 faith）： 11
+    africa   sunni                    best=masmudi                  61/150 41%
+    africa   rebba_religion           best=waaqism_pagan            1/1 100%
+    africa   odinala_religion         best=west_african_orisha_pagan 1/1 100%
+    africa   abwoi_religion           best=west_african_bori_pagan  1/1 100%
+    sea      satsana_phi              best=shaivism                 3/8 38%
+    sea      orang_asli_religion      best=shaivism                 1/1 100%
+    sea      naurus_religion          best=tolotang                 1/1 100%
+    sea      momolianism_religion     best=shaivism                 1/1 100%
+    sea      ipok_religion            best=mahayana                 1/1 100%
+    sea      sunni                    best=vajrayana                1/1 100%
+    sea      besavik_religion         best=kaharingan               1/1 100%
+
+== 覆盖 ==
+  africa  总省 2378 | 会写 1204 | 无 EU5 pops 112 | 无映射 1062
+  sea     总省 1044 | 会写 809 | 无 EU5 pops 0 | 无映射 235
+
+faith 变 1407 | rite 变 1956 | 两者都变 1407
+
+top faith transitions:
+  pagan                      -> west_african_pagan         770
+  vaishnava_faith            -> shaiva_faith               130
+  dayawism                   -> shaiva_faith               116
+  pagan                      -> mahayana_faith             52
+  west_african_bidu_pagan    -> west_african_pagan         50
+  pagan                      -> shaiva_faith               49
+  pagan                      -> akom_pagan                 41
+  pagan                      -> west_african_bori_pagan    37
+  pagan                      -> west_african_roog_pagan    28
+  pagan                      -> satsana_phi                28
+  kharijite                  -> masmudi                    27
+  kushitism_pagan            -> waaqism_pagan              22
+  pagan                      -> vajrayana_faith            21
+  moism                      -> mahayana_faith             18
+  west_african_orisha_pagan  -> akom_pagan                 10
+  pagan                      -> tolotang                   6
+  waaqism_pagan              -> sunni                      2
+
+plan csv: D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\gen_debug\_africa_sea_faith_plan.csv
+
+[dry-run] 未写文件。加 --apply 才写。

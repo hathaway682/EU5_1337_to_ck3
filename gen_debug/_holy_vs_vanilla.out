@@ -1,0 +1,372 @@
+mod 圣地 = 317   原版圣地 = 269
+mod barony = 21046   mod county = 3819
+两边都有的 key = 269
+
+不一致 = 206 条；其中原版目标在 mod 存在的：
+[ 1] adur_farnbag           mod=b_khunj                     (洪杰      ) 原版=b_kariyan                   (卡里扬     )
+[ 2] badd                   mod=b_heris                     (赫里斯     ) 原版=b_ahar                      (阿哈尔     )
+[ 3] hitakami               mod=b_iwai                      (磐井      ) 原版=b_isawa                     (        )
+[ 4] khao_khlang_nai        mod=b_chai_nat                  (猜纳      ) 原版=b_sri_thep                  (斯里贴     )
+[ 5] mount_lu               mod=b_dehua_jiujiang            (德化      ) 原版=b_xunyang                   (汉阴      )
+[ 6] mount_mian             mod=b_jiexiu                    (介休      ) 原版=b_lingshi                   (灵石      )
+[ 7] novgorod               mod=b_novgorod                  (诺夫哥罗德   ) 原版=b_soltsy                    (索利齐     )
+[ 8] olympus                mod=b_hatera                    (哈泰拉     ) 原版=b_servia                    (塞尔维亚    )
+[ 9] qiongzhou              mod=b_qiongshan                 (琼山      ) 原版=c_yazhou                    (崖州      )
+[10] sizhou                 mod=b_wuchuan_sinan             (婺川      ) 原版=c_sizhou                    (思州      )
+[11] surgut                 mod=b_surgut                    (苏尔古特    ) 原版=c_kazym                     (卡济姆     )
+[12] taebaek                mod=b_samcheok                  (三陟      ) 原版=c_andong                    (安东      )
+
+合计原版目标可用 = 12
+
+=== 中文名一致（实质已对，粒度不同）= 53 条 ===
+
+=== 中文名不同（需人判）= 153 条 ===
+  adur_burzen_mihr       mod=b_nishapur                (内沙布尔      ) 原版=b_rivand                  (里万德       ) 原版存在=False
+  adur_farnbag           mod=b_khunj                   (洪杰        ) 原版=b_kariyan                 (卡里扬       ) 原版存在=True
+  ajanta                 mod=b_mahagaon                (马哈冈       ) 原版=c_vatsagulma              (婆蹉崛摩      ) 原版存在=False
+  akkel                  mod=b_akkala                  (阿卡拉       ) 原版=c_akkel                   (阿凯尔       ) 原版存在=False
+  aksum                  mod=b_axum                    (阿克苏姆      ) 原版=c_tigre                   (提格雷       ) 原版存在=False
+  alxa                   mod=b_alxa                    (阿拉善       ) 原版=c_alxa                    (阿剌筛       ) 原版存在=False
+  amandee                mod=b_amami_ooshima           (奄美大岛      ) 原版=b_amami                   (          ) 原版存在=False
+  amaravati              mod=b_guntur                  (贡图尔       ) 原版=c_nallamala               (捺罗摩罗      ) 原版存在=False
+  amparita               mod=b_sidenreng               (锡登伦       ) 原版=b_SUL_Amparita            (安帕里塔      ) 原版存在=False
+  aneto                  mod=b_jaca                    (哈卡        ) 原版=c_alto_aragon             (上阿拉贡      ) 原版存在=False
+  anlong                 mod=b_anlong                  (安龙        ) 原版=c_yanchuan                (琰川        ) 原版存在=False
+  ar_kol                 mod=b_north_andaman           (北安达曼      ) 原版=c_andamans                (汉都曼       ) 原版存在=False
+  atamasthana            mod=b_anuradhapura            (阿努拉德普勒    ) 原版=c_phiti                   (比醯帝       ) 原版存在=False
+  ayodhya                mod=b_awadh                   (阿瓦德       ) 原版=c_ayodhya                 (阿踰陀       ) 原版存在=False
+  badd                   mod=b_heris                   (赫里斯       ) 原版=b_ahar                    (阿哈尔       ) 原版存在=True
+  baekdu                 mod=b_huju                    (厚州        ) 原版=b_FIC_Liao_Changbaishan   (长白山       ) 原版存在=False
+  bahrein                mod=b_manama                  (麦纳麦       ) 原版=c_qatif                   (盖提夫       ) 原版存在=False
+  bianliang              mod=b_kaifeng                 (开封        ) 原版=c_bianzhou                (汴州        ) 原版存在=False
+  biri_larosa            mod=b_catarman                (卡塔曼       ) 原版=c_PHI_samar               (萨马尔       ) 原版存在=False
+  bodh_gaya              mod=b_gaya                    (迦耶        ) 原版=c_gaya                    (伽耶        ) 原版存在=False
+  cao_bang               mod=b_bac_thai_nguyen         (北太原       ) 原版=c_binh_nguyen             (原平        ) 原版存在=False
+  chakla                 mod=b_dartsedo                (打箭炉       ) 原版=c_chakla                  (甲拉        ) 原版存在=False
+  chupka                 mod=b_kunashiri               (国后        ) 原版=c_chupka                  (          ) 原版存在=False
+  constantinople         mod=b_constantinople          (君士坦丁堡     ) 原版=c_byzantion               (拜占庭       ) 原版存在=False
+  ctesiphon              mod=b_baghdad                 (巴格达       ) 原版=b_an-nahrawan             (奈赫赖万      ) 原版存在=False
+  danakil                mod=b_afrera                  (阿夫雷拉      ) 原版=c_danakil                 (达纳基勒      ) 原版存在=False
+  dashtestan             mod=b_bandar_deyr             (代尔港       ) 原版=c_mandestan               (曼德斯坦      ) 原版存在=False
+  dunhuang               mod=b_shazhou                 (沙州        ) 原版=c_dunhuang                (米兰        ) 原版存在=False
+  dvin                   mod=b_yerevan                 (埃里温       ) 原版=c_dvin                    (德温        ) 原版存在=False
+  dwarka                 mod=b_dwarka                  (德瓦卡       ) 原版=c_dvaraka                 (堕罗迦       ) 原版存在=False
+  el_fasher              mod=b_masa_sud                (马萨        ) 原版=c_el_fasher               (法希尔       ) 原版存在=False
+  ellora                 mod=b_mahagaon                (马哈冈       ) 原版=c_vatsagulma              (婆蹉崛摩      ) 原版存在=False
+  fes                    mod=b_fez                     (非斯        ) 原版=b_subu                    (苏布        ) 原版存在=False
+  gangganegara           mod=b_manjung                 (曼绒        ) 原版=c_MAL_gangganegara        (刚迦尼       ) 原版存在=False
+  garumele               mod=b_garoumale               (加鲁马莱      ) 原版=c_garumele                (加鲁梅莱      ) 原版存在=False
+  garwhal                mod=b_chandpur_garhi          (金德布尔加希    ) 原版=c_garwhal                 (姞利呬婆罗     ) 原版存在=False
+  gyaitang               mod=b_nixi                    (泥西        ) 原版=c_gyaitang                (建塘        ) 原版存在=False
+  harar                  mod=b_harar                   (哈拉尔       ) 原版=c_harar                   (哈勒尔       ) 原版存在=False
+  haridwar               mod=b_thanesar                (坦内萨尔      ) 原版=c_sthanisvara             (萨他泥湿伐罗    ) 原版存在=False
+  haripunjaya            mod=b_lamphun                 (南奔        ) 原版=c_haripunjaya             (诃利奔阇耶     ) 原版存在=False
+  hiiumaa                mod=b_kaina                   (凯伊纳       ) 原版=b_hiiumaa                 (希乌马       ) 原版存在=False
+  hitakami               mod=b_iwai                    (磐井        ) 原版=b_isawa                   (          ) 原版存在=True
+  hoanya                 mod=b_arikun                  (阿立昆       ) 原版=c_hoanya                  (洪雅        ) 原版存在=False
+  iban                   mod=b_igan                    (伊甘        ) 原版=c_BOR_iban                (伊班        ) 原版存在=False
+  ilam                   mod=b_phakphok                (法克福克      ) 原版=c_ilam                    (伊拉姆       ) 原版存在=False
+  ise_jingu              mod=b_watarai                 (度会        ) 原版=b_ise_jingu               (          ) 原版存在=False
+  itil                   mod=b_astrakhan               (阿斯特拉罕     ) 原版=c_itil                    (阿得        ) 原版存在=False
+  itsukushima            mod=b_saeki                   (佐伯        ) 原版=b_itsukushima             (          ) 原版存在=False
+  ivatan                 mod=b_batanes                 (巴坦群岛      ) 原版=c_PHI_ivatan              (伊巴丹       ) 原版存在=False
+  jorvik                 mod=b_york                    (约克        ) 原版=b_yarlestre               (亚莱斯彻      ) 原版存在=False
+  kaffa                  mod=b_bonga                   (邦加        ) 原版=c_kaffa                   (咖法        ) 原版存在=False
+  kamuykotan             mod=b_uryuu                   (雨龙        ) 原版=b_cup_pet                 (          ) 原版存在=False
+  kanchipuram            mod=b_kanchipuram             (甘吉布勒姆     ) 原版=c_kanchipuram             (建志补罗      ) 原版存在=False
+  kara_khorum            mod=b_karakorum               (哈拉和林      ) 原版=c_karakorum               (哈剌和林      ) 原版存在=False
+  kashima                mod=b_kashima                 (鹿岛        ) 原版=b_kashima_hitachi         (          ) 原版存在=False
+  kathmandu              mod=b_kathmandu               (加德满都      ) 原版=c_kathmandu               (迦瑟侘曼荼波    ) 原版存在=False
+  kayor                  mod=b_tivaouane               (蒂瓦万       ) 原版=c_kayor                   (卡约尔       ) 原版存在=False
+  kepala_burung          mod=b_moi                     (莫伊        ) 原版=c_kepala_burung           (鸟头        ) 原版存在=False
+  kerala                 mod=b_edappaly                (埃达帕利      ) 原版=c_kerala                  (焚波那住      ) 原版存在=False
+  kerch                  mod=b_vosporo                 (沃斯波罗      ) 原版=c_kerch                   (刻赤        ) 原版存在=False
+  khao_khlang_nai        mod=b_chai_nat                (猜纳        ) 原版=b_sri_thep                (斯里贴       ) 原版存在=True
+  khotan                 mod=b_khotan                  (于阗        ) 原版=b_lafak                   (拉伐克       ) 原版存在=False
+  kilimanjaro            mod=b_usangi                  (乌桑吉       ) 原版=c_kilimanjaro             (乞力马扎罗     ) 原版存在=False
+  kirinyaga              mod=b_agikuyu                 (阿基库尤      ) 原版=c_kirinyaga               (基里尼亚加     ) 原版存在=False
+  kizuki                 mod=b_izumo                   (出云        ) 原版=b_kizuki_taisha           (          ) 原版存在=False
+  kochi                  mod=b_kochi                   (科钦        ) 原版=b_kunjakari               (贡奢迦利      ) 原版存在=False
+  konarak                mod=b_puri                    (补梨        ) 原版=b_konarak                 (拘拿罗迦      ) 原版存在=False
+  kutai                  mod=b_kutai_lama              (古泰拉玛      ) 原版=c_BOR_kutai_utara         (库泰郁多罗     ) 原版存在=False
+  lalish                 mod=b_sinjar                  (辛贾尔       ) 原版=c_ninive                  (尼尼微       ) 原版存在=False
+  makhir                 mod=b_ruguda                  (鲁古达       ) 原版=c_makhir                  (马希尔       ) 原版存在=False
+  makkarinupuri          mod=b_yoichi                  (余市        ) 原版=b_aptapet_ainu            (          ) 原版存在=False
+  mangea                 mod=b_malindi                 (马林迪       ) 原版=b_mtwapa                  (姆特瓦帕      ) 原版存在=False
+  mantalingajan          mod=b_aborlan                 (阿博兰       ) 原版=c_PHI_south_palawan       (南巴拉望      ) 原版存在=False
+  mathura                mod=b_mathura                 (马图拉       ) 原版=c_mathura                 (秣菟罗       ) 原版存在=False
+  memphis                mod=b_atfih                   (艾特菲赫      ) 原版=b_hulwan-cairo            (赫勒万       ) 原版存在=False
+  mizdahqan              mod=b_shimbay                 (申拜        ) 原版=b_mizdahqan               (米兹达赫甘     ) 原版存在=False
+  mogadishu              mod=b_mogadishu               (摩加迪沙      ) 原版=c_mogadishu               (木骨都束      ) 原版存在=False
+  molihewen              mod=b_uschu                   (乌苏        ) 原版=c_eman_molihewen          (末里合温      ) 原版存在=False
+  mount_damavand         mod=b_damavand                (达马万德      ) 原版=b_firrim                  (菲林        ) 原版存在=False
+  mount_heng             mod=b_hunyuan                 (浑源        ) 原版=b_hengshan_2              (恒山        ) 原版存在=False
+  mount_longhu           mod=b_guixi_guangxin          (贵溪        ) 原版=b_yiyang_1                (弋阳        ) 原版存在=False
+  mount_lu               mod=b_dehua_jiujiang          (德化        ) 原版=b_xunyang                 (汉阴        ) 原版存在=True
+  mount_mian             mod=b_jiexiu                  (介休        ) 原版=b_lingshi                 (灵石        ) 原版存在=True
+  mount_qiyung           mod=b_xiuning                 (休宁        ) 原版=c_shezhou                 (歙州        ) 原版存在=False
+  mount_tai              mod=b_fengfu                  (奉符        ) 原版=b_qianfeng                (乾封        ) 原版存在=False
+  muara_takus            mod=b_kampar                  (监篦        ) 原版=b_SUM_Muara_Takus         (麻拉塔库斯     ) 原版存在=False
+  muze                   mod=b_mengzi                  (蒙自        ) 原版=c_muze                    (目则        ) 原版存在=False
+  my_son                 mod=b_simhapura               (僧诃补罗      ) 原版=b_my_son                  (美山        ) 原版存在=False
+  nadjaf                 mod=b_kufa                    (库法        ) 原版=b_an-najaf                (纳杰夫       ) 原版存在=False
+  nakkavaram             mod=b_nicobar                 (尼科巴群岛     ) 原版=c_nakkavaram              (那旺        ) 原版存在=False
+  nanning                mod=b_xuanhua_nanning         (宣化        ) 原版=c_yongzhou_1              (邕州        ) 原版存在=False
+  naqis                  mod=b_aydhab                  (艾扎卜       ) 原版=c_naqis                   (纳吉斯       ) 原版存在=False
+  nara                   mod=b_nara                    (奈良        ) 原版=b_kofuku_ji               (          ) 原版存在=False
+  ngawa                  mod=b_droge                   (卓格        ) 原版=c_ngawa                   (阿坝        ) 原版存在=False
+  nguu_hong              mod=b_muong                   (芒州        ) 原版=c_quoc_oai                (国威        ) 原版存在=False
+  nok_kundi              mod=b_mardehek                (马尔德赫克     ) 原版=c_riqan                   (里坎        ) 原版存在=False
+  novgorod               mod=b_novgorod                (诺夫哥罗德     ) 原版=b_soltsy                  (索利齐       ) 原版存在=True
+  nutapkauspe            mod=b_katou                   (河东        ) 原版=b_opereperkep             (          ) 原版存在=False
+  olkhon                 mod=b_bayanday                (巴彦代       ) 原版=c_olkhon                  (奥尔洪       ) 原版存在=False
+  olvia                  mod=b_balikley                (巴利克莱      ) 原版=b_olbia_ETEL              (奥尔比亚      ) 原版存在=False
+  olympus                mod=b_hatera                  (哈泰拉       ) 原版=b_servia                  (塞尔维亚      ) 原版存在=True
+  palitana               mod=b_palitana                (巴利塔纳      ) 原版=c_somnath                 (须门那       ) 原版存在=False
+  panticapaeum           mod=b_vosporo                 (沃斯波罗      ) 原版=c_kerch                   (刻赤        ) 原版存在=False
+  papua_selatan          mod=b_asmat                   (阿斯马特      ) 原版=c_papua_selatan           (南巴布亚      ) 原版存在=False
+  poszony                mod=b_bratislava              (普雷斯堡      ) 原版=c_poszony                 (波若尼       ) 原版存在=False
+  preslav                mod=b_veliki_preslav          (普雷斯拉夫     ) 原版=c_dorostorum              (锡利斯特拉     ) 原版存在=False
+  qayaliq                mod=b_shengeldy               (申格尔德      ) 原版=c_qayaliq                 (海押立       ) 原版存在=False
+  qiongzhou              mod=b_qiongshan               (琼山        ) 原版=c_yazhou                  (崖州        ) 原版存在=True
+  ragusa                 mod=b_dubrovnik               (杜布罗夫尼克    ) 原版=c_ragusa                  (拉古萨       ) 原版存在=False
+  raivola                mod=b_korela                  (科列拉       ) 原版=c_kakisalmi               (凯基萨尔米     ) 原版存在=False
+  ranaheim               mod=b_orkdal                  (奥克达尔      ) 原版=c_trandheim               (特隆赫姆      ) 原版存在=False
+  ranakpur               mod=b_kurki                   (库尔基       ) 原版=c_naddula                 (捺度罗       ) 原版存在=False
+  rebgong                mod=b_tongren                 (铜仁        ) 原版=c_rebgong                 (捏工        ) 原版存在=False
+  riak_nan_berbedur      mod=b_inderapura              (因德拉普拉     ) 原版=c_SUM_riak_nan_berbedur   (里亚南贝杜     ) 原版存在=False
+  rome                   mod=b_rome                    (罗马        ) 原版=b_vaticano                (梵蒂冈       ) 原版存在=False
+  sanchi                 mod=b_bhopal                  (博帕尔       ) 原版=b_sanchi                  (散脂        ) 原版存在=False
+  sarysyn                mod=b_beljamen                (别利亚缅      ) 原版=c_sarysyn                 (萨雷森       ) 原版存在=False
+  sefa_utaki             mod=b_oozato                  (大里        ) 原版=b_simajiri                (          ) 原版存在=False
+  shikharj               mod=b_baragram                (巴拉格拉姆     ) 原版=c_radha                   (罗陀        ) 原版存在=False
+  siang                  mod=b_cenrana                 (岑拉纳       ) 原版=c_SuMa_siang              (西昂        ) 原版存在=False
+  sikong                 mod=b_qianshan                (潜山        ) 原版=c_qizhou_1                (蕲州        ) 原版存在=False
+  sinai                  mod=b_saint_katrine           (圣凯瑟琳      ) 原版=c_sinai                   (西奈        ) 原版存在=False
+  sittannavasal          mod=b_karur                   (卡鲁尔       ) 原版=c_kongu                   (贡古        ) 原版存在=False
+  sizhou                 mod=b_wuchuan_sinan           (婺川        ) 原版=c_sizhou                  (思州        ) 原版存在=True
+  sonba_i                mod=b_sombai                  (松拜        ) 原版=c_IDO_sonba_i             (松巴伊       ) 原版存在=False
+  suenik                 mod=b_yerevan                 (埃里温       ) 原版=c_dvin                    (德温        ) 原版存在=False
+  sufed                  mod=b_safed                   (采法特       ) 原版=c_acre                    (亚柯        ) 原版存在=False
+  surgut                 mod=b_surgut                  (苏尔古特      ) 原版=c_kazym                   (卡济姆       ) 原版存在=True
+  taebaek                mod=b_samcheok                (三陟        ) 原版=c_andong                  (安东        ) 原版存在=True
+  taiao                  mod=b_pelaihari               (佩莱哈里      ) 原版=c_BOR_taiao               (泰耀        ) 原版存在=False
+  tarayka                mod=b_boluohe                 (波罗河       ) 原版=b_tarayka                 (          ) 原版存在=False
+  tavan_bogd             mod=b_onguday                 (翁古达伊      ) 原版=c_tavan_bogd              (塔奔孛黑答     ) 原版存在=False
+  tenerife               mod=b_aguere                  (阿格雷       ) 原版=b_tenerife                (阿奇内奇      ) 原版存在=False
+  tengchong              mod=b_tengchong               (腾冲        ) 原版=c_monyin                  (莫宁        ) 原版存在=False
+  tezu                   mod=b_sadiya                  (萨地亚       ) 原版=c_tezu                    (特祖        ) 原版存在=False
+  tinmallal              mod=b_tinmel                  (廷梅勒       ) 原版=c_tinmallal               (廷马拉尔      ) 原版存在=False
+  torun                  mod=b_torun                   (托伦        ) 原版=c_torun                   (海乌姆诺      ) 原版存在=False
+  tyumen                 mod=b_chimgi_tura             (成吉‑图拉     ) 原版=c_tyumen                  (秋明        ) 原版存在=False
+  udabhanda              mod=b_attock                  (阿托克       ) 原版=c_udabhanda               (乌铎迦汉荼     ) 原版存在=False
+  ujjayini               mod=b_ujjain                  (乌贾因       ) 原版=c_ujjayini                (邬阇衍那      ) 原版存在=False
+  uppsala                mod=b_uppsala                 (乌普萨拉      ) 原版=c_upland                  (乌普兰       ) 原版存在=False
+  vaishali               mod=b_weithali                (维沙利       ) 原版=b_vaisali                 (毗舍离       ) 原版存在=False
+  viscaya                mod=b_bilbao                  (毕尔巴鄂      ) 原版=c_viscaya                 (比斯开       ) 原版存在=False
+  visoki                 mod=b_vrhbosna                (维尔赫博斯纳    ) 原版=c_rama                    (拉马        ) 原版存在=False
+  wandala                mod=b_mora_cam                (默拉        ) 原版=c_wandala                 (万达拉       ) 原版存在=False
+  wenang                 mod=b_manado                  (万鸦老       ) 原版=c_SuMa_wenang             (文昂        ) 原版存在=False
+  xuhen                  mod=b_daguan                  (大关        ) 原版=c_jingzhou_2              (协州        ) 原版存在=False
+  yam_alin               mod=b_kerbi                   (克尔比       ) 原版=c_eman_yam_alin           (杨山        ) 原版存在=False
+  yangtze                mod=b_baling                  (巴陵        ) 原版=c_ezhou                   (鄂州        ) 原版存在=False
+  yijinai                mod=b_khara_khoto             (哈拉浩特      ) 原版=c_tongcheng               (桐城        ) 原版存在=False
+  yizhou                 mod=b_hulin                   (虎林        ) 原版=c_BAL_dongpyeong_yizhou   (伊州        ) 原版存在=False
+  zhaotong               mod=b_wumeng                  (乌蒙        ) 原版=c_quzhou_1                (曲州        ) 原版存在=False
+  zozan                  mod=b_zozan                   (祖赞        ) 原版=c_bakharz                 (巴哈尔兹      ) 原版存在=False
+
+--- 原版目标在 mod 不存在（无法照抄）194 条，仅列原版中文名 ---
+  adur_burzen_mihr       原版=b_rivand                  (里万德       )  mod=b_nishapur              (内沙布尔)
+  ajanta                 原版=c_vatsagulma              (婆蹉崛摩      )  mod=b_mahagaon              (马哈冈)
+  akkel                  原版=c_akkel                   (阿凯尔       )  mod=b_akkala                (阿卡拉)
+  aksum                  原版=c_tigre                   (提格雷       )  mod=b_axum                  (阿克苏姆)
+  albi                   原版=c_albi                    (阿尔比       )  mod=b_albi                  (阿尔比)
+  alxa                   原版=c_alxa                    (阿剌筛       )  mod=b_alxa                  (阿拉善)
+  amandee                原版=b_amami                   (          )  mod=b_amami_ooshima         (奄美大岛)
+  amaravati              原版=c_nallamala               (捺罗摩罗      )  mod=b_guntur                (贡图尔)
+  amparita               原版=b_SUL_Amparita            (安帕里塔      )  mod=b_sidenreng             (锡登伦)
+  aneto                  原版=c_alto_aragon             (上阿拉贡      )  mod=b_jaca                  (哈卡)
+  anlong                 原版=c_yanchuan                (琰川        )  mod=b_anlong                (安龙)
+  antioch                原版=c_antiocheia              (安条克       )  mod=b_antioch               (安条克)
+  ar_kol                 原版=c_andamans                (汉都曼       )  mod=b_north_andaman         (北安达曼)
+  aswan                  原版=c_aswan                   (阿斯旺       )  mod=b_aswan                 (阿斯旺)
+  atamasthana            原版=c_phiti                   (比醯帝       )  mod=b_anuradhapura          (阿努拉德普勒)
+  awkar                  原版=c_awkar                   (奥卡尔       )  mod=b_sahel_corridor06      (奥卡尔走廊)
+  ayodhya                原版=c_ayodhya                 (阿踰陀       )  mod=b_awadh                 (阿瓦德)
+  baalbek                原版=c_baalbek                 (巴勒贝克      )  mod=b_baalbek               (巴勒贝克)
+  babylon                原版=b_al-hila                 (希拉        )  mod=b_hillah                (希拉)
+  baekdu                 原版=b_FIC_Liao_Changbaishan   (长白山       )  mod=b_huju                  (厚州)
+  bahrein                原版=c_qatif                   (盖提夫       )  mod=b_manama                (麦纳麦)
+  beirut                 原版=c_beirut                  (贝鲁特       )  mod=b_beirut                (贝鲁特)
+  bianliang              原版=c_bianzhou                (汴州        )  mod=b_kaifeng               (开封)
+  biri_larosa            原版=c_PHI_samar               (萨马尔       )  mod=b_catarman              (卡塔曼)
+  bodh_gaya              原版=c_gaya                    (伽耶        )  mod=b_gaya                  (迦耶)
+  bordeaux               原版=c_bordeaux                (波尔多       )  mod=b_bordeaux              (波尔多)
+  borobudur              原版=b_JAV_Borobodur           (婆罗浮屠      )  mod=b_borobudur             (婆罗浮屠)
+  braslau                原版=c_braslau                 (布拉斯拉夫     )  mod=b_braslaw               (布拉斯拉夫)
+  cao_bang               原版=c_binh_nguyen             (原平        )  mod=b_bac_thai_nguyen       (北太原)
+  chakla                 原版=c_chakla                  (甲拉        )  mod=b_dartsedo              (打箭炉)
+  chang_an               原版=c_jingzhao                (京兆        )  mod=b_jingzhao              (京兆)
+  chupka                 原版=c_chupka                  (          )  mod=b_kunashiri             (国后)
+  cologne                原版=c_cologne                 (科隆        )  mod=b_cologne               (科隆)
+  constantinople         原版=c_byzantion               (拜占庭       )  mod=b_constantinople        (君士坦丁堡)
+  cotabato               原版=c_PHI_cotabato            (哥打巴托      )  mod=b_kuta_watu             (哥打巴托)
+  ctesiphon              原版=b_an-nahrawan             (奈赫赖万      )  mod=b_baghdad               (巴格达)
+  dagon                  原版=c_dagon                   (大光        )  mod=b_dagon                 (大光)
+  damascus               原版=c_damascus                (大马士革      )  mod=b_damascus              (大马士革)
+  danakil                原版=c_danakil                 (达纳基勒      )  mod=b_afrera                (阿夫雷拉)
+  dashtestan             原版=c_mandestan               (曼德斯坦      )  mod=b_bandar_deyr           (代尔港)
+  daura                  原版=c_daura                   (道拉        )  mod=b_daura                 (道拉)
+  dunhuang               原版=c_dunhuang                (米兰        )  mod=b_shazhou               (沙州)
+  dvin                   原版=c_dvin                    (德温        )  mod=b_yerevan               (埃里温)
+  dwarka                 原版=c_dvaraka                 (堕罗迦       )  mod=b_dwarka                (德瓦卡)
+  el_fasher              原版=c_el_fasher               (法希尔       )  mod=b_masa_sud              (马萨)
+  ellora                 原版=c_vatsagulma              (婆蹉崛摩      )  mod=b_mahagaon              (马哈冈)
+  esztergom              原版=c_esztergom               (埃斯泰尔戈姆    )  mod=b_esztergom             (埃斯泰尔戈姆)
+  fes                    原版=b_subu                    (苏布        )  mod=b_fez                   (非斯)
+  gangganegara           原版=c_MAL_gangganegara        (刚迦尼       )  mod=b_manjung               (曼绒)
+  garumele               原版=c_garumele                (加鲁梅莱      )  mod=b_garoumale             (加鲁马莱)
+  garwhal                原版=c_garwhal                 (姞利呬婆罗     )  mod=b_chandpur_garhi        (金德布尔加希)
+  gilgit                 原版=c_gilgit                  (吉尔吉特      )  mod=b_gilgit                (吉尔吉特)
+  gyaitang               原版=c_gyaitang                (建塘        )  mod=b_nixi                  (泥西)
+  harar                  原版=c_harar                   (哈勒尔       )  mod=b_harar                 (哈拉尔)
+  haridwar               原版=c_sthanisvara             (萨他泥湿伐罗    )  mod=b_thanesar              (坦内萨尔)
+  haripunjaya            原版=c_haripunjaya             (诃利奔阇耶     )  mod=b_lamphun               (南奔)
+  hiiumaa                原版=b_hiiumaa                 (希乌马       )  mod=b_kaina                 (凯伊纳)
+  hoanya                 原版=c_hoanya                  (洪雅        )  mod=b_arikun                (阿立昆)
+  iban                   原版=c_BOR_iban                (伊班        )  mod=b_igan                  (伊甘)
+  igbo                   原版=c_igbo                    (伊博        )  mod=b_igbo_ukwu             (伊博乌库)
+  ilam                   原版=c_ilam                    (伊拉姆       )  mod=b_phakphok              (法克福克)
+  ise_jingu              原版=b_ise_jingu               (          )  mod=b_watarai               (度会)
+  itil                   原版=c_itil                    (阿得        )  mod=b_astrakhan             (阿斯特拉罕)
+  itsukushima            原版=b_itsukushima             (          )  mod=b_saeki                 (佐伯)
+  ivatan                 原版=c_PHI_ivatan              (伊巴丹       )  mod=b_batanes               (巴坦群岛)
+  jenne                  原版=c_jenne                   (杰内        )  mod=b_djenne                (杰内)
+  jerusalem              原版=c_jerusalem               (耶路撒冷      )  mod=b_jerusalem             (耶路撒冷)
+  jinglong               原版=c_chiang_rung             (景昽        )  mod=b_jinglong              (景昽)
+  jorvik                 原版=b_yarlestre               (亚莱斯彻      )  mod=b_york                  (约克)
+  jumla                  原版=c_jumla                   (久姆拉       )  mod=b_jumla                 (久姆拉)
+  kaffa                  原版=c_kaffa                   (咖法        )  mod=b_bonga                 (邦加)
+  kalasan                原版=b_JAV_Mataram             (马塔兰       )  mod=b_mataram               (马塔兰)
+  kamuykotan             原版=b_cup_pet                 (          )  mod=b_uryuu                 (雨龙)
+  kanchipuram            原版=c_kanchipuram             (建志补罗      )  mod=b_kanchipuram           (甘吉布勒姆)
+  kara_khorum            原版=c_karakorum               (哈剌和林      )  mod=b_karakorum             (哈拉和林)
+  kasa                   原版=c_kasa                    (卡萨        )  mod=b_casamance             (卡萨芒斯)
+  kashima                原版=b_kashima_hitachi         (          )  mod=b_kashima               (鹿岛)
+  kathmandu              原版=c_kathmandu               (迦瑟侘曼荼波    )  mod=b_kathmandu             (加德满都)
+  kayor                  原版=c_kayor                   (卡约尔       )  mod=b_tivaouane             (蒂瓦万)
+  kepala_burung          原版=c_kepala_burung           (鸟头        )  mod=b_moi                   (莫伊)
+  kerala                 原版=c_kerala                  (焚波那住      )  mod=b_edappaly              (埃达帕利)
+  kerch                  原版=c_kerch                   (刻赤        )  mod=b_vosporo               (沃斯波罗)
+  khotan                 原版=b_lafak                   (拉伐克       )  mod=b_khotan                (于阗)
+  kiev                   原版=c_kiev                    (基辅        )  mod=b_kyiv                  (基辅)
+  kilimanjaro            原版=c_kilimanjaro             (乞力马扎罗     )  mod=b_usangi                (乌桑吉)
+  kirinyaga              原版=c_kirinyaga               (基里尼亚加     )  mod=b_agikuyu               (阿基库尤)
+  kisi                   原版=c_kisi                    (基西        )  mod=b_kissidougou           (基西杜古)
+  kizuki                 原版=b_kizuki_taisha           (          )  mod=b_izumo                 (出云)
+  kochi                  原版=b_kunjakari               (贡奢迦利      )  mod=b_kochi                 (科钦)
+  konarak                原版=b_konarak                 (拘拿罗迦      )  mod=b_puri                  (补梨)
+  konugardr              原版=c_kiev                    (基辅        )  mod=b_kyiv                  (基辅)
+  kudat                  原版=c_BOR_kudat               (古达        )  mod=b_kudat                 (古达)
+  kukiya                 原版=c_kukiya                  (库基亚       )  mod=b_kukiya                (库基亚)
+  kumasi                 原版=c_kumasi                  (库马西       )  mod=b_kumasi                (库马西)
+  kutai                  原版=c_BOR_kutai_utara         (库泰郁多罗     )  mod=b_kutai_lama            (古泰拉玛)
+  lalish                 原版=c_ninive                  (尼尼微       )  mod=b_sinjar                (辛贾尔)
+  lyon                   原版=c_lyon                    (里昂        )  mod=b_lyon                  (里昂)
+  makhir                 原版=c_makhir                  (马希尔       )  mod=b_ruguda                (鲁古达)
+  makkarinupuri          原版=b_aptapet_ainu            (          )  mod=b_yoichi                (余市)
+  mangea                 原版=b_mtwapa                  (姆特瓦帕      )  mod=b_malindi               (马林迪)
+  mani                   原版=c_gaeseong                (开城        )  mod=b_kaesong               (开城)
+  mantalingajan          原版=c_PHI_south_palawan       (南巴拉望      )  mod=b_aborlan               (阿博兰)
+  mathura                原版=c_mathura                 (秣菟罗       )  mod=b_mathura               (马图拉)
+  memphis                原版=b_hulwan-cairo            (赫勒万       )  mod=b_atfih                 (艾特菲赫)
+  mizdahqan              原版=b_mizdahqan               (米兹达赫甘     )  mod=b_shimbay               (申拜)
+  mogadishu              原版=c_mogadishu               (木骨都束      )  mod=b_mogadishu             (摩加迪沙)
+  molihewen              原版=c_eman_molihewen          (末里合温      )  mod=b_uschu                 (乌苏)
+  mount_damavand         原版=b_firrim                  (菲林        )  mod=b_damavand              (达马万德)
+  mount_heng             原版=b_hengshan_2              (恒山        )  mod=b_hunyuan               (浑源)
+  mount_longhu           原版=b_yiyang_1                (弋阳        )  mod=b_guixi_guangxin        (贵溪)
+  mount_qiyung           原版=c_shezhou                 (歙州        )  mod=b_xiuning               (休宁)
+  mount_tai              原版=b_qianfeng                (乾封        )  mod=b_fengfu                (奉符)
+  muara_takus            原版=b_SUM_Muara_Takus         (麻拉塔库斯     )  mod=b_kampar                (监篦)
+  multan                 原版=c_multan                  (木尔坦       )  mod=b_multan                (木尔坦)
+  muze                   原版=c_muze                    (目则        )  mod=b_mengzi                (蒙自)
+  my_son                 原版=b_my_son                  (美山        )  mod=b_simhapura             (僧诃补罗)
+  nadjaf                 原版=b_an-najaf                (纳杰夫       )  mod=b_kufa                  (库法)
+  nakkavaram             原版=c_nakkavaram              (那旺        )  mod=b_nicobar               (尼科巴群岛)
+  nanning                原版=c_yongzhou_1              (邕州        )  mod=b_xuanhua_nanning       (宣化)
+  naqis                  原版=c_naqis                   (纳吉斯       )  mod=b_aydhab                (艾扎卜)
+  nara                   原版=b_kofuku_ji               (          )  mod=b_nara                  (奈良)
+  ngawa                  原版=c_ngawa                   (阿坝        )  mod=b_droge                 (卓格)
+  nguu_hong              原版=c_quoc_oai                (国威        )  mod=b_muong                 (芒州)
+  niani                  原版=c_niani                   (尼亚尼       )  mod=b_niani                 (尼亚尼)
+  nikki                  原版=c_nikki                   (尼基        )  mod=b_nikki                 (尼基)
+  nok_kundi              原版=c_riqan                   (里坎        )  mod=b_mardehek              (马尔德赫克)
+  nutapkauspe            原版=b_opereperkep             (          )  mod=b_katou                 (河东)
+  ob                     原版=c_ob                      (鄂毕        )  mod=b_ob                    (鄂毕)
+  olkhon                 原版=c_olkhon                  (奥尔洪       )  mod=b_bayanday              (巴彦代)
+  olvia                  原版=b_olbia_ETEL              (奥尔比亚      )  mod=b_balikley              (巴利克莱)
+  paderborn              原版=c_paderborn               (帕德博恩      )  mod=b_paderborn             (帕德博恩)
+  palitana               原版=c_somnath                 (须门那       )  mod=b_palitana              (巴利塔纳)
+  panticapaeum           原版=c_kerch                   (刻赤        )  mod=b_vosporo               (沃斯波罗)
+  papua_selatan          原版=c_papua_selatan           (南巴布亚      )  mod=b_asmat                 (阿斯马特)
+  pinatubo               原版=c_PHI_tondo               (汤都        )  mod=b_tondo                 (汤都)
+  plock                  原版=c_plocka                  (普沃茨克      )  mod=b_plock                 (普沃茨克)
+  poszony                原版=c_poszony                 (波若尼       )  mod=b_bratislava            (普雷斯堡)
+  preslav                原版=c_dorostorum              (锡利斯特拉     )  mod=b_veliki_preslav        (普雷斯拉夫)
+  qayaliq                原版=c_qayaliq                 (海押立       )  mod=b_shengeldy             (申格尔德)
+  qufu                   原版=b_fuqu                    (曲阜        )  mod=b_qufu                  (曲阜)
+  ragusa                 原版=c_ragusa                  (拉古萨       )  mod=b_dubrovnik             (杜布罗夫尼克)
+  raivola                原版=c_kakisalmi               (凯基萨尔米     )  mod=b_korela                (科列拉)
+  ranaheim               原版=c_trandheim               (特隆赫姆      )  mod=b_orkdal                (奥克达尔)
+  ranakpur               原版=c_naddula                 (捺度罗       )  mod=b_kurki                 (库尔基)
+  rebgong                原版=c_rebgong                 (捏工        )  mod=b_tongren               (铜仁)
+  riak_nan_berbedur      原版=c_SUM_riak_nan_berbedur   (里亚南贝杜     )  mod=b_inderapura            (因德拉普拉)
+  rima                   原版=c_rima                    (日玛        )  mod=b_rima                  (日玛)
+  rome                   原版=b_vaticano                (梵蒂冈       )  mod=b_rome                  (罗马)
+  rugen                  原版=c_rugen                   (吕根        )  mod=b_rugen                 (吕根)
+  sanchi                 原版=b_sanchi                  (散脂        )  mod=b_bhopal                (博帕尔)
+  sarysyn                原版=c_sarysyn                 (萨雷森       )  mod=b_beljamen              (别利亚缅)
+  sefa_utaki             原版=b_simajiri                (          )  mod=b_oozato                (大里)
+  sennar                 原版=c_sennar                  (森纳尔       )  mod=b_sennar                (森纳尔)
+  seorak                 原版=c_goseong                 (高城        )  mod=b_goseong               (高城)
+  sherbro                原版=c_sherbro                 (歇尔布罗      )  mod=b_sherbro_island        (歇尔布罗岛)
+  shikharj               原版=c_radha                   (罗陀        )  mod=b_baragram              (巴拉格拉姆)
+  siang                  原版=c_SuMa_siang              (西昂        )  mod=b_cenrana               (岑拉纳)
+  sijilmasa              原版=c_sijilmasa               (锡吉勒马萨     )  mod=b_sijilmasa             (锡吉勒马萨)
+  sikong                 原版=c_qizhou_1                (蕲州        )  mod=b_qianshan              (潜山)
+  sinai                  原版=c_sinai                   (西奈        )  mod=b_saint_katrine         (圣凯瑟琳)
+  sinjar                 原版=c_sinjar                  (辛贾尔       )  mod=b_sinjar                (辛贾尔)
+  sittannavasal          原版=c_kongu                   (贡古        )  mod=b_karur                 (卡鲁尔)
+  sonba_i                原版=c_IDO_sonba_i             (松巴伊       )  mod=b_sombai                (松拜)
+  suenik                 原版=c_dvin                    (德温        )  mod=b_yerevan               (埃里温)
+  sufed                  原版=c_acre                    (亚柯        )  mod=b_safed                 (采法特)
+  sukadana               原版=c_BOR_sukadana            (巫律述       )  mod=b_sukadana              (巫律述)
+  taiao                  原版=c_BOR_taiao               (泰耀        )  mod=b_pelaihari             (佩莱哈里)
+  tarayka                原版=b_tarayka                 (          )  mod=b_boluohe               (波罗河)
+  tavan_bogd             原版=c_tavan_bogd              (塔奔孛黑答     )  mod=b_onguday               (翁古达伊)
+  tenerife               原版=b_tenerife                (阿奇内奇      )  mod=b_aguere                (阿格雷)
+  tengchong              原版=c_monyin                  (莫宁        )  mod=b_tengchong             (腾冲)
+  tezu                   原版=c_tezu                    (特祖        )  mod=b_sadiya                (萨地亚)
+  tinmallal              原版=c_tinmallal               (廷马拉尔      )  mod=b_tinmel                (廷梅勒)
+  torun                  原版=c_torun                   (海乌姆诺      )  mod=b_torun                 (托伦)
+  tyumen                 原版=c_tyumen                  (秋明        )  mod=b_chimgi_tura           (成吉‑图拉)
+  udabhanda              原版=c_udabhanda               (乌铎迦汉荼     )  mod=b_attock                (阿托克)
+  ujjayini               原版=c_ujjayini                (邬阇衍那      )  mod=b_ujjain                (乌贾因)
+  uppsala                原版=c_upland                  (乌普兰       )  mod=b_uppsala               (乌普萨拉)
+  vaishali               原版=b_vaisali                 (毗舍离       )  mod=b_weithali              (维沙利)
+  vien_chan              原版=c_vien_chan               (万象        )  mod=b_vientiane             (万象)
+  viscaya                原版=c_viscaya                 (比斯开       )  mod=b_bilbao                (毕尔巴鄂)
+  visoki                 原版=c_rama                    (拉马        )  mod=b_vrhbosna              (维尔赫博斯纳)
+  wadan                  原版=c_wadan                   (瓦丹        )  mod=b_wadan                 (瓦丹)
+  wadi_el_milk           原版=c_wadi_el-milk            (米勒克谷      )  mod=b_wadi_el_melik         (米勒克谷)
+  wandala                原版=c_wandala                 (万达拉       )  mod=b_mora_cam              (默拉)
+  wenang                 原版=c_SuMa_wenang             (文昂        )  mod=b_manado                (万鸦老)
+  xuhen                  原版=c_jingzhou_2              (协州        )  mod=b_daguan                (大关)
+  yam_alin               原版=c_eman_yam_alin           (杨山        )  mod=b_kerbi                 (克尔比)
+  yangtze                原版=c_ezhou                   (鄂州        )  mod=b_baling                (巴陵)
+  yijinai                原版=c_tongcheng               (桐城        )  mod=b_khara_khoto           (哈拉浩特)
+  yizhou                 原版=c_BAL_dongpyeong_yizhou   (伊州        )  mod=b_hulin                 (虎林)
+  zhaotong               原版=c_quzhou_1                (曲州        )  mod=b_wumeng                (乌蒙)
+  zozan                  原版=c_bakharz                 (巴哈尔兹      )  mod=b_zozan                 (祖赞)
+  zunyi                  原版=c_bochuan                 (播州        )  mod=b_bozhou                (播州)

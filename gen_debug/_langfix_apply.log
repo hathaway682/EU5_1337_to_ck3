@@ -1,0 +1,38 @@
+﻿EU5 cultures with language: 2083
+CK3 vanilla pillar keys: 162
+
+language 行改写: 1146
+EU5 无 language 字段、保持组级: 4 -> ['cunco_culture', 'gen_culture_unsettled', 'manekenk_culture', 'yaros_culture']
+新增 language pillar key: 313 个
+
+样例:
+  abau_culture                   eu5_heritage_papuan_group          -> eu5_language_sepik_language            (EU5: sepik_language)
+  abipones_culture               eu5_heritage_mataco_guaicuru_group -> eu5_language_mataco_guaicuru_language  (EU5: mataco_guaicuru_language)
+  abitibi_culture                eu5_heritage_anishinabe_group      -> eu5_language_anishinabe_language       (EU5: anishinabe_language)
+  abun_culture                   eu5_heritage_papuan_group          -> eu5_language_abun_language             (EU5: abun_language)
+  acaxee_culture                 eu5_heritage_yutonahua_group       -> eu5_language_cahita_language           (EU5: cahita_language)
+  accomac_culture                eu5_heritage_powhatan_group        -> eu5_language_powhatan_language         (EU5: powhatan_language)
+  achagua_culture                eu5_heritage_ta_arawakan_group     -> eu5_language_ta_arawakan_language      (EU5: ta_arawakan_language)
+  ache_culture                   eu5_heritage_tupi_group            -> eu5_language_tupi_language             (EU5: tupi_language)
+
+== 新 key 覆盖文化数 top 15 ==
+  eu5_language_pama_nyungan_language       130
+  eu5_language_nadene_language             42
+  eu5_language_tupi_language               36
+  eu5_language_macro_je_language           31
+  eu5_language_penutian_language           25
+  eu5_language_hokan_language              23
+  eu5_language_chibchan_language           22
+  eu5_language_salishan_language           20
+  eu5_language_maya_language               20
+  eu5_language_muskogee_language           16
+  eu5_language_quechuan_language           16
+  eu5_language_yupik_language              15
+  eu5_language_cree_language               14
+  eu5_language_gunwinyguan_language        14
+  eu5_language_ta_arawakan_language        13
+
+pillars 已存在(跳过): 0 | 需新增: 313
+已写回 D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\common\culture\cultures\00_generated_cultures.txt (备份 D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\common\culture\cultures\00_generated_cultures.txt.bak_langfix_20261020_011406)
+已追加 313 个 language pillar 到 D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\common\culture\pillars\00_generated_pillars.txt (备份 D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\common\culture\pillars\00_generated_pillars.txt.bak_langfix_20261020_011406)
+APPLIED

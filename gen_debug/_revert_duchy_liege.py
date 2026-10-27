@@ -31,7 +31,7 @@ def revert_duchy_liege(path):
             date_open_depth = depth + 1
             in_date = True
 
-        # only remove liege lines that sit inside a duchy title's 1337.1.1 block
+        # only remove liege lines that sit inside a duchy title's 1337.4.1 block
         if in_d and in_date and s.startswith('liege = '):
             removed += 1
             continue

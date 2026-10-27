@@ -1721,7 +1721,7 @@ ara_cecilia_comminges = {
 	father = com_bernard_viii_comminges
 	mother = com_mathe_lisle_jourdain
 	1321.1.1 = { birth = yes }
-	1337.1.1 = { add_spouse = ara_james_i_urgell }
+	1337.4.1 = { add_spouse = ara_james_i_urgell }
 }
 
 ara_constanca_luna = {
@@ -2014,7 +2014,7 @@ ara_sibilla_montcada = {
 	culture = catalan
 	religion = catholic
 	1321.1.1 = { birth = yes }
-	1337.1.1 = { add_spouse = arb_giovanni_arborea_ii }
+	1337.4.1 = { add_spouse = arb_giovanni_arborea_ii }
 }
 
 ara_teresa_entenza = {
@@ -3723,7 +3723,7 @@ bad_ananga_dev_bhanj = {
 	name = "name_ananga_dev"
 		dynasty = bhanj_dynasty
 	culture = chhattisgarhi
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -4364,7 +4364,7 @@ bgk_sohagdeva_baghela = {
 	name = "name_sohagdeva"
 		dynasty = baghela_dynasty
 	culture = bagheli
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -4515,7 +4515,7 @@ bhd_bhanji_jethwa = {
 	name = "name_bhanji"
 		dynasty = jethwa_dynasty
 	culture = gujarati
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -4579,7 +4579,8 @@ bkz_alam_al_din_ali = {
 	name = "name_ali"
 		dynasty = abdallah_kanz_el_dawla_dynasty
 	culture = bedouin_culture
-	religion = shia
+	religion = sunni
+	rite = maliki
 	mother = bkz_daughter_nasr
 	1311.1.1 = { birth = yes }
 }
@@ -4588,7 +4589,8 @@ bkz_daughter_nasr = {
 	name = "name_eu5_bkz_daughter_nasr"
 		dynasty = abdallah_kanz_el_dawla_dynasty
 	culture = bedouin_culture
-	religion = shia
+	religion = sunni
+	rite = maliki
 	father = bkz_shujah_al_din_nasr
 	1275.1.1 = { birth = yes }
 	1326.1.1 = { death = yes }
@@ -4598,7 +4600,8 @@ bkz_rukn_al_din_al_husayn = {
 	name = "name_husayn"
 		dynasty = abdallah_kanz_el_dawla_dynasty
 	culture = bedouin_culture
-	religion = shia
+	religion = sunni
+	rite = maliki
 	father = bkz_shujah_al_din_nasr
 	1278.1.1 = { birth = yes }
 	1334.1.1 = { death = yes }
@@ -4608,7 +4611,8 @@ bkz_sayf_al_din_abu_abdallah_muhammad = {
 	name = "name_muhammad"
 		dynasty = abdallah_kanz_el_dawla_dynasty
 	culture = bedouin_culture
-	religion = shia
+	religion = sunni
+	rite = maliki
 	father = bkz_shujah_al_din_nasr
 	1280.1.1 = { birth = yes }
 	1333.1.1 = { death = yes }
@@ -4618,7 +4622,8 @@ bkz_shujah_al_din_nasr = {
 	name = "name_nasr"
 		dynasty = abdallah_kanz_el_dawla_dynasty
 	culture = bedouin_culture
-	religion = shia
+	religion = sunni
+	rite = maliki
 	1255.1.1 = { birth = yes }
 	1300.1.1 = { death = yes }
 }
@@ -4627,7 +4632,8 @@ bkz_umm_al_hayr = {
 	name = "Umm_al_Khayr"
 		dynasty = abdallah_kanz_el_dawla_dynasty
 	culture = bedouin_culture
-	religion = shia
+	religion = sunni
+	rite = maliki
 	father = bkz_rukn_al_din_al_husayn
 	1308.1.1 = { birth = yes }
 	1327.1.1 = { add_spouse = bkz_alam_al_din_ali }
@@ -4932,7 +4938,7 @@ bli_sri_astasura_ratnabhumibanten = {
 	name = "Sri_Astasura"
 		dynasty = bali_dynasty
 	culture = balinese_culture
-	religion = shaiva_faith
+	religion = smartism
 	1290.1.1 = { birth = yes }
 }
 
@@ -4940,7 +4946,7 @@ bln_mokodoludut = {
 	name = "Mokodoludut"
 		dynasty = bolaang_dynasty
 	culture = mongondow_culture
-	religion = pagan
+	religion = kaharingan
 	1300.1.1 = { birth = yes }
 }
 
@@ -5321,7 +5327,7 @@ bnd_prithviraj_singh_bundela = {
 	name = "Prithviraj"
 		dynasty = bundela_dynasty
 	culture = bundeli
-	religion = smartism
+	religion = vaishnava_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -6095,7 +6101,7 @@ bou_jeanne_chatillon = {
 	father = brb_hugues_chatillon
 	mother = brb_jeanne_argies
 	1320.1.1 = { birth = yes }
-	1337.1.1 = { add_spouse = bou_jacques_bourbon_marche }
+	1337.4.1 = { add_spouse = bou_jacques_bourbon_marche }
 }
 
 bou_louis_i_bourbon = {
@@ -6185,7 +6191,7 @@ bow_mokodoludu = {
 	name = "Mokodoludu"
 		dynasty = bowontehu_dynasty
 	culture = minahasan_culture
-	religion = pagan
+	religion = kaharingan
 	1310.1.1 = { birth = yes }
 }
 
@@ -7237,7 +7243,7 @@ bsp_sampurn_chandel = {
 	name = "name_sampurn"
 		dynasty = chandel_dynasty
 	culture = kangri
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1295.1.1 = { birth = yes }
 }
 
@@ -10582,7 +10588,7 @@ cab_madana_varman_mushana = {
 	name = "name_madana.name_varman"
 		dynasty = mushana_dynasty
 	culture = kangri
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -11183,7 +11189,7 @@ cbh_siripat_thakial = {
 	name = "name_siripat"
 		dynasty = thakial_dynasty
 	culture = punjabi
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -11896,7 +11902,7 @@ chd_hir_singh_chanda = {
 	name = "name_hir.name_singh"
 		dynasty = chanda_dynasty
 	culture = gond
-	religion = pagan
+	religion = kiratism
 	1300.1.1 = { birth = yes }
 }
 
@@ -12984,7 +12990,7 @@ cld_duan_guang = {
 	name = "Guang"
 		dynasty = duan_dynasty
 	culture = bai_culture
-	religion = mahayana_faith
+	rite = acharya
 	1285.1.1 = { birth = yes }
 }
 
@@ -13214,7 +13220,7 @@ cmn_rao_palansang_chauhan = {
 	name = "name_rao_palansang"
 		dynasty = champaner_dynasty
 	culture = gujarati
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -13786,7 +13792,7 @@ crl_kriznook = {
 	name = "name_kriznook"
 		dynasty = urtsun_dynasty
 	culture = chitrali
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -18551,14 +18557,14 @@ eu5_regent_alo = {
 	name = "name_eu5_alodia"
 	culture = nubian
 	religion = miaphysitism
-    rite = ethiopian_rite
+    rite = coptic_rite
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_alu = {
 	name = "name_eu5_alupa"
 	culture = tuluva
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -18784,14 +18790,14 @@ eu5_regent_azl = {
 eu5_regent_bac = {
 	name = "name_eu5_bacan"
 	culture = bacan_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_bai = {
 	name = "name_eu5_banggai"
 	culture = banggai_culture
-	religion = pagan
+	religion = aluk
 	1300.1.1 = { birth = yes }
 }
 
@@ -18842,7 +18848,7 @@ eu5_regent_bfr = {
 eu5_regent_bgg = {
 	name = "name_eu5_bangga"
 	culture = kaili_culture
-	religion = pagan
+	religion = aluk
 	1300.1.1 = { birth = yes }
 }
 
@@ -18892,7 +18898,7 @@ eu5_regent_bib = {
 eu5_regent_bim = {
 	name = "name_eu5_bima"
 	culture = bima_culture
-	religion = shaiva_faith
+	religion = smartism
 	1300.1.1 = { birth = yes }
 }
 
@@ -18906,7 +18912,7 @@ eu5_regent_bir = {
 eu5_regent_bjg = {
 	name = "name_eu5_baojing"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -19077,7 +19083,7 @@ eu5_regent_bsk = {
 eu5_regent_bsm = {
 	name = "name_eu5_boussouma"
 	culture = mossi
-	religion = pagan
+	religion = west_african_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -19091,7 +19097,7 @@ eu5_regent_btg = {
 eu5_regent_btn = {
 	name = "name_eu5_buton"
 	culture = buton_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
@@ -19119,7 +19125,7 @@ eu5_regent_bwl = {
 eu5_regent_bzh = {
 	name = "name_eu5_beisheng"
 	culture = nashi_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -19520,7 +19526,7 @@ eu5_regent_cuo = {
 eu5_regent_cut = {
 	name = "name_eu5_chutia"
 	culture = chutia_culture
-	religion = pagan
+	religion = donyipoloism
 	1300.1.1 = { birth = yes }
 }
 
@@ -19563,7 +19569,7 @@ eu5_regent_daa = {
 eu5_regent_daj = {
 	name = "name_eu5_daju"
 	culture = daju_culture
-	religion = pagan
+	religion = kushitism_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -19616,7 +19622,7 @@ eu5_regent_dfn = {
 eu5_regent_dgb = {
 	name = "name_eu5_dagbon"
 	culture = dagbani
-	religion = pagan
+	religion = west_african_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -19655,7 +19661,7 @@ eu5_regent_dhk = {
 eu5_regent_dim = {
 	name = "name_eu5_dimasa"
 	culture = dimasa_culture
-	religion = pagan
+	religion = donyipoloism
 	1300.1.1 = { birth = yes }
 }
 
@@ -19712,14 +19718,14 @@ eu5_regent_dnb = {
 eu5_regent_dog = {
 	name = "name_eu5_dogra"
 	culture = kangri
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_dom = {
 	name = "name_eu5_dompu"
 	culture = dompu_culture
-	religion = shaiva_faith
+	religion = smartism
 	1300.1.1 = { birth = yes }
 }
 
@@ -19741,7 +19747,7 @@ eu5_regent_dru = {
 eu5_regent_dti = {
 	name = "name_eu5_doti"
 	culture = kumaoni
-	religion = shaiva_faith
+	religion = vaishnava_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -19755,7 +19761,7 @@ eu5_regent_dtm = {
 eu5_regent_dwg = {
 	name = "name_eu5_dawang"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -19777,7 +19783,7 @@ eu5_regent_dyg = {
 eu5_regent_dyn = {
 	name = "name_eu5_duyun"
 	culture = sui_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -19791,7 +19797,7 @@ eu5_regent_dzh = {
 eu5_regent_dzk = {
 	name = "name_eu5_durdzuketia"
 	culture = nakh_culture
-	religion = pagan
+	religion = tengri_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -19805,7 +19811,7 @@ eu5_regent_eji = {
 eu5_regent_ela = {
 	name = "name_eu5_elayadathu"
 	culture = malayali
-	religion = shakta_faith
+	religion = vaishnava_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -19941,7 +19947,7 @@ eu5_regent_gch = {
 eu5_regent_gda = {
 	name = "name_eu5_godara"
 	culture = bagri
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -19978,7 +19984,7 @@ eu5_regent_gil = {
 eu5_regent_glu = {
 	name = "name_eu5_gaoluo"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -20056,7 +20062,7 @@ eu5_regent_grr = {
 eu5_regent_grt = {
 	name = "name_eu5_gorontalo"
 	culture = gorontalo_culture
-	religion = pagan
+	religion = kaharingan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20077,14 +20083,14 @@ eu5_regent_gug = {
 eu5_regent_gur = {
 	name = "name_eu5_fada_n_gourma"
 	culture = gurma
-	religion = pagan
+	religion = west_african_pagan
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_gwi = {
 	name = "name_eu5_gwiriko"
 	culture = mossi
-	religion = pagan
+	religion = west_african_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20112,7 +20118,7 @@ eu5_regent_gyt = {
 eu5_regent_gzh = {
 	name = "name_eu5_guzhou"
 	culture = kam_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -20275,7 +20281,7 @@ eu5_regent_hot = {
 eu5_regent_hqg = {
 	name = "name_eu5_heqing"
 	culture = bai_culture
-	religion = mahayana_faith
+	rite = acharya
 	1300.1.1 = { birth = yes }
 }
 
@@ -20399,7 +20405,7 @@ eu5_regent_hyt = {
 eu5_regent_hzh = {
 	name = "name_eu5_hongzhou"
 	culture = kam_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -20621,7 +20627,7 @@ eu5_regent_jlm = {
 eu5_regent_jlo = {
 	name = "name_eu5_jailolo"
 	culture = tobelo_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
@@ -20694,7 +20700,7 @@ eu5_regent_jux = {
 eu5_regent_kab = {
 	name = "name_eu5_kaabu"
 	culture = balanta
-	religion = pagan
+	religion = west_african_roog_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -20745,7 +20751,7 @@ eu5_regent_kda = {
 eu5_regent_kdu = {
 	name = "name_eu5_padinjattedathu"
 	culture = malayali
-	religion = shakta_faith
+	religion = vaishnava_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -20849,7 +20855,7 @@ eu5_regent_kir = {
 eu5_regent_kja = {
 	name = "name_eu5_keonjhar"
 	culture = chhattisgarhi
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -20908,7 +20914,7 @@ eu5_regent_klr = {
 eu5_regent_kls = {
 	name = "name_eu5_kalisusu"
 	culture = buton_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
@@ -20922,7 +20928,7 @@ eu5_regent_klt = {
 eu5_regent_klu = {
 	name = "name_eu5_kullu"
 	culture = kangri
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -20972,7 +20978,7 @@ eu5_regent_knk = {
 eu5_regent_knw = {
 	name = "name_eu5_konawe"
 	culture = tolaki_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
@@ -20993,7 +20999,7 @@ eu5_regent_kow = {
 eu5_regent_kpl = {
 	name = "name_eu5_koppula"
 	culture = telugu
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -21029,14 +21035,14 @@ eu5_regent_ksh = {
 eu5_regent_ktl = {
 	name = "name_eu5_kutlehar"
 	culture = kangri
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ktn = {
 	name = "name_eu5_kuttanad"
 	culture = malayali
-	religion = shakta_faith
+	religion = vaishnava_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -21201,7 +21207,7 @@ eu5_regent_lin = {
 eu5_regent_ljg = {
 	name = "name_eu5_lijiang"
 	culture = nashi_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -21250,21 +21256,21 @@ eu5_regent_lno = {
 eu5_regent_lol = {
 	name = "name_eu5_loloda"
 	culture = galela_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_lpg = {
 	name = "name_eu5_liping"
 	culture = kam_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_lrt = {
 	name = "name_eu5_larantuka"
 	culture = lamaholot_culture
-	religion = pagan
+	religion = hantuism
 	1300.1.1 = { birth = yes }
 }
 
@@ -21286,7 +21292,7 @@ eu5_regent_ltn = {
 eu5_regent_ltu = {
 	name = "name_eu5_lantu"
 	culture = sui_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -21654,7 +21660,7 @@ eu5_regent_mnl = {
 eu5_regent_mnu = {
 	name = "name_eu5_melanau"
 	culture = melanau_culture
-	religion = pagan
+	religion = kaharingan
 	1300.1.1 = { birth = yes }
 }
 
@@ -21675,7 +21681,7 @@ eu5_regent_mom = {
 eu5_regent_moo = {
 	name = "name_eu5_moro"
 	culture = galela_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
@@ -21697,7 +21703,7 @@ eu5_regent_mpe = {
 eu5_regent_mpr = {
 	name = "name_eu5_mamprugu"
 	culture = mamprusi
-	religion = pagan
+	religion = west_african_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -21719,7 +21725,7 @@ eu5_regent_mrh = {
 eu5_regent_mrn = {
 	name = "name_eu5_moronene"
 	culture = moronene_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
@@ -21914,7 +21920,7 @@ eu5_regent_ngd = {
 eu5_regent_ngl = {
 	name = "name_eu5_ngali"
 	culture = sumbawa_culture
-	religion = shaiva_faith
+	religion = smartism
 	1300.1.1 = { birth = yes }
 }
 
@@ -21978,7 +21984,7 @@ eu5_regent_nqs = {
 eu5_regent_nri = {
 	name = "name_eu5_nri"
 	culture = igbo
-	religion = pagan
+	religion = west_african_orisha_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -22155,7 +22161,7 @@ eu5_regent_ota = {
 eu5_regent_oua = {
 	name = "name_eu5_wagadugu"
 	culture = mossi
-	religion = pagan
+	religion = west_african_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -22218,7 +22224,7 @@ eu5_regent_pan = {
 eu5_regent_pcd = {
 	name = "name_eu5_pingchadong"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -22260,7 +22266,7 @@ eu5_regent_pdn = {
 eu5_regent_pdu = {
 	name = "name_eu5_cochin"
 	culture = malayali
-	religion = shakta_faith
+	religion = vaishnava_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -22303,7 +22309,7 @@ eu5_regent_pig = {
 eu5_regent_pjt = {
 	name = "name_eu5_pudjananti"
 	culture = kaili_culture
-	religion = pagan
+	religion = aluk
 	1300.1.1 = { birth = yes }
 }
 
@@ -22359,7 +22365,7 @@ eu5_regent_pna = {
 eu5_regent_pnc = {
 	name = "name_eu5_poonch"
 	culture = kashmiri_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -22380,7 +22386,7 @@ eu5_regent_poo = {
 eu5_regent_prm = {
 	name = "name_eu5_perm"
 	culture = komi
-	religion = pagan
+	religion = siberian_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -22444,7 +22450,7 @@ eu5_regent_qan = {
 eu5_regent_qgs = {
 	name = "name_eu5_qiongshui"
 	culture = kam_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -22452,7 +22458,7 @@ eu5_regent_qht = {
 	name = "name_eu5_qahtan"
 	culture = yemeni_culture
 	religion = shia
-    rite = zayidi
+    rite = ismaili
 	1300.1.1 = { birth = yes }
 }
 
@@ -22547,7 +22553,7 @@ eu5_regent_reg = {
 eu5_regent_rgm = {
 	name = "name_eu5_rongmei"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -22576,7 +22582,7 @@ eu5_regent_rjr = {
 eu5_regent_rks = {
 	name = "name_eu5_raksel"
 	culture = nagpuri_culture
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -22766,7 +22772,7 @@ eu5_regent_sgu = {
 eu5_regent_sgz = {
 	name = "name_eu5_sangzhi"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -22795,7 +22801,7 @@ eu5_regent_shm = {
 eu5_regent_shr = {
 	name = "name_eu5_saharan"
 	culture = shekhawati
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -22846,7 +22852,7 @@ eu5_regent_sld = {
 eu5_regent_slp = {
 	name = "name_eu5_selaparang"
 	culture = sasak_culture
-	religion = shaiva_faith
+	religion = smartism
 	1300.1.1 = { birth = yes }
 }
 
@@ -22962,7 +22968,7 @@ eu5_regent_src = {
 eu5_regent_srg = {
 	name = "name_eu5_sarangarh"
 	culture = gond
-	religion = pagan
+	religion = kiratism
 	1300.1.1 = { birth = yes }
 }
 
@@ -22976,7 +22982,7 @@ eu5_regent_srl = {
 eu5_regent_srm = {
 	name = "name_eu5_nahan"
 	culture = garhwali
-	religion = shaiva_faith
+	religion = vaishnava_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -23085,7 +23091,7 @@ eu5_regent_szg = {
 eu5_regent_szh = {
 	name = "name_eu5_sizhou"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -23099,7 +23105,7 @@ eu5_regent_szi = {
 eu5_regent_szu = {
 	name = "name_eu5_shizhu"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -23233,7 +23239,7 @@ eu5_regent_tem = {
 eu5_regent_ten = {
 	name = "name_eu5_tenkodogo"
 	culture = mossi
-	religion = pagan
+	religion = west_african_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -23262,7 +23268,7 @@ eu5_regent_tfk = {
 eu5_regent_tgr = {
 	name = "name_eu5_tongren"
 	culture = kam_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -23277,7 +23283,7 @@ eu5_regent_tgt = {
 eu5_regent_tgy = {
 	name = "name_eu5_tangya"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -23298,7 +23304,7 @@ eu5_regent_tht = {
 eu5_regent_tid = {
 	name = "name_eu5_tidore"
 	culture = tidore_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
@@ -23370,7 +23376,7 @@ eu5_regent_tlt = {
 eu5_regent_tlw = {
 	name = "name_eu5_taliwang"
 	culture = sumbawa_culture
-	religion = shaiva_faith
+	religion = smartism
 	1300.1.1 = { birth = yes }
 }
 
@@ -23434,7 +23440,7 @@ eu5_regent_tnn = {
 eu5_regent_tnp = {
 	name = "name_eu5_tianping"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -23661,7 +23667,7 @@ eu5_regent_twi = {
 eu5_regent_txi = {
 	name = "name_eu5_tixi"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -23781,7 +23787,7 @@ eu5_regent_ugw = {
 eu5_regent_ujj = {
 	name = "name_eu5_ujjainiya"
 	culture = bhojpuri_culture
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -23839,7 +23845,7 @@ eu5_regent_utb = {
 eu5_regent_vdk = {
 	name = "name_eu5_vadakkumkur"
 	culture = malayali
-	religion = shakta_faith
+	religion = vaishnava_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -23861,7 +23867,7 @@ eu5_regent_vdz = {
 eu5_regent_vld = {
 	name = "name_eu5_valluvanad"
 	culture = malayali
-	religion = shakta_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -23875,7 +23881,7 @@ eu5_regent_vna = {
 eu5_regent_vnd = {
 	name = "name_eu5_venad"
 	culture = malayali
-	religion = shakta_faith
+	religion = vaishnava_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -23981,7 +23987,7 @@ eu5_regent_wnt = {
 eu5_regent_wrg = {
 	name = "name_eu5_wairagarh"
 	culture = gond
-	religion = pagan
+	religion = kiratism
 	1300.1.1 = { birth = yes }
 }
 
@@ -24009,7 +24015,7 @@ eu5_regent_wtz = {
 eu5_regent_wun = {
 	name = "name_eu5_muna"
 	culture = muna_culture
-	religion = pagan
+	religion = tolotang
 	1300.1.1 = { birth = yes }
 }
 
@@ -24149,7 +24155,7 @@ eu5_regent_xol = {
 eu5_regent_xsy = {
 	name = "name_eu5_xishanyang"
 	culture = kam_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -24164,14 +24170,14 @@ eu5_regent_yam = {
 	name = "name_eu5_yam"
 	culture = yemeni_culture
 	religion = shia
-    rite = zayidi
+    rite = ismaili
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_yan = {
 	name = "name_eu5_yao_an"
 	culture = bai_culture
-	religion = mahayana_faith
+	rite = acharya
 	1300.1.1 = { birth = yes }
 }
 
@@ -24193,7 +24199,7 @@ eu5_regent_yas = {
 eu5_regent_yat = {
 	name = "name_eu5_yatenga"
 	culture = mossi
-	religion = pagan
+	religion = west_african_pagan
 	1300.1.1 = { birth = yes }
 }
 
@@ -24214,7 +24220,7 @@ eu5_regent_ydz = {
 eu5_regent_ygs = {
 	name = "name_eu5_yongshun"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -24228,21 +24234,21 @@ eu5_regent_yim = {
 eu5_regent_yji = {
 	name = "name_eu5_yanjing"
 	culture = nashi_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_yng = {
 	name = "name_eu5_yongning_2"
 	culture = nashi_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_ynh = {
 	name = "name_eu5_yanhe"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -24320,7 +24326,7 @@ eu5_regent_ysu = {
 eu5_regent_yyg = {
 	name = "name_eu5_youyang"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -24385,7 +24391,7 @@ eu5_regent_zgh = {
 eu5_regent_zgl = {
 	name = "name_eu5_zhonglu"
 	culture = tujia_culture
-	religion = pagan
+	religion = bimoism
 	1300.1.1 = { birth = yes }
 }
 
@@ -24414,14 +24420,14 @@ eu5_regent_zip = {
 eu5_regent_zld = {
 	name = "name_eu5_zhonglindong"
 	culture = kam_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
 eu5_regent_zmr = {
 	name = "name_eu5_kozhikode"
 	culture = malayali
-	religion = shakta_faith
+	religion = vaishnava_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -24456,7 +24462,7 @@ eu5_regent_znx = {
 eu5_regent_znz = {
 	name = "name_eu5_zhenzhou"
 	culture = sui_culture
-	religion = pagan
+	religion = moism
 	1300.1.1 = { birth = yes }
 }
 
@@ -27233,7 +27239,7 @@ fra_jeanne_coucy = {
 	father = fra_guillaume_i_coucy
 	mother = fra_isabeau_chatillon
 	1321.1.1 = { birth = yes }
-	1337.1.1 = { add_spouse = fra_gaucher_viii_chatillon }
+	1337.4.1 = { add_spouse = fra_gaucher_viii_chatillon }
 }
 
 fra_jeanne_evreux = {
@@ -30100,7 +30106,7 @@ ghl_arjanji_sartanji_guhila = {
 	name = "name_arjanji"
 		dynasty = guhila_dynasty
 	culture = gujarati
-	religion = vaishnava_faith
+	religion = shakta_faith
 	father = ghl_sartanji_shahji_guhila
 	1230.1.1 = { birth = yes }
 	1300.1.1 = { death = yes }
@@ -30110,7 +30116,7 @@ ghl_mokhdaji_ranoji_guhila = {
 	name = "name_mokhdaji_ranoji"
 		dynasty = guhila_dynasty
 	culture = gujarati
-	religion = vaishnava_faith
+	religion = shakta_faith
 	father = ghl_ranoji_sartanji_guhila
 	1278.1.1 = { birth = yes }
 }
@@ -30119,7 +30125,7 @@ ghl_ranoji_sartanji_guhila = {
 	name = "name_ranoji"
 		dynasty = guhila_dynasty
 	culture = gujarati
-	religion = vaishnava_faith
+	religion = shakta_faith
 	father = ghl_sartanji_shahji_guhila
 	1235.1.1 = { birth = yes }
 	1309.1.1 = { death = yes }
@@ -30129,7 +30135,7 @@ ghl_sartanji_shahji_guhila = {
 	name = "name_sartanji"
 		dynasty = guhila_dynasty
 	culture = gujarati
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1200.1.1 = { birth = yes }
 	1250.1.1 = { death = yes }
 }
@@ -30138,7 +30144,7 @@ ghr_vasudev_rajgond = {
 	name = "name_vasudev"
 		dynasty = rajgond_dynasty
 	culture = bagheli
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -30723,7 +30729,7 @@ goa_suriyadeva_kadamba = {
 	name = "name_suriyadeva"
 		dynasty = kadamba_dynasty
 	culture = konkani
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -31735,7 +31741,7 @@ gwl_anant_pal_ii = {
 	name = "Anant_Pal"
 		dynasty = panwar_dynasty
 	culture = garhwali
-	religion = shaiva_faith
+	religion = vaishnava_faith
 	1310.1.1 = { birth = yes }
 }
 
@@ -32519,7 +32525,7 @@ hhb_agnes_schaunberg = {
 	culture = danube_bavarian
 	religion = catholic
 	1321.1.1 = { birth = yes }
-	1337.1.1 = { add_spouse = hhb_heinrich_hohenberg_rotenburg }
+	1337.4.1 = { add_spouse = hhb_heinrich_hohenberg_rotenburg }
 }
 
 hhb_albrecht_hohenberg = {
@@ -33622,7 +33628,7 @@ idr_dhavalmaji_rathore = {
 	name = "name_dhavalmaji"
 		dynasty = rathore_dynasty
 	culture = mewari
-	religion = vaishnava_faith
+	religion = shakta_faith
 	father = idr_emalji_rathore
 	1260.1.1 = { birth = yes }
 	1310.1.1 = { death = yes }
@@ -33632,7 +33638,7 @@ idr_emalji_rathore = {
 	name = "name_emalji"
 		dynasty = rathore_dynasty
 	culture = mewari
-	religion = vaishnava_faith
+	religion = shakta_faith
 	father = mrw_sheoji_rathore
 	1240.1.1 = { birth = yes }
 	1285.1.1 = { death = yes }
@@ -33642,7 +33648,7 @@ idr_kehar_rathore = {
 	name = "name_kehar"
 		dynasty = rathore_dynasty
 	culture = mewari
-	religion = vaishnava_faith
+	religion = shakta_faith
 	father = idr_lunkaran_rathore
 	1300.1.1 = { birth = yes }
 }
@@ -33651,7 +33657,7 @@ idr_lunkaran_rathore = {
 	name = "name_lunkaran"
 		dynasty = rathore_dynasty
 	culture = mewari
-	religion = vaishnava_faith
+	religion = shakta_faith
 	father = idr_dhavalmaji_rathore
 	1280.1.1 = { birth = yes }
 	1324.1.1 = { death = yes }
@@ -33661,7 +33667,7 @@ idr_sonangji_rathore = {
 	name = "name_sonangji"
 		dynasty = rathore_dynasty
 	culture = mewari
-	religion = vaishnava_faith
+	religion = shakta_faith
 	father = mrw_sheoji_rathore
 	1225.1.1 = { birth = yes }
 	1283.1.1 = { death = yes }
@@ -51146,7 +51152,7 @@ jfn_martanda_cinkaiariyan_aryacakravarti = {
 	name = "Martanda"
 		dynasty = aryacakravarti_dynasty
 	culture = tamil
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -51181,7 +51187,7 @@ jlr_kanhadadeva_chauhan = {
 	name = "name_kanhadadeva"
 		dynasty = chauhan_jalore_dynasty
 	culture = marwari
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1280.1.1 = { birth = yes }
 }
 
@@ -51189,7 +51195,7 @@ jlw_nagji_jhala = {
 	name = "name_nagji"
 		dynasty = jhala_dynasty
 	culture = gujarati
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -51271,7 +51277,7 @@ jol_ndiadiane_ndiaye = {
 	name = "Ndiadiane"
 		dynasty = ndiaye_dynasty
 	culture = wolof
-	religion = pagan
+	religion = west_african_roog_pagan
 	1315.1.1 = { birth = yes }
 }
 
@@ -51375,7 +51381,7 @@ kam_adi = {
 	name = "name_adi"
 		dynasty = kaimana_dynasty
 	culture = buruwai_culture
-	religion = pagan
+	religion = tolotang
 	father = kam_patimunin
 	1330.1.1 = { birth = yes }
 }
@@ -51384,7 +51390,7 @@ kam_patimunin = {
 	name = "name_patimunin"
 		dynasty = kaimana_dynasty
 	culture = buruwai_culture
-	religion = pagan
+	religion = tolotang
 	1270.1.1 = { birth = yes }
 }
 
@@ -51734,7 +51740,7 @@ kgr_prithvi_chandra_katoch = {
 	name = "name_prithvi.name_chandra"
 		dynasty = katoch_dynasty
 	culture = kangri
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1280.1.1 = { birth = yes }
 }
 
@@ -52668,7 +52674,7 @@ klh_raghuraj_deo_naga = {
 	name = "name_raghuraj.name_deo"
 		dynasty = naga_dynasty
 	culture = chhattisgarhi
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -52709,7 +52715,7 @@ kmn_dharm_chand = {
 	name = "Dharm"
 		dynasty = chand_dynasty
 	culture = kumaoni
-	religion = shaiva_faith
+	religion = vaishnava_faith
 	1295.1.1 = { birth = yes }
 }
 
@@ -53136,7 +53142,7 @@ ksh_haidar_khan_lohara = {
 	name = "name_haidar.name_khan"
 		dynasty = lohara_dynasty
 	culture = kashmiri_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = ksh_suhadeva_lohara
 	mother = ksh_kota_rani_lohara
 	1320.1.1 = { birth = yes }
@@ -53145,7 +53151,7 @@ ksh_haidar_khan_lohara = {
 ksh_kota_rani_lohara = {
 	name = "name_kota_rani"
 	culture = kashmiri_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1290.1.1 = { birth = yes }
 	1306.1.1 = { add_spouse = ksh_suhadeva_lohara }
 }
@@ -53154,7 +53160,7 @@ ksh_suhadeva_lohara = {
 	name = "name_suhadeva"
 		dynasty = lohara_dynasty
 	culture = kashmiri_culture
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1280.1.1 = { birth = yes }
 	1306.1.1 = { add_spouse = ksh_kota_rani_lohara }
 }
@@ -53163,7 +53169,7 @@ ksw_brahm_sen = {
 	name = "name_brahm"
 		dynasty = kishtwar_dynasty
 	culture = kangri
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -53233,7 +53239,7 @@ kut_mulvaji_jadeja = {
 	name = "name_mulvaji"
 		dynasty = jadeja_dynasty
 	culture = gujarati
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -55035,7 +55041,7 @@ lun_marie = {
 	culture = lower_saxon
 	religion = catholic
 	1321.1.1 = { birth = yes }
-	1337.1.1 = { add_spouse = lun_wilhelm_ii_luneburg }
+	1337.4.1 = { add_spouse = lun_wilhelm_ii_luneburg }
 }
 
 lun_mathilde_luneburg = {
@@ -55527,7 +55533,7 @@ mal_maghan_konate = {
 	name = "name_maghan"
 		dynasty = keita_dynasty
 	culture = mandinka
-	religion = pagan
+	religion = west_african_pagan
 	1148.1.1 = { birth = yes }
 	1218.1.1 = { death = yes }
 }
@@ -55587,7 +55593,7 @@ mal_sundiata = {
 	name = "name_sundiata"
 		dynasty = keita_dynasty
 	culture = mandinka
-	religion = pagan
+	religion = west_african_pagan
 	father = mal_maghan_konate
 	1217.1.1 = { birth = yes }
 	1255.1.1 = { death = yes }
@@ -56051,7 +56057,7 @@ mau_joyasingh_deva_haihaya = {
 	name = "name_joyasingh_deva"
 		dynasty = haihaya_dynasty
 	culture = chhattisgarhi
-	religion = shakta_faith
+	religion = vaishnava_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -56491,7 +56497,7 @@ mew_jaita_meena = {
 	name = "name_jaita"
 		dynasty = meena_dynasty
 	culture = harauti
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -56983,7 +56989,7 @@ mkg_sangia_melanga = {
 	name = "Sangia_Melanga"
 		dynasty = mekongga_dynasty
 	culture = tolaki_culture
-	religion = pagan
+	religion = tolotang
 	1310.1.1 = { birth = yes }
 }
 
@@ -57221,7 +57227,7 @@ mlb_telheipa = {
 	name = "Telheipa"
 		dynasty = kangleipak_dynasty
 	culture = meitei_culture
-	religion = pagan
+	religion = sedism
 	1285.1.1 = { birth = yes }
 }
 
@@ -58912,7 +58918,7 @@ mrw_asthan_rathore = {
 	name = "name_asthan"
 		dynasty = rathore_dynasty
 	culture = marwari
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = mrw_sheoji_rathore
 	1220.1.1 = { birth = yes }
 	1292.1.1 = { death = yes }
@@ -58922,7 +58928,7 @@ mrw_chhadaji_rathore = {
 	name = "name_chhadaji"
 		dynasty = rathore_dynasty
 	culture = marwari
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = mrw_jalansi_rathore
 	1308.1.1 = { birth = yes }
 }
@@ -58931,7 +58937,7 @@ mrw_doohad_rathore = {
 	name = "name_doohad"
 		dynasty = rathore_dynasty
 	culture = marwari
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = mrw_asthan_rathore
 	1240.1.1 = { birth = yes }
 	1309.1.1 = { death = yes }
@@ -58941,7 +58947,7 @@ mrw_jalansi_rathore = {
 	name = "name_jalansi"
 		dynasty = rathore_dynasty
 	culture = marwari
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = mrw_kanhapal_rathore
 	1290.1.1 = { birth = yes }
 	1328.1.1 = { death = yes }
@@ -58951,7 +58957,7 @@ mrw_kanhapal_rathore = {
 	name = "name_kanhapal"
 		dynasty = rathore_dynasty
 	culture = marwari
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = mrw_raipal_rathore
 	1275.1.1 = { birth = yes }
 	1323.1.1 = { death = yes }
@@ -58961,7 +58967,7 @@ mrw_raipal_rathore = {
 	name = "name_raipal"
 		dynasty = rathore_dynasty
 	culture = marwari
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = mrw_doohad_rathore
 	1260.1.1 = { birth = yes }
 	1313.1.1 = { death = yes }
@@ -58971,7 +58977,7 @@ mrw_sheoji_rathore = {
 	name = "name_sheoji"
 		dynasty = rathore_dynasty
 	culture = marwari
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1200.1.1 = { birth = yes }
 	1273.1.1 = { death = yes }
 }
@@ -59479,7 +59485,7 @@ mtb_jeanne_montfaucon = {
 	father = mtb_henri_i_montfaucon
 	mother = mtb_agnes_chalon_burgundy
 	1321.1.1 = { birth = yes }
-	1337.1.1 = { add_spouse = sav_hugues_joinville_gex }
+	1337.4.1 = { add_spouse = sav_hugues_joinville_gex }
 }
 
 mtb_louis_montfaucon = {
@@ -61451,7 +61457,7 @@ neg_simona_fadrique = {
 	father = sao_alfons_frederic_de_arago
 	mother = sao_marulla_verona
 	1321.1.1 = { birth = yes }
-	1337.1.1 = { add_spouse = neg_giorgio_ii_ghisi }
+	1337.4.1 = { add_spouse = neg_giorgio_ii_ghisi }
 }
 
 neu_amadeus_neuchatel = {
@@ -61960,7 +61966,7 @@ nrs_dharma_singh_harichandan_mohapatra = {
 	name = "name_dharma.name_singh"
 		dynasty = harichandan_mohapatra_dynasty
 	culture = chhattisgarhi
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -63104,7 +63110,7 @@ ori_anangabhima_deva_iii_purba_ganga = {
 	name = "name_anangabhima.name_deva"
 		dynasty = purba_ganga_dynasty
 	culture = orissan
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1180.1.1 = { birth = yes }
 	1238.1.1 = { death = yes }
 }
@@ -63113,7 +63119,7 @@ ori_bhanu_deva_i_purba_ganga = {
 	name = "name_bhanu.name_deva"
 		dynasty = purba_ganga_dynasty
 	culture = orissan
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = ori_narasimha_deva_i_purba_ganga
 	1220.1.1 = { birth = yes }
 	1278.1.1 = { death = yes }
@@ -63123,7 +63129,7 @@ ori_bhanu_deva_ii_purba_ganga = {
 	name = "name_bhanu.name_deva"
 		dynasty = purba_ganga_dynasty
 	culture = orissan
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = ori_narasimha_deva_ii_purba_ganga
 	1280.1.1 = { birth = yes }
 	1328.1.1 = { death = yes }
@@ -63133,7 +63139,7 @@ ori_narasimha_deva_i_purba_ganga = {
 	name = "name_narasimha.name_deva"
 		dynasty = purba_ganga_dynasty
 	culture = orissan
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = ori_anangabhima_deva_iii_purba_ganga
 	1200.1.1 = { birth = yes }
 	1264.1.1 = { death = yes }
@@ -63143,7 +63149,7 @@ ori_narasimha_deva_ii_purba_ganga = {
 	name = "name_narasimha.name_deva"
 		dynasty = purba_ganga_dynasty
 	culture = orissan
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = ori_bhanu_deva_i_purba_ganga
 	1250.1.1 = { birth = yes }
 	1306.1.1 = { death = yes }
@@ -63153,7 +63159,7 @@ ori_narasimha_deva_iii_purba_ganga = {
 	name = "name_narasimha.name_deva"
 		dynasty = purba_ganga_dynasty
 	culture = orissan
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = ori_bhanu_deva_ii_purba_ganga
 	1300.1.1 = { birth = yes }
 }
@@ -65189,7 +65195,7 @@ pgl_kelhana_bhati = {
 	name = "name_kelhana"
 		dynasty = pugal_dynasty
 	culture = bagri
-	religion = vaishnava_faith
+	religion = shakta_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -65864,7 +65870,7 @@ plt_nonghanji_arjanji_guhila = {
 	name = "Nonghanji"
 		dynasty = guhila_dynasty
 	culture = gujarati
-	religion = vaishnava_faith
+	religion = shakta_faith
 	father = ghl_arjanji_sartanji_guhila
 	1280.1.1 = { birth = yes }
 }
@@ -66889,7 +66895,7 @@ ptn_bujang_deo_chauhan = {
 	name = "name_bujang_deo"
 		dynasty = chauhan_patna_dynasty
 	culture = chhattisgarhi
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1283.1.1 = { birth = yes }
 }
 
@@ -67291,7 +67297,7 @@ rdl_kraft_i_riedesel = {
 rdy_annemamba = {
 	name = "name_annemamba"
 	culture = telugu
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1280.1.1 = { birth = yes }
 	1296.1.1 = { add_spouse = rdy_prolaya_reddi }
 }
@@ -67300,7 +67306,7 @@ rdy_dodda_reddi = {
 	name = "name_dodda"
 		dynasty = reddi_dynasty
 	culture = telugu
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = rdy_vema_reddi
 	1275.1.1 = { birth = yes }
 }
@@ -67309,7 +67315,7 @@ rdy_macha_reddi = {
 	name = "name_macha"
 		dynasty = reddi_dynasty
 	culture = telugu
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = rdy_vema_reddi
 	1265.1.1 = { birth = yes }
 	1305.1.1 = { death = yes }
@@ -67319,7 +67325,7 @@ rdy_malla_reddi = {
 	name = "name_malla"
 		dynasty = reddi_dynasty
 	culture = telugu
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = rdy_vema_reddi
 	1280.1.1 = { birth = yes }
 }
@@ -67328,7 +67334,7 @@ rdy_prolaya_reddi = {
 	name = "name_prolaya"
 		dynasty = reddi_dynasty
 	culture = telugu
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = rdy_vema_reddi
 	1270.1.1 = { birth = yes }
 	1320.1.1 = { death = yes }
@@ -67339,7 +67345,7 @@ rdy_prolaya_vema_reddi = {
 	name = "name_prolaya.name_vema"
 		dynasty = reddi_dynasty
 	culture = telugu
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	father = rdy_prolaya_reddi
 	mother = rdy_annemamba
 	1300.1.1 = { birth = yes }
@@ -67349,7 +67355,7 @@ rdy_vema_reddi = {
 	name = "name_vema"
 		dynasty = reddi_dynasty
 	culture = telugu
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1240.1.1 = { birth = yes }
 	1300.1.1 = { death = yes }
 	1296.1.1 = { add_spouse = rdy_annemamba }
@@ -67740,7 +67746,7 @@ rji_chokrana_paramara = {
 	name = "name_chokrana"
 		dynasty = paramara_dynasty
 	culture = bhil
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1259.1.1 = { birth = yes }
 }
 
@@ -67770,7 +67776,7 @@ ros_euphemia_de_ross = {
 	father = ros_hugh_4th_earl
 	mother = ros_matilda_de_brus
 	1321.1.1 = { birth = yes }
-	1337.1.1 = { add_spouse = moy_john_randolph }
+	1337.4.1 = { add_spouse = moy_john_randolph }
 }
 
 ros_hugh_4th_earl = {
@@ -72092,7 +72098,8 @@ skn_zayd_ibn_abi_numayy_ibn_ajlan = {
 	name = "name_zayd"
 		dynasty = qatadid_dynasty
 	culture = hijazi_culture
-	religion = shia
+	religion = sunni
+	rite = maliki
 	father = mec_muhammad_abu_numayy_ibn_abi_sad_al_hasan_ibn_ali_ibn_qatadah_al_hasani
 	1280.1.1 = { birth = yes }
 }
@@ -72101,7 +72108,7 @@ skt_ban_sen = {
 	name = "name_ban"
 		dynasty = sen_dynasty
 	culture = kangri
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -72492,7 +72499,7 @@ smv_rajanarayana_sambuvarayar = {
 	name = "name_rajanarayana"
 		dynasty = sambuvarayar_dynasty
 	culture = tamil
-	religion = vaishnava_faith
+	religion = shaiva_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -74216,7 +74223,7 @@ ter_boheyat = {
 	name = "Boheyat"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_siding_arif
 	1290.1.1 = { birth = yes }
 }
@@ -74225,7 +74232,7 @@ ter_gapi_baguna = {
 	name = "Gapi_Baguna"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_siding_arif
 	1310.1.1 = { birth = yes }
 }
@@ -74234,7 +74241,7 @@ ter_gapi_malamo = {
 	name = "Gapi_Malamo"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_siding_arif
 	1305.1.1 = { birth = yes }
 }
@@ -74243,7 +74250,7 @@ ter_kalabata = {
 	name = "Kalabata"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	1230.1.1 = { birth = yes }
 	1304.1.1 = { death = yes }
 }
@@ -74252,7 +74259,7 @@ ter_momole = {
 	name = "Momole"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_siding_arif
 	1295.1.1 = { birth = yes }
 }
@@ -74261,7 +74268,7 @@ ter_ngolo_ma_caya = {
 	name = "Ngolo_ma_Caya"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_siding_arif
 	1300.1.1 = { birth = yes }
 }
@@ -74270,7 +74277,7 @@ ter_patsaranga_malamo = {
 	name = "Patsaranga"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_kalabata
 	1255.1.1 = { birth = yes }
 	1322.1.1 = { death = yes }
@@ -74280,7 +74287,7 @@ ter_putri = {
 	name = "Putri"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_kalabata
 	1250.1.1 = { birth = yes }
 }
@@ -74289,7 +74296,7 @@ ter_siding_arif = {
 	name = "Siding_Arif"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	mother = ter_putri
 	1270.1.1 = { birth = yes }
 	1331.1.1 = { death = yes }
@@ -74299,7 +74306,7 @@ ter_syah_alam = {
 	name = "Syah_Alam"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_patsaranga_malamo
 	1280.1.1 = { birth = yes }
 }
@@ -74308,7 +74315,7 @@ ter_tolu_malamo = {
 	name = "Tolu_Malamo"
 		dynasty = ternate_dynasty
 	culture = ternate_culture
-	religion = pagan
+	religion = tolotang
 	father = ter_patsaranga_malamo
 	1290.1.1 = { birth = yes }
 }
@@ -74972,7 +74979,7 @@ tku_kumaran_iyakan_manikandan = {
 	name = "name_kumara.name_iyakan"
 		dynasty = manikandan_dynasty
 	culture = malayali
-	religion = shakta_faith
+	religion = vaishnava_faith
 	1300.1.1 = { birth = yes }
 }
 
@@ -75016,7 +75023,7 @@ tnk_maravarman_kulasekara_pandya = {
 	name = "Maravarman"
 		dynasty = pandya_dynasty
 	culture = tamil
-	religion = shakta_faith
+	religion = shaiva_faith
 	1245.1.1 = { birth = yes }
 	1310.1.1 = { death = yes }
 }
@@ -75025,7 +75032,7 @@ tnk_sundara_pandya = {
 	name = "name_sundara"
 		dynasty = pandya_dynasty
 	culture = tamil
-	religion = shakta_faith
+	religion = shaiva_faith
 	father = tnk_maravarman_kulasekara_pandya
 	1277.1.1 = { birth = yes }
 }
@@ -75034,7 +75041,7 @@ tnk_vira_pandya = {
 	name = "name_vira"
 		dynasty = pandya_dynasty
 	culture = tamil
-	religion = shakta_faith
+	religion = shaiva_faith
 	father = tnk_maravarman_kulasekara_pandya
 	1280.1.1 = { birth = yes }
 }
@@ -80157,7 +80164,7 @@ vij_bhavana_sangama = {
 	name = "name_bhavana"
 		dynasty = sangama_dynasty
 	culture = kannadiga
-	religion = shaiva_faith
+	religion = vaishnava_faith
 	1280.1.1 = { birth = yes }
 	1306.1.1 = { add_spouse = vij_maravve_nayakiti }
 }
@@ -80166,7 +80173,7 @@ vij_bukka_raya_sangama = {
 	name = "name_bukka_raya"
 		dynasty = sangama_dynasty
 	culture = kannadiga
-	religion = shaiva_faith
+	religion = vaishnava_faith
 	father = vij_bhavana_sangama
 	mother = vij_maravve_nayakiti
 	1310.1.1 = { birth = yes }
@@ -80176,7 +80183,7 @@ vij_harihara_sangama = {
 	name = "name_harihara"
 		dynasty = sangama_dynasty
 	culture = kannadiga
-	religion = shaiva_faith
+	religion = vaishnava_faith
 	father = vij_bhavana_sangama
 	mother = vij_maravve_nayakiti
 	1306.1.1 = { birth = yes }
@@ -80186,7 +80193,7 @@ vij_kampilideva_kampili = {
 	name = "name_kampilideva"
 		dynasty = kampili_dynasty
 	culture = kannadiga
-	religion = shaiva_faith
+	religion = vaishnava_faith
 	father = vij_singeya_nayaka_kampili
 	1275.1.1 = { birth = yes }
 	1328.1.1 = { death = yes }
@@ -80196,7 +80203,7 @@ vij_maravve_nayakiti = {
 	name = "name_maravve_nayakiti"
 		dynasty = kampili_dynasty
 	culture = kannadiga
-	religion = shaiva_faith
+	religion = vaishnava_faith
 	father = vij_kampilideva_kampili
 	1290.1.1 = { birth = yes }
 	1306.1.1 = { add_spouse = vij_bhavana_sangama }
@@ -80206,7 +80213,7 @@ vij_singeya_nayaka_kampili = {
 	name = "name_singeya_nayaka"
 		dynasty = kampili_dynasty
 	culture = kannadiga
-	religion = shaiva_faith
+	religion = vaishnava_faith
 	1260.1.1 = { birth = yes }
 	1300.1.1 = { death = yes }
 }
@@ -82245,7 +82252,7 @@ gen_wilderness_holder = {
 	culture = gen_culture_unsettled
 	disallow_random_traits = yes
 	sexuality = asexual
-	1337.1.1 = {
+	1337.4.1 = {
 		birth = yes
 		trait = wilderness
 		trait = immortal

@@ -53,7 +53,7 @@ def restore(path, dmap):
             date_open_depth = depth + 1
             in_date = True
         out.append(line)
-        # detect the closing brace of the 1337.1.1 block
+        # detect the closing brace of the 1337.4.1 block
         if in_date and date_open_depth is not None and (depth + opens - closes) < date_open_depth \
            and cur_title in dmap and cur_title not in done:
             out.insert(len(out) - 1, dmap[cur_title])

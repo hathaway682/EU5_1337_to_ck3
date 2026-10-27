@@ -1,0 +1,177 @@
+adjacency keys=20613
+
+==== 目标省现状 + 接壤 ====
+
+p12243  faith=sunni  rite=None
+   adj(0): []
+
+p14381  faith=sunni  rite=None
+   adj(5): ['14383', '14384', '14385', '14382', '14380']
+      p14383  faith=pagan                rite=None
+      p14384  faith=pagan                rite=None
+      p14385  faith=pagan                rite=None
+      p14382  faith=pagan                rite=None
+      p14380  faith=pagan                rite=None
+
+p14386  faith=sunni  rite=None
+   adj(4): ['14390', '14403', '14387', '14389']
+      p14390  faith=pagan                rite=None
+      p14403  faith=pagan                rite=None
+      p14387  faith=pagan                rite=None
+      p14389  faith=pagan                rite=None
+
+p14388  faith=sunni  rite=None
+   adj(5): ['14385', '14412', '14413', '14390', '14383']
+      p14385  faith=pagan                rite=None
+      p14412  faith=pagan                rite=None
+      p14413  faith=pagan                rite=None
+      p14390  faith=pagan                rite=None
+      p14383  faith=pagan                rite=None
+
+p14427  faith=sunni  rite=None
+   adj(4): ['14393', '14428', '14449', '14429']
+      p14393  faith=pagan                rite=None
+      p14428  faith=pagan                rite=None
+      p14449  faith=pagan                rite=None
+      p14429  faith=pagan                rite=None
+
+p14435  faith=sunni  rite=None
+   adj(3): ['14447', '14439', '14428']
+      p14447  faith=pagan                rite=None
+      p14439  faith=pagan                rite=None
+      p14428  faith=pagan                rite=None
+
+==== k_madagascar 全部省份 ====
+
+-- c_ambongo                安邦戈          duchy=d_north_madagascar
+   b_nosy_bali            p14423  faith=pagan                rite=None       adj=3
+   b_andranomavo          p14424  faith=pagan                rite=None       adj=7
+   b_besalampy            p14425  faith=pagan                rite=None       adj=5
+   b_vilamatsa            p14426  faith=pagan                rite=None       adj=3
+
+-- c_antandroy              安坦德鲁伊        duchy=d_east_madagascar
+   b_andranosoa           p14380  faith=pagan                rite=None       adj=7
+   b_ambovontany          p14381  faith=sunni                rite=None       adj=5
+   b_fort_dauphin         p14382  faith=pagan                rite=None       adj=2
+   b_manambato            p14383  faith=pagan                rite=None       adj=4
+   b_talaky               p14384  faith=pagan                rite=None       adj=3
+   b_tsiveri              p14385  faith=pagan                rite=None       adj=5
+
+-- c_antankarana            安坦卡拉纳        duchy=d_north_madagascar
+   b_vohemar              p14427  faith=sunni                rite=None       adj=4
+   b_ambilobe             p14428  faith=pagan                rite=None       adj=5
+   b_irodo                p14429  faith=pagan                rite=None       adj=2
+
+-- c_antemoro               安泰莫罗         duchy=d_east_madagascar
+   b_vohipeno             p14386  faith=sunni                rite=None       adj=4
+   b_ikongo               p14387  faith=pagan                rite=None       adj=6
+   b_manabondro           p14388  faith=sunni                rite=None       adj=5
+   b_masindrano           p14389  faith=pagan                rite=None       adj=3
+   b_rasanga              p14390  faith=pagan                rite=None       adj=4
+
+-- c_betsileo               贝齐略          duchy=d_malagasy_highlands
+   b_fianarantsoa         p14403  faith=pagan                rite=None       adj=7
+   b_ambositra            p14404  faith=pagan                rite=None       adj=7
+   b_ikalamavony          p14405  faith=pagan                rite=None       adj=5
+   b_midongy              p14406  faith=pagan                rite=None       adj=6
+
+-- c_bezanozano             贝扎诺扎诺        duchy=d_malagasy_highlands
+   b_ambatondrazaka       p14407  faith=pagan                rite=None       adj=7
+   b_ambohidray           p14408  faith=pagan                rite=None       adj=4
+   b_moramanga            p14409  faith=pagan                rite=None       adj=6
+   b_tsilalanarivo        p14410  faith=pagan                rite=None       adj=7
+
+-- c_ibara                  伊巴拉          duchy=d_malagasy_highlands
+   b_ihosy                p14411  faith=pagan                rite=None       adj=5
+   b_betroka              p14412  faith=pagan                rite=None       adj=6
+   b_ivohibe              p14413  faith=pagan                rite=None       adj=6
+   b_ranohira             p14414  faith=pagan                rite=None       adj=6
+   b_teniky               p14415  faith=pagan                rite=None       adj=7
+
+-- c_iboina                 伊博伊纳         duchy=d_north_madagascar
+   b_boeny                p14430  faith=pagan                rite=None       adj=5
+   b_andranoboka          p14431  faith=pagan                rite=None       adj=6
+   b_antetikala           p14432  faith=pagan                rite=None       adj=3
+   b_antsohihy            p14433  faith=pagan                rite=None       adj=4
+   b_kingany              p14434  faith=pagan                rite=None       adj=4
+   b_mahilaka             p14435  faith=sunni                rite=None       adj=3
+   b_mahajanga            p14436  faith=pagan                rite=None       adj=4
+   b_marovoay             p14437  faith=pagan                rite=None       adj=7
+   b_nosy_be              p14438  faith=pagan                rite=None       adj=0
+   b_sada                 p14439  faith=pagan                rite=None       adj=3
+
+-- c_inner_iboina           内伊博伊纳        duchy=d_north_madagascar
+   b_maevatanana          p14440  faith=pagan                rite=None       adj=5
+   b_ambalanjakomby       p14441  faith=pagan                rite=None       adj=6
+   b_ambolosy             p14442  faith=pagan                rite=None       adj=5
+   b_ampotaka             p14443  faith=pagan                rite=None       adj=6
+   b_manoninerina         p14444  faith=pagan                rite=None       adj=7
+   b_tsarahafatra         p14445  faith=pagan                rite=None       adj=6
+
+-- c_mailaka                迈拉卡          duchy=d_west_madagascar
+   b_sahadia              p14451  faith=pagan                rite=None       adj=4
+   b_ankavandra           p14452  faith=pagan                rite=None       adj=5
+   b_beanka               p14453  faith=pagan                rite=None       adj=7
+   b_maintirano           p14454  faith=pagan                rite=None       adj=3
+
+-- c_maroserana             马鲁塞拉纳        duchy=d_west_madagascar
+   b_toliara              p14455  faith=pagan                rite=None       adj=6
+   b_andasy_merine        p14456  faith=pagan                rite=None       adj=4
+   b_enijo                p14457  faith=pagan                rite=None       adj=4
+   b_soalara              p14458  faith=pagan                rite=None       adj=4
+   b_taolambiby           p14459  faith=pagan                rite=None       adj=6
+
+-- c_mascarene_islands      马斯克林群岛       duchy=d_mascarene_islands
+   b_mauritius            p14467  faith=pagan                rite=None       adj=0
+   b_rodrigues            p14468  faith=pagan                rite=None       adj=0
+   b_reunion              p14469  faith=pagan                rite=None       adj=0
+
+-- c_menabe                 梅纳贝          duchy=d_west_madagascar
+   b_maneva               p14460  faith=pagan                rite=None       adj=4
+   b_bengy                p14461  faith=pagan                rite=None       adj=3
+   b_mahabo               p14462  faith=pagan                rite=None       adj=6
+   b_malaimbandy          p14463  faith=pagan                rite=None       adj=6
+   b_miandrivazo          p14464  faith=pagan                rite=None       adj=7
+   b_rezoky               p14465  faith=pagan                rite=None       adj=3
+   b_tsimanandrafozana    p14466  faith=pagan                rite=None       adj=5
+
+-- c_merina                 梅里纳          duchy=d_malagasy_highlands
+   b_antananarivo         p14416  faith=pagan                rite=None       adj=8
+   b_ambatomanoina        p14417  faith=pagan                rite=None       adj=7
+   b_ankazobe             p14418  faith=pagan                rite=None       adj=5
+   b_antsiroamandidy      p14419  faith=pagan                rite=None       adj=5
+   b_fenoarivo            p14420  faith=pagan                rite=None       adj=6
+   b_kavitaha             p14421  faith=pagan                rite=None       adj=5
+   b_vohimasina           p14422  faith=pagan                rite=None       adj=5
+
+-- c_north_betsimisaraka    北贝齐米萨拉卡      duchy=d_east_madagascar
+   b_maroantsetra         p14391  faith=pagan                rite=None       adj=5
+   b_antalaha             p14392  faith=pagan                rite=None       adj=3
+   b_bemanevika           p14393  faith=pagan                rite=None       adj=3
+   b_fahambahy            p14394  faith=pagan                rite=None       adj=3
+   b_fenoarivo_east       p14395  faith=pagan                rite=None       adj=4
+   b_sandrakatsy          p14396  faith=pagan                rite=None       adj=3
+   b_tintingue            p14397  faith=pagan                rite=None       adj=4
+   b_toamasina            p14398  faith=pagan                rite=None       adj=3
+
+-- c_south_betsimisaraka    南贝齐米萨拉卡      duchy=d_east_madagascar
+   b_manahoro             p14399  faith=pagan                rite=None       adj=6
+   b_andevoranto          p14400  faith=pagan                rite=None       adj=5
+   b_mahaela              p14401  faith=pagan                rite=None       adj=3
+   b_vatomandry           p14402  faith=pagan                rite=None       adj=3
+
+-- c_tsimihety              齐米赫蒂         duchy=d_north_madagascar
+   b_manditsara           p14446  faith=pagan                rite=None       adj=8
+   b_bealanana            p14447  faith=pagan                rite=None       adj=8
+   b_befandriana          p14448  faith=pagan                rite=None       adj=5
+   b_bengoala             p14449  faith=pagan                rite=None       adj=6
+   b_tsaratanana          p14450  faith=pagan                rite=None       adj=6
+
+==== c_laccadive ====
+   b_kavaratti_atoll      p12243  faith=sunni                rite=None       adj=[]
+
+==== mapping.json 里马达加斯加/拉克沙 locations ====
+   amini_atoll              kind=wasteland county=laccadive                kingdom=deccan         religion=None
+   andrott_atoll            kind=wasteland county=laccadive                kingdom=deccan         religion=None
+   kavaratti_atoll          kind=land   county=laccadive                kingdom=deccan         religion=None
+   minicoy_atoll            kind=wasteland county=laccadive                kingdom=deccan         religion=None
