@@ -302,6 +302,12 @@ CULT_RULE = {
     # —— 苏丹-阿拉伯（用户 2026-10-22 定）——
     "sudanese_arab":        r(7, "bedouin", "苏丹阿拉伯，用户定入贝都因（不建融合文化）"),
 
+    # —— 哈德拉毛（用户 2026-10-28 定）——
+    # 挂 peninsular_dialect，LANG_RULE 会整组收成 bedouin；但 hadhrami 是也门东南部
+    # （哈德拉毛/穆卡拉一带），与 yemeni 同属南阿拉伯，故单独覆盖成 yemeni。
+    # 同组其余（najdi/hijazi/omani/kaliji/bahrani/dhofari/shihhi）仍走 LANG_RULE→bedouin。
+    "hadhrami_culture":     r(4, "yemeni", "哈德拉毛（也门东南），用户 2026-10-28 定入也门而非贝都因"),
+
     # —— 尼罗-撒哈拉（用户 2026-10-27 定：按文化组一律入达朱）——
     # EU5 把苏丹-埃塞俄比亚边境的尼罗-撒哈拉族群拆成一堆小文化，部分还错标成
     # `egyptian_dialect`（埃及方言），按语言并入会全变 CK3 `egyptian`（撒南出现埃及文化的原因）。

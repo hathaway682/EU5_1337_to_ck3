@@ -1,0 +1,1931 @@
+# EU5 与 CK3 头衔等级不一致的国家（回溯）
+
+来源：`eu5_ck3_title_map.csv` 的 `kind=country` 行，比较 `eu5_tier` 与 `ck3_tier`。
+
+- 总数 2337，其中等级一致 487、不一致 **1850**。
+
+## 分类计数
+
+| 类别 | EU5→CK3 | 数量 |
+| --- | --- | --- |
+| A | -→k | 5 |
+| A | d→k | 4 |
+| A | e→h | 1 |
+| A | e→k | 2 |
+| A | k→e | 5 |
+| B | d→空 | 9 |
+| B | d→b | 10 |
+| B | d→c | 20 |
+| B | k→空 | 1 |
+| B | k→b | 1 |
+| C | -→空 | 276 |
+| C | -→b | 468 |
+| C | -→c | 846 |
+| D | c→空 | 36 |
+| D | c→b | 166 |
+
+## A. 主动按原版 key 调整层级（17）
+
+| EU5 | 中文名 | 变化 | 原版 key | 原因 |
+| --- | --- | --- | --- | --- |
+| CND | 詹达尔 | -→k | k_candar | EU5 无 rank，原版有 k_candar |
+| GRM | 盖尔米扬 | -→k | k_germiyan | EU5 无 rank，原版有 k_germiyan |
+| KAR | 卡拉曼 | -→k | k_karaman | EU5 无 rank，原版有 k_karaman |
+| SRU | 萨鲁汗 | -→k | k_saruhan | EU5 无 rank，原版有 k_saruhan |
+| TEK | 泰凯 | -→k | k_tekke | EU5 无 rank，原版有 k_tekke |
+| AYD | 艾登 | d→k | k_aydin | EU5 贝伊国为公国级，原版有 k_aydin |
+| ERE | 埃雷特纳 | d→k | k_eretnid | EU5 贝伊国为公国级，原版有 k_eretnid |
+| MEN | 门泰谢 | d→k | k_mentese | EU5 贝伊国为公国级，原版有 k_mentese |
+| TUR | 奥斯曼 | d→k | k_ottoman | EU5 贝伊国为公国级，原版有 k_ottoman |
+| CHI | 中华 | e→h | h_china | 原版最高是霸权 h_china，无 e_china |
+| BUL | 保加利亚 | e→k | k_bulgaria | 原版只有 k_bulgaria，无 e_ 级 |
+| TRE | 特拉比松 | e→k | k_trebizond | 原版只有 k_trebizond，无 e_ 级 |
+| CHG | 察合台 | k→e | e_chagatai | 原版只有 e_chagatai，无 k_ 级 |
+| GLH | 术赤 | k→e | e_golden_horde | 原版只有 e_golden_horde，无 k_ 级 |
+| KOR | 高丽 | k→e | e_goryeo | 原版只有 e_goryeo，无 k_ 级 |
+| MAJ | 满者伯夷 | k→e | e_majapahit | 原版只有 e_majapahit，无 k_ 级 |
+| TIB | 吐蕃 | k→e | e_tibet | 原版只有 e_tibet，无 k_ 级 |
+
+## B. 头衔被丢掉（rank-title-dropped）（41）
+
+这 41 行的 note 都来自 `gen_debug/eu5_titles_dropped.txt`：`_fix_politics_output.py` 判定「这个 key 不声明、不写 history 块」的清单。按代码里真正产生这个 key 的分支分四类，不按「领主是谁」倒推：
+
+| 分支 | 行数 | 代码位置 | 判定 |
+| --- | --- | --- | --- |
+| B1 单伯爵领公国 | 19 | L528-546 | EU5 rank=d、只持 1 个伯爵领、自己名下没有任何附庸、且答于某位领主 |
+| B2 只剩男爵领 | 11 | L571-579 | `baronies` 里这一项带 `drop_title`，整块地只剩一个男爵领 |
+| B3 无君主 | 1 | L608-612 | rank=d/k/e 但 EU5 没给 ruler，头衔没人能持有 |
+| B4 旧清单残留 | 10 | — | 清单是 10-20 写的、politics 是 10-22 的，现行数据已不满足上面任何一条 |
+
+> 神罗成员不是降级原因。B1 里 `type=hre` 的那几行，代码只多做一件事：`liege =` 那一行写 `e_hre` 而不是写领主本人的 `d_eu5_ubv`（L535-539）。降不降级由 L531-534 三条决定，跟领主是帝国、王国还是公国无关——神罗是帝国，它底下最高只有波希米亚这个王国，它不会把任何人降级。
+
+### B1. 单伯爵领公国（19）
+
+EU5 把它写成公国（rank=d），但它只持有一个伯爵领、自己名下没有任何附庸，同时又答于某位领主。这种公国在 CK3 里没有可写的东西：头衔不声明、history 块不写，地直接按伯爵领落地。下表「领主」一列是它答于谁，「liege 写」一列是最终落进 `liege =` 的 key。
+
+| EU5 | 中文名 | 层级 | 领主 | 关系 type | liege 写 | 现头衔 |
+| --- | --- | --- | --- | --- | --- | --- |
+| AAI | 阿拉斯塔尼 | d→c | 格鲁吉亚 GEO | vassal | k_eu5_geo | c_tashir |
+| AOS | 奥斯塔 | d→c | 上巴伐利亚 UBV | hre | e_hre | c_aosta |
+| AQU | 阿奎莱亚 | d→c | 上巴伐利亚 UBV | hre | e_hre | c_friuli |
+| ATH | 雅典 | d→c | 西西里 SIC | vassal | k_eu5_sic | c_attica |
+| CDL | 大理 | d→c | 梁 LNG | vassal | k_eu5_lng | c_dali |
+| GLO | 格沃古夫 | d→c | 波希米亚 BOH | vassal | k_eu5_boh | c_glogow |
+| KOL | 科隆 | d→c | 上巴伐利亚 UBV | hre | e_hre | c_koln_bucht |
+| LCZ | 文奇察 | d→c | 波兰 POL | vassal | k_eu5_pol | c_leczyca |
+| LGC | 莱格尼察 | d→c | 波希米亚 BOH | vassal | k_eu5_boh | c_legnica |
+| LIE | $liege$ | d→c | 上巴伐利亚 UBV | hre | e_hre | c_liege |
+| OEL | 奥莱希尼察 | d→c | 波希米亚 BOH | vassal | k_eu5_boh | c_olesnica |
+| OPL | 奥波莱 | d→c | 波希米亚 BOH | vassal | k_eu5_boh | c_opole |
+| OPV | 奥帕瓦 | d→c | 波希米亚 BOH | vassal | k_eu5_boh | c_opavsko |
+| PLK | 普沃茨克 | d→c | 波兰 POL | vassal | k_eu5_pol | c_plock |
+| SDZ | 谢拉兹 | d→c | 波兰 POL | vassal | k_eu5_pol | c_sieradz |
+| SWB | 萨克森‑维滕贝格 | d→c | 上巴伐利亚 UBV | hre | e_hre | c_flaming |
+| SWD | 希维德尼察 | d→c | 上巴伐利亚 UBV | hre | e_hre | c_swidnica |
+| TES | 切申 | d→c | 波希米亚 BOH | vassal | k_eu5_boh | c_tesin |
+| ZAG | 扎甘 | d→c | 波希米亚 BOH | vassal | k_eu5_boh | c_zagan |
+
+领主分布：波希米亚 BOH（7）、上巴伐利亚 UBV（6）、波兰 POL（3）、格鲁吉亚 GEO（1）、西西里 SIC（1）、梁 LNG（1）
+
+### B2. 只剩一块男爵领（11）
+
+EU5 仍给 d 或 k 级，但 `baronies` 里这一项标了 `drop_title`——整块地只剩一个男爵领，实际地位就是男爵，公国/王国头衔没有落脚点。
+
+| EU5 | 中文名 | 层级 | 剩下的男爵领 | 现头衔 |
+| --- | --- | --- | --- | --- |
+| ANR | 安道尔 | d→b | b_andorra_la_vella | b_andorra_la_vella |
+| BYM | 比托姆 | d→b | b_bytom | b_bytom |
+| DMI | 德米特罗夫 | d→b | b_dmitrov | b_dmitrov |
+| NMD | 涅莫德林 | d→b | b_niemodlin | b_niemodlin |
+| OSW | 奥斯威辛 | d→b | b_oswiecim | b_oswiecim |
+| PDK | 普鲁德尼克 | d→b | b_prudnik | b_prudnik |
+| PTE | 帕泰 | k→b | b_pate | b_pate |
+| SCI | 希齐纳瓦 | d→b | b_wolow | b_wolow |
+| STZ | 斯切尔采 | d→b | b_strzelce_opolskie | b_strzelce_opolskie |
+| YRV | 尤里耶夫‑波利斯基 | d→b | b_yuryev_polsky | b_yuryev_polsky |
+| ZIE | 津比采 | d→b | b_ziebice | b_ziebice |
+
+### B3. 无君主（1）
+
+| EU5 | 中文名 | 层级 | 情况 | 现头衔 |
+| --- | --- | --- | --- | --- |
+| HSA | 汉萨 | d→空 | rank=d、伯爵领 0 个、EU5 没有给 ruler（汉萨同盟这种有成员没君主的国家） | — |
+
+### B4. 旧清单残留（10）
+
+`eu5_titles_dropped.txt` 是 10-20 10:26 写的，`eu5_politics.json` 是 10-22 22:24 的，中间重新导出过 politics 但没重跑 `_fix_politics_output.py`。这 10 行在旧数据里满足 B1 的条件，现在的伯爵领数已经变了，按现行数据不会再丢。它们的 note 是旧清单带来的。
+
+| EU5 | 中文名 | 层级 | 现行 rank | 现行伯爵领数 | 现行领主 | 现头衔 |
+| --- | --- | --- | --- | --- | --- | --- |
+| BRU | 不伦瑞克 | d→c | d | 2 | 上巴伐利亚 UBV(hre) | c_brunswick |
+| BRZ | 布热格 | d→空 | d | 0 | 波希米亚 BOH(vassal) | — |
+| INO | 伊诺弗罗茨瓦夫 | d→空 | d | 0 | 波兰 POL(fiefdom) | — |
+| JAW | 亚沃尔 | d→空 | d | 0 | 上巴伐利亚 UBV(hre) | — |
+| KLN | 克林 | d→空 | d | 0 | 特维尔 TVE(vassal)、术赤 GLH(tatar_yoke) | — |
+| LIM | 林堡 | d→空 | d | 0 | 上巴伐利亚 UBV(hre) | — |
+| MNN | 马恩 | k→空 | k | 0 | — | — |
+| NMS | 纳梅斯武夫 | d→空 | d | 0 | 波希米亚 BOH(vassal) | — |
+| RCB | 拉齐布日 | d→空 | d | 0 | 波希米亚 BOH(vassal) | — |
+| SIZ | 谢维日 | d→空 | d | 0 | 波希米亚 BOH(vassal) | — |
+
+## C. EU5 未给 rank，按实际领地挂（1590）
+
+| EU5 | 中文名 | EU5→CK3 | 现头衔 | note |
+| --- | --- | --- | --- | --- |
+| ABB | 阿尔巴卜尼 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| ACL | 阿科拉皮萨 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| ACW | 阿卡瓦马基 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| ADA | 阿达尔 | -→空 | — | country-below-county-rank: its land is nothing |
+| AFR | 阿夫勒 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| AIT | 阿伊特阿巴斯 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| AIX | 艾斯 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| ALA | 阿拉巴莫 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| ALC | 阿伦蒂亚克 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| ALE | 阿朗松 | -→空 | — | union,vassal,country-below-county-rank: its land is nothing |
+| ALG | 阿尔及尔 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| ALT | 阿尔泰 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| AMB | 安贝尔特 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| AMN | 卡马纳 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| ANG | 昂古莱姆 | -→空 | — | union,vassal,union-junior: seat not recorded yet |
+| ANJ | 安茹 | -→空 | — | union,vassal,union-junior: seat not recorded yet |
+| ANK | 安坦卡拉纳 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| ANT | 阿里亚尼蒂 | -→空 | — | union,union-junior: seat not recorded yet |
+| AQQ | 白羊 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| ARZ | 阿雷佐 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| ASL | 阿斯里 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| ATB | 安坦巴华卡 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| ATF | 安泰法西 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| ATK | 安特萨卡 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| ATM | 安泰莫罗 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| ATV | 阿塔维约斯 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| AWS | 奥萨 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| AXO | 阿霍科潘 | -→空 | — | union,union-junior: seat not recorded yet |
+| BAA | 巴拉 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| BAG | 巴瓜 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| BCN | 布里黑尼奥格 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| BER | 贝里 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| BET | 贝齐略 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| BEZ | 贝扎诺扎诺 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| BGN | 布洛涅 | -→空 | — | union,vassal,union-junior: seat not recorded yet |
+| BHN | 巴拿 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| BNY | 布尼奥罗 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| BOI | 博伊纳 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| BRR | 贝阿恩 | -→空 | — | union,union-junior: seat not recorded yet |
+| BSG | 布索加 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| BSH | 巴什基尔 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| BTI | 塞米恩 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| BUU | 布隆迪 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| BVK | 布鲁 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| CAG | 卡利亚里 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| CAR | 卡尼奥拉 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| CCT | 坎图马尔卡尼 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| CCY | 钱凯 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| CEN | 切内达 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| CHB | 出班 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| CHP | 香槟 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| CHV | 基亚文纳 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| CHW | 丘维 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| CIM | 卡利马 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| CIR | 切尔克西亚 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| CNH | 卡维纳奇斯 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| COP | 哈维希‑库尼查瓦伊 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| COR | 科西嘉 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| CSA | 卡斯马 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| CSQ | 卡斯奎 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| DAH | 达荷美 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| DDI | 傣 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| DEG | 德加 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| DEN | 登比 | -→空 | — | union,vassal,union-junior: seat not recorded yet |
+| DHB | 德赫巴思 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| DNG | 董鄂 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| DRA | 达拉 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| END | 恩德塔 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| EUD | 尤德韦 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| EVR | 埃夫勒 | -→空 | — | union,vassal,union-junior: seat not recorded yet |
+| FAB | 法布里亚诺 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| FEL | 费尔特雷 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| FEZ | 非斯 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| FIN | 芬兰 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| FUL | 大富洛 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| GAL | 加卢拉 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| GAY | 瓜伊尼亚 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| GCV | 万卡维尔卡 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| GCZ | 戈伊塔卡斯 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| GDD | 圭内斯 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| GJJ | 戈贾姆 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| GLE | 格勒迪 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| GLY | 加洛韦 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| GRL | 格陵兰 | -→空 | — | union,union-junior: seat not recorded yet |
+| GUO | 瓜尔科 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| GUV | 瓜萨韦 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| GUX | 瓜沙班 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| GUY | 加斯科涅 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| GWT | 格温特 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| GYA | 贾阿曼 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| HDA | 哈达 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| HIT | 阿奇克哈塔 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| HJN | 忽剌温 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| HKR | 哈通卡尼亚尔 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| HLA | 海斯拉 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| HLE | 神所同盟 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| HLK | 海尔楚克 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| HNE | 浑河 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| HOI | 辉发 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| HPP | 万卡潘帕 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| HQQ | 哈尼 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| HTS | 希萨齐农 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| HUL | 胡里改 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| ICE | 冰岛 | -→空 | — | union,union-junior: seat not recorded yet |
+| IUW | 伊桑克通万 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| JEC | 哲陈 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| JGP | 景颇 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| KAD | 侗 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| KBN | 库布纳 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| KEB | 凯比 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| KHK | 卡霍齐亚基 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| KHS | 卡萨 | -→空 | — | union,union-junior: seat not recorded yet |
+| KLL | 基利亚卡 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| KMU | 克木 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| KND | 孔达 | -→空 | — | tributary,generated-regent,country-below-county-rank: its land is noth |
+| KOD | 科达 | -→空 | — | tributary,generated-regent,country-below-county-rank: its land is noth |
+| KRL | 卡累利阿 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| KRN | 克伦 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| KRW | 卡拉圭 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| KUK | 库库 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| KUN | 库纳马 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| KUY | 归 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| KVE | 克文兰 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| KWY | 卡亚瓦亚 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| KZY | 卡济姆 | -→空 | — | tributary,generated-regent,country-below-county-rank: its land is noth |
+| LDI | 洛迪 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| LDU | 隆杜 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| LEF | 勒富 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| LHQ | 拉克特米什 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| LLG | 科利亚瓜 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| MAE | 马里安 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| MAO | 毛怜 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| MAS | 迈索纳 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| MCX | 马科里斯 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| MDM | 马桑 | -→空 | — | union,union-junior: seat not recorded yet |
+| MDR | 曼达拉 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| MIE | 曼恩 | -→空 | — | union,union-junior: seat not recorded yet |
+| MIO | 苗 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| MIR | 梅里纳 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| MKC | 梅科奇 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| MKH | 马卡 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| MNB | 梅纳贝 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| MNE | 瑶 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| MNP | 门巴 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| MNT | 曼塔 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| MOD | 摩德纳 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| MOX | 莫霍 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| MRA | 马拉维 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| MRC | 拉马什 | -→空 | — | union,union-junior: seat not recorded yet |
+| MRK | 马拉喀什 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| MRT | 莫尔坦 | -→空 | — | union,vassal,union-junior: seat not recorded yet |
+| MSG | 米西索加 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| MSH | 僜 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| MSL | 米苏尔 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| MUO | 芒 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| MUU | 穆棱 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| MWG | 莫甘努格 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| NCH | 纽阿奇 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| NEK | 内科克尧特尔 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| NGR | 雅提拉宜努伊 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| NKO | 安科莱 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| NPO | 雅提波卢 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| NTH | 雅屠霍依 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| NTT | 诺托韦 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| NUE | 努马卡基 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| NUX | 努哈尔克 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| ODO | 斡朵里 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| OOW | 奥维基亚拉 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| ORL | 奥尔良 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| ORO | 奥罗莫 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| ORQ | 鄂伦春 | -→空 | — | vassal,generated-regent,country-below-county-rank: its land is nothing |
+| PAC | 帕卡卡 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| PAM | 希奥伊 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| PCT | 波康塔克 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| PHE | 皮昆切 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| PIA | 皮安克肖 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| PIC | 皮卡第 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| PIM | 阿基梅尔奥德汉 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| PIO | 皮翁比诺 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| POI | 普瓦图 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| PPK | 潘卡 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| PPT | 帕潘特兰 | -→空 | — | union,union-junior: seat not recorded yet |
+| PRC | 佩尔什 | -→空 | — | union,union-junior: seat not recorded yet |
+| PUB | 普本 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| PUH | 雅普依 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| PUK | 普卡穆鲁 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| PUU | 普鲁哈 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| PWS | 波伊斯 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| QAR | 黑羊 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| QHZ | 基亚维斯特兰 | -→空 | — | union,union-junior: seat not recorded yet |
+| QQH | 卡拉卡拉 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| QTO | 基多 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| QUZ | 基斯基斯 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| RET | 勒泰勒 | -→空 | — | union,vassal,union-junior: seat not recorded yet |
+| RGG | 雷焦 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| RGT | 朗吉塔尼 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| RNP | 兰普尔 | -→空 | — | union,union-junior: seat not recorded yet |
+| RST | 罗斯托克 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| RUA | 雅提卢阿努依 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| RWA | 卢旺达 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| SAU | 绍萨 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| SDQ | 撒达卡 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| SED | 色当 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| SGL | 灰色同盟 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| SHK | 沙尔卡 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| SIB | 锡伯 | -→空 | — | vassal,generated-regent,country-below-county-rank: its land is nothing |
+| SIH | 西哈纳卡 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| SKA | 萨卡拉瓦 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| SKL | 斯克勒拉姆 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| SLE | 塞拉 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| SLL | 沙巴卢拉 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| SOA | 绍阿 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| SOB | 索拜普里 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| SOS | 苏斯 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| SOY | 索约 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| SPL | 斯波莱托 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| SQH | 斯阔米什 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| SSH | 苏克素护 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| SSP | 圣塞波尔克罗 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| STW | 锡西屯万 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TAE | 塔惠 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TAL | 塔纳拉 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| TAM | 塔马 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TAN | 珞巴 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TAV | 塔瓦斯特兰 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TBK | 通布卡 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| TEG | 特圭马 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TET | 得土安 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| TGU | 特圭斯 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TLN | 塔阳 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TMB | 廷巴克图 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| TMW | 塔马罗瓦 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TND | 坦德罗伊 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| TNI | 泰努伊 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TNO | 马瓜 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TOA | 托亚 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TOJ | 托霍拉瓦尔 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TOR | 托雷斯 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| TOT | 森波阿兰 | -→空 | — | union,country-below-county-rank: its land is nothing |
+| TOU | 图卢兹 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| TPC | 特佩坎 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TRC | 塔里亚卡 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TRO | 特拉武尼亚 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| TRT | 陶安泰恩拉特 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TRV | 特雷维索 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| TTR | 托托拉梅 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TUJ | 土家 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TUP | 图皮萨 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| TVA | 图瓦 | -→空 | — | vassal,generated-regent,country-below-county-rank: its land is nothing |
+| TWN | 特瓦纳 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| UBH | 布哈 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| ULA | 乌拉 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| URY | 兀良哈 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| VIN | 维琴察 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| VLS | 瓦卢瓦 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| WAD | 瓦达伊 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| WAS | 佤 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| WCM | 沃卡莫 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| WGE | 卫古 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| WGG | 完颜 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| WNL | 万林 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| XAU | 豪哈 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| XDA | 海达 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| XIN | 辛卡 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| XIX | 希希梅 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| XTA | 谢塔 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| YAL | 鸭绿 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| YAQ | 亚基 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| YAU | 尧特佩克 | -→空 | — | union,union-junior: seat not recorded yet |
+| YAW | 亚维尤 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| YEH | 叶赫 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| YII | 彝 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| ZAZ | 扎波罗热 | -→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| ZGW | 扎加瓦 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| ZHU | 壮 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| ZNI | 祖尼 | -→空 | — | generated-regent,country-below-county-rank: its land is nothing |
+| AAR | 阿卜达里 | -→b | b_kahari | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ABW | 艾卜瓦卜 | -→b | b_ed_damer | generated-regent,country-below-county-rank: its land is a barony |
+| ACA | 阿卡蒂克 | -→b | b_acatic | generated-regent,country-below-county-rank: its land is a barony |
+| ADG | 安定 | -→b | b_anding_mashan | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| AGH | 安戈谢 | -→b | b_angoche | generated-regent,country-below-county-rank: its land is a barony |
+| AGN | 阿宁 | -→b | b_ami | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| AHY | 安楚希希 | -→b | b_antsohihy | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| AID | 艾丹 | -→b | b_yenji | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| AJC | 阿霍奇特兰 | -→b | b_ajuchitlan | generated-regent,country-below-county-rank: its land is a barony |
+| AKR | 阿库雷 | -→b | b_akure | generated-regent,country-below-county-rank: its land is a barony |
+| ALI | 凯里 | -→b | b_kaili | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| AMA | 阿马 | -→b | b_armagh | vassal,country-below-county-rank: its land is a barony |
+| AME | 阿梅坎 | -→b | b_ameca | generated-regent,country-below-county-rank: its land is a barony |
+| AMH | 阿德迈尔 | -→b | b_raphoe | vassal,country-below-county-rank: its land is a barony |
+| AML | 阿莫兰 | -→b | b_amollan | generated-regent,country-below-county-rank: its land is a barony |
+| AMP | 阿马皮拉 | -→b | b_tlacalahuastla | generated-regent,country-below-county-rank: its land is a barony |
+| AMT | 阿玛科兹蒂特兰 | -→b | b_amaticoztitlan | generated-regent,country-below-county-rank: its land is a barony |
+| ANI | 阿鲁尼 | -→b | b_aruni | generated-regent,country-below-county-rank: its land is a barony |
+| APD | 阿帕儿迪 | -→b | b_andkhoy | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| ARD | 阿达兰 | -→b | b_sanandaj | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| ASC | 阿斯科利 | -→b | b_ascolipiceno | country-below-county-rank: its land is a barony |
+| ASR | $astarabad$ | -→b | b_astarabad | tributary,country-below-county-rank: its land is a barony |
+| AST | 阿斯塔拉克 | -→b | b_mirande | vassal,country-below-county-rank: its land is a barony |
+| ASU | 阿苏 | -→b | b_ningguta | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ATO | 阿托克潘 | -→b | b_atocpan | generated-regent,country-below-county-rank: its land is a barony |
+| ATP | 阿特佩克 | -→b | b_atepec | generated-regent,country-below-county-rank: its land is a barony |
+| ATT | 阿蒂特兰 | -→b | b_atitlan | generated-regent,country-below-county-rank: its land is a barony |
+| ATZ | 阿尔塔兹 | -→b | b_maku | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| AUD | 阿伦德尔 | -→b | b_oswestry | vassal,country-below-county-rank: its land is a barony |
+| AUM | 欧马勒 | -→b | b_aumale | vassal,country-below-county-rank: its land is a barony |
+| AUV | 奥弗涅 | -→b | b_vic_le_comte | union,vassal,country-below-county-rank: its land is a barony |
+| AYO | 阿约特兰 | -→b | b_tecoanapa | generated-regent,country-below-county-rank: its land is a barony |
+| AZL | 阿兹塔特兰 | -→b | b_aztatlan | generated-regent,country-below-county-rank: its land is a barony |
+| BAC | 巴占 | -→b | b_amassing | generated-regent,country-below-county-rank: its land is a barony |
+| BAY | 巴彦 | -→b | b_bayan_susu | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| BEA | 比尔 | -→b | b_carbery | vassal,country-below-county-rank: its land is a barony |
+| BES | 木威 | -→b | b_beruas | generated-regent,country-below-county-rank: its land is a barony |
+| BFR | 巴夫拉 | -→b | b_bafra | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| BGG | 邦贾 | -→b | b_sigi | generated-regent,country-below-county-rank: its land is a barony |
+| BGL | 巴格拉纳 | -→b | b_salagiri | generated-regent,country-below-county-rank: its land is a barony |
+| BHD | 班瓦德 | -→b | b_bhanvad | union,country-below-county-rank: its land is a barony |
+| BHT | 博赫丹 | -→b | b_cizre | vassal,country-below-county-rank: its land is a barony |
+| BIN | 恰帕克丘尔 | -→b | b_bingol | vassal,country-below-county-rank: its land is a barony |
+| BIR | 毕日 | -→b | b_guide | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| BJG | 保靖 | -→b | b_baojing | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| BLN | 博朗 | -→b | b_belang | country-below-county-rank: its land is a barony |
+| BNA | 钵奈 | -→b | b_bonaigarh | generated-regent,country-below-county-rank: its land is a barony |
+| BNI | 白泥 | -→b | b_baini | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| BOD | 博多尼察 | -→b | b_bodonitsa | country-below-county-rank: its land is a barony |
+| BOL | 达皮丹 | -→b | b_bool | generated-regent,country-below-county-rank: its land is a barony |
+| BQL | 巴格林 | -→b | b_khawr_baraka | generated-regent,country-below-county-rank: its land is a barony |
+| BRO | 布雷克诺克 | -→b | b_brecknock | vassal,country-below-county-rank: its land is a barony |
+| BSD | 别速惕 | -→b | b_deh_kundi | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| BSP | 比拉斯布尔 | -→b | b_kahlur | country-below-county-rank: its land is a barony |
+| BTE | 班塔恩 | -→b | b_bantayan | country-below-county-rank: its land is a barony |
+| BWL | 贝尼瓦尔 | -→b | b_rawatsar | generated-regent,country-below-county-rank: its land is a barony |
+| CAB | 昌巴 | -→b | b_chamba_india | country-below-county-rank: its land is a barony |
+| CAU | 夸乌特兰 | -→b | b_cuautla | generated-regent,country-below-county-rank: its land is a barony |
+| CBH | 比姆贝尔 | -→b | b_bhimber | country-below-county-rank: its land is a barony |
+| CCL | 科科兰 | -→b | b_cocollan | generated-regent,country-below-county-rank: its land is a barony |
+| CCN | 奎卡特兰 | -→b | b_cuicatlan | generated-regent,country-below-county-rank: its land is a barony |
+| CCP | 夸乌奎茨帕尔特佩克 | -→b | b_cuauhcuetzpaltepec | generated-regent,country-below-county-rank: its land is a barony |
+| CDC | 卡斯泰洛 | -→b | b_cittacastello | generated-regent,country-below-county-rank: its land is a barony |
+| CDD | 琼丹迪 | -→b | b_chaudandi | generated-regent,country-below-county-rank: its land is a barony |
+| CEP | 凯法洛尼亚 | -→b | b_cephalonia | vassal,country-below-county-rank: its land is a barony |
+| CER | 哲卢 | -→b | b_rohtas | generated-regent,country-below-county-rank: its land is a barony |
+| CES | 切塞纳 | -→b | b_cesena | country-below-county-rank: its land is a barony |
+| CHM | 奇穆 | -→b | b_chan_chan | generated-regent,country-below-county-rank: its land is a barony |
+| CIN | 至那 | -→b | b_tosora | generated-regent,country-below-county-rank: its land is a barony |
+| CLA | 克兰迪博伊 | -→b | b_newtownards | country-below-county-rank: its land is a barony |
+| CLC | 查尔科 | -→b | b_chalco | generated-regent,country-below-county-rank: its land is a barony |
+| CLL | 乔卢拉 | -→b | b_cholollan | generated-regent,country-below-county-rank: its land is a barony |
+| CLP | 奇拉帕 | -→b | b_chilapa | generated-regent,country-below-county-rank: its land is a barony |
+| CLQ | 科利克 | -→b | b_collique | generated-regent,country-below-county-rank: its land is a barony |
+| CMA | 西康诺特 | -→b | b_clifden | country-below-county-rank: its land is a barony |
+| CMR | 卡梅里诺 | -→b | b_camerino | country-below-county-rank: its land is a barony |
+| CMS | 凯迈斯 | -→b | b_fishguard | vassal,country-below-county-rank: its land is a barony |
+| CNC | 坎奇 | -→b | b_waqrapukara | generated-regent,country-below-county-rank: its land is a barony |
+| CNL | 阿卡努尔 | -→b | b_calkini | generated-regent,country-below-county-rank: its land is a barony |
+| CNT | 卡伊安塔 | -→b | b_kainta | generated-regent,country-below-county-rank: its land is a barony |
+| COG | 草塘 | -→b | b_wengshui | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| COI | 尤佐库 | -→b | b_coixtlahuacan | generated-regent,country-below-county-rank: its land is a barony |
+| CON | 科伊南 | -→b | b_coinan | generated-regent,country-below-county-rank: its land is a barony |
+| CPN | 佐阿潘 | -→b | b_choapan | generated-regent,country-below-county-rank: its land is a barony |
+| CRK | 楚鲁梅夸 | -→b | b_churumekua | generated-regent,country-below-county-rank: its land is a barony |
+| CRL | 乌尔岑 | -→b | b_urtsun | country-below-county-rank: its land is a barony |
+| CSM | 科萨马洛阿潘 | -→b | b_cosamaloapan | generated-regent,country-below-county-rank: its land is a barony |
+| CSU | 库斯科 | -→b | b_qusqu | country-below-county-rank: its land is a barony |
+| CTL | 奇尧特拉 | -→b | b_chiautla | generated-regent,country-below-county-rank: its land is a barony |
+| CUL | 库尔瓦坎 | -→b | b_culhuacan | country-below-county-rank: its land is a barony |
+| CUU | 库埃纳瓦卡 | -→b | b_cuauhnahuac | generated-regent,country-below-county-rank: its land is a barony |
+| CUZ | 库察马拉 | -→b | b_cutzamala | generated-regent,country-below-county-rank: its land is a barony |
+| CVN | 东布雷夫讷 | -→b | b_cavan | country-below-county-rank: its land is a barony |
+| DAA | 道拉 | -→b | b_daura | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| DHK | 达赫拉克 | -→b | b_dahlak | generated-regent,country-below-county-rank: its land is a barony |
+| DIL | 迪尔马奇 | -→b | b_kozluk | vassal,country-below-county-rank: its land is a barony |
+| DLA | 达拉 | -→b | b_odoli | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| DLN | 东兰 | -→b | b_donglan | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| DMB | 东博利‑博赫特 | -→b | b_akre | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| DOG | 多格拉 | -→b | b_kathua | generated-regent,country-below-county-rank: its land is a barony |
+| DOM | 栋普 | -→b | b_dompu | generated-regent,country-below-county-rank: its land is a barony |
+| DRE | 德勒 | -→b | b_dreux | vassal,country-below-county-rank: its land is a barony |
+| DRP | 拉姆讷格尔 | -→b | b_dharampur | country-below-county-rank: its land is a barony |
+| DRW | 陀多瓦 | -→b | b_taranagar | country-below-county-rank: its land is a barony |
+| DWG | 大王 | -→b | b_sanmao | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| DYG | 都阳 | -→b | b_duyang | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| DZH | 底寨 | -→b | b_longchang | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| DZK | 杜尔祖克 | -→b | b_tsontaroy_kala | generated-regent,country-below-county-rank: its land is a barony |
+| EGL | 埃伊尔 | -→b | b_sivrice | vassal,country-below-county-rank: its land is a barony |
+| EJI | 埃吉米 | -→b | b_hvlan | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ELA | 伊罗耶达都 | -→b | b_kottarakkara | generated-regent,country-below-county-rank: its land is a barony |
+| ELY | 伊莱 | -→b | b_moycarn | country-below-county-rank: its land is a barony |
+| ETZ | 埃察特兰 | -→b | b_etzatlan | generated-regent,country-below-county-rank: its land is a barony |
+| EWY | 尤亚斯 | -→b | b_ewyas | vassal,country-below-county-rank: its land is a barony |
+| FAE | 法恩扎 | -→b | b_faenza | vassal,country-below-county-rank: its land is a barony |
+| FCL | 菲斯卡尔 | -→b | b_tullamore | country-below-county-rank: its land is a barony |
+| FLN | 富伦 | -→b | b_hailang | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| FLY | 奥法利 | -→b | b_daingean | country-below-county-rank: its land is a barony |
+| FMA | 弗马纳 | -→b | b_enniskillen | country-below-county-rank: its land is a barony |
+| FMN | 富曼 | -→b | b_fuman | generated-regent,country-below-county-rank: its land is a barony |
+| FRM | 费尔莫 | -→b | b_fermo | country-below-county-rank: its land is a barony |
+| FUT | 弗提 | -→b | b_futi | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| FZH | 富州 | -→b | b_fuzhou_guangnan | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| GED | 格迪 | -→b | b_gedi | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| GLS | 格伦斯 | -→b | b_ballycastle | country-below-county-rank: its land is a barony |
+| GLU | 高罗 | -→b | b_shinan | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| GNG | 珙 | -→b | b_luoji | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| GOA | 果阿 | -→b | b_goa | country-below-county-rank: its land is a barony |
+| GRR | 加罗钱巴 | -→b | b_cangochamba | generated-regent,country-below-county-rank: its land is a barony |
+| GUB | 古比奥 | -→b | b_gubbio | generated-regent,country-below-county-rank: its land is a barony |
+| GWR | 高尔 | -→b | b_swansea | vassal,country-below-county-rank: its land is a barony |
+| GYE | 嘉绒 | -→b | b_durgyeling | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| GYT | 建塘 | -→b | b_nixi | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| GZH | 古州 | -→b | b_guzhou | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| HBN | 哈斯巴尼 | -→b | b_ujan | tributary,country-below-county-rank: its land is a barony |
+| HCH | 瓦马丘科 | -→b | b_markahuamachuco | generated-regent,country-below-county-rank: its land is a barony |
+| HCI | 哈吉埃米尔 | -→b | b_mesudiye | tributary,country-below-county-rank: its land is a barony |
+| HDR | 哈杜尔 | -→b | b_sulaymaniyah | tributary,country-below-county-rank: its land is a barony |
+| HHP | 双肃 | -→b | b_thaungdut | generated-regent,country-below-county-rank: its land is a barony |
+| HJZ | 韦霍津戈 | -→b | b_huexotzinco | generated-regent,country-below-county-rank: its land is a barony |
+| HKZ | 北山 | -→b | b_nakijin | country-below-county-rank: its land is a barony |
+| HNC | 珲春 | -→b | b_huncun | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| HOT | 禾屯吉 | -→b | b_sunggari | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| HRB | 哈尔卜 | -→b | b_khalis_medina | generated-regent,country-below-county-rank: its land is a barony |
+| HRO | 霍罗 | -→b | b_katen | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| HSC | 汉斯卡 | -→b | b_chisinau | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| HST | 特奥约特兰 | -→b | b_teayotlan | generated-regent,country-below-county-rank: its land is a barony |
+| HTN | 霍京 | -→b | b_hotin | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| HTY | 哈图凯 | -→b | b_mapa | generated-regent,country-below-county-rank: its land is a barony |
+| HTZ | 惠茨奎利克 | -→b | b_huitzquilic | generated-regent,country-below-county-rank: its land is a barony |
+| HUX | 瓦斯特佩克 | -→b | b_huaxtepec | generated-regent,country-below-county-rank: its land is a barony |
+| HYC | 韦亚科科特拉 | -→b | b_huayacocotla | generated-regent,country-below-county-rank: its land is a barony |
+| HYM | 伊瓦内 | -→b | b_athlone | country-below-county-rank: its land is a barony |
+| HYT | 海图克 | -→b | b_shanjir | generated-regent,country-below-county-rank: its land is a barony |
+| HZH | 洪州 | -→b | b_yongcong | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| HZN | 希赞 | -→b | b_hizan | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| HZR | 哈兹里 | -→b | b_hazro | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ICM | 依其马 | -→b | b_ishma | generated-regent,country-below-county-rank: its land is a barony |
+| IFE | 伊费 | -→b | b_ife | generated-regent,country-below-county-rank: its land is a barony |
+| IJB | 伊杰布 | -→b | b_ijebu_ode | generated-regent,country-below-county-rank: its land is a barony |
+| IJE | 伊杰罗 | -→b | b_ikere | generated-regent,country-below-county-rank: its land is a barony |
+| IJO | 利勒茹尔丹 | -→b | b_lisle_jourdain | vassal,country-below-county-rank: its land is a barony |
+| IJS | 伊杰沙 | -→b | b_ilesa | generated-regent,country-below-county-rank: its land is a barony |
+| IMA | 伊马尔 | -→b | b_glendalough | country-below-county-rank: its land is a barony |
+| IMN | 伊曼卡 | -→b | b_imanka | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| IMO | 伊莫拉 | -→b | b_imola | country-below-county-rank: its land is a barony |
+| INA | 伊南奇 | -→b | b_lazkiye | vassal,country-below-county-rank: its land is a barony |
+| INI | 因尼肖温 | -→b | b_inishowen | vassal,country-below-county-rank: its land is a barony |
+| IRD | 伊鲁杜 | -→b | b_irodo | generated-regent,country-below-county-rank: its land is a barony |
+| ISL | 希维巴克 | -→b | b_shiewhibak | generated-regent,country-below-county-rank: its land is a barony |
+| ISO | 伊塞多 | -→b | b_offa | generated-regent,country-below-county-rank: its land is a barony |
+| ITU | 伊图 | -→b | b_changchun | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| IVG | 艾维 | -→b | b_iveagh | country-below-county-rank: its land is a barony |
+| IXA | 伊斯塔潘 | -→b | b_ixtapan | generated-regent,country-below-county-rank: its land is a barony |
+| IXL | 伊斯特兰 | -→b | b_ixtlan | generated-regent,country-below-county-rank: its land is a barony |
+| IXT | 伊斯塔卡马什蒂特兰 | -→b | b_ixtacamaxtitlan | generated-regent,country-below-county-rank: its land is a barony |
+| IYA | 伊拉雅拉 | -→b | b_oshogbo | generated-regent,country-below-county-rank: its land is a barony |
+| IZC | 伊斯塔查卡拉潘 | -→b | b_iztachacalapan | generated-regent,country-below-county-rank: its land is a barony |
+| IZO | 伊佐坎 | -→b | b_itzocan | generated-regent,country-below-county-rank: its land is a barony |
+| JHI | 乔希亚 | -→b | b_suratgarh | generated-regent,country-below-county-rank: its land is a barony |
+| JIZ | 积石州 | -→b | b_jishi | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| JJK | 杰贾卡布克提 | -→b | b_kalinjar | country-below-county-rank: its land is a barony |
+| JLO | 贾伊洛洛 | -→b | b_jailolo | generated-regent,country-below-county-rank: its land is a barony |
+| JNT | 贾因蒂亚 | -→b | b_jaintiapur | generated-regent,country-below-county-rank: its land is a barony |
+| JSI | 建水 | -→b | b_jianshui | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| JSK | 贾斯克 | -→b | b_bandar_e_jask | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| JUS | 朱舍里 | -→b | b_juxeri | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| JUX | 尤佐奎亚 | -→b | b_juxtlahuaca | generated-regent,country-below-county-rank: its land is a barony |
+| JWR | 乔哈尔 | -→b | b_jawhar | country-below-county-rank: its land is a barony |
+| KAU | 考爱 | -→b | b_kaua_i | country-below-county-rank: its land is a barony |
+| KBD | 库巴德 | -→b | b_ladik_pontus | tributary,country-below-county-rank: its land is a barony |
+| KDA | 卡巴尔达 | -→b | b_kuzhyb | generated-regent,country-below-county-rank: its land is a barony |
+| KDU | 帕金杰塔杜 | -→b | b_kodungallur | generated-regent,country-below-county-rank: its land is a barony |
+| KER | 齐亚 | -→b | b_tsiya | generated-regent,country-below-county-rank: its land is a barony |
+| KGR | 冈格拉 | -→b | b_nagarkot | country-below-county-rank: its land is a barony |
+| KHF | 哈夫 | -→b | b_salameh | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| KHG | 卡加 | -→b | b_amchok | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| KHU | 洪季 | -→b | b_khunj | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| KIP | 奇皮克 | -→b | b_susaco | generated-regent,country-below-county-rank: its land is a barony |
+| KKG | 古泰‑卡塔内加拉 | -→b | b_kutai_lama | country-below-county-rank: its land is a barony |
+| KLA | 卡拉特 | -→b | b_kalat | generated-regent,country-below-county-rank: its land is a barony |
+| KLH | 卡拉汉迪 | -→b | b_kalahandinagara | country-below-county-rank: its land is a barony |
+| KLI | 格劳利 | -→b | b_karauli | country-below-county-rank: its land is a barony |
+| KLS | 卡利苏苏 | -→b | b_kalisusu | generated-regent,country-below-county-rank: its land is a barony |
+| KLU | 古卢 | -→b | b_naggar | generated-regent,country-below-county-rank: its land is a barony |
+| KLW | 戈尔瓦 | -→b | b_awaran | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| KML | 古麻剌朗 | -→b | b_lamitan | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| KNK | 甘盖尔 | -→b | b_kanker | generated-regent,country-below-county-rank: its land is a barony |
+| KNW | 哥那威 | -→b | b_unaaha | generated-regent,country-below-county-rank: its land is a barony |
+| KOW | 科沃伊 | -→b | b_chakanbakan | generated-regent,country-below-county-rank: its land is a barony |
+| KRI | 库拉尼 | -→b | b_qasr_shirin | tributary,country-below-county-rank: its land is a barony |
+| KSA | $kashan$ | -→b | b_kashan | tributary,country-below-county-rank: its land is a barony |
+| KTL | 库特勒哈尔 | -→b | b_kutlehar | generated-regent,country-below-county-rank: its land is a barony |
+| KTN | 库塔纳德 | -→b | b_ponnani | generated-regent,country-below-county-rank: its land is a barony |
+| KTT | 忽都 | -→b | b_vakhs | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| KYA | 科塔亚姆 | -→b | b_wayanad | generated-regent,country-below-county-rank: its land is a barony |
+| LAC | 索茨莱布 | -→b | b_napinaica | generated-regent,country-below-county-rank: its land is a barony |
+| LBO | 雷波 | -→b | b_leibo | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| LEK | 莱基亚 | -→b | b_kurakh | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| LGE | 邻稽 | -→b | b_linge | generated-regent,country-below-county-rank: its land is a barony |
+| LGQ | 龙泉 | -→b | b_longquanping | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| LHL | 拉胡尔 | -→b | b_keylong | generated-regent,country-below-county-rank: its land is a barony |
+| LHN | 拉海纳 | -→b | b_lahaina | generated-regent,country-below-county-rank: its land is a barony |
+| LLN | 陆良 | -→b | b_luliang | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| LLU | 拉卢 | -→b | b_hulawen | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| LNK | 万那 | -→b | b_ngabang | generated-regent,country-below-county-rank: its land is a barony |
+| LOL | 洛洛达 | -→b | b_loloda | generated-regent,country-below-county-rank: its land is a barony |
+| LTU | 烂土 | -→b | b_lantu | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| LUP | 卢皮哈基 | -→b | b_chucuito | generated-regent,country-below-county-rank: its land is a barony |
+| LXG | 罗雄 | -→b | b_luoxiong | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| LZI | 良寨 | -→b | b_bazhai | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| LZO | 罗佐 | -→b | b_boai | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| MAH | 马希安 | -→b | b_malong | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| MAT | 托洛坎 | -→b | b_tollohcan | generated-regent,country-below-county-rank: its land is a barony |
+| MAU | 毛甘吉 | -→b | b_mauganj | generated-regent,country-below-county-rank: its land is a barony |
+| MBD | 马纳邦德罗 | -→b | b_manabondro | generated-regent,country-below-county-rank: its land is a barony |
+| MBT | 姆巴塔 | -→b | b_mbanza_mbata | country-below-county-rank: its land is a barony |
+| MCC | 米却阿潘科 | -→b | b_panuco | generated-regent,country-below-county-rank: its land is a barony |
+| MGN | 勐恩 | -→b | b_menglei | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| MGT | 孟弥 | -→b | b_mongmit | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| MHC | 梅拉瓦坎 | -→b | b_melahuacan | generated-regent,country-below-county-rank: its land is a barony |
+| MHK | 勐亨 | -→b | b_kongwei | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| MHL | 马希拉卡 | -→b | b_mahilaka | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| MHT | 米亚瓦特兰 | -→b | b_miahuatlan | generated-regent,country-below-county-rank: its land is a barony |
+| MIC | 密陈 | -→b | b_yilaha | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| MIT | 米蒂克 | -→b | b_mitic | generated-regent,country-below-county-rank: its land is a barony |
+| MKG | 梅孔加 | -→b | b_kolumba | country-below-county-rank: its land is a barony |
+| MKW | 梅尔克万 | -→b | b_osnavieh | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| MLE | 弥勒 | -→b | b_mile | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| MLG | 马龙 | -→b | b_malong_qujing | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| MLI | 马林迪 | -→b | b_malindi | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| MLK | 莫洛卡伊 | -→b | b_moloka_i | country-below-county-rank: its land is a barony |
+| MLT | 马拉卡托 | -→b | b_malacatos | generated-regent,country-below-county-rank: its land is a barony |
+| MNA | 马尼拉 | -→b | b_maynila | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| MON | 蒙福尔 | -→b | b_monfort_lamaury | vassal,country-below-county-rank: its land is a barony |
+| MOO | 摩洛 | -→b | b_moro | generated-regent,country-below-county-rank: its land is a barony |
+| MRE | 穆伦 | -→b | b_jixi | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| MRN | 莫罗内内 | -→b | b_taubonto | generated-regent,country-below-county-rank: its land is a barony |
+| MRW | 马尔瓦尔 | -→b | b_khed | country-below-county-rank: its land is a barony |
+| MTA | 马切拉塔 | -→b | b_macerata | country-below-county-rank: its land is a barony |
+| MTG | 勐汀 | -→b | b_nam_thing | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| MTR | 马特兰加 | -→b | b_kavaje | vassal,country-below-county-rank: its land is a barony |
+| MUH | 穆希亚 | -→b | b_yongmingcheng | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| MUS | 穆什 | -→b | b_mus | vassal,country-below-county-rank: its land is a barony |
+| MYA | 孟养 | -→b | b_monhyin | generated-regent,country-below-county-rank: its land is a barony |
+| MYM | 马永马尔卡 | -→b | b_paqwayranra | generated-regent,country-below-county-rank: its land is a barony |
+| MZJ | 马赞贾尼 | -→b | b_erbil | vassal,country-below-county-rank: its land is a barony |
+| MZK | 穆扎卡 | -→b | b_ballsh | vassal,country-below-county-rank: its land is a barony |
+| MZT | 米赞特拉 | -→b | b_mizantla | generated-regent,country-below-county-rank: its land is a barony |
+| NAG | 那迦罗 | -→b | b_nagar | country-below-county-rank: its land is a barony |
+| NAL | 纳拉吉 | -→b | b_ougen | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| NEM | 内梅尔 | -→b | b_nemeri | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| NEY | 讷殷 | -→b | b_golmin_salggiyan | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| NGL | 恩加利 | -→b | b_sumbawa | generated-regent,country-below-county-rank: its land is a barony |
+| NND | 纽恩迪伊 | -→b | b_mictlan | generated-regent,country-below-county-rank: its land is a barony |
+| NPG | 綦江 | -→b | b_qijiang | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| NQS | 纳吉斯 | -→b | b_khawr_nubt | generated-regent,country-below-county-rank: its land is a barony |
+| NRO | 诺罗 | -→b | b_nuoluo | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| NRP | 努尔布尔 | -→b | b_nurpur | country-below-county-rank: its land is a barony |
+| NRS | 讷尔辛格布尔 | -→b | b_narsinghpur | vassal,country-below-county-rank: its land is a barony |
+| NSU | 恩苏迪 | -→b | b_masinga | generated-regent,country-below-county-rank: its land is a barony |
+| NTA | 坎塔 | -→b | b_cantamarca | generated-regent,country-below-county-rank: its land is a barony |
+| NTL | 马哈赞加 | -→b | b_mahajanga | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| NWU | 钮兀 | -→b | b_puri_simao | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| NYZ | 宁远州 | -→b | b_muong_te | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| NZN | 南山 | -→b | b_oozato | country-below-county-rank: its land is a barony |
+| OAH | 瓦胡 | -→b | b_o_ahu | country-below-county-rank: its land is a barony |
+| OAP | 奥阿潘 | -→b | b_oapan | generated-regent,country-below-county-rank: its land is a barony |
+| OHK | 奥奎‑奥温格 | -→b | b_ohkweeo_owingeh | generated-regent,country-below-county-rank: its land is a barony |
+| OKE | 奥凯伊拉 | -→b | b_oke_ila | generated-regent,country-below-county-rank: its land is a barony |
+| OMT | 奥梅特佩克 | -→b | b_ometepec | generated-regent,country-below-county-rank: its land is a barony |
+| OND | 翁多 | -→b | b_ondo | generated-regent,country-below-county-rank: its land is a barony |
+| ORD | 奥蒙德 | -→b | b_clonmel | vassal,country-below-county-rank: its land is a barony |
+| OSS | 奥索里 | -→b | b_cullahill | vassal,country-below-county-rank: its land is a barony |
+| OTA | 奥塔蒂特兰 | -→b | b_otatitlan | generated-regent,country-below-county-rank: its land is a barony |
+| OWO | 奥沃 | -→b | b_owo | generated-regent,country-below-county-rank: its land is a barony |
+| OXT | 奥斯特利潘 | -→b | b_oxtlipan | generated-regent,country-below-county-rank: its land is a barony |
+| PCD | 平茶洞 | -→b | b_xiushan | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| PCO | 帕里纳科查 | -→b | b_tucssa | generated-regent,country-below-county-rank: its land is a barony |
+| PCR | 波克拉 | -→b | b_wari_peru | generated-regent,country-below-county-rank: its land is a barony |
+| PDG | 平定 | -→b | b_maxia | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| PEM | 奔巴 | -→b | b_ras_mkumbuu | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| PES | 佩萨罗 | -→b | b_pesaro | consul-holds,country-below-county-rank: its land is a barony |
+| PGB | 平坝 | -→b | b_pingba | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| PGL | 布格尔 | -→b | b_pugal | country-below-county-rank: its land is a barony |
+| PHY | 帕尧 | -→b | b_phayao | country-below-county-rank: its land is a barony |
+| PIG | 皮纳瓜 | -→b | b_pikillaqta | generated-regent,country-below-county-rank: its land is a barony |
+| PLA | 帕尔拉哈拉 | -→b | b_pal_lahara | generated-regent,country-below-county-rank: its land is a barony |
+| PLL | 普利禄 | -→b | b_pulilu | generated-regent,country-below-county-rank: its land is a barony |
+| PLT | 巴利塔纳 | -→b | b_palitana | country-below-county-rank: its land is a barony |
+| PNA | 普尼亚 | -→b | b_sidhmukh | generated-regent,country-below-county-rank: its land is a barony |
+| PNC | 蓬奇 | -→b | b_poonch | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| PRT | 曼多尔 | -→b | b_phalvardhika | vassal,country-below-county-rank: its land is a barony |
+| PSA | 八昔 | -→b | b_pasai | generated-regent,country-below-county-rank: its land is a barony |
+| PTL | 普克特兰 | -→b | b_puctlan | generated-regent,country-below-county-rank: its land is a barony |
+| PTZ | 平头著可 | -→b | b_wuluo | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| PUA | 磨 | -→b | b_pua | tributary,country-below-county-rank: its land is a barony |
+| QAN | 坎霍瓦尔 | -→b | b_jolom_konob | generated-regent,country-below-county-rank: its land is a barony |
+| QGS | 邛水 | -→b | b_qiongshui | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| QIG | 基耶戈基 | -→b | b_coatlan | generated-regent,country-below-county-rank: its land is a barony |
+| QLL | 夸乌克奇奥兰 | -→b | b_quauhquechollan | generated-regent,country-below-county-rank: its land is a barony |
+| QUA | 奎特马兰 | -→b | b_cuauhtemallan | generated-regent,country-below-county-rank: its land is a barony |
+| RAN | 拉诺 | -→b | b_rano | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| RAV | 拉文纳 | -→b | b_ravenna | country-below-county-rank: its land is a barony |
+| RCC | 罗什舒阿尔 | -→b | b_rochechouart | vassal,country-below-county-rank: its land is a barony |
+| RGM | 容美 | -→b | b_rongmei | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| RGS | 容山 | -→b | b_rongshan | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| RJI | 拉杰毕普拉 | -→b | b_nandod | country-below-county-rank: its land is a barony |
+| RJR | 拉久里 | -→b | b_rajouri | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| RND | 仁德 | -→b | b_rende | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| RNG | 戎 | -→b | b_rongxian | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| RNK | 拉内库赫 | -→b | b_langarud | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| RRU | 巴鲁 | -→b | b_barru | country-below-county-rank: its land is a barony |
+| RUP | 鲁平 | -→b | b_ruppin | vassal,country-below-county-rank: its land is a barony |
+| RUT | 鲁图尔 | -→b | b_rutul | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| SAO | 萨洛纳 | -→b | b_salona | vassal,country-below-county-rank: its land is a barony |
+| SAY | 萨约兰 | -→b | b_sayula | generated-regent,country-below-county-rank: its land is a barony |
+| SBU | 塞林包 | -→b | b_selimbau | country-below-county-rank: its land is a barony |
+| SDR | 锡登伦 | -→b | b_sidenreng | generated-regent,country-below-county-rank: its land is a barony |
+| SGS | 上思 | -→b | b_shangsi | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| SGU | 桑高 | -→b | b_sanggau | generated-regent,country-below-county-rank: its land is a barony |
+| SGZ | 桑植 | -→b | b_shixi | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| SHG | 上林 | -→b | b_xilin | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| SHI | 施林 | -→b | b_tulazi | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| SHR | 撒哈拉 | -→b | b_churu | generated-regent,country-below-county-rank: its land is a barony |
+| SIG | 锡昂 | -→b | b_sengkae | generated-regent,country-below-county-rank: its land is a barony |
+| SIR | 西林 | -→b | b_shili | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| SKT | 苏盖德 | -→b | b_suket | country-below-county-rank: its land is a barony |
+| SLI | 萨布利 | -→b | b_mahabad | tributary,country-below-county-rank: its land is a barony |
+| SLN | 卡伯里 | -→b | b_sligo | country-below-county-rank: its land is a barony |
+| SLP | 沙拉巴朗 | -→b | b_sasak | generated-regent,country-below-county-rank: its land is a barony |
+| SMN | 失里绵 | -→b | b_hulin | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| SMV | 三补缚罗耶尔 | -→b | b_padaividu | country-below-county-rank: its land is a barony |
+| SNC | 三察哈 | -→b | b_boduna | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| SNT | 森蒂斯帕克 | -→b | b_sentispac | generated-regent,country-below-county-rank: its land is a barony |
+| SOH | 索赫里 | -→b | b_rawanduz | vassal,country-below-county-rank: its land is a barony |
+| SPG | 石屏 | -→b | b_shiping | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| SRA | 索拉 | -→b | b_soras | generated-regent,country-below-county-rank: its land is a barony |
+| SRB | 萨尔毕道朗 | -→b | b_haresabad | country-below-county-rank: its land is a barony |
+| SSI | 斯托罗日涅茨 | -→b | b_storozhynets | tributary,generated-regent,country-below-county-rank: its land is a ba |
+| SZG | 师宗 | -→b | b_shizong | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| SZI | 舍资 | -→b | b_lihua | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| SZU | 石柱 | -→b | b_shizhu | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| TAA | 特拉尔潘 | -→b | b_tlalpan | generated-regent,country-below-county-rank: its land is a barony |
+| TAO | 亚洛法伊博 | -→b | b_ialophaybo | generated-regent,country-below-county-rank: its land is a barony |
+| TAX | 塔希马罗阿 | -→b | b_taximaroa | generated-regent,country-below-county-rank: its land is a barony |
+| TBA | 塔巴萨兰 | -→b | b_khuchni | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| TCC | 特佩科阿奎尔科 | -→b | b_tepecoacuilco | generated-regent,country-below-county-rank: its land is a barony |
+| TCH | 特拉奇科 | -→b | b_tlachco | generated-regent,country-below-county-rank: its land is a barony |
+| TCP | 特拉科潘 | -→b | b_tlacopan | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| TCQ | 恩迪西努 | -→b | b_tlachquiauhco | generated-regent,country-below-county-rank: its land is a barony |
+| TCY | 特拉帕科扬 | -→b | b_tlapacoyan | generated-regent,country-below-county-rank: its land is a barony |
+| TEE | 特特拉 | -→b | b_tetela | generated-regent,country-below-county-rank: its land is a barony |
+| TEL | 卡什坎 | -→b | b_teulinchan | generated-regent,country-below-county-rank: its land is a barony |
+| TEM | 铁米尔戈伊 | -→b | b_maykop | generated-regent,country-below-county-rank: its land is a barony |
+| TEY | 泰帕纳 | -→b | b_teypana | generated-regent,country-below-county-rank: its land is a barony |
+| TFK | 提拉夫卡 | -→b | b_bourem | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| TGH | 蒂勒拉 | -→b | b_skreen | country-below-county-rank: its land is a barony |
+| TGY | 唐崖 | -→b | b_datian_shizhou | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| THP | 托皮亚 | -→b | b_kruje | vassal,country-below-county-rank: its land is a barony |
+| TLA | 蒂斯特拉 | -→b | b_tixtla | generated-regent,country-below-county-rank: its land is a barony |
+| TLL | 特特兰 | -→b | b_tetellan | generated-regent,country-below-county-rank: its land is a barony |
+| TLM | 图勒姆 | -→b | b_bandar_e_anzali | generated-regent,country-below-county-rank: its land is a barony |
+| TLT | 特拉科特拉尔潘 | -→b | b_tlacotlalpan | generated-regent,country-below-county-rank: its land is a barony |
+| TLW | 塔利旺 | -→b | b_taliwang | generated-regent,country-below-county-rank: its land is a barony |
+| TLZ | 特拉尔科萨乌蒂特兰 | -→b | b_tlazcozauhtitlan | generated-regent,country-below-county-rank: its land is a barony |
+| TMK | 塔得迈卡 | -→b | b_tadmekka | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| TMS | 特马斯卡尔特佩克 | -→b | b_temascaltepec | generated-regent,country-below-county-rank: its land is a barony |
+| TNN | 塔诺 | -→b | b_than_u_ge | generated-regent,country-below-county-rank: its land is a barony |
+| TNP | 添平 | -→b | b_tianping | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| TNX | 特纳马斯特兰 | -→b | b_tenamaxtlan | generated-regent,country-below-county-rank: its land is a barony |
+| TOD | 托多 | -→b | b_lefu | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| TOX | 屯 | -→b | b_wanhufu | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| TOZ | 托斯特兰 | -→b | b_tozlan | generated-regent,country-below-county-rank: its land is a barony |
+| TPL | 特波斯科库拉 | -→b | b_yucundaa | generated-regent,country-below-county-rank: its land is a barony |
+| TPN | 特克帕蒂特兰 | -→b | b_tepactitlan | generated-regent,country-below-county-rank: its land is a barony |
+| TPT | 特克潘特佩克 | -→b | b_tecpan | generated-regent,country-below-county-rank: its land is a barony |
+| TPX | 特佩西克 | -→b | b_tepexi | generated-regent,country-below-county-rank: its land is a barony |
+| TSE | 特塞乔阿坎 | -→b | b_tesechoacan | generated-regent,country-below-county-rank: its land is a barony |
+| TSK | 杂谷 | -→b | b_baoning_maozhou | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| TST | 图夫舒尔蒂亚 | -→b | b_tuf_shur_tia | generated-regent,country-below-county-rank: its land is a barony |
+| TTA | 特乌蒂拉 | -→b | b_teutila | generated-regent,country-below-county-rank: its land is a barony |
+| TTC | 塔姆托克 | -→b | b_tamtoc | generated-regent,country-below-county-rank: its land is a barony |
+| TTE | 的里雅斯特 | -→b | b_trieste | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| TTZ | 阿科尔瓦坎 | -→b | b_tetzcoco | country-below-county-rank: its land is a barony |
+| TUT | 托托特佩克 | -→b | b_tutotepec | generated-regent,country-below-county-rank: its land is a barony |
+| TUZ | 托赞特兰 | -→b | b_tuzantla | generated-regent,country-below-county-rank: its land is a barony |
+| TXI | 提溪 | -→b | b_tixi | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| TZC | 图拉钦科 | -→b | b_tollantzinco | generated-regent,country-below-county-rank: its land is a barony |
+| TZE | 策尔塔尔 | -→b | b_quechula | generated-regent,country-below-county-rank: its land is a barony |
+| TZH | 齐乌科阿克 | -→b | b_tziuhcoac | generated-regent,country-below-county-rank: its land is a barony |
+| TZI | 茨塔夸罗 | -→b | b_tzitacuaro | generated-regent,country-below-county-rank: its land is a barony |
+| TZU | 楚图希尔 | -→b | b_atitlan_guatemala | generated-regent,country-below-county-rank: its land is a barony |
+| TZZ | 察波钦戈 | -→b | b_tzapotzingo | generated-regent,country-below-county-rank: its land is a barony |
+| UAU | 夸乌特奥潘 | -→b | b_cuauhteopan | generated-regent,country-below-county-rank: its land is a barony |
+| UAY | 瓦伊米尔 | -→b | b_tixmul | generated-regent,country-below-county-rank: its land is a barony |
+| UGH | 乌格罕 | -→b | b_qatruyeh | generated-regent,country-below-county-rank: its land is a barony |
+| UGW | 翁瓜纳 | -→b | b_ungwana | generated-regent,country-below-county-rank: its land is a barony |
+| UMA | 乌马苏尤斯 | -→b | b_achacachi | generated-regent,country-below-county-rank: its land is a barony |
+| UMH | 奥维尔 | -→b | b_burrishoole | country-below-county-rank: its land is a barony |
+| VDK | 瓦达库姆库尔 | -→b | b_karikkode | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| VDZ | 瓦约茨佐尔 | -→b | b_gladzor | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| WEJ | 窝集 | -→b | b_hailun | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| WEK | 倭肯 | -→b | b_wehe | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| WMO | 威茂 | -→b | b_wenshan | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| WRG | 韦拉加尔 | -→b | b_wairagarh | generated-regent,country-below-county-rank: its land is a barony |
+| WUN | 穆纳 | -→b | b_kotano_muna | generated-regent,country-below-county-rank: its land is a barony |
+| WZH | 五寨 | -→b | b_wuzhai | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| XCG | 忻城 | -→b | b_xincheng_xincheng | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| XCH | 霍奇米尔科 | -→b | b_xochimilco | generated-regent,country-below-county-rank: its land is a barony |
+| XCP | 霍奇阿潘 | -→b | b_xochiapa | generated-regent,country-below-county-rank: its land is a barony |
+| XCT | 霍奇特佩克 | -→b | b_xochitepec | generated-regent,country-below-county-rank: its land is a barony |
+| XIC | 希科奇马尔科 | -→b | b_xicochimalco | generated-regent,country-below-county-rank: its land is a barony |
+| XIH | 修特兰 | -→b | b_xihutla | generated-regent,country-below-county-rank: its land is a barony |
+| XIL | 希洛特佩克 | -→b | b_xilotepec | generated-regent,country-below-county-rank: its land is a barony |
+| XIU | 图图尔休 | -→b | b_mani | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| XLG | 仙龙 | -→b | b_mingyi | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| XLT | 沙洛斯托蒂特兰 | -→b | b_xalostotitlan | generated-regent,country-below-county-rank: its land is a barony |
+| XNG | 咸宁 | -→b | b_weiqing | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| XSY | 西山阳 | -→b | b_xiajiang | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| YAH | 亚瓦利坎 | -→b | b_yahualican | generated-regent,country-below-county-rank: its land is a barony |
+| YAM | 亚姆 | -→b | b_najran | generated-regent,country-below-county-rank: its land is a barony |
+| YAS | 亚斯 | -→b | b_liwa | generated-regent,country-below-county-rank: its land is a barony |
+| YCH | 玉库萨图塔 | -→b | b_zacatepec | generated-regent,country-below-county-rank: its land is a barony |
+| YDZ | 约佐卡伊 | -→b | b_yodzocahi | generated-regent,country-below-county-rank: its land is a barony |
+| YIM | 亦马忽 | -→b | b_itu_jilin | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| YNH | 沿河 | -→b | b_yanhe | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| YNL | 筠连 | -→b | b_yunlian | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| YOK | 约科坦 | -→b | b_cupilco | generated-regent,country-below-county-rank: its land is a barony |
+| YOO | 约瑟 | -→b | b_nogule | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| YRN | 雅兰 | -→b | b_anju_nurgan | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| YSN | 永顺僮 | -→b | b_yongshun | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| YZO | 亦佐 | -→b | b_luoshan_qujing | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ZAT | 萨卡特兰 | -→b | b_zacatlan | generated-regent,country-below-county-rank: its land is a barony |
+| ZCT | 萨卡图拉 | -→b | b_zacatollan | generated-regent,country-below-county-rank: its land is a barony |
+| ZCZ | 萨卡索纳潘 | -→b | b_zacazonapan | generated-regent,country-below-county-rank: its land is a barony |
+| ZGH | 扎加 | -→b | b_dia | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ZGL | 忠路 | -→b | b_zhonglu | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ZIB | 齐卜 | -→b | b_madin_bani_sulaym | generated-regent,country-below-county-rank: its land is a barony |
+| ZIN | 锡纳佩夸罗 | -→b | b_zinapecuaro | generated-regent,country-below-county-rank: its land is a barony |
+| ZIP | 穆伊奎塔 | -→b | b_funza | generated-regent,country-below-county-rank: its land is a barony |
+| ZLD | 中林峒 | -→b | b_tonggu_liping | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ZMR | 科泽科德 | -→b | b_kozhikode | generated-regent,country-below-county-rank: its land is a barony |
+| ZNX | 镇雄 | -→b | b_mangbu | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ZOM | 聪潘科 | -→b | b_zompanco | generated-regent,country-below-county-rank: its land is a barony |
+| ZRQ | 齐尔坎 | -→b | b_mayyafariqin | vassal,country-below-county-rank: its land is a barony |
+| ZYI | 沾益 | -→b | b_zhanyi | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ZZR | 泽尔扎里 | -→b | b_semdinli | vassal,country-below-county-rank: its land is a barony |
+| AAD | 阿伊兹 | -→c | c_sudair | generated-regent,primary-title |
+| AAL | 阿里 | -→c | c_shaam | vassal,primary-title |
+| ABD | 安本杜 | -→c | c_anbamba | generated-regent,country-below-county-rank: its land is its counties |
+| ABT | 阿比蒂比 | -→c | c_mattagami | generated-regent,country-below-county-rank: its land is its counties |
+| ABV | 安布翁塔尼 | -→c | c_antandroy | generated-regent,country-below-county-rank: its land is its counties |
+| ACO | 阿库 | -→c | c_shiewhibak | generated-regent,country-below-county-rank: its land is its counties |
+| ACX | 阿卡塞 | -→c | c_culiacan | generated-regent,country-below-county-rank: its land is its counties |
+| ADH | 阿踰陀 | -→c | c_ayutthaya | tributary,country-below-county-rank: its land is its counties |
+| ADO | 阿多 | -→c | c_north_benin | generated-regent,country-below-county-rank: its land is its counties |
+| ADR | 阿昂迪罗农 | -→c | c_ganatchio | generated-regent,country-below-county-rank: its land is its counties |
+| AFA | 丹卡利 | -→c | c_afar | generated-regent,primary-title |
+| AGJ | 阿古朱达 | -→c | c_cataraqui | generated-regent,country-below-county-rank: its land is its counties |
+| AGW | 阿蒂格纳万坦 | -→c | c_wendake | generated-regent,country-below-county-rank: its land is its counties |
+| AHI | 艾赫 | -→c | c_ankara | generated-regent,country-below-county-rank: its land is its counties |
+| AHO | 阿洪姆 | -→c | c_ahom | primary-title |
+| AHU | 阿瓦卡特兰 | -→c | c_ahuacatlan | generated-regent,country-below-county-rank: its land is its counties |
+| AIM | 艾莫雷 | -→c | c_gurgueia | generated-regent,country-below-county-rank: its land is its counties |
+| AKG | 阿查坎古恩 | -→c | c_wapinippi | generated-regent,country-below-county-rank: its land is its counties |
+| AKW | 阿提卡梅克 | -→c | c_nistassinan | generated-regent,country-below-county-rank: its land is its counties |
+| AKY | 阿特拉夸耶 | -→c | c_paxtang | generated-regent,country-below-county-rank: its land is its counties |
+| ALN | 阿兰尼亚 | -→c | c_north_caucasus | generated-regent,country-below-county-rank: its land is its counties |
+| ALY | 阿拉耶 | -→c | c_alaiye | country-below-county-rank: its land is its counties |
+| AMD | 安多 | -→c | c_amdo | vassal,generated-regent,primary-title |
+| AMG | 阿马尼亚克 | -→c | c_armagnac | vassal,primary-title |
+| AMR | 米拉 | -→c | c_hawran | vassal,primary-title |
+| ANC | 安科纳 | -→c | c_marche | generated-regent,country-below-county-rank: its land is its counties |
+| ANL | 阿尼尔科 | -→c | c_anilco | generated-regent,country-below-county-rank: its land is its counties |
+| ANU | 阿伊努 | -→c | c_chishima | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| ANZ | 阿尼扎 | -→c | c_khaybar | generated-regent,country-below-county-rank: its land is its counties |
+| APA | 阿巴拉契 | -→c | c_apalachee | generated-regent,country-below-county-rank: its land is its counties |
+| ARG | 阿尔戈斯 | -→c | c_argolis | country-below-county-rank: its land is its counties |
+| ARK | 隆邑 | -→c | c_northern_arakhan | primary-title |
+| ARN | 阿伦达罗农 | -→c | c_kawartha | generated-regent,country-below-county-rank: its land is its counties |
+| ARR | 里加‑利沃尼亚 | -→c | c_inner_livonia | vassal,primary-title |
+| ART | 阿鲁剌惕 | -→c | c_maymana | tributary,generated-regent,country-below-county-rank: its land is its  |
+| ARU | 哑鲁 | -→c | c_deli | generated-regent,primary-title |
+| ARW | 特阿拉瓦 | -→c | c_bay_of_plenty | generated-regent,country-below-county-rank: its land is its counties |
+| ASH | 阿沙拉霍 | -→c | c_ihkowom_iyo_he | generated-regent,country-below-county-rank: its land is its counties |
+| ASP | 阿什希皮特 | -→c | c_chakadee_wakpa | generated-regent,country-below-county-rank: its land is its counties |
+| ATC | 阿塔龙克罗农 | -→c | c_shawanaga | generated-regent,country-below-county-rank: its land is its counties |
+| ATG | 阿蒂格尼农纳哈克 | -→c | c_quinte | generated-regent,country-below-county-rank: its land is its counties |
+| ATJ | 亚齐 | -→c | c_northern_aceh | generated-regent,primary-title |
+| ATL | 奥特兰 | -→c | c_autlan | generated-regent,country-below-county-rank: its land is its counties |
+| ATQ | 阿尔图格 | -→c | c_mardin | primary-title |
+| AUX | 欧塞尔 | -→c | c_auxerrois | vassal,country-below-county-rank: its land is its counties |
+| AVA | 瓜拉尼 | -→c | c_chiquitania | generated-regent,country-below-county-rank: its land is its counties |
+| AVR | 阿瓦尔 | -→c | c_avaria | tributary,generated-regent,country-below-county-rank: its land is its  |
+| AVY | 阿沃耶尔 | -→c | c_catahoula | generated-regent,country-below-county-rank: its land is its counties |
+| AWA | 特阿提亚瓦 | -→c | c_waikato | generated-regent,country-below-county-rank: its land is its counties |
+| AWO | 阿沃里 | -→c | c_ijebu | generated-regent,country-below-county-rank: its land is its counties |
+| AXC | 阿索奇亚潘 | -→c | c_tlalnahuac | generated-regent,country-below-county-rank: its land is its counties |
+| AYA | 阿亚尔马卡 | -→c | c_acamama | primary-title |
+| AZF | 扎菲尔 | -→c | c_hinakiyah | generated-regent,country-below-county-rank: its land is its counties |
+| BAD | 包特 | -→c | c_orissa_garjats | vassal,country-below-county-rank: its land is its counties |
+| BAI | 邦盖 | -→c | c_banggai | tributary,generated-regent,country-below-county-rank: its land is its  |
+| BAK | 巴尔达克 | -→c | c_yendyr | tributary,generated-regent,country-below-county-rank: its land is its  |
+| BAR | 巴尔 | -→c | c_barrois | vassal,primary-title |
+| BAT | 巴图特 | -→c | c_barkul | vassal,generated-regent,primary-title |
+| BAU | 鲍雷 | -→c | c_mamore | generated-regent,country-below-county-rank: its land is its counties |
+| BBA | 巴巴 | -→c | c_atacames | generated-regent,country-below-county-rank: its land is its counties |
+| BBK | 邦布 | -→c | c_khaaso | vassal,generated-regent,primary-title |
+| BDK | 博德瓦多米克 | -→c | c_cheboygan | generated-regent,country-below-county-rank: its land is its counties |
+| BDS | 巴杜斯潘 | -→c | c_qazvin | primary-title |
+| BFN | 西布雷夫讷 | -→c | c_breifne | country-below-county-rank: its land is its counties |
+| BGI | 巴吉尔米 | -→c | c_eastern_adamawa | generated-regent,country-below-county-rank: its land is its counties |
+| BGJ | 别洛戈里耶 | -→c | c_belogorye | tributary,generated-regent,primary-title |
+| BGK | 巴格尔坎德 | -→c | c_baghelkhand | country-below-county-rank: its land is its counties |
+| BGR | 班杜加拉 | -→c | c_upper_vidarbha | generated-regent,country-below-county-rank: its land is its counties |
+| BHA | 巴特尼尔 | -→c | c_jangladesh | country-below-county-rank: its land is its counties |
+| BHM | 八莫 | -→c | c_manmaw | generated-regent,country-below-county-rank: its land is its counties |
+| BHP | 马拉布姆 | -→c | c_bishnupur | country-below-county-rank: its land is its counties |
+| BIA | 巴亚 | -→c | c_suceava | tributary,generated-regent,country-below-county-rank: its land is its  |
+| BID | 多尔帕特 | -→c | c_tartu | vassal,country-below-county-rank: its land is its counties |
+| BIM | 比马 | -→c | c_sumbawa | generated-regent,country-below-county-rank: its land is its counties |
+| BIO | 厄塞尔 | -→c | c_rotalia | vassal,country-below-county-rank: its land is its counties |
+| BJA | 比亚尔米亚 | -→c | c_kuloy | generated-regent,country-below-county-rank: its land is its counties |
+| BKH | 巴达赫尚 | -→c | c_badakhshan | tributary,generated-regent,primary-title |
+| BKT | 布德韦坎通万 | -→c | c_mathoskabde | generated-regent,country-below-county-rank: its land is its counties |
+| BKZ | 巴努‑坎兹 | -→c | c_qusiyya | vassal,country-below-county-rank: its land is its counties |
+| BLA | 布莱达 | -→c | c_gwadar | vassal,generated-regent,primary-title |
+| BLD | 伯尔拉德 | -→c | c_barlad | tributary,generated-regent,country-below-county-rank: its land is its  |
+| BLE | 巴莱 | -→c | c_oromia | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| BLG | 博洛尼亚 | -→c | c_bologna | country-below-county-rank: its land is its counties |
+| BLS | 布卢瓦 | -→c | c_blois | vassal,primary-title |
+| BMB | 奔巴欧 | -→c | c_comoros | generated-regent,country-below-county-rank: its land is its counties |
+| BMK | 贝马内维卡 | -→c | c_north_betsimisaraka | generated-regent,country-below-county-rank: its land is its counties |
+| BMP | 班布尔 | -→c | c_bampur | vassal,generated-regent,primary-title |
+| BMR | 班巴拉 | -→c | c_djenne | vassal,generated-regent,primary-title |
+| BND | 本德尔肯德 | -→c | c_upper_bundelkhand | country-below-county-rank: its land is its counties |
+| BNE | 波尼 | -→c | c_bone | country-below-county-rank: its land is its counties |
+| BNL | 拉姆 | -→c | c_east_qassim | generated-regent,primary-title |
+| BON | 博诺曼 | -→c | c_asante | generated-regent,country-below-county-rank: its land is its counties |
+| BOR | 博尔古 | -→c | c_borgu | generated-regent,primary-title |
+| BOW | 博翁特胡 | -→c | c_manado | country-below-county-rank: its land is its counties |
+| BPR | 卑谬 | -→c | c_pyay | tributary,country-below-county-rank: its land is its counties |
+| BQA | 拜尔盖 | -→c | c_barca | vassal,primary-title |
+| BRK | 博里肯 | -→c | c_boriken | generated-regent,country-below-county-rank: its land is its counties |
+| BRL | 巴鲁剌思 | -→c | c_amol | tributary,generated-regent,country-below-county-rank: its land is its  |
+| BRT | 布里亚特 | -→c | c_irkutsk | generated-regent,primary-title |
+| BSM | 布苏马 | -→c | c_boussouma | generated-regent,country-below-county-rank: its land is its counties |
+| BST | 巴斯塔尔 | -→c | c_bastar | country-below-county-rank: its land is its counties |
+| BTG | 巴塘 | -→c | c_sangon | vassal,generated-regent,primary-title |
+| BTL | 泰利斯 | -→c | c_misratah | tributary,country-below-county-rank: its land is its counties |
+| BTN | 布敦 | -→c | c_butung | generated-regent,country-below-county-rank: its land is its counties |
+| BTS | 贝齐米萨拉卡 | -→c | c_south_betsimisaraka | generated-regent,country-below-county-rank: its land is its counties |
+| BTU | 武端 | -→c | c_agusan | tributary,generated-regent,country-below-county-rank: its land is its  |
+| BUB | 布雷巴萨加 | -→c | c_viti_levu | generated-regent,country-below-county-rank: its land is its counties |
+| BUG | 布干达 | -→c | c_victoria_nile | country-below-county-rank: its land is its counties |
+| BUS | 巴鲁斯 | -→c | c_barus | generated-regent,country-below-county-rank: its land is its counties |
+| BXJ | 巴荷杰 | -→c | c_mendota | generated-regent,country-below-county-rank: its land is its counties |
+| BYG | 巴亚古拉 | -→c | c_bulbancha | generated-regent,country-below-county-rank: its land is its counties |
+| BZN | 巴津 | -→c | c_bazin | generated-regent,country-below-county-rank: its land is its counties |
+| CAA | 克洛坦 | -→c | c_roanoke | generated-regent,country-below-county-rank: its land is its counties |
+| CAD | 哈西奈 | -→c | c_nacogdoches | generated-regent,primary-title |
+| CAE | 卡埃特 | -→c | c_capibaribe | generated-regent,country-below-county-rank: its land is its counties |
+| CAV | 卡尔瓦 | -→c | c_hatun_kanar | generated-regent,country-below-county-rank: its land is its counties |
+| CAX | 卡兰基 | -→c | c_quitu | generated-regent,country-below-county-rank: its land is its counties |
+| CBC | 卡贝卡尔 | -→c | c_tariaca | generated-regent,country-below-county-rank: its land is its counties |
+| CBD | 卡宾达 | -→c | c_kabinda | generated-regent,country-below-county-rank: its land is its counties |
+| CBK | 牛吼 | -→c | c_tru_vien | generated-regent,primary-title |
+| CBO | 西沃内 | -→c | c_baracoa | generated-regent,country-below-county-rank: its land is its counties |
+| CBY | 奇里巴亚 | -→c | c_puquina | generated-regent,country-below-county-rank: its land is its counties |
+| CCH | 查尔查奇 | -→c | c_cuyo | generated-regent,country-below-county-rank: its land is its counties |
+| CEB | 宿务 | -→c | c_central_visayas | generated-regent,country-below-county-rank: its land is its counties |
+| CEM | 切米什盖泽克 | -→c | c_harput | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| CET | 切斯特 | -→c | c_cheshire | vassal,country-below-county-rank: its land is its counties |
+| CEW | 切瓦 | -→c | c_lower_malawi | generated-regent,country-below-county-rank: its land is its counties |
+| CFQ | 科菲塔切基 | -→c | c_cofitachequi | generated-regent,primary-title |
+| CGY | 西瓜约 | -→c | c_magua | generated-regent,country-below-county-rank: its land is its counties |
+| CGZ | 昌州 | -→c | c_dechang | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| CHC | 乔克托 | -→c | c_mobile | generated-regent,country-below-county-rank: its land is its counties |
+| CHD | 钱达 | -→c | c_chanda | primary-title |
+| CHH | 景洪 | -→c | c_cheli | vassal,generated-regent,primary-title |
+| CHJ | 丘拉洪 | -→c | c_chala | generated-regent,country-below-county-rank: its land is its counties |
+| CHK | 卡霍基亚 | -→c | c_cahokia | generated-regent,primary-title |
+| CHO | 乔奎 | -→c | c_malingo | generated-regent,country-below-county-rank: its land is its counties |
+| CHS | 奇克索 | -→c | c_chickasaw | generated-regent,primary-title |
+| CHT | 乔尔蒂 | -→c | c_cuauhtemallan | generated-regent,primary-title |
+| CHZ | 中山 | -→c | c_ryuukyuu | country-below-county-rank: its land is its counties |
+| CIC | 钦查 | -→c | c_ica | generated-regent,country-below-county-rank: its land is its counties |
+| CIH | 锡瓦特兰 | -→c | c_cihuatlan | generated-regent,country-below-county-rank: its land is its counties |
+| CKL | 明正 | -→c | c_dartsedo | vassal,generated-regent,primary-title |
+| CKP | 查坎普图姆 | -→c | c_tabacoh | generated-regent,primary-title |
+| CLE | 车勒 | -→c | c_yongning | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| CLG | 查拉高萨 | -→c | c_monongahela | generated-regent,country-below-county-rank: its land is its counties |
+| CLM | 科利马 | -→c | c_coliman | generated-regent,primary-title |
+| CLR | 克兰里卡德 | -→c | c_galway | country-below-county-rank: its land is its counties |
+| CLS | 卡卢萨 | -→c | c_mayaimi | generated-regent,country-below-county-rank: its land is its counties |
+| CLT | 卡拉 | -→c | c_upper_auvergne | vassal,country-below-county-rank: its land is its counties |
+| CMG | 库马纳戈托 | -→c | c_karu_pana | generated-regent,country-below-county-rank: its land is its counties |
+| CML | 奇米拉 | -→c | c_mompoj | generated-regent,country-below-county-rank: its land is its counties |
+| CMN | 尚庞 | -→c | c_rewa_kantha | vassal,primary-title |
+| CNK | 奇努克 | -→c | c_chinook | generated-regent,country-below-county-rank: its land is its counties |
+| CNO | 乔诺 | -→c | c_guancavilca | generated-regent,country-below-county-rank: its land is its counties |
+| CNR | 关切 | -→c | c_canary_islands | generated-regent,country-below-county-rank: its land is its counties |
+| COL | 科立瓜 | -→c | c_coligua | generated-regent,country-below-county-rank: its land is its counties |
+| COM | 科曼日 | -→c | c_comminges | vassal,country-below-county-rank: its land is its counties |
+| COO | 库萨 | -→c | c_coosa | generated-regent,primary-title |
+| COW | 考维塔 | -→c | c_coweta | generated-regent,country-below-county-rank: its land is its counties |
+| COY | 科亚伊马 | -→c | c_coyaima | generated-regent,country-below-county-rank: its land is its counties |
+| CPA | 科帕 | -→c | c_akhtar | generated-regent,country-below-county-rank: its land is its counties |
+| CPQ | 卡帕切基 | -→c | c_hitchiti | generated-regent,country-below-county-rank: its land is its counties |
+| CPU | 库奎姆普 | -→c | c_elki | generated-regent,country-below-county-rank: its land is its counties |
+| CRA | 查克拉 | -→c | c_charka | generated-regent,primary-title |
+| CRJ | 卡里若 | -→c | c_iaguarauna | generated-regent,country-below-county-rank: its land is its counties |
+| CSB | 库萨博 | -→c | c_santee | generated-regent,country-below-county-rank: its land is its counties |
+| CTC | 夸特利卡马克 | -→c | c_coatlicamac | generated-regent,country-below-county-rank: its land is its counties |
+| CTE | 奎采奥 | -→c | c_cuitzeo | generated-regent,country-below-county-rank: its land is its counties |
+| CTI | 奇蒂马查 | -→c | c_chawasha | generated-regent,country-below-county-rank: its land is its counties |
+| CTM | 查克特埃马尔 | -→c | c_chactemal | generated-regent,primary-title |
+| CTN | 卡伦图安 | -→c | c_wyoming | generated-regent,country-below-county-rank: its land is its counties |
+| CTO | 科托 | -→c | c_boruca | generated-regent,country-below-county-rank: its land is its counties |
+| CTR | 吉德拉尔 | -→c | c_chitral | country-below-county-rank: its land is its counties |
+| CTT | 查托特 | -→c | c_pensacola | generated-regent,country-below-county-rank: its land is its counties |
+| CTX | 奎特拉斯特兰 | -→c | c_cuetlaxtlan | generated-regent,country-below-county-rank: its land is its counties |
+| CTZ | 科亚特萨夸尔科 | -→c | c_coatzacoalco | generated-regent,country-below-county-rank: its land is its counties |
+| CUA | 查鲁亚 | -→c | c_guenoa | generated-regent,country-below-county-rank: its land is its counties |
+| CUC | 奎卡 | -→c | c_apure | generated-regent,country-below-county-rank: its land is its counties |
+| CUI | 奎斯曼库 | -→c | c_markahuamachuco | generated-regent,country-below-county-rank: its land is its counties |
+| CUO | 夸赫托奇科 | -→c | c_cuauhtochco | generated-regent,country-below-county-rank: its land is its counties |
+| CUT | 久蒂亚 | -→c | c_sadiya | generated-regent,primary-title |
+| CWM | 克兰威廉 | -→c | c_tipperary | vassal,country-below-county-rank: its land is its counties |
+| CYA | 查查波亚 | -→c | c_kuelap | generated-regent,primary-title |
+| CYC | 科帕亚库 | -→c | c_atacama | generated-regent,country-below-county-rank: its land is its counties |
+| CYS | 塔尼科 | -→c | c_cayas | generated-regent,country-below-county-rank: its land is its counties |
+| CZL | 科萨拉潘 | -→c | c_cuzalapa | generated-regent,country-below-county-rank: its land is its counties |
+| DAJ | 达朱 | -→c | c_north_darfur | generated-regent,primary-title |
+| DAM | 达莫特 | -→c | c_sidamo | generated-regent,country-below-county-rank: its land is its counties |
+| DAW | 达瓦罗 | -→c | c_bale | vassal,generated-regent,primary-title |
+| DBD | 檀婆提尼耶 | -→c | c_pihiti | primary-title |
+| DBE | 多贝亚 | -→c | c_dobea | generated-regent,country-below-county-rank: its land is its counties |
+| DCI | 迪希斯 | -→c | c_waterford | vassal,country-below-county-rank: its land is its counties |
+| DCN | 东川 | -→c | c_dongchuan | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| DFN | 贾富努 | -→c | c_kaarta | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| DGB | 达格邦 | -→c | c_dagbon | generated-regent,primary-title |
+| DGE | 都客儿 | -→c | c_ar_ruha | vassal,generated-regent,primary-title |
+| DGR | 婆迦尔 | -→c | c_vagad | country-below-county-rank: its land is its counties |
+| DHF | 佐法尔 | -→c | c_mahra | country-below-county-rank: its land is its counties |
+| DHM | 达勒姆 | -→c | c_durham | vassal,country-below-county-rank: its land is its counties |
+| DHU | 敦达尔 | -→c | c_dhundhar | country-below-county-rank: its land is its counties |
+| DIM | 底马撒 | -→c | c_kachari | generated-regent,country-below-county-rank: its land is its counties |
+| DJE | 杰里德 | -→c | c_central_sahara | tributary,generated-regent,country-below-county-rank: its land is its  |
+| DML | 东博利 | -→c | c_khoy | tributary,country-below-county-rank: its land is its counties |
+| DMS | 德斯蒙德 | -→c | c_cork | vassal,primary-title |
+| DNE | 迪内 | -→c | c_orayvi | generated-regent,country-below-county-rank: its land is its counties |
+| DOE | 多埃格 | -→c | c_doeg | generated-regent,country-below-county-rank: its land is its counties |
+| DRG | 德格 | -→c | c_derge | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| DSN | 达斯尼 | -→c | c_mosul | vassal,country-below-county-rank: its land is its counties |
+| DTI | 多提 | -→c | c_lower_ghaghara | generated-regent,country-below-county-rank: its land is its counties |
+| DUL | 杜尔卡迪尔 | -→c | c_marash | vassal,country-below-county-rank: its land is its counties |
+| DUR | 达斡尔 | -→c | c_amur | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| DWS | 代瓦西尔 | -→c | c_dawasir | generated-regent,primary-title |
+| DYN | 都匀 | -→c | c_duyun | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| ENN | 恩纳雷亚 | -→c | c_ennarea | tributary,generated-regent,country-below-county-rank: its land is its  |
+| ERI | 伊利霍南 | -→c | c_erie | generated-regent,country-below-county-rank: its land is its counties |
+| ERM | 瓦尔米亚 | -→c | c_warmia | vassal,country-below-county-rank: its land is its counties |
+| ETA | 埃唐普 | -→c | c_chartrain | vassal,country-below-county-rank: its land is its counties |
+| EUF | 尤福拉 | -→c | c_capachequi | generated-regent,country-below-county-rank: its land is its counties |
+| EVE | 鄂温 | -→c | c_okam | generated-regent,country-below-county-rank: its land is its counties |
+| EVK | 鄂温克 | -→c | c_amgun | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| FAL | 法勒 | -→c | c_siraf | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| FDL | 法德勒 | -→c | c_tadmur | vassal,primary-title |
+| FER | 费拉拉 | -→c | c_ferrara | primary-title |
+| FNJ | 贝尔塔 | -→c | c_bahr_al_jabal | generated-regent,country-below-county-rank: its land is its counties |
+| FOI | 富瓦 | -→c | c_foix | union,vassal,primary-title |
+| FRZ | 福雷 | -→c | c_lyonnais | vassal,primary-title |
+| FUY | 福余 | -→c | c_nuomin | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| FZA | 费赞 | -→c | c_fezzan | vassal,primary-title |
+| GAM | 瓜马尔 | -→c | c_pechichitane | generated-regent,country-below-county-rank: its land is its counties |
+| GAR | 加瓦比托 | -→c | c_nekokiaw | generated-regent,country-below-county-rank: its land is its counties |
+| GAZ | 加扎里亚 | -→c | c_cafa | vassal,generated-regent,primary-title |
+| GBS | 加贝斯 | -→c | c_qabisa | vassal,primary-title |
+| GCH | 夸乌奇南科 | -→c | c_cuauhchinanco | generated-regent,country-below-county-rank: its land is its counties |
+| GDA | 果达拉 | -→c | c_shekhawati | generated-regent,country-below-county-rank: its land is its counties |
+| GDW | 基杜瓦 | -→c | c_kituwa | generated-regent,country-below-county-rank: its land is its counties |
+| GFS | 加夫萨 | -→c | c_djerid | vassal,country-below-county-rank: its land is its counties |
+| GHA | 加纳 | -→c | c_ghana | vassal,generated-regent,primary-title |
+| GHL | 格锡瓦德 | -→c | c_khekassala | primary-title |
+| GHR | 加尔哈 | -→c | c_garha_mandla | country-below-county-rank: its land is its counties |
+| GIL | 吉烈迷 | -→c | c_sanjiang | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| GLI | 吉尔吉特 | -→c | c_balor | country-below-county-rank: its land is its counties |
+| GMG | 格拉摩根 | -→c | c_glamorgan | vassal,country-below-county-rank: its land is its counties |
+| GNJ | 贡觉 | -→c | c_gonjo | vassal,generated-regent,primary-title |
+| GOB | 戈比尔 | -→c | c_gobir | tributary,generated-regent,primary-title |
+| GOL | 果洛 | -→c | c_golog | vassal,generated-regent,primary-title |
+| GOW | 戈瓦 | -→c | c_makassar | generated-regent,country-below-county-rank: its land is its counties |
+| GRT | 哥伦打洛 | -→c | c_gorontalo | generated-regent,country-below-county-rank: its land is its counties |
+| GUC | 夸乌奇奇尔 | -→c | c_guachichil | generated-regent,country-below-county-rank: its land is its counties |
+| GUG | 古格 | -→c | c_guge | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| GUL | 瓜莱 | -→c | c_ossabaw | generated-regent,primary-title |
+| GUM | 古马兹 | -→c | c_metekel | generated-regent,country-below-county-rank: its land is its counties |
+| GUR | 法达恩古尔马 | -→c | c_nungu | generated-regent,country-below-county-rank: its land is its counties |
+| GWA | 瓜廖尔 | -→c | c_gird | vassal,country-below-county-rank: its land is its counties |
+| GWI | 圭里科 | -→c | c_gwiriko | generated-regent,country-below-county-rank: its land is its counties |
+| GWL | 加瓦尔 | -→c | c_garhwal | country-below-county-rank: its land is its counties |
+| GWY | 古瓦伊希 | -→c | c_keowee | generated-regent,primary-title |
+| GYO | 加耶戈霍诺 | -→c | c_gayogohono | generated-regent,country-below-county-rank: its land is its counties |
+| GYP | 瓜尤佩 | -→c | c_cumaribo | generated-regent,country-below-county-rank: its land is its counties |
+| HAA | 汉尼宁 | -→c | c_iskwao | generated-regent,country-below-county-rank: its land is its counties |
+| HAD | 哈多蒂 | -→c | c_hadoti | vassal,country-below-county-rank: its land is its counties |
+| HAT | 哈萨韦克拉 | -→c | c_wapocomo | generated-regent,country-below-county-rank: its land is its counties |
+| HAW | 夏威夷 | -→c | c_hawaii | country-below-county-rank: its land is its counties |
+| HCK | 霍查克 | -→c | c_millioke | generated-regent,country-below-county-rank: its land is its counties |
+| HCR | 瓦克拉丘科 | -→c | c_konchuko | generated-regent,country-below-county-rank: its land is its counties |
+| HDN | $hamadan$ | -→c | c_hamadan | tributary,country-below-county-rank: its land is its counties |
+| HDY | 哈迪亚 | -→c | c_hadiya | vassal,country-below-county-rank: its land is its counties |
+| HEL | 切尔 | -→c | c_dzilam | vassal,generated-regent,primary-title |
+| HEZ | 河州 | -→c | c_hezhou | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| HGO | 洪戈赖 | -→c | c_novosyolovo | generated-regent,country-below-county-rank: its land is its counties |
+| HGY | 伊圭 | -→c | c_higuey | generated-regent,country-below-county-rank: its land is its counties |
+| HHK | 霍霍坎 | -→c | c_akimel_oodham | generated-regent,primary-title |
+| HIJ | 希安 | -→c | c_bolon | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| HIR | 希拉卡 | -→c | c_manatara | generated-regent,country-below-county-rank: its land is its counties |
+| HIY | 哈伊彦 | -→c | c_gyongseong | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| HKK | 哈卡里 | -→c | c_amadiya | vassal,country-below-county-rank: its land is its counties |
+| HKM | 坎底 | -→c | c_putao | generated-regent,country-below-county-rank: its land is its counties |
+| HLL | 希拉 | -→c | c_kufa | tributary,country-below-county-rank: its land is its counties |
+| HLM | 哈尔科梅勒姆 | -→c | c_halkomelem | generated-regent,country-below-county-rank: its land is its counties |
+| HLN | 哈兰 | -→c | c_tumen | vassal,generated-regent,primary-title |
+| HMD | 哈米德 | -→c | c_hamid | country-below-county-rank: its land is its counties |
+| HNK | 哈南·昌卡 | -→c | c_wari | generated-regent,primary-title |
+| HNO | 希诺埃尼诺 | -→c | c_histayaho | generated-regent,country-below-county-rank: its land is its counties |
+| HNV | 霍纳沃尔 | -→c | c_kanara | generated-regent,country-below-county-rank: its land is its counties |
+| HNY | 哈斯努亚 | -→c | c_sahrazur | tributary,generated-regent,country-below-county-rank: its land is its  |
+| HNZ | 罕萨 | -→c | c_hunza | country-below-county-rank: its land is its counties |
+| HON | 奥尼亚松特 | -→c | c_allegheny | generated-regent,country-below-county-rank: its land is its counties |
+| HOP | 霍皮 | -→c | c_hwalbay | generated-regent,country-below-county-rank: its land is its counties |
+| HOR | 霍尔巴 | -→c | c_tehor | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| HQG | 鹤庆 | -→c | c_heqing | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| HRC | 瓦尔科 | -→c | c_ishma | generated-regent,country-below-county-rank: its land is its counties |
+| HRL | 哈尔拉 | -→c | c_adal | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| HSE | 兴威 | -→c | c_hsenwi | primary-title |
+| HSI | 昔卜 | -→c | c_hsipaw | generated-regent,primary-title |
+| HSN | 阿尤布 | -→c | c_hasankeyf | country-below-county-rank: its land is its counties |
+| HUA | 瓦伊拉斯 | -→c | c_huaylas | generated-regent,country-below-county-rank: its land is its counties |
+| HUI | 惠巴 | -→c | c_upper_songhua | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| HUR | 虎尔哈 | -→c | c_mudan | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| HUT | 胡泰姆 | -→c | c_nafud | generated-regent,country-below-county-rank: its land is its counties |
+| HVB | 哈弗尔贝格 | -→c | c_prignitz | vassal,country-below-county-rank: its land is its counties |
+| HWE | 哈威亚 | -→c | c_whakatu | generated-regent,country-below-county-rank: its land is its counties |
+| HZP | 哈扎拉斯普 | -→c | c_izeh | primary-title |
+| IAS | 雅西 | -→c | c_iasi | tributary,generated-regent,primary-title |
+| IBL | 伊巴隆 | -→c | c_ibalong | generated-regent,country-below-county-rank: its land is its counties |
+| IDR | 伊德尔 | -→c | c_sarasvata | vassal,country-below-county-rank: its land is its counties |
+| IGR | 伊涅里 | -→c | c_leeward_islands | generated-regent,country-below-county-rank: its land is its counties |
+| IHB | 伊斯帕巴德 | -→c | c_talish | tributary,generated-regent,country-below-county-rank: its land is its  |
+| IKW | 伊桑克图纳纳 | -→c | c_mahkato | generated-regent,country-below-county-rank: its land is its counties |
+| ILC | 伊罗戈 | -→c | c_lower_cagayan | generated-regent,country-below-county-rank: its land is its counties |
+| ILU | 伊卢 | -→c | c_smaller_ussuri | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| INH | 伊尼扬巴内 | -→c | c_inhambane | generated-regent,country-below-county-rank: its land is its counties |
+| INR | 丁机宜 | -→c | c_riau_indragiri | tributary,generated-regent,country-below-county-rank: its land is its  |
+| ISH | 伊沙克 | -→c | c_akokisa | generated-regent,country-below-county-rank: its land is its counties |
+| IZT | 伊斯塔奇奇梅卡 | -→c | c_sauzas | generated-regent,country-below-county-rank: its land is its counties |
+| JBL | 久巴尔 | -→c | c_kangra | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| JFN | 贾夫纳 | -→c | c_jaffna | country-below-county-rank: its land is its counties |
+| JHT | 双城子 | -→c | c_muling | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| JKR | 札兀尼·库尔班 | -→c | c_nishapur | tributary,primary-title |
+| JLM | 乔勒马克 | -→c | c_van | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| JLR | 贾洛尔 | -→c | c_godwar | vassal,primary-title |
+| JLW | 贾拉瓦德 | -→c | c_jhalavad | country-below-county-rank: its land is its counties |
+| JLY | 札剌伊尔 | -→c | c_khujand | tributary,generated-regent,primary-title |
+| JNG | 朱纳格利 | -→c | c_sorath | country-below-county-rank: its land is its counties |
+| JOA | 乔阿拉 | -→c | c_joara | generated-regent,primary-title |
+| JOL | 乔洛夫 | -→c | c_jolof | vassal,primary-title |
+| JOV | 霍瓦斯 | -→c | c_yaqui | generated-regent,country-below-county-rank: its land is its counties |
+| JPO | 嫩德布尔 | -→c | c_kalahandi_garjat | generated-regent,country-below-county-rank: its land is its counties |
+| JRG | 哈拉瓜 | -→c | c_jaragua | generated-regent,country-below-county-rank: its land is its counties |
+| JRN | 贾林 | -→c | c_balaw | generated-regent,country-below-county-rank: its land is its counties |
+| JRW | 贾尔万 | -→c | c_al_ahsa | vassal,primary-title |
+| JUR | 尤尔曼 | -→c | c_darab | generated-regent,country-below-county-rank: its land is its counties |
+| KAB | 卡布 | -→c | c_kaabu | vassal,generated-regent,primary-title |
+| KAI | 凯塔格 | -→c | c_lezgistan | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| KAL | 格礼 | -→c | c_kale | generated-regent,country-below-county-rank: its land is its counties |
+| KAM | 凯马纳 | -→c | c_bomberai | tributary,country-below-county-rank: its land is its counties |
+| KAN | 卡诺 | -→c | c_kano | tributary,generated-regent,primary-title |
+| KAQ | 卡克奇克尔 | -→c | c_kakol_kiej | generated-regent,country-below-county-rank: its land is its counties |
+| KAW | 坎扎 | -→c | c_piankeshaw | generated-regent,country-below-county-rank: its land is its counties |
+| KBR | 卡布拉 | -→c | c_macina | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| KCN | 哈琴 | -→c | c_kachen | vassal,country-below-county-rank: its land is its counties |
+| KDW | 卡达达楚 | -→c | c_ouachita | generated-regent,country-below-county-rank: its land is its counties |
+| KED | 吉打 | -→c | c_kedah | country-below-county-rank: its land is its counties |
+| KEE | 基纳特 | -→c | c_derry | vassal,country-below-county-rank: its land is its counties |
+| KEL | 克拉里 | -→c | c_nahavand | tributary,generated-regent,country-below-county-rank: its land is its  |
+| KEN | 肯塔恩通加 | -→c | c_cuyahoga | generated-regent,country-below-county-rank: its land is its counties |
+| KET | 凯图 | -→c | c_fon | generated-regent,country-below-county-rank: its land is its counties |
+| KGN | 卡利纳戈 | -→c | c_windward_islands | generated-regent,country-below-county-rank: its land is its counties |
+| KHD | 辉特 | -→c | c_zavkhan | vassal,generated-regent,primary-title |
+| KHN | 卡兰 | -→c | c_kharan | generated-regent,primary-title |
+| KHR | 凯尔拉 | -→c | c_mahadeo | country-below-county-rank: its land is its counties |
+| KHT | $quhestan_area$ | -→c | c_qaen | tributary,primary-title |
+| KHZ | 胡兹达尔 | -→c | c_qusdar | generated-regent,primary-title |
+| KIA | 基特凯哈基 | -→c | c_aahkawiraahkata | generated-regent,country-below-county-rank: its land is its counties |
+| KIC | 基切 | -→c | c_cuchumatan | country-below-county-rank: its land is its counties |
+| KID | 基尔代尔 | -→c | c_kildare | vassal,country-below-county-rank: its land is its counties |
+| KIH | 基泰什 | -→c | c_kitaish | generated-regent,country-below-county-rank: its land is its counties |
+| KIL | 基利斯 | -→c | c_ayntab | vassal,generated-regent,primary-title |
+| KIM | 奇里曼 | -→c | c_tagloc | generated-regent,country-below-county-rank: its land is its counties |
+| KIO | 卡约瓦 | -→c | c_tacuru | generated-regent,country-below-county-rank: its land is its counties |
+| KIW | 基维加帕瓦 | -→c | c_sandusky | generated-regent,country-below-county-rank: its land is its counties |
+| KJA | 盖翁切尔 | -→c | c_keonjhar | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| KKA | 卡尼恩凯哈卡 | -→c | c_kanienkehaka | generated-regent,primary-title |
+| KKE | 基利克 | -→c | c_tucssa | generated-regent,country-below-county-rank: its land is its counties |
+| KKH | 卡斯坎卡汉 | -→c | c_mengakonkia | generated-regent,country-below-county-rank: its land is its counties |
+| KKL | 哈勒哈里 | -→c | c_ardabil | tributary,generated-regent,country-below-county-rank: its land is its  |
+| KKR | 科赫罗 | -→c | c_ranchi | generated-regent,country-below-county-rank: its land is its counties |
+| KLB | 基拉卜 | -→c | c_yamama | generated-regent,primary-title |
+| KLG | 卡兰加 | -→c | c_motloutse | tributary,generated-regent,country-below-county-rank: its land is its  |
+| KLP | 卡拉普亚 | -→c | c_oregon | generated-regent,country-below-county-rank: its land is its counties |
+| KLR | 卡尔霍尔 | -→c | c_hulwan | tributary,generated-regent,country-below-county-rank: its land is its  |
+| KLT | 科拉舒纳德 | -→c | c_puzhi_nadu | generated-regent,country-below-county-rank: its land is its counties |
+| KMA | 卡玛塔 | -→c | c_baro_bhuyan | country-below-county-rank: its land is its counties |
+| KMG | 蒙兀 | -→c | c_khamag | generated-regent,primary-title |
+| KMK | 科莫克斯 | -→c | c_strathcona | generated-regent,country-below-county-rank: its land is its counties |
+| KMN | 库马翁 | -→c | c_kumaon | country-below-county-rank: its land is its counties |
+| KNA | 卡纳 | -→c | c_ayaviri | generated-regent,primary-title |
+| KNG | 孔格 | -→c | c_kong | generated-regent,country-below-county-rank: its land is its counties |
+| KOT | 萨奥 | -→c | c_mandara | generated-regent,country-below-county-rank: its land is its counties |
+| KPK | 基斯波科 | -→c | c_muskingum | generated-regent,country-below-county-rank: its land is its counties |
+| KPL | 科普拉 | -→c | c_kalingandhra | generated-regent,primary-title |
+| KRD | 卡拉斯 | -→c | c_karasi | tributary,country-below-county-rank: its land is its counties |
+| KRG | 卡拉捷金 | -→c | c_qarategin | tributary,generated-regent,country-below-county-rank: its land is its  |
+| KRK | 卡朗卡 | -→c | c_uyuni | generated-regent,primary-title |
+| KRM | 克尔曼 | -→c | c_kerman | primary-title |
+| KRP | 固里班 | -→c | c_kuripan | generated-regent,primary-title |
+| KRR | 基里里 | -→c | c_jaguaribe | generated-regent,country-below-county-rank: its land is its counties |
+| KSK | 卡斯基南波 | -→c | c_aniyutsi | generated-regent,country-below-county-rank: its land is its counties |
+| KSP | 基切西皮里尼 | -→c | c_kitchissippi | generated-regent,country-below-county-rank: its land is its counties |
+| KST | 科阿萨蒂 | -→c | c_kaskinampo | generated-regent,country-below-county-rank: its land is its counties |
+| KSW | 吉什德瓦尔 | -→c | c_punjab_hills | country-below-county-rank: its land is its counties |
+| KTG | 景栋 | -→c | c_kengtung | country-below-county-rank: its land is its counties |
+| KTK | 基蒂基蒂什 | -→c | c_mah_hom | generated-regent,country-below-county-rank: its land is its counties |
+| KTS | 卡齐纳 | -→c | c_katsina | tributary,generated-regent,country-below-county-rank: its land is its  |
+| KTU | 加德满都 | -→c | c_east_gandak | country-below-county-rank: its land is its counties |
+| KTW | 卡尔塔维 | -→c | c_barza | tributary,country-below-county-rank: its land is its counties |
+| KUB | 库巴 | -→c | c_lomami | generated-regent,country-below-county-rank: its land is its counties |
+| KUI | 奎库罗 | -→c | c_xingu | generated-regent,country-below-county-rank: its land is its counties |
+| KUR | 库尔兰 | -→c | c_courland | vassal,country-below-county-rank: its land is its counties |
+| KUS | 库斯卡坦 | -→c | c_kuskatan | generated-regent,country-below-county-rank: its land is its counties |
+| KUT | 卡奇 | -→c | c_kutch | primary-title |
+| KWA | 夸扣特尔 | -→c | c_kwakwala | generated-regent,country-below-county-rank: its land is its counties |
+| KYK | 科里亚克 | -→c | c_east_koryak | generated-regent,country-below-county-rank: its land is its counties |
+| LAL | 拉林 | -→c | c_lalin | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| LAM | 拉穆 | -→c | c_lamu_archipelago | generated-regent,country-below-county-rank: its land is its counties |
+| LAN | 兰开斯特 | -→c | c_lancashire | vassal,country-below-county-rank: its land is its counties |
+| LAV | 罗涡 | -→c | c_rayong | country-below-county-rank: its land is its counties |
+| LBA | 卢巴 | -→c | c_kilemba | generated-regent,country-below-county-rank: its land is its counties |
+| LCK | 霍什迪 | -→c | c_khorramabad | primary-title |
+| LCY | 卢卡约 | -→c | c_bahamas | generated-regent,country-below-county-rank: its land is its counties |
+| LEG | 莱加 | -→c | c_lukuga | generated-regent,country-below-county-rank: its land is its counties |
+| LGK | 狼牙修 | -→c | c_kelantan | generated-regent,primary-title |
+| LGT | 灵藏 | -→c | c_ling | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| LGZ | 龙州 | -→c | c_longan | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| LHT | 卢舒特西德 | -→c | c_cascadia | generated-regent,country-below-county-rank: its land is its counties |
+| LIG | 洛坤 | -→c | c_thammarat | generated-regent,primary-title |
+| LIP | 利普塔科 | -→c | c_liptako | generated-regent,country-below-county-rank: its land is its counties |
+| LJG | 丽江 | -→c | c_lijiang | vassal,generated-regent,primary-title |
+| LKT | 拉科塔 | -→c | c_niobrara | generated-regent,country-below-county-rank: its land is its counties |
+| LLS | 罗罗斯 | -→c | c_sichuan | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| LMN | 珞门 | -→c | c_western_bhutan | vassal,generated-regent,primary-title |
+| LNC | 伦卡 | -→c | c_choluteca | generated-regent,country-below-county-rank: its land is its counties |
+| LND | 隆达 | -→c | c_cuoim | generated-regent,country-below-county-rank: its land is its counties |
+| LNO | 拉瑙 | -→c | c_agus | generated-regent,country-below-county-rank: its land is its counties |
+| LOI | 群岛 | -→c | c_outer_hebrides | vassal,country-below-county-rank: its land is its counties |
+| LPG | 黎平 | -→c | c_liping | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| LRT | 拉兰图卡 | -→c | c_flores | generated-regent,country-below-county-rank: its land is its counties |
+| LST | 拉雷斯坦 | -→c | c_lar | generated-regent,primary-title |
+| LTN | 理塘 | -→c | c_lithang | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| LUR | 劳尔 | -→c | c_meghalaya | generated-regent,country-below-county-rank: its land is its counties |
+| LWA | 林布旺 | -→c | c_lower_kosi | generated-regent,primary-title |
+| LYA | 利亚平 | -→c | c_kunovat | tributary,generated-regent,country-below-county-rank: its land is its  |
+| MAA | 马赛 | -→c | c_ewaso_ngiro | generated-regent,primary-title |
+| MAC | 边区 | -→c | c_brecon | vassal,country-below-county-rank: its land is its counties |
+| MAD | 马登 | -→c | c_doberai | generated-regent,country-below-county-rank: its land is its counties |
+| MAN | 曼托瓦 | -→c | c_mantua | vassal,primary-title |
+| MAR | 麻域 | -→c | c_ladakh | vassal,primary-title |
+| MBA | 蒙巴萨 | -→c | c_lower_gafana | tributary,generated-regent,country-below-county-rank: its land is its  |
+| MBL | 托霍梅 | -→c | c_conecuh | generated-regent,country-below-county-rank: its land is its counties |
+| MCG | 马斯科吉 | -→c | c_mabila | generated-regent,country-below-county-rank: its land is its counties |
+| MCI | 木赤 | -→c | c_maozhou | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| MCN | 穆赫康纽 | -→c | c_mahicannituck | generated-regent,country-below-county-rank: its land is its counties |
+| MCT | 马斯古顿 | -→c | c_kalamazoo | generated-regent,country-below-county-rank: its land is its counties |
+| MDA | 麦地那 | -→c | c_medina | vassal,primary-title |
+| MDY | 马迪亚斯 | -→c | c_panay | generated-regent,primary-title |
+| MEC | 麦加 | -→c | c_mecca | vassal,primary-title |
+| MED | 梅德里巴赫里 | -→c | c_serae | primary-title |
+| MET | 梅茨蒂特兰 | -→c | c_metztitlan | generated-regent,country-below-county-rank: its land is its counties |
+| MEW | 梅瓦尔 | -→c | c_mewar | vassal,country-below-county-rank: its land is its counties |
+| MGD | 文都灵 | -→c | c_mindanao | tributary,generated-regent,country-below-county-rank: its land is its  |
+| MGG | 芒隅贡塘 | -→c | c_mangyul | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| MGK | 勐沽 | -→c | c_jindong | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| MGU | 马瓜纳 | -→c | c_maguana | generated-regent,country-below-county-rank: its land is its counties |
+| MHA | 勐沙 | -→c | c_mengding | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| MHN | 勐甸 | -→c | c_shunning | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| MIH | 米赫拉班 | -→c | c_zaranj | primary-title |
+| MIK | 米克马克 | -→c | c_agg_piktuk | generated-regent,country-below-county-rank: its land is its counties |
+| MIX | 玉库扎 | -→c | c_tututepec | generated-regent,country-below-county-rank: its land is its counties |
+| MJU | 马尤布汉杰 | -→c | c_mayurbhanj | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| MKA | 孟拱 | -→c | c_mongkawng | generated-regent,primary-title |
+| MKN | 孟昆 | -→c | c_htamanthi | generated-regent,country-below-county-rank: its land is its counties |
+| MKU | 马夸 | -→c | c_liganha | generated-regent,country-below-county-rank: its land is its counties |
+| MLB | 刚莱博 | -→c | c_manipur | country-below-county-rank: its land is its counties |
+| MLM | 孟连 | -→c | c_menglian | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| MLN | 马利纳尔科 | -→c | c_matlatzinco | generated-regent,country-below-county-rank: its land is its counties |
+| MLS | 沃拉斯托基维克 | -→c | c_madawaska | generated-regent,country-below-county-rank: its land is its counties |
+| MMA | 勐卯 | -→c | c_mangshi | vassal,primary-title |
+| MMM | 玛姆 | -→c | c_zaklohpakab | generated-regent,country-below-county-rank: its land is its counties |
+| MMQ | 马马切陶 | -→c | c_boojwiikwedong | generated-regent,country-below-county-rank: its land is its counties |
+| MNC | 莫纳坎 | -→c | c_monacan | generated-regent,country-below-county-rank: its land is its counties |
+| MNI | 孟乃 | -→c | c_mongnai | generated-regent,country-below-county-rank: its land is its counties |
+| MNJ | 曼绒 | -→c | c_perak | generated-regent,country-below-county-rank: its land is its counties |
+| MNK | 曼凯西姆 | -→c | c_fante | generated-regent,country-below-county-rank: its land is its counties |
+| MNL | 曼尕赖 | -→c | c_aksu | tributary,generated-regent,country-below-county-rank: its land is its  |
+| MNS | 蒙西 | -→c | c_manhattan | generated-regent,country-below-county-rank: its land is its counties |
+| MNU | 梅拉瑙 | -→c | c_lower_rajang | generated-regent,primary-title |
+| MNY | 恩达乌 | -→c | c_buzi | tributary,generated-regent,country-below-county-rank: its land is its  |
+| MNZ | 岷州 | -→c | c_minzhou | vassal,generated-regent,primary-title |
+| MOM | 蒙博阿勒 | -→c | c_kinhasa | generated-regent,country-below-county-rank: its land is its counties |
+| MOP | 莫潘 | -→c | c_ceibal | generated-regent,country-below-county-rank: its land is its counties |
+| MOY | 默里 | -→c | c_moray | vassal,primary-title |
+| MOZ | 莫桑比克 | -→c | c_mozambique | tributary,generated-regent,country-below-county-rank: its land is its  |
+| MPC | 马普切 | -→c | c_butalmapu | generated-regent,country-below-county-rank: its land is its counties |
+| MPR | 曼普鲁古 | -→c | c_mamprusi | generated-regent,country-below-county-rank: its land is its counties |
+| MRH | 穆拉 | -→c | c_yabrin | generated-regent,country-below-county-rank: its land is its counties |
+| MRJ | 马拉若阿拉 | -→c | c_marajoara | generated-regent,country-below-county-rank: its land is its counties |
+| MRP | 古泰‑摩多补罗 | -→c | c_upper_mahakam | primary-title |
+| MRV | $merv$ | -→c | c_merv | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| MSC | 马萨诸塞 | -→c | c_massachusetts | generated-regent,country-below-county-rank: its land is its counties |
+| MSK | 梅斯夸基 | -→c | c_waawiiyaataanong | generated-regent,country-below-county-rank: its land is its counties |
+| MSN | 穆苏尼里 | -→c | c_warangal | primary-title |
+| MTN | 莫内顿 | -→c | c_chattarawa | generated-regent,country-below-county-rank: its land is its counties |
+| MTO | 迈因蒂拉努 | -→c | c_mailaka | tributary,generated-regent,country-below-county-rank: its land is its  |
+| MUI | 毛伊 | -→c | c_maui | generated-regent,country-below-county-rank: its land is its counties |
+| MUT | 穆塔伊尔 | -→c | c_al_hisu | generated-regent,country-below-county-rank: its land is its counties |
+| MVA | 摩拉维亚 | -→c | c_olomoucko | vassal,primary-title |
+| MWO | 勐沃 | -→c | c_weiyuan | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| MXT | 梅什蒂卡坎 | -→c | c_tepactitlan | generated-regent,country-below-county-rank: its land is its counties |
+| MYC | 米尔卡亚克 | -→c | c_quines | generated-regent,country-below-county-rank: its land is its counties |
+| MYI | 麻逸 | -→c | c_mait | tributary,generated-regent,country-below-county-rank: its land is its  |
+| MYO | 梅奧 | -→c | c_mayo | country-below-county-rank: its land is its counties |
+| MZB | 姆扎卜 | -→c | c_mzab | tributary,generated-regent,country-below-county-rank: its land is its  |
+| MZF | 穆扎法尔 | -→c | c_yazd | primary-title |
+| MZN | 塔巴里斯坦 | -→c | c_rustamdar | tributary,primary-title |
+| NAA | 那加 | -→c | c_naga | generated-regent,country-below-county-rank: its land is its counties |
+| NBH | 西霍尔 | -→c | c_nubhor | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| NBY | 南比亚 | -→c | c_manyame | tributary,generated-regent,country-below-county-rank: its land is its  |
+| NCN | 囊谦 | -→c | c_nangchen | vassal,generated-regent,primary-title |
+| NCZ | 纳奇兹 | -→c | c_natchez | generated-regent,primary-title |
+| NDA | 纳科达 | -→c | c_kiyuska | generated-regent,country-below-county-rank: its land is its counties |
+| NDN | 南丹 | -→c | c_nandan | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| NDV | 南德瓦 | -→c | c_ivai | generated-regent,country-below-county-rank: its land is its counties |
+| NEG | 内格罗蓬特 | -→c | c_euboea | country-below-county-rank: its land is its counties |
+| NEV | 讷韦尔 | -→c | c_nevernais | union,vassal,country-below-county-rank: its land is its counties |
+| NGD | 捏兀迭里 | -→c | c_ghazni | tributary,generated-regent,primary-title |
+| NGI | 雅沃霍 | -→c | c_northland | generated-regent,country-below-county-rank: its land is its counties |
+| NGU | 恩古尼 | -→c | c_ntsoana_tsatsi | generated-regent,country-below-county-rank: its land is its counties |
+| NGZ | 宁州 | -→c | c_linan | vassal,generated-regent,primary-title |
+| NKH | 雅提卡胡伍努 | -→c | c_whanganui | generated-regent,country-below-county-rank: its land is its counties |
+| NKW | 纳卡韦 | -→c | c_baawitigong | generated-regent,country-below-county-rank: its land is its counties |
+| NLG | 安龙 | -→c | c_xilong | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| NLU | 纳楼 | -→c | c_heni | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| NNN | 安南 | -→c | c_mengzi | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| NOO | 努特卡 | -→c | c_southern_vancouver | generated-regent,country-below-county-rank: its land is its counties |
+| NPS | 尼皮辛 | -→c | c_nipissing | generated-regent,country-below-county-rank: its land is its counties |
+| NRB | 纳博讷 | -→c | c_narbonnais | vassal,country-below-county-rank: its land is its counties |
+| NRG | 纳伊甘塞特 | -→c | c_narraganset | generated-regent,country-below-county-rank: its land is its counties |
+| NRI | 恩里 | -→c | c_west_igbo | generated-regent,primary-title |
+| NSM | 南塞蒙德 | -→c | c_chesapeake | generated-regent,country-below-county-rank: its land is its counties |
+| NSR | 楠沙鲁奈 | -→c | c_banjar | primary-title |
+| NST | 纳什图什 | -→c | c_natchitoches | generated-regent,country-below-county-rank: its land is its counties |
+| NTK | 嫩特戈 | -→c | c_nanticoke | generated-regent,country-below-county-rank: its land is its counties |
+| NUP | 努佩 | -→c | c_nupe | generated-regent,primary-title |
+| NUT | 努塔贝 | -→c | c_kuna | generated-regent,country-below-county-rank: its land is its counties |
+| NUW | 努维 | -→c | c_east_nuwuvi | generated-regent,country-below-county-rank: its land is its counties |
+| NVK | 尼夫赫 | -→c | c_amur_estuary | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| NWN | 阿西尼博因 | -→c | c_itkanaahtuusu | generated-regent,country-below-county-rank: its land is its counties |
+| NWV | 努武 | -→c | c_chemewevi | generated-regent,country-below-county-rank: its land is its counties |
+| NYA | 娘绒 | -→c | c_nyarong | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| NYM | 布埃尼 | -→c | c_iboina | tributary,generated-regent,country-below-county-rank: its land is its  |
+| OBD | 奥布多尔 | -→c | c_obdorsk | tributary,generated-regent,primary-title |
+| OCT | 奥库特 | -→c | c_ocute | generated-regent,country-below-county-rank: its land is its counties |
+| ODW | 渥达瓦 | -→c | c_karegnondi | generated-regent,country-below-county-rank: its land is its counties |
+| OFO | 奥夫 | -→c | c_mineami | generated-regent,country-below-county-rank: its land is its counties |
+| OGL | 瓦尔格拉 | -→c | c_ouargla | tributary,generated-regent,country-below-county-rank: its land is its  |
+| OIL | 奥里尔 | -→c | c_oriel | country-below-county-rank: its land is its counties |
+| OJI | 奥吉布瓦 | -→c | c_manitoulin | generated-regent,country-below-county-rank: its land is its counties |
+| OMA | 阿曼 | -→c | c_nizwa | country-below-county-rank: its land is its counties |
+| OMG | 奥马瓦卡 | -→c | c_jujuy | generated-regent,country-below-county-rank: its land is its counties |
+| ONG | 翁尼亚拉 | -→c | c_niagara | generated-regent,country-below-county-rank: its land is its counties |
+| ONJ | 奥诺朱塔 | -→c | c_shamokin | generated-regent,country-below-county-rank: its land is its counties |
+| ONN | 奥农多瓦加 | -→c | c_onondowaga | generated-regent,country-below-county-rank: its land is its counties |
+| ONO | 奥农达格加 | -→c | c_onondagega | generated-regent,country-below-county-rank: its land is its counties |
+| ONW | 乌尼瓦尔 | -→c | c_darbhanga | primary-title |
+| ONY | 奥尼奥塔阿卡 | -→c | c_onyotaaka | generated-regent,primary-title |
+| OOB | 奥奥布 | -→c | c_tahejoc | generated-regent,country-below-county-rank: its land is its counties |
+| ORC | 奥罗奇 | -→c | c_tumnin | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| ORK | 奥克尼 | -→c | c_northern_isles | vassal,country-below-county-rank: its land is its counties |
+| OSG | 奥谢阿加 | -→c | c_hochelaga | generated-regent,country-below-county-rank: its land is its counties |
+| OSK | 奥萨基瓦基 | -→c | c_saginaw | generated-regent,country-below-county-rank: its land is its counties |
+| OTL | 奥塔利 | -→c | c_tanasi | generated-regent,country-below-county-rank: its land is its counties |
+| OTO | 夏尔托坎 | -→c | c_tetzcoco | union,primary-title |
+| OUA | 瓦加杜古 | -→c | c_ouagadougou | generated-regent,primary-title |
+| OVI | 奥文本杜 | -→c | c_mbalundu | generated-regent,country-below-county-rank: its land is its counties |
+| OYO | 奥约 | -→c | c_oyo | generated-regent,primary-title |
+| OZL | 奥苏卢阿马 | -→c | c_huasteca | generated-regent,country-below-county-rank: its land is its counties |
+| OZT | 奥斯托曼 | -→c | c_temascaltepec | generated-regent,country-below-county-rank: its land is its counties |
+| OZU | 奥苏马钦 | -→c | c_atepec | generated-regent,country-below-county-rank: its land is its counties |
+| PAH | 彭亨 | -→c | c_pahang | generated-regent,primary-title |
+| PCH | 帕卡哈 | -→c | c_pacaha | generated-regent,country-below-county-rank: its land is its counties |
+| PCJ | 帕卡贾基斯 | -→c | c_tiwanaku | generated-regent,country-below-county-rank: its land is its counties |
+| PCK | 佩纳库克 | -→c | c_casco | generated-regent,country-below-county-rank: its land is its counties |
+| PEA | 佩鲁贾 | -→c | c_perugia | generated-regent,country-below-county-rank: its land is its counties |
+| PEN | 佩诺布斯科特 | -→c | c_penobscot | generated-regent,country-below-county-rank: its land is its counties |
+| PEO | 佩瓦雷瓦 | -→c | c_checagou | generated-regent,country-below-county-rank: its land is its counties |
+| PEP | 佩皮科基亚 | -→c | c_atchakangouen | generated-regent,country-below-county-rank: its land is its counties |
+| PER | 佩里戈尔 | -→c | c_perigord | vassal,country-below-county-rank: its land is its counties |
+| PGS | 邦阿西楠 | -→c | c_samtoy | generated-regent,country-below-county-rank: its land is its counties |
+| PIJ | 皮豪 | -→c | c_caly | generated-regent,country-below-county-rank: its land is its counties |
+| PJT | 普占纳提 | -→c | c_donggala | generated-regent,country-below-county-rank: its land is its counties |
+| PKR | 帕索科朗 | -→c | c_mamudju | generated-regent,country-below-county-rank: its land is its counties |
+| PKW | 佩科维 | -→c | c_shenandoah | generated-regent,country-below-county-rank: its land is its counties |
+| PLB | 巴邻旁 | -→c | c_ogan | tributary,generated-regent,primary-title |
+| PLY | 佩雷姆 | -→c | c_ponil | tributary,generated-regent,country-below-county-rank: its land is its  |
+| PMB | 彭布罗克 | -→c | c_deheubarth | vassal,country-below-county-rank: its land is its counties |
+| PML | 帕姆利科 | -→c | c_pamlico | generated-regent,country-below-county-rank: its land is its counties |
+| PMN | 佩蒙 | -→c | c_caroni | generated-regent,country-below-county-rank: its land is its counties |
+| PNI | 潘奈 | -→c | c_pannai | tributary,generated-regent,country-below-county-rank: its land is its  |
+| PNS | 阿罗萨贡塔库克 | -→c | c_kennebec | generated-regent,country-below-county-rank: its land is its counties |
+| POO | 波窝 | -→c | c_poyul | vassal,generated-regent,primary-title |
+| POS | 波伊斯 | -→c | c_powys | vassal,country-below-county-rank: its land is its counties |
+| POT | 波蒂瓜拉 | -→c | c_paraiba | generated-regent,country-below-county-rank: its land is its counties |
+| PQD | 帕萨马科迪 | -→c | c_manan | generated-regent,country-below-county-rank: its land is its counties |
+| PQT | 佩科特 | -→c | c_connecticut | generated-regent,country-below-county-rank: its land is its counties |
+| PRM | 彼尔姆 | -→c | c_cherdyn | generated-regent,primary-title |
+| PSC | 皮斯卡塔韦 | -→c | c_patapsco | generated-regent,country-below-county-rank: its land is its counties |
+| PTC | 碧武里 | -→c | c_phetchaburi | tributary,country-below-county-rank: its land is its counties |
+| PTN | 巴特那 | -→c | c_sambalpur_garjats | vassal,country-below-county-rank: its land is its counties |
+| PTP | 潘特佩克 | -→c | c_tetela | generated-regent,country-below-county-rank: its land is its counties |
+| PTW | 皮塔瓦里塔 | -→c | c_neosho | generated-regent,country-below-county-rank: its land is its counties |
+| PUR | 布让 | -→c | c_purang | union,vassal,primary-title |
+| PYE | 平越 | -→c | c_pingyue | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| QBY | 金巴亚 | -→c | c_tahami | generated-regent,country-below-county-rank: its land is its counties |
+| QEQ | 凯克奇 | -→c | c_kab_koj | generated-regent,country-below-county-rank: its land is its counties |
+| QGM | 奎瓜尔塔姆 | -→c | c_yazoo | generated-regent,country-below-county-rank: its land is its counties |
+| QHT | 盖哈坦 | -→c | c_tathlith | generated-regent,primary-title |
+| QIM | 基尔梅斯 | -→c | c_lule | generated-regent,country-below-county-rank: its land is its counties |
+| QLM | 克利马内 | -→c | c_ucungo | generated-regent,country-below-county-rank: its land is its counties |
+| QMG | 夸斯米格多 | -→c | c_bidai | generated-regent,country-below-county-rank: its land is its counties |
+| QOM | $qom$ | -→c | c_qom | tributary,country-below-county-rank: its land is its counties |
+| QRP | 奎里皮 | -→c | c_montauk | generated-regent,country-below-county-rank: its land is its counties |
+| QTA | 咖塔 | -→c | c_akele_guzai | generated-regent,country-below-county-rank: its land is its counties |
+| QTR | 基多尔 | -→c | c_tarapaca | generated-regent,country-below-county-rank: its land is its counties |
+| QUL | 库尧 | -→c | c_hatunqulla | generated-regent,country-below-county-rank: its land is its counties |
+| QUN | 哈剌兀纳思 | -→c | c_kabul | tributary,generated-regent,primary-title |
+| RAG | 拉古萨 | -→c | c_south_dalmatia | vassal,country-below-county-rank: its land is its counties |
+| RAP | 特拉普怀 | -→c | c_murihiku | generated-regent,country-below-county-rank: its land is its counties |
+| RAR | 拉拉穆里 | -→c | c_sinaloa | generated-regent,country-below-county-rank: its land is its counties |
+| RCH | 隶契罗 | -→c | c_golconda | country-below-county-rank: its land is its counties |
+| RDY | 罗底 | -→c | c_kamma_nadu | primary-title |
+| RIM | 里米尼 | -→c | c_romagna | country-below-county-rank: its land is its counties |
+| RKL | 兰卡利 | -→c | c_kermanshah | tributary,country-below-county-rank: its land is its counties |
+| RKS | 拉克塞尔 | -→c | c_palamau | generated-regent,primary-title |
+| ROS | 罗斯 | -→c | c_ross | vassal,country-below-county-rank: its land is its counties |
+| ROU | 鲁西 | -→c | c_soissonais | vassal,country-below-county-rank: its land is its counties |
+| RPP | 拉帕汉诺克 | -→c | c_tsenacommacah | generated-regent,country-below-county-rank: its land is its counties |
+| RSH | 拉什特 | -→c | c_gilan | generated-regent,country-below-county-rank: its land is its counties |
+| SAG | 实皆 | -→c | c_sagaing | country-below-county-rank: its land is its counties |
+| SAK | 萨哈 | -→c | c_yakutia | generated-regent,primary-title |
+| SAM | 萨摩亚 | -→c | c_samoa | generated-regent,primary-title |
+| SAN | 桑塞尔 | -→c | c_upper_berry | vassal,country-below-county-rank: its land is its counties |
+| SBG | 山都望 | -→c | c_santubong | generated-regent,country-below-county-rank: its land is its counties |
+| SBY | 苏拜 | -→c | c_dhalam | generated-regent,country-below-county-rank: its land is its counties |
+| SBZ | $sabzevar$ | -→c | c_sabzevar | tributary,country-below-county-rank: its land is its counties |
+| SEN | 塞纳 | -→c | c_lower_mazowe | tributary,generated-regent,country-below-county-rank: its land is its  |
+| SFA | 索法拉 | -→c | c_pungwe | generated-regent,country-below-county-rank: its land is its counties |
+| SFR | $esfarayen$ | -→c | c_esfarayen | tributary,country-below-county-rank: its land is its counties |
+| SGH | 桑哈纳 | -→c | c_arguin | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| SGN | 索纳尔冈 | -→c | c_sonargaon | vassal,generated-regent,primary-title |
+| SGT | 西昆图尔 | -→c | c_upper_jambi | generated-regent,primary-title |
+| SHB | 沙班卡拉 | -→c | c_jahrom | country-below-county-rank: its land is its counties |
+| SHH | 萨尼什 | -→c | c_marapa | generated-regent,country-below-county-rank: its land is its counties |
+| SHM | 舍迈尔 | -→c | c_hail | generated-regent,country-below-county-rank: its land is its counties |
+| SHP | 萨希布‑阿塔 | -→c | c_karahisar | country-below-county-rank: its land is its counties |
+| SII | 斯基里 | -→c | c_kaya_paha | generated-regent,country-below-county-rank: its land is its counties |
+| SIK | 希卢克 | -→c | c_bahr_el_ghazal | generated-regent,country-below-county-rank: its land is its counties |
+| SKI | 沙基 | -→c | c_shaki | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| SKK | 锡金 | -→c | c_sikkim | generated-regent,country-below-county-rank: its land is its counties |
+| SKN | 萨瓦金 | -→c | c_suakin | vassal,country-below-county-rank: its land is its counties |
+| SKR | 斯卡鲁雷 | -→c | c_chicora | generated-regent,country-below-county-rank: its land is its counties |
+| SLA | 锡拉特 | -→c | c_upper_kapuas | country-below-county-rank: its land is its counties |
+| SLD | 速勒都思 | -→c | c_balkh | tributary,generated-regent,primary-title |
+| SLK | 塞尔库普 | -→c | c_bolshoy_uluy | generated-regent,country-below-county-rank: its land is its counties |
+| SMA | 萨姆玛 | -→c | c_northern_sindh | generated-regent,primary-title |
+| SMB | 三发 | -→c | c_sambas | tributary,generated-regent,country-below-county-rank: its land is its  |
+| SMI | 萨普米 | -→c | c_inner_white_karelia | generated-regent,country-below-county-rank: its land is its counties |
+| SML | 三马兰 | -→c | c_zamboanga | tributary,generated-regent,country-below-county-rank: its land is its  |
+| SMS | 西姆西尔 | -→c | c_simsir | tributary,generated-regent,country-below-county-rank: its land is its  |
+| SND | 信德 | -→c | c_tharparkar | generated-regent,primary-title |
+| SNG | 新加坡 | -→c | c_riau_islands | country-below-county-rank: its land is its counties |
+| SNP | 松潘 | -→c | c_songpan | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| SOK | 马齐普斯科亚克 | -→c | c_alsigontekw | generated-regent,country-below-county-rank: its land is its counties |
+| SON | 桑海 | -→c | c_gao | vassal,generated-regent,primary-title |
+| SOO | 苏泰奥 | -→c | c_minnetonka | generated-regent,country-below-county-rank: its land is its counties |
+| SOT | 索托 | -→c | c_eiland | generated-regent,country-below-county-rank: its land is its counties |
+| SPN | 素攀武里 | -→c | c_suphanburi | country-below-county-rank: its land is its counties |
+| SRC | 索罗卡 | -→c | c_balti_moldova | tributary,generated-regent,country-below-county-rank: its land is its  |
+| SRG | 萨兰加尔 | -→c | c_raigadh_garjats | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| SRL | 萨雷阔勒 | -→c | c_sarikol | tributary,generated-regent,primary-title |
+| SRV | 希尔凡 | -→c | c_baku | primary-title |
+| SSG | 双城 | -→c | c_hwaju | vassal,country-below-county-rank: its land is its counties |
+| STD | 斯塔达科纳 | -→c | c_kikonteku | generated-regent,country-below-county-rank: its land is its counties |
+| STN | 萨普塔格拉姆 | -→c | c_pandua | vassal,generated-regent,primary-title |
+| STP | 圣波勒 | -→c | c_upper_artois | vassal,country-below-county-rank: its land is its counties |
+| STR | 桑塔拉 | -→c | c_tulu_nadu | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| SUC | 苏库鲁 | -→c | c_acarau | generated-regent,country-below-county-rank: its land is its counties |
+| SUI | 绥芬 | -→c | c_suifun | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| SUL | 卢帕苏格 | -→c | c_sulu | tributary,generated-regent,country-below-county-rank: its land is its  |
+| SUN | 巽他 | -→c | c_kawali | primary-title |
+| SUR | 苏拉 | -→c | c_yunga | generated-regent,country-below-county-rank: its land is its counties |
+| SVA | 索西瓦 | -→c | c_kazym | tributary,generated-regent,country-below-county-rank: its land is its  |
+| SVO | 萨沃拉克斯 | -→c | c_savolax | generated-regent,country-below-county-rank: its land is its counties |
+| SWR | 什未林 | -→c | c_schwerin | vassal,country-below-county-rank: its land is its counties |
+| SWT | 斯瓦特 | -→c | c_swat | generated-regent,primary-title |
+| SXI | 水西 | -→c | c_wusawei | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| SYY | 萨基亚 | -→c | c_safhat_jibal | tributary,country-below-county-rank: its land is its counties |
+| TAI | 泰罗纳 | -→c | c_magdalena | generated-regent,country-below-county-rank: its land is its counties |
+| TAS | 塔山 | -→c | c_hulan | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| TAT | 图瓦特 | -→c | c_gourara | vassal,generated-regent,primary-title |
+| TAZ | 洮州 | -→c | c_taozhou | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| TBG | 托科巴加 | -→c | c_tampa | generated-regent,country-below-county-rank: its land is its counties |
+| TBY | 塔巴里 | -→c | c_kushva | tributary,generated-regent,country-below-county-rank: its land is its  |
+| TDE | 塔纳德 | -→c | c_majerteen | tributary,country-below-county-rank: its land is its counties |
+| TDG | 缇洞 | -→c | c_tarakan | generated-regent,primary-title |
+| TDJ | 塔杰迪尼 | -→c | c_amasya | tributary,country-below-county-rank: its land is its counties |
+| TEN | 滕科多戈 | -→c | c_tenkodogo | generated-regent,country-below-county-rank: its land is its counties |
+| TEO | 特奥蒂特兰 | -→c | c_teotitlan | generated-regent,country-below-county-rank: its land is its counties |
+| TER | 特尔纳特 | -→c | c_ternate | country-below-county-rank: its land is its counties |
+| TGR | 铜仁 | -→c | c_tongren | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| TGT | 图古尔特 | -→c | c_touggourt | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| THM | 塔哈米 | -→c | c_nechi | generated-regent,country-below-county-rank: its land is its counties |
+| THO | 托蒙德 | -→c | c_clare | country-below-county-rank: its land is its counties |
+| THT | 特万特佩克 | -→c | c_tehuantepec | generated-regent,country-below-county-rank: its land is its counties |
+| TID | 蒂多雷 | -→c | c_tidore | generated-regent,country-below-county-rank: its land is its counties |
+| TIO | 提奥农塔特 | -→c | c_ehwae | generated-regent,country-below-county-rank: its land is its counties |
+| TJP | 丹戎武罗 | -→c | c_sukadana | tributary,generated-regent,primary-title |
+| TKE | 巴太凯 | -→c | c_south_sangha | generated-regent,country-below-county-rank: its land is its counties |
+| TKR | 塔克鲁尔 | -→c | c_galam | vassal,generated-regent,primary-title |
+| TKS | 塔内克斯 | -→c | c_kentucky | generated-regent,country-below-county-rank: its land is its counties |
+| TKU | 特昆库尔 | -→c | c_kutta_nadu | country-below-county-rank: its land is its counties |
+| TLG | 特林吉特 | -→c | c_central_tlingit | generated-regent,country-below-county-rank: its land is its counties |
+| TLO | 特洛洛瓦潘 | -→c | c_tepecoacuilco | generated-regent,country-below-county-rank: its land is its counties |
+| TLP | 特拉潘 | -→c | c_tlapan | generated-regent,country-below-county-rank: its land is its counties |
+| TLQ | 特拉劳基特佩克 | -→c | c_tlatlauquitepec | generated-regent,country-below-county-rank: its land is its counties |
+| TLX | 特拉斯卡兰 | -→c | c_tlaxcala | country-below-county-rank: its land is its counties |
+| TLY | 特拉帕科亚 | -→c | c_tlapacoya | generated-regent,country-below-county-rank: its land is its counties |
+| TMC | 蒂穆夸 | -→c | c_jororo | generated-regent,country-below-county-rank: its land is its counties |
+| TMG | 蒂米斯卡明 | -→c | c_temiscamingue | generated-regent,country-below-county-rank: its land is its counties |
+| TMH | 齐米夏 | -→c | c_tsetsaut | generated-regent,country-below-county-rank: its land is its counties |
+| TML | 塔毛利特科 | -→c | c_tamaulipeco | generated-regent,country-below-county-rank: its land is its counties |
+| TMN | 耽罗 | -→c | c_tamna | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| TMT | 托马特兰 | -→c | c_tomatlan | generated-regent,country-below-county-rank: its land is its counties |
+| TNA | 通加 | -→c | c_middle_zambezi | tributary,generated-regent,country-below-county-rank: its land is its  |
+| TNC | 特诺奇蒂特兰 | -→c | c_anahuac | vassal,country-below-county-rank: its land is its counties |
+| TNG | 东吁 | -→c | c_taungoo | tributary,country-below-county-rank: its land is its counties |
+| TNK | 潘地亚 | -→c | c_pandya_nadu | country-below-county-rank: its land is its counties |
+| TNL | 托纳兰 | -→c | c_tonala | generated-regent,country-below-county-rank: its land is its counties |
+| TNQ | 天全 | -→c | c_lizhou_sichuan | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| TNT | 特伦托 | -→c | c_trentino | vassal,country-below-county-rank: its land is its counties |
+| TOG | 图伊汤加 | -→c | c_tongatapu | generated-regent,primary-title |
+| TOH | 托奇特佩克 | -→c | c_tochtepec | generated-regent,country-below-county-rank: its land is its counties |
+| TON | 托内尔 | -→c | c_senonais | vassal,country-below-county-rank: its land is its counties |
+| TOO | 托霍诺奥德汉 | -→c | c_hia_ced_oodham | generated-regent,country-below-county-rank: its land is its counties |
+| TOQ | 托克瓜 | -→c | c_naco | generated-regent,country-below-county-rank: its land is its counties |
+| TOV | 托瓦塔 | -→c | c_vanua_levu | generated-regent,country-below-county-rank: its land is its counties |
+| TPA | 图皮南巴 | -→c | c_amazon | generated-regent,country-below-county-rank: its land is its counties |
+| TPG | 太平 | -→c | c_taiping_guangxi | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| TPH | 特佩万 | -→c | c_guarisamey | generated-regent,country-below-county-rank: its land is its counties |
+| TPQ | 图皮尼金 | -→c | c_sapukaia | generated-regent,country-below-county-rank: its land is its counties |
+| TPY | 特佩亚卡 | -→c | c_tepeyacac | generated-regent,country-below-county-rank: its land is its counties |
+| TRF | 塔拉夫 | -→c | c_sylhet | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| TRG | 图阿雷格 | -→c | c_air | generated-regent,country-below-county-rank: its land is its counties |
+| TRH | 土尔扈特 | -→c | c_altay | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| TRP | 的黎波里 | -→c | c_tripolitania | vassal,country-below-county-rank: its land is its counties |
+| TSA | 萨莫萨 | -→c | c_olympic | generated-regent,country-below-county-rank: its land is its counties |
+| TSG | 聪加 | -→c | c_changane | tributary,generated-regent,country-below-county-rank: its land is its  |
+| TSM | 丹那沙林 | -→c | c_tenasserim | tributary,generated-regent,country-below-county-rank: its land is its  |
+| TSN | 塞纳科马克 | -→c | c_powhatan | generated-regent,country-below-county-rank: its land is its counties |
+| TSO | 佐亚哈 | -→c | c_pelisipi | generated-regent,primary-title |
+| TSW | 察维 | -→c | c_omaha | generated-regent,country-below-county-rank: its land is its counties |
+| TTL | 图特洛 | -→c | c_waxhaw | generated-regent,country-below-county-rank: its land is its counties |
+| TTS | 齐齐斯塔斯 | -→c | c_minitig | generated-regent,country-below-county-rank: its land is its counties |
+| TTY | 塔图伊 | -→c | c_paraguana | generated-regent,country-below-county-rank: its land is its counties |
+| TUA | 图利亚 | -→c | c_tanico | generated-regent,country-below-county-rank: its land is its counties |
+| TUC | 塔卡巴奇 | -→c | c_tuckabutche | generated-regent,country-below-county-rank: its land is its counties |
+| TVS | 塔瓦斯 | -→c | c_mugla | vassal,country-below-county-rank: its land is its counties |
+| TVY | 陶瓦亚 | -→c | c_etzanoa | generated-regent,country-below-county-rank: its land is its counties |
+| TWA | 茨瓦纳 | -→c | c_em_dinaneni | generated-regent,country-below-county-rank: its land is its counties |
+| TWI | 特里普拉 | -→c | c_tripura | generated-regent,country-below-county-rank: its land is its counties |
+| TWK | 塔瓦科尼 | -→c | c_waco | generated-regent,country-below-county-rank: its land is its counties |
+| TXP | 图斯潘 | -→c | c_tuxpan | generated-regent,country-below-county-rank: its land is its counties |
+| TYY | 泰泰 | -→c | c_palawan | tributary,generated-regent,country-below-county-rank: its land is its  |
+| TZL | 特奥萨科阿尔科 | -→c | c_tlachquiauhco | generated-regent,country-below-county-rank: its land is its counties |
+| TZM | 塔马索兰 | -→c | c_patzcuaro | generated-regent,country-below-county-rank: its land is its counties |
+| TZP | 特察波蒂特兰 | -→c | c_tetzapotitlan | generated-regent,country-below-county-rank: its land is its counties |
+| UDE | 兀狄哈 | -→c | c_tunguska | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| UGX | 乌加克斯帕 | -→c | c_chucalissa | generated-regent,country-below-county-rank: its land is its counties |
+| UJJ | 乌贾伊尼亚 | -→c | c_arrah | generated-regent,country-below-county-rank: its land is its counties |
+| ULC | 乌尔奇 | -→c | c_gorin | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| ULS | 阿尔斯特 | -→c | c_antrim | vassal,primary-title |
+| UMO | 乌莫霍 | -→c | c_charquis | generated-regent,primary-title |
+| UNA | 乌纳米 | -→c | c_assupink | generated-regent,country-below-county-rank: its land is its counties |
+| UNL | 乌纳拉奇戈 | -→c | c_kechemeche | generated-regent,country-below-county-rank: its land is its counties |
+| URB | 乌尔比诺 | -→c | c_urbino | country-below-county-rank: its land is its counties |
+| URC | 乌林·昌卡 | -→c | c_huaman_karpa | generated-regent,country-below-county-rank: its land is its counties |
+| USS | 乌苏里 | -→c | c_greater_ussuri | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| UTB | 乌泰巴 | -→c | c_taif | generated-regent,country-below-county-rank: its land is its counties |
+| UTR | 乌得勒支 | -→c | c_overijssel | vassal,primary-title |
+| VAZ | 瓦赞巴 | -→c | c_betsileo | generated-regent,country-below-county-rank: its land is its counties |
+| VDM | 旺多姆 | -→c | c_castres | vassal,country-below-county-rank: its land is its counties |
+| VED | 文达 | -→c | c_middle_limpopo | tributary,generated-regent,country-below-county-rank: its land is its  |
+| VEZ | 威祖 | -→c | c_maroserana | generated-regent,country-below-county-rank: its land is its counties |
+| VIL | 维利 | -→c | c_nyanga | generated-regent,country-below-county-rank: its land is its counties |
+| VLD | 瓦卢瓦纳德 | -→c | c_kuda_nadu | generated-regent,country-below-county-rank: its land is its counties |
+| VNA | 温达 | -→c | c_mbanza_kongo | generated-regent,country-below-county-rank: its land is its counties |
+| VND | 吠那住 | -→c | c_ve_nadu | generated-regent,country-below-county-rank: its land is its counties |
+| VNT | 旺塔杜尔 | -→c | c_turenne | vassal,country-below-county-rank: its land is its counties |
+| VOH | 武海马尔 | -→c | c_antankarana | tributary,generated-regent,country-below-county-rank: its land is its  |
+| VYT | 维亚特卡 | -→c | c_vyatka | generated-regent,primary-title |
+| WAI | 怀塔哈 | -→c | c_waitaha | generated-regent,country-below-county-rank: its land is its counties |
+| WAN | 万卡 | -→c | c_hatun_xauxa | generated-regent,country-below-county-rank: its land is its counties |
+| WAR | 瓦桑加利 | -→c | c_maakhir | tributary,primary-title |
+| WDG | 武定 | -→c | c_wuding | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| WEA | 威亚坦瓦 | -→c | c_kankakee | generated-regent,country-below-county-rank: its land is its counties |
+| WGH | 瓦格托克塔塔 | -→c | c_meskousing | generated-regent,country-below-county-rank: its land is its counties |
+| WHL | 韦哈勒 | -→c | c_timor | generated-regent,country-below-county-rank: its land is its counties |
+| WKH | 瓦佩库特 | -→c | c_hokah | generated-regent,country-below-county-rank: its land is its counties |
+| WMG | 万帕诺亚格 | -→c | c_nauset | generated-regent,country-below-county-rank: its land is its counties |
+| WNA | 万加 | -→c | c_mara | generated-regent,country-below-county-rank: its land is its counties |
+| WNG | 乌蒙 | -→c | c_wumeng | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| WNT | 文多 | -→c | c_wuntho | generated-regent,country-below-county-rank: its land is its counties |
+| WPW | 瓦佩图万 | -→c | c_pokemaga | generated-regent,country-below-county-rank: its land is its counties |
+| WRO | 温罗赫农 | -→c | c_wenro | generated-regent,country-below-county-rank: its land is its counties |
+| WSA | 乌撒 | -→c | c_wusa | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| WSK | 韦斯卡里尼 | -→c | c_gatineau | generated-regent,country-below-county-rank: its land is its counties |
+| WUY | 兀也吾 | -→c | c_middle_songhua | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| WZZ | 瓦扎哲 | -→c | c_cuttaway | generated-regent,country-below-county-rank: its land is its counties |
+| XAL | 哈利斯科 | -→c | c_aztatlan | generated-regent,country-below-county-rank: its land is its counties |
+| XAP | 哈拉潘 | -→c | c_xalapa | generated-regent,country-below-county-rank: its land is its counties |
+| XHO | 科萨 | -→c | c_siyathemba | generated-regent,country-below-county-rank: its land is its counties |
+| XLL | 什扬 | -→c | c_xllang | generated-regent,primary-title |
+| XNL | 兴隆 | -→c | c_xinzhou_sichuan | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| XOC | 索奇皮尔兰 | -→c | c_teulinchan | generated-regent,country-below-county-rank: its land is its counties |
+| XOL | 乔尔 | -→c | c_otolum | generated-regent,country-below-county-rank: its land is its counties |
+| XUM | 休马诺斯 | -→c | c_suma | generated-regent,country-below-county-rank: its land is its counties |
+| YAK | 雅卡 | -→c | c_kwango | generated-regent,country-below-county-rank: its land is its counties |
+| YAN | 姚安 | -→c | c_yaoan | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| YAO | 比拉拉 | -→c | c_yao | generated-regent,country-below-county-rank: its land is its counties |
+| YAP | 雅浦 | -→c | c_yap | generated-regent,country-below-county-rank: its land is its counties |
+| YAT | 亚滕加 | -→c | c_yatenga | generated-regent,country-below-county-rank: its land is its counties |
+| YDR | 亚达瓦拉亚 | -→c | c_southern_rayalaseema | country-below-county-rank: its land is its counties |
+| YJI | 盐井 | -→c | c_baixing | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| YKG | 尤卡吉尔 | -→c | c_indigirka | generated-regent,country-below-county-rank: its land is its counties |
+| YMS | 亚马西 | -→c | c_congaree | generated-regent,primary-title |
+| YNG | 永宁 | -→c | c_muli | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| YNN | 永宁僮 | -→c | c_annan_guizhou | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| YOH | 约瓦尔特佩克 | -→c | c_yohualtepec | generated-regent,country-below-county-rank: its land is its counties |
+| YPZ | 约皮钦科 | -→c | c_yopitzinco | generated-regent,country-below-county-rank: its land is its counties |
+| YRM | 约雷梅 | -→c | c_yoreme | generated-regent,country-below-county-rank: its land is its counties |
+| YSU | 札撒兀里 | -→c | c_samarkand | tributary,generated-regent,primary-title |
+| YYG | 酉阳 | -→c | c_youyang | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| ZAB | 扎卜 | -→c | c_aures | tributary,primary-title |
+| ZAC | 萨卡特卡 | -→c | c_zacatecas | generated-regent,country-below-county-rank: its land is its counties |
+| ZAI | 萨因 | -→c | c_alamamas | generated-regent,country-below-county-rank: its land is its counties |
+| ZAM | 扎姆法拉 | -→c | c_zamfara | tributary,generated-regent,primary-title |
+| ZAP | 扎奇拉 | -→c | c_coyolapan | union,primary-title |
+| ZAQ | 琼苏阿 | -→c | c_chunsa | generated-regent,primary-title |
+| ZBR | 泽巴里 | -→c | c_garmian | tributary,country-below-county-rank: its land is its counties |
+| ZEN | 塞努 | -→c | c_sinu | generated-regent,country-below-county-rank: its land is its counties |
+| ZEZ | 泽祖鲁 | -→c | c_tete | tributary,generated-regent,country-below-county-rank: its land is its  |
+| ZFI | 武希佩努 | -→c | c_antemoro | generated-regent,country-below-county-rank: its land is its counties |
+| ZNK | 桑迦 | -→c | c_zangskar | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| ZNN | 镇安 | -→c | c_guishun | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| ZNZ | 真州 | -→c | c_zhenan | vassal,generated-regent,country-below-county-rank: its land is its cou |
+| ZOO | 佐 | -→c | c_chin | generated-regent,country-below-county-rank: its land is its counties |
+| ZUB | 祖布佐夫 | -→c | c_zubtsov | vassal,country-below-county-rank: its land is its counties |
+| ZZB | 桑给巴尔 | -→c | c_zanzibar | tributary,generated-regent,country-below-county-rank: its land is its  |
+| ZZZ | 扎造 | -→c | c_zazzau | tributary,generated-regent,primary-title |
+
+## D. 粒度差异（202）
+
+| EU5 | 中文名 | EU5→CK3 | 现头衔 | note |
+| --- | --- | --- | --- | --- |
+| ABL | 阿尔达比勒 | c→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| ACC | 阿恰约利 | c→空 | — | vassal,country-below-county-rank: its land is nothing |
+| ALL | 阿尔施泰特 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| BBD | 勃兰登贝格 | c→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| BBG | 布兰肯堡 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| BGM | 贝加莫 | c→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| BLL | 布永 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| BRD | 巴尔迪 | c→空 | — | vassal,country-below-county-rank: its land is nothing |
+| BRS | 布雷西亚 | c→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| CHN | 希尼 | c→空 | — | union,vassal,country-below-county-rank: its land is nothing |
+| CRM | 克雷莫纳 | c→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| GLR | 格拉鲁斯 | c→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| HBG | 海因斯贝格 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| HOL | 荷兰 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| HSP | 荷尔斯泰因‑平讷贝格 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| JER | 泽西 | c→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| LOO | 洛恩 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| LUX | 卢森堡 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| MFE | 曼斯费尔德 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| NID | 尼达 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| NSA | 拿骚 | c→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| NSD | 拿骚‑迪伦堡 | c→空 | — | country-below-county-rank: its land is nothing |
+| NSW | 拿骚‑魏尔堡 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| NVA | 诺瓦拉 | c→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| ORE | 奥列舍克 | c→空 | — | union,lowered d->c,vassal,union-junior: seat not recorded yet |
+| PCZ | 皮亚琴察 | c→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| PNK | 平斯克 | c→空 | — | union,lowered d->c,vassal,union-junior: seat not recorded yet |
+| PRO | 普罗旺斯 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| PRZ | 佩鲁齐 | c→空 | — | vassal,no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| SOR | 卢萨蒂亚 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| THU | 图林根 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| VBG | 法尔肯堡 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| VRC | 韦尔切利 | c→空 | — | no-ruler-in-eu5,country-below-county-rank: its land is nothing |
+| WRN | 瓦伦 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| ZEE | 泽兰 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| ZUT | 聚特芬 | c→空 | — | union,vassal,union-junior: seat not recorded yet |
+| AAC | 亚琛 | c→b | b_aachen | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ABA | 阿尔巴 | c→b | b_alba | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ANB | 阿恩斯贝格 | c→b | b_arnsberg | vassal,country-below-county-rank: its land is a barony |
+| ANH | 安哈尔特 | c→b | b_zerbst | vassal,country-below-county-rank: its land is a barony |
+| ANN | 安纳利 | c→b | b_longford | country-below-county-rank: its land is a barony |
+| APR | 普吕姆 | c→b | b_prum | vassal,country-below-county-rank: its land is a barony |
+| ATI | 阿斯蒂 | c→b | b_asti | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| BAM | 班贝格 | c→b | b_bamberg | vassal,country-below-county-rank: its land is a barony |
+| BHL | 拜希林根 | c→b | b_beichlingen | vassal,country-below-county-rank: its land is a barony |
+| BIB | 比伯拉赫 | c→b | b_biberach | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| BLB | 莱布斯 | c→b | b_lebus | vassal,country-below-county-rank: its land is a barony |
+| BLM | 贝尔蒙 | c→b | b_ilanz | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| BMS | 迈森尼亚 | c→b | b_wurzen | vassal,country-below-county-rank: its land is a barony |
+| BNB | 贝恩堡 | c→b | b_bernburg | union,vassal,country-below-county-rank: its land is a barony |
+| BNT | 本特海姆 | c→b | b_bentheim | vassal,country-below-county-rank: its land is a barony |
+| BRC | 贝希特斯加登 | c→b | b_berchtesgaden | vassal,country-below-county-rank: its land is a barony |
+| BRM | 不来梅 | c→b | b_bremen | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| BSC | 贝桑松 | c→b | b_besancon | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| BSK | 贝斯科 | c→b | b_beeskow | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| BUD | 比丁根 | c→b | b_budingen | vassal,country-below-county-rank: its land is a barony |
+| BXN | 布里克森 | c→b | b_brixen | vassal,country-below-county-rank: its land is a barony |
+| CAM | 康布雷 | c→b | b_cambrai | vassal,country-below-county-rank: its land is a barony |
+| CEV | 切瓦 | c→b | b_ceva | vassal,country-below-county-rank: its land is a barony |
+| CHX | 基耶里 | c→b | b_chieri | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| CJK | 克伊克 | c→b | b_cuijk | vassal,country-below-county-rank: its land is a barony |
+| CNV | 卡纳韦塞 | c→b | b_ivrea | vassal,country-below-county-rank: its land is a barony |
+| COT | 科尔托纳 | c→b | b_cortona | vassal,country-below-county-rank: its land is a barony |
+| CRR | 菲纳莱 | c→b | b_cairo_montenotte | vassal,country-below-county-rank: its land is a barony |
+| DIE | 迪茨 | c→b | b_diez | vassal,country-below-county-rank: its land is a barony |
+| DIS | 迪森蒂斯 | c→b | b_disentis | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| DIT | 迪特马尔申 | c→b | b_heide | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| DNB | 丁克尔斯比尔 | c→b | b_dinkelsbuhl | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| DPH | 迪普霍尔茨 | c→b | b_diepholz | vassal,country-below-county-rank: its land is a barony |
+| DTM | 多特蒙德 | c→b | b_dortmund | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| DUN | 道恩 | c→b | b_daun | vassal,country-below-county-rank: its land is a barony |
+| EIC | 艾希施泰特 | c→b | b_eichstatt | vassal,country-below-county-rank: its land is a barony |
+| ELL | 埃尔旺根 | c→b | b_ellwangen | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ERB | 埃尔巴赫 | c→b | b_erbach | vassal,country-below-county-rank: its land is a barony |
+| ERF | 爱尔福特 | c→b | b_erfurt | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ESS | 埃森 | c→b | b_essen | vassal,country-below-county-rank: its land is a barony |
+| EVS | 埃弗施泰因 | c→b | b_holzminden | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| FBG | 弗赖堡 | c→b | b_freiburg | vassal,country-below-county-rank: its land is a barony |
+| FRN | 法兰克福 | c→b | b_frankfurt | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| FRT | 费雷特 | c→b | b_ferrette | vassal,country-below-county-rank: its land is a barony |
+| FUR | 菲尔斯滕贝格 | c→b | b_furstenberg | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| GBH | 格鲁本哈根 | c→b | b_einbeck | vassal,country-below-county-rank: its land is a barony |
+| GLN | 格莱兴 | c→b | b_ohrdruf | vassal,country-below-county-rank: its land is a barony |
+| GOS | 戈斯拉尔 | c→b | b_goslar | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| GRF | 哈尔斯 | c→b | b_grafenau | vassal,country-below-county-rank: its land is a barony |
+| GRK | 古尔克 | c→b | b_feldkirchen | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| GRY | 格吕耶尔 | c→b | b_gruyere | vassal,country-below-county-rank: its land is a barony |
+| HAC | 哈赫贝格 | c→b | b_hachberg | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| HAG | 阿格诺 | c→b | b_haguenau | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| HAM | 汉堡 | c→b | b_hamburg | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| HBR | 海尔布隆 | c→b | b_heilbronn | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| HBS | 哈尔伯施塔特 | c→b | b_halberstadt | vassal,country-below-county-rank: its land is a barony |
+| HEH | 海登海姆 | c→b | b_heidenheim | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| HLF | 黑尔芬施泰因 | c→b | b_helfenstein | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| HNA | 哈瑙 | c→b | b_hanau | vassal,country-below-county-rank: its land is a barony |
+| HOH | 霍亨索伦 | c→b | b_balingen | vassal,country-below-county-rank: its land is a barony |
+| HOX | 科维 | c→b | b_hoxter | vassal,country-below-county-rank: its land is a barony |
+| HOY | 霍亚 | c→b | b_hoya | vassal,country-below-county-rank: its land is a barony |
+| HRN | 霍恩 | c→b | b_weert | vassal,country-below-county-rank: its land is a barony |
+| HSF | 黑斯费尔德 | c→b | b_hersfeld | vassal,country-below-county-rank: its land is a barony |
+| HTR | 荷尔斯泰因‑伦茨堡 | c→b | b_rendsburg | vassal,country-below-county-rank: its land is a barony |
+| JEV | 耶弗尔 | c→b | b_jever | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| KIR | 基希贝格 | c→b | b_erbach_swabia | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| KLE | 克莱沃 | c→b | b_kleve | vassal,country-below-county-rank: its land is a barony |
+| KMP | 肯普滕 | c→b | b_kempten | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| KTZ | 卡岑埃尔恩博根 | c→b | b_katzenelnbogen | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| KYB | 基堡 | c→b | b_burgdorf_emmental | vassal,country-below-county-rank: its land is a barony |
+| LBB | 吕贝卡 | c→b | b_eutin | vassal,country-below-county-rank: its land is a barony |
+| LCA | 科莫 | c→b | b_bellinzona | vassal,country-below-county-rank: its land is a barony |
+| LCU | 卢塞恩 | c→b | b_lucerne | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| LDA | 兰道 | c→b | b_landau_rhineland | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| LEU | 洛伊希滕贝格 | c→b | b_leuchtenberg | vassal,country-below-county-rank: its land is a barony |
+| LIC | 利希滕贝格 | c→b | b_lichtenberg | vassal,country-below-county-rank: its land is a barony |
+| LNN | 莱宁根 | c→b | b_leiningen | vassal,country-below-county-rank: its land is a barony |
+| LSA | 洛桑 | c→b | b_lausanne | vassal,country-below-county-rank: its land is a barony |
+| MDN | 明登 | c→b | b_minden | vassal,country-below-county-rank: its land is a barony |
+| MDS | 曼德沙伊德 | c→b | b_schleiden | vassal,country-below-county-rank: its land is a barony |
+| MEM | 梅明根 | c→b | b_memmingen | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| MFK | 费尔德基希 | c→b | b_feldkirch | vassal,country-below-county-rank: its land is a barony |
+| MKL | 梅克伦堡 | c→b | b_wismar | vassal,country-below-county-rank: its land is a barony |
+| MLH | 米尔豪森 | c→b | b_muhlhausen | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| MOU | 穆宗 | c→b | b_mouzon | vassal,country-below-county-rank: its land is a barony |
+| MRB | 梅泽堡 | c→b | b_merseburg | vassal,country-below-county-rank: its land is a barony |
+| MRS | 默尔斯 | c→b | b_mors | vassal,country-below-county-rank: its land is a barony |
+| MSB | 莫斯巴赫 | c→b | b_mosbach | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| MSO | 梅索科 | c→b | b_mesocco | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| MSP | 马拉斯皮纳 | c→b | b_fosdinovo | vassal,country-below-county-rank: its land is a barony |
+| MTB | 蒙贝利亚尔 | c→b | b_montbeliard | vassal,country-below-county-rank: its land is a barony |
+| MUL | 米卢斯 | c→b | b_mulhouse | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| MUR | 米尔巴克 | c→b | b_murbach | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| NEL | 内伦堡 | c→b | b_stockach | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| NEU | 纳沙泰尔 | c→b | b_neuchatel | vassal,country-below-county-rank: its land is a barony |
+| NMB | 瑙姆堡 | c→b | b_naumburg | vassal,country-below-county-rank: its land is a barony |
+| NSH | 拿骚‑哈达马尔 | c→b | b_hadamar | vassal,country-below-county-rank: its land is a barony |
+| NSI | 拿骚‑伊德施泰因 | c→b | b_wiesbaden | union,vassal,country-below-county-rank: its land is a barony |
+| NUR | 纽伦堡 | c→b | b_nuremberg | vassal,country-below-county-rank: its land is a barony |
+| NWG | 瑙加德 | c→b | b_nowogard | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| OBW | 上瓦尔登 | c→b | b_sarnen | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| OFB | 奥芬堡 | c→b | b_offenburg | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ORA | 奥朗日 | c→b | b_orange | vassal,country-below-county-rank: its land is a barony |
+| ORT | 奥尔滕堡 | c→b | b_spittal | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| PDB | 帕德博恩 | c→b | b_paderborn | vassal,country-below-county-rank: its land is a barony |
+| PMS | 波美萨尼亚 | c→b | b_kwidzyn | vassal,country-below-county-rank: its land is a barony |
+| PRA | 普拉托 | c→b | b_prato | consul,vassal,consul-holds,country-below-county-rank: its land is a ba |
+| PST | 皮斯托亚 | c→b | b_pistoia | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| PSZ | 锡门 | c→b | b_simmern | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| PTG | 皮蒂利亚诺 | c→b | b_pitigliano | vassal,country-below-county-rank: its land is a barony |
+| QUB | 格拉 | c→b | b_gera | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| RBG | 里特贝格 | c→b | b_rietberg | vassal,country-below-county-rank: its land is a barony |
+| RDL | 里德泽尔 | c→b | b_lauterbach | vassal,country-below-county-rank: its land is a barony |
+| REG | 雷根斯堡 | c→b | b_regensburg | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| RIE | 里内克 | c→b | b_lohr | vassal,country-below-county-rank: its land is a barony |
+| ROT | 罗滕堡 | c→b | b_rothenburg | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| RTB | 里策比特尔 | c→b | b_ritzebuttel | vassal,country-below-county-rank: its land is a barony |
+| RVA | 拉芬斯堡 | c→b | b_ravensburg | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| RVB | 拉芬斯贝格 | c→b | b_bielefeld | vassal,country-below-county-rank: its land is a barony |
+| RYL | 雷利斯克 | c→b | b_rylsk | lowered d->c,vassal,generated-regent,country-below-county-rank: its la |
+| RZB | 拉策堡 | c→b | b_ratzeburg | vassal,country-below-county-rank: its land is a barony |
+| SAA | 萨尔布吕肯 | c→b | b_saarbrucken | vassal,country-below-county-rank: its land is a barony |
+| SAB | 绍森贝格 | c→b | b_mullheim | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| SAW | 萨尔韦尔登 | c→b | b_saarwerden | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| SCB | 绍恩堡 | c→b | b_buckeburg | union,vassal,country-below-county-rank: its land is a barony |
+| SCL | 圣克洛德 | c→b | b_saint_claude | vassal,country-below-county-rank: its land is a barony |
+| SFC | 斯特拉斯堡 | c→b | b_strasbourg | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| SHS | 松德斯豪森 | c→b | b_sondershausen | vassal,country-below-county-rank: its land is a barony |
+| SLM | 萨尔姆 | c→b | b_salm | vassal,country-below-county-rank: its land is a barony |
+| SLT | 索洛图恩 | c→b | b_solothurn | vassal,country-below-county-rank: its land is a barony |
+| SPB | 施普伦贝格 | c→b | b_spremberg | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| SPO | 施蓬海姆 | c→b | b_kreuznach | vassal,country-below-county-rank: its land is a barony |
+| SPY | 斯皮拉 | c→b | b_bruchsal | vassal,country-below-county-rank: its land is a barony |
+| STG | 圣加仑 | c→b | b_st_gallen | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| STV | 斯塔沃洛‑马尔梅迪 | c→b | b_stavelot | vassal,country-below-county-rank: its land is a barony |
+| SWH | 施瓦本哈尔 | c→b | b_hall | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| SWZ | 施瓦茨堡 | c→b | b_arnstadt | union,vassal,country-below-county-rank: its land is a barony |
+| SYE | 施派尔 | c→b | b_speyer | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| SYN | 赛恩 | c→b | b_altenkirchen | vassal,country-below-county-rank: its land is a barony |
+| TGG | 吐根堡 | c→b | b_toggenburg | vassal,country-below-county-rank: its land is a barony |
+| THD | 特鲁亨丁根 | c→b | b_schesslitz | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| TRN | 图恩 | c→b | b_frutigen | vassal,country-below-county-rank: its land is a barony |
+| TTN | 托尔托纳 | c→b | b_tortona | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| TUB | 蒂宾根 | c→b | b_tubingen | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| TUL | 图勒 | c→b | b_toul | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| UBL | 于伯林根 | c→b | b_uberlingen | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ULM | 乌尔姆 | c→b | b_ulm | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| URI | 乌利 | c→b | b_altdorf | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| VEL | 费尔登茨 | c→b | b_lichtenberg_veldenz | vassal,country-below-county-rank: its land is a barony |
+| VLT | 沃尔泰拉 | c→b | b_volterra | vassal,country-below-county-rank: its land is a barony |
+| VRD | 费尔登 | c→b | b_verden | vassal,country-below-county-rank: its land is a barony |
+| VUD | 沃 | c→b | b_yverdon_les_bains | vassal,country-below-county-rank: its land is a barony |
+| WDB | 瓦尔德贝格 | c→b | b_waldburg | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| WDE | 瓦尔代克 | c→b | b_korbach | vassal,country-below-county-rank: its land is a barony |
+| WEI | 魏森堡 | c→b | b_weissenburg | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| WER | 韦尔登贝格 | c→b | b_werdenberg | vassal,country-below-county-rank: its land is a barony |
+| WGO | 韦尼格罗德 | c→b | b_wernigerode | vassal,country-below-county-rank: its land is a barony |
+| WIE | 维德 | c→b | b_wied | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| WLD | 瓦尔德萨森 | c→b | b_tirschenreuth | vassal,country-below-county-rank: its land is a barony |
+| WMA | 魏玛 | c→b | b_weimar | vassal,country-below-county-rank: its land is a barony |
+| WRM | 沃尔姆斯 | c→b | b_worms | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| WTG | 维特根斯坦 | c→b | b_berleburg | vassal,country-below-county-rank: its land is a barony |
+| WTZ | 韦茨拉尔 | c→b | b_wetzlar | vassal,generated-regent,country-below-county-rank: its land is a baron |
+| ZIG | 齐根海恩 | c→b | b_ziegenhain | union,vassal,country-below-county-rank: its land is a barony |
+| ZWE | 茨韦布吕肯 | c→b | b_zweibrucken | vassal,country-below-county-rank: its land is a barony |
