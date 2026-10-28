@@ -4,8 +4,6 @@
 # Seed: 1 | Generated start year: 900
 # =========================================================
 
-# Generated cultures. Vanilla's are left declared but unheld.
-
 abau_culture = {
 	color = { 181 105 74 }
 
@@ -219,38 +217,6 @@ acaxee_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_249_acaxee_culture_0
-	}
-}
-
-acciaioli_bank_culture = {
-	color = { 120 100 195 }
-
-	ethos = ethos_courtly
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_collective_lands
-		tradition_religion_blending
-		tradition_fishermen
-		tradition_nubian_warrior_queens
-	}
-
-	name_list = name_list_acciaioli_bank_culture
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_acciaioli_bank_culture_0
 	}
 }
 
@@ -1233,34 +1199,6 @@ alawite_culture = {
 	}
 }
 
-albanian = {
-	color = { 186 98 45 }
-
-	ethos = ethos_egalitarian
-	heritage = albanian_group
-	language = language_albanian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_caravaneers
-		tradition_desert_nomads
-		tradition_highland_warriors
-	}
-
-	name_list = name_list_albanian
-
-	coa_gfx = { japanese_coa_gfx }
-	building_gfx = { japanese_building_gfx }
-	clothing_gfx = { japanese_clothing_gfx }
-	unit_gfx = { japanese_unit_gfx }
-	house_coa_frame = house_japan
-
-	ethnicities = {
-		100 = gen_ethnicity_275_albanian_0
-	}
-}
-
 aldan_culture = {
 	color = { 111 207 88 }
 
@@ -1842,35 +1780,6 @@ ancestral_pueblo_culture = {
 	}
 }
 
-andalusi = {
-	color = { 240 230 155 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_iberian
-	language = language_arabic
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_gardening
-		tradition_dryland_dwellers
-		tradition_hunters
-		tradition_mountaineers
-	}
-
-	name_list = name_list_andalusi
-
-	coa_gfx = { iberian_group_coa_gfx western_coa_gfx }
-	building_gfx = { iberian_building_gfx }
-	clothing_gfx = { iberian_christian_clothing_gfx western_clothing_gfx }
-	unit_gfx = { iberian_christian_unit_gfx }
-	house_coa_frame = house_china
-
-	ethnicities = {
-		100 = gen_ethnicity_288_andalusi_0
-	}
-}
-
 andamanese_culture = {
 	color = { 95 160 90 }
 
@@ -1962,36 +1871,6 @@ anejom_culture = {
 	}
 }
 
-angevin = {
-	color = { 172 103 84 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_frankish
-	language = language_french
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_ruling_caste
-		tradition_hunters
-		tradition_life_is_just_a_joke
-		tradition_equal_inheritance
-	}
-
-	name_list = name_list_angevin
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_09
-
-	ethnicities = {
-		100 = gen_ethnicity_291_angevin_0
-	}
-}
-
 anggamudi_culture = {
 	color = { 166 43 86 }
 
@@ -2018,37 +1897,6 @@ anggamudi_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_279_anggamudi_culture_0
-	}
-}
-
-anglo_irish = {
-	color = { 173 68 94 }
-
-	ethos = ethos_communal
-	heritage = heritage_goidelic
-	language = eu5_language_hiberno_english_dialect
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hill_dwellers
-		tradition_language_scholars
-		tradition_festivities
-		tradition_polders
-	}
-
-	name_list = name_list_anglo_irish
-
-	coa_gfx = { irish_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_23
-	house_coa_mask_offset = { 0.0 0.03 }
-	house_coa_mask_scale = { 0.9 0.9 }
-
-	ethnicities = {
-		100 = gen_ethnicity_292_anglo_irish_0
 	}
 }
 
@@ -2080,34 +1928,6 @@ angoram_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_245_angoram_culture_0
-	}
-}
-
-angrian = {
-	color = { 214 90 79 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_saxon
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_fighters
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_mountaineers
-	}
-
-	name_list = name_list_angrian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_angrian_0
 	}
 }
 
@@ -2498,37 +2318,6 @@ apyawa_culture = {
 	}
 }
 
-aragonese = {
-	color = { 150 78 151 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_iberian
-	language = language_occitano_romance
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_pastoralists
-		tradition_horse_breeder
-		tradition_hard_working
-		tradition_gardening
-		tradition_dryland_dwellers
-		tradition_female_only_inheritance
-	}
-
-	name_list = name_list_aragonese
-
-	coa_gfx = { iberian_group_coa_gfx western_coa_gfx }
-	building_gfx = { iberian_building_gfx }
-	clothing_gfx = { iberian_christian_clothing_gfx western_clothing_gfx }
-	unit_gfx = { iberian_christian_unit_gfx }
-	house_coa_frame = house_china
-
-	ethnicities = {
-		100 = gen_ethnicity_288_aragonese_0
-	}
-}
-
 arandai_culture = {
 	color = { 9 113 73 }
 
@@ -2652,36 +2441,6 @@ armenian_culture = {
 	}
 }
 
-aromanian = {
-	color = { 0 84 148 }
-
-	ethos = ethos_courtly
-	heritage = heritage_vlach
-	language = language_wallachian
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_legalistic
-		tradition_polders
-		tradition_wetlanders
-		tradition_forest_folk
-		tradition_metal_craftsmanship
-	}
-
-	name_list = name_list_aromanian
-
-	coa_gfx = { south_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_298_aromanian_0
-	}
-}
-
 arop_culture = {
 	color = { 161 4 226 }
 
@@ -2740,37 +2499,6 @@ arosi_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_269_arosi_culture_0
-	}
-}
-
-arpitan = {
-	color = { 235 196 231 }
-
-	ethos = ethos_bellicose
-	heritage = heritage_frankish
-	language = language_occitano_romance
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_mountaineers
-		tradition_mountain_homes
-		tradition_sacred_mountains
-		tradition_equal_inheritance
-	}
-
-	name_list = name_list_arpitan
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_291_arpitan_0
 	}
 }
 
@@ -2924,34 +2652,6 @@ ashenika_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_253_ashenika_culture_0
-	}
-}
-
-ashkenazi = {
-	color = { 0 40 133 }
-
-	ethos = ethos_courtly
-	heritage = heritage_israelite
-	language = eu5_language_yiddish_dialect
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_fighters
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_mountaineers
-	}
-
-	name_list = name_list_ashkenazi
-
-	coa_gfx = { israelite_group_coa_gfx }
-	building_gfx = { mena_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { mena_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_ashkenazi_0
 	}
 }
 
@@ -3474,67 +3174,6 @@ attu_culture = {
 		5 = gen_ethnicity_307_attu_culture_1
 		35 = gen_ethnicity_307_attu_culture_2
 		15 = gen_ethnicity_307_attu_culture_3
-	}
-}
-
-aukstaitian = {
-	color = { 154 69 116 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_baltic
-	language = language_baltic
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_artisans
-		tradition_sacred_groves
-		tradition_african_tolerance
-	}
-
-	name_list = name_list_aukstaitian
-
-	coa_gfx = { baltic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		10 = gen_ethnicity_308_aukstaitian_0
-	}
-}
-
-auvergnat = {
-	color = { 218 155 75 }
-
-	ethos = ethos_communal
-	heritage = heritage_frankish
-	language = language_occitano_romance
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_polders
-		tradition_castle_keepers
-		tradition_sacred_groves
-		tradition_culture_blending
-		tradition_forest_fighters
-		tradition_equal_inheritance
-	}
-
-	name_list = name_list_auvergnat
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_09
-
-	ethnicities = {
-		100 = gen_ethnicity_291_auvergnat_0
 	}
 }
 
@@ -5271,38 +4910,6 @@ barbakoan_culture = {
 	}
 }
 
-bardi_bank_culture = {
-	color = { 200 175 60 }
-
-	ethos = ethos_courtly
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_collective_lands
-		tradition_religion_blending
-		tradition_fishermen
-		tradition_nubian_warrior_queens
-	}
-
-	name_list = name_list_bardi_bank_culture
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_bardi_bank_culture_0
-	}
-}
-
 bardi_culture = {
 	color = { 206 106 207 }
 
@@ -5597,37 +5204,6 @@ basingui = {
 
 	ethnicities = {
 		100 = gen_ethnicity_280_basingui_0
-	}
-}
-
-basque = {
-	color = { 148 10 0 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_iberian
-	language = language_basque
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_pastoralists
-		tradition_horse_breeder
-		tradition_hard_working
-		tradition_gardening
-		tradition_dryland_dwellers
-		tradition_female_only_inheritance
-	}
-
-	name_list = name_list_basque
-
-	coa_gfx = { iberian_group_coa_gfx western_coa_gfx }
-	building_gfx = { iberian_building_gfx }
-	clothing_gfx = { iberian_christian_clothing_gfx western_clothing_gfx }
-	unit_gfx = { iberian_christian_unit_gfx }
-	house_coa_frame = house_china
-
-	ethnicities = {
-		100 = gen_ethnicity_288_basque_0
 	}
 }
 
@@ -6340,37 +5916,6 @@ beothuk_culture = {
 	}
 }
 
-berrichon = {
-	color = { 85 65 215 }
-
-	ethos = ethos_courtly
-	heritage = heritage_frankish
-	language = language_french
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_talent_acquisition
-		tradition_collective_lands
-		tradition_forest_fighters
-		tradition_warriors_by_merit
-		tradition_female_only_inheritance
-	}
-
-	name_list = name_list_berrichon
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_09
-
-	ethnicities = {
-		100 = gen_ethnicity_291_berrichon_0
-	}
-}
-
 berta_culture = {
 	color = { 167 8 227 }
 
@@ -6398,35 +5943,6 @@ berta_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_328_berta_culture_0
-	}
-}
-
-besermyan = {
-	color = { 182 249 114 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_ugro_permian
-	language = language_finnic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_mountains
-		tradition_horse_breeder
-		tradition_polders
-		tradition_forest_folk
-	}
-
-	name_list = name_list_besermyan
-
-	coa_gfx = { ugro_permian_group_coa_gfx steppe_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { ugro_permian_clothing_gfx northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_329_besermyan_0
 	}
 }
 
@@ -7033,36 +6549,6 @@ bitur_culture = {
 	}
 }
 
-bjarmian = {
-	color = { 170 230 180 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_balto_finnic
-	language = language_finnic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_chivalry
-		tradition_hard_working
-		tradition_fishermen
-		tradition_swords_for_hire
-	}
-
-	name_list = name_list_bjarmian
-
-	coa_gfx = { balto_finnic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_331_bjarmian_0
-	}
-}
-
 blaan_culture = {
 	color = { 240 20 50 }
 
@@ -7396,37 +6882,6 @@ bola_culture = {
 	}
 }
 
-bolghar_culture = {
-	color = { 155 123 128 }
-
-	ethos = ethos_stoic
-	heritage = heritage_turkic
-	language = language_oghur
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_ancient_miners
-		tradition_monastic_communities
-		tradition_desert_nomads
-		tradition_castle_keepers
-	}
-
-	name_list = name_list_bolghar_culture
-
-	coa_gfx = { turkic_group_coa_gfx steppe_coa_gfx }
-	building_gfx = { steppe_building_gfx }
-	clothing_gfx = { turkic_clothing_gfx mongol_clothing_gfx }
-	unit_gfx = { mongol_unit_gfx }
-	house_coa_frame = house_frame_02
-	house_coa_mask_offset = { 0.0 0.055 }
-	house_coa_mask_scale = { 0.9 0.9 }
-
-	ethnicities = {
-		100 = gen_ethnicity_314_bolghar_culture_0
-	}
-}
-
 bomassa_culture = {
 	color = { 87 201 20 }
 
@@ -7579,34 +7034,6 @@ boruca_culture = {
 	}
 }
 
-bosnian = {
-	color = { 227 197 87 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_south_slavic
-	language = language_south_slavic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hill_dwellers
-		tradition_mountaineers
-		tradition_ancient_miners
-	}
-
-	name_list = name_list_bosnian
-
-	coa_gfx = { south_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_334_bosnian_0
-	}
-}
-
 botos_culture = {
 	color = { 84 212 124 }
 
@@ -7695,64 +7122,6 @@ braji = {
 
 	ethnicities = {
 		100 = gen_ethnicity_311_braji_0
-	}
-}
-
-brandenburgish = {
-	color = { 123 90 90 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_saxon
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_fighters
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_mountaineers
-	}
-
-	name_list = name_list_brandenburgish
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_brandenburgish_0
-	}
-}
-
-breton = {
-	color = { 118 99 151 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_brythonic
-	language = language_brythonic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_ruling_caste
-		tradition_hunters
-		tradition_life_is_just_a_joke
-		tradition_equal_inheritance
-	}
-
-	name_list = name_list_breton
-
-	coa_gfx = { welsh_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { welsh_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_09
-
-	ethnicities = {
-		100 = gen_ethnicity_336_breton_0
 	}
 }
 
@@ -8033,35 +7402,6 @@ bukiyip_culture = {
 	}
 }
 
-bulgarian = {
-	color = { 240 240 210 }
-
-	ethos = ethos_courtly
-	heritage = heritage_south_slavic
-	language = language_slavonic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_caravaneers
-		tradition_highland_warriors
-		tradition_mountaineers
-	}
-
-	name_list = name_list_bulgarian
-
-	coa_gfx = { south_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_japan
-
-	ethnicities = {
-		100 = gen_ethnicity_334_bulgarian_0
-	}
-}
-
 bullom = {
 	color = { 18 33 46 }
 
@@ -8242,36 +7582,6 @@ bungku_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_252_bungku_culture_0
-	}
-}
-
-burgundian = {
-	color = { 148 30 69 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_frankish
-	language = language_french
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_formation_fighting
-		tradition_artisans
-		tradition_battlefield_looters
-	}
-
-	name_list = name_list_burgundian
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_291_burgundian_0
 	}
 }
 
@@ -8946,37 +8256,6 @@ casma_culture = {
 	}
 }
 
-castilian = {
-	color = { 235 143 14 }
-
-	ethos = ethos_bellicose
-	heritage = heritage_iberian
-	language = language_iberian
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_hill_dwellers
-		tradition_mountaineers
-		tradition_agrarian
-		tradition_swords_for_hire
-		tradition_equal_inheritance
-	}
-
-	name_list = name_list_castilian
-
-	coa_gfx = { iberian_group_coa_gfx western_coa_gfx }
-	building_gfx = { iberian_building_gfx }
-	clothing_gfx = { iberian_christian_clothing_gfx western_clothing_gfx }
-	unit_gfx = { iberian_christian_unit_gfx }
-	house_coa_frame = house_china
-
-	ethnicities = {
-		100 = gen_ethnicity_288_castilian_0
-	}
-}
-
 catagua_culture = {
 	color = { 226 215 180 }
 
@@ -9003,37 +8282,6 @@ catagua_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_254_catagua_culture_0
-	}
-}
-
-catalan = {
-	color = { 151 137 201 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_iberian
-	language = language_occitano_romance
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_highland_warriors
-		tradition_ancient_miners
-		tradition_agrarian
-		tradition_pastoralists
-		tradition_female_only_inheritance
-	}
-
-	name_list = name_list_catalan
-
-	coa_gfx = { iberian_group_coa_gfx western_coa_gfx }
-	building_gfx = { iberian_building_gfx }
-	clothing_gfx = { iberian_christian_clothing_gfx western_clothing_gfx }
-	unit_gfx = { iberian_christian_unit_gfx }
-	house_coa_frame = house_china
-
-	ethnicities = {
-		100 = gen_ethnicity_288_catalan_0
 	}
 }
 
@@ -9434,36 +8682,6 @@ chamoru_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_269_chamoru_culture_0
-	}
-}
-
-champenais = {
-	color = { 166 125 154 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_frankish
-	language = language_high_german
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_formation_fighting
-		tradition_artisans
-		tradition_battlefield_looters
-	}
-
-	name_list = name_list_champenais
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_291_champenais_0
 	}
 }
 
@@ -10381,35 +9599,6 @@ chitrali = {
 	}
 }
 
-chiyalik_culture = {
-	color = { 253 195 250 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_magyar
-	language = language_magyar
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_collective_lands
-		tradition_mountain_homes
-		tradition_mountaineers
-		tradition_republican_legacy
-	}
-
-	name_list = name_list_chiyalik_culture
-
-	coa_gfx = { magyar_group_coa_gfx ugro_permian_group_coa_gfx steppe_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_361_chiyalik_culture_0
-	}
-}
-
 choctaw_culture = {
 	color = { 21 237 85 }
 
@@ -10908,37 +10097,6 @@ chuvan_culture = {
 	}
 }
 
-chuvash_culture = {
-	color = { 255 223 228 }
-
-	ethos = ethos_stoic
-	heritage = heritage_turkic
-	language = language_oghur
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_ancient_miners
-		tradition_monastic_communities
-		tradition_desert_nomads
-		tradition_castle_keepers
-	}
-
-	name_list = name_list_chuvash_culture
-
-	coa_gfx = { turkic_group_coa_gfx steppe_coa_gfx }
-	building_gfx = { steppe_building_gfx }
-	clothing_gfx = { turkic_clothing_gfx mongol_clothing_gfx }
-	unit_gfx = { mongol_unit_gfx }
-	house_coa_frame = house_frame_02
-	house_coa_mask_offset = { 0.0 0.055 }
-	house_coa_mask_scale = { 0.9 0.9 }
-
-	ethnicities = {
-		100 = gen_ethnicity_314_chuvash_culture_0
-	}
-}
-
 chuwi_culture = {
 	color = { 29 187 252 }
 
@@ -11362,96 +10520,6 @@ coremas_culture = {
 	}
 }
 
-cornish = {
-	color = { 105 105 105 }
-
-	ethos = ethos_communal
-	heritage = heritage_brythonic
-	language = language_brythonic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_sacred_groves
-		tradition_agrarian
-	}
-
-	name_list = name_list_cornish
-
-	coa_gfx = { welsh_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { welsh_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_16
-
-	ethnicities = {
-		100 = gen_ethnicity_336_cornish_0
-	}
-}
-
-corsican = {
-	color = { 106 178 46 }
-
-	ethos = ethos_courtly
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_collective_lands
-		tradition_religion_blending
-		tradition_fishermen
-		tradition_nubian_warrior_queens
-	}
-
-	name_list = name_list_corsican
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_corsican_0
-	}
-}
-
-cossack_culture = {
-	color = { 195 200 60 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_east_slavic
-	language = language_east_slavic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_chivalry
-		tradition_hard_working
-		tradition_fishermen
-		tradition_swords_for_hire
-	}
-
-	name_list = name_list_cossack_culture
-
-	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { east_slavic_building_gfx western_building_gfx }
-	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_371_cossack_culture_0
-	}
-}
-
 coweta_culture = {
 	color = { 103 163 147 }
 
@@ -11541,36 +10609,6 @@ croatan_culture = {
 
 	ethnicities = {
 		10 = gen_ethnicity_251_croatan_culture_0
-	}
-}
-
-croatian = {
-	color = { 174 227 95 }
-
-	ethos = ethos_courtly
-	heritage = heritage_south_slavic
-	language = language_south_slavic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_legalistic
-		tradition_polders
-		tradition_wetlanders
-		tradition_forest_folk
-		tradition_metal_craftsmanship
-	}
-
-	name_list = name_list_croatian
-
-	coa_gfx = { south_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_334_croatian_0
 	}
 }
 
@@ -11669,35 +10707,6 @@ cuitlatec_culture = {
 	}
 }
 
-cuman_culture = {
-	color = { 149 115 39 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_west_slavic
-	language = language_turkic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_collective_lands
-		tradition_mountain_homes
-		tradition_mountaineers
-		tradition_republican_legacy
-	}
-
-	name_list = name_list_cuman_culture
-
-	coa_gfx = { polish_coa_gfx west_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { west_slavic_clothing_gfx western_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_374_cuman_culture_0
-	}
-}
-
 cumanagoto_culture = {
 	color = { 19 46 107 }
 
@@ -11789,36 +10798,6 @@ cunhua_culture = {
 	}
 }
 
-curonian = {
-	color = { 14 52 212 }
-
-	ethos = ethos_communal
-	heritage = heritage_baltic
-	language = language_baltic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_gardening
-		tradition_wetlanders
-		tradition_hunters
-	}
-
-	name_list = name_list_curonian
-
-	coa_gfx = { baltic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		10 = gen_ethnicity_376_curonian_0
-	}
-}
-
 cusabo_culture = {
 	color = { 163 42 119 }
 
@@ -11878,34 +10857,6 @@ cuyonon_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_252_cuyonon_culture_0
-	}
-}
-
-czech = {
-	color = { 161 139 40 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_west_slavic
-	language = language_czech_slovak
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_storytellers
-		tradition_castle_keepers
-		tradition_collective_lands
-		tradition_talent_acquisition
-	}
-
-	name_list = name_list_czech
-
-	coa_gfx = { polish_coa_gfx west_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { west_slavic_clothing_gfx western_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_377_czech_0
 	}
 }
 
@@ -12119,34 +11070,6 @@ dakelh_culture = {
 	ethnicities = {
 		75 = gen_ethnicity_263_dakelh_culture_0
 		25 = gen_ethnicity_263_dakelh_culture_1
-	}
-}
-
-dalmatian = {
-	color = { 13 93 119 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hill_dwellers
-		tradition_mountaineers
-		tradition_ancient_miners
-	}
-
-	name_list = name_list_dalmatian
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_250_dalmatian_0
 	}
 }
 
@@ -12368,38 +11291,6 @@ dangbon_culture = {
 	}
 }
 
-danish = {
-	color = { 190 70 70 }
-
-	ethos = ethos_bellicose
-	heritage = heritage_north_germanic
-	language = language_norse
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_religious_patronage
-		tradition_mountaineers
-		tradition_highland_warriors
-		tradition_jungle_dwellers
-		tradition_swords_for_hire
-	}
-
-	name_list = name_list_danish
-
-	coa_gfx = { norse_coa_gfx western_coa_gfx }
-	building_gfx = { norse_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { norse_unit_gfx }
-	house_coa_frame = house_frame_25
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_380_danish_0
-	}
-}
-
 danu_culture = {
 	color = { 132 114 209 }
 
@@ -12429,36 +11320,6 @@ danu_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_320_danu_culture_0
-	}
-}
-
-danube_bavarian = {
-	color = { 220 220 220 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_central_germanic
-	language = language_high_german
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_wedding_ceremonies
-		tradition_agrarian
-		tradition_highland_warriors
-		tradition_mountaineers
-		tradition_equal_inheritance
-	}
-
-	name_list = name_list_danube_bavarian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_danube_bavarian_0
 	}
 }
 
@@ -13526,36 +12387,6 @@ dyula = {
 	}
 }
 
-east_franconian = {
-	color = { 130 77 119 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_central_germanic
-	language = language_high_german
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_wedding_ceremonies
-		tradition_agrarian
-		tradition_highland_warriors
-		tradition_mountaineers
-		tradition_equal_inheritance
-	}
-
-	name_list = name_list_east_franconian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_east_franconian_0
-	}
-}
-
 eastern_abenaki_culture = {
 	color = { 108 76 68 }
 
@@ -13650,65 +12481,6 @@ eastern_kru = {
 	}
 }
 
-eastern_pomeranian = {
-	color = { 33 119 58 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_central_germanic
-	language = language_saxon
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_hard_working
-		tradition_collective_lands
-		tradition_forest_folk
-	}
-
-	name_list = name_list_eastern_pomeranian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_eastern_pomeranian_0
-	}
-}
-
-eastphalian = {
-	color = { 116 92 39 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_saxon
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_fighters
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_mountaineers
-	}
-
-	name_list = name_list_eastphalian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_eastphalian_0
-	}
-}
-
 edo = {
 	color = { 110 173 129 }
 
@@ -13768,38 +12540,6 @@ embera_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_387_embera_culture_0
-	}
-}
-
-emilian = {
-	color = { 192 102 151 }
-
-	ethos = ethos_courtly
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_collective_lands
-		tradition_religion_blending
-		tradition_fishermen
-		tradition_nubian_warrior_queens
-	}
-
-	name_list = name_list_emilian
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_emilian_0
 	}
 }
 
@@ -13985,36 +12725,6 @@ enggano_culture = {
 	}
 }
 
-english = {
-	color = { 242 55 48 }
-
-	ethos = ethos_courtly
-	heritage = heritage_west_germanic
-	language = language_anglic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_adaptive_skirmishing
-		tradition_hunters
-		tradition_agrarian
-	}
-
-	name_list = name_list_english
-
-	coa_gfx = { english_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { english_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_23
-	house_coa_mask_offset = { 0.0 0.03 }
-	house_coa_mask_scale = { 0.9 0.9 }
-
-	ethnicities = {
-		100 = gen_ethnicity_391_english_0
-	}
-}
-
 enlhet_culture = {
 	color = { 33 33 170 }
 
@@ -14131,35 +12841,6 @@ erielhonan_culture = {
 	}
 }
 
-erzya_culture = {
-	color = { 206 60 63 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_volga_finnic
-	language = language_volga_finnic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_caravaneers
-		tradition_fishermen
-		tradition_warriors_of_the_dry
-	}
-
-	name_list = name_list_erzya_culture
-
-	coa_gfx = { steppe_coa_gfx volga_finnic_group_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_393_erzya_culture_0
-	}
-}
-
 eseejja_culture = {
 	color = { 89 249 119 }
 
@@ -14217,36 +12898,6 @@ eshira = {
 
 	ethnicities = {
 		100 = gen_ethnicity_280_eshira_0
-	}
-}
-
-estonian = {
-	color = { 48 211 118 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_balto_finnic
-	language = language_finnic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_chivalry
-		tradition_hard_working
-		tradition_fishermen
-		tradition_swords_for_hire
-	}
-
-	name_list = name_list_estonian
-
-	coa_gfx = { balto_finnic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_331_estonian_0
 	}
 }
 
@@ -14620,36 +13271,6 @@ fataluku_culture = {
 	}
 }
 
-finnish = {
-	color = { 155 175 204 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_balto_finnic
-	language = language_finnic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_sacred_groves
-		tradition_winter_warriors
-		tradition_polders
-		tradition_monastic_communities
-	}
-
-	name_list = name_list_finnish
-
-	coa_gfx = { balto_finnic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_331_finnish_0
-	}
-}
-
 fon = {
 	color = { 48 95 30 }
 
@@ -14739,122 +13360,6 @@ formosan_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_252_formosan_culture_0
-	}
-}
-
-franc_comtois = {
-	color = { 177 198 139 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_frankish
-	language = language_french
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_formation_fighting
-		tradition_artisans
-		tradition_battlefield_looters
-	}
-
-	name_list = name_list_franc_comtois
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_291_franc_comtois_0
-	}
-}
-
-french = {
-	color = { 35 35 173 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_frankish
-	language = language_french
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_ruling_caste
-		tradition_hunters
-		tradition_life_is_just_a_joke
-		tradition_equal_inheritance
-	}
-
-	name_list = name_list_french
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_09
-
-	ethnicities = {
-		100 = gen_ethnicity_291_french_0
-	}
-}
-
-frisian = {
-	color = { 156 96 100 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_central_germanic
-	language = language_anglic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_agrarian
-		tradition_metal_craftsmanship
-	}
-
-	name_list = name_list_frisian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_05
-
-	ethnicities = {
-		100 = gen_ethnicity_396_frisian_0
-	}
-}
-
-friulian = {
-	color = { 34 30 174 }
-
-	ethos = ethos_bellicose
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_mountaineers
-		tradition_ancient_miners
-		tradition_festivities
-	}
-
-	name_list = name_list_friulian
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_250_friulian_0
 	}
 }
 
@@ -15250,67 +13755,6 @@ galela_culture = {
 	}
 }
 
-galician = {
-	color = { 240 167 130 }
-
-	ethos = ethos_communal
-	heritage = heritage_iberian
-	language = language_iberian
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_mountaineers
-		tradition_hill_dwellers
-		tradition_forest_fighters
-		tradition_caravaneers
-		tradition_eye_for_an_eye
-		tradition_female_only_inheritance
-	}
-
-	name_list = name_list_galician
-
-	coa_gfx = { iberian_group_coa_gfx western_coa_gfx }
-	building_gfx = { iberian_building_gfx }
-	clothing_gfx = { iberian_christian_clothing_gfx western_clothing_gfx }
-	unit_gfx = { iberian_christian_unit_gfx }
-	house_coa_frame = house_china
-
-	ethnicities = {
-		100 = gen_ethnicity_288_galician_0
-	}
-}
-
-gallo = {
-	color = { 91 85 125 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_frankish
-	language = language_french
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_ruling_caste
-		tradition_hunters
-		tradition_life_is_just_a_joke
-		tradition_equal_inheritance
-	}
-
-	name_list = name_list_gallo
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_09
-
-	ethnicities = {
-		100 = gen_ethnicity_291_gallo_0
-	}
-}
-
 gamberre_culture = {
 	color = { 156 245 136 }
 
@@ -15514,37 +13958,6 @@ garo_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_311_garo_culture_0
-	}
-}
-
-gascon = {
-	color = { 32 144 204 }
-
-	ethos = ethos_courtly
-	heritage = heritage_frankish
-	language = language_occitano_romance
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_talent_acquisition
-		tradition_collective_lands
-		tradition_forest_fighters
-		tradition_warriors_by_merit
-		tradition_female_only_inheritance
-	}
-
-	name_list = name_list_gascon
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_09
-
-	ethnicities = {
-		100 = gen_ethnicity_398_gascon_0
 	}
 }
 
@@ -15850,120 +14263,6 @@ georgian_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_246_georgian_culture_0
-	}
-}
-
-german_baltic = {
-	color = { 65 112 242 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_saxon
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_fighters
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_mountaineers
-	}
-
-	name_list = name_list_german_baltic
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_german_baltic_0
-	}
-}
-
-german_carpathian = {
-	color = { 39 36 158 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_high_german
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_fighters
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_mountaineers
-	}
-
-	name_list = name_list_german_carpathian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_german_carpathian_0
-	}
-}
-
-german_silesian = {
-	color = { 190 171 171 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_high_german
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_fighters
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_mountaineers
-	}
-
-	name_list = name_list_german_silesian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_german_silesian_0
-	}
-}
-
-german_transylvanian = {
-	color = { 0 117 238 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_high_german
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_legalistic
-		tradition_polders
-		tradition_wetlanders
-		tradition_forest_folk
-		tradition_metal_craftsmanship
-	}
-
-	name_list = name_list_german_transylvanian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_400_german_transylvanian_0
 	}
 }
 
@@ -16415,63 +14714,6 @@ gothic_culture = {
 	}
 }
 
-greater_polish = {
-	color = { 154 14 82 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_west_slavic
-	language = language_lechitic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_storytellers
-		tradition_castle_keepers
-		tradition_collective_lands
-		tradition_talent_acquisition
-	}
-
-	name_list = name_list_greater_polish
-
-	coa_gfx = { polish_coa_gfx west_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { west_slavic_clothing_gfx western_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_402_greater_polish_0
-	}
-}
-
-greek_culture = {
-	color = { 121 53 140 }
-
-	ethos = ethos_courtly
-	heritage = heritage_byzantine
-	language = language_greek
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_caravaneers
-		tradition_highland_warriors
-		tradition_mountaineers
-	}
-
-	name_list = name_list_greek_culture
-
-	coa_gfx = { byzantine_group_coa_gfx }
-	building_gfx = { byzantine_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_japan
-
-	ethnicities = {
-		100 = gen_ethnicity_342_greek_culture_0
-	}
-}
-
 gresi_culture = {
 	color = { 77 224 171 }
 
@@ -16500,35 +14742,6 @@ gresi_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_245_gresi_culture_0
-	}
-}
-
-griko_culture = {
-	color = { 188 51 209 }
-
-	ethos = ethos_courtly
-	heritage = heritage_byzantine
-	language = language_greek
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_caravaneers
-		tradition_highland_warriors
-		tradition_mountaineers
-	}
-
-	name_list = name_list_griko_culture
-
-	coa_gfx = { byzantine_group_coa_gfx }
-	building_gfx = { byzantine_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_japan
-
-	ethnicities = {
-		100 = gen_ethnicity_342_griko_culture_0
 	}
 }
 
@@ -17835,35 +16048,6 @@ gurunsi = {
 	}
 }
 
-gutnish = {
-	color = { 190 120 70 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_north_germanic
-	language = language_norse
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_wedding_ceremonies
-		tradition_gardening
-		tradition_collective_lands
-		tradition_chanson_de_geste
-	}
-
-	name_list = name_list_gutnish
-
-	coa_gfx = { norse_coa_gfx western_coa_gfx }
-	building_gfx = { norse_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { norse_unit_gfx }
-	house_coa_frame = house_frame_05
-
-	ethnicities = {
-		100 = gen_ethnicity_411_gutnish_0
-	}
-}
-
 guugu_yimidhirr_culture = {
 	color = { 233 245 182 }
 
@@ -18509,36 +16693,6 @@ halkomelem_culture = {
 	}
 }
 
-halychian_culture = {
-	color = { 123 34 46 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_east_slavic
-	language = language_east_slavic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_folk
-		tradition_wetlanders
-		tradition_gardening
-	}
-
-	name_list = name_list_halychian_culture
-
-	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { east_slavic_building_gfx western_building_gfx }
-	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_371_halychian_culture_0
-	}
-}
-
 hambatus_culture = {
 	color = { 180 104 7 }
 
@@ -18659,34 +16813,6 @@ hani_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_320_hani_culture_0
-	}
-}
-
-hanseatic = {
-	color = { 0 32 32 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_saxon
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_fighters
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_mountaineers
-	}
-
-	name_list = name_list_hanseatic
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_hanseatic_0
 	}
 }
 
@@ -19247,66 +17373,6 @@ het_culture = {
 	}
 }
 
-high_alemannic = {
-	color = { 153 122 108 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_high_german
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_collective_lands
-		tradition_the_witenagemot
-		tradition_hard_working
-		tradition_female_only_inheritance
-	}
-
-	name_list = name_list_high_alemannic
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_high_alemannic_0
-	}
-}
-
-highland = {
-	color = { 46 78 153 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_goidelic
-	language = language_goidelic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_mountaineers
-		tradition_music_theory
-		tradition_highland_warriors
-		tradition_hill_dwellers
-	}
-
-	name_list = name_list_highland
-
-	coa_gfx = { irish_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.055 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_336_highland_0
-	}
-}
-
 hijazi_culture = {
 	color = { 255 215 185 }
 
@@ -19615,35 +17681,6 @@ hohokam_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_420_hohokam_culture_0
-	}
-}
-
-holsatian = {
-	color = { 156 179 189 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_central_germanic
-	language = language_saxon
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_wedding_ceremonies
-		tradition_gardening
-		tradition_collective_lands
-		tradition_chanson_de_geste
-	}
-
-	name_list = name_list_holsatian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_05
-
-	ethnicities = {
-		100 = gen_ethnicity_293_holsatian_0
 	}
 }
 
@@ -20051,35 +18088,6 @@ huizhou_hakka_culture = {
 	}
 }
 
-hungarian = {
-	color = { 152 85 92 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_magyar
-	language = language_magyar
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_collective_lands
-		tradition_mountain_homes
-		tradition_mountaineers
-		tradition_republican_legacy
-	}
-
-	name_list = name_list_hungarian
-
-	coa_gfx = { magyar_group_coa_gfx ugro_permian_group_coa_gfx steppe_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_361_hungarian_0
-	}
-}
-
 hupa_culture = {
 	color = { 54 213 114 }
 
@@ -20292,37 +18300,6 @@ ibanag_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_252_ibanag_culture_0
-	}
-}
-
-icelandic = {
-	color = { 43 60 117 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_north_germanic
-	language = language_norse
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_mountaineers
-		tradition_music_theory
-		tradition_highland_warriors
-		tradition_hill_dwellers
-	}
-
-	name_list = name_list_icelandic
-
-	coa_gfx = { norse_coa_gfx western_coa_gfx }
-	building_gfx = { norse_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { norse_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.055 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_411_icelandic_0
 	}
 }
 
@@ -20819,36 +18796,6 @@ ingalik_culture = {
 	}
 }
 
-ingrian = {
-	color = { 239 252 22 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_balto_finnic
-	language = language_finnic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_chivalry
-		tradition_hard_working
-		tradition_fishermen
-		tradition_swords_for_hire
-	}
-
-	name_list = name_list_ingrian
-
-	coa_gfx = { balto_finnic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_331_ingrian_0
-	}
-}
-
 inka_culture = {
 	color = { 229 64 64 }
 
@@ -21254,35 +19201,6 @@ iresim_culture = {
 	}
 }
 
-irish = {
-	color = { 47 140 36 }
-
-	ethos = ethos_communal
-	heritage = heritage_goidelic
-	language = language_goidelic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hill_dwellers
-		tradition_language_scholars
-		tradition_festivities
-		tradition_polders
-	}
-
-	name_list = name_list_irish
-
-	coa_gfx = { irish_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_16
-
-	ethnicities = {
-		100 = gen_ethnicity_336_irish_0
-	}
-}
-
 irritila_culture = {
 	color = { 189 236 182 }
 
@@ -21370,68 +19288,6 @@ issati_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_345_issati_culture_0
-	}
-}
-
-istroromanian = {
-	color = { 35 201 240 }
-
-	ethos = ethos_courtly
-	heritage = heritage_vlach
-	language = language_wallachian
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_legalistic
-		tradition_polders
-		tradition_wetlanders
-		tradition_forest_folk
-		tradition_metal_craftsmanship
-	}
-
-	name_list = name_list_istroromanian
-
-	coa_gfx = { south_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_298_istroromanian_0
-	}
-}
-
-italki = {
-	color = { 0 24 82 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_israelite
-	language = language_italian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_caravaneers
-		tradition_fishermen
-		tradition_warriors_of_the_dry
-	}
-
-	name_list = name_list_italki
-
-	coa_gfx = { israelite_group_coa_gfx }
-	building_gfx = { mena_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { mena_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		45 = gen_ethnicity_409_italki_0
-		5 = gen_ethnicity_409_italki_1
-		35 = gen_ethnicity_409_italki_2
-		15 = gen_ethnicity_409_italki_3
 	}
 }
 
@@ -21995,35 +19851,6 @@ jaru_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_322_jaru_culture_0
-	}
-}
-
-jasz_culture = {
-	color = { 206 32 124 }
-
-	ethos = ethos_spiritual
-	heritage = jasz_culture_group
-	language = language_scythian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_mountains
-		tradition_horse_breeder
-		tradition_polders
-		tradition_forest_folk
-	}
-
-	name_list = name_list_jasz_culture
-
-	coa_gfx = { turkic_group_coa_gfx steppe_coa_gfx }
-	building_gfx = { steppe_building_gfx }
-	clothing_gfx = { turkic_clothing_gfx mongol_clothing_gfx }
-	unit_gfx = { mongol_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_429_jasz_culture_0
 	}
 }
 
@@ -24348,36 +22175,6 @@ karbi_culture = {
 	}
 }
 
-karelian = {
-	color = { 209 252 22 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_balto_finnic
-	language = language_finnic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_sacred_groves
-		tradition_winter_warriors
-		tradition_polders
-		tradition_monastic_communities
-	}
-
-	name_list = name_list_karelian
-
-	coa_gfx = { balto_finnic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_331_karelian_0
-	}
-}
-
 karen_culture = {
 	color = { 210 30 50 }
 
@@ -24533,37 +22330,6 @@ kashmiri_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_311_kashmiri_culture_0
-	}
-}
-
-kashubian = {
-	color = { 255 242 0 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_west_slavic
-	language = language_lechitic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_hard_working
-		tradition_collective_lands
-		tradition_forest_folk
-	}
-
-	name_list = name_list_kashubian
-
-	coa_gfx = { polish_coa_gfx west_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { west_slavic_clothing_gfx western_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_402_kashubian_0
 	}
 }
 
@@ -27006,38 +24772,6 @@ kombai_culture = {
 	}
 }
 
-komi = {
-	color = { 249 182 114 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_ugro_permian
-	language = language_ugro_permian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_wetlanders
-		tradition_sacred_groves
-		tradition_forest_folk
-		tradition_concubines
-		tradition_mountaineers
-	}
-
-	name_list = name_list_komi
-
-	coa_gfx = { ugro_permian_group_coa_gfx steppe_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { ugro_permian_clothing_gfx northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_24
-	house_coa_mask_offset = { 0.0 0.055 }
-	house_coa_mask_scale = { 0.9 0.9 }
-
-	ethnicities = {
-		100 = gen_ethnicity_329_komi_0
-	}
-}
-
 komo = {
 	color = { 137 65 111 }
 
@@ -28619,36 +26353,6 @@ kuyu = {
 	}
 }
 
-kvens = {
-	color = { 124 100 85 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_balto_finnic
-	language = language_finnic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_chivalry
-		tradition_hard_working
-		tradition_fishermen
-		tradition_swords_for_hire
-	}
-
-	name_list = name_list_kvens
-
-	coa_gfx = { balto_finnic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_331_kvens_0
-	}
-}
-
 kwaio_culture = {
 	color = { 70 43 153 }
 
@@ -28988,38 +26692,6 @@ ladakh_culture = {
 	}
 }
 
-ladin = {
-	color = { 24 95 167 }
-
-	ethos = ethos_courtly
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_collective_lands
-		tradition_religion_blending
-		tradition_fishermen
-		tradition_nubian_warrior_queens
-	}
-
-	name_list = name_list_ladin
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_ladin_0
-	}
-}
-
 lahkota_culture = {
 	color = { 252 194 5 }
 
@@ -29356,37 +27028,6 @@ lamutk_culture = {
 	}
 }
 
-languedocien = {
-	color = { 120 12 30 }
-
-	ethos = ethos_courtly
-	heritage = heritage_frankish
-	language = language_occitano_romance
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_talent_acquisition
-		tradition_collective_lands
-		tradition_forest_fighters
-		tradition_warriors_by_merit
-		tradition_female_only_inheritance
-	}
-
-	name_list = name_list_languedocien
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_09
-
-	ethnicities = {
-		100 = gen_ethnicity_291_languedocien_0
-	}
-}
-
 lao_culture = {
 	color = { 93 147 88 }
 
@@ -29500,36 +27141,6 @@ latje_latje_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_279_latje_latje_culture_0
-	}
-}
-
-latvian = {
-	color = { 120 86 179 }
-
-	ethos = ethos_communal
-	heritage = heritage_baltic
-	language = language_baltic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_gardening
-		tradition_wetlanders
-		tradition_hunters
-	}
-
-	name_list = name_list_latvian
-
-	coa_gfx = { baltic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		10 = gen_ethnicity_376_latvian_0
 	}
 }
 
@@ -29750,37 +27361,6 @@ lenca_culture = {
 	}
 }
 
-leonese = {
-	color = { 99 14 87 }
-
-	ethos = ethos_bellicose
-	heritage = heritage_iberian
-	language = language_iberian
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_hill_dwellers
-		tradition_mountaineers
-		tradition_agrarian
-		tradition_swords_for_hire
-		tradition_equal_inheritance
-	}
-
-	name_list = name_list_leonese
-
-	coa_gfx = { iberian_group_coa_gfx western_coa_gfx }
-	building_gfx = { iberian_building_gfx }
-	clothing_gfx = { iberian_christian_clothing_gfx western_clothing_gfx }
-	unit_gfx = { iberian_christian_unit_gfx }
-	house_coa_frame = house_china
-
-	ethnicities = {
-		100 = gen_ethnicity_288_leonese_0
-	}
-}
-
 lepai_nde_culture = {
 	color = { 198 166 100 }
 
@@ -29809,36 +27389,6 @@ lepai_nde_culture = {
 		5 = gen_ethnicity_381_lepai_nde_culture_1
 		45 = gen_ethnicity_381_lepai_nde_culture_2
 		35 = gen_ethnicity_381_lepai_nde_culture_3
-	}
-}
-
-lesser_polish = {
-	color = { 14 184 54 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_west_slavic
-	language = language_lechitic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_folk
-		tradition_wetlanders
-		tradition_gardening
-	}
-
-	name_list = name_list_lesser_polish
-
-	coa_gfx = { polish_coa_gfx west_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { west_slavic_clothing_gfx western_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_402_lesser_polish_0
 	}
 }
 
@@ -30062,38 +27612,6 @@ licanantay_culture = {
 	}
 }
 
-ligurian = {
-	color = { 218 215 56 }
-
-	ethos = ethos_courtly
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_collective_lands
-		tradition_religion_blending
-		tradition_fishermen
-		tradition_nubian_warrior_queens
-	}
-
-	name_list = name_list_ligurian
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_ligurian_0
-	}
-}
-
 lillooet_culture = {
 	color = { 180 38 95 }
 
@@ -30187,37 +27705,6 @@ limilngan_culture = {
 	}
 }
 
-limousin = {
-	color = { 182 88 203 }
-
-	ethos = ethos_courtly
-	heritage = heritage_frankish
-	language = language_occitano_romance
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_talent_acquisition
-		tradition_collective_lands
-		tradition_forest_fighters
-		tradition_warriors_by_merit
-		tradition_female_only_inheritance
-	}
-
-	name_list = name_list_limousin
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_09
-
-	ethnicities = {
-		100 = gen_ethnicity_291_limousin_0
-	}
-}
-
 lio_culture = {
 	color = { 20 125 15 }
 
@@ -30280,36 +27767,6 @@ lisu_culture = {
 	}
 }
 
-liv = {
-	color = { 155 126 71 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_balto_finnic
-	language = language_finnic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_chivalry
-		tradition_hard_working
-		tradition_fishermen
-		tradition_swords_for_hire
-	}
-
-	name_list = name_list_liv
-
-	coa_gfx = { balto_finnic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_331_liv_0
-	}
-}
-
 lomari_culture = {
 	color = { 166 50 88 }
 
@@ -30336,94 +27793,6 @@ lomari_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_382_lomari_culture_0
-	}
-}
-
-lombard = {
-	color = { 146 108 146 }
-
-	ethos = ethos_courtly
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_collective_lands
-		tradition_religion_blending
-		tradition_fishermen
-		tradition_nubian_warrior_queens
-	}
-
-	name_list = name_list_lombard
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_lombard_0
-	}
-}
-
-lorrain = {
-	color = { 115 142 205 }
-
-	ethos = ethos_courtly
-	heritage = heritage_frankish
-	language = language_high_german
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_fighters
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_mountaineers
-	}
-
-	name_list = name_list_lorrain
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_291_lorrain_0
-	}
-}
-
-low_franconian = {
-	color = { 212 105 17 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_dutch
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_fighters
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_mountaineers
-	}
-
-	name_list = name_list_low_franconian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_396_low_franconian_0
 	}
 }
 
@@ -30456,34 +27825,6 @@ lower_egyptian_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_326_lower_egyptian_culture_0
-	}
-}
-
-lower_saxon = {
-	color = { 33 101 137 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_central_germanic
-	language = language_saxon
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_agrarian
-		tradition_metal_craftsmanship
-	}
-
-	name_list = name_list_lower_saxon
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_05
-
-	ethnicities = {
-		100 = gen_ethnicity_293_lower_saxon_0
 	}
 }
 
@@ -32183,38 +29524,6 @@ malpa_culture = {
 	}
 }
 
-maltese = {
-	color = { 16 30 15 }
-
-	ethos = ethos_courtly
-	heritage = heritage_latin
-	language = eu5_language_maltese_dialect
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_collective_lands
-		tradition_religion_blending
-		tradition_fishermen
-		tradition_nubian_warrior_queens
-	}
-
-	name_list = name_list_maltese
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_maltese_0
-	}
-}
-
 malto_culture = {
 	color = { 100 75 35 }
 
@@ -32916,34 +30225,6 @@ manoki_culture = {
 	}
 }
 
-mansi_culture = {
-	color = { 124 15 221 }
-
-	ethos = ethos_spiritual
-	heritage = mansi_culture_group
-	language = language_ugro_permian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_martial_admiration
-		tradition_forest_folk
-	}
-
-	name_list = name_list_mansi_culture
-
-	coa_gfx = { turkic_group_coa_gfx steppe_coa_gfx }
-	building_gfx = { steppe_building_gfx }
-	clothing_gfx = { turkic_clothing_gfx mongol_clothing_gfx }
-	unit_gfx = { mongol_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_459_mansi_culture_0
-	}
-}
-
 manta_culture = {
 	color = { 234 65 214 }
 
@@ -33247,35 +30528,6 @@ marathi_culture = {
 	}
 }
 
-mari_culture = {
-	color = { 37 224 228 }
-
-	ethos = ethos_spiritual
-	heritage = mari_culture_group
-	language = language_volga_finnic
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_mountains
-		tradition_horse_breeder
-		tradition_polders
-		tradition_forest_folk
-	}
-
-	name_list = name_list_mari_culture
-
-	coa_gfx = { turkic_group_coa_gfx steppe_coa_gfx }
-	building_gfx = { steppe_building_gfx }
-	clothing_gfx = { turkic_clothing_gfx mongol_clothing_gfx }
-	unit_gfx = { mongol_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_461_mari_culture_0
-	}
-}
-
 marind_culture = {
 	color = { 191 26 104 }
 
@@ -33304,34 +30556,6 @@ marind_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_245_marind_culture_0
-	}
-}
-
-markish = {
-	color = { 136 48 66 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_central_germanic
-	language = language_saxon
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_agrarian
-		tradition_metal_craftsmanship
-	}
-
-	name_list = name_list_markish
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_05
-
-	ethnicities = {
-		100 = gen_ethnicity_293_markish_0
 	}
 }
 
@@ -33992,37 +31216,6 @@ mazanderani_culture = {
 	}
 }
 
-mazovian = {
-	color = { 195 149 155 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_west_slavic
-	language = language_lechitic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_hard_working
-		tradition_collective_lands
-		tradition_forest_folk
-	}
-
-	name_list = name_list_mazovian
-
-	coa_gfx = { polish_coa_gfx west_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { west_slavic_clothing_gfx western_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_402_mazovian_0
-	}
-}
-
 mbaka = {
 	color = { 73 134 111 }
 
@@ -34294,38 +31487,6 @@ mebengokre_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_271_mebengokre_culture_0
-	}
-}
-
-median = {
-	color = { 193 26 14 }
-
-	ethos = ethos_bellicose
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_castle_keepers
-		tradition_highland_warriors
-		tradition_mountaineers
-		tradition_agrarian
-	}
-
-	name_list = name_list_median
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_29
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_median_0
 	}
 }
 
@@ -34662,67 +31823,6 @@ merina_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_294_merina_culture_0
-	}
-}
-
-merya_culture = {
-	color = { 137 124 128 }
-
-	ethos = ethos_spiritual
-	heritage = merya_culture_group
-	language = language_volga_finnic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_mountains
-		tradition_horse_breeder
-		tradition_polders
-		tradition_forest_folk
-	}
-
-	name_list = name_list_merya_culture
-
-	coa_gfx = { turkic_group_coa_gfx steppe_coa_gfx }
-	building_gfx = { steppe_building_gfx }
-	clothing_gfx = { turkic_clothing_gfx mongol_clothing_gfx }
-	unit_gfx = { mongol_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		25 = gen_ethnicity_464_merya_culture_0
-		15 = gen_ethnicity_464_merya_culture_1
-		35 = gen_ethnicity_464_merya_culture_2
-		25 = gen_ethnicity_464_merya_culture_3
-	}
-}
-
-meschera_culture = {
-	color = { 106 160 163 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_volga_finnic
-	language = language_volga_finnic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_caravaneers
-		tradition_fishermen
-		tradition_warriors_of_the_dry
-	}
-
-	name_list = name_list_meschera_culture
-
-	coa_gfx = { steppe_coa_gfx volga_finnic_group_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_393_meschera_culture_0
 	}
 }
 
@@ -35550,35 +32650,6 @@ moi_culture = {
 	}
 }
 
-moksha_culture = {
-	color = { 255 85 153 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_volga_finnic
-	language = language_volga_finnic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_caravaneers
-		tradition_fishermen
-		tradition_warriors_of_the_dry
-	}
-
-	name_list = name_list_moksha_culture
-
-	coa_gfx = { steppe_coa_gfx volga_finnic_group_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_393_moksha_culture_0
-	}
-}
-
 molalla_culture = {
 	color = { 122 189 110 }
 
@@ -35607,36 +32678,6 @@ molalla_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_466_molalla_culture_0
-	}
-}
-
-moldovan = {
-	color = { 136 157 23 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_vlach
-	language = language_wallachian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_wetlanders
-		tradition_mountaineers
-		tradition_hunters
-	}
-
-	name_list = name_list_moldovan
-
-	coa_gfx = { south_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_298_moldovan_0
 	}
 }
 
@@ -36109,34 +33150,6 @@ moratau_culture = {
 	}
 }
 
-moravian = {
-	color = { 232 149 18 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_west_slavic
-	language = language_czech_slovak
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_storytellers
-		tradition_castle_keepers
-		tradition_collective_lands
-		tradition_talent_acquisition
-	}
-
-	name_list = name_list_moravian
-
-	coa_gfx = { polish_coa_gfx west_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { west_slavic_clothing_gfx western_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_377_moravian_0
-	}
-}
-
 mori_culture = {
 	color = { 220 115 230 }
 
@@ -36257,34 +33270,6 @@ moru_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_328_moru_culture_0
-	}
-}
-
-moselle_franconian = {
-	color = { 208 104 44 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_high_german
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_fighters
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_mountaineers
-	}
-
-	name_list = name_list_moselle_franconian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		10 = gen_ethnicity_293_moselle_franconian_0
 	}
 }
 
@@ -36855,36 +33840,6 @@ muscogee_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_272_muscogee_culture_0
-	}
-}
-
-muscovite = {
-	color = { 206 181 97 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_east_slavic
-	language = language_east_slavic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_chivalry
-		tradition_hard_working
-		tradition_fishermen
-		tradition_swords_for_hire
-	}
-
-	name_list = name_list_muscovite
-
-	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { east_slavic_building_gfx western_building_gfx }
-	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		10 = gen_ethnicity_470_muscovite_0
 	}
 }
 
@@ -38345,38 +35300,6 @@ nduke_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_269_nduke_culture_0
-	}
-}
-
-neapolitan = {
-	color = { 19 96 135 }
-
-	ethos = ethos_bellicose
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_castle_keepers
-		tradition_highland_warriors
-		tradition_mountaineers
-		tradition_agrarian
-	}
-
-	name_list = name_list_neapolitan
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_29
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_neapolitan_0
 	}
 }
 
@@ -39991,99 +36914,6 @@ nootka_culture = {
 	}
 }
 
-norman = {
-	color = { 131 138 116 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_frankish
-	language = language_french
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_ruling_caste
-		tradition_hunters
-		tradition_life_is_just_a_joke
-		tradition_equal_inheritance
-	}
-
-	name_list = name_list_norman
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_09
-
-	ethnicities = {
-		100 = gen_ethnicity_291_norman_0
-	}
-}
-
-norn_culture = {
-	color = { 80 113 153 }
-
-	ethos = ethos_bellicose
-	heritage = heritage_north_germanic
-	language = language_norse
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_religious_patronage
-		tradition_mountaineers
-		tradition_highland_warriors
-		tradition_jungle_dwellers
-		tradition_swords_for_hire
-	}
-
-	name_list = name_list_norn_culture
-
-	coa_gfx = { norse_coa_gfx western_coa_gfx }
-	building_gfx = { norse_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { norse_unit_gfx }
-	house_coa_frame = house_frame_25
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_411_norn_culture_0
-	}
-}
-
-norse_gael = {
-	color = { 0 105 104 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_goidelic
-	language = language_goidelic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_mountaineers
-		tradition_music_theory
-		tradition_highland_warriors
-		tradition_hill_dwellers
-	}
-
-	name_list = name_list_norse_gael
-
-	coa_gfx = { irish_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.055 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_336_norse_gael_0
-	}
-}
-
 north_valley_yokut_culture = {
 	color = { 220 190 210 }
 
@@ -40116,68 +36946,6 @@ north_valley_yokut_culture = {
 	}
 }
 
-northumbrian = {
-	color = { 166 40 78 }
-
-	ethos = ethos_courtly
-	heritage = heritage_west_germanic
-	language = language_anglic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_adaptive_skirmishing
-		tradition_hunters
-		tradition_agrarian
-	}
-
-	name_list = name_list_northumbrian
-
-	coa_gfx = { english_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { english_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_23
-	house_coa_mask_offset = { 0.0 0.03 }
-	house_coa_mask_scale = { 0.9 0.9 }
-
-	ethnicities = {
-		100 = gen_ethnicity_391_northumbrian_0
-	}
-}
-
-norwegian = {
-	color = { 117 165 188 }
-
-	ethos = ethos_bellicose
-	heritage = heritage_north_germanic
-	language = language_norse
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_religious_patronage
-		tradition_mountaineers
-		tradition_highland_warriors
-		tradition_jungle_dwellers
-		tradition_swords_for_hire
-	}
-
-	name_list = name_list_norwegian
-
-	coa_gfx = { norse_coa_gfx western_coa_gfx }
-	building_gfx = { norse_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { norse_unit_gfx }
-	house_coa_frame = house_frame_25
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_411_norwegian_0
-	}
-}
-
 nottoway_culture = {
 	color = { 83 83 247 }
 
@@ -40206,36 +36974,6 @@ nottoway_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_477_nottoway_culture_0
-	}
-}
-
-novgorodian = {
-	color = { 97 126 37 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_east_slavic
-	language = language_east_slavic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_chivalry
-		tradition_hard_working
-		tradition_fishermen
-		tradition_swords_for_hire
-	}
-
-	name_list = name_list_novgorodian
-
-	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { east_slavic_building_gfx western_building_gfx }
-	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		10 = gen_ethnicity_470_novgorodian_0
 	}
 }
 
@@ -43754,38 +40492,6 @@ pericu_culture = {
 	}
 }
 
-peruzzi_bank_culture = {
-	color = { 40 60 180 }
-
-	ethos = ethos_courtly
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_collective_lands
-		tradition_religion_blending
-		tradition_fishermen
-		tradition_nubian_warrior_queens
-	}
-
-	name_list = name_list_peruzzi_bank_culture
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_peruzzi_bank_culture_0
-	}
-}
-
 piankeshaw_culture = {
 	color = { 145 160 202 }
 
@@ -43814,68 +40520,6 @@ piankeshaw_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_304_piankeshaw_culture_0
-	}
-}
-
-picard = {
-	color = { 184 184 122 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_frankish
-	language = language_high_german
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_ruling_caste
-		tradition_hunters
-		tradition_life_is_just_a_joke
-		tradition_equal_inheritance
-	}
-
-	name_list = name_list_picard
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_09
-
-	ethnicities = {
-		100 = gen_ethnicity_291_picard_0
-	}
-}
-
-piedmontese = {
-	color = { 255 255 255 }
-
-	ethos = ethos_courtly
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_collective_lands
-		tradition_religion_blending
-		tradition_fishermen
-		tradition_nubian_warrior_queens
-	}
-
-	name_list = name_list_piedmontese
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_piedmontese_0
 	}
 }
 
@@ -44299,126 +40943,6 @@ pohnpeian_culture = {
 	}
 }
 
-poitevin = {
-	color = { 182 88 203 }
-
-	ethos = ethos_courtly
-	heritage = heritage_frankish
-	language = language_french
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_talent_acquisition
-		tradition_collective_lands
-		tradition_forest_fighters
-		tradition_warriors_by_merit
-		tradition_female_only_inheritance
-	}
-
-	name_list = name_list_poitevin
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_09
-
-	ethnicities = {
-		100 = gen_ethnicity_291_poitevin_0
-	}
-}
-
-polabian = {
-	color = { 235 175 20 }
-
-	ethos = ethos_courtly
-	heritage = heritage_south_slavic
-	language = language_lechitic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_caravaneers
-		tradition_highland_warriors
-		tradition_mountaineers
-	}
-
-	name_list = name_list_polabian
-
-	coa_gfx = { south_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_japan
-
-	ethnicities = {
-		100 = gen_ethnicity_334_polabian_0
-	}
-}
-
-polatskian_culture = {
-	color = { 16 113 155 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_east_slavic
-	language = language_east_slavic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_artisans
-		tradition_sacred_groves
-		tradition_african_tolerance
-	}
-
-	name_list = name_list_polatskian_culture
-
-	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { east_slavic_building_gfx western_building_gfx }
-	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		10 = gen_ethnicity_470_polatskian_culture_0
-	}
-}
-
-polesian_culture = {
-	color = { 166 133 133 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_east_slavic
-	language = language_east_slavic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_artisans
-		tradition_sacred_groves
-		tradition_african_tolerance
-	}
-
-	name_list = name_list_polesian_culture
-
-	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { east_slavic_building_gfx western_building_gfx }
-	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_371_polesian_culture_0
-	}
-}
-
 pomo_culture = {
 	color = { 176 197 216 }
 
@@ -44448,34 +40972,6 @@ pomo_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_255_pomo_culture_0
-	}
-}
-
-pomor = {
-	color = { 69 94 18 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_east_slavic
-	language = language_east_slavic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_folk
-		tradition_jungle_dwellers
-		tradition_hunters
-	}
-
-	name_list = name_list_pomor
-
-	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { east_slavic_building_gfx western_building_gfx }
-	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_486_pomor_0
 	}
 }
 
@@ -44600,37 +41096,6 @@ poqom_culture = {
 	}
 }
 
-portuguese = {
-	color = { 40 110 140 }
-
-	ethos = ethos_bellicose
-	heritage = heritage_iberian
-	language = language_iberian
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_hill_dwellers
-		tradition_mountaineers
-		tradition_agrarian
-		tradition_swords_for_hire
-		tradition_equal_inheritance
-	}
-
-	name_list = name_list_portuguese
-
-	coa_gfx = { iberian_group_coa_gfx western_coa_gfx }
-	building_gfx = { iberian_building_gfx }
-	clothing_gfx = { iberian_christian_clothing_gfx western_clothing_gfx }
-	unit_gfx = { iberian_christian_unit_gfx }
-	house_coa_frame = house_china
-
-	ethnicities = {
-		100 = gen_ethnicity_288_portuguese_0
-	}
-}
-
 potiguara_culture = {
 	color = { 162 83 5 }
 
@@ -44687,99 +41152,6 @@ powhatan_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_251_powhatan_culture_0
-	}
-}
-
-provencal = {
-	color = { 93 160 163 }
-
-	ethos = ethos_communal
-	heritage = heritage_frankish
-	language = language_occitano_romance
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_polders
-		tradition_castle_keepers
-		tradition_sacred_groves
-		tradition_culture_blending
-		tradition_forest_fighters
-		tradition_equal_inheritance
-	}
-
-	name_list = name_list_provencal
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_09
-
-	ethnicities = {
-		100 = gen_ethnicity_291_provencal_0
-	}
-}
-
-prussian = {
-	color = { 15 27 76 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_central_germanic
-	language = language_saxon
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_hard_working
-		tradition_collective_lands
-		tradition_forest_folk
-	}
-
-	name_list = name_list_prussian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_prussian_0
-	}
-}
-
-pruthenian = {
-	color = { 121 115 152 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_baltic
-	language = language_baltic
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_hard_working
-		tradition_collective_lands
-		tradition_forest_folk
-	}
-
-	name_list = name_list_pruthenian
-
-	coa_gfx = { baltic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_487_pruthenian_0
 	}
 }
 
@@ -46088,63 +42460,6 @@ rendille_culture = {
 	}
 }
 
-rhine_alemannic = {
-	color = { 155 170 136 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_high_german
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_collective_lands
-		tradition_the_witenagemot
-		tradition_hard_working
-		tradition_female_only_inheritance
-	}
-
-	name_list = name_list_rhine_alemannic
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_rhine_alemannic_0
-	}
-}
-
-rhine_franconian = {
-	color = { 114 171 184 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_high_german
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_fighters
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_mountaineers
-	}
-
-	name_list = name_list_rhine_franconian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_rhine_franconian_0
-	}
-}
-
 riantana_culture = {
 	color = { 85 230 21 }
 
@@ -46204,35 +42519,6 @@ rikbaktsa_culture = {
 	}
 }
 
-ripuarian_franconian = {
-	color = { 84 124 48 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_high_german
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_collective_lands
-		tradition_the_witenagemot
-		tradition_hard_working
-		tradition_female_only_inheritance
-	}
-
-	name_list = name_list_ripuarian_franconian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_ripuarian_franconian_0
-	}
-}
-
 rma_culture = {
 	color = { 60 110 210 }
 
@@ -46260,124 +42546,6 @@ rma_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_320_rma_culture_0
-	}
-}
-
-romagnol = {
-	color = { 102 226 74 }
-
-	ethos = ethos_courtly
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_collective_lands
-		tradition_religion_blending
-		tradition_fishermen
-		tradition_nubian_warrior_queens
-	}
-
-	name_list = name_list_romagnol
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_romagnol_0
-	}
-}
-
-roman_culture = {
-	color = { 128 51 64 }
-
-	ethos = ethos_courtly
-	heritage = heritage_byzantine
-	language = eu5_language_roman_dialect
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_caravaneers
-		tradition_highland_warriors
-		tradition_mountaineers
-	}
-
-	name_list = name_list_roman_culture
-
-	coa_gfx = { byzantine_group_coa_gfx }
-	building_gfx = { byzantine_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_japan
-
-	ethnicities = {
-		100 = gen_ethnicity_342_roman_culture_0
-	}
-}
-
-romani_culture = {
-	color = { 191 67 129 }
-
-	ethos = ethos_spiritual
-	heritage = romani_group
-	language = eu5_language_romani_dialect
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_caravaneers
-		tradition_fishermen
-		tradition_warriors_of_the_dry
-	}
-
-	name_list = name_list_romani_culture
-
-	coa_gfx = { indo_aryan_group_coa_gfx }
-	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
-	unit_gfx = { indian_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_382_romani_culture_0
-	}
-}
-
-romansh = {
-	color = { 15 15 175 }
-
-	ethos = ethos_bellicose
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_folk
-		tradition_frugal_armorsmiths
-		tradition_mountain_homes
-		tradition_female_only_inheritance
-	}
-
-	name_list = name_list_romansh
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_romansh_0
 	}
 }
 
@@ -46660,36 +42828,6 @@ runga_culture = {
 	}
 }
 
-rusyn_culture = {
-	color = { 0 233 233 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_east_slavic
-	language = language_east_slavic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_chivalry
-		tradition_hard_working
-		tradition_fishermen
-		tradition_swords_for_hire
-	}
-
-	name_list = name_list_rusyn_culture
-
-	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { east_slavic_building_gfx western_building_gfx }
-	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_371_rusyn_culture_0
-	}
-}
-
 rutara_culture = {
 	color = { 213 160 18 }
 
@@ -46718,36 +42856,6 @@ rutara_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_280_rutara_culture_0
-	}
-}
-
-ruthenian = {
-	color = { 81 123 210 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_east_slavic
-	language = language_east_slavic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_folk
-		tradition_wetlanders
-		tradition_gardening
-	}
-
-	name_list = name_list_ruthenian
-
-	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { east_slavic_building_gfx western_building_gfx }
-	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_371_ruthenian_0
 	}
 }
 
@@ -46810,36 +42918,6 @@ rwanda_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_280_rwanda_culture_0
-	}
-}
-
-ryazanian = {
-	color = { 146 134 77 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_east_slavic
-	language = language_east_slavic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_chivalry
-		tradition_hard_working
-		tradition_fishermen
-		tradition_swords_for_hire
-	}
-
-	name_list = name_list_ryazanian
-
-	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { east_slavic_building_gfx western_building_gfx }
-	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_371_ryazanian_0
 	}
 }
 
@@ -47096,37 +43174,6 @@ saigoku_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_450_saigoku_culture_0
-	}
-}
-
-saintongeais = {
-	color = { 182 88 203 }
-
-	ethos = ethos_courtly
-	heritage = heritage_frankish
-	language = language_french
-	martial_custom = martial_custom_female_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_talent_acquisition
-		tradition_collective_lands
-		tradition_forest_fighters
-		tradition_warriors_by_merit
-		tradition_female_only_inheritance
-	}
-
-	name_list = name_list_saintongeais
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_09
-
-	ethnicities = {
-		100 = gen_ethnicity_291_saintongeais_0
 	}
 }
 
@@ -47470,36 +43517,6 @@ sambal_culture = {
 	}
 }
 
-samogitian = {
-	color = { 0 124 45 }
-
-	ethos = ethos_communal
-	heritage = heritage_baltic
-	language = language_baltic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_gardening
-		tradition_wetlanders
-		tradition_hunters
-	}
-
-	name_list = name_list_samogitian
-
-	coa_gfx = { baltic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		10 = gen_ethnicity_308_samogitian_0
-	}
-}
-
 sanaviron_culture = {
 	color = { 71 110 205 }
 
@@ -47683,36 +43700,6 @@ sao_culture = {
 	}
 }
 
-sapmi = {
-	color = { 252 209 22 }
-
-	ethos = ethos_stoic
-	heritage = sapmi_group
-	language = language_sami
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_festivities
-		tradition_hidden_cities
-		tradition_sacred_mountains
-	}
-
-	name_list = name_list_sapmi
-
-	coa_gfx = { frisian_coa_gfx german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { nivkh_clothing_gfx mongol_clothing_gfx }
-	unit_gfx = { mongol_unit_gfx }
-	house_coa_frame = house_frame_25
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_497_sapmi_0
-	}
-}
-
 sara_culture = {
 	color = { 130 131 162 }
 
@@ -47740,38 +43727,6 @@ sara_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_258_sara_culture_0
-	}
-}
-
-sardinian = {
-	color = { 117 146 167 }
-
-	ethos = ethos_bellicose
-	heritage = heritage_latin
-	language = language_sardinian
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_castle_keepers
-		tradition_highland_warriors
-		tradition_mountaineers
-		tradition_agrarian
-	}
-
-	name_list = name_list_sardinian
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_29
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_sardinian_0
 	}
 }
 
@@ -47895,36 +43850,6 @@ sauzas_culture = {
 	}
 }
 
-savonian = {
-	color = { 174 252 80 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_balto_finnic
-	language = language_finnic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_sacred_groves
-		tradition_winter_warriors
-		tradition_polders
-		tradition_monastic_communities
-	}
-
-	name_list = name_list_savonian
-
-	coa_gfx = { balto_finnic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_331_savonian_0
-	}
-}
-
 sawokli_culture = {
 	color = { 87 147 165 }
 
@@ -47952,94 +43877,6 @@ sawokli_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_272_sawokli_culture_0
-	}
-}
-
-saxon = {
-	color = { 157 148 181 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_central_germanic
-	language = language_high_german
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_storytellers
-		tradition_castle_keepers
-		tradition_collective_lands
-		tradition_talent_acquisition
-	}
-
-	name_list = name_list_saxon
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_saxon_0
-	}
-}
-
-sclavene = {
-	color = { 48 113 181 }
-
-	ethos = ethos_courtly
-	heritage = heritage_south_slavic
-	language = language_south_slavic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_caravaneers
-		tradition_highland_warriors
-		tradition_mountaineers
-	}
-
-	name_list = name_list_sclavene
-
-	coa_gfx = { south_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_japan
-
-	ethnicities = {
-		100 = gen_ethnicity_334_sclavene_0
-	}
-}
-
-scottish = {
-	color = { 199 152 12 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_goidelic
-	language = language_anglic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_mountaineers
-		tradition_music_theory
-		tradition_highland_warriors
-		tradition_hill_dwellers
-	}
-
-	name_list = name_list_scottish
-
-	coa_gfx = { irish_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.055 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_498_scottish_0
 	}
 }
 
@@ -48318,38 +44155,6 @@ senufo = {
 	}
 }
 
-sephardi = {
-	color = { 63 107 209 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_israelite
-	language = eu5_language_ladino_dialect
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_caravaneers
-		tradition_fishermen
-		tradition_warriors_of_the_dry
-	}
-
-	name_list = name_list_sephardi
-
-	coa_gfx = { israelite_group_coa_gfx }
-	building_gfx = { mena_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { mena_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		60 = gen_ethnicity_409_sephardi_0
-		5 = gen_ethnicity_409_sephardi_1
-		25 = gen_ethnicity_409_sephardi_2
-		10 = gen_ethnicity_409_sephardi_3
-	}
-}
-
 seramese_culture = {
 	color = { 70 110 185 }
 
@@ -48379,34 +44184,6 @@ seramese_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_252_seramese_culture_0
-	}
-}
-
-serbian = {
-	color = { 181 24 24 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_south_slavic
-	language = language_south_slavic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_caravaneers
-		tradition_desert_nomads
-		tradition_highland_warriors
-	}
-
-	name_list = name_list_serbian
-
-	coa_gfx = { south_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_japan
-
-	ethnicities = {
-		100 = gen_ethnicity_334_serbian_0
 	}
 }
 
@@ -48534,37 +44311,6 @@ seuta_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_280_seuta_culture_0
-	}
-}
-
-severian = {
-	color = { 190 190 190 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_east_slavic
-	language = language_east_slavic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_collective_lands
-		tradition_forest_folk
-		tradition_forest_fighters
-		tradition_diasporic
-	}
-
-	name_list = name_list_severian
-
-	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { east_slavic_building_gfx western_building_gfx }
-	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_371_severian_0
 	}
 }
 
@@ -49134,38 +44880,6 @@ sibe_culture = {
 	}
 }
 
-sicilian = {
-	color = { 73 152 76 }
-
-	ethos = ethos_bellicose
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_castle_keepers
-		tradition_highland_warriors
-		tradition_mountaineers
-		tradition_agrarian
-	}
-
-	name_list = name_list_sicilian
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_29
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_sicilian_0
-	}
-}
-
 sidama_culture = {
 	color = { 159 175 200 }
 
@@ -49349,34 +45063,6 @@ siksika_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_270_siksika_culture_0
-	}
-}
-
-silesian = {
-	color = { 84 166 93 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_west_slavic
-	language = language_high_german
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_storytellers
-		tradition_castle_keepers
-		tradition_collective_lands
-		tradition_talent_acquisition
-	}
-
-	name_list = name_list_silesian
-
-	coa_gfx = { polish_coa_gfx west_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { west_slavic_clothing_gfx western_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_377_silesian_0
 	}
 }
 
@@ -49764,94 +45450,6 @@ sklallam_culture = {
 	}
 }
 
-slovak = {
-	color = { 34 131 193 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_west_slavic
-	language = language_czech_slovak
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_collective_lands
-		tradition_mountain_homes
-		tradition_mountaineers
-		tradition_republican_legacy
-	}
-
-	name_list = name_list_slovak
-
-	coa_gfx = { polish_coa_gfx west_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { west_slavic_clothing_gfx western_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_374_slovak_0
-	}
-}
-
-slovene = {
-	color = { 159 174 96 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_south_slavic
-	language = language_south_slavic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_collective_lands
-		tradition_mountain_homes
-		tradition_mountaineers
-		tradition_republican_legacy
-	}
-
-	name_list = name_list_slovene
-
-	coa_gfx = { south_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_334_slovene_0
-	}
-}
-
-smolenskian_culture = {
-	color = { 106 160 43 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_east_slavic
-	language = language_east_slavic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_artisans
-		tradition_sacred_groves
-		tradition_african_tolerance
-	}
-
-	name_list = name_list_smolenskian_culture
-
-	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { east_slavic_building_gfx western_building_gfx }
-	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_371_smolenskian_culture_0
-	}
-}
-
 solongo = {
 	color = { 180 104 221 }
 
@@ -50070,34 +45668,6 @@ sora_culture = {
 	}
 }
 
-sorbian = {
-	color = { 16 172 239 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_west_slavic
-	language = language_czech_slovak
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_storytellers
-		tradition_castle_keepers
-		tradition_collective_lands
-		tradition_talent_acquisition
-	}
-
-	name_list = name_list_sorbian
-
-	coa_gfx = { polish_coa_gfx west_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { west_slavic_clothing_gfx western_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_377_sorbian_0
-	}
-}
-
 sotaeoo_culture = {
 	color = { 147 92 94 }
 
@@ -50249,66 +45819,6 @@ south_valley_yokut_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_360_south_valley_yokut_culture_0
-	}
-}
-
-southern_bavarian = {
-	color = { 170 43 21 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_high_german
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_fighters
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_mountaineers
-	}
-
-	name_list = name_list_southern_bavarian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_southern_bavarian_0
-	}
-}
-
-southern_gallo_italic = {
-	color = { 174 74 194 }
-
-	ethos = ethos_courtly
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_collective_lands
-		tradition_religion_blending
-		tradition_fishermen
-		tradition_nubian_warrior_queens
-	}
-
-	name_list = name_list_southern_gallo_italic
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_southern_gallo_italic_0
 	}
 }
 
@@ -50532,37 +46042,6 @@ sudanese_arab = {
 
 	ethnicities = {
 		100 = gen_ethnicity_274_sudanese_arab_0
-	}
-}
-
-sudovian = {
-	color = { 132 144 54 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_baltic
-	language = language_baltic
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_hard_working
-		tradition_collective_lands
-		tradition_forest_folk
-	}
-
-	name_list = name_list_sudovian
-
-	coa_gfx = { baltic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_487_sudovian_0
 	}
 }
 
@@ -51000,36 +46479,6 @@ svan_culture = {
 	}
 }
 
-swabian = {
-	color = { 225 98 87 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_central_germanic
-	language = language_high_german
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_wedding_ceremonies
-		tradition_agrarian
-		tradition_highland_warriors
-		tradition_mountaineers
-		tradition_equal_inheritance
-	}
-
-	name_list = name_list_swabian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_swabian_0
-	}
-}
-
 swahili_culture = {
 	color = { 81 141 85 }
 
@@ -51057,38 +46506,6 @@ swahili_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_280_swahili_culture_0
-	}
-}
-
-swedish = {
-	color = { 0 105 166 }
-
-	ethos = ethos_bellicose
-	heritage = heritage_north_germanic
-	language = language_norse
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_religious_patronage
-		tradition_mountaineers
-		tradition_highland_warriors
-		tradition_jungle_dwellers
-		tradition_swords_for_hire
-	}
-
-	name_list = name_list_swedish
-
-	coa_gfx = { norse_coa_gfx western_coa_gfx }
-	building_gfx = { norse_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { norse_unit_gfx }
-	house_coa_frame = house_frame_25
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_411_swedish_0
 	}
 }
 
@@ -51149,36 +46566,6 @@ syriac_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_274_syriac_culture_0
-	}
-}
-
-szekely_culture = {
-	color = { 153 255 50 }
-
-	ethos = ethos_courtly
-	heritage = heritage_magyar
-	language = language_magyar
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_legalistic
-		tradition_polders
-		tradition_wetlanders
-		tradition_forest_folk
-		tradition_metal_craftsmanship
-	}
-
-	name_list = name_list_szekely_culture
-
-	coa_gfx = { magyar_group_coa_gfx ugro_permian_group_coa_gfx steppe_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_361_szekely_culture_0
 	}
 }
 
@@ -52639,36 +48026,6 @@ tausug_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_252_tausug_culture_0
-	}
-}
-
-tavastian = {
-	color = { 174 200 80 }
-
-	ethos = ethos_egalitarian
-	heritage = heritage_balto_finnic
-	language = language_finnic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hunters
-		tradition_sacred_groves
-		tradition_winter_warriors
-		tradition_polders
-		tradition_monastic_communities
-	}
-
-	name_list = name_list_tavastian
-
-	coa_gfx = { balto_finnic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_331_tavastian_0
 	}
 }
 
@@ -55040,36 +50397,6 @@ towa_panka_culture = {
 	}
 }
 
-transylvanian = {
-	color = { 211 207 173 }
-
-	ethos = ethos_courtly
-	heritage = heritage_vlach
-	language = language_wallachian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_legalistic
-		tradition_polders
-		tradition_wetlanders
-		tradition_forest_folk
-		tradition_metal_craftsmanship
-	}
-
-	name_list = name_list_transylvanian
-
-	coa_gfx = { south_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_298_transylvanian_0
-	}
-}
-
 tremembe_culture = {
 	color = { 129 62 74 }
 
@@ -56376,38 +51703,6 @@ turrbal_culture = {
 	}
 }
 
-tuscan = {
-	color = { 74 126 117 }
-
-	ethos = ethos_courtly
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_collective_lands
-		tradition_religion_blending
-		tradition_fishermen
-		tradition_nubian_warrior_queens
-	}
-
-	name_list = name_list_tuscan
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_tuscan_0
-	}
-}
-
 tutelo_culture = {
 	color = { 141 152 39 }
 
@@ -56810,35 +52105,6 @@ udege_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_416_udege_culture_0
-	}
-}
-
-udmurt = {
-	color = { 114 182 249 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_ugro_permian
-	language = language_ugro_permian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_mountains
-		tradition_horse_breeder
-		tradition_polders
-		tradition_forest_folk
-	}
-
-	name_list = name_list_udmurt
-
-	coa_gfx = { ugro_permian_group_coa_gfx steppe_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { ugro_permian_clothing_gfx northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		10 = gen_ethnicity_329_udmurt_0
 	}
 }
 
@@ -57303,34 +52569,6 @@ upper_egyptian_culture = {
 	}
 }
 
-upper_palatine = {
-	color = { 57 151 142 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_high_german
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_fighters
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_mountaineers
-	}
-
-	name_list = name_list_upper_palatine
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		10 = gen_ethnicity_293_upper_palatine_0
-	}
-}
-
 uru_culture = {
 	color = { 79 61 157 }
 
@@ -57759,68 +52997,6 @@ venda_culture = {
 	}
 }
 
-venetian = {
-	color = { 54 167 156 }
-
-	ethos = ethos_courtly
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_horse_breeder
-		tradition_collective_lands
-		tradition_religion_blending
-		tradition_fishermen
-		tradition_nubian_warrior_queens
-	}
-
-	name_list = name_list_venetian
-
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_20
-	house_coa_mask_offset = { 0.0 0.025 }
-	house_coa_mask_scale = { 0.95 0.95 }
-
-	ethnicities = {
-		100 = gen_ethnicity_250_venetian_0
-	}
-}
-
-vepsian = {
-	color = { 19 179 112 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_balto_finnic
-	language = language_finnic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_chivalry
-		tradition_hard_working
-		tradition_fishermen
-		tradition_swords_for_hire
-	}
-
-	name_list = name_list_vepsian
-
-	coa_gfx = { balto_finnic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_331_vepsian_0
-	}
-}
-
 vezo_culture = {
 	color = { 252 243 178 }
 
@@ -57942,99 +53118,6 @@ vitimske_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_276_vitimske_culture_0
-	}
-}
-
-vivaro_alpine = {
-	color = { 23 19 23 }
-
-	ethos = ethos_communal
-	heritage = heritage_frankish
-	language = language_occitano_romance
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_polders
-		tradition_castle_keepers
-		tradition_sacred_groves
-		tradition_culture_blending
-		tradition_forest_fighters
-		tradition_equal_inheritance
-	}
-
-	name_list = name_list_vivaro_alpine
-
-	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_09
-
-	ethnicities = {
-		100 = gen_ethnicity_291_vivaro_alpine_0
-	}
-}
-
-volhynian_culture = {
-	color = { 205 38 38 }
-
-	ethos = ethos_communal
-	heritage = heritage_east_slavic
-	language = language_east_slavic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_folk
-		tradition_forest_fighters
-		tradition_by_the_sword
-		tradition_culture_blending
-		tradition_hunters
-	}
-
-	name_list = name_list_volhynian_culture
-
-	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { east_slavic_building_gfx western_building_gfx }
-	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_21
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 1.0 1.0 }
-
-	ethnicities = {
-		100 = gen_ethnicity_371_volhynian_culture_0
-	}
-}
-
-votian = {
-	color = { 0 154 255 }
-
-	ethos = ethos_spiritual
-	heritage = heritage_balto_finnic
-	language = language_finnic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_sacred_groves
-		tradition_chivalry
-		tradition_hard_working
-		tradition_fishermen
-		tradition_swords_for_hire
-	}
-
-	name_list = name_list_votian
-
-	coa_gfx = { balto_finnic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { northern_unit_gfx }
-	house_coa_frame = house_frame_14
-
-	ethnicities = {
-		100 = gen_ethnicity_331_votian_0
 	}
 }
 
@@ -58397,64 +53480,6 @@ wakaya_culture = {
 
 	ethnicities = {
 		100 = gen_ethnicity_322_wakaya_culture_0
-	}
-}
-
-wallachian = {
-	color = { 82 160 242 }
-
-	ethos = ethos_courtly
-	heritage = heritage_vlach
-	language = language_wallachian
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_legalistic
-		tradition_polders
-		tradition_wetlanders
-		tradition_forest_folk
-		tradition_metal_craftsmanship
-	}
-
-	name_list = name_list_wallachian
-
-	coa_gfx = { south_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-	house_coa_frame = house_frame_17
-
-	ethnicities = {
-		100 = gen_ethnicity_298_wallachian_0
-	}
-}
-
-walloon = {
-	color = { 149 186 37 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_high_german
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_fighters
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_mountaineers
-	}
-
-	name_list = name_list_walloon
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_396_walloon_0
 	}
 }
 
@@ -59268,34 +54293,6 @@ wea_culture = {
 	}
 }
 
-welsh = {
-	color = { 116 127 173 }
-
-	ethos = ethos_courtly
-	heritage = heritage_brythonic
-	language = language_brythonic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_adaptive_skirmishing
-		tradition_hunters
-		tradition_agrarian
-	}
-
-	name_list = name_list_welsh
-
-	coa_gfx = { welsh_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { welsh_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_16
-
-	ethnicities = {
-		100 = gen_ethnicity_336_welsh_0
-	}
-}
-
 wemba_wemba_culture = {
 	color = { 16 66 165 }
 
@@ -59471,62 +54468,6 @@ western_kru = {
 
 	ethnicities = {
 		100 = gen_ethnicity_386_western_kru_0
-	}
-}
-
-western_pomeranian = {
-	color = { 61 136 66 }
-
-	ethos = ethos_bureaucratic
-	heritage = heritage_central_germanic
-	language = language_saxon
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_hard_working
-		tradition_agrarian
-		tradition_metal_craftsmanship
-	}
-
-	name_list = name_list_western_pomeranian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	house_coa_frame = house_frame_05
-
-	ethnicities = {
-		100 = gen_ethnicity_293_western_pomeranian_0
-	}
-}
-
-westphalian = {
-	color = { 231 230 138 }
-
-	ethos = ethos_courtly
-	heritage = heritage_central_germanic
-	language = language_saxon
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_forest_fighters
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_mountaineers
-	}
-
-	name_list = name_list_westphalian
-
-	coa_gfx = { german_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-
-	ethnicities = {
-		100 = gen_ethnicity_293_westphalian_0
 	}
 }
 
@@ -63518,4 +58459,3 @@ gen_culture_unsettled = {
 		100 = gen_ethnicity_245
 	}
 }
-

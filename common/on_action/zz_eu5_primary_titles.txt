@@ -8,6 +8,9 @@ on_game_start = {
 
 eu5_start_primary_titles = {
 	effect = {
+		title:h_china = {
+			set_title_name_dynamic = dynn_title_yuan
+		}
 		character:aal_jumaz_bin_muhammed = {
 			if = {
 				limit = { is_alive = yes }
@@ -44,6 +47,12 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_northern_arakhan
 			}
 		}
+		character:ath_william = {
+			if = {
+				limit = { is_alive = yes }
+				set_primary_title_to = title:d_eu5_ath
+			}
+		}
 		character:atq_mahmud = {
 			if = {
 				limit = { is_alive = yes }
@@ -60,12 +69,6 @@ eu5_start_primary_titles = {
 			if = {
 				limit = { is_alive = yes }
 				set_primary_title_to = title:c_barrois
-			}
-		}
-		character:bds_jalal_al_dawla_iskandar = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_qazvin
 			}
 		}
 		character:bls_guy_i_chatillon = {
@@ -92,16 +95,16 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_mittelmark
 			}
 		}
+		character:brb_jan_iii_van_brabant = {
+			if = {
+				limit = { is_alive = yes }
+				set_primary_title_to = title:d_eu5_brb
+			}
+		}
 		character:brg_adolf_ix_berg = {
 			if = {
 				limit = { is_alive = yes }
 				set_primary_title_to = title:c_niederrhein
-			}
-		}
-		character:bru_otto_i_braunschweig_gottingen = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_brunswick
 			}
 		}
 		character:bry_gleb_svyatoslavich_rurikovich = {
@@ -182,12 +185,6 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_khaaso
 			}
 		}
-		character:eu5_regent_bgj = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_belogorye
-			}
-		}
 		character:eu5_regent_bkh = {
 			if = {
 				limit = { is_alive = yes }
@@ -224,34 +221,16 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_borgu
 			}
 		}
-		character:eu5_regent_brt = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_irkutsk
-			}
-		}
 		character:eu5_regent_btg = {
 			if = {
 				limit = { is_alive = yes }
 				set_primary_title_to = title:c_sangon
 			}
 		}
-		character:eu5_regent_cad = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_nacogdoches
-			}
-		}
 		character:eu5_regent_cbk = {
 			if = {
 				limit = { is_alive = yes }
 				set_primary_title_to = title:c_tru_vien
-			}
-		}
-		character:eu5_regent_cfq = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_cofitachequi
 			}
 		}
 		character:eu5_regent_chh = {
@@ -264,12 +243,6 @@ eu5_start_primary_titles = {
 			if = {
 				limit = { is_alive = yes }
 				set_primary_title_to = title:c_cahokia
-			}
-		}
-		character:eu5_regent_chs = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_chickasaw
 			}
 		}
 		character:eu5_regent_cht = {
@@ -294,12 +267,6 @@ eu5_start_primary_titles = {
 			if = {
 				limit = { is_alive = yes }
 				set_primary_title_to = title:c_coliman
-			}
-		}
-		character:eu5_regent_coo = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_coosa
 			}
 		}
 		character:eu5_regent_cra = {
@@ -392,28 +359,10 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_golog
 			}
 		}
-		character:eu5_regent_gul = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_ossabaw
-			}
-		}
-		character:eu5_regent_gwy = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_keowee
-			}
-		}
 		character:eu5_regent_hel = {
 			if = {
 				limit = { is_alive = yes }
 				set_primary_title_to = title:c_dzilam
-			}
-		}
-		character:eu5_regent_hhk = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_akimel_oodham
 			}
 		}
 		character:eu5_regent_hln = {
@@ -444,12 +393,6 @@ eu5_start_primary_titles = {
 			if = {
 				limit = { is_alive = yes }
 				set_primary_title_to = title:c_khujand
-			}
-		}
-		character:eu5_regent_joa = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_joara
 			}
 		}
 		character:eu5_regent_kab = {
@@ -498,12 +441,6 @@ eu5_start_primary_titles = {
 			if = {
 				limit = { is_alive = yes }
 				set_primary_title_to = title:c_yamama
-			}
-		}
-		character:eu5_regent_kmg = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_khamag
 			}
 		}
 		character:eu5_regent_kna = {
@@ -566,12 +503,6 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_lower_kosi
 			}
 		}
-		character:eu5_regent_maa = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_ewaso_ngiro
-			}
-		}
 		character:eu5_regent_mdy = {
 			if = {
 				limit = { is_alive = yes }
@@ -602,12 +533,6 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_nangchen
 			}
 		}
-		character:eu5_regent_ncz = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_natchez
-			}
-		}
 		character:eu5_regent_ngd = {
 			if = {
 				limit = { is_alive = yes }
@@ -630,12 +555,6 @@ eu5_start_primary_titles = {
 			if = {
 				limit = { is_alive = yes }
 				set_primary_title_to = title:c_nupe
-			}
-		}
-		character:eu5_regent_obd = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_obdorsk
 			}
 		}
 		character:eu5_regent_ony = {
@@ -696,12 +615,6 @@ eu5_start_primary_titles = {
 			if = {
 				limit = { is_alive = yes }
 				set_primary_title_to = title:c_palamau
-			}
-		}
-		character:eu5_regent_sak = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_yakutia
 			}
 		}
 		character:eu5_regent_sam = {
@@ -800,18 +713,6 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_tongatapu
 			}
 		}
-		character:eu5_regent_tso = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_pelisipi
-			}
-		}
-		character:eu5_regent_umo = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_charquis
-			}
-		}
 		character:eu5_regent_vyt = {
 			if = {
 				limit = { is_alive = yes }
@@ -822,12 +723,6 @@ eu5_start_primary_titles = {
 			if = {
 				limit = { is_alive = yes }
 				set_primary_title_to = title:c_xllang
-			}
-		}
-		character:eu5_regent_yms = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_congaree
 			}
 		}
 		character:eu5_regent_ysu = {
@@ -890,12 +785,6 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_qabisa
 			}
 		}
-		character:gel_reinoud_ii_van_gelre = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_gelderland
-			}
-		}
 		character:ghl_mokhdaji_ranoji_guhila = {
 			if = {
 				limit = { is_alive = yes }
@@ -941,7 +830,7 @@ eu5_start_primary_titles = {
 		character:hun_karoly_robert = {
 			if = {
 				limit = { is_alive = yes }
-				set_primary_title_to = title:k_eu5_hun
+				set_primary_title_to = title:k_hungary
 			}
 		}
 		character:hzp_rukn_al_din_yusuf_shah = {
@@ -1028,6 +917,12 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_noto_japan
 			}
 		}
+		character:jaw_henryk_i_javorski = {
+			if = {
+				limit = { is_alive = yes }
+				set_primary_title_to = title:d_eu5_jaw
+			}
+		}
 		character:jkr_arghun_shah = {
 			if = {
 				limit = { is_alive = yes }
@@ -1080,6 +975,12 @@ eu5_start_primary_titles = {
 			if = {
 				limit = { is_alive = yes }
 				set_primary_title_to = title:c_khorramabad
+			}
+		}
+		character:lgc_boleslaw_iii_the_generous_piast = {
+			if = {
+				limit = { is_alive = yes }
+				set_primary_title_to = title:d_eu5_lgc
 			}
 		}
 		character:lit_gediminas_gediminids = {
@@ -1208,6 +1109,12 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_darbhanga
 			}
 		}
+		character:opv_mikolaj_ii_premyslid = {
+			if = {
+				limit = { is_alive = yes }
+				set_primary_title_to = title:d_eu5_opv
+			}
+		}
 		character:oto_pantictzin = {
 			if = {
 				limit = { is_alive = yes }
@@ -1244,10 +1151,16 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_kamma_nadu
 			}
 		}
-		character:rig_friedrich_von_pernstein = {
+		character:sav_aymon_savoy = {
 			if = {
 				limit = { is_alive = yes }
-				set_primary_title_to = title:c_inner_livonia
+				set_primary_title_to = title:d_eu5_sav
+			}
+		}
+		character:sme_qvarqvare = {
+			if = {
+				limit = { is_alive = yes }
+				set_primary_title_to = title:d_eu5_sme
 			}
 		}
 		character:srv_keykubad = {
@@ -1265,7 +1178,13 @@ eu5_start_primary_titles = {
 		character:swe_magnus_eriksson = {
 			if = {
 				limit = { is_alive = yes }
-				set_primary_title_to = title:k_eu5_swe
+				set_primary_title_to = title:k_sweden
+			}
+		}
+		character:tes_kazimir_piast = {
+			if = {
+				limit = { is_alive = yes }
+				set_primary_title_to = title:d_eu5_tes
 			}
 		}
 		character:tir_margarete_von_tirol = {
@@ -1274,16 +1193,16 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_south_tirol
 			}
 		}
+		character:tve_konstantin_mikhailovich_rurikovich = {
+			if = {
+				limit = { is_alive = yes }
+				set_primary_title_to = title:d_eu5_tve
+			}
+		}
 		character:uls_elizabeth_de_burgh_4th_countess_ulster = {
 			if = {
 				limit = { is_alive = yes }
 				set_primary_title_to = title:c_antrim
-			}
-		}
-		character:utr_jan_van_diest = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_overijssel
 			}
 		}
 		character:vbk_algirdas_gediminds = {

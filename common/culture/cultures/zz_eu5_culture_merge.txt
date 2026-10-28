@@ -1,0 +1,57 @@
+﻿# =========================================================
+# EU5 -> CK3 文化归并（2026-10-22 用户定：不建任何新文化）
+#
+# 新版 CK3 官方将加入 norse_gael / arpitan 等文化，自建会撞车，
+# 所以本轮把原计划的 5 个新文化全部并入 CK3 原版已有文化：
+#   anglo_irish            -> english
+#   norse_gael             -> gaelic
+#   walloon                -> french
+#   western/eastern_pomeranian -> saxon
+#   EU5 prussian（德意志）  -> saxon
+# 因此本文件只剩一个块：把 prussian 覆盖回波罗的定义。
+#
+# prussian 在 00_generated_cultures.txt 里是按 EU5 德意志普鲁士建的
+# （低地德语、central_germanic），但省份里剩下的 30 个 prussian
+# （pruthenian 15 + sudovian 9 + curonian 6）是西波罗的波罗的普鲁士人
+# （普鲁赛尼亚 / 苏多维亚 / 库罗尼亚），不是德意志人。
+# 此处覆盖回 CK3 原版波罗的定义。
+# =========================================================
+
+
+# prussian 在生成物里是按 EU5 的德意志普鲁士建的（低地德语、central_germanic），
+# 但省份里剩下的 30 个 prussian（pruthenian 15 + sudovian 9 + curonian 6）是西波罗的
+# 波罗的普鲁士人（普鲁赛尼亚 / 苏多维亚 / 库罗尼亚），不是德意志人。
+# 此处覆盖回 CK3 原版的波罗的定义。德意志那一支另用 teutonic（显示「普鲁士」）。
+prussian = {
+	color = { 0.56 0.55 0.4 }
+
+	ethos = ethos_bureaucratic
+	heritage = heritage_baltic
+	language = language_baltic
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_sacred_groves
+		tradition_equitable
+		tradition_forest_wardens
+		tradition_welcoming
+	}
+
+	name_list = name_list_prussian
+
+	coa_gfx = { baltic_group_coa_gfx steppe_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx }
+	unit_gfx = { northern_unit_gfx }
+	house_coa_frame = house_frame_21
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 1.0 1.0 }
+
+	ethnicities = {
+		80 = caucasian_northern_blond
+		15 = caucasian_northern_ginger
+		3 = caucasian_northern_brown_hair
+		2 = caucasian_northern_dark_hair
+	}
+}

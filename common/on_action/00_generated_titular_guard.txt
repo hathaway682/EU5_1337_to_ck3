@@ -6,6 +6,7 @@
 
 # Vanilla e_/k_/d_/h_ shims may be referenced. They may never be held.
 # See common/landed_titles/zz_vanilla_titulars.txt for what they are and why.
+# Titles this mod declares for real are not marked here: destroying them would undo the mod.
 
 on_title_gain = {
 	on_actions = {
@@ -65,7 +66,6 @@ gen_mark_vanilla_titulars = {
 		title:d_masmudi = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_muwalladi = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_ghulat = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:e_chagatai = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_red_horde = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_white_horde = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_aarlud_khanate = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -220,7 +220,6 @@ gen_mark_vanilla_titulars = {
 		title:e_slavia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_armenia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_viet = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:e_majapahit = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_ruucuu = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_north_sea = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_carthage = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -239,7 +238,6 @@ gen_mark_vanilla_titulars = {
 		title:d_yungdrung_bon = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_hansa = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_britannia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_england = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_bedford = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_northumberland = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_lancaster = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -254,7 +252,6 @@ gen_mark_vanilla_titulars = {
 		title:d_gwynedd = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_powys = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_deheubarth = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_scotland = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_albany = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_the_isles = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_galloway = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -314,19 +311,8 @@ gen_mark_vanilla_titulars = {
 		title:e_oriens = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_aegyptus = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_africa = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:e_byzantium = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_saruhan = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_trinacria = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_tekke = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_trebizond = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_ottoman = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_rum = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_mentese = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_karaman = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_germiyan = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_eretnid = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_aydin = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_candar = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_thessalonika = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_thrace = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_strymon = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -342,7 +328,6 @@ gen_mark_vanilla_titulars = {
 		title:d_achaia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_krete = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_krete = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_croatia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_dalmatia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_croatia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_slavonia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -350,19 +335,16 @@ gen_mark_vanilla_titulars = {
 		title:d_lower_bosna = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_usora = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_ragusa = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_serbia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_rashka = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_macva = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_duklja = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_bosnia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_albania = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_bulgaria = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_vidin = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_turnovo = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_dobrudja = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_bulgaria = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_philippopolis = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_cyprus = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_cyprus = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_nikaea = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_opsikion = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -385,11 +367,9 @@ gen_mark_vanilla_titulars = {
 		title:d_mesopotamia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_vaspurakan = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_greater_armenia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_georgia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_tao-klarjeti = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_abkhazia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_georgia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_sicily = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_sicily = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_benevento = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_capua = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -403,7 +383,6 @@ gen_mark_vanilla_titulars = {
 		title:e_italy = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_genoa = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_pisa = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_naples = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_italy = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_friuli = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_verona = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -423,7 +402,6 @@ gen_mark_vanilla_titulars = {
 		title:d_spoleto = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_latium = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_scandinavia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_sweden = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_svealand = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_bergslagen = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_vastergotland = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -437,12 +415,10 @@ gen_mark_vanilla_titulars = {
 		title:d_duortnoseatnu = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_giemajohka = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_guoldat = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_denmark = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_sjaelland = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_skane = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_jylland = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_slesvig = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_norway = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_viken = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_agder = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_vestlandi = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -476,14 +452,12 @@ gen_mark_vanilla_titulars = {
 		title:k_livonia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_west_slavia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_moravia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_poland = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_lesser_poland = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_wielkopolska = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_mazovia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_upper_silesia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_lower_silesia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_kuyavia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_bohemia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_bohemia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_moravia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_galicia-volhynia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -511,7 +485,6 @@ gen_mark_vanilla_titulars = {
 		title:d_minsk = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_polotsk = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_smolensk = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_opolye = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_opolye = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_ryazan = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_nizhny_novgorod = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -655,7 +628,6 @@ gen_mark_vanilla_titulars = {
 		title:d_jinghiz = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_degelen = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_kentarlau = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_dzungaria = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_kara_khoja = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_beshbalik = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_altay = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -743,7 +715,6 @@ gen_mark_vanilla_titulars = {
 		title:d_bukovina = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_moldova = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_bugeac = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_hungary = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_visegrad = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_somogy = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_nyitra = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -756,7 +727,6 @@ gen_mark_vanilla_titulars = {
 		title:d_gyor = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_syrmia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_france = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_france = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_valois = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_berry = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_anjou = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -796,13 +766,10 @@ gen_mark_vanilla_titulars = {
 		title:d_valencia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_mallorca = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_murcia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_castille = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_castilla = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_cantabria = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_aragon = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_aragon = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_barcelona = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_navarra = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_navarra = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_viscaya = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_asturias = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -811,11 +778,9 @@ gen_mark_vanilla_titulars = {
 		title:d_asturias = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_spanish_galicia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_galicia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_portugal = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_porto = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_coimbra = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_maghreb = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_maghreb = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_marrakesh = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_sous = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_tafilalt = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -864,14 +829,12 @@ gen_mark_vanilla_titulars = {
 		title:d_al-hasa = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_bahrain = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_oman = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_yemen = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_sanaa = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_jawf-al-yamani = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_taizz = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_hadramawt = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_mahra = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_socotra = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_egypt = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_cyrenaica = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_alexandria = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_delta = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -892,7 +855,6 @@ gen_mark_vanilla_titulars = {
 		title:d_lebanon = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_damascus = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_palmyra = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:e_abyssinia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_abyssinia = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_aksum = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_dahlaks = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -922,7 +884,6 @@ gen_mark_vanilla_titulars = {
 		title:d_zaila = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_sanaag = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_azania = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_ajuraan = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_hafun = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_mogadishu = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_west_ajuraan = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -935,7 +896,6 @@ gen_mark_vanilla_titulars = {
 		title:d_mombasa = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_bonde_la_ufa = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_zanzibar = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:e_kanem_bornu = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_kanem = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_kanem = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_bornu = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -954,7 +914,6 @@ gen_mark_vanilla_titulars = {
 		title:d_west_darfur = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_wadai = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_kordofan = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:e_mali = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_songhay = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_kawkaw = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_timbuktu = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -1028,7 +987,6 @@ gen_mark_vanilla_titulars = {
 		title:d_multan = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_lahore = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_gandhara = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_delhi = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_kuru = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_haritanaka = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_mathura = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -1112,7 +1070,6 @@ gen_mark_vanilla_titulars = {
 		title:d_dakhina_desa = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_ruhunu = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_sinhala = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:e_tibet = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_u = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_yarlung = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_lhasa = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -1212,7 +1169,6 @@ gen_mark_vanilla_titulars = {
 		title:d_JAV_mataram = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_JAV_taruma = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_IDO_bali = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_malayadvipa = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_SUM_palembang = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_SUM_jambi = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_SUM_riau = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -1320,7 +1276,6 @@ gen_mark_vanilla_titulars = {
 		title:k_toro = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_winideheim = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_cossack = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:e_japan = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_yamato = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_kinai = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_nankaido = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -1478,7 +1433,6 @@ gen_mark_vanilla_titulars = {
 		title:d_jingjiang = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_rongguan = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_yongguan = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_viet = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_hai_dong = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_nghe_an = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_lam_tay = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -1513,7 +1467,6 @@ gen_mark_vanilla_titulars = {
 		title:k_siam = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:e_brunei = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_brunei = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:e_kambuja = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_funan = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_baigaur = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_vyadhapura = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
@@ -1523,10 +1476,8 @@ gen_mark_vanilla_titulars = {
 		title:k_chenla = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_phonsavan = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_mukdahan = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:k_champa = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_indrapura = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_vijaya = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
-		title:e_goryeo = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:k_goguryeo = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_gaeseong = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
 		title:d_haeju = { set_variable = gen_vanilla_titular if = { limit = { exists = holder } holder = { destroy_title = prev } } }
