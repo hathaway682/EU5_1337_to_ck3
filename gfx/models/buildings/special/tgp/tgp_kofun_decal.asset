@@ -1,0 +1,22 @@
+﻿pdxmesh = {
+	name = "tgp_kofun_decal_mesh"
+	file = "tgp_kofun_decal.mesh"
+	scale = 0.25
+
+	meshsettings = {
+		name = "tgp_kofun_decalShape"
+		index = 0
+		texture_diffuse = "tgp_kofun_decal_diffuse.dds"
+		texture_normal = "tgp_kofun_decal_normal.dds"
+		texture_specular = "tgp_kofun_decal_properties.dds"
+		
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "tgp_kofun_decal_entity"
+	pdxmesh = "tgp_kofun_decal_mesh"
+}

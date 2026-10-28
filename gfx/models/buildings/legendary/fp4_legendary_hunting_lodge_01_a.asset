@@ -1,0 +1,62 @@
+﻿pdxmesh = {
+	scale = 0.5
+	name = "fp4_legendary_hunting_lodge_01_a_mesh"
+	file = "fp4_legendary_hunting_lodge_01_a.mesh"
+
+	meshsettings = {
+		name = "fp4_legendary_hunting_lodge_bush_01_aShape"
+		index = 0
+		texture_diffuse = "fp4_legendary_hunting_lodge_01_a_bush_diffuse.dds"
+		texture_normal = "fp4_legendary_hunting_lodge_01_a_bush_normal.dds"
+		texture_specular = "fp4_legendary_hunting_lodge_01_a_bush_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "fp4_legendary_hunting_lodge_decal_01_aShape"
+		index = 0
+		texture_diffuse = "fp4_legendary_hunting_lodge_01_a_decal_diffuse.dds"
+		texture_normal = "fp4_legendary_hunting_lodge_01_a_decal_normal.dds"
+		texture_specular = "fp4_legendary_hunting_lodge_01_a_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "fp4_legendary_hunting_lodge_animal_01_aShape"
+		index = 0
+		texture_diffuse = "ep1_generic_animal_hide_big_01_c_diffuse.dds"
+		texture_normal = "ep1_generic_animal_hide_medium_01_a_normal.dds"
+		texture_specular = "ep1_generic_animal_hide_medium_01_a_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "fp4_legendary_hunting_lodge_01_aShape"
+		index = 0
+		texture_diffuse = "building_western_atlas_2.dds"
+		texture_normal = "building_western_atlas_normal.dds"
+		texture_specular = "building_western_atlas_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "fp4_legendary_hunting_lodge_tree_01_aShape"
+		index = 0
+		texture_diffuse = "tree_leaf_01_diffuse.dds"
+		texture_normal = "tree_leaf_01_normal.dds"
+		texture_specular = "tree_leaf_01_properties.dds"
+		texture = { file = "tree_leaf_01_tint.dds" index = 3 srgb = yes }
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+}
+
+entity = {
+	name = "fp4_legendary_hunting_lodge_01_a_entity"
+	pdxmesh = "fp4_legendary_hunting_lodge_01_a_mesh"
+}

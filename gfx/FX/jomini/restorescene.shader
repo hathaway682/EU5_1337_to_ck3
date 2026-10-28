@@ -1,0 +1,323 @@
+Includes = {
+	"cw/utility.fxh"
+	"jomini/posteffect_base.fxh"
+
+
+	#// TODO: REMOVE
+	"jomini/jomini_dof.fxh"
+
+	"spherical_earth_cloth.fxh"
+    "cu_flat_wrap.fxh"
+}
+
+
+PixelShader =
+{
+	TextureSampler MainScene
+	{
+		Index = 0
+		MagFilter = "Point"
+		MinFilter = "Point"
+		MipFilter = "Point"
+		SampleModeU = "Clamp"
+		SampleModeV = "Clamp"
+	}
+	TextureSampler RestoreBloom
+	{
+		Index = 1
+		MagFilter = "Linear"
+		MinFilter = "Linear"
+		MipFilter = "Point"
+		SampleModeU = "Clamp"
+		SampleModeV = "Clamp"
+	}
+	TextureSampler ColorCube
+	{
+		Index = 2
+		MagFilter = "Linear"
+		MinFilter = "Linear"
+		MipFilter = "Point"
+		SampleModeU = "Clamp"
+		SampleModeV = "Clamp"
+		MaxAnisotropy = 0
+	}
+	TextureSampler AverageLuminanceTexture
+	{
+		Index = 3
+		MagFilter = "Point"
+		MinFilter = "Point"
+		MipFilter = "Point"
+		SampleModeU = "Clamp"
+		SampleModeV = "Clamp"
+	}
+	TextureSampler DepthOfFieldTexture
+	{
+		Index = 4
+		MagFilter = "Linear"
+		MinFilter = "Linear"
+		MipFilter = "Linear"
+		SampleModeU = "Clamp"
+		SampleModeV = "Clamp"
+	}
+	TextureSampler DepthOfFieldCocTexture
+	{
+		Index = 5
+		MagFilter = "Point"
+		MinFilter = "Point"
+		MipFilter = "Point"
+		SampleModeU = "Clamp"
+		SampleModeV = "Clamp"
+	}
+	TextureSampler LensFlareTexture
+	{
+		Index = 6
+		MagFilter = "Point"
+		MinFilter = "Point"
+		MipFilter = "Point"
+		SampleModeU = "Clamp"
+		SampleModeV = "Clamp"
+	}
+	TextureSampler LensDirtTexture
+	{
+		Index = 7
+		MagFilter = "Point"
+		MinFilter = "Point"
+		MipFilter = "Point"
+		SampleModeU = "Clamp"
+		SampleModeV = "Clamp"
+	}
+	TextureSampler AdditionalLensFlareTexture
+	{
+		Index = 8
+		MagFilter = "Point"
+		MinFilter = "Point"
+		MipFilter = "Point"
+		SampleModeU = "Clamp"
+		SampleModeV = "Clamp"
+	}
+
+	TextureSampler FogBlurTexture
+	{
+		Index = 9
+		MagFilter = "Point"
+		MinFilter = "Point"
+		MipFilter = "Point"
+		SampleModeU = "Clamp"
+		SampleModeV = "Clamp"
+	}
+
+	MainCode PixelShader
+	{
+		Input = "VS_OUTPUT_FULLSCREEN"
+		Output = "PDX_COLOR"
+		Code
+		[[
+
+			float3 SampleColorCube(float3 aColor)
+			{
+				float scale = (CubeSize - 1.0) / CubeSize;
+				float offset = 0.5 / CubeSize;
+
+				float x = ((scale * aColor.r + offset) / CubeSize);
+				float y = scale * aColor.g + offset;
+
+				float zFloor = floor((scale * aColor.b + offset) * CubeSize);
+				float xOffset1 = zFloor / CubeSize;
+				float xOffset2 = min(CubeSize - 1.0, zFloor + 1.0) / CubeSize;
+
+				float3 color1 = PdxTex2D( ColorCube, float2(x + xOffset1, y) ).rgb;
+				float3 color2 = PdxTex2D( ColorCube, float2(x + xOffset2, y) ).rgb;
+
+				float3 color = lerp(color1, color2, scale * aColor.b * CubeSize - zFloor );
+
+				return color;
+			}
+
+			float4 RestoreScene( float3 inColor )
+			{
+				float3 color = inColor;
+			#ifdef LUT_ENABLED
+				color = SampleColorCube( color );
+			#endif
+
+				float3 HSV_ = RGBtoHSV( color.rgb );
+				HSV_.yz *= HSV.yz;
+				HSV_.x += HSV.x;
+				color = HSVtoRGB( HSV_ );
+
+				color = saturate( color * ColorBalance );
+				color = Levels( color, LevelsMin, LevelsMax );
+
+				return float4( color, 1.0 );
+			}
+
+
+			float3 ApplyOutputDither( float3 Color, float2 PixelCoord )
+			{
+				// Interleaved gradient noise, remapped to a triangular distribution so the error stays zero mean.
+				float Noise = frac( 52.9829189 * frac( dot( PixelCoord, float2( 0.06711056, 0.00583715 ) ) ) );
+				float Offset = Noise * 2.0 - 1.0;
+				Offset = sign( Offset ) * ( 1.0 - sqrt( max( 0.0, 1.0 - abs( Offset ) ) ) );
+
+				// ToneMap already applied ToGamma, so one output LSB is 1/255 in this space.
+				return Color + Offset * ( 1.0 / 255.0 );
+			}
+
+			PDX_MAIN
+			{
+				float4 color = PdxTex2DLod0( MainScene, Input.uv );
+                #ifndef ALPHA
+                float4 CUFlatWrapRawScene = color;
+                float CUFlatWrapCoverage = 0.0;
+                // Produce HDR map colour before the common postprocessing.
+                if (SETGlobeBlend() <= 0.0)
+                    color = CUFlatWrapScene(color,Input.uv,CUFlatWrapRawScene,MainScene,CUFlatWrapCoverage);
+                #endif
+                // Detect empty map fragments before postprocessing can brighten them.
+                // The narrow HDR range fades clear/antialiased edges into the fill.
+                float SETSceneCoverage = smoothstep(0.0001,0.001,
+                    max(color.r,max(color.g,color.b)));
+
+			#ifdef DOF_ENABLED
+				float4 DofColor = PdxTex2DLod0( DepthOfFieldTexture, Input.uv );
+				float DofCoc = PdxTex2DLod0( DepthOfFieldCocTexture, Input.uv ).r;
+				DofCoc = smoothstep( _BlurBlendMin, _BlurBlendMax, DofCoc );	// Tweak to avoid using the low resolution image at small blur values
+                #ifndef ALPHA
+                // These buffers contain the old table/background, not the
+                // reconstructed map. Its HDR colour must not blend with them.
+                DofCoc *= 1.0-CUFlatWrapCoverage;
+                #endif
+				color.rgb = lerp( color.rgb, DofColor.rgb, DofCoc );
+			#endif
+
+			#ifdef PDX_DEBUG_NO_HDR
+				return float4( ToGamma( saturate(color.rgb) ), 1 );
+			#endif
+
+			#ifdef BLOOM_ENABLED
+				float3 bloom = PdxTex2DLod0( RestoreBloom, Input.uv ).rgb;
+                #ifndef ALPHA
+                bloom *= 1.0-CUFlatWrapCoverage;
+                #endif
+				color.rgb = bloom.rgb + color.rgb; // todo * bloomscale?
+
+				#ifdef LENS_FLARE_ENABLED
+					float3 LensFlare = PdxTex2DLod0( LensFlareTexture, Input.uv ).rgb;
+                    #ifndef ALPHA
+                    LensFlare *= 1.0-CUFlatWrapCoverage;
+                    #endif
+					float3 LensDirt = PdxTex2DLod0( LensDirtTexture, Input.uv ).rgb;
+					color.rgb = ( LensFlare.rgb * LensDirt ) + color.rgb;
+				#endif
+
+				#ifdef ADDITIONAL_LENS_FLARE_ENABLED
+					float3 AdditionalLensFlare = PdxTex2DLod0( AdditionalLensFlareTexture, Input.uv ).rgb;
+                    #ifndef ALPHA
+                    AdditionalLensFlare *= 1.0-CUFlatWrapCoverage;
+                    #endif
+					#ifndef LENS_FLARE_ENABLED
+						float3 LensDirt = PdxTex2DLod0( LensDirtTexture, Input.uv ).rgb;
+					#endif
+					color.rgb = ( ( AdditionalLensFlare.rgb ) * LensDirt ) + color.rgb;
+				#endif
+
+			#endif
+
+			#ifdef FOG_BLUR_ENABLED
+				float4 FogBlurColor = PdxTex2DLod0( FogBlurTexture, Input.uv );
+				// FogBlur was built from the planar scene/depth buffer. Keep
+                // it for the native flat map and alpha/portrait targets only.
+                #ifdef ALPHA
+                color.rgb = lerp( color.rgb, FogBlurColor.rgb, FogBlurColor.a );
+                #else
+                if (SETGlobeBlend() <= 0.001)
+                    color.rgb = lerp( color.rgb, FogBlurColor.rgb, FogBlurColor.a*(1.0-CUFlatWrapCoverage) );
+                #endif
+			#endif
+
+                // RestoreAlpha renders offscreen alpha targets, including portraits.
+                // Map-only background reconstruction must not alter this pass.
+                #ifndef ALPHA
+                if (SETGlobeBlend() > 0.0001)
+                {
+                    color = SETClothFill(color,Input.uv,SETSceneCoverage);
+                }
+                #endif
+
+				// Tonemapping
+				color.rgb = Exposure( color.rgb );
+				color.rgb = ColorContrast( color.rgb );
+				color.rgb = ToneMap( color.rgb );
+
+			#ifdef ALPHA
+				color.rgb = RestoreScene( saturate(color).rgb ).rgb;
+			#else
+				color = RestoreScene( saturate(color.rgb) );
+			#endif
+
+				color.rgb = ApplyOutputDither( color.rgb, Input.uv / InvScreenResolution );
+
+			#ifdef PDX_DEBUG_TONEMAP_CURVE
+				float2 uvScale = float2( ddx(Input.uv.x), ddy(Input.uv.y) );
+				const float2 AREA_START = float2( 0.8, 0.25 );
+				const float2 AREA_EXTENT = float2( 1.0f - AREA_START.x - 0.001, 0.2 );
+				//const float NormalScale = vec2(1.0f) / float2(1920,1080);
+				//const float2 AREA_EXTENT = float2( 150, 150 ) * lerp( NormalScale, uvScale, 0.7f );
+				//const float2 AREA_START = float2( 1.0, 0.66f ) - AREA_EXTENT;
+				const float CURVE_ALPHA = 1.0f;
+				float2 Coord = ( Input.uv - AREA_START ) / AREA_EXTENT;
+				if( Coord.x >= 0 && Coord.x <= 1.0 && Coord.y >= 0 && Coord.y <= 1 )
+				{
+					float3 v = vec3( Coord.x );
+					v = Exposure( v );
+					v = ToneMap( v );
+					Coord.y = 1.0f - Coord.y;
+					color = lerp( color, float4( step( Coord.y, ToLinear(v) ), 1.0f ), CURVE_ALPHA );
+				}
+			#endif
+
+			#if defined( LUMA_AS_ALPHA ) && !defined( ALPHA )
+				float lumaM = dot(LUMINANCE_VECTOR, color.rgb);
+
+				return float4(color.rgb, lumaM);
+			#else
+				return color;
+			#endif
+			}
+		]]
+	}
+}
+
+
+BlendState BlendState
+{
+	BlendEnable = no
+	#[NU] Couldnt figure out why this was needed, but I need the alpha channel for FXAA reasons
+	#WriteMask = "RED|GREEN|BLUE"
+}
+BlendState BlendStateWriteAlpha
+{
+	BlendEnable = no
+	WriteMask = "RED|GREEN|BLUE|ALPHA"
+}
+
+DepthStencilState DepthStencilState
+{
+	DepthEnable = no
+	DepthWriteEnable = no
+}
+
+
+Effect Restore
+{
+	VertexShader = "VertexShaderFullscreen"
+	PixelShader = "PixelShader"
+}
+
+Effect RestoreAlpha
+{
+	VertexShader = "VertexShaderFullscreen"
+	PixelShader = "PixelShader"
+	BlendState = "BlendStateWriteAlpha"
+	Defines = { "ALPHA" }
+}

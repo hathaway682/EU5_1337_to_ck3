@@ -1,0 +1,44 @@
+﻿pdxmesh = {
+	name = "ep3_monument_parthenon_01_a_mesh"
+	file = "ep3_monument_parthenon_01_a.mesh"
+
+    scale = 0.55
+
+	meshsettings = {
+		name = "ep3_monument_parthenon_01_aShape"
+		index = 0
+		texture_diffuse = "ep3_monument_parthenon_01_a_diffuse.dds"
+		texture_normal = "ep3_monument_parthenon_01_a_normal.dds"
+		texture_specular = "ep3_monument_parthenon_01_a_properties.dds"
+		texture = { file = "ep3_monument_parthenon_01_ao_a_unique.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "|ep3_monument_parthenon_01_a|ep3_monument_parthenon_01_b|ep3_mo"
+		index = 0
+		texture_diffuse = "building_mediterranean_atlas_diffuse.dds"
+		texture_normal = "building_mediterranean_atlas_normal.dds"
+		texture_specular = "building_mediterranean_atlas_properties.dds"
+		texture = { file = "ep3_monument_parthenon_01_ao_a_unique.dds" index = 5 }		
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "|ep3_monument_parthenon_01_a|ep3_monument_parthenon_decal|ep3_m"
+		index = 0
+		texture_diffuse = "fp2_building_special_alcazar_de_segovia_01_a_decal_diffuse.dds"
+		texture_normal = "fp2_building_special_alcazar_de_segovia_01_a_decal_normal.dds"
+		texture_specular = "fp2_building_special_alcazar_de_segovia_01_a_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "ep3_monument_parthenon_01_a_entity"
+	pdxmesh = "ep3_monument_parthenon_01_a_mesh"
+}

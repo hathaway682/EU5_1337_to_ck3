@@ -1,0 +1,25 @@
+﻿categories={ map_foliage_category }
+layer={
+ name="tree_high_layer"
+ fade_in=0
+ fade_out=17
+ category="map_foliage_category"
+ masks="low|medium|high"
+ visibility_tags=""
+}
+layer={
+ name="tree_medium_layer"
+ fade_in=0
+ fade_out=16
+ category="map_foliage_category"
+ masks="medium|high"
+ visibility_tags=""
+}
+layer={
+ name="tree_low_layer"
+ fade_in=0
+ fade_out=15
+ category="map_foliage_category"
+ masks="low|medium|high"
+ visibility_tags=""
+}

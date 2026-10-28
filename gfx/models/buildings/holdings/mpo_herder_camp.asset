@@ -1,0 +1,40 @@
+pdxmesh = {
+	name = "mpo_herder_camp_mesh"
+	file = "mpo_herder_camp.mesh"
+
+	meshsettings = {
+		name = "mpo_herder_b"
+		index = 0
+		texture_diffuse = "tribal_walls_01_diffuse.dds"
+		texture_normal = "tribal_walls_01_normal.dds"
+		texture_specular = "tribal_walls_01_properties.dds"
+		shader = "SETBuilding_snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "mpo_herder"
+		index = 0
+		texture_diffuse = "building_mongol_atlas_diffuse.dds"
+		texture_normal = "building_mongol_atlas_normal.dds"
+		texture_specular = "building_mongol_atlas_properties.dds"
+		shader = "SETBuilding_snap_to_terrain"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "mpo_herder_decal"
+		index = 0
+		texture_diffuse = "western_city_01_decal_diffuse.dds"
+		texture_normal = "western_city_01_decal_normal.dds"
+		texture_specular = "western_city_01_decal_properties.dds"
+		shader = "SETBuilding_decal_local"
+		shader_file = "gfx/FX/set_building_pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "mpo_herder_camp_entity"
+	pdxmesh = "mpo_herder_camp_mesh"
+}

@@ -1,0 +1,56 @@
+﻿pdxmesh = {
+	scale = 0.5
+	name = "building_special_confucius_temple_01_mesh"
+	file = "building_special_confucius_temple_01.mesh"
+	lod_percentages = { lod = { index = 1 percent = 3.0 } }
+
+	meshsettings = {
+		name = "building_special_confucius_temple_01_decal_LOD_0Shape"
+		index = 0
+		texture_diffuse = "tgp_building_chinese_wall_decal_diffuse.dds"
+		texture_normal = "tgp_building_chinese_wall_decal_normal.dds"
+		texture_specular = "tgp_building_chinese_wall_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_special_confucius_temple_01_LOD_0Shape"
+		index = 0
+		texture_diffuse = "building_asia_atlas_2_a_diffuse.dds"
+		texture_normal = "building_asia_atlas_2_a_normal.dds"
+		texture_specular = "building_asia_atlas_2_a_properties.dds"
+		texture = { file = "confucius_temple.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_special_confucius_temple_01_LOD_1Shape"
+		index = 0
+		texture_diffuse = "building_asia_atlas_2_a_diffuse.dds"
+		texture_normal = "building_asia_atlas_2_a_normal.dds"
+		texture_specular = "building_asia_atlas_2_a_properties.dds"
+		texture = { file = "confucius_temple.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_special_confucius_temple_01_LOD_2Shape"
+		index = 0
+		texture_diffuse = "building_asia_atlas_2_a_diffuse.dds"
+		texture_normal = "building_asia_atlas_2_a_normal.dds"
+		texture_specular = "building_asia_atlas_2_a_properties.dds"
+		texture = { file = "confucius_temple.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+}
+
+entity = {
+	name = "building_special_confucius_temple_01_entity"
+	pdxmesh = "building_special_confucius_temple_01_mesh"
+}

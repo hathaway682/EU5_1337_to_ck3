@@ -1,0 +1,62 @@
+﻿pdxmesh = {
+	scale = 0.5
+	name = "ep3_patras_castle_01_a_mesh"
+	file = "ep3_patras_castle_01_a.mesh"
+
+	meshsettings = {
+		name = "ep3_athos_monasteries_ground_01_aShape"
+		index = 0
+		texture_diffuse = "ep3_athos_monasteries_01_b_diffuse.dds"
+		texture_normal = "ep3_athos_monasteries_01_b_normal.dds"
+		texture_specular = "ep3_athos_monasteries_01_b_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_patras_castle_ground_01_aShape"
+		index = 0
+		texture_diffuse = "ep3_patras_castle_ground_diffuse.dds"
+		texture_normal = "ep3_patras_castle_ground_normal.dds"
+		texture_specular = "ep3_patras_castle_ground_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_basilica_sant_apollinare_nuovo_decalShape"
+		index = 0
+		texture_diffuse = "fp2_building_special_alcazar_de_segovia_01_a_decal_diffuse.dds"
+		texture_normal = "fp2_building_special_alcazar_de_segovia_01_a_decal_normal.dds"
+		texture_specular = "fp2_building_special_alcazar_de_segovia_01_a_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "ep3_patras_castle_01_aShape"
+		index = 0
+		texture_diffuse = "building_mediterranean_atlas_diffuse.dds"
+		texture_normal = "building_mediterranean_atlas_normal.dds"
+		texture_specular = "building_mediterranean_atlas_properties.dds"
+		texture = { file = "ep3_patras_castle_01_a_unique.dds" index = 5 }			
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_athos_monasteries_mountain_01_aShape"
+		index = 0
+		texture_diffuse = "ep3_sumela_monastery_diffuse.dds"
+		texture_normal = "ep3_sumela_monastery_normal.dds"
+		texture_specular = "ep3_sumela_monastery_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "ep3_patras_castle_01_a_entity"
+	pdxmesh = "ep3_patras_castle_01_a_mesh"
+}

@@ -1,0 +1,75 @@
+pdxmesh = {
+	name = "ep3_tabletop_mesh"
+	file = "ep3_tabletop.mesh"
+
+	cull_distance = 50000
+
+	meshsettings = {
+		name = "ep3_tabletop|ep3_byzantium_feet|ep3_byzantium_feetShape"
+		index = 0
+		texture_diffuse = "ep3_byzantium_feet_diffuse.dds"
+		texture_normal = "ep3_byzantium_feet_normal.dds"
+		texture_specular = "ep3_byzantium_feet_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_tabletop|ep3_byzantium_table|ep3_byzantium_tableShape"
+		index = 0
+		texture_diffuse = "ep3_byzantium_table_diffuse.dds"
+		texture_normal = "ep3_byzantium_table_normal.dds"
+		texture_specular = "ep3_byzantium_table_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/set_tabletop.shader"
+
+		texture = { file = "ep3_byzantium_detail_normal.dds" index = 6 }
+		additional_shader_defines = {
+			"DETAIL_TILING float4( 3.0f, 3.0f, 0.0f, 0.0f )"
+			"DETAIL_ROUGHNESS_STRENGTH float(0.9f)"
+			"DETAIL_NORMAL_STRENGTH float(0.3f)"
+		}
+	}
+
+	meshsettings = {
+		name = "ep3_tabletop|ep3_byzantium_cloth|ep3_byzantium_clothShape"
+		index = 0
+		texture_diffuse = "ep3_byzantium_cloth_diffuse.dds"
+		texture_normal = "ep3_byzantium_cloth_normal.dds"
+		texture_specular = "ep3_byzantium_cloth_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/set_tabletop.shader"
+
+		texture = { file = "detail_linen_02.dds" index = 6 }
+		additional_shader_defines = {
+			"DETAIL_TILING float4( 3.0f, 3.0f, 0.0f, 0.0f )"            
+			"DETAIL_ROUGHNESS_STRENGTH float(0.8f)"
+			"DETAIL_NORMAL_STRENGTH float(0.6f)"
+		}
+	}
+
+	meshsettings = {
+		name = "ep3_tabletop|ep3_byzantium_decal|ep3_byzantium_decalShape"
+		index = 0
+		texture_diffuse = "ep3_byzantium_decal_diffuse.dds"
+		texture_normal = "ep3_byzantium_decal_normal.dds"
+		texture_specular = "ep3_byzantium_decal_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_byzantium_trimShape"
+		index = 0
+		texture_diffuse = "ep3_byzantium_trim_diffuse.dds"
+		texture_normal = "ep3_byzantium_trim_normal.dds"
+		texture_specular = "ep3_byzantium_trim_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+}
+
+entity = {
+	name = "ep3_tabletop_entity"
+	pdxmesh = "ep3_tabletop_mesh"
+}

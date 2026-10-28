@@ -1,0 +1,77 @@
+pdxmesh = {
+	name = "fp1_building_norse_castle_02_mena_mesh"
+	file = "fp1_building_norse_castle_02_mena.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3.0 }
+		lod = { index = 2 percent = 1.0 }
+	}
+
+	meshsettings = {
+		name = "fp1_building_norse_castle_02_mena_LOD0Shape"
+		index = 0
+		texture_diffuse = "building_mena_atlas_diffuse.dds"
+		texture_normal = "building_mena_atlas_normal.dds"
+		texture_specular = "building_mena_atlas_properties.dds"
+		texture = { file = "fp1_building_norse_castle_02_unique.dds" index = 5 }
+		shader = "SETBuilding_standard_atlas"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|castle_walls|castle_wallsShape"
+		index = 0
+		texture_diffuse = "western_walls_01_diffuse_desert.dds"
+		texture_normal = "western_walls_01_normal.dds"
+		texture_specular = "western_walls_01_properties.dds"
+		shader = "SETBuilding_standard_alpha_to_coverage_winter"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "fp1_building_norse_castle_02_mena_LOD1Shape"
+		index = 0
+		texture_diffuse = "building_mena_atlas_diffuse.dds"
+		texture_normal = "building_mena_atlas_normal.dds"
+		texture_specular = "building_mena_atlas_properties.dds"
+		texture = { file = "fp1_building_norse_castle_02_unique.dds" index = 5 }
+		shader = "SETBuilding_standard_atlas"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|castle_walls|castle_wallsShape"
+		index = 0
+		texture_diffuse = "western_walls_01_diffuse_desert.dds"
+		texture_normal = "western_walls_01_normal.dds"
+		texture_specular = "western_walls_01_properties.dds"
+		shader = "SETBuilding_standard_alpha_to_coverage_winter"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "fp1_building_norse_castle_02_mena_LOD2Shape"
+		index = 0
+		texture_diffuse = "building_mena_atlas_diffuse.dds"
+		texture_normal = "building_mena_atlas_normal.dds"
+		texture_specular = "building_mena_atlas_properties.dds"
+		texture = { file = "fp1_building_norse_castle_02_unique.dds" index = 5 }
+		shader = "SETBuilding_standard_atlas"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|castle_walls|castle_wallsShape"
+		index = 0
+		texture_diffuse = "western_walls_01_diffuse_desert.dds"
+		texture_normal = "western_walls_01_normal.dds"
+		texture_specular = "western_walls_01_properties.dds"
+		shader = "SETBuilding_standard_alpha_to_coverage_winter"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "fp1_building_norse_castle_02_mena_entity"
+	pdxmesh = "fp1_building_norse_castle_02_mena_mesh"
+}

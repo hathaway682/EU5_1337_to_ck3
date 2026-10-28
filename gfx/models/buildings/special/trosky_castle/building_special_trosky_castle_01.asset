@@ -1,0 +1,78 @@
+﻿pdxmesh = {
+	scale = 0.5
+	name = "building_special_trosky_castle_01_mesh"
+	file = "building_special_trosky_castle_01.mesh"
+
+	cull_distance = 5000.0
+
+	lod_percentages = {
+		lod = { index = 1 percent = 10.0 }
+		lod = { index = 2 percent = 7.0 }
+	}
+
+	meshsettings = {
+		name = "decal_LOD0"
+		index = 0
+		texture_diffuse = "building_special_trosky_castle_decal_01_diffuse.dds"
+		texture_normal = "building_special_trosky_castle_decal_01_normal.dds"
+		texture_specular = "building_special_trosky_castle_decal_01_properties.dds"
+		shader = "standard_alpha_to_coverage_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_LOD1"
+		index = 0
+		texture_diffuse = "building_special_trosky_castle_decal_01_diffuse.dds"
+		texture_normal = "building_special_trosky_castle_decal_01_normal.dds"
+		texture_specular = "building_special_trosky_castle_decal_01_properties.dds"
+		shader = "standard_alpha_to_coverage_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_LOD2"
+		index = 0
+		texture_diffuse = "building_special_trosky_castle_decal_01_diffuse.dds"
+		texture_normal = "building_special_trosky_castle_decal_01_normal.dds"
+		texture_specular = "building_special_trosky_castle_decal_01_properties.dds"
+		shader = "standard_alpha_to_coverage_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "trosky_castle_LOD0"
+		index = 0
+		texture_diffuse = "building_special_trosky_castle_01_diffuse_diffuse.dds"
+		texture_normal = "building_special_trosky_castle_01_diffuse_normal.dds"
+		texture_specular = "building_special_trosky_castle_01_diffuse_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "trosky_castle_LOD1"
+		index = 0
+		texture_diffuse = "building_special_trosky_castle_01_diffuse_diffuse.dds"
+		texture_normal = "building_special_trosky_castle_01_diffuse_normal.dds"
+		texture_specular = "building_special_trosky_castle_01_diffuse_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "trosky_castle_LOD2"
+		index = 0
+		texture_diffuse = "building_special_trosky_castle_01_diffuse_diffuse.dds"
+		texture_normal = "building_special_trosky_castle_01_diffuse_normal.dds"
+		texture_specular = "building_special_trosky_castle_01_diffuse_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+}
+
+entity = {
+	name = "building_special_trosky_castle_01_entity"
+	pdxmesh = "building_special_trosky_castle_01_mesh"
+}

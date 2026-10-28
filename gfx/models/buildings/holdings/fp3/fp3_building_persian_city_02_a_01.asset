@@ -1,0 +1,69 @@
+pdxmesh = {
+	name = "fp3_building_persian_city_02_a_01_mesh"
+	file = "fp3_building_persian_city_02_a_01.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 7.0 }
+		lod = { index = 2 percent = 5.0 }
+	}
+
+	meshsettings = {
+		name = "fp3_building_persian_city_02_a_01_LOD0Shape"
+		index = 0
+		texture_diffuse = "building_persia_atlas_b_diffuse.dds"
+		texture_normal = "building_persia_atlas_normal.dds"
+		texture_specular = "building_persia_atlas_properties.dds"
+		texture = { file = "fp3_building_persian_city_02_a_01_unique.dds" index = 5 }
+		shader = "SETBuilding_standard_atlas"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "fp3_building_persian_city_02_c_01Shape"
+		index = 0
+		texture_diffuse = "fp3_building_persian_temple_02_decal_diffuse.dds"
+		texture_normal = "fp3_building_persian_temple_02_decal_normal.dds"
+		texture_specular = "fp3_building_persian_temple_02_decal_properties.dds"
+		texture = { file = "fp3_building_persian_city_02_a_01_unique.dds" index = 5 }
+		shader = "SETBuilding_standard_atlas"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "fp3_building_persian_city_02_b_0Shape1"
+		index = 0
+		texture_diffuse = "building_mena_city_01_decal_diffuse.dds"
+		texture_normal = "building_mena_city_01_decal_normal.dds"
+		texture_specular = "building_mena_city_01_decal_properties.dds"
+		shader = "SETBuilding_decal_local"
+		shader_file = "gfx/FX/set_building_pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "fp3_building_persian_city_02_a_01_LOD1Shape"
+		index = 0
+		texture_diffuse = "building_persia_atlas_b_diffuse.dds"
+		texture_normal = "building_persia_atlas_normal.dds"
+		texture_specular = "building_persia_atlas_properties.dds"
+		texture = { file = "fp3_building_persian_city_02_a_01_unique.dds" index = 5 }
+		shader = "SETBuilding_standard_atlas"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "fp3_building_persian_city_02_a_01_LOD2Shape"
+		index = 0
+		texture_diffuse = "building_persia_atlas_b_diffuse.dds"
+		texture_normal = "building_persia_atlas_normal.dds"
+		texture_specular = "building_persia_atlas_properties.dds"
+		texture = { file = "fp3_building_persian_city_02_a_01_unique.dds" index = 5 }
+		shader = "SETBuilding_standard_atlas"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "fp3_building_persian_city_02_a_01_entity"
+	pdxmesh = "fp3_building_persian_city_02_a_01_mesh"
+}

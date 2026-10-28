@@ -1,0 +1,56 @@
+﻿pdxmesh = {
+	scale = 0.5
+	name = "building_special_dengfeng_observatory_01_mesh"
+	file = "building_special_dengfeng_observatory_01.mesh"
+	lod_percentages = { lod = { index = 1 percent = 3.0 } }
+	
+	meshsettings = {
+		name = "building_special_dengfeng_observatory_decal_01_LOD_0Shape"
+		index = 0
+		texture_diffuse = "dengfeng_observatory_decal_diffuse.dds"
+		texture_normal = "ep2_building_special_canterbury_decal_01_normal.dds"
+		texture_specular = "ep2_building_special_canterbury_decal_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_special_dengfeng_observatory_01_LOD_0Shape"
+		index = 0
+		texture_diffuse = "building_se_asia_atlas_2_a_diffuse.dds"
+		texture_normal = "building_se_asia_atlas_2_a_normal.dds"
+		texture_specular = "building_se_asia_atlas_2_a_properties.dds"
+		texture = { file = "dengfeng_observatory.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_special_dengfeng_observatory_01_LOD_1Shape"
+		index = 0
+		texture_diffuse = "building_se_asia_atlas_2_a_diffuse.dds"
+		texture_normal = "building_se_asia_atlas_2_a_normal.dds"
+		texture_specular = "building_se_asia_atlas_2_a_properties.dds"
+		texture = { file = "dengfeng_observatory.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_special_dengfeng_observatory_01_LOD_2Shape"
+		index = 0
+		texture_diffuse = "building_se_asia_atlas_2_a_diffuse.dds"
+		texture_normal = "building_se_asia_atlas_2_a_normal.dds"
+		texture_specular = "building_se_asia_atlas_2_a_properties.dds"
+		texture = { file = "dengfeng_observatory.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+}
+
+entity = {
+	name = "building_special_dengfeng_observatory_01_entity"
+	pdxmesh = "building_special_dengfeng_observatory_01_mesh"
+}

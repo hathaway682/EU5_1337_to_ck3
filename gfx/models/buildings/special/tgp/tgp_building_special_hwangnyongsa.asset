@@ -1,0 +1,57 @@
+﻿pdxmesh = {
+	scale = 0.5
+	name = "tgp_building_special_hwangnyongsa_mesh"
+	file = "tgp_building_special_hwangnyongsa.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 6.0 }
+	}
+
+	meshsettings = {
+		name = "tgp_building_special_hwangnyongsa_decal_LOD1"
+		index = 0
+		texture_diffuse = "building_mena_city_01_decal_diffuse.dds"
+		texture_normal = "building_mena_city_01_decal_normal.dds"
+		texture_specular = "building_mena_city_01_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "tgp_building_special_hwangnyongsa_LOD0"
+		index = 0
+		texture_diffuse = "building_goryeo_atlas_a_diffuse.dds"
+		texture_normal = "building_goryeo_atlas_a_normal.dds"
+		texture_specular = "building_goryeo_atlas_a_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tgp_building_special_hwangnyongsa_LOD1"
+		index = 0
+		texture_diffuse = "building_goryeo_atlas_a_diffuse.dds"
+		texture_normal = "building_goryeo_atlas_a_normal.dds"
+		texture_specular = "building_goryeo_atlas_a_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tgp_building_special_hwangnyongsa_decal_LOD0"
+		index = 0
+		texture_diffuse = "building_mena_city_01_decal_diffuse.dds"
+		texture_normal = "building_mena_city_01_decal_normal.dds"
+		texture_specular = "building_mena_city_01_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+}
+
+entity = {
+	name = "tgp_building_special_hwangnyongsa_entity"
+	pdxmesh = "tgp_building_special_hwangnyongsa_mesh"
+}

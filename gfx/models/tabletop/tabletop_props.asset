@@ -1,0 +1,176 @@
+pdxmesh = {
+	name = "tabletop_props_mesh"
+	file = "tabletop_props.mesh"
+
+	cull_distance = 50000
+
+	meshsettings = {
+		name = "ep3_byzantium_chairShape"
+		index = 0
+		texture_diffuse = "ep3_byzantium_chair_diffuse.dds"
+		texture_normal = "ep3_byzantium_chair_normal.dds"
+		texture_specular = "ep3_byzantium_chair_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_byzantium_lampShape"
+		index = 0
+		texture_diffuse = "ep3_byzantium_lampstand_diffuse.dds"
+		texture_normal = "ep3_byzantium_lampstand_normal.dds"
+		texture_specular = "ep3_byzantium_lampstand_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+
+	meshsettings = {
+		name = "bp2_reading_book_01_aShape"
+		index = 0
+		texture_diffuse = "bp2_reading_book_01_a_diffuse.dds"
+		texture_normal = "bp2_reading_book_01_a_normal.dds"
+		texture_specular = "bp2_reading_book_01_a_properties.dds"
+		shader = "tabletop_standard"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+
+	meshsettings = {
+		name = "bp2_reading_book_01_aShape"
+		index = 1
+		texture_diffuse = "ep3_byzantium_bookcover_diffuse.dds"
+		texture_normal = "ep3_byzantium_bookcover_normal.dds"
+		texture_specular = "ep3_byzantium_bookcover_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_byzantium_gobletShape"
+		index = 0
+		texture_diffuse = "ep3_byzantium_goblet_diffuse.dds"
+		texture_normal = "ep3_byzantium_goblet_normal.dds"
+		texture_specular = "ep3_byzantium_goblet_properties.dds"
+		shader = "tabletop_standard"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_byzantium_pitcherShape"
+		index = 0
+		texture_diffuse = "ep3_byzantium_pitcher_diffuse.dds"
+		texture_normal = "ep3_byzantium_pitcher_normal.dds"
+		texture_specular = "ep3_byzantium_pitcher_properties.dds"
+		shader = "tabletop_standard"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_byzantium_grapes_cupShape"
+		index = 0
+		texture_diffuse = "ep3_byzantium_grapecup_diffuse.dds"
+		texture_normal = "ep3_byzantium_grapecup_normal.dds"
+		texture_specular = "ep3_byzantium_grapecup_properties.dds"
+		shader = "tabletop_standard"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+
+
+		
+	meshsettings = {
+		name = "fp4_tabletop_stoneware_01_jug_wineShape"
+		index = 0
+		texture_diffuse = "tabletop_wine_01_a_diffuse.dds"
+		texture_normal = "tabletop_wine_01_a_normal.dds"
+		texture_specular = "tabletop_wine_01_a_properties.dds"
+		shader = "tabletop_standard"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_byzantium_chair_clothShape"
+		index = 0
+		texture_diffuse = "ep3_byzantium_chair_cloth_diffuse.dds"
+		texture_normal = "ep3_byzantium_chair_cloth_normal.dds"
+		texture_specular = "ep3_byzantium_chair_cloth_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_stickShape"
+		index = 0
+		texture_diffuse = "ep1_western_pouch_basic_01_a_diffuse.dds"
+		texture_normal = "ep1_western_pouch_basic_01_a_normal.dds"
+		texture_specular = "ep1_western_pouch_basic_01_a_properties.dds"
+		shader = "tabletop_standard"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_cloth_patternShape"
+		index = 0
+		texture_diffuse = "ep3_cloth_pattern_diffuse.dds"
+		texture_normal = "ep3_cloth_pattern_normal.dds"
+		texture_specular = "ep3_cloth_pattern_properties.dds"
+		shader = "tabletop_standard"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_byzantium_sword1Shape"
+		index = 0
+		texture_diffuse = "ep3_byzantium_sword_diffuse.dds"
+		texture_normal = "ep3_byzantium_sword_normal.dds"
+		texture_specular = "ep3_byzantium_sword_properties.dds"
+		shader = "tabletop_standard"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_byzantium_coinShape"
+		index = 0
+		texture_diffuse = "ep3_byzantium_coin_diffuse.dds"
+		texture_normal = "ep3_byzantium_coin_normal.dds"
+		texture_specular = "ep3_byzantium_coin_properties.dds"
+		shader = "tabletop_standard"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_byzantium_eagleShape"
+		index = 0
+		texture_diffuse = "ep3_byzantium_eagle_diffuse.dds"
+		texture_normal = "ep3_byzantium_eagle_normal.dds"
+		texture_specular = "ep3_byzantium_eagle_properties.dds"
+		shader = "tabletop_standard"
+		shader_file = "gfx/FX/set_tabletop.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_byzantium_grapes_01Shape"
+		index = 0
+		texture_diffuse = "ep3_byzantium_grapes_diffuse.dds"
+		texture_normal = "ep3_byzantium_grapes_normal.dds"
+		texture_specular = "ep3_byzantium_grapes_properties.dds"
+		shader = "tabletop_standard"
+		shader_file = "gfx/FX/set_tabletop.shader"
+		additional_shader_defines = {
+			"TRANSLUCENCY"
+			"THICKNESS_MAP"
+		}	
+	}
+}
+
+entity = {
+	name = "tabletop_props_entity"
+	pdxmesh = "tabletop_props_mesh"
+
+
+	attach = { "candleflame_1" = "flame_01_entity" }
+	attach = { "candleflame_1" = "candle_glow" }
+	attach = { "candleflame_2" = "flame_02_entity" }
+	attach = { "candleflame_2" = "candle_glow" }
+
+
+}
+

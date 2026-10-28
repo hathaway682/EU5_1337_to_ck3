@@ -1,0 +1,114 @@
+﻿pdxmesh = {
+	scale = 0.5
+	name = "tgp_building_special_heian_kyo_mesh"
+	file = "tgp_building_special_heian_kyo.mesh"
+	lod_percentages = {
+		lod = { index = 1 percent = 20.0 }
+		lod = { index = 2 percent = 10.0 }
+	}
+
+	meshsettings = {
+		name = "heian_kyo_decal_LOD0Shape"
+		index = 0
+		texture_diffuse = "heian_kyo_decal_diffuse.dds"
+		texture_normal = "heian_kyo_decal_normal.dds"
+		texture_specular = "heian_kyo_decal_properties.dds"
+		
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "heian_kyo_decal_LOD1Shape"
+		index = 0
+		texture_diffuse = "heian_kyo_decal_diffuse.dds"
+		texture_normal = "heian_kyo_decal_normal.dds"
+		texture_specular = "heian_kyo_decal_properties.dds"
+		
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+	
+	meshsettings = {
+		name = "heian_kyo_decal_LOD2Shape"
+		index = 0
+		texture_diffuse = "heian_kyo_decal_diffuse.dds"
+		texture_normal = "heian_kyo_decal_normal.dds"
+		texture_specular = "heian_kyo_decal_properties.dds"
+		
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "tgp_building_special_heian_kyo_LOD0Shape"
+		index = 0
+		texture_diffuse = "building_japanese_atlas_diffuse.dds"
+		texture_normal = "building_japanese_atlas_normal.dds"
+		texture_specular = "building_japanese_atlas_properties.dds"
+		texture = { file = "tgp_building_special_heian_kyo_unique.dds" index = 5 }
+		shader = "snap_to_terrain_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tgp_building_special_heian_kyo_LOD1Shape"
+		index = 0
+		texture_diffuse = "building_japanese_atlas_diffuse.dds"
+		texture_normal = "building_japanese_atlas_normal.dds"
+		texture_specular = "building_japanese_atlas_properties.dds"
+		texture = { file = "tgp_building_special_heian_kyo_unique.dds" index = 5 }
+		shader = "snap_to_terrain_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tgp_building_special_heian_kyo_LOD2Shape"
+		index = 0
+		texture_diffuse = "building_japanese_atlas_diffuse.dds"
+		texture_normal = "building_japanese_atlas_normal.dds"
+		texture_specular = "building_japanese_atlas_properties.dds"
+		texture = { file = "tgp_building_special_heian_kyo_unique.dds" index = 5 }
+		shader = "snap_to_terrain_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "trees_sakura_heian_kyo_LOD0Shape"
+		index = 0
+		texture_diffuse = "tree_sakura_diffuse.dds"
+		texture_normal = "tree_sakura_normal.dds"
+		texture_specular = "tree_sakura_properties.dds"
+		
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "trees_sakura_heian_kyo_LOD1Shape"
+		index = 0
+		texture_diffuse = "tree_sakura_diffuse.dds"
+		texture_normal = "tree_sakura_normal.dds"
+		texture_specular = "tree_sakura_properties.dds"
+		
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "trees_sakura_heian_kyo_LOD2Shape"
+		index = 0
+		texture_diffuse = "tree_sakura_diffuse.dds"
+		texture_normal = "tree_sakura_normal.dds"
+		texture_specular = "tree_sakura_properties.dds"
+		
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "tgp_building_special_heian_kyo_entity"
+	pdxmesh = "tgp_building_special_heian_kyo_mesh"
+}

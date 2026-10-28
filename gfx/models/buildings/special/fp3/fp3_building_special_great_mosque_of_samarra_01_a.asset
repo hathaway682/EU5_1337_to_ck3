@@ -1,0 +1,73 @@
+﻿pdxmesh = {
+	name = "fp3_building_special_great_mosque_of_samarra_01_a_mesh"
+	file = "fp3_building_special_great_mosque_of_samarra_01_a.mesh"
+
+	scale = 0.5
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3.0 }
+		lod = { index = 2 percent = 1.0 }
+	}
+
+	meshsettings = {
+		name = "fp3_building_special_great_mosque_of_samarra_01_a_decalaShape"
+		index = 0
+		texture_diffuse = "great_mosque_of_samarra_diffuse.dds"
+		texture_normal = "great_mosque_of_samarra_normal.dds"
+		texture_specular = "great_mosque_of_samarra_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "fp3_building_special_great_mosque_of_samarra_01_a_decalbShape"
+		index = 0
+		texture_diffuse = "great_mosque_of_samarra_diffuse.dds"
+		texture_normal = "great_mosque_of_samarra_normal.dds"
+		texture_specular = "great_mosque_of_samarra_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "fp3_building_special_great_mosque_of_samarra_01_a_LOD0Shape"
+		index = 0
+		texture_diffuse = "building_persia_atlas_diffuse.dds"
+		texture_normal = "building_persia_atlas_normal.dds"
+		texture_specular = "building_persia_atlas_properties.dds"
+		texture = { file = "great_mosque_of_samarra_unique.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "fp3_building_special_great_mosque_of_samarra_01_a_LOD1Shape"
+		index = 0
+		texture_diffuse = "building_persia_atlas_diffuse.dds"
+		texture_normal = "building_persia_atlas_normal.dds"
+		texture_specular = "building_persia_atlas_properties.dds"
+		texture = { file = "great_mosque_of_samarra_unique.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+
+	meshsettings = {
+		name = "fp3_building_special_great_mosque_of_samarra_01_a_LOD2Shape"
+		index = 0
+		texture_diffuse = "building_persia_atlas_diffuse.dds"
+		texture_normal = "building_persia_atlas_normal.dds"
+		texture_specular = "building_persia_atlas_properties.dds"
+		texture = { file = "great_mosque_of_samarra_unique.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "fp3_building_special_great_mosque_of_samarra_01_a_entity"
+	pdxmesh = "fp3_building_special_great_mosque_of_samarra_01_a_mesh"
+}
+

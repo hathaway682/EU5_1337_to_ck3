@@ -1,0 +1,96 @@
+﻿pdxmesh = {
+	scale = 0.5
+	name = "building_special_buddha_kamakura_01_mesh"
+	file = "building_special_buddha_kamakura_01.mesh"
+	lod_percentages = { lod = { index = 1 percent = 3.0 } }
+
+	meshsettings = {
+		name = "building_special_buddha_kamakura_01_LOD_0Shape"
+		index = 0
+		texture_diffuse = "copper_m_diffuse.dds"
+		texture_normal = "copper_m_normal.dds"
+		texture_specular = "copper_m_gloss.dds"
+		texture = { file = "buddha_kamakura.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_special_buddha_kamakura_01_LOD_1Shape"
+		index = 0
+		texture_diffuse = "copper_m_diffuse.dds"
+		texture_normal = "copper_m_normal.dds"
+		texture_specular = "copper_m_gloss.dds"
+		texture = { file = "buddha_kamakura.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_special_buddha_kamakura_01_LOD_2Shape"
+		index = 0
+		texture_diffuse = "copper_m_diffuse.dds"
+		texture_normal = "copper_m_normal.dds"
+		texture_specular = "copper_m_gloss.dds"
+		texture = { file = "buddha_kamakura.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_special_buddha_kamakura_temple_01_LOD_0Shape"
+		index = 0
+		texture_diffuse = "building_japanese_atlas_diffuse.dds"
+		texture_normal = "building_japanese_atlas_normal.dds"
+		texture_specular = "building_japanese_atlas_properties.dds"
+		texture = { file = "buddha_kamakura_temple.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_special_buddha_kamakura_temple_01_LOD_1Shape"
+		index = 0
+		texture_diffuse = "building_japanese_atlas_diffuse.dds"
+		texture_normal = "building_japanese_atlas_normal.dds"
+		texture_specular = "building_japanese_atlas_properties.dds"
+		texture = { file = "buddha_kamakura_temple.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_special_buddha_kamakura_temple_01_LOD_2Shape"
+		index = 0
+		texture_diffuse = "building_japanese_atlas_diffuse.dds"
+		texture_normal = "building_japanese_atlas_normal.dds"
+		texture_specular = "building_japanese_atlas_properties.dds"
+		texture = { file = "buddha_kamakura_temple.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_special_buddha_kamakura_decal_01_LOD_0Shape"
+		index = 0
+		texture_diffuse = "buddha_kamakura_decal_diffuse.dds"
+		texture_normal = "tgp_building_special_japanese_temple_03_decal_normal.dds"
+		texture_specular = "tgp_building_special_japanese_temple_03_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+}
+
+entity = {
+	name = "building_special_buddha_kamakura_01_entity"
+	pdxmesh = "building_special_buddha_kamakura_01_mesh"
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5 looping = yes
+		event = { time = 0 node = "buddha_fire" particle = "roco_fireplace" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "buddha_fire" particle = "candle_glow" trigger_once = yes keep_particle = yes }
+	}
+}

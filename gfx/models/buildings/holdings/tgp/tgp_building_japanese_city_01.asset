@@ -1,0 +1,83 @@
+pdxmesh = {
+	name = "tgp_building_japanese_city_01_mesh"
+	file = "tgp_building_japanese_city_01.mesh"
+	lod_percentages = {
+		lod = { index = 1 percent = 30.0 }
+		lod = { index = 2 percent = 10.0 }
+	}
+
+	meshsettings = {
+		name = "japanese_city_decal_LOD0Shape"
+		index = 0
+		texture_diffuse = "tgp_building_japanese_city_decal_diffuse.dds"
+		texture_normal = "tgp_building_japanese_city_decal_normal.dds"
+		texture_specular = "tgp_building_japanese_city_decal_properties.dds"
+		
+		shader = "SETBuilding_decal_local"
+		shader_file = "gfx/FX/set_building_pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "japanese_city_decal_LOD1Shape"
+		index = 0
+		texture_diffuse = "tgp_building_japanese_city_decal_diffuse.dds"
+		texture_normal = "tgp_building_japanese_city_decal_normal.dds"
+		texture_specular = "tgp_building_japanese_city_decal_properties.dds"
+		
+		shader = "SETBuilding_decal_local"
+		shader_file = "gfx/FX/set_building_pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+	
+	meshsettings = {
+		name = "japanese_city_decal_LOD2Shape"
+		index = 0
+		texture_diffuse = "tgp_building_japanese_city_decal_diffuse.dds"
+		texture_normal = "tgp_building_japanese_city_decal_normal.dds"
+		texture_specular = "tgp_building_japanese_city_decal_properties.dds"
+		
+		shader = "SETBuilding_decal_local"
+		shader_file = "gfx/FX/set_building_pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "tgp_building_japanese_city_01_LOD0Shape"
+		index = 0
+		texture_diffuse = "building_japanese_atlas_diffuse.dds"
+		texture_normal = "building_japanese_atlas_normal.dds"
+		texture_specular = "building_japanese_atlas_properties.dds"
+		texture = { file = "tgp_building_japanese_city_01_unique.dds" index = 5 }
+		shader = "SETBuilding_snap_to_terrain_atlas_usercolor"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tgp_building_japanese_city_01_LOD1Shape"
+		index = 0
+		texture_diffuse = "building_japanese_atlas_diffuse.dds"
+		texture_normal = "building_japanese_atlas_normal.dds"
+		texture_specular = "building_japanese_atlas_properties.dds"
+		texture = { file = "tgp_building_japanese_city_01_unique.dds" index = 5 }
+		shader = "SETBuilding_snap_to_terrain_atlas_usercolor"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tgp_building_japanese_city_01_LOD2Shape"
+		index = 0
+		texture_diffuse = "building_japanese_atlas_diffuse.dds"
+		texture_normal = "building_japanese_atlas_normal.dds"
+		texture_specular = "building_japanese_atlas_properties.dds"
+		#texture = { file = "tgp_building_japanese_city_01_unique.dds" index = 5 }
+		shader = "SETBuilding_snap_to_terrain_atlas_usercolor"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+}
+
+
+entity = {
+	name = "tgp_building_japanese_city_01_entity"
+	pdxmesh = "tgp_building_japanese_city_01_mesh"
+}

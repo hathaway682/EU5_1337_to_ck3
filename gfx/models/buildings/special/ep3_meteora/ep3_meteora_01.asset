@@ -1,0 +1,21 @@
+﻿pdxmesh = {
+	scale = 0.5
+	name = "ep3_meteora_01_mesh"
+	file = "ep3_meteora_01.mesh"
+
+	meshsettings = {
+		name = "meteora_low:MeshShape"
+		index = 0
+		texture_diffuse = "ep3_meteora_diffuse.dds"
+		texture_normal = "ep3_meteora_normal.dds"
+		texture_specular = "ep3_meteora_properties.dds"
+		texture = { file = "ep3_meteora_unique.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "ep3_meteora_01_entity"
+	pdxmesh = "ep3_meteora_01_mesh"
+}

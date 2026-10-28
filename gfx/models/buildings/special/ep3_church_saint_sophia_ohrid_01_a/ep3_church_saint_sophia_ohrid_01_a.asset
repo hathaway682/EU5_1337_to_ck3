@@ -1,0 +1,52 @@
+﻿pdxmesh = {
+	scale = 0.5
+	name = "ep3_church_saint_sophia_ohrid_01_a_mesh"
+	file = "ep3_church_saint_sophia_ohrid_01_a.mesh"
+
+	meshsettings = {
+		name = "ep3_church_saint_sophia_ohrid_01_aShape"
+		index = 0
+		texture_diffuse = "building_mediterranean_atlas_diffuse.dds"
+		texture_normal = "building_mediterranean_atlas_normal.dds"
+		texture_specular = "building_mediterranean_atlas_properties.dds"
+		texture = { file = "ep3_church_saint_sophia_ohrid_01_a_unique.dds" index = 5 }			
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "fp4_islamic_garden_01_aShape"
+		index = 0
+		texture_diffuse = "fp4_legendary_islamic_shrine_01_a_diffuse.dds"
+		texture_normal = "fp4_legendary_islamic_shrine_01_a_normal.dds"
+		texture_specular = "fp4_legendary_islamic_shrine_01_a_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ep3_church_saint_sophia_ohrid_decal_01_aShape"
+		index = 0
+		texture_diffuse = "fp2_building_special_alcazar_de_segovia_01_a_decal_diffuse.dds"
+		texture_normal = "fp2_building_special_alcazar_de_segovia_01_a_decal_normal.dds"
+		texture_specular = "fp2_building_special_alcazar_de_segovia_01_a_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "ep3_church_saint_sophia_ohrid_ground_01_aShape"
+		index = 0
+		texture_diffuse = "ep3_church_saint_sophia_ohrid_01_a_diffuse.dds"
+		texture_normal = "ep3_church_saint_sophia_ohrid_01_a_normal.dds"
+		texture_specular = "ep3_church_saint_sophia_ohrid_01_a_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "ep3_church_saint_sophia_ohrid_01_a_entity"
+	pdxmesh = "ep3_church_saint_sophia_ohrid_01_a_mesh"
+}

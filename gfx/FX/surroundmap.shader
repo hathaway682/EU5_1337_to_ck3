@@ -5,6 +5,8 @@ Includes = {
 	"jomini/jomini_fog.fxh"
 	"jomini/jomini_lighting.fxh"
 	"lowspec.fxh"
+
+	"spherical_earth_theory.fxh"
 }
 
 
@@ -234,6 +236,7 @@ PixelShader =
 		[[
 			PDX_MAIN
 			{
+				clip( 0.001 - SETGlobeBlend() );
 				float2 UV = Input.uv;
 
 				float3 SurroundMaskChannels = PdxTex2D( SurroundMask, UV ).rgb;
@@ -304,6 +307,7 @@ PixelShader =
 		[[
 			PDX_MAIN
 			{
+				clip( 0.001 - SETGlobeBlend() );
 				float2 UV = Input.uv;
 				
 				float3 SurroundMaskChannels = PdxTex2D( SurroundMask, UV ).rgb;
@@ -372,6 +376,7 @@ PixelShader =
 		[[			
 			PDX_MAIN
 			{
+				clip( 0.001 - SETGlobeBlend() );
 				float4 Ret = GetFlatMapSurround( Input.uv );
 				Ret.a *= FlatMapLerp;
 
@@ -401,13 +406,6 @@ DepthStencilState DepthStencilState
 	DepthWriteEnable = no
 }
 
-# Procedural map: the 3D surround layers test against the terrain's depth.
-DepthStencilState proctool_surround_depth_test
-{
-	DepthEnable = yes
-	DepthWriteEnable = no
-}
-
 RasterizerState RasterizerState
 {
 	frontccw = yes
@@ -416,14 +414,12 @@ RasterizerState RasterizerState
 
 Effect surroundmap
 {
-	DepthStencilState = "proctool_surround_depth_test"
 	VertexShader = VS_surroundmap
 	PixelShader = PS_surroundmap
 }
 
 Effect surroundmapLowSpec
 {
-	DepthStencilState = "proctool_surround_depth_test"
 	VertexShader = VS_surroundmap
 	PixelShader = PS_surroundmapLowSpec
 }

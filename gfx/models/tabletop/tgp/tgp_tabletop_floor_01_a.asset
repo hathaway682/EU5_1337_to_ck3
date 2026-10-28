@@ -1,0 +1,29 @@
+pdxmesh = {
+	name = "tgp_tabletop_floor_01_a_mesh"
+	file = "tgp_tabletop_floor_01_a.mesh"
+
+	cull_distance = 50000.0
+
+	meshsettings = {
+		name = "Floor"
+		index = 0
+		texture_diffuse = "tgp_dark_tile_floor_diffuse.dds"
+		texture_normal = "tgp_dark_tile_floor_normal.dds"
+		texture_specular = "tgp_dark_tile_floor_properties.dds"
+		shader = "map_floor"
+		shader_file = "gfx/FX/set_tabletop.shader"
+		
+		texture = { file = "tgp_table_floor_lightning_diffuse.dds" index = 7 }
+		additional_shader_defines = {
+			"BAKED_LIGHTING"
+			"LIGHTING_DECAL"
+			"TILING float4 (2.28, 2.28, 1, 1)"
+		}
+	}
+
+}
+
+entity = {
+	name = "tgp_tabletop_floor_01_a_entity"
+	pdxmesh = "tgp_tabletop_floor_01_a_mesh"
+}

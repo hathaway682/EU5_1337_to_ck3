@@ -1,0 +1,21 @@
+﻿pdxmesh = {
+	scale = 0.5
+	name = "mpo_building_special_burkhan_khaldun_mesh"
+	file = "mpo_building_special_burkhan_khaldun.mesh"
+
+
+	meshsettings = {
+		name = "mpo_building_special_burkhan_khaldun"
+		index = 0
+		texture_diffuse = "mpo_building_special_burkhan_khaldun_diffuse.dds"
+		texture_normal = "mpo_building_special_burkhan_khaldun_normal.dds"
+		texture_specular = "mpo_building_special_burkhan_khaldun_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "mpo_building_special_burkhan_khaldun_entity"
+	pdxmesh = "mpo_building_special_burkhan_khaldun_mesh"
+}

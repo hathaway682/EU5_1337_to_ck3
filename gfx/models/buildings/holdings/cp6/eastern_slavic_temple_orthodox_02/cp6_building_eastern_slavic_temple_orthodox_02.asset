@@ -1,0 +1,114 @@
+pdxmesh = {
+	name = "cp6_building_eastern_slavic_temple_orthodox_02_mesh"
+	file = "cp6_building_eastern_slavic_temple_orthodox_02.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 10.0 }
+		lod = { index = 2 percent = 5.0 }
+	}
+
+	meshsettings = {
+		name = "cp6_building_eastern_slavic_temple_orthodox_02_LOD0"
+		index = 0
+		texture_diffuse = "building_western_atlas_diffuse.dds"
+		texture_normal = "building_western_atlas_normal.dds"
+		texture_specular = "building_western_atlas_properties.dds"
+		texture = { file = "cp6_building_eastern_slavic_temple_orthodox_02_unique.dds" index = 5 }
+		shader = "SETBuilding_standard_atlas"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cp6_building_eastern_slavic_temple_orthodox_02_LOD1"
+		index = 0
+		texture_diffuse = "building_western_atlas_diffuse.dds"
+		texture_normal = "building_western_atlas_normal.dds"
+		texture_specular = "building_western_atlas_properties.dds"
+		texture = { file = "cp6_building_eastern_slavic_temple_orthodox_02_unique.dds" index = 5 }
+		shader = "SETBuilding_standard_atlas"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cp6_building_eastern_slavic_temple_orthodox_02_LOD2"
+		index = 0
+		texture_diffuse = "building_western_atlas_diffuse.dds"
+		texture_normal = "building_western_atlas_normal.dds"
+		texture_specular = "building_western_atlas_properties.dds"
+		texture = { file = "cp6_building_eastern_slavic_temple_orthodox_02_unique.dds" index = 5 }
+		shader = "SETBuilding_standard_atlas"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "eastern_slavic_orthodox_roof_02_LOD0"
+		index = 0
+		texture_diffuse = "slavic_orthodox_roof_gilded_diffuse.dds"
+		texture_normal = "slavic_orthodox_roof_gilded_normal.dds"
+		texture_specular = "slavic_orthodox_roof_gilded_properties.dds"
+		texture = { file = "cp6_building_eastern_slavic_temple_orthodox_02_unique.dds" index = 5 }
+		shader = "SETBuilding_standard_atlas"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}	
+
+	meshsettings = {
+		name = "eastern_slavic_orthodox_roof_02_LOD1"
+		index = 0
+		texture_diffuse = "slavic_orthodox_roof_gilded_diffuse.dds"
+		texture_normal = "slavic_orthodox_roof_gilded_normal.dds"
+		texture_specular = "slavic_orthodox_roof_gilded_properties.dds"
+		texture = { file = "cp6_building_eastern_slavic_temple_orthodox_02_unique.dds" index = 5 }
+		shader = "SETBuilding_standard_atlas"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}	
+	
+	meshsettings = {
+		name = "eastern_slavic_orthodox_roof_02_LOD2"
+		index = 0
+		texture_diffuse = "slavic_orthodox_roof_gilded_diffuse.dds"
+		texture_normal = "slavic_orthodox_roof_gilded_normal.dds"
+		texture_specular = "slavic_orthodox_roof_gilded_properties.dds"
+		texture = { file = "cp6_building_eastern_slavic_temple_orthodox_02_unique.dds" index = 5 }
+		shader = "SETBuilding_standard_atlas"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}	
+	
+	meshsettings = {
+		name = "cp6_east_slavic_orthodox_decal_02_LOD1"
+		index = 0
+		texture_diffuse = "western_temple_christian_decal_diffuse.dds"
+		texture_normal = "western_temple_christian_decal_normal.dds"
+		texture_specular = "western_temple_christian_decal_properties.dds"
+		shader = "SETBuilding_decal_local"
+		shader_file = "gfx/FX/set_building_pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "cp6_east_slavic_orthodox_decal_02_LOD0"
+		index = 0
+		texture_diffuse = "western_temple_christian_decal_diffuse.dds"
+		texture_normal = "western_temple_christian_decal_normal.dds"
+		texture_specular = "western_temple_christian_decal_properties.dds"
+		shader = "SETBuilding_decal_local"
+		shader_file = "gfx/FX/set_building_pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+	
+	meshsettings = {
+		name = "cp6_east_slavic_orthodox_decal_02_LOD2"
+		index = 0
+		texture_diffuse = "western_temple_christian_decal_diffuse.dds"
+		texture_normal = "western_temple_christian_decal_normal.dds"
+		texture_specular = "western_temple_christian_decal_properties.dds"
+		shader = "SETBuilding_decal_local"
+		shader_file = "gfx/FX/set_building_pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+}
+
+entity = {
+	name = "cp6_building_eastern_slavic_temple_orthodox_02_entity"
+	pdxmesh = "cp6_building_eastern_slavic_temple_orthodox_02_mesh"
+}

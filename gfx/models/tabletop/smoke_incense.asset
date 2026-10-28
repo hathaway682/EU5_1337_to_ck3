@@ -1,0 +1,23 @@
+pdxmesh = {
+	name = "smoke_incense_mesh"
+	file = "smoke_cone.mesh"
+	scale = 5.0
+
+	cull_distance = 50000
+
+	meshsettings = {
+		name = "smoke_coneShape"
+		index = 0
+		texture_diffuse = "smoke_noise.dds"
+		
+		shader = "mesh_vfx_smoke"
+		shader_file = "gfx/FX/set_tabletop_vfx.shader"
+	
+
+	}
+}
+
+entity = {
+	name = "smoke_incense_entity"
+	pdxmesh = "smoke_incense_mesh"
+}

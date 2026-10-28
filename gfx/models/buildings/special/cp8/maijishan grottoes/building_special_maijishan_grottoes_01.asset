@@ -1,0 +1,56 @@
+﻿pdxmesh = {
+	scale = 0.5
+	name = "building_special_maijishan_grottoes_01_mesh"
+	file = "building_special_maijishan_grottoes_01.mesh"
+	lod_percentages = { lod = { index = 1 percent = 3.0 } }
+
+	meshsettings = {
+		name = "building_special_maijishan_grottoes_01_LOD_0Shape"
+		index = 0
+		texture_diffuse = "maijishan_grottoes_diffuse.dds"
+		texture_normal = "maijishan_grottoes_normal.dds"
+		texture_specular = "noproperties.dds"
+		texture = { file = "maijishan_grottoes.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_special_maijishan_grottoes_galleries_01_LOD_0Shape"
+		index = 0
+		texture_diffuse = "western_walls_01_diffuse.dds"
+		texture_normal = "western_walls_01_normal.dds"
+		texture_specular = "western_walls_01_properties.dds"
+		texture = { file = "maijishan_grottoes.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_special_maijishan_grottoes_01_LOD_1Shape"
+		index = 0
+		texture_diffuse = "maijishan_grottoes_diffuse.dds"
+		texture_normal = "maijishan_grottoes_normal.dds"
+		texture_specular = "noproperties.dds"
+		texture = { file = "maijishan_grottoes.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_special_maijishan_grottoes_01_LOD_2Shape"
+		index = 0
+		texture_diffuse = "maijishan_grottoes_diffuse.dds"
+		texture_normal = "maijishan_grottoes_normal.dds"
+		texture_specular = "noproperties.dds"
+		texture = { file = "maijishan_grottoes.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+}
+
+entity = {
+	name = "building_special_maijishan_grottoes_01_entity"
+	pdxmesh = "building_special_maijishan_grottoes_01_mesh"
+}

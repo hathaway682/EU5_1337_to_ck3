@@ -1,0 +1,56 @@
+pdxmesh = {
+	name = "fp3_building_persian_walls_02_a_01_mesh"
+	file = "fp3_building_persian_walls_02_a_01.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3.0 }
+		lod = { index = 2 percent = 1.0 }
+	}
+
+	meshsettings = {
+		name = "fp3_building_persian_walls_02_decal__LOD0Shape"
+		index = 0
+		texture_diffuse = "western_walls_01_decal_b_diffuse.dds"
+		texture_normal = "western_walls_01_decal_normal.dds"
+		texture_specular = "western_walls_01_decal_properties.dds"
+		shader = "SETBuilding_decal_local"
+		shader_file = "gfx/FX/set_building_pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "fp3_building_persian_walls_02_LOD0Shape"
+		index = 0
+		texture_diffuse = "building_persia_atlas_b_diffuse.dds"
+		texture_normal = "building_persia_atlas_normal.dds"
+		texture_specular = "building_persia_atlas_properties.dds"
+		texture = { file = "fp3_building_persia_walls_02_unique_diffuse.dds" index = 5 }
+		shader = "SETBuilding_snap_to_terrain_atlas"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "fp3_building_persian_walls_02_LOD1Shape"
+		index = 0
+		texture_diffuse = "building_persia_atlas_b_diffuse.dds"
+		texture_normal = "building_persia_atlas_normal.dds"
+		texture_specular = "building_persia_atlas_properties.dds"
+		shader = "SETBuilding_snap_to_terrain_atlas"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "fp3_building_persian_walls_02_LOD2Shape"
+		index = 0
+		texture_diffuse = "building_persia_atlas_b_diffuse.dds"
+		texture_normal = "building_persia_atlas_normal.dds"
+		texture_specular = "building_persia_atlas_properties.dds"
+		shader = "SETBuilding_snap_to_terrain_atlas"
+		shader_file = "gfx/FX/set_building_pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "fp3_building_persian_walls_02_a_01_entity"
+	pdxmesh = "fp3_building_persian_walls_02_a_01_mesh"
+}

@@ -1,0 +1,92 @@
+﻿pdxmesh = {
+	scale = 0.5
+	name = "fp3_building_special_imam_reza_shrine_01_a_mesh"
+	file = "fp3_building_special_imam_reza_shrine_01_a.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3.0 }
+		lod = { index = 2 percent = 1.0 }
+	}
+
+	meshsettings = {
+		name = "fp3_building_special_imam_reza_shrine_01_a_LOD_0Shape"
+		index = 0
+		texture_diffuse = "building_persia_atlas_diffuse.dds"
+		texture_normal = "building_persia_atlas_normal.dds"
+		texture_specular = "building_persia_atlas_properties.dds"
+		texture = { file = "fp3_building_imam_reza_shrine_01_a_unique_diffuse.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "fp3_building_special_imam_reza_shrine_01_a|LOD_0|decal_a|decal_"
+		index = 0
+		texture_diffuse = "fp3_building_special_decal_01_a_diffuse.dds"
+		texture_normal = "fp3_building_special_decal_01_a_normal.dds"
+		texture_specular = "fp3_building_special_decal_01_a_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "tree_palm_01_a_LOD_0Shape"
+		index = 0
+		texture_diffuse = "tree_palm_01_diffuse.dds"
+		texture_normal = "tree_palm_01_normal.dds"
+		texture_specular = "tree_palm_01_properties.dds"
+		texture = { file = "tree_palm_01_tint.dds" index = 3 srgb = yes }
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "fp3_building_special_imam_reza_shrine_01_a_LOD_01Shape"
+		index = 0
+		texture_diffuse = "building_persia_atlas_diffuse.dds"
+		texture_normal = "building_persia_atlas_normal.dds"
+		texture_specular = "building_persia_atlas_properties.dds"
+		texture = { file = "fp3_building_imam_reza_shrine_01_a_unique_diffuse.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "fp3_building_special_imam_reza_shrine_01_a|LOD_1|decal_b|decal_"
+		index = 0
+		texture_diffuse = "fp3_building_special_decal_01_a_diffuse.dds"
+		texture_normal = "fp3_building_special_decal_01_a_normal.dds"
+		texture_specular = "fp3_building_special_decal_01_a_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "tree_palm_01_a_LOD_01Shape"
+		index = 0
+		texture_diffuse = "tree_palm_01_diffuse.dds"
+		texture_normal = "tree_palm_01_normal.dds"
+		texture_specular = "tree_palm_01_properties.dds"
+		texture = { file = "tree_palm_01_tint.dds" index = 3 srgb = yes }
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "fp3_building_special_imam_reza_shrine_01_a_LOD_02Shape"
+		index = 0
+		texture_diffuse = "building_persia_atlas_diffuse.dds"
+		texture_normal = "building_persia_atlas_normal.dds"
+		texture_specular = "building_persia_atlas_properties.dds"
+		texture = { file = "fp3_building_imam_reza_shrine_01_a_unique_diffuse.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "fp3_building_special_imam_reza_shrine_01_a_entity"
+	pdxmesh = "fp3_building_special_imam_reza_shrine_01_a_mesh"
+}

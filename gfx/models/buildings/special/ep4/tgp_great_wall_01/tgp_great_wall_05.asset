@@ -1,0 +1,32 @@
+﻿pdxmesh = {
+	scale = 0.5
+	name = "tgp_great_wall_05_mesh"
+	file = "tgp_great_wall_05.mesh"
+
+	meshsettings = {
+		name = "tgp_great_wall_05|decal|decalShape"
+		index = 0
+		texture_diffuse = "fp3_building_special_great_wall_of_gorgan_01_b_diffuse.dds"
+		texture_normal = "fp3_building_special_great_wall_of_gorgan_01_b_normal.dds"
+		texture_specular = "fp3_building_special_great_wall_of_gorgan_01_b_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "wall_05Shape"
+		index = 0
+		texture_diffuse = "building_asia_atlas_1_a_diffuse.dds"
+		texture_normal = "building_asia_atlas_1_a_normal.dds"
+		texture_specular = "building_asia_atlas_1_a_properties.dds"
+		texture = { file = "universal_ao.dds" index = 5 }
+		shader = "snap_to_terrain_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "tgp_great_wall_05_entity"
+	pdxmesh = "tgp_great_wall_05_mesh"
+}
