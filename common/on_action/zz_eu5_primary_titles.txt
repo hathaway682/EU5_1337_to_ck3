@@ -8,6 +8,9 @@ on_game_start = {
 
 eu5_start_primary_titles = {
 	effect = {
+		title:h_china = {
+			set_title_name_dynamic = dynn_title_yuan
+		}
 		character:aal_jumaz_bin_muhammed = {
 			if = {
 				limit = { is_alive = yes }
