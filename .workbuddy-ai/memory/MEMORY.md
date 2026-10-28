@@ -39,6 +39,7 @@
 - 复合名每部分是独立 key，按 EU5 部分拼接（中文无分隔符、英文空格）。
 - Git：master=发布分支，eu5-coa 分支存纹章；禁 git worktree；GitHub Desktop 提交，push 前 fetch。
 - 地图可视化一律 `ck3-mapviz`，严禁自己算投影打点。
+- **备份归档位置（长期约定）**：所有 `*.bak*` 备份统一放 `F:/EU5_Modern_Borders_bak/`，**按原目录结构分层保留**（common/history/gen_debug/localization 等），项目目录内不得残留 bak 文件。2026-10-28 已把 317 个历史 bak 全量迁出。需要临时备份时也放这里，别留在项目里。
 
 ## 八、工程要点
 - 首府链路六步（rank_state→reassign→export→tusi→holstein）；fallback 真多数 = 地数严格大于县内其他单持有者；HRE 同名首府 5 县（c_chrudimsko/c_hanover/c_lippe/c_luneburger_heide/c_neuchatel）跑完 rank_state 须重跑 `fix_holstein_denmark.py`；土司首府规则已回滚勿实施。
