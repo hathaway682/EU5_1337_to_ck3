@@ -41,3 +41,16 @@
 ## 六、首府与开局
 - 首府链路六步（rank_state→reassign→export→tusi→holstein）；fallback 真多数 = 地数严格大于县内其他单持有者；HRE 同名首府 5 县（c_chrudimsko/c_hanover/c_lippe/c_luneburger_heide/c_neuchatel）跑完 rank_state 须重跑 `fix_holstein_denmark.py`；土司首府规则已回滚勿实施。
 - 开局 1337.4.1 三处同步（bookmarks/challenge/groups）；重跑 `_fix_politics_output.py` 丢毛利标记、`_export_title_map.py` 记 58 头衔开局无主。
+
+## 七、颜色口径
+- 头衔颜色 = 该头衔自己那份色，**不做任何派生/替换**。`_fix_politics_output.py` 的 `usable()`
+  以前会把近白（`max-min <= 24 且 max >= 190`）换成 key 哈希色，2026-10-29 已删——近白也是色
+  （原版 `k_trinacria` 就是 `{ 249 232 247 }`）。
+- **原版键头衔的颜色用原版那份**，权威表 `eu5_export/_vanilla_title_colors.json`（1440 条，
+  从原版 `common/landed_titles/` 抄出，含 hsv 写法）。换 `title_key` 时不要沿用被替换掉的旧键颜色：
+  `k_delhi` 220 150 75 与 `e_hindustan` 0 76 76 是两个头衔各自的色。
+- `*_eu5_*` 头衔的颜色 = 该 tag 在 politics 里的 `color` 原值。
+- **原版键头衔不止在 `zz_eu5_titular.txt` 里**：五个信首（`k_papal_state`/`k_orthodox`/
+  `d_coptic_papacy`/`d_apostolic_church`/`d_patriarchate_in_the_east`）声明在
+  `common/landed_titles/zzz_eu5_faith_heads.txt`，颜色写死在 `_faith_heads.py` 的 `COLORS` 表。
+  总装脚本的「原版色」那一段只扫 `zz_eu5_titular.txt`，**改颜色时这两个地方都要看**。

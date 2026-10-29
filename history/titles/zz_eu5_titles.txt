@@ -972,6 +972,19 @@ e_tibet = {
 	}
 }
 
+e_hindustan = {
+	1320.9.8 = {
+		holder = dlh_ghiyasuddin_tughlaq
+	}
+	1325.1.2 = {
+		holder = dlh_muhammad_bin_tughluq
+	}
+	1337.4.1 = {
+		holder = dlh_muhammad_bin_tughluq
+		government = administrative_government
+	}
+}
+
 k_bulgaria = {
 	1185.1.1 = {
 		holder = bul_theodor_petar_asen
@@ -1635,19 +1648,6 @@ k_eu5_dgl = {
 	1337.4.1 = {
 		holder = eu5_regent_dgl
 		government = clan_government
-	}
-}
-
-k_delhi = {
-	1320.9.8 = {
-		holder = dlh_ghiyasuddin_tughlaq
-	}
-	1325.1.2 = {
-		holder = dlh_muhammad_bin_tughluq
-	}
-	1337.4.1 = {
-		holder = dlh_muhammad_bin_tughluq
-		government = administrative_government
 	}
 }
 
@@ -2679,7 +2679,7 @@ k_serbia = {
 	}
 }
 
-k_sicily = {
+k_trinacria = {
 	1194.12.25 = {
 		holder = ogk_heinrich_vi_hohenstaufen
 	}
@@ -3332,7 +3332,7 @@ d_eu5_ath = {
 	1337.4.1 = {
 		holder = ath_william
 		government = feudal_government
-		liege = k_sicily
+		liege = k_trinacria
 	}
 }
 
@@ -3777,7 +3777,7 @@ d_eu5_gau = {
 	1337.4.1 = {
 		holder = gau_qadar_khan
 		government = clan_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -4615,7 +4615,7 @@ d_eu5_neo = {
 	1337.4.1 = {
 		holder = ath_william
 		government = feudal_government
-		liege = k_sicily
+		liege = k_trinacria
 	}
 }
 
@@ -9670,7 +9670,7 @@ c_attica = {
 	1337.4.1 = {
 		holder = ath_william
 		government = feudal_government
-		liege = k_sicily
+		liege = k_trinacria
 	}
 }
 
@@ -11333,7 +11333,7 @@ c_bogra = {
 	1337.4.1 = {
 		holder = gau_qadar_khan
 		government = clan_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -14210,7 +14210,7 @@ c_devkot = {
 	1337.4.1 = {
 		holder = gau_qadar_khan
 		government = clan_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -15887,7 +15887,7 @@ c_gaur = {
 	1337.4.1 = {
 		holder = gau_qadar_khan
 		government = clan_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -15965,7 +15965,7 @@ c_gird = {
 	1337.4.1 = {
 		holder = gwa_kunwar_pal_tomara
 		government = feudal_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -16034,7 +16034,7 @@ c_godwar = {
 	1337.4.1 = {
 		holder = jlr_kanhadadeva_chauhan
 		government = feudal_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -16741,7 +16741,7 @@ c_hadoti = {
 	1337.4.1 = {
 		holder = mew_jaita_meena
 		government = feudal_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -18463,7 +18463,7 @@ c_jalpaiguri = {
 	1337.4.1 = {
 		holder = gau_qadar_khan
 		government = clan_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -19912,7 +19912,7 @@ c_khalifatabad = {
 	1337.4.1 = {
 		holder = eu5_regent_sgn
 		government = clan_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -20101,7 +20101,7 @@ c_khulna = {
 	1337.4.1 = {
 		holder = eu5_regent_stn
 		government = clan_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -23068,7 +23068,7 @@ c_marwar = {
 	1337.4.1 = {
 		holder = jlr_kanhadadeva_chauhan
 		government = feudal_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -23579,7 +23579,7 @@ c_mewar = {
 	1337.4.1 = {
 		holder = mew_hammir_singh_sisodia
 		government = feudal_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -24622,7 +24622,7 @@ c_mymensingh = {
 	1337.4.1 = {
 		holder = eu5_regent_sgn
 		government = clan_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -24679,7 +24679,7 @@ c_nadia = {
 	1337.4.1 = {
 		holder = eu5_regent_stn
 		government = clan_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -25143,7 +25143,7 @@ c_neopatras = {
 	1337.4.1 = {
 		holder = ath_william
 		government = feudal_government
-		liege = k_sicily
+		liege = k_trinacria
 	}
 }
 
@@ -27138,7 +27138,7 @@ c_pandua = {
 	1337.4.1 = {
 		holder = eu5_regent_stn
 		government = clan_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -29048,7 +29048,7 @@ c_rewa_kantha = {
 	1337.4.1 = {
 		holder = cmn_rao_palansang_chauhan
 		government = feudal_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -29983,7 +29983,7 @@ c_sarasvata = {
 	1337.4.1 = {
 		holder = idr_kehar_rathore
 		government = feudal_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -31195,7 +31195,7 @@ c_sonargaon = {
 	1337.4.1 = {
 		holder = eu5_regent_sgn
 		government = clan_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
@@ -36503,7 +36503,7 @@ c_western_malwa = {
 	1337.4.1 = {
 		holder = cmn_rao_palansang_chauhan
 		government = feudal_government
-		liege = k_delhi
+		liege = e_hindustan
 	}
 }
 
