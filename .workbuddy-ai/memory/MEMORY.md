@@ -8,6 +8,18 @@
 - CK3 `b_<name>` 的 `<name>` = EU5 location 名；3725/3819 county 严格对应单一 province。质心缓存 `_ck3_province_centroid.json` 的 **int 键读回必须 `{int(k): v}`**。
 
 ## 二、CK3 数据结构约定（头衔历史改前先看 skill `ck3-title-history-pipeline`）
+- **2026-10-29 起法理树 = Crusader Universalis（1337.4.1 开局态）**：h/e/k 全部来自 CU
+  （h 7 / e 56 / k 225），d_ 按 CU 覆盖内 province 最大比例归 CU 王国，覆盖外 239 个保持原王国。
+  必须先把 `history/titles` 的 `de_jure_liege` + `effect` 里的 `set_de_jure_liege_title`
+  按 <= 1337.4.1 应用一遍（68 条生效），否则拿到的是静态初始态。mod 原有 77 个区域王国
+  （k_iberia / k_north_german / k_scandinavian / k_russian / k_indonesia …）全部废弃，
+  36 个 key 在 history 里本来就没有块，删了无副作用。脚本 `_probe_cu_dejure.py` /
+  `_rebuild_dejure_cu.py` / `_prune_landless_shims.py`，源副本 `gen_debug/_dejure_src_20261029.txt`，
+  映射表 `gen_debug/_dejure_cu_map.csv`。**重建后必须同时 prune `zz_eu5_titular.txt` 与
+  `zz_vanilla_titulars.txt` 里同 key 的无地声明**，否则后加载覆盖回无地。
+- **解析 CU/mod 头衔 key 的正则必须写 `[A-Za-z0-9_-]`**（`k_kabisay-an`、`k_galicia-volhynia`
+  这类带连字符的会被截成 `an`、`volhynia`，父链直接断）；解析日期块还要加 `.`，
+  否则 `867.1.1 = {` 会被拆成 `1 = {`。这两个坑同一天各踩一次。
 - 本地化永远比 key 权威；先 `grep -rn "<key>" localization/simp_chinese/`。
 - **stale-liege 清扫的「改名产物就留着」兜底不能按 `lieges[-1] in rename.values()` 判**：
   `rename.values()` 是所有改名目标，`k_naples`/`k_aragon` 都在里面，于是任何 liege 恰好
