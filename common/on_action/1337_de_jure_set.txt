@@ -6,13 +6,13 @@
 
 1337_de_jure_set = {
 	effect = {
-		# 不列颠
+		# 德国
 		title:k_pomerania = {
 		  	every_in_de_jure_hierarchy = {
 		  		limit = {
 		  			tier = tier_duchy
 		  		}
-		  		set_de_jure_liege_title = title:k_germany
+		  		set_de_jure_liege_title = title:k_east_francia
 		  	}
 		}
 		title:k_bavaria = {
@@ -20,8 +20,22 @@
 		  		limit = {
 		  			tier = tier_duchy
 		  		}
-		  		set_de_jure_liege_title = title:k_germany
+		  		set_de_jure_liege_title = title:k_east_francia
 		  	}
 		}
+		title:d_slovenia = { set_de_jure_liege_title = title:k_east_francia }
+		title:k_burgundy = { set_de_jure_liege_title = title:e_hre }
+		#安达卢西亚
+		title:d_andalusia = { set_de_jure_liege_title = title:k_andalusia }
+		#意大利
+		title:d_liguria = { set_de_jure_liege_title = title:k_italy }
+		#巴尔干
+		title:d_thrace = { set_de_jure_liege_title = title:k_thessalonika }
+		title:d_northern_greece = { set_de_jure_liege_title = title:k_hellas }
+		title:d_aegean_archipelago = { set_de_jure_liege_title = title:k_hellas }
+		title:d_albania = { set_de_jure_liege_title = title:k_albania }
+		title:k_albania = { set_de_jure_liege_title = title:e_byzantium }
+		#大理
+		title:d_dali = { set_de_jure_liege_title = title:k_dali }
 	}
 }
