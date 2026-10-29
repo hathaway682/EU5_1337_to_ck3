@@ -1,0 +1,27 @@
+﻿on_game_start = {
+	on_actions = {
+		1337_de_jure_set
+	}
+}
+
+1337_de_jure_set = {
+	effect = {
+		# 不列颠
+		title:k_pomerania = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_germany
+		  	}
+		}
+		title:k_bavaria = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_germany
+		  	}
+		}
+	}
+}
