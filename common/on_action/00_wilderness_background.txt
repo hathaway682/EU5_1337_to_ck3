@@ -1,0 +1,312 @@
+﻿wilderness_background_0011 = {
+trigger = {
+	tnh_colonization_enabled_trigger = yes
+		expedition_still_out_trigger = yes
+	}
+effect = {
+
+
+
+		scope:colony = {
+			if = {
+				limit = {
+					has_variable = colony_leader
+					var:colony_leader ?= { is_alive = yes }
+				}
+				var:colony_leader = { save_scope_as = expedition_leader }
+			}
+		}
+
+
+
+		if = {
+			limit = { exists = scope:expedition_leader }
+			save_scope_value_as = {
+				name = settling_chance
+				value = scope:expedition_leader.colony_settling_chance
+			}
+		}
+		else = {
+			save_scope_value_as = { name = settling_chance  value = 45 }
+		}
+
+		random = {
+			chance = scope:settling_chance
+			set_variable = { name = settling_took }
+		}
+
+		if = {
+			limit = { has_variable = settling_took }
+			remove_variable = settling_took
+
+
+			scope:colony = {
+
+				if = {
+					limit = { county_control < 50 }
+					change_county_control  = 50
+				}
+
+
+				if = {
+					limit = { has_variable = colony_led_by_soldier }
+					change_county_control = 15
+				}
+
+
+				set_variable = {
+					name = colony_just_founded
+					years = 3
+				}
+			}
+
+			colony_settling_success_effect = yes
+		}
+		else = {
+
+
+			if = {
+				limit = {
+					is_ai = no
+					exists = scope:expedition_leader
+					scope:expedition_leader = root
+				}
+				colony_settling_failure_core_effect = yes
+			}
+			else = {
+				colony_settling_failure_effect = yes
+			}
+		}
+	}
+}
+
+
+wilderness_background_0099 = {
+trigger = {
+		exists = scope:leak_county
+		scope:leak_county = {
+			tier = tier_county
+			title_province ?= { has_holding_type = wilderness_holding }
+			holder ?= { NOT = { has_trait = wilderness } }
+		}
+	}
+effect = {
+
+
+
+
+		every_player = {
+
+		}
+
+		abandon_county_effect = { COUNTY = scope:leak_county }
+	}
+}
+
+
+wilderness_background_0001 = {
+trigger = {
+	tnh_colonization_enabled_trigger = yes
+		is_ai = yes
+		is_landed = yes
+		can_colonize_at_all_trigger = yes
+		NOT = { has_variable = expedition_underway }
+		can_hold_another_colony_trigger = yes
+
+
+
+
+
+
+
+
+
+
+
+
+		gold > { value = colonize_cost  multiply = 3 }
+		prestige >= colonize_prestige_cost
+
+
+		monthly_character_income > 4
+
+
+
+		is_at_war = no
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		any_sub_realm_county = {
+			any_title_to_title_neighboring_and_across_water_county = {
+				county_can_be_claimed_trigger = yes
+			}
+		}
+	}
+effect = {
+		wilderness_pick_adjacent_effect = yes
+
+		if = {
+			limit = { exists = scope:wilderness }
+
+
+
+
+			remove_short_term_gold = colonize_cost
+			add_prestige = { value = colonize_prestige_cost  multiply = -1 }
+
+			colony_launch_expedition_effect = {
+				COUNTY = scope:wilderness
+				COLONIZER = root
+			}
+		}
+	}
+}
+
+
+wilderness_background_pioneer_winter = {
+trigger = {
+	tnh_colonization_enabled_trigger = yes
+		pioneer_stake_still_live_trigger = yes
+	}
+effect = {
+		var:pioneer_stake = { save_scope_as = stake }
+
+		change_variable = { name = pioneer_winters  add = 1 }
+
+
+
+
+
+
+		pioneer_outcome_toast_effect = {
+			VALUE = pioneer_winter_severity
+
+
+		}
+
+
+		if = {
+
+
+
+
+
+
+
+
+			limit = {
+				NOT = { var:pioneer_stake = { is_wilderness_county_trigger = yes } }
+			}
+			trigger_event = { on_action = wilderness_background_pioneer_release }
+		}
+		else_if = {
+
+
+
+			limit = { var:pioneer_hold > 0 }
+
+
+
+
+
+			if = {
+				limit = { var:pioneer_winters < pioneer_winters_required }
+
+				trigger_event = {
+					on_action = wilderness_background_pioneer_winter
+					years = 1
+				}
+			}
+
+
+
+
+			random_list = {
+				40 = {
+					modifier = {
+						add = 30
+						scope:stake = { title_province ?= { has_building = killing_cold } }
+					}
+					modifier = {
+						add = 20
+						scope:stake = { title_province ?= { has_building = flooded_lands } }
+					}
+
+				}
+
+
+				0 = {
+					modifier = {
+						add = 45
+						scope:stake = { title_province ?= { has_building = bandit_camps } }
+					}
+					modifier = {
+						add = 40
+						scope:stake = { title_province ?= { has_building = beast_dens } }
+					}
+					modifier = {
+						add = 15
+						scope:stake = { title_province ?= { has_building = dense_growth } }
+					}
+
+				}
+
+
+
+				25 = {
+					modifier = {
+						add = 30
+						var:pioneer_hold < 40
+					}
+					modifier = {
+						add = 15
+						var:pioneer_winters >= 2
+					}
+
+				}
+			}
+		}
+	}
+}
+
+
+wilderness_background_pioneer_failure = {
+trigger = {
+		pioneer_stake_still_live_trigger = yes
+	}
+effect = {
+		var:pioneer_stake = { save_scope_as = stake }
+
+		pioneer_failure_effect = yes
+	}
+}
+
+
+wilderness_background_pioneer_release = {
+trigger = {
+		pioneer_stake_still_live_trigger = yes
+	}
+effect = {
+		var:pioneer_stake = { save_scope_as = stake }
+
+ pioneer_clear_stake_effect = yes
+}
+}

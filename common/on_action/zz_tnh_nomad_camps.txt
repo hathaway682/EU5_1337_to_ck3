@@ -1,0 +1,28 @@
+﻿on_game_start_after_lobby = {
+	on_actions = { tnh_nomad_camp_setup }
+}
+
+tnh_nomad_camp_setup = {
+	effect = {
+		if = {
+			limit = { has_mpo_dlc_trigger = yes }
+			every_ruler = {
+				limit = {
+					government_has_flag = government_is_nomadic
+					NOT = { this = character:gen_wilderness_holder }
+					NOT = { has_trait = wilderness }
+					NOT = { government_has_flag = government_is_wilderness }
+					is_landed = yes
+					NOT = { any_held_title = { is_nomad_title = yes } }
+				}
+				save_scope_as = holder
+				create_nomad_title = {
+					save_scope_as = tnh_created_nomad_camp
+					name = nomad_title_name
+					holder = scope:holder
+					government = nomad_government
+				}
+			}
+		}
+	}
+}

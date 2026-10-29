@@ -1,0 +1,22 @@
+﻿herders_and_tributary_constraints = {
+
+	NOT = { has_trait = wilderness }
+	NOT = { government_has_flag = government_is_wilderness }
+	trigger_if = {
+		limit = { government_has_flag = government_is_herder }
+		custom_tooltip = {
+			text = is_a_herder_actor_cb_tt
+			always = no
+		}
+	}
+	is_tributary = no
+
+
+	trigger_if = {
+		limit = { exists = scope:defender }
+		scope:defender = {
+			NOT = { has_trait = wilderness }
+			NOT = { government_has_flag = government_is_wilderness }
+		}
+	}
+}

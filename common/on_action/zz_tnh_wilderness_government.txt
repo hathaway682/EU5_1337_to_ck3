@@ -1,0 +1,14 @@
+﻿on_government_change = {
+	on_actions = { tnh_restore_wilderness_government }
+}
+
+tnh_restore_wilderness_government = {
+	trigger = {
+		OR = {
+			this = character:gen_wilderness_holder
+			has_trait = wilderness
+		}
+		NOT = { has_government = wilderness_government }
+	}
+	effect = { change_government = wilderness_government }
+}

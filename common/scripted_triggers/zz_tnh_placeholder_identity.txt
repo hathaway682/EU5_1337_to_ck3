@@ -1,0 +1,23 @@
+﻿tnh_placeholder_identity_trigger = {
+	OR = {
+		culture = culture:gen_wilderness_culture
+		faith = faith:gen_wilderness_faith
+	}
+}
+
+tnh_valid_identity_source_trigger = {
+	exists = culture
+	exists = faith
+	NOT = { culture = culture:gen_wilderness_culture }
+	NOT = { faith = faith:gen_wilderness_faith }
+}
+
+tnh_valid_identity_county_trigger = {
+	tnh_valid_identity_source_trigger = yes
+	exists = title_province
+	title_province = { NOT = { has_holding_type = wilderness_holding } }
+	trigger_if = {
+		limit = { exists = holder }
+		holder = { NOT = { has_government = wilderness_government } }
+	}
+}

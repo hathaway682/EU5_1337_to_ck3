@@ -1,0 +1,196 @@
+﻿tnh_pick_real_identity_source_effect = {
+	clear_saved_scope = tnh_identity_source
+	clear_saved_scope = tnh_identity_county
+	save_scope_as = tnh_identity_character
+	if = {
+		limit = {
+			NOT = { exists = scope:tnh_identity_source }
+			exists = father
+			father = { tnh_valid_identity_source_trigger = yes }
+		}
+		father = { save_scope_as = tnh_identity_source }
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:tnh_identity_source }
+			exists = mother
+			mother = { tnh_valid_identity_source_trigger = yes }
+		}
+		mother = { save_scope_as = tnh_identity_source }
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:tnh_identity_source }
+			exists = employer
+			employer = { tnh_valid_identity_source_trigger = yes }
+		}
+		employer = { save_scope_as = tnh_identity_source }
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:tnh_identity_source }
+			exists = liege
+			liege = { tnh_valid_identity_source_trigger = yes }
+		}
+		liege = { save_scope_as = tnh_identity_source }
+	}
+	if = {
+		limit = {
+			exists = location.county
+			location.county = { tnh_valid_identity_county_trigger = yes }
+		}
+		location.county = { save_scope_as = tnh_identity_county }
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:tnh_identity_county }
+			exists = location
+		}
+		random_county = {
+			limit = {
+				tnh_valid_identity_county_trigger = yes
+				title_province = {
+					squared_distance = { target = scope:tnh_identity_character.location value <= 256 }
+				}
+			}
+			save_scope_as = tnh_identity_county
+		}
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:tnh_identity_county }
+			exists = location
+		}
+		random_county = {
+			limit = {
+				tnh_valid_identity_county_trigger = yes
+				title_province = {
+					squared_distance = { target = scope:tnh_identity_character.location value <= 4096 }
+				}
+			}
+			save_scope_as = tnh_identity_county
+		}
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:tnh_identity_county }
+			exists = location
+		}
+		random_county = {
+			limit = {
+				tnh_valid_identity_county_trigger = yes
+				title_province = {
+					squared_distance = { target = scope:tnh_identity_character.location value <= 65536 }
+				}
+			}
+			save_scope_as = tnh_identity_county
+		}
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:tnh_identity_county }
+			exists = location
+		}
+		random_county = {
+			limit = {
+				tnh_valid_identity_county_trigger = yes
+				title_province = {
+					squared_distance = { target = scope:tnh_identity_character.location value <= 1048576 }
+				}
+			}
+			save_scope_as = tnh_identity_county
+		}
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:tnh_identity_county }
+			exists = location
+		}
+		random_county = {
+			limit = {
+				tnh_valid_identity_county_trigger = yes
+				title_province = {
+					squared_distance = { target = scope:tnh_identity_character.location value <= 16777216 }
+				}
+			}
+			save_scope_as = tnh_identity_county
+		}
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:tnh_identity_county }
+			exists = location
+		}
+		random_county = {
+			limit = {
+				tnh_valid_identity_county_trigger = yes
+				title_province = {
+					squared_distance = { target = scope:tnh_identity_character.location value <= 268435456 }
+				}
+			}
+			save_scope_as = tnh_identity_county
+		}
+	}
+	if = {
+		limit = { NOT = { exists = scope:tnh_identity_county } }
+		random_county = {
+			limit = { tnh_valid_identity_county_trigger = yes }
+			save_scope_as = tnh_identity_county
+		}
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:tnh_identity_source }
+			exists = scope:tnh_identity_county
+		}
+		scope:tnh_identity_county = { save_scope_as = tnh_identity_source }
+	}
+    if = {
+        limit = { NOT = { exists = scope:tnh_identity_source } }
+        every_living_character = {
+            limit = {
+                NOT = { this = character:gen_wilderness_holder }
+                tnh_valid_identity_source_trigger = yes
+            }
+            add_to_list = tnh_real_identity_candidates
+        }
+        random_in_list = {
+            list = tnh_real_identity_candidates
+            save_scope_as = tnh_identity_source
+        }
+    }
+}
+
+tnh_apply_real_identity_effect = {
+	if = {
+		limit = { exists = scope:tnh_identity_source }
+		if = {
+			limit = { culture = culture:gen_wilderness_culture }
+			set_culture = scope:tnh_identity_source.culture
+		}
+		if = {
+			limit = { faith = faith:gen_wilderness_faith }
+			set_character_faith = scope:tnh_identity_source.faith
+		}
+	}
+}
+
+tnh_rehome_wilderness_guest_effect = {
+	if = {
+		limit = { NOT = { this = character:gen_wilderness_holder } }
+		tnh_pick_real_identity_source_effect = yes
+		tnh_apply_real_identity_effect = yes
+		if = {
+			limit = {
+				is_ruler = no
+				exists = scope:tnh_identity_county.title_province
+			}
+			move_to_pool_at = scope:tnh_identity_county.title_province
+		}
+	}
+}
+
+tnh_fix_placeholder_identity_effect = {
+	tnh_pick_real_identity_source_effect = yes
+	tnh_apply_real_identity_effect = yes
+}

@@ -1,0 +1,135 @@
+﻿on_character_created = {
+	on_actions = { tnh_repair_generated_placeholder_identity tnh_redirect_wilderness_generated_character }
+}
+
+tnh_redirect_wilderness_generated_character = {
+	trigger = {
+		is_alive = yes
+		NOT = { has_trait = wilderness }
+		OR = {
+			AND = {
+				exists = employer
+				employer = { has_government = wilderness_government }
+			}
+			AND = {
+				exists = location.county
+				location.county = {
+					exists = title_province
+					title_province = { has_holding_type = wilderness_holding }
+				}
+				OR = {
+					scope:creation_reason = flag:pool
+					scope:creation_reason = flag:guests
+					scope:creation_reason = flag:court_populator
+					scope:creation_reason = flag:succession
+					scope:creation_reason = flag:grant_titles
+					scope:creation_reason = flag:great_holy_war
+					scope:creation_reason = flag:migration
+					scope:creation_reason = flag:save_file_fix
+				}
+			}
+		}
+	}
+	effect = {
+		tnh_rehome_wilderness_guest_effect = yes
+	}
+}
+
+on_birth_child = {
+	on_actions = { tnh_repair_generated_placeholder_identity }
+}
+on_character_culture_change = {
+	on_actions = { tnh_repair_generated_placeholder_identity }
+}
+on_faith_conversion = {
+	on_actions = { tnh_repair_generated_placeholder_identity }
+}
+
+tnh_repair_generated_placeholder_identity = {
+	trigger = {
+		is_alive = yes
+		NOT = { this = character:gen_wilderness_holder }
+		tnh_placeholder_identity_trigger = yes
+	}
+	effect = { tnh_fix_placeholder_identity_effect = yes }
+}
+
+on_game_start_after_lobby = {
+	on_actions = { tnh_initialize_placeholder_identity }
+}
+yearly_global_pulse = {
+	on_actions = { tnh_initialize_placeholder_identity }
+}
+tnh_initialize_placeholder_identity = {
+	effect = {
+		character:gen_wilderness_holder = {
+			if = {
+				limit = { NOT = { has_government = wilderness_government } }
+				change_government = wilderness_government
+			}
+			if = {
+				limit = { NOT = { culture = culture:gen_wilderness_culture } }
+				set_culture = culture:gen_wilderness_culture
+			}
+			if = {
+				limit = { NOT = { faith = faith:gen_wilderness_faith } }
+				set_character_faith = faith:gen_wilderness_faith
+			}
+			if = {
+				limit = { NOT = { rite = faith:gen_wilderness_faith.main_rite } }
+				set_character_rite = faith:gen_wilderness_faith.main_rite
+			}
+			every_held_title = {
+				limit = {
+					tier = tier_county
+					NOT = { cu_neighbor_reassigned_county_trigger = yes }
+					exists = title_province
+					title_province = { has_holding_type = wilderness_holding }
+				}
+				set_county_culture = culture:gen_wilderness_culture
+				set_county_faith = faith:gen_wilderness_faith
+			}
+		}
+		every_living_character = {
+			limit = {
+				NOT = { this = character:gen_wilderness_holder }
+				tnh_placeholder_identity_trigger = yes
+			}
+			tnh_fix_placeholder_identity_effect = yes
+		}
+	}
+}
+
+# Direct scripted faith/rite assignments use this callback, not on_faith_conversion.
+on_rite_change = {
+    on_actions = { tnh_restore_event_wilderness_faith }
+}
+tnh_restore_event_wilderness_faith = {
+    trigger = {
+        is_alive = yes
+        NOT = { this = character:gen_wilderness_holder }
+        OR = {
+            faith = faith:gen_wilderness_faith
+            rite = faith:gen_wilderness_faith.main_rite
+        }
+    }
+    effect = {
+        if = {
+            limit = {
+                exists = scope:old_faith
+                NOT = { scope:old_faith = faith:gen_wilderness_faith }
+            }
+            set_character_faith = scope:old_faith
+            if = {
+                limit = {
+                    exists = scope:old_rite
+                    NOT = { scope:old_rite.faith = faith:gen_wilderness_faith }
+                }
+                set_character_rite = scope:old_rite
+            }
+        }
+        else = {
+            tnh_fix_placeholder_identity_effect = yes
+        }
+    }
+}

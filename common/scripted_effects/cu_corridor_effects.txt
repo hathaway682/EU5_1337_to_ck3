@@ -1,0 +1,252 @@
+﻿# Province scope. The native Sahara modifier uses the same permanent form:
+# add_province_modifier without a duration has no scheduled expiry.
+cu_corridor_mark_province_effect = {
+    if = {
+        limit = { NOT = { has_province_modifier = cu_corridor_land_modifier } }
+        add_province_modifier = cu_corridor_land_modifier
+    }
+}
+
+# New-game province scope. Use the CURRENT county capital, not the old list.
+# After merging into an ordinary county, its non-capital corridor land stays empty.
+cu_corridor_initialize_province_holding_effect = {
+    cu_corridor_mark_province_effect = yes
+    if = {
+        limit = { is_county_capital = yes }
+        if = {
+            limit = { NOT = { has_holding_type = wilderness_holding } }
+            set_holding_type = wilderness_holding
+        }
+    }
+    else_if = {
+        limit = { has_holding = yes }
+        remove_holding = yes
+    }
+}
+
+# Global scope. Direct province references avoid scanning the entire world.
+cu_corridor_apply_permanent_modifiers_effect = {
+    province:7235 = { cu_corridor_mark_province_effect = yes }
+    province:7351 = { cu_corridor_mark_province_effect = yes }
+    province:7412 = { cu_corridor_mark_province_effect = yes }
+    province:7413 = { cu_corridor_mark_province_effect = yes }
+    province:7414 = { cu_corridor_mark_province_effect = yes }
+    province:7435 = { cu_corridor_mark_province_effect = yes }
+    province:7436 = { cu_corridor_mark_province_effect = yes }
+    province:7437 = { cu_corridor_mark_province_effect = yes }
+    province:7438 = { cu_corridor_mark_province_effect = yes }
+    province:7439 = { cu_corridor_mark_province_effect = yes }
+    province:7440 = { cu_corridor_mark_province_effect = yes }
+    province:7441 = { cu_corridor_mark_province_effect = yes }
+    province:7442 = { cu_corridor_mark_province_effect = yes }
+    province:7443 = { cu_corridor_mark_province_effect = yes }
+    province:7444 = { cu_corridor_mark_province_effect = yes }
+    province:7445 = { cu_corridor_mark_province_effect = yes }
+    province:7446 = { cu_corridor_mark_province_effect = yes }
+    province:7447 = { cu_corridor_mark_province_effect = yes }
+    province:7461 = { cu_corridor_mark_province_effect = yes }
+    province:7462 = { cu_corridor_mark_province_effect = yes }
+    province:7473 = { cu_corridor_mark_province_effect = yes }
+    province:8016 = { cu_corridor_mark_province_effect = yes }
+    province:8162 = { cu_corridor_mark_province_effect = yes }
+    province:8163 = { cu_corridor_mark_province_effect = yes }
+    province:8164 = { cu_corridor_mark_province_effect = yes }
+    province:17081 = { cu_corridor_mark_province_effect = yes }
+    province:17082 = { cu_corridor_mark_province_effect = yes }
+    province:17083 = { cu_corridor_mark_province_effect = yes }
+    province:17087 = { cu_corridor_mark_province_effect = yes }
+    province:17088 = { cu_corridor_mark_province_effect = yes }
+    province:17089 = { cu_corridor_mark_province_effect = yes }
+    province:17090 = { cu_corridor_mark_province_effect = yes }
+    province:17091 = { cu_corridor_mark_province_effect = yes }
+    province:17092 = { cu_corridor_mark_province_effect = yes }
+    province:17093 = { cu_corridor_mark_province_effect = yes }
+    province:17668 = { cu_corridor_mark_province_effect = yes }
+    province:17694 = { cu_corridor_mark_province_effect = yes }
+    province:17708 = { cu_corridor_mark_province_effect = yes }
+    province:17717 = { cu_corridor_mark_province_effect = yes }
+    province:17718 = { cu_corridor_mark_province_effect = yes }
+    province:17719 = { cu_corridor_mark_province_effect = yes }
+    province:17720 = { cu_corridor_mark_province_effect = yes }
+    province:17721 = { cu_corridor_mark_province_effect = yes }
+    province:17737 = { cu_corridor_mark_province_effect = yes }
+    province:17738 = { cu_corridor_mark_province_effect = yes }
+    province:17739 = { cu_corridor_mark_province_effect = yes }
+    province:17740 = { cu_corridor_mark_province_effect = yes }
+    province:17741 = { cu_corridor_mark_province_effect = yes }
+    province:17742 = { cu_corridor_mark_province_effect = yes }
+    province:17743 = { cu_corridor_mark_province_effect = yes }
+    province:17744 = { cu_corridor_mark_province_effect = yes }
+    province:17760 = { cu_corridor_mark_province_effect = yes }
+    province:17775 = { cu_corridor_mark_province_effect = yes }
+    province:17776 = { cu_corridor_mark_province_effect = yes }
+    province:17998 = { cu_corridor_mark_province_effect = yes }
+    province:17999 = { cu_corridor_mark_province_effect = yes }
+    province:18000 = { cu_corridor_mark_province_effect = yes }
+    province:18172 = { cu_corridor_mark_province_effect = yes }
+    province:18173 = { cu_corridor_mark_province_effect = yes }
+    province:18174 = { cu_corridor_mark_province_effect = yes }
+    province:18175 = { cu_corridor_mark_province_effect = yes }
+    province:18176 = { cu_corridor_mark_province_effect = yes }
+    province:18177 = { cu_corridor_mark_province_effect = yes }
+    province:18178 = { cu_corridor_mark_province_effect = yes }
+    province:18187 = { cu_corridor_mark_province_effect = yes }
+    province:18188 = { cu_corridor_mark_province_effect = yes }
+    province:18189 = { cu_corridor_mark_province_effect = yes }
+    province:18190 = { cu_corridor_mark_province_effect = yes }
+    province:18191 = { cu_corridor_mark_province_effect = yes }
+    province:18192 = { cu_corridor_mark_province_effect = yes }
+    province:18193 = { cu_corridor_mark_province_effect = yes }
+    province:18208 = { cu_corridor_mark_province_effect = yes }
+    province:18209 = { cu_corridor_mark_province_effect = yes }
+    province:18210 = { cu_corridor_mark_province_effect = yes }
+    province:18211 = { cu_corridor_mark_province_effect = yes }
+    province:18216 = { cu_corridor_mark_province_effect = yes }
+    province:18217 = { cu_corridor_mark_province_effect = yes }
+    province:18226 = { cu_corridor_mark_province_effect = yes }
+    province:18227 = { cu_corridor_mark_province_effect = yes }
+    province:18234 = { cu_corridor_mark_province_effect = yes }
+    province:18236 = { cu_corridor_mark_province_effect = yes }
+    province:18237 = { cu_corridor_mark_province_effect = yes }
+    province:18248 = { cu_corridor_mark_province_effect = yes }
+    province:18255 = { cu_corridor_mark_province_effect = yes }
+    province:18256 = { cu_corridor_mark_province_effect = yes }
+    province:18257 = { cu_corridor_mark_province_effect = yes }
+    province:18264 = { cu_corridor_mark_province_effect = yes }
+    province:18265 = { cu_corridor_mark_province_effect = yes }
+    province:19113 = { cu_corridor_mark_province_effect = yes }
+    province:19114 = { cu_corridor_mark_province_effect = yes }
+    province:19115 = { cu_corridor_mark_province_effect = yes }
+    province:19187 = { cu_corridor_mark_province_effect = yes }
+    province:19214 = { cu_corridor_mark_province_effect = yes }
+    province:19215 = { cu_corridor_mark_province_effect = yes }
+    province:19216 = { cu_corridor_mark_province_effect = yes }
+    province:19217 = { cu_corridor_mark_province_effect = yes }
+    province:19255 = { cu_corridor_mark_province_effect = yes }
+    province:19256 = { cu_corridor_mark_province_effect = yes }
+    province:19268 = { cu_corridor_mark_province_effect = yes }
+    province:19269 = { cu_corridor_mark_province_effect = yes }
+    province:19270 = { cu_corridor_mark_province_effect = yes }
+    province:19271 = { cu_corridor_mark_province_effect = yes }
+    province:19272 = { cu_corridor_mark_province_effect = yes }
+    province:19273 = { cu_corridor_mark_province_effect = yes }
+    province:19274 = { cu_corridor_mark_province_effect = yes }
+    province:19357 = { cu_corridor_mark_province_effect = yes }
+    province:19361 = { cu_corridor_mark_province_effect = yes }
+    province:19362 = { cu_corridor_mark_province_effect = yes }
+    province:19363 = { cu_corridor_mark_province_effect = yes }
+    province:19364 = { cu_corridor_mark_province_effect = yes }
+}
+
+cu_corridor_initialize_holdings_effect = {
+    province:7235 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7351 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7412 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7413 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7414 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7435 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7436 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7437 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7438 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7439 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7440 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7441 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7442 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7443 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7444 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7445 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7446 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7447 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7461 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7462 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:7473 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:8016 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:8162 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:8163 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:8164 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17081 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17082 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17083 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17087 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17088 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17089 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17090 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17091 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17092 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17093 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17668 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17694 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17708 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17717 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17718 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17719 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17720 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17721 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17737 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17738 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17739 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17740 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17741 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17742 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17743 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17744 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17760 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17775 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17776 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17998 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:17999 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18000 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18172 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18173 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18174 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18175 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18176 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18177 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18178 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18187 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18188 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18189 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18190 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18191 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18192 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18193 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18208 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18209 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18210 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18211 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18216 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18217 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18226 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18227 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18234 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18236 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18237 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18248 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18255 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18256 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18257 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18264 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:18265 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19113 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19114 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19115 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19187 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19214 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19215 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19216 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19217 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19255 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19256 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19268 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19269 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19270 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19271 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19272 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19273 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19274 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19357 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19361 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19362 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19363 = { cu_corridor_initialize_province_holding_effect = yes }
+    province:19364 = { cu_corridor_initialize_province_holding_effect = yes }
+}

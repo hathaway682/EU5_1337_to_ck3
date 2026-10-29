@@ -1,0 +1,478 @@
+﻿on_game_start_after_lobby = {
+	on_actions = { cu_neighbor_reassigned_development_initialize }
+}
+
+cu_neighbor_reassigned_development_initialize = {
+	trigger = { NOT = { has_global_variable = cu_neighbor_reassigned_development_initialized } }
+	effect = {
+		title:c_akkol = {
+			change_development_level = {
+				add = title:c_quriltay.development_level
+				subtract = development_level
+			}
+		}
+		title:c_bahr_al_jabal = {
+			change_development_level = {
+				add = title:c_berta.development_level
+				subtract = development_level
+			}
+		}
+		title:c_banzart_khairkhan = {
+			change_development_level = {
+				add = title:c_zarman.development_level
+				subtract = development_level
+			}
+		}
+		title:c_baytak = {
+			change_development_level = {
+				add = title:c_sakmara.development_level
+				subtract = development_level
+			}
+		}
+		title:c_belluno = {
+			change_development_level = {
+				add = title:c_treviso.development_level
+				subtract = development_level
+			}
+		}
+		title:c_belogorye = {
+			change_development_level = {
+				add = title:c_gen_kazym.development_level
+				subtract = development_level
+			}
+		}
+		title:c_belozerskaya = {
+			change_development_level = {
+				add = title:c_tikhvin.development_level
+				subtract = development_level
+			}
+		}
+		title:c_bolkhuny = {
+			change_development_level = {
+				add = title:c_atyrau.development_level
+				subtract = development_level
+			}
+		}
+		title:c_boubon = {
+			change_development_level = {
+				add = title:c_zarma.development_level
+				subtract = development_level
+			}
+		}
+		title:c_bul_bukhta = {
+			change_development_level = {
+				add = title:c_muya.development_level
+				subtract = development_level
+			}
+		}
+		title:c_buskerud = {
+			change_development_level = {
+				add = title:c_vestfold.development_level
+				subtract = development_level
+			}
+		}
+		title:c_cherdyn = {
+			change_development_level = {
+				add = title:c_vukyl.development_level
+				subtract = development_level
+			}
+		}
+		title:c_chin = {
+			change_development_level = {
+				add = title:c_harikela.development_level
+				subtract = development_level
+			}
+		}
+		title:c_cholistan = {
+			change_development_level = {
+				add = title:c_rajanpur.development_level
+				subtract = development_level
+			}
+		}
+		title:c_choyr = {
+			change_development_level = {
+				add = title:c_gobi_ulaantatar.development_level
+				subtract = development_level
+			}
+		}
+		title:c_dardeling = {
+			change_development_level = {
+				add = title:c_astrakhan.development_level
+				subtract = development_level
+			}
+		}
+		title:c_dariganga = {
+			change_development_level = {
+				add = title:c_gobi_ulaantatar.development_level
+				subtract = development_level
+			}
+		}
+		title:c_deli = {
+			change_development_level = {
+				add = title:c_SUM_panai.development_level
+				subtract = development_level
+			}
+		}
+		title:c_east_igbo = {
+			change_development_level = {
+				add = title:c_idoma.development_level
+				subtract = development_level
+			}
+		}
+		title:c_eu5_ulytau = {
+			change_development_level = {
+				add = title:c_mushun.development_level
+				subtract = development_level
+			}
+		}
+		title:c_eu5_vitim = {
+			change_development_level = {
+				add = title:c_chuya.development_level
+				subtract = development_level
+			}
+		}
+		title:c_eu5_zabid = {
+			change_development_level = {
+				add = title:c_hudaida.development_level
+				subtract = development_level
+			}
+		}
+		title:c_haud_2 = {
+			change_development_level = {
+				add = title:c_gode.development_level
+				subtract = development_level
+			}
+		}
+		title:c_hkamti = {
+			change_development_level = {
+				add = title:c_monyin.development_level
+				subtract = development_level
+			}
+		}
+		title:c_ichera = {
+			change_development_level = {
+				add = title:c_lena.development_level
+				subtract = development_level
+			}
+		}
+		title:c_ingoda = {
+			change_development_level = {
+				add = title:c_EM_khoyorgol.development_level
+				subtract = development_level
+			}
+		}
+		title:c_ishbukun = {
+			change_development_level = {
+				add = title:c_siraya.development_level
+				subtract = development_level
+			}
+		}
+		title:c_iwur = {
+			change_development_level = {
+				add = title:c_papua_selatan.development_level
+				subtract = development_level
+			}
+		}
+		title:c_jamtland = {
+			change_development_level = {
+				add = title:c_morarna.development_level
+				subtract = development_level
+			}
+		}
+		title:c_diskit = {
+			change_development_level = {
+				add = title:c_gegyai.development_level
+				subtract = development_level
+			}
+		}
+		title:c_kezhma = {
+			change_development_level = {
+				add = title:c_chadobets.development_level
+				subtract = development_level
+			}
+		}
+		title:c_khamag = {
+			change_development_level = {
+				add = title:c_bargajan.development_level
+				subtract = development_level
+			}
+		}
+		title:c_kharan = {
+			change_development_level = {
+				add = title:c_qusdar.development_level
+				subtract = development_level
+			}
+		}
+		title:c_khoy = {
+			change_development_level = {
+				add = title:c_urmiya.development_level
+				subtract = development_level
+			}
+		}
+		title:c_kuloy = {
+			change_development_level = {
+				add = title:c_kholmogory.development_level
+				subtract = development_level
+			}
+		}
+		title:c_lalsk = {
+			change_development_level = {
+				add = title:c_ustyug.development_level
+				subtract = development_level
+			}
+		}
+		title:c_lower_zeya = {
+			change_development_level = {
+				add = title:c_selemdzha.development_level
+				subtract = development_level
+			}
+		}
+		title:c_luan = {
+			change_development_level = {
+				add = title:c_shuzhou.development_level
+				subtract = development_level
+			}
+		}
+		title:c_majar = {
+			change_development_level = {
+				add = title:c_samiran.development_level
+				subtract = development_level
+			}
+		}
+		title:c_makarikha_procince = {
+			change_development_level = {
+				add = title:c_lena.development_level
+				subtract = development_level
+			}
+		}
+		title:c_manzaya = {
+			change_development_level = {
+				add = title:c_shishina.development_level
+				subtract = development_level
+			}
+		}
+		title:c_marandet = {
+			change_development_level = {
+				add = title:c_air.development_level
+				subtract = development_level
+			}
+		}
+		title:c_marind = {
+			change_development_level = {
+				add = title:c_ndom.development_level
+				subtract = development_level
+			}
+		}
+		title:c_mezen = {
+			change_development_level = {
+				add = title:c_kevrola.development_level
+				subtract = development_level
+			}
+		}
+		title:c_mzab = {
+			change_development_level = {
+				add = title:c_laghwat.development_level
+				subtract = development_level
+			}
+		}
+		title:c_nagornaya = {
+			change_development_level = {
+				add = title:c_vyangi.development_level
+				subtract = development_level
+			}
+		}
+		title:c_niger_delta = {
+			change_development_level = {
+				add = title:c_igbo.development_level
+				subtract = development_level
+			}
+		}
+		title:c_ningzhou = {
+			change_development_level = {
+				add = title:c_yunzhou_2.development_level
+				subtract = development_level
+			}
+		}
+		title:c_omutninsk = {
+			change_development_level = {
+				add = title:c_glazov.development_level
+				subtract = development_level
+			}
+		}
+		title:c_orlov = {
+			change_development_level = {
+				add = title:c_kolyn.development_level
+				subtract = development_level
+			}
+		}
+		title:c_oropesa = {
+			change_development_level = {
+				add = title:c_toledo.development_level
+				subtract = development_level
+			}
+		}
+		title:c_privolnoye = {
+			change_development_level = {
+				add = title:c_besinada.development_level
+				subtract = development_level
+			}
+		}
+		title:c_priyutnoye = {
+			change_development_level = {
+				add = title:c_beksima.development_level
+				subtract = development_level
+			}
+		}
+		title:c_quetta = {
+			change_development_level = {
+				add = title:c_rukhaj.development_level
+				subtract = development_level
+			}
+		}
+		title:c_shilka = {
+			change_development_level = {
+				add = title:c_EM_shilka.development_level
+				subtract = development_level
+			}
+		}
+		title:c_sighnan = {
+			change_development_level = {
+				add = title:c_karran.development_level
+				subtract = development_level
+			}
+		}
+		title:c_southern_highland = {
+			change_development_level = {
+				add = title:c_panduranga.development_level
+				subtract = development_level
+			}
+		}
+		title:c_sudair = {
+			change_development_level = {
+				add = title:c_washm.development_level
+				subtract = development_level
+			}
+		}
+		title:c_suki = {
+			change_development_level = {
+				add = title:c_ndom.development_level
+				subtract = development_level
+			}
+		}
+		title:c_surgut = {
+			change_development_level = {
+				add = title:c_vasyugan.development_level
+				subtract = development_level
+			}
+		}
+		title:c_swat = {
+			change_development_level = {
+				add = title:c_purushapura.development_level
+				subtract = development_level
+			}
+		}
+		title:c_taian = {
+			change_development_level = {
+				add = title:c_qizhou.development_level
+				subtract = development_level
+			}
+		}
+		title:c_taklamakan = {
+			change_development_level = {
+				add = title:c_khotan.development_level
+				subtract = development_level
+			}
+		}
+		title:c_ticino = {
+			change_development_level = {
+				add = title:c_grisons.development_level
+				subtract = development_level
+			}
+		}
+		title:c_tverskaya = {
+			change_development_level = {
+				add = title:c_bezichi.development_level
+				subtract = development_level
+			}
+		}
+		title:c_unzha = {
+			change_development_level = {
+				add = title:c_galich.development_level
+				subtract = development_level
+			}
+		}
+		title:c_upper_barito = {
+			change_development_level = {
+				add = title:c_kuripan.development_level
+				subtract = development_level
+			}
+		}
+		title:c_upper_brunei = {
+			change_development_level = {
+				add = title:c_BOR_brunei.development_level
+				subtract = development_level
+			}
+		}
+		title:c_upper_carinthia = {
+			change_development_level = {
+				add = title:c_lienz.development_level
+				subtract = development_level
+			}
+		}
+		title:c_upper_rajang = {
+			change_development_level = {
+				add = title:c_BOR_iban.development_level
+				subtract = development_level
+			}
+		}
+		title:c_valtellina = {
+			change_development_level = {
+				add = title:c_grisons.development_level
+				subtract = development_level
+			}
+		}
+		title:c_wamesa = {
+			change_development_level = {
+				add = title:c_kepala_burung.development_level
+				subtract = development_level
+			}
+		}
+		title:c_yaren = {
+			change_development_level = {
+				add = title:c_shenkursk.development_level
+				subtract = development_level
+			}
+		}
+		title:c_yemetsk = {
+			change_development_level = {
+				add = title:c_velsk.development_level
+				subtract = development_level
+			}
+		}
+		title:c_yendyr_2 = {
+			change_development_level = {
+				add = title:c_sosva.development_level
+				subtract = development_level
+			}
+		}
+		title:c_yetkul = {
+			change_development_level = {
+				add = title:c_chelabinsk.development_level
+				subtract = development_level
+			}
+		}
+		title:c_yongchang = {
+			change_development_level = {
+				add = title:c_shunning.development_level
+				subtract = development_level
+			}
+		}
+		title:c_zinder = {
+			change_development_level = {
+				add = title:c_daura.development_level
+				subtract = development_level
+			}
+		}
+		set_global_variable = cu_neighbor_reassigned_development_initialized
+	}
+}
