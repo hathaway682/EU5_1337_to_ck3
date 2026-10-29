@@ -8,6 +8,23 @@ on_game_start = {
 
 eu5_start_tributaries = {
 	effect = {
+		character:ara_peter_iv_arago = {
+			save_scope_as = eu5_suzerain
+			character:mll_james_iii_mallorca = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
 		character:bei_dewa_emas_kayangan = {
 			save_scope_as = eu5_suzerain
 			character:eu5_regent_btu = {
@@ -2102,6 +2119,23 @@ eu5_start_tributaries = {
 		character:maj_tribhuwana = {
 			save_scope_as = eu5_suzerain
 			character:kam_patimunin = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_suzerain = { is_independent_ruler = yes }
+						NOT = { this = scope:eu5_suzerain }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+		character:nap_robert_i_anjou = {
+			save_scope_as = eu5_suzerain
+			character:alb_charles_durazzo = {
 				if = {
 					limit = {
 						is_alive = yes

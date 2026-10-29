@@ -31,7 +31,7 @@ STAMP = time.strftime('%Y%m%d_%H%M%S')
 B1 = ['AAI', 'AOS', 'AQU', 'ATH', 'CDL', 'GLO', 'KOL', 'LCZ', 'LGC', 'LIE',
       'OEL', 'OPL', 'OPV', 'PLK', 'SDZ', 'SWD', 'TES', 'ZAG']
 
-# SWB（萨克森-维滕贝格）不在名单里：它的伯爵领 c_flaming 答于 d_eu5_mag（马格德堡公国），
+# SWB（萨克森-维滕贝格）不在名单里：它的伯爵领 c_flaming 的 liege 是 d_eu5_mag（马格德堡公国），
 # 是 19 个里唯一真正同级附庸的，公国头衔该丢，不要给它补回来。
 
 # 首府（seat）写死：CSV 被本脚本改过之后 ck3_key 已经是 d_ 级，不能再从 CSV 取。
@@ -146,7 +146,7 @@ def county_hist(seat):
     """从 history/titles 里取该伯爵领 1337.4.1 的 holder / government / liege。
 
     liege 一律照抄伯爵领自己写的那一行，不用 politics.json 重算：
-    公国的地和它的伯爵领必须答于同一个领主，否则 CK3 里两条 liege 打架。
+    公国的地和它的伯爵领的 liege 必须是同一个领主，否则 CK3 里两条 liege 打架。
     SWB 就是例子——politcs 按 type=hre 算成 e_hre，游戏里 c_flaming 写的是 d_eu5_mag。
     """
     t = io.open(HT, encoding='utf-8-sig', newline='').read()

@@ -3026,6 +3026,46 @@ k_dzungaria = {
 }
 
 
+k_albania = {
+	1272.2.1 = {
+		holder = nap_charles_i_anjou
+	}
+	1285.1.7 = {
+		holder = nap_carlo_ii_anjou
+	}
+	1294.8.13 = {
+		holder = alb_filippo_i_taranto
+	}
+	1332.12.23 = {
+		holder = ach_robert_taranto
+	}
+	1333.1.1 = {
+		holder = alb_john_gravina
+	}
+	1337.4.1 = {
+		holder = alb_charles_durazzo
+		government = feudal_government
+	}
+}
+
+k_mediterranean_sea = {
+	1231.1.1 = {
+		holder = ara_jacme_i_arago
+	}
+	1276.7.27 = {
+		holder = mll_jacme_ii_mallorca
+	}
+	1311.5.29 = {
+		holder = mll_sancho_i_mallorca
+	}
+	1324.9.4 = {
+		holder = mll_james_iii_mallorca
+	}
+	1337.4.1 = {
+		holder = mll_james_iii_mallorca
+	}
+}
+
 d_coptic_papacy = {
 	1337.4.1 = {
 		holder = mam_benjamin_ii_alexandria
@@ -3095,7 +3135,7 @@ d_eu5_ach = {
 	}
 }
 
-d_eu5_alb = {
+d_albania = {
 	1272.2.1 = {
 		holder = nap_charles_i_anjou
 	}
@@ -3114,7 +3154,6 @@ d_eu5_alb = {
 	1337.4.1 = {
 		holder = alb_charles_durazzo
 		government = feudal_government
-		liege = k_naples
 	}
 }
 
@@ -3212,7 +3251,7 @@ d_eu5_arb = {
 	}
 }
 
-d_eu5_arm = {
+d_armenia = {
 	1150.1.1 = {
 		holder = arm_zakare_i
 	}
@@ -3293,7 +3332,7 @@ d_eu5_bei = {
 	}
 }
 
-d_eu5_blo = {
+d_beloozero = {
 	1238.1.1 = {
 		holder = rso_gleb_vasilkovich_rurikovich
 	}
@@ -3318,7 +3357,7 @@ d_eu5_blo = {
 	}
 }
 
-d_eu5_bos = {
+d_bosnia = {
 	1232.1.1 = {
 		holder = bos_matej_ninoslav_kotromanic
 	}
@@ -3376,7 +3415,7 @@ d_eu5_bou = {
 	}
 }
 
-d_eu5_brb = {
+d_brabant = {
 	1183.1.1 = {
 		holder = brb_hendrik_i_van_brabant
 	}
@@ -3413,7 +3452,7 @@ d_eu5_bre = {
 	}
 }
 
-d_eu5_bri = {
+d_brittany = {
 	1199.9.1 = {
 		holder = bri_guy_thouars
 	}
@@ -3467,7 +3506,7 @@ d_eu5_bry = {
 	}
 }
 
-d_eu5_bur = {
+d_burgundy = {
 	952.12.17 = {
 		holder = fra_hugues_le_grand
 	}
@@ -3542,7 +3581,7 @@ d_eu5_bzu = {
 	}
 }
 
-d_eu5_cdl = {
+d_dali = {
 	1337.4.1 = {
 		holder = cld_duan_guang
 		government = feudal_government
@@ -3657,7 +3696,7 @@ d_eu5_feo = {
 	}
 }
 
-d_eu5_fla = {
+d_flanders = {
 	1128.7.28 = {
 		holder = fla_thierry_alsace
 	}
@@ -3815,7 +3854,7 @@ d_eu5_gnn = {
 	}
 }
 
-d_eu5_gra = {
+d_granada = {
 	1238.5.1 = {
 		holder = gra_muhammad_i_nasrid
 	}
@@ -3856,7 +3895,7 @@ d_eu5_grs = {
 	}
 }
 
-d_eu5_hab = {
+d_austria = {
 	1276.11.1 = {
 		holder = hab_rudolf_i_habsburg
 	}
@@ -4293,7 +4332,7 @@ d_eu5_lin = {
 	}
 }
 
-d_eu5_lit = {
+d_lithuania = {
 	1285.1.1 = {
 		holder = lit_butigeidis_gediminids
 	}
@@ -4329,7 +4368,7 @@ d_eu5_lna = {
 	}
 }
 
-d_eu5_lor = {
+d_lorraine = {
 	1047.1.1 = {
 		holder = lor_adalbert_alsace
 	}
@@ -4433,7 +4472,7 @@ d_eu5_mai = {
 	}
 }
 
-d_eu5_mcm = {
+d_munster = {
 	1329.5.7 = {
 		holder = mcm_cormac_mac_carthaigh
 	}
@@ -4455,25 +4494,6 @@ d_eu5_mkr = {
 	1337.4.1 = {
 		holder = mkr_ghiyath_al_din_dinar
 		government = clan_government
-	}
-}
-
-d_eu5_mll = {
-	1231.1.1 = {
-		holder = ara_jacme_i_arago
-	}
-	1276.7.27 = {
-		holder = mll_jacme_ii_mallorca
-	}
-	1311.5.29 = {
-		holder = mll_sancho_i_mallorca
-	}
-	1324.9.4 = {
-		holder = mll_james_iii_mallorca
-	}
-	1337.4.1 = {
-		holder = mll_james_iii_mallorca
-		liege = k_aragon
 	}
 }
 
@@ -4621,7 +4641,7 @@ d_eu5_nov = {
 	}
 }
 
-d_eu5_nrm = {
+d_normandy = {
 	1035.7.2 = {
 		holder = eng_william_the_conquerer
 	}
@@ -4669,7 +4689,7 @@ d_eu5_nsl = {
 	}
 }
 
-d_eu5_nzh = {
+d_nizhny_novgorod = {
 	1325.11.21 = {
 		holder = mos_ivan_i_danilovich_kalita_rurikovich
 	}
@@ -4891,7 +4911,7 @@ d_eu5_rtp = {
 	}
 }
 
-d_eu5_rya = {
+d_ryazan = {
 	1294.1.1 = {
 		holder = rya_yaroslav_romanovich_rurikovich
 	}
@@ -4910,7 +4930,7 @@ d_eu5_rya = {
 	}
 }
 
-d_eu5_sav = {
+d_savoy = {
 	1027.1.1 = {
 		holder = sav_humbert_i_savoy
 	}
@@ -5072,7 +5092,7 @@ d_eu5_slv = {
 	}
 }
 
-d_eu5_slz = {
+d_salzburg = {
 	1177.1.1 = {
 		holder = mai_konrad_i_wittelsbach
 	}
@@ -5111,7 +5131,7 @@ d_eu5_smg = {
 	}
 }
 
-d_eu5_smo = {
+d_smolensk = {
 	988.1.1 = {
 		holder = smo_stanislav_vladimirovich_rurikovich
 	}
@@ -5217,7 +5237,7 @@ d_eu5_szh = {
 	}
 }
 
-d_eu5_szl = {
+d_suzdal = {
 	1252.1.1 = {
 		holder = vlr_andrey_yaroslavich_rurikovich
 	}
@@ -5377,7 +5397,7 @@ d_eu5_try = {
 	}
 }
 
-d_eu5_tve = {
+d_tver = {
 	1285.1.1 = {
 		holder = tve_mikhail_yaroslavich_rurikovich
 	}
@@ -5581,7 +5601,7 @@ d_eu5_vun = {
 	}
 }
 
-d_eu5_wal = {
+d_wallachia = {
 	1324.7.26 = {
 		holder = wal_basarab
 	}
@@ -5634,7 +5654,7 @@ d_eu5_wur = {
 	}
 }
 
-d_eu5_yar = {
+d_yaroslavl = {
 	1260.1.1 = {
 		holder = yar_fyodor_rostislavich_cherny_rurikovich
 	}
@@ -5689,6 +5709,2140 @@ d_eu5_bru = {
 
 
 
+
+d_abruzzo = {
+	1337.4.1 = {
+		holder = nap_robert_i_anjou
+		government = feudal_government
+	}
+}
+
+d_acamama = {
+	1337.4.1 = {
+		holder = aya_tocay_capac
+		government = feudal_government
+	}
+}
+
+d_algiers = {
+	1337.4.1 = {
+		holder = tle_abu_tashufin
+		government = clan_government
+	}
+}
+
+
+d_amdo = {
+	1337.4.1 = {
+		holder = eu5_regent_amd
+		liege = h_china
+		government = tribal_government
+	}
+}
+
+d_andalusia = {
+	1337.4.1 = {
+		holder = cas_alfonso_xi_burgundy
+	}
+}
+
+
+d_apulia = {
+	1337.4.1 = {
+		holder = nap_robert_i_anjou
+		government = feudal_government
+	}
+}
+
+d_aragon = {
+	1337.4.1 = {
+		holder = ara_peter_iv_arago
+		government = feudal_government
+	}
+}
+
+d_arakhan = {
+	1337.4.1 = {
+		holder = ark_min_hti
+		government = mandala_government
+	}
+}
+
+d_atlas_high_plateau = {
+	1337.4.1 = {
+		holder = tle_abu_tashufin
+		government = clan_government
+	}
+}
+
+d_awadh = {
+	1337.4.1 = {
+		holder = dlh_muhammad_bin_tughluq
+		government = administrative_government
+	}
+}
+
+d_azerbaijan = {
+	1337.4.1 = {
+		holder = jal_hasan_buzurg
+		government = nomad_government
+	}
+}
+
+d_badakhshan = {
+	1337.4.1 = {
+		holder = eu5_regent_bkh
+		government = feudal_government
+	}
+}
+
+
+d_balearics = {
+	1337.4.1 = {
+		holder = mll_james_iii_mallorca
+	}
+}
+
+d_bashkiria = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_basilicata = {
+	1337.4.1 = {
+		holder = nap_robert_i_anjou
+		government = feudal_government
+	}
+}
+
+d_beiping = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+
+d_benin = {
+	1337.4.1 = {
+		holder = eu5_regent_ben
+		government = feudal_government
+	}
+}
+
+d_bhojpur = {
+	1337.4.1 = {
+		holder = dlh_muhammad_bin_tughluq
+		government = administrative_government
+	}
+}
+
+d_bohemia = {
+	1337.4.1 = {
+		holder = boh_john_luxembourg
+		liege = e_hre
+		government = feudal_government
+	}
+}
+
+d_bolghar = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_bornu = {
+	1337.4.1 = {
+		holder = kbo_salmama
+		government = clan_government
+	}
+}
+
+d_brandenburg = {
+	1134.1.1 = {
+		holder = bra_albrecht_i_askanier
+	}
+	1170.1.18 = {
+		holder = bra_otto_i_askanier
+	}
+	1184.7.8 = {
+		holder = bra_otto_ii_askanier
+	}
+	1205.7.4 = {
+		holder = bra_albrecht_ii_askanier
+	}
+	1220.2.25 = {
+		holder = bra_johann_i_askanier
+	}
+	1266.6.3 = {
+		holder = bra_otto_iii_askanier
+	}
+	1267.10.9 = {
+		holder = bra_johann_ii_askanier
+	}
+	1281.9.10 = {
+		holder = bra_otto_v_askanier
+	}
+	1294.1.1 = {
+		holder = bra_otto_v_askanier
+	}
+	1298.10.9 = {
+		holder = bra_albrecht_iii_askanier
+	}
+	1298.11.19 = {
+		holder = bra_konrad_i_askanier
+	}
+	1304.1.1 = {
+		holder = bra_hermann_askanier
+	}
+	1308.2.1 = {
+		holder = bra_waldemar_askanier
+	}
+	1308.11.27 = {
+		holder = bra_johann_v_askanier
+	}
+	1317.3.26 = {
+		holder = bra_waldemar_askanier
+	}
+	1318.2.14 = {
+		holder = bra_waldemar_askanier
+	}
+	1319.8.14 = {
+		holder = bra_heinrich_ii_askanier
+	}
+	1323.7.8 = {
+		holder = bra_ludwig_v_wittelsbach
+	}
+	1337.4.1 = {
+		holder = bra_ludwig_v_wittelsbach
+		government = feudal_government
+		liege = e_hre
+	}
+}
+
+d_bulgaria = {
+	1337.4.1 = {
+		holder = bul_ivan_alexander
+		government = feudal_government
+	}
+}
+
+d_bursol = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_butana = {
+	1337.4.1 = {
+		holder = eu5_regent_alo
+		government = feudal_government
+	}
+}
+
+d_campania = {
+	1337.4.1 = {
+		holder = nap_robert_i_anjou
+		government = feudal_government
+	}
+}
+
+d_cappadocia = {
+	1337.4.1 = {
+		holder = ere_eretna
+		government = clan_government
+	}
+}
+
+d_castile = {
+	1337.4.1 = {
+		holder = cas_alfonso_xi_burgundy
+	}
+}
+
+d_central_anatolia = {
+	1337.4.1 = {
+		holder = kar_alaeddin_halil_mirza
+		government = clan_government
+	}
+}
+d_central_ethiopia = {
+	1337.4.1 = {
+		holder = eth_amedee_i_solomon
+		government = feudal_government
+	}
+}
+
+d_chactemal = {
+	1337.4.1 = {
+		holder = eu5_regent_ctm
+		government = feudal_government
+	}
+}
+
+d_champa = {
+	1337.4.1 = {
+		holder = cha_jaya_ananda
+		government = mandala_government
+	}
+}
+
+d_champagne = {
+	1337.4.1 = {
+		holder = fra_philip_vi_valois
+		government = feudal_government
+	}
+}
+
+d_changtang = {
+	1337.4.1 = {
+		holder = tib_namkha_lekpa
+		liege = h_china
+		government = theocracy_government
+	}
+}
+
+d_chao_phraya = {
+	1337.4.1 = {
+		holder = suk_ngua_nam_thum
+		government = mandala_government
+	}
+}
+
+d_chilapan = {
+	1337.4.1 = {
+		holder = eu5_regent_xol
+		government = tribal_government
+	}
+}
+
+d_chimgi_tura = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_chota_nagpur = {
+	1337.4.1 = {
+		holder = eu5_regent_rks
+		government = feudal_government
+	}
+}
+
+d_chuandong = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_chuanxi = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_cilicia = {
+	1337.4.1 = {
+		holder = cil_leo_iv
+		government = feudal_government
+	}
+}
+
+d_croatia = {
+	1337.4.1 = {
+		holder = hun_karoly_robert
+		government = feudal_government
+	}
+}
+
+d_cyrenaica = {
+	1337.4.1 = {
+		holder = bqa_fayed_ibn_muqaddam
+		liege = k_egypt
+		government = clan_government
+	}
+}
+
+d_darfur = {
+	1337.4.1 = {
+		holder = eu5_regent_daj
+		government = tribal_government
+	}
+}
+
+d_datong = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_denmark = {
+	1337.4.1 = {
+		holder = dan_valdemar_atterdag
+		government = feudal_government
+	}
+}
+
+d_desht_kipchak = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_doab = {
+	1337.4.1 = {
+		holder = dlh_muhammad_bin_tughluq
+		government = administrative_government
+	}
+}
+
+
+d_east_anglia = {
+	1337.4.1 = {
+		holder = eng_edward_iii
+		government = feudal_government
+	}
+}
+
+d_east_novgorod = {
+	1337.4.1 = {
+		holder = eu5_rep_nov
+		liege = k_eu5_mos
+		government = republic_government
+	}
+}
+
+d_eastern_gobi = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_extremadura = {
+	1337.4.1 = {
+		holder = cas_alfonso_xi_burgundy
+	}
+}
+
+d_finland = {
+	1337.4.1 = {
+		holder = swe_magnus_eriksson
+		government = feudal_government
+	}
+}
+
+d_franche_comte = {
+	982.1.1 = {
+		holder = fcb_othon_guillaume_burgundy
+	}
+	1027.9.21 = {
+		holder = fcb_renaud_i_burgundy
+	}
+	1057.9.4 = {
+		holder = fcb_guillaume_i_burgundy
+	}
+	1087.11.12 = {
+		holder = fcb_renaud_ii_burgundy
+	}
+	1097.1.1 = {
+		holder = fcb_etienne_i_burgundy
+	}
+	1102.5.27 = {
+		holder = fcb_guillaume_ii_burgundy
+	}
+	1125.1.1 = {
+		holder = fcb_renaud_iii_burgundy
+	}
+	1127.3.1 = {
+		holder = fcb_renaud_iii_burgundy
+	}
+	1148.2.12 = {
+		holder = ogk_beatrice_burgundy
+	}
+	1190.6.10 = {
+		holder = fcb_otton_hohenstaufen
+	}
+	1200.1.14 = {
+		holder = fcb_jeanne_i_hohenstaufen
+	}
+	1205.1.1 = {
+		holder = fcb_beatrice_ii_hohenstaufen
+	}
+	1208.6.21 = {
+		holder = fcb_beatrice_ii_hohenstaufen
+	}
+	1231.5.7 = {
+		holder = fcb_otton_iii_andechs
+	}
+	1248.6.19 = {
+		holder = fcb_adelaide_i_andechs
+	}
+	1266.11.12 = {
+		holder = fcb_adelaide_i_andechs
+	}
+	1267.6.11 = {
+		holder = fcb_adelaide_i_andechs
+	}
+	1279.3.8 = {
+		holder = fcb_othon_iv_chalon_burgundy
+	}
+	1303.3.17 = {
+		holder = fra_jeanne_ii_chalon_burgundy
+	}
+	1307.1.21 = {
+		holder = fra_jeanne_ii_chalon_burgundy
+	}
+	1322.1.3 = {
+		holder = fra_jeanne_ii_chalon_burgundy
+	}
+	1330.1.21 = {
+		holder = bur_jeanne_iii_capet
+	}
+	1337.4.1 = {
+		holder = bur_jeanne_iii_capet
+		government = feudal_government
+		liege = k_france
+	}
+}
+
+d_friesland = {
+	1337.4.1 = {
+		holder = eu5_regent_fri
+		liege = e_hre
+		government = republic_government
+	}
+}
+
+d_fujian = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_futa_tooro = {
+	1337.4.1 = {
+		holder = eu5_regent_bbk
+		liege = e_mali
+		government = clan_government
+	}
+}
+
+d_galicia = {
+	1337.4.1 = {
+		holder = cas_alfonso_xi_burgundy
+	}
+}
+
+d_gambia = {
+	1337.4.1 = {
+		holder = eu5_regent_kab
+		liege = e_mali
+		government = feudal_government
+	}
+}
+
+d_gansu = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_gao = {
+	1337.4.1 = {
+		holder = eu5_regent_son
+		liege = e_mali
+		government = clan_government
+	}
+}
+
+d_georgia = {
+	1337.4.1 = {
+		holder = geo_george_v
+		government = feudal_government
+	}
+}
+
+d_ghana = {
+	1337.4.1 = {
+		holder = eu5_regent_gha
+		liege = e_mali
+		government = clan_government
+	}
+}
+
+d_gotaland = {
+	1337.4.1 = {
+		holder = swe_magnus_eriksson
+		government = feudal_government
+	}
+}
+
+d_greater_poland = {
+	1337.4.1 = {
+		holder = pol_casimir_iii_piast
+		government = feudal_government
+	}
+}
+
+d_greenland = {
+	1299.11.1 = {
+		holder = nor_hakan_magnusson
+	}
+	1319.5.8 = {
+		holder = swe_magnus_eriksson
+	}
+	1337.4.1 = {
+		holder = swe_magnus_eriksson
+		government = feudal_government
+	}
+}
+
+d_guangdong = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_guangxi = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_gur = {
+	1337.4.1 = {
+		holder = eu5_regent_bor
+		government = tribal_government
+	}
+}
+
+d_gwandong = {
+	1337.4.1 = {
+		holder = kor_chungsuk
+		liege = h_china
+		government = meritocratic_government
+	}
+}
+
+d_gwanseo = {
+	1337.4.1 = {
+		holder = kor_chungsuk
+		liege = h_china
+		government = meritocratic_government
+	}
+}
+
+d_gyeonggi = {
+	1337.4.1 = {
+		holder = kor_chungsuk
+		liege = h_china
+		government = meritocratic_government
+	}
+}
+
+d_haeseo = {
+	1337.4.1 = {
+		holder = kor_chungsuk
+		liege = h_china
+		government = meritocratic_government
+	}
+}
+
+d_haibei_hainan = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_haiyou = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+
+d_hebei = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_hebrides = {
+	1337.4.1 = {
+		holder = sco_david_ii
+		government = feudal_government
+	}
+}
+
+d_henan = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+
+d_hexi = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_hokurikudou = {
+	1337.4.1 = {
+		holder = jap_ashikaga_takauji
+		government = japan_feudal_government
+	}
+}
+
+d_holland = {
+	1299.11.10 = {
+		holder = hai_jean_ii_de_hainault
+	}
+	1304.8.22 = {
+		holder = hai_guillaume_de_hainault
+	}
+	1337.4.1 = {
+		holder = hai_guillaume_de_hainault
+		government = feudal_government
+		liege = e_hre
+	}
+}
+
+d_home_counties = {
+	1337.4.1 = {
+		holder = eng_edward_iii
+		government = feudal_government
+	}
+}
+
+d_honam = {
+	1337.4.1 = {
+		holder = kor_chungsuk
+		liege = h_china
+		government = meritocratic_government
+	}
+}
+
+d_hoseo = {
+	1337.4.1 = {
+		holder = kor_chungsuk
+		liege = h_china
+		government = meritocratic_government
+	}
+}
+
+d_huaidong = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_huaixi = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_hubei = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_hunan = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_iceland = {
+	1299.11.1 = {
+		holder = nor_hakan_magnusson
+	}
+	1319.5.8 = {
+		holder = swe_magnus_eriksson
+	}
+	1337.4.1 = {
+		holder = swe_magnus_eriksson
+		government = feudal_government
+	}
+}
+
+d_ile_de_france = {
+	1337.4.1 = {
+		holder = fra_philip_vi_valois
+		government = feudal_government
+	}
+}
+
+d_illinois = {
+	1337.4.1 = {
+		holder = eu5_regent_chk
+		government = tribal_government
+	}
+}
+
+d_irrawady_delta = {
+	1337.4.1 = {
+		holder = peg_binnya_e_law
+		government = mandala_government
+	}
+}
+
+d_java = {
+	1337.4.1 = {
+		holder = maj_tribhuwana
+		government = mandala_government
+	}
+}
+
+d_jiangnan = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_jiangxi = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_jolof = {
+	1337.4.1 = {
+		holder = jol_ndiadiane_ndiaye
+		liege = e_mali
+		government = tribal_government
+	}
+}
+
+d_kanem = {
+	1337.4.1 = {
+		holder = kbo_salmama
+		government = clan_government
+	}
+}
+
+d_karagay = {
+	1337.4.1 = {
+		holder = eu5_regent_prm
+		government = feudal_government
+	}
+}
+
+d_karelia = {
+	1337.4.1 = {
+		holder = eu5_rep_nov
+		liege = k_eu5_mos
+		government = republic_government
+	}
+}
+
+d_karnakassala = {
+	1337.4.1 = {
+		holder = hsl_veera_ballala_iii_hoysala
+		government = feudal_government
+	}
+}
+
+d_kazan = {
+	1337.4.1 = {
+		holder = eu5_regent_prm
+		government = feudal_government
+	}
+}
+
+d_kerman = {
+	1337.4.1 = {
+		holder = krm_qutb_al_din
+		government = clan_government
+	}
+}
+
+d_khorat_plateau = {
+	1337.4.1 = {
+		holder = eu5_regent_vtn
+		government = mandala_government
+	}
+}
+
+d_khwarazm = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_kinai = {
+	1337.4.1 = {
+		holder = jap_ashikaga_takauji
+		government = japan_feudal_government
+	}
+}
+
+
+d_konkan = {
+	1337.4.1 = {
+		holder = dlh_muhammad_bin_tughluq
+		government = administrative_government
+	}
+}
+
+d_kulykol = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_kursk = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+
+d_languedoc = {
+	1337.4.1 = {
+		holder = fra_philip_vi_valois
+		government = feudal_government
+	}
+}
+
+d_lazio = {
+	1337.4.1 = {
+		holder = pap_benedetto_xii
+		government = theocracy_government
+	}
+}
+
+d_left_bank_ukraine = {
+	1337.4.1 = {
+		holder = kie_teodoras_ivanovich_rurikovich
+		government = feudal_government
+	}
+}
+
+d_leon = {
+	1337.4.1 = {
+		holder = cas_alfonso_xi_burgundy
+	}
+}
+
+d_liaodong = {
+	1337.4.1 = {
+		holder = kor_ko
+		liege = h_china
+		government = feudal_government
+	}
+}
+
+d_liguria = {
+	1337.4.1 = {
+		holder = gen_galeotto_spinola
+		liege = e_hre
+		government = republic_government
+	}
+}
+
+d_lombardy = {
+	1337.4.1 = {
+		holder = mlo_azzone_i_visconti
+		liege = e_hre
+		government = republic_government
+	}
+}
+
+d_lower_amur = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_lower_don = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_lower_egypt = {
+	1337.4.1 = {
+		holder = mam_an_nasir_bahri
+		government = clan_government
+	}
+}
+
+d_lower_mekong = {
+	1337.4.1 = {
+		holder = khm_trasak_paem
+		government = mandala_government
+	}
+}
+
+d_lower_niger = {
+	1337.4.1 = {
+		holder = eu5_regent_nup
+		government = tribal_government
+	}
+}
+
+d_lower_selenga = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_macedonia = {
+	1337.4.1 = {
+		holder = byz_andronikos_iii_palaiologos
+		government = administrative_government
+	}
+}
+
+d_maharashtra = {
+	1337.4.1 = {
+		holder = dlh_muhammad_bin_tughluq
+		government = administrative_government
+	}
+}
+
+d_majar = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_maldives = {
+	1337.4.1 = {
+		holder = eu5_regent_dgl
+		government = clan_government
+	}
+}
+
+d_mali = {
+	1337.4.1 = {
+		holder = mal_musa_keita
+		government = clan_government
+	}
+}
+
+d_malwa = {
+	1337.4.1 = {
+		holder = dlh_muhammad_bin_tughluq
+		government = administrative_government
+	}
+}
+
+d_marmara = {
+	1337.4.1 = {
+		holder = tur_orhan
+		government = clan_government
+	}
+}
+
+d_mayaab = {
+	1337.4.1 = {
+		holder = eu5_regent_coc
+		government = feudal_government
+	}
+}
+
+
+d_middle_amur = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_midlands = {
+	1337.4.1 = {
+		holder = eng_edward_iii
+		government = feudal_government
+	}
+}
+
+d_missouri = {
+	1337.4.1 = {
+		holder = eu5_regent_chk
+		government = tribal_government
+	}
+}
+
+d_mithila = {
+	1337.4.1 = {
+		holder = dlh_muhammad_bin_tughluq
+		government = administrative_government
+	}
+}
+
+d_mongolian_great_lakes = {
+	1337.4.1 = {
+		holder = eu5_regent_crs
+		liege = k_eu5_oge
+		government = nomad_government
+	}
+}
+
+d_moravia = {
+	1253.12.23 = {
+		holder = boh_otakar_ii_premyslid
+	}
+	1278.8.26 = {
+		holder = hab_rudolf_i_habsburg
+	}
+	1283.1.1 = {
+		holder = boh_wenceslaus_ii_premyslid
+	}
+	1305.6.21 = {
+		holder = boh_wenceslaus_iii_premyslid
+	}
+	1306.8.4 = {
+		holder = boh_rudolf_habsburg
+	}
+	1307.7.3 = {
+		holder = tir_henry_gorizia
+	}
+	1310.8.31 = {
+		holder = boh_john_luxembourg
+	}
+	1333.1.1 = {
+		holder = boh_charles_iv_luxembourg
+	}
+	1337.4.1 = {
+		holder = boh_charles_iv_luxembourg
+		government = feudal_government
+		liege = k_bohemia
+	}
+}
+
+d_morocco = {
+	1337.4.1 = {
+		holder = mor_abu_al_hasan_ali
+		government = clan_government
+	}
+}
+
+
+d_murcia = {
+	1337.4.1 = {
+		holder = cas_alfonso_xi_burgundy
+	}
+}
+
+d_nankaidou = {
+	1337.4.1 = {
+		holder = jap_ashikaga_takauji
+		government = japan_feudal_government
+	}
+}
+
+d_navarre = {
+	1337.4.1 = {
+		holder = nav_jeanne_ii_capet
+		government = feudal_government
+	}
+}
+
+d_nord_norge = {
+	1337.4.1 = {
+		holder = swe_magnus_eriksson
+		government = feudal_government
+	}
+}
+
+d_north_alfold = {
+	1337.4.1 = {
+		holder = hun_karoly_robert
+		government = feudal_government
+	}
+}
+
+d_north_hausa = {
+	1337.4.1 = {
+		holder = eu5_regent_zam
+		government = clan_government
+	}
+}
+
+d_north_portugal = {
+	1337.4.1 = {
+		holder = por_afonso_iv_portugal
+		government = feudal_government
+	}
+}
+
+
+d_nubia_proper = {
+	1337.4.1 = {
+		holder = mak_al_amir_abi
+		government = clan_government
+	}
+}
+
+
+d_omsk = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_orissa = {
+	1337.4.1 = {
+		holder = ori_narasimha_deva_iii_purba_ganga
+		government = feudal_government
+	}
+}
+
+d_ou = {
+	1337.4.1 = {
+		holder = jap_ashikaga_takauji
+		government = japan_feudal_government
+	}
+}
+
+d_perm = {
+	1337.4.1 = {
+		holder = eu5_regent_prm
+		government = feudal_government
+	}
+}
+
+d_podolia = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_poitou = {
+	1337.4.1 = {
+		holder = fra_philip_vi_valois
+		government = feudal_government
+	}
+}
+
+d_polesia = {
+	1337.4.1 = {
+		holder = lit_gediminas_gediminids
+		government = feudal_government
+	}
+}
+
+d_pomorye = {
+	1337.4.1 = {
+		holder = eu5_rep_nov
+		liege = k_eu5_mos
+		government = republic_government
+	}
+}
+
+d_pontus = {
+	1337.4.1 = {
+		holder = cnd_suleyman
+		government = clan_government
+	}
+}
+d_provence = {
+	1127.1.1 = {
+		holder = cat_ramon_berenguer_iii_barcelona
+	}
+	1131.7.19 = {
+		holder = pro_berenguier_ramon_barcelona
+	}
+	1144.3.1 = {
+		holder = cat_ramon_berenguer_iv_barcelona
+	}
+	1162.8.7 = {
+		holder = pro_ramon_berenguier_iii_barcelona
+	}
+	1166.3.1 = {
+		holder = pro_doca_ii_barcelona
+	}
+	1167.1.1 = {
+		holder = ara_alfons_ii_arago
+	}
+	1173.1.1 = {
+		holder = ara_alfons_ii_arago
+	}
+	1181.4.5 = {
+		holder = ara_alfons_ii_arago
+	}
+	1185.1.1 = {
+		holder = ara_alfons_ii_arago
+	}
+	1196.4.25 = {
+		holder = pro_anfos_ii_arago
+	}
+	1209.2.2 = {
+		holder = pro_ramon_berenguier_v_arago
+	}
+	1245.8.19 = {
+		holder = pro_beatritz_i_arago
+	}
+	1246.1.31 = {
+		holder = nap_charles_i_anjou
+	}
+	1267.9.23 = {
+		holder = nap_charles_i_anjou
+	}
+	1285.1.7 = {
+		holder = nap_carlo_ii_anjou
+	}
+	1309.5.5 = {
+		holder = nap_robert_i_anjou
+	}
+	1337.4.1 = {
+		holder = nap_robert_i_anjou
+		government = feudal_government
+	}
+}
+
+d_prussia = {
+	1337.4.1 = {
+		holder = teu_dietrich_von_altenburg
+		government = theocracy_government
+	}
+}
+
+d_pryazovia = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_punjab = {
+	1337.4.1 = {
+		holder = dlh_muhammad_bin_tughluq
+		government = administrative_government
+	}
+}
+
+d_puuk = {
+	1337.4.1 = {
+		holder = eu5_regent_ckp
+		government = feudal_government
+	}
+}
+
+d_quhestan = {
+	1337.4.1 = {
+		holder = kht_abd_allah
+		government = clan_government
+	}
+}
+
+d_red_river_delta = {
+	1337.4.1 = {
+		holder = dai_vuong
+		government = meritocratic_government
+	}
+}
+
+d_red_ruthenia = {
+	1337.4.1 = {
+		holder = vol_boleslaw_jerzy_ii_piast
+		government = feudal_government
+	}
+}
+
+d_right_bank_ukraine = {
+	1337.4.1 = {
+		holder = kie_teodoras_ivanovich_rurikovich
+		government = feudal_government
+	}
+}
+
+d_rokhilkhand = {
+	1337.4.1 = {
+		holder = dlh_muhammad_bin_tughluq
+		government = administrative_government
+	}
+}
+
+d_rupa_rupa = {
+	1337.4.1 = {
+		holder = eu5_regent_cya
+		government = feudal_government
+	}
+}
+
+d_ruvuma_lurio = {
+	1337.4.1 = {
+		holder = zan_daud_mahdali
+		government = clan_government
+	}
+}
+
+
+d_saikaidou = {
+	1337.4.1 = {
+		holder = jap_ashikaga_takauji
+		government = japan_feudal_government
+	}
+}
+
+d_sailan = {
+	1337.4.1 = {
+		holder = dbd_vijayabahu_siri_sanga_bo
+		government = feudal_government
+	}
+}
+
+d_samara = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_samoa = {
+	1337.4.1 = {
+		holder = eu5_regent_sam
+		government = feudal_government
+	}
+}
+
+d_sanindou = {
+	1337.4.1 = {
+		holder = jap_ashikaga_takauji
+		government = japan_feudal_government
+	}
+}
+
+d_sanyoudou = {
+	1337.4.1 = {
+		holder = jap_ashikaga_takauji
+		government = japan_feudal_government
+	}
+}
+
+d_save = {
+	1337.4.1 = {
+		holder = eu5_regent_zmw
+		government = feudal_government
+	}
+}
+
+d_scottish_highlands = {
+	1337.4.1 = {
+		holder = moy_john_randolph
+		liege = k_scotland
+	}
+}
+
+d_scottish_lowlands = {
+	1337.4.1 = {
+		holder = sco_david_ii
+		government = feudal_government
+	}
+}
+
+d_serbia = {
+	1337.4.1 = {
+		holder = ser_stefan_dusan
+		government = feudal_government
+	}
+}
+
+d_shaanxi = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_shandong = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_shanxi = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_shilkari = {
+	1337.4.1 = {
+		holder = qas_shiliemen_borjigin
+		liege = h_china
+		government = nomad_government
+	}
+}
+
+d_shirvan = {
+	1337.4.1 = {
+		holder = srv_keykubad
+		government = clan_government
+	}
+}
+
+d_sicily = {
+	1337.4.1 = {
+		holder = sic_federico_iii_sicily
+		government = feudal_government
+	}
+}
+
+d_sinai = {
+	1337.4.1 = {
+		holder = mam_an_nasir_bahri
+		government = clan_government
+	}
+}
+
+d_sindh = {
+	1337.4.1 = {
+		holder = eu5_regent_snd
+		government = clan_government
+	}
+}
+
+d_sistan = {
+	1337.4.1 = {
+		holder = mih_qutb_al_din_muhammad
+		government = clan_government
+	}
+}
+
+d_skaneland = {
+	1337.4.1 = {
+		holder = swe_magnus_eriksson
+		government = feudal_government
+	}
+}
+
+d_sloboda_ukraine = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_slovakia = {
+	1337.4.1 = {
+		holder = hun_karoly_robert
+		government = feudal_government
+	}
+}
+
+d_slovenia = {
+	1337.4.1 = {
+		holder = hab_albrecht_ii_habsburg
+		liege = e_hre
+		government = feudal_government
+	}
+}
+
+d_songnen = {
+	1337.4.1 = {
+		holder = otc_yanashiri_borjigin
+		liege = h_china
+		government = nomad_government
+	}
+}
+
+d_south_alfold = {
+	1337.4.1 = {
+		holder = hun_karoly_robert
+		government = feudal_government
+	}
+}
+
+d_south_hausa = {
+	1337.4.1 = {
+		holder = eu5_regent_kan
+		government = clan_government
+	}
+}
+
+d_south_manding = {
+	1337.4.1 = {
+		holder = mal_musa_keita
+		government = clan_government
+	}
+}
+
+d_south_portugal = {
+	1337.4.1 = {
+		holder = por_afonso_iv_portugal
+		government = feudal_government
+	}
+}
+
+d_south_sumatra = {
+	1337.4.1 = {
+		holder = eu5_regent_plb
+		government = mandala_government
+	}
+}
+
+d_south_yemen = {
+	1337.4.1 = {
+		holder = yem_al_mujahid_ali
+		government = clan_government
+	}
+}
+
+d_southern_gobi = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_southern_somalia = {
+	1337.4.1 = {
+		holder = aju_arliqo_i
+		government = clan_government
+	}
+}
+
+d_suni = {
+	1337.4.1 = {
+		holder = eu5_regent_cya
+		government = feudal_government
+	}
+}
+
+d_surgut = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_sus = {
+	1337.4.1 = {
+		holder = mor_abu_ali_omar
+		liege = k_maghreb
+		government = clan_government
+	}
+}
+
+d_suzun = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_svealand = {
+	1337.4.1 = {
+		holder = swe_magnus_eriksson
+		government = feudal_government
+	}
+}
+
+d_syd_norge = {
+	1337.4.1 = {
+		holder = swe_magnus_eriksson
+		government = feudal_government
+	}
+}
+
+d_tambov = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_telingana = {
+	1337.4.1 = {
+		holder = msn_prolaya_musunuri_nayakas
+		government = feudal_government
+	}
+}
+
+d_thrace = {
+	1337.4.1 = {
+		holder = byz_andronikos_iii_palaiologos
+		government = administrative_government
+	}
+}
+
+d_timbuktu = {
+	1337.4.1 = {
+		holder = eu5_regent_bmr
+		liege = e_mali
+		government = clan_government
+	}
+}
+
+d_tirol = {
+	1253.7.22 = {
+		holder = gor_meinhard_iii_gorizia
+	}
+	1258.7.22 = {
+		holder = tir_meinhard_gorizia
+	}
+	1271.1.1 = {
+		holder = tir_meinhard_gorizia
+	}
+	1281.1.1 = {
+		holder = tir_meinhard_gorizia
+	}
+	1292.4.30 = {
+		holder = tir_meinhard_gorizia
+	}
+	1295.11.1 = {
+		holder = tir_henry_gorizia
+	}
+	1305.1.1 = {
+		holder = tir_henry_gorizia
+	}
+	1310.5.25 = {
+		holder = tir_henry_gorizia
+	}
+	1335.4.2 = {
+		holder = tir_margarete_von_tirol
+	}
+	1337.4.1 = {
+		holder = tir_margarete_von_tirol
+		government = feudal_government
+		liege = e_hre
+	}
+}
+
+
+d_toledo = {
+	1337.4.1 = {
+		holder = cas_alfonso_xi_burgundy
+	}
+}
+
+d_tonga = {
+	1337.4.1 = {
+		holder = eu5_regent_tog
+		government = feudal_government
+	}
+}
+
+d_totma = {
+	1337.4.1 = {
+		holder = eu5_rep_nov
+		liege = k_eu5_mos
+		government = republic_government
+	}
+}
+
+d_toukaidou = {
+	1337.4.1 = {
+		holder = jap_ashikaga_takauji
+		government = japan_feudal_government
+	}
+}
+
+d_tousandou = {
+	1337.4.1 = {
+		holder = jap_ashikaga_takauji
+		government = japan_feudal_government
+	}
+}
+
+d_transdanubia = {
+	1337.4.1 = {
+		holder = hun_karoly_robert
+		government = feudal_government
+	}
+}
+
+d_tripolitania = {
+	1337.4.1 = {
+		holder = gbs_makki
+		liege = k_eu5_tun
+		government = clan_government
+	}
+}
+
+d_tsang = {
+	1337.4.1 = {
+		holder = tib_namkha_lekpa
+		liege = h_china
+		government = theocracy_government
+	}
+}
+
+d_tunis = {
+	1337.4.1 = {
+		holder = tun_abu_yahya_abu_bakr_ii
+		government = clan_government
+	}
+}
+
+d_tuva = {
+	1337.4.1 = {
+		holder = eu5_regent_crs
+		liege = k_eu5_oge
+		government = nomad_government
+	}
+}
+
+d_u = {
+	1337.4.1 = {
+		holder = tib_namkha_lekpa
+		liege = h_china
+		government = theocracy_government
+	}
+}
+
+
+d_upper_austria = {
+	1337.4.1 = {
+		holder = hab_albrecht_ii_habsburg
+		liege = e_hre
+		government = feudal_government
+	}
+}
+
+d_upper_egypt = {
+	1337.4.1 = {
+		holder = mam_an_nasir_bahri
+		government = clan_government
+	}
+}
+
+d_upper_selenga = {
+	1337.4.1 = {
+		holder = eu5_regent_crs
+		liege = k_eu5_oge
+		government = nomad_government
+	}
+}
+
+
+d_ust_sysola = {
+	1337.4.1 = {
+		holder = eu5_regent_prm
+		government = feudal_government
+	}
+}
+
+d_valencia = {
+	1337.4.1 = {
+		holder = ara_peter_iv_arago
+		government = feudal_government
+	}
+}
+
+d_vladimir = {
+	1337.4.1 = {
+		holder = mos_ivan_i_danilovich_kalita_rurikovich
+		government = feudal_government
+	}
+}
+
+d_volhynia = {
+	1337.4.1 = {
+		holder = vol_boleslaw_jerzy_ii_piast
+		government = feudal_government
+	}
+}
+
+d_vyatka = {
+	1337.4.1 = {
+		holder = eu5_regent_vyt
+		government = republic_government
+	}
+}
+
+d_wadai = {
+	1337.4.1 = {
+		holder = eu5_regent_daj
+		government = tribal_government
+	}
+}
+
+d_west_mossi = {
+	1337.4.1 = {
+		holder = eu5_regent_oua
+		government = tribal_government
+	}
+}
+
+d_west_novgorod = {
+	1337.4.1 = {
+		holder = eu5_rep_nov
+		liege = k_eu5_mos
+		government = republic_government
+	}
+}
+
+d_western_gobi = {
+	1337.4.1 = {
+		holder = eu5_regent_bat
+		liege = k_eu5_oge
+		government = nomad_government
+	}
+}
+
+
+
+d_yanbei = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_yannan = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_yedisan = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_yeongnam = {
+	1337.4.1 = {
+		holder = kor_chungsuk
+		liege = h_china
+		government = meritocratic_government
+	}
+}
+
+d_yoruba = {
+	1337.4.1 = {
+		holder = eu5_regent_oyo
+		government = feudal_government
+	}
+}
+
+d_yunga = {
+	1337.4.1 = {
+		holder = eu5_regent_cra
+		government = feudal_government
+	}
+}
+
+d_zaporizhzhia = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_zhejiang = {
+	1337.4.1 = {
+		holder = yua_togon_temur
+		government = celestial_government
+	}
+}
+
+d_zhetysu = {
+	1337.4.1 = {
+		holder = chg_changsi
+		government = nomad_government
+	}
+}
+
+d_astrakhan = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_azov = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_carinthia = {
+	1337.4.1 = {
+		holder = hab_albrecht_ii_habsburg
+		liege = e_hre
+		government = feudal_government
+	}
+}
+
+d_catalonia = {
+	1337.4.1 = {
+		holder = ara_peter_iv_arago
+		government = feudal_government
+	}
+}
+
+
+d_leinster = {
+	1337.4.1 = {
+		holder = eng_edward_iii
+		government = feudal_government
+	}
+}
+
+d_lesser_poland = {
+	1337.4.1 = {
+		holder = pol_casimir_iii_piast
+		government = feudal_government
+	}
+}
+
+d_lower_yik = {
+	1337.4.1 = {
+		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
+		government = nomad_government
+	}
+}
+
+d_moscow = {
+	1337.4.1 = {
+		holder = mos_ivan_i_danilovich_kalita_rurikovich
+		government = feudal_government
+	}
+}
+
+d_northumbria = {
+	1337.4.1 = {
+		holder = eng_edward_iii
+		government = feudal_government
+	}
+}
+
+d_samogitia = {
+	1337.4.1 = {
+		holder = lit_gediminas_gediminids
+		government = feudal_government
+	}
+}
+
+d_slavonia = {
+	1337.4.1 = {
+		holder = hun_karoly_robert
+		government = feudal_government
+	}
+}
+
+d_styria = {
+	1337.4.1 = {
+		holder = hab_albrecht_ii_habsburg
+		liege = e_hre
+		government = feudal_government
+	}
+}
+
+d_transylvania = {
+	1337.4.1 = {
+		holder = hun_karoly_robert
+		government = feudal_government
+	}
+}
+
+d_west_country = {
+	1337.4.1 = {
+		holder = eng_edward_iii
+		government = feudal_government
+	}
+}
+
+d_anjou = {
+	862.1.1 = {
+		holder = anj_robert_le_fort
+	}
+	886.5.12 = {
+		holder = fra_odo
+	}
+	888.2.29 = {
+		holder = fra_robert
+	}
+	1129.1.1 = {
+		holder = anj_geoffroy_v_anjou
+	}
+	1151.9.7 = {
+		holder = eng_henry_ii_curtmantle
+	}
+	1189.7.6 = {
+		holder = eng_richard_i_lionheart
+	}
+	1199.4.6 = {
+		holder = eng_john_lackland
+	}
+	1219.7.21 = {
+		holder = anj_jean_tristan_capet
+	}
+	1246.1.31 = {
+		holder = nap_charles_i_anjou
+	}
+	1285.1.7 = {
+		holder = nap_carlo_ii_anjou
+	}
+	1290.8.16 = {
+		holder = fra_margaret_anjou
+	}
+	1299.12.31 = {
+		holder = fra_charles_valois
+	}
+	1314.5.20 = {
+		holder = fra_philip_vi_valois
+	}
+	1332.2.17 = {
+		holder = fra_jean_ii_valois
+	}
+	1337.4.1 = {
+		holder = fra_jean_ii_valois
+		government = feudal_government
+		liege = k_france
+	}
+}
+
+d_holstein = {
+	1290.1.1 = {
+		holder = shl_henry_i_holstein_rendsburg
+	}
+	1304.8.5 = {
+		holder = shl_gerhard_iii_holstein_rendsburg
+	}
+	1337.4.1 = {
+		holder = shl_gerhard_iii_holstein_rendsburg
+		government = feudal_government
+		liege = k_denmark
+	}
+}
 
 c_aacistak = {
 	1337.4.1 = {
@@ -6214,7 +8368,6 @@ c_albania = {
 	1337.4.1 = {
 		holder = alb_charles_durazzo
 		government = feudal_government
-		liege = k_naples
 	}
 }
 
@@ -6458,7 +8611,7 @@ c_amont = {
 	1337.4.1 = {
 		holder = bur_jeanne_iii_capet
 		government = feudal_government
-		liege = e_hre
+		liege = k_france
 	}
 }
 
@@ -6765,7 +8918,6 @@ c_aquisextain = {
 	1337.4.1 = {
 		holder = nap_robert_i_anjou
 		government = feudal_government
-		liege = e_hre
 	}
 }
 
@@ -7242,7 +9394,7 @@ c_aval = {
 	1337.4.1 = {
 		holder = bur_jeanne_iii_capet
 		government = feudal_government
-		liege = e_hre
+		liege = k_france
 	}
 }
 
@@ -8032,7 +10184,7 @@ c_barysaw = {
 	1337.4.1 = {
 		holder = eu5_regent_dru
 		government = feudal_government
-		liege = d_eu5_lit
+		liege = d_lithuania
 	}
 }
 
@@ -8379,7 +10531,7 @@ c_bely = {
 	1337.4.1 = {
 		holder = fmb_fyodor_konstantinovich_krasny_rurikovich
 		government = feudal_government
-		liege = d_eu5_smo
+		liege = d_smolensk
 	}
 }
 
@@ -11744,7 +13896,6 @@ c_dignois = {
 	1337.4.1 = {
 		holder = nap_robert_i_anjou
 		government = feudal_government
-		liege = e_hre
 	}
 }
 
@@ -12031,7 +14182,6 @@ c_dracenois = {
 	1337.4.1 = {
 		holder = nap_robert_i_anjou
 		government = feudal_government
-		liege = e_hre
 	}
 }
 
@@ -12144,7 +14294,7 @@ c_dzisna = {
 	1337.4.1 = {
 		holder = pok_narimantas_gediminds
 		government = feudal_government
-		liege = d_eu5_lit
+		liege = d_lithuania
 	}
 }
 
@@ -15613,7 +17763,6 @@ c_ionian_islands = {
 	1337.4.1 = {
 		holder = alb_charles_durazzo
 		government = feudal_government
-		liege = k_naples
 	}
 }
 
@@ -16427,7 +18576,7 @@ c_kachen = {
 	1337.4.1 = {
 		holder = kcn_ivane_ii
 		government = feudal_government
-		liege = d_eu5_arm
+		liege = d_armenia
 	}
 }
 
@@ -16991,7 +19140,7 @@ c_kashin = {
 	1337.4.1 = {
 		holder = kai_vasily_mikhailovich_rurikovich
 		government = feudal_government
-		liege = d_eu5_tve
+		liege = d_tver
 	}
 }
 
@@ -18060,7 +20209,7 @@ c_kozlov = {
 	1337.4.1 = {
 		holder = vya_fedor_svyatoslavich_rurikovich
 		government = feudal_government
-		liege = d_eu5_smo
+		liege = d_smolensk
 	}
 }
 
@@ -20147,7 +22296,6 @@ c_malingo = {
 c_mallorca = {
 	1337.4.1 = {
 		holder = mll_james_iii_mallorca
-		liege = k_aragon
 	}
 }
 
@@ -21265,7 +23413,7 @@ c_millieu = {
 	1337.4.1 = {
 		holder = bur_jeanne_iii_capet
 		government = feudal_government
-		liege = e_hre
+		liege = k_france
 	}
 }
 
@@ -21579,7 +23727,7 @@ c_mologa = {
 	1337.4.1 = {
 		holder = mog_mikhail_davidovich_rurikovich
 		government = feudal_government
-		liege = d_eu5_yar
+		liege = d_yaroslavl
 	}
 }
 
@@ -21879,7 +24027,7 @@ c_mstsislaw = {
 	1337.4.1 = {
 		holder = eu5_regent_msv
 		government = feudal_government
-		liege = d_eu5_smo
+		liege = d_smolensk
 	}
 }
 
@@ -22328,7 +24476,7 @@ c_namur = {
 	1337.4.1 = {
 		holder = nam_philippe_iii_dampierre
 		government = feudal_government
-		liege = d_eu5_fla
+		liege = d_flanders
 	}
 }
 
@@ -22803,7 +24951,6 @@ c_nice = {
 	1337.4.1 = {
 		holder = nap_robert_i_anjou
 		government = feudal_government
-		liege = e_hre
 	}
 }
 
@@ -23504,7 +25651,7 @@ c_novogrudok = {
 	1337.4.1 = {
 		holder = nrk_karijotas_gediminds
 		government = feudal_government
-		liege = d_eu5_lit
+		liege = d_lithuania
 	}
 }
 
@@ -24240,7 +26387,7 @@ c_orsha = {
 	1337.4.1 = {
 		holder = vbk_algirdas_gediminds
 		government = feudal_government
-		liege = d_eu5_lit
+		liege = d_lithuania
 	}
 }
 
@@ -25310,7 +27457,7 @@ c_pinsk = {
 	1337.4.1 = {
 		holder = pok_narimantas_gediminds
 		government = feudal_government
-		liege = d_eu5_lit
+		liege = d_lithuania
 	}
 }
 
@@ -25600,7 +27747,7 @@ c_polotsk = {
 	1337.4.1 = {
 		holder = pok_narimantas_gediminds
 		government = feudal_government
-		liege = d_eu5_lit
+		liege = d_lithuania
 	}
 }
 
@@ -25815,7 +27962,7 @@ c_pronsk = {
 	1337.4.1 = {
 		holder = prk_mikhail_yaroslavich_rurikovich
 		government = feudal_government
-		liege = d_eu5_rya
+		liege = d_ryazan
 	}
 }
 
@@ -26789,7 +28936,6 @@ c_roscommon = {
 c_rosello = {
 	1337.4.1 = {
 		holder = mll_james_iii_mallorca
-		liege = k_aragon
 	}
 }
 
@@ -26815,7 +28961,7 @@ c_rostislavl = {
 	1337.4.1 = {
 		holder = prk_mikhail_yaroslavich_rurikovich
 		government = feudal_government
-		liege = d_eu5_rya
+		liege = d_ryazan
 	}
 }
 
@@ -26975,7 +29121,7 @@ c_rzhev = {
 	1337.4.1 = {
 		holder = rzh_fedor_yurievich_rurikovich
 		government = feudal_government
-		liege = d_eu5_lit
+		liege = d_lithuania
 	}
 }
 
@@ -28565,7 +30711,7 @@ c_slonin = {
 	1337.4.1 = {
 		holder = nrk_karijotas_gediminds
 		government = feudal_government
-		liege = d_eu5_lit
+		liege = d_lithuania
 	}
 }
 
@@ -29597,7 +31743,7 @@ c_syunik = {
 	1337.4.1 = {
 		holder = syu_biurtel
 		government = feudal_government
-		liege = d_eu5_arm
+		liege = d_armenia
 	}
 }
 
@@ -31098,7 +33244,7 @@ c_torino = {
 	1337.4.1 = {
 		holder = sav_jacques_savoy_achaia
 		government = feudal_government
-		liege = d_eu5_sav
+		liege = d_savoy
 	}
 }
 
@@ -31113,7 +33259,7 @@ c_toropets = {
 	1337.4.1 = {
 		holder = eu5_regent_tps
 		government = feudal_government
-		liege = d_eu5_lit
+		liege = d_lithuania
 	}
 }
 
@@ -31630,7 +33776,7 @@ c_turov = {
 	1337.4.1 = {
 		holder = tuv_danylo_dmitrovich_rurikovich
 		government = feudal_government
-		liege = d_eu5_lit
+		liege = d_lithuania
 	}
 }
 
@@ -32940,7 +35086,7 @@ c_vaud = {
 	1337.4.1 = {
 		holder = gnv_amedee_iii_geneve
 		government = feudal_government
-		liege = d_eu5_sav
+		liege = d_savoy
 	}
 }
 
@@ -32962,7 +35108,7 @@ c_vawkavysk = {
 	1337.4.1 = {
 		holder = nrk_karijotas_gediminds
 		government = feudal_government
-		liege = d_eu5_lit
+		liege = d_lithuania
 	}
 }
 
@@ -33204,7 +35350,7 @@ c_vitebsk = {
 	1337.4.1 = {
 		holder = vbk_algirdas_gediminds
 		government = feudal_government
-		liege = d_eu5_lit
+		liege = d_lithuania
 	}
 }
 
@@ -33380,7 +35526,7 @@ c_vyazma = {
 	1337.4.1 = {
 		holder = vya_fedor_svyatoslavich_rurikovich
 		government = feudal_government
-		liege = d_eu5_smo
+		liege = d_smolensk
 	}
 }
 
@@ -35573,7 +37719,7 @@ c_zubtsov = {
 	1337.4.1 = {
 		holder = tve_aleksandr_mikhailovich_rurikovich
 		government = feudal_government
-		liege = d_eu5_tve
+		liege = d_tver
 	}
 }
 

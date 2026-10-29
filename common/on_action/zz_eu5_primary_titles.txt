@@ -8,9 +8,6 @@ on_game_start = {
 
 eu5_start_primary_titles = {
 	effect = {
-		title:h_china = {
-			set_title_name_dynamic = dynn_title_yuan
-		}
 		character:aal_jumaz_bin_muhammed = {
 			if = {
 				limit = { is_alive = yes }
@@ -93,12 +90,6 @@ eu5_start_primary_titles = {
 			if = {
 				limit = { is_alive = yes }
 				set_primary_title_to = title:c_mittelmark
-			}
-		}
-		character:brb_jan_iii_van_brabant = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:d_eu5_brb
 			}
 		}
 		character:brg_adolf_ix_berg = {
@@ -971,16 +962,10 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_khorramabad
 			}
 		}
-		character:lgc_boleslaw_iii_the_generous_piast = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:d_eu5_lgc
-			}
-		}
 		character:lit_gediminas_gediminids = {
 			if = {
 				limit = { is_alive = yes }
-				set_primary_title_to = title:d_eu5_lit
+				set_primary_title_to = title:d_lithuania
 			}
 		}
 		character:man_luigi_i_gonzaga = {
@@ -1103,12 +1088,6 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_darbhanga
 			}
 		}
-		character:opv_mikolaj_ii_premyslid = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:d_eu5_opv
-			}
-		}
 		character:oto_pantictzin = {
 			if = {
 				limit = { is_alive = yes }
@@ -1148,7 +1127,7 @@ eu5_start_primary_titles = {
 		character:sav_aymon_savoy = {
 			if = {
 				limit = { is_alive = yes }
-				set_primary_title_to = title:d_eu5_sav
+				set_primary_title_to = title:d_savoy
 			}
 		}
 		character:sme_qvarqvare = {
@@ -1175,22 +1154,10 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:k_sweden
 			}
 		}
-		character:tes_kazimir_piast = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:d_eu5_tes
-			}
-		}
 		character:tir_margarete_von_tirol = {
 			if = {
 				limit = { is_alive = yes }
 				set_primary_title_to = title:c_south_tirol
-			}
-		}
-		character:tve_konstantin_mikhailovich_rurikovich = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:d_eu5_tve
 			}
 		}
 		character:uls_elizabeth_de_burgh_4th_countess_ulster = {

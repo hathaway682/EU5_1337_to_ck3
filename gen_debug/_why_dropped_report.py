@@ -2,7 +2,7 @@
 """重写 _tier_mismatch.md 的 B 段。
 
 判定照抄 _fix_politics_output.py 里产生 dropped 的四个分支，不按"领主是谁"倒推原因：
-  B1 demoted  L528-546  rank=d 且只持 1 个伯爵领 且自己名下无附庸 且答于某位领主
+  B1 demoted  L528-546  rank=d 且只持 1 个伯爵领 且自己名下无附庸 且 liege 是某位领主
   B2 baron    L571-579  baronies 里带 drop_title
   B3 no_ruler L608-612  rank=d/k/e 但没有 ruler
   B4 旧清单残留          10-20 的 dropped 与 10-22 的 politics 对不上，现行数据已不满足上述任何一条
@@ -133,7 +133,7 @@ L.append('这 %d 行的 note 都来自 `gen_debug/eu5_titles_dropped.txt`：`_fi
 L.append('')
 L.append('| 分支 | 行数 | 代码位置 | 判定 |')
 L.append('| --- | --- | --- | --- |')
-L.append('| B1 单伯爵领公国 | %d | L528-546 | EU5 rank=d、只持 1 个伯爵领、自己名下没有任何附庸、且答于某位领主 |'
+L.append('| B1 单伯爵领公国 | %d | L528-546 | EU5 rank=d、只持 1 个伯爵领、自己名下没有任何附庸、且 liege 是某位领主 |'
          % len(groups['B1']))
 L.append('| B2 只剩男爵领 | %d | L571-579 | `baronies` 里这一项带 `drop_title`，整块地只剩一个男爵领 |'
          % len(groups['B2']))
@@ -150,8 +150,8 @@ L.append('')
 L.append('### B1. 单伯爵领公国（%d）' % len(groups['B1']))
 L.append('')
 L.append('EU5 把它写成公国（rank=d），但它只持有一个伯爵领、自己名下没有任何附庸，'
-         '同时又答于某位领主。这种公国在 CK3 里没有可写的东西：头衔不声明、history 块不写，'
-         '地直接按伯爵领落地。下表「领主」一列是它答于谁，「liege 写」一列是最终落进 '
+         '同时 liege 又是某位领主。这种公国在 CK3 里没有可写的东西：头衔不声明、history 块不写，'
+         '地直接按伯爵领落地。下表「领主」一列是它的 liege，「liege 写」一列是最终落进 '
          '`liege =` 的 key。')
 L.append('')
 L.append('| EU5 | 中文名 | 层级 | 领主 | 关系 type | liege 写 | 现头衔 |')

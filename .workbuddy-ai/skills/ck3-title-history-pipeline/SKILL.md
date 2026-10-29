@@ -91,7 +91,7 @@ EXP="D:/Documents/Paradox Interactive/Crusader Kings III/mod/Global_modern_map/e
 | 天朝 | `middle_kingdom` | CHI | `h_china` | 13 条（1271 忽必烈起） |
 
 **正确口径**：`io_titles` 只留 `hre`、`ilkhanate`——这两个 EU5 里没有对应的国家 tag，
-组织的头衔是地图上唯一能承载它的东西。其余有国家的组织一律走国家路径，成员照样答于领袖
+组织的头衔是地图上唯一能承载它的东西。其余有国家的组织一律走国家路径，成员的 liege 照样是领袖
 （fallback 到 `title_of[leader]`，`liege = h_china` 仍是 122 条，结果不变）。
 
 需要同时改两处：
@@ -154,7 +154,7 @@ print("braces", t.count("{") - t.count("}"))
 
 ## 硬编码 key 的坑
 
-任何"某国底下所有人都答于它"的地方都不许写死 key。`e_eu5_jap` 这个坑让 61 个县的 liege
+任何"某国底下所有头衔的 liege 都指向它"的地方都不许写死 key。`e_eu5_jap` 这个坑让 61 个县的 liege
 和 145 个日本家族的 liege 全悬空过。正确写法：
 
 ```python

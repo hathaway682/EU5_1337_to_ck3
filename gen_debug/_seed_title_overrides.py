@@ -95,11 +95,11 @@ if missing:
     print('!! 反查不到 tag 的原版 key:', missing)
 
 # ---------------------------------------------------------------- 2. country / liege
-# 单伯爵领公国保不保留不在这张表里：`_fix_politics_output.py` 的降级判据已改成「答于同级头衔才降」，
-# 18 个公国自动保住。这里只有 SWB 一条——它答的是马格德堡公国，而 10-22 的 politics 把关系的
-# `liege_title` 丢了，只剩 `type = hre`，重算会算成直接答于神罗，同级判据就判不出来。
+# 单伯爵领公国保不保留不在这张表里：`_fix_politics_output.py` 的降级判据已改成「liege 是同级头衔才降」，
+# 18 个公国自动保住。这里只有 SWB 一条——它挂的是马格德堡公国，而 10-22 的 politics 把关系的
+# `liege_title` 丢了，只剩 `type = hre`，重算会算成 liege 直接是神罗，同级判据就判不出来。
 add('country', 'SWB', 'liege', 'd_eu5_mag',
-    '10-22 politics 丢了 liege_title；c_flaming 实际答于马格德堡公国（用户决定 2026-10-28）')
+    '10-22 politics 丢了 liege_title；c_flaming 实际的 liege 是马格德堡公国（用户决定 2026-10-28）')
 
 # ---------------------------------------------------------------- 3. county / barony 覆盖
 OVERRIDES = [

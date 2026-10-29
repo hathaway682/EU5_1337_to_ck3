@@ -9,7 +9,19 @@
 
 ## 二、CK3 数据结构约定（头衔历史改前先看 skill `ck3-title-history-pipeline`）
 - 本地化永远比 key 权威；先 `grep -rn "<key>" localization/simp_chinese/`。
+- **stale-liege 清扫的「改名产物就留着」兜底不能按 `lieges[-1] in rename.values()` 判**：
+  `rename.values()` 是所有改名目标，`k_naples`/`k_aragon` 都在里面，于是任何 liege 恰好
+  指那不勒斯/阿拉贡的块都被当成改名产物保留，恢复成王国后还挂在旧宗主下面
+  （2026-10-29 ALB/MLL 8 个块）。判据必须是「这一块里的 liege 真的被 rename 重写过」
+  ——改名前先 `findall` 一遍存 `renamed_liege`。清扫时打 `stale liege taken out: <key> was under <X>`。
 - 首府 = 只读伯爵领块内第一个 b_；省份文件纯 CRLF；文化文件首行带 BOM（00_bantu/nakkavaram/somalian）。
+- **法理结构只存在于 `common/landed_titles/00_landed_titles.txt` 的嵌套里**
+  （`h_ > e_ > k_ > d_ > c_ > b_`）。**绝不要为了改持有人/颜色而在别的文件里顶层重复声明同一个 key**
+  ——CK3 后加载的同名块会**替换整块、不合并**，那个头衔立刻失去父头衔，法理王国/帝国全丢
+  （2026-10-29：281 个 de jure 公国被 `zz_eu5_titular.txt` 顶层重写，用户报「公国都没有法理王国了」）。
+  改持有人只动 `history/titles/`；`common/landed_titles/` 只有本 mod 自己新铸的头衔才进去。
+  2026-10-29 已把 `k_france`/`k_maghreb`/`k_egypt` 三个顶层重复声明也删掉（颜色改用地图自己的），
+  `zz_eu5_titular.txt` 与 `00_landed_titles.txt` 现在零重名。**这条要一直保持零重名。**
 - dynasty=宗族、house=支系；统计文化引用用 `re.finditer(r'(?<![a-z_])culture\s*=\s*(\w+)', line)`；角色块按大括号深度切顶层块。
 - **本 mod 实际占用的原版 key 必须从 landless shim 体系里剔除，两处一起改**：`common/landed_titles/zz_vanilla_titulars.txt`（删 shim 块）＋ `common/on_action/00_generated_titular_guard.txt`（删 `title:X = { … destroy_title = prev }` 那行）。只删 shim 不删 guard，真实头衔开局就被销毁；只删 guard 不删 shim，同 key 的 landless 与有地声明冲突。清单真源 = `_title_overrides.csv` 的 `country/title_key`。**有些 key 只在 guard 里、不在 shim 文件里**（k_egypt/k_france/k_maghreb 是原版真实头衔），必须按 guard 全量比对。这两个文件是外部 Ck3MapGen v0.96 产物，重跑会写回。先例见 `zzz_eu5_faith_heads.txt` 头部注释。
 - **`io_titles` 只能放"EU5 里没有对应国家的组织"**（hre、ilkhanate）。`tatar_yoke`/`middle_kingdom` 有对应国家（GLH/CHI），一旦也给它们铸头衔，组织会先写一个只有当前领袖 1 条的块，国家的完整世系块在改名预处理里被判重复删掉（2026-10-28 中华/金帐世系全丢就是这个）。去掉后成员仍走 `title_of[leader]` 兜底，liege 结果不变。**改名预处理"新 key 已有块就删旧块"是危险动作**：它假定新块更全，实际往往是新块只有一行、旧块有整条世系。
@@ -51,13 +63,27 @@
     实测只降 SWB → d_eu5_mag；18 个单伯爵领公国自动保住，**不要给它们写 override**。
   - **人工决定表** `gen_debug/_title_overrides.csv`（加载器 `eu5_export/_title_overrides.py`）：
     scope=country/title/county/barony，field=rank/title_key/liege/holder/government，没有 declare。
-    要改"谁持有/答于谁/什么政体/挂哪个 key"，只改这张表，别写补丁脚本。播种脚本 `_seed_title_overrides.py`
+    要改"谁持有/liege 是谁/什么政体/挂哪个 key"，只改这张表，别写补丁脚本。播种脚本 `_seed_title_overrides.py`
     只跑过一次，之后表归手工维护（重跑会按脚本内容覆盖）。
+  - **地图上的有地公国** `_grant_landed_duchies.compute(mod, export, lieges=None)`，返回五元组
+    `grants, why, blocked, under_duke, countries`（改签名必须同步三处调用点）。三条规则：同名且
+    tag 是 d → 改名换公国；同名但 tag 是 k/e → 只加公国；控制 ≥50% 且公国内无别的公爵首府 → 给他。
+    **否决：获授者当前 `liege` 是 `d_` 头衔就不给**——他是伯爵，升公爵后同级不能互为封臣，只能独立
+    （贾尔万 JRW liege=d_eu5_orm、阿尔斯特 ULS liege=d_eu5_ple）。判据只看 liege 前缀、**不判 rank**，
+    因为 rank=None 的县级国家同样命中。`lieges` 缺省读 `gen_debug/eu5_lieges.json`。
+    被否掉的公国要 `dropped` 删块 + 撤掉 `zz_eu5_titular.txt` 里的声明，否则留一个空头衔。
+    **`seated`（"公国首府在这里的别的公爵"）只算至少持有 1 个伯爵领的 rank=d 国家**：187 个
+    rank=d 里 51 个一个县都没有，它们的头衔要么被丢（ANR）要么只剩一条没人持有的声明（CAT），
+    拿它们挡人就是拿幽灵挡真人（2026-10-29 阿拉贡 5/6 被 ANR+CAT 挡在 d_catalonia 外面）。
+    地图上**没有 `d_barcelona`**，`c_barcelona` 属于 `d_catalonia`。
+    两个脚本都调它，**改名映射 `duchy_rename` 必须在 `ckey` 之前初始化**、`title_key` 算完要重映射、
+    `dropped[old] = new` 用赋值；声明循环要跳过 `00_landed_titles.txt` 已有的 key（`declared` 只认
+    `zz_eu5_titular.txt`，漏了会重复声明）。
   - **区域政体** `_gov_rules.py`（曼陀罗/村社/穆斯林 clan + 土司 tribal），**牧群** `_herders.py`
     （448 个 herder 国家整批剔掉，17 县还 CHI、586 县荒野）。这两个都在生成器里调，不在链路外。
   - **改过 key 的国家必须连块一起改名**：`_fix_politics_output.py` 用 `dropped[old]=new` 删旧声明，
     `_patch_title_history.py` 用改名预处理把旧块换 key（保世系）。漏了就会出现 `k_eu5_dan` 和
-    `k_denmark` 并存、或者 liege 指向不存在的 key。**任何"某国底下全答于它"的地方都不许写死旧 key**
+    `k_denmark` 并存、或者 liege 指向不存在的 key。**任何"某国底下所有头衔的 liege 都指向它"的地方都不许写死旧 key**
     （`e_eu5_jap` 这个坑让 61 个县 + 145 个日本家族全悬空过）。
 - **`zz_eu5_titles.txt` 绝不可整体重建**（2026-10-28 实测）：`_patch_title_history.py` 按 politics 重写 holder/government/liege，会冲掉后面所有 `_apply_*.py` 补丁层——土司 tribal 119 处、海洋 wanua 66 处、中华 liege 17 县、c_hanover/c_holstein/c_lippe 同名首府修正、c_mugla 的 k_mentese、b_kiel/b_brixen holder。另外 politics 还留着 448 个 herder 国家（rank=None）和 4 个已升王国的贝伊（AYD/ERE/MEN/TUR rank=d），直接重建会写出 603 个无主县并复活 d_eu5_ayd 等 4 块。
   （注：上面这段是重构**之前**的记录；重构后前两类已被 `_gov_rules.py`/`_herders.py` 接管，
