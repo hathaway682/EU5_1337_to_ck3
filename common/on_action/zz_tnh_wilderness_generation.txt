@@ -79,16 +79,16 @@ tnh_initialize_placeholder_identity = {
 				limit = { NOT = { rite = faith:gen_wilderness_faith.main_rite } }
 				set_character_rite = faith:gen_wilderness_faith.main_rite
 			}
-			every_held_title = {
-				limit = {
-					tier = tier_county
-					NOT = { cu_neighbor_reassigned_county_trigger = yes }
-					exists = title_province
-					title_province = { has_holding_type = wilderness_holding }
-				}
-				set_county_culture = culture:gen_wilderness_culture
-				set_county_faith = faith:gen_wilderness_faith
-			}
+			# every_held_title = {
+			# 	limit = {
+			# 		tier = tier_county
+			# 		NOT = { cu_neighbor_reassigned_county_trigger = yes }
+			# 		exists = title_province
+			# 		title_province = { has_holding_type = wilderness_holding }
+			# 	}
+			# 	set_county_culture = culture:gen_wilderness_culture
+			# 	set_county_faith = faith:gen_wilderness_faith
+			# }
 		}
 		every_living_character = {
 			limit = {
