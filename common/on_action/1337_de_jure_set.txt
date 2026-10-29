@@ -35,7 +35,85 @@
 		title:d_aegean_archipelago = { set_de_jure_liege_title = title:k_hellas }
 		title:d_albania = { set_de_jure_liege_title = title:k_albania }
 		title:k_albania = { set_de_jure_liege_title = title:e_byzantium }
+		title:k_trinacria = { set_de_jure_liege_title = title:e_italy }
+		#罗斯
+		title:k_lithuania = { set_de_jure_liege_title = title:e_west_slavia }
+		title:d_vorkuta = { set_de_jure_liege_title = title:k_bjarmaland }
+		#撒哈拉
+		title:d_desert = { set_de_jure_liege_title = title:k_sahara }
+		title:d_western_sahara = { set_de_jure_liege_title = title:k_sahara }
+		#撒哈拉以南
+		title:d_kanem = { set_de_jure_liege_title = title:k_kanem }
+		title:d_air = { set_de_jure_liege_title = title:k_songhay }
 		#大理
 		title:d_dali = { set_de_jure_liege_title = title:k_dali }
+		#东北
+		title:d_gwanbuk = { set_de_jure_liege_title = title:k_goguryeo }
+		title:d_argun = { set_de_jure_liege_title = title:k_otuken }
+		title:d_angara = { set_de_jure_liege_title = title:k_angara }
+		title:k_amur = { set_de_jure_liege_title = title:e_andong }
+		title:k_hitakami = { set_de_jure_liege_title = title:e_japan }
+		title:k_aynumosir = { set_de_jure_liege_title = title:e_japan }
+		#非洲
+		title:d_cameroon_highlands = { set_de_jure_liege_title = title:k_igbo-benue }
+		#伊尔汗国
+		title:e_persia = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+		  		set_de_jure_liege_title = title:e_ilkhanate
+		  	}
+		}
+		#金帐汗国
+		title:e_caspian-pontic_steppe = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+		  		set_de_jure_liege_title = title:e_golden_horde
+		  	}
+		}
+		title:e_volga-ural = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+		  		set_de_jure_liege_title = title:e_golden_horde
+		  	}
+		}
+		title:e_tartaria = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+		  		set_de_jure_liege_title = title:e_golden_horde
+		  	}
+		}
+		title:e_siberia = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+		  		set_de_jure_liege_title = title:e_golden_horde
+		  	}
+		}
+		#察合台汗国
+		title:e_kara_khitai = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+		  		set_de_jure_liege_title = title:e_chagatai
+		  	}
+		}
+		title:e_turan = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+		  		set_de_jure_liege_title = title:e_chagatai
+		  	}
+		}
 	}
 }
