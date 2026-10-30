@@ -18,8 +18,9 @@
 - **stale-liege 清扫的「改名产物就留着」兜底不能按 `lieges[-1] in rename.values()` 判**：`k_naples`/`k_aragon` 都是改名目标，任何 liege 恰好指它们的块都会被放过（2026-10-29 ALB/MLL 8 块）。判据必须是「这一块里的 liege 真的被 rename 重写过」——改名前先 `findall` 存 `renamed_liege`。日志打 `stale liege taken out: <key> was under <X>`。
 - **无地头衔（d/k/e）全丢，不留空壳**：判据在 `_fix_politics_output.py` 的 declined 段——**rank in (d,k,e)、0 个自己的县、不在 lords、ruler 已持有别国县 → 丢弃**。命中 9 个：MNN ＋ BRZ/INO/JAW/KLN/LIM/NMS/RCB/SIZ；PAP、HRE/ILK 不误伤。**地不跟着动**。删头衔连带清四处：`eu5_titles_dropped.txt`、`zz_eu5_titular.txt` 声明、11 语言本地化、`zz_eu5_primary_titles.txt` 的 `set_primary_title_to`。排查口径 `rank in (d,k,e) and not own_counties`。
 - **`io_titles` 只能放「EU5 里没有对应国家的组织」**（hre、ilkhanate）。`tatar_yoke`/`middle_kingdom` 有对应国家（GLH/CHI），给了头衔就会先写一个只有当前领袖 1 条的块，国家的完整世系块在改名预处理里被判重复删掉（2026-10-28 中华/金帐世系全丢）。**改名预处理「新 key 已有块就删旧块」是危险动作**：新块常只有一行、旧块有整条世系。
-- 首府 = 只读伯爵领块内第一个 b_。dynasty=宗族、house=支系。角色块按大括号深度切顶层块；文化引用用 `re.finditer(r'(?<![a-z_])culture\s*=\s*(\w+)', line)`。
+- 首府 = 只读伯爵领块内第一个 `b_`。dynasty=宗族、house=支系。角色块按大括号深度切顶层块；文化引用用 `re.finditer(r'(?<![a-z_])culture\s*=\s*(\w+)', line)`。
 - title_map：帝国/王国/公国→`X_eu5_TAG`；日本→`c_nf_*`，查日本 grep `zzz_eu5_japan_noble_families.txt`。主头衔 220 条；4 条手工指定只在 `_patch_primary_titles_file.py`，重跑生成器会丢。
+- **按 title_map 批量补内容前，必须先过 `_title_overrides.csv`**：清单/CSV 里的 `title_key` 常是**改名前的旧键**（SIC 记 `k_sicily` 实为 `k_trinacria`；DLH 记 `k_delhi` 实为 `e_hindustan`）。给旧键补内容 = 同一世系在新旧键各写一遍（2026-10-30 补类1 踩到，已删旧键块回退）。判据：`override[tag] != csv_key` 就跳过。
 
 ## 三、生成器纪律
 用户手改文件绝不覆盖；默认 dry run；非必要不全量重建；诊断默认只读、报告结论+改法等用户说「改」；行号一律绝对行号；游戏安装目录只读，产物放工作区。
@@ -34,5 +35,5 @@
 - **编码**：mod 的 `.txt`/`.yml` 是 UTF-8-BOM + CRLF。追加内容一律写 `\r\n`（用 `\n` 会写出裸 LF）。`json.dumps` 用 `newline="\n"`。删整行正则必须带 `[^\r\n]*\r?$`，否则只删前缀把值留成孤立行；CRLF 里 `[^\r\n]*$` 匹配不到（`$` 前卡着 `\r`），要写 `\r?$` 或用 `.*$`。
 
 ## 五、已完成 / 遗留
-- 已完成勿重做：168 支系→42 宗族；154 复合君主名重译；4361 宗教人物改写；印度教整县染色；BKZ/SKN 7 角色 maliki；CU 法理树重建（2026-10-29）；ALB/MLL 恢复王国并清 stale liege；LIT 升王国 + 8 公国（2026-10-29）。
-- 待定：① BKZ/SKN 库西雅 7 省 rite；② 10990 pagan 角色文化主体非 pagan；③ 244 印度教省 CU 记耆那；④ pamiri→afghan（先不动）；⑤ tai_lu/tai_nua 定义去留；⑥ coptic 省份层 0 省阈值；⑦ 涅涅茨→Bjarmian；⑧ 萨尔语群 17 文化（先不管）；⑨ `00_generated_titular_guard.txt` 缺失是否补；⑩ 2026-10-29 16:27 总装脚本另改的 11 个无备份文件未逐个核；⑪ B 类 266 国 1357 个丢失世系持有人名单未导 CSV；⑫ `k_mediterranean_sea` 显示名是否覆盖成「马略卡」。
+- 已完成勿重做：168 支系→42 宗族；154 复合君主名重译；4361 宗教人物改写；印度教整县染色；BKZ/SKN 7 角色 maliki；CU 法理树重建（2026-10-29）；ALB/MLL 恢复王国并清 stale liege；LIT 升王国 + 8 公国（2026-10-29）；**类1「有头衔没历史」补世系 244 标题（15 建块 + 229 插入，1532 人），类1 missing 1327→0（2026-10-30，脚本 `_fill_lost_lineages.py`，报告 `_filled_lineages_report.csv`）**。
+- 待定：① BKZ/SKN 库西雅 7 省 rite；② 10990 pagan 角色文化主体非 pagan；③ 244 印度教省 CU 记耆那；④ pamiri→afghan（先不动）；⑤ tai_lu/tai_nua 定义去留；⑥ coptic 省份层 0 省阈值；⑦ 涅涅茨→Bjarmian；⑧ 萨尔语群 17 文化（先不管）；⑨ `00_generated_titular_guard.txt` 缺失是否补；⑩ 2026-10-29 16:27 总装脚本另改的 11 个无备份文件未逐个核；⑪ **类2「没头衔挂不了」28 国 98 人未处理**（清单 `_lost_lineages_split.csv` 类别 2；其中 LUX 卢森堡的 `title_key` 列其实是人物 id，需先定怎么处理）；⑫ `k_mediterranean_sea` 显示名是否覆盖成「马略卡」；⑬ 遗留断引用 `c_armagnac` 的 `holder = amg_mascarose_ii_lomagne` 在 characters 里不存在（2026-10-30 前就有，未动）。

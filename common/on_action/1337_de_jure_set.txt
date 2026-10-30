@@ -6,6 +6,11 @@
 
 1337_de_jure_set = {
 	effect = {
+		title:h_china = {
+			set_title_name_dynamic = dynn_title_yuan
+			set_title_color = { 180 200 200 }
+			tgp_set_wuking_element_effect = { ELEMENT = metal }
+		}
 		# 德国
 		title:k_pomerania = {
 		  	every_in_de_jure_hierarchy = {
@@ -20,24 +25,48 @@
 		  		limit = {
 		  			tier = tier_duchy
 		  		}
-		  		set_de_jure_liege_title = title:k_east_francia
+		  		set_de_jure_liege_title = title:k_austria
 		  	}
 		}
-		title:d_slovenia = { set_de_jure_liege_title = title:k_east_francia }
-		title:k_burgundy = { set_de_jure_liege_title = title:e_hre }
+		title:k_frisia = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_lotharingia
+		  	}
+		}
+		title:d_bavaria = { set_de_jure_liege_title = title:k_east_francia }
+		title:d_slovenia = { set_de_jure_liege_title = title:k_austria }
+		title:k_burgundy = { set_de_jure_liege_title = title:e_france }
 		#安达卢西亚
 		title:d_andalusia = { set_de_jure_liege_title = title:k_andalusia }
 		#意大利
 		title:d_liguria = { set_de_jure_liege_title = title:k_italy }
+		title:k_romagna = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_italy
+		  	}
+		}
 		#巴尔干
 		title:d_thrace = { set_de_jure_liege_title = title:k_thessalonika }
 		title:d_northern_greece = { set_de_jure_liege_title = title:k_hellas }
 		title:d_aegean_archipelago = { set_de_jure_liege_title = title:k_hellas }
 		title:d_albania = { set_de_jure_liege_title = title:k_albania }
 		title:k_albania = { set_de_jure_liege_title = title:e_byzantium }
+		title:k_italy = { set_de_jure_liege_title = title:e_italy }
+		title:d_abruzzo = { set_de_jure_liege_title = title:k_naples }
+		title:k_romagna = { set_de_jure_liege_title = title:e_italy }
+		title:k_naples = { set_de_jure_liege_title = title:e_italy }
 		title:k_trinacria = { set_de_jure_liege_title = title:e_italy }
+		title:k_sardinia = { set_de_jure_liege_title = title:e_italy }
 		#罗斯
+		title:d_prussia = { set_de_jure_liege_title = title:k_poland }
 		title:k_lithuania = { set_de_jure_liege_title = title:e_west_slavia }
+		title:k_galicia-volhynia = { set_de_jure_liege_title = title:e_russia }
 		title:d_vorkuta = { set_de_jure_liege_title = title:k_bjarmaland }
 		#撒哈拉
 		title:d_desert = { set_de_jure_liege_title = title:k_sahara }
@@ -45,17 +74,32 @@
 		#撒哈拉以南
 		title:d_kanem = { set_de_jure_liege_title = title:k_kanem }
 		title:d_air = { set_de_jure_liege_title = title:k_songhay }
+		title:d_timbuktu = { set_de_jure_liege_title = title:k_ghana }
+		title:d_west_mossi = { set_de_jure_liege_title = title:k_gurma }
+		title:d_southern_ethiopia = { set_de_jure_liege_title = title:k_abyssinia }
 		#大理
 		title:d_dali = { set_de_jure_liege_title = title:k_dali }
+		title:d_chuanxi = { set_de_jure_liege_title = title:k_dongchuan }
+		title:d_chuannan = { set_de_jure_liege_title = title:k_dongchuan }
 		#东北
 		title:d_gwanbuk = { set_de_jure_liege_title = title:k_goguryeo }
 		title:d_argun = { set_de_jure_liege_title = title:k_otuken }
 		title:d_angara = { set_de_jure_liege_title = title:k_angara }
+		title:d_western_gobi = { set_de_jure_liege_title = title:k_naimania }
 		title:k_amur = { set_de_jure_liege_title = title:e_andong }
 		title:k_hitakami = { set_de_jure_liege_title = title:e_japan }
 		title:k_aynumosir = { set_de_jure_liege_title = title:e_japan }
 		#非洲
 		title:d_cameroon_highlands = { set_de_jure_liege_title = title:k_igbo-benue }
+		#印度
+		title:k_kashmir = { set_de_jure_liege_title = title:e_hindustan }
+		title:k_punjab = { set_de_jure_liege_title = title:e_hindustan }
+		title:k_delhi = { set_de_jure_liege_title = title:e_hindustan }
+		title:k_kosala = { set_de_jure_liege_title = title:e_hindustan }
+		title:k_himalaya = { set_de_jure_liege_title = title:e_hindustan }
+		#东南亚
+		title:d_lesser_sunda = { set_de_jure_liege_title = title:k_yavakadvipa }
+		title:k_yavakadvipa = { set_de_jure_liege_title = title:e_majapahit }
 		#伊尔汗国
 		title:e_persia = {
 		  	every_in_de_jure_hierarchy = {
