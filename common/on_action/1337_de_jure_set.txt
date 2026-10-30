@@ -20,12 +20,12 @@
 		  		set_de_jure_liege_title = title:k_east_francia
 		  	}
 		}
-		title:k_bavaria = {
+		title:k_lotharingia = {
 		  	every_in_de_jure_hierarchy = {
 		  		limit = {
 		  			tier = tier_duchy
 		  		}
-		  		set_de_jure_liege_title = title:k_austria
+		  		set_de_jure_liege_title = title:k_lotharingia
 		  	}
 		}
 		title:k_frisia = {
@@ -36,9 +36,19 @@
 		  		set_de_jure_liege_title = title:k_lotharingia
 		  	}
 		}
+		title:k_bavaria = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_east_francia
+		  	}
+		}
 		title:d_bavaria = { set_de_jure_liege_title = title:k_east_francia }
-		title:d_slovenia = { set_de_jure_liege_title = title:k_austria }
-		title:k_burgundy = { set_de_jure_liege_title = title:e_france }
+		title:d_slovenia = { set_de_jure_liege_title = title:k_east_francia }
+		title:k_burgundy = { set_de_jure_liege_title = title:e_hre }
+		title:d_silesia = { set_de_jure_liege_title = title:k_bohemia }
+		title:k_east_francia = { set_title_name = k_germany }
 		#安达卢西亚
 		title:d_andalusia = { set_de_jure_liege_title = title:k_andalusia }
 		#意大利
@@ -51,23 +61,59 @@
 		  		set_de_jure_liege_title = title:k_italy
 		  	}
 		}
-		#巴尔干
+		#地中海
 		title:d_thrace = { set_de_jure_liege_title = title:k_thessalonika }
 		title:d_northern_greece = { set_de_jure_liege_title = title:k_hellas }
 		title:d_aegean_archipelago = { set_de_jure_liege_title = title:k_hellas }
 		title:d_albania = { set_de_jure_liege_title = title:k_albania }
 		title:k_albania = { set_de_jure_liege_title = title:e_byzantium }
+		title:d_moldavia = { set_de_jure_liege_title = title:k_dacia }
 		title:k_italy = { set_de_jure_liege_title = title:e_italy }
 		title:d_abruzzo = { set_de_jure_liege_title = title:k_naples }
 		title:k_romagna = { set_de_jure_liege_title = title:e_italy }
 		title:k_naples = { set_de_jure_liege_title = title:e_italy }
 		title:k_trinacria = { set_de_jure_liege_title = title:e_italy }
 		title:k_sardinia = { set_de_jure_liege_title = title:e_italy }
+		title:d_balearics = { set_de_jure_liege_title = title:k_mediterranean_sea }
+		title:k_mediterranean_sea = { set_de_jure_liege_title = title:e_spain }
 		#罗斯
 		title:d_prussia = { set_de_jure_liege_title = title:k_poland }
 		title:k_lithuania = { set_de_jure_liege_title = title:e_west_slavia }
 		title:k_galicia-volhynia = { set_de_jure_liege_title = title:e_russia }
 		title:d_vorkuta = { set_de_jure_liege_title = title:k_bjarmaland }
+		title:d_polesia = { set_de_jure_liege_title = title:k_white_rus }
+		title:d_podolia = { set_de_jure_liege_title = title:k_ruthenia }
+		title:d_smolensk = { set_de_jure_liege_title = title:k_opolye }
+		title:d_oka = { set_de_jure_liege_title = title:k_opolye }
+		title:d_yaroslavl = { set_de_jure_liege_title = title:k_opolye }
+		title:d_tambov = { set_de_jure_liege_title = title:k_opolye }
+		title:k_bjarmaland = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_novgorod
+		  	}
+		}
+		title:k_mordvinia = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_volga_bulgaria
+		  	}
+		}
+		title:d_ust_sysola = { set_de_jure_liege_title = title:k_permia }
+		title:d_vorkuta = { set_de_jure_liege_title = title:k_permia }
+		title:k_permia = { set_de_jure_liege_title = title:e_russia }
+		title:k_volga_bulgaria = { set_de_jure_liege_title = title:e_russia }
+		#草原
+		title:d_kursk = { set_de_jure_liege_title = title:k_pontic_steppe }
+		title:d_astrakhan = { set_de_jure_liege_title = title:k_caspian_steppe }
+		title:d_lower_don = { set_de_jure_liege_title = title:k_pontic_steppe }
+		#中东
+		title:d_jazira = { set_de_jure_liege_title = title:k_mesopotamia }
+		title:d_vorkuta = { set_de_jure_liege_title = title:k_permia }
 		#撒哈拉
 		title:d_desert = { set_de_jure_liege_title = title:k_sahara }
 		title:d_western_sahara = { set_de_jure_liege_title = title:k_sahara }
@@ -158,6 +204,23 @@
 		  		}
 		  		set_de_jure_liege_title = title:e_chagatai
 		  	}
+		}
+		#海间
+		# title:e_carpathia = {
+		#   	every_in_de_jure_hierarchy = {
+		#   		limit = {
+		#   			tier = tier_kingdom
+		#   		}
+		#   		set_de_jure_liege_title = title:e_west_slavia
+		#   	}
+		# }
+		title:k_galicia-volhynia = { set_de_jure_liege_title = title:e_west_slavia }
+		title:k_white_rus = { set_de_jure_liege_title = title:e_west_slavia }
+		title:k_ruthenia = { set_de_jure_liege_title = title:e_west_slavia }
+		#征服者
+		character:tur_orhan = {
+			add_trait = conqueror
+			create_story = story_conqueror
 		}
 	}
 }

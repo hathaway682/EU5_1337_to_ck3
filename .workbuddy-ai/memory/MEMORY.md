@@ -7,6 +7,7 @@
 - EU5：location→province→area→region。`definitions.txt` 是 tab 缩进，必须栈解析 `next(x for x in reversed(stack) if x.endswith(("_region","_area","_province")))`。4149 province / 27334 location。
 - 要人口必须读 `06_pops.txt` 的 `size`（浮点）；`eu5_county_peoples.csv` 只是 location 个数多数。
 - CK3 `b_<name>` 的 `<name>` = EU5 location 名；3725/3819 county 严格对应单一 province。质心缓存 `_ck3_province_centroid.json` 读回必须 `{int(k): v}`。
+- **头衔 `capital` 对齐**：`countries[tag]["capital"]` 是 **location 名**，CK3 侧取 `b_<location>` 的父 `c_`；`capital` 一律写 `c_`（三个声明文件里 2482 个全是 `c_`，无 `b_` 写法）。工具 `gen_debug/_fix_title_capital.py`（幂等，`--dry-run`），只处理 title_map 里原生 d/k/e/h 键、跳过目标县 owner 不是该国的（MEN 的 `milas` 无 `b_milas`、落在 AYD 的 `c_aydin`）。**`00_landed_titles.txt` 的 capital 是 CU 产物，重跑会覆盖**。
 - 本地化永远比 key 权威，先 `grep -rn "<key>" localization/simp_chinese/`。
 
 ## 二、头衔与法理（硬规则）
@@ -31,6 +32,7 @@
 - 复合名每部分是独立 key，按 EU5 部分拼接（中文无分隔符、英文空格）。
 - Git：master=发布分支，eu5-coa 分支存纹章；禁 git worktree；GitHub Desktop 提交，push 前 fetch。
 - 地图可视化一律 `ck3-mapviz`，严禁自己算投影打点。
+- **CU 会在开局重算 development**：`common/on_action/cu_neighbor_reassigned_initialization.txt` 里的 `cu_neighbor_reassigned_development_initialize` 会按邻接重新初始化各地发展度，把 `history/titles/` 里写的 `change_development_level` 全部冲掉。现已整段注释；**重跑生成器或更新 CU 后必须检查是否被写回**。判断"发展度没生效"先看这里，别怀疑写法。
 - **备份归档**：所有 `*.bak*` 放 `F:/EU5_Modern_Borders_bak/`，**按原目录结构分层保留**，项目目录内不得残留 bak。
 - **编码**：mod 的 `.txt`/`.yml` 是 UTF-8-BOM + CRLF。追加内容一律写 `\r\n`（用 `\n` 会写出裸 LF）。`json.dumps` 用 `newline="\n"`。删整行正则必须带 `[^\r\n]*\r?$`，否则只删前缀把值留成孤立行；CRLF 里 `[^\r\n]*$` 匹配不到（`$` 前卡着 `\r`），要写 `\r?$` 或用 `.*$`。
 
