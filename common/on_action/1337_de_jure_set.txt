@@ -11,6 +11,15 @@
 			set_title_color = { 180 200 200 }
 			tgp_set_wuking_element_effect = { ELEMENT = metal }
 		}
+		# 安茹帝国
+		title:e_britannia = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+		  		set_de_jure_liege_title = title:e_france
+		  	}
+		}
 		# 德国
 		title:k_pomerania = {
 		  	every_in_de_jure_hierarchy = {
@@ -47,7 +56,6 @@
 		title:d_bavaria = { set_de_jure_liege_title = title:k_east_francia }
 		title:d_slovenia = { set_de_jure_liege_title = title:k_east_francia }
 		title:k_burgundy = { set_de_jure_liege_title = title:e_hre }
-		title:d_silesia = { set_de_jure_liege_title = title:k_bohemia }
 		title:k_east_francia = { set_title_name = k_germany }
 		#安达卢西亚
 		title:d_andalusia = { set_de_jure_liege_title = title:k_andalusia }
@@ -86,7 +94,7 @@
 		title:d_smolensk = { set_de_jure_liege_title = title:k_opolye }
 		title:d_oka = { set_de_jure_liege_title = title:k_opolye }
 		title:d_yaroslavl = { set_de_jure_liege_title = title:k_opolye }
-		title:d_tambov = { set_de_jure_liege_title = title:k_opolye }
+		#title:d_tambov = { set_de_jure_liege_title = title:k_opolye }
 		title:k_bjarmaland = {
 		  	every_in_de_jure_hierarchy = {
 		  		limit = {
@@ -106,14 +114,229 @@
 		title:d_ust_sysola = { set_de_jure_liege_title = title:k_permia }
 		title:d_vorkuta = { set_de_jure_liege_title = title:k_permia }
 		title:k_permia = { set_de_jure_liege_title = title:e_russia }
-		title:k_volga_bulgaria = { set_de_jure_liege_title = title:e_russia }
+		#title:k_volga_bulgaria = { set_de_jure_liege_title = title:e_russia }
 		#草原
 		title:d_kursk = { set_de_jure_liege_title = title:k_pontic_steppe }
-		title:d_astrakhan = { set_de_jure_liege_title = title:k_caspian_steppe }
 		title:d_lower_don = { set_de_jure_liege_title = title:k_pontic_steppe }
+		title:d_astrakhan = { set_de_jure_liege_title = title:k_caspian_steppe }
+		title:d_desht_kipchak = { set_de_jure_liege_title = title:k_caspian_steppe }
+		title:k_qara_dala = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_sibir
+		  	}
+		}
+		title:k_yugra = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_sibir
+		  	}
+		}
+		title:k_ob = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_sibir
+		  	}
+		}
+		title:k_kipchak = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_sibir
+		  	}
+		}
+		title:d_tomsk = { set_de_jure_liege_title = title:k_angara }
+		title:d_tuva = { set_de_jure_liege_title = title:k_otuken }
+		title:d_mongolian_great_lakes = { set_de_jure_liege_title = title:k_otuken }
+		title:d_western_gobi = { set_de_jure_liege_title = title:k_otuken }
+		title:d_southern_gobi = { set_de_jure_liege_title = title:k_otuken }
+		title:d_eastern_gobi = { set_de_jure_liege_title = title:k_gobi }
+		title:d_argun = { set_de_jure_liege_title = title:k_gobi }
+		title:d_shilkari = { set_de_jure_liege_title = title:k_gobi }
+		title:d_tarim = { set_de_jure_liege_title = title:k_dzungaria }
+		title:d_zhetysu = { set_de_jure_liege_title = title:k_dzungaria }
+		#中原
+		title:k_daibei = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_hebei
+		  	}
+		}
+		title:k_hedong = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_hebei
+		  	}
+		}
+		title:k_youji = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_hebei
+		  	}
+		}
+		title:k_qingxu = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_hebei
+		  	}
+		}
+		title:k_shannan = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_henan
+		  	}
+		}
+		title:k_huainan = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_henan
+		  	}
+		}
+		title:k_liangzhe = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_jiangdong
+		  	}
+		}
+		title:k_fujian = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_jiangdong
+		  	}
+		}
+		title:k_kuizhou = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_hunan
+		  	}
+		}
+		title:k_lingxi = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_hunan
+		  	}
+		}
+		title:k_qianzhong = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_hunan
+		  	}
+		}
+		title:d_haibei_hainan = { set_de_jure_liege_title = title:k_hunan }
+		title:d_guangdong = { set_de_jure_liege_title = title:k_jiangxi }
+		title:d_dali = { set_de_jure_liege_title = title:k_dali }
+		title:d_chuandong = { set_de_jure_liege_title = title:k_dongchuan }
+		title:d_chuanxi = { set_de_jure_liege_title = title:k_dongchuan }
+		title:d_chuannan = { set_de_jure_liege_title = title:k_dali }
+		title:d_yanbei = { set_de_jure_liege_title = title:k_hebei }
+		title:k_viet = { set_de_jure_liege_title = title:e_jingyang }
+		#西藏
+		title:k_maryul = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_tsang
+		  	}
+		}
+		title:k_guge = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_tsang
+		  	}
+		}
+		title:k_lhomon = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_tsang
+		  	}
+		}
+		title:k_kham = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_tsang
+		  	}
+		}
+		title:k_amdo = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_tsang
+		  	}
+		}
+		#东北
+		title:k_shiwei = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_luzhen
+		  	}
+		}
+		title:d_liaodong = { set_de_jure_liege_title = title:k_luzhen }
+		title:d_songhua = { set_de_jure_liege_title = title:k_luzhen }
+		title:d_middle_amur = { set_de_jure_liege_title = title:k_amur }
+		title:d_gwanbuk = { set_de_jure_liege_title = title:k_goguryeo }
+		title:d_angara = { set_de_jure_liege_title = title:k_angara }
+		title:k_amur = { set_de_jure_liege_title = title:e_andong }
+		title:k_hitakami = { set_de_jure_liege_title = title:e_japan }
+		title:k_aynumosir = { set_de_jure_liege_title = title:e_japan }
+		title:k_silla = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_goguryeo
+		  	}
+		}
+		title:k_baekje = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_goguryeo
+		  	}
+		}
 		#中东
 		title:d_jazira = { set_de_jure_liege_title = title:k_mesopotamia }
 		title:d_vorkuta = { set_de_jure_liege_title = title:k_permia }
+		title:d_north_yemen = { set_de_jure_liege_title = title:k_yemen }
 		#撒哈拉
 		title:d_desert = { set_de_jure_liege_title = title:k_sahara }
 		title:d_western_sahara = { set_de_jure_liege_title = title:k_sahara }
@@ -123,26 +346,45 @@
 		title:d_timbuktu = { set_de_jure_liege_title = title:k_ghana }
 		title:d_west_mossi = { set_de_jure_liege_title = title:k_gurma }
 		title:d_southern_ethiopia = { set_de_jure_liege_title = title:k_abyssinia }
-		#大理
-		title:d_dali = { set_de_jure_liege_title = title:k_dali }
-		title:d_chuanxi = { set_de_jure_liege_title = title:k_dongchuan }
-		title:d_chuannan = { set_de_jure_liege_title = title:k_dongchuan }
-		#东北
-		title:d_gwanbuk = { set_de_jure_liege_title = title:k_goguryeo }
-		title:d_argun = { set_de_jure_liege_title = title:k_otuken }
-		title:d_angara = { set_de_jure_liege_title = title:k_angara }
-		title:d_western_gobi = { set_de_jure_liege_title = title:k_naimania }
-		title:k_amur = { set_de_jure_liege_title = title:e_andong }
-		title:k_hitakami = { set_de_jure_liege_title = title:e_japan }
-		title:k_aynumosir = { set_de_jure_liege_title = title:e_japan }
+		title:d_northern_somalia = { set_de_jure_liege_title = title:k_adal }
+		title:d_inner_somalia = { set_de_jure_liege_title = title:k_ajuraan }
+		title:d_egaso_ngiro = { set_de_jure_liege_title = title:k_ajuraan }
 		#非洲
 		title:d_cameroon_highlands = { set_de_jure_liege_title = title:k_igbo-benue }
 		#印度
-		title:k_kashmir = { set_de_jure_liege_title = title:e_hindustan }
-		title:k_punjab = { set_de_jure_liege_title = title:e_hindustan }
-		title:k_delhi = { set_de_jure_liege_title = title:e_hindustan }
-		title:k_kosala = { set_de_jure_liege_title = title:e_hindustan }
-		title:k_himalaya = { set_de_jure_liege_title = title:e_hindustan }
+		title:d_upper_indus = { set_de_jure_liege_title = title:k_delhi }
+		title:d_punjab = { set_de_jure_liege_title = title:k_delhi }
+		title:d_nepal = { set_de_jure_liege_title = title:k_delhi }
+		title:d_awadh = { set_de_jure_liege_title = title:k_delhi }
+		title:d_bhojpur = { set_de_jure_liege_title = title:k_delhi }
+		title:d_sindh = { set_de_jure_liege_title = title:k_rajputana }
+		title:d_saurashtra = { set_de_jure_liege_title = title:k_rajputana }
+		title:d_gujarat = { set_de_jure_liege_title = title:k_rajputana }
+		title:d_gondwana = { set_de_jure_liege_title = title:k_malwa }
+		title:d_vidarbha = { set_de_jure_liege_title = title:k_malwa }
+		title:d_gondwana = { set_de_jure_liege_title = title:k_malwa }
+		title:d_karnakassala = { set_de_jure_liege_title = title:k_tamilakam }
+		title:d_andhra = { set_de_jure_liege_title = title:k_tamilakam }
+		title:d_telingana = { set_de_jure_liege_title = title:k_tamilakam }
+		title:d_sailan = { set_de_jure_liege_title = title:k_tamilakam }
+		title:k_maharastra = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_tamilakam
+		  	}
+		}
+		title:d_assam = { set_de_jure_liege_title = title:k_bengal }
+		title:d_orissa = { set_de_jure_liege_title = title:k_bengal }
+		title:k_bihar = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_bengal
+		  	}
+		}
 		#东南亚
 		title:d_lesser_sunda = { set_de_jure_liege_title = title:k_yavakadvipa }
 		title:k_yavakadvipa = { set_de_jure_liege_title = title:e_majapahit }
@@ -222,5 +464,6 @@
 			add_trait = conqueror
 			create_story = story_conqueror
 		}
+		set_global_variable = mongol_empire_has_spawned
 	}
 }

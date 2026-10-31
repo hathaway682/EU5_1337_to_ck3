@@ -1,0 +1,24 @@
+heddal_stave_church_01 Heddal Stave Church b_tonsberg => b_skien 25.18
+temple_of_uppsala_01 Temple of Uppsala b_stockholm => b_uppsala 31.38
+falun_mines_01 The Falun Mines b_leksand => b_falun 31.32
+visby_ringmur_01 Visby Ringmur b_slite => b_visby 24.84
+fairy_chimneys Troglodytic Settlements b_kayseri => b_urgup 31.0
+somapura_university_01 Somapura University b_shahjadpur => b_naogaon 42.43
+brihadeeswarar_temple_01 Brihadeeswarar Temple b_pattukkottai => b_thanjavur 21.54
+khajuraho_01 Temple City b_chanderi => b_khajuraho 99.46
+iron_pillar_of_delhi_01 Iron Pillar of Delhi b_rohtak => b_delhi 23.02
+london_bridge_01 London Bridge b_kingston => b_london 9.85
+holy_site_basilica_santiago_01 Cathedral of Santiago de Compostela b_mellid => b_santiago_compostela 18.25
+tower_of_hercules_01 Farum Brigantium b_betanzos => b_coruna 27.29
+rock_of_gibraltar_01 Rock of Gibraltar b_algeciras => b_gibraltar 6.4
+cluny_abbey_01 Cluny Monastery b_montcenis => b_macon 32.2
+Traceback (most recent call last):
+duomo_florence_01 Duomo of Florence b_prato => b_florence 21.47
+schwaz_mines_01 Schwaz Mine b_innsbruck => b_schwaz 23.77
+ratnapura_mines_01 The Ratnapura Mines b_gampola => b_ratnapura_lka 18.87
+sanchi_stupa_01 Great Stupa of Sanchi b_sironj => b_bhilsa 20.62
+  File "D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape\gen_debug\calibrate_building_names_20261031.py", line 60, in <module>
+    if d['named_province']!=d['old_province']:print(d['building_family'],d['building_english'],d['old_barony'],'=>',d['named_barony'],d['move_distance'])
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\u010d' in position 8: illegal multibyte sequence
+trepca_mines_01 

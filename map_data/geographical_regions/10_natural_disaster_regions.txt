@@ -1,66 +1,12 @@
-﻿# Rebuilt from CU barony geometry / EU5 definitions, 2026-10-31.
-# Maximum title tier: duchy. Partial counties use province IDs.
+﻿# Region granularity follows CK3 vanilla declarations, adapted to current EU5 duchies.
+# No kingdom, empire or hegemony references. Original fine-grained regions stay precise.
 
 global_flood_region = {
-	duchies = {
-		d_andalusia d_smolensk d_suzdal d_tver d_yedisan d_zaporizhzhia d_zarma
-	}
-	counties = {
-		c_agenais c_alatyr c_alessandria c_alexeyevka c_altmark c_alto_alentejo c_amgun c_anqing
-		c_antwerp c_armagnac c_arrah c_astrakhan c_asyut c_avignonnais c_azamgarh c_azov
-		c_bacs c_badajoz c_baghdad c_baixo_alentejo c_balti_moldova c_bambara c_baramahal c_baranya
-		c_bari_doab c_barysaw c_basarabia c_basra c_bastar c_bataih c_bazadais c_beaujolais
-		c_belgorod c_beljamen c_beloe c_belozerskaya c_berda c_bergisches_land c_bezhetskaya c_bhagalpur
-		c_binzhou c_bolghar c_bologna c_bolon c_bordelais c_borisoglebsk c_branicevo c_bratslav
-		c_breslauja c_buda c_buhayra c_caceres c_cairo c_caux c_champasak c_changde
-		c_changzhou c_cheboksary c_chelmno c_cherkasy c_chernihiv c_chizhou c_chornobyl c_chuzhou
-		c_chyorny_yar c_ciechanow c_cola_nadu c_cremona c_czersk c_dakahliyya c_daming c_danzig
-		c_darbhanga c_dardeling c_deqing c_derajat c_derevskaya c_dezhou c_dobrzyn c_donetsk
-		c_dongchang c_dongping c_drohobych c_dzisna c_east_muntenia c_eastern_podolia c_eifel c_elbmarch
-		c_fejer c_ferrara c_galich c_gaur c_gharbiyya c_gomel c_gorin c_gorodets
-		c_guangzhou c_halych c_hanyang c_he c_henan c_hezhou_guangxi c_holstein c_hombori
-		c_hont c_hsipaw c_huaiqing c_huangzhou c_humar c_igbomina c_indrapura_khmer c_ishanapura
-		c_jinan c_jingmen c_jingzhou c_jingzhou_beizhili c_jining c_jiujiang c_kaizhou c_kale
-		c_kalingandhra c_karman c_kashary c_kasimov c_kazan c_kempenland c_khalifatabad c_khukhan
-		c_khulna c_kissi c_knyazhaya c_koln_bucht c_kongu_nadu c_kostroma c_kracheh c_kremenskaya
-		c_kurmysh c_kuyavia c_kyiv c_lata c_latgalia c_limburg c_lipetsk c_liptako
-		c_lizhou c_loon c_lower_bureya c_lower_doab c_lower_sindh c_lubny c_luneburger_heide c_luzhkaya
-		c_luzhou c_lviv c_macina c_manikpur c_mantua c_mazyr c_merida c_mianyang
-		c_mikhaylovka c_minya c_mogilev c_mologa c_mozhaysk c_mstsislaw c_muang_sua c_murom
-		c_myaungmya c_nadia c_namaro c_nanchang c_nankang c_nantais c_niederrhein c_niger_delta
-		c_nimois c_ningguo c_nizhny_novgorod c_north_dobruja c_northern_sindh c_nupe c_or_keo c_orhei
-		c_orissa_garjats c_orsha c_pagan c_panyu c_parma c_pathein c_pavia c_pays_france
-		c_pegu c_pereiaslav c_pereyaslavl c_pest c_piacenza c_pingle c_piterka c_pleven
-		c_plock c_pocutia c_pologoye_zaymishche c_polotsk c_poltava c_porossia c_pothwar c_priyutnoye
-		c_purnia c_puzhou c_pyay c_qingzhou c_qusiyya c_radom c_rajabandi c_raozhou
-		c_rawa c_rechytsa c_rostov c_ruhr c_rzhevskaya c_sagaing c_salin c_samara
-		c_sambalpur_garjats c_saratov c_sarov c_savannakhet c_selonia c_semigalia c_semikarakorsk c_sergiyevsk
-		c_shanzhou c_sharqiyya c_simbirsk c_sirpur c_sonargaon c_songzhou c_south_benin c_south_holland
-		c_south_livonia c_south_oltenia c_south_pskov c_south_zazzau c_sumadija c_svir c_taian c_taiping
-		c_taizhou_nanzhili c_tana c_tarnovo c_tarusa c_tengzhou_guangxi c_terebovlia c_tharparkar c_timbuktu
-		c_tongzhou c_toulousain c_touraine c_trujillo c_tuchola c_tursan c_uglich c_unzha
-		c_upper_prussia c_upper_sindh c_ust_tsimla c_valentinois c_varanasi c_vengi_nadu c_verona c_vidin
-		c_viennois c_vilkmerge c_villanueva_de_la_serena c_vitebsk c_volkhovskaya c_vologda c_voronezh c_vukovar_syrmia
-		c_vyadhapura c_warsaw c_weihui c_west_banat c_west_igbo c_west_muntenia c_western_podolia c_westerwald
-		c_wuchang c_wuding_shandong c_wuntho c_wuzhou c_xiangxiang c_xiezhou c_xingguo c_yangzhou
-		c_yaransk c_yaroslavl c_yauri c_yazhelbitskaya c_yelets c_yiling c_yingtian c_yuezhou
-		c_zamyany c_zhangde c_zhaoqing c_zhengzhou c_zhenjiang c_zhydachiv c_zvenigorod
-	}
-	provinces = {
-		575 577 578 579 627 630 631 637
-		641 642 645 646 647 648 823 824
-		825 827 828 829 879 880 881 882
-		884 886 1605 1606 1607 1608 1609 1611
-		1612 1842 1845 1846 1847 1901 1904 1924
-		1928 1930 1931 1933 2002 2003 2006 2008
-		2009 2319 2321 2786 2787 2788 2789 2792
-		2946 3162 3163 3948 5065 5066 5067 5068
-		5069 5070 5081 5083 5085 7406 7408 7409
-		7410 7411 7412 8745 9004 9005 9007 9008
-		9248 9849 9850 9851 9852 9853 11175 11176
-		11185 11666 11667 11671 11672 11673 11674 11675
-		12007 12008 12009 12010 12011 12015 12016 14034
-		15318 15319 15323 15573 15574 15575 15578 15579
+	regions = {
+		yellow_river_region yangtze_river_region pearl_river_region tigris_river_region irrawaddy_river_region mekong_river_region amur_river_region nile_river_region
+		niger_river_region po_river_region rhine_river_region elbe_river_region rhone_river_region garonne_river_region seine_river_region loire_river_region
+		vistula_river_region danube_river_region dniester_river_region dnieper_river_region daugava_river_region lovat_river_region volga_river_region don_river_region
+		guadiana_river_region guadalquivir_river_region ganges_river_region indus_river_region kaveri_river_region godavari_river_region mahanadi_river_region tapti_river_region
 	}
 }
 
@@ -438,12 +384,8 @@ central_asian_earthquake_region = {
 }
 
 north_pacific_earthquake_region = {
-	duchies = {
-		d_ezo d_hokurikudou d_kinai d_nankaidou d_ou d_ryuukyuu d_ryuukyuu_sea d_saikaidou
-		d_sanindou d_sanyoudou d_toukaidou d_tousandou
-	}
-	counties = {
-		c_northern_sakhalin c_southern_sakhalin
+	regions = {
+		world_asia_japan world_asia_sakhalin_hokkaido
 	}
 }
 
@@ -459,30 +401,12 @@ world_asia_southeast_islands_weak_earthquake_region = {
 
 world_asia_north_east_and_korea_weak_earthquake_region = {
 	duchies = {
-		d_gwanseo d_gyeonggi d_haeseo d_honam d_hoseo
-	}
-	counties = {
-		c_amgun c_amur_estuary c_bolon c_cheorwon c_chol c_chuncheon c_gorin c_hulan
-		c_humar c_lalin c_lower_bureya c_lower_non c_middle_songhua c_nuomin c_sanjiang c_tangwang
-		c_tunguska c_upper_bureya c_upper_non c_upper_songhua
-	}
-	provinces = {
-		8091 8093 8094 8231 8233 8234
+		d_gwanseo d_gyeonggi d_haeseo d_honam d_hoseo d_lower_amur d_songhua d_songnen
 	}
 }
 
 world_asia_north_east_and_korea = {
-	duchies = {
-		d_gwanbuk d_gwandong d_gwanseo d_gyeonggi d_haeseo d_honam d_hoseo d_songhua
-		d_ussuri d_yeongnam
-	}
-	counties = {
-		c_amgun c_amur_estuary c_bolon c_chaoyang c_chol c_dingliao c_gaizhou c_gorin
-		c_guangning c_humar c_jinzhou c_liaoyang c_lower_bureya c_lower_non c_nuomin c_quanning
-		c_shangdu c_tumnin c_tunguska c_upper_bureya c_upper_non c_xingzhou
-	}
-	provinces = {
-		8117 8119 8121 8361 8362 8591 8593 8595
-		8597
+	regions = {
+		world_asia_korea world_asia_north_east
 	}
 }

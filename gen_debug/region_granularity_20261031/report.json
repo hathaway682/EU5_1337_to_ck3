@@ -1,0 +1,5105 @@
+{
+  "backup": "F:\\备份\\EU5_Modern_Borders_noshape\\_backup_20261031_184125_region_granularity",
+  "duchy_granularity_regions": 310,
+  "restored_parent_region_links": 140,
+  "vanilla_duchy_regions": 334,
+  "retained_boundary_exceptions": [
+    "custom_gotland",
+    "custom_roman_mesopotamia",
+    "dlc_fp1_region_eastern_adventure_targets_estonia",
+    "dlc_mpo_steppe_east_china_addon",
+    "ghw_region_holy_land",
+    "ghw_region_jerusalem",
+    "ghw_region_thessalonika",
+    "tgp_bi_region",
+    "tgp_deng_region",
+    "tgp_di_region",
+    "tgp_e_region",
+    "tgp_guo_region",
+    "tgp_jing_region",
+    "tgp_liang_region",
+    "tgp_lu_region",
+    "tgp_qi_guannei_region",
+    "tgp_qiong_region",
+    "tgp_shang_region",
+    "tgp_wei_region",
+    "tgp_wey_region",
+    "tgp_xing_region",
+    "tgp_xu_shandong_region",
+    "tgp_yang_region",
+    "world_kabulistan"
+  ],
+  "changed_files": [
+    "10_natural_disaster_regions.txt",
+    "geographical_region.txt",
+    "tgp_chinesenaming_regions.txt"
+  ],
+  "fallback_duchies": [
+    {
+      "region": "custom_roman_mesopotamia",
+      "duchy": "d_iraq_arabi",
+      "covered_baronies": 15,
+      "duchy_baronies": 55
+    },
+    {
+      "region": "custom_gotland",
+      "duchy": "d_gotaland",
+      "covered_baronies": 3,
+      "duchy_baronies": 39
+    },
+    {
+      "region": "world_kabulistan",
+      "duchy": "d_sistan",
+      "covered_baronies": 26,
+      "duchy_baronies": 54
+    },
+    {
+      "region": "ghw_region_thessalonika",
+      "duchy": "d_macedonia",
+      "covered_baronies": 15,
+      "duchy_baronies": 39
+    },
+    {
+      "region": "ghw_region_holy_land",
+      "duchy": "d_levant",
+      "covered_baronies": 31,
+      "duchy_baronies": 72
+    },
+    {
+      "region": "ghw_region_jerusalem",
+      "duchy": "d_levant",
+      "covered_baronies": 18,
+      "duchy_baronies": 72
+    },
+    {
+      "region": "dlc_fp1_region_eastern_adventure_targets_estonia",
+      "duchy": "d_baltic",
+      "covered_baronies": 24,
+      "duchy_baronies": 56
+    },
+    {
+      "region": "dlc_mpo_steppe_east_china_addon",
+      "duchy": "d_datong",
+      "covered_baronies": 15,
+      "duchy_baronies": 36
+    },
+    {
+      "region": "tgp_bi_region",
+      "duchy": "d_shaanxi",
+      "covered_baronies": 23,
+      "duchy_baronies": 65
+    },
+    {
+      "region": "tgp_deng_region",
+      "duchy": "d_hubei",
+      "covered_baronies": 32,
+      "duchy_baronies": 80
+    },
+    {
+      "region": "tgp_di_region",
+      "duchy": "d_hexi",
+      "covered_baronies": 12,
+      "duchy_baronies": 54
+    },
+    {
+      "region": "tgp_e_region",
+      "duchy": "d_hubei",
+      "covered_baronies": 24,
+      "duchy_baronies": 80
+    },
+    {
+      "region": "tgp_guo_region",
+      "duchy": "d_henan",
+      "covered_baronies": 7,
+      "duchy_baronies": 97
+    },
+    {
+      "region": "tgp_jing_region",
+      "duchy": "d_hubei",
+      "covered_baronies": 24,
+      "duchy_baronies": 80
+    },
+    {
+      "region": "tgp_liang_region",
+      "duchy": "d_henan",
+      "covered_baronies": 18,
+      "duchy_baronies": 97
+    },
+    {
+      "region": "tgp_lu_region",
+      "duchy": "d_haiyou",
+      "covered_baronies": 15,
+      "duchy_baronies": 40
+    },
+    {
+      "region": "tgp_qi_guannei_region",
+      "duchy": "d_shaanxi",
+      "covered_baronies": 9,
+      "duchy_baronies": 65
+    },
+    {
+      "region": "tgp_qiong_region",
+      "duchy": "d_haibei_hainan",
+      "covered_baronies": 15,
+      "duchy_baronies": 33
+    },
+    {
+      "region": "tgp_shang_region",
+      "duchy": "d_shaanxi",
+      "covered_baronies": 16,
+      "duchy_baronies": 65
+    },
+    {
+      "region": "tgp_wei_region",
+      "duchy": "d_shandong",
+      "covered_baronies": 11,
+      "duchy_baronies": 73
+    },
+    {
+      "region": "tgp_wey_region",
+      "duchy": "d_hebei",
+      "covered_baronies": 10,
+      "duchy_baronies": 34
+    },
+    {
+      "region": "tgp_xing_region",
+      "duchy": "d_hebei",
+      "covered_baronies": 11,
+      "duchy_baronies": 34
+    },
+    {
+      "region": "tgp_xu_shandong_region",
+      "duchy": "d_huaidong",
+      "covered_baronies": 12,
+      "duchy_baronies": 32
+    },
+    {
+      "region": "tgp_yang_region",
+      "duchy": "d_huaidong",
+      "covered_baronies": 15,
+      "duchy_baronies": 32
+    }
+  ],
+  "sibling_tie_resolutions": [
+    {
+      "parent": "material_hsb_deer_antler",
+      "duchy": "d_khwarazm",
+      "winner": "world_steppe_central",
+      "loser": "world_middle_east_persia"
+    },
+    {
+      "parent": "special_mongol_empire_conquest_all_regions",
+      "duchy": "d_dali",
+      "winner": "special_mongol_empire_conquest_region_prio_5",
+      "loser": "special_mongol_empire_conquest_region_bonus"
+    }
+  ],
+  "world_border_adjustments": {
+    "world_asia_china": [
+      8622,
+      8623,
+      8624,
+      8625,
+      8626
+    ],
+    "world_kabulistan": [
+      5430,
+      5431,
+      5432,
+      5433,
+      5434,
+      5435,
+      5436,
+      5437,
+      6594,
+      6595,
+      6596,
+      6597,
+      6598,
+      6599
+    ]
+  },
+  "new_empty_regions": [],
+  "eu5_continents_unchanged": true,
+  "regions": [
+    {
+      "region": "aarlud_khanate_de_jure_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 486,
+      "after_provinces": 486,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_north"
+      ]
+    },
+    {
+      "region": "arab_nomad_area",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 524,
+      "after_provinces": 525,
+      "added": 13,
+      "removed": 12,
+      "duchy_references": 10,
+      "subregions": []
+    },
+    {
+      "region": "baruun_khanate_de_jure_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 164,
+      "after_provinces": 156,
+      "added": 8,
+      "removed": 16,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "blue_horde_de_jure_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 347,
+      "after_provinces": 347,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia_japan"
+      ]
+    },
+    {
+      "region": "board_game_fidchell_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 210,
+      "after_provinces": 210,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 10,
+      "subregions": []
+    },
+    {
+      "region": "chagatai_de_jure_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 292,
+      "after_provinces": 294,
+      "added": 20,
+      "removed": 18,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "cp4_music_area",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1330,
+      "after_provinces": 1311,
+      "added": 57,
+      "removed": 76,
+      "duchy_references": 30,
+      "subregions": [
+        "custom_swedish",
+        "custom_eastern_baltic"
+      ]
+    },
+    {
+      "region": "custom_andalusian",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 165,
+      "after_provinces": 153,
+      "added": 0,
+      "removed": 12,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "custom_aragonese",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 27,
+      "after_provinces": 30,
+      "added": 3,
+      "removed": 0,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_asturleonese",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 30,
+      "after_provinces": 35,
+      "added": 5,
+      "removed": 0,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_bactria",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 217,
+      "after_provinces": 266,
+      "added": 59,
+      "removed": 10,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "custom_bavaria",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 155,
+      "after_provinces": 135,
+      "added": 4,
+      "removed": 24,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "custom_beth_nahrain",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 203,
+      "after_provinces": 201,
+      "added": 16,
+      "removed": 18,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "custom_burgundy",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 129,
+      "after_provinces": 118,
+      "added": 4,
+      "removed": 15,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "custom_carolingian_francia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 418,
+      "after_provinces": 396,
+      "added": 4,
+      "removed": 26,
+      "duchy_references": 18,
+      "subregions": []
+    },
+    {
+      "region": "custom_carolingian_germany",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 273,
+      "after_provinces": 283,
+      "added": 41,
+      "removed": 31,
+      "duchy_references": 9,
+      "subregions": []
+    },
+    {
+      "region": "custom_carolingian_iberia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 79,
+      "after_provinces": 77,
+      "added": 3,
+      "removed": 5,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "custom_carpathia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 260,
+      "after_provinces": 260,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "custom_carthage",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 124,
+      "after_provinces": 119,
+      "added": 11,
+      "removed": 16,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "custom_carthaginian_empire",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 296,
+      "after_provinces": 262,
+      "added": 23,
+      "removed": 57,
+      "duchy_references": 0,
+      "subregions": [
+        "custom_carthage",
+        "custom_tripolitania",
+        "custom_mauretania",
+        "custom_carthago_nova"
+      ]
+    },
+    {
+      "region": "custom_carthago_nova",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 92,
+      "after_provinces": 89,
+      "added": 16,
+      "removed": 19,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "custom_castilian",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 39,
+      "after_provinces": 47,
+      "added": 8,
+      "removed": 0,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_catalan",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 54,
+      "after_provinces": 51,
+      "added": 0,
+      "removed": 3,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "custom_core_austria",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 34,
+      "after_provinces": 39,
+      "added": 8,
+      "removed": 3,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "custom_core_switzerland",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 45,
+      "after_provinces": 43,
+      "added": 4,
+      "removed": 6,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "custom_danish",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 67,
+      "after_provinces": 63,
+      "added": 0,
+      "removed": 4,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "custom_dynastic_cycle",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1708,
+      "after_provinces": 1703,
+      "added": 0,
+      "removed": 5,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia_china"
+      ]
+    },
+    {
+      "region": "custom_eastern_balkans",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 200,
+      "after_provinces": 188,
+      "added": 15,
+      "removed": 27,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "custom_eastern_baltic",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 400,
+      "after_provinces": 402,
+      "added": 28,
+      "removed": 26,
+      "duchy_references": 9,
+      "subregions": []
+    },
+    {
+      "region": "custom_eastern_roman_empire",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1159,
+      "after_provinces": 1182,
+      "added": 28,
+      "removed": 5,
+      "duchy_references": 0,
+      "subregions": [
+        "world_middle_east_jerusalem",
+        "world_europe_south",
+        "world_asia_minor"
+      ]
+    },
+    {
+      "region": "custom_england",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 140,
+      "after_provinces": 149,
+      "added": 9,
+      "removed": 0,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "custom_ep3_restore_rome_eastern_empire",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 10252,
+      "after_provinces": 10171,
+      "added": 68,
+      "removed": 149,
+      "duchy_references": 3,
+      "subregions": [
+        "world_asia_minor",
+        "world_middle_east",
+        "world_africa_east",
+        "world_india",
+        "world_steppe",
+        "world_tibet",
+        "world_europe_south_east",
+        "world_europe_east",
+        "world_asia",
+        "world_siberia"
+      ]
+    },
+    {
+      "region": "custom_europe_eastern_germany",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 310,
+      "after_provinces": 306,
+      "added": 15,
+      "removed": 19,
+      "duchy_references": 9,
+      "subregions": []
+    },
+    {
+      "region": "custom_europe_western_germany",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 482,
+      "after_provinces": 472,
+      "added": 28,
+      "removed": 38,
+      "duchy_references": 17,
+      "subregions": []
+    },
+    {
+      "region": "custom_fennoscandia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 447,
+      "after_provinces": 465,
+      "added": 18,
+      "removed": 0,
+      "duchy_references": 11,
+      "subregions": []
+    },
+    {
+      "region": "custom_frisia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 66,
+      "after_provinces": 55,
+      "added": 10,
+      "removed": 21,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "custom_ganges_plain",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 267,
+      "after_provinces": 225,
+      "added": 23,
+      "removed": 65,
+      "duchy_references": 8,
+      "subregions": []
+    },
+    {
+      "region": "custom_germany",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 163,
+      "after_provinces": 169,
+      "added": 16,
+      "removed": 10,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "custom_greater_armenia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 212,
+      "after_provinces": 176,
+      "added": 22,
+      "removed": 58,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "custom_hungary",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 166,
+      "after_provinces": 166,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "custom_iceland",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 21,
+      "after_provinces": 21,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_ireland",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 95,
+      "after_provinces": 95,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "custom_k_epirus",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 34,
+      "after_provinces": 19,
+      "added": 5,
+      "removed": 20,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_k_hellas",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 36,
+      "after_provinces": 25,
+      "added": 0,
+      "removed": 11,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_k_thessalonika",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 67,
+      "after_provinces": 31,
+      "added": 14,
+      "removed": 50,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_lanka",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 25,
+      "after_provinces": 25,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_latvia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 36,
+      "after_provinces": 56,
+      "added": 20,
+      "removed": 0,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_lotharingia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 111,
+      "after_provinces": 106,
+      "added": 8,
+      "removed": 13,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "custom_mauretania",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 57,
+      "after_provinces": 30,
+      "added": 6,
+      "removed": 33,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_navarra",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 23,
+      "after_provinces": 18,
+      "added": 0,
+      "removed": 5,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_netherlands",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 37,
+      "after_provinces": 37,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "custom_normandy_and_adjacent",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 147,
+      "after_provinces": 160,
+      "added": 13,
+      "removed": 0,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "custom_northern_england",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 99,
+      "after_provinces": 91,
+      "added": 0,
+      "removed": 8,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "custom_northern_italy",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 179,
+      "after_provinces": 200,
+      "added": 25,
+      "removed": 4,
+      "duchy_references": 9,
+      "subregions": []
+    },
+    {
+      "region": "custom_norwegian",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 130,
+      "after_provinces": 145,
+      "added": 15,
+      "removed": 0,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "custom_occitan",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 155,
+      "after_provinces": 153,
+      "added": 8,
+      "removed": 10,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "custom_outremer",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 421,
+      "after_provinces": 456,
+      "added": 47,
+      "removed": 12,
+      "duchy_references": 9,
+      "subregions": []
+    },
+    {
+      "region": "custom_polabia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 81,
+      "after_provinces": 49,
+      "added": 0,
+      "removed": 32,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_portuguese",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 86,
+      "after_provinces": 90,
+      "added": 9,
+      "removed": 5,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "custom_rhineland",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 184,
+      "after_provinces": 185,
+      "added": 23,
+      "removed": 22,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "custom_roman_aegyptus",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 72,
+      "after_provinces": 87,
+      "added": 15,
+      "removed": 0,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "custom_roman_africa",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 84,
+      "after_provinces": 97,
+      "added": 22,
+      "removed": 9,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "custom_roman_caledonia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 60,
+      "after_provinces": 60,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "custom_roman_cyrenaica",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 36,
+      "after_provinces": 14,
+      "added": 0,
+      "removed": 22,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_roman_empire",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 192,
+      "after_provinces": 101,
+      "added": 22,
+      "removed": 113,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "custom_roman_full_borders",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 2611,
+      "after_provinces": 2628,
+      "added": 40,
+      "removed": 23,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_west_iberia",
+        "world_europe_west_francia",
+        "custom_england",
+        "custom_wales",
+        "world_africa_north",
+        "world_middle_east_jerusalem",
+        "world_europe_south",
+        "world_asia_minor"
+      ]
+    },
+    {
+      "region": "custom_roman_hibernia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 95,
+      "after_provinces": 95,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "custom_roman_hispania",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 424,
+      "after_provinces": 424,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 15,
+      "subregions": []
+    },
+    {
+      "region": "custom_roman_illyricum",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 160,
+      "after_provinces": 155,
+      "added": 18,
+      "removed": 23,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "custom_roman_mauretania",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 200,
+      "after_provinces": 165,
+      "added": 0,
+      "removed": 35,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "custom_roman_syria_palestina",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 61,
+      "after_provinces": 72,
+      "added": 11,
+      "removed": 0,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_ryukyu",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 8,
+      "after_provinces": 8,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "custom_sahel_proper",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 320,
+      "after_provinces": 343,
+      "added": 64,
+      "removed": 41,
+      "duchy_references": 14,
+      "subregions": []
+    },
+    {
+      "region": "custom_scotland",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 60,
+      "after_provinces": 60,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "custom_sicily",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 78,
+      "after_provinces": 75,
+      "added": 1,
+      "removed": 4,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "custom_slavia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1465,
+      "after_provinces": 1455,
+      "added": 84,
+      "removed": 94,
+      "duchy_references": 42,
+      "subregions": []
+    },
+    {
+      "region": "custom_south_francia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 150,
+      "after_provinces": 150,
+      "added": 1,
+      "removed": 1,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "custom_south_slavia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 301,
+      "after_provinces": 296,
+      "added": 19,
+      "removed": 24,
+      "duchy_references": 8,
+      "subregions": []
+    },
+    {
+      "region": "custom_southern_england",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 79,
+      "after_provinces": 79,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "custom_stretch_austria",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 25,
+      "after_provinces": 12,
+      "added": 6,
+      "removed": 19,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_sub_saharan_africa_immediate",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 451,
+      "after_provinces": 441,
+      "added": 46,
+      "removed": 56,
+      "duchy_references": 20,
+      "subregions": []
+    },
+    {
+      "region": "custom_swedish",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 73,
+      "after_provinces": 39,
+      "added": 0,
+      "removed": 34,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_theodosian_ere",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 700,
+      "after_provinces": 640,
+      "added": 19,
+      "removed": 79,
+      "duchy_references": 6,
+      "subregions": [
+        "custom_roman_syria_palestina",
+        "custom_roman_aegyptus",
+        "custom_roman_cyrenaica",
+        "ghw_region_greece",
+        "ghw_region_thessalonika",
+        "ghw_region_anatolia"
+      ]
+    },
+    {
+      "region": "custom_tripolitania",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 32,
+      "after_provinces": 24,
+      "added": 7,
+      "removed": 15,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_viet_lands",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 92,
+      "after_provinces": 86,
+      "added": 5,
+      "removed": 11,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "custom_wales",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 34,
+      "after_provinces": 25,
+      "added": 0,
+      "removed": 9,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "custom_west_francia_minus_mediterranean",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 166,
+      "after_provinces": 155,
+      "added": 7,
+      "removed": 18,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "custom_west_slavia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 389,
+      "after_provinces": 373,
+      "added": 13,
+      "removed": 29,
+      "duchy_references": 11,
+      "subregions": []
+    },
+    {
+      "region": "divergence_island_regions",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 104,
+      "after_provinces": 83,
+      "added": 8,
+      "removed": 29,
+      "duchy_references": 8,
+      "subregions": []
+    },
+    {
+      "region": "dlc_ep1_arab_trade_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 644,
+      "after_provinces": 626,
+      "added": 20,
+      "removed": 38,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa_north_east",
+        "world_middle_east_arabia"
+      ]
+    },
+    {
+      "region": "dlc_ep1_arthurian_heartlands_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 49,
+      "after_provinces": 51,
+      "added": 8,
+      "removed": 6,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "dlc_ep1_dutch_trade_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 774,
+      "after_provinces": 752,
+      "added": 4,
+      "removed": 26,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_west_britannia",
+        "world_europe_west_francia"
+      ]
+    },
+    {
+      "region": "dlc_ep1_east_africa_trade_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 280,
+      "after_provinces": 284,
+      "added": 12,
+      "removed": 8,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa_east"
+      ]
+    },
+    {
+      "region": "dlc_ep1_hansa_trade_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1610,
+      "after_provinces": 1605,
+      "added": 24,
+      "removed": 29,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_west_britannia",
+        "world_europe_west_germania",
+        "world_europe_north"
+      ]
+    },
+    {
+      "region": "dlc_ep1_iberia_trade_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 424,
+      "after_provinces": 424,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_west_iberia"
+      ]
+    },
+    {
+      "region": "dlc_ep1_indian_trade_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1176,
+      "after_provinces": 1198,
+      "added": 28,
+      "removed": 6,
+      "duchy_references": 0,
+      "subregions": [
+        "world_india_deccan",
+        "world_india_bengal",
+        "world_india_rajastan"
+      ]
+    },
+    {
+      "region": "dlc_ep1_italian_trade_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1088,
+      "after_provinces": 1110,
+      "added": 27,
+      "removed": 5,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_south",
+        "world_asia_minor"
+      ]
+    },
+    {
+      "region": "dlc_ep1_levant_trade_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 71,
+      "after_provinces": 72,
+      "added": 3,
+      "removed": 2,
+      "duchy_references": 0,
+      "subregions": [
+        "world_middle_east_jerusalem"
+      ]
+    },
+    {
+      "region": "dlc_ep1_mongol_trade_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1192,
+      "after_provinces": 1098,
+      "added": 54,
+      "removed": 148,
+      "duchy_references": 0,
+      "subregions": [
+        "world_steppe_west",
+        "world_steppe_central",
+        "world_steppe_east",
+        "world_steppe_tarim"
+      ]
+    },
+    {
+      "region": "dlc_ep1_north_africa_trade_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 286,
+      "after_provinces": 311,
+      "added": 32,
+      "removed": 7,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa_north_west"
+      ]
+    },
+    {
+      "region": "dlc_ep1_persian_trade_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 672,
+      "after_provinces": 687,
+      "added": 47,
+      "removed": 32,
+      "duchy_references": 0,
+      "subregions": [
+        "world_middle_east_persia"
+      ]
+    },
+    {
+      "region": "dlc_ep1_region_south_east_europe",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 701,
+      "after_provinces": 701,
+      "added": 26,
+      "removed": 26,
+      "duchy_references": 29,
+      "subregions": []
+    },
+    {
+      "region": "dlc_ep1_russia_trade_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 2577,
+      "after_provinces": 2614,
+      "added": 63,
+      "removed": 26,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_west_germania",
+        "world_europe_north",
+        "world_europe_east"
+      ]
+    },
+    {
+      "region": "dlc_ep1_southwest_silk_road_trade_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 441,
+      "after_provinces": 370,
+      "added": 19,
+      "removed": 90,
+      "duchy_references": 0,
+      "subregions": [
+        "world_burma",
+        "world_tibet"
+      ]
+    },
+    {
+      "region": "dlc_ep1_varangian_trade_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1924,
+      "after_provinces": 1907,
+      "added": 33,
+      "removed": 50,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_east",
+        "world_steppe_west"
+      ]
+    },
+    {
+      "region": "dlc_ep1_west_africa_trade_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 721,
+      "after_provinces": 755,
+      "added": 48,
+      "removed": 14,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa_west",
+        "world_africa_sahara"
+      ]
+    },
+    {
+      "region": "dlc_fp1_achievement_vladimirs_second_choice",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 784,
+      "after_provinces": 782,
+      "added": 41,
+      "removed": 43,
+      "duchy_references": 24,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp1_region_colonial_eastern_europe",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1145,
+      "after_provinces": 1209,
+      "added": 80,
+      "removed": 16,
+      "duchy_references": 36,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp1_region_core_mainland_scandinavia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 253,
+      "after_provinces": 256,
+      "added": 15,
+      "removed": 12,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp1_region_eastern_adventure_targets_novgorod",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 133,
+      "after_provinces": 100,
+      "added": 0,
+      "removed": 33,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp1_region_eastern_adventure_targets_ruthenia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 186,
+      "after_provinces": 181,
+      "added": 26,
+      "removed": 31,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp1_region_eastern_adventure_targets_vladimir",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 128,
+      "after_provinces": 154,
+      "added": 38,
+      "removed": 12,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp1_region_eastern_adventure_targets_white_rus",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 169,
+      "after_provinces": 141,
+      "added": 6,
+      "removed": 34,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp1_region_eastern_adventure_targets_zaporizhia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 151,
+      "after_provinces": 167,
+      "added": 34,
+      "removed": 18,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp1_region_eastern_scandinavia_pool",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 97,
+      "after_provinces": 85,
+      "added": 0,
+      "removed": 12,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp1_region_mysterious_stranger_locations",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1645,
+      "after_provinces": 1695,
+      "added": 66,
+      "removed": 16,
+      "duchy_references": 36,
+      "subregions": [
+        "world_europe_north"
+      ]
+    },
+    {
+      "region": "dlc_fp1_region_russian_steppe",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1731,
+      "after_provinces": 1643,
+      "added": 56,
+      "removed": 144,
+      "duchy_references": 20,
+      "subregions": [
+        "world_steppe_west",
+        "world_steppe_central",
+        "world_steppe_east"
+      ]
+    },
+    {
+      "region": "dlc_fp1_region_western_adventure_targets_frisia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 64,
+      "after_provinces": 74,
+      "added": 10,
+      "removed": 0,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp1_region_western_adventure_targets_iceland_isles",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 24,
+      "after_provinces": 24,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp1_region_western_adventure_targets_ireland",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 95,
+      "after_provinces": 95,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp1_region_western_adventure_targets_northern_england",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 83,
+      "after_provinces": 91,
+      "added": 8,
+      "removed": 0,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp1_region_western_adventure_targets_northern_france_brittany",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 82,
+      "after_provinces": 92,
+      "added": 10,
+      "removed": 0,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp1_region_western_adventure_targets_pomerania_prussia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 56,
+      "after_provinces": 75,
+      "added": 26,
+      "removed": 7,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp1_region_western_adventure_targets_scotland_isles",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 39,
+      "after_provinces": 25,
+      "added": 0,
+      "removed": 14,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp1_region_western_scandinavia_pool",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 180,
+      "after_provinces": 195,
+      "added": 15,
+      "removed": 0,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp2_form_aragon_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 183,
+      "after_provinces": 186,
+      "added": 8,
+      "removed": 5,
+      "duchy_references": 8,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp2_lyonese_monk_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 574,
+      "after_provinces": 574,
+      "added": 1,
+      "removed": 1,
+      "duchy_references": 6,
+      "subregions": [
+        "world_europe_west_iberia"
+      ]
+    },
+    {
+      "region": "dlc_fp2_mediterranean_shoreline",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 904,
+      "after_provinces": 906,
+      "added": 132,
+      "removed": 130,
+      "duchy_references": 21,
+      "subregions": [
+        "world_europe_south_italy"
+      ]
+    },
+    {
+      "region": "dlc_fp2_old_vasconia_pushed",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 116,
+      "after_provinces": 100,
+      "added": 3,
+      "removed": 19,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "dlc_fp3_eastern_persian_frontier_regions",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 364,
+      "after_provinces": 388,
+      "added": 67,
+      "removed": 43,
+      "duchy_references": 0,
+      "subregions": [
+        "world_khorasan",
+        "world_transoxiana",
+        "world_makran",
+        "world_kabulistan"
+      ]
+    },
+    {
+      "region": "dlc_fp3_greater_persian_frontier_regions",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1230,
+      "after_provinces": 1241,
+      "added": 94,
+      "removed": 83,
+      "duchy_references": 7,
+      "subregions": [
+        "world_khorasan",
+        "world_transoxiana",
+        "world_makran",
+        "world_kabulistan",
+        "world_mesopotamia",
+        "world_asia_minor",
+        "world_jazira"
+      ]
+    },
+    {
+      "region": "dlc_fp3_seljuk_birth_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 71,
+      "after_provinces": 32,
+      "added": 0,
+      "removed": 39,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "dlc_mpo_steppe_caucasus_expansion",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 183,
+      "after_provinces": 188,
+      "added": 16,
+      "removed": 11,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "dlc_mpo_steppe_central_china_expansion",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 209,
+      "after_provinces": 242,
+      "added": 54,
+      "removed": 21,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "dlc_mpo_steppe_central_siberia_addon",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 46,
+      "after_provinces": 44,
+      "added": 10,
+      "removed": 12,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "dlc_mpo_steppe_e_amur_expansion",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 126,
+      "after_provinces": 114,
+      "added": 0,
+      "removed": 12,
+      "duchy_references": 1,
+      "subregions": [
+        "world_asia_sakhalin_hokkaido"
+      ]
+    },
+    {
+      "region": "dlc_mpo_steppe_east_andong_addon",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 118,
+      "after_provinces": 69,
+      "added": 5,
+      "removed": 54,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "dlc_mpo_steppe_east_buryatia_addon",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 98,
+      "after_provinces": 113,
+      "added": 20,
+      "removed": 5,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "dlc_mpo_steppe_hexi_tarim_expansion",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 73,
+      "after_provinces": 84,
+      "added": 18,
+      "removed": 7,
+      "duchy_references": 1,
+      "subregions": [
+        "world_steppe_tarim"
+      ]
+    },
+    {
+      "region": "dlc_mpo_steppe_north_china_expansion",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 397,
+      "after_provinces": 434,
+      "added": 56,
+      "removed": 19,
+      "duchy_references": 8,
+      "subregions": []
+    },
+    {
+      "region": "dlc_mpo_steppe_north_east_asia_expansion",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 216,
+      "after_provinces": 229,
+      "added": 22,
+      "removed": 9,
+      "duchy_references": 5,
+      "subregions": [
+        "world_asia_sakhalin_hokkaido"
+      ]
+    },
+    {
+      "region": "dlc_mpo_steppe_persia_expansion",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 276,
+      "after_provinces": 293,
+      "added": 27,
+      "removed": 10,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "dlc_mpo_steppe_siberia_further_expansion",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 64,
+      "after_provinces": 70,
+      "added": 23,
+      "removed": 17,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "dlc_tgp_grand_canal_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 117,
+      "after_provinces": 117,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 0,
+      "subregions": [
+        "dlc_tgp_grand_canal_1_region",
+        "dlc_tgp_grand_canal_2_region",
+        "dlc_tgp_grand_canal_3_region",
+        "dlc_tgp_grand_canal_4_region"
+      ]
+    },
+    {
+      "region": "dlc_tgp_mainland_southeast_asia_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 385,
+      "after_provinces": 403,
+      "added": 29,
+      "removed": 11,
+      "duchy_references": 10,
+      "subregions": []
+    },
+    {
+      "region": "dlc_tgp_silk_road_route_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1056,
+      "after_provinces": 1056,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 0,
+      "subregions": [
+        "dlc_tgp_silk_road_route_china",
+        "dlc_tgp_silk_road_route_tibet",
+        "dlc_tgp_silk_road_route_india",
+        "dlc_tgp_silk_road_route_central_asia",
+        "dlc_tgp_silk_road_route_transcaspia",
+        "dlc_tgp_silk_road_route_occident"
+      ]
+    },
+    {
+      "region": "dlc_tgp_swahili_coast_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 25,
+      "after_provinces": 22,
+      "added": 9,
+      "removed": 12,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "eastern_plateau_nomad_area",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 48,
+      "after_provinces": 48,
+      "added": 19,
+      "removed": 19,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "egypt_nomad_area",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 111,
+      "after_provinces": 101,
+      "added": 0,
+      "removed": 10,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_afghanistan",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 198,
+      "after_provinces": 163,
+      "added": 0,
+      "removed": 35,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_anatolia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 241,
+      "after_provinces": 258,
+      "added": 23,
+      "removed": 6,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_arabia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 367,
+      "after_provinces": 372,
+      "added": 8,
+      "removed": 3,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_balkans",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 207,
+      "after_provinces": 202,
+      "added": 19,
+      "removed": 24,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_baltic",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 207,
+      "after_provinces": 205,
+      "added": 20,
+      "removed": 22,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_britannia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 332,
+      "after_provinces": 332,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 14,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_caspian_steppe",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 211,
+      "after_provinces": 236,
+      "added": 38,
+      "removed": 13,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_caucasus",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 317,
+      "after_provinces": 305,
+      "added": 27,
+      "removed": 39,
+      "duchy_references": 9,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_celtic",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 210,
+      "after_provinces": 210,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 10,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_central_european",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 568,
+      "after_provinces": 584,
+      "added": 27,
+      "removed": 11,
+      "duchy_references": 17,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_crimea",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 269,
+      "after_provinces": 284,
+      "added": 38,
+      "removed": 23,
+      "duchy_references": 11,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_eastern_middle_east",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 261,
+      "after_provinces": 247,
+      "added": 9,
+      "removed": 23,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_eastern_sahara",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 50,
+      "after_provinces": 50,
+      "added": 18,
+      "removed": 18,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_egypt",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 111,
+      "after_provinces": 101,
+      "added": 0,
+      "removed": 10,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_egypt_et_al",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 138,
+      "after_provinces": 132,
+      "added": 8,
+      "removed": 14,
+      "duchy_references": 1,
+      "subregions": [
+        "ghw_region_egypt"
+      ]
+    },
+    {
+      "region": "ghw_region_england",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 149,
+      "after_provinces": 149,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_ethiopia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 122,
+      "after_provinces": 119,
+      "added": 15,
+      "removed": 18,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_finland_&_estonia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 295,
+      "after_provinces": 243,
+      "added": 12,
+      "removed": 64,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_france",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 445,
+      "after_provinces": 433,
+      "added": 4,
+      "removed": 16,
+      "duchy_references": 20,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_germanic",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 148,
+      "after_provinces": 143,
+      "added": 8,
+      "removed": 13,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_germany",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 488,
+      "after_provinces": 467,
+      "added": 17,
+      "removed": 38,
+      "duchy_references": 17,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_greece",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 70,
+      "after_provinces": 76,
+      "added": 17,
+      "removed": 11,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_gujarat_&_rajputana",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 95,
+      "after_provinces": 109,
+      "added": 17,
+      "removed": 3,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_horn_of_africa",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 101,
+      "after_provinces": 94,
+      "added": 4,
+      "removed": 11,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_hungary",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 260,
+      "after_provinces": 260,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_iberia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 424,
+      "after_provinces": 424,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 15,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_italy",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 265,
+      "after_provinces": 288,
+      "added": 27,
+      "removed": 4,
+      "duchy_references": 14,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_khotan",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 79,
+      "after_provinces": 54,
+      "added": 11,
+      "removed": 36,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_kurdistan",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 107,
+      "after_provinces": 105,
+      "added": 10,
+      "removed": 12,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_lanka_&_bengal",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 135,
+      "after_provinces": 157,
+      "added": 28,
+      "removed": 6,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_mainland_greece",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 112,
+      "after_provinces": 115,
+      "added": 24,
+      "removed": 21,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_mediterranean",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 129,
+      "after_provinces": 119,
+      "added": 9,
+      "removed": 19,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_middle_india",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 591,
+      "after_provinces": 611,
+      "added": 32,
+      "removed": 12,
+      "duchy_references": 17,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_mongolia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 219,
+      "after_provinces": 225,
+      "added": 31,
+      "removed": 25,
+      "duchy_references": 10,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_near_east",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 161,
+      "after_provinces": 175,
+      "added": 35,
+      "removed": 21,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_non_ganges_india",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 798,
+      "after_provinces": 889,
+      "added": 107,
+      "removed": 16,
+      "duchy_references": 21,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_non_gujarat_or_rajputana_india",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 921,
+      "after_provinces": 982,
+      "added": 75,
+      "removed": 14,
+      "duchy_references": 25,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_north_africa",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 309,
+      "after_provinces": 335,
+      "added": 26,
+      "removed": 0,
+      "duchy_references": 9,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_north_african_interior",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 151,
+      "after_provinces": 157,
+      "added": 32,
+      "removed": 26,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_north_eastern_india",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 343,
+      "after_provinces": 387,
+      "added": 59,
+      "removed": 15,
+      "duchy_references": 10,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_northern_india",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 607,
+      "after_provinces": 673,
+      "added": 77,
+      "removed": 11,
+      "duchy_references": 17,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_northern_italy",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 187,
+      "after_provinces": 213,
+      "added": 30,
+      "removed": 4,
+      "duchy_references": 10,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_northern_russia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 261,
+      "after_provinces": 278,
+      "added": 45,
+      "removed": 28,
+      "duchy_references": 9,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_persia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 323,
+      "after_provinces": 377,
+      "added": 55,
+      "removed": 1,
+      "duchy_references": 8,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_poland",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 168,
+      "after_provinces": 181,
+      "added": 15,
+      "removed": 2,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_poland_bohemia_bavaria",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 384,
+      "after_provinces": 372,
+      "added": 14,
+      "removed": 26,
+      "duchy_references": 14,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_russia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 663,
+      "after_provinces": 665,
+      "added": 52,
+      "removed": 50,
+      "duchy_references": 20,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_saxony",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 170,
+      "after_provinces": 163,
+      "added": 13,
+      "removed": 20,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_scandinavia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 270,
+      "after_provinces": 210,
+      "added": 0,
+      "removed": 60,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_siberia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 301,
+      "after_provinces": 281,
+      "added": 42,
+      "removed": 62,
+      "duchy_references": 10,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_sicily",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 78,
+      "after_provinces": 75,
+      "added": 1,
+      "removed": 4,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_southern_france",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 251,
+      "after_provinces": 246,
+      "added": 4,
+      "removed": 9,
+      "duchy_references": 12,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_southern_india",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 409,
+      "after_provinces": 418,
+      "added": 32,
+      "removed": 23,
+      "duchy_references": 11,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_southern_middle_east",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 310,
+      "after_provinces": 312,
+      "added": 22,
+      "removed": 20,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_southern_russia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 402,
+      "after_provinces": 387,
+      "added": 28,
+      "removed": 43,
+      "duchy_references": 11,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_southwestern_india",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 204,
+      "after_provinces": 171,
+      "added": 1,
+      "removed": 34,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_steppe",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 467,
+      "after_provinces": 452,
+      "added": 42,
+      "removed": 57,
+      "duchy_references": 17,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_subsahelian_africa",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 245,
+      "after_provinces": 250,
+      "added": 33,
+      "removed": 28,
+      "duchy_references": 13,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_the_ganges",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 218,
+      "after_provinces": 202,
+      "added": 17,
+      "removed": 33,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_the_sahel",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 226,
+      "after_provinces": 260,
+      "added": 40,
+      "removed": 6,
+      "duchy_references": 11,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_tibet",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 366,
+      "after_provinces": 316,
+      "added": 6,
+      "removed": 56,
+      "duchy_references": 8,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_transoxiana",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 211,
+      "after_provinces": 236,
+      "added": 38,
+      "removed": 13,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_wendish_lands",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 308,
+      "after_provinces": 324,
+      "added": 27,
+      "removed": 11,
+      "duchy_references": 10,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_western_india",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 290,
+      "after_provinces": 323,
+      "added": 38,
+      "removed": 5,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "ghw_region_western_sahara",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 47,
+      "after_provinces": 13,
+      "added": 0,
+      "removed": 34,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "global_flood_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 2036,
+      "after_provinces": 2036,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 0,
+      "subregions": [
+        "yellow_river_region",
+        "yangtze_river_region",
+        "pearl_river_region",
+        "tigris_river_region",
+        "irrawaddy_river_region",
+        "mekong_river_region",
+        "amur_river_region",
+        "nile_river_region",
+        "niger_river_region",
+        "po_river_region",
+        "rhine_river_region",
+        "elbe_river_region",
+        "rhone_river_region",
+        "garonne_river_region",
+        "seine_river_region",
+        "loire_river_region",
+        "vistula_river_region",
+        "danube_river_region",
+        "dniester_river_region",
+        "dnieper_river_region",
+        "daugava_river_region",
+        "lovat_river_region",
+        "volga_river_region",
+        "don_river_region",
+        "guadiana_river_region",
+        "guadalquivir_river_region",
+        "ganges_river_region",
+        "indus_river_region",
+        "kaveri_river_region",
+        "godavari_river_region",
+        "mahanadi_river_region",
+        "tapti_river_region"
+      ]
+    },
+    {
+      "region": "golden_horde_de_jure_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 469,
+      "after_provinces": 473,
+      "added": 63,
+      "removed": 59,
+      "duchy_references": 16,
+      "subregions": []
+    },
+    {
+      "region": "graphical_east_asia",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 4049,
+      "after_provinces": 4037,
+      "added": 23,
+      "removed": 35,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia_north_east",
+        "world_asia_korea",
+        "world_asia_china",
+        "world_asia_sakhalin_hokkaido",
+        "world_asia_japan",
+        "world_steppe_east",
+        "world_asia_vietnam"
+      ]
+    },
+    {
+      "region": "graphical_india",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 5247,
+      "after_provinces": 5189,
+      "added": 22,
+      "removed": 80,
+      "duchy_references": 0,
+      "subregions": [
+        "world_india",
+        "world_tibet",
+        "world_asia_southeast_islands",
+        "world_burma",
+        "world_asia_thailand",
+        "world_asia_cambodia",
+        "world_asia_malaysia"
+      ]
+    },
+    {
+      "region": "graphical_mediterranean",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 2251,
+      "after_provinces": 2270,
+      "added": 29,
+      "removed": 10,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_west_iberia",
+        "world_europe_south",
+        "custom_south_francia",
+        "custom_burgundy",
+        "world_asia_minor"
+      ]
+    },
+    {
+      "region": "graphical_mena",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 9837,
+      "after_provinces": 9852,
+      "added": 53,
+      "removed": 38,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa",
+        "world_middle_east"
+      ]
+    },
+    {
+      "region": "graphical_siberia",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 545,
+      "after_provinces": 566,
+      "added": 31,
+      "removed": 10,
+      "duchy_references": 0,
+      "subregions": [
+        "world_siberia"
+      ]
+    },
+    {
+      "region": "graphical_steppe",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1146,
+      "after_provinces": 1083,
+      "added": 56,
+      "removed": 119,
+      "duchy_references": 0,
+      "subregions": [
+        "world_steppe_tarim",
+        "world_steppe_west",
+        "world_steppe_central"
+      ]
+    },
+    {
+      "region": "graphical_western",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 5498,
+      "after_provinces": 5542,
+      "added": 61,
+      "removed": 17,
+      "duchy_references": 0,
+      "subregions": [
+        "custom_west_francia_minus_mediterranean",
+        "world_europe_west_germania",
+        "world_europe_west_britannia",
+        "world_europe_east",
+        "world_europe_north"
+      ]
+    },
+    {
+      "region": "great_yuan_de_jure_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 501,
+      "after_provinces": 518,
+      "added": 43,
+      "removed": 26,
+      "duchy_references": 9,
+      "subregions": []
+    },
+    {
+      "region": "heritage_area_cumania",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 110,
+      "after_provinces": 124,
+      "added": 43,
+      "removed": 29,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "heritage_area_perm",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 66,
+      "after_provinces": 60,
+      "added": 9,
+      "removed": 15,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "heritage_area_pontic_steppe",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 321,
+      "after_provinces": 317,
+      "added": 35,
+      "removed": 39,
+      "duchy_references": 12,
+      "subregions": []
+    },
+    {
+      "region": "heritage_area_turkestan",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 146,
+      "after_provinces": 102,
+      "added": 16,
+      "removed": 60,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "heritage_area_volga_bulgaria",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 241,
+      "after_provinces": 192,
+      "added": 32,
+      "removed": 81,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "horn_of_africa_nomad_area",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 101,
+      "after_provinces": 94,
+      "added": 4,
+      "removed": 11,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "hunt_animal_antelope_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 7553,
+      "after_provinces": 7388,
+      "added": 45,
+      "removed": 210,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa",
+        "world_middle_east",
+        "world_steppe",
+        "world_tibet",
+        "world_india",
+        "world_asia_china",
+        "world_asia_southeast_mainland"
+      ]
+    },
+    {
+      "region": "hunt_animal_aurochs_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 9845,
+      "after_provinces": 9797,
+      "added": 66,
+      "removed": 114,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa_north",
+        "world_india",
+        "world_middle_east",
+        "world_steppe",
+        "world_asia_korea",
+        "world_asia_china",
+        "world_europe_west",
+        "world_europe_east",
+        "world_europe_south"
+      ]
+    },
+    {
+      "region": "hunt_animal_bear_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 11688,
+      "after_provinces": 11657,
+      "added": 147,
+      "removed": 178,
+      "duchy_references": 10,
+      "subregions": [
+        "world_europe_north",
+        "world_europe_east",
+        "world_europe_west_iberia",
+        "world_europe_west_germania",
+        "world_europe_west_francia",
+        "world_europe_south",
+        "world_africa_north_west",
+        "world_asia_minor",
+        "world_steppe",
+        "world_tibet",
+        "world_asia",
+        "world_siberia",
+        "world_india"
+      ]
+    },
+    {
+      "region": "hunt_animal_big_cat_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 7289,
+      "after_provinces": 7198,
+      "added": 79,
+      "removed": 170,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa",
+        "world_middle_east",
+        "world_india",
+        "world_steppe_east",
+        "world_tibet",
+        "world_asia_korea",
+        "world_asia_china",
+        "world_asia_sakhalin_hokkaido",
+        "world_asia_southeast_mainland",
+        "world_asia_borneo",
+        "world_asia_sulawesi_maluku",
+        "world_asia_indonesia"
+      ]
+    },
+    {
+      "region": "hunt_animal_bison_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 4360,
+      "after_provinces": 4308,
+      "added": 94,
+      "removed": 146,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa_west",
+        "world_steppe",
+        "world_europe_west_francia",
+        "world_europe_west_germania",
+        "world_europe_east"
+      ]
+    },
+    {
+      "region": "hunt_animal_boar_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 11949,
+      "after_provinces": 11933,
+      "added": 143,
+      "removed": 159,
+      "duchy_references": 11,
+      "subregions": [
+        "world_europe_west",
+        "world_europe_east",
+        "world_europe_south",
+        "world_africa_north_west",
+        "world_asia_minor",
+        "world_steppe_west",
+        "world_steppe_central",
+        "world_steppe_east",
+        "world_siberia",
+        "world_middle_east_jerusalem",
+        "world_middle_east_persia",
+        "world_india",
+        "world_asia"
+      ]
+    },
+    {
+      "region": "hunt_animal_deer_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 12058,
+      "after_provinces": 12050,
+      "added": 107,
+      "removed": 115,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe",
+        "world_africa_north_west",
+        "world_middle_east_jerusalem",
+        "world_middle_east_persia",
+        "world_asia_minor",
+        "world_steppe_east",
+        "world_steppe_central",
+        "world_siberia",
+        "world_steppe_west",
+        "world_india",
+        "world_asia"
+      ]
+    },
+    {
+      "region": "hunt_animal_elk_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 4772,
+      "after_provinces": 4692,
+      "added": 65,
+      "removed": 145,
+      "duchy_references": 29,
+      "subregions": [
+        "world_steppe",
+        "world_asia_north_east",
+        "world_asia_korea",
+        "world_asia_china",
+        "world_asia_sakhalin_hokkaido",
+        "world_asia_japan"
+      ]
+    },
+    {
+      "region": "hunt_animal_gazelle_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 4352,
+      "after_provinces": 4372,
+      "added": 65,
+      "removed": 45,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa",
+        "world_middle_east",
+        "world_asia_china"
+      ]
+    },
+    {
+      "region": "hunt_animal_reindeer_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1271,
+      "after_provinces": 1332,
+      "added": 176,
+      "removed": 115,
+      "duchy_references": 17,
+      "subregions": [
+        "ghw_region_siberia",
+        "ghw_region_mongolia",
+        "world_asia_north_east",
+        "world_asia_sakhalin_hokkaido"
+      ]
+    },
+    {
+      "region": "ilkhanate_de_jure_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 270,
+      "after_provinces": 272,
+      "added": 21,
+      "removed": 19,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "islamic_heartlands",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1275,
+      "after_provinces": 1360,
+      "added": 90,
+      "removed": 5,
+      "duchy_references": 31,
+      "subregions": []
+    },
+    {
+      "region": "israel_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 29,
+      "after_provinces": 29,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 1,
+      "subregions": [
+        "ghw_region_jerusalem"
+      ]
+    },
+    {
+      "region": "karelia_nomad_area",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 101,
+      "after_provinces": 132,
+      "added": 48,
+      "removed": 17,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "kirghiz_homelands",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 44,
+      "after_provinces": 64,
+      "added": 20,
+      "removed": 0,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "material_cloth_cotton",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 3270,
+      "after_provinces": 3210,
+      "added": 22,
+      "removed": 82,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa_north_east",
+        "world_africa_east",
+        "world_asia_china",
+        "world_asia_southeast"
+      ]
+    },
+    {
+      "region": "material_cloth_linen",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 4457,
+      "after_provinces": 4462,
+      "added": 42,
+      "removed": 37,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_west",
+        "world_europe_north",
+        "world_europe_south",
+        "world_europe_east"
+      ]
+    },
+    {
+      "region": "material_cloth_no_silk",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 3876,
+      "after_provinces": 3854,
+      "added": 57,
+      "removed": 79,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa_west",
+        "world_africa_east",
+        "world_asia_korea",
+        "world_asia_china",
+        "world_asia_japan",
+        "world_asia_southeast_mainland",
+        "world_asia_indonesia"
+      ]
+    },
+    {
+      "region": "material_hsb_boar_tusk",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 9743,
+      "after_provinces": 9810,
+      "added": 153,
+      "removed": 86,
+      "duchy_references": 5,
+      "subregions": [
+        "world_europe_west",
+        "world_europe_north",
+        "world_europe_south",
+        "world_europe_east",
+        "world_asia_minor",
+        "world_middle_east_jerusalem",
+        "world_middle_east_persia",
+        "world_india_deccan",
+        "world_india_bengal",
+        "world_india_rajastan",
+        "world_steppe_west",
+        "world_steppe_central",
+        "world_steppe_east",
+        "world_siberia",
+        "world_africa_north",
+        "world_steppe_tarim",
+        "world_burma",
+        "world_mesopotamia",
+        "world_jazira",
+        "world_asia_north_east",
+        "world_asia_southeast_islands"
+      ]
+    },
+    {
+      "region": "material_hsb_camel_bone",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 3177,
+      "after_provinces": 3213,
+      "added": 103,
+      "removed": 67,
+      "duchy_references": 0,
+      "subregions": [
+        "world_middle_east",
+        "world_africa_north",
+        "world_africa_west",
+        "world_africa_east",
+        "world_africa_sahara",
+        "world_india_rajastan",
+        "world_steppe_tarim"
+      ]
+    },
+    {
+      "region": "material_hsb_deer_antler",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 9451,
+      "after_provinces": 9415,
+      "added": 70,
+      "removed": 106,
+      "duchy_references": 2,
+      "subregions": [
+        "world_europe_west",
+        "world_europe_north",
+        "world_europe_south",
+        "world_europe_east",
+        "world_asia_minor",
+        "world_middle_east_jerusalem",
+        "world_middle_east_persia",
+        "world_india_deccan",
+        "world_india_bengal",
+        "world_india_rajastan",
+        "world_steppe_tarim",
+        "world_steppe_west",
+        "world_steppe_central",
+        "world_steppe_east",
+        "world_siberia",
+        "world_tibet",
+        "world_burma",
+        "world_mesopotamia",
+        "world_jazira",
+        "world_asia_north_east",
+        "world_asia_korea",
+        "world_asia_japan"
+      ]
+    },
+    {
+      "region": "material_hsb_ivory_imported",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 8520,
+      "after_provinces": 8424,
+      "added": 71,
+      "removed": 167,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_west",
+        "world_europe_south",
+        "world_asia_minor",
+        "world_middle_east",
+        "world_steppe_west",
+        "world_steppe_central",
+        "world_steppe_east",
+        "world_siberia",
+        "world_steppe_tarim",
+        "world_africa_north",
+        "world_tibet",
+        "world_asia_china",
+        "world_asia_japan"
+      ]
+    },
+    {
+      "region": "material_hsb_ivory_native",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 2863,
+      "after_provinces": 2870,
+      "added": 82,
+      "removed": 75,
+      "duchy_references": 0,
+      "subregions": [
+        "world_india_deccan",
+        "world_india_bengal",
+        "world_india_rajastan",
+        "world_africa_west",
+        "world_africa_east",
+        "world_asia_southeast_mainland",
+        "world_asia_indonesia"
+      ]
+    },
+    {
+      "region": "material_hsb_mother_of_pearl",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 5607,
+      "after_provinces": 5592,
+      "added": 67,
+      "removed": 82,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa_north",
+        "world_europe_south_italy",
+        "world_india_deccan",
+        "world_middle_east_arabia",
+        "world_africa_east",
+        "world_europe_west_iberia",
+        "world_asia_southeast",
+        "world_asia_korea",
+        "world_asia_china",
+        "world_asia_japan"
+      ]
+    },
+    {
+      "region": "material_hsb_seashell",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 7128,
+      "after_provinces": 7186,
+      "added": 155,
+      "removed": 97,
+      "duchy_references": 6,
+      "subregions": [
+        "world_africa_north",
+        "world_africa_east",
+        "world_europe_south_italy",
+        "world_europe_west_iberia",
+        "world_europe_west_francia",
+        "world_burma",
+        "world_middle_east",
+        "world_india",
+        "world_asia_minor",
+        "world_asia_korea",
+        "world_asia_china",
+        "world_asia_japan"
+      ]
+    },
+    {
+      "region": "material_hsb_tortoiseshell",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 3432,
+      "after_provinces": 3476,
+      "added": 74,
+      "removed": 30,
+      "duchy_references": 7,
+      "subregions": [
+        "world_africa_north",
+        "world_europe_south_italy",
+        "world_asia_minor",
+        "world_asia_korea",
+        "world_asia_china",
+        "world_asia_japan"
+      ]
+    },
+    {
+      "region": "material_metal_bulat",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 2696,
+      "after_provinces": 2691,
+      "added": 88,
+      "removed": 93,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_east",
+        "world_steppe_tarim",
+        "world_steppe_west",
+        "world_steppe_central",
+        "world_steppe_east",
+        "world_siberia"
+      ]
+    },
+    {
+      "region": "material_metal_damascus",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 3501,
+      "after_provinces": 3526,
+      "added": 75,
+      "removed": 50,
+      "duchy_references": 0,
+      "subregions": [
+        "world_middle_east",
+        "world_asia_minor",
+        "world_africa_north_east",
+        "world_asia_china"
+      ]
+    },
+    {
+      "region": "material_metal_wootz",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 3397,
+      "after_provinces": 3372,
+      "added": 28,
+      "removed": 53,
+      "duchy_references": 0,
+      "subregions": [
+        "world_india_deccan",
+        "world_india_bengal",
+        "world_india_rajastan",
+        "world_asia_china",
+        "world_asia_southeast_mainland"
+      ]
+    },
+    {
+      "region": "material_wood_elm",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 4174,
+      "after_provinces": 4152,
+      "added": 63,
+      "removed": 85,
+      "duchy_references": 5,
+      "subregions": [
+        "world_europe_west_britannia",
+        "world_europe_west_germania",
+        "world_europe_west_francia",
+        "world_europe_north",
+        "world_europe_south_east",
+        "world_europe_east",
+        "world_himalaya"
+      ]
+    },
+    {
+      "region": "material_wood_maple",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 4911,
+      "after_provinces": 5040,
+      "added": 222,
+      "removed": 93,
+      "duchy_references": 27,
+      "subregions": [
+        "world_europe_west_germania",
+        "world_europe_west_iberia",
+        "world_europe_south",
+        "world_europe_east",
+        "world_asia_minor",
+        "world_transoxiana",
+        "world_himalaya",
+        "world_asia_north_east"
+      ]
+    },
+    {
+      "region": "material_wood_walnut",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 5342,
+      "after_provinces": 5406,
+      "added": 137,
+      "removed": 73,
+      "duchy_references": 6,
+      "subregions": [
+        "world_europe_west_germania",
+        "world_europe_west_iberia",
+        "world_europe_south",
+        "world_europe_east",
+        "world_middle_east_persia",
+        "world_asia_minor",
+        "world_himalaya",
+        "world_europe_west_francia",
+        "world_asia_north_east"
+      ]
+    },
+    {
+      "region": "material_woods_asia_east",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 2268,
+      "after_provinces": 2253,
+      "added": 3,
+      "removed": 18,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia_east"
+      ]
+    },
+    {
+      "region": "material_woods_asia_northeast",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 215,
+      "after_provinces": 227,
+      "added": 36,
+      "removed": 24,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia_north_east"
+      ]
+    },
+    {
+      "region": "material_woods_asia_southeast",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1150,
+      "after_provinces": 1109,
+      "added": 3,
+      "removed": 44,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia_southeast"
+      ]
+    },
+    {
+      "region": "material_woods_bamboo",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1674,
+      "after_provinces": 1619,
+      "added": 34,
+      "removed": 89,
+      "duchy_references": 2,
+      "subregions": [
+        "world_burma",
+        "world_india",
+        "world_tibet"
+      ]
+    },
+    {
+      "region": "material_woods_cherry",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1617,
+      "after_provinces": 1568,
+      "added": 17,
+      "removed": 66,
+      "duchy_references": 0,
+      "subregions": [
+        "world_burma",
+        "world_india",
+        "world_tibet"
+      ]
+    },
+    {
+      "region": "material_woods_dogwood",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 5996,
+      "after_provinces": 5986,
+      "added": 57,
+      "removed": 67,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe",
+        "world_asia_minor",
+        "world_steppe_west",
+        "world_steppe_central",
+        "world_siberia"
+      ]
+    },
+    {
+      "region": "material_woods_ebony",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 441,
+      "after_provinces": 468,
+      "added": 36,
+      "removed": 9,
+      "duchy_references": 6,
+      "subregions": [
+        "material_woods_sri_lanka"
+      ]
+    },
+    {
+      "region": "material_woods_hazel",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 5996,
+      "after_provinces": 5986,
+      "added": 57,
+      "removed": 67,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe",
+        "world_asia_minor",
+        "world_steppe_west",
+        "world_steppe_central",
+        "world_siberia"
+      ]
+    },
+    {
+      "region": "material_woods_hickory",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 665,
+      "after_provinces": 583,
+      "added": 32,
+      "removed": 114,
+      "duchy_references": 0,
+      "subregions": [
+        "world_burma",
+        "world_steppe_east",
+        "world_tibet"
+      ]
+    },
+    {
+      "region": "material_woods_india",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1195,
+      "after_provinces": 1217,
+      "added": 28,
+      "removed": 6,
+      "duchy_references": 1,
+      "subregions": [
+        "world_india_deccan",
+        "world_india_bengal",
+        "world_india_rajastan"
+      ]
+    },
+    {
+      "region": "material_woods_india_burma",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1297,
+      "after_provinces": 1313,
+      "added": 41,
+      "removed": 25,
+      "duchy_references": 0,
+      "subregions": [
+        "world_india",
+        "world_burma"
+      ]
+    },
+    {
+      "region": "material_woods_mediterranean",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 2051,
+      "after_provinces": 2097,
+      "added": 56,
+      "removed": 10,
+      "duchy_references": 3,
+      "subregions": [
+        "world_africa_north",
+        "world_europe_west_iberia",
+        "world_europe_south",
+        "world_asia_minor",
+        "world_middle_east_jerusalem"
+      ]
+    },
+    {
+      "region": "material_woods_mulberry",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 3928,
+      "after_provinces": 4004,
+      "added": 103,
+      "removed": 27,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa_north",
+        "world_asia_minor",
+        "world_europe_south",
+        "world_india",
+        "world_middle_east"
+      ]
+    },
+    {
+      "region": "material_woods_padauk",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 2298,
+      "after_provinces": 2352,
+      "added": 93,
+      "removed": 39,
+      "duchy_references": 0,
+      "subregions": [
+        "material_woods_subsaharan",
+        "world_india",
+        "world_burma"
+      ]
+    },
+    {
+      "region": "material_woods_palm",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 2070,
+      "after_provinces": 2134,
+      "added": 84,
+      "removed": 20,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa_north",
+        "world_asia_minor",
+        "world_middle_east"
+      ]
+    },
+    {
+      "region": "material_woods_pine_and_fir",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 5584,
+      "after_provinces": 5560,
+      "added": 117,
+      "removed": 141,
+      "duchy_references": 11,
+      "subregions": [
+        "world_europe_west_iberia",
+        "world_europe_north",
+        "world_europe_south",
+        "world_europe_east",
+        "world_asia_minor",
+        "world_steppe_tarim",
+        "world_steppe_west",
+        "world_steppe_central",
+        "world_steppe_east",
+        "world_europe_west_francia",
+        "world_siberia",
+        "world_asia_north_east"
+      ]
+    },
+    {
+      "region": "material_woods_sri_lanka",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 347,
+      "after_provinces": 345,
+      "added": 1,
+      "removed": 3,
+      "duchy_references": 0,
+      "subregions": [
+        "world_india_deccan"
+      ]
+    },
+    {
+      "region": "material_woods_subsaharan",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1001,
+      "after_provinces": 1039,
+      "added": 52,
+      "removed": 14,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa_west",
+        "world_africa_east",
+        "world_africa_sahara"
+      ]
+    },
+    {
+      "region": "material_woods_yew",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1097,
+      "after_provinces": 1070,
+      "added": 67,
+      "removed": 94,
+      "duchy_references": 26,
+      "subregions": [
+        "world_europe_south_east"
+      ]
+    },
+    {
+      "region": "mpo_region_permafrost",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 148,
+      "after_provinces": 147,
+      "added": 45,
+      "removed": 46,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "north_pacific_earthquake_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 426,
+      "after_provinces": 418,
+      "added": 0,
+      "removed": 8,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia_japan",
+        "world_asia_sakhalin_hokkaido"
+      ]
+    },
+    {
+      "region": "nubia_nomad_area",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 139,
+      "after_provinces": 150,
+      "added": 19,
+      "removed": 8,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "omnod_dalai_khanate_de_jure_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 148,
+      "after_provinces": 143,
+      "added": 0,
+      "removed": 5,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "paddy_fields_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 2799,
+      "after_provinces": 4038,
+      "added": 1274,
+      "removed": 35,
+      "duchy_references": 0,
+      "subregions": [
+        "graphical_east_asia"
+      ]
+    },
+    {
+      "region": "red_horde_de_jure_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 490,
+      "after_provinces": 490,
+      "added": 30,
+      "removed": 30,
+      "duchy_references": 0,
+      "subregions": [
+        "world_india_rajastan"
+      ]
+    },
+    {
+      "region": "river_valley_nomad_area",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 166,
+      "after_provinces": 121,
+      "added": 18,
+      "removed": 63,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "sahel_desert_nomad_area",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 152,
+      "after_provinces": 153,
+      "added": 31,
+      "removed": 30,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "sahel_north_africa_nomad_area",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 253,
+      "after_provinces": 238,
+      "added": 16,
+      "removed": 31,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "sahel_sub_saharan_africa_nomad_area",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 325,
+      "after_provinces": 360,
+      "added": 67,
+      "removed": 32,
+      "duchy_references": 15,
+      "subregions": []
+    },
+    {
+      "region": "sami_nomad_area",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 143,
+      "after_provinces": 162,
+      "added": 24,
+      "removed": 5,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "sea_atlantic_ocean",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 550,
+      "after_provinces": 550,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 0,
+      "subregions": [
+        "sea_north_atlantic",
+        "sea_south_atlantic"
+      ]
+    },
+    {
+      "region": "sea_indian_ocean",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 247,
+      "after_provinces": 247,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 0,
+      "subregions": [
+        "sea_bay_of_somalia",
+        "sea_swahili_coast",
+        "sea_red_sea",
+        "sea_gulf_of_aden",
+        "sea_persian_gulf",
+        "sea_arabian_sea",
+        "sea_bay_of_bengal"
+      ]
+    },
+    {
+      "region": "sea_inland_steppe_seas",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 35,
+      "after_provinces": 35,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 0,
+      "subregions": [
+        "sea_caspian_sea",
+        "sea_aral_sea"
+      ]
+    },
+    {
+      "region": "sea_mediterranean_sea",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 246,
+      "after_provinces": 246,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 0,
+      "subregions": [
+        "sea_western_mediterranean_sea",
+        "sea_ionian_sea",
+        "sea_adriatic_sea",
+        "sea_aegean_sea",
+        "sea_black_sea"
+      ]
+    },
+    {
+      "region": "sea_north_atlantic",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 494,
+      "after_provinces": 494,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 0,
+      "subregions": [
+        "sea_baltic_sea",
+        "sea_north_sea",
+        "sea_white_sea",
+        "sea_english_channel",
+        "sea_irish_sea",
+        "sea_bay_of_biscay",
+        "sea_macaronesia",
+        "sea_mediterranean_sea"
+      ]
+    },
+    {
+      "region": "sea_south_atlantic",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 56,
+      "after_provinces": 56,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 0,
+      "subregions": [
+        "sea_gulf_of_guinea"
+      ]
+    },
+    {
+      "region": "seasonal_region_bengal",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 339,
+      "after_provinces": 363,
+      "added": 30,
+      "removed": 6,
+      "duchy_references": 0,
+      "subregions": [
+        "world_india_bengal"
+      ]
+    },
+    {
+      "region": "seasonal_region_deccan",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 472,
+      "after_provinces": 470,
+      "added": 1,
+      "removed": 3,
+      "duchy_references": 0,
+      "subregions": [
+        "world_india_deccan",
+        "sea_arabian_sea",
+        "sea_bay_of_bengal"
+      ]
+    },
+    {
+      "region": "seasonal_region_east_africa",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 332,
+      "after_provinces": 336,
+      "added": 12,
+      "removed": 8,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa_east",
+        "sea_bay_of_somalia",
+        "sea_gulf_of_aden",
+        "sea_swahili_coast"
+      ]
+    },
+    {
+      "region": "seasonal_region_maritime_southeast_asia",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 701,
+      "after_provinces": 681,
+      "added": 3,
+      "removed": 23,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia_southeast_islands",
+        "world_asia_malaysia"
+      ]
+    },
+    {
+      "region": "seasonal_region_peninsular_southeast_asia",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 513,
+      "after_provinces": 471,
+      "added": 0,
+      "removed": 42,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia_southeast_mainland"
+      ]
+    },
+    {
+      "region": "seasonal_region_rajasthan",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 490,
+      "after_provinces": 490,
+      "added": 30,
+      "removed": 30,
+      "duchy_references": 0,
+      "subregions": [
+        "world_india_rajastan"
+      ]
+    },
+    {
+      "region": "seasonal_region_west_africa",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 714,
+      "after_provinces": 741,
+      "added": 47,
+      "removed": 20,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa_west",
+        "sea_south_atlantic",
+        "sea_macaronesia"
+      ]
+    },
+    {
+      "region": "special_cagot_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 156,
+      "after_provinces": 153,
+      "added": 11,
+      "removed": 14,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "special_mongol_empire_aarlud_khanate_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 815,
+      "after_provinces": 815,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_west_britannia",
+        "world_europe_north"
+      ]
+    },
+    {
+      "region": "special_mongol_empire_baruun_khanate_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1389,
+      "after_provinces": 1398,
+      "added": 23,
+      "removed": 14,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa"
+      ]
+    },
+    {
+      "region": "special_mongol_empire_blue_horde_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 426,
+      "after_provinces": 418,
+      "added": 0,
+      "removed": 8,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia_japan",
+        "world_asia_sakhalin_hokkaido"
+      ]
+    },
+    {
+      "region": "special_mongol_empire_chagatai_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 292,
+      "after_provinces": 294,
+      "added": 20,
+      "removed": 18,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "special_mongol_empire_conquest_all_regions",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 6768,
+      "after_provinces": 6826,
+      "added": 189,
+      "removed": 131,
+      "duchy_references": 0,
+      "subregions": [
+        "special_mongol_empire_start_region",
+        "special_mongol_empire_conquest_region_prio_1_alpha",
+        "special_mongol_empire_conquest_region_prio_1",
+        "special_mongol_empire_conquest_region_prio_2",
+        "special_mongol_empire_conquest_region_prio_3",
+        "special_mongol_empire_conquest_region_prio_4",
+        "special_mongol_empire_conquest_region_prio_5",
+        "special_mongol_empire_conquest_region_bonus"
+      ]
+    },
+    {
+      "region": "special_mongol_empire_conquest_region_bonus",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1047,
+      "after_provinces": 1040,
+      "added": 112,
+      "removed": 119,
+      "duchy_references": 28,
+      "subregions": []
+    },
+    {
+      "region": "special_mongol_empire_conquest_region_prio_1",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 572,
+      "after_provinces": 608,
+      "added": 118,
+      "removed": 82,
+      "duchy_references": 12,
+      "subregions": []
+    },
+    {
+      "region": "special_mongol_empire_conquest_region_prio_1_alpha",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 291,
+      "after_provinces": 218,
+      "added": 35,
+      "removed": 108,
+      "duchy_references": 8,
+      "subregions": []
+    },
+    {
+      "region": "special_mongol_empire_conquest_region_prio_2",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 626,
+      "after_provinces": 684,
+      "added": 127,
+      "removed": 69,
+      "duchy_references": 17,
+      "subregions": []
+    },
+    {
+      "region": "special_mongol_empire_conquest_region_prio_3",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 506,
+      "after_provinces": 504,
+      "added": 72,
+      "removed": 74,
+      "duchy_references": 15,
+      "subregions": []
+    },
+    {
+      "region": "special_mongol_empire_conquest_region_prio_4",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1521,
+      "after_provinces": 1475,
+      "added": 124,
+      "removed": 170,
+      "duchy_references": 36,
+      "subregions": []
+    },
+    {
+      "region": "special_mongol_empire_conquest_region_prio_5",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1869,
+      "after_provinces": 1938,
+      "added": 210,
+      "removed": 141,
+      "duchy_references": 45,
+      "subregions": []
+    },
+    {
+      "region": "special_mongol_empire_golden_horde_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1701,
+      "after_provinces": 1757,
+      "added": 75,
+      "removed": 19,
+      "duchy_references": 58,
+      "subregions": []
+    },
+    {
+      "region": "special_mongol_empire_great_yuan_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 2576,
+      "after_provinces": 2554,
+      "added": 58,
+      "removed": 80,
+      "duchy_references": 7,
+      "subregions": [
+        "world_asia_china",
+        "world_asia_north_east",
+        "world_asia_korea",
+        "world_tibet"
+      ]
+    },
+    {
+      "region": "special_mongol_empire_ilkhanate_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1561,
+      "after_provinces": 1575,
+      "added": 26,
+      "removed": 12,
+      "duchy_references": 13,
+      "subregions": [
+        "world_asia_minor",
+        "world_middle_east_jerusalem",
+        "world_middle_east_arabia"
+      ]
+    },
+    {
+      "region": "special_mongol_empire_omnod_dalai_khanate_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 865,
+      "after_provinces": 831,
+      "added": 3,
+      "removed": 37,
+      "duchy_references": 5,
+      "subregions": [
+        "world_asia_southeast_islands"
+      ]
+    },
+    {
+      "region": "special_mongol_empire_red_horde_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1297,
+      "after_provinces": 1313,
+      "added": 41,
+      "removed": 25,
+      "duchy_references": 0,
+      "subregions": [
+        "world_india",
+        "world_burma"
+      ]
+    },
+    {
+      "region": "special_mongol_empire_start_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 336,
+      "after_provinces": 359,
+      "added": 52,
+      "removed": 29,
+      "duchy_references": 15,
+      "subregions": []
+    },
+    {
+      "region": "special_mongol_empire_togskol_khanate_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1165,
+      "after_provinces": 1158,
+      "added": 15,
+      "removed": 22,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_south_italy",
+        "world_europe_west_francia",
+        "world_europe_west_iberia"
+      ]
+    },
+    {
+      "region": "special_mongol_empire_white_horde_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1646,
+      "after_provinces": 1614,
+      "added": 27,
+      "removed": 59,
+      "duchy_references": 14,
+      "subregions": [
+        "world_europe_west_germania",
+        "world_europe_south_east"
+      ]
+    },
+    {
+      "region": "special_sicilian_culture_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 78,
+      "after_provinces": 75,
+      "added": 1,
+      "removed": 4,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "tgp_cao_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 41,
+      "after_provinces": 73,
+      "added": 36,
+      "removed": 4,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "tgp_china_tributary_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 2556,
+      "after_provinces": 2510,
+      "added": 51,
+      "removed": 97,
+      "duchy_references": 56,
+      "subregions": []
+    },
+    {
+      "region": "tgp_dai_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 56,
+      "after_provinces": 36,
+      "added": 8,
+      "removed": 28,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "tgp_duchy_chinese_naming_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 360,
+      "after_provinces": 398,
+      "added": 95,
+      "removed": 57,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "tgp_huang_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 31,
+      "after_provinces": 48,
+      "added": 23,
+      "removed": 6,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "tgp_ou_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 95,
+      "after_provinces": 64,
+      "added": 0,
+      "removed": 31,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "tgp_silk_road_asia_minor_minus_georgia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 351,
+      "after_provinces": 389,
+      "added": 38,
+      "removed": 0,
+      "duchy_references": 10,
+      "subregions": []
+    },
+    {
+      "region": "tgp_silk_road_india_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 960,
+      "after_provinces": 940,
+      "added": 27,
+      "removed": 47,
+      "duchy_references": 0,
+      "subregions": [
+        "world_india_bengal",
+        "world_india_rajastan",
+        "world_makran",
+        "world_kabulistan"
+      ]
+    },
+    {
+      "region": "tgp_silk_road_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 4472,
+      "after_provinces": 4390,
+      "added": 3,
+      "removed": 85,
+      "duchy_references": 0,
+      "subregions": [
+        "tgp_silk_road_china_region",
+        "tgp_silk_road_tibet_region",
+        "tgp_silk_road_india_region",
+        "tgp_silk_road_central_asia_region",
+        "tgp_silk_road_transcaspia_region",
+        "tgp_silk_road_occident_region"
+      ]
+    },
+    {
+      "region": "tgp_silk_road_tibet_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 305,
+      "after_provinces": 255,
+      "added": 6,
+      "removed": 56,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "tgp_yin_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 52,
+      "after_provinces": 34,
+      "added": 13,
+      "removed": 31,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "tgp_you_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 38,
+      "after_provinces": 48,
+      "added": 10,
+      "removed": 0,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "tgp_zhao_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 64,
+      "after_provinces": 66,
+      "added": 21,
+      "removed": 19,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "togskol_khanatede_jure_region",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 296,
+      "after_provinces": 311,
+      "added": 19,
+      "removed": 4,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_south_italy"
+      ]
+    },
+    {
+      "region": "western_plateau_nomad_area",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 59,
+      "after_provinces": 54,
+      "added": 17,
+      "removed": 22,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "white_horde_de_jure_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 319,
+      "after_provinces": 328,
+      "added": 9,
+      "removed": 0,
+      "duchy_references": 10,
+      "subregions": []
+    },
+    {
+      "region": "world_africa",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1389,
+      "after_provinces": 1398,
+      "added": 23,
+      "removed": 14,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa_north",
+        "world_africa_west",
+        "world_africa_east",
+        "world_africa_sahara"
+      ]
+    },
+    {
+      "region": "world_africa_east",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 280,
+      "after_provinces": 284,
+      "added": 12,
+      "removed": 8,
+      "duchy_references": 11,
+      "subregions": []
+    },
+    {
+      "region": "world_africa_north",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 409,
+      "after_provinces": 425,
+      "added": 16,
+      "removed": 0,
+      "duchy_references": 0,
+      "subregions": [
+        "world_africa_north_west",
+        "world_africa_north_east"
+      ]
+    },
+    {
+      "region": "world_africa_north_east",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 132,
+      "after_provinces": 114,
+      "added": 7,
+      "removed": 25,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "world_africa_north_west",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 286,
+      "after_provinces": 311,
+      "added": 32,
+      "removed": 7,
+      "duchy_references": 8,
+      "subregions": []
+    },
+    {
+      "region": "world_africa_sahara",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 94,
+      "after_provinces": 129,
+      "added": 49,
+      "removed": 14,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "world_africa_west",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 632,
+      "after_provinces": 659,
+      "added": 47,
+      "removed": 20,
+      "duchy_references": 30,
+      "subregions": []
+    },
+    {
+      "region": "world_asia",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 3633,
+      "after_provinces": 3589,
+      "added": 21,
+      "removed": 65,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia_east",
+        "world_asia_north_east",
+        "world_asia_southeast"
+      ]
+    },
+    {
+      "region": "world_asia_and_india",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 4809,
+      "after_provinces": 4787,
+      "added": 49,
+      "removed": 71,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia",
+        "world_india"
+      ]
+    },
+    {
+      "region": "world_asia_borneo",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 143,
+      "after_provinces": 143,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "world_asia_cambodia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 68,
+      "after_provinces": 49,
+      "added": 6,
+      "removed": 25,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "world_asia_east",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 2268,
+      "after_provinces": 2253,
+      "added": 3,
+      "removed": 18,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia_china",
+        "world_asia_sakhalin_hokkaido",
+        "world_asia_japan",
+        "world_asia_korea"
+      ]
+    },
+    {
+      "region": "world_asia_indonesia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 262,
+      "after_provinces": 258,
+      "added": 8,
+      "removed": 12,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "world_asia_japan",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 347,
+      "after_provinces": 347,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 11,
+      "subregions": []
+    },
+    {
+      "region": "world_asia_khitan_steppe",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 114,
+      "after_provinces": 104,
+      "added": 21,
+      "removed": 31,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "world_asia_korea",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 134,
+      "after_provinces": 132,
+      "added": 3,
+      "removed": 5,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "world_asia_malaysia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 64,
+      "after_provinces": 43,
+      "added": 0,
+      "removed": 21,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "world_asia_minor",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 406,
+      "after_provinces": 438,
+      "added": 33,
+      "removed": 1,
+      "duchy_references": 11,
+      "subregions": []
+    },
+    {
+      "region": "world_asia_north_east",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 215,
+      "after_provinces": 227,
+      "added": 36,
+      "removed": 24,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "world_asia_north_east_and_korea",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 349,
+      "after_provinces": 359,
+      "added": 31,
+      "removed": 21,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia_korea",
+        "world_asia_north_east"
+      ]
+    },
+    {
+      "region": "world_asia_north_east_and_korea_weak_earthquake_region",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 200,
+      "after_provinces": 192,
+      "added": 29,
+      "removed": 37,
+      "duchy_references": 8,
+      "subregions": []
+    },
+    {
+      "region": "world_asia_philippines",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 146,
+      "after_provinces": 146,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "world_asia_sakhalin_hokkaido",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 79,
+      "after_provinces": 71,
+      "added": 0,
+      "removed": 8,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "world_asia_shiwei_steppe",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 54,
+      "after_provinces": 33,
+      "added": 12,
+      "removed": 33,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "world_asia_southeast",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1150,
+      "after_provinces": 1109,
+      "added": 3,
+      "removed": 44,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia_southeast_mainland",
+        "world_asia_southeast_islands"
+      ]
+    },
+    {
+      "region": "world_asia_southeast_islands",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 637,
+      "after_provinces": 638,
+      "added": 8,
+      "removed": 7,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia_philippines",
+        "world_asia_borneo",
+        "world_asia_sulawesi_maluku",
+        "world_asia_indonesia"
+      ]
+    },
+    {
+      "region": "world_asia_southeast_mainland",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 513,
+      "after_provinces": 471,
+      "added": 0,
+      "removed": 42,
+      "duchy_references": 0,
+      "subregions": [
+        "world_asia_thailand",
+        "world_asia_cambodia",
+        "world_asia_vietnam",
+        "world_asia_malaysia",
+        "world_burma"
+      ]
+    },
+    {
+      "region": "world_asia_sulawesi_maluku",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 86,
+      "after_provinces": 91,
+      "added": 5,
+      "removed": 0,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "world_asia_thailand",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 168,
+      "after_provinces": 178,
+      "added": 39,
+      "removed": 29,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "world_asia_vietnam",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 92,
+      "after_provinces": 86,
+      "added": 5,
+      "removed": 11,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "world_atlantic",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 500,
+      "after_provinces": 479,
+      "added": 18,
+      "removed": 39,
+      "duchy_references": 6,
+      "subregions": [
+        "world_europe_west_britannia"
+      ]
+    },
+    {
+      "region": "world_burma",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 121,
+      "after_provinces": 115,
+      "added": 13,
+      "removed": 19,
+      "duchy_references": 4,
+      "subregions": []
+    },
+    {
+      "region": "world_central_asia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 297,
+      "after_provinces": 262,
+      "added": 41,
+      "removed": 76,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "world_daylam",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 82,
+      "after_provinces": 75,
+      "added": 5,
+      "removed": 12,
+      "duchy_references": 2,
+      "subregions": []
+    },
+    {
+      "region": "world_europe",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 4457,
+      "after_provinces": 4462,
+      "added": 42,
+      "removed": 37,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_west",
+        "world_europe_south",
+        "world_europe_east",
+        "world_europe_north"
+      ]
+    },
+    {
+      "region": "world_europe_east",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 1296,
+      "after_provinces": 1338,
+      "added": 60,
+      "removed": 18,
+      "duchy_references": 39,
+      "subregions": []
+    },
+    {
+      "region": "world_europe_north",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 486,
+      "after_provinces": 486,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 12,
+      "subregions": []
+    },
+    {
+      "region": "world_europe_south",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 682,
+      "after_provinces": 672,
+      "added": 15,
+      "removed": 25,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_south_east",
+        "world_europe_south_italy"
+      ]
+    },
+    {
+      "region": "world_europe_south_east",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 386,
+      "after_provinces": 361,
+      "added": 0,
+      "removed": 25,
+      "duchy_references": 11,
+      "subregions": []
+    },
+    {
+      "region": "world_europe_south_italy",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 296,
+      "after_provinces": 311,
+      "added": 19,
+      "removed": 4,
+      "duchy_references": 15,
+      "subregions": []
+    },
+    {
+      "region": "world_europe_west",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1993,
+      "after_provinces": 1966,
+      "added": 6,
+      "removed": 33,
+      "duchy_references": 0,
+      "subregions": [
+        "world_europe_west_iberia",
+        "world_europe_west_francia",
+        "world_europe_west_germania",
+        "world_europe_west_britannia"
+      ]
+    },
+    {
+      "region": "world_europe_west_britannia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 329,
+      "after_provinces": 329,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 13,
+      "subregions": []
+    },
+    {
+      "region": "world_europe_west_francia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 445,
+      "after_provinces": 423,
+      "added": 4,
+      "removed": 26,
+      "duchy_references": 19,
+      "subregions": []
+    },
+    {
+      "region": "world_europe_west_germania",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 795,
+      "after_provinces": 790,
+      "added": 24,
+      "removed": 29,
+      "duchy_references": 30,
+      "subregions": []
+    },
+    {
+      "region": "world_europe_west_iberia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 424,
+      "after_provinces": 424,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 15,
+      "subregions": []
+    },
+    {
+      "region": "world_horse_buildings_in_hills_and_mountains",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 4724,
+      "after_provinces": 4811,
+      "added": 229,
+      "removed": 142,
+      "duchy_references": 77,
+      "subregions": [
+        "world_africa_north",
+        "world_africa_sahara",
+        "world_steppe_east",
+        "world_steppe_tarim",
+        "world_middle_east_persia",
+        "world_middle_east_arabia",
+        "world_europe_west_iberia"
+      ]
+    },
+    {
+      "region": "world_india",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1176,
+      "after_provinces": 1198,
+      "added": 28,
+      "removed": 6,
+      "duchy_references": 0,
+      "subregions": [
+        "world_india_deccan",
+        "world_india_bengal",
+        "world_india_rajastan"
+      ]
+    },
+    {
+      "region": "world_india_bengal",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 339,
+      "after_provinces": 363,
+      "added": 30,
+      "removed": 6,
+      "duchy_references": 9,
+      "subregions": []
+    },
+    {
+      "region": "world_india_deccan",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 347,
+      "after_provinces": 345,
+      "added": 1,
+      "removed": 3,
+      "duchy_references": 10,
+      "subregions": []
+    },
+    {
+      "region": "world_india_rajastan",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 490,
+      "after_provinces": 490,
+      "added": 30,
+      "removed": 30,
+      "duchy_references": 11,
+      "subregions": []
+    },
+    {
+      "region": "world_innovation_camels",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 2017,
+      "after_provinces": 2043,
+      "added": 74,
+      "removed": 48,
+      "duchy_references": 0,
+      "subregions": [
+        "world_middle_east",
+        "world_africa_east",
+        "world_africa_sahara",
+        "world_africa_north"
+      ]
+    },
+    {
+      "region": "world_innovation_elephants",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1561,
+      "after_provinces": 1601,
+      "added": 57,
+      "removed": 17,
+      "duchy_references": 0,
+      "subregions": [
+        "world_india",
+        "dlc_tgp_mainland_southeast_asia_region"
+      ]
+    },
+    {
+      "region": "world_jazira",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 48,
+      "after_provinces": 48,
+      "added": 0,
+      "removed": 0,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "world_khorasan",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 130,
+      "after_provinces": 132,
+      "added": 17,
+      "removed": 15,
+      "duchy_references": 3,
+      "subregions": []
+    },
+    {
+      "region": "world_makran",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 88,
+      "after_provinces": 61,
+      "added": 6,
+      "removed": 33,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "world_mesopotamia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 73,
+      "after_provinces": 55,
+      "added": 1,
+      "removed": 19,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "world_middle_east",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1255,
+      "after_provinces": 1271,
+      "added": 42,
+      "removed": 26,
+      "duchy_references": 0,
+      "subregions": [
+        "world_middle_east_arabia",
+        "world_middle_east_jerusalem",
+        "world_middle_east_persia"
+      ]
+    },
+    {
+      "region": "world_middle_east_arabia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 512,
+      "after_provinces": 512,
+      "added": 13,
+      "removed": 13,
+      "duchy_references": 11,
+      "subregions": []
+    },
+    {
+      "region": "world_middle_east_jerusalem",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 71,
+      "after_provinces": 72,
+      "added": 3,
+      "removed": 2,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "world_middle_east_persia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 672,
+      "after_provinces": 687,
+      "added": 47,
+      "removed": 32,
+      "duchy_references": 13,
+      "subregions": []
+    },
+    {
+      "region": "world_persia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 237,
+      "after_provinces": 257,
+      "added": 30,
+      "removed": 10,
+      "duchy_references": 5,
+      "subregions": []
+    },
+    {
+      "region": "world_persian_empire",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 829,
+      "after_provinces": 853,
+      "added": 63,
+      "removed": 39,
+      "duchy_references": 1,
+      "subregions": [
+        "world_persia",
+        "world_khorasan",
+        "world_daylam",
+        "world_transoxiana",
+        "world_makran",
+        "world_kabulistan",
+        "world_mesopotamia",
+        "world_jazira"
+      ]
+    },
+    {
+      "region": "world_siberia",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 208,
+      "after_provinces": 255,
+      "added": 59,
+      "removed": 12,
+      "duchy_references": 11,
+      "subregions": []
+    },
+    {
+      "region": "world_steppe",
+      "vanilla_duchy_granularity": false,
+      "before_provinces": 1192,
+      "after_provinces": 1098,
+      "added": 54,
+      "removed": 148,
+      "duchy_references": 0,
+      "subregions": [
+        "world_steppe_west",
+        "world_steppe_central",
+        "world_steppe_east",
+        "world_steppe_tarim"
+      ]
+    },
+    {
+      "region": "world_steppe_central",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 297,
+      "after_provinces": 262,
+      "added": 41,
+      "removed": 76,
+      "duchy_references": 6,
+      "subregions": []
+    },
+    {
+      "region": "world_steppe_east",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 224,
+      "after_provinces": 213,
+      "added": 13,
+      "removed": 24,
+      "duchy_references": 9,
+      "subregions": []
+    },
+    {
+      "region": "world_steppe_tarim",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 43,
+      "after_provinces": 54,
+      "added": 11,
+      "removed": 0,
+      "duchy_references": 1,
+      "subregions": []
+    },
+    {
+      "region": "world_steppe_west",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 628,
+      "after_provinces": 569,
+      "added": 25,
+      "removed": 84,
+      "duchy_references": 21,
+      "subregions": []
+    },
+    {
+      "region": "world_tibet",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 320,
+      "after_provinces": 255,
+      "added": 6,
+      "removed": 71,
+      "duchy_references": 7,
+      "subregions": []
+    },
+    {
+      "region": "world_transoxiana",
+      "vanilla_duchy_granularity": true,
+      "before_provinces": 103,
+      "after_provinces": 166,
+      "added": 63,
+      "removed": 0,
+      "duchy_references": 3,
+      "subregions": []
+    }
+  ]
+}

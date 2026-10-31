@@ -1,0 +1,87 @@
+{
+  "backup": "F:\\备份\\EU5_Modern_Borders_noshape\\_backup_20261101_050756_ecclesiastical_1178",
+  "reference_date": "1178.10.1",
+  "scenario_date": "1337.4.1",
+  "ecclesiastical_histories": 77,
+  "active_regions": 75,
+  "inactive_titles": [
+    "d_et_merida",
+    "d_et_eauze"
+  ],
+  "ecclesiastical_declarations": 78,
+  "cardinal_declarations": 54,
+  "suppressed_cardinalates": [
+    "d_cd_velletri",
+    "d_cd_santa_rufina"
+  ],
+  "existing_1337_clergy_reused": 11,
+  "government_overrides_corrected": 8,
+  "unassigned_active_holders": 64,
+  "region_baronies": 4950,
+  "region_overlap_baronies": 0,
+  "seat_pins": [
+    {
+      "title": "d_et_tarentaise",
+      "barony": "b_moutiers",
+      "previous_regions": [
+        "et_867_vienne_region"
+      ],
+      "region": "et_867_tarentaise_region"
+    },
+    {
+      "title": "d_et_arles",
+      "barony": "b_arles",
+      "previous_regions": [
+        "et_867_narbonne_region"
+      ],
+      "region": "et_867_arles_region"
+    },
+    {
+      "title": "d_et_salerno",
+      "barony": "b_salerno",
+      "previous_regions": [
+        "et_1066_napoli_region"
+      ],
+      "region": "et_1066_salerno_region"
+    },
+    {
+      "title": "d_et_bari",
+      "barony": "b_bari",
+      "previous_regions": [
+        "et_1066_trani_region"
+      ],
+      "region": "et_1066_bari_region"
+    }
+  ],
+  "shared_seat_counties": {
+    "c_aquisextain": [
+      "d_et_arles",
+      "d_et_aix"
+    ],
+    "c_calabria_ultra": [
+      "d_et_reggio_calabria",
+      "d_et_santa_severina"
+    ],
+    "c_lavoro": [
+      "d_et_capua",
+      "d_et_napoli"
+    ],
+    "c_bari": [
+      "d_et_bari",
+      "d_et_trani"
+    ],
+    "c_south_dalmatia": [
+      "d_et_split",
+      "d_et_ragusa"
+    ]
+  },
+  "files": [
+    "map_data\\geographical_regions\\geographical_region.txt",
+    "common\\landed_titles\\07_pam_ecclesiastical_titles.txt",
+    "common\\landed_titles\\zz_vanilla_titulars.txt",
+    "history\\titles\\ce3\\00_ecclesiastical_titles.txt",
+    "history\\titles\\ce3\\01_cardinalate_status.txt",
+    "history\\characters\\zz_eu5_government.txt"
+  ],
+  "validation": "passed"
+}

@@ -1,0 +1,412 @@
+﻿# Region granularity follows CK3 vanilla declarations, adapted to current EU5 duchies.
+# No kingdom, empire or hegemony references. Original fine-grained regions stay precise.
+
+global_flood_region = {
+	regions = {
+		yellow_river_region yangtze_river_region pearl_river_region tigris_river_region irrawaddy_river_region mekong_river_region amur_river_region nile_river_region
+		niger_river_region po_river_region rhine_river_region elbe_river_region rhone_river_region garonne_river_region seine_river_region loire_river_region
+		vistula_river_region danube_river_region dniester_river_region dnieper_river_region daugava_river_region lovat_river_region volga_river_region don_river_region
+		guadiana_river_region guadalquivir_river_region ganges_river_region indus_river_region kaveri_river_region godavari_river_region mahanadi_river_region tapti_river_region
+	}
+}
+
+yellow_river_region = {
+	counties = {
+		c_binzhou c_daming c_dezhou c_dongchang c_dongping c_henan c_huaiqing c_jinan
+		c_jingzhou_beizhili c_jining c_kaizhou c_puzhou c_qingzhou c_shanzhou c_songzhou c_taian
+		c_weihui c_wuding_shandong c_xiezhou c_zhangde c_zhengzhou
+	}
+	provinces = {
+		8745 9004 9005 9007 9008 9849 9850 9851
+		9852 9853
+	}
+}
+
+yangtze_river_region = {
+	counties = {
+		c_anqing c_changde c_changzhou c_chizhou c_chuzhou c_hanyang c_he c_huangzhou
+		c_jingmen c_jingzhou c_jiujiang c_lizhou c_luzhou c_mianyang c_nanchang c_nankang
+		c_ningguo c_raozhou c_taiping c_taizhou_nanzhili c_tongzhou c_wuchang c_xiangxiang c_xingguo
+		c_yangzhou c_yiling c_yingtian c_yuezhou c_zhenjiang
+	}
+	provinces = {
+		7406 7408 7409 7410 7411 7412
+	}
+}
+
+pearl_river_region = {
+	counties = {
+		c_deqing c_guangzhou c_hezhou_guangxi c_panyu c_pingle c_tengzhou_guangxi c_wuzhou c_zhaoqing
+	}
+	provinces = {
+		9248
+	}
+}
+
+tigris_river_region = {
+	counties = {
+		c_baghdad c_basra c_bataih
+	}
+}
+
+irrawaddy_river_region = {
+	counties = {
+		c_hsipaw c_kale c_myaungmya c_pagan c_pathein c_pegu c_pyay c_sagaing
+		c_salin c_wuntho
+	}
+}
+
+mekong_river_region = {
+	counties = {
+		c_champasak c_indrapura_khmer c_ishanapura c_khukhan c_kracheh c_muang_sua c_or_keo c_savannakhet
+		c_vyadhapura
+	}
+}
+
+amur_river_region = {
+	counties = {
+		c_amgun c_bolon c_gorin c_humar c_lower_bureya
+	}
+}
+
+nile_river_region = {
+	counties = {
+		c_asyut c_buhayra c_cairo c_dakahliyya c_gharbiyya c_minya c_qusiyya c_sharqiyya
+	}
+	provinces = {
+		14034
+	}
+}
+
+niger_river_region = {
+	duchies = {
+		d_zarma
+	}
+	counties = {
+		c_bambara c_hombori c_igbomina c_kissi c_liptako c_macina c_namaro c_niger_delta
+		c_nupe c_south_benin c_south_zazzau c_timbuktu c_west_igbo c_yauri
+	}
+	provinces = {
+		15318 15319 15323 15573 15574 15575 15578 15579
+	}
+}
+
+po_river_region = {
+	counties = {
+		c_alessandria c_bologna c_cremona c_ferrara c_mantua c_parma c_pavia c_piacenza
+		c_verona
+	}
+}
+
+rhine_river_region = {
+	counties = {
+		c_antwerp c_bergisches_land c_eifel c_kempenland c_koln_bucht c_limburg c_loon c_niederrhein
+		c_ruhr c_south_holland c_westerwald
+	}
+	provinces = {
+		575 577 578 579
+	}
+}
+
+elbe_river_region = {
+	counties = {
+		c_altmark c_elbmarch c_holstein c_luneburger_heide
+	}
+	provinces = {
+		627 630 631 637 641 642 645 646
+		647 648 823 824 825 827 828 829
+		879 880 881 882 884 886
+	}
+}
+
+rhone_river_region = {
+	counties = {
+		c_avignonnais c_beaujolais c_nimois c_valentinois c_viennois
+	}
+	provinces = {
+		1842 1845 1846 1847 1901 1904
+	}
+}
+
+garonne_river_region = {
+	counties = {
+		c_agenais c_armagnac c_bazadais c_bordelais c_toulousain c_tursan
+	}
+	provinces = {
+		2002 2003 2006 2008 2009
+	}
+}
+
+seine_river_region = {
+	counties = {
+		c_caux c_pays_france
+	}
+	provinces = {
+		1924 1928 1930 1931 1933
+	}
+}
+
+loire_river_region = {
+	counties = {
+		c_nantais c_touraine
+	}
+	provinces = {
+		1605 1606 1607 1608 1609 1611 1612
+	}
+}
+
+vistula_river_region = {
+	counties = {
+		c_chelmno c_ciechanow c_czersk c_danzig c_dobrzyn c_kuyavia c_plock c_radom
+		c_rawa c_tuchola c_upper_prussia c_warsaw
+	}
+	provinces = {
+		3162 3163
+	}
+}
+
+danube_river_region = {
+	counties = {
+		c_bacs c_baranya c_branicevo c_buda c_east_muntenia c_fejer c_hont c_north_dobruja
+		c_pest c_pleven c_south_oltenia c_sumadija c_tarnovo c_vidin c_vukovar_syrmia c_west_banat
+		c_west_muntenia
+	}
+	provinces = {
+		2786 2787 2788 2789 2792 2794 2795 2796
+		2797 2798 2946 5065 5066 5067 5068 5069
+		5070 5081 5083 5085
+	}
+}
+
+dniester_river_region = {
+	counties = {
+		c_balti_moldova c_bratslav c_drohobych c_eastern_podolia c_halych c_khadjibey c_lviv c_orhei
+		c_pocutia c_terebovlia c_western_podolia c_zhydachiv
+	}
+	provinces = {
+		2793 2799
+	}
+}
+
+dnieper_river_region = {
+	duchies = {
+		d_zaporizhzhia
+	}
+	counties = {
+		c_berda c_boh c_cherkasy c_chernihiv c_chornobyl c_donetsk c_dorogobuzh c_gomel
+		c_kozlov c_kyiv c_lubny c_mazyr c_mogilev c_mstsislaw c_oleshia c_orsha
+		c_pereiaslav c_poltava c_porossia c_qalancak c_rechytsa c_roslavl c_smolensk c_verzhavsk
+		c_vyazma
+	}
+}
+
+daugava_river_region = {
+	counties = {
+		c_barysaw c_breslauja c_polotsk c_selonia c_semigalia c_south_livonia c_svir c_vilkmerge
+		c_vitebsk
+	}
+}
+
+lovat_river_region = {
+	counties = {
+		c_belozerskaya c_bezhetskaya c_derevskaya c_dzisna c_knyazhaya c_latgalia c_luzhkaya c_rzhevskaya
+		c_south_pskov c_volkhovskaya
+	}
+}
+
+volga_river_region = {
+	duchies = {
+		d_suzdal d_tver
+	}
+	counties = {
+		c_alatyr c_astrakhan c_beljamen c_beloe c_bely c_bolghar c_cheboksary c_chyorny_yar
+		c_dardeling c_galich c_gorodets c_kasimov c_kazan c_kostroma c_kurmysh c_mikhaylovka
+		c_mologa c_mozhaysk c_murom c_nizhny_novgorod c_pereyaslavl c_piterka c_pologoye_zaymishche c_priyutnoye
+		c_rostov c_samara c_saratov c_sarov c_sergiyevsk c_simbirsk c_tarusa c_toropets
+		c_uglich c_unzha c_vologda c_yaransk c_yaroslavl c_yazhelbitskaya c_zamyany c_zvenigorod
+	}
+}
+
+don_river_region = {
+	counties = {
+		c_alexeyevka c_azov c_belgorod c_borisoglebsk c_kashary c_kremenskaya c_lipetsk c_semikarakorsk
+		c_tana c_ust_tsimla c_voronezh c_yelets
+	}
+	provinces = {
+		3948
+	}
+}
+
+guadiana_river_region = {
+	counties = {
+		c_alto_alentejo c_badajoz c_baixo_alentejo c_caceres c_huelva c_merida c_trujillo c_villanueva_de_la_serena
+	}
+	provinces = {
+		2319 2321
+	}
+}
+
+guadalquivir_river_region = {
+	counties = {
+		c_cadiz c_cordoba c_jaen c_sevilla
+	}
+}
+
+ganges_river_region = {
+	counties = {
+		c_arrah c_azamgarh c_bhagalpur c_darbhanga c_gaur c_khalifatabad c_khulna c_lower_doab
+		c_manikpur c_nadia c_purnia c_sonargaon c_varanasi
+	}
+}
+
+indus_river_region = {
+	counties = {
+		c_bari_doab c_derajat c_karman c_lower_sindh c_northern_sindh c_pothwar c_tharparkar c_upper_sindh
+	}
+	provinces = {
+		11175 11176 11185
+	}
+}
+
+kaveri_river_region = {
+	counties = {
+		c_lata
+	}
+	provinces = {
+		11666 11667 11671 11672 11673 11674 11675
+	}
+}
+
+godavari_river_region = {
+	counties = {
+		c_bastar c_kalingandhra c_sirpur c_vengi_nadu
+	}
+	provinces = {
+		12007 12008 12009 12010 12011 12015 12016
+	}
+}
+
+mahanadi_river_region = {
+	counties = {
+		c_orissa_garjats c_rajabandi c_sambalpur_garjats
+	}
+}
+
+tapti_river_region = {
+	counties = {
+		c_baramahal c_cola_nadu c_kongu_nadu
+	}
+}
+
+himalaya_earthquake_region = {
+	duchies = {
+		d_nepal d_ngari d_tsang d_u
+	}
+	counties = {
+		c_balor c_chitral c_eastern_bhutan c_hazara c_hunza c_kangra c_karakoram c_kashmir
+		c_pagsho c_punjab_hills c_sadiya c_sarikol c_sikkim c_tsawarong c_western_bhutan c_zayul
+	}
+}
+
+sichuan_myanmar_earthquake_region = {
+	duchies = {
+		d_arakhan d_assam d_dali d_hill d_irrawady d_kachin
+	}
+	counties = {
+		c_baixing c_cheli c_chengdu c_chengjiang c_chuxiong c_dartsedo c_dechang c_derge
+		c_dongchuan c_hanzhou c_hsenwi c_hsipaw c_itanagar c_jalpaiguri c_jianzhou c_jindong
+		c_jinning c_kyenarong c_linan c_lithang c_lizhou_sichuan c_longan c_malongtalang c_manmaw
+		c_maozhou c_meizhou c_monghsu c_mongnai c_mongpai c_muli c_myaungmya c_mymensingh
+		c_nyarong c_pathein c_pegu c_pengzhou c_qiongzhou_sichuan c_sangon c_sichuan c_simao
+		c_sonargaon c_sylhet c_tehor c_thaton c_tripura c_weiyuan c_wuding c_yazhou
+		c_yuanjiang c_yunnan
+	}
+}
+
+north_china_earthquake_region = {
+	counties = {
+		c_anzhou c_baoan c_baode c_baoding c_bazhou c_caozhou c_changping c_changzhou
+		c_cizhou c_daizhou c_datong c_dingzhou c_fengxiang c_fenzhou c_gaizhou c_gongchang
+		c_haizhou c_hejian c_henan c_huaiqing c_huazhou_shaanxi c_huozhou c_jiangzhou c_jiaozhou
+		c_jizhou c_jizhou_zhending c_juzhou c_kaifeng c_kaizhou c_liaoyang c_liaozhou c_lintao
+		c_luan c_luanzhou c_mizhou c_ningxia c_pingding c_pingyang c_pizhou c_qianzhou
+		c_qingzhou c_qinzhou c_qinzhou_shaanxi c_qizhou c_shanzhou c_shenzhou c_shunde c_shuntian
+		c_songzhou c_suzhou_gansu c_suzhou_north c_taiping c_taiyuan c_tengzhou c_tongzhou_beizhili c_weihui
+		c_xian c_xiezhou c_xinzhou c_xuzhou c_yaozhou c_yingzhou_shanxi c_yizhou c_yizhou_shandong
+		c_yongping c_yuzhou_shanxi c_zezhou c_zhangde c_zhaozhou c_zhending c_zhengzhou c_zhenjiang
+	}
+	provinces = {
+		7345 7346 7347 7349 8089 8090 8092 8107
+		8117 8119 8121 8684 8687 8688 8690 8888
+		8889 8890 9004 9005 9007 9008 9689 9690
+		9694 9712 9713 9714 9715 9716 9724 9725
+		9738 9740 9780 9783 9841 9849 9850 9851
+		9852 9853
+	}
+}
+
+south_china_coastaline_earthquake_region = {
+	counties = {
+		c_funing c_fuzhou c_gaozhou c_huazhou c_leizhou c_qiongzhou c_quanzhou c_xinghua
+		c_zhangzhou
+	}
+	provinces = {
+		9080 9082 9084 9085 9087 9088 9089
+	}
+}
+
+mongolia_baikal_earthquake_region = {
+	duchies = {
+		d_west_stanovoi
+	}
+	counties = {
+		c_bayanday c_dzhida c_egiin c_gobi_altai c_greater_yenisei c_irkutsk c_khovd c_orkhon
+		c_selenga c_smaller_yenisei c_valley_of_the_lakes c_vitim c_western_gobi
+	}
+	provinces = {
+		8455 8456 8457 8458
+	}
+}
+
+central_asian_earthquake_region = {
+	duchies = {
+		d_badakhshan
+	}
+	counties = {
+		c_akhsikath c_aksu c_almaliq c_almaty c_andijan c_beshbalik c_bortala c_bukhara
+		c_charchan c_chu c_farghana c_hami c_ilibalyk c_issyk_kul c_jizzakh c_kashgar
+		c_kelif c_khotan c_khujand c_kurla c_naryn c_nurota c_samarkand c_turpan
+		c_yangjibaliq c_yarkand
+	}
+	provinces = {
+		10131 10133
+	}
+}
+
+north_pacific_earthquake_region = {
+	regions = {
+		world_asia_japan world_asia_sakhalin_hokkaido
+	}
+}
+
+world_asia_southeast_islands_weak_earthquake_region = {
+	duchies = {
+		d_south_borneo
+	}
+	counties = {
+		c_baram c_berau c_karangan c_kinabatangan c_kudat c_lower_mahakam c_lower_rajang c_palawan
+		c_santubong c_tarakan c_upper_kapuas c_upper_mahakam c_upper_rajang
+	}
+}
+
+world_asia_north_east_and_korea_weak_earthquake_region = {
+	duchies = {
+		d_gwanseo d_gyeonggi d_haeseo d_honam d_hoseo d_lower_amur d_songhua d_songnen
+	}
+}
+
+world_asia_north_east_and_korea = {
+	regions = {
+		world_asia_korea world_asia_north_east
+	}
+}

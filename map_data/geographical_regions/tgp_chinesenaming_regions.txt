@@ -1,5 +1,5 @@
-﻿# Rebuilt from CU barony geometry / EU5 definitions, 2026-10-31.
-# Maximum title tier: duchy. Partial counties use province IDs.
+﻿# Region granularity follows CK3 vanilla declarations, adapted to current EU5 duchies.
+# No kingdom, empire or hegemony references. Original fine-grained regions stay precise.
 
 tgp_ba_region = {
 	counties = {
@@ -35,11 +35,8 @@ tgp_cai_region = {
 }
 
 tgp_cao_region = {
-	counties = {
-		c_caozhou c_dezhou c_dongping c_jinan c_jining c_kaizhou c_taian
-	}
-	provinces = {
-		8888 8889 8890
+	duchies = {
+		d_shandong
 	}
 }
 
@@ -69,12 +66,8 @@ tgp_chu_region = {
 }
 
 tgp_dai_region = {
-	counties = {
-		c_baode c_daizhou c_datong c_jiazhou c_jining_shanxi c_wanquan c_xinghe c_xinzhou
-		c_yingzhou_shanxi c_yuzhou_shanxi
-	}
-	provinces = {
-		8937 8938 8940 8941 8942 8943 8944
+	duchies = {
+		d_datong
 	}
 }
 
@@ -168,12 +161,8 @@ tgp_huai_region = {
 }
 
 tgp_huang_region = {
-	counties = {
-		c_anqing c_he c_luan_nanzhili c_luzhou
-	}
-	provinces = {
-		7400 7401 7417 7418 8722 8723 8724 8726
-		8727 8729
+	duchies = {
+		d_huaixi
 	}
 }
 
@@ -304,9 +293,6 @@ tgp_min_region = {
 tgp_ou_region = {
 	duchies = {
 		d_zhejiang
-	}
-	counties = {
-		c_bozhou c_shizhou c_sinan c_songjiang c_youyang c_zhenan
 	}
 }
 
@@ -505,12 +491,8 @@ tgp_yang_region = {
 }
 
 tgp_yin_region = {
-	counties = {
-		c_cizhou c_huaiqing c_jianning c_shaowu c_shunde c_tingzhou c_weihui c_yanping
-		c_zhangde
-	}
-	provinces = {
-		8684 8687 8688 8690
+	duchies = {
+		d_hebei
 	}
 }
 
@@ -532,8 +514,8 @@ tgp_yong_region = {
 }
 
 tgp_you_region = {
-	counties = {
-		c_baoan c_changping c_jizhou c_luanzhou c_shuntian c_tongzhou_beizhili c_yongping
+	duchies = {
+		d_beiping
 	}
 }
 
@@ -577,12 +559,8 @@ tgp_yue_2_region = {
 }
 
 tgp_zhao_region = {
-	counties = {
-		c_binzhou c_cizhou c_jingzhou_beizhili c_jizhou_zhending c_qingchi c_qingzhou_beizhili c_qizhou c_shenzhou
-		c_shunde c_wuding_shandong c_zhangde c_zhaozhou c_zhending
-	}
-	provinces = {
-		8684 8687 8688 8690
+	duchies = {
+		d_yannan
 	}
 }
 
@@ -608,21 +586,8 @@ tgp_zou_region = {
 }
 
 tgp_duchy_chinese_naming_region = {
-	counties = {
-		c_anqing c_binzhou c_binzhou_shaanxi c_chuzhou c_cizhou c_daizhou c_daming c_dongchang
-		c_fengxiang c_fengzhou c_fenzhou c_fuzhou_shaanxi c_gaotang c_gaoyou c_gongchang c_guangping
-		c_he c_huaiqing c_huazhou_shaanxi c_huizhou_shaanxi c_huozhou c_jiangzhou c_jiezhou c_jingning
-		c_jingzhou_beizhili c_jingzhou_shaanxi c_jizhou_zhending c_kelan c_liaozhou c_linqing c_luan c_luan_nanzhili
-		c_luzhou c_minzhou c_nanningjun c_pingding c_pingliang c_pingyang c_puzhou_shanxi c_qianzhou
-		c_qingchi c_qingyang c_qingzhou_beizhili c_qinzhou c_qinzhou_shaanxi c_qiongzhou c_qizhou c_shangzhou
-		c_shenzhou c_shizhou_shanxi c_shunde c_taiyuan c_taizhou_nanzhili c_tongzhou c_tongzhou_shaanxi c_wananjun
-		c_weihui c_wuding_shandong c_xian c_xiezhou c_xingan c_xinzhou c_xizhou c_yanan
-		c_yangzhou c_yaozhou c_zezhou c_zhangde c_zhaozhou c_zhending
-	}
-	provinces = {
-		7348 7350 7362 7365 7366 7400 7401 7417
-		7418 7422 7424 8722 8723 8724 8726 8727
-		8729 8891 9723
+	duchies = {
+		d_hebei d_hexi d_huaixi d_longyou d_shaanxi d_shanxi d_yannan
 	}
 }
 

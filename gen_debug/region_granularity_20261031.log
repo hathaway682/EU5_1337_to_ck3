@@ -1,0 +1,224 @@
+{
+  "backup": "F:\\����\\EU5_Modern_Borders_noshape\\_backup_20261031_184125_region_granularity",
+  "duchy_granularity_regions": 310,
+  "restored_parent_region_links": 140,
+  "vanilla_duchy_regions": 334,
+  "retained_boundary_exceptions": [
+    "custom_gotland",
+    "custom_roman_mesopotamia",
+    "dlc_fp1_region_eastern_adventure_targets_estonia",
+    "dlc_mpo_steppe_east_china_addon",
+    "ghw_region_holy_land",
+    "ghw_region_jerusalem",
+    "ghw_region_thessalonika",
+    "tgp_bi_region",
+    "tgp_deng_region",
+    "tgp_di_region",
+    "tgp_e_region",
+    "tgp_guo_region",
+    "tgp_jing_region",
+    "tgp_liang_region",
+    "tgp_lu_region",
+    "tgp_qi_guannei_region",
+    "tgp_qiong_region",
+    "tgp_shang_region",
+    "tgp_wei_region",
+    "tgp_wey_region",
+    "tgp_xing_region",
+    "tgp_xu_shandong_region",
+    "tgp_yang_region",
+    "world_kabulistan"
+  ],
+  "changed_files": [
+    "10_natural_disaster_regions.txt",
+    "geographical_region.txt",
+    "tgp_chinesenaming_regions.txt"
+  ],
+  "fallback_duchies": [
+    {
+      "region": "custom_roman_mesopotamia",
+      "duchy": "d_iraq_arabi",
+      "covered_baronies": 15,
+      "duchy_baronies": 55
+    },
+    {
+      "region": "custom_gotland",
+      "duchy": "d_gotaland",
+      "covered_baronies": 3,
+      "duchy_baronies": 39
+    },
+    {
+      "region": "world_kabulistan",
+      "duchy": "d_sistan",
+      "covered_baronies": 26,
+      "duchy_baronies": 54
+    },
+    {
+      "region": "ghw_region_thessalonika",
+      "duchy": "d_macedonia",
+      "covered_baronies": 15,
+      "duchy_baronies": 39
+    },
+    {
+      "region": "ghw_region_holy_land",
+      "duchy": "d_levant",
+      "covered_baronies": 31,
+      "duchy_baronies": 72
+    },
+    {
+      "region": "ghw_region_jerusalem",
+      "duchy": "d_levant",
+      "covered_baronies": 18,
+      "duchy_baronies": 72
+    },
+    {
+      "region": "dlc_fp1_region_eastern_adventure_targets_estonia",
+      "duchy": "d_baltic",
+      "covered_baronies": 24,
+      "duchy_baronies": 56
+    },
+    {
+      "region": "dlc_mpo_steppe_east_china_addon",
+      "duchy": "d_datong",
+      "covered_baronies": 15,
+      "duchy_baronies": 36
+    },
+    {
+      "region": "tgp_bi_region",
+      "duchy": "d_shaanxi",
+      "covered_baronies": 23,
+      "duchy_baronies": 65
+    },
+    {
+      "region": "tgp_deng_region",
+      "duchy": "d_hubei",
+      "covered_baronies": 32,
+      "duchy_baronies": 80
+    },
+    {
+      "region": "tgp_di_region",
+      "duchy": "d_hexi",
+      "covered_baronies": 12,
+      "duchy_baronies": 54
+    },
+    {
+      "region": "tgp_e_region",
+      "duchy": "d_hubei",
+      "covered_baronies": 24,
+      "duchy_baronies": 80
+    },
+    {
+      "region": "tgp_guo_region",
+      "duchy": "d_henan",
+      "covered_baronies": 7,
+      "duchy_baronies": 97
+    },
+    {
+      "region": "tgp_jing_region",
+      "duchy": "d_hubei",
+      "covered_baronies": 24,
+      "duchy_baronies": 80
+    },
+    {
+      "region": "tgp_liang_region",
+      "duchy": "d_henan",
+      "covered_baronies": 18,
+      "duchy_baronies": 97
+    },
+    {
+      "region": "tgp_lu_region",
+      "duchy": "d_haiyou",
+      "covered_baronies": 15,
+      "duchy_baronies": 40
+    },
+    {
+      "region": "tgp_qi_guannei_region",
+      "duchy": "d_shaanxi",
+      "covered_baronies": 9,
+      "duchy_baronies": 65
+    },
+    {
+      "region": "tgp_qiong_region",
+      "duchy": "d_haibei_hainan",
+      "covered_baronies": 15,
+      "duchy_baronies": 33
+    },
+    {
+      "region": "tgp_shang_region",
+      "duchy": "d_shaanxi",
+      "covered_baronies": 16,
+      "duchy_baronies": 65
+    },
+    {
+      "region": "tgp_wei_region",
+      "duchy": "d_shandong",
+      "covered_baronies": 11,
+      "duchy_baronies": 73
+    },
+    {
+      "region": "tgp_wey_region",
+      "duchy": "d_hebei",
+      "covered_baronies": 10,
+      "duchy_baronies": 34
+    },
+    {
+      "region": "tgp_xing_region",
+      "duchy": "d_hebei",
+      "covered_baronies": 11,
+      "duchy_baronies": 34
+    },
+    {
+      "region": "tgp_xu_shandong_region",
+      "duchy": "d_huaidong",
+      "covered_baronies": 12,
+      "duchy_baronies": 32
+    },
+    {
+      "region": "tgp_yang_region",
+      "duchy": "d_huaidong",
+      "covered_baronies": 15,
+      "duchy_baronies": 32
+    }
+  ],
+  "sibling_tie_resolutions": [
+    {
+      "parent": "material_hsb_deer_antler",
+      "duchy": "d_khwarazm",
+      "winner": "world_steppe_central",
+      "loser": "world_middle_east_persia"
+    },
+    {
+      "parent": "special_mongol_empire_conquest_all_regions",
+      "duchy": "d_dali",
+      "winner": "special_mongol_empire_conquest_region_prio_5",
+      "loser": "special_mongol_empire_conquest_region_bonus"
+    }
+  ],
+  "world_border_adjustments": {
+    "world_asia_china": [
+      8622,
+      8623,
+      8624,
+      8625,
+      8626
+    ],
+    "world_kabulistan": [
+      5430,
+      5431,
+      5432,
+      5433,
+      5434,
+      5435,
+      5436,
+      5437,
+      6594,
+      6595,
+      6596,
+      6597,
+      6598,
+      6599
+    ]
+  },
+  "new_empty_regions": [],
+  "eu5_continents_unchanged": true
+}

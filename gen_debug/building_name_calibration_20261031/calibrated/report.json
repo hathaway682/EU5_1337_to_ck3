@@ -1,0 +1,582 @@
+{
+  "backup": "F:\\备份\\EU5_Modern_Borders_noshape\\_backup_20261031_220020_building_name_calibration",
+  "audited_arrangements": 312,
+  "moved_arrangements": 58,
+  "changed_files": [
+    "history\\provinces\\00_generated_provinces.txt",
+    "common\\on_action\\game_start.txt",
+    "events\\decisions_events\\major_decisions_events.txt",
+    "common\\decisions\\80_major_decisions.txt"
+  ],
+  "holding_changes": [
+    {
+      "barony": "b_falun",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_urgup",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_naogaon",
+      "from": "none",
+      "to": "city_holding"
+    },
+    {
+      "barony": "b_thanjavur",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_khajuraho",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_gibraltar",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_macon",
+      "from": "none",
+      "to": "church_holding"
+    },
+    {
+      "barony": "b_velletri",
+      "from": "none",
+      "to": "church_holding"
+    },
+    {
+      "barony": "b_eisenach",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_bhilsa",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_livadeia",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_kutna_hora",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_damavand",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_sar_sang",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_dayr_aqul",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_khan_khentii",
+      "from": "none",
+      "to": "nomad_holding"
+    },
+    {
+      "barony": "b_tiantai",
+      "from": "none",
+      "to": "church_holding"
+    },
+    {
+      "barony": "b_qufu",
+      "from": "none",
+      "to": "church_holding"
+    },
+    {
+      "barony": "b_phakant",
+      "from": "none",
+      "to": "temple_citadel_holding"
+    },
+    {
+      "barony": "b_dayong",
+      "from": "none",
+      "to": "city_holding"
+    },
+    {
+      "barony": "b_hunyuan",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_handan",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_jurong",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_nishikubiki",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_oshika",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_van_don",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_borobudur",
+      "from": "none",
+      "to": "church_holding"
+    },
+    {
+      "barony": "b_dieng",
+      "from": "none",
+      "to": "castle_holding"
+    },
+    {
+      "barony": "b_xiuyan",
+      "from": "none",
+      "to": "castle_holding"
+    }
+  ],
+  "changes": [
+    {
+      "building_family": "heddal_stave_church_01",
+      "source_barony": "b_tunsberg",
+      "old_barony": "b_tonsberg",
+      "named_barony": "b_skien",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "temple_of_uppsala_01",
+      "source_barony": "b_sigtuna",
+      "old_barony": "b_stockholm",
+      "named_barony": "b_uppsala",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "generic_university",
+      "source_barony": "b_uppsala",
+      "old_barony": "b_uppsala",
+      "named_barony": "b_enkoping",
+      "calibration_rule": "nearby_same_county_slot_for_uppsala_temple"
+    },
+    {
+      "building_family": "falun_mines_01",
+      "source_barony": "b_falene",
+      "old_barony": "b_leksand",
+      "named_barony": "b_falun",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "visby_ringmur_01",
+      "source_barony": "b_wysbu",
+      "old_barony": "b_slite",
+      "named_barony": "b_visby",
+      "calibration_rule": "localized_building_place_name"
+    },
+    {
+      "building_family": "fairy_chimneys",
+      "source_barony": "b_kaisereia",
+      "old_barony": "b_kayseri",
+      "named_barony": "b_urgup",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "generic_university",
+      "source_barony": "b_somapur",
+      "old_barony": "b_shahjadpur",
+      "named_barony": "b_naogaon",
+      "calibration_rule": "preserved_vanilla_dlc_alternative"
+    },
+    {
+      "building_family": "somapura_university_01",
+      "source_barony": "b_somapur",
+      "old_barony": "b_shahjadpur",
+      "named_barony": "b_naogaon",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "brihadeeswarar_temple_01",
+      "source_barony": "b_tanjavur",
+      "old_barony": "b_pattukkottai",
+      "named_barony": "b_thanjavur",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "khajuraho_01",
+      "source_barony": "b_chanderi",
+      "old_barony": "b_chanderi",
+      "named_barony": "b_khajuraho",
+      "calibration_rule": "building_key_exact_place"
+    },
+    {
+      "building_family": "iron_pillar_of_delhi_01",
+      "source_barony": "b_indraprastha",
+      "old_barony": "b_rohtak",
+      "named_barony": "b_delhi",
+      "calibration_rule": "localized_building_place_name"
+    },
+    {
+      "building_family": "holy_site_basilica_santiago_01",
+      "source_barony": "b_santiago",
+      "old_barony": "b_mellid",
+      "named_barony": "b_santiago_compostela",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "tower_of_hercules_01",
+      "source_barony": "b_corunna",
+      "old_barony": "b_betanzos",
+      "named_barony": "b_coruna",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "rock_of_gibraltar_01",
+      "source_barony": "b_algeciras",
+      "old_barony": "b_algeciras",
+      "named_barony": "b_gibraltar",
+      "calibration_rule": "localized_building_place_name"
+    },
+    {
+      "building_family": "cluny_abbey_01",
+      "source_barony": "b_cluny",
+      "old_barony": "b_montcenis",
+      "named_barony": "b_macon",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "duomo_florence_01",
+      "source_barony": "b_firenze",
+      "old_barony": "b_prato",
+      "named_barony": "b_florence",
+      "calibration_rule": "localized_building_place_name"
+    },
+    {
+      "building_family": "the_colosseum_01",
+      "source_barony": "b_roma",
+      "old_barony": "b_tivoli",
+      "named_barony": "b_rome",
+      "calibration_rule": "reviewed_historical_place_name"
+    },
+    {
+      "building_family": "pam_lateran_basilica_01",
+      "source_barony": "b_ostia",
+      "old_barony": "b_rome",
+      "named_barony": "b_velletri",
+      "calibration_rule": "reviewed_historical_place_name"
+    },
+    {
+      "building_family": "schwaz_mines_01",
+      "source_barony": "b_innsbruck",
+      "old_barony": "b_innsbruck",
+      "named_barony": "b_schwaz",
+      "calibration_rule": "localized_building_place_name"
+    },
+    {
+      "building_family": "wartburg_01",
+      "source_barony": "b_schmalkalden",
+      "old_barony": "b_schmalkalden",
+      "named_barony": "b_eisenach",
+      "calibration_rule": "reviewed_historical_place_name"
+    },
+    {
+      "building_family": "ratnapura_mines_01",
+      "source_barony": "b_malaya_rata",
+      "old_barony": "b_gampola",
+      "named_barony": "b_ratnapura_lka",
+      "calibration_rule": "localized_building_place_name"
+    },
+    {
+      "building_family": "sanchi_stupa_01",
+      "source_barony": "b_sanchi",
+      "old_barony": "b_sironj",
+      "named_barony": "b_bhilsa",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "trepca_mines_01",
+      "source_barony": "b_zvecan",
+      "old_barony": "b_peja",
+      "named_barony": "b_mitrovica",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "hosios_loukas",
+      "source_barony": "b_amfissa",
+      "old_barony": "b_salona",
+      "named_barony": "b_livadeia",
+      "calibration_rule": "reviewed_historical_place_name"
+    },
+    {
+      "building_family": "kremnica_mines_01",
+      "source_barony": "b_turoc",
+      "old_barony": "b_turciansky_svaty_martin",
+      "named_barony": "b_kremnica",
+      "calibration_rule": "localized_building_place_name"
+    },
+    {
+      "building_family": "imam_reza_shrine_01",
+      "source_barony": "b_tus",
+      "old_barony": "b_tus",
+      "named_barony": "b_mashhad",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "kutna_hora_mines_01",
+      "source_barony": "b_caslav",
+      "old_barony": "b_caslav",
+      "named_barony": "b_kutna_hora",
+      "calibration_rule": "localized_building_place_name"
+    },
+    {
+      "building_family": "mount_damavand_01",
+      "source_barony": "b_firrim",
+      "old_barony": "b_amol",
+      "named_barony": "b_damavand",
+      "calibration_rule": "localized_building_place_name"
+    },
+    {
+      "building_family": "soltaniyeh_01",
+      "source_barony": "b_zanjan",
+      "old_barony": "b_zanjan",
+      "named_barony": "b_soltaniyeh",
+      "calibration_rule": "localized_building_place_name"
+    },
+    {
+      "building_family": "buddhas_of_bamian_01",
+      "source_barony": "b_bamian",
+      "old_barony": "b_kahmard",
+      "named_barony": "b_bamyan",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "sar_i_sang_mines_01",
+      "source_barony": "b_badakhshan",
+      "old_barony": "b_ragh",
+      "named_barony": "b_sar_sang",
+      "calibration_rule": "localized_building_place_name"
+    },
+    {
+      "building_family": "palace_of_ctesiphon_01",
+      "source_barony": "b_an-nahrawan",
+      "old_barony": "b_balad_ruz",
+      "named_barony": "b_dayr_aqul",
+      "calibration_rule": "reviewed_historical_place_name"
+    },
+    {
+      "building_family": "citadel_of_aleppo_01",
+      "source_barony": "b_halab",
+      "old_barony": "b_jabbul",
+      "named_barony": "b_aleppo",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "burkhan_khaldun_01",
+      "source_barony": "b_khentii",
+      "old_barony": "b_onon",
+      "named_barony": "b_khan_khentii",
+      "calibration_rule": "localized_building_place_name"
+    },
+    {
+      "building_family": "tiantai_monasteries_01",
+      "source_barony": "b_dongyang",
+      "old_barony": "b_dongyang",
+      "named_barony": "b_tiantai",
+      "calibration_rule": "building_key_exact_place"
+    },
+    {
+      "building_family": "citadel_linan_01",
+      "source_barony": "b_qiantang",
+      "old_barony": "b_haining",
+      "named_barony": "b_hangzhou",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "confucius_temple_01",
+      "source_barony": "b_fuqu",
+      "old_barony": "b_sishui",
+      "named_barony": "b_qufu",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "nanhua_temple_01",
+      "source_barony": "b_guiyang",
+      "old_barony": "b_lianzhou",
+      "named_barony": "b_qujiang",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "guiyang_mines_01",
+      "source_barony": "b_chen",
+      "old_barony": "b_chenyang",
+      "named_barony": "b_pingyang_guiyang",
+      "calibration_rule": "building_key_place_component"
+    },
+    {
+      "building_family": "hpakant_mines_01",
+      "source_barony": "b_takon",
+      "old_barony": "b_takawng",
+      "named_barony": "b_phakant",
+      "calibration_rule": "reviewed_historical_place_name"
+    },
+    {
+      "building_family": "wulingyuan_01",
+      "source_barony": "b_cili",
+      "old_barony": "b_cili",
+      "named_barony": "b_dayong",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "yungang_grottoes_01",
+      "source_barony": "b_yunzhong",
+      "old_barony": "b_baideng",
+      "named_barony": "b_datong_datong",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "hanging_temple_01",
+      "source_barony": "b_shenwu_2",
+      "old_barony": "b_shenwu",
+      "named_barony": "b_hunyuan",
+      "calibration_rule": "reviewed_historical_place_name"
+    },
+    {
+      "building_family": "pagoda_of_fogong_temple_01",
+      "source_barony": "b_yanmen",
+      "old_barony": "b_daizhou",
+      "named_barony": "b_jincheng",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "hanxing_mines_01",
+      "source_barony": "b_fuyang",
+      "old_barony": "b_fuyang",
+      "named_barony": "b_handan",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "leshan_giant_buddha_01",
+      "source_barony": "b_suishan",
+      "old_barony": "b_emei",
+      "named_barony": "b_longyou_jiading",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "lize_academy_01",
+      "source_barony": "b_luze",
+      "old_barony": "b_jingan_shenzhou",
+      "named_barony": "b_jinhua",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "maoshan_academy_01",
+      "source_barony": "b_jiangning",
+      "old_barony": "b_jiangning",
+      "named_barony": "b_jurong",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "dazaifu_01",
+      "source_barony": "b_dazaifu",
+      "old_barony": "b_asakura",
+      "named_barony": "b_mikasa",
+      "calibration_rule": "reviewed_historical_place_name"
+    },
+    {
+      "building_family": "itoigawa_mines_01",
+      "source_barony": "b_kubiki",
+      "old_barony": "b_higashikubiki",
+      "named_barony": "b_nishikubiki",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "koganeyama_mines_01",
+      "source_barony": "b_taga",
+      "old_barony": "b_taga",
+      "named_barony": "b_oshika",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "ha_long_bay_01",
+      "source_barony": "b_long_hung",
+      "old_barony": "b_hong_chau",
+      "named_barony": "b_van_don",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "muaro_jambi_01",
+      "source_barony": "b_SUM_Jambi",
+      "old_barony": "b_perbatasan",
+      "named_barony": "b_jambi",
+      "calibration_rule": "localized_building_place_name"
+    },
+    {
+      "building_family": "borobudur_01",
+      "source_barony": "b_JAV_Borobodur",
+      "old_barony": "b_bagaluhan",
+      "named_barony": "b_borobudur",
+      "calibration_rule": "localized_building_place_name"
+    },
+    {
+      "building_family": "dieng_plateau_01",
+      "source_barony": "b_JAV_Dieng",
+      "old_barony": "b_pekalongan",
+      "named_barony": "b_dieng",
+      "calibration_rule": "localized_building_place_name"
+    },
+    {
+      "building_family": "wilwatikta_palace_01",
+      "source_barony": "b_JAV_Daha",
+      "old_barony": "b_daha",
+      "named_barony": "b_trowulan",
+      "calibration_rule": "reviewed_historical_place_name"
+    },
+    {
+      "building_family": "plain_of_jars_01",
+      "source_barony": "b_sam_nuea",
+      "old_barony": "b_muang_et",
+      "named_barony": "b_muang_phuan",
+      "calibration_rule": "user_identified_named_site"
+    },
+    {
+      "building_family": "xiuyan_mines_01",
+      "source_barony": "b_Liao_Diezhou",
+      "old_barony": "b_zhuanghe",
+      "named_barony": "b_xiuyan",
+      "calibration_rule": "building_key_exact_place"
+    }
+  ],
+  "preserved_vanilla_neighboring_cases": [
+    "dengfeng_observatory_01",
+    "great_wall_of_gorgan_01",
+    "liuhe_pagoda_01",
+    "london_bridge_01",
+    "phnom_dek_mines_01"
+  ],
+  "building_types_unchanged": true,
+  "province_building_command_counts_preserved": true,
+  "startup_building_command_counts_preserved": true,
+  "sources": [
+    "https://whc.unesco.org/en/list/250",
+    "https://whc.unesco.org/en/list/897",
+    "https://whc.unesco.org/en/list/537/"
+  ],
+  "tested_in_game": false
+}
