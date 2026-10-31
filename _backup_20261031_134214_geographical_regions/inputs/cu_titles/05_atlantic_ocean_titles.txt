@@ -1,0 +1,40 @@
+﻿# Dedicated custom hegemony and de-jure descendants: h_atlantic_ocean_continent
+h_atlantic_ocean_continent = {
+	capital = c_bermuda
+	e_north_atlantic_ocean_sub_continent = {
+		capital = c_bermuda
+		k_north_atlantic_ocean = {
+			color = { 185 180 46 }
+			capital = c_bermuda
+			d_bermuda = {
+				color = { 197 122 34 }
+				capital = c_bermuda
+				c_bermuda = {
+					color = { 104 165 40 }
+					b_bermuda = {
+						color = { 221 54 216 }
+						province = 27810
+					}
+				}
+			}
+		}
+	}
+	e_south_atlantic_sub_continent = {
+		capital = c_saint_helena
+		k_south_atlantic = {
+			color = { 122 175 153 }
+			capital = c_saint_helena
+			d_atlantic_saint_helena = {
+				color = { 159 38 138 }
+				capital = c_saint_helena
+				c_saint_helena = {
+					color = { 61 99 144 }
+					b_st_helena = {
+						color = { 153 220 61 }
+						province = 27930
+					}
+				}
+			}
+		}
+	}
+}

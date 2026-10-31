@@ -1,0 +1,2103 @@
+﻿@better_than_the_alternatives_score = 50
+@correct_culture_primary_score = 100
+e_suvarnabhumi = {
+	capital = c_pagan
+	color = { 227 108 3 }
+	k_pagan = {
+		color = { 143 70 136 }
+		capital = c_pagan
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_burman }
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+		d_pagan = {
+			color = { 117 76 123 }
+			capital = c_pagan
+			c_pagan = {
+				color = { 71 62 77 }
+				b_saw = {
+					color = { 0 190 91 }
+					province = 14772
+				}
+				b_kale = {
+					color = { 126 82 127 }
+					province = 14767
+				}
+				b_htilin = {
+					color = { 85 227 81 }
+					province = 14768
+				}
+				b_kanna = {
+					color = { 68 166 106 }
+					province = 14769
+				}
+				b_mingin = {
+					color = { 204 145 111 }
+					province = 14770
+				}
+				b_pakokku = {
+					color = { 170 121 161 }
+					province = 14771
+				}
+			}
+			c_kyaukse = {
+				color = { 135 67 146 }
+				b_kyaukse = {
+					color = { 92 65 105 }
+					province = 14780
+				}
+				b_pinya = {
+					color = { 121 73 121 }
+					province = 14779
+				}
+				b_nyaungyan = {
+					color = { 204 135 56 }
+					province = 14781
+				}
+				b_pindale = {
+					color = { 68 229 66 }
+					province = 14782
+				}
+				b_pinle = {
+					color = { 204 229 71 }
+					province = 14783
+				}
+			}
+			c_minbu = {
+				color = { 146 115 162 }
+				b_sagu = {
+					color = { 153 215 166 }
+					province = 14799
+				}
+				b_salin = {
+					color = { 195 162 202 }
+					province = 14796
+				}
+				b_laungshe = {
+					color = { 153 103 196 }
+					province = 14797
+				}
+				b_ngape = {
+					color = { 125 93 149 }
+					province = 14798
+				}
+			}
+			c_sagaing = {
+				color = { 134 103 140 }
+				b_sagaing = {
+					color = { 92 80 99 }
+					province = 14791
+				}
+				b_amyint = {
+					color = { 102 195 146 }
+					province = 14792
+				}
+				b_butalin = {
+					color = { 51 200 91 }
+					province = 14793
+				}
+				b_dhipaesyin = {
+					color = { 187 47 96 }
+					province = 14794
+				}
+				b_moksobo = {
+					color = { 17 232 16 }
+					province = 14795
+				}
+			}
+			c_eu5_pagan = {
+				color = { 71 62 77 }
+				b_pagan = {
+					color = { 90 74 107 }
+					province = 14774
+				}
+				b_magway = {
+					color = { 221 110 71 }
+					province = 14775
+				}
+				b_salay = {
+					color = { 119 145 101 }
+					province = 14776
+				}
+				b_talok = {
+					color = { 170 225 171 }
+					province = 14777
+				}
+				b_taungdwingyi = {
+					color = { 143 97 149 }
+					province = 14778
+				}
+			}
+		}
+		d_tagaung = {
+			color = { 166 104 167 }
+			capital = c_takon
+			c_takon = {
+				color = { 115 97 121 }
+				b_katha = {
+					color = { 238 240 241 }
+					province = 14875
+				}
+				b_wuntho = {
+					color = { 88 67 94 }
+					province = 14873
+				}
+				b_htigyaing = {
+					color = { 123 72 141 }
+					province = 14874
+				}
+				b_myedu = {
+					color = { 116 65 122 }
+					province = 14876
+				}
+			}
+			c_madaya = {
+				color = { 137 95 136 }
+				b_kyaukme = {
+					color = { 102 67 246 }
+					province = 15162
+				}
+				b_hsipaw = {
+					color = { 151 95 152 }
+					province = 15161
+				}
+				b_monglong = {
+					color = { 102 112 236 }
+					province = 15163
+				}
+				b_ngasingu = {
+					color = { 153 89 246 }
+					province = 15164
+				}
+				b_wetwin = {
+					color = { 153 128 176 }
+					province = 15165
+				}
+			}
+		}
+		d_sriksetra = {
+			color = { 96 37 79 }
+			capital = c_sriksetra
+			c_sriksetra = {
+				color = { 69 39 67 }
+				b_pyay = {
+					color = { 170 94 71 }
+					province = 14784
+				}
+				b_mindon = {
+					color = { 170 131 41 }
+					province = 14785
+				}
+				b_myede = {
+					color = { 88 56 85 }
+					province = 14786
+				}
+				b_paungde = {
+					color = { 153 153 1 }
+					province = 14787
+				}
+				b_tharrawaddy = {
+					color = { 142 36 160 }
+					province = 14788
+				}
+				b_thayet = {
+					color = { 0 116 26 }
+					province = 14789
+				}
+			}
+			c_hinthada = {
+				color = { 138 31 108 }
+				b_hinthada = {
+					color = { 97 37 92 }
+					province = 14821
+				}
+				b_pathein = {
+					color = { 85 153 51 }
+					province = 14819
+				}
+				b_danubyu = {
+					color = { 85 239 61 }
+					province = 14820
+				}
+				b_ingapu = {
+					color = { 51 161 46 }
+					province = 14822
+				}
+				b_myanaung = {
+					color = { 178 67 128 }
+					province = 14823
+				}
+			}
+			c_toungoo = {
+				color = { 153 73 148 }
+				b_taungoo = {
+					color = { 34 112 16 }
+					province = 14801
+				}
+				b_lewe = {
+					color = { 136 194 101 }
+					province = 14802
+				}
+				b_nwamethin = {
+					color = { 68 145 31 }
+					province = 14803
+				}
+				b_pyinmana = {
+					color = { 17 238 1 }
+					province = 14804
+				}
+				b_thandaunggyi = {
+					color = { 170 195 171 }
+					province = 14805
+				}
+			}
+		}
+		d_arakan = {
+			color = { 179 61 120 }
+			capital = c_vaisali
+			c_vaisali = {
+				color = { 133 69 117 }
+				cultural_names = {
+					name_list_burmese = cn_waithali
+				}
+				b_minbya = {
+					color = { 187 190 71 }
+					province = 14684
+				}
+				b_launggyet = {
+					color = { 173 116 149 }
+					province = 14681
+				}
+				b_akyab = {
+					color = { 148 93 135 }
+					province = 14682
+				}
+				b_maungdaw = {
+					color = { 68 77 26 }
+					province = 14683
+				}
+				b_mrauk_u = {
+					color = { 153 57 130 }
+					province = 14685
+				}
+				b_weithali = {
+					color = { 34 178 121 }
+					province = 14686
+				}
+			}
+			c_ramu = {
+				color = { 149 62 103 }
+				b_ramu = {
+					color = { 108 62 93 }
+					province = 14679
+				}
+				b_chittagong = {
+					color = { 51 188 66 }
+					province = 14674
+				}
+				b_chakaria = {
+					color = { 170 214 21 }
+					province = 14675
+				}
+				b_chakma = {
+					color = { 119 117 116 }
+					province = 14676
+				}
+				b_kaptai = {
+					color = { 119 125 136 }
+					province = 14677
+				}
+				b_karpus_mahal = {
+					color = { 85 119 86 }
+					province = 14678
+				}
+				b_sitakunda = {
+					color = { 221 91 1 }
+					province = 14680
+				}
+			}
+			c_sandoway = {
+				color = { 180 37 84 }
+				b_thandwe = {
+					color = { 221 130 166 }
+					province = 14692
+				}
+				b_skalstugan = {
+					color = { 75 20 70 }
+					province = 14687
+				}
+				b_gwa = {
+					color = { 34 119 101 }
+					province = 14688
+				}
+				b_ramree = {
+					color = { 153 42 75 }
+					province = 14689
+				}
+				b_talak_burma = {
+					color = { 238 58 156 }
+					province = 14690
+				}
+				b_taungup = {
+					color = { 34 221 76 }
+					province = 14691
+				}
+			}
+		}
+		d_ramannadesa = {
+			color = { 146 53 164 }
+			capital = c_thaton
+			c_thaton = {
+				color = { 95 59 118 }
+				b_thaton = {
+					color = { 62 51 77 }
+					province = 14839
+				}
+			}
+			c_sittaung = {
+				color = { 123 53 134 }
+				b_sittaung = {
+					color = { 79 52 93 }
+					province = 14843
+				}
+				b_donwun = {
+					color = { 34 185 21 }
+					province = 14840
+				}
+				b_kyaukkyi = {
+					color = { 221 183 21 }
+					province = 14841
+				}
+				b_papun = {
+					color = { 204 51 246 }
+					province = 14842
+				}
+			}
+			c_pegu = {
+				color = { 160 30 187 }
+				b_pegu = {
+					color = { 109 47 146 }
+					province = 14824
+				}
+				b_kawliya = {
+					color = { 102 120 216 }
+					province = 14827
+				}
+				b_phyu = {
+					color = { 136 23 174 }
+					province = 14828
+				}
+			}
+			c_dagon = {
+				color = { 165 31 163 }
+				b_dagon = {
+					color = { 109 43 124 }
+					province = 14825
+				}
+				b_hmawbi = {
+					color = { 34 170 76 }
+					province = 14826
+				}
+				b_thanlyin = {
+					color = { 187 98 16 }
+					province = 14829
+				}
+			}
+			c_myaungmya = {
+				color = { 150 70 133 }
+				b_myaungmya = {
+					color = { 141 78 154 }
+					province = 14813
+				}
+				b_dala = {
+					color = { 102 217 146 }
+					province = 14814
+				}
+				b_maubin = {
+					color = { 51 176 126 }
+					province = 14815
+				}
+				b_naungyo = {
+					color = { 68 96 56 }
+					province = 14816
+				}
+				b_ngaputaw = {
+					color = { 221 102 76 }
+					province = 14817
+				}
+				b_twante = {
+					color = { 170 181 1 }
+					province = 14818
+				}
+			}
+		}
+		d_mongnai = {
+			capital = c_mongnai
+			color = { 195 136 194 }
+			c_mongnai = {
+				color = { 143 124 149 }
+				b_mongnai = {
+					color = { 99 88 108 }
+					province = 15178
+				}
+				b_kengtawng = {
+					color = { 0 150 186 }
+					province = 15179
+				}
+				b_lai_hka = {
+					color = { 34 186 51 }
+					province = 15180
+				}
+				b_mawkmai = {
+					color = { 149 86 169 }
+					province = 15181
+				}
+				b_mongkung = {
+					color = { 181 91 174 }
+					province = 15182
+				}
+				b_mongtung = {
+					color = { 170 58 106 }
+					province = 15183
+				}
+			}
+			c_hsenwi = {
+				color = { 165 120 162 }
+				b_hsenwi = {
+					color = { 121 101 124 }
+					province = 15154
+				}
+				b_lashio = {
+					color = { 136 207 126 }
+					province = 15155
+				}
+				b_muse = {
+					color = { 85 230 31 }
+					province = 15156
+				}
+				b_nam_thing = {
+					color = { 204 91 136 }
+					province = 15157
+				}
+				b_namhsan = {
+					color = { 204 213 201 }
+					province = 15158
+				}
+				b_ta_shwe_htan = {
+					color = { 221 117 91 }
+					province = 15159
+				}
+			}
+			c_nyaungshwe = {
+				color = { 175 112 180 }
+				b_lawksawk = {
+					color = { 221 205 116 }
+					province = 15185
+				}
+				b_mong_pai = {
+					color = { 126 69 121 }
+					province = 15184
+				}
+				b_siri_do = {
+					color = { 153 100 41 }
+					province = 15186
+				}
+				b_taunggyi = {
+					color = { 119 188 71 }
+					province = 15187
+				}
+				b_yawnghwe = {
+					color = { 147 50 146 }
+					province = 15188
+				}
+			}
+			c_monghsu = {
+				color = { 220 92 145 }
+				b_monghsu = {
+					color = { 205 164 195 }
+					province = 15195
+				}
+				b_kehsi = {
+					color = { 68 136 191 }
+					province = 15196
+				}
+				b_kengkham = {
+					color = { 170 146 241 }
+					province = 15197
+				}
+				b_mong_yai = {
+					color = { 68 119 131 }
+					province = 15198
+				}
+				b_mongnawng = {
+					color = { 153 223 131 }
+					province = 15199
+				}
+			}
+		}
+		d_yongchang = {
+			capital = c_yongchang_yongchang
+			color = { 190 62 195 }
+			c_yongchang_yongchang = {
+				color = { 128 74 149 }
+				b_yongchang_yongchang = {
+					color = { 90 71 108 }
+					province = 11075
+				}
+				b_yongping_yongchang = {
+					color = { 68 52 126 }
+					province = 11079
+				}
+				b_lujiang = {
+					color = { 149 47 170 }
+					province = 11081
+				}
+			}
+			c_yongchang_jingmadian = {
+				color = { 164 65 165 }
+				b_mengdong = {
+					color = { 136 132 16 }
+					province = 11052
+				}
+				b_mengding = {
+					color = { 170 209 136 }
+					province = 11050
+				}
+				b_gengma = {
+					color = { 138 64 137 }
+					province = 11051
+				}
+				b_mengmeng = {
+					color = { 0 231 46 }
+					province = 11053
+				}
+			}
+			c_moeng_laem = {
+				color = { 209 34 218 }
+				b_menglei = {
+					color = { 238 114 31 }
+					province = 11056
+				}
+				b_mulian = {
+					color = { 170 207 216 }
+					province = 11054
+				}
+				b_matman = {
+					color = { 17 200 56 }
+					province = 11055
+				}
+				b_pangyang = {
+					color = { 0 104 96 }
+					province = 11057
+				}
+				b_musuo = {
+					color = { 136 78 116 }
+					province = 11058
+				}
+				b_yinshaluo = {
+					color = { 0 51 11 }
+					province = 11059
+				}
+			}
+			c_shunning = {
+				color = { 51 75 51 }
+				b_shunning = {
+					color = { 221 78 146 }
+					province = 11061
+				}
+				b_midu = {
+					color = { 85 80 46 }
+					province = 11062
+				}
+				b_dingbian_shunning = {
+					color = { 204 219 176 }
+					province = 11063
+				}
+				b_baotong = {
+					color = { 85 52 136 }
+					province = 11064
+				}
+				b_youdian = {
+					color = { 17 215 136 }
+					province = 11065
+				}
+			}
+			c_yongchang = {
+				color = { 81 49 20 }
+				b_shidian = {
+					color = { 204 133 46 }
+					province = 11077
+				}
+				b_zhenkang = {
+					color = { 17 171 6 }
+					province = 11076
+				}
+				b_kongwei = {
+					color = { 221 121 126 }
+					province = 11078
+				}
+				b_rouyuan = {
+					color = { 100 72 46 }
+					province = 11080
+				}
+			}
+		}
+		d_tengchong = {
+			capital = c_momauk
+			color = { 126 37 114 }
+			c_momauk = {
+				color = { 76 38 80 }
+				b_manmaw = {
+					color = { 51 73 221 }
+					province = 15172
+				}
+				b_mabein = {
+					color = { 221 119 91 }
+					province = 15173
+				}
+				b_mongmit = {
+					color = { 193 146 199 }
+					province = 15174
+				}
+				b_namhkan = {
+					color = { 119 191 151 }
+					province = 15175
+				}
+				b_shwegu = {
+					color = { 150 2 110 }
+					province = 15176
+				}
+				b_takawng = {
+					color = { 238 186 31 }
+					province = 15177
+				}
+			}
+			c_myitkyina = {
+				color = { 96 35 86 }
+				b_injangyang = {
+					color = { 204 175 16 }
+					province = 14868
+				}
+				b_putao = {
+					color = { 86 27 80 }
+					province = 14866
+				}
+				b_chibwe = {
+					color = { 68 115 96 }
+					province = 14867
+				}
+				b_suamprabon = {
+					color = { 221 234 221 }
+					province = 14869
+				}
+				b_waingmaw = {
+					color = { 154 95 151 }
+					province = 14870
+				}
+			}
+			c_monyin = {
+				color = { 149 20 133 }
+				b_monhyin = {
+					color = { 187 183 226 }
+					province = 14863
+				}
+				b_mongkawng = {
+					color = { 153 225 161 }
+					province = 14861
+				}
+				b_mongyang = {
+					color = { 34 126 1 }
+					province = 14862
+				}
+				b_myitkyina = {
+					color = { 73 39 74 }
+					province = 14864
+				}
+			}
+			c_nandian = {
+				color = { 143 59 134 }
+				b_nandian = {
+					color = { 98 59 102 }
+					province = 11070
+				}
+				b_tengchong = {
+					color = { 238 83 171 }
+					province = 11066
+				}
+				b_wadian = {
+					color = { 170 86 71 }
+					province = 11067
+				}
+				b_zhenxi = {
+					color = { 221 51 31 }
+					province = 11068
+				}
+				b_nandan_tengcheng = {
+					color = { 102 169 201 }
+					province = 11069
+				}
+			}
+			c_htamanthi = {
+				color = { 152 90 74 }
+				b_htamanthi = {
+					color = { 102 149 41 }
+					province = 14853
+				}
+				b_phakant = {
+					color = { 170 130 221 }
+					province = 14854
+				}
+				b_tamu = {
+					color = { 170 136 166 }
+					province = 14855
+				}
+				b_thaungdut = {
+					color = { 85 180 111 }
+					province = 14856
+				}
+				b_tizu = {
+					color = { 102 225 166 }
+					province = 14857
+				}
+				b_zalon_taung = {
+					color = { 68 95 156 }
+					province = 14858
+				}
+			}
+			c_mangshi = {
+				color = { 72 124 52 }
+				b_mangshi = {
+					color = { 187 217 151 }
+					province = 11046
+				}
+				b_longchuan = {
+					color = { 153 120 11 }
+					province = 11047
+				}
+				b_luchuan_mangshi = {
+					color = { 68 123 136 }
+					province = 11048
+				}
+			}
+			c_hkamti = {
+				color = { 38 152 70 }
+				b_hkamti = {
+					color = { 102 111 151 }
+					province = 14844
+				}
+				b_maingkwan = {
+					color = { 170 58 146 }
+					province = 14845
+				}
+				b_hukawng = {
+					color = { 102 77 221 }
+					province = 14846
+				}
+				b_lahe = {
+					color = { 221 174 66 }
+					province = 14847
+				}
+				b_minsin = {
+					color = { 187 101 161 }
+					province = 14848
+				}
+				b_tarung = {
+					color = { 102 52 121 }
+					province = 14849
+				}
+			}
+		}
+	}
+	k_dvaravati = {
+		color = { 227 118 5 }
+		capital = c_lop_buri
+		d_lop_buri = {
+			color = { 255 81 5 }
+			capital = c_lop_buri
+			c_lop_buri = {
+				color = { 255 84 5 }
+				b_phayuhakhiri = {
+					color = { 85 53 71 }
+					province = 14739
+				}
+				b_phraek = {
+					color = { 221 206 56 }
+					province = 14735
+				}
+				b_chai_nat = {
+					color = { 170 104 46 }
+					province = 14736
+				}
+				b_chakangrao = {
+					color = { 113 125 3 }
+					province = 14737
+				}
+				b_nakhon_sawan = {
+					color = { 221 67 251 }
+					province = 14738
+				}
+			}
+			c_khu_bua = {
+				color = { 210 69 6 }
+				b_ratchaburi = {
+					color = { 238 107 151 }
+					province = 14759
+				}
+				b_suphanburi = {
+					color = { 136 219 181 }
+					province = 14756
+				}
+				b_chaisri = {
+					color = { 204 239 91 }
+					province = 14757
+				}
+				b_kanchanaburi = {
+					color = { 204 82 151 }
+					province = 14758
+				}
+				b_wang_pho = {
+					color = { 170 80 106 }
+					province = 14760
+				}
+			}
+			c_nakhon_pathom = {
+				color = { 187 104 7 }
+				b_ayodhya = {
+					color = { 180 130 60 }
+					province = 14726
+				}
+				b_dong_lakhon = {
+					color = { 170 169 41 }
+					province = 14727
+				}
+				b_lopburi = {
+					color = { 102 223 66 }
+					province = 14728
+				}
+				b_prachinburi = {
+					color = { 136 60 141 }
+					province = 14729
+				}
+				b_saraburi = {
+					color = { 119 125 166 }
+					province = 14730
+				}
+			}
+		}
+		d_muang_sua = {
+			color = { 185 82 6 }
+			capital = c_luang_prabang
+			c_luang_prabang = {
+				color = { 241 107 4 }
+				b_muang_sua = {
+					color = { 238 153 66 }
+					province = 15070
+				}
+				b_ban_luang_cheng = {
+					color = { 170 81 216 }
+					province = 15071
+				}
+				b_muang_thaeng = {
+					color = { 68 84 106 }
+					province = 15072
+				}
+				b_nam_xuang = {
+					color = { 102 80 86 }
+					province = 15073
+				}
+				b_phongsali = {
+					color = { 153 117 91 }
+					province = 15074
+				}
+			}
+			c_chiang_khaeng = {
+				color = { 140 92 7 }
+				b_chom_khao_maneerat = {
+					color = { 170 86 111 }
+					province = 15064
+				}
+				b_muang_sing = {
+					color = { 143 110 3 }
+					province = 15063
+				}
+				b_hongsa = {
+					color = { 204 166 196 }
+					province = 15065
+				}
+				b_muang_luang_phukha = {
+					color = { 187 113 181 }
+					province = 15066
+				}
+				b_muang_xay = {
+					color = { 153 123 91 }
+					province = 15067
+				}
+				b_vieng_phouka = {
+					color = { 68 109 151 }
+					province = 15068
+				}
+			}
+			c_nan_asia = {
+				color = { 181 64 4 }
+				b_nan = {
+					color = { 244 64 4 }
+					province = 15084
+				}
+				b_phrae = {
+					color = { 159 212 4 }
+					province = 15082
+				}
+				b_muang_ngao = {
+					color = { 221 228 246 }
+					province = 15083
+				}
+				b_pua = {
+					color = { 170 214 1 }
+					province = 15085
+				}
+				b_thung_yang = {
+					color = { 51 206 21 }
+					province = 15086
+				}
+			}
+			c_ngoenyang = {
+				color = { 234 60 8 }
+				b_mong_hsat = {
+					color = { 187 218 61 }
+					province = 15168
+				}
+				b_kengtung = {
+					color = { 170 111 161 }
+					province = 15166
+				}
+				b_mong_hpayak = {
+					color = { 221 217 121 }
+					province = 15167
+				}
+				b_mong_yang = {
+					color = { 182 27 205 }
+					cultural_names = {
+						name_list_han = cn_mengyang
+					}
+					province = 15169
+				}
+				b_mong_yawng = {
+					color = { 221 205 131 }
+					province = 15170
+				}
+				b_mongping = {
+					color = { 119 198 86 }
+					province = 15171
+				}
+			}
+			c_chiang_rai = {
+				color = { 234 60 8 }
+				b_chiang_rai = {
+					color = { 180 79 7 }
+					province = 15057
+				}
+				b_chiang_khong = {
+					color = { 85 125 146 }
+					province = 15058
+				}
+				b_chiang_saen = {
+					color = { 255 66 5 }
+					province = 15059
+				}
+				b_phayao = {
+					color = { 255 172 3 }
+					province = 15060
+				}
+				b_wiang_fang = {
+					color = { 34 121 101 }
+					province = 15061
+				}
+			}
+		}
+		d_sukhothai = {
+			color = { 181 154 4 }
+			capital = c_sukhothai
+			c_phetchabun = {
+				color = { 140 195 3 }
+				b_phuenchapura = {
+					color = { 17 188 21 }
+					province = 14749
+				}
+				b_sri_thep = {
+					color = { 255 62 6 }
+					province = 14747
+				}
+				b_mueng_rat = {
+					color = { 204 189 176 }
+					province = 14748
+				}
+			}
+			c_sukhothai = {
+				color = { 206 143 5 }
+				b_sukhothai = {
+					color = { 168 112 6 }
+					province = 14750
+				}
+				b_mueng_bang_yom = {
+					color = { 238 228 36 }
+					province = 14751
+				}
+				b_nakhon_thai = {
+					color = { 85 47 96 }
+					province = 14752
+				}
+				b_song_khwae = {
+					color = { 221 188 111 }
+					province = 14753
+				}
+				b_sra_luang = {
+					color = { 238 168 131 }
+					province = 14754
+				}
+				b_sri_satchanalai = {
+					color = { 102 132 236 }
+					province = 14755
+				}
+			}
+			c_lampang = {
+				color = { 210 189 3 }
+				cultural_names = {
+					name_list_tai = b_phayao
+				}
+				b_lampang = {
+					color = { 254 246 2 }
+					province = 15051
+				}
+				b_chiang_mai = {
+					color = { 103 105 4 }
+					province = 15049
+				}
+				b_chiang_dao = {
+					color = { 170 215 171 }
+					province = 15050
+				}
+				b_lamphun = {
+					color = { 204 133 116 }
+					province = 15052
+				}
+				b_muang_wang = {
+					color = { 204 90 76 }
+					province = 15053
+				}
+				b_mueng_thoen = {
+					color = { 204 130 31 }
+					province = 15054
+				}
+			}
+		}
+		d_tun_sun = {
+			color = { 255 141 6 }
+			capital = c_THAI_phetchaburi
+			c_THAI_phetchaburi = {
+				color = { 254 104 8 }
+				b_phetchaburi = {
+					color = { 170 129 136 }
+					province = 14732
+				}
+				b_chumphon = {
+					color = { 119 111 141 }
+					province = 14733
+				}
+				b_muang_na_rang = {
+					color = { 221 59 6 }
+					province = 14734
+				}
+			}
+			c_THAI_tenasserim = {
+				color = { 240 185 4 }
+				b_kawthaung = {
+					color = { 102 217 126 }
+					province = 14831
+				}
+				b_tenasserim = {
+					color = { 34 94 66 }
+					province = 14830
+				}
+				b_mergui = {
+					color = { 136 166 111 }
+					province = 14832
+				}
+				b_myitta = {
+					color = { 68 64 146 }
+					province = 14833
+				}
+				b_singkhon = {
+					color = { 0 188 56 }
+					province = 14834
+				}
+				b_tavoy = {
+					color = { 221 62 106 }
+					province = 14835
+				}
+				b_thayetchaung = {
+					color = { 68 89 171 }
+					province = 14836
+				}
+			}
+			c_thanbyuzayat = {
+				color = { 180 137 6 }
+				b_kyainseikgyi = {
+					color = { 204 132 221 }
+					province = 14809
+				}
+				b_martaban = {
+					color = { 102 74 51 }
+					province = 14806
+				}
+				b_haungtharaw = {
+					color = { 153 139 86 }
+					province = 14807
+				}
+				b_hpa_an = {
+					color = { 204 105 141 }
+					province = 14808
+				}
+				b_mawlamyine = {
+					color = { 103 49 138 }
+					province = 14810
+				}
+				b_ye = {
+					color = { 207 182 6 }
+					province = 14811
+				}
+			}
+		}
+		d_haripunjaya = {
+			color = { 148 113 4 }
+			capital = c_mae_hong_son
+			c_hlaingbwe = {
+				color = { 125 137 4 }
+				b_mae_sot = {
+					color = { 162 147 3 }
+					province = 14763
+				}
+				b_tak = {
+					color = { 170 208 36 }
+					province = 14761
+				}
+				b_ban_pa_la_ta = {
+					color = { 85 137 126 }
+					province = 14762
+				}
+				b_nakhon_chum = {
+					color = { 85 139 46 }
+					province = 14764
+				}
+			}
+			c_mae_hong_son = {
+				color = { 158 107 4 }
+				b_mae_hong_son = {
+					color = { 139 84 5 }
+					province = 15077
+				}
+				b_muang_yuam = {
+					color = { 136 106 91 }
+					province = 15075
+				}
+				b_hot = {
+					color = { 134 178 5 }
+					province = 15076
+				}
+				b_muang_jam = {
+					color = { 153 147 251 }
+					province = 15078
+				}
+				b_omkoi = {
+					color = { 119 231 86 }
+					province = 15079
+				}
+				b_sariang = {
+					color = { 17 124 11 }
+					province = 15080
+				}
+			}
+		}
+		d_sipsongpanna = {
+			color = { 212 121 4 }
+			cultural_names = {
+				name_list_han = cn_jinglong
+				name_list_tai = cn_moeng_lu
+			}
+			capital = c_chiang_rung
+			c_chiang_rung = {
+				color = { 223 161 5 }
+				cultural_names = {
+					name_list_han = cn_jinglong
+				}
+				b_jinglong = {
+					color = { 34 74 86 }
+					province = 11082
+				}
+				b_daolong = {
+					color = { 102 202 91 }
+					province = 11083
+				}
+				b_gengdang = {
+					color = { 187 121 161 }
+					province = 11084
+				}
+				b_mengban_jihong = {
+					color = { 153 98 61 }
+					province = 11085
+				}
+				b_menghai = {
+					color = { 0 98 26 }
+					province = 11086
+				}
+				b_mengla = {
+					color = { 187 131 136 }
+					province = 11087
+				}
+				b_yot_ou = {
+					color = { 238 104 31 }
+					province = 11088
+				}
+			}
+		}
+	}
+	k_siam = {
+		color = { 88 137 172 }
+		capital = c_sukhothai
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				culture = { has_cultural_pillar = heritage_tai }
+			}
+		}
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:tai
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_tai }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+	}
+}
+e_brunei = {
+	color = { 255 255 0 }
+	capital = c_BOR_brunei
+	can_create = {
+		trigger_if = {
+			limit = {
+				is_ai = yes
+			}
+			religion = religion:islam_religion
+			culture = { has_cultural_pillar = heritage_austronesian }
+		}
+	}
+	ai_primary_priority = {
+		if = {
+			limit = {
+				religion = religion:islam_religion
+				culture = { has_cultural_pillar = heritage_austronesian }
+			}
+			add = @correct_culture_primary_score
+		}
+		if = {
+			limit = {
+				religion = religion:islam_religion
+				culture = { has_cultural_pillar = heritage_austronesian }
+			}
+			add = @better_than_the_alternatives_score
+		}
+	}
+	k_brunei = {
+		color = { 255 255 0 }
+		capital = c_BOR_brunei
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				religion = religion:islam_religion
+				culture = { has_cultural_pillar = heritage_austronesian }
+			}
+		}
+		ai_primary_priority = {
+			if = {
+				limit = {
+					religion = religion:islam_religion
+					culture = { has_cultural_pillar = heritage_austronesian }
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					religion = religion:islam_religion
+					culture = { has_cultural_pillar = heritage_austronesian }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+	}
+}
+e_kambuja = {
+	color = { 41 69 238 }
+	capital = c_angkor
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+	k_funan = {
+		color = { 0 50 150 }
+		capital = c_angkor
+		d_baigaur = {
+			capital = c_ca_mau
+			color = { 0 64 198 }
+			c_ca_mau = {
+				color = { 0 49 167 }
+				b_toek_khmau = {
+					color = { 119 239 51 }
+					province = 14980
+				}
+				b_or_keo = {
+					color = { 238 225 66 }
+					province = 14975
+				}
+				b_kramuon_sa = {
+					color = { 136 137 21 }
+					province = 14976
+				}
+				b_phsar_dek = {
+					color = { 187 190 81 }
+					province = 14977
+				}
+				b_pouthi_loeu = {
+					color = { 119 138 211 }
+					province = 14978
+				}
+				b_srok_khleang = {
+					color = { 102 196 71 }
+					province = 14979
+				}
+			}
+		}
+		d_vyadhapura = {
+			capital = c_binh_long
+			color = { 0 55 107 }
+			c_binh_long = {
+				color = { 0 61 143 }
+				b_tuol_ta_mouk = {
+					color = { 34 239 96 }
+					province = 14990
+				}
+				b_prey_nokor = {
+					color = { 153 131 76 }
+					province = 14985
+				}
+				b_angkor_knong = {
+					color = { 187 167 16 }
+					province = 14986
+				}
+				b_chhmuoh_thmei = {
+					color = { 0 176 76 }
+					province = 14987
+				}
+				b_kampong_roessei = {
+					color = { 17 61 6 }
+					province = 14988
+				}
+				b_rong_damrel = {
+					color = { 221 215 126 }
+					province = 14989
+				}
+			}
+			c_kracheh_nokor = {
+				color = { 0 54 72 }
+				b_tboung_khmum = {
+					color = { 51 60 111 }
+					province = 14974
+				}
+				b_kracheh = {
+					color = { 153 178 61 }
+					province = 14972
+				}
+				b_sampheak_borak = {
+					color = { 85 233 36 }
+					province = 14973
+				}
+			}
+		}
+		d_angkor = {
+			capital = c_angkor
+			color = { 0 39 160 }
+			c_angkor = {
+				color = { 0 39 213 }
+				b_angkor = {
+					color = { 0 40 158 }
+					province = 14951
+				}
+				b_banteay_chhmar = {
+					color = { 221 163 31 }
+					province = 14952
+				}
+				b_damrey_trom = {
+					color = { 119 182 86 }
+					province = 14953
+				}
+				b_phnom_srok = {
+					color = { 204 202 96 }
+					province = 14954
+				}
+				b_sdok_kok_thom = {
+					color = { 85 208 41 }
+					province = 14955
+				}
+			}
+			c_dong_si_mahosot = {
+				color = { 0 50 172 }
+				b_nokor_reach_seyma = {
+					color = { 204 166 141 }
+					province = 14920
+				}
+				b_phimai = {
+					color = { 16 102 44 }
+					province = 14918
+				}
+				b_khorat = {
+					color = { 0 65 187 }
+					province = 14919
+				}
+				b_phanom_rung = {
+					color = { 238 179 226 }
+					province = 14921
+				}
+				b_thung_samrit = {
+					color = { 85 174 61 }
+					province = 14922
+				}
+			}
+			c_sambhupura = {
+				color = { 0 37 124 }
+				b_phnom_santuk = {
+					color = { 34 128 36 }
+					province = 14964
+				}
+				b_indrapura_khmer = {
+					color = { 0 66 57 }
+					province = 14962
+				}
+				b_beng_mealea = {
+					color = { 119 118 31 }
+					province = 14963
+				}
+				b_prasat_andet = {
+					color = { 221 127 146 }
+					province = 14965
+				}
+				b_preah_khan_kompong_svay = {
+					color = { 136 119 151 }
+					province = 14966
+				}
+			}
+			c_prea_vihear = {
+				color = { 0 31 214 }
+				b_sangkha = {
+					color = { 136 240 201 }
+					province = 14899
+				}
+				b_khukhan = {
+					color = { 17 218 21 }
+					province = 14896
+				}
+				b_prasat_thong_lang = {
+					color = { 51 188 106 }
+					province = 14897
+				}
+				b_rattanaburi = {
+					color = { 187 150 171 }
+					province = 14898
+				}
+				b_vat_phou = {
+					color = { 221 97 231 }
+					province = 14900
+				}
+			}
+			c_koh_ker = {
+				color = { 0 44 111 }
+				b_koh_ker = {
+					color = { 0 34 129 }
+					province = 14968
+				}
+				b_ishanapura = {
+					color = { 119 77 191 }
+					province = 14967
+				}
+				b_prasat_don_kau = {
+					color = { 238 118 196 }
+					province = 14969
+				}
+				b_preah_vihear = {
+					color = { 204 186 56 }
+					province = 14970
+				}
+				b_sandan = {
+					color = { 153 117 146 }
+					province = 14971
+				}
+			}
+			c_buriram = {
+				color = { 152 43 160 }
+				b_buriram = {
+					color = { 0 239 121 }
+					province = 14877
+				}
+				b_muang_tam = {
+					color = { 187 150 156 }
+					province = 14878
+				}
+				b_phutthaisong = {
+					color = { 238 183 191 }
+					province = 14879
+				}
+				b_prathai_saman = {
+					color = { 170 126 26 }
+					province = 14880
+				}
+				b_suwannaphum = {
+					color = { 187 113 141 }
+					province = 14881
+				}
+			}
+		}
+		d_ratanakiri = {
+			capital = c_ratanakiri
+			color = { 0 56 151 }
+			c_ratanakiri = {
+				color = { 0 37 179 }
+				b_banlung = {
+					color = { 34 204 91 }
+					province = 14992
+				}
+				b_stung_treng = {
+					color = { 0 46 83 }
+					province = 14991
+				}
+				b_doh_kromum = {
+					color = { 68 171 16 }
+					province = 14993
+				}
+				b_lumphat = {
+					color = { 102 135 91 }
+					province = 14994
+				}
+				b_preah_ko = {
+					color = { 221 77 241 }
+					province = 14995
+				}
+			}
+			c_pleiku = {
+				color = { 0 74 98 }
+				b_ia = {
+					color = { 238 181 231 }
+					province = 14707
+				}
+				b_kon_klor = {
+					color = { 102 52 186 }
+					province = 14705
+				}
+				b_apui = {
+					color = { 0 211 136 }
+					province = 14706
+				}
+				b_kon_tum = {
+					color = { 102 168 136 }
+					province = 14708
+				}
+				b_samriddhipuri = {
+					color = { 119 145 41 }
+					province = 14709
+				}
+			}
+		}
+		d_angkor_borey = {
+			capital = c_angkor_borey
+			color = { 0 37 138 }
+			c_angkor_borey = {
+				color = { 0 39 118 }
+				b_angkor_borei = {
+					color = { 204 95 131 }
+					province = 14997
+				}
+				b_vyadhapura = {
+					color = { 0 37 88 }
+					province = 14996
+				}
+				b_phnom_penh = {
+					color = { 0 28 153 }
+					province = 14998
+				}
+				b_prasat_pram_lovet = {
+					color = { 68 160 96 }
+					province = 14999
+				}
+				b_srey_sarchhor = {
+					color = { 17 233 36 }
+					province = 15000
+				}
+			}
+			c_botum_sakor = {
+				color = { 0 32 175 }
+				b_kampong_saom = {
+					color = { 187 144 131 }
+					province = 14982
+				}
+				b_peam = {
+					color = { 68 163 26 }
+					province = 14981
+				}
+				b_koh_kong = {
+					color = { 170 180 161 }
+					province = 14983
+				}
+				b_mueng_thung_yai = {
+					color = { 204 110 21 }
+					province = 14984
+				}
+			}
+			c_pursat = {
+				color = { 0 45 184 }
+				b_pursat = {
+					color = { 0 32 187 }
+					province = 14960
+				}
+				b_battambang = {
+					color = { 0 31 157 }
+					province = 14956
+				}
+				b_banon = {
+					color = { 85 51 61 }
+					province = 14957
+				}
+				b_longvek = {
+					color = { 17 104 21 }
+					province = 14958
+				}
+				b_prasat_don_an = {
+					color = { 119 217 116 }
+					province = 14959
+				}
+			}
+			c_mueang_phra_rot = {
+				color = { 0 29 169 }
+				b_phanat = {
+					color = { 204 194 31 }
+					province = 14744
+				}
+				b_rayong = {
+					color = { 0 26 118 }
+					province = 14741
+				}
+				b_dong_si_maha_phot = {
+					color = { 136 96 251 }
+					province = 14742
+				}
+				b_muang_khuan_kra_buri = {
+					color = { 153 207 146 }
+					province = 14743
+				}
+				b_sa_kaeo = {
+					color = { 0 42 230 }
+					province = 14745
+				}
+			}
+		}
+	}
+	k_chenla = {
+		capital = c_sanasomboon
+		color = { 30 70 60 }
+		d_phonsavan = {
+			capital = c_sanasomboon
+			color = { 23 64 42 }
+			c_sanasomboon = {
+				color = { 21 75 47 }
+				b_muang_mang = {
+					color = { 153 136 6 }
+					province = 14892
+				}
+				b_champasak = {
+					color = { 85 117 151 }
+					province = 14889
+				}
+				b_ban_phone = {
+					color = { 102 138 201 }
+					province = 14890
+				}
+				b_idkabue = {
+					color = { 136 237 111 }
+					province = 14891
+				}
+				b_samxay = {
+					color = { 0 163 21 }
+					province = 14893
+				}
+				b_tonle_kong = {
+					color = { 102 164 136 }
+					province = 14894
+				}
+			}
+			c_vien_chan = {
+				color = { 30 78 53 }
+				b_vientiane = {
+					color = { 0 224 21 }
+					province = 14945
+				}
+				b_ban_khon = {
+					color = { 187 167 226 }
+					province = 14946
+				}
+				b_phon_hong = {
+					color = { 187 147 46 }
+					province = 14947
+				}
+				b_sayniabuli = {
+					color = { 85 95 181 }
+					province = 14948
+				}
+				b_vang_vieng = {
+					color = { 34 89 68 }
+					province = 14949
+				}
+			}
+			c_salo_tai = {
+				color = { 25 66 27 }
+				b_nong_bok = {
+					color = { 170 88 116 }
+					province = 14941
+				}
+				b_thakhek = {
+					color = { 136 119 66 }
+					province = 14936
+				}
+				b_keutkeut = {
+					color = { 136 190 126 }
+					province = 14937
+				}
+				b_khamkeut = {
+					color = { 34 90 121 }
+					province = 14938
+				}
+				b_mahaxay = {
+					color = { 119 215 186 }
+					province = 14939
+				}
+				b_ngoc_ma = {
+					color = { 68 172 71 }
+					province = 14940
+				}
+			}
+			c_savannakhet = {
+				color = { 204 183 34 }
+				b_savannakhet = {
+					color = { 187 183 161 }
+					province = 14929
+				}
+				b_muang_phalan = {
+					color = { 221 178 66 }
+					province = 14930
+				}
+				b_muang_phin = {
+					color = { 204 106 36 }
+					province = 14931
+				}
+				b_muang_ta_oi = {
+					color = { 51 163 26 }
+					province = 14932
+				}
+				b_sepon = {
+					color = { 68 147 116 }
+					province = 14933
+				}
+				b_thuan_binh = {
+					color = { 238 145 36 }
+					province = 14934
+				}
+			}
+			c_muang_phuan = {
+				color = { 159 56 198 }
+				b_muang_phuan = {
+					color = { 204 183 21 }
+					province = 14913
+				}
+				b_bolikham = {
+					color = { 204 48 116 }
+					province = 14914
+				}
+				b_phonsavan = {
+					color = { 204 177 216 }
+					province = 14915
+				}
+				b_thoulakhom = {
+					color = { 119 52 206 }
+					province = 14916
+				}
+			}
+		}
+		d_mukdahan = {
+			capital = c_canasha
+			color = { 33 85 76 }
+			c_canasha = {
+				color = { 24 77 55 }
+				b_kaset_sombun = {
+					color = { 34 133 41 }
+					province = 14883
+				}
+				b_chaiyaphum = {
+					color = { 24 67 45 }
+					province = 14882
+				}
+				b_khon_san = {
+					color = { 0 202 101 }
+					province = 14884
+				}
+				b_mancha_khiri = {
+					color = { 238 222 231 }
+					province = 14885
+				}
+				b_nong_bua_lamphu = {
+					color = { 204 118 196 }
+					province = 14886
+				}
+				b_phu_wiang = {
+					color = { 0 139 71 }
+					province = 14887
+				}
+			}
+			c_ku_kaeo = {
+				color = { 24 68 96 }
+				b_udon_thani = {
+					color = { 85 210 76 }
+					province = 14905
+				}
+				b_loei = {
+					color = { 29 59 85 }
+					province = 14901
+				}
+				b_chiang_khan = {
+					color = { 187 111 151 }
+					province = 14902
+				}
+				b_dan_sai = {
+					color = { 187 113 151 }
+					province = 14903
+				}
+				b_nong_khay = {
+					color = { 102 91 161 }
+					province = 14904
+				}
+			}
+			c_mukdahan = {
+				color = { 34 109 78 }
+				b_mukdahan = {
+					color = { 36 112 58 }
+					province = 14909
+				}
+				b_muang_nakhon = {
+					color = { 17 80 116 }
+					province = 14906
+				}
+				b_kut_ling = {
+					color = { 85 134 201 }
+					province = 14907
+				}
+				b_muang_nong_han_luang = {
+					color = { 187 80 51 }
+					province = 14908
+				}
+				b_pak_huei_lang = {
+					color = { 0 216 66 }
+					province = 14910
+				}
+				b_that_phanom = {
+					color = { 119 233 131 }
+					province = 14911
+				}
+			}
+			c_muang_fa_daet = {
+				color = { 32 75 67 }
+				b_mueng_fa_daet = {
+					color = { 0 114 11 }
+					province = 14927
+				}
+				b_roi_et = {
+					color = { 153 133 56 }
+					province = 14923
+				}
+				b_kham_muang = {
+					color = { 68 121 81 }
+					province = 14924
+				}
+				b_khon_kaen = {
+					color = { 26 75 87 }
+					province = 14925
+				}
+				b_muang_khemarat = {
+					color = { 102 105 176 }
+					province = 14926
+				}
+				b_yasothon = {
+					color = { 153 190 71 }
+					province = 14928
+				}
+			}
+		}
+	}
+	k_champa = {
+		color = { 104 63 176 }
+		capital = c_simhapura
+		d_indrapura = {
+			capital = c_simhapura
+			color = { 74 60 148 }
+			cultural_names = {
+				name_list_vietnamese = cn_dong_duong
+			}
+			c_simhapura = {
+				color = { 90 69 151 }
+				b_simhapura = {
+					color = { 95 58 171 }
+					province = 14701
+				}
+				b_indrapura = {
+					color = { 102 174 121 }
+					province = 14699
+				}
+				b_dien_ban = {
+					color = { 102 126 11 }
+					province = 14700
+				}
+				b_amarendrapura = {
+					color = { 153 177 186 }
+					province = 14694
+				}
+			}
+			c_ma_linh = {
+				color = { 67 80 117 }
+				cultural_names = {
+					name_list_han = cn_rinan
+				}
+				b_visnupura = {
+					color = { 110 245 100 }
+					province = 14696
+				}
+				b_phon_nha = {
+					color = { 119 102 16 }
+					province = 14695
+				}
+				b_vrddha_ratnapura = {
+					color = { 204 59 231 }
+					province = 14697
+				}
+			}
+		}
+		d_vijaya = {
+			capital = c_vijaya
+			color = { 113 57 183 }
+			cultural_names = {
+				name_list_vietnamese = cn_do_ban
+			}
+			c_vijaya = {
+				color = { 142 38 189 }
+				cultural_names = {
+					name_list_vietnamese = cn_do_ban
+				}
+				b_vijaya = {
+					color = { 167 39 134 }
+					cultural_names = {
+						name_list_vietnamese = cn_do_ban
+					}
+					province = 14722
+				}
+				b_amaravati = {
+					color = { 197 20 70 }
+					province = 14723
+				}
+				b_bong_son = {
+					color = { 68 180 96 }
+					province = 14724
+				}
+				b_ha_va_nguon = {
+					color = { 17 227 56 }
+					province = 14725
+				}
+			}
+			c_kauthara = {
+				color = { 112 64 174 }
+				b_kauthara = {
+					color = { 98 52 182 }
+					province = 14702
+				}
+				b_aryaru = {
+					color = { 17 164 156 }
+					province = 14703
+				}
+				b_bang_keng = {
+					color = { 34 239 21 }
+					province = 14704
+				}
+			}
+			c_panduranga = {
+				color = { 148 63 149 }
+				b_panduranga = {
+					color = { 155 75 150 }
+					province = 14711
+				}
+				b_bal_cattinon = {
+					color = { 136 170 126 }
+					province = 14712
+				}
+				b_camp_po_thit = {
+					color = { 0 80 41 }
+					province = 14713
+				}
+				b_chan_bo = {
+					color = { 0 137 46 }
+					province = 14714
+				}
+				b_kampong_sraka_trey = {
+					color = { 34 165 66 }
+					province = 14715
+				}
+			}
+			c_southern_highland = {
+				color = { 103 37 50 }
+				b_cat_tien = {
+					color = { 187 240 241 }
+					province = 14716
+				}
+				b_ban_don = {
+					color = { 187 104 6 }
+					province = 14717
+				}
+				b_dak_lak = {
+					color = { 102 235 131 }
+					province = 14718
+				}
+				b_di_dinh = {
+					color = { 102 141 111 }
+					province = 14719
+				}
+				b_song_be = {
+					color = { 153 232 181 }
+					province = 14720
+				}
+			}
+		}
+	}
+}

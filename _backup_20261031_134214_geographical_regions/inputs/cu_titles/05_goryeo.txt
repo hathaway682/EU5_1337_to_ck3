@@ -1,0 +1,839 @@
+﻿@correct_culture_primary_score = 100
+e_goryeo = {
+	color = { 220 205 250 }
+	capital = c_gaeseong
+	can_create = {
+		trigger_if = {
+			limit = {
+				culture = {
+					OR = {
+						has_cultural_pillar = heritage_korean
+						any_parent_culture = { has_cultural_pillar = heritage_korean }
+					}
+				}
+			}
+			custom_tooltip = {
+				text = unify_goryeo_decision_requirement_tt
+				NOT = { government_has_mechanic = administrative }
+			}
+		}
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+	personal_relation_entry = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:target
+					scope:vassal ?= scope:target
+				}
+				desc = japan_personal_relation_ceremonial_regent_same
+			}
+			triggered_desc = {
+				trigger = { exists = scope:vassal }
+				desc = japan_personal_relation_ceremonial_regent_other
+			}
+		}
+	}
+	personal_relation_vassal = {
+		has_title = title:k_yongson_throne
+	}
+	k_goguryeo = {
+		color = { 55 85 190 }
+		capital = c_seogyeong
+		cultural_names = {
+			name_list_yamato = cn_koma
+			name_list_emishi = cn_koma
+		}
+		can_create = {
+			# Cannot be created by Goryeo after it is formed
+			custom_tooltip = {
+				text = unify_goryeo_decision_blocker_tt
+				NOT = {
+					top_liege = {
+						has_title = title:e_goryeo
+						has_government = meritocratic_government
+					}
+				}
+			}
+		}
+		d_gaeseong = {
+			color = { 75 105 210 }
+			capital = c_gaeseong
+			c_gaeseong = {
+				color = { 90 120 225 }
+				b_kaesong = {
+					color = { 119 70 171 }
+					province = 9517
+				}
+				b_papyeong = {
+					color = { 153 70 121 }
+					province = 9518
+				}
+				b_inju = {
+					color = { 187 73 1 }
+					province = 9522
+				}
+				b_tosan = {
+					color = { 153 116 51 }
+					province = 9561
+				}
+			}
+			c_gokju = {
+				color = { 55 90 225 }
+				b_gokju = {
+					color = { 85 74 81 }
+					province = 9564
+				}
+				b_suan = {
+					color = { 170 141 96 }
+					province = 9563
+				}
+			}
+			c_pyeongju = {
+				color = { 100 125 210 }
+				b_pyeongju = {
+					color = { 51 71 41 }
+					province = 9562
+				}
+			}
+		}
+		d_haeju = {
+			color = { 21 166 173 }
+			capital = c_haeju
+			c_haeju = {
+				color = { 51 186 193 }
+				b_haeju = {
+					color = { 136 72 56 }
+					province = 9551
+				}
+				b_ongjin = {
+					color = { 85 72 71 }
+					province = 9552
+				}
+				b_baekcheon = {
+					color = { 119 71 251 }
+					province = 9554
+				}
+				b_jaeryeong = {
+					color = { 187 73 196 }
+					province = 9557
+				}
+			}
+			c_hwangju = {
+				color = { 120 225 230 }
+				b_hwangju = {
+					color = { 153 73 36 }
+					province = 9558
+				}
+				b_bongju = {
+					color = { 238 73 21 }
+					province = 9559
+				}
+				b_anak = {
+					color = { 34 73 1 }
+					province = 9560
+				}
+			}
+			c_pungju = {
+				color = { 20 205 215 }
+				b_pungcheon = {
+					color = { 85 73 211 }
+					province = 9556
+				}
+				b_jangyeon = {
+					color = { 85 72 101 }
+					province = 9553
+				}
+				b_cheongsong = {
+					color = { 238 223 171 }
+					province = 9555
+				}
+			}
+		}
+		d_gyoju = {
+			color = { 50 120 225 }
+			capital = c_dongju
+			c_inje = {
+				color = { 95 155 250 }
+				b_inje = {
+					color = { 136 66 146 }
+					province = 9482
+				}
+			}
+			c_dongju = {
+				color = { 30 115 240 }
+				b_dongju = {
+					color = { 17 67 16 }
+					province = 9475
+				}
+				b_geumseong = {
+					color = { 119 69 21 }
+					province = 9476
+				}
+				b_hoeyang = {
+					color = { 34 69 6 }
+					province = 9477
+				}
+				b_ichon = {
+					color = { 0 90 16 }
+					province = 9478
+				}
+				b_pyeonggang = {
+					color = { 170 69 56 }
+					province = 9479
+				}
+			}
+			c_chunju = {
+				color = { 30 90 170 }
+				b_chunju = {
+					color = { 187 67 211 }
+					province = 9480
+				}
+				b_hongcheon = {
+					color = { 204 66 121 }
+					province = 9481
+				}
+				b_nangcheon = {
+					color = { 221 68 81 }
+					province = 9483
+				}
+				b_yanggu = {
+					color = { 221 68 136 }
+					province = 9484
+				}
+			}
+		}
+		d_yukju = {
+			color = { 30 40 145 }
+			capital = c_jangjeong
+			c_jangjeong = {
+				color = { 35 35 120 }
+				b_unju = {
+					color = { 136 75 211 }
+					province = 9465
+				}
+				b_huicheon = {
+					color = { 119 74 136 }
+					province = 9464
+				}
+			}
+			c_uiju = {
+				color = { 60 60 130 }
+				b_uiju = {
+					color = { 170 76 136 }
+					province = 9456
+				}
+				b_seonju = {
+					color = { 187 75 26 }
+					province = 9458
+				}
+			}
+			c_gwiju = {
+				color = { 40 45 170 }
+				b_gwiju = {
+					color = { 119 76 156 }
+					province = 9459
+				}
+				b_sakju = {
+					color = { 170 77 221 }
+					province = 9457
+				}
+				b_jeongju_jeongju = {
+					color = { 136 75 251 }
+					province = 9460
+				}
+			}
+			c_taeju = {
+				color = { 30 35 220 }
+				b_gaeju = {
+					color = { 238 74 171 }
+					province = 9453
+				}
+				b_sukju = {
+					color = { 102 73 16 }
+					province = 9454
+				}
+			}
+		}
+		d_bukgye = {
+			color = { 160 72 175 }
+			capital = c_seogyeong
+			c_seogyeong = {
+				color = { 135 42 169 }
+				b_seogyeong = {
+					color = { 136 73 186 }
+					province = 9445
+				}
+				b_jeungsan = {
+					color = { 68 72 176 }
+					province = 9446
+				}
+				b_samhwa = {
+					color = { 153 59 236 }
+					province = 9447
+				}
+				b_junghwa = {
+					color = { 85 72 146 }
+					province = 9448
+				}
+			}
+			c_seongju = {
+				color = { 180 92 195 }
+				b_seongcheon = {
+					color = { 170 72 121 }
+					province = 9449
+				}
+				b_yangam = {
+					color = { 51 72 81 }
+					province = 9450
+				}
+			}
+			c_yeongwon = {
+				color = { 155 100 165 }
+				b_yeongwon = {
+					color = { 238 74 121 }
+					province = 9452
+				}
+				b_deokju = {
+					color = { 85 179 11 }
+					province = 9451
+				}
+				b_sunju = {
+					color = { 34 73 31 }
+					province = 9455
+				}
+			}
+		}
+		d_gwangju = {
+			color = { 115 172 174 }
+			capital = c_gwangju
+			c_gwangju = {
+				color = { 135 192 194 }
+				b_gwangju = {
+					color = { 119 73 196 }
+					province = 9525
+				}
+				b_namgyeong = {
+					color = { 34 74 61 }
+					province = 9524
+				}
+				b_suwon = {
+					color = { 170 72 141 }
+					province = 9526
+				}
+				b_icheon = {
+					color = { 204 72 106 }
+					province = 9527
+				}
+			}
+			c_yangju = {
+				color = { 135 192 194 }
+				b_yangju = {
+					color = { 85 74 96 }
+					province = 9519
+				}
+				b_pocheon = {
+					color = { 221 127 71 }
+					province = 9520
+				}
+				b_gapyeong = {
+					color = { 204 58 146 }
+					province = 9521
+				}
+				b_jipyeong = {
+					color = { 187 89 146 }
+					province = 9523
+				}
+			}
+		}
+	}
+	k_silla = {
+		color = { 120 45 40 }
+		capital = c_gyeongju
+		cultural_names = {
+			name_list_yamato = cn_shiragi
+			name_list_emishi = cn_shiragi
+		}
+		can_create = {
+			# Cannot be created by Goryeo after it is formed
+			custom_tooltip = {
+				text = unify_goryeo_decision_blocker_tt
+				NOT = {
+					top_liege = {
+						has_title = title:e_goryeo
+						has_government = meritocratic_government
+					}
+				}
+			}
+		}
+		d_gyeongju = {
+			color = { 135 60 55 }
+			capital = c_gyeongju
+			c_gyeongju = {
+				color = { 150 75 70 }
+				b_gyeongju = {
+					color = { 204 55 251 }
+					province = 9500
+				}
+				b_yeongil = {
+					color = { 170 55 16 }
+					province = 9501
+				}
+				b_yeongju = {
+					color = { 119 63 16 }
+					province = 9502
+				}
+				b_boseongbu = {
+					color = { 153 63 46 }
+					province = 9503
+				}
+				b_yeongdeok = {
+					color = { 204 55 71 }
+					province = 9504
+				}
+				b_yeongyang = {
+					color = { 102 56 126 }
+					province = 9505
+				}
+			}
+			c_andong = {
+				color = { 205 125 115 }
+				b_andong = {
+					color = { 238 64 141 }
+					province = 9490
+				}
+				b_bonghwa = {
+					color = { 170 56 191 }
+					province = 9491
+				}
+				b_yeongcheon = {
+					color = { 102 56 211 }
+					province = 9492
+				}
+				b_mungyeong = {
+					color = { 68 57 1 }
+					province = 9493
+				}
+				b_sangju = {
+					color = { 119 229 126 }
+					province = 9494
+				}
+			}
+			c_sangju = {
+				color = { 235 90 80 }
+				b_uiseong = {
+					color = { 221 63 56 }
+					province = 9498
+				}
+				b_seongju = {
+					color = { 170 62 121 }
+					province = 9495
+				}
+				b_taegu = {
+					color = { 68 62 81 }
+					province = 9496
+				}
+				b_gaeryeong = {
+					color = { 136 62 186 }
+					province = 9497
+				}
+				b_seonsan = {
+					color = { 187 63 226 }
+					province = 9499
+				}
+			}
+		}
+		d_jinju = {
+			color = { 52 15 8 }
+			capital = c_jinju
+			c_jinju = {
+				color = { 70 35 28 }
+				b_jinju = {
+					color = { 187 58 136 }
+					province = 9506
+				}
+				b_hadong = {
+					color = { 187 49 31 }
+					province = 9507
+				}
+				b_namhae = {
+					color = { 238 87 156 }
+					province = 9508
+				}
+				b_sacheon = {
+					color = { 85 49 46 }
+					province = 9509
+				}
+				b_geoje = {
+					color = { 221 87 156 }
+					province = 9510
+				}
+			}
+			c_ulju = {
+				color = { 80 20 10 }
+				b_ulju = {
+					color = { 102 55 241 }
+					province = 9516
+				}
+				b_dongnae = {
+					color = { 221 50 146 }
+					province = 9513
+				}
+				b_miryang = {
+					color = { 153 60 121 }
+					province = 9515
+				}
+			}
+			c_hamyang = {
+				color = { 70 55 50 }
+				b_geochang = {
+					color = { 238 73 31 }
+					province = 9511
+				}
+				b_hapcheon = {
+					color = { 238 61 221 }
+					province = 9512
+				}
+			}
+			c_guemju = {
+				color = { 80 45 15 }
+				b_uian = {
+					color = { 102 50 111 }
+					province = 9514
+				}
+			}
+		}
+		d_donggye = {
+			color = { 178 69 17 }
+			capital = c_myeongju
+			c_myeongju = {
+				color = { 160 45 5 }
+				b_myeongju = {
+					color = { 119 65 31 }
+					province = 9468
+				}
+				b_uljin = {
+					color = { 119 80 121 }
+					province = 9469
+				}
+				b_samcheok = {
+					color = { 102 65 201 }
+					province = 9470
+				}
+			}
+			c_goseong = {
+				color = { 136 81 19 }
+				b_goseong = {
+					color = { 119 66 156 }
+					province = 9471
+				}
+				b_tongcheon = {
+					color = { 136 204 1 }
+					province = 9472
+				}
+				b_ingnyeong = {
+					color = { 170 66 91 }
+					province = 9473
+				}
+			}
+			c_deungju = {
+				color = { 170 125 15 }
+				b_deungju = {
+					color = { 204 76 166 }
+					province = 9600
+				}
+				b_hwaju = {
+					color = { 136 67 41 }
+					province = 9598
+				}
+				b_munju = {
+					color = { 68 67 11 }
+					province = 9599
+				}
+				b_north_jeongju = {
+					color = { 85 68 86 }
+					province = 9601
+				}
+				b_goju = {
+					color = { 17 67 26 }
+					province = 9602
+				}
+			}
+			c_wonju = {
+				color = { 105 190 205 }
+				b_wonju = {
+					color = { 17 71 31 }
+					province = 9485
+				}
+				b_yeongwol = {
+					color = { 221 70 171 }
+					province = 9486
+				}
+				b_pyeongchang = {
+					color = { 119 71 206 }
+					province = 9487
+				}
+				b_jeongseon = {
+					color = { 85 65 11 }
+					province = 9488
+				}
+				b_hoengcheon = {
+					color = { 51 66 86 }
+					province = 9489
+				}
+			}
+		}
+	}
+	k_baekje = {
+		color = { 90 160 115 }
+		capital = c_jeonju
+		cultural_names = {
+			name_list_yamato = cn_kudara
+			name_list_emishi = cn_kudara
+		}
+		can_create = {
+			# Cannot be created by Goryeo after it is formed
+			custom_tooltip = {
+				text = unify_goryeo_decision_blocker_tt
+				NOT = {
+					top_liege = {
+						has_title = title:e_goryeo
+						has_government = meritocratic_government
+					}
+				}
+			}
+		}
+		d_chungju = {
+			color = { 13 150 65 }
+			capital = c_chungju
+			c_chungju = {
+				color = { 33 170 85 }
+				b_chungju = {
+					color = { 204 69 11 }
+					province = 9565
+				}
+				b_eumseong = {
+					color = { 187 69 211 }
+					province = 9566
+				}
+				b_goeju = {
+					color = { 170 166 166 }
+					province = 9567
+				}
+				b_jecheon = {
+					color = { 136 69 31 }
+					province = 9568
+				}
+				b_danyang_korea = {
+					color = { 119 70 151 }
+					province = 9569
+				}
+			}
+			c_hongju = {
+				color = { 40 135 100 }
+				b_hongju = {
+					color = { 170 65 16 }
+					province = 9576
+				}
+				b_boryeong = {
+					color = { 238 203 171 }
+					province = 9577
+				}
+				b_hansan = {
+					color = { 153 64 166 }
+					province = 9578
+				}
+				b_seosan = {
+					color = { 170 65 221 }
+					province = 9579
+				}
+				b_aju = {
+					color = { 119 67 1 }
+					province = 9580
+				}
+			}
+			c_gongju = {
+				color = { 60 115 80 }
+				b_gongju = {
+					color = { 204 65 46 }
+					province = 9570
+				}
+				b_yeonsan = {
+					color = { 238 235 106 }
+					province = 9571
+				}
+				b_jinjam = {
+					color = { 85 67 31 }
+					province = 9572
+				}
+				b_yeongdong = {
+					color = { 187 62 151 }
+					province = 9573
+				}
+				b_cheongju = {
+					color = { 102 68 116 }
+					province = 9574
+				}
+				b_cheonan = {
+					color = { 119 129 76 }
+					province = 9575
+				}
+			}
+		}
+		d_naju = {
+			color = { 25 100 5 }
+			capital = c_naju
+			c_naju = {
+				color = { 45 120 25 }
+				b_naju = {
+					color = { 221 48 186 }
+					province = 9532
+				}
+				b_yeonggam = {
+					color = { 119 50 171 }
+					province = 9536
+				}
+				b_muan = {
+					color = { 238 49 6 }
+					province = 9537
+				}
+				b_hwasun = {
+					color = { 68 49 36 }
+					province = 9538
+				}
+				b_yeonggwang = {
+					color = { 34 47 111 }
+					province = 9540
+				}
+			}
+			c_jangheung = {
+				color = { 40 150 10 }
+				b_jangheung = {
+					color = { 17 174 61 }
+					province = 9535
+				}
+				b_haenam = {
+					color = { 68 47 101 }
+					province = 9533
+				}
+				b_jindo = {
+					color = { 204 87 166 }
+					province = 9534
+				}
+			}
+			c_boseong = {
+				color = { 120 215 60 }
+				b_boseong = {
+					color = { 136 48 201 }
+					province = 9546
+				}
+				b_suncheon = {
+					color = { 68 231 56 }
+					province = 9545
+				}
+				b_heungyang = {
+					color = { 187 87 166 }
+					province = 9547
+				}
+				b_gokseong = {
+					color = { 170 52 141 }
+					province = 9548
+				}
+			}
+		}
+		d_tamna = {
+			color = { 45 245 135 }
+			capital = c_tamna
+			c_tamna = {
+				color = { 45 245 135 }
+				b_tamna = {
+					color = { 204 47 81 }
+					province = 9549
+				}
+				b_seongwi = {
+					color = { 85 87 161 }
+					province = 9550
+				}
+			}
+		}
+		d_jeonju = {
+			color = { 30 90 70 }
+			capital = c_jeonju
+			c_jeonju = {
+				color = { 50 110 90 }
+				b_jeonju = {
+					color = { 34 53 61 }
+					province = 9528
+				}
+				b_gimje = {
+					color = { 17 53 1 }
+					province = 9529
+				}
+				b_jeongeup = {
+					color = { 102 50 226 }
+					province = 9543
+				}
+				b_musong = {
+					color = { 238 49 51 }
+					province = 9544
+				}
+			}
+			c_jillye = {
+				color = { 25 65 40 }
+				b_jinan = {
+					color = { 238 53 86 }
+					province = 9530
+				}
+				b_mupung = {
+					color = { 153 54 221 }
+					province = 9531
+				}
+			}
+			c_namwon = {
+				color = { 50 70 60 }
+				b_namwon = {
+					color = { 85 52 196 }
+					province = 9541
+				}
+				b_imsil = {
+					color = { 170 53 46 }
+					province = 9542
+				}
+			}
+		}
+	}
+}
+k_yongson_throne = {
+	color = { 220 205 250 }
+	capital = c_gaeseong
+	can_be_named_after_dynasty = no
+	landless = yes
+	figurehead = yes
+	allow_domicile = no
+	always_follows_primary_heir = yes
+	definite_form = yes
+	can_create = { always = no }
+	personal_relation_entry = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:target
+					scope:liege ?= scope:target
+				}
+				desc = japan_personal_relation_ceremonial_liege_same
+			}
+			triggered_desc = {
+				trigger = { exists = scope:liege }
+				desc = japan_personal_relation_ceremonial_liege_other
+			}
+		}
+	}
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_korean }
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+}

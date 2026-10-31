@@ -1,0 +1,1688 @@
+﻿@correct_culture_primary_score = 100
+@never_primary_score = -1000
+e_japan = {
+	color = { 255 100 255 }
+	capital = c_yamashiro
+	landless = no
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_japonic }
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+	personal_relation_entry = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:target
+					scope:vassal ?= scope:target
+				}
+				desc = japan_personal_relation_ceremonial_regent_same
+			}
+			triggered_desc = {
+				trigger = { exists = scope:vassal }
+				desc = japan_personal_relation_ceremonial_regent_other
+			}
+		}
+	}
+	personal_relation_vassal = {
+		has_title = title:k_chrysanthemum_throne
+	}
+	k_yamato = {
+		color = { 96 3 6 }
+		capital = c_yamashiro
+		can_be_named_after_dynasty = no
+		can_create = {
+			japan_government_japan_kingdom_restriction_trigger = yes
+		}
+		ai_primary_priority = {
+			if = {
+				limit = { culture = culture:japanese }
+				add = @correct_culture_primary_score
+			}
+		}
+		d_kinai = {
+			color = { 68 18 14 }
+			capital = c_yamashiro
+			can_create = {
+				japan_government_japan_duchy_restriction_trigger = yes
+			}
+			c_yamashiro = {
+				color = { 77 7 3 }
+				b_kyoto = {
+					color = { 102 49 36 }
+					province = 8964
+				}
+				b_kuse = {
+					color = { 170 80 141 }
+					province = 8965
+				}
+			}
+			c_settsu = {
+				color = { 46 26 23 }
+				b_muko = {
+					color = { 221 78 116 }
+					province = 8962
+				}
+				b_osaka = {
+					color = { 204 81 171 }
+					province = 8960
+				}
+				b_kawabe = {
+					color = { 221 56 101 }
+					province = 8961
+				}
+				b_izumi = {
+					color = { 160 5 5 }
+					province = 8963
+				}
+			}
+			c_yamato = {
+				color = { 101 61 60 }
+				b_yoshino = {
+					color = { 62 31 28 }
+					province = 8968
+				}
+				b_takaichi = {
+					color = { 204 84 26 }
+					province = 8966
+				}
+				b_nara = {
+					color = { 153 83 206 }
+					province = 8967
+				}
+			}
+		}
+		d_nankaido = {
+			color = { 131 1 8 }
+			capital = c_iyo
+			can_create = {
+				japan_government_japan_duchy_restriction_trigger = yes
+			}
+			c_iyo = {
+				color = { 79 29 28 }
+				b_iyo = {
+					color = { 82 23 22 }
+					province = 8979
+				}
+				b_ochi = {
+					color = { 21 16 17 }
+					province = 8978
+				}
+				b_nii = {
+					color = { 153 49 56 }
+					province = 8980
+				}
+				b_ukena = {
+					color = { 136 62 81 }
+					province = 8981
+				}
+				b_kita_shikoku = {
+					color = { 119 62 101 }
+					province = 8982
+				}
+				b_uwa = {
+					color = { 134 60 51 }
+					province = 8983
+				}
+			}
+			c_awa = {
+				color = { 171 23 39 }
+				b_awa_shikoku = {
+					color = { 221 64 101 }
+					province = 8971
+				}
+				b_nakata = {
+					color = { 177 76 94 }
+					province = 8970
+				}
+				b_naka_shikoku = {
+					color = { 153 63 56 }
+					province = 8973
+				}
+				b_kaifu = {
+					color = { 103 2 5 }
+					province = 8974
+				}
+				b_mima = {
+					color = { 136 63 251 }
+					province = 8975
+				}
+				b_miyoshi_shikoku = {
+					color = { 170 141 116 }
+					province = 8976
+				}
+			}
+			c_sanuki = {
+				color = { 165 61 77 }
+				b_aya = {
+					color = { 85 64 156 }
+					province = 8990
+				}
+				b_mitoyo = {
+					color = { 153 64 196 }
+					province = 8991
+				}
+				b_miki = {
+					color = { 187 64 131 }
+					province = 8992
+				}
+			}
+			c_tosa = {
+				color = { 99 2 1 }
+				b_tosa = {
+					color = { 119 62 166 }
+					province = 8994
+				}
+				b_nagaoka = {
+					color = { 98 33 36 }
+					province = 8993
+				}
+				b_aki_shikoku = {
+					color = { 221 63 21 }
+					province = 8995
+				}
+				b_kami_shikoku = {
+					color = { 153 62 196 }
+					province = 8996
+				}
+				b_agawa = {
+					color = { 187 62 161 }
+					province = 8997
+				}
+				b_takaoka = {
+					color = { 159 98 100 }
+					province = 8998
+				}
+				b_hata = {
+					color = { 161 70 60 }
+					province = 8999
+				}
+			}
+			c_kii = {
+				color = { 192 6 2 }
+				b_kaisou = {
+					color = { 85 84 146 }
+					province = 8984
+				}
+				b_higashimuro = {
+					color = { 102 85 211 }
+					province = 8985
+				}
+				b_minamimuro = {
+					color = { 187 85 241 }
+					province = 8986
+				}
+				b_nishimuro = {
+					color = { 221 112 66 }
+					province = 8987
+				}
+				b_hidaka = {
+					color = { 246 113 99 }
+					province = 8988
+				}
+				b_naga = {
+					color = { 130 55 25 }
+					province = 8989
+				}
+			}
+			c_awaji = {
+				color = { 212 124 125 }
+				b_awaji = {
+					color = { 140 86 89 }
+					province = 8972
+				}
+			}
+		}
+		d_east_sanindo = {
+			color = { 131 48 54 }
+			capital = c_tanba
+			can_create = {
+				japan_government_japan_duchy_restriction_trigger = yes
+			}
+			c_tanba = {
+				color = { 183 21 31 }
+				b_kuwada = {
+					color = { 250 61 76 }
+					province = 9077
+				}
+				b_funai = {
+					color = { 120 51 61 }
+					province = 9078
+				}
+				b_ikaruga = {
+					color = { 136 79 181 }
+					province = 9079
+				}
+				b_hikami = {
+					color = { 146 4 21 }
+					province = 9080
+				}
+			}
+			c_tajima = {
+				color = { 88 14 22 }
+				b_keta_tajima = {
+					color = { 71 2 14 }
+					province = 9074
+				}
+				b_yabu = {
+					color = { 187 73 236 }
+					province = 9075
+				}
+				b_futakata = {
+					color = { 170 135 121 }
+					province = 9076
+				}
+			}
+			c_inaba = {
+				color = { 168 104 113 }
+				b_houmi = {
+					color = { 221 73 201 }
+					province = 9060
+				}
+				b_takakusa = {
+					color = { 181 85 89 }
+					province = 9061
+				}
+			}
+			c_tango = {
+				color = { 172 58 72 }
+				b_yosa = {
+					color = { 17 74 76 }
+					province = 9082
+				}
+				b_kasa_tango = {
+					color = { 231 28 36 }
+					province = 9081
+				}
+				b_onyuu = {
+					color = { 102 79 206 }
+					province = 9083
+				}
+			}
+		}
+		d_west_sanindo = {
+			color = { 98 61 64 }
+			capital = c_izumo
+			can_create = {
+				japan_government_japan_duchy_restriction_trigger = yes
+			}
+			c_izumo = {
+				color = { 137 104 107 }
+				b_izumo = {
+					color = { 136 71 196 }
+					province = 9068
+				}
+				b_ou = {
+					color = { 117 89 93 }
+					province = 9067
+				}
+				b_iishi = {
+					color = { 102 221 76 }
+					province = 9070
+				}
+				b_nita = {
+					color = { 59 42 44 }
+					province = 9071
+				}
+			}
+			c_iwami = {
+				color = { 71 48 51 }
+				b_naka_iwami = {
+					color = { 56 32 34 }
+					province = 9062
+				}
+				b_nima = {
+					color = { 204 70 126 }
+					province = 9063
+				}
+				b_oochi = {
+					color = { 34 70 101 }
+					province = 9064
+				}
+				b_mino = {
+					color = { 117 53 66 }
+					province = 9065
+				}
+				b_kanoashi = {
+					color = { 106 83 85 }
+					province = 9066
+				}
+			}
+			c_hoki = {
+				color = { 121 57 63 }
+				b_kume_houki = {
+					color = { 221 71 21 }
+					province = 9057
+				}
+				b_aimi = {
+					color = { 170 71 11 }
+					province = 9058
+				}
+				b_hino = {
+					color = { 165 49 58 }
+					province = 9059
+				}
+			}
+			c_oki = {
+				color = { 163 61 60 }
+				b_oki = {
+					color = { 223 28 45 }
+					province = 9069
+				}
+			}
+		}
+		d_west_sanyodo = {
+			color = { 37 22 23 }
+			capital = c_aki
+			can_create = {
+				japan_government_japan_duchy_restriction_trigger = yes
+			}
+			c_aki = {
+				color = { 33 23 24 }
+				b_aki = {
+					color = { 37 19 18 }
+					province = 9084
+				}
+				b_toyota = {
+					color = { 170 67 51 }
+					province = 9086
+				}
+				b_saeki = {
+					color = { 187 43 16 }
+					province = 9087
+				}
+				b_yamagata = {
+					color = { 56 28 34 }
+					province = 9088
+				}
+				b_takata = {
+					color = { 119 151 1 }
+					province = 9089
+				}
+			}
+			c_bingo = {
+				color = { 63 21 21 }
+				b_ashida = {
+					color = { 51 68 76 }
+					province = 9094
+				}
+				b_sera = {
+					color = { 68 68 111 }
+					province = 9095
+				}
+				b_miyoshi = {
+					color = { 136 68 151 }
+					province = 9096
+				}
+				b_eso = {
+					color = { 221 68 166 }
+					province = 9097
+				}
+				b_nuka = {
+					color = { 136 69 191 }
+					province = 9098
+				}
+				b_kameshi = {
+					color = { 187 68 91 }
+					province = 9099
+				}
+			}
+			c_nagato = {
+				color = { 63 54 55 }
+				b_toyoura = {
+					color = { 170 216 46 }
+					province = 9112
+				}
+				b_asa = {
+					color = { 88 80 81 }
+					province = 9113
+				}
+				b_ootsu = {
+					color = { 204 66 176 }
+					province = 9114
+				}
+				b_abu = {
+					color = { 20 15 16 }
+					province = 9115
+				}
+			}
+			c_suo = {
+				color = { 62 35 40 }
+				b_yoshiki_suou = {
+					color = { 221 65 46 }
+					province = 9121
+				}
+				b_saba = {
+					color = { 85 65 21 }
+					province = 9117
+				}
+				b_kuga = {
+					color = { 20 17 17 }
+					province = 9118
+				}
+				b_kumage = {
+					color = { 98 29 48 }
+					province = 9119
+				}
+				b_tsuno = {
+					color = { 100 82 84 }
+					province = 9120
+				}
+			}
+		}
+		d_east_sanyodo = {
+			color = { 163 112 113 }
+			capital = c_harima
+			can_create = {
+				japan_government_japan_duchy_restriction_trigger = yes
+			}
+			c_harima = {
+				color = { 143 112 110 }
+				b_shikama = {
+					color = { 172 146 145 }
+					province = 9103
+				}
+				b_akashi = {
+					color = { 226 145 148 }
+					province = 9104
+				}
+				b_taka = {
+					color = { 153 95 95 }
+					province = 9105
+				}
+				b_akou = {
+					color = { 153 76 156 }
+					province = 9106
+				}
+				b_shisou = {
+					color = { 170 172 86 }
+					province = 9107
+				}
+			}
+			c_bitchu = {
+				color = { 222 130 128 }
+				b_asakuchi = {
+					color = { 85 70 66 }
+					province = 9091
+				}
+				b_kaya = {
+					color = { 187 69 21 }
+					province = 9090
+				}
+				b_katou_bicchuu = {
+					color = { 102 69 236 }
+					province = 9092
+				}
+				b_aka = {
+					color = { 85 69 6 }
+					province = 9093
+				}
+			}
+			c_bizen = {
+				color = { 217 172 176 }
+				b_joutou = {
+					color = { 238 75 1 }
+					province = 9100
+				}
+				b_wake = {
+					color = { 187 76 51 }
+					province = 9101
+				}
+				b_tsudaka = {
+					color = { 85 75 41 }
+					province = 9102
+				}
+			}
+			c_mimasaka = {
+				color = { 99 59 59 }
+				b_tomata = {
+					color = { 127 88 84 }
+					province = 9108
+				}
+				b_kume = {
+					color = { 95 29 33 }
+					province = 9109
+				}
+				b_mashima = {
+					color = { 60 28 27 }
+					province = 9110
+				}
+				b_aita = {
+					color = { 102 72 136 }
+					province = 9111
+				}
+			}
+		}
+	}
+	k_azuma = {
+		color = { 125 15 65 }
+		capital = c_mino
+		can_be_named_after_dynasty = no
+		can_create = {
+			japan_government_japan_kingdom_restriction_trigger = yes
+		}
+		d_east_bando = {
+			color = { 164 35 90 }
+			capital = c_shimosa
+			can_create = {
+				japan_government_japan_duchy_restriction_trigger = yes
+			}
+			c_shimosa = {
+				color = { 223 103 163 }
+				b_katsushika = {
+					color = { 151 77 108 }
+					province = 9234
+				}
+				b_katori = {
+					color = { 246 62 153 }
+					province = 9235
+				}
+				b_chiba = {
+					color = { 244 162 199 }
+					province = 9236
+				}
+				b_souma = {
+					color = { 170 229 136 }
+					province = 9237
+				}
+			}
+			c_hitachi = {
+				color = { 190 17 79 }
+				b_ibaraki = {
+					color = { 161 40 85 }
+					province = 9187
+				}
+				b_taga = {
+					color = { 35 10 95 }
+					province = 9188
+				}
+				b_kuji_kanto = {
+					color = { 119 86 81 }
+					province = 9189
+				}
+				b_naka = {
+					color = { 230 185 94 }
+					province = 9190
+				}
+				b_kashima = {
+					color = { 231 187 210 }
+					province = 9191
+				}
+				b_niihari = {
+					color = { 85 88 76 }
+					province = 9192
+				}
+				b_tsukuba = {
+					color = { 123 55 84 }
+					province = 9193
+				}
+			}
+			c_kazusa = {
+				color = { 102 42 62 }
+				b_ichihara = {
+					color = { 71 15 36  }
+					province = 9209
+				}
+				b_musa = {
+					color = { 102 91 226 }
+					province = 9210
+				}
+				b_isumi = {
+					color = { 187 52 106 }
+					province = 9211
+				}
+				b_awa = {
+					color = { 143 89 104  }
+					province = 9212
+				}
+				b_makuda = {
+					color = { 204 92 96 }
+					province = 9213
+				}
+			}
+			c_shimotsuke = {
+				color = { 143 28 87 }
+				b_ashikaga_loc = {
+					color = { 153 181 31 }
+					province = 9282
+				}
+				b_tsuga = {
+					color = { 221 90 96 }
+					province = 9277
+				}
+				b_nasu = {
+					color = { 200 15 101 }
+					province = 9278
+				}
+				b_shioya = {
+					color = { 144 80 110 }
+					province = 9279
+				}
+				b_kawachi = {
+					color = { 149 43 44 }
+					province = 9280
+				}
+				b_haga = {
+					color = { 102 90 16 }
+					province = 9281
+				}
+			}
+		}
+		d_west_bando = {
+			color = { 84 39 55 }
+			capital = c_musashi
+			can_create = {
+				japan_government_japan_duchy_restriction_trigger = yes
+			}
+			c_musashi = {
+				color = { 76 35 48 }
+				b_tama = {
+					color = { 205 34 94 }
+					province = 9218
+				}
+				b_saitama = {
+					color = { 238 93 246 }
+					province = 9219
+				}
+				b_adachi_kanto = {
+					color = { 119 94 6 }
+					province = 9220
+				}
+				b_toshima_kanto = {
+					color = { 153 94 16 }
+					province = 9221
+				}
+				b_tachibana = {
+					color = { 238 94 36 }
+					province = 9222
+				}
+				b_chichibu = {
+					color = { 72 7 23 }
+					province = 9223
+				}
+				b_hiki = {
+					color = { 153 95 156 }
+					province = 9224
+				}
+				b_hanzawa = {
+					color = { 136 149 106 }
+					province = 9225
+				}
+			}
+			c_sagami = {
+				color = { 123 88 100 }
+				b_kamakura = {
+					color = { 144 113 120 }
+					province = 9229
+				}
+				b_ashigara = {
+					color = { 221 97 196 }
+					province = 9230
+				}
+				b_aikou = {
+					color = { 204 97 146 }
+					province = 9231
+				}
+			}
+			c_izu = {
+				color = { 122 27 55 }
+				b_tagata = {
+					color = { 167 22 74 }
+					province = 9201
+				}
+				b_kamo_izu = {
+					color = { 76 39 48 }
+					province = 9202
+				}
+			}
+			c_kozuke = {
+				color = { 26 16 18 }
+				b_gunma = {
+					color = { 28 14 18 }
+					province = 9254
+				}
+				b_tone = {
+					color = { 44 38 38 }
+					province = 9255
+				}
+				b_seta = {
+					color = { 51 96 1 }
+					province = 9256
+				}
+				b_nitta = {
+					color = { 44 15 18 }
+					province = 9257
+				}
+				b_usui = {
+					color = { 102 96 51 }
+					province = 9258
+				}
+				b_kanra = {
+					color = { 119 96 86 }
+					province = 9259
+				}
+				b_agatsuma = {
+					color = { 44 27 28 }
+					province = 9260
+				}
+			}
+		}
+		d_tokaido = {
+			color = { 105 0 42 }
+			capital = c_ise
+			can_create = {
+				japan_government_japan_duchy_restriction_trigger = yes
+			}
+			c_ise = {
+				color = { 77 18 42 }
+				b_ichishi = {
+					color = { 238 87 176 }
+					province = 9197
+				}
+				b_suzuka = {
+					color = { 136 87 201 }
+					province = 9195
+				}
+				b_mie = {
+					color = { 124 5 52 }
+					province = 9196
+				}
+				b_watarai = {
+					color = { 204 87 146 }
+					province = 9198
+				}
+				b_taki = {
+					color = { 119 86 136 }
+					province = 9199
+				}
+				b_iga = {
+					color = { 94 67 79 }
+					province = 9200
+				}
+			}
+			c_owari = {
+				color = { 146 21 64 }
+				b_nakajima = {
+					color = { 136 90 86 }
+					province = 9226
+				}
+				b_niwa = {
+					color = { 34 90 16 }
+					province = 9227
+				}
+				b_aichi = {
+					color = { 34 90 101 }
+					province = 9228
+				}
+			}
+			c_mikawa = {
+				color = { 156 75 105 }
+				b_hoi = {
+					color = { 51 94 116 }
+					province = 9214
+				}
+				b_shitara = {
+					color = { 213 145 169 }
+					province = 9215
+				}
+				b_kamo_mikawa = {
+					color = { 131 39 76 }
+					province = 9216
+				}
+				b_hekikai = {
+					color = { 17 96 11 }
+					province = 9217
+				}
+			}
+			c_suruga = {
+				color = { 32 22 27 }
+				b_abe = {
+					color = { 26 19 22 }
+					province = 9238
+				}
+				b_suntou = {
+					color = { 238 98 111 }
+					province = 9239
+				}
+				b_fuji = {
+					color = { 54 26 43 }
+					province = 9240
+				}
+				b_ihara = {
+					color = { 238 99 146 }
+					province = 9241
+				}
+				b_shida = {
+					color = { 54 49 52 }
+					province = 9242
+				}
+			}
+			c_totomi = {
+				color = { 102 69 82 }
+				b_toyoda = {
+					color = { 102 71 86 }
+					province = 9244
+				}
+				b_kitou = {
+					color = { 187 98 106 }
+					province = 9245
+				}
+				b_shuuchi = {
+					color = { 102 98 96 }
+					province = 9246
+				}
+				b_fuchi = {
+					color = { 153 82 113 }
+					province = 9247
+				}
+			}
+			c_shima = {
+				color = { 99 109 95 }
+				b_shima = {
+					color = { 128 61 88 }
+					province = 9232
+				}
+				b_kitamuro = {
+					color = { 187 86 81 }
+					province = 9233
+				}
+			}
+		}
+		d_tosando = {
+			color = { 157 84 114 }
+			capital = c_omi
+			can_create = {
+				japan_government_japan_duchy_restriction_trigger = yes
+			}
+			c_omi = {
+				color = { 208 150 169 }
+				b_kouka = {
+					color = { 34 82 96 }
+					province = 9274
+				}
+				b_kurita = {
+					color = { 153 81 246 }
+					province = 9270
+				}
+				b_azai = {
+					color = { 130 83 96 }
+					province = 9271
+				}
+				b_echi = {
+					color = { 51 82 61 }
+					province = 9272
+				}
+				b_gamou = {
+					color = { 102 82 81 }
+					province = 9273
+				}
+				b_takashima = {
+					color = { 170 81 11 }
+					province = 9275
+				}
+			}
+			c_mino = {
+				color = { 121 70 89 }
+				b_fuwa_mino = {
+					color = { 119 87 11 }
+					province = 9262
+				}
+				b_ena = {
+					color = { 17 89 6 }
+					province = 9263
+				}
+				b_minokamo = {
+					color = { 204 57 81 }
+					province = 9264
+				}
+				b_gujou = {
+					color = { 0 112 51 }
+					province = 9265
+				}
+				b_mugi = {
+					color = { 105 34 65 }
+					province = 9266
+				}
+				b_toki = {
+					color = { 170 89 231 }
+					province = 9267
+				}
+				b_katagata = {
+					color = { 34 88 66 }
+					province = 9268
+				}
+				b_ikeda = {
+					color = { 204 88 41 }
+					province = 9269
+				}
+			}
+			c_hida = {
+				color = { 214 92 153 }
+				b_kamioono = {
+					color = { 119 137 41 }
+					province = 9248
+				}
+				b_yoshiki = {
+					color = { 56 30 36 }
+					province = 9249
+				}
+				b_mashita = {
+					color = { 246 71 164 }
+					province = 9250
+				}
+			}
+			c_shinano = {
+				color = { 146 48 97 }
+				b_tsukama = {
+					color = { 187 13 92 }
+					province = 9283
+				}
+				b_kiso = {
+					color = { 119 84 36 }
+					province = 9284
+				}
+				b_saku = {
+					color = { 203 103 148 }
+					province = 9285
+				}
+				b_takai = {
+					color = { 187 99 211 }
+					province = 9286
+				}
+				b_minochi = {
+					color = { 136 100 1 }
+					province = 9287
+				}
+				b_sarashina = {
+					color = { 153 99 221 }
+					province = 9288
+				}
+				b_azumi = {
+					color = { 119 11 56 }
+					province = 9289
+				}
+				b_chiisagata = {
+					color = { 136 100 11 }
+					province = 9290
+				}
+				b_suwa = {
+					color = { 238 164 171 }
+					province = 9291
+				}
+				b_kamiina = {
+					color = { 221 162 86 }
+					province = 9292
+				}
+				b_shimoina = {
+					color = { 153 87 1 }
+					province = 9293
+				}
+			}
+			c_kai = {
+				color = { 59 47 52 }
+				b_yatsushiro = {
+					color = { 40 31 34 }
+					province = 9204
+				}
+				b_tsuru = {
+					color = { 88 75 80 }
+					province = 9205
+				}
+				b_yamanashi = {
+					color = { 204 98 41 }
+					province = 9206
+				}
+				b_koma_kai = {
+					color = { 187 98 96 }
+					province = 9207
+				}
+			}
+		}
+		d_hokurikudo = {
+			color = { 191 137 165 }
+			capital = c_echizen
+			can_create = {
+				japan_government_japan_duchy_restriction_trigger = yes
+			}
+			c_echizen = {
+				color = { 250 200 227 }
+				b_nyuu = {
+					color = { 136 80 86 }
+					province = 8948
+				}
+				b_sakai_echizen = {
+					color = { 170 80 126 }
+					province = 8949
+				}
+				b_nakaoono = {
+					color = { 136 91 151 }
+					province = 8950
+				}
+				b_imadate = {
+					color = { 119 79 26 }
+					province = 8951
+				}
+				b_tsuruga = {
+					color = { 133 113 124 }
+					province = 8952
+				}
+			}
+			c_echigo = {
+				color = { 143 96 115 }
+				b_higashikubiki = {
+					color = { 119 89 206 }
+					province = 8937
+				}
+				b_nishikubiki = {
+					color = { 170 80 56 }
+					province = 8938
+				}
+				b_iwafune = {
+					color = { 88 69 75 }
+					province = 8939
+				}
+				b_nutari = {
+					color = { 170 85 231 }
+					province = 8940
+				}
+				b_nishikanbara = {
+					color = { 51 85 11 }
+					province = 8941
+				}
+				b_higashikanbara = {
+					color = { 136 90 96 }
+					province = 8942
+				}
+				b_koshi = {
+					color = { 187 86 26 }
+					province = 8943
+				}
+				b_kariwa = {
+					color = { 85 89 161 }
+					province = 8944
+				}
+				b_minamiuonuma = {
+					color = { 204 89 146 }
+					province = 8945
+				}
+				b_kitauonuma = {
+					color = { 119 90 11 }
+					province = 8946
+				}
+			}
+			c_etchu = {
+				color = { 216 131 173 }
+				b_imizu = {
+					color = { 144 68 112 }
+					province = 8933
+				}
+				b_niikawa = {
+					color = { 153 94 91 }
+					province = 8934
+				}
+				b_nei = {
+					color = { 0 235 86 }
+					province = 8935
+				}
+				b_tonami = {
+					color = { 238 93 161 }
+					province = 8936
+				}
+			}
+			c_noto = {
+				color = { 182 149 166 }
+				b_noto_jap = {
+					color = { 68 92 61 }
+					province = 8955
+				}
+				b_fugeshi = {
+					color = { 112 85 99 }
+					province = 8956
+				}
+				b_suzu = {
+					color = { 51 233 81 }
+					province = 8957
+				}
+			}
+			c_kaga = {
+				color = { 81 48 63 }
+				b_kaga = {
+					color = { 51 92 26 }
+					province = 8954
+				}
+				b_nomi = {
+					color = { 170 91 246 }
+					province = 8953
+				}
+			}
+			c_sado = {
+				color = { 33 23 24 }
+				b_sawata = {
+					color = { 51 88 131 }
+					province = 8958
+				}
+				b_kamo = {
+					color = { 36 21 22 }
+					province = 8959
+				}
+			}
+		}
+	}
+	k_tsukushi = {
+		color = { 210 145 30 }
+		capital = c_chikuzen
+		can_be_named_after_dynasty = no
+		can_create = {
+			japan_government_japan_kingdom_restriction_trigger = yes
+		}
+		d_north_saikaido = {
+			color = { 138 103 45 }
+			capital = c_chikuzen
+			definite_form = yes
+			can_create = {
+				japan_government_japan_duchy_restriction_trigger = yes
+			}
+			c_chikuzen = {
+				color = { 181 157 100 }
+				b_asakura = {
+					color = { 68 51 41 }
+					province = 9017
+				}
+				b_mikasa = {
+					color = { 204 52 121 }
+					province = 9014
+				}
+				b_hakata = {
+					color = { 109 86 45 }
+					province = 9015
+				}
+				b_onga = {
+					color = { 153 51 91 }
+					province = 9016
+				}
+			}
+			c_bungo = {
+				color = { 112 92 65 }
+				b_ooita = {
+					color = { 204 59 11 }
+					province = 9001
+				}
+				b_kunisaki = {
+					color = { 117 75 34 }
+					province = 9002
+				}
+				b_hayami = {
+					color = { 119 59 46 }
+					province = 9003
+				}
+				b_amabe = {
+					color = { 152 127 78 }
+					province = 9004
+				}
+				b_oono_bungo = {
+					color = { 170 59 231 }
+					province = 9005
+				}
+				b_naoiri = {
+					color = { 102 58 196 }
+					province = 9006
+				}
+				b_kusu = {
+					color = { 85 59 36 }
+					province = 9007
+				}
+				b_hita = {
+					color = { 36 27 18 }
+					province = 9008
+				}
+			}
+			c_buzen = {
+				color = { 192 134 20 }
+				b_usa = {
+					color = { 232 169 56 }
+					province = 9011
+				}
+				b_nakatsu = {
+					color = { 238 60 116 }
+					province = 9009
+				}
+				b_mike = {
+					color = { 170 60 106 }
+					province = 9010
+				}
+			}
+			c_chikugo = {
+				color = { 134 80 18 }
+				b_mii = {
+					color = { 129 76 19 }
+					province = 9012
+				}
+				b_kamitsuma = {
+					color = { 85 52 211 }
+					province = 9013
+				}
+			}
+			c_hizen = {
+				color = { 71 42 10 }
+				b_saga = {
+					color = { 75 36 2 }
+					province = 9027
+				}
+				b_higashimatsuura = {
+					color = { 238 53 11 }
+					province = 9028
+				}
+				b_kishima = {
+					color = { 68 53 41 }
+					province = 9029
+				}
+				b_takaki = {
+					color = { 153 54 146 }
+					province = 9030
+				}
+				b_nishisonogi = {
+					color = { 34 143 51 }
+					province = 9031
+				}
+				b_higashisonogi = {
+					color = { 204 54 121 }
+					province = 9032
+				}
+				b_nishimatsuura = {
+					color = { 153 53 56 }
+					province = 9033
+				}
+				b_minamimatsuura = {
+					color = { 170 53 91 }
+					province = 9034
+				}
+			}
+			c_tsushima = {
+				color = { 52 47 38 }
+				b_shimoagata = {
+					color = { 153 60 161 }
+					province = 9055
+				}
+				b_kamiagata = {
+					color = { 221 60 171 }
+					province = 9056
+				}
+			}
+		}
+		d_south_saikaido = {
+			color = { 250 142 13 }
+			capital = c_satsuma
+			can_create = {
+				japan_government_japan_duchy_restriction_trigger = yes
+			}
+			c_satsuma = {
+				color = { 159 78 1 }
+				b_satsuma = {
+					color = { 238 56 111 }
+					province = 9050
+				}
+				b_kagoshima = {
+					color = { 210 151 78 }
+					province = 9051
+				}
+				b_ibusuki = {
+					color = { 85 56 126 }
+					province = 9052
+				}
+				b_izumi_satsuma = {
+					color = { 129 81 42 }
+					province = 9053
+				}
+			}
+			c_higo = {
+				color = { 248 115 1 }
+				b_mashiki = {
+					color = { 200 111 45 }
+					province = 9022
+				}
+				b_akita_kumamoto = {
+					color = { 136 55 231 }
+					province = 9018
+				}
+				b_aso = {
+					color = { 70 155 145 }
+					province = 9019
+				}
+				b_koushi = {
+					color = { 221 54 186 }
+					province = 9020
+				}
+				b_tamana = {
+					color = { 153 54 176 }
+					province = 9021
+				}
+				b_yatsushiro_higo = {
+					color = { 206 151 81 }
+					province = 9023
+				}
+				b_amakusa = {
+					color = { 250 153 34 }
+					province = 9024
+				}
+				b_kuma = {
+					color = { 129 55 8 }
+					province = 9025
+				}
+				b_ashikita = {
+					color = { 221 55 56 }
+					province = 9026
+				}
+			}
+			c_hyuga = {
+				color = { 166 126 70 }
+				b_koyu = {
+					color = { 109 86 44 }
+					province = 9035
+				}
+				b_higashiusuki = {
+					color = { 238 125 151 }
+					province = 9036
+				}
+				b_nishiusuki = {
+					color = { 170 58 156 }
+					province = 9037
+				}
+				b_naka_hyuuga = {
+					color = { 187 58 91 }
+					province = 9038
+				}
+				b_nishimorokata = {
+					color = { 102 57 56 }
+					province = 9039
+				}
+				b_kitamorokata = {
+					color = { 68 57 46 }
+					province = 9040
+				}
+				b_miyazaki = {
+					color = { 170 105 33 }
+					province = 9041
+				}
+				b_minamimorokata = {
+					color = { 204 57 31 }
+					province = 9042
+				}
+			}
+			c_osumi = {
+				color = { 250 181 83 }
+				b_oosumi = {
+					color = { 187 57 21 }
+					province = 9044
+				}
+				b_soo = {
+					color = { 174 127 41 }
+					province = 9043
+				}
+				b_kimotsuki = {
+					color = { 249 140 17 }
+					province = 9045
+				}
+				b_kuwabara = {
+					color = { 247 192 137 }
+					province = 9046
+				}
+				b_hishikari = {
+					color = { 170 55 91 }
+					province = 9047
+				}
+				b_gomu = {
+					color = { 85 51 6 }
+					province = 9048
+				}
+				b_kumage_oosumi = {
+					color = { 34 51 31 }
+					province = 9049
+				}
+			}
+		}
+	}
+}
+k_chrysanthemum_throne = {
+	color = { 96 3 42 }
+	capital = c_yamashiro
+	can_be_named_after_dynasty = no
+	landless = yes
+	figurehead = yes
+	allow_domicile = no
+	always_follows_primary_heir = yes
+	definite_form = yes
+	can_create = { always = no }
+	dlc_feature = all_under_heaven
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_japonic }
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+	personal_relation_entry = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:target
+					scope:liege ?= scope:target
+				}
+				desc = japan_personal_relation_ceremonial_liege_same
+			}
+			triggered_desc = {
+				trigger = { exists = scope:liege }
+				desc = japan_personal_relation_ceremonial_liege_other
+			}
+		}
+	}
+	posthumous_regnal_male_names = {
+		Ankan Antoku
+		Daigo
+		En_yU_
+		Heizei
+		Higashiyama
+		Horikawa
+		IchijO_
+		Jun_an Junna Junnin Junchi Junmu
+		Kameyama Kanmu Kashiwabara Kazan
+		Keitai
+		Kinmei
+		KO_bun KO_chi KO_kaku_2 KO_kO_ Komatsu KO_mei KO_mu KO_myO_ KO_nin Konoe Kotoku KO_zei
+		Momozono Monmu Montoku
+		Murakami
+		Nakamikado Nara
+		NijO_ Nin_an Ninchi NinkO_ Ninmu NinmyO_ NinshO_
+		O_gimachi
+		Reichi Reigen Reimei ReishO_ Reizei
+		RokujO_
+		Saga_JP Sakuramachi SanjO_
+		Seiwa Senka
+		ShijO_ Shirakawa
+		ShO_kO_ ShO_mu ShO_toku
+		SukO_ Sushun Sutoku Suzaku
+		Takakura
+		Tenji Tenmu
+		Toba_JP
+		Tsuchimikado
+		Uda_JP
+		YO_mei YO_zei
+		# Unisex
+		AnegakO_ji
+		Atago
+		AyanokO_ji
+		BunchO_ BunryU_ BunshO_
+		BO_jO_
+		Eian
+		Enso
+		Genka
+		GojO_
+		HachijO_
+		Higashiyama
+		Imadegawa
+		Iwakura
+		Junmei Junmei_2
+		Kaen Kan_an Karasuma Kasuga
+		Katoku
+		Keimei KenshO_ Kentoku
+		Kinugasa Kitano Kitashirakawa Kitayama Kiyomizu Kiyotaki
+		Koga
+		KujO_ Kurama
+		KyO_goku
+		KO_bun KO_ka
+		Mantoku Matsunoo
+		Meiho Meitei
+		Mibu
+		Murasakino Muromachi
+		Narutaki
+		Okazaki
+		Omuro
+		OshinokO_ji
+		Reitoku
+		Sakuragi
+		ShichijO_ ShO_ka ShU_bun
+		Taireki TaiO_ Takao Takatsukasa
+		TenkyU_ TenkO_ Tensei
+		TO_in
+		Umezu
+		Yamashina Yase_JP
+		O_hara O_inomikado O_miya
+	}
+	posthumous_regnal_female_names = {
+		Gen_an Genchi Genken GenkO_ Genmei Gennei Gennin GenshO_ GentO_ Gentoku Genzei
+		JitO_
+		KO_ken KO_gyoku
+		MeishO_
+		Saimei
+		Suiko
+		# Unisex
+		AnegakO_ji
+		Atago
+		AyanokO_ji
+		BunchO_ BunryU_ BunshO_
+		BO_jO_
+		Eian
+		Enso
+		Genka
+		GojO_
+		HachijO_
+		Imadegawa
+		Iwakura
+		Junmei_2
+		Kaen Kan_an Karasuma Kasuga
+		Katoku
+		Keimei KenshO_ Kentoku
+		Kinugasa Kitano Kitashirakawa Kitayama Kiyomizu Kiyotaki
+		Koga
+		KujO_ Kurama
+		KyO_goku
+		KO_bun KO_ka
+		Mantoku Matsunoo
+		Meiho Meitei
+		Mibu
+		Murasakino Muromachi
+		Narutaki
+		Okazaki
+		Omuro
+		OshinokO_ji
+		Reitoku
+		Sakuragi
+		ShichijO_ ShO_ka ShU_bun
+		Taireki TaiO_ Takao Takatsukasa
+		TenkyU_ TenkO_ Tensei
+		TO_in
+		Umezu
+		Yamashina Yase_JP
+		O_hara O_inomikado O_miya
+	}
+}
+d_laamp_shunkan = {
+	color = { 100 100 100 }
+	capital = c_amami
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
+	ai_primary_priority = { add = @never_primary_score }
+}
+d_laamp_takaoka = {
+	color = { 100 100 100 }
+	capital = c_nakhon_pathom
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
+	ai_primary_priority = { add = @never_primary_score }
+}
+d_laamp_yoshitsune = {
+	color = { 100 100 100 }
+	capital = c_isawa
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
+	ai_primary_priority = { add = @never_primary_score }
+}
+d_laamp_miyoshi_kiyotsura = {
+	color = { 100 100 100 }
+	capital = c_yamashiro
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
+	ai_primary_priority = { add = @never_primary_score }
+}
+d_laamp_hiei_wayfarers = {
+	color = { 100 100 100 }
+	capital = c_yamashiro
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
+	ai_primary_priority = { add = @never_primary_score }
+}
+d_laamp_northern_blades = {
+	color = { 100 100 100 }
+	capital = c_korehari
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
+	ai_primary_priority = { add = @never_primary_score }
+}
+d_laamp_band_of_the_inland_sea = {
+	color = { 100 100 100 }
+	capital = c_chikuzen
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
+	ai_primary_priority = { add = @never_primary_score }
+}
