@@ -1,0 +1,318 @@
+﻿# Characters added by the updated EU5 snapshot.
+
+byz_julius_constantius = {
+	father = byz_constantius_i
+	dynasty = constantinian_dynasty
+	religion = hellenic_pagan
+	culture = roman
+	name = "name_julius"
+	289.1.1 = { birth = yes }
+	337.9.1 = { death = yes }
+}
+
+byz_ariadne = {
+	female = yes
+	father = byz_leo_i
+	dynasty = leonid_dynasty
+	religion = orthodox
+	culture = roman
+	name = "name_ariadne"
+	450.1.1 = { birth = yes }
+	515.8.1 = { death = yes }
+}
+
+pap_gerald_odonis = {
+	martial = 4
+	diplomacy = 14
+	stewardship = 16
+	religion = catholic
+	culture = occitan
+	name = "name_gerald"
+	1285.1.1 = { birth = yes }
+}
+
+bur_hugh_vaucemain = {
+	martial = 5
+	diplomacy = 14
+	stewardship = 15
+	religion = catholic
+	culture = french
+	name = "name_hugh"
+	1288.1.1 = { birth = yes }
+}
+
+fra_guglielmo_cremona = {
+	martial = 4
+	diplomacy = 14
+	stewardship = 17
+	religion = catholic
+	culture = cisalpine
+	name = "name_william"
+	1270.1.1 = { birth = yes }
+}
+
+bur_jean_chaudenay = {
+	martial = 5
+	diplomacy = 12
+	stewardship = 14
+	religion = catholic
+	culture = french
+	name = "name_john"
+	1292.1.1 = { birth = yes }
+}
+
+nap_raymond_gramat = {
+	martial = 6
+	diplomacy = 12
+	stewardship = 14
+	religion = catholic
+	culture = occitan
+	name = "name_raymond"
+	1282.1.1 = { birth = yes }
+}
+
+cas_blanca_lacerda_lara = {
+	female = yes
+	mother = cas_juana_nunez_lara
+	father = cas_fernando_lacerda_jr
+	dynasty_house = house_burgundy_castile
+	religion = catholic
+	culture = castilian
+	name = "name_blanche"
+	1311.1.1 = { birth = yes }
+}
+
+cas_constanza_manuel = {
+	female = yes
+	father = cas_juan_manuel
+	dynasty = manuel_dynasty
+	religion = catholic
+	culture = castilian
+	name = "name_constance"
+	1318.1.1 = { birth = yes }
+	1336.4.8 = { add_spouse = por_pedro_i_portugal }
+}
+
+cas_fernando_manuel = {
+	mother = cas_blanca_lacerda_lara
+	father = cas_juan_manuel
+	dynasty = manuel_dynasty
+	religion = catholic
+	culture = castilian
+	name = "name_ferdinand"
+	1332.1.1 = { birth = yes }
+}
+
+cas_sancho_manuel = {
+	father = cas_juan_manuel
+	dynasty = manuel_dynasty
+	religion = catholic
+	culture = castilian
+	name = "name_sancho"
+	1320.1.1 = { birth = yes }
+}
+
+ora_levi_ben_gershom = {
+	religion = rabbinic_faith
+	culture = sephardi
+	name = "Levi"
+	1288.1.1 = { birth = yes }
+}
+
+koj_petrus_bartholomaeus = {
+	religion = catholic
+	culture = occitan
+	name = "name_peter"
+	1060.1.1 = { birth = yes }
+	1099.4.20 = { death = yes }
+}
+
+alm_abu_l_abbas_prince = {
+	martial = 9
+	diplomacy = 10
+	stewardship = 11
+	dynasty = almohad_dynasty
+	rite = maliki
+	religion = sunni
+	culture = maghrebi
+	name = "Abu-l_Abbas"
+	1320.1.1 = { birth = yes }
+}
+
+tun_abu_zakariya_yahya = {
+	martial = 9
+	diplomacy = 7
+	stewardship = 6
+	father = tun_abu_yahya_abu_bakr_ii
+	dynasty = hafsid_dynasty
+	rite = hanafi
+	religion = sunni
+	culture = baranis
+	name = "name_john"
+	1306.1.1 = { birth = yes }
+}
+
+tun_al-fadl = {
+	martial = 5
+	diplomacy = 6
+	stewardship = 11
+	father = tun_abu_yahya_abu_bakr_ii
+	dynasty = hafsid_dynasty
+	rite = maliki
+	religion = sunni
+	culture = baranis
+	name = "Al-Fadl"
+	1334.1.1 = { birth = yes }
+}
+
+tun_abu_muhammad_ibn_tafragin = {
+	martial = 9
+	diplomacy = 18
+	stewardship = 11
+	dynasty = tafragin_dynasty
+	rite = maliki
+	religion = sunni
+	culture = maghrebi
+	name = "name_muhammad"
+	1285.1.1 = { birth = yes }
+}
+
+mll_abraham_cresques = {
+	religion = rabbinic_faith
+	culture = sephardi
+	name = "name_abraham"
+	1325.1.1 = { birth = yes }
+}
+
+ara_nissim_gerondi = {
+	religion = rabbinic_faith
+	culture = sephardi
+	name = "name_nissim"
+	1315.1.1 = { birth = yes }
+}
+
+ara_bahya_ben_asher = {
+	religion = rabbinic_faith
+	culture = sephardi
+	name = "name_bahya"
+	1255.1.1 = { birth = yes }
+	1340.1.1 = { death = yes }
+}
+
+cas_asher_ben_jehiel = {
+	religion = rabbinic_faith
+	culture = ashkenazi
+	name = "name_asher"
+	1250.1.1 = { birth = yes }
+	1327.1.1 = { death = yes }
+}
+
+cas_jacob_ben_asher = {
+	father = cas_asher_ben_jehiel
+	religion = rabbinic_faith
+	culture = sephardi
+	name = "name_james"
+	1269.1.1 = { birth = yes }
+}
+
+cas_judah_ben_asher = {
+	father = cas_asher_ben_jehiel
+	religion = rabbinic_faith
+	culture = sephardi
+	name = "name_judah"
+	1270.1.1 = { birth = yes }
+}
+
+cas_samuel_halevi_abulafia = {
+	martial = 2
+	diplomacy = 13
+	stewardship = 16
+	dynasty = abulafia_dynasty
+	religion = rabbinic_faith
+	culture = sephardi
+	name = "name_samuel"
+	1320.1.1 = { birth = yes }
+}
+
+gra_ibn_al_khatib = {
+	martial = 17
+	diplomacy = 16
+	stewardship = 18
+	rite = maliki
+	religion = sunni
+	culture = andalusian
+	name = "name_muhammad"
+	1313.11.16 = { birth = yes }
+}
+
+gra_ibn_al_hakim_al_rundi = {
+	martial = 16
+	diplomacy = 14
+	stewardship = 17
+	rite = maliki
+	religion = sunni
+	culture = andalusian
+	name = "name_muhammad"
+	1261.1.1 = { birth = yes }
+	1309.3.14 = { death = yes }
+}
+
+cas_juan_nunez_de_prado = {
+	martial = 17
+	diplomacy = 12
+	stewardship = 14
+	religion = catholic
+	culture = castilian
+	name = "name_john"
+	1295.1.1 = { birth = yes }
+}
+
+cas_vasco_rodriguez_de_coronado = {
+	martial = 15
+	diplomacy = 14
+	stewardship = 14
+	religion = catholic
+	culture = asturleonese
+	name = "name_vasco"
+	1285.1.1 = { birth = yes }
+}
+
+cas_rodrigo_perez_alcantara = {
+	martial = 14
+	diplomacy = 9
+	stewardship = 11
+	religion = catholic
+	culture = asturleonese
+	name = "name_roderick"
+	1290.1.1 = { birth = yes }
+}
+
+por_estevao_goncalves_leitao = {
+	martial = 14
+	diplomacy = 11
+	stewardship = 14
+	religion = catholic
+	culture = portuguese
+	name = "name_stephen"
+	1290.1.1 = { birth = yes }
+}
+
+por_goncalo_vasques = {
+	martial = 14
+	diplomacy = 11
+	stewardship = 12
+	religion = catholic
+	culture = portuguese
+	name = "name_gonzalo"
+	1295.1.1 = { birth = yes }
+}
+
+ara_pere_de_thous = {
+	martial = 14
+	diplomacy = 13
+	stewardship = 16
+	religion = catholic
+	culture = catalan
+	name = "name_peter"
+	1295.1.1 = { birth = yes }
+}

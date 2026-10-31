@@ -1,0 +1,24 @@
+﻿on_game_start = {
+	on_actions = { eu5_updated_1337_tributaries }
+}
+
+eu5_updated_1337_tributaries = {
+	effect = {
+		character:cas_alfonso_xi_burgundy = {
+			save_scope_as = eu5_updated_suzerain
+			character:gra_yusuf_i_nasrid = {
+				if = {
+					limit = {
+						is_alive = yes
+						is_independent_ruler = yes
+						scope:eu5_updated_suzerain = { is_independent_ruler = yes }
+					}
+					break_subject_contract_and_establish_tributary_effect = {
+						SUZERAIN = scope:eu5_updated_suzerain
+						TRIBUTARY = this
+					}
+				}
+			}
+		}
+	}
+}
