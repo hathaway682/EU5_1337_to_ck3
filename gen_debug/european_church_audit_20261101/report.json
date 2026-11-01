@@ -1,0 +1,252 @@
+{
+  "atlas": "https://doi.org/10.25740/rh195hm5975",
+  "atlas_attribution": "Rowan Dorin, Clara Romani, Lauren Schlansky, Claire Womack (2021), CC BY 3.0; adapted to CK3 county geometry and 1337 exceptions.",
+  "atlas_license": "https://creativecommons.org/licenses/by/3.0/",
+  "baseline_map": "province1350.json (approximate 1350, Prague 1344 corrected to Mainz)",
+  "atlas_counties_examined": 580,
+  "existing_counties_corrected": 43,
+  "new_finland_counties": 6,
+  "historical_noncontiguous_or_island_exceptions": {
+    "c_astorga": "et_1178_braga_region",
+    "c_lugo": "et_1178_braga_region",
+    "c_ourense": "et_1178_braga_region",
+    "c_tras_os_montes": "et_1178_braga_region",
+    "c_bjelovar": "et_1178_kalocsa_region",
+    "c_zagreb": "et_1178_kalocsa_region",
+    "c_gotland": "et_1178_uppsala_region",
+    "c_valtellina": "et_867_aquileia_region"
+  },
+  "specified_changes": {
+    "c_jawf": "unassigned",
+    "c_sharat": "et_1178_antioch_region"
+  },
+  "kept_ambiguous": {
+    "c_zamora": "Zamora was a Santiago suffragan, despite competing Braga claims.",
+    "c_benavente": "Benavente city was an Oviedo enclave; county straddles dioceses.",
+    "c_punente": "County capital Albenga was a Genoa suffragan; Savona belonged to Milan.",
+    "c_bosnia": "Bosnian Catholic bishopric was suffragan to Kalocsa.",
+    "c_usora_and_soli": "Hungarian-control and Bosnian/Kalocsa decision retained."
+  },
+  "skipped_for_geography_or_uncertainty": {},
+  "changed_counties": {
+    "c_alpenvorland": {
+      "from": "et_1178_mainz_region",
+      "to": "et_867_salzburg_region"
+    },
+    "c_aosta": {
+      "from": "et_1178_milano_region",
+      "to": "et_867_tarentaise_region"
+    },
+    "c_astorga": {
+      "from": "et_1178_toledo_region",
+      "to": "et_1178_braga_region"
+    },
+    "c_aval": {
+      "from": "et_867_lyon_region",
+      "to": "et_867_besancon_region"
+    },
+    "c_avila": {
+      "from": "et_1178_toledo_region",
+      "to": "et_1178_santiago_region"
+    },
+    "c_baixo_alentejo": {
+      "from": "et_867_sevilla_region",
+      "to": "et_1178_santiago_region"
+    },
+    "c_barrois": {
+      "from": "et_867_cologne_region",
+      "to": "et_867_trier_region"
+    },
+    "c_beauvaisis": {
+      "from": "et_867_rouen_region",
+      "to": "et_867_reims_region"
+    },
+    "c_bihar": {
+      "from": "et_1178_kalocsa_region",
+      "to": "et_1178_esztergom_region"
+    },
+    "c_bjelovar": {
+      "from": "et_1178_split_region",
+      "to": "et_1178_kalocsa_region"
+    },
+    "c_cismonte": {
+      "from": "et_1178_genoa_region",
+      "to": "et_1178_pisa_region"
+    },
+    "c_clare": {
+      "from": "et_1178_tuam_region",
+      "to": "et_1178_cashel_region"
+    },
+    "c_dalsland": {
+      "from": "et_1178_lund_region",
+      "to": "et_1178_uppsala_region"
+    },
+    "c_east_luxembourg": {
+      "from": "et_867_cologne_region",
+      "to": "et_867_trier_region"
+    },
+    "c_finland": {
+      "from": "",
+      "to": "et_1178_uppsala_region"
+    },
+    "c_gotland": {
+      "from": "et_1178_lund_region",
+      "to": "et_1178_uppsala_region"
+    },
+    "c_heves": {
+      "from": "et_1178_kalocsa_region",
+      "to": "et_1178_esztergom_region"
+    },
+    "c_jawf": {
+      "from": "et_1178_antioch_region",
+      "to": ""
+    },
+    "c_litomericko": {
+      "from": "et_1178_magdeburg_region",
+      "to": "et_1178_mainz_region"
+    },
+    "c_lugo": {
+      "from": "et_1178_santiago_region",
+      "to": "et_1178_braga_region"
+    },
+    "c_maramaros": {
+      "from": "et_1178_kalocsa_region",
+      "to": "et_1178_esztergom_region"
+    },
+    "c_middle_weser": {
+      "from": "et_1178_mainz_region",
+      "to": "et_867_cologne_region"
+    },
+    "c_nerike": {
+      "from": "et_1178_lund_region",
+      "to": "et_1178_uppsala_region"
+    },
+    "c_nowy_sacz": {
+      "from": "et_1178_esztergom_region",
+      "to": "et_1178_gniezno_region"
+    },
+    "c_nyland": {
+      "from": "",
+      "to": "et_1178_uppsala_region"
+    },
+    "c_ostergotland": {
+      "from": "et_1178_lund_region",
+      "to": "et_1178_uppsala_region"
+    },
+    "c_ostra_smaland": {
+      "from": "et_1178_lund_region",
+      "to": "et_1178_uppsala_region"
+    },
+    "c_ourense": {
+      "from": "et_1178_santiago_region",
+      "to": "et_1178_braga_region"
+    },
+    "c_rhine_valley": {
+      "from": "et_867_besancon_region",
+      "to": "et_1178_mainz_region"
+    },
+    "c_satakunta": {
+      "from": "",
+      "to": "et_1178_uppsala_region"
+    },
+    "c_sauerland": {
+      "from": "et_1178_mainz_region",
+      "to": "et_867_cologne_region"
+    },
+    "c_sharat": {
+      "from": "et_1178_jerusalem_region",
+      "to": "et_1178_antioch_region"
+    },
+    "c_sodermanland": {
+      "from": "et_1178_lund_region",
+      "to": "et_1178_uppsala_region"
+    },
+    "c_sodra_osterbotten": {
+      "from": "",
+      "to": "et_1178_uppsala_region"
+    },
+    "c_szabolcs": {
+      "from": "et_1178_kalocsa_region",
+      "to": "et_1178_esztergom_region"
+    },
+    "c_szczyrzyc": {
+      "from": "et_1178_esztergom_region",
+      "to": "et_1178_gniezno_region"
+    },
+    "c_szolnok": {
+      "from": "et_1178_kalocsa_region",
+      "to": "et_1178_esztergom_region"
+    },
+    "c_taunus": {
+      "from": "et_1178_mainz_region",
+      "to": "et_867_trier_region"
+    },
+    "c_tavastland": {
+      "from": "",
+      "to": "et_1178_uppsala_region"
+    },
+    "c_tioharad": {
+      "from": "et_1178_lund_region",
+      "to": "et_1178_uppsala_region"
+    },
+    "c_tras_os_montes": {
+      "from": "et_1178_santiago_region",
+      "to": "et_1178_braga_region"
+    },
+    "c_valtellina": {
+      "from": "et_1178_milano_region",
+      "to": "et_867_aquileia_region"
+    },
+    "c_varmland": {
+      "from": "et_1178_lund_region",
+      "to": "et_1178_uppsala_region"
+    },
+    "c_vastergotland": {
+      "from": "et_1178_lund_region",
+      "to": "et_1178_uppsala_region"
+    },
+    "c_vaud": {
+      "from": "et_867_tarentaise_region",
+      "to": "et_867_besancon_region"
+    },
+    "c_verdunois": {
+      "from": "et_867_cologne_region",
+      "to": "et_867_trier_region"
+    },
+    "c_villanueva_de_la_serena": {
+      "from": "et_1178_toledo_region",
+      "to": "et_1178_santiago_region"
+    },
+    "c_vogtland": {
+      "from": "et_1178_mainz_region",
+      "to": "et_1178_magdeburg_region"
+    },
+    "c_vyborg": {
+      "from": "",
+      "to": "et_1178_uppsala_region"
+    },
+    "c_zagreb": {
+      "from": "et_1178_split_region",
+      "to": "et_1178_kalocsa_region"
+    },
+    "c_zemplen": {
+      "from": "et_1178_kalocsa_region",
+      "to": "et_1178_esztergom_region"
+    }
+  },
+  "user_exceptions_preserved": [
+    "Scotland directly in Rome",
+    "c_prilep remains Ohrid",
+    "c_north_dalmatia Split proxy",
+    "c_capitanata Trani proxy",
+    "c_noto Monreale proxy",
+    "Pec/Tarnovo/Halych follow 1337 political control"
+  ],
+  "active_church_regions": 79,
+  "assigned_counties": 1000,
+  "overlap_counties": 0,
+  "overlap_capitals": 0,
+  "backup": "F:\\备份\\EU5_Modern_Borders_noshape\\_backup_20261101_082521_europe_church_audit",
+  "validation": "passed",
+  "in_game_test_performed": false
+}

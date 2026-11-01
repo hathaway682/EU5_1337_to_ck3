@@ -4746,31 +4746,31 @@ et_1178_toledo_region = {
 		d_murcia d_toledo
 	}
 	counties = {
-		c_almeria c_astorga c_avila c_benavente c_burgos c_cordoba c_east_asturias c_granada c_jaen c_leon c_lerma c_palencia c_segovia c_valladolid c_villanueva_de_la_serena c_west_asturias
+		c_almeria c_benavente c_burgos c_cordoba c_east_asturias c_granada c_jaen c_leon c_lerma c_montana c_palencia c_segovia c_soria c_valladolid c_west_asturias
 	}
 }
 
 et_1178_santiago_region = {
 	duchies = {
-		d_galicia
+		d_extremadura
 	}
 	counties = {
-		c_alto_alentejo c_badajoz c_beira_baixa c_caceres c_ciudad_rodrigo c_estremadura c_merida c_plasencia c_ribatejo c_salamanca c_tras_os_montes c_trujillo c_zamora
+		c_alto_alentejo c_avila c_baixo_alentejo c_beira_baixa c_ciudad_rodrigo c_coruna c_estremadura c_ribatejo c_salamanca c_santiago c_zamora
 	}
 }
 
 et_867_tarragona_region = {
 	duchies = {
-		d_aragon d_balearics d_navarre d_valencia
+		d_balearics d_valencia
 	}
 	counties = {
-		c_barcelona c_girona c_montana c_new_catalonia c_osona c_soria c_urgell
+		c_barcelona c_girona c_new_catalonia c_osona c_urgell
 	}
 }
 
 et_867_sevilla_region = {
 	counties = {
-		c_algarve c_baixo_alentejo c_cadiz c_huelva c_malaga c_sevilla
+		c_algarve c_cadiz c_huelva c_malaga c_sevilla
 	}
 }
 
@@ -4785,7 +4785,7 @@ et_867_braga_region = {
 
 et_1178_braga_region = {
 	counties = {
-		c_beira_alta c_beira_litoral c_minho
+		c_astorga c_beira_alta c_beira_litoral c_lugo c_minho c_ourense c_tras_os_montes
 	}
 }
 
@@ -4811,17 +4811,14 @@ et_867_york_region = {
 }
 
 et_1178_york_region = {
-	duchies = {
-		d_scottish_highlands d_scottish_lowlands
-	}
 	counties = {
-		c_cumberland c_durham c_east_riding c_north_riding c_northumberland c_nottinghamshire c_west_riding c_westmorland
+		c_cumberland c_durham c_east_riding c_galloway c_north_riding c_northumberland c_nottinghamshire c_west_riding c_westmorland
 	}
 }
 
 et_1178_tuam_region = {
 	counties = {
-		c_clare c_galway c_mayo c_roscommon
+		c_galway c_mayo c_roscommon
 	}
 }
 
@@ -4832,8 +4829,8 @@ et_1178_dublin_region = {
 }
 
 et_1178_cashel_region = {
-	counties = {
-		c_cork c_desmond c_limerick c_tipperary c_waterford
+	duchies = {
+		d_munster
 	}
 }
 
@@ -4859,9 +4856,6 @@ et_867_rouen_region = {
 	duchies = {
 		d_normandy
 	}
-	counties = {
-		c_beauvaisis
-	}
 }
 
 et_867_reims_region = {
@@ -4869,7 +4863,7 @@ et_867_reims_region = {
 		d_flanders d_picardy
 	}
 	counties = {
-		c_brabant c_hainaut c_remois c_rethelois c_soissonais
+		c_beauvaisis c_brabant c_hainaut c_remois c_rethelois c_soissonais
 	}
 }
 
@@ -4911,13 +4905,13 @@ et_867_lyon_region = {
 		d_lyonnais
 	}
 	counties = {
-		c_autunnais c_auxerrois c_aval c_bassigny c_dijonnais
+		c_autunnais c_auxerrois c_bassigny c_dijonnais
 	}
 }
 
 et_867_tarentaise_region = {
 	counties = {
-		c_bern c_oberwallis c_savoy c_vaud
+		c_aosta c_bern c_oberwallis c_savoy
 	}
 }
 
@@ -4947,13 +4941,16 @@ et_1066_auch_region = {
 
 et_867_narbonne_region = {
 	counties = {
-		c_foix c_narbonnais c_nimois c_razes c_rosello c_toulousain
+		c_narbonnais c_nimois c_razes c_rosello
 	}
 }
 
 et_867_besancon_region = {
+	duchies = {
+		d_franche_comte d_western_switzerland
+	}
 	counties = {
-		c_amont c_millieu c_neuchatel c_rhine_valley c_upper_alsace
+		c_upper_alsace
 	}
 }
 
@@ -4982,17 +4979,14 @@ et_867_milano_region = {
 }
 
 et_1178_milano_region = {
-	duchies = {
-		d_piemonte
-	}
 	counties = {
-		c_bergamo c_brescia c_cremona c_milano c_monza c_pavia c_ticino c_valtellina
+		c_alessandria c_bergamo c_brescia c_cremona c_milano c_mondovi c_monferrato c_monza c_novara c_pavia c_saluzzo c_ticino c_torino
 	}
 }
 
 et_1178_genoa_region = {
 	counties = {
-		c_cismonte c_levante c_punente
+		c_levante c_punente
 	}
 }
 
@@ -5053,7 +5047,7 @@ et_1066_reggio_calabria_region = {
 
 et_1178_reggio_calabria_region = {
 	counties = {
-		c_calabria_ultra c_noto
+		c_calabria_ultra
 	}
 }
 
@@ -5110,16 +5104,16 @@ et_1066_roma_region = {
 
 et_1178_roma_region = {
 	duchies = {
-		d_abruzzo d_lazio d_marche
+		d_abruzzo d_lazio d_marche d_scottish_highlands
 	}
 	counties = {
-		c_arezzo c_florence c_grosseto c_lucca c_siena c_urbino
+		c_aberdeenshire c_angus c_arezzo c_fife c_florence c_grosseto c_lothian c_lucca c_perthshire c_siena c_strathclyde c_teviotdale c_urbino
 	}
 }
 
 et_1178_pisa_region = {
 	counties = {
-		c_gallura c_pisa c_pumonte
+		c_cismonte c_gallura c_pisa c_pumonte
 	}
 }
 
@@ -5173,7 +5167,7 @@ et_867_aquileia_region = {
 		d_slovenia d_veneto
 	}
 	counties = {
-		c_istria c_mantua c_trentino
+		c_istria c_mantua c_trentino c_valtellina
 	}
 }
 
@@ -5187,8 +5181,11 @@ et_1066_esztergom_region = {
 }
 
 et_1178_esztergom_region = {
+	duchies = {
+		d_slovakia
+	}
 	counties = {
-		c_baranya c_buda c_hont c_nograd c_nowy_sacz c_pest c_pozsony c_somogy c_sopron c_szczyrzyc c_szepes c_trencsen c_vas c_vukovar_syrmia c_zala
+		c_baranya c_bihar c_buda c_heves c_pest c_somogy c_sopron c_szabolcs c_szolnok c_vas c_vukovar_syrmia c_zala
 	}
 }
 
@@ -5197,7 +5194,7 @@ et_1178_kalocsa_region = {
 		d_south_alfold d_transylvania
 	}
 	counties = {
-		c_bihar c_fejer c_heves c_kraszna c_maramaros c_szabolcs c_szatmar c_szolnok c_zemplen
+		c_bjelovar c_bosnia c_fejer c_kraszna c_macva c_sumadija c_szatmar c_usora_and_soli c_zagreb
 	}
 }
 
@@ -5209,38 +5206,38 @@ et_867_split_region = {
 }
 
 et_1066_ohrid_region = {
-	duchies = {
-		d_bulgaria d_wallachia
-	}
 	counties = {
-		c_albania c_bacau c_barlad c_basarabia c_bosnia c_branicevo c_iasi c_kosovo c_macva c_nis c_north_epirus c_podrinje c_prilep c_raska c_south_epirus c_sumadija c_toplica c_upper_macedonia c_usora_and_soli c_vardar c_zlatibor
+		c_albania c_north_epirus c_prilep c_south_epirus c_upper_macedonia
 	}
 }
 
 et_1178_split_region = {
 	counties = {
-		c_bjelovar c_donji_kraji c_illyria c_lika c_north_dalmatia c_una_sana c_zagreb c_zeta
+		c_donji_kraji c_lika c_north_dalmatia c_una_sana
 	}
 }
 
 et_1178_ragusa_region = {
 	counties = {
-		c_hum c_south_dalmatia
+		c_south_dalmatia
 	}
 }
 
 et_867_salzburg_region = {
 	duchies = {
-		d_austria d_carinthia d_salzburg d_styria d_upper_austria
+		d_austria d_bavaria d_carinthia d_salzburg d_styria d_upper_austria
 	}
 	counties = {
-		c_bayerischer_wald c_chiemgau c_donau_moos c_gauboden c_munchner_schotterebene c_oberpfalzer_wald c_south_tirol c_unterinntal
+		c_south_tirol c_unterinntal
 	}
 }
 
 et_867_trier_region = {
+	duchies = {
+		d_lorraine
+	}
 	counties = {
-		c_eifel c_hunsruck c_pays_messin c_pays_nancy c_sarregueminois c_vosges c_westerwald
+		c_east_luxembourg c_eifel c_hunsruck c_taunus c_westerwald
 	}
 }
 
@@ -5260,10 +5257,10 @@ et_1066_gniezno_region = {
 
 et_1178_gniezno_region = {
 	duchies = {
-		d_central_poland d_greater_poland
+		d_central_poland d_greater_poland d_lesser_poland
 	}
 	counties = {
-		c_checiny c_ciechanow c_czersk c_czestochowa c_danzig c_glogow c_koslin c_krakow c_legnica c_lomza c_lublin c_neumark c_olesnica c_opole c_pilzno c_plock c_pyritz c_radom c_rawa c_sandomierz c_stettin c_stolp c_swidnica c_tesin c_tuchola c_uckermark c_warsaw c_wroclaw c_zagan
+		c_ciechanow c_czersk c_danzig c_glogow c_koslin c_legnica c_lomza c_neumark c_olesnica c_opole c_plock c_pyritz c_rawa c_stettin c_stolp c_swidnica c_tesin c_tuchola c_uckermark c_warsaw c_wroclaw c_zagan
 	}
 }
 
@@ -5299,10 +5296,10 @@ et_1066_mainz_region = {
 
 et_1178_mainz_region = {
 	duchies = {
-		d_eastern_switzerland d_franconia d_hesse d_moravia d_swabia
+		d_bohemia d_eastern_switzerland d_franconia d_moravia d_swabia d_upper_rhine
 	}
 	counties = {
-		c_aargau c_alpenvorland c_altmark c_bechinsko c_boleslavsko c_brunswick c_chebsko c_chrudimsko c_hanover c_harz c_hradecko c_kraichgau c_leine c_lippe c_lower_alsace c_luneburger_heide c_middle_weser c_oberinntal c_odenwald c_opavsko c_palatinate c_plzensko c_prachensko c_prague c_saale c_sauerland c_schwarzwald c_thuringer_becken c_thuringer_wald c_vogtland c_vorarlberg c_zatecko
+		c_aargau c_altmark c_brunswick c_hanover c_harz c_hessen_bergland c_leine c_lippe c_lower_alsace c_luneburger_heide c_oberinntal c_opavsko c_saale c_spessart c_thuringer_becken c_thuringer_wald c_untermain c_vogelsberg c_vorarlberg c_wetterau
 	}
 }
 
@@ -5317,7 +5314,7 @@ et_1066_magdeburg_region = {
 
 et_1178_magdeburg_region = {
 	counties = {
-		c_elbtal c_erzgebirge c_flaming c_leipziger_bucht c_litomericko c_magdeburger_borde c_mittelmark c_niederlausitz c_oberlausitz c_prignitz
+		c_elbtal c_erzgebirge c_flaming c_leipziger_bucht c_magdeburger_borde c_mittelmark c_niederlausitz c_oberlausitz c_prignitz c_vogtland
 	}
 }
 
@@ -5326,7 +5323,7 @@ et_867_cologne_region = {
 		d_friesland d_holland
 	}
 	counties = {
-		c_antwerp c_barrois c_bergisches_land c_east_luxembourg c_emsland c_julich c_kempenland c_koln_bucht c_liege c_limburg c_loon c_munsterland c_namur c_niederrhein c_ostwestphalia c_ruhr c_verdunois c_west_luxembourg
+		c_antwerp c_bergisches_land c_emsland c_julich c_kempenland c_koln_bucht c_liege c_limburg c_loon c_middle_weser c_munsterland c_namur c_niederrhein c_ostwestphalia c_ruhr c_sauerland c_west_luxembourg
 	}
 }
 
@@ -5364,16 +5361,19 @@ et_1178_hamburg_bremen_region = {
 
 et_1178_lund_region = {
 	duchies = {
-		d_denmark d_gotaland d_skaneland
+		d_denmark d_skaneland
 	}
 	counties = {
-		c_nerike c_sodermanland c_varmland
+		c_estonia
 	}
 }
 
 et_1178_uppsala_region = {
+	duchies = {
+		d_gotaland d_svealand
+	}
 	counties = {
-		c_angermanland c_dalarna c_gastrikland c_halsingland c_jamtland c_lule_lappmark c_pite_lappmark c_ume_lappmark c_uppland c_vasterbotten c_vastmanland
+		c_angermanland c_finland c_halsingland c_jamtland c_lule_lappmark c_nyland c_pite_lappmark c_satakunta c_sodra_osterbotten c_tavastland c_ume_lappmark c_vasterbotten c_vyborg
 	}
 }
 
@@ -5404,10 +5404,10 @@ et_1066_kyiv_region = {
 
 et_1178_kyiv_region = {
 	duchies = {
-		d_black_ruthenia d_east_novgorod d_left_bank_ukraine d_moscow d_oka d_polesia d_red_ruthenia d_right_bank_ukraine d_severia d_smolensk d_suzdal d_tver d_vladimir d_volhynia d_west_novgorod d_white_ruthenia
+		d_beloozero d_black_ruthenia d_east_novgorod d_kursk d_left_bank_ukraine d_moscow d_oka d_polesia d_right_bank_ukraine d_severia d_sloboda_ukraine d_smolensk d_suzdal d_totma d_tver d_vladimir d_west_novgorod d_white_ruthenia d_yaroslavl d_zaporizhzhia
 	}
 	counties = {
-		c_ashmyany c_aunus_karelia c_balti_moldova c_belgorod c_beloe c_beloozero c_bezhetsk c_bratslav c_breslauja c_cherepoves c_donetsk c_dorohei c_eastern_podolia c_inner_aunus_karelia c_inner_white_karelia c_kasimov c_kursk c_latgalia c_mologa c_murom c_nizhny_novgorod c_orhei c_podlasie c_pronsk c_rostislavl c_ryazan c_sarov c_suceava c_sumy c_svir c_vinnytsia c_western_podolia c_white_karelia c_yaroslavl c_yelets
+		c_ashmyany c_atkarsk c_aunus_karelia c_borisoglebsk c_bratslav c_breslauja c_galich c_gorodets c_inner_aunus_karelia c_inner_white_karelia c_kargopol c_kasimov c_kholmogory c_kuloy c_lipetsk c_murom c_nizhny_novgorod c_onega c_podlasie c_pomorye c_pronsk c_rostislavl c_ryazan c_sarov c_shenkursk c_svir c_tambov c_torgovytsia c_unzha c_vinnytsia c_white_karelia c_yemetsk c_zavolochye
 	}
 }
 
@@ -5443,10 +5443,10 @@ et_1066_constantinople_region = {
 
 et_1178_constantinople_region = {
 	duchies = {
-		d_aegean_archipelago d_cappadocia d_central_anatolia d_marmara d_morea d_pontus d_thrace d_west_anatolia
+		d_aegean_archipelago d_cappadocia d_central_anatolia d_marmara d_moldavia d_morea d_pontus d_wallachia d_west_anatolia
 	}
 	counties = {
-		c_aetolia c_attica c_central_macedonia c_chalkidiki c_erzurum c_harput c_ionian_islands c_lower_macedonia c_marash c_neopatras c_pirin c_sis c_thessaly
+		c_aetolia c_attica c_central_macedonia c_chalkidiki c_constantinople c_dardanelles c_edirne c_erzurum c_evros c_harput c_ionian_islands c_lower_macedonia c_neopatras c_pirin c_rhodopes c_thessaly c_zagore
 	}
 }
 
@@ -5463,7 +5463,7 @@ et_867_antioch_region = {
 
 et_1178_antioch_region = {
 	counties = {
-		c_adana c_antakya c_ar_ruha c_ayntab c_halab c_hawran c_hims c_icel c_jawf c_latakia c_madian c_malatya c_shaam c_tadmur c_tarsus
+		c_adana c_antakya c_ar_ruha c_ayntab c_halab c_hawran c_hims c_icel c_latakia c_malatya c_marash c_shaam c_sis c_tadmur c_tarsus
 	}
 }
 
@@ -5499,7 +5499,7 @@ et_1066_georgia_region = {
 		d_georgia
 	}
 	counties = {
-		c_avaria c_shaki c_tuapse
+		c_shaki c_tuapse
 	}
 }
 
@@ -5524,7 +5524,7 @@ et_867_jerusalem_region = {
 
 et_1178_jerusalem_region = {
 	counties = {
-		c_filastin c_sharat c_tih
+		c_filastin c_madian c_sharat c_tih
 	}
 }
 
@@ -5547,22 +5547,22 @@ et_1178_alexandria_region = {
 		d_butana d_cyrenaica d_lower_egypt d_nubia_proper d_upper_egypt
 	}
 	counties = {
-		c_al_jifar c_bahr_al_jabal c_bazin c_kordofan
+		c_al_jifar
 	}
 }
 
 et_867_axum_region = {
+	duchies = {
+		d_central_ethiopia d_northern_ethiopia d_southern_ethiopia
+	}
 	counties = {
-		c_akele_guzai c_amhara c_argobba c_begemder c_dobea c_enderta c_gojjam c_hamasien c_lasta c_metekel c_semien c_serae c_tigray c_wej
+		c_bale c_oromia
 	}
 }
 
 et_867_africa_region = {
 	duchies = {
 		d_algiers d_atlas_high_plateau d_tripolitania d_tunis
-	}
-	counties = {
-		c_central_sahara c_east_fezzan c_fezzan c_touggourt
 	}
 }
 
