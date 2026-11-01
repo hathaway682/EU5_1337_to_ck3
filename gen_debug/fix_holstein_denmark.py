@@ -36,6 +36,18 @@ Provinces 608/611 are already castle_holding -- nothing to do there.
    NOTE: a later full `_capital_correct.py --barony-order rank_state` run
    re-derives RANK_STATE.json from the rule and would hand c_lippe back to
    soest -- re-run this script after any such run.
+
+4. Armagh seat (user decision 2026-11-01). Outside the HRE, so rule 3 never
+   reaches it: EU5's Armagh holds c_oriel and its capital is the town armagh,
+   but the county was still led from b_monaghan -- Oriel's own seat, left over
+   from when OIL held the county. b_armagh moves to the front of c_oriel, and
+   c_oriel + b_armagh join eu5_reassign_keep.json.
+
+5. Elector seats (user decision 2026-11-01). The two secular electors whose county
+   was led from the wrong town: c_flaming b_schweinitz -> b_wittenberg
+   (Saxe-Wittenberg, d_upper_saxony) and c_palatinate b_kaiserslautern ->
+   b_heidelberg (Palatine, d_upper_rhine). Both counties and both new seats join
+   eu5_reassign_keep.json.
 """
 import datetime, io, json, os, re, shutil
 from collections import defaultdict
@@ -392,5 +404,32 @@ if picks:
         wrote.append("RANK_STATE.json")
     if extend_keep(keep):
         wrote.append("eu5_reassign_keep.json")
+
+# ---- 4. Armagh seat (user decision 2026-11-01) ----
+# Outside the HRE, so the namesake rule above never reaches it: EU5's Armagh holds
+# c_oriel and its capital is the town armagh, but the county is still led from
+# b_monaghan -- Oriel's own seat, left over from when OIL held the county. The
+# archbishop's town takes the lead, and both keys join the reassign keep-list so a
+# later --barony-order rank_state run does not hand the seat back to monaghan.
+print("Armagh seat:")
+for path in (LT_MOD, LT_EXP):
+    if reorder_seat(path, "oriel", "armagh"):
+        wrote.append("%s (c_oriel)" % os.path.basename(path))
+if extend_keep(["c_oriel", "b_armagh"]):
+    wrote.append("eu5_reassign_keep.json")
+
+# ---- 5. Elector seats (user decision 2026-11-01) ----
+# The two secular electors whose county was led from the wrong town:
+#   c_flaming      b_schweinitz -> b_wittenberg   (Saxe-Wittenberg, d_upper_saxony)
+#   c_palatinate   b_kaiserslautern -> b_heidelberg (Palatine, d_upper_rhine)
+# Wittenberg and Heidelberg are the towns both the EU5 country and the CK3 duchy are
+# read through. Both counties and both new seats join eu5_reassign_keep.json.
+print("Elector seats:")
+for county, barony in (("flaming", "wittenberg"), ("palatinate", "heidelberg")):
+    for path in (LT_MOD, LT_EXP):
+        if reorder_seat(path, county, barony):
+            wrote.append("%s (c_%s)" % (os.path.basename(path), county))
+if extend_keep(["c_flaming", "b_wittenberg", "c_palatinate", "b_heidelberg"]):
+    wrote.append("eu5_reassign_keep.json")
 
 print("written:", ", ".join(wrote))

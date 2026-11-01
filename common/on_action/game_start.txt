@@ -204,15 +204,15 @@ on_game_start = {
 			limit = { exists = title:e_hre.holder }
 			add_to_global_variable_list = {
 				name = hre_elector_list
-				target = title:c_cologne
+				target = title:c_koln_bucht #cologne
 			}
 			add_to_global_variable_list = {
 				name = hre_elector_list
-				target = title:c_mainz
+				target = title:c_untermain #mainz
 			}
 			add_to_global_variable_list = {
 				name = hre_elector_list
-				target = title:c_trier
+				target = title:c_hunsruck #trier
 			}
 			add_to_global_variable_list = {
 				name = hre_elector_list
@@ -220,18 +220,19 @@ on_game_start = {
 			}
 			add_to_global_variable_list = {
 				name = hre_elector_list
-				target = title:d_east_franconia
+				target = title:d_upper_rhine #east_franconia
 			}
 			add_to_global_variable_list = {
 				name = hre_elector_list
-				target = title:d_ostmark
+				target = title:d_brandenburg #ostmark
 			}
 			add_to_global_variable_list = {
 				name = hre_elector_list
-				target = title:d_angria
+				target = title:d_upper_saxony #angria
 			}
 			hre_elector_list_save_effect = yes
 			hre_margraves_effect = yes
+			title:e_hre = { add_title_law = princely_elective_succession_law }
 		}
 
 		# Empire Faith Gate: seed global list of empire holders for perf (yearly pulse uses this list).

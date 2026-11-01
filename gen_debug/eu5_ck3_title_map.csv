@@ -1530,7 +1530,7 @@ country,OZU,-,Ozumatzin,奥苏马钦,,,c_atepec,c,Atepec,阿特佩克,eu5_regent
 country,PAC,-,Pacaca,帕卡卡,,,,,,,eu5_regent_pac,,,,,"generated-regent,country-below-county-rank: its land is nothing"
 country,PAD,c,Padua,帕多瓦,,,c_padua,c,Patávion,帕多瓦,eu5_rep_pad,eu5_rep_pad,d_eu5_ver,republic_government,yes,"consul,vassal,consul-holds,country-below-county-rank: its land is its counties"
 country,PAH,-,Pahang,彭亨,,,c_pahang,c,Pahang,彭亨,eu5_regent_pah,eu5_regent_pah,,mandala_government,yes,"generated-regent,primary-title"
-country,PAL,d,Rhine,莱茵,,,d_eu5_pal,d,Rhine,莱茵,pal_rudolf_ii_wittelsbach,pal_rudolf_ii_wittelsbach,e_hre,feudal_government,yes,vassal
+country,PAL,d,Rhine,莱茵,,,d_upper_rhine,d,Rhine,莱茵,pal_rudolf_ii_wittelsbach,pal_rudolf_ii_wittelsbach,e_hre,feudal_government,yes,"vassal,elector (Palatine); duchy d_upper_rhine"
 country,PAM,-,Xi'oi,希奥伊,,,,,,,eu5_regent_pam,,,,,"generated-regent,country-below-county-rank: its land is nothing"
 country,PAN,d,Pǔ'ān,普安,,,d_eu5_pan,d,Pǔ'ān,普安,eu5_regent_pan,eu5_regent_pan,k_eu5_lng,tribal_government,yes,"vassal,generated-regent"
 country,PAP,k,Rome,罗马,,,k_papal_state,k,Rome,罗马,pap_benedetto_xii,pap_benedetto_xii,,theocracy_government,yes,
@@ -1870,7 +1870,7 @@ country,SUW,c,Suwa,诹访,,,c_nf_suwa,c,Suwa,诹访,jap_suwa_yoritsugu,jap_suwa_
 country,SVA,-,Sosva,索西瓦,,,c_kazym,c,Kazym,卡济姆,eu5_regent_sva,eu5_regent_sva,,herder_government,yes,"tributary,generated-regent,country-below-county-rank: its land is its counties"
 country,SVN,d,Slavonia,斯拉沃尼亚,,,d_eu5_svn,d,Slavonia,斯拉沃尼亚,,,,,yes,no-ruler-in-eu5
 country,SVO,-,Savolax,萨沃拉克斯,,,c_savolax,c,Savolax,萨沃拉克斯,eu5_regent_svo,eu5_regent_svo,,herder_government,yes,"generated-regent,country-below-county-rank: its land is its counties"
-country,SWB,d,Saxe-Wittenberg,萨克森‑维滕贝格,,,c_flaming,c,Fläming Heath,弗莱明荒原,swb_rudolf_askanier,swb_rudolf_askanier,d_eu5_mag,feudal_government,yes,"vassal,rank-title-dropped (d_eu5_swb)"
+country,SWB,d,Saxe-Wittenberg,萨克森‑维滕贝格,,,d_upper_saxony,d,Fläming Heath,弗莱明荒原,swb_rudolf_askanier,swb_rudolf_askanier,e_hre,feudal_government,yes,"vassal,elector (Saxe-Wittenberg); duchy d_upper_saxony, direct under e_hre"
 country,SWD,d,Świdnica,希维德尼察,,,d_eu5_swd,d,Świdnica,希维德尼察,swd_bolko_ii_small,swd_bolko_ii_small,e_hre,feudal_government,yes,vassal
 country,SWE,k,Sweden,瑞典,,,k_sweden,k,Sweden,瑞典,swe_magnus_eriksson,swe_magnus_eriksson,,feudal_government,yes,union
 country,SWH,c,Schwäbisch Hall,施瓦本哈尔,,,b_hall,b,Schwäbisch Hall,施瓦本哈尔,eu5_regent_swh,eu5_regent_swh,,,yes,"vassal,generated-regent,country-below-county-rank: its land is a barony"
@@ -3268,7 +3268,7 @@ county,MAM,-,Egypt,埃及,Filastin,菲拉斯廷,c_filastin,c,Filastin,菲拉斯�
 county,SWE,-,Sweden,瑞典,Egentliga Finland,芬兰本土,c_finland,c,Finland,芬兰本土,swe_magnus_eriksson,swe_magnus_eriksson,,feudal_government,yes,seat-of SWE (Sweden)
 county,NOR,-,Norway,挪威,Finnmark,芬马克,c_finnmark,c,Finnmark,芬马克,swe_magnus_eriksson,swe_magnus_eriksson,,feudal_government,yes,seat-of NOR (Norway)
 county,INJ,-,Injuids,因珠,Fīrūzābād,菲鲁扎巴德,c_firuzabad,c,Fīrūzābād,菲鲁扎巴德,inj_ghiyas_al_din_kai_khusrau,inj_ghiyas_al_din_kai_khusrau,,clan_government,yes,seat-of INJ (Injuids)
-county,SWB,-,Saxe-Wittenberg,萨克森‑维滕贝格,Fläming Heath,弗莱明荒原,c_flaming,c,Fläming Heath,弗莱明荒原,swb_rudolf_askanier,swb_rudolf_askanier,d_eu5_mag,feudal_government,yes,seat-of SWB (Saxe-Wittenberg)
+county,SWB,-,Saxe-Wittenberg,萨克森‑维滕贝格,Fläming Heath,弗莱明荒原,c_flaming,c,Fläming Heath,弗莱明荒原,swb_rudolf_askanier,swb_rudolf_askanier,e_hre,feudal_government,yes,seat-of SWB (Saxe-Wittenberg)
 county,FLO,-,Florence,佛罗伦萨,Florence,佛罗伦萨,c_florence,c,Florens,佛罗伦萨,gub_jacopo_gabrielli,gub_jacopo_gabrielli,e_hre,republic_government,yes,seat-of FLO (Florence)
 county,LRT,-,Larantuka,拉兰图卡,Flores,弗洛勒斯,c_flores,c,Flores,弗洛勒斯,eu5_regent_lrt,eu5_regent_lrt,,wanua_government,yes,seat-of LRT (Larantuka)
 county,FOI,-,Foix,富瓦,Foix,富瓦,c_foix,c,Foix,富瓦,foi_gaston_ii_foix,foi_gaston_ii_foix,k_france,feudal_government,yes,seat-of FOI (Foix)

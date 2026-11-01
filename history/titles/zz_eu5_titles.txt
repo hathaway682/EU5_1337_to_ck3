@@ -5839,7 +5839,7 @@ d_eu5_orm = {
 	}
 }
 
-d_eu5_pal = {
+d_upper_rhine = {
 	1156.1.1 = {
 		holder = pal_konrad_hohenstaufen
 	}
@@ -20358,7 +20358,7 @@ c_flaming = {
 		holder = swb_rudolf_askanier
 	}
 	1337.1.1 = {
-		liege = d_et_magdeburg
+		liege = e_hre
 	}
 	1337.4.1 = {
 		change_development_level = 28
@@ -60018,5 +60018,13 @@ b_zweibrucken = {
 	}
 	1337.4.1 = {
 		holder = zwe_walram_ii_zweibrucken
+	}
+}
+
+d_upper_saxony = {
+	1337.4.1 = {
+		holder = swb_rudolf_askanier
+		government = feudal_government
+		liege = e_hre
 	}
 }
