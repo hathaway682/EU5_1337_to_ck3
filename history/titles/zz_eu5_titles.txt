@@ -3366,7 +3366,7 @@ k_papal_state = {
 	}
 	1337.4.1 = {
 		holder = pap_benedetto_xii
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -4849,7 +4849,7 @@ d_eu5_aqn = {
 	}
 }
 
-d_eu5_aqu = {
+d_et_aquileia = {
 	1273.12.21 = {
 		holder = aqu_raimondo_della_torre
 	}
@@ -4862,12 +4862,11 @@ d_eu5_aqu = {
 	1334.7.4 = {
 		holder = aqu_bertrando_genasio
 	}
-	1337.1.1 = {
-		liege = e_hre
-	}
 	1337.4.1 = {
+		government = ecclesiastical_government
 		holder = aqu_bertrando_genasio
-		government = theocracy_government
+		clerical_region = et_867_aquileia_region
+		liege = e_hre
 	}
 }
 
@@ -4956,7 +4955,7 @@ d_eu5_aug = {
 	}
 	1337.4.1 = {
 		holder = aug_ulrich_von_schonegg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -5007,13 +5006,13 @@ d_eu5_bou = {
 	}
 }
 
-d_eu5_bre = {
-	1337.1.1 = {
-		liege = e_hre
-	}
+d_et_hamburg = {
 	1337.4.1 = {
+		government = ecclesiastical_government
 		holder = bre_burchard_grelle
-		government = theocracy_government
+		clerical_region = et_1178_hamburg_bremen_region
+		liege = e_hre
+		name = d_et_hamburg_bremen
 	}
 }
 
@@ -5436,7 +5435,7 @@ d_eu5_kmm = {
 	}
 	1337.4.1 = {
 		holder = kmm_johann_i_lauenburg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -5446,17 +5445,16 @@ d_eu5_kni = {
 	}
 	1337.4.1 = {
 		holder = kni_helion_de_villeneuve
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
-d_eu5_kol = {
-	1337.1.1 = {
-		liege = e_hre
-	}
+d_et_cologne = {
 	1337.4.1 = {
+		government = ecclesiastical_government
 		holder = kol_walram_von_julich
-		government = theocracy_government
+		clerical_region = et_867_cologne_region
+		liege = e_hre
 	}
 }
 
@@ -5589,7 +5587,7 @@ d_eu5_lie = {
 	}
 	1337.4.1 = {
 		holder = lie_adolf_ii_von_der_mark
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -5611,7 +5609,7 @@ d_eu5_liv = {
 	}
 	1337.4.1 = {
 		holder = liv_eberhard_von_monheim
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -5656,31 +5654,28 @@ d_eu5_lun = {
 	}
 }
 
-d_eu5_mag = {
-	1337.1.1 = {
-		holder = mag_otto_von_hessen
-		liege = e_hre
-	}
+d_et_magdeburg = {
 	1337.4.1 = {
+		government = ecclesiastical_government
 		holder = mag_otto_von_hessen
-		government = theocracy_government
+		clerical_region = et_1178_magdeburg_region
+		liege = e_hre
 	}
 }
 
 
-d_eu5_mai = {
+d_et_mainz = {
 	1161.1.1 = {
 		holder = mai_konrad_i_wittelsbach
 	}
 	1183.8.23 = {
 		holder = mai_konrad_i_wittelsbach
 	}
-	1337.1.1 = {
-		liege = e_hre
-	}
 	1337.4.1 = {
+		government = ecclesiastical_government
 		holder = mai_heinrich_iii_von_virneburg
-		government = theocracy_government
+		clerical_region = et_1178_mainz_region
+		liege = e_hre
 	}
 }
 
@@ -6555,16 +6550,15 @@ d_eu5_trb = {
 	}
 }
 
-d_eu5_tri = {
+d_et_trier = {
 	1307.11.23 = {
 		holder = tri_balduin_von_luxembourg
 	}
-	1337.1.1 = {
-		liege = e_hre
-	}
 	1337.4.1 = {
+		government = ecclesiastical_government
 		holder = tri_balduin_von_luxembourg
-		government = theocracy_government
+		clerical_region = et_867_trier_region
+		liege = e_hre
 	}
 }
 
@@ -7579,7 +7573,7 @@ d_languedoc = {
 d_lazio = {
 	1337.4.1 = {
 		holder = pap_benedetto_xii
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -8264,7 +8258,7 @@ d_prussia = {
 	}
 	1337.4.1 = {
 		holder = teu_dietrich_von_altenburg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -8584,7 +8578,16 @@ d_salzburg = {
 	}
 	1337.4.1 = {
 		holder = slz_friedrich_von_leibnitz
-		government = theocracy_government
+		government = ecclesiastical_government
+	}
+}
+
+d_et_salzburg = {
+	1337.4.1 = {
+		government = ecclesiastical_government
+		holder = slz_friedrich_von_leibnitz
+		clerical_region = et_867_salzburg_region
+		liege = e_hre
 	}
 }
 
@@ -9557,7 +9560,7 @@ c_achaea = {
 	}
 	1337.4.1 = {
 		holder = pat_guglielmo_frangipani
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -10363,7 +10366,7 @@ c_alpenvorland = {
 	}
 	1337.4.1 = {
 		holder = eu5_regent_fre
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -11771,7 +11774,7 @@ c_avignonnais = {
 	}
 	1337.4.1 = {
 		holder = pap_benedetto_xii
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -13083,7 +13086,7 @@ c_bayerischer_wald = {
 	}
 	1337.4.1 = {
 		holder = pss_albert_ii_von_sachsen_wittenberg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -15218,7 +15221,7 @@ c_campagna = {
 	}
 	1337.4.1 = {
 		holder = pap_benedetto_xii
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -16116,7 +16119,7 @@ c_chelmno = {
 	}
 	1337.4.1 = {
 		holder = klm_otto
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -17446,7 +17449,7 @@ c_courland = {
 	}
 	1337.4.1 = {
 		holder = kur_johann_ii
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -18008,7 +18011,7 @@ c_danzig = {
 	}
 	1337.4.1 = {
 		holder = teu_dietrich_von_altenburg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -18755,7 +18758,7 @@ c_dobrzyn = {
 	}
 	1337.4.1 = {
 		holder = teu_dietrich_von_altenburg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -18976,7 +18979,7 @@ c_drenthe = {
 	}
 	1337.4.1 = {
 		holder = utr_jan_van_diest
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -19090,7 +19093,7 @@ c_durham = {
 	}
 	1337.4.1 = {
 		holder = dhm_richard_de_bury
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -20355,7 +20358,7 @@ c_flaming = {
 		holder = swb_rudolf_askanier
 	}
 	1337.1.1 = {
-		liege = d_eu5_mag
+		liege = d_et_magdeburg
 	}
 	1337.4.1 = {
 		change_development_level = 28
@@ -20518,7 +20521,7 @@ c_friuli = {
 	}
 	1337.4.1 = {
 		holder = aqu_bertrando_genasio
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -21578,7 +21581,7 @@ c_graubunden = {
 	}
 	1337.4.1 = {
 		holder = bch_ulrich_von_lenzburg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -23752,7 +23755,7 @@ c_hunsruck = {
 	}
 	1337.4.1 = {
 		holder = tri_balduin_von_luxembourg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -24328,7 +24331,15 @@ c_inner_livonia = {
 	}
 	1337.4.1 = {
 		holder = rig_friedrich_von_pernstein
-		government = theocracy_government
+		government = ecclesiastical_government
+	}
+}
+
+d_et_riga = {
+	1337.4.1 = {
+		government = ecclesiastical_government
+		holder = 0
+		clerical_region = eu5_et_1337_riga_region
 	}
 }
 
@@ -27782,7 +27793,7 @@ c_koln_bucht = {
 	}
 	1337.4.1 = {
 		holder = kol_walram_von_julich
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -29076,7 +29087,7 @@ c_latgalia = {
 	}
 	1337.4.1 = {
 		holder = rig_friedrich_von_pernstein
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -29404,7 +29415,7 @@ c_liege = {
 	}
 	1337.4.1 = {
 		holder = lie_adolf_ii_von_der_mark
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -29593,7 +29604,7 @@ c_lippe = {
 	}
 	1337.4.1 = {
 		holder = pdb_bernhard_v
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -29628,7 +29639,7 @@ c_lithuania_minor = {
 	}
 	1337.4.1 = {
 		holder = teu_dietrich_von_altenburg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -29806,7 +29817,7 @@ c_lower_alsace = {
 	}
 	1337.4.1 = {
 		holder = als_berthold_ii_buchegg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -30210,7 +30221,7 @@ c_lower_prussia = {
 	}
 	1337.4.1 = {
 		holder = sms_johann_clare
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -30958,7 +30969,7 @@ c_magdeburger_borde = {
 	}
 	1337.4.1 = {
 		holder = mag_otto_von_hessen
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -31108,7 +31119,7 @@ c_main_franconia = {
 	}
 	1337.4.1 = {
 		holder = wbg_otto_ii_von_wolfskeel
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -31898,7 +31909,7 @@ c_marittima = {
 	}
 	1337.4.1 = {
 		holder = pap_benedetto_xii
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -32065,7 +32076,7 @@ c_masuria = {
 	}
 	1337.4.1 = {
 		holder = teu_dietrich_von_altenburg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -34147,7 +34158,7 @@ c_munsterland = {
 	}
 	1337.4.1 = {
 		holder = mun_ludwig_ii_hessen
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -35143,7 +35154,7 @@ c_neuchatel = {
 	}
 	1337.4.1 = {
 		holder = bas_johann_ii_senn_von_munsingen
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -35951,7 +35962,7 @@ c_north_livonia = {
 	}
 	1337.4.1 = {
 		holder = liv_eberhard_von_monheim
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -36821,7 +36832,7 @@ c_oberwallis = {
 	}
 	1337.4.1 = {
 		holder = sit_aymon_iv_de_la_tour_dit_de_chatillon
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -36902,7 +36913,7 @@ c_odenwald = {
 	}
 	1337.4.1 = {
 		holder = mai_heinrich_iii_von_virneburg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -37467,6 +37478,13 @@ c_orhei = {
 	}
 }
 
+b_oriel = {
+	1337.4.1 = {
+		holder = oil_seoan_macmahon
+		government = tribal_government
+	}
+}
+
 c_oriel = {
 	1331.1.1 = {
 		holder = oil_seoan_macmahon
@@ -37475,8 +37493,9 @@ c_oriel = {
 		change_development_level = 11
 	}
 	1337.4.1 = {
-		holder = oil_seoan_macmahon
-		government = tribal_government
+		holder = ama_david_mageraghty
+		government = ecclesiastical_government
+		liege = k_england
 	}
 }
 
@@ -37674,7 +37693,7 @@ c_ostwestphalia = {
 	}
 	1337.4.1 = {
 		holder = osn_gottfried_von_arnsberg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -37898,7 +37917,7 @@ c_overijssel = {
 	}
 	1337.4.1 = {
 		holder = utr_jan_van_diest
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -38494,7 +38513,7 @@ c_patrimonio = {
 	}
 	1337.4.1 = {
 		holder = pap_benedetto_xii
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -38600,7 +38619,7 @@ c_pays_messin = {
 	}
 	1337.4.1 = {
 		holder = mtz_aymar_adhemar_de_la_garde
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -39215,7 +39234,7 @@ c_pinzgau = {
 	}
 	1337.4.1 = {
 		holder = slz_friedrich_von_leibnitz
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -39645,7 +39664,7 @@ c_pongau = {
 	}
 	1337.4.1 = {
 		holder = slz_friedrich_von_leibnitz
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -39857,7 +39876,7 @@ c_prignitz = {
 	}
 	1337.4.1 = {
 		holder = hvb_dietrich_i_kothe
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -41225,7 +41244,7 @@ c_rodos = {
 	}
 	1337.4.1 = {
 		holder = kni_helion_de_villeneuve
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -41412,7 +41431,7 @@ c_rotalia = {
 	}
 	1337.4.1 = {
 		holder = bio_jakob_ii
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -41659,7 +41678,7 @@ c_saale = {
 	}
 	1337.4.1 = {
 		holder = mag_otto_von_hessen
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -41989,7 +42008,7 @@ c_salzburger_land = {
 	}
 	1337.4.1 = {
 		holder = slz_friedrich_von_leibnitz
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -42775,7 +42794,7 @@ c_selonia = {
 	}
 	1337.4.1 = {
 		holder = liv_eberhard_von_monheim
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -42795,7 +42814,7 @@ c_semigalia = {
 	}
 	1337.4.1 = {
 		holder = liv_eberhard_von_monheim
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -44836,7 +44855,7 @@ c_spessart = {
 	}
 	1337.4.1 = {
 		holder = mai_heinrich_iii_von_virneburg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -44859,7 +44878,7 @@ c_spoleto = {
 	}
 	1337.4.1 = {
 		holder = pap_benedetto_xii
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -46392,7 +46411,7 @@ c_tartu = {
 	}
 	1337.4.1 = {
 		holder = bid_engelbert_von_dolen
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -48061,7 +48080,7 @@ c_trentino = {
 	}
 	1337.4.1 = {
 		holder = tnt_nikolaus_brunn
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -48304,7 +48323,7 @@ c_tuchola = {
 	}
 	1337.4.1 = {
 		holder = teu_dietrich_von_altenburg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -49261,7 +49280,7 @@ c_untermain = {
 	}
 	1337.4.1 = {
 		holder = mai_heinrich_iii_von_virneburg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -49818,7 +49837,7 @@ c_upper_prussia = {
 	}
 	1337.4.1 = {
 		holder = teu_dietrich_von_altenburg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -51058,7 +51077,7 @@ c_vogelsberg = {
 	}
 	1337.4.1 = {
 		holder = fld_heinrich_vi_von_hohenberg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -51563,7 +51582,7 @@ c_warmia = {
 	}
 	1337.4.1 = {
 		holder = erm_hermann_of_prague
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -52245,7 +52264,7 @@ c_westerwald = {
 	}
 	1337.4.1 = {
 		holder = tri_balduin_von_luxembourg
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -52567,7 +52586,7 @@ c_wroclaw = {
 	}
 	1337.4.1 = {
 		holder = nys_nanker
-		government = theocracy_government
+		government = ecclesiastical_government
 	}
 }
 
@@ -54842,6 +54861,15 @@ b_antsohihy = {
 b_armagh = {
 	1337.4.1 = {
 		holder = ama_david_mageraghty
+	}
+}
+
+d_et_armagh = {
+	1337.4.1 = {
+		government = ecclesiastical_government
+		holder = ama_david_mageraghty
+		clerical_region = et_1178_armagh_region
+		liege = k_england
 	}
 }
 
