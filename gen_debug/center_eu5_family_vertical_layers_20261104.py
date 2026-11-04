@@ -3,6 +3,8 @@
 Read the pre-change snapshot from F:. Unrotated layers must remain near the center, with modest vertical
 offsets; separate fixed border/divider emblems are allowed. The union of
 the visible alpha bounds is centered while each layer receives the same shift.
+Afterward, run fix_eu5_family_mask_centers_20261105.py to align circular
+pattern masks with their frame and preserve the original EU5 layer offsets.
 Afterwards, run center_eu5_family_offset_layers_20261104.py to handle central
 compositions whose layers share a vertical anchor but have small horizontal offsets.
 Follow with center_eu5_family_vertical_layers_20261104.py for slightly offset

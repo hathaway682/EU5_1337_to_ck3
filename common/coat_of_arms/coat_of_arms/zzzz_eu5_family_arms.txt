@@ -219,43 +219,43 @@ al_fadl_dynasty = {
 		color1 = color2
 		color2 = color1
 		color3 = color4
-		instance = { position = { 0.5 0.46 } scale = { 1.2 0.8 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.2 0.8 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_side_horns.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.46 } scale = { 0.75 0.48 } }
+		instance = { position = { 0.5 0.5 } scale = { 0.75 0.48 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_center_chalice.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.46 } scale = { 0.4875 0.325 } }
+		instance = { position = { 0.5 0.5 } scale = { 0.4875 0.325 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_bottom_chalice.dds"
 		color1 = color5
 		color2 = color5
-		instance = { position = { 0.5 0.682 } scale = { 0.51 0.34 } }
+		instance = { position = { 0.5 0.722 } scale = { 0.51 0.34 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_bottom_buqja.dds"
 		color1 = color5
 		color2 = color5
-		instance = { position = { 0.5 0.240 } scale = { 0.51 0.34 } }
+		instance = { position = { 0.5 0.28 } scale = { 0.51 0.34 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_shield_bars.dds"
 		color1 = color3
 		color2 = color3
-		instance = { position = { 0.5 0.46 } scale = { 1.2 0.8 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.2 0.8 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_shield_top_frame_02.dds"
 		color1 = color3
 		color2 = color3
-		instance = { position = { 0.5 0.46 } scale = { 1.2 0.8 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.2 0.8 } }
 	}
 }
 
@@ -271,28 +271,28 @@ al_mira_dynasty = {
 		texture = "eu5dyn_ce_frame_circle.dds"
 		color1 = color3
 		color2 = color3
-		instance = { position = { 0.5 0.46 } scale = { 0.9 0.6 } }
+		instance = { position = { 0.5 0.5 } scale = { 0.9 0.6 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_fleur_lis_shield.dds"
 		color1 = color4
 		color2 = color4
-		instance = { position = { 0.5 0.46 } scale = { 0.96 0.61 } }
+		instance = { position = { 0.5 0.5 } scale = { 0.96 0.61 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_roundel.dds"
 		color1 = color4
 		color2 = color4
-		instance = { position = { 0.32 0.30 } scale = { 0.165 0.11 } }
-		instance = { position = { 0.68 0.30 } scale = { 0.165 0.11 } }
-		instance = { position = { 0.2975 0.53 } scale = { 0.165 0.11 } }
-		instance = { position = { 0.7025 0.53 } scale = { 0.165 0.11 } }
+		instance = { position = { 0.32 0.34 } scale = { 0.165 0.11 } }
+		instance = { position = { 0.68 0.34 } scale = { 0.165 0.11 } }
+		instance = { position = { 0.2975 0.57 } scale = { 0.165 0.11 } }
+		instance = { position = { 0.7025 0.57 } scale = { 0.165 0.11 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_shield_top_frame_02.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.46 } scale = { 1.2 0.8 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.2 0.8 } }
 	}
 }
 
@@ -1922,7 +1922,7 @@ bhati_dynasty = {
 
 # EU5 bhatti_dynasty
 bhatti_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_round_frame_shield_ordinary_india.dds"
+	pattern = "eu5dyn_centered_pattern_round_frame_shield_ordinary_india.dds"
 	color1 = "eu5dyn_red"
 	color2 = "eu5dyn_yellow"
 	color3 = "eu5dyn_black"
@@ -1938,13 +1938,13 @@ bhatti_dynasty = {
 		color1 = color2
 		color2 = color2
 		color3 = color1
-		instance = { position = { 0.5 0.46 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_per_fess_shield.dds"
 		color1 = color1
 		color2 = color2
-		instance = { position = { 0.5 0.5 } scale = { 1.5 1 } }
+		instance = { position = { 0.5 0.54 } scale = { 1.5 1 } }
 		mask = { 2 }
 	}
 	colored_emblem = {
@@ -2245,7 +2245,7 @@ bournonville_dynasty = {
 		color1 = color2
 		color2 = color3
 		color3 = color3
-		instance = { position = { 0.5 0.475 } scale = { 1.35 0.9 } }
+		instance = { position = { 0.5 0.496484 } scale = { 1.35 0.9 } }
 	}
 }
 
@@ -2909,7 +2909,7 @@ chalon_arlay_dynasty = {
 
 # EU5 champaner_dynasty
 champaner_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_round_frame_shield_ordinary_india.dds"
+	pattern = "eu5dyn_centered_pattern_round_frame_shield_ordinary_india.dds"
 	color1 = "eu5dyn_red"
 	color2 = "eu5dyn_yellow"
 	color3 = "eu5dyn_white"
@@ -2926,13 +2926,13 @@ champaner_dynasty = {
 		color1 = color2
 		color2 = color2
 		color3 = color1
-		instance = { position = { 0.5 0.46 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_barry_04.dds"
 		color1 = color4
 		color2 = color3
-		instance = { position = { 0.5 0.46 } scale = { 0.75 0.5 } }
+		instance = { position = { 0.5 0.5 } scale = { 0.75 0.5 } }
 		mask = { 2 }
 	}
 	colored_emblem = {
@@ -3101,7 +3101,7 @@ chauhan_dynasty = {
 
 # EU5 chauhan_jalore_dynasty
 chauhan_jalore_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_round_frame_shield_ordinary_india.dds"
+	pattern = "eu5dyn_centered_pattern_round_frame_shield_ordinary_india.dds"
 	color1 = "eu5dyn_red"
 	color2 = "eu5dyn_yellow"
 
@@ -3116,20 +3116,20 @@ chauhan_jalore_dynasty = {
 		color1 = color2
 		color2 = color2
 		color3 = color1
-		instance = { position = { 0.5 0.46 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_solid.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.46 } scale = { 0.5 0.5 } }
+		instance = { position = { 0.5 0.5 } scale = { 0.5 0.5 } }
 		mask = { 2 }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_trishula_danta.dds"
 		color1 = color1
 		color2 = color1
-		instance = { position = { 0.5 0.46 } scale = { 0.7125 0.475 } }
+		instance = { position = { 0.5 0.5 } scale = { 0.7125 0.475 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_solid.dds"
@@ -3142,7 +3142,7 @@ chauhan_jalore_dynasty = {
 
 # EU5 chauhan_patna_dynasty
 chauhan_patna_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_round_frame_shield_ordinary_india.dds"
+	pattern = "eu5dyn_centered_pattern_round_frame_shield_ordinary_india.dds"
 	color1 = "eu5dyn_red"
 	color2 = "eu5dyn_yellow"
 	color3 = "eu5dyn_blue"
@@ -3160,41 +3160,41 @@ chauhan_patna_dynasty = {
 		color1 = color2
 		color2 = "eu5dyn_black"
 		color3 = "eu5dyn_black"
-		instance = { position = { 0.5 0.46 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_solid.dds"
 		color1 = color3
 		color2 = color3
-		instance = { position = { 0.5 0.26 } scale = { 1.0 0.1 } }
+		instance = { position = { 0.5 0.3 } scale = { 1.0 0.1 } }
 		mask = { 2 }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_solid.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.36 } scale = { 1.0 0.1 } }
+		instance = { position = { 0.5 0.4 } scale = { 1.0 0.1 } }
 		mask = { 2 }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_solid.dds"
 		color1 = "eu5dyn_red_mid"
 		color2 = "eu5dyn_red_mid"
-		instance = { position = { 0.5 0.46 } scale = { 1.0 0.1 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.0 0.1 } }
 		mask = { 2 }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_solid.dds"
 		color1 = color4
 		color2 = color4
-		instance = { position = { 0.5 0.56 } scale = { 1.0 0.1 } }
+		instance = { position = { 0.5 0.6 } scale = { 1.0 0.1 } }
 		mask = { 2 }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_solid.dds"
 		color1 = color5
 		color2 = color5
-		instance = { position = { 0.5 0.66 } scale = { 1.0 0.1 } }
+		instance = { position = { 0.5 0.7 } scale = { 1.0 0.1 } }
 		mask = { 2 }
 	}
 	colored_emblem = {
@@ -3279,7 +3279,7 @@ chousokabe_dynasty = {
 		texture = "eu5dyn_ce_mon_chosokabe.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.0875 0.725 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.0875 0.725 } }
 	}
 }
 
@@ -4484,7 +4484,7 @@ della_tosa_dynasty = {
 
 # EU5 deramku_dynasty
 deramku_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield_inner.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield_inner.dds"
 	color1 = "eu5dyn_green"
 	color2 = "eu5dyn_white"
 	color3 = "eu5dyn_yellow_mid"
@@ -5231,7 +5231,7 @@ erik_dynasty = {
 		color1 = color2
 		color2 = color2
 		color3 = color2
-		instance = { position = { 0.5 0.475 } scale = { 1.35 0.9 } }
+		instance = { position = { 0.5 0.496484 } scale = { 1.35 0.9 } }
 	}
 }
 
@@ -5282,7 +5282,7 @@ everstein_dynasty = {
 		color1 = color2
 		color2 = color3
 		color3 = color4
-		instance = { position = { 0.5 0.475 } scale = { 1.35 0.9 } }
+		instance = { position = { 0.5 0.496484 } scale = { 1.35 0.9 } }
 	}
 }
 
@@ -5789,7 +5789,7 @@ galloway_dynasty = {
 		color1 = color2
 		color2 = color3
 		color3 = color3
-		instance = { position = { 0.5 0.475 } scale = { 1.35 0.9 } }
+		instance = { position = { 0.5 0.496484 } scale = { 1.35 0.9 } }
 	}
 }
 
@@ -5884,13 +5884,13 @@ germiyanids_dynasty = {
 		texture = "eu5dyn_ce_frame_circle.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.46 } scale = { 0.975 0.65 } }
+		instance = { position = { 0.5 0.5 } scale = { 0.975 0.65 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_crescent.dds"
 		color1 = color1
 		color2 = color1
-		instance = { position = { 0.5 0.425 } scale = { 0.9375 -0.625 } }
+		instance = { position = { 0.5 0.465 } scale = { 0.9375 -0.625 } }
 	}
 }
 
@@ -6697,7 +6697,7 @@ heinsberg_dynasty = {
 		color1 = color2
 		color2 = color2
 		color3 = color2
-		instance = { position = { 0.5 0.475 } scale = { 1.35 0.9 } }
+		instance = { position = { 0.5 0.496484 } scale = { 1.35 0.9 } }
 	}
 }
 
@@ -6753,7 +6753,7 @@ hetumids_dynasty = {
 		color1 = color2
 		color2 = color3
 		color3 = color3
-		instance = { position = { 0.5 0.475 } scale = { 1.35 0.9 } }
+		instance = { position = { 0.5 0.496484 } scale = { 1.35 0.9 } }
 	}
 }
 
@@ -6887,7 +6887,7 @@ horne_dynasty = {
 
 # EU5 hot_dynasty
 hot_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield.dds"
 	color1 = "eu5dyn_yellow"
 	color2 = "eu5dyn_white"
 	color3 = "eu5dyn_red"
@@ -7329,7 +7329,7 @@ jarral_dynasty = {
 
 # EU5 jarwanid_dynasty
 jarwanid_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield_inner.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield_inner.dds"
 	color1 = "eu5dyn_red"
 	color2 = "eu5dyn_white"
 	color3 = "eu5dyn_yellow"
@@ -7343,14 +7343,14 @@ jarwanid_dynasty = {
 		texture = "eu5dyn_ce_mena_ordinary_chief.dds"
 		color1 = color2
 		color2 = color1
-		instance = { position = { 0.5 0.573438 } scale = { 1.5 1 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.5 1 } }
 		mask = { 2 }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_shield_top_frame.dds"
 		color1 = color3
 		color2 = color3
-		instance = { position = { 0.5 0.573438 } scale = { 1.2 0.8 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.2 0.8 } }
 	}
 }
 
@@ -7625,7 +7625,7 @@ kagawa_dynasty = {
 		texture = "eu5dyn_ce_mon_itakura_tomoe.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.46 } scale = { 1.0875 0.725 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.0875 0.725 } }
 	}
 }
 
@@ -7661,7 +7661,7 @@ kantakouzenos_dynasty = {
 
 # EU5 karamanids_dynasty
 karamanids_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield_inner.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield_inner.dds"
 	color1 = "eu5dyn_red"
 	color2 = "eu5dyn_white"
 	color3 = "eu5dyn_yellow_light"
@@ -7753,7 +7753,7 @@ kasranid_dynasty = {
 		color1 = color2
 		color2 = color2
 		color3 = color1
-		instance = { position = { 0.5 0.46 } scale = { 1.1625 0.775 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.1625 0.775 } }
 	}
 }
 
@@ -7925,7 +7925,7 @@ kevernburg_dynasty = {
 		color1 = color2
 		color2 = color2
 		color3 = color2
-		instance = { position = { 0.5 0.475 } scale = { 1.35 0.9 } }
+		instance = { position = { 0.5 0.496484 } scale = { 1.35 0.9 } }
 	}
 }
 
@@ -8043,7 +8043,7 @@ kimotsuki_dynasty = {
 		texture = "eu5dyn_ce_mon_kimotsuke.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.475 } scale = { 1.0875 0.725 } }
+		instance = { position = { 0.5 0.495752 } scale = { 1.0875 0.725 } }
 	}
 }
 
@@ -8254,7 +8254,7 @@ kusunoki_dynasty = {
 
 # EU5 kutai_kartanegara_dynasty
 kutai_kartanegara_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield.dds"
 	color1 = "eu5dyn_yellow"
 	color2 = rgb { 166 79 17 }
 	color3 = "eu5dyn_red_mid"
@@ -8290,7 +8290,7 @@ kutai_kartanegara_dynasty = {
 
 # EU5 kutai_martapura_dynasty
 kutai_martapura_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield_inner_02.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield_inner_02.dds"
 	color1 = "eu5dyn_red"
 	color2 = "eu5dyn_white"
 	color3 = "eu5dyn_yellow"
@@ -8834,7 +8834,7 @@ limbourg_dynasty = {
 		color1 = color2
 		color2 = color3
 		color3 = color3
-		instance = { position = { 0.5 0.475 } scale = { 1.35 0.9 } }
+		instance = { position = { 0.5 0.496484 } scale = { 1.35 0.9 } }
 	}
 }
 
@@ -9381,7 +9381,7 @@ mac_mahon_dynasty = {
 		color1 = color2
 		color2 = color3
 		color3 = color1
-		instance = { position = { 0.5 0.475 }  scale = { 1.35 0.9 } }
+		instance = { position = { 0.5 0.496484 }  scale = { 1.35 0.9 } }
 	}
 }
 
@@ -9865,7 +9865,7 @@ mathrafal_dynasty = {
 
 # EU5 mauli_dynasty
 mauli_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield_inner_02.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield_inner_02.dds"
 	color1 = "eu5dyn_red"
 	color2 = "eu5dyn_white"
 	color3 = "eu5dyn_yellow"
@@ -9879,14 +9879,14 @@ mauli_dynasty = {
 		texture = "eu5dyn_ce_per_pale.dds"
 		color1 = color2
 		color2 = color1
-		instance = { position = { 0.425 0.46 } scale = { 1.5 1 } }
+		instance = { position = { 0.425 0.5 } scale = { 1.5 1 } }
 		mask = { 2 }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_frame_india_lotus_voided.dds"
 		color1 = color3
 		color2 = color3
-		instance = { position = { 0.5 0.46 } scale = { 1.1625 0.775 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.1625 0.775 } }
 	}
 }
 
@@ -10260,7 +10260,7 @@ miladid_dynasty = {
 
 # EU5 mirwari_dynasty
 mirwari_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield.dds"
 	color1 = "eu5dyn_red_scarlet"
 	color2 = rgb { 76 128 25 }
 	color3 = "eu5dyn_yellow"
@@ -10282,13 +10282,13 @@ mirwari_dynasty = {
 		texture = "eu5dyn_ce_crescent_star_06_mena.dds"
 		color1 = color4
 		color2 = color4
-		instance = { position = { 0.5 0.485 }  scale = { 0.825 0.575 } }
+		instance = { position = { 0.5 0.525 }  scale = { 0.825 0.575 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_shield_top_frame.dds"
 		color1 = color3
 		color2 = color3
-		instance = { position = { 0.5 0.46 } scale = { 1.1625 0.775 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.1625 0.775 } }
 	}
 }
 
@@ -10879,7 +10879,7 @@ muzakajt_dynasty = {
 
 # EU5 muzni_dynasty
 muzni_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield.dds"
 	color1 = "eu5dyn_yellow"
 	color2 = "eu5dyn_red"
 	color3 = "eu5dyn_green"
@@ -10935,7 +10935,7 @@ myinsaing_dynasty = {
 
 # EU5 nabhani_dynasty
 nabhani_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield_inner.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield_inner.dds"
 	color1 = "eu5dyn_red"
 	color2 = "eu5dyn_green_light"
 	color3 = "eu5dyn_yellow"
@@ -12321,7 +12321,7 @@ parsberg_dynasty = {
 
 # EU5 pasai_dynasty
 pasai_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield.dds"
 	color1 = "eu5dyn_black_secondary"
 	color2 = "eu5dyn_yellow"
 	color3 = "eu5dyn_red_mid"
@@ -12337,21 +12337,21 @@ pasai_dynasty = {
 		texture = "eu5dyn_ce_crescent.dds"
 		color1 = color4
 		color2 = color4
-		instance = { position = { 0.5 0.5 } scale = { 0.9 0.575 } }
+		instance = { position = { 0.5 0.54 } scale = { 0.9 0.575 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_star_05.dds"
 		color1 = color4
 		color2 = color4
-		instance = { position = { 0.5 0.275 } scale = { 0.225 0.15 } }
-		instance = { position = { 0.41 0.375 } scale = { 0.225 0.15 } }
-		instance = { position = { 0.59 0.375 } scale = { 0.225 0.15 } }
+		instance = { position = { 0.5 0.315 } scale = { 0.225 0.15 } }
+		instance = { position = { 0.41 0.415 } scale = { 0.225 0.15 } }
+		instance = { position = { 0.59 0.415 } scale = { 0.225 0.15 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_shield_top_frame.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.46 } scale = { 1.1625 0.775 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.1625 0.775 } }
 	}
 }
 
@@ -12643,7 +12643,7 @@ plauen_dynasty = {
 		color1 = color2
 		color2 = color3
 		color3 = color3
-		instance = { position = { 0.5 0.475 } scale = { 1.35 0.9 } }
+		instance = { position = { 0.5 0.496484 } scale = { 1.35 0.9 } }
 	}
 }
 
@@ -12826,7 +12826,7 @@ premyslid_dynasty = {
 		color1 = color2
 		color2 = color3
 		color3 = color3
-		instance = { position = { 0.5 0.475 } scale = { 1.35 0.9 } }
+		instance = { position = { 0.5 0.496484 } scale = { 1.35 0.9 } }
 	}
 }
 
@@ -13133,7 +13133,7 @@ rankali_dynasty = {
 
 # EU5 rasulid_dynasty
 rasulid_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield.dds"
 	color1 = "eu5dyn_yellow"
 	color2 = "eu5dyn_red"
 	color3 = "eu5dyn_white"
@@ -14123,7 +14123,7 @@ schwarzburg_dynasty = {
 		color1 = color2
 		color2 = color3
 		color3 = color2
-		instance = { position = { 0.5 0.475 } scale = { 1.35 0.9 } }
+		instance = { position = { 0.5 0.496484 } scale = { 1.35 0.9 } }
 	}
 }
 
@@ -14242,7 +14242,7 @@ shimazu_dynasty = {
 		texture = "eu5dyn_ce_mon_shimazu.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -14351,7 +14351,7 @@ sisodia_dynasty = {
 
 # EU5 siyara_dynasty
 siyara_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield_inner.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield_inner.dds"
 	color1 = "eu5dyn_red"
 	color2 = "eu5dyn_white"
 	color3 = "eu5dyn_yellow"
@@ -14360,20 +14360,20 @@ siyara_dynasty = {
 		texture = "eu5dyn_ce_mena_ordinary_chief.dds"
 		color1 = color1
 		color2 = color1
-		instance = { position = { 0.5 0.573438 }  scale = { 1.5 1 } }
+		instance = { position = { 0.5 0.5 }  scale = { 1.5 1 } }
 		mask = { 2 }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_crescent.dds"
 		color1 = color1
 		color2 = color1
-		instance = { position = { 0.5 0.603437 }  scale = { 0.8625 0.575 } }
+		instance = { position = { 0.5 0.53 }  scale = { 0.8625 0.575 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_shield_top_frame.dds"
 		color1 = color3
 		color2 = color3
-		instance = { position = { 0.5 0.573438 } scale = { 1.2 0.8 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.2 0.8 } }
 	}
 }
 
@@ -14403,7 +14403,7 @@ smilets_dynasty = {
 		color1 = color2
 		color2 = color2
 		color3 = color3
-		instance = { position = { 0.5 0.475 } scale = { 1.35 0.9 } }
+		instance = { position = { 0.5 0.496484 } scale = { 1.35 0.9 } }
 	}
 }
 
@@ -14468,7 +14468,7 @@ solomonid_dynasty = {
 
 # EU5 soomra_dynasty
 soomra_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield.dds"
 	color1 = rgb { 76 128 25 }
 	color2 = "eu5dyn_yellow"
 	color3 = "eu5dyn_red_mid"
@@ -15070,7 +15070,7 @@ sverre_aetten_dynasty = {
 		color1 = color2
 		color2 = color3
 		color3 = color2
-		instance = { scale = { 1.35 0.9 } position = { 0.5 0.475 } }
+		instance = { scale = { 1.35 0.9 } position = { 0.5 0.496484 } }
 	}
 }
 
@@ -15155,7 +15155,7 @@ takashina_dynasty = {
 		texture = "eu5dyn_ce_mon_hana_wachigai.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -15409,7 +15409,7 @@ tellez_giron_dynasty = {
 
 # EU5 tellis_dynasty
 tellis_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield_inner.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield_inner.dds"
 	color1 = "eu5dyn_green"
 	color2 = "eu5dyn_white"
 	color3 = "eu5dyn_yellow"
@@ -15429,13 +15429,13 @@ tellis_dynasty = {
 		texture = "eu5dyn_ce_crescents_03_pairle_shield.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.445 }  scale = { 0.975 -0.65 } }
+		instance = { position = { 0.5 0.485 }  scale = { 0.975 -0.65 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_shield_top_frame.dds"
 		color1 = color3
 		color2 = color3
-		instance = { position = { 0.5 0.46 } scale = { 1.2 0.8 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.2 0.8 } }
 	}
 }
 
@@ -15458,7 +15458,7 @@ terter_dynasty = {
 
 # EU5 thabit_dynasty
 thabit_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield.dds"
 	color1 = "eu5dyn_white"
 	color2 = "eu5dyn_red"
 	color3 = "eu5dyn_green"
@@ -15869,7 +15869,7 @@ uda_genji_dynasty = {
 		texture = "eu5dyn_ce_mon_so.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.47 } scale = { 1.0875 0.75 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.0875 0.75 } }
 	}
 }
 
@@ -15931,7 +15931,7 @@ ughanid_dynasty = {
 
 # EU5 umar_dynasty
 umar_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield_inner.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield_inner.dds"
 	color1 = "eu5dyn_red"
 	color2 = "eu5dyn_yellow"
 	color3 = "eu5dyn_blue"
@@ -16546,7 +16546,7 @@ von_gleichen_dynasty = {
 		color1 = color2
 		color2 = color2
 		color3 = color3
-		instance = { position = { 0.5 0.475 } scale = { 1.35 0.9 } }
+		instance = { position = { 0.5 0.496484 } scale = { 1.35 0.9 } }
 	}
 }
 
@@ -16794,7 +16794,7 @@ wake_dynasty = {
 
 # EU5 walashma_dynasty
 walashma_dynasty = {
-	pattern = "eu5dyn_aspect_pattern_mena_round_frame_shield_inner.dds"
+	pattern = "eu5dyn_centered_pattern_mena_round_frame_shield_inner.dds"
 	color1 = "eu5dyn_green"
 	color2 = "eu5dyn_red_mid"
 	color3 = "eu5dyn_yellow"
@@ -16811,13 +16811,13 @@ walashma_dynasty = {
 		texture = "eu5dyn_ce_crescent_increscent_shield.dds"
 		color1 = color4
 		color2 = color4
-		instance = { position = { 0.5 0.46 }  scale = { -0.975 0.65 } }
+		instance = { position = { 0.5 0.5 }  scale = { -0.975 0.65 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_shield_top_frame.dds"
 		color1 = color4
 		color2 = color4
-		instance = { position = { 0.5 0.46 } scale = { 1.2 0.8 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.2 0.8 } }
 	}
 }
 
@@ -16962,7 +16962,7 @@ wassenberg_dynasty = {
 		color1 = color2
 		color2 = color3
 		color3 = color2
-		instance = { position = { 0.5 0.475 } scale = { 1.35 0.9 } }
+		instance = { position = { 0.5 0.496484 } scale = { 1.35 0.9 } }
 	}
 }
 
@@ -17290,7 +17290,7 @@ yamato_dynasty = {
 		texture = "eu5dyn_ce_mon_yamato.dds"
 		color1 = color2
 		color2 = color1
-		instance = { position = { 0.5 0.46 } scale = { 1.0875 0.725 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.0875 0.725 } }
 	}
 }
 
@@ -17563,7 +17563,7 @@ house_aisu = {
 		texture = "eu5dyn_ce_mon_aisu.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.475 } scale = { 1.0875 0.725 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.0875 0.725 } }
 	}
 }
 
@@ -17595,44 +17595,44 @@ house_al_ali = {
 		color1 = color2
 		color2 = color5
 		color3 = color2
-		instance = { position = { 0.5 0.46 } scale = { 1.2 0.8 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.2 0.8 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_side_horns.dds"
 		color1 = color1
 		color2 = color1
-		instance = { position = { 0.5 0.46 } scale = { 0.75 0.5 } }
+		instance = { position = { 0.5 0.5 } scale = { 0.75 0.5 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_center_lamp.dds"
 		color1 = color1
 		color2 = color1
-		instance = { position = { 0.5 0.46 } scale = { 0.5025 0.335 } }
+		instance = { position = { 0.5 0.5 } scale = { 0.5025 0.335 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_bottom_axe.dds"
 		color1 = color4
 		color2 = color4
-		instance = { position = { 0.5 0.682 } scale = { 0.51 0.34 } }
+		instance = { position = { 0.5 0.722 } scale = { 0.51 0.34 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_bottom_buqja.dds"
 		color1 = color4
 		color2 = color4
-		instance = { position = { 0.425 0.245 } scale = { 0.45 0.325 } }
-		instance = { position = { 0.575 0.245 } scale = { 0.45 0.325 } }
+		instance = { position = { 0.425 0.285 } scale = { 0.45 0.325 } }
+		instance = { position = { 0.575 0.285 } scale = { 0.45 0.325 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_shield_bars.dds"
 		color1 = color3
 		color2 = color3
-		instance = { position = { 0.5 0.46 } scale = { 1.2 0.8 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.2 0.8 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mena_shield_top_frame.dds"
 		color1 = color3
 		color2 = color3
-		instance = { position = { 0.5 0.46 } scale = { 1.2 0.8 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.2 0.8 } }
 	}
 }
 
@@ -17838,7 +17838,7 @@ house_ashikaga = {
 		texture = "eu5dyn_ce_mon_ashikaga.dds"
 		color1 = color2
 		color2 = color1
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -17852,7 +17852,7 @@ house_ashina = {
 		texture = "eu5dyn_ce_mon_sakuma.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -18275,7 +18275,7 @@ house_date = {
 		texture = "eu5dyn_ce_mon_date.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.435 } scale = { 0.975 0.67 } }
+		instance = { position = { 0.5 0.5 } scale = { 0.975 0.67 } }
 	}
 }
 
@@ -18393,7 +18393,7 @@ house_enya = {
 		texture = "eu5dyn_ce_mon_hana_wachigai.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -18484,7 +18484,7 @@ house_hatakeyama = {
 		texture = "eu5dyn_ce_mon_ashikaga.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -18526,7 +18526,7 @@ house_hienuki = {
 		texture = "eu5dyn_ce_mon_shiba.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -18659,7 +18659,7 @@ house_ijuuin = {
 		texture = "eu5dyn_ce_mon_izyuin.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.0875 0.725 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.0875 0.725 } }
 	}
 }
 
@@ -18687,7 +18687,7 @@ house_inawashiro = {
 		texture = "eu5dyn_ce_mon_sakuma.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -18733,7 +18733,7 @@ house_isa = {
 		texture = "eu5dyn_ce_mon_shiba.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -18761,7 +18761,7 @@ house_ishidou = {
 		texture = "eu5dyn_ce_mon_ashikaga.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -18789,7 +18789,7 @@ house_isshiki = {
 		texture = "eu5dyn_ce_mon_ashikaga.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -18887,7 +18887,7 @@ house_kikkawa = {
 		texture = "eu5dyn_ce_mon_sakuma.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -18915,7 +18915,7 @@ house_kira = {
 		texture = "eu5dyn_ce_mon_ashikaga.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -18971,7 +18971,7 @@ house_kou = {
 		texture = "eu5dyn_ce_mon_hana_wachigai.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -19202,7 +19202,7 @@ house_minami = {
 		texture = "eu5dyn_ce_mon_hana_wachigai.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -19230,7 +19230,7 @@ house_miura = {
 		texture = "eu5dyn_ce_mon_miura.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.46 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -19278,7 +19278,7 @@ house_mogami = {
 		texture = "eu5dyn_ce_mon_shiba.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -19292,7 +19292,7 @@ house_momonoi = {
 		texture = "eu5dyn_ce_mon_ashikaga.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -19385,7 +19385,7 @@ house_nagano = {
 		texture = "eu5dyn_ce_mon_sakuma.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -19413,7 +19413,7 @@ house_nanbu = {
 		texture = "eu5dyn_ce_mon_nanbu.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -19505,7 +19505,7 @@ house_nitsuki = {
 		texture = "eu5dyn_ce_mon_ashikaga.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -19519,7 +19519,7 @@ house_nitta = {
 		texture = "eu5dyn_ce_mon_nita.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -19547,7 +19547,7 @@ house_ogasawara = {
 		texture = "eu5dyn_ce_mon_ogasawara.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.46 } scale = { 1.0875 0.75 } }
+		instance = { position = { 0.5 0.501465 } scale = { 1.0875 0.75 } }
 	}
 }
 
@@ -19617,7 +19617,7 @@ house_ooida = {
 		texture = "eu5dyn_ce_mon_oida.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -19631,7 +19631,7 @@ house_oosaki = {
 		texture = "eu5dyn_ce_mon_shiba.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -19828,7 +19828,7 @@ house_rokkaku = {
 		texture = "eu5dyn_ce_mon_so.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.47 } scale = { 1.0875 0.75 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.0875 0.75 } }
 	}
 }
 
@@ -19870,7 +19870,7 @@ house_sahara = {
 		texture = "eu5dyn_ce_mon_sakuma.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -19884,7 +19884,7 @@ house_sasaki = {
 		texture = "eu5dyn_ce_mon_so.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.47 } scale = { 1.0875 0.75 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.0875 0.75 } }
 	}
 }
 
@@ -19918,7 +19918,7 @@ house_satomi = {
 		texture = "eu5dyn_ce_mon_oida.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -19932,7 +19932,7 @@ house_shiba = {
 		texture = "eu5dyn_ce_mon_shiba.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -19960,7 +19960,7 @@ house_shouni = {
 		texture = "eu5dyn_ce_mon_so.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.47 } scale = { 1.0875 0.75 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.0875 0.75 } }
 	}
 }
 
@@ -20295,7 +20295,7 @@ house_ueno = {
 		texture = "eu5dyn_ce_mon_ashikaga.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -20309,7 +20309,7 @@ house_uesugi = {
 		texture = "eu5dyn_ce_mon_uesugi.dds"
 		color1 = color2
 		color2 = color1
-		instance = { position = { 0.5 0.46 } scale = { 1.125 0.75 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.125 0.75 } }
 	}
 }
 
@@ -20379,21 +20379,21 @@ house_wachi = {
 		texture = "eu5dyn_ce_solid.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.45 } scale = { 0.28 0.43 } }
+		instance = { position = { 0.5 0.5 } scale = { 0.28 0.43 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_solid.dds"
 		color1 = color1
 		color2 = color1
-		instance = { position = { 0.5 0.35 } scale = { 0.09 0.21 } }
-		instance = { position = { 0.365 0.55 } scale = { 0.09 0.21 } }
-		instance = { position = { 0.635 0.55 } scale = { 0.09 0.21 } }
+		instance = { position = { 0.5 0.4 } scale = { 0.09 0.21 } }
+		instance = { position = { 0.365 0.6 } scale = { 0.09 0.21 } }
+		instance = { position = { 0.635 0.6 } scale = { 0.09 0.21 } }
 	}
 	colored_emblem = {
 		texture = "eu5dyn_ce_mon_frame_circle.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.45 } scale = { 1.095 0.73 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.095 0.73 } }
 	}
 }
 
@@ -20515,7 +20515,7 @@ house_yoshimi = {
 		texture = "eu5dyn_ce_mon_shiba.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
@@ -20571,7 +20571,7 @@ house_hatano = {
 		texture = "eu5dyn_ce_mon_jinbo.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.455 } scale = { 1.05 0.7 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.05 0.7 } }
 	}
 }
 
