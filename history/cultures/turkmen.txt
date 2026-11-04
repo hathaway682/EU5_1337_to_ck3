@@ -52,3 +52,33 @@
 	discover_innovation = innovation_men_at_arms
 	discover_innovation = innovation_divine_right
 }
+# 1337 scenario: later medieval cultural history.
+1250.1.1 = {
+	discover_innovation = innovation_currency_03
+}
+
+1300.1.1 = {
+	join_era = culture_era_late_medieval
+}
+
+# 1337 scenario: regional innovation.
+1331.1.1 = {
+	discover_innovation = innovation_ghilman
+}
+
+# 1337 scenario: water-powered mills and related machinery.
+1333.1.1 = {
+	discover_innovation = innovation_windmills
+}
+
+# 1337 scenario: Anatolian urban, military and administrative institutions.
+1334.1.1 = {
+	discover_innovation = innovation_city_planning
+	discover_innovation = innovation_ledger
+	discover_innovation = innovation_burhs
+	discover_innovation = innovation_development_02
+	discover_innovation = innovation_chronicle_writing
+	discover_innovation = innovation_knighthood
+	discover_innovation = innovation_advanced_bowmaking
+	discover_innovation = innovation_heraldry
+}

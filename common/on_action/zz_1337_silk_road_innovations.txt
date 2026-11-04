@@ -1,0 +1,58 @@
+# Additional historically grounded Silk Road innovations for the 1337 scenario.
+# The vanilla helper both registers eligibility and grants the innovation.
+on_game_start = {
+    on_actions = { eu5_1337_silk_road_innovations }
+}
+
+eu5_1337_silk_road_innovations = {
+    effect = {
+        if = {
+            limit = {
+                has_tgp_dlc_trigger = yes
+                game_start_date = 1337.4.1
+            }
+            culture:uyghur = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = block_printing }
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = double_entry_bookkeeping }
+            }
+            culture:mongol = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = block_printing }
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = double_entry_bookkeeping }
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+            }
+            culture:japanese = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = block_printing }
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+            }
+            culture:goryeo = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = block_printing }
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+            }
+            culture:viet = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+            }
+            culture:bouxcuengh = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+            }
+            culture:tai = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+            }
+            culture:khmer = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+            }
+            culture:burmese = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+            }
+            culture:javanese = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+            }
+            culture:cham = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+            }
+        }
+    }
+}

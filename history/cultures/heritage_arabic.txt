@@ -63,3 +63,21 @@
 	discover_innovation = innovation_house_soldiers
 	discover_innovation = innovation_manorialism
 }
+# 1337 scenario: later medieval cultural history.
+1250.1.1 = {
+	discover_innovation = innovation_currency_03
+}
+
+1300.1.1 = {
+	join_era = culture_era_late_medieval
+}
+
+# 1337 scenario: water-powered mills and related machinery.
+1333.1.1 = {
+	discover_innovation = innovation_windmills
+}
+
+# 1337: steppe exchange and documented crossbow transmission.
+1336.11.1 = {
+	discover_innovation = innovation_advanced_bowmaking
+}

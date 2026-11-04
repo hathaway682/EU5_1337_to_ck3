@@ -55,3 +55,31 @@
 	discover_innovation = innovation_hereditary_rule
 	discover_innovation = innovation_stem_duchies
 }
+
+# 1337 scenario: later medieval cultural history.
+1250.1.1 = {
+	discover_innovation = innovation_guilds
+	discover_innovation = innovation_currency_03
+	discover_innovation = innovation_development_03
+	discover_innovation = innovation_windmills
+}
+
+1300.1.1 = {
+	join_era = culture_era_late_medieval
+}
+
+1325.1.1 = {
+	discover_innovation = innovation_machicolations
+}
+
+# 1337 scenario: medieval military and feudal institutions.
+1332.1.1 = {
+	discover_innovation = innovation_men_at_arms
+	discover_innovation = innovation_divine_right
+	discover_innovation = innovation_scutage
+}
+
+1336.1.1 = {
+	discover_innovation = innovation_advanced_bowmaking
+}
+
