@@ -83293,23 +83293,14 @@
 	faith = miaphysitism
 	rite = armenian_rite
 	holding = church_holding
-	304.1.1 = {
-		special_building_slot = etchmiadzin_cathedral
-	}
 }
 3745 = {
 	culture = armenian
 	faith = miaphysitism
 	rite = armenian_rite
 	holding = castle_holding
-	effect = {
-		if = {
-			limit = {
-				has_tgp_dlc_trigger = yes
-			}
-			add_special_building_slot = dvin_shuka_01
-			add_special_building = dvin_shuka_01
-		}
+	304.1.1 = {
+		special_building_slot = etchmiadzin_cathedral
 	}
 }
 3747 = {
@@ -83323,6 +83314,15 @@
 	faith = miaphysitism
 	rite = armenian_rite
 	holding = none
+	effect = {
+		if = {
+			limit = {
+				has_tgp_dlc_trigger = yes
+			}
+			add_special_building_slot = dvin_shuka_01
+			add_special_building = dvin_shuka_01
+		}
+	}
 }
 3749 = {
 	culture = armenian
@@ -95161,7 +95161,7 @@
 1451 = {
 	culture = scottish
 	faith = catholic
-	holding = none
+	holding = castle_holding
 }
 1453 = {
 	culture = scottish
@@ -104079,6 +104079,7 @@
 	culture = swedish
 	faith = catholic
 	holding = castle_holding
+	special_building = temple_of_uppsala_01
 }
 2 = {
 	culture = swedish
@@ -104094,7 +104095,6 @@
 	culture = swedish
 	faith = catholic
 	holding = church_holding
-	special_building = temple_of_uppsala_01
 }
 5 = {
 	culture = swedish
