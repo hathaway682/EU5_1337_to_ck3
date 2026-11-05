@@ -2505,13 +2505,22 @@ on_game_start = {
 				add_title_law = confederation_elective_succession_law
 			}
 		}
+		# Adapt the vanilla 1178 roster to our 1337 people and map.
 		if = {
-			limit = {
-				has_pam_dlc_trigger = yes
+			limit = { game_start_date = 1337.4.1 current_date = 1337.4.1 }
+			if = {
+				limit = { has_pam_dlc_trigger = yes }
+				eu5_1337_historical_monastic_orders_effect = yes
 			}
-			set_up_historical_monastic_orders_effect = yes
+			eu5_1337_historical_military_orders_effect = yes
 		}
-		set_up_historical_military_orders_effect = yes
+		else = {
+			if = {
+				limit = { has_pam_dlc_trigger = yes }
+				set_up_historical_monastic_orders_effect = yes
+			}
+			set_up_historical_military_orders_effect = yes
+		}
 
 		## PAM ##
 

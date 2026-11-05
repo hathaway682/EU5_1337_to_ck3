@@ -60,3 +60,18 @@
 		}
 	}
 }
+
+
+# Avignon papacy: use the dark-age phase for the 1337 bookmark.
+1337.4.1 = {
+	effect = {
+		if = {
+			limit = { has_pam_dlc_trigger = yes game_start_date = 1337.4.1 }
+			situation:the_christian_church = {
+				situation_top_sub_region = {
+					change_phase = { phase = saeculum_obscurum }
+				}
+			}
+		}
+	}
+}

@@ -97,6 +97,11 @@ ho_christian_knights_hospitaller = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = military_order_game_start_founder }
 			}
@@ -110,6 +115,8 @@ ho_christian_knights_hospitaller = {
 				# founder is a hospital-building type
 				ai_compassion >= 0
 			}
+		}
+
 		}
 	}
 
@@ -287,6 +294,11 @@ ho_christian_order_of_calatrava = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = military_order_game_start_founder }
 			}
@@ -308,6 +320,8 @@ ho_christian_order_of_calatrava = {
 					}
 				}
 			}
+		}
+
 		}
 	}
 
@@ -399,6 +413,11 @@ ho_christian_order_of_alcantara = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = military_order_game_start_founder }
 			}
@@ -420,6 +439,8 @@ ho_christian_order_of_alcantara = {
 					}
 				}
 			}
+		}
+
 		}
 	}
 
@@ -496,6 +517,11 @@ ho_christian_order_of_santiago = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = military_order_game_start_founder }
 			}
@@ -517,6 +543,8 @@ ho_christian_order_of_santiago = {
 					}
 				}
 			}
+		}
+
 		}
 	}
 
@@ -971,6 +999,11 @@ ho_christian_order_of_aviz = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = military_order_game_start_founder }
 			}
@@ -990,6 +1023,8 @@ ho_christian_order_of_aviz = {
 					}
 				}
 			}
+		}
+
 		}
 	}
 
@@ -1761,6 +1796,11 @@ ho_christian_benedictine_order = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 				current_year >= 867
@@ -1779,6 +1819,8 @@ ho_christian_benedictine_order = {
 					}
 				}
 			}
+		}
+
 		}
 	}
 
@@ -1820,7 +1862,11 @@ ho_christian_benedictine_order = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 				current_year >= 1178
 			}
-			scope:new_holy_order = { set_order_tenet = tenet:tenet_simony }
+			if = {
+				limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+				scope:new_holy_order = { set_order_tenet = tenet:tenet_scholasticism }
+			}
+			else = { scope:new_holy_order = { set_order_tenet = tenet:tenet_simony } }
 		}
 		else_if = {
 			limit = {
@@ -1850,6 +1896,11 @@ ho_christian_cluniacs = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -1864,6 +1915,8 @@ ho_christian_cluniacs = {
 					geographical_region = world_europe_west_francia
 				}
 			}
+		}
+
 		}
 	}
 
@@ -1934,6 +1987,11 @@ ho_christian_camaldolese = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -1948,6 +2006,8 @@ ho_christian_camaldolese = {
 					geographical_region = world_europe_south_italy
 				}
 			}
+		}
+
 		}
 	}
 
@@ -2061,6 +2121,11 @@ ho_imperial_canonesses = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -2083,6 +2148,8 @@ ho_imperial_canonesses = {
 					is_female = yes
 				}
 			}
+		}
+
 		}
 	}
 
@@ -2156,6 +2223,11 @@ ho_christian_vallombrosans = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -2171,6 +2243,8 @@ ho_christian_vallombrosans = {
 				empire = title:e_italy
 			}
 			current_year >= 900
+		}
+
 		}
 	}
 
@@ -2224,6 +2298,11 @@ ho_christian_premonstratensians = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -2242,6 +2321,8 @@ ho_christian_premonstratensians = {
 				}
 			}
 			current_year >= 1100
+		}
+
 		}
 	}
 
@@ -2289,6 +2370,11 @@ ho_christian_carthusians = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -2304,6 +2390,8 @@ ho_christian_carthusians = {
 				kingdom = title:k_burgundy
 			}
 			current_year >= 1100
+		}
+
 		}
 	}
 
@@ -2350,6 +2438,11 @@ ho_christian_tironensians = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -2369,6 +2462,8 @@ ho_christian_tironensians = {
 				}
 			}
 			current_year >= 1000
+		}
+
 		}
 	}
 
@@ -2416,6 +2511,11 @@ ho_christian_fontevraud_order = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -2434,6 +2534,8 @@ ho_christian_fontevraud_order = {
 				}
 			}
 			current_year >= 1100
+		}
+
 		}
 	}
 
@@ -2491,6 +2593,11 @@ ho_christian_augustinian_canons = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -2503,6 +2610,8 @@ ho_christian_augustinian_canons = {
 					has_doctrine_parameter = is_western_christian_faith
 				}
 			}
+		}
+
 		}
 	}
 
@@ -2754,6 +2863,11 @@ ho_gorziac_benedictines = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -2769,6 +2883,8 @@ ho_gorziac_benedictines = {
 				kingdom = title:k_lotharingia
 			}
 			current_year >= 900
+		}
+
 		}
 	}
 
@@ -2983,6 +3099,11 @@ ho_christian_hirsau_benedictines = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -3002,6 +3123,8 @@ ho_christian_hirsau_benedictines = {
 				}
 			}
 			current_year >= 1000
+		}
+
 		}
 	}
 
@@ -3305,6 +3428,11 @@ ho_christian_iberian_cluniacs = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = {
 					has_variable = monastic_game_start_founder
@@ -3326,6 +3454,8 @@ ho_christian_iberian_cluniacs = {
 				geographical_region = world_europe_west_iberia
 			}
 			current_year >= 900
+		}
+
 		}
 	}
 
@@ -3783,6 +3913,11 @@ ho_christian_ugo_benedictines = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -3799,6 +3934,8 @@ ho_christian_ugo_benedictines = {
 				kingdom = title:k_romagna
 			}
 			current_year >= 900
+		}
+
 		}
 	}
 
@@ -3926,6 +4063,11 @@ ho_christian_martinian_benedictines = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -3943,6 +4085,8 @@ ho_christian_martinian_benedictines = {
 					empire = title:e_france
 				}
 			}
+		}
+
 		}
 	}
 
@@ -4194,6 +4338,11 @@ ho_christian_norman_benedictines = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -4216,6 +4365,8 @@ ho_christian_norman_benedictines = {
 					culture = culture:norman
 				}
 			}
+		}
+
 		}
 	}
 
@@ -4275,6 +4426,11 @@ ho_christian_cistercians = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -4289,6 +4445,8 @@ ho_christian_cistercians = {
 					geographical_region = world_europe_west
 				}
 			}
+		}
+
 		}
 	}
 
@@ -4551,6 +4709,11 @@ ho_christian_ulaid_monasteries = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -4568,6 +4731,8 @@ ho_christian_ulaid_monasteries = {
 			scope:province = {
 				duchy = title:d_ulster
 			}
+		}
+
 		}
 	}
 
@@ -4857,6 +5022,11 @@ ho_christian_gaelic_abbeys = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -4877,6 +5047,8 @@ ho_christian_gaelic_abbeys = {
 					has_cultural_pillar = heritage_goidelic
 				}
 			}
+		}
+
 		}
 	}
 
@@ -4990,6 +5162,11 @@ ho_christian_athonite_hermits = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -5013,6 +5190,8 @@ ho_christian_athonite_hermits = {
 					is_male = yes
 				}
 			}
+		}
+
 		}
 	}
 
@@ -5081,6 +5260,11 @@ ho_christian_bithynians = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -5096,6 +5280,8 @@ ho_christian_bithynians = {
 			scope:province = {
 				geographical_region = world_asia_minor
 			}
+		}
+
 		}
 	}
 
@@ -5133,6 +5319,11 @@ ho_christian_latros_hesychasts = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -5148,6 +5339,8 @@ ho_christian_latros_hesychasts = {
 			scope:province.county = {
 				duchy = title:d_ephese
 			}
+		}
+
 		}
 	}
 
@@ -5237,6 +5430,11 @@ ho_christian_georgian_monasteries = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -5263,6 +5461,8 @@ ho_christian_georgian_monasteries = {
 			scope:province = {
 				kingdom = title:k_georgia
 			}
+		}
+
 		}
 	}
 
@@ -5300,6 +5500,11 @@ ho_christian_evergetine_cenobites = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -5321,6 +5526,8 @@ ho_christian_evergetine_cenobites = {
 				geographical_region = world_europe_south_east
 			}
 			current_year >= 1049
+		}
+
 		}
 	}
 
@@ -5358,6 +5565,11 @@ ho_christian_klimentine_monasteries = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -5380,6 +5592,8 @@ ho_christian_klimentine_monasteries = {
 				}
 			}
 			current_year >= 886
+		}
+
 		}
 	}
 
@@ -5417,6 +5631,11 @@ ho_christian_kyivan_studites = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -5438,6 +5657,8 @@ ho_christian_kyivan_studites = {
 				kingdom = title:k_ruthenia
 			}
 			current_year >= 1051
+		}
+
 		}
 	}
 
@@ -5475,6 +5696,11 @@ ho_christian_yurievs = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -5499,6 +5725,8 @@ ho_christian_yurievs = {
 				kingdom = title:k_novgorod
 			}
 			current_year >= 1030
+		}
+
 		}
 	}
 
@@ -5536,6 +5764,11 @@ ho_christian_boeotians = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -5551,6 +5784,8 @@ ho_christian_boeotians = {
 			scope:province.county = {
 				duchy = title:d_athens
 			}
+		}
+
 		}
 	}
 
@@ -5588,6 +5823,11 @@ ho_christian_euphrosynians = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -5612,6 +5852,8 @@ ho_christian_euphrosynians = {
 				}
 			}
 			current_year >= 1173
+		}
+
 		}
 	}
 
@@ -5672,6 +5914,11 @@ ho_christian_sisters_of_the_nativity = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -5690,6 +5937,8 @@ ho_christian_sisters_of_the_nativity = {
 			scope:leader ?= {
 				is_female = yes
 			}
+		}
+
 		}
 	}
 
@@ -5750,6 +5999,11 @@ ho_christian_bahitawi = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -5766,6 +6020,8 @@ ho_christian_bahitawi = {
 			scope:province = {
 				geographical_region = world_africa_east
 			}
+		}
+
 		}
 	}
 
@@ -5803,6 +6059,11 @@ ho_christian_desert_fathers = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -5816,6 +6077,8 @@ ho_christian_desert_fathers = {
 			scope:province = {
 				geographical_region = world_africa_north_east
 			}
+		}
+
 		}
 	}
 
@@ -5853,6 +6116,11 @@ ho_christian_monks_of_hayk = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -5877,6 +6145,8 @@ ho_christian_monks_of_hayk = {
 			scope:province = {
 				kingdom = title:k_armenia
 			}
+		}
+
 		}
 	}
 
@@ -5914,6 +6184,11 @@ ho_christian_eastern_vardapets = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -5936,6 +6211,8 @@ ho_christian_eastern_vardapets = {
 				kingdom = title:k_armenia
 			}
 			current_year >= 1150
+		}
+
 		}
 	}
 
@@ -5973,6 +6250,11 @@ ho_christian_sons_of_the_covenant = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -5986,6 +6268,8 @@ ho_christian_sons_of_the_covenant = {
 			scope:province = {
 				geographical_region = world_jazira
 			}
+		}
+
 		}
 	}
 
@@ -6022,6 +6306,11 @@ ho_christian_rightful_dayroye = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -6036,6 +6325,8 @@ ho_christian_rightful_dayroye = {
 			scope:province = {
 				geographical_region = world_jazira
 			}
+		}
+
 		}
 	}
 
@@ -6072,6 +6363,11 @@ ho_christian_community_of_st_catherine = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -6084,6 +6380,8 @@ ho_christian_community_of_st_catherine = {
 				rite = rite:antiochian_rite
 			}
 			scope:province.county ?= title:c_sinai
+		}
+
 		}
 	}
 
@@ -6162,6 +6460,11 @@ ho_christian_franciscans = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -6177,6 +6480,8 @@ ho_christian_franciscans = {
 			scope:province = {
 				empire = title:e_italy
 			}
+		}
+
 		}
 	}
 
@@ -6204,6 +6509,11 @@ ho_christian_dominicans = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = monastic_game_start_founder }
 			}
@@ -6216,6 +6526,8 @@ ho_christian_dominicans = {
 				}
 			}
 			current_year >= 1200
+		}
+
 		}
 	}
 

@@ -1,0 +1,2169 @@
+﻿# Vanilla 1178 roster plus the EU5 1337 religious-order setup and its leaders.
+# Monastic orders require PAM, as in vanilla. Military orders do not.
+# Headquarters and branch houses are all non-capital baronies.
+# Landed county ownership is retained; only the barony leases are established.
+
+eu5_1337_prepare_order_barony_effect = {
+	title:$BARONY$ = {
+		if = {
+			limit = { title_province = { has_holding = no } }
+			title_province = { set_holding_type = $HOLDING$ }
+		}
+		# Vanilla startup likewise consolidates baronies under their county holder.
+		county.holder = { get_title = title:$BARONY$ }
+	}
+}
+
+eu5_1337_found_order_effect = {
+	eu5_1337_prepare_order_barony_effect = { BARONY = $CAPITAL$ HOLDING = $HOLDING$ }
+	$LEADER$ = { save_scope_as = eu5_1337_order_founder }
+	# Prefer a local patron of the same faith; minority enclaves can found themselves.
+	title:$CAPITAL$.county.holder = {
+		if = {
+			limit = { faith = $LEADER$.faith }
+			save_scope_as = eu5_1337_order_founder
+		}
+	}
+	scope:eu5_1337_order_founder = {
+		set_variable = { name = $STARTUP_FLAG$ days = 1 }
+		add_character_flag = eu5_1337_historical_order_setup
+	}
+	# Explicit type preserves the historical name, arms, tenet and succession setup.
+	create_holy_order = {
+		leader = $LEADER$
+		founder = scope:eu5_1337_order_founder
+		holy_order_type = $TYPE$
+		capital = title:$CAPITAL$
+		save_scope_as = $ORDER_SCOPE$
+	}
+	scope:eu5_1337_order_founder = { remove_variable = $STARTUP_FLAG$ remove_character_flag = eu5_1337_historical_order_setup }
+	if = {
+		limit = { exists = scope:$ORDER_SCOPE$ }
+		set_global_variable = $FLAG$
+		$LEADER$ = {
+			add_trait = $TRAIT$
+			add_piety_level = 2
+			add_gold = holy_order_starting_gold
+			every_courtier = { add_trait = $TRAIT$ }
+		}
+	}
+}
+
+eu5_1337_lease_order_branch_effect = {
+	if = {
+		limit = {
+			exists = $ORDER$
+			title:$BARONY$ = {
+				exists = county.holder
+				is_under_holy_order_lease = no
+				title_province = { is_county_capital = no }
+			}
+		}
+		eu5_1337_prepare_order_barony_effect = { BARONY = $BARONY$ HOLDING = $HOLDING$ }
+		title:$BARONY$ = { lease_out_to_holy_order = $ORDER$ }
+	}
+}
+
+eu5_1337_historical_monastic_orders_effect = {
+	if = {
+		limit = { game_start_date = 1337.4.1 current_date = 1337.4.1 }
+		# Old Benedictines
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_0_created }
+				title:b_nonantola = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_benedictine_order.holder }
+			}
+			if = {
+				limit = { exists = character:nap_raymond_gramat character:nap_raymond_gramat = { is_alive = yes } }
+				character:nap_raymond_gramat = { save_scope_as = eu5_1337_order_0_leader }
+			}
+			else = {
+				create_character = {
+					age = 45
+					gender = male
+					dynasty = none
+					random_traits = yes
+					faith = rite:roman_rite.faith
+					rite = rite:roman_rite
+					culture = culture:occitan
+					location = title:b_nonantola.title_province
+					trait = devoted
+					trait = celibate
+					trait = education_learning_3
+					save_scope_as = eu5_1337_order_0_leader
+				}
+			}
+			scope:eu5_1337_order_0_leader = { change_first_name = eu5_order_head_nap_raymond_gramat }
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_0_leader
+				CAPITAL = b_nonantola
+				TYPE = ho_christian_benedictine_order
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_0
+				FLAG = eu5_1337_order_0_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_0 } scope:eu5_1337_order_0 = { set_order_tenet = tenet:tenet_scholasticism } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_montalcino ORDER = scope:eu5_1337_order_0 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_chioggia ORDER = scope:eu5_1337_order_0 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_pinerolo ORDER = scope:eu5_1337_order_0 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_usti_nad_labem ORDER = scope:eu5_1337_order_0 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_split ORDER = scope:eu5_1337_order_0 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_melk ORDER = scope:eu5_1337_order_0 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_wertingen ORDER = scope:eu5_1337_order_0 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_corleone ORDER = scope:eu5_1337_order_0 HOLDING = church_holding }
+		}
+		# Ulaid Monasteries
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_1_created }
+				title:b_clogher = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_ulaid_monasteries.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:irish
+				location = title:b_clogher.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_1_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_1_leader
+				CAPITAL = b_clogher
+				TYPE = ho_christian_ulaid_monasteries
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_1
+				FLAG = eu5_1337_order_1_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_1 } scope:eu5_1337_order_1 = { set_order_rite = rite:roman_rite } }
+			if = { limit = { exists = scope:eu5_1337_order_1 } scope:eu5_1337_order_1 = { set_order_tenet = tenet:tenet_confession } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_kilmacrennan ORDER = scope:eu5_1337_order_1 HOLDING = church_holding }
+		}
+		# Cluniacs
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_2_created }
+				title:b_charolles = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_cluniacs.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:french
+				location = title:b_charolles.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_2_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_2_leader
+				CAPITAL = b_charolles
+				TYPE = ho_christian_cluniacs
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_2
+				FLAG = eu5_1337_order_2_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_2 } scope:eu5_1337_order_2 = { set_order_tenet = tenet:tenet_transubstantiation } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_figeac ORDER = scope:eu5_1337_order_2 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_lodeve ORDER = scope:eu5_1337_order_2 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_jonzac ORDER = scope:eu5_1337_order_2 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_montreuil ORDER = scope:eu5_1337_order_2 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_beaugency ORDER = scope:eu5_1337_order_2 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_bielsko ORDER = scope:eu5_1337_order_2 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_corbie ORDER = scope:eu5_1337_order_2 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_sint_niklaas ORDER = scope:eu5_1337_order_2 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_sauveterre_de_guyenne ORDER = scope:eu5_1337_order_2 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_lewes ORDER = scope:eu5_1337_order_2 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_berga ORDER = scope:eu5_1337_order_2 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_ringsted ORDER = scope:eu5_1337_order_2 HOLDING = church_holding }
+		}
+		# Camaldolese Hermits
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_3_created }
+				title:b_mangona = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_camaldolese.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:polish
+				location = title:b_mangona.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_3_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_3_leader
+				CAPITAL = b_mangona
+				TYPE = ho_christian_camaldolese
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_3
+				FLAG = eu5_1337_order_3_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_3 } scope:eu5_1337_order_3 = { set_order_tenet = tenet:tenet_mortification_of_the_flesh } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_uniejow ORDER = scope:eu5_1337_order_3 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_isili ORDER = scope:eu5_1337_order_3 HOLDING = church_holding }
+		}
+		# Ugo Benedictines
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_4_created }
+				title:b_sabina = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_ugo_benedictines.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:italian
+				location = title:b_sabina.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_4_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_4_leader
+				CAPITAL = b_sabina
+				TYPE = ho_christian_ugo_benedictines
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_4
+				FLAG = eu5_1337_order_4_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_4 } scope:eu5_1337_order_4 = { set_order_tenet = tenet:tenet_divine_liturgy } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_venafro ORDER = scope:eu5_1337_order_4 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_sandonnino ORDER = scope:eu5_1337_order_4 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_velletri ORDER = scope:eu5_1337_order_4 HOLDING = church_holding }
+		}
+		# Vallombrosans
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_5_created }
+				title:b_sanlorenzo = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_vallombrosans.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:italian
+				location = title:b_sanlorenzo.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_5_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_5_leader
+				CAPITAL = b_sanlorenzo
+				TYPE = ho_christian_vallombrosans
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_5
+				FLAG = eu5_1337_order_5_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_5 } scope:eu5_1337_order_5 = { set_order_tenet = tenet:tenet_philanthropia } }
+		}
+		# Gaelic Abbeys
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_6_created }
+				title:b_mull = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_gaelic_abbeys.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:gaelic
+				location = title:b_mull.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_6_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_6_leader
+				CAPITAL = b_mull
+				TYPE = ho_christian_gaelic_abbeys
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_6
+				FLAG = eu5_1337_order_6_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_6 } scope:eu5_1337_order_6 = { set_order_rite = rite:roman_rite } }
+			if = { limit = { exists = scope:eu5_1337_order_6 } scope:eu5_1337_order_6 = { set_order_tenet = tenet:tenet_sanctity_of_nature } }
+		}
+		# Imperial Canonesses
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_7_created }
+				title:b_darmstadt = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_imperial_canonesses.holder }
+			}
+			create_character = {
+				age = 45
+				gender = female
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:franconian
+				location = title:b_darmstadt.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_7_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_7_leader
+				CAPITAL = b_darmstadt
+				TYPE = ho_imperial_canonesses
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_7
+				FLAG = eu5_1337_order_7_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_7 } scope:eu5_1337_order_7 = { set_order_tenet = tenet:tenet_celestial_hierarchy } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_essen ORDER = scope:eu5_1337_order_7 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_ballenstedt ORDER = scope:eu5_1337_order_7 HOLDING = church_holding }
+		}
+		# Gorziac Benedictines
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_8_created }
+				title:b_morhange = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:franconian
+				location = title:b_morhange.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_8_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_8_leader
+				CAPITAL = b_morhange
+				TYPE = ho_gorziac_benedictines
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_8
+				FLAG = eu5_1337_order_8_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_8 } scope:eu5_1337_order_8 = { set_order_tenet = tenet:tenet_ora_et_labora } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_fresnes ORDER = scope:eu5_1337_order_8 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_prum ORDER = scope:eu5_1337_order_8 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_hersfeld ORDER = scope:eu5_1337_order_8 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_gandersheim ORDER = scope:eu5_1337_order_8 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_neustadt_an_der_haardt ORDER = scope:eu5_1337_order_8 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_kelheim ORDER = scope:eu5_1337_order_8 HOLDING = church_holding }
+		}
+		# Martinian Benedictines
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_9_created }
+				title:b_papa = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_martinian_benedictines.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:hungarian
+				location = title:b_papa.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_9_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_9_leader
+				CAPITAL = b_papa
+				TYPE = ho_christian_martinian_benedictines
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_9
+				FLAG = eu5_1337_order_9_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_9 } scope:eu5_1337_order_9 = { set_order_tenet = tenet:tenet_scholasticism } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_csurgo ORDER = scope:eu5_1337_order_9 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_novigrad ORDER = scope:eu5_1337_order_9 HOLDING = church_holding }
+		}
+		# Silosian Benedictines
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_10_created }
+				title:b_sto_domingo_silos = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_iberian_cluniacs.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:castilian
+				location = title:b_sto_domingo_silos.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_10_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_10_leader
+				CAPITAL = b_sto_domingo_silos
+				TYPE = ho_christian_iberian_cluniacs
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_10
+				FLAG = eu5_1337_order_10_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_10 } scope:eu5_1337_order_10 = { set_order_tenet = tenet:tenet_communion } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_aranda_de_duero ORDER = scope:eu5_1337_order_10 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_sahagun ORDER = scope:eu5_1337_order_10 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_jaca ORDER = scope:eu5_1337_order_10 HOLDING = church_holding }
+		}
+		# Order of Cistercians
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_11_created }
+				title:b_beaune = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_cistercians.holder }
+			}
+			if = {
+				limit = { exists = character:bur_jean_chaudenay character:bur_jean_chaudenay = { is_alive = yes } }
+				character:bur_jean_chaudenay = { save_scope_as = eu5_1337_order_11_leader }
+			}
+			else = {
+				create_character = {
+					age = 45
+					gender = male
+					dynasty = none
+					random_traits = yes
+					faith = rite:roman_rite.faith
+					rite = rite:roman_rite
+					culture = culture:french
+					location = title:b_beaune.title_province
+					trait = devoted
+					trait = celibate
+					trait = education_learning_3
+					save_scope_as = eu5_1337_order_11_leader
+				}
+			}
+			scope:eu5_1337_order_11_leader = { change_first_name = eu5_order_head_bur_jean_chaudenay }
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_11_leader
+				CAPITAL = b_beaune
+				TYPE = ho_christian_cistercians
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_11
+				FLAG = eu5_1337_order_11_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_11 } scope:eu5_1337_order_11 = { set_order_tenet = tenet:tenet_asceticism } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_auneau ORDER = scope:eu5_1337_order_11 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_chaumont_vexin ORDER = scope:eu5_1337_order_11 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_castelnaudary ORDER = scope:eu5_1337_order_11 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_banbury ORDER = scope:eu5_1337_order_11 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_montblanc ORDER = scope:eu5_1337_order_11 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_modigliana ORDER = scope:eu5_1337_order_11 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_legnano ORDER = scope:eu5_1337_order_11 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_viterbo ORDER = scope:eu5_1337_order_11 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_alcobaca ORDER = scope:eu5_1337_order_11 HOLDING = church_holding }
+		}
+		# Premonstratensians
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_12_created }
+				title:b_laon = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_premonstratensians.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:french
+				location = title:b_laon.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_12_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_12_leader
+				CAPITAL = b_laon
+				TYPE = ho_christian_premonstratensians
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_12
+				FLAG = eu5_1337_order_12_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_12 } scope:eu5_1337_order_12 = { set_order_tenet = tenet:tenet_love_thy_neighbour } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_catania ORDER = scope:eu5_1337_order_12 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_j_hradec ORDER = scope:eu5_1337_order_12 HOLDING = church_holding }
+		}
+		# Order of Carthusians
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_13_created }
+				title:b_romans = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_carthusians.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:occitan
+				location = title:b_romans.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_13_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_13_leader
+				CAPITAL = b_romans
+				TYPE = ho_christian_carthusians
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_13
+				FLAG = eu5_1337_order_13_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_13 } scope:eu5_1337_order_13 = { set_order_tenet = tenet:tenet_anachoresis } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_lasko ORDER = scope:eu5_1337_order_13 HOLDING = church_holding }
+		}
+		# Order of Tiron
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_14_created }
+				title:b_forfar = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_tironensians.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:scottish
+				location = title:b_forfar.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_14_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_14_leader
+				CAPITAL = b_forfar
+				TYPE = ho_christian_tironensians
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_14
+				FLAG = eu5_1337_order_14_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_14 } scope:eu5_1337_order_14 = { set_order_tenet = tenet:tenet_ora_et_labora } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_beaumont_au_maine ORDER = scope:eu5_1337_order_14 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_pembroke ORDER = scope:eu5_1337_order_14 HOLDING = church_holding }
+		}
+		# Fontevraud Order
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_15_created }
+				title:b_loudun = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_fontevraud_order.holder }
+			}
+			create_character = {
+				age = 45
+				gender = female
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:french
+				location = title:b_loudun.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_15_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_15_leader
+				CAPITAL = b_loudun
+				TYPE = ho_christian_fontevraud_order
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_15
+				FLAG = eu5_1337_order_15_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_15 } scope:eu5_1337_order_15 = { set_order_tenet = tenet:tenet_hyperdulia } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_chippenham ORDER = scope:eu5_1337_order_15 HOLDING = church_holding }
+		}
+		# Augustinian Canons
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_16_created }
+				title:b_taunton = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_augustinian_canons.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:norman
+				location = title:b_taunton.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_16_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_16_leader
+				CAPITAL = b_taunton
+				TYPE = ho_christian_augustinian_canons
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_16
+				FLAG = eu5_1337_order_16_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_16 } scope:eu5_1337_order_16 = { set_order_tenet = tenet:tenet_mendicant_preachers } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_dumfries ORDER = scope:eu5_1337_order_16 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_ballymore ORDER = scope:eu5_1337_order_16 HOLDING = church_holding }
+		}
+		# Hirsau Benedictines
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_17_created }
+				title:b_oppenheim = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_hirsau_benedictines.holder }
+			}
+			create_character = {
+				age = 45
+				gender = female
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:franconian
+				location = title:b_oppenheim.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_17_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_17_leader
+				CAPITAL = b_oppenheim
+				TYPE = ho_christian_hirsau_benedictines
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_17
+				FLAG = eu5_1337_order_17_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_17 } scope:eu5_1337_order_17 = { set_order_tenet = tenet:tenet_divine_liturgy } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_griesbach ORDER = scope:eu5_1337_order_17 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_hallein ORDER = scope:eu5_1337_order_17 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_bludenz ORDER = scope:eu5_1337_order_17 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_luxeuil ORDER = scope:eu5_1337_order_17 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_bruchsal ORDER = scope:eu5_1337_order_17 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_bamberg ORDER = scope:eu5_1337_order_17 HOLDING = church_holding }
+		}
+		# Norman Benedictines
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_18_created }
+				title:b_st_albans = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_norman_benedictines.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:norman
+				location = title:b_st_albans.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_18_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_18_leader
+				CAPITAL = b_st_albans
+				TYPE = ho_christian_norman_benedictines
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_18
+				FLAG = eu5_1337_order_18_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_18 } scope:eu5_1337_order_18 = { set_order_tenet = tenet:tenet_ora_et_labora } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_hexham ORDER = scope:eu5_1337_order_18 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_stoke ORDER = scope:eu5_1337_order_18 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_lowestoft ORDER = scope:eu5_1337_order_18 HOLDING = church_holding }
+		}
+		# Athonite Hermits
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_19_created }
+				title:b_mount_athos = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_athonite_hermits.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:byzantine_rite.faith
+				rite = rite:byzantine_rite
+				culture = culture:greek
+				location = title:b_mount_athos.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_19_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_19_leader
+				CAPITAL = b_mount_athos
+				TYPE = ho_christian_athonite_hermits
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_19
+				FLAG = eu5_1337_order_19_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_19 } scope:eu5_1337_order_19 = { set_order_tenet = tenet:tenet_celestial_hierarchy } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_trikala ORDER = scope:eu5_1337_order_19 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_prokuplje ORDER = scope:eu5_1337_order_19 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_varna ORDER = scope:eu5_1337_order_19 HOLDING = church_holding }
+		}
+		# Bithynians
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_20_created }
+				title:b_adranos = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_bithynians.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:byzantine_rite.faith
+				rite = rite:byzantine_rite
+				culture = culture:greek
+				location = title:b_adranos.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_20_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_20_leader
+				CAPITAL = b_adranos
+				TYPE = ho_christian_bithynians
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_20
+				FLAG = eu5_1337_order_20_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_20 } scope:eu5_1337_order_20 = { set_order_tenet = tenet:tenet_holy_myron } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_eynegol ORDER = scope:eu5_1337_order_20 HOLDING = church_holding }
+		}
+		# Latros Hesychasts
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_21_created }
+				title:b_balat = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_latros_hesychasts.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:byzantine_rite.faith
+				rite = rite:byzantine_rite
+				culture = culture:greek
+				location = title:b_balat.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_21_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_21_leader
+				CAPITAL = b_balat
+				TYPE = ho_christian_latros_hesychasts
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_21
+				FLAG = eu5_1337_order_21_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_21 } scope:eu5_1337_order_21 = { set_order_tenet = tenet:tenet_hesychasm } }
+		}
+		# Georgian Monasteries
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_22_created }
+				title:b_mtskheta = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_georgian_monasteries.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:georgian_rite.faith
+				rite = rite:georgian_rite
+				culture = culture:georgian
+				location = title:b_mtskheta.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_22_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_22_leader
+				CAPITAL = b_mtskheta
+				TYPE = ho_christian_georgian_monasteries
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_22
+				FLAG = eu5_1337_order_22_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_22 } scope:eu5_1337_order_22 = { set_order_tenet = tenet:tenet_dulia } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_panaskerti ORDER = scope:eu5_1337_order_22 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_tsepina ORDER = scope:eu5_1337_order_22 HOLDING = church_holding }
+		}
+		# Evergetine Cenobites
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_23_created }
+				title:b_silivri = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_evergetine_cenobites.holder }
+			}
+			create_character = {
+				age = 45
+				gender = female
+				dynasty = none
+				random_traits = yes
+				faith = rite:byzantine_rite.faith
+				rite = rite:byzantine_rite
+				culture = culture:greek
+				location = title:b_silivri.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_23_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_23_leader
+				CAPITAL = b_silivri
+				TYPE = ho_christian_evergetine_cenobites
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_23
+				FLAG = eu5_1337_order_23_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_23 } scope:eu5_1337_order_23 = { set_order_tenet = tenet:tenet_philanthropia } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_kilkis ORDER = scope:eu5_1337_order_23 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_surmene ORDER = scope:eu5_1337_order_23 HOLDING = church_holding }
+		}
+		# Klimentine Monks
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_24_created }
+				title:b_devol = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_klimentine_monasteries.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:slavic_rite.faith
+				rite = rite:slavic_rite
+				culture = culture:greek
+				location = title:b_devol.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_24_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_24_leader
+				CAPITAL = b_devol
+				TYPE = ho_christian_klimentine_monasteries
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_24
+				FLAG = eu5_1337_order_24_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_24 } scope:eu5_1337_order_24 = { set_order_tenet = tenet:tenet_acts_of_apostles } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_dupnitsa ORDER = scope:eu5_1337_order_24 HOLDING = church_holding }
+		}
+		# Chernoriztsy
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_25_created }
+				title:b_skvyra = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_kyivan_studites.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:slavic_rite.faith
+				rite = rite:slavic_rite
+				culture = culture:russian
+				location = title:b_skvyra.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_25_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_25_leader
+				CAPITAL = b_skvyra
+				TYPE = ho_christian_kyivan_studites
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_25
+				FLAG = eu5_1337_order_25_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_25 } scope:eu5_1337_order_25 = { set_order_tenet = tenet:tenet_ora_et_labora } }
+		}
+		# Yurievs
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_26_created }
+				title:b_soltsy = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_yurievs.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:slavic_rite.faith
+				rite = rite:slavic_rite
+				culture = culture:russian
+				location = title:b_soltsy.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_26_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_26_leader
+				CAPITAL = b_soltsy
+				TYPE = ho_christian_yurievs
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_26
+				FLAG = eu5_1337_order_26_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_26 } scope:eu5_1337_order_26 = { set_order_tenet = tenet:tenet_adaptive } }
+		}
+		# Boeotians
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_27_created }
+				title:b_gravia = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_boeotians.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:byzantine_rite.faith
+				rite = rite:byzantine_rite
+				culture = culture:greek
+				location = title:b_gravia.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_27_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_27_leader
+				CAPITAL = b_gravia
+				TYPE = ho_christian_boeotians
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_27
+				FLAG = eu5_1337_order_27_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_27 } scope:eu5_1337_order_27 = { set_order_tenet = tenet:tenet_confession } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_megara ORDER = scope:eu5_1337_order_27 HOLDING = church_holding }
+		}
+		# Euphrosynians
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_28_created }
+				title:b_kraslava = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_euphrosynians.holder }
+			}
+			create_character = {
+				age = 45
+				gender = female
+				dynasty = none
+				random_traits = yes
+				faith = rite:slavic_rite.faith
+				rite = rite:slavic_rite
+				culture = culture:russian
+				location = title:b_kraslava.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_28_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_28_leader
+				CAPITAL = b_kraslava
+				TYPE = ho_christian_euphrosynians
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_28
+				FLAG = eu5_1337_order_28_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_28 } scope:eu5_1337_order_28 = { set_order_tenet = tenet:tenet_scholasticism } }
+		}
+		# Sisters of the Nativity
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_29_created }
+				title:b_sudogda = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_sisters_of_the_nativity.holder }
+			}
+			create_character = {
+				age = 45
+				gender = female
+				dynasty = none
+				random_traits = yes
+				faith = rite:slavic_rite.faith
+				rite = rite:slavic_rite
+				culture = culture:russian
+				location = title:b_sudogda.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_29_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_29_leader
+				CAPITAL = b_sudogda
+				TYPE = ho_christian_sisters_of_the_nativity
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_29
+				FLAG = eu5_1337_order_29_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_29 } scope:eu5_1337_order_29 = { set_order_tenet = tenet:tenet_hyperdulia } }
+		}
+		# Bahitawi
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_30_created }
+				title:b_chercher = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_bahitawi.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:ethiopian_rite.faith
+				rite = rite:ethiopian_rite
+				culture = culture:ethiopian
+				location = title:b_chercher.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_30_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_30_leader
+				CAPITAL = b_chercher
+				TYPE = ho_christian_bahitawi
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_30
+				FLAG = eu5_1337_order_30_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_30 } scope:eu5_1337_order_30 = { set_order_tenet = tenet:tenet_esotericism } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_shire ORDER = scope:eu5_1337_order_30 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_debre_bizen ORDER = scope:eu5_1337_order_30 HOLDING = church_holding }
+		}
+		# Desert Fathers
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_31_created }
+				title:b_wadi_el_natrun = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_desert_fathers.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:coptic_rite.faith
+				rite = rite:coptic_rite
+				culture = culture:egyptian
+				location = title:b_wadi_el_natrun.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_31_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_31_leader
+				CAPITAL = b_wadi_el_natrun
+				TYPE = ho_christian_desert_fathers
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_31
+				FLAG = eu5_1337_order_31_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_31 } scope:eu5_1337_order_31 = { set_order_tenet = tenet:tenet_anachoresis } }
+		}
+		# Monks of Hayk'
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_32_created }
+				title:b_haterk = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_monks_of_hayk.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:armenian_rite.faith
+				rite = rite:armenian_rite
+				culture = culture:armenian
+				location = title:b_haterk.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_32_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_32_leader
+				CAPITAL = b_haterk
+				TYPE = ho_christian_monks_of_hayk
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_32
+				FLAG = eu5_1337_order_32_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_32 } scope:eu5_1337_order_32 = { set_order_tenet = tenet:tenet_communal_identity } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_julfa ORDER = scope:eu5_1337_order_32 HOLDING = church_holding }
+		}
+		# Eastern Vardapets
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_33_created }
+				title:b_kumayri = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_eastern_vardapets.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:armenian_rite.faith
+				rite = rite:armenian_rite
+				culture = culture:armenian
+				location = title:b_kumayri.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_33_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_33_leader
+				CAPITAL = b_kumayri
+				TYPE = ho_christian_eastern_vardapets
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_33
+				FLAG = eu5_1337_order_33_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_33 } scope:eu5_1337_order_33 = { set_order_tenet = tenet:tenet_alexandrian_catechism } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_gardman ORDER = scope:eu5_1337_order_33 HOLDING = church_holding }
+		}
+		# Sons of the Covenant
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_34_created }
+				title:b_duhok = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_sons_of_the_covenant.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:nestorian.faith
+				rite = rite:nestorian
+				culture = culture:assyrian
+				location = title:b_duhok.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_34_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_34_leader
+				CAPITAL = b_duhok
+				TYPE = ho_christian_sons_of_the_covenant
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_34
+				FLAG = eu5_1337_order_34_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_34 } scope:eu5_1337_order_34 = { set_order_tenet = tenet:tenet_literalism } }
+		}
+		# Rightful Dayroye
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_35_created }
+				title:b_barqaid = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_rightful_dayroye.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:antiochian_rite.faith
+				rite = rite:antiochian_rite
+				culture = culture:assyrian
+				location = title:b_barqaid.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_35_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_35_leader
+				CAPITAL = b_barqaid
+				TYPE = ho_christian_rightful_dayroye
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_35
+				FLAG = eu5_1337_order_35_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_35 } scope:eu5_1337_order_35 = { set_order_tenet = tenet:tenet_pastoral_isolation } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_ras_ayn ORDER = scope:eu5_1337_order_35 HOLDING = church_holding }
+		}
+		# Community of St Catherine
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_36_created }
+				title:b_saint_katrine = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_community_of_st_catherine.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:antiochian_rite.faith
+				rite = rite:antiochian_rite
+				culture = culture:greek
+				location = title:b_saint_katrine.title_province
+				trait = devoted
+				trait = celibate
+				trait = education_learning_3
+				save_scope_as = eu5_1337_order_36_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_36_leader
+				CAPITAL = b_saint_katrine
+				TYPE = ho_christian_community_of_st_catherine
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_36
+				FLAG = eu5_1337_order_36_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_36 } scope:eu5_1337_order_36 = { set_order_tenet = tenet:tenet_ritual_hospitality } }
+		}
+		# Dominicans
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_48_created }
+				title:b_medicina = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_dominicans.holder }
+			}
+			if = {
+				limit = { exists = character:bur_hugh_vaucemain character:bur_hugh_vaucemain = { is_alive = yes } }
+				character:bur_hugh_vaucemain = { save_scope_as = eu5_1337_order_48_leader }
+			}
+			else = {
+				create_character = {
+					age = 45
+					gender = male
+					dynasty = none
+					random_traits = yes
+					faith = rite:roman_rite.faith
+					rite = rite:roman_rite
+					culture = culture:french
+					location = title:b_medicina.title_province
+					trait = devoted
+					trait = celibate
+					trait = education_learning_3
+					save_scope_as = eu5_1337_order_48_leader
+				}
+			}
+			scope:eu5_1337_order_48_leader = { change_first_name = eu5_order_head_bur_hugh_vaucemain }
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_48_leader
+				CAPITAL = b_medicina
+				TYPE = ho_christian_dominicans
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_48
+				FLAG = eu5_1337_order_48_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_48 } scope:eu5_1337_order_48 = { set_order_tenet = tenet:tenet_mendicant_preachers } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_nola ORDER = scope:eu5_1337_order_48 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_bonn ORDER = scope:eu5_1337_order_48 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_montpellier ORDER = scope:eu5_1337_order_48 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_ksiaz_wielki ORDER = scope:eu5_1337_order_48 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_poggibonsi ORDER = scope:eu5_1337_order_48 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_austria_baden ORDER = scope:eu5_1337_order_48 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_apolda ORDER = scope:eu5_1337_order_48 HOLDING = church_holding }
+		}
+		# Franciscans
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_49_created }
+				title:b_assisi = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_franciscans.holder }
+			}
+			if = {
+				limit = { exists = character:pap_gerald_odonis character:pap_gerald_odonis = { is_alive = yes } }
+				character:pap_gerald_odonis = { save_scope_as = eu5_1337_order_49_leader }
+			}
+			else = {
+				create_character = {
+					age = 45
+					gender = male
+					dynasty = none
+					random_traits = yes
+					faith = rite:roman_rite.faith
+					rite = rite:roman_rite
+					culture = culture:occitan
+					location = title:b_assisi.title_province
+					trait = devoted
+					trait = celibate
+					trait = education_learning_3
+					save_scope_as = eu5_1337_order_49_leader
+				}
+			}
+			scope:eu5_1337_order_49_leader = { change_first_name = eu5_order_head_pap_gerald_odonis }
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_49_leader
+				CAPITAL = b_assisi
+				TYPE = ho_christian_franciscans
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_49
+				FLAG = eu5_1337_order_49_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_49 } scope:eu5_1337_order_49 = { set_order_tenet = tenet:tenet_vows_of_poverty } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_monselice ORDER = scope:eu5_1337_order_49 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_indersdorf ORDER = scope:eu5_1337_order_49 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_kourim ORDER = scope:eu5_1337_order_49 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_canterbury ORDER = scope:eu5_1337_order_49 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_esztergom ORDER = scope:eu5_1337_order_49 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_pontedera ORDER = scope:eu5_1337_order_49 HOLDING = church_holding }
+		}
+		# Augustinian Hermits
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_50_created }
+				title:b_montmorency = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_eu5_augustinian_hermits.holder }
+			}
+			if = {
+				limit = { exists = character:fra_guglielmo_cremona character:fra_guglielmo_cremona = { is_alive = yes } }
+				character:fra_guglielmo_cremona = { save_scope_as = eu5_1337_order_50_leader }
+			}
+			else = {
+				create_character = {
+					age = 45
+					gender = male
+					dynasty = none
+					random_traits = yes
+					faith = rite:roman_rite.faith
+					rite = rite:roman_rite
+					culture = culture:cisalpine
+					location = title:b_montmorency.title_province
+					trait = devoted
+					trait = celibate
+					trait = education_learning_3
+					save_scope_as = eu5_1337_order_50_leader
+				}
+			}
+			scope:eu5_1337_order_50_leader = { change_first_name = eu5_order_head_fra_guglielmo_cremona }
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_50_leader
+				CAPITAL = b_montmorency
+				TYPE = ho_eu5_augustinian_hermits
+				HOLDING = church_holding
+				STARTUP_FLAG = monastic_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_50
+				FLAG = eu5_1337_order_50_created
+				TRAIT = devoted
+			}
+			if = { limit = { exists = scope:eu5_1337_order_50 } scope:eu5_1337_order_50 = { set_order_tenet = tenet:tenet_confession } }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_passavant ORDER = scope:eu5_1337_order_50 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_breteuil ORDER = scope:eu5_1337_order_50 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_bapaume ORDER = scope:eu5_1337_order_50 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_kingston ORDER = scope:eu5_1337_order_50 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_utrecht ORDER = scope:eu5_1337_order_50 HOLDING = church_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_limbourg ORDER = scope:eu5_1337_order_50 HOLDING = church_holding }
+		}
+	}
+}
+
+eu5_1337_historical_military_orders_effect = {
+	if = {
+		limit = { game_start_date = 1337.4.1 current_date = 1337.4.1 }
+		# Knights Hospitaller
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_38_created }
+				title:b_kos = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_knights_hospitaller.holder }
+			}
+			if = {
+				limit = { exists = character:kni_helion_de_villeneuve character:kni_helion_de_villeneuve = { is_alive = yes } }
+				character:kni_helion_de_villeneuve = { save_scope_as = eu5_1337_order_38_leader }
+			}
+			else = {
+				create_character = {
+					age = 45
+					gender = male
+					dynasty = none
+					random_traits = yes
+					faith = rite:roman_rite.faith
+					rite = rite:roman_rite
+					culture = culture:french
+					location = title:b_kos.title_province
+					trait = order_member
+					trait = celibate
+					trait = education_martial_3
+					save_scope_as = eu5_1337_order_38_leader
+				}
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:occitan
+				location = title:b_kos.title_province
+				trait = order_member
+				trait = celibate
+				trait = education_martial_3
+				save_scope_as = eu5_1337_hospitaller_acting_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_hospitaller_acting_leader
+				CAPITAL = b_kos
+				TYPE = ho_christian_knights_hospitaller
+				HOLDING = castle_holding
+				STARTUP_FLAG = military_order_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_38
+				FLAG = eu5_1337_order_38_created
+				TRAIT = order_member
+			}
+			if = {
+				limit = { exists = scope:eu5_1337_order_38 scope:eu5_1337_order_38_leader = { has_title = title:c_rodos } }
+				scope:eu5_1337_order_38.leader.primary_title = {
+					create_title_and_vassal_change = { type = granted save_scope_as = eu5_1337_hospitaller_transfer add_claim_on_loss = no }
+					change_title_holder_include_vassals = { holder = scope:eu5_1337_order_38_leader change = scope:eu5_1337_hospitaller_transfer }
+					resolve_title_and_vassal_change = scope:eu5_1337_hospitaller_transfer
+				}
+				# Military order government cannot personally hold a church holding.
+				title:b_rodos.title_province = { set_holding_type = castle_holding }
+				scope:eu5_1337_order_38_leader = {
+					change_government = holy_order_government
+					set_primary_title_to = title:d_knights_hospitaller
+				}
+				title:d_eu5_kni = { set_always_follows_primary_heir = yes }
+			}
+			eu5_1337_lease_order_branch_effect = { BARONY = b_baniyas ORDER = scope:eu5_1337_order_38 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_korneuburg ORDER = scope:eu5_1337_order_38 HOLDING = castle_holding }
+		}
+		# Knights of Santiago
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_39_created }
+				title:b_jaraicejo = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_knights_santiago.holder }
+			}
+			if = {
+				limit = { exists = character:cas_vasco_rodriguez_de_coronado character:cas_vasco_rodriguez_de_coronado = { is_alive = yes } }
+				character:cas_vasco_rodriguez_de_coronado = { save_scope_as = eu5_1337_order_39_leader }
+			}
+			else = {
+				create_character = {
+					age = 45
+					gender = male
+					dynasty = none
+					random_traits = yes
+					faith = rite:roman_rite.faith
+					rite = rite:roman_rite
+					culture = culture:asturleonese
+					location = title:b_jaraicejo.title_province
+					trait = order_member
+					trait = celibate
+					trait = education_martial_3
+					save_scope_as = eu5_1337_order_39_leader
+				}
+			}
+			scope:eu5_1337_order_39_leader = { change_first_name = eu5_order_head_cas_vasco_rodriguez_de_coronado }
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_39_leader
+				CAPITAL = b_jaraicejo
+				TYPE = ho_christian_order_of_santiago
+				HOLDING = castle_holding
+				STARTUP_FLAG = military_order_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_39
+				FLAG = eu5_1337_order_39_created
+				TRAIT = order_member
+			}
+			eu5_1337_lease_order_branch_effect = { BARONY = b_ucles ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_consuegra ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_montiel ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_segura_de_la_sierra ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_caravaca ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_azuaga ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_llerena ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_montanchez ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_zafra ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
+		}
+		# Order of Calatrava
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_40_created }
+				title:b_tomelloso = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_knights_calatrava.holder }
+			}
+			if = {
+				limit = { exists = character:cas_juan_nunez_de_prado character:cas_juan_nunez_de_prado = { is_alive = yes } }
+				character:cas_juan_nunez_de_prado = { save_scope_as = eu5_1337_order_40_leader }
+			}
+			else = {
+				create_character = {
+					age = 45
+					gender = male
+					dynasty = none
+					random_traits = yes
+					faith = rite:roman_rite.faith
+					rite = rite:roman_rite
+					culture = culture:castilian
+					location = title:b_tomelloso.title_province
+					trait = order_member
+					trait = celibate
+					trait = education_martial_3
+					save_scope_as = eu5_1337_order_40_leader
+				}
+			}
+			scope:eu5_1337_order_40_leader = { change_first_name = eu5_order_head_cas_juan_nunez_de_prado }
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_40_leader
+				CAPITAL = b_tomelloso
+				TYPE = ho_christian_order_of_calatrava
+				HOLDING = castle_holding
+				STARTUP_FLAG = military_order_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_40
+				FLAG = eu5_1337_order_40_created
+				TRAIT = order_member
+			}
+			eu5_1337_lease_order_branch_effect = { BARONY = b_calatrava ORDER = scope:eu5_1337_order_40 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_manzanares ORDER = scope:eu5_1337_order_40 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_almodovar_del_campo ORDER = scope:eu5_1337_order_40 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_puertollano ORDER = scope:eu5_1337_order_40 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_osuna ORDER = scope:eu5_1337_order_40 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_arcos_de_la_frontera ORDER = scope:eu5_1337_order_40 HOLDING = castle_holding }
+		}
+		# Knights of Avis
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_41_created }
+				title:b_avis = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_knights_aviz.holder }
+			}
+			if = {
+				limit = { exists = character:por_goncalo_vasques character:por_goncalo_vasques = { is_alive = yes } }
+				character:por_goncalo_vasques = { save_scope_as = eu5_1337_order_41_leader }
+			}
+			else = {
+				create_character = {
+					age = 45
+					gender = male
+					dynasty = none
+					random_traits = yes
+					faith = rite:roman_rite.faith
+					rite = rite:roman_rite
+					culture = culture:portuguese
+					location = title:b_avis.title_province
+					trait = order_member
+					trait = celibate
+					trait = education_martial_3
+					save_scope_as = eu5_1337_order_41_leader
+				}
+			}
+			scope:eu5_1337_order_41_leader = { change_first_name = eu5_order_head_por_goncalo_vasques }
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_41_leader
+				CAPITAL = b_avis
+				TYPE = ho_christian_order_of_aviz
+				HOLDING = castle_holding
+				STARTUP_FLAG = military_order_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_41
+				FLAG = eu5_1337_order_41_created
+				TRAIT = order_member
+			}
+			eu5_1337_lease_order_branch_effect = { BARONY = b_mora_portugal ORDER = scope:eu5_1337_order_41 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_elvas ORDER = scope:eu5_1337_order_41 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_vila_vicosa ORDER = scope:eu5_1337_order_41 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_estremoz ORDER = scope:eu5_1337_order_41 HOLDING = castle_holding }
+		}
+		# Turkic Ghazis
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_42_created }
+				title:b_yalvac = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_turkic_ghazis.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:hanafi.faith
+				rite = rite:hanafi
+				culture = culture:turkmen
+				location = title:b_yalvac.title_province
+				trait = order_member
+				trait = celibate
+				trait = education_martial_3
+				save_scope_as = eu5_1337_order_42_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_42_leader
+				CAPITAL = b_yalvac
+				TYPE = ho_turkic_ghazis
+				HOLDING = castle_holding
+				STARTUP_FLAG = military_order_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_42
+				FLAG = eu5_1337_order_42_created
+				TRAIT = order_member
+			}
+			eu5_1337_lease_order_branch_effect = { BARONY = b_cermik ORDER = scope:eu5_1337_order_42 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_malekan ORDER = scope:eu5_1337_order_42 HOLDING = castle_holding }
+		}
+		# Baḥr al-Maghrib Raiders
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_43_created }
+				title:b_tebourba = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_bahr_al_maghrib_raiders.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:maliki.faith
+				rite = rite:maliki
+				culture = culture:baranis
+				location = title:b_tebourba.title_province
+				trait = order_member
+				trait = celibate
+				trait = education_martial_3
+				save_scope_as = eu5_1337_order_43_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_43_leader
+				CAPITAL = b_tebourba
+				TYPE = ho_bahr_al_maghrib_raiders
+				HOLDING = castle_holding
+				STARTUP_FLAG = military_order_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_43
+				FLAG = eu5_1337_order_43_created
+				TRAIT = order_member
+			}
+			eu5_1337_lease_order_branch_effect = { BARONY = b_cherchell ORDER = scope:eu5_1337_order_43 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_cartagena ORDER = scope:eu5_1337_order_43 HOLDING = castle_holding }
+		}
+		# Ghazis of al-Andalus
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_44_created }
+				title:b_loja = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_ghazis_of_al_andalus.holder }
+			}
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:maliki.faith
+				rite = rite:maliki
+				culture = culture:butr
+				location = title:b_loja.title_province
+				trait = order_member
+				trait = celibate
+				trait = education_martial_3
+				save_scope_as = eu5_1337_order_44_leader
+			}
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_44_leader
+				CAPITAL = b_loja
+				TYPE = ho_ghazis_of_al_andalus
+				HOLDING = castle_holding
+				STARTUP_FLAG = military_order_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_44
+				FLAG = eu5_1337_order_44_created
+				TRAIT = order_member
+			}
+			eu5_1337_lease_order_branch_effect = { BARONY = b_guadix ORDER = scope:eu5_1337_order_44 HOLDING = castle_holding }
+		}
+		# Order of Alcantara
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_45_created }
+				title:b_alcantara = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_knights_alcantara.holder }
+			}
+			if = {
+				limit = { exists = character:cas_rodrigo_perez_alcantara character:cas_rodrigo_perez_alcantara = { is_alive = yes } }
+				character:cas_rodrigo_perez_alcantara = { save_scope_as = eu5_1337_order_45_leader }
+			}
+			else = {
+				create_character = {
+					age = 45
+					gender = male
+					dynasty = none
+					random_traits = yes
+					faith = rite:roman_rite.faith
+					rite = rite:roman_rite
+					culture = culture:asturleonese
+					location = title:b_alcantara.title_province
+					trait = order_member
+					trait = celibate
+					trait = education_martial_3
+					save_scope_as = eu5_1337_order_45_leader
+				}
+			}
+			scope:eu5_1337_order_45_leader = { change_first_name = eu5_order_head_cas_rodrigo_perez_alcantara }
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_45_leader
+				CAPITAL = b_alcantara
+				TYPE = ho_christian_order_of_alcantara
+				HOLDING = castle_holding
+				STARTUP_FLAG = military_order_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_45
+				FLAG = eu5_1337_order_45_created
+				TRAIT = order_member
+			}
+			eu5_1337_lease_order_branch_effect = { BARONY = b_brozas ORDER = scope:eu5_1337_order_45 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_valencia_de_alcantara ORDER = scope:eu5_1337_order_45 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_medellin ORDER = scope:eu5_1337_order_45 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_zalamea ORDER = scope:eu5_1337_order_45 HOLDING = castle_holding }
+		}
+		# Order of Christ
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_46_created }
+				title:b_tavira = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_eu5_order_of_christ.holder }
+			}
+			if = {
+				limit = { exists = character:por_estevao_goncalves_leitao character:por_estevao_goncalves_leitao = { is_alive = yes } }
+				character:por_estevao_goncalves_leitao = { save_scope_as = eu5_1337_order_46_leader }
+			}
+			else = {
+				create_character = {
+					age = 45
+					gender = male
+					dynasty = none
+					random_traits = yes
+					faith = rite:roman_rite.faith
+					rite = rite:roman_rite
+					culture = culture:portuguese
+					location = title:b_tavira.title_province
+					trait = order_member
+					trait = celibate
+					trait = education_martial_3
+					save_scope_as = eu5_1337_order_46_leader
+				}
+			}
+			scope:eu5_1337_order_46_leader = { change_first_name = eu5_order_head_por_estevao_goncalves_leitao }
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_46_leader
+				CAPITAL = b_tavira
+				TYPE = ho_eu5_order_of_christ
+				HOLDING = castle_holding
+				STARTUP_FLAG = military_order_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_46
+				FLAG = eu5_1337_order_46_created
+				TRAIT = order_member
+			}
+			eu5_1337_lease_order_branch_effect = { BARONY = b_chao_de_couce ORDER = scope:eu5_1337_order_46 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_proenca_nova ORDER = scope:eu5_1337_order_46 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_idanha ORDER = scope:eu5_1337_order_46 HOLDING = castle_holding }
+		}
+		# Order of Montesa
+		if = {
+			limit = {
+				NOT = { has_global_variable = eu5_1337_order_47_created }
+				title:b_peniscola = {
+					exists = county.holder
+					is_under_holy_order_lease = no
+					title_province = { is_county_capital = no }
+				}
+				NOT = { exists = title:d_eu5_order_of_montesa.holder }
+			}
+			if = {
+				limit = { exists = character:ara_pere_de_thous character:ara_pere_de_thous = { is_alive = yes } }
+				character:ara_pere_de_thous = { save_scope_as = eu5_1337_order_47_leader }
+			}
+			else = {
+				create_character = {
+					age = 45
+					gender = male
+					dynasty = none
+					random_traits = yes
+					faith = rite:roman_rite.faith
+					rite = rite:roman_rite
+					culture = culture:catalan
+					location = title:b_peniscola.title_province
+					trait = order_member
+					trait = celibate
+					trait = education_martial_3
+					save_scope_as = eu5_1337_order_47_leader
+				}
+			}
+			scope:eu5_1337_order_47_leader = { change_first_name = eu5_order_head_ara_pere_de_thous }
+			eu5_1337_found_order_effect = {
+				LEADER = scope:eu5_1337_order_47_leader
+				CAPITAL = b_peniscola
+				TYPE = ho_eu5_order_of_montesa
+				HOLDING = castle_holding
+				STARTUP_FLAG = military_order_game_start_founder
+				ORDER_SCOPE = eu5_1337_order_47
+				FLAG = eu5_1337_order_47_created
+				TRAIT = order_member
+			}
+			eu5_1337_lease_order_branch_effect = { BARONY = b_bunol ORDER = scope:eu5_1337_order_47 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_gandia ORDER = scope:eu5_1337_order_47 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_morella ORDER = scope:eu5_1337_order_47 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_cantavieja ORDER = scope:eu5_1337_order_47 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_ares_del_maestre ORDER = scope:eu5_1337_order_47 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_llucena ORDER = scope:eu5_1337_order_47 HOLDING = castle_holding }
+		}
+	}
+}
+

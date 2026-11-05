@@ -1,0 +1,123 @@
+religious_order_manager = {
+	order_of_calatrava_religious_order = {
+		dlc = "d009_across_the_pillars"
+		graphical_cultures = { calatrava_gfx }
+		type = iberian_military_order_type
+		calling = crusaders_calling
+		religion = catholic
+		coa = CTV
+		zeal = 75
+		locations = { calatrava manzanares almodovar_del_campo puertollano osuna arcos_de_la_frontera }
+		head_character = cas_juan_nunez_de_prado
+	}
+
+	order_of_santiago_religious_order = {
+		dlc = "d009_across_the_pillars"
+		graphical_cultures = { santiago_gfx }
+		type = iberian_military_order_type
+		calling = crusaders_calling
+		religion = catholic
+		coa = STO
+		zeal = 80
+		locations = { ucles ocana montiel segura_de_la_sierra caravaca azuaga llerena merida zafra }
+		head_character = cas_vasco_rodriguez_de_coronado
+	}
+
+	order_of_alcantara_religious_order = {
+		dlc = "d009_across_the_pillars"
+		graphical_cultures = { alcantara_gfx }
+		type = iberian_military_order_type
+		calling = wardens_calling
+		religion = catholic
+		coa = ACT
+		zeal = 70
+		locations = { alcantara brozas valencia_de_alcantara villanueva_de_la_serena zalamea }
+		head_character = cas_rodrigo_perez_alcantara
+	}
+
+	order_of_christ_religious_order = {
+		dlc = "d009_across_the_pillars"
+		graphical_cultures = { order_of_christ_gfx }
+		type = iberian_military_order_type
+		calling = mariners_calling
+		religion = catholic
+		coa = OPX
+		zeal = 70
+		locations = { tavira leiria castelo_branco idanha }
+		head_character = por_estevao_goncalves_leitao
+	}
+
+	order_of_avis_religious_order = {
+		dlc = "d009_across_the_pillars"
+		graphical_cultures = { avis_gfx }
+		type = iberian_military_order_type
+		calling = confidants_calling
+		religion = catholic
+		coa = AVI
+		zeal = 75
+		locations = { avis mora_portugal elvas vila_vicosa estremoz }
+		head_character = por_goncalo_vasques
+	}
+
+	order_of_montesa_religious_order = {
+		dlc = "d009_across_the_pillars"
+		graphical_cultures = { montesa_gfx }
+		type = iberian_military_order_type
+		calling = wardens_calling
+		religion = catholic
+		coa = MTS
+		zeal = 70
+		locations = { peniscola valencia jativa morella cantavieja ares_del_maestre llucena }
+		head_character = ara_pere_de_thous
+	}
+
+	benedictine_order_religious_order = {
+		graphical_cultures = { benedictine_gfx }
+		type = monastic_order_type
+		calling = contemplatives_calling
+		religion = catholic
+		zeal = 85
+		locations = { salzburg regensburg bamberg melk augsburg mainz siena palermo rome sahagun sto_domingo_silos jaca }
+		head_character = nap_raymond_gramat
+	}
+
+	cistercian_order_religious_order = {
+		graphical_cultures = { cistercian_gfx }
+		type = monastic_order_type
+		calling = cultivators_calling
+		religion = catholic
+		zeal = 84
+		locations = { dijon chartres beauvais toulouse oxford tarragona ravenna milano viterbo alcobaca }
+		head_character = bur_jean_chaudenay
+	}
+
+	dominican_order_religious_order = {
+		graphical_cultures = { dominican_gfx }
+		type = mendicant_order_type
+		calling = preachers_calling
+		religion = catholic
+		zeal = 80
+		locations = { bologna naples cologne montpellier krakow florence vienna erfurt }
+		head_character = bur_hugh_vaucemain
+	}
+
+	franciscan_order_religious_order = {
+		graphical_cultures = { franciscan_gfx }
+		type = mendicant_order_type
+		calling = almoners_calling
+		religion = catholic
+		zeal = 85
+		locations = { assisi padova munich prague canterbury esztergom pisa }
+		head_character = pap_gerald_odonis
+	}
+
+	augustine_order_religious_order = {
+		graphical_cultures = { augustine_gfx }
+		type = mendicant_order_type
+		calling = confessors_calling
+		religion = catholic
+		zeal = 78
+		locations = { paris angers amiens arras london utrecht liege }
+		head_character = fra_guglielmo_cremona
+	}
+}

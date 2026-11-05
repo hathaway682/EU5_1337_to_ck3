@@ -1,0 +1,2193 @@
+{
+  "source_date": "1178.10.1",
+  "target_date": "1337.4.1",
+  "orders": [
+    {
+      "LEADER": "character:benedictine_4",
+      "CAPITAL": "title:b_cento",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:b_cento.county.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 0,
+      "leases": [
+        "title:b_montalcino",
+        "title:b_pomposa",
+        "title:b_pinerolo",
+        "title:b_slany",
+        "title:b_solin"
+      ],
+      "capital": "b_nonantola",
+      "capital_km": 25.22,
+      "source_lonlat": [
+        11.237415265317235,
+        44.61209208781713
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_montalcino",
+          "barony": "b_montalcino",
+          "km": 17.35
+        },
+        {
+          "source": "b_pomposa",
+          "barony": "b_chioggia",
+          "km": 18.97
+        },
+        {
+          "source": "b_pinerolo",
+          "barony": "b_pinerolo",
+          "km": 6.73
+        },
+        {
+          "source": "b_slany",
+          "barony": "b_usti_nad_labem",
+          "km": 26.39
+        },
+        {
+          "source": "b_solin",
+          "barony": "b_split",
+          "km": 31.04
+        }
+      ],
+      "type_key": "ho_christian_benedictine_order",
+      "title": "d_benedictine_order",
+      "name_key": "holy_order_benedictine_order",
+      "culture": "occitan",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": "nap_raymond_gramat",
+      "name_en": "Old Benedictines",
+      "name_zh": "旧本笃会",
+      "capital_county": "c_modena",
+      "capital_province": "2551",
+      "branches": [
+        "b_montalcino",
+        "b_chioggia",
+        "b_pinerolo",
+        "b_usti_nad_labem",
+        "b_split",
+        "b_melk",
+        "b_wertingen",
+        "b_corleone"
+      ],
+      "eu5_source_key": "benedictine_order_religious_order",
+      "eu5_order_type": "monastic_order_type",
+      "leader_name_key": "eu5_order_head_nap_raymond_gramat",
+      "leader_name_en": "Raymond de Gramat",
+      "leader_name_zh": "雷蒙·德·格拉马"
+    },
+    {
+      "LEADER": "character:hibernian_monastic_4",
+      "CAPITAL": "title:b_armagh",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:c_oriel.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 1,
+      "leases": [
+        "title:b_raphoe"
+      ],
+      "capital": "b_clogher",
+      "capital_km": 3.24,
+      "source_lonlat": [
+        -7.212884718322492,
+        54.529189023329685
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_raphoe",
+          "barony": "b_kilmacrennan",
+          "km": 8.69
+        }
+      ],
+      "type_key": "ho_christian_ulaid_monasteries",
+      "title": "d_ulaid_monasteries",
+      "name_key": "holy_order_ulaid_monasteries",
+      "culture": "irish",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Ulaid Monasteries",
+      "name_zh": "乌莱德隐修院",
+      "capital_county": "c_tyrone",
+      "capital_province": "1543",
+      "branches": [
+        "b_kilmacrennan"
+      ]
+    },
+    {
+      "LEADER": "character:cluniac_1",
+      "CAPITAL": "title:b_cluny",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:k_france.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 2,
+      "leases": [
+        "title:b_figeac",
+        "title:b_lodeve",
+        "title:b_jonzac",
+        "title:b_abbeville",
+        "title:b_beaugency",
+        "title:b_bielsko",
+        "title:b_corbie",
+        "title:b_gent",
+        "title:b_fronsac",
+        "title:b_arun",
+        "title:b_berga",
+        "title:b_naestved"
+      ],
+      "capital": "b_charolles",
+      "capital_km": 16.85,
+      "source_lonlat": [
+        4.47992561232172,
+        46.685724523713176
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_figeac",
+          "barony": "b_figeac",
+          "km": 23.61
+        },
+        {
+          "source": "b_lodeve",
+          "barony": "b_lodeve",
+          "km": 18.1
+        },
+        {
+          "source": "b_jonzac",
+          "barony": "b_jonzac",
+          "km": 5.96
+        },
+        {
+          "source": "b_abbeville",
+          "barony": "b_montreuil",
+          "km": 26.08
+        },
+        {
+          "source": "b_beaugency",
+          "barony": "b_beaugency",
+          "km": 30.2
+        },
+        {
+          "source": "b_bielsko",
+          "barony": "b_bielsko",
+          "km": 38.99
+        },
+        {
+          "source": "b_corbie",
+          "barony": "b_corbie",
+          "km": 24.13
+        },
+        {
+          "source": "b_gent",
+          "barony": "b_sint_niklaas",
+          "km": 15.01
+        },
+        {
+          "source": "b_fronsac",
+          "barony": "b_sauveterre_de_guyenne",
+          "km": 5.77
+        },
+        {
+          "source": "b_arun",
+          "barony": "b_lewes",
+          "km": 25.77
+        },
+        {
+          "source": "b_berga",
+          "barony": "b_berga",
+          "km": 13.43
+        },
+        {
+          "source": "b_naestved",
+          "barony": "b_ringsted",
+          "km": 16.44
+        }
+      ],
+      "type_key": "ho_christian_cluniacs",
+      "title": "d_cluniacs",
+      "name_key": "holy_order_cluniacs",
+      "culture": "french",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Cluniacs",
+      "name_zh": "克吕尼修会",
+      "capital_county": "c_autunnais",
+      "capital_province": "1681",
+      "branches": [
+        "b_figeac",
+        "b_lodeve",
+        "b_jonzac",
+        "b_montreuil",
+        "b_beaugency",
+        "b_bielsko",
+        "b_corbie",
+        "b_sint_niklaas",
+        "b_sauveterre_de_guyenne",
+        "b_lewes",
+        "b_berga",
+        "b_ringsted"
+      ]
+    },
+    {
+      "LEADER": "character:camaldolese_2",
+      "CAPITAL": "title:b_camaldoli",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:c_casentino.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 3,
+      "leases": [
+        "title:b_uniejow",
+        "title:b_isili"
+      ],
+      "capital": "b_mangona",
+      "capital_km": 14.99,
+      "source_lonlat": [
+        11.496653998808107,
+        44.047877582311735
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_uniejow",
+          "barony": "b_uniejow",
+          "km": 21.27
+        },
+        {
+          "source": "b_isili",
+          "barony": "b_isili",
+          "km": 45.41
+        }
+      ],
+      "type_key": "ho_christian_camaldolese",
+      "title": "d_camaldolese",
+      "name_key": "holy_order_camaldolese",
+      "culture": "polish",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Camaldolese Hermits",
+      "name_zh": "卡马尔多利隐修会",
+      "capital_county": "c_florence",
+      "capital_province": "2728",
+      "branches": [
+        "b_uniejow",
+        "b_isili"
+      ]
+    },
+    {
+      "LEADER": "character:ugo_2",
+      "CAPITAL": "title:b_farfa",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:b_farfa.county.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 4,
+      "leases": [
+        "title:b_cassino",
+        "title:b_florentiola"
+      ],
+      "capital": "b_sabina",
+      "capital_km": 3.45,
+      "source_lonlat": [
+        12.810130248495215,
+        42.20686739893124
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_cassino",
+          "barony": "b_venafro",
+          "km": 18.95
+        },
+        {
+          "source": "b_florentiola",
+          "barony": "b_sandonnino",
+          "km": 23.59
+        }
+      ],
+      "type_key": "ho_christian_ugo_benedictines",
+      "title": "d_ugo_benedictines",
+      "name_key": "holy_order_ugo_benedictines",
+      "culture": "italian",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Ugo Benedictines",
+      "name_zh": "许格本笃会",
+      "capital_county": "c_campagna",
+      "capital_province": "2575",
+      "branches": [
+        "b_venafro",
+        "b_sandonnino",
+        "b_velletri"
+      ]
+    },
+    {
+      "LEADER": "character:vallombrosan_2",
+      "CAPITAL": "title:b_vallombrosa",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:c_arezzo.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 5,
+      "leases": [],
+      "capital": "b_sanlorenzo",
+      "capital_km": 32.06,
+      "source_lonlat": [
+        11.755892732298987,
+        43.58002282848041
+      ],
+      "leases_mapped": [],
+      "type_key": "ho_christian_vallombrosans",
+      "title": "d_vallombrosans",
+      "name_key": "holy_order_vallombrosans",
+      "culture": "italian",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Vallombrosans",
+      "name_zh": "瓦隆布罗萨会",
+      "capital_county": "c_florence",
+      "capital_province": "2731",
+      "branches": []
+    },
+    {
+      "LEADER": "character:gaelic_2",
+      "CAPITAL": "title:b_mull",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:d_western_isles.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 6,
+      "leases": [],
+      "capital": "b_mull",
+      "capital_km": 10.44,
+      "source_lonlat": [
+        -5.803210816149716,
+        56.43242941443159
+      ],
+      "leases_mapped": [],
+      "type_key": "ho_christian_gaelic_abbeys",
+      "title": "d_gaelic_abbeys",
+      "name_key": "holy_order_gaelic_abbeys",
+      "culture": "gaelic",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Gaelic Abbeys",
+      "name_zh": "盖尔修道院",
+      "capital_county": "c_inner_hebrides",
+      "capital_province": "1447",
+      "branches": []
+    },
+    {
+      "LEADER": "character:31824",
+      "CAPITAL": "title:b_limburg",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:e_hre.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 7,
+      "leases": [
+        "title:b_essen",
+        "title:b_arnstein"
+      ],
+      "capital": "b_darmstadt",
+      "capital_km": 25.89,
+      "source_lonlat": [
+        8.351224032452144,
+        50.1566982859195
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_essen",
+          "barony": "b_essen",
+          "km": 5.19
+        },
+        {
+          "source": "b_arnstein",
+          "barony": "b_ballenstedt",
+          "km": 19.02
+        }
+      ],
+      "type_key": "ho_imperial_canonesses",
+      "title": "d_imperial_canonesses",
+      "name_key": "holy_order_imperial_canonesses",
+      "culture": "franconian",
+      "rite": "roman_rite",
+      "gender": "female",
+      "existing_leader": null,
+      "name_en": "Imperial Canonesses",
+      "name_zh": "帝国女咏礼会",
+      "capital_county": "c_untermain",
+      "capital_province": "703",
+      "branches": [
+        "b_essen",
+        "b_ballenstedt"
+      ]
+    },
+    {
+      "LEADER": "character:gorze_2",
+      "CAPITAL": "title:b_faulquemont",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:d_upper_lorraine.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 8,
+      "leases": [
+        "title:b_argonne",
+        "title:b_prum",
+        "title:b_hersfeld",
+        "title:b_dassel",
+        "title:b_besensheim"
+      ],
+      "capital": "b_morhange",
+      "capital_km": 8.59,
+      "source_lonlat": [
+        6.571118062481458,
+        48.849072954034014
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_argonne",
+          "barony": "b_fresnes",
+          "km": 9.35
+        },
+        {
+          "source": "b_prum",
+          "barony": "b_prum",
+          "km": 27.2
+        },
+        {
+          "source": "b_hersfeld",
+          "barony": "b_hersfeld",
+          "km": 16.42
+        },
+        {
+          "source": "b_dassel",
+          "barony": "b_gandersheim",
+          "km": 18.27
+        },
+        {
+          "source": "b_besensheim",
+          "barony": "b_neustadt_an_der_haardt",
+          "km": 29.48
+        }
+      ],
+      "type_key": "ho_gorziac_benedictines",
+      "title": null,
+      "name_key": "holy_order_gorziac_benedictines",
+      "culture": "franconian",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Gorziac Benedictines",
+      "name_zh": "戈尔策本笃会",
+      "capital_county": "c_pays_messin",
+      "capital_province": "1870",
+      "branches": [
+        "b_fresnes",
+        "b_prum",
+        "b_hersfeld",
+        "b_gandersheim",
+        "b_neustadt_an_der_haardt",
+        "b_kelheim"
+      ]
+    },
+    {
+      "LEADER": "character:martinian_2",
+      "CAPITAL": "title:b_zirc",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:k_hungary.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 9,
+      "leases": [
+        "title:b_csurgo",
+        "title:b_biograd"
+      ],
+      "capital": "b_papa",
+      "capital_km": 23.17,
+      "source_lonlat": [
+        17.80479651375277,
+        47.34422763165136
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_csurgo",
+          "barony": "b_csurgo",
+          "km": 15.41
+        },
+        {
+          "source": "b_biograd",
+          "barony": "b_novigrad",
+          "km": 23.05
+        }
+      ],
+      "type_key": "ho_christian_martinian_benedictines",
+      "title": "d_martinian_benedictines",
+      "name_key": "holy_order_martinian_benedictines",
+      "culture": "hungarian",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Martinian Benedictines",
+      "name_zh": "玛尔定本笃会",
+      "capital_county": "c_fejer",
+      "capital_province": "2938",
+      "branches": [
+        "b_csurgo",
+        "b_novigrad"
+      ]
+    },
+    {
+      "LEADER": "character:iberian_cluniac_2",
+      "CAPITAL": "title:b_lerma",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:k_castille.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 10,
+      "leases": [
+        "title:b_sanleonardodeyague"
+      ],
+      "capital": "b_sto_domingo_silos",
+      "capital_km": 78.89,
+      "source_lonlat": [
+        -4.213213250739004,
+        42.09162903412706
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_sanleonardodeyague",
+          "barony": "b_aranda_de_duero",
+          "km": 43.85
+        }
+      ],
+      "type_key": "ho_christian_iberian_cluniacs",
+      "title": "d_iberian_cluniacs",
+      "name_key": "holy_order_iberian_cluniacs",
+      "culture": "castilian",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Silosian Benedictines",
+      "name_zh": "锡洛斯本笃会",
+      "capital_county": "c_lerma",
+      "capital_province": "2124",
+      "branches": [
+        "b_aranda_de_duero",
+        "b_sahagun",
+        "b_jaca"
+      ]
+    },
+    {
+      "LEADER": "character:cistercian_1",
+      "CAPITAL": "title:b_citeaux",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:d_burgundy.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 11,
+      "leases": [
+        "title:b_grand",
+        "title:b_lorient",
+        "title:b_loches",
+        "title:b_montbard",
+        "title:b_mortain",
+        "title:b_gallarate",
+        "title:b_monmouth",
+        "title:b_kilkenny",
+        "title:b_carlow",
+        "title:b_ripon",
+        "title:b_riseberga",
+        "title:b_varnhem",
+        "title:b_gryfino",
+        "title:b_leiria",
+        "title:b_ourense",
+        "title:b_gera",
+        "title:b_nagyszeben",
+        "title:b_dabrowa_gorn"
+      ],
+      "capital": "b_beaune",
+      "capital_km": 18.81,
+      "source_lonlat": [
+        5.153946319397998,
+        47.20742434167078
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_grand",
+          "barony": "b_choiseul",
+          "km": 12.37
+        },
+        {
+          "source": "b_lorient",
+          "barony": "b_hennebont",
+          "km": 12.17
+        },
+        {
+          "source": "b_loches",
+          "barony": "b_loches",
+          "km": 28.5
+        },
+        {
+          "source": "b_montbard",
+          "barony": "b_aignay",
+          "km": 19.81
+        },
+        {
+          "source": "b_mortain",
+          "barony": "b_mortain",
+          "km": 12.52
+        },
+        {
+          "source": "b_gallarate",
+          "barony": "b_legnano",
+          "km": 14.1
+        },
+        {
+          "source": "b_monmouth",
+          "barony": "b_monmouth",
+          "km": 12.26
+        },
+        {
+          "source": "b_kilkenny",
+          "barony": "b_roscrea",
+          "km": 13.78
+        },
+        {
+          "source": "b_carlow",
+          "barony": "b_carlow",
+          "km": 27.98
+        },
+        {
+          "source": "b_ripon",
+          "barony": "b_ripon",
+          "km": 16.98
+        },
+        {
+          "source": "b_riseberga",
+          "barony": "b_riseberga",
+          "km": 34.36
+        },
+        {
+          "source": "b_varnhem",
+          "barony": "b_hjo",
+          "km": 5.97
+        },
+        {
+          "source": "b_gryfino",
+          "barony": "b_gryfow",
+          "km": 11.42
+        },
+        {
+          "source": "b_leiria",
+          "barony": "b_leiria",
+          "km": 9.39
+        },
+        {
+          "source": "b_ourense",
+          "barony": "b_ribadavia",
+          "km": 25.33
+        },
+        {
+          "source": "b_gera",
+          "barony": "b_altenburg",
+          "km": 23.37
+        },
+        {
+          "source": "b_nagyszeben",
+          "barony": "b_medias",
+          "km": 28.82
+        },
+        {
+          "source": "b_dabrowa_gorn",
+          "barony": "b_chrzanow",
+          "km": 15.06
+        }
+      ],
+      "type_key": "ho_christian_cistercians",
+      "title": "d_cistercians",
+      "name_key": "holy_order_cistercians",
+      "culture": "french",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": "bur_jean_chaudenay",
+      "name_en": "Order of Cistercians",
+      "name_zh": "熙笃会",
+      "capital_county": "c_dijonnais",
+      "capital_province": "1687",
+      "branches": [
+        "b_auneau",
+        "b_chaumont_vexin",
+        "b_castelnaudary",
+        "b_banbury",
+        "b_montblanc",
+        "b_modigliana",
+        "b_legnano",
+        "b_viterbo",
+        "b_alcobaca"
+      ],
+      "eu5_source_key": "cistercian_order_religious_order",
+      "eu5_order_type": "monastic_order_type",
+      "leader_name_key": "eu5_order_head_bur_jean_chaudenay",
+      "leader_name_en": "Jean de Chaudenay",
+      "leader_name_zh": "让·德·绍德内"
+    },
+    {
+      "LEADER": "character:premonstratensian_1",
+      "CAPITAL": "title:b_laon",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:b_laon.county.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 12,
+      "leases": [
+        "title:b_catania",
+        "title:b_chynov"
+      ],
+      "capital": "b_laon",
+      "capital_km": 2.75,
+      "source_lonlat": [
+        3.684926829616367,
+        49.57204493684251
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_catania",
+          "barony": "b_catania",
+          "km": 11.73
+        },
+        {
+          "source": "b_chynov",
+          "barony": "b_j_hradec",
+          "km": 20.08
+        }
+      ],
+      "type_key": "ho_christian_premonstratensians",
+      "title": "d_premonstratensians",
+      "name_key": "holy_order_premonstratensians",
+      "culture": "french",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Premonstratensians",
+      "name_zh": "普雷蒙特雷会",
+      "capital_county": "c_soissonais",
+      "capital_province": "1810",
+      "branches": [
+        "b_catania",
+        "b_j_hradec"
+      ]
+    },
+    {
+      "LEADER": "character:carthusian_1",
+      "CAPITAL": "title:b_romans",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:b_romans.county.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 13,
+      "leases": [
+        "title:b_krsko"
+      ],
+      "capital": "b_romans",
+      "capital_km": 37.6,
+      "source_lonlat": [
+        5.3613373061907,
+        45.103176066167364
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_krsko",
+          "barony": "b_lasko",
+          "km": 11.13
+        }
+      ],
+      "type_key": "ho_christian_carthusians",
+      "title": "d_carthusians",
+      "name_key": "holy_order_carthusians",
+      "culture": "occitan",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Order of Carthusians",
+      "name_zh": "加尔都西会",
+      "capital_county": "c_viennois",
+      "capital_province": "2048",
+      "branches": [
+        "b_lasko"
+      ]
+    },
+    {
+      "LEADER": "character:tironensian_1",
+      "CAPITAL": "title:b_kirriemuir",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:k_scotland.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 14,
+      "leases": [
+        "title:b_sarthe",
+        "title:b_st_davids"
+      ],
+      "capital": "b_forfar",
+      "capital_km": 24.59,
+      "source_lonlat": [
+        -2.9170195832846213,
+        56.651954336598706
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_sarthe",
+          "barony": "b_beaumont_au_maine",
+          "km": 6.67
+        },
+        {
+          "source": "b_st_davids",
+          "barony": "b_pembroke",
+          "km": 10.51
+        }
+      ],
+      "type_key": "ho_christian_tironensians",
+      "title": "d_tironensians",
+      "name_key": "holy_order_tironensians",
+      "culture": "scottish",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Order of Tiron",
+      "name_zh": "蒂龙会",
+      "capital_county": "c_angus",
+      "capital_province": "1477",
+      "branches": [
+        "b_beaumont_au_maine",
+        "b_pembroke"
+      ]
+    },
+    {
+      "LEADER": "character:fontevraud_1",
+      "CAPITAL": "title:b_loudun",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:b_loudun.county.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 15,
+      "leases": [
+        "title:b_ramsbury"
+      ],
+      "capital": "b_loudun",
+      "capital_km": 20.76,
+      "source_lonlat": [
+        0.1938452186058937,
+        46.78204659193267
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_ramsbury",
+          "barony": "b_chippenham",
+          "km": 6.96
+        }
+      ],
+      "type_key": "ho_christian_fontevraud_order",
+      "title": "d_fontevraud_order",
+      "name_key": "holy_order_fontevraud_order",
+      "culture": "french",
+      "rite": "roman_rite",
+      "gender": "female",
+      "existing_leader": null,
+      "name_en": "Fontevraud Order",
+      "name_zh": "丰特夫罗会",
+      "capital_county": "c_anjou",
+      "capital_province": "1610",
+      "branches": [
+        "b_chippenham"
+      ]
+    },
+    {
+      "LEADER": "character:augustinian_1",
+      "CAPITAL": "title:b_taunton",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:b_taunton.county.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 16,
+      "leases": [
+        "title:b_jedburgh",
+        "title:b_birr"
+      ],
+      "capital": "b_taunton",
+      "capital_km": 27.06,
+      "source_lonlat": [
+        -3.52190996143,
+        51.11787364039723
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_jedburgh",
+          "barony": "b_dumfries",
+          "km": 19.7
+        },
+        {
+          "source": "b_birr",
+          "barony": "b_ballymore",
+          "km": 2.26
+        }
+      ],
+      "type_key": "ho_christian_augustinian_canons",
+      "title": "d_augustinian_canons",
+      "name_key": "holy_order_augustinian_canons",
+      "culture": "norman",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Augustinian Canons",
+      "name_zh": "奥斯定咏礼会",
+      "capital_county": "c_somerset",
+      "capital_province": "1403",
+      "branches": [
+        "b_dumfries",
+        "b_ballymore"
+      ]
+    },
+    {
+      "LEADER": "character:von_bingen_1",
+      "CAPITAL": "title:b_kreusnach",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:e_hre.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 17,
+      "leases": [
+        "title:b_deggendorf",
+        "title:b_hallein",
+        "title:b_sankt_gallen",
+        "title:b_lure",
+        "title:b_calw"
+      ],
+      "capital": "b_oppenheim",
+      "capital_km": 7.46,
+      "source_lonlat": [
+        8.040137552263088,
+        49.78510768010194
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_deggendorf",
+          "barony": "b_griesbach",
+          "km": 31.02
+        },
+        {
+          "source": "b_hallein",
+          "barony": "b_hallein",
+          "km": 13.18
+        },
+        {
+          "source": "b_sankt_gallen",
+          "barony": "b_bludenz",
+          "km": 43.8
+        },
+        {
+          "source": "b_lure",
+          "barony": "b_luxeuil",
+          "km": 16.28
+        },
+        {
+          "source": "b_calw",
+          "barony": "b_bruchsal",
+          "km": 28.96
+        }
+      ],
+      "type_key": "ho_christian_hirsau_benedictines",
+      "title": "d_hirsau_benedictines",
+      "name_key": "holy_order_hirsau_benedictines",
+      "culture": "franconian",
+      "rite": "roman_rite",
+      "gender": "female",
+      "existing_leader": null,
+      "name_en": "Hirsau Benedictines",
+      "name_zh": "希尔绍本笃会",
+      "capital_county": "c_untermain",
+      "capital_province": "705",
+      "branches": [
+        "b_griesbach",
+        "b_hallein",
+        "b_bludenz",
+        "b_luxeuil",
+        "b_bruchsal",
+        "b_bamberg"
+      ]
+    },
+    {
+      "LEADER": "character:norman_benedictine_1",
+      "CAPITAL": "title:b_saint_albans",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:k_england.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 18,
+      "leases": [
+        "title:b_hexham",
+        "title:b_wolverhampton",
+        "title:b_beodericsworth"
+      ],
+      "capital": "b_st_albans",
+      "capital_km": 13.84,
+      "source_lonlat": [
+        -0.3246322483758588,
+        51.93850502904077
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_hexham",
+          "barony": "b_hexham",
+          "km": 8.41
+        },
+        {
+          "source": "b_wolverhampton",
+          "barony": "b_stoke",
+          "km": 25.37
+        },
+        {
+          "source": "b_beodericsworth",
+          "barony": "b_lowestoft",
+          "km": 24.1
+        }
+      ],
+      "type_key": "ho_christian_norman_benedictines",
+      "title": "d_norman_benedictines",
+      "name_key": "holy_order_norman_benedictines",
+      "culture": "norman",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Norman Benedictines",
+      "name_zh": "诺曼本笃会",
+      "capital_county": "c_hertfordshire",
+      "capital_province": "1398",
+      "branches": [
+        "b_hexham",
+        "b_stoke",
+        "b_lowestoft"
+      ]
+    },
+    {
+      "LEADER": "character:athonite_3",
+      "CAPITAL": "title:b_ierrisos",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:e_byzantium.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 19,
+      "leases": [
+        "title:b_stagoi",
+        "title:b_prokuplje",
+        "title:b_varna"
+      ],
+      "capital": "b_mount_athos",
+      "capital_km": 30.91,
+      "source_lonlat": [
+        23.84908850726808,
+        40.42922958181446
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_stagoi",
+          "barony": "b_trikala",
+          "km": 8.51
+        },
+        {
+          "source": "b_prokuplje",
+          "barony": "b_prokuplje",
+          "km": 36.56
+        },
+        {
+          "source": "b_varna",
+          "barony": "b_varna",
+          "km": 13.46
+        }
+      ],
+      "type_key": "ho_christian_athonite_hermits",
+      "title": "d_athonite_hermits",
+      "name_key": "holy_order_athonite_hermits",
+      "culture": "greek",
+      "rite": "byzantine_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Athonite Hermits",
+      "name_zh": "阿索斯隐修士",
+      "capital_county": "c_chalkidiki",
+      "capital_province": "5108",
+      "branches": [
+        "b_trikala",
+        "b_prokuplje",
+        "b_varna"
+      ]
+    },
+    {
+      "LEADER": "character:bithynian_2",
+      "CAPITAL": "title:b_helge",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:d_opsikion.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 20,
+      "leases": [
+        "title:b_apemea"
+      ],
+      "capital": "b_adranos",
+      "capital_km": 8.32,
+      "source_lonlat": [
+        28.846590204814486,
+        39.87629855007127
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_apemea",
+          "barony": "b_eynegol",
+          "km": 53.37
+        }
+      ],
+      "type_key": "ho_christian_bithynians",
+      "title": "d_bithynians",
+      "name_key": "holy_order_bithynians",
+      "culture": "greek",
+      "rite": "byzantine_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Bithynians",
+      "name_zh": "比提尼亚修道院",
+      "capital_county": "c_hudavendigar",
+      "capital_province": "5852",
+      "branches": [
+        "b_eynegol"
+      ]
+    },
+    {
+      "LEADER": "character:latros_3",
+      "CAPITAL": "title:b_miletus",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:d_ephese.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 21,
+      "leases": [],
+      "capital": "b_balat",
+      "capital_km": 21.13,
+      "source_lonlat": [
+        27.4447052686501,
+        37.533715959800055
+      ],
+      "leases_mapped": [],
+      "type_key": "ho_christian_latros_hesychasts",
+      "title": "d_latros_hesychasts",
+      "name_key": "holy_order_latros_hesychasts",
+      "culture": "greek",
+      "rite": "byzantine_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Latros Hesychasts",
+      "name_zh": "拉特若静修士",
+      "capital_county": "c_aydin",
+      "capital_province": "5929",
+      "branches": []
+    },
+    {
+      "LEADER": "character:georgian_monastic_3",
+      "CAPITAL": "title:b_mtskheta",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:k_georgia.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 22,
+      "leases": [
+        "title:b_taoskari",
+        "title:b_krichim"
+      ],
+      "capital": "b_mtskheta",
+      "capital_km": 28.78,
+      "source_lonlat": [
+        44.886602872433,
+        41.94740718820338
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_taoskari",
+          "barony": "b_panaskerti",
+          "km": 24.47
+        },
+        {
+          "source": "b_krichim",
+          "barony": "b_tsepina",
+          "km": 20.33
+        }
+      ],
+      "type_key": "ho_christian_georgian_monasteries",
+      "title": "d_georgian_monasteries",
+      "name_key": "holy_order_georgian_monasteries",
+      "culture": "georgian",
+      "rite": "georgian_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Georgian Monasteries",
+      "name_zh": "格鲁吉亚修道院",
+      "capital_county": "c_kartli",
+      "capital_province": "3779",
+      "branches": [
+        "b_panaskerti",
+        "b_tsepina"
+      ]
+    },
+    {
+      "LEADER": "character:evergetine_2",
+      "CAPITAL": "title:b_selymbria",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:e_byzantium.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 23,
+      "leases": [
+        "title:b_gynaikokastron",
+        "title:b_rhizus"
+      ],
+      "capital": "b_silivri",
+      "capital_km": 10.31,
+      "source_lonlat": [
+        28.260758764551454,
+        41.17981880094137
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_gynaikokastron",
+          "barony": "b_kilkis",
+          "km": 17.07
+        },
+        {
+          "source": "b_rhizus",
+          "barony": "b_surmene",
+          "km": 2.68
+        }
+      ],
+      "type_key": "ho_christian_evergetine_cenobites",
+      "title": "d_evergetine_cenobites",
+      "name_key": "holy_order_evergetine_cenobites",
+      "culture": "greek",
+      "rite": "byzantine_rite",
+      "gender": "female",
+      "existing_leader": null,
+      "name_en": "Evergetine Cenobites",
+      "name_zh": "施恩诞神女共修士",
+      "capital_county": "c_constantinople",
+      "capital_province": "5148",
+      "branches": [
+        "b_kilkis",
+        "b_surmene"
+      ]
+    },
+    {
+      "LEADER": "character:klimentine_2",
+      "CAPITAL": "title:b_devol",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:d_bulgaria.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 24,
+      "leases": [
+        "title:b_rila"
+      ],
+      "capital": "b_devol",
+      "capital_km": 29.13,
+      "source_lonlat": [
+        20.899598140565153,
+        40.76570164349168
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_rila",
+          "barony": "b_dupnitsa",
+          "km": 20.64
+        }
+      ],
+      "type_key": "ho_christian_klimentine_monasteries",
+      "title": "d_klimentine_monasteries",
+      "name_key": "holy_order_klimentine_monasteries",
+      "culture": "greek",
+      "rite": "slavic_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Klimentine Monks",
+      "name_zh": "克利密斯修士",
+      "capital_county": "c_albania",
+      "capital_province": "5188",
+      "branches": [
+        "b_dupnitsa"
+      ]
+    },
+    {
+      "LEADER": "character:kyivan_studite_1",
+      "CAPITAL": "title:b_yuriev",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:d_kiev.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 25,
+      "leases": [],
+      "capital": "b_skvyra",
+      "capital_km": 24.79,
+      "source_lonlat": [
+        29.74706083656581,
+        49.89144134351643
+      ],
+      "leases_mapped": [],
+      "type_key": "ho_christian_kyivan_studites",
+      "title": "d_kyivan_studites",
+      "name_key": "holy_order_kyivan_studites",
+      "culture": "russian",
+      "rite": "slavic_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Chernoriztsy",
+      "name_zh": "黑袍修士",
+      "capital_county": "c_porossia",
+      "capital_province": "3590",
+      "branches": []
+    },
+    {
+      "LEADER": "character:yuriev_2",
+      "CAPITAL": "title:b_soltsy",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:d_novgorod.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 26,
+      "leases": [],
+      "capital": "b_soltsy",
+      "capital_km": 25.53,
+      "source_lonlat": [
+        29.79890858326399,
+        58.22917998416009
+      ],
+      "leases_mapped": [],
+      "type_key": "ho_christian_yurievs",
+      "title": "d_yurievs",
+      "name_key": "holy_order_yurievs",
+      "culture": "russian",
+      "rite": "slavic_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Yurievs",
+      "name_zh": "格奥尔吉修道院",
+      "capital_county": "c_knyazhaya",
+      "capital_province": "4636",
+      "branches": []
+    },
+    {
+      "LEADER": "character:boeotian_1",
+      "CAPITAL": "title:b_amfissa",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:d_athens.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 27,
+      "leases": [
+        "title:b_megara"
+      ],
+      "capital": "b_gravia",
+      "capital_km": 28.61,
+      "source_lonlat": [
+        22.46442288180287,
+        38.54694366930251
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_megara",
+          "barony": "b_megara",
+          "km": 9.97
+        }
+      ],
+      "type_key": "ho_christian_boeotians",
+      "title": "d_boeotians",
+      "name_key": "holy_order_boeotians",
+      "culture": "greek",
+      "rite": "byzantine_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Boeotians",
+      "name_zh": "玻俄提亚修道院",
+      "capital_county": "c_neopatras",
+      "capital_province": "5220",
+      "branches": [
+        "b_megara"
+      ]
+    },
+    {
+      "LEADER": "character:euphrosynian_1",
+      "CAPITAL": "title:b_drysa",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:d_polotsk.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 28,
+      "leases": [],
+      "capital": "b_kraslava",
+      "capital_km": 43.26,
+      "source_lonlat": [
+        27.794129044267876,
+        56.10187002359058
+      ],
+      "leases_mapped": [],
+      "type_key": "ho_christian_euphrosynians",
+      "title": "d_euphrosynians",
+      "name_key": "holy_order_euphrosynians",
+      "culture": "russian",
+      "rite": "slavic_rite",
+      "gender": "female",
+      "existing_leader": null,
+      "name_en": "Euphrosynians",
+      "name_zh": "艾弗福若西尼女修道院",
+      "capital_county": "c_latgalia",
+      "capital_province": "3057",
+      "branches": []
+    },
+    {
+      "LEADER": "character:nativity_1",
+      "CAPITAL": "title:b_sudogda",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:d_opolye.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 29,
+      "leases": [],
+      "capital": "b_sudogda",
+      "capital_km": 39.69,
+      "source_lonlat": [
+        41.04986961676803,
+        55.79443551915122
+      ],
+      "leases_mapped": [],
+      "type_key": "ho_christian_sisters_of_the_nativity",
+      "title": "d_sisters_of_the_nativity",
+      "name_key": "holy_order_sisters_of_the_nativity",
+      "culture": "russian",
+      "rite": "slavic_rite",
+      "gender": "female",
+      "existing_leader": null,
+      "name_en": "Sisters of the Nativity",
+      "name_zh": "圣诞女修会",
+      "capital_county": "c_vladimir",
+      "capital_province": "4469",
+      "branches": []
+    },
+    {
+      "LEADER": "character:bahitawi_3",
+      "CAPITAL": "title:b_doba",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:k_abyssinia.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 30,
+      "leases": [
+        "title:b_tigre",
+        "title:b_shimazana"
+      ],
+      "capital": "b_chercher",
+      "capital_km": 32.02,
+      "source_lonlat": [
+        39.82280627824455,
+        12.659511307855901
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_tigre",
+          "barony": "b_shire",
+          "km": 27.04
+        },
+        {
+          "source": "b_shimazana",
+          "barony": "b_debre_bizen",
+          "km": 13.9
+        }
+      ],
+      "type_key": "ho_christian_bahitawi",
+      "title": "d_bahitawi",
+      "name_key": "holy_order_bahitawi",
+      "culture": "ethiopian",
+      "rite": "ethiopian_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Bahitawi",
+      "name_zh": "吉兹独修士",
+      "capital_county": "c_dobea",
+      "capital_province": "13869",
+      "branches": [
+        "b_shire",
+        "b_debre_bizen"
+      ]
+    },
+    {
+      "LEADER": "character:desert_father_3",
+      "CAPITAL": "title:b_wadi_natrun",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:d_coptic_papacy.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 31,
+      "leases": [],
+      "capital": "b_wadi_el_natrun",
+      "capital_km": 35.16,
+      "source_lonlat": [
+        30.4160900228068,
+        30.231081333605744
+      ],
+      "leases_mapped": [],
+      "type_key": "ho_christian_desert_fathers",
+      "title": "d_desert_fathers",
+      "name_key": "holy_order_desert_fathers",
+      "culture": "egyptian",
+      "rite": "coptic_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Desert Fathers",
+      "name_zh": "旷野教父",
+      "capital_county": "c_buhayra",
+      "capital_province": "14479",
+      "branches": []
+    },
+    {
+      "LEADER": "character:hayk_monk_3",
+      "CAPITAL": "title:b_gandzasar",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:c_khachen.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 32,
+      "leases": [
+        "title:b_jugha"
+      ],
+      "capital": "b_haterk",
+      "capital_km": 21.6,
+      "source_lonlat": [
+        46.234644286585564,
+        39.96698026981672
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_jugha",
+          "barony": "b_julfa",
+          "km": 8.0
+        }
+      ],
+      "type_key": "ho_christian_monks_of_hayk",
+      "title": "d_monks_of_hayk",
+      "name_key": "holy_order_monks_of_hayk",
+      "culture": "armenian",
+      "rite": "armenian_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Monks of Hayk'",
+      "name_zh": "哈伊克修士",
+      "capital_county": "c_kachen",
+      "capital_province": "3731",
+      "branches": [
+        "b_julfa"
+      ]
+    },
+    {
+      "LEADER": "character:vardapet_1",
+      "CAPITAL": "title:b_kumayri",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:d_greater_armenia.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 33,
+      "leases": [
+        "title:b_shamkur"
+      ],
+      "capital": "b_kumayri",
+      "capital_km": 34.89,
+      "source_lonlat": [
+        44.19529958312399,
+        40.699171265498826
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_shamkur",
+          "barony": "b_gardman",
+          "km": 16.14
+        }
+      ],
+      "type_key": "ho_christian_eastern_vardapets",
+      "title": "d_eastern_vardapets",
+      "name_key": "holy_order_eastern_vardapets",
+      "culture": "armenian",
+      "rite": "armenian_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Eastern Vardapets",
+      "name_zh": "东方瓦尔达佩特",
+      "capital_county": "c_ani",
+      "capital_province": "3728",
+      "branches": [
+        "b_gardman"
+      ]
+    },
+    {
+      "LEADER": "character:sons_of_the_covenant_3",
+      "CAPITAL": "title:b_fishabur",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:c_ninive.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 34,
+      "leases": [],
+      "capital": "b_duhok",
+      "capital_km": 27.86,
+      "source_lonlat": [
+        42.69171492887691,
+        36.886226637556234
+      ],
+      "leases_mapped": [],
+      "type_key": "ho_christian_sons_of_the_covenant",
+      "title": "d_sons_of_the_covenant",
+      "name_key": "holy_order_sons_of_the_covenant",
+      "culture": "assyrian",
+      "rite": "nestorian",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Sons of the Covenant",
+      "name_zh": "盟约诸子",
+      "capital_county": "c_mosul",
+      "capital_province": "6052",
+      "branches": []
+    },
+    {
+      "LEADER": "character:rightful_dayroye_3",
+      "CAPITAL": "title:b_gazirat_ibn_umar",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:b_gazirat_ibn_umar.county.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 35,
+      "leases": [
+        "title:b_kafartutha"
+      ],
+      "capital": "b_barqaid",
+      "capital_km": 10.47,
+      "source_lonlat": [
+        42.15595487966243,
+        37.157227186750475
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_kafartutha",
+          "barony": "b_ras_ayn",
+          "km": 26.51
+        }
+      ],
+      "type_key": "ho_christian_rightful_dayroye",
+      "title": "d_rightful_dayroye",
+      "name_key": "holy_order_rightful_dayroye",
+      "culture": "assyrian",
+      "rite": "antiochian_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Rightful Dayroye",
+      "name_zh": "公义隐修士",
+      "capital_county": "c_nusaybin",
+      "capital_province": "6058",
+      "branches": [
+        "b_ras_ayn"
+      ]
+    },
+    {
+      "LEADER": "character:community_of_st_catherine_3",
+      "CAPITAL": "title:b_stcatherine",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:c_sinai.holder",
+      "ORDER_TYPE": "monastic",
+      "id": 36,
+      "leases": [],
+      "capital": "b_saint_katrine",
+      "capital_km": 35.26,
+      "source_lonlat": [
+        33.873741468374796,
+        28.68450931636675
+      ],
+      "leases_mapped": [],
+      "type_key": "ho_christian_community_of_st_catherine",
+      "title": "d_community_of_st_catherine",
+      "name_key": "holy_order_community_of_st_catherine",
+      "culture": "greek",
+      "rite": "antiochian_rite",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Community of St Catherine",
+      "name_zh": "圣埃卡特里纳社团",
+      "capital_county": "c_tih",
+      "capital_province": "14568",
+      "branches": []
+    },
+    {
+      "LEADER": "character:231000",
+      "CAPITAL": "title:b_hebron",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "character:223523",
+      "ORDER_TYPE": "military",
+      "id": 38,
+      "leases": [
+        "title:b_antartus",
+        "title:b_haugsdorf"
+      ],
+      "capital": "b_kos",
+      "capital_km": 956.36,
+      "source_lonlat": [
+        35.22063521537161,
+        31.440872097950148
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_antartus",
+          "barony": "b_baniyas",
+          "km": 13.73
+        },
+        {
+          "source": "b_haugsdorf",
+          "barony": "b_korneuburg",
+          "km": 23.86
+        }
+      ],
+      "type_key": "ho_christian_knights_hospitaller",
+      "title": "d_knights_hospitaller",
+      "name_key": "holy_order_knights_hospitaller",
+      "culture": "french",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": "kni_helion_de_villeneuve",
+      "name_en": "Knights Hospitaller",
+      "name_zh": "医院骑士团",
+      "capital_county": "c_rodos",
+      "capital_province": "5290",
+      "branches": [
+        "b_baniyas",
+        "b_korneuburg"
+      ],
+      "integrate_hospitaller": true
+    },
+    {
+      "LEADER": "character:72363",
+      "CAPITAL": "title:b_trujillo",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:k_leon.holder",
+      "ORDER_TYPE": "military",
+      "id": 39,
+      "leases": [],
+      "capital": "b_jaraicejo",
+      "capital_km": 15.4,
+      "source_lonlat": [
+        -5.543972082658837,
+        39.584379491278
+      ],
+      "leases_mapped": [],
+      "type_key": "ho_christian_order_of_santiago",
+      "title": "d_knights_santiago",
+      "name_key": "holy_order_knights_of_santiago",
+      "culture": "asturleonese",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": "cas_vasco_rodriguez_de_coronado",
+      "name_en": "Knights of Santiago",
+      "name_zh": "圣地亚哥骑士团",
+      "capital_county": "c_plasencia",
+      "capital_province": "2175",
+      "branches": [
+        "b_ucles",
+        "b_consuegra",
+        "b_montiel",
+        "b_segura_de_la_sierra",
+        "b_caravaca",
+        "b_azuaga",
+        "b_llerena",
+        "b_montanchez",
+        "b_zafra"
+      ],
+      "eu5_source_key": "order_of_santiago_religious_order",
+      "eu5_order_type": "iberian_military_order_type",
+      "leader_name_key": "eu5_order_head_cas_vasco_rodriguez_de_coronado",
+      "leader_name_en": "Vasco Rodríguez de Coronado",
+      "leader_name_zh": "瓦斯科·罗德里格斯·德·科罗纳多"
+    },
+    {
+      "LEADER": "character:iberian_knight_1",
+      "CAPITAL": "title:b_tomelloso",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:k_castille.holder",
+      "ORDER_TYPE": "military",
+      "id": 40,
+      "leases": [],
+      "capital": "b_tomelloso",
+      "capital_km": 39.79,
+      "source_lonlat": [
+        -2.934302165517348,
+        39.126549048137946
+      ],
+      "leases_mapped": [],
+      "type_key": "ho_christian_order_of_calatrava",
+      "title": "d_knights_calatrava",
+      "name_key": "holy_order_order_of_calatrava",
+      "culture": "castilian",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": "cas_juan_nunez_de_prado",
+      "name_en": "Order of Calatrava",
+      "name_zh": "卡拉特拉瓦骑士团",
+      "capital_county": "c_ocana",
+      "capital_province": "2386",
+      "branches": [
+        "b_calatrava",
+        "b_manzanares",
+        "b_almodovar_del_campo",
+        "b_puertollano",
+        "b_osuna",
+        "b_arcos_de_la_frontera"
+      ],
+      "eu5_source_key": "order_of_calatrava_religious_order",
+      "eu5_order_type": "iberian_military_order_type",
+      "leader_name_key": "eu5_order_head_cas_juan_nunez_de_prado",
+      "leader_name_en": "Juan Núñez de Prado",
+      "leader_name_zh": "胡安·努涅斯·德·普拉多"
+    },
+    {
+      "LEADER": "character:lanhoso_5",
+      "CAPITAL": "title:b_avis",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:k_portugal.holder",
+      "ORDER_TYPE": "military",
+      "id": 41,
+      "leases": [],
+      "capital": "b_avis",
+      "capital_km": 8.32,
+      "source_lonlat": [
+        -7.877120684076726,
+        38.99329538934166
+      ],
+      "leases_mapped": [],
+      "type_key": "ho_christian_order_of_aviz",
+      "title": "d_knights_aviz",
+      "name_key": "holy_order_knights_of_aviz",
+      "culture": "portuguese",
+      "rite": "roman_rite",
+      "gender": "male",
+      "existing_leader": "por_goncalo_vasques",
+      "name_en": "Knights of Avis",
+      "name_zh": "阿维什骑士团",
+      "capital_county": "c_alto_alentejo",
+      "capital_province": "2323",
+      "branches": [
+        "b_mora_portugal",
+        "b_elvas",
+        "b_vila_vicosa",
+        "b_estremoz"
+      ],
+      "eu5_source_key": "order_of_avis_religious_order",
+      "eu5_order_type": "iberian_military_order_type",
+      "leader_name_key": "eu5_order_head_por_goncalo_vasques",
+      "leader_name_en": "Gonçalo Vasques",
+      "leader_name_zh": "贡萨洛·瓦斯克斯"
+    },
+    {
+      "LEADER": "character:ghazi_4",
+      "CAPITAL": "title:b_amorion",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:k_rum.holder",
+      "ORDER_TYPE": "military",
+      "id": 42,
+      "leases": [
+        "title:b_zermion",
+        "title:b_leylan"
+      ],
+      "capital": "b_yalvac",
+      "capital_km": 18.94,
+      "source_lonlat": [
+        30.90499384615839,
+        38.473660752153
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_zermion",
+          "barony": "b_cermik",
+          "km": 24.18
+        },
+        {
+          "source": "b_leylan",
+          "barony": "b_malekan",
+          "km": 24.56
+        }
+      ],
+      "type_key": "ho_turkic_ghazis",
+      "title": "d_turkic_ghazis",
+      "name_key": "holy_order_turkic_ghazis",
+      "culture": "turkmen",
+      "rite": "hanafi",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Turkic Ghazis",
+      "name_zh": "突厥加齐",
+      "capital_county": "c_beysehir",
+      "capital_province": "5772",
+      "branches": [
+        "b_cermik",
+        "b_malekan"
+      ]
+    },
+    {
+      "LEADER": "character:ghazi_7",
+      "CAPITAL": "title:b_qartajana",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:k_maghreb.holder",
+      "ORDER_TYPE": "military",
+      "id": 43,
+      "leases": [
+        "title:b_mattija",
+        "title:b_cartagena"
+      ],
+      "capital": "b_tebourba",
+      "capital_km": 14.01,
+      "source_lonlat": [
+        10.204498285714326,
+        36.90601046187395
+      ],
+      "leases_mapped": [
+        {
+          "source": "b_mattija",
+          "barony": "b_cherchell",
+          "km": 13.58
+        },
+        {
+          "source": "b_cartagena",
+          "barony": "b_cartagena",
+          "km": 6.68
+        }
+      ],
+      "type_key": "ho_bahr_al_maghrib_raiders",
+      "title": "d_bahr_al_maghrib_raiders",
+      "name_key": "holy_order_bahr_al_maghrib_raiders",
+      "culture": "baranis",
+      "rite": "maliki",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Baḥr al-Maghrib Raiders",
+      "name_zh": "马格里布海盗",
+      "capital_county": "c_bizerte",
+      "capital_province": "14765",
+      "branches": [
+        "b_cherchell",
+        "b_cartagena"
+      ]
+    },
+    {
+      "LEADER": "character:ghazi_8",
+      "CAPITAL": "title:b_carmona",
+      "NEW_HO_SCOPE": "new_holy_order",
+      "FOUNDER": "title:k_maghreb.holder",
+      "ORDER_TYPE": "military",
+      "id": 44,
+      "leases": [
+        "title:b_andujar"
+      ],
+      "capital": "b_loja",
+      "capital_km": null,
+      "source_lonlat": null,
+      "leases_mapped": [
+        {
+          "source": "relocated_from_b_andujar",
+          "barony": "b_guadix"
+        }
+      ],
+      "type_key": "ho_ghazis_of_al_andalus",
+      "title": "d_ghazis_of_al_andalus",
+      "name_key": "holy_order_ghazis_of_al_andalus",
+      "culture": "butr",
+      "rite": "maliki",
+      "gender": "male",
+      "existing_leader": null,
+      "name_en": "Ghazis of al-Andalus",
+      "name_zh": "安达卢斯加齐",
+      "capital_county": "c_granada",
+      "capital_province": "2455",
+      "branches": [
+        "b_guadix"
+      ]
+    },
+    {
+      "id": 45,
+      "ORDER_TYPE": "military",
+      "LEADER": "character:cas_rodrigo_perez_alcantara",
+      "CAPITAL": "title:b_alcantara",
+      "type_key": "ho_christian_order_of_alcantara",
+      "title": "d_knights_alcantara",
+      "name_key": null,
+      "name_en": "Order of Alcantara",
+      "name_zh": "阿尔坎塔拉骑士团",
+      "capital": "b_alcantara",
+      "capital_county": "c_caceres",
+      "capital_province": "2162",
+      "branches": [
+        "b_brozas",
+        "b_valencia_de_alcantara",
+        "b_medellin",
+        "b_zalamea"
+      ],
+      "existing_leader": "cas_rodrigo_perez_alcantara",
+      "culture": "asturleonese",
+      "rite": "roman_rite",
+      "gender": "male",
+      "eu5_source_key": "order_of_alcantara_religious_order",
+      "eu5_order_type": "iberian_military_order_type",
+      "leader_name_key": "eu5_order_head_cas_rodrigo_perez_alcantara",
+      "leader_name_en": "Rodrigo Pérez de Alcántara",
+      "leader_name_zh": "罗德里戈·佩雷斯·德·阿尔坎塔拉"
+    },
+    {
+      "id": 46,
+      "ORDER_TYPE": "military",
+      "LEADER": "character:por_estevao_goncalves_leitao",
+      "CAPITAL": "title:b_tavira",
+      "type_key": "ho_eu5_order_of_christ",
+      "title": "d_eu5_order_of_christ",
+      "name_key": null,
+      "name_en": "Order of Christ",
+      "name_zh": "基督骑士团",
+      "capital": "b_tavira",
+      "capital_county": "c_algarve",
+      "capital_province": "2321",
+      "branches": [
+        "b_chao_de_couce",
+        "b_proenca_nova",
+        "b_idanha"
+      ],
+      "existing_leader": "por_estevao_goncalves_leitao",
+      "culture": "portuguese",
+      "rite": "roman_rite",
+      "gender": "male",
+      "eu5_source_key": "order_of_christ_religious_order",
+      "eu5_order_type": "iberian_military_order_type",
+      "leader_name_key": "eu5_order_head_por_estevao_goncalves_leitao",
+      "leader_name_en": "Estêvão Gonçalves Leitão",
+      "leader_name_zh": "埃斯特旺·贡萨尔维斯·莱唐"
+    },
+    {
+      "id": 47,
+      "ORDER_TYPE": "military",
+      "LEADER": "character:ara_pere_de_thous",
+      "CAPITAL": "title:b_peniscola",
+      "type_key": "ho_eu5_order_of_montesa",
+      "title": "d_eu5_order_of_montesa",
+      "name_key": null,
+      "name_en": "Order of Montesa",
+      "name_zh": "蒙特萨骑士团",
+      "capital": "b_peniscola",
+      "capital_county": "c_castellon",
+      "capital_province": "2266",
+      "branches": [
+        "b_bunol",
+        "b_gandia",
+        "b_morella",
+        "b_cantavieja",
+        "b_ares_del_maestre",
+        "b_llucena"
+      ],
+      "existing_leader": "ara_pere_de_thous",
+      "culture": "catalan",
+      "rite": "roman_rite",
+      "gender": "male",
+      "eu5_source_key": "order_of_montesa_religious_order",
+      "eu5_order_type": "iberian_military_order_type",
+      "leader_name_key": "eu5_order_head_ara_pere_de_thous",
+      "leader_name_en": "Pere de Thous",
+      "leader_name_zh": "佩雷·德·托乌斯"
+    },
+    {
+      "id": 48,
+      "ORDER_TYPE": "monastic",
+      "LEADER": "character:bur_hugh_vaucemain",
+      "CAPITAL": "title:b_bologna",
+      "type_key": "ho_christian_dominicans",
+      "title": "d_dominicans",
+      "name_key": null,
+      "name_en": "Dominicans",
+      "name_zh": "道明会",
+      "capital": "b_medicina",
+      "capital_county": "c_bologna",
+      "capital_province": "2542",
+      "branches": [
+        "b_nola",
+        "b_bonn",
+        "b_montpellier",
+        "b_ksiaz_wielki",
+        "b_poggibonsi",
+        "b_austria_baden",
+        "b_apolda"
+      ],
+      "existing_leader": "bur_hugh_vaucemain",
+      "culture": "french",
+      "rite": "roman_rite",
+      "gender": "male",
+      "eu5_source_key": "dominican_order_religious_order",
+      "eu5_order_type": "mendicant_order_type",
+      "leader_name_key": "eu5_order_head_bur_hugh_vaucemain",
+      "leader_name_en": "Hugh de Vaucemain",
+      "leader_name_zh": "于格·德·沃斯曼"
+    },
+    {
+      "id": 49,
+      "ORDER_TYPE": "monastic",
+      "LEADER": "character:pap_gerald_odonis",
+      "CAPITAL": "title:b_assisi",
+      "type_key": "ho_christian_franciscans",
+      "title": "d_franciscans",
+      "name_key": null,
+      "name_en": "Franciscans",
+      "name_zh": "方济各会",
+      "capital": "b_assisi",
+      "capital_county": "c_spoleto",
+      "capital_province": "2646",
+      "branches": [
+        "b_monselice",
+        "b_indersdorf",
+        "b_kourim",
+        "b_canterbury",
+        "b_esztergom",
+        "b_pontedera"
+      ],
+      "existing_leader": "pap_gerald_odonis",
+      "culture": "occitan",
+      "rite": "roman_rite",
+      "gender": "male",
+      "eu5_source_key": "franciscan_order_religious_order",
+      "eu5_order_type": "mendicant_order_type",
+      "leader_name_key": "eu5_order_head_pap_gerald_odonis",
+      "leader_name_en": "Gérald Odonis",
+      "leader_name_zh": "热拉尔·奥多尼斯"
+    },
+    {
+      "id": 50,
+      "ORDER_TYPE": "monastic",
+      "LEADER": "character:fra_guglielmo_cremona",
+      "CAPITAL": "title:b_paris",
+      "type_key": "ho_eu5_augustinian_hermits",
+      "title": "d_eu5_augustinian_hermits",
+      "name_key": null,
+      "name_en": "Augustinian Hermits",
+      "name_zh": "奥斯定隐修会",
+      "capital": "b_montmorency",
+      "capital_county": "c_pays_france",
+      "capital_province": "1806",
+      "branches": [
+        "b_passavant",
+        "b_breteuil",
+        "b_bapaume",
+        "b_kingston",
+        "b_utrecht",
+        "b_limbourg"
+      ],
+      "existing_leader": "fra_guglielmo_cremona",
+      "culture": "cisalpine",
+      "rite": "roman_rite",
+      "gender": "male",
+      "eu5_source_key": "augustine_order_religious_order",
+      "eu5_order_type": "mendicant_order_type",
+      "leader_name_key": "eu5_order_head_fra_guglielmo_cremona",
+      "leader_name_en": "Guglielmo da Cremona",
+      "leader_name_zh": "克雷莫纳的古列尔莫"
+    }
+  ],
+  "backup": "F:/备份/EU5_Modern_Borders_noshape/_backup_20261105_100609_templar_granada",
+  "previous_backup": "F:/备份/EU5_Modern_Borders_noshape/_backup_20261105_093800_eu5_order_leaders",
+  "expected_counts": {
+    "monastic": 40,
+    "military": 10
+  },
+  "eu5_source_heads": {
+    "order_of_calatrava_religious_order": "cas_juan_nunez_de_prado",
+    "order_of_santiago_religious_order": "cas_vasco_rodriguez_de_coronado",
+    "order_of_alcantara_religious_order": "cas_rodrigo_perez_alcantara",
+    "order_of_christ_religious_order": "por_estevao_goncalves_leitao",
+    "order_of_avis_religious_order": "por_goncalo_vasques",
+    "order_of_montesa_religious_order": "ara_pere_de_thous",
+    "benedictine_order_religious_order": "nap_raymond_gramat",
+    "cistercian_order_religious_order": "bur_jean_chaudenay",
+    "dominican_order_religious_order": "bur_hugh_vaucemain",
+    "franciscan_order_religious_order": "pap_gerald_odonis",
+    "augustine_order_religious_order": "fra_guglielmo_cremona"
+  },
+  "eu5_source_path": "D:\\Program Files (x86)\\Steam\\steamapps\\common\\Europa Universalis V\\game\\main_menu\\setup\\1337\\04_religious_orders.txt",
+  "eu5_source_sha256": "2ff8196c1f80692ace351100103879c99e577f9b3796aaf265eb35e12638548e"
+}

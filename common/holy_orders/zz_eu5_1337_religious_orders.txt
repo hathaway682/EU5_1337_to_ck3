@@ -1,0 +1,32 @@
+﻿# EU5 1337 additions. Augustinian Hermits are distinct from Augustinian Canons.
+# Like native Franciscans/Dominicans, the EU5 mendicant order uses CK3 monastic mechanics.
+ho_eu5_order_of_christ = {
+	type = military
+	government = holy_order_government
+	title = d_eu5_order_of_christ
+	name = ho_eu5_order_of_christ_name
+	trigger = { current_date >= 1337.4.1 scope:founder.faith = { has_doctrine_parameter = is_western_christian_faith } }
+	weight = { value = 10 }
+	men_at_arms = { caballero }
+	coat_of_arms = eu5_order_christ
+}
+
+ho_eu5_order_of_montesa = {
+	type = military
+	government = holy_order_government
+	title = d_eu5_order_of_montesa
+	name = ho_eu5_order_of_montesa_name
+	trigger = { current_date >= 1337.4.1 scope:founder.faith = { has_doctrine_parameter = is_western_christian_faith } }
+	weight = { value = 10 }
+	men_at_arms = { caballero }
+	coat_of_arms = eu5_order_montesa
+}
+
+ho_eu5_augustinian_hermits = {
+	type = monastic
+	government = monastic_holy_order_government
+	title = d_eu5_augustinian_hermits
+	name = ho_eu5_augustinian_hermits_name
+	trigger = { current_date >= 1337.4.1 scope:founder.faith = { has_doctrine_parameter = is_western_christian_faith } }
+	weight = { value = 10 }
+}
