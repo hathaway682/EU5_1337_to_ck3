@@ -192,7 +192,7 @@ def validate(data, additions):
     assert [(r['id'], r['LEADER'], r['CAPITAL']) for r in rows if r['id'] < 45] == [
         (r['id'], r['LEADER'], r['CAPITAL']) for r in baseline if r['id'] != 37]
     previous = json.loads((Path(data['backup']) / 'mod/gen_debug/historical_orders_1337_20261105/inputs/orders.json').read_text(encoding='utf-8'))['orders']
-    assert all(r['capital'] == next(x for x in previous if x['id'] == r['id'])['capital'] and set(next(x for x in previous if x['id'] == r['id'])['branches']) <= set(r['branches']) for r in rows if r['id'] < 45 and r['id'] not in (11, 44))
+    assert all(r['capital'] == next(x for x in previous if x['id'] == r['id'])['capital'] and set(next(x for x in previous if x['id'] == r['id'])['branches']) <= set(r['branches']) for r in rows if r['id'] < 45 and r['id'] not in (11, 39, 40, 41, 42, 43, 44))
     meta = json.loads((OUT / 'inputs/map_metadata.json').read_text(encoding='utf-8'))
     _, baronies, ancestry = syntax.titles(ROOT / 'common/landed_titles')
     title_keys = set()
@@ -239,7 +239,11 @@ def validate(data, additions):
             holding = meta[b]['state'].get('holding', 'none')
             allowed = ('none', 'church_holding', 'temple_citadel_holding') if r['ORDER_TYPE'] == 'monastic' else ('none', 'castle_holding', 'city_holding', 'temple_citadel_holding')
             assert holding in allowed, (b, holding)
-    assert len(used) == 188
+    assert len(used) == 171
+    for r in rows:
+        if r['id'] in (39, 40, 41, 45, 46, 47):
+            counties = [meta[b]['county'] for b in [r['capital']] + r['branches']]
+            assert len(counties) == len(set(counties)), (r['id'], counties)
     assert meta['b_rodos']['capital'] and meta['b_rodos']['county'] == 'c_rodos'
     chars = (ROOT / 'history/characters/zz_eu5_characters.txt').read_text(encoding='utf-8-sig')
     assert 'kni_helion_de_villeneuve = {' in chars
@@ -332,11 +336,9 @@ def render_order(r):
                   f'\t\t\t\tchange_title_holder_include_vassals = {{ holder = scope:{leader} change = scope:eu5_1337_hospitaller_transfer }}',
                   '\t\t\t\tresolve_title_and_vassal_change = scope:eu5_1337_hospitaller_transfer',
                   '\t\t\t}',
-                  '\t\t\t# Military order government cannot personally hold a church holding.',
-                  '\t\t\ttitle:b_rodos.title_province = { set_holding_type = castle_holding }',
                   f'\t\t\tscope:{leader} = {{',
-                  '\t\t\t\tchange_government = holy_order_government',
-                  '\t\t\t\tset_primary_title_to = title:d_knights_hospitaller', '\t\t\t}',
+                  '\t\t\t\tchange_government = ecclesiastical_government',
+                  '\t\t\t\tset_primary_title_to = title:d_eu5_kni', '\t\t\t}',
                   '\t\t\ttitle:d_eu5_kni = { set_always_follows_primary_heir = yes }', '\t\t}']
     for b in r['branches']:
         lines += [f'\t\teu5_1337_lease_order_branch_effect = {{ BARONY = {b} ORDER = scope:{scope} HOLDING = {holding} }}']
@@ -382,6 +384,8 @@ def main():
     for kind in ('monastic', 'military'):
         effects += f'eu5_1337_historical_{kind}_orders_effect = {{\n'
         effects += '\tif = {\n\t\tlimit = { game_start_date = 1337.4.1 current_date = 1337.4.1 }\n'
+        if kind == 'military':
+            effects += '\t\teu5_1337_setup_baltic_landed_orders_effect = yes\n'
         body = ''.join(render_order(r) for r in data['orders'] if r['ORDER_TYPE'] == kind)
         effects += '\n'.join('\t' + line if line else '' for line in body.splitlines()) + '\n\t}\n}\n\n'
     start = (ROOT / START).read_text(encoding='utf-8-sig')
@@ -429,19 +433,19 @@ def main():
     def count_native(node, name):
         return sum((k == name) + (count_native(v, name) if isinstance(v, tuple) else 0) for k, v in node[0])
     assert sum(count_native(n, 'create_holy_order') for n in expanded) == 50
-    assert sum(count_native(n, 'lease_out_to_holy_order') for n in expanded) == 138
+    assert sum(count_native(n, 'lease_out_to_holy_order') for n in expanded) == 121
     assert 'character:benedictine_4' not in effects
     historical_heads = set(data['eu5_source_heads'].values()) | {'kni_helion_de_villeneuve'}
     assert set(re.findall(r'character:([\w]+)', effects)) == historical_heads
     assert effects.count('change_first_name = eu5_order_head_') == 11
     assert effects.count('set_order_tenet = tenet:tenet_') == 40
-    assert effects.count('title:b_rodos.title_province = { set_holding_type = castle_holding }') == 1
+    assert 'title:b_rodos.title_province = { set_holding_type = castle_holding }' not in effects
     # Verify the startup patch touches exactly this initialization block.
     baseline_path = Path(data['backup']) / 'mod' / START
     baseline = baseline_path.read_text(encoding='utf-8-sig')
     assert start == baseline.replace(OLD, NEW)
     report = {'orders': 50, 'monastic_orders': 40, 'military_orders': 10,
-              'headquarters': 50, 'branch_houses': 138, 'leased_baronies': 188,
+              'headquarters': 50, 'branch_houses': 121, 'leased_baronies': 171,
               'female_heads': sum(r['gender'] == 'female' for r in data['orders']),
               'generated_heads': sum(not r['existing_leader'] for r in data['orders']),
               'existing_heads': sorted(historical_heads), 'eu5_documented_heads': 11,
@@ -449,16 +453,16 @@ def main():
               'undefined_references': 0, 'duplicate_leases': 0, 'leased_county_capitals': 0,
               'in_game_tested': False, 'backup': data['backup']}
     products[Path('gen_debug/historical_orders_1337_20261105/validation.json')] = json.dumps(report, indent=2, ensure_ascii=False) + '\n'
-    md = ['# 1337 修会与骑士团', '', '现有 50 个组织：40 个修会、10 个军事修会；188 处租借驻地（50 总部、138 分院）。',
+    md = ['# 1337 修会与骑士团', '', '现有 50 个组织：40 个修会、10 个军事修会；171 处租借驻地（50 总部、121 分院）。',
           '', '在原版 1178 的 45 个组织上，按 EU5 `setup/1337/04_religious_orders.txt` 新增 6 个组织，并为文件内全部 11 个组织接入指定领导人。',
           '新增：阿尔坎塔拉、基督、蒙特萨骑士团，道明会、方济各会、奥斯定隐修会。奥斯定隐修会与现有奥斯定咏礼会分别保留；EU5 的托钵修会采用 CK3 原版方济各会/道明会使用的 monastic 机制。',
           '11 位人物均复用现有角色 ID、出生日期和能力；不复制人物。仅补充中英文全名显示。另沿用现有医院骑士团团长，剩余 39 个组织仍使用动态生成的当代首领。',
           '修会保留 PAM DLC 门槛，军事修会不要求 PAM。仅在 1337.4.1 新开局初始化，逐团有创建成功标记和重复租借防护。',
-          '', '本笃会地点按地区修会和改革传统分配；萨尔茨堡、美因茨、锡洛斯复用原有修院，不再在同一伯爵领另建代理。按照 EU5 locations 为本笃会及圣地亚哥、卡拉特拉瓦、阿维什骑士团补充地产；熙笃会按 EU5 地点缩减为 10 处；完整对应见 inputs/eu5_lease_supplement_mapping.json。新增 6 个组织的 38 处驻地按 EU5 locations 映射。先保留全部可用同名地块，再为首府、被租地和类型不兼容地产选择同伯爵领内的代理。详见 inputs/eu5_location_mapping.json。',
+          '', '本笃会地点按地区修会和改革传统分配；萨尔茨堡、美因茨、锡洛斯复用原有修院，不再在同一伯爵领另建代理。按照 EU5 locations 为本笃会及圣地亚哥、卡拉特拉瓦、阿维什骑士团补充地产；熙笃会按 EU5 地点缩减为 10 处；完整对应见 inputs/eu5_lease_supplement_mapping.json。新增 6 个组织的 38 处驻地按 EU5 locations 映射。伊比利亚骑士团保留总部，其他伯爵领只保留 EU5 人口最多的来源地点；首府及不兼容地产使用同伯爵领代理。详见 inputs/eu5_location_mapping.json。',
           '基督和蒙特萨骑士团使用 EU5 OPX/MTS 原始十字纹理与配色，未覆盖其他纹章。',
-          '医院骑士团继续保留上一轮的处理：科斯岛总部、现有罗德岛团长、骑士团政体、罗德岛首府转城堡。新接入的其他 11 位领导人不会执行这段罗德岛专属逻辑。',
+          '医院骑士团继续保留上一轮的处理：科斯岛总部、现有罗德岛团长、教会制、保留罗德岛首府教堂。新接入的其他 11 位领导人不会执行这段罗德岛专属逻辑。',
           '圣殿骑士团于 1312 年撤销，已从 1337 开局移除；安达卢斯加齐总部迁至洛哈、分驻瓜迪克斯。',
-          '', '**验证：静态语法、参数展开、头衔/礼仪/文化/人物引用、188 处非首府租借和重复项检查通过。尚未游戏内新开局/过日/存读档测试。**',
+          '', '**验证：静态语法、参数展开、头衔/礼仪/文化/人物引用、171 处非首府租借和重复项检查通过。尚未游戏内新开局/过日/存读档测试。**',
           '', f'本次备份：`{data["backup"]}`', f'前次备份：`{data["previous_backup"]}`',
           '', '| 组织 | 类型 | 领导人 | 总部地块 | 分院数 |', '|---|---|---|---|---:|']
     for r in data['orders']:

@@ -2,7 +2,7 @@
 from pathlib import Path
 import re,json,hashlib,sys
 M=Path(__file__).resolve().parents[1]; B=Path(r'F:/备份/EU5_Modern_Borders_noshape/_backup_20261105_101859_order_startup_and_coa');sys.path.insert(0,str(M/'gen_debug'));import rebuild_geographical_regions_20261031 as parser
-rows=json.loads((M/'gen_debug/historical_orders_1337_20261105/inputs/orders.json').read_text(encoding='utf8'))['orders'];expected={r['type_key'] for r in rows if not r['type_key'].startswith('ho_eu5_')}
+rows=json.loads((M/'gen_debug/historical_orders_1337_20261105/inputs/orders.json').read_text(encoding='utf8'))['orders'];expected={r['type_key'] for r in rows if not r['type_key'].startswith('ho_eu5_')} | {'ho_christian_sword_brethren', 'ho_christian_teutonic_order'}
 files=[('mod/common/holy_orders/00_christian_holy_orders.txt','common/holy_orders/00_christian_holy_orders.txt'),('game/common/holy_orders/00_muslim_holy_orders.txt','common/holy_orders/00_muslim_holy_orders.txt')]
 outputs={};found=set()
 def mask(s):

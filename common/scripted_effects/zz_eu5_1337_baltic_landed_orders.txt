@@ -1,0 +1,97 @@
+# Two landed military orders, using the Hospitaller temporary-head transfer pattern.
+eu5_1337_setup_baltic_landed_orders_effect = {
+ # teutonic
+ if = {
+  limit = {
+   NOT = { has_global_variable = eu5_1337_teutonic_created }
+   exists = character:teu_dietrich_von_altenburg
+   character:teu_dietrich_von_altenburg = { is_alive = yes has_title = title:d_prussia }
+   NOT = { exists = title:d_teutonic_order.holder }
+   title:b_dzierzgon = { exists = county.holder is_under_holy_order_lease = no title_province = { is_county_capital = no } }
+  }
+  create_character = {
+   age = 45
+   gender = male
+   dynasty = none
+   random_traits = yes
+   faith = rite:roman_rite.faith
+   rite = rite:roman_rite
+   culture = culture:saxon
+   location = title:b_dzierzgon.title_province
+   trait = order_member
+   trait = celibate
+   trait = education_martial_3
+   save_scope_as = eu5_1337_teutonic_acting_leader
+  }
+  eu5_1337_found_order_effect = {
+   LEADER = scope:eu5_1337_teutonic_acting_leader
+   CAPITAL = b_dzierzgon
+   TYPE = ho_christian_teutonic_order
+   HOLDING = castle_holding
+   STARTUP_FLAG = military_order_game_start_founder
+   ORDER_SCOPE = eu5_1337_teutonic_order
+   FLAG = eu5_1337_teutonic_created
+   TRAIT = order_member
+  }
+  if = {
+   limit = { exists = scope:eu5_1337_teutonic_order character:teu_dietrich_von_altenburg = { has_title = title:d_prussia } }
+   scope:eu5_1337_teutonic_order.leader.primary_title = {
+    create_title_and_vassal_change = { type = granted save_scope_as = eu5_1337_teutonic_transfer add_claim_on_loss = no }
+    change_title_holder_include_vassals = { holder = character:teu_dietrich_von_altenburg change = scope:eu5_1337_teutonic_transfer }
+    resolve_title_and_vassal_change = scope:eu5_1337_teutonic_transfer
+   }
+   character:teu_dietrich_von_altenburg = { add_trait = order_member change_government = ecclesiastical_government set_primary_title_to = title:d_prussia }
+   title:d_prussia = { set_always_follows_primary_heir = yes }
+  }
+ }
+ # livonian
+ if = {
+  limit = {
+   NOT = { has_global_variable = eu5_1337_livonian_created }
+   exists = character:liv_eberhard_von_monheim
+   character:liv_eberhard_von_monheim = { is_alive = yes has_title = title:d_eu5_liv }
+   NOT = { exists = title:d_sword_brethren.holder }
+   title:b_viljandi = { exists = county.holder is_under_holy_order_lease = no title_province = { is_county_capital = no } }
+  }
+  create_character = {
+   age = 45
+   gender = male
+   dynasty = none
+   random_traits = yes
+   faith = rite:roman_rite.faith
+   rite = rite:roman_rite
+   culture = culture:saxon
+   location = title:b_viljandi.title_province
+   trait = order_member
+   trait = celibate
+   trait = education_martial_3
+   save_scope_as = eu5_1337_livonian_acting_leader
+  }
+  eu5_1337_found_order_effect = {
+   LEADER = scope:eu5_1337_livonian_acting_leader
+   CAPITAL = b_viljandi
+   TYPE = ho_christian_sword_brethren
+   HOLDING = castle_holding
+   STARTUP_FLAG = military_order_game_start_founder
+   ORDER_SCOPE = eu5_1337_livonian_order
+   FLAG = eu5_1337_livonian_created
+   TRAIT = order_member
+  }
+  if = {
+   limit = { exists = scope:eu5_1337_livonian_order character:liv_eberhard_von_monheim = { has_title = title:d_eu5_liv } }
+   scope:eu5_1337_livonian_order.leader.primary_title = {
+    create_title_and_vassal_change = { type = granted save_scope_as = eu5_1337_livonian_transfer add_claim_on_loss = no }
+    change_title_holder_include_vassals = { holder = character:liv_eberhard_von_monheim change = scope:eu5_1337_livonian_transfer }
+    resolve_title_and_vassal_change = scope:eu5_1337_livonian_transfer
+   }
+   # The de jure Baltic duchy starts unheld; never take it from an existing holder.
+   if = { limit = { NOT = { exists = title:d_baltic.holder } } character:liv_eberhard_von_monheim = { get_title = title:d_baltic } }
+   character:liv_eberhard_von_monheim = {
+    add_trait = order_member
+    change_government = ecclesiastical_government
+    if = { limit = { has_title = title:d_baltic } set_primary_title_to = title:d_baltic }
+   }
+   title:d_eu5_liv = { set_always_follows_primary_heir = yes }
+  }
+ }
+}

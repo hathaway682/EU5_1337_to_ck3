@@ -204,6 +204,11 @@ ho_christian_teutonic_order = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = military_order_game_start_founder }
 			}
@@ -218,6 +223,7 @@ ho_christian_teutonic_order = {
 					has_cultural_pillar = heritage_central_germanic
 				}
 			}
+		}
 		}
 	}
 
@@ -747,6 +753,11 @@ ho_christian_sword_brethren = {
 
 	trigger = {
 		trigger_if = {
+			limit = { scope:founder = { has_character_flag = eu5_1337_historical_order_setup } }
+			always = yes
+		}
+		trigger_else = {
+		trigger_if = {
 			limit = {
 				scope:founder = { has_variable = military_order_game_start_founder }
 			}
@@ -758,6 +769,7 @@ ho_christian_sword_brethren = {
 					has_doctrine_parameter = is_western_christian_faith
 				}
 			}
+		}
 		}
 	}
 

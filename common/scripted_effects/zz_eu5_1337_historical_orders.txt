@@ -1,4 +1,4 @@
-﻿# Vanilla 1178 roster plus the EU5 1337 religious-order setup and its leaders.
+# Vanilla 1178 roster plus the EU5 1337 religious-order setup and its leaders.
 # Monastic orders require PAM, as in vanilla. Military orders do not.
 # Headquarters and branch houses are all non-capital baronies.
 # Landed county ownership is retained; only the barony leases are established.
@@ -1688,6 +1688,7 @@ eu5_1337_historical_monastic_orders_effect = {
 eu5_1337_historical_military_orders_effect = {
 	if = {
 		limit = { game_start_date = 1337.4.1 current_date = 1337.4.1 }
+		eu5_1337_setup_baltic_landed_orders_effect = yes
 		# Knights Hospitaller
 		if = {
 			limit = {
@@ -1750,11 +1751,9 @@ eu5_1337_historical_military_orders_effect = {
 					change_title_holder_include_vassals = { holder = scope:eu5_1337_order_38_leader change = scope:eu5_1337_hospitaller_transfer }
 					resolve_title_and_vassal_change = scope:eu5_1337_hospitaller_transfer
 				}
-				# Military order government cannot personally hold a church holding.
-				title:b_rodos.title_province = { set_holding_type = castle_holding }
 				scope:eu5_1337_order_38_leader = {
-					change_government = holy_order_government
-					set_primary_title_to = title:d_knights_hospitaller
+					change_government = ecclesiastical_government
+					set_primary_title_to = title:d_eu5_kni
 				}
 				title:d_eu5_kni = { set_always_follows_primary_heir = yes }
 			}
@@ -1803,15 +1802,13 @@ eu5_1337_historical_military_orders_effect = {
 				FLAG = eu5_1337_order_39_created
 				TRAIT = order_member
 			}
-			eu5_1337_lease_order_branch_effect = { BARONY = b_ucles ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
+
 			eu5_1337_lease_order_branch_effect = { BARONY = b_consuegra ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
 			eu5_1337_lease_order_branch_effect = { BARONY = b_montiel ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
 			eu5_1337_lease_order_branch_effect = { BARONY = b_segura_de_la_sierra ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_caravaca ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_azuaga ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_llerena ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
+
 			eu5_1337_lease_order_branch_effect = { BARONY = b_montanchez ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_zafra ORDER = scope:eu5_1337_order_39 HOLDING = castle_holding }
+
 		}
 		# Order of Calatrava
 		if = {
@@ -1856,9 +1853,7 @@ eu5_1337_historical_military_orders_effect = {
 				TRAIT = order_member
 			}
 			eu5_1337_lease_order_branch_effect = { BARONY = b_calatrava ORDER = scope:eu5_1337_order_40 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_manzanares ORDER = scope:eu5_1337_order_40 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_almodovar_del_campo ORDER = scope:eu5_1337_order_40 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_puertollano ORDER = scope:eu5_1337_order_40 HOLDING = castle_holding }
+
 			eu5_1337_lease_order_branch_effect = { BARONY = b_osuna ORDER = scope:eu5_1337_order_40 HOLDING = castle_holding }
 			eu5_1337_lease_order_branch_effect = { BARONY = b_arcos_de_la_frontera ORDER = scope:eu5_1337_order_40 HOLDING = castle_holding }
 		}
@@ -1905,15 +1900,13 @@ eu5_1337_historical_military_orders_effect = {
 				TRAIT = order_member
 			}
 			eu5_1337_lease_order_branch_effect = { BARONY = b_mora_portugal ORDER = scope:eu5_1337_order_41 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_elvas ORDER = scope:eu5_1337_order_41 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_vila_vicosa ORDER = scope:eu5_1337_order_41 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_estremoz ORDER = scope:eu5_1337_order_41 HOLDING = castle_holding }
+
 		}
 		# Turkic Ghazis
 		if = {
 			limit = {
 				NOT = { has_global_variable = eu5_1337_order_42_created }
-				title:b_yalvac = {
+				title:b_sogut = {
 					exists = county.holder
 					is_under_holy_order_lease = no
 					title_province = { is_county_capital = no }
@@ -1928,7 +1921,7 @@ eu5_1337_historical_military_orders_effect = {
 				faith = rite:hanafi.faith
 				rite = rite:hanafi
 				culture = culture:turkmen
-				location = title:b_yalvac.title_province
+				location = title:b_sogut.title_province
 				trait = order_member
 				trait = celibate
 				trait = education_martial_3
@@ -1936,7 +1929,7 @@ eu5_1337_historical_military_orders_effect = {
 			}
 			eu5_1337_found_order_effect = {
 				LEADER = scope:eu5_1337_order_42_leader
-				CAPITAL = b_yalvac
+				CAPITAL = b_sogut
 				TYPE = ho_turkic_ghazis
 				HOLDING = castle_holding
 				STARTUP_FLAG = military_order_game_start_founder
@@ -1944,6 +1937,7 @@ eu5_1337_historical_military_orders_effect = {
 				FLAG = eu5_1337_order_42_created
 				TRAIT = order_member
 			}
+			eu5_1337_lease_order_branch_effect = { BARONY = b_yalvac ORDER = scope:eu5_1337_order_42 HOLDING = castle_holding }
 			eu5_1337_lease_order_branch_effect = { BARONY = b_cermik ORDER = scope:eu5_1337_order_42 HOLDING = castle_holding }
 			eu5_1337_lease_order_branch_effect = { BARONY = b_malekan ORDER = scope:eu5_1337_order_42 HOLDING = castle_holding }
 		}
@@ -1983,7 +1977,7 @@ eu5_1337_historical_military_orders_effect = {
 				TRAIT = order_member
 			}
 			eu5_1337_lease_order_branch_effect = { BARONY = b_cherchell ORDER = scope:eu5_1337_order_43 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_cartagena ORDER = scope:eu5_1337_order_43 HOLDING = castle_holding }
+			eu5_1337_lease_order_branch_effect = { BARONY = b_tetouan ORDER = scope:eu5_1337_order_43 HOLDING = castle_holding }
 		}
 		# Ghazis of al-Andalus
 		if = {
@@ -2064,9 +2058,7 @@ eu5_1337_historical_military_orders_effect = {
 				FLAG = eu5_1337_order_45_created
 				TRAIT = order_member
 			}
-			eu5_1337_lease_order_branch_effect = { BARONY = b_brozas ORDER = scope:eu5_1337_order_45 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_valencia_de_alcantara ORDER = scope:eu5_1337_order_45 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_medellin ORDER = scope:eu5_1337_order_45 HOLDING = castle_holding }
+
 			eu5_1337_lease_order_branch_effect = { BARONY = b_zalamea ORDER = scope:eu5_1337_order_45 HOLDING = castle_holding }
 		}
 		# Order of Christ
@@ -2113,7 +2105,7 @@ eu5_1337_historical_military_orders_effect = {
 			}
 			eu5_1337_lease_order_branch_effect = { BARONY = b_chao_de_couce ORDER = scope:eu5_1337_order_46 HOLDING = castle_holding }
 			eu5_1337_lease_order_branch_effect = { BARONY = b_proenca_nova ORDER = scope:eu5_1337_order_46 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_idanha ORDER = scope:eu5_1337_order_46 HOLDING = castle_holding }
+
 		}
 		# Order of Montesa
 		if = {
@@ -2159,10 +2151,9 @@ eu5_1337_historical_military_orders_effect = {
 			}
 			eu5_1337_lease_order_branch_effect = { BARONY = b_bunol ORDER = scope:eu5_1337_order_47 HOLDING = castle_holding }
 			eu5_1337_lease_order_branch_effect = { BARONY = b_gandia ORDER = scope:eu5_1337_order_47 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_morella ORDER = scope:eu5_1337_order_47 HOLDING = castle_holding }
+
 			eu5_1337_lease_order_branch_effect = { BARONY = b_cantavieja ORDER = scope:eu5_1337_order_47 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_ares_del_maestre ORDER = scope:eu5_1337_order_47 HOLDING = castle_holding }
-			eu5_1337_lease_order_branch_effect = { BARONY = b_llucena ORDER = scope:eu5_1337_order_47 HOLDING = castle_holding }
+
 		}
 	}
 }
