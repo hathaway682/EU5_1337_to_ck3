@@ -42,6 +42,11 @@ eu5_1337_setup_baltic_landed_orders_effect = {
    }
    character:teu_dietrich_von_altenburg = { add_trait = order_member change_government = ecclesiastical_government set_primary_title_to = title:d_prussia }
    title:d_prussia = { set_always_follows_primary_heir = yes }
+   # EU5 TEU directly owns Mergentheim; preserve the existing church holding.
+   if = {
+    limit = { exists = scope:eu5_1337_teutonic_order title:b_mergentheim = { exists = holder is_under_holy_order_lease = no } }
+    title:b_mergentheim = { lease_out_to_holy_order = scope:eu5_1337_teutonic_order }
+   }
   }
  }
  # livonian
