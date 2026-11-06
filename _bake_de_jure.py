@@ -20,7 +20,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 ON_ACTION = os.path.join(ROOT, "common", "on_action", "1337_de_jure_set.txt")
 FILES = {
     "00": os.path.join(ROOT, "common", "landed_titles", "00_landed_titles.txt"),
-    "2020": os.path.join(ROOT, "common", "ToSC_titles.txt"),
+    "2020": os.path.join(ROOT, "common", "landed_titles", "00_landed_titles.txt"),
 }
 
 from _de_jure_parse import parse_on_action, LandedTitles
