@@ -1,29 +1,27 @@
 # -*- coding: utf-8 -*-
 """Bake the runtime de jure changes from 1337_de_jure_set.txt directly into
-the mod's landed titles files (00_landed_titles.txt + 2020_new_landed_titles.txt),
+the mod's single landed titles file (00_landed_titles.txt),
 so the effective de jure structure is expressed statically in the files.
 
 Applies the on_action operations in their original order:
   - set_de_jure_liege_title  -> physically moves the title block into the new parent
-  - every_in_de_jure_hierarchy (tier_duchy) -> moves all duchy blocks under the kingdom
+  - every_in_de_jure_hierarchy -> moves descendants matching the requested tier
   - set_capital_county       -> sets/updates the `capital = c_xxx` line in the block
 
 Comments attached above a moved block travel with it. Barony (b_) and county (c_)
 moves are handled by the same block-move logic.
 """
-import json
+import copy
 import os
 import re
-import sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 ON_ACTION = os.path.join(ROOT, "common", "on_action", "1337_de_jure_set.txt")
 FILES = {
     "00": os.path.join(ROOT, "common", "landed_titles", "00_landed_titles.txt"),
-    "2020": os.path.join(ROOT, "common", "landed_titles", "00_landed_titles.txt"),
 }
 
-from _de_jure_parse import parse_on_action, LandedTitles
+from _de_jure_parse import parse_on_action, apply_on_action, LandedTitles, TIER_GAME_NAME
 
 
 def read_text(path):
@@ -57,8 +55,15 @@ def find_block(text, tid):
             i = n if j == -1 else j
             continue
         if c == '"':
-            j = text.find('"', i + 1)
-            i = n if j == -1 else j + 1
+            i += 1
+            while i < n:
+                if text[i] == "\\":
+                    i += 2
+                elif text[i] == '"':
+                    i += 1
+                    break
+                else:
+                    i += 1
             continue
         if c == "{":
             depth += 1
@@ -73,6 +78,9 @@ def find_block(text, tid):
 def preceding_comments(text, start):
     """Return (comment_start, comment_text) for contiguous '#' lines directly above start."""
     lines = text[:start].split("\n")
+    # start points at the beginning of the title line, after its preceding '\n'.
+    if lines and lines[-1] == "":
+        lines.pop()
     chunks = []
     i = len(lines) - 1
     while i >= 0 and lines[i].lstrip().startswith("#"):
@@ -88,13 +96,12 @@ def preceding_comments(text, start):
 
 
 def locate(texts, tid):
-    """Find which file contains the block; return (key, start, end, comment_start)."""
-    for key in ("00", "2020"):
+    """Find which file contains the block; return (key, start, end)."""
+    for key in texts:
         r = find_block(texts[key], tid)
         if r:
             start, end = r
-            cs, _ = preceding_comments(texts[key], start)
-            return key, cs, end
+            return key, start, end
     return None
 
 
@@ -118,12 +125,12 @@ def move_block(texts, aid, bid):
         return False
     # extract block text (with comments)
     text_a = texts[key_a]
-    _, block_text = preceding_comments(text_a, a_start)
-    block_text = (block_text + "\n" if block_text else "") + text_a[a_start:a_end]
+    comment_start, _ = preceding_comments(text_a, a_start)
+    block_text = text_a[comment_start:a_end]
     # re-indent to the target parent's child level
-    src_base = text_a[a_start:a_start + len(text_a[a_start:]) - len(text_a[a_start:].lstrip())]
+    src_base = re.match(r"[ \t]*", text_a[a_start:]).group()
     b_text = texts[key_b]
-    b_own = b_text[b_start:b_start + len(b_text[b_start:]) - len(b_text[b_start:].lstrip())]
+    b_own = re.match(r"[ \t]*", b_text[b_start:]).group()
     inner = b_text[b_start:b_end].split("\n")[1:]
     tgt_base = None
     for line in inner:
@@ -137,7 +144,11 @@ def move_block(texts, aid, bid):
                    for ln in block_lines]
     block_text = "\n".join(block_lines)
     # cut from source
-    texts[key_a] = text_a[:a_start] + text_a[a_end:]
+    cut_end = a_end
+    tail = re.match(r"[ \t]*\n", text_a[a_end:])
+    if tail:
+        cut_end += tail.end()
+    texts[key_a] = text_a[:comment_start] + text_a[cut_end:]
     # re-locate target in the (possibly shifted) target text
     if key_a == key_b:
         lb2 = find_block(texts[key_b], bid)
@@ -148,6 +159,12 @@ def move_block(texts, aid, bid):
     # insert before B's closing brace
     text_b = texts[key_b]
     insert_at = b_end - 1  # position of '}' (0-based)
+    close_line = text_b.rfind("\n", 0, insert_at) + 1
+    if not text_b[close_line:insert_at].strip():
+        insert_at = close_line
+    else:
+        # Expand an inline target while preserving its own closing indentation.
+        text_b = text_b[:insert_at] + b_own + text_b[insert_at:]
     prefix = text_b[:insert_at]
     suffix = text_b[insert_at:]
     if prefix and not prefix.endswith("\n"):
@@ -177,6 +194,11 @@ def main():
     metas = {k: read_text(v)[1] for k, v in FILES.items()}
 
     ops = parse_on_action(ON_ACTION)
+    expected_lt = LandedTitles()
+    for k, path in FILES.items():
+        expected_lt.add_file(path, k)
+    expected = copy.deepcopy(expected_lt.titles)
+    apply_on_action(expected, ops)
     print("ops:", len(ops))
     moved = 0
     skipped = 0
@@ -200,14 +222,21 @@ def main():
                 skipped += 1
                 continue
             key, k_start, k_end = la
-            # find all duchy blocks currently inside K's block
+            # Select the requested tier from the current subtree, before moving.
             span = texts[key][k_start:k_end]
+            tier_name = op.get("tier")
+            if tier_name is not None and tier_name not in TIER_GAME_NAME:
+                raise ValueError("Unknown hierarchy tier: %s" % tier_name)
+            tier = TIER_GAME_NAME.get(tier_name)
+            prefix = re.escape(tier) if tier else "[hkedcb]"
             found = []
-            for m in re.finditer(r"(?m)^(\s*)(d_[a-z0-9_-]+)\s*=\s*\{", span):
-                found.append((m.start(), m.group(2)))
+            for m in re.finditer(r"(?m)^[ \t]*(" + prefix + r"_[a-z0-9_-]+)[ \t]*=[ \t]*\{", span):
+                child = m.group(1)
+                if child != tid and child != target:
+                    found.append((m.start(), child))
             found.sort()
             if not found:
-                print("  [skip] %s hierarchy has no duchies" % tid)
+                print("  [skip] %s hierarchy has no matching titles (%s)" % (tid, tier_name or "all"))
                 skipped += 1
                 continue
             for _, d in found:
@@ -220,13 +249,9 @@ def main():
             if new00 is not None:
                 texts["00"] = new00
             else:
-                new2020 = set_capital(texts["2020"], tid, op["target"])
-                if new2020 is not None:
-                    texts["2020"] = new2020
-                else:
-                    print("  [skip] %s not found for capital" % tid)
-                    skipped += 1
-                    continue
+                print("  [skip] %s not found for capital" % tid)
+                skipped += 1
+                continue
             print("  [capital] %s = %s" % (tid, op["target"]))
             moved += 1
 
@@ -236,11 +261,15 @@ def main():
 
     # ---- verification: parse baked files WITHOUT on_action ----
     lt = LandedTitles()
-    lt.add_file(FILES["00"], "mod:00_landed_titles.txt")
-    lt.add_file(FILES["2020"], "mod:ToSC_titles.txt")
-    lt.finalize()
+    from _de_jure_parse import parse_blocks
+    for key, text in texts.items():
+        tokens = [m.group() for m in re.finditer(
+            r'#[^\n]*|"(?:\\.|[^"\\])*"|[{}=]|[^\s{}="#]+', text)
+            if not m.group().startswith("#")]
+        blocks, _ = parse_blocks(tokens)
+        lt._walk(blocks, None, key)
     baked = lt.titles
-    current = json.load(open(os.path.join(ROOT, "_de_jure_structure.json"), encoding="utf-8"))["titles"]
+    current = expected
     mism = 0
     for tid in sorted(baked):
         b = baked[tid]["parent"]
