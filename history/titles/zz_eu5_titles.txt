@@ -2038,7 +2038,7 @@ k_eu5_bli = {
 	}
 }
 
-k_eu5_cil = {
+k_anatolia = {
 	1198.1.6 = {
 		holder = cil_levon_i_roupenid
 	}
@@ -2134,7 +2134,7 @@ k_eu5_grg = {
 	}
 }
 
-k_eu5_hal = {
+k_galicia-volhynia = {
 	1085.1.1 = {
 		holder = hal_rurik_rostislavich_rurikovich
 	}
@@ -2255,7 +2255,7 @@ k_eu5_hsl = {
 	}
 }
 
-k_eu5_ifa = {
+k_adal = {
 	1337.1.1 = {
 		holder = ifa_jamal_i_walashma
 	}
@@ -2527,21 +2527,6 @@ k_eu5_mdi = {
 	}
 }
 
-k_eu5_mos = {
-	1263.11.14 = {
-		holder = mos_daniil_aleksandrovich_rurikovich
-	}
-	1303.5.4 = {
-		holder = mos_yury_danilovich_rurikovich
-	}
-	1325.11.21 = {
-		holder = mos_ivan_i_danilovich_kalita_rurikovich
-	}
-	1337.4.1 = {
-		holder = mos_ivan_i_danilovich_kalita_rurikovich
-		government = feudal_government
-	}
-}
 
 k_eu5_muc = {
 }
@@ -2737,62 +2722,8 @@ k_eu5_vij = {
 	}
 }
 
-k_eu5_vol = {
-	987.1.1 = {
-		holder = rso_boris_vladimirovich_rurikovich
-	}
-	1010.1.1 = {
-		holder = vol_vsevolod_vladimirovich_rurikovich
-	}
-	1036.1.1 = {
-		holder = kie_sviatoslav_ii_rurikovich
-	}
-	1054.2.20 = {
-		holder = smo_igor_yaroslavich_rurikovich
-	}
-	1057.1.1 = {
-		holder = vol_rostislav_vladimirovich_rurikovich
-	}
-	1078.10.3 = {
-		holder = tuv_yaropolk_izyaslavich_rurikovich
-	}
-	1086.11.22 = {
-		holder = smo_davyd_igorevich_rurikovich
-	}
-	1097.1.1 = {
-		holder = vol_mstislav_sviatopolkovich_rurikovich
-	}
-	1100.8.30 = {
-		holder = pol_yaroslav_sviatopolkovich_rurikovich
-	}
-	1199.1.1 = {
-		holder = vol_roman_rurikovich
-	}
-	1235.1.1 = {
-		holder = kie_mikhail_ii_vsevolodovich_rurikovich
-	}
-	1253.1.1 = {
-		holder = vol_daniel_rurikovich
-	}
-	1264.1.1 = {
-		holder = vol_leo_i_rurikovich
-	}
-	1301.1.1 = {
-		holder = vol_yuri_i_rurikovich
-	}
-	1308.1.1 = {
-		holder = vol_andrii_rurikovich
-	}
-	1323.1.1 = {
-		holder = vol_boleslaw_jerzy_ii_piast
-	}
-	1337.4.1 = {
-		holder = vol_boleslaw_jerzy_ii_piast
-		government = feudal_government
-	}
-}
 
-k_eu5_zan = {
+k_zanj = {
 	1277.1.1 = {
 		holder = zan_al_hassan_ibn_talut_mahdali
 	}
@@ -3883,6 +3814,37 @@ k_yemen = {
 # MB+ d_strymon: merge both source history blocks; Phokas5 succeeds in 1315.
 # MB+ Iberian and Two Sicilies duchies.
 # Iberian and Two Sicilies ecclesiastical vassals.
+# MB+ Mamluk duchies.
+d_palestine = {
+ 1337.1.1 = { liege = k_egypt }
+ 1337.4.1 = { holder = mb_egypt_34993 government = clan_government }
+}
+
+d_dakhila = {
+ 1337.1.1 = { liege = k_egypt }
+ 1337.4.1 = { holder = mb_egypt_12364288M3 government = clan_government }
+}
+
+d_medina = {
+	1337.1.1 = { liege = k_egypt }
+	1337.4.1 = { holder = mda_wudayy_bin_jammaz government = clan_government }
+}
+
+d_alexandria = {
+	1337.1.1 = { liege = k_egypt }
+	1337.4.1 = { holder = mb_egypt_485007 government = clan_government }
+}
+
+d_al-said = {
+	1337.1.1 = { liege = k_egypt }
+	1337.4.1 = { holder = mb_egypt_8000472 government = clan_government }
+}
+
+d_amiralarab = {
+	1337.1.1 = { liege = k_egypt }
+	1337.4.1 = { holder = mb_egypt_1500043M government = clan_government }
+}
+
 d_et_toledo = {
 	1337.4.1 = {
 		liege = k_castille
@@ -5069,7 +5031,7 @@ d_east_novgorod = {
 		holder = mos_ivan_i_danilovich_kalita_rurikovich
 	}
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		holder = eu5_rep_nov
@@ -5967,7 +5929,7 @@ d_eu5_lin = {
 }
 
 
-d_eu5_liv = {
+k_livonia = {
 	1328.1.1 = {
 		holder = liv_eberhard_von_monheim
 	}
@@ -7859,7 +7821,7 @@ d_karagay = {
 
 d_karelia = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		holder = eu5_rep_nov
@@ -8370,6 +8332,15 @@ d_morocco = {
 }
 
 d_moscow = {
+	1263.11.14 = {
+		holder = mos_daniil_aleksandrovich_rurikovich
+	}
+	1303.5.4 = {
+		holder = mos_yury_danilovich_rurikovich
+	}
+	1325.11.21 = {
+		holder = mos_ivan_i_danilovich_kalita_rurikovich
+	}
 	1337.4.1 = {
 		holder = mos_ivan_i_danilovich_kalita_rurikovich
 		government = feudal_government
@@ -8544,7 +8515,7 @@ d_polesia = {
 
 d_pomorye = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		holder = eu5_rep_nov
@@ -9465,7 +9436,7 @@ d_tonga = {
 
 d_totma = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		holder = eu5_rep_nov
@@ -9615,6 +9586,54 @@ d_vladimir = {
 }
 
 d_volhynia = {
+	987.1.1 = {
+		holder = rso_boris_vladimirovich_rurikovich
+	}
+	1010.1.1 = {
+		holder = vol_vsevolod_vladimirovich_rurikovich
+	}
+	1036.1.1 = {
+		holder = kie_sviatoslav_ii_rurikovich
+	}
+	1054.2.20 = {
+		holder = smo_igor_yaroslavich_rurikovich
+	}
+	1057.1.1 = {
+		holder = vol_rostislav_vladimirovich_rurikovich
+	}
+	1078.10.3 = {
+		holder = tuv_yaropolk_izyaslavich_rurikovich
+	}
+	1086.11.22 = {
+		holder = smo_davyd_igorevich_rurikovich
+	}
+	1097.1.1 = {
+		holder = vol_mstislav_sviatopolkovich_rurikovich
+	}
+	1100.8.30 = {
+		holder = pol_yaroslav_sviatopolkovich_rurikovich
+	}
+	1199.1.1 = {
+		holder = vol_roman_rurikovich
+	}
+	1235.1.1 = {
+		holder = kie_mikhail_ii_vsevolodovich_rurikovich
+	}
+	1253.1.1 = {
+		holder = vol_daniel_rurikovich
+	}
+	1264.1.1 = {
+		holder = vol_leo_i_rurikovich
+	}
+	1301.1.1 = {
+		holder = vol_yuri_i_rurikovich
+	}
+	1308.1.1 = {
+		holder = vol_andrii_rurikovich
+	}
+	1323.1.1 = {
+		holder = vol_boleslaw_jerzy_ii_piast
+	}
 	1337.4.1 = {
 		holder = vol_boleslaw_jerzy_ii_piast
 		government = feudal_government
@@ -9661,7 +9680,7 @@ d_west_mossi = {
 
 d_west_novgorod = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		holder = eu5_rep_nov
@@ -9939,7 +9958,7 @@ c_achaea = {
 
 c_adal = {
 	1337.1.1 = {
-		liege = k_eu5_ifa
+		liege = k_adal
 	}
 	1337.4.1 = {
 		change_development_level = 10
@@ -10447,11 +10466,12 @@ c_al_hisu = {
 }
 
 c_al_jifar = {
+	1337.1.1 = { liege = k_egypt }
 	1337.4.1 = {
 		change_development_level = 19
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_8000471
 		government = clan_government
 	}
 }
@@ -10627,11 +10647,12 @@ c_alessandria = {
 }
 
 c_alexandria = {
+	1337.1.1 = { liege = d_alexandria }
 	1337.4.1 = {
 		change_development_level = 37
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_485007
 		government = clan_government
 	}
 }
@@ -11842,11 +11863,12 @@ c_astrakhan = {
 }
 
 c_asyut = {
+	1337.1.1 = { liege = d_al-said }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_8000472
 		government = clan_government
 	}
 }
@@ -12013,7 +12035,7 @@ c_attu = {
 
 c_aunus_karelia = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 6
@@ -12526,11 +12548,12 @@ c_bahamas = {
 }
 
 c_bahnasa = {
+	1337.1.1 = { liege = d_al-said }
 	1337.4.1 = {
 		change_development_level = 26
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_485020
 		government = clan_government
 	}
 }
@@ -13790,7 +13813,7 @@ c_beloozero = {
 
 c_belozerskaya = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 14
@@ -14036,7 +14059,7 @@ c_bezanozano = {
 
 c_bezhetsk = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 14
@@ -14049,7 +14072,7 @@ c_bezhetsk = {
 
 c_bezhetskaya = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 16
@@ -15172,11 +15195,12 @@ c_buglas = {
 }
 
 c_buhayra = {
+	1337.1.1 = { liege = d_alexandria }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_485007
 		government = clan_government
 	}
 }
@@ -17851,7 +17875,7 @@ c_courland = {
 		holder = kur_johann_ii
 	}
 	1337.1.1 = {
-		liege = d_eu5_liv
+		liege = k_livonia
 	}
 	1337.4.1 = {
 		change_development_level = 16
@@ -18278,11 +18302,12 @@ c_daizhou = {
 }
 
 c_dakahliyya = {
+	1337.1.1 = { liege = k_egypt }
 	1337.4.1 = {
 		change_development_level = 26
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_8000505
 		government = clan_government
 	}
 }
@@ -18807,7 +18832,7 @@ c_derbyshire = {
 
 c_derevskaya = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 16
@@ -19418,11 +19443,12 @@ c_drohobych = {
 }
 
 c_duba = {
+	1337.1.1 = { liege = d_medina }
 	1337.4.1 = {
 		change_development_level = 3
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mda_wudayy_bin_jammaz
 		government = clan_government
 	}
 }
@@ -20745,11 +20771,12 @@ c_fika = {
 }
 
 c_filastin = {
+ 1337.1.1 = { liege = d_palestine }
 	1337.4.1 = {
 		change_development_level = 27
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_34993
 		government = clan_government
 	}
 }
@@ -21476,11 +21503,12 @@ c_ghana = {
 }
 
 c_gharbiyya = {
+	1337.1.1 = { liege = k_egypt }
 	1337.4.1 = {
 		change_development_level = 25
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_8000504
 		government = clan_government
 	}
 }
@@ -24729,7 +24757,7 @@ c_iningai = {
 
 c_inner_aunus_karelia = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 4
@@ -24767,7 +24795,7 @@ c_inner_livonia = {
 		holder = rig_friedrich_von_pernstein
 	}
 	1337.1.1 = {
-		liege = d_eu5_liv
+		liege = k_livonia
 	}
 	1337.4.1 = {
 		change_development_level = 14
@@ -24779,9 +24807,12 @@ c_inner_livonia = {
 }
 
 d_et_riga = {
+	1337.1.1 = {
+		liege = k_livonia
+	}
 	1337.4.1 = {
 		government = ecclesiastical_government
-		holder = 0
+		holder = rig_friedrich_von_pernstein
 		clerical_region = eu5_et_1337_riga_region
 	}
 }
@@ -26758,7 +26789,7 @@ c_kargasok = {
 
 c_kargopol = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 4
@@ -27696,7 +27727,7 @@ c_khiva = {
 
 c_kholmogory = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 6
@@ -28142,7 +28173,7 @@ c_kletsk = {
 
 c_knyazhaya = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 16
@@ -29502,18 +29533,19 @@ c_lata = {
 }
 
 c_latakia = {
+	1337.1.1 = { liege = k_egypt }
 	1337.4.1 = {
 		change_development_level = 20
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_485430
 		government = clan_government
 	}
 }
 
 c_latgalia = {
 	1337.1.1 = {
-		liege = d_eu5_liv
+		liege = k_livonia
 	}
 	1337.4.1 = {
 		change_development_level = 14
@@ -29559,11 +29591,12 @@ c_lavras = {
 }
 
 c_lebanon = {
+ 1337.1.1 = { liege = d_palestine }
 	1337.4.1 = {
 		change_development_level = 20
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_485200
 		government = clan_government
 	}
 }
@@ -31127,7 +31160,7 @@ c_luxico = {
 
 c_luzhkaya = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 14
@@ -31361,11 +31394,12 @@ c_madhyamagrama = {
 }
 
 c_madian = {
+	1337.1.1 = { liege = d_medina }
 	1337.4.1 = {
 		change_development_level = 2
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_34506
 		government = clan_government
 	}
 }
@@ -32854,7 +32888,7 @@ c_medina = {
 		holder = mda_wudayy_bin_jammaz
 	}
 	1337.1.1 = {
-		liege = k_egypt
+		liege = d_medina
 	}
 	1337.4.1 = {
 		change_development_level = 7
@@ -33650,11 +33684,12 @@ c_minusinsk = {
 }
 
 c_minya = {
+	1337.1.1 = { liege = d_al-said }
 	1337.4.1 = {
 		change_development_level = 26
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_485020
 		government = clan_government
 	}
 }
@@ -34919,7 +34954,7 @@ c_nagaur = {
 
 c_nagornaya = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 13
@@ -37189,11 +37224,12 @@ c_nzima = {
 }
 
 c_oasis = {
+ 1337.1.1 = { liege = d_dakhila }
 	1337.4.1 = {
 		change_development_level = 14
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_12364288M3
 		government = clan_government
 	}
 }
@@ -37299,7 +37335,7 @@ c_oberwallis = {
 
 c_obonezhskaya = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 14
@@ -37745,7 +37781,7 @@ c_onabeesh = {
 
 c_onega = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 4
@@ -40114,7 +40150,7 @@ c_pomo = {
 
 c_pomorye = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 3
@@ -41028,11 +41064,12 @@ c_qumisha = {
 }
 
 c_qura = {
+	1337.1.1 = { liege = d_medina }
 	1337.4.1 = {
 		change_development_level = 0
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mda_wudayy_bin_jammaz
 		government = clan_government
 	}
 }
@@ -41403,11 +41440,12 @@ c_rechytsa = {
 }
 
 c_red_sea_coast = {
+ 1337.1.1 = { liege = d_al-said }
 	1337.4.1 = {
 		change_development_level = 19
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_485120
 		government = clan_government
 	}
 }
@@ -41902,7 +41940,7 @@ c_rotalia = {
 		holder = bio_jakob_ii
 	}
 	1337.1.1 = {
-		liege = d_eu5_liv
+		liege = k_livonia
 	}
 	1337.4.1 = {
 		change_development_level = 14
@@ -42124,7 +42162,7 @@ c_rzhev = {
 
 c_rzhevskaya = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 16
@@ -43650,21 +43688,23 @@ c_sharangad = {
 }
 
 c_sharat = {
+	1337.1.1 = { liege = d_amiralarab }
 	1337.4.1 = {
 		change_development_level = 16
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_1500043M
 		government = clan_government
 	}
 }
 
 c_sharqiyya = {
+	1337.1.1 = { liege = k_egypt }
 	1337.4.1 = {
 		change_development_level = 24
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_8000505
 		government = clan_government
 	}
 }
@@ -43750,7 +43790,7 @@ c_shenandoah = {
 
 c_shenkursk = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 4
@@ -44970,7 +45010,7 @@ c_south_ktunaxa = {
 
 c_south_livonia = {
 	1337.1.1 = {
-		liege = d_eu5_liv
+		liege = k_livonia
 	}
 	1337.4.1 = {
 		change_development_level = 25
@@ -46204,11 +46244,12 @@ c_tabriz = {
 }
 
 c_tabuk = {
+	1337.1.1 = { liege = d_medina }
 	1337.4.1 = {
 		change_development_level = 0
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_34506
 		government = clan_government
 	}
 }
@@ -46887,7 +46928,7 @@ c_tartu = {
 		holder = bid_engelbert_von_dolen
 	}
 	1337.1.1 = {
-		liege = d_eu5_liv
+		liege = k_livonia
 	}
 	1337.4.1 = {
 		change_development_level = 18
@@ -47776,11 +47817,12 @@ c_tigray = {
 }
 
 c_tih = {
+	1337.1.1 = { liege = k_egypt }
 	1337.4.1 = {
 		change_development_level = 17
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_egypt_8000471
 		government = clan_government
 	}
 }
@@ -48387,7 +48429,7 @@ c_toropets = {
 
 c_torzhok = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 14
@@ -48411,7 +48453,7 @@ c_tosa = {
 
 c_totma = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 14
@@ -49286,7 +49328,7 @@ c_tver = {
 
 c_tverskaya = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 16
@@ -51173,7 +51215,7 @@ c_ve_nadu = {
 
 c_velsk = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 14
@@ -51556,7 +51598,7 @@ c_vladimir = {
 
 c_vodskaya = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 16
@@ -51616,7 +51658,7 @@ c_voikar = {
 
 c_volkhovskaya = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 24
@@ -51639,7 +51681,7 @@ c_volodymyr = {
 
 c_vologda = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 16
@@ -52884,7 +52926,7 @@ c_whanganui = {
 
 c_white_karelia = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 4
@@ -53902,7 +53944,7 @@ c_yaransk = {
 
 c_yaren = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 14
@@ -53993,7 +54035,7 @@ c_yazd = {
 
 c_yazhelbitskaya = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 16
@@ -54058,7 +54100,7 @@ c_yelets = {
 
 c_yemetsk = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 4
@@ -54787,7 +54829,7 @@ c_zanzibar = {
 
 c_zaonezhye = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 3
@@ -55225,7 +55267,7 @@ c_zumbo = {
 
 c_zvenigorod = {
 	1337.1.1 = {
-		liege = k_eu5_mos
+		liege = k_opolye
 	}
 	1337.4.1 = {
 		change_development_level = 16

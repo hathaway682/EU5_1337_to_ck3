@@ -54,7 +54,7 @@ eu5_1337_setup_baltic_landed_orders_effect = {
   limit = {
    NOT = { has_global_variable = eu5_1337_livonian_created }
    exists = character:liv_eberhard_von_monheim
-   character:liv_eberhard_von_monheim = { is_alive = yes has_title = title:d_eu5_liv }
+   character:liv_eberhard_von_monheim = { is_alive = yes has_title = title:k_livonia }
    NOT = { exists = title:d_sword_brethren.holder }
    title:b_viljandi = { exists = county.holder is_under_holy_order_lease = no title_province = { is_county_capital = no } }
   }
@@ -83,20 +83,20 @@ eu5_1337_setup_baltic_landed_orders_effect = {
    TRAIT = order_member
   }
   if = {
-   limit = { exists = scope:eu5_1337_livonian_order character:liv_eberhard_von_monheim = { has_title = title:d_eu5_liv } }
+   limit = { exists = scope:eu5_1337_livonian_order character:liv_eberhard_von_monheim = { has_title = title:k_livonia } }
    scope:eu5_1337_livonian_order.leader.primary_title = {
     create_title_and_vassal_change = { type = granted save_scope_as = eu5_1337_livonian_transfer add_claim_on_loss = no }
     change_title_holder_include_vassals = { holder = character:liv_eberhard_von_monheim change = scope:eu5_1337_livonian_transfer }
     resolve_title_and_vassal_change = scope:eu5_1337_livonian_transfer
    }
    # The de jure Baltic duchy starts unheld; never take it from an existing holder.
-   if = { limit = { NOT = { exists = title:d_baltic.holder } } character:liv_eberhard_von_monheim = { get_title = title:d_baltic } }
+   if = { limit = { NOT = { exists = title:k_livonia.holder } } character:liv_eberhard_von_monheim = { get_title = title:k_livonia } }
    character:liv_eberhard_von_monheim = {
     add_trait = order_member
     change_government = ecclesiastical_government
-    if = { limit = { has_title = title:d_baltic } set_primary_title_to = title:d_baltic }
+    if = { limit = { has_title = title:k_livonia } set_primary_title_to = title:k_livonia }
    }
-   title:d_eu5_liv = { set_always_follows_primary_heir = yes }
+   title:k_livonia = { set_always_follows_primary_heir = yes }
   }
  }
 }

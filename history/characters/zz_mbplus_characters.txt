@@ -10917,3 +10917,210 @@ mb_iberia_Ribadouro1 = {
 	1268.1.1 = { birth = yes }
 	1340.1.1 = { death = yes }
 }
+
+# MB+ Egyptian and Mamluk vassals.
+# MB+ 144091
+mb_egypt_144091 = {
+	name = "mb_egypt_name_144091"
+	culture = levantine
+	religion = sunni
+	rite = shafii
+	dynasty = ayyubids_dynasty
+	1273.11.1 = { birth = yes }
+	1331.10.27 = { death = yes }
+}
+
+# MB+ 1500043
+mb_egypt_1500043 = {
+	name = "mb_egypt_name_1500043"
+	culture = bedouin
+	religion = sunni
+	rite = shafii
+	dynasty_house = mb_egypt_house_house_almira
+	1266.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+}
+
+# MB+ 1500043M
+mb_egypt_1500043M = {
+	name = "mb_egypt_name_1500043M"
+	culture = bedouin
+	religion = sunni
+	rite = shafii
+	dynasty_house = mb_egypt_house_house_almira
+	father = mb_egypt_1500043
+	1286.1.1 = { birth = yes }
+	1345.1.1 = { death = yes }
+}
+
+# MB+ 34505
+mb_egypt_34505 = {
+	name = "mb_egypt_name_34505"
+	culture = bedouin
+	religion = sunni
+	rite = shafii
+	dynasty = mb_egypt_dynasty_101728
+	1300.1.1 = { birth = yes }
+	1330.1.1 = { death = yes }
+}
+
+# MB+ 34506
+mb_egypt_34506 = {
+	name = "mb_egypt_name_34506"
+	culture = bedouin
+	religion = sunni
+	rite = shafii
+	dynasty = mb_egypt_dynasty_101728
+	father = mb_egypt_34505
+	1320.1.1 = { birth = yes }
+	1370.1.1 = { death = yes }
+}
+
+# MB+ 485007
+mb_egypt_485007 = {
+	name = "mb_egypt_name_485007"
+	culture = cuman
+	religion = sunni
+	rite = shafii
+	dynasty = bahri_dynasty
+	father = mam_an_nasir_bahri
+	1328.1.1 = { birth = yes }
+	1347.1.1 = { death = yes }
+}
+
+# MB+ 485020
+mb_egypt_485020 = {
+	name = "mb_egypt_name_485020"
+	culture = egyptian
+	religion = sunni
+	rite = shafii
+	dynasty = mb_egypt_dynasty_100788
+	1300.1.1 = { birth = yes }
+	1350.1.1 = { death = yes }
+}
+
+# MB+ 485430
+mb_egypt_485430 = {
+	name = "mb_egypt_name_485430"
+	culture = levantine
+	religion = sunni
+	rite = shafii
+	dynasty = ayyubids_dynasty
+	father = mb_egypt_144091
+	1300.1.1 = { birth = yes }
+	1350.1.1 = { death = yes }
+}
+
+# MB+ 8000471
+mb_egypt_8000471 = {
+	name = "mb_egypt_name_8000471"
+	culture = cuman
+	religion = sunni
+	rite = shafii
+	dynasty = mb_egypt_dynasty_8000571
+	1265.1.1 = { birth = yes }
+	1344.1.1 = { death = yes }
+}
+
+# MB+ 8000472
+mb_egypt_8000472 = {
+	name = "mb_egypt_name_8000472"
+	culture = cuman
+	religion = sunni
+	rite = shafii
+	dynasty = mb_egypt_dynasty_8000572
+	1280.1.1 = { birth = yes }
+	1339.1.1 = { death = yes }
+}
+
+# MB+ 8000504
+mb_egypt_8000504 = {
+	name = "mb_egypt_name_8000504"
+	culture = alan
+	religion = sunni
+	rite = shafii
+	dynasty = mb_egypt_dynasty_8000604
+	1293.1.1 = { birth = yes }
+	1342.6.1 = { death = yes }
+}
+
+# MB+ 8000505
+mb_egypt_8000505 = {
+	name = "mb_egypt_name_8000505"
+	culture = alan
+	religion = sunni
+	rite = shafii
+	dynasty = mb_egypt_dynasty_8000605
+	1292.1.1 = { birth = yes }
+	1342.6.1 = { death = yes }
+}
+
+# MB+ Dakhila and Qusayr holders.
+mb_egypt_12364288 = {
+ name = "mb_egypt_name_12364288"
+ culture = butr
+ religion = sunni
+ rite = maliki
+ dynasty = mb_egypt_dynasty_1000101143
+ 1205.1.1 = { birth = yes }
+ 1291.11.10 = { death = yes }
+}
+mb_egypt_12364288M = {
+ name = "mb_egypt_name_12364288M"
+ culture = butr
+ religion = sunni
+ rite = maliki
+ dynasty = mb_egypt_dynasty_1000101143
+ father = mb_egypt_12364288
+ 1238.1.1 = { birth = yes }
+ 1310.1.1 = { death = yes }
+}
+mb_egypt_12364288M2 = {
+ name = "mb_egypt_name_12364288M2"
+ culture = butr
+ religion = sunni
+ rite = maliki
+ dynasty = mb_egypt_dynasty_1000101143
+ father = mb_egypt_12364288M
+ 1270.1.1 = { birth = yes }
+ 1332.1.1 = { death = yes }
+}
+mb_egypt_12364288M3 = {
+ name = "mb_egypt_name_12364288M3"
+ culture = butr
+ religion = sunni
+ rite = maliki
+ dynasty = mb_egypt_dynasty_1000101143
+ father = mb_egypt_12364288M2
+ 1300.1.1 = { birth = yes }
+ 1370.1.1 = { death = yes }
+}
+mb_egypt_485120 = {
+ name = "mb_egypt_name_485120"
+ culture = egyptian
+ religion = sunni
+ rite = shafii
+ dynasty = mb_egypt_dynasty_100714
+ 1300.1.1 = { birth = yes }
+ 1350.1.1 = { death = yes }
+}
+
+# MB+ Jerusalem and Beirut.
+mb_egypt_34993 = {
+ name = "mb_egypt_name_34993"
+ culture = cuman
+ religion = sunni
+ rite = shafii
+ dynasty = mb_egypt_dynasty_100691
+ 1280.1.1 = { birth = yes }
+ 1340.1.1 = { death = yes }
+}
+mb_egypt_485200 = {
+ name = "mb_egypt_name_485200"
+ culture = levantine
+ religion = sunni
+ rite = shafii
+ dynasty = mb_egypt_dynasty_100770
+ 1300.1.1 = { birth = yes }
+ 1350.1.1 = { death = yes }
+}
