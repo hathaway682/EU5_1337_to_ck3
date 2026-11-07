@@ -25,7 +25,7 @@ Usage:
 """
 import argparse, csv, io, os, re, shutil, sys, datetime, importlib.util
 
-BLOCK = re.compile(r"(?ms)^([A-Za-z0-9_]+) = \{\n(.*?)^\}\n")
+BLOCK = re.compile(r"(?ms)^([A-Za-z0-9_-]+) = \{\n(.*?)^\}\n")
 ENTRY = re.compile(r"(?ms)^(\t\d+\.\d+\.\d+) = \{\n(.*?)^\t\}\n")
 START = "1337.4.1"
 
@@ -131,7 +131,7 @@ def do_sync(mod, export, rows, fields, by_tag, dry_run, vassals_of=()):
     for fn in os.listdir(ltd):
         if fn.endswith(".txt"):
             declared |= set(re.findall(
-                r"(?m)^\s*([a-z]_[A-Za-z0-9_]+)\s*=\s*\{",
+                r"(?m)^\s*([a-z]_[A-Za-z0-9_-]+)\s*=\s*\{",
                 io.open(os.path.join(ltd, fn), encoding="utf-8-sig", errors="ignore").read()))
     bodies = {m.group(1): m.group(2)
               for m in BLOCK.finditer(read_norm(os.path.join(mod, "history", "titles", "zz_eu5_titles.txt")))}
@@ -280,18 +280,18 @@ def main():
     bodies = {m.group(1): m.group(2) for m in BLOCK.finditer(htext)}
     tit_path = os.path.join(mod, "common", "landed_titles", "zz_eu5_titular.txt")
     ttext = read_norm(tit_path)
-    declared = set(re.findall(r"(?m)^\s*([a-z]_[A-Za-z0-9_]+)\s*=\s*\{", ttext))
+    declared = set(re.findall(r"(?m)^\s*([a-z]_[A-Za-z0-9_-]+)\s*=\s*\{", ttext))
     for fn in os.listdir(os.path.join(mod, "common", "landed_titles")):
         if fn.endswith(".txt"):
             declared |= set(re.findall(
-                r"(?m)^\s*([a-z]_[A-Za-z0-9_]+)\s*=\s*\{",
+                r"(?m)^\s*([a-z]_[A-Za-z0-9_-]+)\s*=\s*\{",
                 io.open(os.path.join(mod, "common", "landed_titles", fn),
                         encoding="utf-8-sig", errors="ignore").read()))
     # the CU 1337 de jure tree: a key declared there is a real title of the world, not a shell
     # this mod minted. Its block and its declaration are never removed when a country walks
     # away from it — the title keeps existing for whoever else holds it.
     cu_tree = set(re.findall(
-        r"(?m)^\s*([a-z]_[A-Za-z0-9_]+)\s*=\s*\{",
+        r"(?m)^\s*([a-z]_[A-Za-z0-9_-]+)\s*=\s*\{",
         read_norm(os.path.join(mod, "common", "landed_titles", "00_landed_titles.txt"))))
 
     replace, rename, delete, decl_del, plan = {}, {}, set(), [], []

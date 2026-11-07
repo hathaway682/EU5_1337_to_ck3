@@ -1,0 +1,31 @@
+# Follow MB+: only the emperor and direct administrative house-head vassals.
+on_game_start = {
+    on_actions = { mbplus_byzantine_noble_families }
+}
+
+mbplus_byzantine_noble_families = {
+    effect = {
+        if = {
+            limit = {
+                game_start_date >= 1260.1.1
+                has_dlc_feature = roads_to_power
+                exists = title:e_byzantium.holder
+            }
+            title:e_byzantium.holder = {
+                every_vassal = {
+                    limit = {
+                        highest_held_title_tier >= tier_county
+                        has_government = administrative_government
+                        is_house_head = yes
+                        NOT = { any_held_title = { is_noble_family_title = yes } }
+                    }
+                    create_noble_family_effect = { GOVERNMENT_GIVER = this }
+                }
+                if = {
+                    limit = { NOT = { any_held_title = { is_noble_family_title = yes } } }
+                    create_noble_family_effect = { GOVERNMENT_GIVER = this }
+                }
+            }
+        }
+    }
+}
