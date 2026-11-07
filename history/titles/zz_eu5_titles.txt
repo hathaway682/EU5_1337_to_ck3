@@ -43,6 +43,47 @@ h_china = {
 	}
 }
 
+# MB+ Yuan provincial governors.
+k_otuken = {
+	1337.1.1 = { liege = h_china }
+	1337.4.1 = { holder = mb_yuan_244012 government = celestial_government }
+}
+
+k_luzhen = {
+	1337.1.1 = { liege = h_china }
+	1337.4.1 = { holder = mb_yuan_SEAsiaMMBMongol6 government = celestial_government }
+}
+
+k_hexi = {
+	1337.1.1 = { liege = h_china }
+	1337.4.1 = { holder = mb_yuan_tangut0034 government = celestial_government }
+}
+
+k_guannei = {
+	1337.1.1 = { liege = h_china }
+	1337.4.1 = { holder = mb_yuan_Chucai7 government = celestial_government }
+}
+
+k_henan = {
+	1337.1.1 = { liege = h_china }
+	1337.4.1 = { holder = mb_yuan_Khasi3 government = celestial_government }
+}
+
+k_dongchuan = {
+	1337.1.1 = { liege = h_china }
+	1337.4.1 = { holder = mb_yuan_SEAsiaMMBMongol4 government = celestial_government }
+}
+
+k_hunan = {
+	1337.1.1 = { liege = h_china }
+	1337.4.1 = { holder = mb_yuan_SEAsiaMMBMongol2 government = celestial_government }
+}
+
+k_jiangdong = {
+	1337.1.1 = { liege = h_china }
+	1337.4.1 = { holder = mb_yuan_SEAsiaMMB277 government = celestial_government }
+}
+
 e_abyssinia = {
 	1270.8.10 = {
 		holder = eth_yekuno_amlak
@@ -4091,12 +4132,12 @@ d_rattapadi = {
 
 d_novosil = {
  1337.1.1 = { liege = e_golden_horde }
- 1337.4.1 = { holder = mb_steppe_semyon_mikhailovich government = nomad_government }
+ 1337.4.1 = { holder = mb_steppe_Voronezh4 government = nomad_government }
 }
 
 d_murom = {
  1337.1.1 = { liege = e_golden_horde }
- 1337.4.1 = { holder = mb_steppe_472630 government = nomad_government }
+ 1337.4.1 = { holder = mb_steppe_1233648 government = nomad_government }
 }
 
 d_martyuba = {
@@ -5216,15 +5257,17 @@ d_chota_nagpur = {
 }
 
 d_chuandong = {
+	1337.1.1 = { liege = k_dongchuan }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
 
 d_chuanxi = {
+	1337.1.1 = { liege = k_dongchuan }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -5357,8 +5400,9 @@ d_east_novgorod = {
 }
 
 d_eastern_gobi = {
+	1337.1.1 = { liege = k_otuken }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_244012
 		government = celestial_government
 	}
 }
@@ -7735,8 +7779,9 @@ d_friesland = {
 }
 
 d_fujian = {
+	1337.1.1 = { liege = k_jiangdong }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -7769,8 +7814,9 @@ d_gambia = {
 }
 
 d_gansu = {
+	1337.1.1 = { liege = k_hexi }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_tangut0034
 		government = celestial_government
 	}
 }
@@ -7868,8 +7914,9 @@ d_guangdong = {
 }
 
 d_guangxi = {
+	1337.1.1 = { liege = k_hunan }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -7922,8 +7969,9 @@ d_haeseo = {
 }
 
 d_haibei_hainan = {
+	1337.1.1 = { liege = k_hunan }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -7950,15 +7998,17 @@ d_hebrides = {
 }
 
 d_henan = {
+	1337.1.1 = { liege = k_henan }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 d_hexi = {
+	1337.1.1 = { liege = k_guannei }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -8030,29 +8080,33 @@ d_hoseo = {
 }
 
 d_huaidong = {
+	1337.1.1 = { liege = k_henan }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 d_huaixi = {
+	1337.1.1 = { liege = k_henan }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 d_hubei = {
+	1337.1.1 = { liege = k_henan }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 d_hunan = {
+	1337.1.1 = { liege = k_hunan }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -8100,8 +8154,9 @@ d_java = {
 }
 
 d_jiangnan = {
+	1337.1.1 = { liege = k_jiangdong }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -8462,8 +8517,9 @@ d_lorraine = {
 }
 
 d_lower_amur = {
+	1337.1.1 = { liege = k_luzhen }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol6
 		government = celestial_government
 	}
 }
@@ -8497,8 +8553,9 @@ d_lower_niger = {
 }
 
 d_lower_selenga = {
+	1337.1.1 = { liege = k_otuken }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_244012
 		government = celestial_government
 	}
 }
@@ -9373,8 +9430,9 @@ d_serbia = {
 }
 
 d_shaanxi = {
+	1337.1.1 = { liege = k_guannei }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -9577,8 +9635,9 @@ d_south_yemen = {
 }
 
 d_southern_gobi = {
+	1337.1.1 = { liege = k_hexi }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_tangut0034
 		government = celestial_government
 	}
 }
@@ -10091,8 +10150,9 @@ d_zaporizhzhia = {
 }
 
 d_zhejiang = {
+	1337.1.1 = { liege = k_jiangdong }
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -10866,11 +10926,12 @@ c_alarcon = {
 }
 
 c_alasha = {
+	1337.1.1 = { liege = d_southern_gobi }
 	1337.4.1 = {
 		change_development_level = 0
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_tangut0034
 		government = celestial_government
 	}
 }
@@ -10881,7 +10942,7 @@ c_alatyr = {
 		change_development_level = 8
 	}
 	1337.4.1 = {
-		holder = mb_steppe_472630
+		holder = mb_steppe_1233648
 		government = nomad_government
 	}
 }
@@ -11253,11 +11314,12 @@ c_amga = {
 }
 
 c_amgun = {
+	1337.1.1 = { liege = d_lower_amur }
 	1337.4.1 = {
 		change_development_level = 9
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol6
 		government = celestial_government
 	}
 }
@@ -11328,11 +11390,12 @@ c_amur = {
 }
 
 c_amur_estuary = {
+	1337.1.1 = { liege = d_lower_amur }
 	1337.4.1 = {
 		change_development_level = 9
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol6
 		government = celestial_government
 	}
 }
@@ -11543,11 +11606,12 @@ c_ankara = {
 }
 
 c_anlu = {
+	1337.1.1 = { liege = d_hubei }
 	1337.4.1 = {
 		change_development_level = 33
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -11580,11 +11644,12 @@ c_annan_guizhou = {
 }
 
 c_anqing = {
+	1337.1.1 = { liege = d_huaixi }
 	1337.4.1 = {
 		change_development_level = 31
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -13321,21 +13386,23 @@ c_baol = {
 }
 
 c_baoning = {
+	1337.1.1 = { liege = d_chuanxi }
 	1337.4.1 = {
 		change_development_level = 32
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
 
 c_baoqing = {
+	1337.1.1 = { liege = d_hunan }
 	1337.4.1 = {
 		change_development_level = 32
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -13917,11 +13984,12 @@ c_bazhou = {
 }
 
 c_bazhou_sichuan = {
+	1337.1.1 = { liege = d_chuanxi }
 	1337.4.1 = {
 		change_development_level = 26
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -14583,21 +14651,23 @@ c_binzhou = {
 }
 
 c_binzhou_guangxi = {
+	1337.1.1 = { liege = k_hunan }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
 
 c_binzhou_shaanxi = {
+	1337.1.1 = { liege = d_shaanxi }
 	1337.4.1 = {
 		change_development_level = 23
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -15271,11 +15341,12 @@ c_bozhou = {
 }
 
 c_bozhou_nanzhili = {
+	1337.1.1 = { liege = d_huaixi }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -16643,21 +16714,23 @@ c_changane = {
 }
 
 c_changde = {
+	1337.1.1 = { liege = k_hunan }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
 
 c_changning = {
+	1337.1.1 = { liege = k_dongchuan }
 	1337.4.1 = {
 		change_development_level = 26
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -16673,11 +16746,12 @@ c_changping = {
 }
 
 c_changsha = {
+	1337.1.1 = { liege = d_hunan }
 	1337.4.1 = {
 		change_development_level = 38
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -16695,21 +16769,23 @@ c_changtang = {
 }
 
 c_changzhou = {
+	1337.1.1 = { liege = d_jiangnan }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
 
 c_changzhou_sichuan = {
+	1337.1.1 = { liege = d_chuandong }
 	1337.4.1 = {
 		change_development_level = 32
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -16939,21 +17015,23 @@ c_chemewevi = {
 }
 
 c_chen = {
+	1337.1.1 = { liege = k_hunan }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
 
 c_chengdu = {
+	1337.1.1 = { liege = d_chuanxi }
 	1337.4.1 = {
 		change_development_level = 37
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -16972,21 +17050,23 @@ c_chengjiang = {
 }
 
 c_chenzhou = {
+	1337.1.1 = { liege = d_hunan }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
 
 c_chenzhou_henan = {
+	1337.1.1 = { liege = d_henan }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -17345,11 +17425,12 @@ c_chittagong = {
 }
 
 c_chizhou = {
+	1337.1.1 = { liege = d_jiangnan }
 	1337.4.1 = {
 		change_development_level = 33
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -17428,11 +17509,12 @@ c_choluteca = {
 }
 
 c_chongqing = {
+	1337.1.1 = { liege = d_chuandong }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -17470,11 +17552,12 @@ c_chorti = {
 }
 
 c_choyr = {
+	1337.1.1 = { liege = d_eastern_gobi }
 	1337.4.1 = {
 		change_development_level = 3
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_244012
 		government = celestial_government
 	}
 }
@@ -17645,21 +17728,23 @@ c_chuxiong = {
 }
 
 c_chuzhou = {
+	1337.1.1 = { liege = d_huaixi }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 c_chuzhou_zhejiang = {
+	1337.1.1 = { liege = d_zhejiang }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -18835,11 +18920,12 @@ c_danzig = {
 }
 
 c_daozhou = {
+	1337.1.1 = { liege = d_hunan }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -18974,21 +19060,23 @@ c_daylam = {
 }
 
 c_dazhou = {
+	1337.1.1 = { liege = d_chuandong }
 	1337.4.1 = {
 		change_development_level = 26
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
 
 c_dean = {
+	1337.1.1 = { liege = d_hubei }
 	1337.4.1 = {
 		change_development_level = 31
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -19156,11 +19244,12 @@ c_dengzhou = {
 }
 
 c_dengzhou_henan = {
+	1337.1.1 = { liege = d_henan }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -19725,11 +19814,12 @@ c_doolboong = {
 }
 
 c_dorbod = {
+	1337.1.1 = { liege = d_eastern_gobi }
 	1337.4.1 = {
 		change_development_level = 1
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_244012
 		government = celestial_government
 	}
 }
@@ -19946,11 +20036,12 @@ c_duyun = {
 }
 
 c_dzhida = {
+	1337.1.1 = { liege = d_lower_selenga }
 	1337.4.1 = {
 		change_development_level = 4
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_244012
 		government = celestial_government
 	}
 }
@@ -20295,11 +20386,12 @@ c_eastern_bhutan = {
 }
 
 c_eastern_gobi = {
+	1337.1.1 = { liege = d_southern_gobi }
 	1337.4.1 = {
 		change_development_level = 0
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_tangut0034
 		government = celestial_government
 	}
 }
@@ -20683,11 +20775,12 @@ c_equatoria = {
 }
 
 c_erenkhot = {
+	1337.1.1 = { liege = d_eastern_gobi }
 	1337.4.1 = {
 		change_development_level = 3
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_244012
 		government = celestial_government
 	}
 }
@@ -20950,11 +21043,12 @@ c_falklands = {
 }
 
 c_fangzhou = {
+	1337.1.1 = { liege = d_hubei }
 	1337.4.1 = {
 		change_development_level = 24
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -21025,31 +21119,34 @@ c_fejer = {
 }
 
 c_fengxiang = {
+	1337.1.1 = { liege = d_shaanxi }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
 
 c_fengyang = {
+	1337.1.1 = { liege = d_huaixi }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 c_fengzhou = {
+	1337.1.1 = { liege = d_shaanxi }
 	1337.4.1 = {
 		change_development_level = 22
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -21384,11 +21481,12 @@ c_funen = {
 }
 
 c_funing = {
+	1337.1.1 = { liege = d_fujian }
 	1337.4.1 = {
 		change_development_level = 29
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -21431,11 +21529,12 @@ c_futuna = {
 }
 
 c_fuzhou = {
+	1337.1.1 = { liege = d_fujian }
 	1337.4.1 = {
 		change_development_level = 42
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -21451,21 +21550,23 @@ c_fuzhou_jiangxi = {
 }
 
 c_fuzhou_shaanxi = {
+	1337.1.1 = { liege = d_hexi }
 	1337.4.1 = {
 		change_development_level = 22
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
 
 c_fuzhou_sichuan = {
+	1337.1.1 = { liege = d_chuandong }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -21645,11 +21746,12 @@ c_ganzhou = {
 }
 
 c_ganzhou_gansu = {
+	1337.1.1 = { liege = d_gansu }
 	1337.4.1 = {
 		change_development_level = 17
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_tangut0034
 		government = celestial_government
 	}
 }
@@ -21678,21 +21780,23 @@ c_gaotang = {
 }
 
 c_gaoyou = {
+	1337.1.1 = { liege = d_huaidong }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 c_gaozhou = {
+	1337.1.1 = { liege = d_haibei_hainan }
 	1337.4.1 = {
 		change_development_level = 27
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -22157,11 +22261,12 @@ c_gonaqua = {
 }
 
 c_gongchang = {
+	1337.1.1 = { liege = k_guannei }
 	1337.4.1 = {
 		change_development_level = 24
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -22225,11 +22330,12 @@ c_gorgan = {
 }
 
 c_gorin = {
+	1337.1.1 = { liege = d_lower_amur }
 	1337.4.1 = {
 		change_development_level = 11
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol6
 		government = celestial_government
 	}
 }
@@ -22636,21 +22742,23 @@ c_guancavilca = {
 }
 
 c_guangan = {
+	1337.1.1 = { liege = d_chuanxi }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
 
 c_guangde = {
+	1337.1.1 = { liege = d_jiangnan }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -22702,11 +22810,12 @@ c_guangxin = {
 }
 
 c_guangyuan = {
+	1337.1.1 = { liege = d_chuanxi }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -22722,11 +22831,12 @@ c_guangzhou = {
 }
 
 c_guangzhou_henan = {
+	1337.1.1 = { liege = d_henan }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -22828,21 +22938,23 @@ c_guge = {
 }
 
 c_guide = {
+	1337.1.1 = { liege = d_henan }
 	1337.4.1 = {
 		change_development_level = 38
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 c_guilin = {
+	1337.1.1 = { liege = d_guangxi }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -22873,11 +22985,12 @@ c_guishun = {
 }
 
 c_guiyang = {
+	1337.1.1 = { liege = d_hunan }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -22896,11 +23009,12 @@ c_guizhou = {
 }
 
 c_guizhou_huguang = {
+	1337.1.1 = { liege = d_hubei }
 	1337.4.1 = {
 		change_development_level = 27
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -22941,11 +23055,12 @@ c_guwevkabaya = {
 }
 
 c_guyuan = {
+	1337.1.1 = { liege = d_hexi }
 	1337.4.1 = {
 		change_development_level = 23
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -23207,11 +23322,12 @@ c_hainaut = {
 }
 
 c_haizhou = {
+	1337.1.1 = { liege = d_huaidong }
 	1337.4.1 = {
 		change_development_level = 31
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -23397,11 +23513,12 @@ c_han_hwechin = {
 }
 
 c_hangzhou = {
+	1337.1.1 = { liege = d_zhejiang }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -23439,31 +23556,34 @@ c_hanseong = {
 }
 
 c_hanyang = {
+	1337.1.1 = { liege = d_hubei }
 	1337.4.1 = {
 		change_development_level = 33
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 c_hanzhong = {
+	1337.1.1 = { liege = d_shaanxi }
 	1337.4.1 = {
 		change_development_level = 24
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
 
 c_hanzhou = {
+	1337.1.1 = { liege = d_chuanxi }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -23705,11 +23825,12 @@ c_hazaribagh = {
 }
 
 c_he = {
+	1337.1.1 = { liege = d_huaixi }
 	1337.4.1 = {
 		change_development_level = 32
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -23795,31 +23916,34 @@ c_hellin = {
 }
 
 c_henan = {
+	1337.1.1 = { liege = d_henan }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 c_hengzhou = {
+	1337.1.1 = { liege = d_hunan }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
 
 c_hengzhou_guangxi = {
+	1337.1.1 = { liege = k_hunan }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -23967,21 +24091,23 @@ c_hezhou = {
 }
 
 c_hezhou_guangxi = {
+	1337.1.1 = { liege = d_guangxi }
 	1337.4.1 = {
 		change_development_level = 24
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
 
 c_hezhou_sichuan = {
+	1337.1.1 = { liege = d_chuandong }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -24375,11 +24501,12 @@ c_htamanthi = {
 }
 
 c_huaian = {
+	1337.1.1 = { liege = d_huaidong }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -24405,11 +24532,12 @@ c_huaman_karpa = {
 }
 
 c_huangzhou = {
+	1337.1.1 = { liege = d_hubei }
 	1337.4.1 = {
 		change_development_level = 31
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -24437,21 +24565,23 @@ c_huaylas = {
 }
 
 c_huazhou = {
+	1337.1.1 = { liege = d_haibei_hainan }
 	1337.4.1 = {
 		change_development_level = 29
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
 
 c_huazhou_shaanxi = {
+	1337.1.1 = { liege = d_shaanxi }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -24520,11 +24650,12 @@ c_huila = {
 }
 
 c_huizhou = {
+	1337.1.1 = { liege = d_jiangnan }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -24648,11 +24779,12 @@ c_huozhou = {
 }
 
 c_huzhou = {
+	1337.1.1 = { liege = d_zhejiang }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -25895,11 +26027,12 @@ c_ji_parana = {
 }
 
 c_jiading = {
+	1337.1.1 = { liege = k_dongchuan }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -25935,31 +26068,34 @@ c_jiangzhou = {
 }
 
 c_jianning = {
+	1337.1.1 = { liege = d_fujian }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
 
 c_jianzhou = {
+	1337.1.1 = { liege = d_chuanxi }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
 
 c_jianzhou_west = {
+	1337.1.1 = { liege = d_chuanxi }
 	1337.4.1 = {
 		change_development_level = 32
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -25975,21 +26111,23 @@ c_jiaozhou = {
 }
 
 c_jiaxing = {
+	1337.1.1 = { liege = d_zhejiang }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
 
 c_jiazhou = {
+	1337.1.1 = { liege = d_hexi }
 	1337.4.1 = {
 		change_development_level = 24
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -26031,11 +26169,12 @@ c_jindong = {
 }
 
 c_jing = {
+	1337.1.1 = { liege = k_hunan }
 	1337.4.1 = {
 		change_development_level = 26
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -26053,31 +26192,34 @@ c_jingili = {
 }
 
 c_jingmen = {
+	1337.1.1 = { liege = d_hubei }
 	1337.4.1 = {
 		change_development_level = 35
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 c_jingning = {
+	1337.1.1 = { liege = d_hexi }
 	1337.4.1 = {
 		change_development_level = 22
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
 
 c_jingzhou = {
+	1337.1.1 = { liege = d_hubei }
 	1337.4.1 = {
 		change_development_level = 33
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -26093,21 +26235,23 @@ c_jingzhou_beizhili = {
 }
 
 c_jingzhou_shaanxi = {
+	1337.1.1 = { liege = d_hexi }
 	1337.4.1 = {
 		change_development_level = 22
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
 
 c_jinhua = {
+	1337.1.1 = { liege = d_zhejiang }
 	1337.4.1 = {
 		change_development_level = 32
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -26332,11 +26476,12 @@ c_jundiai = {
 }
 
 c_junzhou = {
+	1337.1.1 = { liege = d_hubei }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -26601,11 +26746,12 @@ c_kaialigamiut = {
 }
 
 c_kaifeng = {
+	1337.1.1 = { liege = d_henan }
 	1337.4.1 = {
 		change_development_level = 37
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -27370,7 +27516,7 @@ c_kasimov = {
 		change_development_level = 14
 	}
 	1337.4.1 = {
-		holder = mb_steppe_472630
+		holder = mb_steppe_1233648
 		government = nomad_government
 	}
 }
@@ -28033,11 +28179,12 @@ c_khara_khoto = {
 }
 
 c_kharaa = {
+	1337.1.1 = { liege = d_lower_selenga }
 	1337.4.1 = {
 		change_development_level = 4
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_244012
 		government = celestial_government
 	}
 }
@@ -28116,11 +28263,12 @@ c_khekassala = {
 }
 
 c_khilok = {
+	1337.1.1 = { liege = d_lower_selenga }
 	1337.4.1 = {
 		change_development_level = 4
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_244012
 		government = celestial_government
 	}
 }
@@ -29196,11 +29344,12 @@ c_kuhuur = {
 }
 
 c_kuizhou = {
+	1337.1.1 = { liege = d_chuandong }
 	1337.4.1 = {
 		change_development_level = 27
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -29410,12 +29559,12 @@ c_kurmysh = {
 }
 
 c_kursk = {
-	1337.1.1 = { liege = e_golden_horde }
+	1337.1.1 = { liege = d_voronezh }
 	1337.4.1 = {
 		change_development_level = 8
 	}
 	1337.4.1 = {
-		holder = mb_steppe_472002
+		holder = mb_steppe_Voronezh4
 		government = nomad_government
 	}
 }
@@ -30126,11 +30275,12 @@ c_leipziger_bucht = {
 }
 
 c_leizhou = {
+	1337.1.1 = { liege = d_haibei_hainan }
 	1337.4.1 = {
 		change_development_level = 31
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -30242,11 +30392,12 @@ c_lhokha = {
 }
 
 c_lianzhou = {
+	1337.1.1 = { liege = d_haibei_hainan }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -30420,11 +30571,12 @@ c_ling = {
 }
 
 c_lingzhou = {
+	1337.1.1 = { liege = d_hexi }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -30450,11 +30602,12 @@ c_linqing = {
 }
 
 c_lintao = {
+	1337.1.1 = { liege = k_guannei }
 	1337.4.1 = {
 		change_development_level = 24
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -30551,21 +30704,23 @@ c_litomericko = {
 }
 
 c_liuzhou = {
+	1337.1.1 = { liege = d_guangxi }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
 
 c_lizhou = {
+	1337.1.1 = { liege = k_hunan }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -31268,11 +31423,12 @@ c_luan = {
 }
 
 c_luan_nanzhili = {
+	1337.1.1 = { liege = d_huaixi }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -31557,11 +31713,12 @@ c_lunsemfwa = {
 }
 
 c_luorong = {
+	1337.1.1 = { liege = d_guangxi }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -31602,21 +31759,23 @@ c_luzhkaya = {
 }
 
 c_luzhou = {
+	1337.1.1 = { liege = d_huaixi }
 	1337.4.1 = {
 		change_development_level = 32
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 c_luzhou_sichuan = {
+	1337.1.1 = { liege = d_chuandong }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -33380,11 +33539,12 @@ c_meghalaya = {
 }
 
 c_meizhou = {
+	1337.1.1 = { liege = k_dongchuan }
 	1337.4.1 = {
 		change_development_level = 32
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -33721,11 +33881,12 @@ c_mezen = {
 }
 
 c_mianyang = {
+	1337.1.1 = { liege = d_hubei }
 	1337.4.1 = {
 		change_development_level = 31
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -35673,21 +35834,23 @@ c_nankang = {
 }
 
 c_nanning = {
+	1337.1.1 = { liege = k_hunan }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
 
 c_nanningjun = {
+	1337.1.1 = { liege = d_haibei_hainan }
 	1337.4.1 = {
 		change_development_level = 26
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -35728,11 +35891,12 @@ c_nanxiong = {
 }
 
 c_nanyang = {
+	1337.1.1 = { liege = d_henan }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -36391,11 +36555,12 @@ c_nimois = {
 }
 
 c_ningbo = {
+	1337.1.1 = { liege = d_zhejiang }
 	1337.4.1 = {
 		change_development_level = 35
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -36411,11 +36576,12 @@ c_ningdu = {
 }
 
 c_ningguo = {
+	1337.1.1 = { liege = d_jiangnan }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -36431,11 +36597,12 @@ c_ninghai = {
 }
 
 c_ningxia = {
+	1337.1.1 = { liege = d_hexi }
 	1337.4.1 = {
 		change_development_level = 22
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -37213,11 +37380,12 @@ c_northern_rayalaseema = {
 }
 
 c_northern_sakhalin = {
+	1337.1.1 = { liege = d_lower_amur }
 	1337.4.1 = {
 		change_development_level = 8
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol6
 		government = celestial_government
 	}
 }
@@ -38242,11 +38410,12 @@ c_onega = {
 }
 
 c_ongiin = {
+	1337.1.1 = { liege = k_otuken }
 	1337.4.1 = {
 		change_development_level = 3
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_244012
 		government = celestial_government
 	}
 }
@@ -39697,11 +39866,12 @@ c_pembina = {
 }
 
 c_pengzhou = {
+	1337.1.1 = { liege = d_chuanxi }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -40117,21 +40287,23 @@ c_pingding = {
 }
 
 c_pingle = {
+	1337.1.1 = { liege = d_guangxi }
 	1337.4.1 = {
 		change_development_level = 23
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
 
 c_pingliang = {
+	1337.1.1 = { liege = d_hexi }
 	1337.4.1 = {
 		change_development_level = 22
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -40338,11 +40510,12 @@ c_piumhi = {
 }
 
 c_pizhou = {
+	1337.1.1 = { liege = d_huaidong }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -41255,11 +41428,12 @@ c_qazvin = {
 }
 
 c_qianzhou = {
+	1337.1.1 = { liege = d_shaanxi }
 	1337.4.1 = {
 		change_development_level = 32
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -41297,11 +41471,12 @@ c_qingchi = {
 }
 
 c_qingyang = {
+	1337.1.1 = { liege = d_hexi }
 	1337.4.1 = {
 		change_development_level = 21
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -41350,31 +41525,34 @@ c_qinzhou = {
 }
 
 c_qinzhou_shaanxi = {
+	1337.1.1 = { liege = k_guannei }
 	1337.4.1 = {
 		change_development_level = 26
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
 
 c_qiongzhou = {
+	1337.1.1 = { liege = d_haibei_hainan }
 	1337.4.1 = {
 		change_development_level = 27
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
 
 c_qiongzhou_sichuan = {
+	1337.1.1 = { liege = k_dongchuan }
 	1337.4.1 = {
 		change_development_level = 26
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -41413,21 +41591,23 @@ c_quanning = {
 }
 
 c_quanzhou = {
+	1337.1.1 = { liege = d_fujian }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
 
 c_quanzhou_guangxi = {
+	1337.1.1 = { liege = d_guangxi }
 	1337.4.1 = {
 		change_development_level = 25
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -41574,11 +41754,12 @@ c_quy_hoa = {
 }
 
 c_quzhou = {
+	1337.1.1 = { liege = d_zhejiang }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -42309,21 +42490,23 @@ c_romsdalen = {
 }
 
 c_rongzhou = {
+	1337.1.1 = { liege = d_guangxi }
 	1337.4.1 = {
 		change_development_level = 24
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
 
 c_rongzhou_wuzhou = {
+	1337.1.1 = { liege = d_guangxi }
 	1337.4.1 = {
 		change_development_level = 22
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -42513,11 +42696,12 @@ c_ruizhou = {
 }
 
 c_runing = {
+	1337.1.1 = { liege = d_henan }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -42561,11 +42745,12 @@ c_rutok = {
 }
 
 c_ruzhou = {
+	1337.1.1 = { liege = d_henan }
 	1337.4.1 = {
 		change_development_level = 32
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -43413,7 +43598,7 @@ c_sarov = {
 		change_development_level = 13
 	}
 	1337.4.1 = {
-		holder = mb_steppe_472630
+		holder = mb_steppe_1233648
 		government = nomad_government
 	}
 }
@@ -44078,11 +44263,12 @@ c_shangdu = {
 }
 
 c_shangzhou = {
+	1337.1.1 = { liege = d_shaanxi }
 	1337.4.1 = {
 		change_development_level = 23
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -44100,11 +44286,12 @@ c_shanha = {
 }
 
 c_shanzhou = {
+	1337.1.1 = { liege = d_henan }
 	1337.4.1 = {
 		change_development_level = 31
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -44120,21 +44307,23 @@ c_shanzhou_shandong = {
 }
 
 c_shaowu = {
+	1337.1.1 = { liege = d_fujian }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
 
 c_shaoxing = {
+	1337.1.1 = { liege = d_zhejiang }
 	1337.4.1 = {
 		change_development_level = 37
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -44150,11 +44339,12 @@ c_shaozhou = {
 }
 
 c_sharangad = {
+	1337.1.1 = { liege = d_eastern_gobi }
 	1337.4.1 = {
 		change_development_level = 3
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_244012
 		government = celestial_government
 	}
 }
@@ -44332,11 +44522,12 @@ c_shilingol = {
 }
 
 c_shilka = {
+	1337.1.1 = { liege = k_otuken }
 	1337.4.1 = {
 		change_development_level = 2
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_244012
 		government = celestial_government
 	}
 }
@@ -44430,11 +44621,12 @@ c_shirvan = {
 }
 
 c_shizhou = {
+	1337.1.1 = { liege = k_hunan }
 	1337.4.1 = {
 		change_development_level = 24
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -44462,11 +44654,12 @@ c_shoromba = {
 }
 
 c_shouzhou = {
+	1337.1.1 = { liege = d_huaixi }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -44506,11 +44699,12 @@ c_shunning = {
 }
 
 c_shunqing = {
+	1337.1.1 = { liege = d_chuanxi }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -44968,11 +45162,12 @@ c_siyathemba = {
 }
 
 c_sizhou = {
+	1337.1.1 = { liege = d_huaixi }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -45217,11 +45412,12 @@ c_sonderjylland = {
 }
 
 c_songjiang = {
+	1337.1.1 = { liege = d_jiangnan }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -45240,11 +45436,12 @@ c_songpan = {
 }
 
 c_songzhou = {
+	1337.1.1 = { liege = d_henan }
 	1337.4.1 = {
 		change_development_level = 31
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -45789,11 +45986,12 @@ c_southern_rayalaseema = {
 }
 
 c_southern_sakhalin = {
+	1337.1.1 = { liege = d_lower_amur }
 	1337.4.1 = {
 		change_development_level = 7
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol6
 		government = celestial_government
 	}
 }
@@ -46089,11 +46287,12 @@ c_sugpiap = {
 }
 
 c_suide = {
+	1337.1.1 = { liege = d_hexi }
 	1337.4.1 = {
 		change_development_level = 24
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -46112,31 +46311,34 @@ c_suifun = {
 }
 
 c_suining = {
+	1337.1.1 = { liege = d_chuanxi }
 	1337.4.1 = {
 		change_development_level = 32
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
 
 c_suizhou = {
+	1337.1.1 = { liege = d_hubei }
 	1337.4.1 = {
 		change_development_level = 29
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 c_suizhou_henan = {
+	1337.1.1 = { liege = d_henan }
 	1337.4.1 = {
 		change_development_level = 35
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -46433,31 +46635,34 @@ c_suzdal = {
 }
 
 c_suzhou = {
+	1337.1.1 = { liege = d_jiangnan }
 	1337.4.1 = {
 		change_development_level = 40
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
 
 c_suzhou_gansu = {
+	1337.1.1 = { liege = d_gansu }
 	1337.4.1 = {
 		change_development_level = 14
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_tangut0034
 		government = celestial_government
 	}
 }
 
 c_suzhou_north = {
+	1337.1.1 = { liege = d_huaixi }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -46938,11 +47143,12 @@ c_taihe = {
 }
 
 c_taiping = {
+	1337.1.1 = { liege = d_jiangnan }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -46971,21 +47177,23 @@ c_taiyuan = {
 }
 
 c_taizhou = {
+	1337.1.1 = { liege = d_zhejiang }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
 
 c_taizhou_nanzhili = {
+	1337.1.1 = { liege = d_huaidong }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -47251,11 +47459,12 @@ c_tango = {
 }
 
 c_tangwang = {
+	1337.1.1 = { liege = k_luzhen }
 	1337.4.1 = {
 		change_development_level = 14
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol6
 		government = celestial_government
 	}
 }
@@ -47742,11 +47951,12 @@ c_tengzhou = {
 }
 
 c_tengzhou_guangxi = {
+	1337.1.1 = { liege = d_guangxi }
 	1337.4.1 = {
 		change_development_level = 24
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -48363,11 +48573,12 @@ c_timucua = {
 }
 
 c_tingzhou = {
+	1337.1.1 = { liege = d_fujian }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -48735,11 +48946,12 @@ c_tongatapu = {
 }
 
 c_tongchuan = {
+	1337.1.1 = { liege = d_chuanxi }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -48758,11 +48970,12 @@ c_tongren = {
 }
 
 c_tongzhou = {
+	1337.1.1 = { liege = d_huaidong }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -48778,11 +48991,12 @@ c_tongzhou_beizhili = {
 }
 
 c_tongzhou_shaanxi = {
+	1337.1.1 = { liege = d_shaanxi }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -49401,7 +49615,7 @@ c_tula_russia = {
 		change_development_level = 16
 	}
 	1337.4.1 = {
-		holder = mb_steppe_semyon_mikhailovich
+		holder = mb_steppe_Voronezh4
 		government = nomad_government
 	}
 }
@@ -49467,11 +49681,12 @@ c_tumen = {
 }
 
 c_tumnin = {
+	1337.1.1 = { liege = d_lower_amur }
 	1337.4.1 = {
 		change_development_level = 10
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol6
 		government = celestial_government
 	}
 }
@@ -49501,11 +49716,12 @@ c_tungaru = {
 }
 
 c_tunguska = {
+	1337.1.1 = { liege = d_lower_amur }
 	1337.4.1 = {
 		change_development_level = 11
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol6
 		government = celestial_government
 	}
 }
@@ -49758,11 +49974,12 @@ c_tututepec = {
 }
 
 c_tuul = {
+	1337.1.1 = { liege = k_otuken }
 	1337.4.1 = {
 		change_development_level = 4
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_244012
 		government = celestial_government
 	}
 }
@@ -49973,11 +50190,12 @@ c_ucungo = {
 }
 
 c_uda = {
+	1337.1.1 = { liege = d_lower_selenga }
 	1337.4.1 = {
 		change_development_level = 2
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_244012
 		government = celestial_government
 	}
 }
@@ -50073,11 +50291,12 @@ c_uktus = {
 }
 
 c_ulaan = {
+	1337.1.1 = { liege = k_otuken }
 	1337.4.1 = {
 		change_development_level = 0
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_244012
 		government = celestial_government
 	}
 }
@@ -50818,11 +51037,12 @@ c_upper_musi = {
 }
 
 c_upper_non = {
+	1337.1.1 = { liege = k_luzhen }
 	1337.4.1 = {
 		change_development_level = 14
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol6
 		government = celestial_government
 	}
 }
@@ -52494,11 +52714,12 @@ c_wamesa = {
 }
 
 c_wananjun = {
+	1337.1.1 = { liege = d_haibei_hainan }
 	1337.4.1 = {
 		change_development_level = 20
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -52932,11 +53153,12 @@ c_wenro = {
 }
 
 c_wenzhou = {
+	1337.1.1 = { liege = d_zhejiang }
 	1337.4.1 = {
 		change_development_level = 33
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -53663,11 +53885,12 @@ c_wroclaw = {
 }
 
 c_wuchang = {
+	1337.1.1 = { liege = d_hubei }
 	1337.4.1 = {
 		change_development_level = 33
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -53696,11 +53919,12 @@ c_wuding_shandong = {
 }
 
 c_wugang = {
+	1337.1.1 = { liege = d_hunan }
 	1337.4.1 = {
 		change_development_level = 27
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -53755,11 +53979,12 @@ c_wusawei = {
 }
 
 c_wuzhou = {
+	1337.1.1 = { liege = d_guangxi }
 	1337.4.1 = {
 		change_development_level = 25
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -53857,31 +54082,34 @@ c_xaymaca = {
 }
 
 c_xian = {
+	1337.1.1 = { liege = d_shaanxi }
 	1337.4.1 = {
 		change_development_level = 32
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
 
 c_xiangxiang = {
+	1337.1.1 = { liege = d_hunan }
 	1337.4.1 = {
 		change_development_level = 32
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
 
 c_xiangyang = {
+	1337.1.1 = { liege = d_hubei }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -53933,21 +54161,23 @@ c_xilotepec = {
 }
 
 c_xingan = {
+	1337.1.1 = { liege = d_shaanxi }
 	1337.4.1 = {
 		change_development_level = 24
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
 
 c_xingguo = {
+	1337.1.1 = { liege = d_hubei }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -53963,11 +54193,12 @@ c_xinghe = {
 }
 
 c_xinghua = {
+	1337.1.1 = { liege = d_fujian }
 	1337.4.1 = {
 		change_development_level = 36
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -54005,21 +54236,23 @@ c_xinhui = {
 }
 
 c_xining = {
+	1337.1.1 = { liege = d_gansu }
 	1337.4.1 = {
 		change_development_level = 18
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_tangut0034
 		government = celestial_government
 	}
 }
 
 c_xinyang = {
+	1337.1.1 = { liege = d_henan }
 	1337.4.1 = {
 		change_development_level = 32
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -54116,11 +54349,12 @@ c_xun = {
 }
 
 c_xunzhou = {
+	1337.1.1 = { liege = d_guangxi }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -54136,31 +54370,34 @@ c_xunzhou_guangdong = {
 }
 
 c_xuzhou = {
+	1337.1.1 = { liege = d_huaidong }
 	1337.4.1 = {
 		change_development_level = 35
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 c_xuzhou_henan = {
+	1337.1.1 = { liege = d_henan }
 	1337.4.1 = {
 		change_development_level = 38
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 c_xuzhou_sichuan = {
+	1337.1.1 = { liege = k_dongchuan }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -54279,11 +54516,12 @@ c_yana = {
 }
 
 c_yanan = {
+	1337.1.1 = { liege = d_hexi }
 	1337.4.1 = {
 		change_development_level = 24
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -54336,41 +54574,45 @@ c_yangman = {
 }
 
 c_yangzhou = {
+	1337.1.1 = { liege = d_huaidong }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 c_yangzhou_shaanxi = {
+	1337.1.1 = { liege = d_shaanxi }
 	1337.4.1 = {
 		change_development_level = 22
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
 
 c_yanping = {
+	1337.1.1 = { liege = d_fujian }
 	1337.4.1 = {
 		change_development_level = 29
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
 
 c_yanzhou = {
+	1337.1.1 = { liege = d_zhejiang }
 	1337.4.1 = {
 		change_development_level = 28
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -54411,11 +54653,12 @@ c_yaoan = {
 }
 
 c_yaozhou = {
+	1337.1.1 = { liege = d_shaanxi }
 	1337.4.1 = {
 		change_development_level = 26
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
@@ -54558,11 +54801,12 @@ c_yazhelbitskaya = {
 }
 
 c_yazhou = {
+	1337.1.1 = { liege = k_dongchuan }
 	1337.4.1 = {
 		change_development_level = 26
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }
@@ -54686,11 +54930,12 @@ c_yetkul = {
 }
 
 c_yiling = {
+	1337.1.1 = { liege = d_hubei }
 	1337.4.1 = {
 		change_development_level = 31
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -54718,21 +54963,23 @@ c_yinggarda = {
 }
 
 c_yingtian = {
+	1337.1.1 = { liege = d_jiangnan }
 	1337.4.1 = {
 		change_development_level = 41
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
 
 c_yingzhou = {
+	1337.1.1 = { liege = d_huaixi }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -54852,11 +55099,12 @@ c_yongchang = {
 }
 
 c_yongchang_gansu = {
+	1337.1.1 = { liege = d_gansu }
 	1337.4.1 = {
 		change_development_level = 16
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_tangut0034
 		government = celestial_government
 	}
 }
@@ -54898,11 +55146,12 @@ c_yongshun = {
 }
 
 c_yongzhou = {
+	1337.1.1 = { liege = d_hunan }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -54955,11 +55204,12 @@ c_youyang = {
 }
 
 c_youzhou = {
+	1337.1.1 = { liege = d_hunan }
 	1337.4.1 = {
 		change_development_level = 29
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -54998,11 +55248,12 @@ c_yuanzhou = {
 }
 
 c_yuanzhou_huguang = {
+	1337.1.1 = { liege = k_hunan }
 	1337.4.1 = {
 		change_development_level = 26
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -55020,11 +55271,12 @@ c_yuat = {
 }
 
 c_yuezhou = {
+	1337.1.1 = { liege = d_hunan }
 	1337.4.1 = {
 		change_development_level = 33
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -55042,21 +55294,23 @@ c_yuktali = {
 }
 
 c_yulin = {
+	1337.1.1 = { liege = d_hexi }
 	1337.4.1 = {
 		change_development_level = 23
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Chucai7
 		government = celestial_government
 	}
 }
 
 c_yulin_guangxi = {
+	1337.1.1 = { liege = d_guangxi }
 	1337.4.1 = {
 		change_development_level = 30
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol2
 		government = celestial_government
 	}
 }
@@ -55156,11 +55410,12 @@ c_yushu = {
 }
 
 c_yuzhou = {
+	1337.1.1 = { liege = d_henan }
 	1337.4.1 = {
 		change_development_level = 34
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
@@ -55549,11 +55804,12 @@ c_zhangde = {
 }
 
 c_zhangzhou = {
+	1337.1.1 = { liege = d_fujian }
 	1337.4.1 = {
 		change_development_level = 33
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
@@ -55613,31 +55869,34 @@ c_zhending = {
 }
 
 c_zhengzhou = {
+	1337.1.1 = { liege = d_henan }
 	1337.4.1 = {
 		change_development_level = 40
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_Khasi3
 		government = celestial_government
 	}
 }
 
 c_zhenjiang = {
+	1337.1.1 = { liege = d_jiangnan }
 	1337.4.1 = {
 		change_development_level = 38
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMB277
 		government = celestial_government
 	}
 }
 
 c_zhongzhou = {
+	1337.1.1 = { liege = d_chuandong }
 	1337.4.1 = {
 		change_development_level = 29
 	}
 	1337.4.1 = {
-		holder = yua_togon_temur
+		holder = mb_yuan_SEAsiaMMBMongol4
 		government = celestial_government
 	}
 }

@@ -156,12 +156,20 @@
 		title:d_tuva = { set_de_jure_liege_title = title:k_otuken }
 		title:d_mongolian_great_lakes = { set_de_jure_liege_title = title:k_otuken }
 		title:d_western_gobi = { set_de_jure_liege_title = title:k_otuken }
-		title:d_southern_gobi = { set_de_jure_liege_title = title:k_otuken }
-		title:d_eastern_gobi = { set_de_jure_liege_title = title:k_gobi }
-		title:d_argun = { set_de_jure_liege_title = title:k_gobi }
-		title:d_shilkari = { set_de_jure_liege_title = title:k_gobi }
+		title:d_southern_gobi = { set_de_jure_liege_title = title:k_hexi }
+		title:d_eastern_gobi = { set_de_jure_liege_title = title:k_otuken }
+		title:d_argun = { set_de_jure_liege_title = title:k_otuken }
+		title:d_shilkari = { set_de_jure_liege_title = title:k_otuken }
 		title:d_tarim = { set_de_jure_liege_title = title:k_dzungaria }
 		title:d_zhetysu = { set_de_jure_liege_title = title:k_dzungaria }
+		title:k_gobi = {
+		  	every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_duchy
+		  		}
+		  		set_de_jure_liege_title = title:k_otuken
+		  	}
+		}
 		#中原
 		title:k_daibei = {
 		  	every_in_de_jure_hierarchy = {
@@ -256,7 +264,7 @@
 		title:d_dali = { set_de_jure_liege_title = title:k_dali }
 		title:d_chuandong = { set_de_jure_liege_title = title:k_dongchuan }
 		title:d_chuanxi = { set_de_jure_liege_title = title:k_dongchuan }
-		title:d_chuannan = { set_de_jure_liege_title = title:k_dali }
+		title:d_chuannan = { set_de_jure_liege_title = title:k_dongchuan }
 		title:d_yanbei = { set_de_jure_liege_title = title:k_hebei }
 		title:k_viet = { set_de_jure_liege_title = title:e_jingyang }
 		#西藏
@@ -311,7 +319,7 @@
 		}
 		title:d_liaodong = { set_de_jure_liege_title = title:k_luzhen }
 		title:d_songhua = { set_de_jure_liege_title = title:k_luzhen }
-		title:d_middle_amur = { set_de_jure_liege_title = title:k_amur }
+		title:d_lower_amur = { set_de_jure_liege_title = title:k_luzhen }
 		title:d_gwanbuk = { set_de_jure_liege_title = title:k_goguryeo }
 		title:d_angara = { set_de_jure_liege_title = title:k_angara }
 		title:k_amur = { set_de_jure_liege_title = title:e_andong }

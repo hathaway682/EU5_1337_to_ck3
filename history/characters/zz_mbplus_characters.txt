@@ -11184,7 +11184,7 @@ mb_steppe_1231202 = {
 # MB+ 1232006M2
 mb_steppe_1232006M2 = {
 	name = "mb_steppe_name_1232006M2"
-	culture = russian
+	culture = cuman
 	religion = orthodox
 	rite = slavic_rite
 	dynasty = mb_steppe_dynasty_1000100512
@@ -11195,7 +11195,7 @@ mb_steppe_1232006M2 = {
 # MB+ 1232006M3
 mb_steppe_1232006M3 = {
 	name = "mb_steppe_name_1232006M3"
-	culture = russian
+	culture = cuman
 	religion = orthodox
 	rite = slavic_rite
 	dynasty = mb_steppe_dynasty_1000100512
@@ -12139,39 +12139,8 @@ mb_steppe_427103 = {
 }
 
 # MB+ 472002
-mb_steppe_472002 = {
-	name = "mb_steppe_name_472002"
-	culture = russian
-	religion = orthodox
-	rite = slavic_rite
-	dynasty = mb_steppe_dynasty_100406
-	1300.1.1 = { birth = yes }
-	1350.1.1 = { death = yes }
-}
-
 # MB+ 472630
-mb_steppe_472630 = {
-	name = "mb_steppe_name_472630"
-	culture = russian
-	religion = orthodox
-	rite = slavic_rite
-	dynasty_house = mb_steppe_house_house_svyatoslavich
-	father = mb_steppe_472632
-	1302.1.2 = { birth = yes }
-	1340.1.2 = { death = yes }
-}
-
 # MB+ 472632
-mb_steppe_472632 = {
-	name = "mb_steppe_name_472632"
-	culture = russian
-	religion = orthodox
-	rite = slavic_rite
-	dynasty_house = mb_steppe_house_house_svyatoslavich
-	1285.1.2 = { birth = yes }
-	1326.1.2 = { death = yes }
-}
-
 # MB+ 476510
 mb_steppe_476510 = {
 	name = "mb_steppe_name_476510"
@@ -13326,7 +13295,7 @@ mb_steppe_Urusoba2 = {
 # MB+ Voronezh2
 mb_steppe_Voronezh2 = {
 	name = "mb_steppe_name_Voronezh2"
-	culture = russian
+	culture = kipchak
 	religion = orthodox
 	rite = slavic_rite
 	dynasty_house = mb_steppe_house_house_yimek
@@ -13337,7 +13306,7 @@ mb_steppe_Voronezh2 = {
 # MB+ Voronezh4
 mb_steppe_Voronezh4 = {
 	name = "mb_steppe_name_Voronezh4"
-	culture = russian
+	culture = kipchak
 	religion = orthodox
 	rite = slavic_rite
 	dynasty_house = mb_steppe_house_house_yimek
@@ -13389,16 +13358,6 @@ mb_steppe_bengal3 = {
 }
 
 # MB+ mikhail_semyonovich
-mb_steppe_mikhail_semyonovich = {
-	name = "mb_steppe_name_mikhail_semyonovich"
-	culture = russian
-	religion = orthodox
-	rite = slavic_rite
-	dynasty_house = mb_steppe_house_house_Olgovichi
-	1265.1.1 = { birth = yes }
-	1310.1.1 = { death = yes }
-}
-
 # MB+ muzaffarid1
 mb_steppe_muzaffarid1 = {
 	name = "mb_steppe_name_muzaffarid1"
@@ -13411,17 +13370,6 @@ mb_steppe_muzaffarid1 = {
 }
 
 # MB+ semyon_mikhailovich
-mb_steppe_semyon_mikhailovich = {
-	name = "mb_steppe_name_semyon_mikhailovich"
-	culture = russian
-	religion = orthodox
-	rite = slavic_rite
-	dynasty_house = mb_steppe_house_house_Olgovichi
-	father = mb_steppe_mikhail_semyonovich
-	1305.1.1 = { birth = yes }
-	1350.1.1 = { death = yes }
-}
-
 # MB+ Taran family. Source marks them fictional; 3025712's 1310 death conflicts with its 1337 title history.
 mb_steppe_302570 = {
  name = "mb_steppe_name_302570"
@@ -13456,4 +13404,347 @@ mb_steppe_3025712 = {
  dynasty = mb_steppe_dynasty_2001089
  father = mb_steppe_3025711
  1240.7.8 = { birth = yes }
+}
+
+# MB+ Yuan provincial governors and their families.
+# MB+ tangut0034
+mb_yuan_tangut0034 = {
+	name = "mb_yuan_name_tangut0034"
+	culture = qiang
+	religion = vajrayana_faith
+	rite = lamaism
+	dynasty = mb_yuan_dynasty_ngwemi
+	father = mb_yuan_tangut0033
+	1280.1.1 = { birth = yes }
+	1340.1.1 = { death = yes }
+}
+
+# MB+ Chucai7
+mb_yuan_Chucai7 = {
+	name = "mb_yuan_name_Chucai7"
+	culture = shiwei
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_yuan_dynasty_yelu
+	father = mb_yuan_Chucai5
+	1300.8.19 = { birth = yes }
+	1358.5.26 = { death = yes }
+}
+
+# MB+ 244012 (source identifies as fictional)
+mb_yuan_244012 = {
+	name = "mb_yuan_name_244012"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = mb_yuan_dynasty_yasauri
+	father = mb_yuan_244011
+	1300.1.1 = { birth = yes }
+	1350.1.1 = { death = yes }
+}
+
+# MB+ Khasi3
+mb_yuan_Khasi3 = {
+	name = "mb_yuan_name_Khasi3"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_yuan_Khasi2
+	1288.3.5 = { birth = yes }
+	1347.9.19 = { death = yes }
+}
+
+# MB+ SEAsiaMMB277
+mb_yuan_SEAsiaMMB277 = {
+	name = "mb_yuan_name_SEAsiaMMB277"
+	culture = mongol
+	religion = vajrayana_faith
+	rite = lamaism
+	1280.1.1 = { birth = yes }
+	1350.1.1 = { death = yes }
+}
+
+# MB+ SEAsiaMMBMongol2
+mb_yuan_SEAsiaMMBMongol2 = {
+	name = "mb_yuan_name_SEAsiaMMBMongol2"
+	culture = mongol
+	religion = vajrayana_faith
+	rite = lamaism
+	1280.1.1 = { birth = yes }
+	1350.1.1 = { death = yes }
+}
+
+# MB+ SEAsiaMMBMongol4
+mb_yuan_SEAsiaMMBMongol4 = {
+	name = "mb_yuan_name_SEAsiaMMBMongol4"
+	culture = mongol
+	religion = vajrayana_faith
+	rite = lamaism
+	1280.1.1 = { birth = yes }
+	1350.1.1 = { death = yes }
+}
+
+# MB+ SEAsiaMMBMongol6
+mb_yuan_SEAsiaMMBMongol6 = {
+	name = "mb_yuan_name_SEAsiaMMBMongol6"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = pundarika
+	dynasty = mb_yuan_dynasty_namyang_hong
+	father = mb_yuan_SEAsiaMMBMongol5
+	1267.1.1 = { birth = yes }
+	1340.1.1 = { death = yes }
+}
+
+# MB+ tangut0033
+mb_yuan_tangut0033 = {
+	name = "mb_yuan_name_tangut0033"
+	culture = qiang
+	religion = vajrayana_faith
+	rite = lamaism
+	dynasty = mb_yuan_dynasty_ngwemi
+	father = mb_yuan_tangut0032
+	1260.1.1 = { birth = yes }
+	1320.1.1 = { death = yes }
+}
+
+# MB+ Chucai5
+mb_yuan_Chucai5 = {
+	name = "mb_yuan_name_Chucai5"
+	culture = shiwei
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_yuan_dynasty_yelu
+	father = mb_yuan_Chucai3
+	1270.6.11 = { birth = yes }
+	1329.9.18 = { death = yes }
+}
+
+# MB+ 244011 (source identifies as fictional)
+mb_yuan_244011 = {
+	name = "mb_yuan_name_244011"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = mb_yuan_dynasty_yasauri
+	father = mb_yuan_244010
+	1274.1.1 = { birth = yes }
+	1333.1.1 = { death = yes }
+}
+
+# MB+ Khasi2
+mb_yuan_Khasi2 = {
+	name = "mb_yuan_name_Khasi2"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_yuan_Khasi1
+	1260.7.18 = { birth = yes }
+	1325.12.4 = { death = yes }
+}
+
+# MB+ SEAsiaMMBMongol5
+mb_yuan_SEAsiaMMBMongol5 = {
+	name = "mb_yuan_name_SEAsiaMMBMongol5"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = pundarika
+	dynasty = mb_yuan_dynasty_namyang_hong
+	1244.1.1 = { birth = yes }
+	1291.1.1 = { death = yes }
+}
+
+# MB+ tangut0032
+mb_yuan_tangut0032 = {
+	name = "mb_yuan_name_tangut0032"
+	culture = qiang
+	religion = vajrayana_faith
+	rite = lamaism
+	dynasty = mb_yuan_dynasty_ngwemi
+	father = mb_yuan_tangut0031
+	1240.1.1 = { birth = yes }
+	1300.1.1 = { death = yes }
+}
+
+# MB+ Chucai3
+mb_yuan_Chucai3 = {
+	name = "mb_yuan_name_Chucai3"
+	culture = shiwei
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_yuan_dynasty_yelu
+	father = mb_yuan_Chucai1
+	1242.4.15 = { birth = yes }
+	1298.8.22 = { death = yes }
+}
+
+# MB+ 244010 (source identifies as fictional)
+mb_yuan_244010 = {
+	name = "mb_yuan_name_244010"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = mb_yuan_dynasty_yasauri
+	1251.2.10 = { birth = yes }
+	1305.12.10 = { death = yes }
+}
+
+# MB+ Khasi1
+mb_yuan_Khasi1 = {
+	name = "mb_yuan_name_Khasi1"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_yuan_217304
+	1235.9.23 = { birth = yes }
+	1301.5.11 = { death = yes }
+}
+
+# MB+ tangut0031
+mb_yuan_tangut0031 = {
+	name = "mb_yuan_name_tangut0031"
+	culture = qiang
+	religion = vajrayana_faith
+	rite = lamaism
+	dynasty = mb_yuan_dynasty_ngwemi
+	father = mb_yuan_tangut0030
+	1220.1.1 = { birth = yes }
+	1280.1.1 = { death = yes }
+}
+
+# MB+ Chucai1
+mb_yuan_Chucai1 = {
+	name = "mb_yuan_name_Chucai1"
+	culture = shiwei
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_yuan_dynasty_yelu
+	father = mb_yuan_1413469
+	1215.9.8 = { birth = yes }
+	1276.3.17 = { death = yes }
+}
+
+# MB+ 217304
+mb_yuan_217304 = {
+	name = "mb_yuan_name_217304"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = chg_ogedei_borjigin
+	1209.4.16 = { birth = yes }
+	1246.2.20 = { death = yes }
+}
+
+# MB+ tangut0030
+mb_yuan_tangut0030 = {
+	name = "mb_yuan_name_tangut0030"
+	culture = qiang
+	religion = vajrayana_faith
+	rite = lamaism
+	dynasty = mb_yuan_dynasty_ngwemi
+	father = mb_yuan_tangut0029
+	1200.1.1 = { birth = yes }
+	1260.1.1 = { death = yes }
+}
+
+# MB+ 1413469
+mb_yuan_1413469 = {
+	name = "mb_yuan_name_1413469"
+	culture = shiwei
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_yuan_dynasty_yelu
+	father = mb_yuan_1413465
+	1190.7.24 = { birth = yes }
+}
+
+# MB+ tangut0029
+mb_yuan_tangut0029 = {
+	name = "mb_yuan_name_tangut0029"
+	culture = qiang
+	religion = vajrayana_faith
+	rite = lamaism
+	dynasty = mb_yuan_dynasty_ngwemi
+	father = mb_yuan_tangut0028
+	1180.1.1 = { birth = yes }
+	1226.1.1 = { death = yes }
+}
+
+# MB+ 1413465
+mb_yuan_1413465 = {
+	name = "mb_yuan_name_1413465"
+	culture = shiwei
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_yuan_dynasty_yelu
+	father = mb_yuan_1413464
+	1131.1.1 = { birth = yes }
+	1191.6.1 = { death = yes }
+}
+
+# MB+ tangut0028
+mb_yuan_tangut0028 = {
+	name = "mb_yuan_name_tangut0028"
+	culture = qiang
+	religion = vajrayana_faith
+	rite = lamaism
+	dynasty = mb_yuan_dynasty_ngwemi
+	father = mb_yuan_tangut0027
+	1160.1.1 = { birth = yes }
+	1220.1.1 = { death = yes }
+}
+
+# MB+ 1413464
+mb_yuan_1413464 = {
+	name = "mb_yuan_name_1413464"
+	culture = shiwei
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_yuan_dynasty_yelu
+	father = mb_yuan_1413462
+	1085.1.1 = { birth = yes }
+	1141.1.1 = { death = yes }
+}
+
+# MB+ tangut0027
+mb_yuan_tangut0027 = {
+	name = "mb_yuan_name_tangut0027"
+	culture = qiang
+	religion = vajrayana_faith
+	rite = lamaism
+	dynasty = mb_yuan_dynasty_ngwemi
+	father = mb_yuan_tangut0026
+	1140.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+
+# MB+ 1413462
+mb_yuan_1413462 = {
+	name = "mb_yuan_name_1413462"
+	culture = shiwei
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_yuan_dynasty_yelu
+	father = mb_yuan_1413461
+	1041.1.1 = { birth = yes }
+	1101.1.1 = { death = yes }
+}
+
+# MB+ tangut0026
+mb_yuan_tangut0026 = {
+	name = "mb_yuan_name_tangut0026"
+	culture = qiang
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_yuan_dynasty_ngwemi
+	1120.1.1 = { birth = yes }
+	1180.1.1 = { death = yes }
+}
+
+# MB+ 1413461
+mb_yuan_1413461 = {
+	name = "mb_yuan_name_1413461"
+	culture = shiwei
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_yuan_dynasty_yelu
+	998.1.1 = { birth = yes }
+	1061.1.1 = { death = yes }
 }
