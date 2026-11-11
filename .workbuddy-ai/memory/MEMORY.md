@@ -42,3 +42,14 @@
 ## 五、已完成 / 遗留
 - 已完成勿重做：168 支系→42 宗族；154 复合君主名重译；4361 宗教人物改写；印度教整县染色；BKZ/SKN 7 角色 maliki；CU 法理树重建（2026-10-29）；ALB/MLL 恢复王国并清 stale liege；LIT 升王国 + 8 公国（2026-10-29）；**类1「有头衔没历史」补世系 244 标题（15 建块 + 229 插入，1532 人），类1 missing 1327→0（2026-10-30，脚本 `_fill_lost_lineages.py`，报告 `_filled_lineages_report.csv`）**。
 - 待定：① BKZ/SKN 库西雅 7 省 rite；② 10990 pagan 角色文化主体非 pagan；③ 244 印度教省 CU 记耆那；④ pamiri→afghan（先不动）；⑤ tai_lu/tai_nua 定义去留；⑥ coptic 省份层 0 省阈值；⑦ 涅涅茨→Bjarmian；⑧ 萨尔语群 17 文化（先不管）；⑨ `00_generated_titular_guard.txt` 缺失是否补；⑩ 2026-10-29 16:27 总装脚本另改的 11 个无备份文件未逐个核；⑪ **类2「没头衔挂不了」28 国 98 人未处理**（清单 `_lost_lineages_split.csv` 类别 2；其中 LUX 卢森堡的 `title_key` 列其实是人物 id，需先定怎么处理）；⑫ `k_mediterranean_sea` 显示名是否覆盖成「马略卡」；⑬ 遗留断引用 `c_armagnac` 的 `holder = amg_mascarose_ii_lomagne` 在 characters 里不存在（2026-10-30 前就有，未动）。
+
+## 六、强制锁定首府标准流程（2026-11-10 用户拍板）
+用户说「把 X 强制设为其所在伯爵领的首府」= **默认全套一起改**，不必逐项确认；原话「伯爵领归属，挂的头衔也一并修改，这是标准流程，记下来」。统一写进 `gen_debug/fix_holstein_denmark.py` 的对应小节（幂等、保留 BOM/CRLF、docstring 记依据）。
+1. **两处法理树**：`common/landed_titles/00_landed_titles.txt` ＋ EXPORT `landed_titles/00_eu5_landed_titles.txt`，把 `b_X` 提为 `c_<county>` 的第一个 barony（CK3 首府 = 第一个 `b_`）。
+2. **`history/titles/zz_eu5_titles.txt`**：该 `c_` 的 `1337.4.1` holder 改成 X 国 ruler，`government` 同步换成 X 国的（republic→`republic_government`）；历史日期段不动。
+3. **`gen_debug/eu5_ck3_title_map.csv` 只改 country 行**：X 国 `b_X → c_<county>`（tier c、名换 county 名、government、note 改 `its land is its counties`）；`county` 行 / `barony` 行一律不动。country 行 note 常是带引号且内含逗号的字段，解析必须 `csv.reader`，**不能 `split(",")`**。
+4. **原持有者不是一律降级为男爵领**：只有「EU5 里除了这个 county 没有别的地」才像 RIM→`b_rimini` 那样，把它的 country 行从 `c_` 改挂 `b_<原首府>` 并在 `zz_eu5_titles.txt` 新建该 `b_` 块承接 holder。**公国 / 多地的原持有者什么都不动**——用户原话「吕讷堡又不是只拿了一块地，你纠结他干什么」：LUN rank d、11 个 location、country 行挂 `d_eu5_lun`，失去 `c_elbmarch` 后仍有地，`country,LUN` 与 `b_harburg` 都不动。
+5. **`gen_debug/eu5_reassign_keep.json`**：加 `c_<county>`、`b_X`，以及（有降级时）`b_<原首府>`，防 `--barony-order rank_state` 重跑把座位抢回去。
+6. 完整重跑 `_export_title_map.py` 会按 `seat` / `barony_of` 把 country 行写回旧绑定，**导出后必须重跑 `fix_holstein_denmark.py`**。
+已落地：c_holstein/kiel、HRE 同名首府 5 县、c_oriel、c_flaming/c_palatinate、c_romagna（RAV/RIM）、c_elbmarch（HAM/LUN）、c_wesermarch（BRM/OLD）。
+- 坑：`fix_holstein_denmark.py` 第 2 节原先在已打补丁的数据上会崩（`c_holstein` 的 `1337.1.1` liege 已被手改成 `k_denmark`、holder 移进单独 `1337.4.1` 块）；已加幂等分支，命中已落地状态就整段不写，绝不覆盖手改行。

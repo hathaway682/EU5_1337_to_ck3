@@ -1,0 +1,64 @@
+﻿# New Beta definitions absent from overridden files.
+
+on_term_ended = {
+	on_actions = { on_term_ended_events }
+	effect = {
+		if = {
+			limit = { scope:previous_holder = scope:new_holder }
+			every_player = {
+				limit = {
+					OR = {
+						this = root
+						is_vassal_or_below_of = root
+					}
+				}
+				if = {
+					limit = { this = root }
+					send_interface_toast = {
+						type = event_toast_effect_good
+						title = term_ended_reelected_toast_self
+						left_icon = scope:title
+						custom_tooltip = term_ended_reelected_toast_self.desc
+					}
+				}
+				else = {
+					send_interface_toast = {
+						type = event_toast_effect_neutral
+						title = term_ended_reelected_toast
+						left_icon = scope:new_holder
+						right_icon = scope:title
+						custom_tooltip = term_ended_reelected_toast.desc
+					}
+				}
+			}
+		}
+	}
+}
+
+on_term_ended_events = {
+	effect = {
+		if = {
+			limit = { scope:previous_holder = scope:new_holder }
+			# Re-elected (root)
+			scope:title ?= {
+				every_full_assembly_member = {
+					limit = {
+						is_ai = no
+					}
+					trigger_event = republic_event.0051
+				}
+			}
+		}
+		else = {
+			# Elected (root = winner)
+			scope:title ?= {
+				every_full_assembly_member = {
+					limit = {
+						is_ai = no
+					}
+					trigger_event = republic_event.0050
+				}
+			}
+		}
+	}
+}

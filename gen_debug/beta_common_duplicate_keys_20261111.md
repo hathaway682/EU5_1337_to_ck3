@@ -1,0 +1,194 @@
+﻿# 同目录重复定义检查
+
+包含原版有效文件和模组覆盖文件；on_action、defines 等本来可能允许合并，因此重复不必然是错误。需逐类型核对加载语义。
+
+- `buildings` / `walls_00`：`99_background_graphics_buildings.txt`, `zz_wilderness_wall_override.txt`
+- `buildings` / `walls_01_tribal`：`99_background_graphics_buildings.txt`, `zz_wilderness_wall_override.txt`
+- `coat_of_arms/coat_of_arms` / `d_bosnia`：`01_landed_titles.txt`, `zz_eu5_de_jure_duchy_arms.txt`
+- `coat_of_arms/coat_of_arms` / `d_bulgaria`：`01_landed_titles.txt`, `zz_eu5_de_jure_duchy_arms.txt`
+- `coat_of_arms/coat_of_arms` / `d_cappadocia`：`01_landed_titles.txt`, `zz_eu5_de_jure_duchy_arms.txt`
+- `coat_of_arms/coat_of_arms` / `d_catalonia`：`01_landed_titles.txt`, `zz_eu5_de_jure_duchy_arms.txt`
+- `coat_of_arms/coat_of_arms` / `d_croatia`：`01_landed_titles.txt`, `zz_eu5_de_jure_duchy_arms.txt`
+- `coat_of_arms/coat_of_arms` / `d_franconia`：`01_landed_titles.txt`, `zz_eu5_de_jure_duchy_arms.txt`
+- `coat_of_arms/coat_of_arms` / `d_georgia`：`01_landed_titles.txt`, `zz_eu5_de_jure_duchy_arms.txt`
+- `coat_of_arms/coat_of_arms` / `d_ghana`：`01_landed_titles.txt`, `zz_eu5_de_jure_duchy_arms.txt`
+- `coat_of_arms/coat_of_arms` / `d_hexi`：`01_landed_titles.txt`, `zz_eu5_de_jure_duchy_arms.txt`
+- `coat_of_arms/coat_of_arms` / `d_longyou`：`01_landed_titles.txt`, `zz_eu5_de_jure_duchy_arms.txt`
+- `coat_of_arms/coat_of_arms` / `d_lyonnais`：`01_landed_titles.txt`, `zz_eu5_de_jure_duchy_arms.txt`
+- `coat_of_arms/coat_of_arms` / `house_armagnac`：`90_dynasties.txt`, `zzzz_eu5_family_arms.txt`
+- `coat_of_arms/coat_of_arms` / `house_capet`：`90_dynasties.txt`, `zzzz_eu5_family_arms.txt`
+- `coat_of_arms/coat_of_arms` / `house_chalon`：`90_dynasties.txt`, `zzzz_eu5_family_arms.txt`
+- `coat_of_arms/coat_of_arms` / `house_dreux`：`90_dynasties.txt`, `zzzz_eu5_family_arms.txt`
+- `coat_of_arms/coat_of_arms` / `house_plantagenet`：`90_dynasties.txt`, `zzzz_eu5_family_arms.txt`
+- `coat_of_arms/coat_of_arms` / `house_urgell`：`90_dynasties.txt`, `zzzz_eu5_family_arms.txt`
+- `culture/cultures` / `akan`：`00_akan.txt`, `00_generated_cultures.txt`
+- `culture/cultures` / `bashkir`：`00_generated_cultures.txt`, `00_turkic.txt`
+- `culture/cultures` / `bengali`：`00_generated_cultures.txt`, `00_indo_aryan.txt`
+- `culture/cultures` / `bobo`：`00_generated_cultures.txt`, `00_west_african.txt`
+- `culture/cultures` / `edo`：`00_generated_cultures.txt`, `00_yoruba.txt`
+- `culture/cultures` / `ewe`：`00_generated_cultures.txt`, `00_yoruba.txt`
+- `culture/cultures` / `gond`：`00_dravidian.txt`, `00_generated_cultures.txt`
+- `culture/cultures` / `gujarati`：`00_generated_cultures.txt`, `00_indo_aryan.txt`
+- `culture/cultures` / `hausa`：`00_central_african.txt`, `00_generated_cultures.txt`
+- `culture/cultures` / `igbo`：`00_generated_cultures.txt`, `00_yoruba.txt`
+- `culture/cultures` / `malvi`：`00_generated_cultures.txt`, `00_indo_aryan.txt`
+- `culture/cultures` / `mossi`：`00_generated_cultures.txt`, `00_sahelian.txt`
+- `culture/cultures` / `mustaarabi`：`00_generated_cultures.txt`, `00_israelite.txt`
+- `culture/cultures` / `nubian`：`00_east_african.txt`, `00_generated_cultures.txt`
+- `culture/cultures` / `nupe`：`00_central_african.txt`, `00_generated_cultures.txt`
+- `culture/cultures` / `prussian`：`00_baltic.txt`, `zz_eu5_culture_merge.txt`
+- `culture/cultures` / `punjabi`：`00_generated_cultures.txt`, `00_indo_aryan.txt`
+- `culture/cultures` / `serer`：`00_generated_cultures.txt`, `00_senegambian.txt`
+- `culture/cultures` / `sindhi`：`00_generated_cultures.txt`, `00_indo_aryan.txt`
+- `culture/cultures` / `songhai`：`00_generated_cultures.txt`, `00_sahelian_ibl.txt`
+- `culture/cultures` / `soninke`：`00_generated_cultures.txt`, `00_sahelian.txt`
+- `culture/cultures` / `tamil`：`00_dravidian.txt`, `00_generated_cultures.txt`
+- `culture/cultures` / `telugu`：`00_dravidian.txt`, `00_generated_cultures.txt`
+- `culture/cultures` / `wolof`：`00_generated_cultures.txt`, `00_senegambian.txt`
+- `culture/cultures` / `yoruba`：`00_generated_cultures.txt`, `00_yoruba.txt`
+- `culture/name_lists` / `name_list_akan`：`00_akan.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_albanian`：`00_generated_name_lists.txt`, `00_south_slavic.txt`
+- `culture/name_lists` / `name_list_aragonese`：`00_generated_name_lists.txt`, `00_iberian.txt`
+- `culture/name_lists` / `name_list_arpitan`：`00_frankish.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_ashkenazi`：`00_generated_name_lists.txt`, `00_israelite.txt`
+- `culture/name_lists` / `name_list_bashkir`：`00_generated_name_lists.txt`, `00_turkic.txt`
+- `culture/name_lists` / `name_list_basque`：`00_generated_name_lists.txt`, `00_iberian.txt`
+- `culture/name_lists` / `name_list_bengali`：`00_generated_name_lists.txt`, `00_indo_aryan.txt`
+- `culture/name_lists` / `name_list_bobo`：`00_generated_name_lists.txt`, `00_west_african.txt`
+- `culture/name_lists` / `name_list_bosnian`：`00_generated_name_lists.txt`, `00_south_slavic.txt`
+- `culture/name_lists` / `name_list_breton`：`00_brythonic.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_bulgarian`：`00_generated_name_lists.txt`, `00_south_slavic.txt`
+- `culture/name_lists` / `name_list_castilian`：`00_generated_name_lists.txt`, `00_iberian.txt`
+- `culture/name_lists` / `name_list_catalan`：`00_generated_name_lists.txt`, `00_iberian.txt`
+- `culture/name_lists` / `name_list_cornish`：`00_brythonic.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_croatian`：`00_generated_name_lists.txt`, `00_south_slavic.txt`
+- `culture/name_lists` / `name_list_czech`：`00_generated_name_lists.txt`, `00_west_slavic.txt`
+- `culture/name_lists` / `name_list_danish`：`00_generated_name_lists.txt`, `00_north_germanic.txt`
+- `culture/name_lists` / `name_list_edo`：`00_generated_name_lists.txt`, `00_yoruba.txt`
+- `culture/name_lists` / `name_list_english`：`00_generated_name_lists.txt`, `00_west_germanic.txt`
+- `culture/name_lists` / `name_list_estonian`：`00_balto_finnic.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_ewe`：`00_generated_name_lists.txt`, `00_yoruba.txt`
+- `culture/name_lists` / `name_list_finnish`：`00_balto_finnic.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_french`：`00_frankish.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_frisian`：`00_central_germanic.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_galician`：`00_generated_name_lists.txt`, `00_iberian.txt`
+- `culture/name_lists` / `name_list_gond`：`00_dravidian.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_gujarati`：`00_generated_name_lists.txt`, `00_indo_aryan.txt`
+- `culture/name_lists` / `name_list_hausa`：`00_central_african.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_hungarian`：`00_generated_name_lists.txt`, `00_magyar.txt`
+- `culture/name_lists` / `name_list_icelandic`：`00_generated_name_lists.txt`, `00_north_germanic.txt`
+- `culture/name_lists` / `name_list_igbo`：`00_generated_name_lists.txt`, `00_yoruba.txt`
+- `culture/name_lists` / `name_list_irish`：`00_generated_name_lists.txt`, `00_goidelic.txt`
+- `culture/name_lists` / `name_list_karelian`：`00_balto_finnic.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_komi`：`00_generated_name_lists.txt`, `00_ugro_permian.txt`
+- `culture/name_lists` / `name_list_lombard`：`00_generated_name_lists.txt`, `00_latin.txt`
+- `culture/name_lists` / `name_list_malvi`：`00_generated_name_lists.txt`, `00_indo_aryan.txt`
+- `culture/name_lists` / `name_list_mossi`：`00_generated_name_lists.txt`, `00_sahelian.txt`
+- `culture/name_lists` / `name_list_mustaarabi`：`00_generated_name_lists.txt`, `00_israelite.txt`
+- `culture/name_lists` / `name_list_norman`：`00_frankish.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_norse_gael`：`00_generated_name_lists.txt`, `00_north_germanic.txt`
+- `culture/name_lists` / `name_list_norwegian`：`00_generated_name_lists.txt`, `00_north_germanic.txt`
+- `culture/name_lists` / `name_list_novgorodian`：`00_east_slavic.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_nubian`：`00_east_african.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_nupe`：`00_central_african.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_polabian`：`00_generated_name_lists.txt`, `00_west_slavic.txt`
+- `culture/name_lists` / `name_list_portuguese`：`00_generated_name_lists.txt`, `00_iberian.txt`
+- `culture/name_lists` / `name_list_prussian`：`00_baltic.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_punjabi`：`00_generated_name_lists.txt`, `00_indo_aryan.txt`
+- `culture/name_lists` / `name_list_romansh`：`00_frankish.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_sardinian`：`00_generated_name_lists.txt`, `00_latin.txt`
+- `culture/name_lists` / `name_list_saxon`：`00_central_germanic.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_scottish`：`00_generated_name_lists.txt`, `00_west_germanic.txt`
+- `culture/name_lists` / `name_list_sephardi`：`00_generated_name_lists.txt`, `00_israelite.txt`
+- `culture/name_lists` / `name_list_serbian`：`00_generated_name_lists.txt`, `00_south_slavic.txt`
+- `culture/name_lists` / `name_list_serer`：`00_generated_name_lists.txt`, `00_senegambian.txt`
+- `culture/name_lists` / `name_list_severian`：`00_east_slavic.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_sicilian`：`00_generated_name_lists.txt`, `00_latin.txt`
+- `culture/name_lists` / `name_list_sindhi`：`00_generated_name_lists.txt`, `00_indo_aryan.txt`
+- `culture/name_lists` / `name_list_songhai`：`00_generated_name_lists.txt`, `00_sahelian.txt`
+- `culture/name_lists` / `name_list_soninke`：`00_generated_name_lists.txt`, `00_sahelian.txt`
+- `culture/name_lists` / `name_list_swabian`：`00_central_germanic.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_swedish`：`00_generated_name_lists.txt`, `00_north_germanic.txt`
+- `culture/name_lists` / `name_list_tamil`：`00_dravidian.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_telugu`：`00_dravidian.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_vepsian`：`00_balto_finnic.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_welsh`：`00_brythonic.txt`, `00_generated_name_lists.txt`
+- `culture/name_lists` / `name_list_wolof`：`00_generated_name_lists.txt`, `00_senegambian.txt`
+- `culture/name_lists` / `name_list_yoruba`：`00_generated_name_lists.txt`, `00_yoruba.txt`
+- `defines` / `NActivity`：`00_defines.txt`, `zz_wilderness_activity_defines.txt`
+- `defines` / `NGovernment`：`00_defines.txt`, `zz_generated_defines.txt`
+- `defines` / `NJominiMap`：`00_defines.txt`, `zz_generated_defines.txt`
+- `defines/graphic` / `NCamera`：`00_graphics.txt`, `zz_generated_graphics.txt`
+- `defines/graphic` / `NGraphics`：`00_graphics.txt`, `zz_generated_graphics.txt`
+- `defines/graphic` / `NHoldingGraphics`：`00_graphics.txt`, `zz_generated_graphics.txt`
+- `defines/graphic` / `NMainMenu`：`00_graphics.txt`, `zz_gen_main_menu.txt`
+- `defines/graphic` / `NMapIcon`：`00_graphics.txt`, `zz_generated_graphics.txt`
+- `defines/graphic` / `NTerrainCulling`：`00_graphics.txt`, `zz_generated_graphics.txt`
+- `defines/graphic` / `NTravelRouteGraphics`：`00_graphics.txt`, `zz_generated_graphics.txt`
+- `defines/graphic` / `NUnitGraphics`：`00_graphics.txt`, `zz_generated_graphics.txt`
+- `great_projects/types` / `@castle_china_illustration`：`00_great_project_types.txt`, `00_ministry_projects.txt`
+- `great_projects/types` / `@default_illustration`：`00_great_project_types.txt`, `00_ministry_projects.txt`, `01_pam_projects.txt`
+- `great_projects/types` / `@great_project_china_icon`：`00_great_project_types.txt`, `00_ministry_projects.txt`
+- `great_projects/types` / `@msg_completion_effect_generic`：`00_great_project_types.txt`, `00_ministry_projects.txt`
+- `named_colors` / `colors`：`00_gen_wilderness_colors.txt`, `culture_colors.txt`, `default_colors.txt`, `district_colors.txt`, `zz_eu5_family_colors.txt`
+- `on_action` / `on_birth_child`：`child_birth_on_actions.txt`, `zz_tnh_wilderness_generation.txt`
+- `on_action` / `on_character_created`：`character_created_on_actions.txt`, `zz_tnh_wilderness_generation.txt`
+- `on_action` / `on_character_culture_change`：`culture_on_actions.txt`, `zz_tnh_wilderness_generation.txt`
+- `on_action` / `on_death`：`00_pioneer_on_actions.txt`, `death.txt`
+- `on_action` / `on_faith_conversion`：`religion_on_actions.txt`, `zz_tnh_wilderness_generation.txt`
+- `on_action` / `on_game_start`：`1337_de_jure_set.txt`, `game_start.txt`, `zz_1337_silk_road_innovations.txt`, `zz_eu5_hanseatic_league.txt`, `zz_eu5_primary_titles.txt`, `zz_eu5_republic_count_families.txt`, `zz_eu5_test_duchy_merchants.txt`, `zz_eu5_tributaries.txt`, `zz_mbplus_byzantine_families.txt`, `zzz_eu5_updated_1337_tributaries.txt`
+- `on_action` / `on_game_start_after_lobby`：`00_colonization_on_actions.txt`, `game_start.txt`, `zz_eu5_beta_trade_startup.txt`, `zz_eu5_test_duchy_merchants.txt`, `zz_tnh_nomad_camps.txt`, `zz_tnh_wilderness_generation.txt`
+- `on_action` / `on_government_change`：`government_on_actions.txt`, `zz_tnh_wilderness_government.txt`
+- `on_action` / `on_rite_change`：`religion_on_actions.txt`, `zz_tnh_wilderness_generation.txt`
+- `on_action` / `on_title_gain`：`00_colonization_on_actions.txt`, `title_on_actions.txt`
+- `on_action` / `on_travel_plan_abort`：`00_colonization_on_actions.txt`, `travel_on_actions.txt`
+- `on_action` / `on_travel_plan_arrival`：`00_colonization_on_actions.txt`, `travel_on_actions.txt`
+- `on_action` / `on_travel_plan_cancel`：`00_colonization_on_actions.txt`, `travel_on_actions.txt`
+- `on_action` / `on_travel_plan_complete`：`00_colonization_on_actions.txt`, `travel_on_actions.txt`
+- `on_action` / `on_travel_plan_start`：`00_colonization_on_actions.txt`, `travel_on_actions.txt`
+- `on_action` / `on_war_started`：`00_colonization_on_actions.txt`, `war_on_actions.txt`
+- `on_action` / `yearly_global_pulse`：`00_colonization_on_actions.txt`, `yearly_on_actions.txt`, `zz_tnh_wilderness_generation.txt`
+- `on_action` / `yearly_playable_pulse`：`00_colonization_on_actions.txt`, `yearly_on_actions.txt`
+- `religion/tenet_types` / `tenet_acts_of_apostles`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_adoptionism`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_alexandrian_catechism`：`00_tenet_types.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_anachoresis`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_aniconism`：`00_tenet_types.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_apostolic_succession`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_armed_pilgrimages`：`00_tenet_types.txt`, `zz_gen_great_holy_war_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_be_fruitful_and_multiply`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_celestial_hierarchy`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_communal_identity`：`00_tenet_types.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_confession`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_consolamentum`：`00_tenet_types.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_divine_liturgy`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_divine_marriage`：`00_tenet_types.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_dulia`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_gnosticism`：`00_tenet_types.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_hesychasm`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_holy_myron`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_hyperdulia`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_khachkar`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_love_thy_neighbour`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_mendicant_preachers`：`00_tenet_types.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_miaphysitism`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_miles_christi`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_monophysitism`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_mortification_of_the_flesh`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_ora_et_labora`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_original_sin`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_peace_of_god`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_pentarchy`：`00_tenet_types.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_philanthropia`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_purgatory`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_scholasticism`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_simony`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_struggle_submission`：`00_tenet_types.txt`, `zz_gen_great_holy_war_tenets.txt`
+- `religion/tenet_types` / `tenet_transubstantiation`：`00_pam_tenets.txt`, `zz_gen_bga_tenets.txt`, `zzz_gen_tenet_text.txt`
+- `religion/tenet_types` / `tenet_unrelenting_faith`：`00_tenet_types.txt`, `zzz_gen_tenet_text.txt`
+- `scripted_rules` / `can_be_activity_guest`：`00_rules.txt`, `zz_wilderness_rules.txt`
+- `scripted_rules` / `can_be_trader`：`00_rules.txt`, `zz_eu5_trade_rules.txt`
+- `scripted_rules` / `can_build_external_trade_post`：`00_rules.txt`, `zz_eu5_trade_rules.txt`
+- `scripted_triggers` / `barony_cannot_construct_holding`：`00_building_requirement_triggers.txt`, `zz_wilderness_holding_construction.txt`
+- `scripted_triggers` / `ep3_laamp_diplo_range_trigger`：`07_ep3_triggers.txt`, `zz_wilderness_laamp_range.txt`
+- `scripted_triggers` / `herders_and_tributary_constraints`：`00_war_and_peace_triggers.txt`, `zz_wilderness_war_triggers.txt`

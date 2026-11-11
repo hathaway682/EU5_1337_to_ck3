@@ -7,7 +7,7 @@ disinherit_interaction = {
 
 	desc = disinherit_interaction_desc
 	use_diplomatic_range = no
-
+	
 	is_available = {
 		trigger_if = {
 			limit = { is_ai = yes }
@@ -22,8 +22,8 @@ disinherit_interaction = {
 	is_shown = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
-		NOR = {
-			scope:recipient = scope:puppet_or_actor
+		NOR = { 
+			scope:recipient = scope:puppet_or_actor 
 
 			AND = { # Explicit AND to ensure no funny business
 				scope:recipient = { is_child_of = scope:puppet_or_actor }
@@ -40,8 +40,9 @@ disinherit_interaction = {
 
 		}
 		scope:recipient = {
-			NOT = {
+			NOR = {
 				has_trait = disinherited
+				has_trait = adopted_no_inheritance
 			}
 		}
 	}
@@ -52,7 +53,7 @@ disinherit_interaction = {
 		custom_description = {
 			scope:puppet_or_actor.culture = {
 				NOT = { has_cultural_parameter = cannot_disherit }
-			}
+			} 
 			text = "mystical_ancestors_disinherit"
 		}
 	}
@@ -106,7 +107,7 @@ disinherit_interaction = {
 			trigger_event = char_interaction.0020
 		}
 	}
-
+	
 	on_accept = {
 		scope:puppet_or_actor = {
 			# Only get stressed/SP penalties if you don't have the parameter
@@ -119,7 +120,7 @@ disinherit_interaction = {
 					compassionate = minor_stress_impact_gain
 				}
 			}
-
+			
 			#Legitimacy loss
 			if = {
 				limit = { has_legitimacy = yes }
@@ -149,7 +150,7 @@ disinherit_interaction = {
 					type = event_toast_effect_neutral
 					title = disinherit_interaction_notification
 
-					left_icon = scope:puppet_or_actor
+					left_icon = scope:puppet_or_actor					
 					right_icon = scope:recipient
 
 					scope:recipient = {
@@ -188,7 +189,7 @@ disinherit_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = medium_unity_loss
@@ -216,7 +217,7 @@ disinherit_interaction = {
 			}
 		}
 	}
-
+	
 	cost = {
 		renown = {
 			value = {
@@ -305,14 +306,14 @@ disinherit_interaction = {
 			}
 		}
 	}
-
+	
 	auto_accept = yes
 
 	ai_targets = {
 		ai_recipients = dynasty
 		max = 20
 	}
-
+	
 	ai_frequency_by_tier = {
 		barony = 0
 		county = 96
@@ -321,10 +322,10 @@ disinherit_interaction = {
 		empire = 12
 		hegemony = 12
 	}
-
+	
 	ai_will_do = {
 		base = 0
-
+		
 		modifier = {
 			add = -100
 			scope:puppet_or_actor = {
@@ -335,17 +336,14 @@ disinherit_interaction = {
 			}
 			scope:recipient = { is_primary_heir_of = scope:puppet_or_actor }
 		}
-
+		
 		modifier = {
 			add = 100
 			scope:recipient = {
-				OR = {
-					has_relation_rival = scope:puppet_or_actor
-					has_relation_nemesis = scope:puppet_or_actor
-				}
+				has_relation_rival = scope:puppet_or_actor
 			}
 		}
-
+		
 		modifier = {
 			add = 100
 			scope:recipient = {
@@ -357,7 +355,7 @@ disinherit_interaction = {
 				}
 			}
 		}
-
+		
 		modifier = {
 			add = 5
 			ai_vengefulness >= medium_positive_ai_value
@@ -438,17 +436,14 @@ disinherit_interaction = {
 		evaluate_action_decreasing_house_unity = {
 			VALUE = 100
 		}
-
+		
 		modifier = {
 			factor = 0
 			scope:recipient = {
-				OR = {
-					has_relation_friend = scope:puppet_or_actor
-					has_relation_best_friend = scope:puppet_or_actor
-				}
+				has_relation_friend = scope:puppet_or_actor
 			}
 		}
-
+		
 		modifier = {
 			factor = 0
 			scope:recipient = {
@@ -490,8 +485,9 @@ disinherit_children_interaction = {
 			has_dynasty_perk = fp2_coterie_legacy_5
 		}
 		scope:recipient = {
-			NOT = {
+			NOR = {
 				has_trait = disinherited
+				has_trait = adopted_no_inheritance
 			}
 		}
 	}
@@ -600,13 +596,13 @@ disinherit_children_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_loss
 			DESC = clan_unity_disinheritance.desc
 			REVERSE_NON_HOUSE_TARGET = no
-		}
+		}		
 	}
 
 	cost = {
@@ -662,10 +658,7 @@ disinherit_children_interaction = {
 		modifier = {
 			add = 100
 			scope:recipient = {
-				OR = {
-					has_relation_rival = scope:puppet_or_actor
-					has_relation_nemesis = scope:puppet_or_actor
-				}
+				has_relation_rival = scope:puppet_or_actor
 			}
 		}
 
@@ -765,10 +758,7 @@ disinherit_children_interaction = {
 		modifier = {
 			factor = 0
 			scope:recipient = {
-				OR = {
-					has_relation_friend = scope:puppet_or_actor
-					has_relation_best_friend = scope:puppet_or_actor
-				}
+				has_relation_friend = scope:puppet_or_actor
 			}
 		}
 
@@ -810,7 +800,10 @@ restore_inheritance_interaction = {
 
 		}
 		scope:recipient = {
-			has_trait = disinherited
+			OR = {
+				has_trait = disinherited
+				has_trait = adopted_no_inheritance
+			}
 		}
 	}
 
@@ -825,7 +818,7 @@ restore_inheritance_interaction = {
 			trigger_event = char_interaction.0030
 		}
 	}
-
+	
 	on_accept = {
 		scope:puppet_or_actor = {
 			stress_and_fulfillment_impact = {
@@ -851,13 +844,13 @@ restore_inheritance_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_gain
 			DESC = clan_unity_re_inheritance.desc
 			REVERSE_NON_HOUSE_TARGET = no
-		}
+		}		
 	}
 
 	cost = {
@@ -869,14 +862,14 @@ restore_inheritance_interaction = {
 			}
 		}
 	}
-
+	
 	auto_accept = yes
 
 	ai_targets = {
 		ai_recipients = dynasty
 		max = 20
 	}
-
+	
 	ai_frequency_by_tier = {
 		barony = 0
 		county = 96
@@ -885,25 +878,22 @@ restore_inheritance_interaction = {
 		empire = 12
 		hegemony = 12
 	}
-
+	
 	ai_will_do = {
 		base = 0
-
+		
 		modifier = {
 			add = 100
 			scope:recipient = {
-				OR = {
-					has_relation_friend = scope:puppet_or_actor
-					has_relation_best_friend = scope:puppet_or_actor
-				}
+				has_relation_friend = scope:puppet_or_actor
 			}
 		}
-
+		
 		modifier = {
 			add = 5
 			ai_vengefulness <= medium_negative_ai_value
 		}
-
+		
 		modifier = {
 			add = 100
 			scope:recipient = scope:puppet_or_actor
@@ -913,14 +903,11 @@ restore_inheritance_interaction = {
 		evaluate_action_increasing_house_unity = {
 			VALUE = 100
 		}
-
+		
 		modifier = {
 			factor = 0
 			scope:recipient = {
-				OR = {
-					has_relation_rival = scope:puppet_or_actor
-					has_relation_nemesis = scope:puppet_or_actor
-				}
+				has_relation_rival = scope:puppet_or_actor
 			}
 		}
 	}
@@ -937,7 +924,7 @@ denounce_interaction = {
 	interface_priority = 59 #after disinherit
 
 	desc = denounce_interaction_desc
-
+	
 	is_available = {
 		trigger_if = {
 			limit = { is_ai = yes }
@@ -981,7 +968,7 @@ denounce_interaction = {
 			trigger_event = char_interaction.0040
 		}
 	}
-
+	
 	on_accept = {
 		scope:puppet_or_actor = {
 			# Only get stressed/SP penalties if you don't have the parameter
@@ -1000,7 +987,7 @@ denounce_interaction = {
 					type = event_toast_effect_neutral
 					title = denounce_interaction_notification
 
-					left_icon = scope:puppet_or_actor
+					left_icon = scope:puppet_or_actor					
 					right_icon = scope:recipient
 
 					scope:recipient = {
@@ -1039,13 +1026,13 @@ denounce_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_loss
 			DESC = clan_unity_denouncement.desc
 			REVERSE_NON_HOUSE_TARGET = no
-		}
+		}		
 	}
 
 	cost = {
@@ -1106,14 +1093,14 @@ denounce_interaction = {
 			}
 		}
 	}
-
+	
 	auto_accept = yes
 
 	ai_targets = {
 		ai_recipients = dynasty
 		max = 20
 	}
-
+	
 	ai_frequency_by_tier = {
 		barony = 0
 		county = 96
@@ -1122,20 +1109,17 @@ denounce_interaction = {
 		empire = 12
 		hegemony = 12
 	}
-
+	
 	ai_will_do = {
 		base = 0
-
+		
 		modifier = {
 			add = 100
 			scope:recipient = {
-				OR = {
-					has_relation_rival = scope:puppet_or_actor
-					has_relation_nemesis = scope:puppet_or_actor
-				}
+				has_relation_rival = scope:puppet_or_actor
 			}
 		}
-
+		
 		modifier = {
 			add = 5
 			ai_vengefulness >= medium_positive_ai_value
@@ -1213,14 +1197,11 @@ denounce_interaction = {
 		evaluate_action_decreasing_house_unity = {
 			VALUE = 100
 		}
-
+		
 		modifier = {
 			factor = 0
 			scope:recipient = {
-				OR = {
-					has_relation_friend = scope:puppet_or_actor
-					has_relation_best_friend = scope:puppet_or_actor
-				}
+				has_relation_friend = scope:puppet_or_actor
 			}
 		}
 	}
@@ -1237,7 +1218,7 @@ forgive_interaction = {
 	interface_priority = 60
 
 	desc = forgive_interaction_desc
-
+	
 	is_available = {
 		trigger_if = {
 			limit = { is_ai = yes }
@@ -1295,13 +1276,13 @@ forgive_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_gain
 			DESC = clan_unity_forgiveness.desc
 			REVERSE_NON_HOUSE_TARGET = no
-		}
+		}		
 	}
 
 	cost = {
@@ -1313,14 +1294,14 @@ forgive_interaction = {
 			}
 		}
 	}
-
+	
 	auto_accept = yes
 
 	ai_targets = {
 		ai_recipients = dynasty
 		max = 20
 	}
-
+	
 	ai_frequency_by_tier = {
 		barony = 0
 		county = 120
@@ -1329,25 +1310,22 @@ forgive_interaction = {
 		empire = 24
 		hegemony = 24
 	}
-
+	
 	ai_will_do = {
 		base = 0
-
+		
 		modifier = {
 			add = 100
 			scope:recipient = {
-				OR = {
-					has_relation_friend = scope:puppet_or_actor
-					has_relation_best_friend = scope:puppet_or_actor
-				}
+				has_relation_friend = scope:puppet_or_actor
 			}
 		}
-
+		
 		modifier = {
 			add = 5
 			ai_vengefulness <= medium_negative_ai_value
 		}
-
+		
 		modifier = {
 			add = 100
 			scope:recipient = scope:puppet_or_actor
@@ -1357,14 +1335,11 @@ forgive_interaction = {
 		evaluate_action_increasing_house_unity = {
 			VALUE = 100
 		}
-
+		
 		modifier = {
 			factor = 0
 			scope:recipient = {
-				OR = {
-					has_relation_rival = scope:puppet_or_actor
-					has_relation_nemesis = scope:puppet_or_actor
-				}
+				has_relation_rival = scope:puppet_or_actor
 			}
 		}
 	}
@@ -1381,15 +1356,15 @@ call_dynasty_member_to_war_interaction = {
 	interface_priority = 60
 
 	desc = call_dynasty_member_to_war_interaction_desc
-
+	
 	interface = call_ally
 	special_interaction = call_ally_interaction
 	popup_on_receive = yes
 	pause_on_receive = yes
-
+	
 	greeting = positive
 	notification_text = CALL_DYNASTY_MEMBER_NOTIFICATION
-
+	
 	is_shown = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
@@ -1414,7 +1389,7 @@ call_dynasty_member_to_war_interaction = {
 			}
 		}
 	}
-
+	
 	has_valid_target = {
 		exists = scope:target
 	}
@@ -1461,7 +1436,7 @@ call_dynasty_member_to_war_interaction = {
 			trigger_event = call_ally.0001
 		}
 	}
-
+		
 	on_accept = {
 		call_dynasty_member_to_war_interaction_effect = yes
 
@@ -1479,7 +1454,7 @@ call_dynasty_member_to_war_interaction = {
 			}
 		}
 	}
-
+	
 	on_decline = {
 		#The war could theoretically end on the day the decline is sent
 		if = {
@@ -1529,7 +1504,7 @@ call_dynasty_member_to_war_interaction = {
 			}
 		}
 	}
-
+	
 	ai_accept = {
 		base = 20
 
@@ -1576,11 +1551,11 @@ call_dynasty_member_to_war_interaction = {
 						this = scope:target.casus_belli.primary_defender
 					}
 				}
-
+				
 			}
 			desc = WONT_FIGHT_SPOUSE_REASON
 		}
-
+		
 		modifier = {  # Reluctant when already at war
 			add = -50
 			scope:recipient = {
@@ -1747,13 +1722,16 @@ dynast_claim_title_interaction = {
 			}
 		}
 	}
-
+	
 	can_be_picked_title = {
-		custom_tooltip = {
-			NOT = { any_claimant = { this = scope:puppet_or_actor } }
-			text = "ALREADY_HAVE_CLAIM_ON_THIS_TITLE"
+		scope:target = {
+			tier >= tier_county
+			custom_tooltip = {
+				NOT = { any_claimant = { this = scope:puppet_or_actor } }
+				text = "ALREADY_HAVE_CLAIM_ON_THIS_TITLE"
+			}
+			is_landless_type_title = no
 		}
-		is_landless_type_title = no
 	}
 
 	is_valid_showing_failures_only = {
@@ -1763,7 +1741,7 @@ dynast_claim_title_interaction = {
 					title_tier >= county
 					NOT = { any_claimant = { this = scope:puppet_or_actor } }
 					is_landless_type_title = no
-				}
+				} 
 			}
 
 			object = scope:recipient
@@ -1784,7 +1762,7 @@ dynast_claim_title_interaction = {
 			trigger_event = char_interaction.0060
 		}
 	}
-
+	
 	on_accept = {
 		if = {
 			limit = { scope:is_puppet_action ?= yes }
@@ -1802,7 +1780,7 @@ dynast_claim_title_interaction = {
 					type = event_toast_effect_neutral
 					title = dynast_claim_title_interaction_notification
 
-					left_icon = scope:puppet_or_actor
+					left_icon = scope:puppet_or_actor					
 					right_icon = scope:recipient
 
 					show_as_tooltip = {
@@ -1833,7 +1811,7 @@ dynast_claim_title_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = medium_unity_loss
@@ -1859,7 +1837,7 @@ dynast_end_dynasty_wars_interaction = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
 		scope:puppet_or_actor != scope:recipient
-
+		
 		scope:puppet_or_actor ?= {
 			is_dynast = yes
 			religion ?= scope:recipient.religion
@@ -1953,7 +1931,7 @@ dynast_legitimize_bastard_interaction = {
 			}
 		}
 	}
-
+	
 	on_accept = {
 		scope:puppet_or_actor = {
 			stress_and_fulfillment_impact = {
@@ -1974,7 +1952,7 @@ dynast_legitimize_bastard_interaction = {
 				}
 			}
 		}
-
+		
 		hidden_effect = {
 			scope:recipient = {
 				trigger_event = bastard_interaction.0009
@@ -2033,7 +2011,7 @@ send_to_varangian_guard_interaction = {
 	desc = send_to_varangian_guard_interaction_desc
 	use_diplomatic_range = no
 	common_interaction = yes
-
+	
 	is_available = {
 		trigger_if = {
 			limit = { is_ai = yes }
@@ -2064,11 +2042,11 @@ send_to_varangian_guard_interaction = {
 		scope:puppet_or_actor ?= {
 			is_dynast = yes
 			dynasty ?= scope:recipient.dynasty
-
+			
 			dynasty ?= {
 				has_dynasty_perk = fp1_adventure_legacy_1
 			}
-
+			
 			exists = title:e_byzantium.holder
 			NOR = {
 				faith ?= {
@@ -2080,7 +2058,7 @@ send_to_varangian_guard_interaction = {
 			}
 		}
 	}
-
+	
 	cooldown = { years = 2 }
 
 	is_valid_showing_failures_only = {
@@ -2136,7 +2114,7 @@ send_to_varangian_guard_interaction = {
 			}
 		}
 	}
-
+	
 	on_accept = {
 		title:e_byzantium.holder = {
 			save_scope_as = emperor
@@ -2148,7 +2126,7 @@ send_to_varangian_guard_interaction = {
 				}
 			}
 		}
-
+		
 		scope:puppet_or_actor = {
 			stress_and_fulfillment_impact = {
 				paranoid = minor_stress_impact_gain
@@ -2158,9 +2136,9 @@ send_to_varangian_guard_interaction = {
 					type = event_toast_effect_neutral
 					title = send_to_varangian_guard_interaction_toast
 
-					left_icon = scope:recipient
+					left_icon = scope:recipient					
 					right_icon = scope:emperor
-
+					
 					custom_tooltip = send_to_varangian_guard_interaction_toast_desc
 				}
 			}
@@ -2186,9 +2164,9 @@ send_to_varangian_guard_interaction = {
 
 		scope:recipient = {
 			save_scope_as = varangian_candidate
-
+			
 		}
-
+		
 		show_as_tooltip = {
 			scope:varangian_candidate = {
 				visit_court_of = scope:emperor
@@ -2203,17 +2181,17 @@ send_to_varangian_guard_interaction = {
 				trigger_event = varangian.0003
 			}
 		}
-
+		
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = miniscule_unity_loss
 			DESC = clan_unity_vaering.desc
 			REVERSE_NON_HOUSE_TARGET = no
-		}
+		}		
 	}
-
+	
 	cost = {
 		prestige = {
 			value = 350
@@ -2223,14 +2201,14 @@ send_to_varangian_guard_interaction = {
 			}
 		}
 	}
-
+	
 	auto_accept = yes
 
 	ai_targets = {
 		ai_recipients = children
 		max = 10
 	}
-
+	
 	ai_frequency_by_tier = {
 		barony = 0
 		county = 120
@@ -2239,8 +2217,9 @@ send_to_varangian_guard_interaction = {
 		empire = 24
 		hegemony = 24
 	}
-
+	
 	ai_will_do = {
 		base = 100
 	}
 }
+

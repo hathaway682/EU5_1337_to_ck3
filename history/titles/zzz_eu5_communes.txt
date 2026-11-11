@@ -1,0 +1,152 @@
+﻿# 1337 EU5 republican communes and their directly held counties.
+
+d_commune_firenze = {
+	1337.4.1 = {
+		holder = gub_jacopo_gabrielli
+		government = republic_government
+		liege = e_hre
+	}
+}
+
+d_commune_milan = {
+	1337.4.1 = {
+		holder = mlo_azzone_i_visconti
+		government = republic_government
+		liege = e_hre
+	}
+}
+
+d_commune_verona = {
+	1337.4.1 = {
+		holder = ver_mastino_ii_scala
+		government = republic_government
+		liege = e_hre
+	}
+}
+
+d_commune_ancona = {
+	1337.4.1 = {
+		holder = eu5_regent_anc
+		government = republic_government
+	}
+}
+
+c_marche = {
+	1337.4.1 = {
+		liege = d_commune_ancona
+	}
+}
+
+d_commune_siena = {
+	1337.4.1 = {
+		holder = eu5_regent_sie
+		government = republic_government
+		liege = e_hre
+	}
+}
+
+c_grosseto = {
+	1337.4.1 = {
+		liege = d_commune_siena
+	}
+}
+
+c_siena = {
+	1337.4.1 = {
+		liege = d_commune_siena
+	}
+}
+
+d_commune_mantua = {
+	1337.4.1 = {
+		holder = man_luigi_i_gonzaga
+		government = republic_government
+		liege = e_hre
+	}
+}
+
+c_mantua = {
+	1337.4.1 = {
+		liege = d_commune_mantua
+	}
+}
+
+c_reggioem = {
+	1337.4.1 = {
+		liege = d_commune_mantua
+	}
+}
+
+d_commune_pavia = {
+	1337.4.1 = {
+		holder = pav_musso_beccaria
+		government = republic_government
+		liege = e_hre
+	}
+}
+
+c_pavia = {
+	1337.4.1 = {
+		liege = d_commune_pavia
+	}
+}
+
+d_commune_bologna = {
+	1337.4.1 = {
+		holder = blg_taddeo_pepoli
+		government = republic_government
+	}
+}
+
+c_bologna = {
+	1337.4.1 = {
+		liege = d_commune_bologna
+	}
+}
+
+d_commune_ferrara = {
+	1337.4.1 = {
+		holder = fer_obizzo_iii_este
+		government = republic_government
+	}
+}
+
+c_ferrara = {
+	1337.4.1 = {
+		liege = d_commune_ferrara
+	}
+}
+
+c_modena = {
+	1337.4.1 = {
+		liege = d_commune_ferrara
+	}
+}
+
+d_commune_ragusa = {
+	1337.4.1 = {
+		holder = rag_filippo_belegno
+		government = republic_government
+		liege = k_venice
+	}
+}
+
+c_south_dalmatia = {
+	1337.4.1 = {
+		liege = d_commune_ragusa
+	}
+}
+
+d_commune_ravenna = {
+	1337.4.1 = {
+		holder = rav_ostasio_i_polenta
+		government = republic_government
+	}
+}
+
+c_romagna = {
+	1337.4.1 = {
+		liege = d_commune_ravenna
+	}
+}
+

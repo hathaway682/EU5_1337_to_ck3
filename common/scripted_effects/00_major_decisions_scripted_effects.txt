@@ -2008,11 +2008,11 @@ sicilian_parliament_building_scripted_effect = {
 		}
 		if = {
 			limit = {
-				has_special_building_slot = no
+				has_special_district_slot = no
 			}
-			add_special_building_slot = special_sicilian_parliament_01
+			add_special_district_slot = special_sicilian_parliament_01_district
 		}
-		add_special_building = special_sicilian_parliament_01
+		add_special_district = special_sicilian_parliament_01_district
 	}
 }
 sicilian_parliament_kingdom_split_scripted_effect = { #If the decision is taken when the ruler doesn't hold the entirety of k_sicily, it results in the Naples/Trinacria split. (this is the ruler)
@@ -2283,9 +2283,9 @@ promote_hungarian_settlement_decision_scripted_effect = {
 			hidden_effect = {
 				if = {
 					limit = {
-						development_level < 5
+						prosperity_level < 5
 					}
-					change_development_level = 1
+					change_prosperity_level = 1
 				}
 				random_list = {
 					30 = {

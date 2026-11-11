@@ -1,0 +1,319 @@
+scripted_trigger coronation_events_1040_neighbor_trigger = {
+	highest_held_title_tier <= root.highest_held_title_tier
+	is_tributary = no
+	is_at_war = no
+	NOR = {
+		has_trait = conqueror
+		has_trait = greatest_of_khans
+		has_trait = ambitious
+		has_trait = arrogant
+		has_trait = paranoid
+	}
+	opinion = {
+		target = root
+		value > -20
+	}
+}
+
+coronation_events.1040 = {
+    id_override_priority = 1000
+	type = activity_event
+	title = coronation_events.1040.t
+	desc  = coronation_events.1040.desc
+	theme = coronation_activity
+	cooldown = { years = 10 }
+
+	override_background = {
+		reference = throne_room
+	}
+
+	left_portrait = {
+		character = root
+		animation = chaplain
+		camera = camera_event_center_pointing_right
+	}
+
+	center_portrait = {
+		character = scope:tributary_1
+		animation = debating
+		camera = camera_event_center_pointing_left
+	}
+
+	right_portrait = {
+		character = scope:tributary_2
+		animation = personality_zealous
+	}
+
+	trigger = {
+		has_government = mandala_government	
+		scope:activity = {
+			any_guest_subset = {
+				name = supporter
+				OR = {
+					is_of_major_interest_to_root_trigger = yes
+					is_of_minor_interest_to_root_trigger = yes
+				}
+				is_ai = yes
+			}
+		}
+		any_neighboring_top_liege_realm_owner = {
+			coronation_events_1040_neighbor_trigger = yes
+            tnh_non_wilderness_character_trigger = yes
+		}
+	}
+
+	immediate = {
+		# For MP
+		coronation_busy_effect = yes
+		
+		every_neighboring_top_liege_realm_owner = {
+			limit = {
+				coronation_events_1040_neighbor_trigger = yes
+                tnh_non_wilderness_character_trigger = yes
+			}
+			add_to_list = potential_tributaries
+		}
+		random_in_list = {
+			list = potential_tributaries
+			save_scope_as = tributary_1
+		}
+
+		if = {
+			limit = {
+				any_in_list = {
+					list = potential_tributaries
+					count > 1
+				}
+			}
+			random_in_list = {
+				list = potential_tributaries
+				limit = {
+					NOT = { this = scope:tributary_1 }
+				}
+				save_scope_as = tributary_2
+			}
+		}
+	}
+
+	option = { # Special — Reuse one you found earlier
+		name = coronation_events.1040.special
+
+		trigger = {
+			learning >= high_skill_rating
+		}
+
+		add_learning_lifestyle_xp = medium_lifestyle_xp
+		custom_tooltip = coronation_tt_positive_medium
+		scope:activity = { activity_special_type_progression_medium = yes }
+		coronation_add_magnificence_log_effect = {
+			VALUE = flag:positive_medium
+			CHAR = root
+		}
+
+		if = {
+			limit = { exists = scope:tributary_1 }
+			scope:tributary_1 = {
+				start_tributary_interaction_effect = {
+					TRIBUTARY = this
+					SUZERAIN = root
+				}
+				add_opinion = {
+					target = root
+					modifier = impressed_opinion
+					opinion = 30
+				}
+			}
+		}
+
+		if = {
+			limit = { exists = scope:tributary_2 }
+			scope:tributary_2 = {
+				start_tributary_interaction_effect = {
+					TRIBUTARY = this
+					SUZERAIN = root
+				}
+				add_opinion = {
+					target = root
+					modifier = impressed_opinion
+					opinion = 30
+				}
+			}
+		}
+
+		stress_impact = {
+			arrogant = medium_stress_impact_gain
+			greedy = minor_stress_impact_loss
+			humble = medium_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 40
+			modifier = {
+				add = 50
+				learning >= high_skill_rating
+			}
+			modifier = { 
+				add = 20 
+				has_trait = greedy
+			}
+			modifier = { 
+				add = 20 
+				has_trait = humble
+			}
+			modifier = { 
+				add = -10 
+				has_trait = arrogant
+			}
+			modifier = { 
+				add = 10 
+				has_trait = diligent
+			}
+		}
+	}
+
+	option = { # A — Spare no Expense
+		name = coronation_events.1040.a
+
+		add_piety = massive_piety_loss
+		custom_tooltip = coronation_tt_positive_medium
+		scope:activity = { activity_special_type_progression_medium = yes }
+		coronation_add_magnificence_log_effect = {
+			VALUE = flag:positive_medium
+			CHAR = root
+		}
+
+		if = {
+			limit = { exists = scope:tributary_1 }
+			scope:tributary_1 = {
+				start_tributary_interaction_effect = {
+					TRIBUTARY = this
+					SUZERAIN = root
+				}
+				add_opinion = {
+					target = root
+					modifier = impressed_opinion
+					opinion = 30
+				}
+			}
+		}
+
+		if = {
+			limit = { exists = scope:tributary_2 }
+			scope:tributary_2 = {
+				start_tributary_interaction_effect = {
+					TRIBUTARY = this
+					SUZERAIN = root
+				}
+				add_opinion = {
+					target = root
+					modifier = impressed_opinion
+					opinion = 30
+				}
+			}
+		}
+
+		stress_impact = {
+			diligent = medium_stress_impact_loss
+			arrogant = medium_stress_impact_loss
+			greedy = medium_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 40
+			modifier = { 
+				add = -40 
+				has_trait = greedy
+			}
+			modifier = { 
+				add = 20 
+				has_trait = diligent
+			}
+			modifier = { 
+				add = 20 
+				has_trait = arrogant
+			}
+		}
+	}
+
+	option = { # B — Simple Mandala
+		name = coronation_events.1040.b
+
+		add_piety = major_piety_loss
+		custom_tooltip = coronation_tt_positive_tiny
+		scope:activity = { activity_special_type_progression_tiny = yes }
+		coronation_add_magnificence_log_effect = {
+			VALUE = flag:positive_tiny
+			CHAR = root
+		}
+
+		if = {
+			limit = { exists = scope:tributary_1 }
+			scope:tributary_1 = {
+				start_tributary_interaction_effect = {
+					TRIBUTARY = this
+					SUZERAIN = root
+				}
+				add_opinion = {
+					target = root
+					modifier = impressed_opinion
+					opinion = 30
+				}
+			}
+		}
+
+		stress_impact = {
+			diligent = minor_stress_impact_loss
+			arrogant = minor_stress_impact_loss
+			greedy = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 40
+			modifier = { 
+				add = -20 
+				has_trait = greedy
+			}
+			modifier = { 
+				add = 10 
+				has_trait = arrogant
+			}
+			modifier = { 
+				add = 10 
+				has_trait = diligent
+			}
+		}
+	}
+
+	option = { # C — That's wasteful
+		name = coronation_events.1040.c
+
+		add_piety = minor_piety_gain
+
+		stress_impact = {
+			diligent = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+			greedy = medium_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 40
+			modifier = { 
+				add = 20 
+				has_trait = greedy
+			}
+			modifier = { 
+				add = -10 
+				has_trait = arrogant
+			}
+			modifier = { 
+				add = -10 
+				has_trait = diligent
+			}
+		}
+	}
+
+	after = {
+		# For MP
+		coronation_ready_effect = yes
+	}
+}

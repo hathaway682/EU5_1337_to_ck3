@@ -27,6 +27,7 @@
 	ai_instant_response = yes
 
 	desc = make_clerical_puppet_interaction_desc
+	notification_text = make_clerical_puppet_interaction_notification
 
 	is_available = {
 		can_have_realm_priest_puppet_trigger = yes
@@ -37,6 +38,24 @@
 			}
 			NOT = {
 				exists = puppet:theological_agent_puppet
+			}
+			cp:councillor_court_chaplain ?= {
+				is_available_quick = {
+					ai = yes
+					adult = yes
+					incapable = no
+				}
+				NOT = { exists = puppeteer }
+			}
+			OR = {
+				piety_level >= 2
+				has_hook = cp:councillor_court_chaplain
+				cp:councillor_court_chaplain = {
+					has_dread_level_towards = {
+						target = root
+						level >= 2
+					}
+				}
 			}
 		}
 	}
@@ -64,10 +83,10 @@
 				is_adult = no
 				has_trait = incapable
 			}
-			custom_tooltip = {
-				text = pam_recipient_already_puppet_tt
-				NOT = { exists = puppeteer }
-			}
+            custom_tooltip = {
+                text = pam_recipient_already_puppet_tt
+                NOT = { exists = puppeteer }
+            }
 		}
 	}
 
@@ -90,19 +109,19 @@
 	}
 
 	ai_targets = {
-		ai_recipients = councillors
-	}
-	ai_frequency_by_tier = {
-		barony = 0
-		county = 72
-		duchy = 36
-		kingdom = 12
-		empire = 12
-		hegemony = 12
-	}
-	ai_will_do = {
-		base = 100
-	}
+        ai_recipients = councillors
+    }
+    ai_frequency_by_tier = {
+        barony = 0
+        county = 72
+        duchy = 36
+        kingdom = 12
+        empire = 12
+        hegemony = 12
+    }
+    ai_will_do = {
+        base = 100
+    }
 
 	cost = {
 		piety = {
@@ -128,7 +147,7 @@
 			hidden_effect = {
 				send_interface_toast = {
 					type = event_toast_effect_good
-					title = make_clerical_puppet_interaction_notification
+					title = make_clerical_puppet_interaction_toast
 					left_icon = scope:actor
 					right_icon = scope:recipient
 					set_puppet = {
@@ -264,19 +283,20 @@ make_external_clerical_puppet_interaction = {
 	use_diplomatic_range = no
 
 	desc = make_external_clerical_puppet_interaction_desc
+	notification_text = make_clerical_puppet_interaction_notification
 
 	is_available = {
 		is_adult = yes
-		can_have_theological_agent_puppet_trigger = yes
+        can_have_theological_agent_puppet_trigger = yes
 		NOT = { has_trait = incapable }
-		trigger_if = {
-			limit = {
-				is_ai = yes
-			}
-			NOT = {
-				exists = puppet:external_theological_agent_puppet
-			}
-		}
+        trigger_if = {
+            limit = {
+                is_ai = yes
+            }
+            NOT = {
+                exists = puppet:external_theological_agent_puppet
+            }
+        }
 		has_pam_dlc_trigger = yes
 	}
 
@@ -293,6 +313,7 @@ make_external_clerical_puppet_interaction = {
 			NOR = {
 				scope:actor.puppet:theological_agent_puppet ?= scope:recipient
 				scope:actor.cp:councillor_court_chaplain ?= scope:recipient
+				has_title = title:e_minister_of_rites
 			}
 		}
 	}
@@ -320,10 +341,10 @@ make_external_clerical_puppet_interaction = {
 				is_adult = no
 				has_trait = incapable
 			}
-			custom_tooltip = {
-				text = pam_recipient_already_puppet_tt
-				NOT = { exists = puppeteer }
-			}
+            custom_tooltip = {
+                text = pam_recipient_already_puppet_tt
+                NOT = { exists = puppeteer }
+            }
 		}
 	}
 
@@ -401,19 +422,19 @@ make_external_clerical_puppet_interaction = {
 		ai_recipients = peer_vassals
 		max = 10
 	}
-	ai_target_quick_trigger = {
-		adult = yes
-	}
-	ai_frequency_by_tier = {
-		barony = 0
-		county = 160
-		duchy = 48
-		kingdom = 24
-		empire = 24
-		hegemony = 24
-	}
-	ai_will_do = {
-		base = 100
+    ai_target_quick_trigger = {
+        adult = yes
+    }
+    ai_frequency_by_tier = {
+        barony = 0
+        county = 160
+        duchy = 48
+        kingdom = 24
+        empire = 24
+        hegemony = 24
+    }
+    ai_will_do = {
+        base = 100
 
 		modifier = {
 			scope:recipient = {
@@ -428,7 +449,7 @@ make_external_clerical_puppet_interaction = {
 			scope:actor.highest_held_title_tier >= tier_duchy
 			factor = 0
 		}
-	}
+    }
 
 	cost = {
 		piety = {
@@ -445,7 +466,9 @@ make_external_clerical_puppet_interaction = {
 	on_accept = {
 		scope:actor = {
 			trigger_event = pam_interactions_events.0120
-			pam_generic_set_puppet_interaction_side_effects = yes
+			show_as_tooltip = {
+				pam_generic_set_puppet_interaction_side_effects = yes
+			}
 		}
 		scope:recipient = {
 			custom_tooltip = set_external_clerical_puppet_tt
@@ -627,7 +650,7 @@ make_external_clerical_puppet_interaction = {
 				has_variable_list = recent_leasers
 				any_in_list = {
 					variable = recent_leasers
-					this = scope:actor
+					this = scope:actor	
 				}
 			}
 			desc = RECENTLY_LEASED_TO_ORDER
@@ -638,7 +661,7 @@ make_external_clerical_puppet_interaction = {
 				has_variable_list = recent_donators
 				any_in_list = {
 					variable = recent_donators
-					this = scope:actor
+					this = scope:actor	
 				}
 			}
 			desc = RECENTLY_DONATED_TO_ORDER
@@ -691,6 +714,8 @@ make_external_ruler_puppet_interaction = {
 
 	desc = make_external_ruler_puppet_interaction_desc
 
+	notification_text = make_external_ruler_puppet_interaction_greetings
+
 	is_available = {
 		is_ai = no
 		trigger_if = {
@@ -706,7 +731,7 @@ make_external_ruler_puppet_interaction = {
 		has_pam_dlc_trigger = yes
 	}
 
-	cooldown_against_recipient = { years = 10 }
+	cooldown_against_recipient = { years = 10 } 
 
 	is_shown = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
@@ -750,152 +775,9 @@ make_external_ruler_puppet_interaction = {
 	}
 
 	can_send = {
-		custom_tooltip = {
-			text = make_external_ruler_puppet_tt
-			OR = {
-				scope:actor = {
-					is_clergy = yes
-					is_vassal_of = scope:recipient
-				}
-				AND = {
-					scope:actor = {
-						has_trait = seducer
-					}
-					trigger_if = {
-						limit = {
-							scope:recipient = {
-								highest_held_title_tier >= tier_kingdom
-							}
-						}
-						scope:recipient = {
-							has_relation_soulmate = scope:actor
-						}
-					}
-					trigger_else = {
-						scope:recipient = {
-							has_relation_lover = scope:actor
-						}
-					}
-				}
-				AND = {
-					scope:actor = {
-						has_trait = torturer
-					}
-					scope:recipient = {
-						is_imprisoned_by = scope:actor
-						is_in_prison_type = dungeon
-					}
-				}
-				AND = {
-					scope:actor = {
-						has_trait = family_first
-					}
-					scope:recipient = {
-						is_close_family_of = scope:actor
-					}
-				}
-				scope:actor = {
-					has_trait = schemer
-					trigger_if = {
-						limit = {
-							scope:recipient = {
-								highest_held_title_tier >= tier_kingdom
-							}
-						}
-						has_strong_hook = scope:recipient
-					}
-					trigger_else = {
-						has_hook = scope:recipient
-					}
-				}
-				scope:actor = {
-					has_trait = diplomat
-					is_allied_to = scope:recipient
-				}
-				AND = {
-					scope:actor = {
-						has_trait = gallant
-					}
-					scope:recipient = {
-						is_spouse_of = scope:actor
-					}
-				}
-				AND = {
-					scope:actor = {
-						is_diarch_of_target = scope:recipient
-					}
-					scope:recipient = {
-						has_diarchy_parameter = diarchy_type_is_entrenched_regency
-					}
-				}
-				AND = {
-					exists = scope:recipient.religious_head_or_challenger
-					scope:recipient.religious_head_or_challenger = scope:actor
-				}
-				AND = {
-					exists = scope:recipient.rite.head_of_rite
-					scope:recipient.rite.head_of_rite = scope:actor
-				}
-			}
-		}
-		scope:actor = {
-			trigger_if = {
-				limit = {
-					scope:recipient = {
-						highest_held_title_tier >= tier_empire
-					}
-				}
-				custom_tooltip = {
-					text = pam_empire_dread_or_strong_hook_tt
-					OR = {
-						has_strong_hook = scope:recipient
-						scope:recipient = {
-							has_dread_level_towards = {
-								target = scope:actor
-								level >= 2
-							}
-						}
-						scope:recipient.religious_head_or_challenger ?= scope:actor
-					}
-				}
-			}
-			trigger_else_if = {
-				limit = {
-					scope:recipient = {
-						highest_held_title_tier >= tier_kingdom
-					}
-				}
-				custom_tooltip = {
-					text = piety_level_4_dread_or_strong_hook_tt
-					OR = {
-						piety_level >= 4
-						has_strong_hook = scope:recipient
-						scope:recipient = {
-							has_dread_level_towards = {
-								target = scope:actor
-								level >= 2
-							}
-						}
-						scope:recipient.religious_head_or_challenger ?= scope:actor
-					}
-				}
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = piety_level_3_dread_or_hook_tt
-					OR = {
-						piety_level >= 3
-						has_hook = scope:recipient
-						scope:recipient = {
-							has_dread_level_towards = {
-								target = scope:actor
-								level >= 2
-							}
-						}
-						scope:recipient.religious_head_or_challenger ?= scope:actor
-					}
-				}
-			}
+		can_send_make_external_ruler_puppet_trigger = {
+			ACTOR = scope:actor
+			RECIPIENT = scope:recipient
 		}
 	}
 
@@ -949,7 +831,7 @@ make_external_ruler_puppet_interaction = {
 			factor = 0
 		}
 	}
-
+	
 	cost = {
 		prestige = {
 			value = {
@@ -965,7 +847,9 @@ make_external_ruler_puppet_interaction = {
 	on_accept = {
 		scope:actor = {
 			trigger_event = pam_interactions_events.0121
-			pam_generic_set_puppet_interaction_side_effects = yes
+			show_as_tooltip = {
+				pam_generic_set_puppet_interaction_side_effects = yes
+			}
 		}
 		scope:recipient = {
 			custom_tooltip = set_external_ruler_puppet_tt
@@ -1193,7 +1077,7 @@ make_external_ruler_puppet_interaction = {
 			has_trait = zealous
 			desc = ASK_FOR_CONVERSION_RECIPIENT_IS_ZEALOUS
 		}
-
+		
 		theocratic_related_puppet_acceptance_factors_modifier = yes
 	}
 }
@@ -1222,7 +1106,7 @@ fire_puppet_interaction = {
 		scope:actor != scope:recipient
 		scope:recipient.puppeteer ?= scope:actor
 	}
-
+	
 	is_valid_showing_failures_only = {
 		scope:actor = { is_incapable = no }
 	}

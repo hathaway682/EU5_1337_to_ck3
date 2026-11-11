@@ -1,0 +1,82 @@
+{
+ "mod_root": "D:/Documents/Paradox Interactive/Crusader Kings III/mod/EU5_Modern_Borders_noshape",
+ "out": "D:/Documents/Paradox Interactive/Crusader Kings III/mod/EU5_Modern_Borders_noshape/gen_debug/_mapviz_seat_moved_20261109",
+ "title": "相比 EU5 改变了首府的伯爵领（2026-11-09 现况）",
+ "subtitle": "EU5 首府 = definitions.txt 该省第一个 location；mod 首府 = c_ 块内第一个 b_；共 44 县",
+ "layer": "county",
+ "on_conflict": "first",
+ "groups": [
+  {
+   "name": "rank_state 规则移动首府（40 县）",
+   "color": "#C0392B",
+   "titles": [
+    "c_brecon",
+    "c_cempohuallan",
+    "c_chrudimsko",
+    "c_cuchumatan",
+    "c_hanover",
+    "c_hohenloher_ebene",
+    "c_hunsruck",
+    "c_julich",
+    "c_kangra",
+    "c_koslin",
+    "c_leine",
+    "c_limburg",
+    "c_linan",
+    "c_lippe",
+    "c_lower_alsace",
+    "c_lower_carinthia",
+    "c_lower_mahakam",
+    "c_luneburger_heide",
+    "c_millieu",
+    "c_neuchatel",
+    "c_ober_dem_wienerwald",
+    "c_ostwestphalia",
+    "c_punjab_hills",
+    "c_rhine_valley",
+    "c_ries",
+    "c_ruhr",
+    "c_sauerland",
+    "c_swabian_alb",
+    "c_tauberfranken",
+    "c_thuringer_becken",
+    "c_tlachquiauhco",
+    "c_tumen",
+    "c_tzintzuntzan",
+    "c_untermain",
+    "c_upper_carinthia",
+    "c_vorarlberg",
+    "c_vosges",
+    "c_western_upper_swabia",
+    "c_wetterau",
+    "c_zinacantan"
+   ]
+  },
+  {
+   "name": "手改 / 规则外锁定（4 县）",
+   "color": "#E67E22",
+   "titles": [
+    "c_flaming",
+    "c_holstein",
+    "c_oriel",
+    "c_palatinate"
+   ]
+  }
+ ],
+ "color": {
+  "mode": "direct"
+ },
+ "base": {
+  "sea": "#CBDCEC",
+  "lake": "#CBDCEC",
+  "impassable_sea": "#CBDCEC",
+  "waste": "#B9B9B9",
+  "unassigned": "#F4F2EC",
+  "orphan": "#B9B9B9"
+ },
+ "legend": {
+  "enabled": true,
+  "unit": "provinces",
+  "show_counts": true
+ }
+}

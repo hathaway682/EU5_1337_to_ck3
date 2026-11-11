@@ -1,4 +1,4 @@
-ep3_frankokratia_save_financier_effect = {
+﻿ep3_frankokratia_save_financier_effect = {
 	#Start with Venice, then any Italian republic
 	title:e_italy = {
 		random_in_de_jure_hierarchy = {
@@ -1017,29 +1017,29 @@ ep3_frankokratia_capital_sacking_effect = {
 		if = {
 			limit = {
 				scope:claimant.capital_county = {
-					development_level >= 90
+					prosperity_level >= 90
 				}
 			}
-			change_development_level = -20
+			change_prosperity_level = -20
 		}
 		else_if = {
 			limit = {
 				scope:claimant.capital_county = {
-					development_level >= 60
+					prosperity_level >= 60
 				}
 			}
-			change_development_level = -15
+			change_prosperity_level = -15
 		}
 		else_if = {
 			limit = {
 				scope:claimant.capital_county = {
-					development_level >= 40
+					prosperity_level >= 40
 				}
 			}
-			change_development_level = -10
+			change_prosperity_level = -10
 		}
 		else = {
-			change_development_level = -5
+			change_prosperity_level = -5
 		}
 		custom_tooltip = byz_capital_building_destroyed_tooltip
 	}

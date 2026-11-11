@@ -1,7 +1,6 @@
 ﻿claim_wilderness_interaction = {
 	is_valid = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
-		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
 	}
 
 	category = interaction_category_diplomacy
@@ -21,7 +20,6 @@
 
 	is_shown = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
-		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
 		tnh_colonization_enabled_trigger = yes
 		scope:recipient = { has_trait = wilderness }
 		scope:actor = {

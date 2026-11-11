@@ -8,6 +8,19 @@ on_game_start = {
 
 eu5_start_primary_titles = {
 	effect = {
+
+
+
+		character:rav_ostasio_i_polenta = { if = { limit = { is_alive = yes } set_primary_title_to = title:d_commune_ravenna } }
+		character:rag_filippo_belegno = { if = { limit = { is_alive = yes } set_primary_title_to = title:d_commune_ragusa } }
+
+		character:blg_taddeo_pepoli = { if = { limit = { is_alive = yes } set_primary_title_to = title:d_commune_bologna } }
+		character:pav_musso_beccaria = { if = { limit = { is_alive = yes } set_primary_title_to = title:d_commune_pavia } }
+
+
+		character:eu5_regent_anc = { if = { limit = { is_alive = yes } set_primary_title_to = title:d_commune_ancona } }
+		character:ver_mastino_ii_scala = { if = { limit = { is_alive = yes } set_primary_title_to = title:d_commune_verona } }
+		character:gub_jacopo_gabrielli = { if = { limit = { is_alive = yes } set_primary_title_to = title:d_commune_firenze } }
 		character:aal_jumaz_bin_muhammed = {
 			if = {
 				limit = { is_alive = yes }
@@ -647,7 +660,7 @@ eu5_start_primary_titles = {
 		character:eu5_regent_sie = {
 			if = {
 				limit = { is_alive = yes }
-				set_primary_title_to = title:c_siena
+				set_primary_title_to = title:d_commune_siena
 			}
 		}
 		character:eu5_regent_sld = {
@@ -779,7 +792,7 @@ eu5_start_primary_titles = {
 		character:fer_obizzo_iii_este = {
 			if = {
 				limit = { is_alive = yes }
-				set_primary_title_to = title:c_ferrara
+				set_primary_title_to = title:d_commune_ferrara
 			}
 		}
 		character:foi_gaston_ii_foix = {
@@ -1019,7 +1032,7 @@ eu5_start_primary_titles = {
 		character:man_luigi_i_gonzaga = {
 			if = {
 				limit = { is_alive = yes }
-				set_primary_title_to = title:c_mantua
+				set_primary_title_to = title:d_commune_mantua
 			}
 		}
 		character:mar_rinchen = {
@@ -1067,7 +1080,7 @@ eu5_start_primary_titles = {
 		character:mlo_azzone_i_visconti = {
 			if = {
 				limit = { is_alive = yes }
-				set_primary_title_to = title:d_lombardy
+				set_primary_title_to = title:d_commune_milan
 			}
 		}
 		character:mma_hkan_hpa = {

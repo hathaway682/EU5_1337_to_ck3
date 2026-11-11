@@ -110,7 +110,7 @@ task_clear_the_wilds = {
 
 	ai_target_score = {
 		value = 10
-		add = scope:county.development_level
+		add = scope:county.prosperity_level
 	}
 
 	ai_will_do = {
@@ -145,7 +145,7 @@ task_clear_the_wilds = {
 	on_finish_task_county = {
 		scope:province = {
 			if = {
-				limit = { has_ongoing_construction = no }
+				limit = { has_ongoing_holding_construction = no }
 
 				wilderness_clear_hardest_obstacle_effect = yes
 				wilderness_obstacle_cleared_effect = yes
@@ -247,7 +247,7 @@ task_call_for_settlers = {
 
 	council_owner_modifier = {
 		name = task_call_for_settlers_modifier
-		development_growth_factor = 1
+		prosperity_growth_factor = 1
 		scale = colony_speaker_growth
 	}
 

@@ -1,0 +1,168 @@
+﻿# Beta commune titles adapted to the EU5 map.
+@correct_government_primary_score = 200
+
+d_commune_firenze = {
+	color = { 232 190 25 }
+	capital = c_florence
+	no_automatic_claims = yes
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				government_has_flag = government_is_republic
+			}
+			add = @correct_government_primary_score
+		}
+	}
+}
+
+d_commune_milan = {
+	color = { 185 120 205 }
+	capital = c_milano
+	no_automatic_claims = yes
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				government_has_flag = government_is_republic
+			}
+			add = @correct_government_primary_score
+		}
+	}
+}
+
+d_commune_verona = {
+	color = { 130 215 190 }
+	capital = c_verona
+	no_automatic_claims = yes
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				government_has_flag = government_is_republic
+			}
+			add = @correct_government_primary_score
+		}
+	}
+}
+
+d_commune_ancona = {
+	color = { 245 245 195 }
+	capital = c_marche
+	no_automatic_claims = yes
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				government_has_flag = government_is_republic
+			}
+			add = @correct_government_primary_score
+		}
+	}
+}
+
+d_commune_siena = {
+	color = { 205 175 25 }
+	capital = c_siena
+	no_automatic_claims = yes
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				government_has_flag = government_is_republic
+			}
+			add = @correct_government_primary_score
+		}
+	}
+}
+
+d_commune_mantua = {
+	color = { 215 175 205 }
+	capital = c_mantua
+	no_automatic_claims = yes
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				government_has_flag = government_is_republic
+			}
+			add = @correct_government_primary_score
+		}
+	}
+}
+
+d_commune_pavia = {
+	color = { 200 155 255 }
+	capital = c_pavia
+	no_automatic_claims = yes
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				government_has_flag = government_is_republic
+			}
+			add = @correct_government_primary_score
+		}
+	}
+}
+
+d_commune_bologna = {
+	color = { 209 145 95 }
+	capital = c_bologna
+	no_automatic_claims = yes
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				government_has_flag = government_is_republic
+			}
+			add = @correct_government_primary_score
+		}
+	}
+}
+
+d_commune_ferrara = {
+	color = { 219 125 85 }
+	capital = c_ferrara
+	no_automatic_claims = yes
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				government_has_flag = government_is_republic
+			}
+			add = @correct_government_primary_score
+		}
+	}
+}
+
+d_commune_ragusa = {
+	color = { 170 11 30 }
+	capital = c_south_dalmatia
+	no_automatic_claims = yes
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				government_has_flag = government_is_republic
+			}
+			add = @correct_government_primary_score
+		}
+	}
+}
+
+d_commune_ravenna = {
+	color = { 229 165 115 }
+	capital = c_romagna
+	no_automatic_claims = yes
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				government_has_flag = government_is_republic
+			}
+			add = @correct_government_primary_score
+		}
+	}
+}
+

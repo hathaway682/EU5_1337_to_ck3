@@ -40,7 +40,7 @@
 			has_personal_tenet_flag = tenet_unrelenting_faith_sparring
 			top_participant_group:dynastic_cycle ?= {
 				participant_group_type = expansion_movement
-			}
+			}				
 		}
 	}
 
@@ -55,7 +55,7 @@
 				has_personal_tenet_flag = tenet_unrelenting_faith_sparring
 				top_participant_group:dynastic_cycle ?= {
 					participant_group_type = expansion_movement
-				}
+				}				
 			}
 		}
 		scope:recipient = {
@@ -80,7 +80,7 @@
 		# Neither of the characters can be imprisoned.
 		scope:actor = { is_imprisoned = no }
 		scope:recipient = { is_imprisoned = no }
-
+		
 		scope:actor = { is_at_war = no }
 		scope:recipient = { is_at_war = no }
 	}
@@ -93,7 +93,7 @@
 			}
 		}
 	}
-
+	
 	cost = { prestige = medium_prestige_value }
 	cooldown = { years = 5 }
 	cooldown_against_recipient = { years = 10 }
@@ -134,7 +134,7 @@
 
 	ai_accept = {
 		base = 10 # Try to make it 0 for most interactions
-
+		
 		modifier = {
 			desc = CTSC_RELATIVE_PROWESS
 			scope:recipient.prowess < scope:actor.prowess
@@ -144,7 +144,7 @@
 				multiply = -2
 			}
 		}
-
+		
 		# Personality values
 		ai_value_modifier = {
 			who = scope:recipient
@@ -164,7 +164,7 @@
 			desc = AI_REFUSAL_WOUNDED
 			scope:recipient = {
 				OR = {
-					has_trait = wounded
+					has_trait = wounded 
 					has_trait = maimed
 				}
 			}
@@ -195,7 +195,7 @@
 
 	ai_will_do = {
 		base = -25
-
+		
 		# Factor for personality (excluding realism).
 		modifier = {
 			add = {
@@ -216,7 +216,7 @@
 		modifier = {
 			factor = 0
 			OR = {
-				has_trait = wounded
+				has_trait = wounded 
 				has_trait = maimed
 			}
 		}
@@ -272,7 +272,7 @@ appoint_podesta_interaction = {
 			is_landed = yes
 			target_is_liege_or_above = scope:actor
 			NOT = { government_has_flag = government_is_republic }
-
+			
 		}
 	}
 
@@ -291,7 +291,7 @@ appoint_podesta_interaction = {
 			}
 		}
 
-
+		
 		scope:recipient = {
 			target_is_liege_or_above = scope:actor
 			NOT = { government_has_flag = government_is_republic }
@@ -313,7 +313,7 @@ appoint_podesta_interaction = {
 					}
 				}
 			}
-
+			
 			custom_description = {
 				text = must_not_be_heir_to_any_title
 				scope:recipient = {
@@ -333,7 +333,7 @@ appoint_podesta_interaction = {
 						any_county_province = {
 							has_holding_type = city_holding
 						}
-						development_level > 20
+						prosperity_level > 20
 					}
 				}
 			}
@@ -346,6 +346,18 @@ appoint_podesta_interaction = {
 						culture = {
 							has_cultural_parameter = can_make_republican_vassals
 						}
+					}
+				}
+			}			
+		}
+
+		custom_tooltip = {
+			text = clergy_unable_to_change_government_desc
+			NOT = {
+				scope:recipient = {
+					OR = {
+						holds_religious_office_trigger = yes
+						pam_is_clergy_ruler_trigger = yes
 					}
 				}
 			}
@@ -374,7 +386,7 @@ appoint_podesta_interaction = {
 					type = event_toast_effect_neutral
 					title = appoint_podesta_interaction_notification
 
-					left_icon = scope:actor
+					left_icon = scope:actor					
 					right_icon = scope:recipient
 
 					scope:recipient = {
@@ -389,7 +401,7 @@ appoint_podesta_interaction = {
 								limit = {
 									government_has_flag = government_is_republic
 								}
-								every_held_title = {
+								every_held_title = { 
 									change_title_holder = {
 										holder = scope:recipient
 										change = scope:change
@@ -414,7 +426,7 @@ appoint_podesta_interaction = {
 				limit = {
 					government_has_flag = government_is_republic
 				}
-				every_held_title = {
+				every_held_title = { 
 					change_title_holder = {
 						holder = scope:recipient
 						change = scope:change
@@ -426,7 +438,7 @@ appoint_podesta_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_gain

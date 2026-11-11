@@ -37,19 +37,16 @@ fund_inspiration_interaction = {
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
 		scope:recipient = {
 			is_ruler = no
-			inspiration ?= {
-				NOT = {
-					exists = inspiration_sponsor
-				}
+			exists = inspiration
+			any_inspiration = {
+				NOT = { exists = inspiration_sponsor }
 			}
 		}
 		scope:actor = {
-			any_courtier_or_guest = {
-				this = scope:recipient
-			}
+			any_courtier_or_guest = { this = scope:recipient }
 		}
 	}
-
+	
 	is_highlighted = {
 		always = yes
 	}
@@ -69,11 +66,20 @@ fund_inspiration_interaction = {
 			}
 		}
 		scope:actor = {
-			can_sponsor_inspiration = scope:recipient.inspiration
 			gold >= scope:recipient.inspiration.base_inspiration_gold_cost
+			trigger_if = {
+				limit = { government_has_flag = government_is_merchant }
+				has_realm_law = company_purpose_artisan
+			}
+			trigger_else = {
+				custom_description = {
+					text = needs_inspiration_to_sponsor_tt
+					can_sponsor_inspiration = scope:recipient.inspiration
+				}
+			}	
 		}
 	}
-
+	
 	on_accept = {
 		fund_inspiration_effect = yes
 
@@ -141,7 +147,7 @@ fund_inspiration_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = miniscule_unity_gain
@@ -160,10 +166,10 @@ fund_inspiration_interaction = {
 			}
 		}
 	}
-
+	
 	auto_accept = {
 		custom_description = {
-			text = auto_accept_interaction_ai
+			text = auto_accept_interaction_ai	
 			object = scope:recipient
 			scope:recipient = {
 				is_ai = yes
@@ -191,7 +197,7 @@ fund_inspiration_interaction = {
 
 	ai_will_do = {
 		base = 100
-
+		
 		modifier = { # Not as likely to fund inspirations if they already have some going (max three for very prestigious courts)
 			add = {
 				if = {
@@ -214,7 +220,7 @@ fund_inspiration_interaction = {
 				}
 			}
 		}
-
+		
 		# Do not pointlessly fund inspirations you do not need
 		modifier = { # Weapons
 			factor = 0
@@ -298,7 +304,7 @@ indebt_guest_interaction = {
 	pre_answer_no_key = ANSWER_CANT_SUCCEED
 	pre_answer_yes_key = ANSWER_WILL_SUCCEED
 	pre_answer_maybe_breakdown_key = ANSWER_SUM_CHANCE
-
+	
 	is_available = {
 		trigger_if = {
 			limit = { is_ai = yes }
@@ -358,7 +364,7 @@ indebt_guest_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = miniscule_unity_loss
@@ -382,7 +388,7 @@ indebt_guest_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = miniscule_unity_loss
@@ -477,7 +483,7 @@ indebt_guest_interaction = {
 
 	ai_will_do = {
 		base = -100
-
+		
 		# This is a silly way for the AI to spend its CGV, so we keep 'em off it most of the time.
 		# Unless they've got a scheme on the go at their nemesis' court...
 		modifier = {
@@ -512,5 +518,5 @@ indebt_guest_interaction = {
 			indebt_guest_interaction_get_intrigue_difference_value >= indebt_guest_interaction_likely_success_control_value
 			scope:recipient = { intrigue >= extremely_high_skill_rating }
 		}
-	}
+	}	
 }

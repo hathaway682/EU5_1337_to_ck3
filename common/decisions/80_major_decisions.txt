@@ -399,8 +399,8 @@ convert_whole_realm_to_feudalism_decision = {
 			faith = { NOT = { has_doctrine_parameter = unreformed } }
 		}
 		prestige_level >= 2
-		capital_province.county = {
-			development_level >= convert_to_feudalism_development_requirement
+		capital_province = {
+			province_size_level >= 2
 		}
 		custom_description = { #You need to have 70% of all (non-regional/unique) tribal innovations!
 			text = has_all_tribal_innovations
@@ -584,7 +584,7 @@ convert_whole_realm_to_feudalism_west_african_pagan_decision = {
 			custom_tooltip = {
 				text = convert_whole_realm_to_feudalism_west_african_pagan_decision.tt.wa_capital_development
 				capital_county = {
-					development_level >= convert_whole_realm_to_feudalism_west_african_pagan_decision_wa_capital_development_value
+					prosperity_level >= convert_whole_realm_to_feudalism_west_african_pagan_decision_wa_capital_prosperity_value
 					title_province = { geographical_region = world_africa_west }
 				}
 			}
@@ -1858,10 +1858,10 @@ found_university_decision = {
 					title:b_fez.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_fez.county = { development_level >= 30 }
+					title:b_fez.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_fez.title_province = { has_special_building_slot = no }
+						title:b_fez.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -1871,10 +1871,10 @@ found_university_decision = {
 					title:b_cairo.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_cairo.county = { development_level >= 30 }
+					title:b_cairo.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_cairo.title_province = { has_special_building_slot = no }
+						title:b_cairo.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -1884,10 +1884,10 @@ found_university_decision = {
 					title:b_bologna.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_bologna.county = { development_level >= 30 }
+					title:b_bologna.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_bologna.title_province = { has_special_building_slot = no }
+						title:b_bologna.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -1897,10 +1897,10 @@ found_university_decision = {
 					title:b_salamanca.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_salamanca.county = { development_level >= 30 }
+					title:b_salamanca.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_salamanca.title_province = { has_special_building_slot = no }
+						title:b_salamanca.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -1910,10 +1910,10 @@ found_university_decision = {
 					title:b_madrid.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_madrid.county = { development_level >= 30 }
+					title:b_madrid.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_madrid.title_province = { has_special_building_slot = no }
+						title:b_madrid.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -1923,10 +1923,10 @@ found_university_decision = {
 					title:b_oxford.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_oxford.county = { development_level >= 30 }
+					title:b_oxford.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_oxford.title_province = { has_special_building_slot = no }
+						title:b_oxford.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -1936,10 +1936,10 @@ found_university_decision = {
 					title:b_cambridge.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_cambridge.county = { development_level >= 30 }
+					title:b_cambridge.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_cambridge.title_province = { has_special_building_slot = no }
+						title:b_cambridge.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -1949,10 +1949,10 @@ found_university_decision = {
 					title:b_padova.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_padova.county = { development_level >= 30 }
+					title:b_padova.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_padova.title_province = { has_special_building_slot = no }
+						title:b_padova.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -1962,10 +1962,10 @@ found_university_decision = {
 					title:b_siena.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_siena.county = { development_level >= 30 }
+					title:b_siena.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_siena.title_province = { has_special_building_slot = no }
+						title:b_siena.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -1975,10 +1975,10 @@ found_university_decision = {
 					title:b_coimbra.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_coimbra.county = { development_level >= 30 }
+					title:b_coimbra.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_coimbra.title_province = { has_special_building_slot = no }
+						title:b_coimbra.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -1988,10 +1988,10 @@ found_university_decision = {
 					title:b_naples.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_naples.county = { development_level >= 30 }
+					title:b_naples.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_naples.title_province = { has_special_building_slot = no }
+						title:b_naples.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -2001,10 +2001,10 @@ found_university_decision = {
 					title:b_timbuktu.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_timbuktu.county = { development_level >= 30 }
+					title:b_timbuktu.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_timbuktu.title_province = { has_special_building_slot = no }
+						title:b_timbuktu.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -2014,10 +2014,10 @@ found_university_decision = {
 					title:b_milano.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_milano.county = { development_level >= 30 }
+					title:b_milano.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_milano.title_province = { has_special_building_slot = no }
+						title:b_milano.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -2027,10 +2027,10 @@ found_university_decision = {
 					title:b_lund.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_lund.county = { development_level >= 30 }
+					title:b_lund.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_lund.title_province = { has_special_building_slot = no }
+						title:b_lund.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -2040,10 +2040,10 @@ found_university_decision = {
 					title:b_vienna.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_vienna.county = { development_level >= 30 }
+					title:b_vienna.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_vienna.title_province = { has_special_building_slot = no }
+						title:b_vienna.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -2053,10 +2053,10 @@ found_university_decision = {
 					title:b_speyer.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_speyer.county = { development_level >= 30 }
+					title:b_speyer.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_speyer.title_province = { has_special_building_slot = no }
+						title:b_speyer.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -2066,10 +2066,10 @@ found_university_decision = {
 					title:b_krakow.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_krakow.county = { development_level >= 30 }
+					title:b_krakow.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_krakow.title_province = { has_special_building_slot = no }
+						title:b_krakow.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -2079,10 +2079,10 @@ found_university_decision = {
 					title:b_pisa.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_pisa.county = { development_level >= 30 }
+					title:b_pisa.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_pisa.title_province = { has_special_building_slot = no }
+						title:b_pisa.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -2092,10 +2092,10 @@ found_university_decision = {
 					title:b_turin.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_turin.county = { development_level >= 30 }
+					title:b_turin.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_turin.title_province = { has_special_building_slot = no }
+						title:b_turin.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -2105,10 +2105,10 @@ found_university_decision = {
 					title:b_ferrara.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_ferrara.county = { development_level >= 30 }
+					title:b_ferrara.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_ferrara.title_province = { has_special_building_slot = no }
+						title:b_ferrara.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -2118,10 +2118,10 @@ found_university_decision = {
 					title:b_leipzig.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_leipzig.county = { development_level >= 30 }
+					title:b_leipzig.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_leipzig.title_province = { has_special_building_slot = no }
+						title:b_leipzig.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -2131,10 +2131,10 @@ found_university_decision = {
 					title:b_messina.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_messina.county = { development_level >= 30 }
+					title:b_messina.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_messina.title_province = { has_special_building_slot = no }
+						title:b_messina.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -2144,10 +2144,10 @@ found_university_decision = {
 					title:b_barcelona.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_barcelona.county = { development_level >= 30 }
+					title:b_barcelona.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_barcelona.title_province = { has_special_building_slot = no }
+						title:b_barcelona.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -2157,10 +2157,10 @@ found_university_decision = {
 					title:b_dumbarton.title_province = { NOT = { exists = var:university } }
 				}
 				AND = {
-					title:b_dumbarton.county = { development_level >= 30 }
+					title:b_dumbarton.county = { prosperity_level >= 30 }
 					custom_description = {
 						text = no_special_building_slot
-						title:b_dumbarton.title_province = { has_special_building_slot = no }
+						title:b_dumbarton.title_province = { has_special_district_slot = no }
 					}
 				}
 			}
@@ -2234,7 +2234,7 @@ lunatic_building_decision = {
 		title_valid = {
 			trigger_if = {
 				limit = { exists = this }
-				title_province = { has_special_building_slot = no }
+				title_province = { has_special_district_slot = no }
 				is_capital_barony = yes
 				holder = scope:ruler
 				is_leased_out = no
@@ -2394,56 +2394,153 @@ found_witch_coven_decision = {
 
 ### Repay Loan ###
 repay_loan_decision = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
-	}
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds" }
 	decision_group_type = major
 
 	desc = repay_loan_decision_decision_desc
 	selection_tooltip = repay_loan_decision_decision_tooltip
 
-	ai_check_interval = 0
+	ai_check_interval = 24
 
 	is_shown = {
-		var:loan_holder ?= {
-			any_in_list = {
-				variable = owes_me_money
-				this = root
+		any_owned_story = {
+			story_type = story_cycle_loan
+			exists = var:amount_owed
+			var:lender ?= {
+				any_in_list = {
+					variable = owes_me_money
+					this = root
+				}
 			}
 		}
-		exists = var:loan_amount_owed
 	}
 
 	is_valid_showing_failures_only = {
-		is_available = yes
-		gold >= var:loan_amount_owed
-	}
-
-	effect = {
-		var:loan_holder ?= { save_scope_as = recipient }
-		pay_short_term_gold = {
-			gold = var:loan_amount_owed
-			target = scope:recipient
+		is_available_quick = {
+			adult = yes
+			incapable = no
 		}
-		clear_loanee_variables_effect = yes
-		if = {
-			limit = { has_character_flag = borrow_from_holy_order }
-			remove_character_flag = borrow_from_holy_order
-		}
-		scope:recipient = {
-			remove_list_variable = {
-				name = owes_me_money
-				target = root
+		custom_tooltip = {
+			text = repay_loan_decision_afford_any_tt
+			any_owned_story = {
+				story_type = story_cycle_loan
+				exists = var:amount_owed
+				var:amount_owed <= prev.gold
 			}
 		}
 	}
 
-	ai_potential = {
-		always = no
+	effect = {
+		scope:selected_item ?= { save_scope_as = recipient }
+		ordered_owned_story = {
+			limit = {
+				story_type = story_cycle_loan
+				exists = var:amount_owed
+				var:lender = {
+					this = scope:recipient
+					any_in_list = {
+						variable = owes_me_money
+						this = root
+					}
+				}
+			}
+			order_by = { # repay smallest first
+				value = 0
+				subtract = var:amount_owed
+			}
+			save_scope_as = repaid_loan
+		}
+		scope:repaid_loan = { repay_and_end_loan_story_effect = yes } # use this effect to show relevant tooltips
+	}
+
+	widget = {
+		gui = "decision_view_widget_select_character"
+		controller = select_scope_object
+		show_from_start = yes
+		decision_to_second_step_button = "SELECT"
+
+		setup_items = {
+			scope:actor = {
+				every_owned_story = {
+					limit = {
+						story_type = story_cycle_loan
+						exists = var:amount_owed
+						var:lender ?= {
+							any_in_list = {
+								variable = owes_me_money
+								this = scope:actor
+							}
+						}
+					}
+					var:lender = { add_to_list = item_list }
+				}
+			}
+		}
+
+		default_item = {
+			scope:actor = {
+				ordered_owned_story = {
+					limit = {
+						story_type = story_cycle_loan
+						exists = var:amount_owed
+						var:lender ?= {
+							any_in_list = {
+								variable = owes_me_money
+								this = scope:actor
+							}
+						}
+					}
+					order_by = var:years_since
+					var:lender = { save_scope_as = selected_item }
+				}
+			}
+		}
+
+		is_item_valid = {
+			save_temporary_scope_as = lender_temp
+			custom_tooltip = {
+				text = repay_loan_decision_afford_tt
+				scope:actor = {
+					any_owned_story = {
+						story_type = story_cycle_loan
+						exists = var:amount_owed
+						var:lender ?= scope:lender_temp
+						var:amount_owed <= scope:actor.gold
+					}
+				}
+			}
+		}
+
+		ai_select_item = {
+			scope:actor = {
+				ordered_owned_story = {
+					limit = {
+						story_type = story_cycle_loan
+						exists = var:amount_owed
+						var:lender ?= {
+							any_in_list = {
+								variable = owes_me_money
+								this = scope:actor
+							}
+						}
+						var:amount_owed < scope:actor.short_term_gold
+					}
+					order_by = {
+						value = 0
+						add = var:years_since
+						if = {
+							limit = { var:lender = { is_ai = no } }
+							add = 2
+						}
+					}
+					var:lender = { save_scope_as = selected_item }
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
-		base = 0
+		base = 25
 	}
 }
 
@@ -2975,7 +3072,7 @@ expand_duchy_decision = {
 				}
 				scope:barony.duchy = {
 					ordered_de_jure_county = {
-						order_by = development_level
+						order_by = prosperity_level
 						limit = { NOT = { this = scope:barony.county } }
 						save_scope_as = new_duchy_capital
 					}

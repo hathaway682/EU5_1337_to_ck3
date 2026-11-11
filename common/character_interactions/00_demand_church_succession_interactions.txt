@@ -108,8 +108,7 @@ demand_church_succession_interaction = {
 				# Only Christian archbishops actually hold a clerical region; others fall back on the neighbour rule above.
 				AND = {
 					scope:puppet_or_actor = {
-						any_held_title = { has_clerical_region = yes }
-						is_in_same_clerical_region_as_trigger = { TARGET = scope:recipient }
+						pam_gift_claim_recipient_in_own_clerical_region_trigger = { TARGET = scope:recipient }
 					}
 				}
 			}
@@ -183,7 +182,7 @@ demand_church_succession_interaction = {
 				demand_church_succession_side_effects = yes
 			}
 		}
-
+		
 		if = {
 			limit = {
 				scope:is_puppet_action ?= yes
@@ -285,8 +284,7 @@ demand_church_succession_interaction = {
 		modifier = {
 			add = 25
 			scope:puppet_or_actor = {
-				any_held_title = { has_clerical_region = yes }
-				is_in_same_clerical_region_as_trigger = { TARGET = scope:recipient }
+				pam_gift_claim_recipient_in_own_clerical_region_trigger = { TARGET = scope:recipient }
 			}
 		}
 		# Don't shake down friends or close family.
@@ -493,7 +491,7 @@ demand_church_succession_religious_head_interaction = {
 		ai_recipients = domicile_location_top_realm_vassals
 		max = 10
 	}
-
+	
 	ai_frequency_by_tier = {
 		barony = 0
 		county = 0

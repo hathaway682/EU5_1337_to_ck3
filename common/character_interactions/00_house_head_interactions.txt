@@ -8,19 +8,19 @@ call_house_member_to_war_interaction = {
 
 	category = interaction_category_diplomacy
 	icon = alliance
-
+	
 
 	interface_priority = 60
 
 	desc = call_house_member_to_war_interaction_desc
-
+	
 	interface = call_ally
 	special_interaction = call_ally_interaction
 	popup_on_receive = yes
 	pause_on_receive = yes
-
+	
 	notification_text = CALL_HOUSE_MEMBER_NOTIFICATION
-
+	
 	is_available = {
 		OR = {
 			is_house_head = yes
@@ -57,11 +57,11 @@ call_house_member_to_war_interaction = {
 			}
 		}
 	}
-
+	
 	has_valid_target = {
 		exists = scope:target
 	}
-
+	
 	has_valid_target_showing_failures_only = {
 		scope:target = {
 			is_war_leader = scope:actor
@@ -99,7 +99,7 @@ call_house_member_to_war_interaction = {
 			trigger_event = call_ally.0001
 		}
 	}
-
+	
 	on_accept = {
 		call_house_member_to_war_interaction_effect = yes
 
@@ -131,7 +131,7 @@ call_house_member_to_war_interaction = {
 			scope:recipient = {	add_prestige = medium_prestige_gain	}
 		}
 	}
-
+	
 	on_decline = {
 		#The war could theoretically end on the day the decline is sent
 		if = {
@@ -168,7 +168,7 @@ call_house_member_to_war_interaction = {
 			refuse_call_to_arms_add_clan_unity_effect = yes
 		}
 	}
-
+	
 	ai_accept = {
 		base = 20
 
@@ -215,7 +215,7 @@ call_house_member_to_war_interaction = {
 						this = scope:target.casus_belli.primary_defender
 					}
 				}
-
+				
 			}
 			desc = WONT_FIGHT_SPOUSE_REASON
 		}
@@ -546,7 +546,7 @@ legitimize_bastard_interaction = {
 			opinion_target = scope:secondary_recipient
 			multiplier = 0.25
 		}
-
+		
 		modifier = {
 			add = intimidated_reason_value
 			scope:recipient = {
@@ -569,7 +569,7 @@ legitimize_bastard_interaction = {
 			}
 			desc = COWED_REASON
 		}
-
+		
 		modifier = {
 			add = intimidated_external_reason_value
 			scope:recipient = {
@@ -608,7 +608,7 @@ legitimize_bastard_interaction = {
 			}
 		}
 	}
-
+	
 	on_accept = {
 		scope:actor = {
 			stress_and_fulfillment_impact = {
@@ -630,13 +630,13 @@ legitimize_bastard_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = miniscule_unity_loss
 			DESC = clan_unity_bastardry.desc
 			REVERSE_NON_HOUSE_TARGET = no
-		}
+		}	
 
 		hidden_effect = {
 			scope:actor = {
@@ -650,7 +650,7 @@ legitimize_bastard_interaction = {
 					}
 				}
 			}
-		}
+		}	
 	}
 
 	on_decline = {
@@ -659,19 +659,19 @@ legitimize_bastard_interaction = {
 				type = event_toast_effect_bad
 				title = legitimize_bastard_interaction_decline_notification
 
-				left_icon = scope:actor.house.house_head
+				left_icon = scope:actor.house.house_head					
 				right_icon = scope:secondary_recipient
 			}
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = miniscule_unity_gain
 			DESC = clan_unity_bastardry_refusal.desc
 			REVERSE_NON_HOUSE_TARGET = no
-		}
+		}		
 	}
 
 	send_option = {
@@ -704,11 +704,11 @@ accuse_of_decandence_interaction = {
 	category = interaction_category_hostile
 	interface_priority = 60
 	common_interaction = yes
-
+	
 	cooldown = { years = 3 }
 
 	desc = accuse_of_decandence_interaction_desc
-
+	
 	is_available = {
 		government_has_flag = government_is_clan
 		house.house_head ?= this
@@ -748,7 +748,7 @@ accuse_of_decandence_interaction = {
 			trigger_event = char_interaction.0041
 		}
 	}
-
+	
 	on_accept = {
 		scope:actor = {
 			# Only get stressed/SP penalties if you don't have the parameter
@@ -765,7 +765,7 @@ accuse_of_decandence_interaction = {
 				type = event_toast_effect_neutral
 				title = accuse_of_decandence_interaction_notification
 
-				left_icon = scope:actor
+				left_icon = scope:actor					
 				right_icon = scope:recipient
 
 				scope:recipient = {
@@ -788,13 +788,13 @@ accuse_of_decandence_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = major_unity_loss
 			DESC = clan_unity_decadence.desc
 			REVERSE_NON_HOUSE_TARGET = no
-		}
+		}		
 	}
 
 	cost = {
@@ -828,18 +828,18 @@ accuse_of_decandence_interaction = {
 			}
 		}
 	}
-
+	
 	auto_accept = yes
 
 	ai_targets = {
 		ai_recipients = dynasty
 		max = 30
 	}
-
+	
 	ai_targets = {
 		ai_recipients = vassals
 	}
-
+	
 	ai_frequency_by_tier = {
 		barony = 0
 		county = 96
@@ -848,20 +848,17 @@ accuse_of_decandence_interaction = {
 		empire = 36
 		hegemony = 36
 	}
-
+	
 	ai_will_do = {
 		base = 0
-
+		
 		modifier = {
 			add = 100
 			scope:recipient = {
-				OR = {
-					has_relation_rival = scope:actor
-					has_relation_nemesis = scope:actor
-				}
+				has_relation_rival = scope:actor
 			}
 		}
-
+		
 		modifier = {
 			add = 50
 			scope:actor = {
@@ -872,7 +869,7 @@ accuse_of_decandence_interaction = {
 				num_sinful_traits >= 1
 			}
 		}
-
+		
 		modifier = {
 			add = 100
 			scope:actor = {
@@ -883,7 +880,7 @@ accuse_of_decandence_interaction = {
 				num_sinful_traits >= 2
 			}
 		}
-
+		
 		modifier = {
 			add = 20
 			scope:actor = {
@@ -897,7 +894,7 @@ accuse_of_decandence_interaction = {
 				}
 			}
 		}
-
+		
 		modifier = {
 			add = 100
 			scope:actor = {
@@ -911,7 +908,7 @@ accuse_of_decandence_interaction = {
 				}
 			}
 		}
-
+		
 		modifier = {
 			add = 50
 			scope:actor = {
@@ -987,24 +984,21 @@ accuse_of_decandence_interaction = {
 				}
 			}
 		}
-
+		
 		modifier = {
 			factor = 0.25
 			scope:recipient = {
 				is_powerful_vassal_of = scope:actor
 			}
 		}
-
+		
 		modifier = {
 			factor = 0
 			scope:recipient = {
-				OR = {
-					has_relation_friend = scope:actor
-					has_relation_best_friend = scope:actor
-				}
+				has_relation_friend = scope:actor
 			}
 		}
-
+		
 		modifier = {
 			factor = 0
 			scope:recipient = {
@@ -1024,11 +1018,11 @@ extoll_virtuousness_interaction = {
 	category = interaction_category_friendly
 	interface_priority = 60
 	common_interaction = yes
-
+	
 	cooldown = { years = 3 }
 
 	desc = extoll_virtuousness_interaction_desc
-
+	
 	is_available = {
 		government_has_flag = government_is_clan
 		house.house_head ?= this
@@ -1063,7 +1057,7 @@ extoll_virtuousness_interaction = {
 			trigger_event = char_interaction.0042
 		}
 	}
-
+	
 	on_accept = {
 		scope:actor = {
 			stress_and_fulfillment_impact = {
@@ -1074,7 +1068,7 @@ extoll_virtuousness_interaction = {
 				type = event_toast_effect_neutral
 				title = extoll_interaction_notification
 
-				left_icon = scope:actor
+				left_icon = scope:actor					
 				right_icon = scope:recipient
 
 				scope:recipient = {
@@ -1096,13 +1090,13 @@ extoll_virtuousness_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = major_unity_gain
 			DESC = clan_unity_extolled.desc
 			REVERSE_NON_HOUSE_TARGET = no
-		}
+		}		
 	}
 
 	cost = {
@@ -1136,18 +1130,18 @@ extoll_virtuousness_interaction = {
 			}
 		}
 	}
-
+	
 	auto_accept = yes
 
 	ai_targets = {
 		ai_recipients = dynasty
 		max = 30
 	}
-
+	
 	ai_targets = {
 		ai_recipients = vassals
 	}
-
+	
 	ai_frequency_by_tier = {
 		barony = 0
 		county = 96
@@ -1156,10 +1150,10 @@ extoll_virtuousness_interaction = {
 		empire = 36
 		hegemony = 36
 	}
-
+	
 	ai_will_do = {
 		base = 0
-
+		
 		modifier = {
 			add = 100
 			scope:actor = {
@@ -1168,12 +1162,11 @@ extoll_virtuousness_interaction = {
 			scope:recipient = {
 				OR = {
 					has_relation_friend = scope:actor
-					has_relation_best_friend = scope:actor
 					is_primary_heir_of = scope:actor
 				}
 			}
 		}
-
+		
 		modifier = {
 			add = 50
 			scope:actor = {
@@ -1184,7 +1177,7 @@ extoll_virtuousness_interaction = {
 				num_virtuous_traits >= 1
 			}
 		}
-
+		
 		modifier = {
 			add = 100
 			scope:actor = {
@@ -1195,7 +1188,7 @@ extoll_virtuousness_interaction = {
 				num_virtuous_traits >= 2
 			}
 		}
-
+		
 		modifier = {
 			add = 20
 			scope:actor = {
@@ -1209,7 +1202,7 @@ extoll_virtuousness_interaction = {
 				}
 			}
 		}
-
+		
 		modifier = {
 			add = 100
 			scope:actor = {
@@ -1223,21 +1216,18 @@ extoll_virtuousness_interaction = {
 				}
 			}
 		}
-
+		
 		modifier = {
 			factor = 1.5
 			scope:recipient = {
 				is_vassal_of = scope:actor
 			}
 		}
-
+		
 		modifier = {
 			factor = 0
 			scope:recipient = {
-				OR = {
-					has_relation_rival = scope:actor
-					has_relation_nemesis = scope:actor
-				}
+				has_relation_rival = scope:actor
 			}
 		}
 	}

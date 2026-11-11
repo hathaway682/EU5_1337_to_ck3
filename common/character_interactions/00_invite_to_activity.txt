@@ -14,7 +14,7 @@
 
 	ai_maybe = yes
 	can_send_despite_rejection = yes
-
+	
 	is_highlighted = {
 		always = yes
 	}
@@ -41,7 +41,7 @@
 			invite_to_activity = scope:puppet_or_actor.involved_activity
 		}
 	}
-
+	
 	on_accept = {
 		# Acceptance handled by the activity system itself
 		scope:puppet_or_actor = {
@@ -113,7 +113,7 @@
 
 		activity_modifier = {
 			object = scope:puppet_or_actor.involved_activity
-			target = scope:recipient
+			target = scope:recipient			
 		}
 	}
 }

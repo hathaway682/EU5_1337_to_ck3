@@ -3288,7 +3288,7 @@ ho_christian_eremetic_benedictines = {
 						scope:province.county = {
 							save_temporary_scope_as = county_temp
 							any_neighboring_county = {
-								development_level < scope:county_temp.development_level
+								prosperity_level < scope:county_temp.prosperity_level
 							}
 						}
 					}
@@ -4291,7 +4291,7 @@ ho_christian_pastoral_benedictines = {
 						scope:province.county = {
 							save_temporary_scope_as = county_temp
 							any_neighboring_county = {
-								development_level < scope:county_temp.development_level
+								prosperity_level < scope:county_temp.prosperity_level
 							}
 						}
 					}

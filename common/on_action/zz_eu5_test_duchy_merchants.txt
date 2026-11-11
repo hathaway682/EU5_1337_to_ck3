@@ -1,0 +1,98 @@
+﻿on_game_start = {
+	on_actions = { eu5_test_duchy_merchants_on_game_start }
+}
+
+on_game_start_after_lobby = {
+	on_actions = { eu5_test_duchy_merchants_trade_expertise }
+}
+
+eu5_test_duchy_merchants_on_game_start = {
+	effect = {
+		every_duchy = {
+			limit = {
+				exists = title_capital_county.title_province
+				title_capital_county.de_jure_liege = this
+				title_capital_county = {
+					exists = holder
+					holder = {
+						NOR = {
+							this = character:gen_wilderness_holder
+							has_government = wilderness_government
+						}
+					}
+					title_province = {
+						NOT = { has_holding_type = wilderness_holding }
+					}
+				}
+			}
+			title_capital_county.title_province = {
+				create_character = {
+					template = generated_merchant_template
+					location = this
+					after_creation = {
+						add_to_list = eu5_test_duchy_merchants
+					}
+				}
+			}
+		}
+
+		every_in_list = {
+			list = eu5_test_duchy_merchants
+			save_temporary_scope_as = merchant_scope
+			house = { set_house_name = generated_merchant_house_name }
+			save_temporary_scope_value_as = {
+				name = gdp_starting_merchant
+				value = yes
+			}
+			create_merchant_title_effect = {
+				REASON = flag:historical
+				FLAVOR_CHAR = dummy_female
+			}
+			if = {
+				limit = {
+					is_ai = yes
+					is_ruler = yes
+					has_government = merchant_government
+				}
+				primary_title = { set_variable = gdp_starting_merchant_company }
+				set_starting_company_acumen_effect = yes
+			}
+			remove_from_list = eu5_test_duchy_merchants
+		}
+
+		if = {
+			limit = { has_tgp_dlc_trigger = yes }
+			title:b_urgench.title_province = { add_special_district = gurganj_bazaar_01_district }
+			title:b_tabriz.title_province = { add_special_district = tabriz_bazaar_01_district }
+		}
+	}
+}
+
+eu5_test_duchy_merchants_trade_expertise = {
+	trigger = { has_global_variable_list = merchants_tally }
+	effect = {
+		set_global_variable = {
+			name = merchant_company_starting_count
+			value = { value = 0 every_in_global_list = { variable = merchants_tally add = 1 } }
+		}
+		# The engine seeds trade routes before on_game_start_after_lobby.
+		every_in_global_list = {
+			variable = merchants_tally
+			limit = {
+				NOT = {
+					any_trade_good_category = {
+						has_trade_good_category_xp_track = yes
+						save_temporary_scope_as = existing_expertise_category
+						prev = {
+							trade_good_category_xp = {
+								target = scope:existing_expertise_category
+								value > 0
+							}
+						}
+					}
+				}
+			}
+			set_starting_trade_expertise_effect = yes
+		}
+	}
+}

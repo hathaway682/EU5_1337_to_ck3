@@ -1,16 +1,17 @@
-﻿on_game_start = {
-    on_actions = { cu_corridor_apply_permanent_modifiers }
-}
-on_game_start_after_lobby = {
-    on_actions = { cu_corridor_initialize_holdings }
-}
-yearly_global_pulse = {
-    on_actions = { cu_corridor_apply_permanent_modifiers }
-}
+﻿# Corridor effects are disabled in cu_corridor_effects.txt.
+# on_game_start = {
+#     on_actions = { cu_corridor_apply_permanent_modifiers }
+# }
+# on_game_start_after_lobby = {
+#     on_actions = { cu_corridor_initialize_holdings }
+# }
+# yearly_global_pulse = {
+#     on_actions = { cu_corridor_apply_permanent_modifiers }
+# }
 
-cu_corridor_apply_permanent_modifiers = {
-    effect = { cu_corridor_apply_permanent_modifiers_effect = yes }
-}
-cu_corridor_initialize_holdings = {
-    effect = { cu_corridor_initialize_holdings_effect = yes }
-}
+# cu_corridor_apply_permanent_modifiers = {
+#     effect = { cu_corridor_apply_permanent_modifiers_effect = yes }
+# }
+# cu_corridor_initialize_holdings = {
+#     effect = { cu_corridor_initialize_holdings_effect = yes }
+# }

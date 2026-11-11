@@ -2619,7 +2619,7 @@ lesson_basics_holdings = {
 				custom_description = {
 					text = lesson_basics_start_construction_tt
 					any_realm_province = {
-						has_ongoing_construction = yes
+						has_ongoing_holding_construction = yes
 					}
 				}
 			}
@@ -2654,7 +2654,7 @@ lesson_basics_holdings = {
 				custom_description = {
 					text = lesson_basics_start_construction_tt
 					any_realm_province = {
-						has_ongoing_construction = yes
+						has_ongoing_holding_construction = yes
 					}
 				}
 			}
@@ -2668,7 +2668,7 @@ lesson_basics_holdings = {
 				custom_description = {
 					text = lesson_basics_start_construction_tt
 					any_realm_province = {
-						has_ongoing_construction = yes
+						has_ongoing_holding_construction = yes
 					}
 					NOT = { has_character_flag = tutorial_flag_construction_begun }
 				}

@@ -13,7 +13,7 @@
 		tax_mult = -1.0
 		levy_size = -1.0
 		garrison_size = -1.0
-		development_growth_factor = -1.0
+		prosperity_growth_factor = -1.0
 
 
 
@@ -46,7 +46,7 @@ beast_dens = {
 	can_construct_potential = { always = no }
 
 	county_modifier = {
-		development_growth_factor = -0.20
+		prosperity_growth_factor = -0.20
 		supply_limit_mult = -0.30
 		tax_mult = -0.20
 		garrison_size = -0.15
@@ -134,7 +134,7 @@ dense_growth = {
 
 	county_modifier = {
 		supply_limit_mult = -0.50
-		development_growth_factor = -0.25
+		prosperity_growth_factor = -0.25
 		travel_danger = 25
 	}
 
@@ -180,7 +180,7 @@ flooded_lands = {
 	can_construct_potential = { always = no }
 
 	county_modifier = {
-		development_growth_factor = -0.50
+		prosperity_growth_factor = -0.50
 		county_opinion_add = -10
 		travel_danger = 15
 	}
@@ -231,7 +231,7 @@ scree_slopes = {
 	can_construct_potential = { always = no }
 
 	county_modifier = {
-		development_growth_factor = -0.40
+		prosperity_growth_factor = -0.40
 		supply_limit_mult = -0.25
 		travel_danger = 15
 	}
@@ -280,7 +280,7 @@ killing_cold = {
 	can_construct_potential = { always = no }
 
 	county_modifier = {
-		development_growth_factor = -0.65
+		prosperity_growth_factor = -0.65
 		holding_build_speed = 0.20
 		supply_limit_mult = -0.40
 		levy_size = -0.20
@@ -373,7 +373,7 @@ ruins_large = {
 	county_modifier = {
 
 		county_opinion_add = -10
-		development_growth_factor = -0.20
+		prosperity_growth_factor = -0.20
 		travel_danger = 40
 	}
 
@@ -421,7 +421,7 @@ ruins_small = {
 
 	county_modifier = {
 		county_opinion_add = -3
-		development_growth_factor = -0.05
+		prosperity_growth_factor = -0.05
 		travel_danger = 10
 	}
 

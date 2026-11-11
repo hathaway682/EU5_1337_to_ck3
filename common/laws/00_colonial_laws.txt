@@ -52,7 +52,7 @@ colony_law_garrison = {
 		monthly_county_control_growth_add = 0.35
 		garrison_size = 0.40
 		defender_holding_advantage = 6
-		development_growth_factor = -0.15
+		prosperity_growth_factor = -0.15
 		build_gold_cost = 0.15
 	}
 
@@ -153,7 +153,7 @@ colony_law_homestead = {
 	pass_cost = { prestige = minor_prestige_value }
 
 	modifier = {
-		development_growth_factor = 0.30
+		prosperity_growth_factor = 0.30
 		county_opinion_add = 20
 		stress_loss_mult = 0.15
 		tax_mult = -0.25

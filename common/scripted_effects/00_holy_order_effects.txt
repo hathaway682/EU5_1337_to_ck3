@@ -403,7 +403,7 @@ create_monastic_decision_effect = {
 					}
 					limit = {
 						has_holding = no
-						has_ongoing_construction = no
+						has_ongoing_holding_construction = no
 					}
 					begin_create_holding = church_holding
 					save_scope_as = province
@@ -6435,7 +6435,7 @@ monastic_lease_swapping_effect = {
 			save_scope_as = target_order
 			ordered_leased_title = {
 				order_by = {
-					value = county.development_level
+					value = county.prosperity_level
 					multiply = -1
 				}
 				limit = {
@@ -6455,7 +6455,7 @@ monastic_lease_swapping_effect = {
 				}
 				ordered_leased_title = {
 					order_by = {
-						value = county.development_level
+						value = county.prosperity_level
 						multiply = -1
 					}
 					limit = {

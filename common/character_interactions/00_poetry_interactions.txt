@@ -18,7 +18,7 @@ send_poem_interaction = {
 	desc = send_poem_interaction_desc
 
 	is_available = {
-		OR = {
+		OR = { 
 			has_trait = lifestyle_poet
 			employs_court_position = master_bard_camp_officer
 			employs_court_position = laureate_camp_officer
@@ -57,7 +57,7 @@ send_poem_interaction = {
 		}
 	}
 
-	send_options_exclusive = yes
+    send_options_exclusive = yes
 
 	cost = { prestige = minor_prestige_value }
 
@@ -180,28 +180,13 @@ send_poem_interaction = {
 			}
 			scope:actor = { remove_character_flag = flag_hostile_actions_disabled_delay }
 		}
-		show_as_tooltip = {
-			if = {
-				limit = { always = scope:poem_theme_incompetence }
-				# If we're a clan this interaction affects unity
-				add_clan_unity_interaction_effect = {
-					CHARACTER = scope:actor
-					TARGET = scope:recipient
-					VALUE = minor_unity_loss
-					DESC = clan_unity_poetry.desc
-					REVERSE_NON_HOUSE_TARGET = no
-				}
-			}
-			else = {
-				# If we're a clan this interaction affects unity
-				add_clan_unity_interaction_effect = {
-					CHARACTER = scope:actor
-					TARGET = scope:recipient
-					VALUE = minor_unity_gain
-					DESC = clan_unity_poetry.desc
-					REVERSE_NON_HOUSE_TARGET = no
-				}
-			}
+		# If we're a clan this interaction affects unity
+		add_house_unity_interaction_effect = {
+			CHARACTER = scope:actor
+			TARGET = scope:recipient
+			VALUE = minor_unity_gain
+			DESC = clan_unity_poetry.desc
+			REVERSE_NON_HOUSE_TARGET = no
 		}
 	}
 
@@ -320,7 +305,7 @@ send_poem_interaction = {
 	}
 	ai_will_do = {
 		base = 50
-
+		
 		# Lustful characters prefer romance poems
 		modifier = {
 			add = 50
@@ -330,13 +315,13 @@ send_poem_interaction = {
 			}
 			scope:poem_theme_romance = yes
 		}
-
+		
 		# Arrogant characters are prone to actually interact via public poetry publishing.
 		modifier = {
 			add = 20
 			scope:actor = { has_trait = arrogant }
 		}
-
+		
 		# Certain personality types skew towards specific poem types
 		modifier = {
 			add = 10
@@ -359,7 +344,7 @@ send_poem_interaction = {
 			}
 			scope:poem_theme_strife = yes
 		}
-
+		
 		## Insult people you don't like
 		modifier = {
 			add = 50
@@ -384,7 +369,7 @@ send_poem_interaction = {
 		evaluate_action_increasing_house_unity = {
 			VALUE = 100
 		}
-
+		
 		# Characters who are not lustful don't send romantic poems to just anyone
 		modifier = {
 			factor = 0
@@ -400,7 +385,7 @@ send_poem_interaction = {
 			}
 			scope:poem_theme_romance = yes
 		}
-
+		
 		## Don't use insulting poems willy-nilly
 		modifier = {
 			factor = 0
@@ -418,7 +403,7 @@ send_poem_interaction = {
 				}
 			}
 		}
-
+		
 		## Don't spam players while at war
 		modifier = {
 			factor = 0
@@ -427,7 +412,7 @@ send_poem_interaction = {
 				is_at_war = yes
 			}
 		}
-
+		
 		## Don't spam players when the poetry block is active
 		modifier = {
 			factor = 0

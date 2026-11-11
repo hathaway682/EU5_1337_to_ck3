@@ -6,12 +6,11 @@ debug_impact_house_relation_interaction = {
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
 	}
 
-	category = interaction_debug_tgp
+	category = interaction_debug_extra
 	desc = debug_impact_house_relation_interaction_desc
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = debug_chars
-	common_interaction = yes
 
 	is_shown = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
@@ -174,10 +173,9 @@ debug_spawn_natural_disaster = {
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
 	}
 
-	category = interaction_debug_tgp
+	category = interaction_debug_extra
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
-	common_interaction = yes
 	icon = debug_bad
 	auto_accept = yes
 	is_shown = {
@@ -267,10 +265,9 @@ debug_change_bloc_cohesion = {
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
 	}
 
-	category = interaction_debug_tgp
+	category = interaction_debug_extra
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
-	common_interaction = yes
 	icon = icon_leave_bloc
 	auto_accept = yes
 	is_shown = {

@@ -68,7 +68,7 @@ convert_to_witchcraft_interaction = {
 				type = event_toast_effect_good
 				title = convert_to_witchcraft_interaction_notification
 
-				left_icon = scope:actor
+				left_icon = scope:actor					
 				right_icon = scope:recipient
 
 				begin_scheme_basic_effect = {
@@ -83,7 +83,7 @@ convert_to_witchcraft_interaction = {
 	auto_accept = yes
 
 	#AI will do
-
+	
 	ai_target_quick_trigger = {
 		adult = yes
 	}
@@ -99,7 +99,7 @@ convert_to_witchcraft_interaction = {
 		ai_recipients = vassals
 		max = 10
 	}
-
+	
 	ai_frequency_by_tier = {
 		barony = 0
 		county = 72
@@ -111,7 +111,7 @@ convert_to_witchcraft_interaction = {
 
 	ai_will_do = {
 		base = -45
-
+		
 		# Do I like recipient & are they trustworthy
 		opinion_modifier = {
 			who = scope:actor
@@ -253,7 +253,7 @@ reveal_as_witch_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = miniscule_unity_loss
@@ -266,7 +266,7 @@ reveal_as_witch_interaction = {
 	force_notification = yes
 
 	#AI will do
-
+	
 	ai_target_quick_trigger = {
 		adult = yes
 	}

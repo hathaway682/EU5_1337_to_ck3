@@ -1,0 +1,37 @@
+﻿on_game_start = {
+	on_actions = { eu5_republic_count_family_setup }
+}
+
+eu5_republic_count_family_setup = {
+	effect = {
+		every_ruler = {
+			limit = {
+				government_has_flag = government_is_republic
+				OR = {
+					highest_held_title_tier = tier_county
+					this = character:eu5_regent_anc
+					this = character:eu5_regent_sie
+				}
+				NOT = {
+					any_held_title = { is_noble_family_title = yes }
+				}
+			}
+			save_scope_as = republican_founder
+			create_dynamic_title = {
+				name = NEW_PATRICIAN_TITLE_NAME
+				tier = county
+				type = title_type_merchant_family
+				holder = scope:republican_founder
+				article = DEFAULT_TITLE_NAME_ARTICLE
+				save_scope_as = new_patrician_title
+			}
+			scope:new_patrician_title ?= {
+				add_title_law = noble_family_succession_law
+				if = {
+					limit = { scope:republican_founder = { this = character:eu5_regent_gaz } }
+					set_capital_county = title:c_cafa
+				}
+			}
+		}
+	}
+}

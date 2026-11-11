@@ -20,8 +20,10 @@ request_culture_conversion_interaction = {
 
 	desc = ask_for_conversion_interaction_desc
 
-	hidden = yes
+	notification_text = ask_for_culture_conversion_interaction_notice
 
+	hidden = yes
+	
 	is_shown = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
@@ -31,7 +33,7 @@ request_culture_conversion_interaction = {
 
 	is_valid_showing_failures_only = {
 	}
-
+	
 	ai_accept = {
 		base = -10
 		opinion_modifier = {
@@ -39,7 +41,7 @@ request_culture_conversion_interaction = {
 			who = scope:recipient
 			multiplier = 1
 		}
-
+		
 		modifier = {
 			desc = ASK_FOR_CONVERSION_SAME_CULTURE_PRESTIGE_LEVEL
 			add = {
@@ -58,7 +60,7 @@ request_culture_conversion_interaction = {
 				multiply = 5
 			}
 		}
-
+		
 		modifier = {
 			desc = ASK_FOR_CONVERSION_RECIPIENT_IS_CYNICAL
 			add = 30
@@ -66,7 +68,7 @@ request_culture_conversion_interaction = {
 				has_trait = cynical
 			}
 		}
-
+		
 		modifier = {
 			desc = ASK_FOR_CONVERSION_RECIPIENT_IS_STUBBORN
 			add = -30
@@ -74,7 +76,7 @@ request_culture_conversion_interaction = {
 				has_trait = stubborn
 			}
 		}
-
+			
 		modifier = {
 			add = intimidated_external_reason_value
 			scope:recipient = {
@@ -100,10 +102,10 @@ request_culture_conversion_interaction = {
 			VALUE = 100
 		}
 	}
-
+	
 	ai_min_reply_days = 1
 	ai_max_reply_days = 5
-
+	
 	on_accept = {
 		new_culture_created_vassal_conversion_effect = {
 			CONVERTEE = scope:recipient
@@ -126,9 +128,9 @@ ai_cultural_hybridization_interaction = {
 
 
 	hidden = yes
-
+	
 	auto_accept = yes
-
+	
 	is_available = {
 		sub_realm_size >= 4
 		OR = {
@@ -145,7 +147,7 @@ ai_cultural_hybridization_interaction = {
 	has_valid_target = {
 		exists = scope:target
 	}
-
+	
 	ai_set_target = {
 		scope:actor = {
 			if = {
@@ -174,7 +176,7 @@ ai_cultural_hybridization_interaction = {
 						add_to_list = culture_list
 					}
 				}
-
+				
 				ordered_in_list = {
 					list = culture_list
 					limit = { culture_realm_size >= 3 }
@@ -198,11 +200,11 @@ ai_cultural_hybridization_interaction = {
 			create_hybrid_culture_with_side_effects = scope:target
 		}
 	}
-
+	
 	ai_targets = {
 		ai_recipients = self
 	}
-
+	
 	ai_frequency_by_tier = {
 		barony = 0
 		county = 120
@@ -219,7 +221,7 @@ ai_cultural_hybridization_interaction = {
 		evaluate_action_increasing_house_unity = {
 			VALUE = 100
 		}
-
+		
 		modifier = {
 			factor = 0.2
 			has_game_rule = less_common_hybrid_culture_ai_frequency
@@ -231,7 +233,7 @@ ai_cultural_hybridization_interaction = {
 				has_cultural_parameter = harder_to_hybridize
 			}
 		}
-
+		
 		modifier = { # The AI should only want to hybridize if they're the second ruler of their culture for their primary title
 			factor = 0
 			OR = {
@@ -244,7 +246,7 @@ ai_cultural_hybridization_interaction = {
 				}
 			}
 		}
-
+		
 		modifier = { # The AI doesn't want to hybridize if their culture is more than X% bigger than the targeted culture within the same realm (unless it's in the capital, and the capital is the De Jure capital of the primary title)
 			factor = 0
 			scope:actor.culture.culture_realm_size > scope:target.culture_realm_size_larger_30_percent
@@ -253,7 +255,7 @@ ai_cultural_hybridization_interaction = {
 				scope:actor.capital_county.culture = scope:target
 			}
 		}
-
+		
 		modifier = { # Do not hybridize if 30% or more of your vassals of the relevant culture/s dislike you
 			factor = 0
 			scope:actor = {
@@ -271,7 +273,7 @@ ai_cultural_hybridization_interaction = {
 				}
 			}
 		}
-
+		
 		modifier = { # The AI does not want to create multiple hybrids from the same cultures
 			factor = 0
 			any_in_global_list = {
@@ -280,7 +282,7 @@ ai_cultural_hybridization_interaction = {
 				any_parent_culture = { this = scope:actor.culture }
 			}
 		}
-
+		
 		# Loose requirements
 		modifier = { # The AI does not want to create a hybrid with a hybrid culture that has the same roots
 			factor = 0
@@ -298,7 +300,7 @@ ai_cultural_hybridization_interaction = {
 				}
 			}
 		}
-
+		
 		modifier = { # The AI does not want to create a hybrid with a hybrid culture (unless a historical hybrid)
 			factor = 0
 			has_game_rule = relaxed_hybrid_culture_ai_restrictions
@@ -311,7 +313,7 @@ ai_cultural_hybridization_interaction = {
 				culture_is_not_historical_hybrid_trigger = yes
 			}
 		}
-
+		
 		modifier = { # The AI does not want to create a hybrid with a hybrid culture or if the target is a hybrid (unless a historical hybrid)
 			factor = 0
 			has_game_rule = default_hybrid_culture_ai_restrictions
@@ -326,7 +328,7 @@ ai_cultural_hybridization_interaction = {
 				}
 			}
 		}
-
+		
 		modifier = { # The AI does not want to create a hybrid with a hybrid culture that their culture is a parent of, or share heritage of
 			factor = 0
 			scope:target = {
@@ -339,7 +341,7 @@ ai_cultural_hybridization_interaction = {
 				}
 			}
 		}
-
+		
 		modifier = { # The AI does not want to create a hybrid if their culture is a hybrid of the target culture, or share heritage of
 			factor = 0
 			scope:actor.culture = {
@@ -352,7 +354,7 @@ ai_cultural_hybridization_interaction = {
 				}
 			}
 		}
-
+		
 		modifier = { # Avoid hybridizing if your realm is of a significant size and elective, we don't want the HRE Emperor to hybdridize in ugly ways...
 			factor = 0
 			primary_title = {
@@ -365,12 +367,12 @@ ai_cultural_hybridization_interaction = {
 				culture != scope:actor.culture
 			}
 		}
-
+		
 		modifier = { # Theocrats such as the Pope shouldn't hybridize; they have an influx of different cultures, it's just weird
 			factor = 0
 			government_has_flag = government_is_theocracy
 		}
-
+		
 		modifier = { # Block for Scots and Gaelic specifically
 			factor = 0
 			scope:actor.culture = {
@@ -386,7 +388,7 @@ ai_cultural_hybridization_interaction = {
 				}
 			}
 		}
-
+		
 		# Note: As we're checking if we can hybridize with a culture *right now*, a suboptimal culture might be checked. A buffer of 10 acceptance is used by the AI to alleviate this.
 	}
 }
