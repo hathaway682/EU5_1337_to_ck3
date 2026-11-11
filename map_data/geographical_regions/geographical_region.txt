@@ -4065,9 +4065,15 @@ dlc_tgp_mainland_southeast_asia_region = {
 }
 
 dlc_tgp_great_wall_shanhai = {
+	provinces = {
+		8615 8620 8634 8635 8638 8674
+	}
 }
 
 dlc_tgp_great_wall_liaodong = {
+	provinces = {
+		8089 8104 8106 8111 8114 8115 8599 8601 8603
+	}
 }
 
 dlc_tgp_grand_canal_region = {
@@ -4078,34 +4084,25 @@ dlc_tgp_grand_canal_region = {
 
 dlc_tgp_grand_canal_1_region = {
 	counties = {
-		c_hangzhou c_jiaxing c_ningbo c_shaoxing c_songjiang c_suzhou
+		c_hangzhou c_jiaxing c_ningbo c_shaoxing c_suzhou
 	}
 }
 
 dlc_tgp_grand_canal_2_region = {
 	counties = {
-		c_changzhou c_gaoyou c_huaian c_sizhou c_yangzhou c_zhenjiang
-	}
-	provinces = {
-		7348 7350
+		c_changzhou c_gaoyou c_huaian c_yangzhou c_zhenjiang
 	}
 }
 
 dlc_tgp_grand_canal_3_region = {
 	counties = {
-		c_caozhou c_kaizhou c_shanzhou_shandong c_suzhou_north c_tengzhou c_xuzhou
-	}
-	provinces = {
-		8888 8889 8890
+		c_dongping c_jining c_pizhou c_shanzhou_shandong c_xuzhou
 	}
 }
 
 dlc_tgp_grand_canal_4_region = {
 	counties = {
-		c_daming c_gaotang c_jingzhou_beizhili c_linqing c_qingchi c_qingzhou_beizhili
-	}
-	provinces = {
-		8685 8686 8689 8863 8864 8891
+		c_dezhou c_dongchang c_guangping c_jingzhou_beizhili c_linqing c_qingchi c_qingzhou_beizhili c_shuntian c_tongzhou_beizhili
 	}
 }
 
@@ -5585,5 +5582,26 @@ custom_slavic_rite_mission_region = {
 	}
 	provinces = {
 		2831 2832 3365 3366
+	}
+}
+
+
+dlc_tgp_great_wall_ningxia = {
+	provinces = {
+		9738 9740 9741 9742 9744 9745 9795
+	}
+}
+
+
+dlc_tgp_great_wall_jinxi = {
+	provinces = {
+		8931 8940 8941 8948 8957 8962
+	}
+}
+
+
+dlc_tgp_great_wall_jinbei = {
+	provinces = {
+		8627 8950 8953 8954 8960
 	}
 }

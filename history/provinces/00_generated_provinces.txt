@@ -10197,7 +10197,7 @@
 			district = {
 				type = grain_district
 				level = 6
-				buildings = { beer_brewery_2 }
+				buildings = { fruit_gardens_1 beer_brewery_2 }
 			}
 		}
 	}
@@ -10409,7 +10409,7 @@
 			district = {
 				type = grain_district
 				level = 6
-				buildings = { beer_brewery_2 }
+				buildings = { local_flax_1 small_rice_paddies_1 small_sugar_plantations_1 }
 			}
 			district = {
 				type = al_azhar_university_district
@@ -10561,7 +10561,7 @@
 			district = {
 				type = rice_district
 				level = 6
-				buildings = { rice_winery_2 }
+				buildings = { fruit_gardens_1 small_sugar_plantations_1 rice_winery_2 }
 			}
 		}
 	}
@@ -10720,7 +10720,7 @@
 			district = {
 				type = cotton_district
 				level = 6
-				buildings = { irrigation_network_2 }
+				buildings = { minor_grain_farms_1 small_rice_paddies_1 small_sugar_plantations_1 }
 			}
 		}
 	}
@@ -10877,7 +10877,7 @@
 			district = {
 				type = cotton_district
 				level = 6
-				buildings = { textiles_cotton_building_3 quilting_workshop_3 }
+				buildings = { local_flax_1 minor_grain_farms_1 textiles_cotton_building_3 }
 			}
 		}
 	}
@@ -20927,9 +20927,11 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		special_district_slot = eu5_nounkonkan_mines_01_district
 		holding = castle_holding
 		province_size = 2
 		districts = {
+			district = { type = eu5_nounkonkan_mines_01_district level = 1 }
 			district = {
 				type = castle_holding_district
 				level = 3
@@ -20959,9 +20961,11 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		special_district_slot = eu5_kouroussa_mines_01_district
 		holding = city_holding
 		province_size = 1
 		districts = {
+			district = { type = eu5_kouroussa_mines_01_district level = 1 }
 			district = {
 				type = city_holding_district
 				level = 3
@@ -23523,6 +23527,10 @@
 	867.1.1 = {
 		special_building_slot = mali_mines_01
 	}
+
+	1337.4.1 = {
+		special_district_slot = mali_mines_01_district
+	}
 }
 15666 = {
 	culture = malinke
@@ -24624,6 +24632,10 @@
 	faith = sunni
 	rite = maliki
 	holding = none
+
+	1337.4.1 = {
+		special_district_slot = eu5_taoudenni_mines_01_district
+	}
 }
 15738 = {
 	culture = butr
@@ -24634,6 +24646,7 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		special_district_slot = taghaza_mines_01_district
 		holding = castle_holding
 		province_size = 1
 		districts = {
@@ -24648,9 +24661,8 @@
 				buildings = { archery_ranges_1 militia_camps_1 }
 			}
 			district = {
-				type = salt_district
+				type = mine_district
 				level = 6
-				buildings = { pan_smith_2 sack_basket_weavers_2 }
 			}
 			district = {
 				type = taghaza_mines_01_district
@@ -28287,6 +28299,10 @@
 	culture = yutonahua
 	faith = pagan
 	holding = none
+
+	1337.4.1 = {
+		special_district_slot = eu5_zain_mines_01_district
+	}
 }
 18211 = {
 	culture = yutonahua
@@ -43500,6 +43516,10 @@
 	culture = otopamean
 	faith = pagan
 	holding = none
+
+	1337.4.1 = {
+		special_district_slot = eu5_mo_o_ti_mines_01_district
+	}
 }
 17697 = {
 	culture = otopamean
@@ -47801,9 +47821,8 @@
 				buildings = { militia_camps_1 }
 			}
 			district = {
-				type = grain_district
+				type = mine_district
 				level = 4
-				buildings = { beer_brewery_2 }
 			}
 		}
 	}
@@ -47852,9 +47871,11 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		special_district_slot = eu5_llacsapallanca_mines_01_district
 		holding = city_holding
 		province_size = 1
 		districts = {
+			district = { type = eu5_llacsapallanca_mines_01_district level = 1 }
 			district = {
 				type = city_holding_district
 				level = 3
@@ -48391,7 +48412,7 @@
 				level = 1
 			}
 			district = {
-				type = stone_district
+				type = mine_district
 				level = 6
 			}
 		}
@@ -48422,6 +48443,10 @@
 	culture = ckunsa
 	faith = pagan
 	holding = none
+
+	1337.4.1 = {
+		special_district_slot = eu5_ccantumarcani_mines_01_district
+	}
 }
 19885 = {
 	culture = ckunsa
@@ -55737,6 +55762,10 @@
 	faith = sunni
 	rite = shafii
 	holding = none
+
+	1337.4.1 = {
+		special_district_slot = pansjhir_mines_01_district
+	}
 }
 5433 = {
 	culture = tajik
@@ -55758,10 +55787,8 @@
 	rite = shafii
 	holding = castle_holding
 	1066.1.1 = {
-		special_building = pansjhir_mines_01
 	}
 	867.1.1 = {
-		special_building = pansjhir_mines_01
 	}
 }
 5437 = {
@@ -56982,6 +57009,10 @@
 	rite = imami
 	holding = nomad_holding
 	special_building = nishapur_mines_01
+
+	1337.4.1 = {
+		special_district_slot = nishapur_mines_01_district
+	}
 }
 5620 = {
 	culture = persian
@@ -83061,7 +83092,23 @@
 8665 = {
 	culture = han
 	faith = confucian_faith
-	holding = none
+	holding = castle_holding
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = { castle_training_grounds_2 castle_great_hall_2 }
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
 }
 8662 = {
 	culture = han
@@ -83115,12 +83162,44 @@
 8664 = {
 	culture = han
 	faith = confucian_faith
-	holding = none
+	holding = castle_holding
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = { castle_training_grounds_2 castle_great_hall_2 }
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
 }
 8666 = {
 	culture = han
 	faith = confucian_faith
-	holding = none
+	holding = castle_holding
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = { castle_training_grounds_2 castle_great_hall_2 }
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
 }
 8667 = {
 	culture = han
@@ -83523,7 +83602,23 @@
 8932 = {
 	culture = mongol
 	faith = tengri_pagan
-	holding = none
+	holding = castle_holding
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = { castle_training_grounds_2 castle_great_hall_2 }
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
 }
 8934 = {
 	culture = mongol
@@ -83620,12 +83715,44 @@
 8938 = {
 	culture = mongol
 	faith = tengri_pagan
-	holding = none
+	holding = castle_holding
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = { castle_training_grounds_2 castle_great_hall_2 }
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
 }
 8939 = {
 	culture = mongol
 	faith = tengri_pagan
-	holding = none
+	holding = castle_holding
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = { castle_training_grounds_2 castle_great_hall_2 }
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
 }
 8940 = {
 	culture = mongol
@@ -83645,7 +83772,23 @@
 8944 = {
 	culture = mongol
 	faith = tengri_pagan
-	holding = none
+	holding = castle_holding
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = { castle_training_grounds_2 castle_great_hall_2 }
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
 }
 8945 = {
 	culture = han
@@ -91520,7 +91663,23 @@
 8594 = {
 	culture = mongol
 	faith = shamanism
-	holding = none
+	holding = castle_holding
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = { castle_training_grounds_2 castle_great_hall_2 }
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
 }
 8591 = {
 	culture = mongol
@@ -91609,7 +91768,23 @@
 8605 = {
 	culture = jurchen
 	faith = shamanism
-	holding = none
+	holding = castle_holding
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = { castle_training_grounds_2 castle_great_hall_2 }
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
 }
 8606 = {
 	culture = jurchen
@@ -91849,7 +92024,23 @@
 8619 = {
 	culture = mongol
 	faith = tengri_pagan
-	holding = none
+	holding = castle_holding
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = { castle_training_grounds_2 castle_great_hall_2 }
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
 }
 8621 = {
 	culture = mongol
@@ -96292,7 +96483,7 @@
 				level = 2
 			}
 			district = {
-				type = cattle_district
+				type = mine_district
 				level = 2
 			}
 		}
@@ -96307,6 +96498,10 @@
 	culture = bouxcuengh
 	faith = moism
 	holding = none
+
+	1337.4.1 = {
+		special_district_slot = eu5_xincheng_annan_mines_01_district
+	}
 }
 9256 = {
 	culture = hmong
@@ -103673,7 +103868,23 @@
 9701 = {
 	culture = han
 	faith = confucian_faith
-	holding = none
+	holding = castle_holding
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = { castle_training_grounds_2 castle_great_hall_2 }
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
 }
 9695 = {
 	culture = han
@@ -103702,7 +103913,23 @@
 9698 = {
 	culture = han
 	faith = confucian_faith
-	holding = none
+	holding = castle_holding
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = { castle_training_grounds_2 castle_great_hall_2 }
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
 }
 9699 = {
 	culture = han
@@ -103717,7 +103944,23 @@
 9704 = {
 	culture = han
 	faith = confucian_faith
-	holding = none
+	holding = castle_holding
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = { castle_training_grounds_2 castle_great_hall_2 }
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
 }
 9702 = {
 	culture = han
@@ -103776,7 +104019,23 @@
 9705 = {
 	culture = han
 	faith = confucian_faith
-	holding = none
+	holding = castle_holding
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = { castle_training_grounds_2 castle_great_hall_2 }
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
 }
 9708 = {
 	culture = han
@@ -103913,7 +104172,23 @@
 9714 = {
 	culture = han
 	faith = confucian_faith
-	holding = none
+	holding = castle_holding
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = { castle_training_grounds_2 castle_great_hall_2 }
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
 }
 9715 = {
 	culture = han
@@ -104175,7 +104450,23 @@
 9728 = {
 	culture = han
 	faith = confucian_faith
-	holding = none
+	holding = castle_holding
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = { castle_training_grounds_2 castle_great_hall_2 }
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
 }
 9730 = {
 	culture = han
@@ -129452,9 +129743,8 @@
 				level = 3
 			}
 			district = {
-				type = mine_district
+				type = cotton_district
 				level = 6
-				buildings = { mint_1 jewellers_workshop_2 }
 			}
 		}
 	}
@@ -129794,7 +130084,7 @@
 				buildings = { travellers_inns_2 noble_townhouses_2 }
 			}
 			district = {
-				type = sugar_district
+				type = cotton_district
 				level = 4
 				buildings = { seasonal_labor_shared_1 }
 			}
@@ -130699,9 +130989,8 @@
 				buildings = { brewers_guild_2 guild_builders_2 }
 			}
 			district = {
-				type = grain_district
+				type = cotton_district
 				level = 6
-				buildings = { beer_brewery_2 }
 			}
 		}
 	}
@@ -130906,9 +131195,8 @@
 				buildings = { bureaucratic_mint_3 }
 			}
 			district = {
-				type = rice_district
+				type = cotton_district
 				level = 6
-				buildings = { rice_winery_2 }
 			}
 		}
 	}
@@ -131038,9 +131326,8 @@
 				buildings = { burgage_plots_3 noble_townhouses_3 communal_wells_3 }
 			}
 			district = {
-				type = rice_district
+				type = cotton_district
 				level = 6
-				buildings = { rice_straw_weaving_2 husk_warehouse_2 }
 			}
 		}
 	}
@@ -139556,7 +139843,6 @@
 	faith = shaiva_faith
 	holding = castle_holding
 	867.1.1 = {
-		special_building_slot = kollur_mines_01
 	}
 
 	# CK3 Beta 1178 opening configuration
@@ -145596,9 +145882,8 @@
 				buildings = { noble_townhouses_2 }
 			}
 			district = {
-				type = cotton_district
+				type = mine_district
 				level = 4
-				buildings = { textiles_cotton_building_2 }
 			}
 		}
 	}
@@ -145632,9 +145917,11 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		special_district_slot = kollur_mines_01_district
 		holding = church_holding
 		province_size = 1
 		districts = {
+			district = { type = kollur_mines_01_district level = 1 }
 			district = {
 				type = temple_holding_district
 				level = 3
@@ -153804,9 +154091,8 @@
 				buildings = { militia_camps_1 }
 			}
 			district = {
-				type = fish_district
+				type = cotton_district
 				level = 4
-				buildings = { cooper_workshop_2 }
 			}
 		}
 	}
@@ -155722,9 +156008,11 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		special_district_slot = eu5_sikar_mines_01_district
 		holding = castle_holding
 		province_size = 4
 		districts = {
+			district = { type = eu5_sikar_mines_01_district level = 1 }
 			district = {
 				type = castle_holding_district
 				level = 2
@@ -155997,9 +156285,8 @@
 				buildings = { burgage_plots_2 }
 			}
 			district = {
-				type = fish_district
+				type = cotton_district
 				level = 6
-				buildings = { fish_saltery_2 pearl_fishery_1 }
 			}
 		}
 	}
@@ -171126,6 +171413,7 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		special_district_slot = srebrenica_mines_01_district
 		holding = none
 	}
 }
@@ -174710,9 +174998,8 @@
 				buildings = { meadowlands_pastures_1 }
 			}
 			district = {
-				type = ceramics_district
+				type = mine_district
 				level = 6
-				buildings = { fritware_workshops_3 ceramics_glazeworks_3 }
 			}
 		}
 	}
@@ -174721,6 +175008,10 @@
 	culture = carantanian
 	faith = catholic
 	holding = none
+
+	1337.4.1 = {
+		special_district_slot = eu5_tolmin_mines_01_district
+	}
 }
 4936 = {
 	culture = carantanian
@@ -178609,9 +178900,8 @@
 				buildings = { roadside_inns_1 }
 			}
 			district = {
-				type = grain_district
+				type = amber_district
 				level = 6
-				buildings = { beer_brewery_2 }
 			}
 		}
 	}
@@ -180418,6 +180708,10 @@
 	holding = none
 	867.1.1 = {
 		special_building_slot = kremnica_mines_01
+	}
+
+	1337.4.1 = {
+		special_district_slot = kremnica_mines_01_district
 	}
 }
 2854 = {
@@ -182291,6 +182585,7 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		special_district_slot = turda_mines_01_district
 		holding = castle_holding
 		province_size = 2
 		districts = {
@@ -182304,9 +182599,8 @@
 				level = 3
 			}
 			district = {
-				type = salt_district
+				type = mine_district
 				level = 6
-				buildings = { pan_smith_2 }
 			}
 			district = {
 				type = turda_mines_01_district
@@ -206836,7 +207130,7 @@
 				buildings = { roadside_inns_1 }
 			}
 			district = {
-				type = grain_district
+				type = wool_district
 				level = 4
 			}
 		}
@@ -206989,9 +207283,8 @@
 				buildings = { archery_ranges_1 militia_camps_1 }
 			}
 			district = {
-				type = fish_district
+				type = wool_district
 				level = 4
-				buildings = { fish_saltery_2 }
 			}
 		}
 	}
@@ -207151,7 +207444,7 @@
 				buildings = { day_market_2 fabric_market_2 }
 			}
 			district = {
-				type = medicaments_district
+				type = wool_district
 				level = 4
 				buildings = { seasonal_labor_shared_1 }
 			}
@@ -207387,9 +207680,8 @@
 				level = 1
 			}
 			district = {
-				type = forestry_district
+				type = wool_district
 				level = 4
-				buildings = { hunting_lodges_2 }
 			}
 			district = {
 				type = offas_dyke_01_district
@@ -207432,9 +207724,9 @@
 				buildings = { armorer_1 militia_camps_1 }
 			}
 			district = {
-				type = grain_district
+				type = wool_district
 				level = 4
-				buildings = { beer_brewery_2 }
+				buildings = { textiles_wool_building_1 }
 			}
 		}
 	}
@@ -207668,9 +207960,8 @@
 				level = 1
 			}
 			district = {
-				type = forestry_district
+				type = wool_district
 				level = 6
-				buildings = { hunting_lodges_2 charcoal_production_1 }
 			}
 		}
 	}
@@ -207809,9 +208100,9 @@
 				buildings = { communal_wells_1 }
 			}
 			district = {
-				type = grain_district
+				type = wool_district
 				level = 4
-				buildings = { beer_brewery_2 }
+				buildings = { textiles_wool_building_1 }
 			}
 		}
 	}
@@ -207932,9 +208223,8 @@
 				buildings = { militia_camps_1 armorer_1 }
 			}
 			district = {
-				type = ceramics_district
+				type = wool_district
 				level = 6
-				buildings = { fritware_workshops_3 ceramics_glazeworks_3 }
 			}
 			district = {
 				type = hadrians_wall_01_district
@@ -208024,9 +208314,8 @@
 				buildings = { archery_ranges_1 militia_camps_1 }
 			}
 			district = {
-				type = fish_district
+				type = wool_district
 				level = 4
-				buildings = { fish_saltery_2 }
 			}
 		}
 	}
@@ -208085,9 +208374,8 @@
 				buildings = { mustering_grounds_1 archery_ranges_1 }
 			}
 			district = {
-				type = cattle_district
+				type = wool_district
 				level = 6
-				buildings = { cheesemaker_2 }
 			}
 		}
 	}
@@ -208163,7 +208451,7 @@
 			district = {
 				type = villages_district
 				level = 3
-				buildings = { market_fairs_1 local_bailiffs_1 }
+				buildings = { village_weaver_1 local_bailiffs_1 }
 			}
 		}
 	}
@@ -208230,9 +208518,8 @@
 				buildings = { archery_ranges_1 militia_camps_1 }
 			}
 			district = {
-				type = forestry_district
+				type = wool_district
 				level = 4
-				buildings = { hunting_lodges_2 charcoal_production_1 }
 			}
 		}
 	}
@@ -208304,9 +208591,9 @@
 				buildings = { militia_camps_1 mustering_grounds_1 }
 			}
 			district = {
-				type = mine_district
+				type = wool_district
 				level = 4
-				buildings = { tool_smith_2 }
+				buildings = { textiles_wool_building_1 }
 			}
 		}
 	}
@@ -213116,7 +213403,7 @@
 			district = {
 				type = ceramics_district
 				level = 6
-				buildings = { fritware_workshops_4 }
+				buildings = { minor_silk_plantation_1 fritware_workshops_4 }
 			}
 			district = {
 				type = alhambra_01_district
@@ -213282,7 +213569,7 @@
 			district = {
 				type = sugar_district
 				level = 5
-				buildings = { seasonal_labor_shared_1 fishing_villages_1 }
+				buildings = { small_winery_1 seasonal_labor_shared_1 fishing_villages_1 }
 			}
 		}
 	}
@@ -214215,9 +214502,11 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		special_district_slot = eu5_bilbao_mines_01_district
 		holding = castle_holding
 		province_size = 3
 		districts = {
+			district = { type = eu5_bilbao_mines_01_district level = 1 }
 			district = {
 				type = castle_holding_district
 				level = 3
@@ -215996,9 +216285,8 @@
 				level = 1
 			}
 			district = {
-				type = fruit_district
+				type = mine_district
 				level = 6
-				buildings = { cooper_workshop_1 cider_brewery_2 }
 			}
 		}
 	}
@@ -216007,6 +216295,10 @@
 	culture = castilian
 	faith = catholic
 	holding = none
+
+	1337.4.1 = {
+		special_district_slot = eu5_almaden_mines_01_district
+	}
 }
 2399 = {
 	culture = castilian
@@ -222265,9 +222557,11 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		special_district_slot = eu5_piazza_mines_01_district
 		holding = city_holding
 		province_size = 1
 		districts = {
+			district = { type = eu5_piazza_mines_01_district level = 1 }
 			district = {
 				type = city_holding_district
 				level = 3
@@ -222416,7 +222710,7 @@
 				buildings = { bureaucratic_mint_3 }
 			}
 			district = {
-				type = sugar_district
+				type = mine_district
 				level = 6
 			}
 			district = {
@@ -222456,9 +222750,11 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		special_district_slot = eu5_mazara_mines_01_district
 		holding = city_holding
 		province_size = 2
 		districts = {
+			district = { type = eu5_mazara_mines_01_district level = 1 }
 			district = {
 				type = city_holding_district
 				level = 3
@@ -223463,7 +223759,7 @@
 			district = {
 				type = guild_district
 				level = 3
-				buildings = { guild_butchery_2 guild_goldsmiths_2 guild_tannery_2 }
+				buildings = { guild_glassmakers_2 guild_goldsmiths_2 guild_tannery_2 }
 			}
 			district = {
 				type = urban_housing_district
@@ -225382,9 +225678,9 @@
 				buildings = { city_watch_2 gatehouses_2 }
 			}
 			district = {
-				type = dyes_district
+				type = flax_district
 				level = 6
-				buildings = { dyeing_pits_2 }
+				buildings = { textiles_flax_building_1 }
 			}
 		}
 	}
@@ -227222,6 +227518,7 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		special_district_slot = rammelsberg_mines_01_district
 		holding = city_holding
 		province_size = 1
 		districts = {
@@ -229001,7 +229298,7 @@
 				level = 3
 			}
 			district = {
-				type = millet_district
+				type = mine_district
 				level = 6
 				buildings = { sheep_pastures_1 }
 			}
@@ -229043,9 +229340,11 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		special_district_slot = eu5_freiberg_mines_01_district
 		holding = city_holding
 		province_size = 2
 		districts = {
+			district = { type = eu5_freiberg_mines_01_district level = 1 }
 			district = {
 				type = city_holding_district
 				level = 3
@@ -233845,9 +234144,9 @@
 				buildings = { travellers_inns_1 }
 			}
 			district = {
-				type = grain_district
+				type = fish_district
 				level = 6
-				buildings = { beer_brewery_2 fishing_villages_1 }
+				buildings = { fishing_villages_1 }
 			}
 			district = {
 				type = lund_cathedral_01_district
@@ -233901,6 +234200,7 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		special_district_slot = falun_mines_01_district
 		holding = none
 	}
 }
@@ -236298,9 +236598,8 @@
 				buildings = { day_market_2 merchant_lodging_houses_1 }
 			}
 			district = {
-				type = millet_district
+				type = mine_district
 				level = 6
-				buildings = { double_cropping_2 }
 			}
 		}
 	}
@@ -236344,6 +236643,7 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		special_district_slot = kutna_hora_mines_01_district
 		holding = castle_holding
 		province_size = 2
 		districts = {

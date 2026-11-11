@@ -1,0 +1,176 @@
+﻿on_game_start = {
+	on_actions = { eu5_historical_goods_setup }
+}
+
+eu5_historical_goods_setup = {
+	effect = {
+		if = {
+			limit = { game_start_date = 1337.4.1 }
+			title:c_bedfordshire = {
+				add_county_modifier = eu5_goods_england_wool_base
+			}
+			title:c_berkshire = {
+				add_county_modifier = eu5_goods_england_wool_base
+			}
+			title:c_bishnupur = {
+				add_county_modifier = eu5_goods_bengal_cotton_base
+			}
+			title:c_bogra = {
+				add_county_modifier = eu5_goods_bengal_cotton_base
+			}
+			title:c_buckinghamshire = {
+				add_county_modifier = eu5_goods_england_wool_base
+			}
+			title:c_buhayra = {
+				add_county_modifier = eu5_goods_nile_delta_fruit_base
+				add_county_modifier = eu5_goods_nile_delta_wheat_base
+			}
+			title:c_cairo = {
+				add_county_modifier = eu5_goods_nile_delta_fiber_crops_base_flax
+				add_county_modifier = eu5_goods_nile_delta_rice_base
+				add_county_modifier = eu5_goods_nile_delta_sugar_base
+				add_county_modifier = eu5_goods_nile_delta_wheat_base
+			}
+			title:c_cumberland = {
+				add_county_modifier = eu5_goods_england_wool_base
+			}
+			title:c_dakahliyya = {
+				add_county_modifier = eu5_goods_nile_delta_fruit_base
+				add_county_modifier = eu5_goods_nile_delta_rice_base
+				add_county_modifier = eu5_goods_nile_delta_sugar_base
+			}
+			title:c_devkot = {
+				add_county_modifier = eu5_goods_bengal_cotton_base
+			}
+			title:c_durham = {
+				add_county_modifier = eu5_goods_england_wool_base
+			}
+			title:c_east_flanders = {
+				add_county_modifier = eu5_goods_flanders_fine_cloth_base
+			}
+			title:c_east_riding = {
+				add_county_modifier = eu5_goods_england_wool_base
+			}
+			title:c_florence = {
+				add_county_modifier = eu5_goods_tuscany_fine_cloth_base
+			}
+			title:c_gharbiyya = {
+				add_county_modifier = eu5_goods_nile_delta_cotton_base
+				add_county_modifier = eu5_goods_nile_delta_rice_base
+				add_county_modifier = eu5_goods_nile_delta_sugar_base
+				add_county_modifier = eu5_goods_nile_delta_wheat_base
+			}
+			title:c_gohilwad = {
+				add_county_modifier = eu5_goods_gujarat_cotton_base
+			}
+			title:c_granada = {
+				add_county_modifier = eu5_goods_alpujarras_silk_base
+				add_county_modifier = eu5_goods_granada_pottery_base
+			}
+			title:c_halar = {
+				add_county_modifier = eu5_goods_gujarat_cotton_base
+			}
+			title:c_hampshire = {
+				add_county_modifier = eu5_goods_england_wool_base
+			}
+			title:c_herefordshire = {
+				add_county_modifier = eu5_goods_england_wool_base
+			}
+			title:c_jhalavad = {
+				add_county_modifier = eu5_goods_gujarat_cotton_base
+			}
+			title:c_kent = {
+				add_county_modifier = eu5_goods_england_wool_base
+			}
+			title:c_khekassala = {
+				add_county_modifier = eu5_goods_gujarat_cotton_base
+			}
+			title:c_lancashire = {
+				add_county_modifier = eu5_goods_england_wool_base
+			}
+			title:c_lata = {
+				add_county_modifier = eu5_goods_gujarat_cotton_base
+			}
+			title:c_leicestershire = {
+				add_county_modifier = eu5_goods_england_wool_base
+				add_county_modifier = eu5_goods_yorkshire_cloth_base
+			}
+			title:c_long_range = {
+				add_county_modifier = eu5_goods_newfoundland_fishing_grounds_base
+			}
+			title:c_lower_prussia = {
+				add_county_modifier = eu5_goods_amber_coast_base
+			}
+			title:c_lucca = {
+				add_county_modifier = eu5_goods_tuscany_fine_cloth_base
+			}
+			title:c_magua = {
+				add_county_modifier = eu5_goods_amber_coast_base
+			}
+			title:c_malaga = {
+				add_county_modifier = eu5_goods_malaga_sweet_wine_base
+			}
+			title:c_malmohus = {
+				add_county_modifier = eu5_goods_skane_herring_market
+			}
+			title:c_mymensingh = {
+				add_county_modifier = eu5_goods_bengal_cotton_base
+			}
+			title:c_nadia = {
+				add_county_modifier = eu5_goods_bengal_cotton_base
+			}
+			title:c_north_riding = {
+				add_county_modifier = eu5_goods_yorkshire_cloth_base
+			}
+			title:c_northamptonshire = {
+				add_county_modifier = eu5_goods_england_wool_base
+			}
+			title:c_northumberland = {
+				add_county_modifier = eu5_goods_england_wool_base
+			}
+			title:c_nottinghamshire = {
+				add_county_modifier = eu5_goods_england_wool_base
+			}
+			title:c_oxfordshire = {
+				add_county_modifier = eu5_goods_england_wool_base
+			}
+			title:c_pandua = {
+				add_county_modifier = eu5_goods_bengal_cotton_base
+			}
+			title:c_sharqiyya = {
+				add_county_modifier = eu5_goods_nile_delta_cotton_base
+				add_county_modifier = eu5_goods_nile_delta_fiber_crops_base_flax
+				add_county_modifier = eu5_goods_nile_delta_legumes_base
+			}
+			title:c_sonargaon = {
+				add_county_modifier = eu5_goods_bengal_cotton_base
+			}
+			title:c_taizz = {
+				add_county_modifier = eu5_goods_coffee_yemen_base
+			}
+			title:c_ternate = {
+				add_county_modifier = eu5_goods_spice_islands_base
+			}
+			title:c_tidore = {
+				add_county_modifier = eu5_goods_spice_islands_base
+			}
+			title:c_upper_prussia = {
+				add_county_modifier = eu5_goods_amber_coast_base
+			}
+			title:c_venice = {
+				add_county_modifier = eu5_goods_venice_glass_base
+			}
+			title:c_warwickshire = {
+				add_county_modifier = eu5_goods_england_wool_base
+				add_county_modifier = eu5_goods_yorkshire_cloth_base
+			}
+			title:c_west_flanders = {
+				add_county_modifier = eu5_goods_flanders_fine_cloth_base
+			}
+			title:c_west_riding = {
+				add_county_modifier = eu5_goods_england_wool_base
+				add_county_modifier = eu5_goods_yorkshire_cloth_base
+			}
+		}
+	}
+}
