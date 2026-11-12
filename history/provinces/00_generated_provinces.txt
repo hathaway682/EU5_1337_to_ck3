@@ -3772,8 +3772,10 @@
 				level = 2
 			}
 			district = {
-				type = mine_district
+				type = fish_district
 				level = 3
+			
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -7706,6 +7708,8 @@
 			district = {
 				type = fish_district
 				level = 6
+			
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -8165,7 +8169,7 @@
 			district = {
 				type = fish_district
 				level = 5
-				buildings = { pearl_fishery_2 pearl_fishery_1 }
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -21449,7 +21453,7 @@
 			district = {
 				type = fish_district
 				level = 4
-				buildings = { netmakers_2 }
+				buildings = { pearl_fishery_1 netmakers_2 }
 			}
 		}
 	}
@@ -42941,9 +42945,9 @@
 				buildings = { militia_camps_1 armorer_1 }
 			}
 			district = {
-				type = salt_district
+				type = fish_district
 				level = 4
-				buildings = { pan_smith_2 }
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -58069,7 +58073,7 @@
 			district = {
 				type = fish_district
 				level = 6
-				buildings = { fish_saltery_2 netmakers_2 pearl_fishery_1 }
+				buildings = { pearl_fishery_1 fish_saltery_2 netmakers_2 }
 			}
 			district = {
 				type = quanzhou_seaport_01_district
@@ -59890,9 +59894,9 @@
 				buildings = { civic_projects_2 }
 			}
 			district = {
-				type = ceramics_district
+				type = rice_district
 				level = 5
-				buildings = { fritware_workshops_2 ceramics_glazeworks_2 }
+				
 			}
 		}
 	}
@@ -61928,9 +61932,9 @@
 				buildings = { civic_projects_2 }
 			}
 			district = {
-				type = silk_district
+				type = rice_district
 				level = 6
-				buildings = { textiles_silk_building_2 dyehouse_1 }
+				
 			}
 		}
 	}
@@ -63464,9 +63468,9 @@
 				buildings = { civic_projects_2 }
 			}
 			district = {
-				type = ceramics_district
+				type = rice_district
 				level = 6
-				buildings = { fritware_workshops_4 }
+				
 			}
 		}
 	}
@@ -63751,7 +63755,7 @@
 				level = 1
 			}
 			district = {
-				type = stone_district
+				type = rice_district
 				level = 2
 			}
 		}
@@ -64188,9 +64192,9 @@
 				buildings = { bureaucratic_mint_3 }
 			}
 			district = {
-				type = furs_district
+				type = cotton_district
 				level = 6
-				buildings = { furs_tannery_2 }
+				
 			}
 		}
 	}
@@ -64696,7 +64700,7 @@
 				buildings = { bureaucratic_mint_3 }
 			}
 			district = {
-				type = silk_district
+				type = rice_district
 				level = 6
 				buildings = { fishing_villages_2 }
 			}
@@ -66407,9 +66411,9 @@
 				buildings = { noble_townhouses_2 burgage_plots_2 }
 			}
 			district = {
-				type = ceramics_district
+				type = rice_district
 				level = 6
-				buildings = { fritware_workshops_2 }
+				
 			}
 		}
 	}
@@ -70887,9 +70891,9 @@
 				level = 3
 			}
 			district = {
-				type = fruit_district
+				type = fish_district
 				level = 4
-				buildings = { drying_terraces_2 }
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -71877,7 +71881,7 @@
 			district = {
 				type = fish_district
 				level = 4
-				buildings = { netmakers_2 pearl_fishery_1 }
+				buildings = { pearl_fishery_1 netmakers_2 }
 			}
 		}
 	}
@@ -74563,7 +74567,7 @@
 			district = {
 				type = fish_district
 				level = 4
-				buildings = { netmakers_2 }
+				buildings = { pearl_fishery_1 netmakers_2 }
 			}
 		}
 	}
@@ -75298,7 +75302,7 @@
 			district = {
 				type = fish_district
 				level = 5
-				buildings = { netmakers_2 pearl_fishery_1 }
+				buildings = { pearl_fishery_1 netmakers_2 }
 			}
 		}
 	}
@@ -80418,52 +80422,52 @@
 	}
 }
 8247 = {
-	culture = serbi
+	culture = shiwei
 	faith = tengri_pagan
 	holding = nomad_holding
 }
 8248 = {
-	culture = serbi
+	culture = shiwei
 	faith = shamanism
 	holding = none
 }
 8249 = {
-	culture = serbi
+	culture = shiwei
 	faith = shamanism
 	holding = none
 }
 8250 = {
-	culture = serbi
+	culture = shiwei
 	faith = shamanism
 	holding = none
 }
 8252 = {
-	culture = serbi
+	culture = shiwei
 	faith = shamanism
 	holding = none
 }
 8251 = {
-	culture = serbi
+	culture = shiwei
 	faith = tengri_pagan
 	holding = nomad_holding
 }
 8253 = {
-	culture = serbi
+	culture = shiwei
 	faith = shamanism
 	holding = tribal_holding
 }
 8254 = {
-	culture = serbi
+	culture = shiwei
 	faith = tengri_pagan
 	holding = none
 }
 8255 = {
-	culture = serbi
+	culture = shiwei
 	faith = shamanism
 	holding = tribal_holding
 }
 8256 = {
-	culture = serbi
+	culture = shiwei
 	faith = shamanism
 	holding = none
 }
@@ -80517,32 +80521,32 @@
 	holding = none
 }
 8263 = {
-	culture = serbi
+	culture = shiwei
 	faith = shamanism
 	holding = none
 }
 8262 = {
-	culture = serbi
+	culture = shiwei
 	faith = shamanism
 	holding = nomad_holding
 }
 8264 = {
-	culture = serbi
+	culture = shiwei
 	faith = shamanism
 	holding = none
 }
 8265 = {
-	culture = serbi
+	culture = shiwei
 	faith = shamanism
 	holding = none
 }
 8266 = {
-	culture = serbi
+	culture = shiwei
 	faith = tengri_pagan
 	holding = none
 }
 8267 = {
-	culture = serbi
+	culture = shiwei
 	faith = shamanism
 	holding = none
 }
@@ -81033,27 +81037,27 @@
 	holding = none
 }
 8325 = {
-	culture = serbi
+	culture = shiwei
 	faith = shamanism
 	holding = none
 }
 8321 = {
-	culture = serbi
+	culture = shiwei
 	faith = shamanism
 	holding = nomad_holding
 }
 8322 = {
-	culture = serbi
+	culture = shiwei
 	faith = tengri_pagan
 	holding = none
 }
 8323 = {
-	culture = serbi
+	culture = shiwei
 	faith = shamanism
 	holding = none
 }
 8324 = {
-	culture = serbi
+	culture = shiwei
 	faith = shamanism
 	holding = none
 }
@@ -97373,7 +97377,7 @@
 			district = {
 				type = fish_district
 				level = 4
-				buildings = { netmakers_2 pearl_fishery_1 }
+				buildings = { pearl_fishery_1 netmakers_2 }
 			}
 		}
 	}
@@ -97491,7 +97495,7 @@
 			district = {
 				type = fish_district
 				level = 6
-				buildings = { fish_saltery_2 pearl_fishery_1 }
+				buildings = { pearl_fishery_1 fish_saltery_2 }
 			}
 		}
 	}
@@ -112073,9 +112077,9 @@
 				level = 3
 			}
 			district = {
-				type = rice_district
+				type = fish_district
 				level = 5
-				buildings = { rice_winery_2 rice_straw_weaving_2 }
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -112307,9 +112311,9 @@
 				level = 1
 			}
 			district = {
-				type = fruit_district
+				type = fish_district
 				level = 6
-				buildings = { cider_brewery_2 }
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -114964,7 +114968,7 @@
 			district = {
 				type = fish_district
 				level = 4
-				buildings = { netmakers_2 pearl_fishery_1 }
+				buildings = { pearl_fishery_1 netmakers_2 }
 			}
 		}
 	}
@@ -115561,9 +115565,9 @@
 				buildings = { mustering_grounds_1 archery_ranges_1 }
 			}
 			district = {
-				type = mine_district
+				type = fish_district
 				level = 6
-				buildings = { mint_2 }
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -116757,9 +116761,9 @@
 				buildings = { cereal_stockpile_1 }
 			}
 			district = {
-				type = medicaments_district
+				type = fish_district
 				level = 4
-				buildings = { seasonal_labor_shared_1 }
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -119196,9 +119200,9 @@
 				buildings = { suburb_2 }
 			}
 			district = {
-				type = wine_district
+				type = forestry_district
 				level = 4
-				buildings = { seasonal_labor_shared_1 }
+				
 			}
 		}
 	}
@@ -120665,9 +120669,9 @@
 				buildings = { mustering_grounds_1 archery_ranges_1 }
 			}
 			district = {
-				type = fruit_district
+				type = fish_district
 				level = 5
-				buildings = { fruit_distillery_1 cider_brewery_2 }
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -121092,9 +121096,9 @@
 				level = 3
 			}
 			district = {
-				type = hemp_district
+				type = fish_district
 				level = 6
-				buildings = { breaking_mill_2 }
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -130462,7 +130466,7 @@
 				buildings = { reception_suites_3 confectionaries_3 }
 			}
 			district = {
-				type = ivory_district
+				type = sugar_district
 				level = 6
 			}
 		}
@@ -130656,9 +130660,9 @@
 				buildings = { suburb_2 }
 			}
 			district = {
-				type = ivory_district
+				type = rice_district
 				level = 4
-				buildings = { sacred_elephant_compound_1 }
+				
 			}
 		}
 	}
@@ -132492,9 +132496,9 @@
 				buildings = { reception_suites_3 confectionaries_3 }
 			}
 			district = {
-				type = ivory_district
+				type = grain_district
 				level = 6
-				buildings = { sacred_elephant_compound_2 military_elephant_compound_2 }
+				
 			}
 		}
 	}
@@ -132635,9 +132639,9 @@
 				level = 2
 			}
 			district = {
-				type = dyes_district
+				type = rice_district
 				level = 4
-				buildings = { small_rice_paddies_1 }
+				
 			}
 		}
 	}
@@ -139801,6 +139805,8 @@
 			district = {
 				type = fish_district
 				level = 4
+			
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -141648,7 +141654,7 @@
 			district = {
 				type = fish_district
 				level = 4
-				buildings = { netmakers_2 }
+				buildings = { pearl_fishery_1 netmakers_2 }
 			}
 		}
 	}
@@ -143504,7 +143510,7 @@
 			district = {
 				type = fish_district
 				level = 4
-				buildings = { netmakers_2 pearl_fishery_1 }
+				buildings = { pearl_fishery_1 netmakers_2 }
 			}
 		}
 	}
@@ -143741,7 +143747,7 @@
 			district = {
 				type = fish_district
 				level = 4
-				buildings = { netmakers_2 pearl_fishery_1 }
+				buildings = { pearl_fishery_1 netmakers_2 }
 			}
 		}
 	}
@@ -144131,9 +144137,9 @@
 				buildings = { castle_court_2 }
 			}
 			district = {
-				type = spices_district
+				type = fish_district
 				level = 4
-				buildings = { fishing_villages_1 }
+				buildings = { pearl_fishery_1 fishing_villages_1 }
 			}
 		}
 	}
@@ -144403,9 +144409,9 @@
 				buildings = { communal_wells_1 noble_townhouses_2 }
 			}
 			district = {
-				type = spices_district
+				type = fish_district
 				level = 4
-				buildings = { fishing_villages_1 }
+				buildings = { pearl_fishery_1 fishing_villages_1 }
 			}
 		}
 	}
@@ -144989,9 +144995,9 @@
 				buildings = { suburb_2 communal_wells_1 }
 			}
 			district = {
-				type = salt_district
+				type = fish_district
 				level = 4
-				buildings = { pan_smith_2 }
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -145288,9 +145294,9 @@
 				buildings = { civic_projects_2 }
 			}
 			district = {
-				type = dyes_district
+				type = fish_district
 				level = 6
-				buildings = { minor_grazing_1 }
+				buildings = { pearl_fishery_1 minor_grazing_1 }
 			}
 		}
 	}
@@ -147266,9 +147272,9 @@
 				buildings = { guild_carpenters_3 weavers_guild_2 }
 			}
 			district = {
-				type = salt_district
+				type = grain_district
 				level = 6
-				buildings = { pan_smith_2 }
+				
 			}
 		}
 	}
@@ -147421,9 +147427,9 @@
 				buildings = { brewers_guild_2 guild_builders_2 }
 			}
 			district = {
-				type = dyes_district
+				type = grain_district
 				level = 6
-				buildings = { minor_grain_farms_2 }
+				
 			}
 		}
 	}
@@ -148038,9 +148044,9 @@
 				buildings = { temple_school_2 clerical_housing_2 }
 			}
 			district = {
-				type = silk_district
+				type = flax_district
 				level = 6
-				buildings = { textiles_silk_building_2 dyehouse_1 }
+				buildings = { dyehouse_1 }
 			}
 		}
 	}
@@ -156285,8 +156291,10 @@
 				buildings = { burgage_plots_2 }
 			}
 			district = {
-				type = cotton_district
+				type = fish_district
 				level = 6
+			
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -158070,8 +158078,10 @@
 				level = 3
 			}
 			district = {
-				type = rice_district
+				type = fish_district
 				level = 6
+			
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -160392,9 +160402,9 @@
 				buildings = { temple_viharas_2 martial_cloisters_2 }
 			}
 			district = {
-				type = forestry_district
+				type = fish_district
 				level = 6
-				buildings = { hunting_lodges_2 }
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -163906,7 +163916,7 @@
 			district = {
 				type = fish_district
 				level = 6
-				buildings = { fish_saltery_2 netmakers_2 }
+				buildings = { pearl_fishery_1 fish_saltery_2 netmakers_2 }
 			}
 		}
 	}
@@ -164428,7 +164438,7 @@
 			district = {
 				type = fish_district
 				level = 4
-				buildings = { netmakers_2 }
+				buildings = { pearl_fishery_1 netmakers_2 }
 			}
 		}
 	}
@@ -166867,6 +166877,8 @@
 			district = {
 				type = fish_district
 				level = 2
+			
+				buildings = { pearl_fishery_1 }
 			}
 			district = {
 				type = besakih_temple_01_district
@@ -167303,6 +167315,8 @@
 			district = {
 				type = fish_district
 				level = 3
+			
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -168103,8 +168117,10 @@
 				level = 2
 			}
 			district = {
-				type = spices_district
+				type = fish_district
 				level = 2
+			
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -170357,9 +170373,9 @@
 				level = 1
 			}
 			district = {
-				type = millet_district
+				type = fish_district
 				level = 4
-				buildings = { seasonal_labor_shared_1 }
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -187308,7 +187324,7 @@
 			district = {
 				type = fish_district
 				level = 4
-				buildings = { netmakers_2 }
+				buildings = { pearl_fishery_1 netmakers_2 }
 			}
 		}
 	}
@@ -200008,7 +200024,7 @@
 	}
 }
 1734 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = castle_holding
 
@@ -200036,7 +200052,7 @@
 	}
 }
 1735 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 
@@ -200059,12 +200075,12 @@
 	}
 }
 1736 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 }
 1737 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 
@@ -200087,7 +200103,7 @@
 	}
 }
 1738 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = church_holding
 
@@ -203213,12 +203229,12 @@
 	}
 }
 1899 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 }
 1897 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = castle_holding
 
@@ -203246,7 +203262,7 @@
 	}
 }
 1898 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 
@@ -203268,12 +203284,12 @@
 	}
 }
 1900 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 }
 1892 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = castle_holding
 
@@ -203301,17 +203317,17 @@
 	}
 }
 1893 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 }
 1894 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 }
 1895 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 
@@ -203337,7 +203353,7 @@
 	}
 }
 1896 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 
@@ -203359,7 +203375,7 @@
 	}
 }
 1901 = {
-	culture = french
+	culture = arpitan
 	faith = waldensian
 	rite = waldensian_rite
 	holding = castle_holding
@@ -203393,7 +203409,7 @@
 	}
 }
 1902 = {
-	culture = french
+	culture = arpitan
 	faith = waldensian
 	rite = waldensian_rite
 	holding = none
@@ -203420,7 +203436,7 @@
 	}
 }
 1903 = {
-	culture = french
+	culture = arpitan
 	faith = waldensian
 	rite = waldensian_rite
 	holding = none
@@ -203448,13 +203464,13 @@
 	}
 }
 1904 = {
-	culture = french
+	culture = arpitan
 	faith = waldensian
 	rite = waldensian_rite
 	holding = none
 }
 1905 = {
-	culture = french
+	culture = arpitan
 	faith = waldensian
 	rite = waldensian_rite
 	holding = none
@@ -203477,7 +203493,7 @@
 	}
 }
 1906 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 
@@ -206219,7 +206235,7 @@
 	holding = none
 }
 2039 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 
@@ -206241,7 +206257,7 @@
 	}
 }
 2035 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = castle_holding
 
@@ -206272,7 +206288,7 @@
 	}
 }
 2036 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 
@@ -206295,12 +206311,12 @@
 	}
 }
 2037 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 }
 2038 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 
@@ -206323,17 +206339,17 @@
 	}
 }
 2040 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 }
 2041 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 }
 2042 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 }
@@ -206419,7 +206435,7 @@
 	}
 }
 2047 = {
-	culture = french
+	culture = arpitan
 	faith = waldensian
 	rite = waldensian_rite
 	holding = castle_holding
@@ -206451,7 +206467,7 @@
 	}
 }
 2048 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 
@@ -206474,7 +206490,7 @@
 	}
 }
 2049 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 
@@ -206496,7 +206512,7 @@
 	}
 }
 2050 = {
-	culture = french
+	culture = arpitan
 	faith = waldensian
 	rite = waldensian_rite
 	holding = none
@@ -209129,7 +209145,7 @@
 			district = {
 				type = fish_district
 				level = 4
-				buildings = { netmakers_2 pearl_fishery_1 }
+				buildings = { pearl_fishery_1 netmakers_2 }
 			}
 		}
 	}
@@ -209503,9 +209519,9 @@
 				buildings = { mustering_grounds_1 archery_ranges_1 }
 			}
 			district = {
-				type = mine_district
+				type = fish_district
 				level = 4
-				buildings = { tool_smith_2 }
+				buildings = { pearl_fishery_1 }
 			}
 		}
 	}
@@ -221695,7 +221711,7 @@
 	holding = none
 }
 2654 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = castle_holding
 
@@ -221722,7 +221738,7 @@
 	}
 }
 2655 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 
@@ -221745,7 +221761,7 @@
 	}
 }
 2656 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 }
@@ -222624,9 +222640,9 @@
 				level = 1
 			}
 			district = {
-				type = salt_district
+				type = grain_district
 				level = 6
-				buildings = { pan_smith_2 }
+				
 			}
 		}
 	}
@@ -224101,8 +224117,10 @@
 				buildings = { roadside_inns_1 }
 			}
 			district = {
-				type = ivory_district
+				type = fish_district
 				level = 5
+			
+				buildings = { walrus_hunting_camp_1 }
 			}
 		}
 	}
@@ -224186,52 +224204,52 @@
 	holding = none
 }
 497 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = wilderness_holding
 }
 498 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 499 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 503 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 500 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = wilderness_holding
 }
 501 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 502 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 504 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 505 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 468 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = castle_holding
 
@@ -224259,32 +224277,32 @@
 	}
 }
 469 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 470 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 471 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 472 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 473 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 463 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = castle_holding
 
@@ -224316,32 +224334,32 @@
 	}
 }
 464 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 465 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 466 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 467 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 479 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 478 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = castle_holding
 
@@ -224361,40 +224379,40 @@
 				buildings = { travellers_inns_1 }
 			}
 			district = {
-				type = wool_district
+				type = fish_district
 				level = 6
-				buildings = { textiles_wool_building_2 }
+				buildings = { walrus_hunting_camp_1 }
 			}
 		}
 	}
 }
 480 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 481 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 482 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 483 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 475 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 474 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = castle_holding
 
@@ -224418,20 +224436,20 @@
 				level = 1
 			}
 			district = {
-				type = stone_district
+				type = fish_district
 				level = 6
-				buildings = { fishing_villages_1 }
+				buildings = { walrus_hunting_camp_1 fishing_villages_1 }
 			}
 		}
 	}
 }
 476 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
 477 = {
-	culture = norwegian
+	culture = icelandic
 	faith = catholic
 	holding = none
 }
@@ -230003,7 +230021,7 @@
 			district = {
 				type = fish_district
 				level = 6
-				buildings = { fish_saltery_2 }
+				buildings = { pearl_fishery_1 fish_saltery_2 }
 			}
 		}
 	}
@@ -232870,7 +232888,7 @@
 			district = {
 				type = fish_district
 				level = 4
-				buildings = { netmakers_2 }
+				buildings = { pearl_fishery_1 netmakers_2 }
 			}
 		}
 	}
@@ -235955,7 +235973,7 @@
 			district = {
 				type = fish_district
 				level = 6
-				buildings = { fish_saltery_2 }
+				buildings = { pearl_fishery_1 fish_saltery_2 }
 			}
 		}
 	}
@@ -237549,12 +237567,12 @@
 	holding = none
 }
 1030 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 }
 1027 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = church_holding
 
@@ -237581,12 +237599,12 @@
 	}
 }
 1028 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 }
 1029 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 }
@@ -240821,7 +240839,7 @@
 	}
 }
 1052 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = castle_holding
 
@@ -240852,12 +240870,12 @@
 	}
 }
 1053 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 }
 1054 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = castle_holding
 
@@ -240879,7 +240897,7 @@
 	}
 }
 1055 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = church_holding
 
@@ -240889,17 +240907,17 @@
 	}
 }
 1056 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 }
 1057 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = none
 }
 1058 = {
-	culture = french
+	culture = arpitan
 	faith = catholic
 	holding = castle_holding
 

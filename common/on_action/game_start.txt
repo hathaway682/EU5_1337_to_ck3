@@ -1564,67 +1564,175 @@ on_game_start = {
 
 		### CEDARS OF LEBANON ###
 		# The cedar forests of Mount Lebanon
-		title:c_beirut = { add_county_modifier = cedars_of_lebanon_modifier }
-		title:c_tripoli = { add_county_modifier = cedars_of_lebanon_modifier }
+		title:c_lebanon = { add_county_modifier = cedars_of_lebanon_modifier }
 
-		### PEARL FISHING BANKS ###
+### PEARL FISHING BANKS ###
 		# Pearl banks worked by local divers
-		title:c_dahlak = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_massawa = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_bur = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_dhafra = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_uqayr = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_julfar = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_qatif = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_kotte = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_madurai = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_lianzhou_1 = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_qinzhou_2 = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_ise = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_PHI_sulu = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_adjukru = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_akele_guzai = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_al_ahsa = { add_county_modifier = pearl_fishing_banks_modifier }
 		title:c_aru = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_THAI_tenasserim = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_PHI_south_palawan = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_PHI_bool_and_cebu = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_yazhou = { add_county_modifier = pearl_fishing_banks_modifier }
-		title:c_danzhou_1 = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_arutua = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_aztatlan = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_balaw = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_bali = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_boruca = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_butung = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_cihuatlan = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_cofitachequi = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_cola_nadu = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_donau_moos = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_fakarava = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_gamrun = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_guban = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_gwynedd = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_haeju = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_halar = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_haorangi = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_hogohega = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_hongju = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_ijebu = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_ise = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_iyo = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_jaffna = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_jazan = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_julfar = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_kaabu = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_katagalugan = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_khulays = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_kuna = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_leizhou = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_lianzhou = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_malvana = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_masqat = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_mendawai = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_mindanao = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_nganaa_nui = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_nghe_an = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_nia_matai_ma = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_niger_delta = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_onega = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_or_keo = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_orinucu = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_panay = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_pandya_nadu = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_paramaribo = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_perthshire = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_qala_safid = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_qatar = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_quanzhou = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_riau_kampar = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_rikuzen = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_satsunan_islands = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_shima = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_siraf = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_south_kola = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_southern_arakhan = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_suakin = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_suchiimma = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_sulu = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_taizz = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_tarakan = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_tenasserim = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_thien_truong = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_tidore = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_tondai_nadu = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_vanni = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_vanua_levu = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_ve_nadu = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_vengi_nadu = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_vogtland = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_white_karelia = { add_county_modifier = pearl_fishing_banks_modifier }
+		title:c_yopitzinco = { add_county_modifier = pearl_fishing_banks_modifier }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		### WALRUS IVORY ###
 		# Walrus grounds of the North Atlantic, Barents Sea and White Sea
-		title:c_vestisland = { add_county_modifier = walrus_ivory_modifier }
-		title:c_nordrland = { add_county_modifier = walrus_ivory_modifier }
-		title:c_vastvag = { add_county_modifier = walrus_ivory_modifier }
-		title:c_bothin = { add_county_modifier = walrus_ivory_modifier }
-		title:c_skolt = { add_county_modifier = walrus_ivory_modifier }
-		title:c_ter = { add_county_modifier = walrus_ivory_modifier }
-		title:c_kintus = { add_county_modifier = walrus_ivory_modifier }
-		title:c_viena = { add_county_modifier = walrus_ivory_modifier }
-		title:c_kholmogory = { add_county_modifier = walrus_ivory_modifier }
-		title:c_koutajoki = { add_county_modifier = walrus_ivory_modifier }
-		title:c_akkel = { add_county_modifier = walrus_ivory_modifier }
-		title:c_jovvkuj = { add_county_modifier = walrus_ivory_modifier }
-		title:c_east_kiilt = { add_county_modifier = walrus_ivory_modifier }
-		title:c_karasjohka = { add_county_modifier = walrus_ivory_modifier }
-		title:c_aviovara = { add_county_modifier = walrus_ivory_modifier }
-		title:c_rounala = { add_county_modifier = walrus_ivory_modifier }
+		title:c_anaabyr = { add_county_modifier = walrus_ivory_modifier }
+		title:c_coastal_chuvan = { add_county_modifier = walrus_ivory_modifier }
+		title:c_east_itelmen = { add_county_modifier = walrus_ivory_modifier }
+		title:c_east_koryak = { add_county_modifier = walrus_ivory_modifier }
+		title:c_east_omok = { add_county_modifier = walrus_ivory_modifier }
+		title:c_east_peninsula = { add_county_modifier = walrus_ivory_modifier }
+		title:c_erri = { add_county_modifier = walrus_ivory_modifier }
+		title:c_gardr = { add_county_modifier = walrus_ivory_modifier }
+		title:c_kaialigamiut = { add_county_modifier = walrus_ivory_modifier }
+		title:c_kavagmiut = { add_county_modifier = walrus_ivory_modifier }
+		title:c_kerek = { add_county_modifier = walrus_ivory_modifier }
+		title:c_kugmiut = { add_county_modifier = walrus_ivory_modifier }
+		title:c_kuhuur = { add_county_modifier = walrus_ivory_modifier }
+		title:c_kuskokwagmiut = { add_county_modifier = walrus_ivory_modifier }
+		title:c_magadan = { add_county_modifier = walrus_ivory_modifier }
+		title:c_malemiut = { add_county_modifier = walrus_ivory_modifier }
+		title:c_north_alyutor = { add_county_modifier = walrus_ivory_modifier }
+		title:c_north_itelmen = { add_county_modifier = walrus_ivory_modifier }
+		title:c_north_onmilin = { add_county_modifier = walrus_ivory_modifier }
+		title:c_nushagagmiut = { add_county_modifier = walrus_ivory_modifier }
+		title:c_okam = { add_county_modifier = walrus_ivory_modifier }
+		title:c_olyuben = { add_county_modifier = walrus_ivory_modifier }
+		title:c_omchikan = { add_county_modifier = walrus_ivory_modifier }
+		title:c_qikiqtaaluk = { add_county_modifier = walrus_ivory_modifier }
+		title:c_south_alyutor = { add_county_modifier = walrus_ivory_modifier }
+		title:c_south_farthing = { add_county_modifier = walrus_ivory_modifier }
+		title:c_south_onmilin = { add_county_modifier = walrus_ivory_modifier }
+		title:c_tumyat = { add_county_modifier = walrus_ivory_modifier }
+		title:c_unalaska = { add_county_modifier = walrus_ivory_modifier }
+		title:c_vestribygd = { add_county_modifier = walrus_ivory_modifier }
+		title:c_west_farthing = { add_county_modifier = walrus_ivory_modifier }
+		title:c_west_koryak = { add_county_modifier = walrus_ivory_modifier }
+		title:c_west_omok = { add_county_modifier = walrus_ivory_modifier }
+		title:c_xahaaciya = { add_county_modifier = walrus_ivory_modifier }
+		title:c_yupighyt = { add_county_modifier = walrus_ivory_modifier }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		### NAPHTA ###
 		# The oil springs of Baku and the Absheron peninsula
-		title:c_shirvan = { add_county_modifier = naphta_modifier }
+		title:c_baku = { add_county_modifier = naphta_modifier }
 
 		### REGIONAL CRAFT SPECIALITIES ###
 		# The mastic villages of Chios
-		province:486 = { add_province_modifier = mastic_of_chios_modifier }
+		province:5260 = { add_province_modifier = mastic_of_chios_modifier }
 		# The lustreware kilns of Kashan
-		province:4047 = { add_province_modifier = kashi_lustreware_modifier }
+		province:6726 = { add_province_modifier = kashi_lustreware_modifier }
 		# The glassmakers of Venice, later of Murano
-		province:2517 = { add_province_modifier = venetian_glass_modifier }
+		province:2761 = { add_province_modifier = venetian_glass_modifier }
 		# The bladesmiths of Toledo
-		province:1919 = { add_province_modifier = toledo_bladesmiths_modifier }
+		province:2388 = { add_province_modifier = toledo_bladesmiths_modifier }
 		# The papermakers of Samarkand
-		province:4404 = { add_province_modifier = samarkandi_paper_modifier }
+		province:5570 = { add_province_modifier = samarkandi_paper_modifier }
 		# The marble quarries of Luni
-		province:2531 = { add_province_modifier = carrara_marble_modifier }
+		province:2592 = { add_province_modifier = carrara_marble_modifier }
 
 		### REGIONAL CROP BOUNTIES ###
 		# Bounty of the Nile: vanilla sites mapped to EU5-map counties.
@@ -1639,62 +1747,102 @@ on_game_start = {
 		title:c_qusiyya = { add_county_modifier = bounty_of_the_nile_modifier }
 		title:c_sharqiyya = { add_county_modifier = bounty_of_the_nile_modifier }
 		# Granary of the Mediterranean
-		title:c_palermo = { add_county_modifier = granary_of_the_mediterranean_modifier }
-		title:c_caltagirone = { add_county_modifier = granary_of_the_mediterranean_modifier }
-		title:c_trapani = { add_county_modifier = granary_of_the_mediterranean_modifier }
-		title:c_messina = { add_county_modifier = granary_of_the_mediterranean_modifier }
-		title:c_catania = { add_county_modifier = granary_of_the_mediterranean_modifier }
-		title:c_siracusa = { add_county_modifier = granary_of_the_mediterranean_modifier }
-		title:c_agrigento = { add_county_modifier = granary_of_the_mediterranean_modifier }
-		title:c_malta = { add_county_modifier = granary_of_the_mediterranean_modifier }
+		title:c_demena = { add_county_modifier = granary_of_the_mediterranean_modifier }
+		title:c_girgenti = { add_county_modifier = granary_of_the_mediterranean_modifier }
+		title:c_mazara = { add_county_modifier = granary_of_the_mediterranean_modifier }
+		title:c_noto = { add_county_modifier = granary_of_the_mediterranean_modifier }
+
+
+
+
+
+
+
 		# Gangetic Plain
-		title:c_manikpur = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_asni = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_prayaga = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_chunar = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_varanasi = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_jaunpur = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_sasaram = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_kusinagara = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_mithila = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_bangaon = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_magadha = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_mudgagiri = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_laksmanavati = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_gauda = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_madhupur = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_bikrampur = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_candradvipa = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_samatata = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_nabadwipa = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_saptagrama = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_tamralipti = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_pundravardhana = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_kanyakubja = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_kol = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_arrah = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_azamgarh = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_bhagalpur = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_bogra = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_braj = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_central_doab = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_darbhanga = { add_county_modifier = granary_of_hindustan_modifier }
 		title:c_delhi = { add_county_modifier = granary_of_hindustan_modifier }
-		title:c_mathura = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_gaur = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_khalifatabad = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_khulna = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_lower_doab = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_manikpur = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_nadia = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_pandua = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_patna = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_purnia = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_sonargaon = { add_county_modifier = granary_of_hindustan_modifier }
+		title:c_varanasi = { add_county_modifier = granary_of_hindustan_modifier }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		# Granary of the South
-		title:c_yangzhou = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_lujiang = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_shuzhou = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_yunyang = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_jiangling = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_hanyang = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_liyang = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_langzhou = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_ezhou = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_yuezhou_1 = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_huangzhou = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_tanzhou = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_hongzhou = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_raozhou = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_nankang = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_chizhou = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_xuanzhou = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_jiangning = { add_county_modifier = granary_of_the_south_modifier }
-		title:c_runzhou = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_anqing = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_changde = { add_county_modifier = granary_of_the_south_modifier }
 		title:c_changzhou = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_chizhou = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_hanyang = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_huangzhou = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_jingmen = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_jiujiang = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_lizhou = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_luzhou = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_nanchang = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_nankang = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_ningguo = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_raozhou = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_wuchang = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_xiangxiang = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_yangzhou = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_yingtian = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_yuezhou = { add_county_modifier = granary_of_the_south_modifier }
+		title:c_zhenjiang = { add_county_modifier = granary_of_the_south_modifier }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		### HENDEKAPOLIS ###
 		title:c_ionia = { add_county_modifier = dodekapolis_modifier }
@@ -1720,7 +1868,7 @@ on_game_start = {
 			title:c_thessaliotis = { add_county_modifier = backwater_county_modifier }
 			title:c_thessalia = { add_county_modifier = backwater_county_modifier }
 			title:c_epeiros = { add_county_modifier = backwater_county_modifier }
-			title:c_corfu = { add_county_modifier = backwater_county_modifier }
+		    title:c_ionian_islands = { add_county_modifier = backwater_county_modifier }
 			title:c_veria = { add_county_modifier = backwater_county_modifier }
 			title:c_metzovo = { add_county_modifier = backwater_county_modifier }
 			title:c_chalkidike = { add_county_modifier = backwater_county_modifier }
