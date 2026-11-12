@@ -3788,7 +3788,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 13895 = {
@@ -5563,7 +5568,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 14386 = {
@@ -5835,7 +5845,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 14427 = {
@@ -5879,7 +5894,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 14430 = {
@@ -5927,7 +5947,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 14434 = {
@@ -5943,7 +5968,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 14437 = {
@@ -6230,7 +6260,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 13957 = {
@@ -8864,7 +8899,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 14285 = {
@@ -9352,7 +9392,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 14336 = {
@@ -9838,7 +9883,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = swahili_port_pemba_district level = 1 }
+		}
 	}
 }
 14546 = {
@@ -11087,7 +11138,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = saint_catherine_district level = 1 }
+		}
 	}
 }
 14569 = {
@@ -18746,7 +18803,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 15232 = {
@@ -18804,7 +18866,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 15236 = {
@@ -21423,7 +21490,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 15474 = {
@@ -22430,6 +22502,16 @@
 	faith = sunni
 	rite = maliki
 	holding = none
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
+	}
 }
 15577 = {
 	culture = songhai
@@ -22502,7 +22584,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 15580 = {
@@ -22623,7 +22710,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = ijil_mines_01_district level = 1 }
+		}
 	}
 }
 15622 = {
@@ -23533,7 +23626,15 @@
 	}
 
 	1337.4.1 = {
+		province_size = 1
+		holding = castle_holding
 		special_district_slot = mali_mines_01_district
+	
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = mali_mines_01_district level = 1 }
+		}
 	}
 }
 15666 = {
@@ -24554,7 +24655,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 15760 = {
@@ -24638,7 +24744,15 @@
 	holding = none
 
 	1337.4.1 = {
+		province_size = 1
+		holding = castle_holding
 		special_district_slot = eu5_taoudenni_mines_01_district
+	
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = eu5_taoudenni_mines_01_district level = 1 }
+		}
 	}
 }
 15738 = {
@@ -27536,7 +27650,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 18166 = {
@@ -27563,7 +27682,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 18169 = {
@@ -27583,7 +27707,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 18172 = {
@@ -27593,7 +27722,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 18173 = {
@@ -27603,7 +27737,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 18174 = {
@@ -27613,7 +27752,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 18175 = {
@@ -28255,7 +28399,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 18216 = {
@@ -28291,7 +28440,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 18220 = {
@@ -28305,7 +28459,15 @@
 	holding = none
 
 	1337.4.1 = {
+		province_size = 1
+		holding = castle_holding
 		special_district_slot = eu5_zain_mines_01_district
+	
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = eu5_zain_mines_01_district level = 1 }
+		}
 	}
 }
 18211 = {
@@ -32537,7 +32699,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17835 = {
@@ -32735,7 +32902,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17070 = {
@@ -37969,7 +38141,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17754 = {
@@ -38189,7 +38366,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17759 = {
@@ -38560,7 +38742,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17550 = {
@@ -38597,7 +38784,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17553 = {
@@ -38612,7 +38804,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17561 = {
@@ -38659,7 +38856,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17558 = {
@@ -38830,7 +39032,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17542 = {
@@ -38840,7 +39047,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17543 = {
@@ -38970,7 +39182,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17532 = {
@@ -39716,7 +39933,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17517 = {
@@ -39726,7 +39948,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17487 = {
@@ -40167,7 +40394,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17503 = {
@@ -40182,7 +40414,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17508 = {
@@ -40293,7 +40530,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17510 = {
@@ -40344,7 +40586,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17513 = {
@@ -40354,7 +40601,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17514 = {
@@ -40552,7 +40804,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17641 = {
@@ -41112,7 +41369,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17668 = {
@@ -41122,7 +41384,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17669 = {
@@ -41155,7 +41422,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17633 = {
@@ -41799,7 +42071,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17623 = {
@@ -42017,7 +42294,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17628 = {
@@ -42112,7 +42394,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17627 = {
@@ -42144,7 +42431,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17573 = {
@@ -42182,7 +42474,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17576 = {
@@ -42344,7 +42641,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17588 = {
@@ -42354,7 +42656,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17589 = {
@@ -42545,7 +42852,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17578 = {
@@ -42609,7 +42921,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17583 = {
@@ -42619,7 +42936,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17564 = {
@@ -42689,7 +43011,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17569 = {
@@ -42758,7 +43085,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17571 = {
@@ -42790,7 +43122,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17790 = {
@@ -42800,7 +43137,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17789 = {
@@ -42848,7 +43190,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17783 = {
@@ -42886,7 +43233,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17786 = {
@@ -42896,7 +43248,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17787 = {
@@ -42906,7 +43263,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17788 = {
@@ -42921,7 +43283,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17793 = {
@@ -42964,7 +43331,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17782 = {
@@ -42974,7 +43346,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17779 = {
@@ -43015,7 +43392,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17781 = {
@@ -43063,7 +43445,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17773 = {
@@ -43073,7 +43460,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17805 = {
@@ -43111,7 +43503,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17806 = {
@@ -43143,7 +43540,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17808 = {
@@ -43153,7 +43555,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17770 = {
@@ -43163,7 +43570,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17767 = {
@@ -43242,7 +43654,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17777 = {
@@ -43257,7 +43674,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17802 = {
@@ -43267,7 +43689,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17797 = {
@@ -43315,7 +43742,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17801 = {
@@ -43522,7 +43954,15 @@
 	holding = none
 
 	1337.4.1 = {
+		province_size = 1
+		holding = castle_holding
 		special_district_slot = eu5_mo_o_ti_mines_01_district
+	
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = eu5_mo_o_ti_mines_01_district level = 1 }
+		}
 	}
 }
 17697 = {
@@ -43597,7 +44037,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 17701 = {
@@ -45620,7 +46065,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 19902 = {
@@ -45953,7 +46403,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 19662 = {
@@ -46408,7 +46863,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 19666 = {
@@ -47802,7 +48262,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 19811 = {
@@ -48449,7 +48914,15 @@
 	holding = none
 
 	1337.4.1 = {
+		province_size = 1
+		holding = castle_holding
 		special_district_slot = eu5_ccantumarcani_mines_01_district
+	
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = eu5_ccantumarcani_mines_01_district level = 1 }
+		}
 	}
 }
 19885 = {
@@ -48792,7 +49265,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 19858 = {
@@ -54880,7 +55358,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = sar_i_sang_mines_01_district level = 1 }
+		}
 	}
 }
 5295 = {
@@ -55768,7 +56252,15 @@
 	holding = none
 
 	1337.4.1 = {
+		province_size = 1
+		holding = castle_holding
 		special_district_slot = pansjhir_mines_01_district
+	
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = pansjhir_mines_01_district level = 1 }
+		}
 	}
 }
 5433 = {
@@ -56108,6 +56600,16 @@
 	faith = sunni
 	rite = shafii
 	holding = none
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
+	}
 }
 5472 = {
 	culture = cuman
@@ -57085,7 +57587,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 5627 = {
@@ -66940,7 +67447,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+			district = { type = fengtian_mines_01_district level = 1 }
+		}
 	}
 }
 7441 = {
@@ -67679,7 +68192,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 7139 = {
@@ -67689,7 +68207,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 7140 = {
@@ -67699,7 +68222,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 7144 = {
@@ -67709,7 +68237,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 7141 = {
@@ -67774,7 +68307,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 7148 = {
@@ -70121,7 +70659,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = itoigawa_mines_01_district level = 1 }
+		}
 	}
 }
 7598 = {
@@ -72263,7 +72807,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 7935 = {
@@ -76341,7 +76890,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = mount_baekdu_01_district level = 1 }
+		}
 	}
 }
 8073 = {
@@ -78704,7 +79259,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = xiuyan_mines_01_district level = 1 }
+		}
 	}
 }
 8100 = {
@@ -79974,7 +80535,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8217 = {
@@ -80001,7 +80567,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8219 = {
@@ -80228,7 +80799,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8231 = {
@@ -80259,7 +80835,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8233 = {
@@ -80291,7 +80872,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8240 = {
@@ -80301,7 +80887,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8237 = {
@@ -80344,7 +80935,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8243 = {
@@ -80388,7 +80984,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8244 = {
@@ -80398,7 +80999,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8245 = {
@@ -80408,7 +81014,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8246 = {
@@ -80418,7 +81029,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8247 = {
@@ -80674,7 +81290,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8283 = {
@@ -80684,7 +81305,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8284 = {
@@ -80734,7 +81360,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8289 = {
@@ -80784,7 +81415,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8298 = {
@@ -80794,7 +81430,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8300 = {
@@ -80846,7 +81487,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8293 = {
@@ -80871,7 +81517,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8301 = {
@@ -80902,7 +81553,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8303 = {
@@ -80912,7 +81568,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8304 = {
@@ -80922,7 +81583,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8310 = {
@@ -80932,7 +81598,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8306 = {
@@ -80942,7 +81613,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8307 = {
@@ -80973,7 +81649,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8309 = {
@@ -80988,7 +81669,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 8312 = {
@@ -93707,7 +94393,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9354 = {
@@ -94002,7 +94693,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9384 = {
@@ -96504,7 +97200,15 @@
 	holding = none
 
 	1337.4.1 = {
+		province_size = 1
+		holding = castle_holding
 		special_district_slot = eu5_xincheng_annan_mines_01_district
+	
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = eu5_xincheng_annan_mines_01_district level = 1 }
+		}
 	}
 }
 9256 = {
@@ -96613,7 +97317,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9267 = {
@@ -96713,7 +97422,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9283 = {
@@ -96723,7 +97437,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9279 = {
@@ -96771,7 +97490,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9282 = {
@@ -96791,7 +97515,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9287 = {
@@ -96801,7 +97530,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9286 = {
@@ -96832,7 +97566,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9291 = {
@@ -96940,7 +97679,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9311 = {
@@ -97003,7 +97747,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9298 = {
@@ -97044,7 +97793,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9302 = {
@@ -97064,7 +97818,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9312 = {
@@ -97095,7 +97854,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9320 = {
@@ -97105,7 +97869,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9319 = {
@@ -97142,7 +97911,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9315 = {
@@ -97173,7 +97947,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9318 = {
@@ -97183,7 +97962,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9323 = {
@@ -97977,7 +98761,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9153 = {
@@ -97987,7 +98776,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9156 = {
@@ -98148,7 +98942,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9163 = {
@@ -98284,7 +99083,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9177 = {
@@ -98299,7 +99103,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9178 = {
@@ -98384,7 +99193,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9187 = {
@@ -98708,7 +99522,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9402 = {
@@ -98748,7 +99567,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9406 = {
@@ -98789,7 +99613,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9409 = {
@@ -98804,7 +99633,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9412 = {
@@ -98845,7 +99679,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9416 = {
@@ -98938,7 +99777,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9425 = {
@@ -98948,7 +99792,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9426 = {
@@ -98979,7 +99828,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9429 = {
@@ -99041,7 +99895,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9434 = {
@@ -99124,7 +99983,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9444 = {
@@ -99134,7 +99998,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9445 = {
@@ -99144,7 +100013,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9446 = {
@@ -99171,7 +100045,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9449 = {
@@ -99287,7 +100166,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9451 = {
@@ -101944,7 +102828,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9909 = {
@@ -102073,7 +102962,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9917 = {
@@ -102119,7 +103013,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9921 = {
@@ -102159,7 +103058,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9924 = {
@@ -102244,7 +103148,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9931 = {
@@ -102449,7 +103358,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9948 = {
@@ -102859,7 +103773,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9982 = {
@@ -103478,7 +104397,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 10025 = {
@@ -105417,7 +106341,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9782 = {
@@ -105428,7 +106357,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9783 = {
@@ -105774,7 +106708,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 9806 = {
@@ -106029,7 +106968,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = kaibao_mines_01_district level = 1 }
+		}
 	}
 }
 9821 = {
@@ -108370,7 +109315,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = fairy_chimneys_district level = 1 }
+		}
 	}
 }
 5737 = {
@@ -110811,7 +111762,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 5893 = {
@@ -111811,7 +112767,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = phocaea_mines_01_district level = 1 }
+		}
 	}
 }
 5953 = {
@@ -113037,7 +113999,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 6191 = {
@@ -113436,7 +114403,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 6225 = {
@@ -115604,7 +116576,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 6335 = {
@@ -117126,7 +118103,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 5986 = {
@@ -117149,7 +118131,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 5989 = {
@@ -119313,7 +120300,7 @@
 			district = {
 				type = guild_district
 				level = 3
-				buildings = { blacksmiths_guild_3 weavers_guild_3 }
+				buildings = { eu5_damascus_bladesmiths_3 weavers_guild_3 }
 			}
 			district = {
 				type = oil_district
@@ -119506,6 +120493,17 @@
 	769.1.1 = {
 		special_building = petra_01
 	}
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = petra_01_district level = 1 }
+		}
+	}
 }
 6135 = {
 	culture = levantine
@@ -119610,7 +120608,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = rainbow_mountains_01_district level = 1 }
+		}
 	}
 }
 6516 = {
@@ -119738,7 +120742,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 6528 = {
@@ -119906,6 +120915,16 @@
 	faith = sunni
 	rite = hanafi
 	holding = none
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
+	}
 }
 6554 = {
 	culture = baloch
@@ -120354,7 +121373,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 6603 = {
@@ -120415,7 +121439,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 6608 = {
@@ -120960,7 +121989,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 6666 = {
@@ -121744,7 +122778,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 6727 = {
@@ -123186,7 +124225,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 6868 = {
@@ -123197,7 +124241,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 6869 = {
@@ -123746,7 +124795,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 6918 = {
@@ -129584,6 +130638,16 @@
 	culture = gond
 	faith = donyipoloism
 	holding = none
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
+	}
 }
 11382 = {
 	culture = gond
@@ -151336,6 +152400,16 @@
 	culture = nepali
 	faith = vaishnava_faith
 	holding = none
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
+	}
 }
 11137 = {
 	culture = nepali
@@ -152614,7 +153688,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 11201 = {
@@ -152662,7 +153741,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 11205 = {
@@ -152677,7 +153761,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 11207 = {
@@ -153568,7 +154657,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 11262 = {
@@ -153674,7 +154768,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 11275 = {
@@ -153813,7 +154912,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 11285 = {
@@ -153823,7 +154927,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 11286 = {
@@ -158253,7 +159362,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12275 = {
@@ -160677,7 +161791,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = temple_citadel_holding
+		districts = {
+			district = { type = temple_citadel_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = hpakant_mines_01_district level = 1 }
+		}
 	}
 }
 12412 = {
@@ -160687,7 +161807,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = temple_citadel_holding
+		districts = {
+			district = { type = temple_citadel_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12413 = {
@@ -160707,7 +161832,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = temple_citadel_holding
+		districts = {
+			district = { type = temple_citadel_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12415 = {
@@ -161912,7 +163042,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = temple_citadel_holding
+		districts = {
+			district = { type = temple_citadel_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12510 = {
@@ -163621,6 +164756,16 @@
 	faith = mahayana_faith
 	rite = dhyana
 	holding = none
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
+	}
 }
 12629 = {
 	culture = viet
@@ -164634,7 +165779,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12684 = {
@@ -164827,7 +165977,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = temple_citadel_holding
+		districts = {
+			district = { type = temple_citadel_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = mogok_mines_01_district level = 1 }
+		}
 	}
 }
 12700 = {
@@ -165083,7 +166239,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12870 = {
@@ -165160,7 +166321,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12879 = {
@@ -165197,7 +166363,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12881 = {
@@ -165207,7 +166378,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12882 = {
@@ -165217,7 +166393,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12883 = {
@@ -165227,7 +166408,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12889 = {
@@ -165283,7 +166469,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12895 = {
@@ -165374,7 +166565,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12900 = {
@@ -165418,7 +166614,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12907 = {
@@ -165516,7 +166717,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12913 = {
@@ -165572,7 +166778,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12919 = {
@@ -167138,7 +168349,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = temple_citadel_holding
+		districts = {
+			district = { type = temple_citadel_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12995 = {
@@ -167375,7 +168591,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 13056 = {
@@ -167811,7 +169032,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 13116 = {
@@ -167845,7 +169071,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+			district = { type = mount_apo_01_district level = 1 }
+		}
 	}
 }
 13119 = {
@@ -168070,7 +169302,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 13026 = {
@@ -168080,7 +169317,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 13027 = {
@@ -168090,7 +169332,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 13031 = {
@@ -168132,7 +169379,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 13032 = {
@@ -168412,7 +169664,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = temple_citadel_holding
+		districts = {
+			district = { type = temple_citadel_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12823 = {
@@ -168613,6 +169870,16 @@
 	culture = dayak
 	faith = kaharingan
 	holding = none
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
+	}
 }
 12848 = {
 	culture = dayak
@@ -168621,7 +169888,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12844 = {
@@ -168829,7 +170101,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = suvarnadvipa_mines_01_district level = 1 }
+		}
 	}
 }
 13251 = {
@@ -168980,7 +170258,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 13262 = {
@@ -169433,7 +170716,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = temple_citadel_holding
+		districts = {
+			district = { type = temple_citadel_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12741 = {
@@ -169612,7 +170900,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = temple_citadel_holding
+		districts = {
+			district = { type = temple_citadel_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 12772 = {
@@ -169931,7 +171224,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = krakatoa_01_district level = 1 }
+		}
 	}
 }
 13175 = {
@@ -170154,7 +171453,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = generic_university_district level = 1 }
+		}
 	}
 }
 13196 = {
@@ -170394,7 +171699,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = temple_citadel_holding
+		districts = {
+			district = { type = temple_citadel_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 13213 = {
@@ -170681,7 +171991,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 13139 = {
@@ -170757,7 +172072,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+			district = { type = generic_university_district level = 1 }
+		}
 	}
 }
 13149 = {
@@ -171138,7 +172459,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 5184 = {
@@ -171220,7 +172546,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 5191 = {
@@ -171429,8 +172760,15 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		province_size = 1
 		special_district_slot = srebrenica_mines_01_district
-		holding = none
+
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = srebrenica_mines_01_district level = 1 }
+		}
 	}
 }
 4988 = {
@@ -172885,7 +174223,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = mount_athos_01_district level = 1 }
+		}
 	}
 }
 5109 = {
@@ -173682,7 +175026,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 5208 = {
@@ -173876,7 +175225,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 5216 = {
@@ -173923,7 +175277,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 5220 = {
@@ -174088,7 +175447,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = meteora_01_district level = 1 }
+		}
 	}
 }
 5234 = {
@@ -175026,7 +176391,15 @@
 	holding = none
 
 	1337.4.1 = {
+		province_size = 1
+		holding = castle_holding
 		special_district_slot = eu5_tolmin_mines_01_district
+	
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = eu5_tolmin_mines_01_district level = 1 }
+		}
 	}
 }
 4936 = {
@@ -179265,7 +180638,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3333 = {
@@ -179406,6 +180784,16 @@
 	culture = polish
 	faith = catholic
 	holding = none
+
+	1337.4.1 = {
+		holding = castle_holding
+		province_size = 1
+
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
+	}
 }
 3344 = {
 	culture = polish
@@ -179474,7 +180862,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3353 = {
@@ -179763,7 +181156,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3369 = {
@@ -179932,7 +181330,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = hotin_fort_01_district level = 1 }
+		}
 	}
 }
 2782 = {
@@ -180268,7 +181672,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 2823 = {
@@ -180727,7 +182136,15 @@
 	}
 
 	1337.4.1 = {
+		province_size = 1
+		holding = castle_holding
 		special_district_slot = kremnica_mines_01_district
+	
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = kremnica_mines_01_district level = 1 }
+		}
 	}
 }
 2854 = {
@@ -183532,7 +184949,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3684 = {
@@ -183548,7 +184970,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3685 = {
@@ -183593,7 +185020,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3696 = {
@@ -183783,7 +185215,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3702 = {
@@ -183836,7 +185273,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3709 = {
@@ -184832,7 +186274,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3809 = {
@@ -184868,7 +186315,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3812 = {
@@ -184878,7 +186330,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3813 = {
@@ -184968,7 +186425,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3827 = {
@@ -188791,7 +190253,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 4350 = {
@@ -195437,7 +196904,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3875 = {
@@ -195447,7 +196919,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3876 = {
@@ -195457,7 +196934,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3877 = {
@@ -195510,7 +196992,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3883 = {
@@ -195520,7 +197007,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 3884 = {
@@ -198103,7 +199595,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1632 = {
@@ -199801,7 +201298,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1725 = {
@@ -199997,7 +201499,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1733 = {
@@ -200109,7 +201616,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1740 = {
@@ -200228,7 +201740,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1745 = {
@@ -202955,7 +204472,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1877 = {
@@ -203042,7 +204564,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1881 = {
@@ -204352,7 +205879,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1938 = {
@@ -205904,7 +207436,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 2018 = {
@@ -207666,7 +209203,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = offas_dyke_01_district level = 1 }
+		}
 	}
 }
 1333 = {
@@ -207716,7 +209259,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = offas_dyke_01_district level = 1 }
+		}
 	}
 }
 1308 = {
@@ -208054,7 +209603,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = offas_dyke_01_district level = 1 }
+		}
 	}
 }
 1338 = {
@@ -208259,7 +209814,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = hadrians_wall_01_district level = 1 }
+		}
 	}
 }
 1369 = {
@@ -208510,7 +210071,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = hadrians_wall_01_district level = 1 }
+		}
 	}
 }
 1361 = {
@@ -208550,7 +210117,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = hadrians_wall_01_district level = 1 }
+		}
 	}
 }
 1363 = {
@@ -209335,7 +210908,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1502 = {
@@ -209404,7 +210982,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1488 = {
@@ -210138,7 +211721,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = rock_of_gibraltar_01_district level = 1 }
+		}
 	}
 }
 2408 = {
@@ -212460,7 +214049,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 2259 = {
@@ -216313,7 +217907,15 @@
 	holding = none
 
 	1337.4.1 = {
+		province_size = 1
+		holding = castle_holding
 		special_district_slot = eu5_almaden_mines_01_district
+	
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = eu5_almaden_mines_01_district level = 1 }
+		}
 	}
 }
 2399 = {
@@ -216670,7 +218272,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1573 = {
@@ -216719,7 +218326,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1561 = {
@@ -216748,7 +218360,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1574 = {
@@ -216850,7 +218467,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1568 = {
@@ -216861,7 +218483,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1510 = {
@@ -216940,7 +218567,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1527 = {
@@ -217019,7 +218651,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1531 = {
@@ -217057,7 +218694,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1517 = {
@@ -217067,7 +218709,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1514 = {
@@ -217149,7 +218796,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1521 = {
@@ -217317,7 +218969,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1582 = {
@@ -217494,7 +219151,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1599 = {
@@ -217517,7 +219179,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1602 = {
@@ -217639,7 +219306,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1537 = {
@@ -217718,7 +219390,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1552 = {
@@ -217729,7 +219406,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1540 = {
@@ -217740,7 +219422,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1538 = {
@@ -217780,7 +219467,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1555 = {
@@ -217832,6 +219524,16 @@
 	faith = catholic
 	rite = insular_celtic
 	holding = none
+
+	1337.4.1 = {
+		holding = tribal_holding
+		province_size = 1
+
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
+	}
 }
 1557 = {
 	culture = irish
@@ -217893,7 +219595,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 2475 = {
@@ -219774,7 +221481,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 2566 = {
@@ -220560,7 +222272,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 2599 = {
@@ -220745,6 +222462,12 @@
 				type = walls_district
 				level = 2
 				buildings = { city_watch_2 }
+			}
+		
+			district = {
+				type = guild_district
+				level = 2
+				buildings = { eu5_milan_armourers_2 }
 			}
 		}
 	}
@@ -221088,6 +222811,12 @@
 				level = 3
 				buildings = { livestock_market_3 tailor_shops_3 }
 			}
+		
+			district = {
+				type = guild_district
+				level = 3
+				buildings = { eu5_milan_armourers_2 }
+			}
 		}
 	}
 }
@@ -221303,7 +223032,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 2635 = {
@@ -221350,7 +223084,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 2636 = {
@@ -221530,7 +223269,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 2646 = {
@@ -221772,7 +223516,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 2657 = {
@@ -221800,7 +223549,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 2660 = {
@@ -222979,6 +224733,11 @@
 				type = manor_houses_district
 				level = 1
 			}
+		
+			district = {
+				type = generic_university_district
+				level = 1
+			}
 		}
 	}
 }
@@ -223012,10 +224771,7 @@
 				level = 3
 				buildings = { livestock_market_3 tailor_shops_3 }
 			}
-			district = {
-				type = generic_university_district
-				level = 1
-			}
+
 		}
 	}
 }
@@ -224717,7 +226473,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 520 = {
@@ -224808,7 +226569,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 512 = {
@@ -225120,7 +226886,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 641 = {
@@ -225270,7 +227041,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 652 = {
@@ -225876,7 +227652,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 545 = {
@@ -226247,7 +228028,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 723 = {
@@ -226339,7 +228125,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 701 = {
@@ -226477,7 +228268,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 715 = {
@@ -226513,7 +228309,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 717 = {
@@ -226523,7 +228324,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 710 = {
@@ -226565,7 +228371,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 707 = {
@@ -226633,7 +228444,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 712 = {
@@ -226969,7 +228785,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 610 = {
@@ -227076,7 +228897,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 606 = {
@@ -227086,7 +228912,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 607 = {
@@ -227365,7 +229196,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 782 = {
@@ -227588,7 +229424,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 796 = {
@@ -227848,7 +229689,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 825 = {
@@ -228411,7 +230257,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 906 = {
@@ -228706,7 +230557,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 659 = {
@@ -228716,7 +230572,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 660 = {
@@ -228754,7 +230615,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 664 = {
@@ -228786,7 +230652,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 666 = {
@@ -228801,7 +230672,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 667 = {
@@ -228811,7 +230687,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 668 = {
@@ -228844,7 +230725,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 670 = {
@@ -229101,7 +230987,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 692 = {
@@ -229111,7 +231002,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 693 = {
@@ -229144,7 +231040,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 683 = {
@@ -229488,7 +231389,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 851 = {
@@ -229648,7 +231554,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 874 = {
@@ -229686,7 +231597,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 877 = {
@@ -229696,7 +231612,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 878 = {
@@ -229855,7 +231776,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 864 = {
@@ -229902,7 +231828,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 867 = {
@@ -229945,7 +231876,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 871 = {
@@ -230272,7 +232208,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 594 = {
@@ -230432,7 +232373,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 767 = {
@@ -230617,7 +232563,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 743 = {
@@ -230632,7 +232583,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 774 = {
@@ -230696,7 +232652,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 776 = {
@@ -230904,7 +232865,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 753 = {
@@ -230978,7 +232944,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 745 = {
@@ -230988,7 +232959,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 746 = {
@@ -231488,7 +233464,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = danevirke_01_district level = 1 }
+		}
 	}
 }
 122 = {
@@ -231501,7 +233483,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = danevirke_01_district level = 1 }
+		}
 	}
 }
 87 = {
@@ -234218,8 +236206,15 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
+		province_size = 1
 		special_district_slot = falun_mines_01_district
-		holding = none
+
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = falun_mines_01_district level = 1 }
+		}
 	}
 }
 33 = {
@@ -235240,7 +237235,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1267 = {
@@ -235426,7 +237426,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 931 = {
@@ -235851,7 +237856,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1202 = {
@@ -236334,7 +238344,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1207 = {
@@ -237349,7 +239364,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 993 = {
@@ -237401,7 +239421,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 997 = {
@@ -237558,7 +239583,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1026 = {
@@ -237670,7 +239700,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1042 = {
@@ -237685,7 +239720,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1045 = {
@@ -237695,7 +239735,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1046 = {
@@ -237732,7 +239777,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1048 = {
@@ -237752,7 +239802,13 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+			district = { type = pam_abbey_of_st_gall_01_district level = 1 }
+		}
 	}
 }
 1049 = {
@@ -237785,7 +239841,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1051 = {
@@ -237818,7 +239879,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1035 = {
@@ -237855,7 +239921,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1139 = {
@@ -237916,7 +239987,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1141 = {
@@ -238032,7 +240108,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1147 = {
@@ -238074,7 +240155,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1151 = {
@@ -238352,7 +240438,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1167 = {
@@ -238887,7 +240978,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 958 = {
@@ -239412,7 +241508,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1096 = {
@@ -239427,7 +241528,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1101 = {
@@ -239469,7 +241575,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1099 = {
@@ -239603,7 +241714,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1102 = {
@@ -239639,7 +241755,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1104 = {
@@ -239659,7 +241780,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1107 = {
@@ -239669,7 +241795,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1108 = {
@@ -239733,7 +241864,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1119 = {
@@ -239743,7 +241879,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1120 = {
@@ -239851,7 +241992,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1000 = {
@@ -240359,7 +242505,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1075 = {
@@ -240441,7 +242592,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1093 = {
@@ -240451,7 +242607,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1066 = {
@@ -240509,7 +242670,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1067 = {
@@ -240529,7 +242695,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1070 = {
@@ -240589,7 +242760,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1085 = {
@@ -240621,7 +242797,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1087 = {
@@ -240745,7 +242926,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1083 = {
@@ -240797,7 +242983,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1061 = {
@@ -240807,7 +242998,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = city_holding
+		districts = {
+			district = { type = city_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1062 = {
@@ -240903,7 +243099,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = church_holding
+		districts = {
+			district = { type = temple_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 1056 = {
@@ -244710,7 +246911,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = tribal_holding
+		districts = {
+			district = { type = tribal_holding_district level = 2 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 20751 = {
@@ -244748,7 +246954,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 20754 = {
@@ -244785,7 +246996,12 @@
 
 	# CK3 Beta 1178 opening configuration
 	1337.4.1 = {
-		holding = none
+		province_size = 1
+		holding = castle_holding
+		districts = {
+			district = { type = castle_holding_district level = 3 }
+			district = { type = villages_district level = 1 }
+		}
 	}
 }
 20761 = {

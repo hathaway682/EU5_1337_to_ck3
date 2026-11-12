@@ -198,15 +198,15 @@ on_game_start = {
 			limit = { exists = title:e_hre.holder }
 			add_to_global_variable_list = {
 				name = hre_elector_list
-				target = title:c_cologne
+				target = title:c_koln_bucht #cologne
 			}
 			add_to_global_variable_list = {
 				name = hre_elector_list
-				target = title:c_mainz
+				target = title:c_untermain #mainz
 			}
 			add_to_global_variable_list = {
 				name = hre_elector_list
-				target = title:c_trier
+				target = title:c_hunsruck #trier
 			}
 			add_to_global_variable_list = {
 				name = hre_elector_list
@@ -214,18 +214,19 @@ on_game_start = {
 			}
 			add_to_global_variable_list = {
 				name = hre_elector_list
-				target = title:d_east_franconia
+				target = title:d_upper_rhine #east_franconia
 			}
 			add_to_global_variable_list = {
 				name = hre_elector_list
-				target = title:d_ostmark
+				target = title:d_brandenburg #ostmark
 			}
 			add_to_global_variable_list = {
 				name = hre_elector_list
-				target = title:d_angria
+				target = title:d_upper_saxony #angria
 			}
 			hre_elector_list_save_effect = yes
 			hre_margraves_effect = yes
+			title:e_hre = { add_title_law = princely_elective_succession_law }
 		}
 
 		# Empire Faith Gate: seed global list of empire holders for perf (yearly pulse uses this list).
@@ -506,11 +507,11 @@ on_game_start = {
 			limit = {
 				has_cp3_dlc_trigger = yes
 			}
-	        title:b_barcelona.title_province = { add_special_district_slot = drassanes_01_district } #1892
+
 	        title:b_merv.title_province = { add_special_district = kyz_kala_01_district } #4238
-	        if = { limit = { game_start_date >= 1178.10.1 } title:b_cluny.title_province = { add_special_district = cluny_abbey_01_district special_district = { add_building = cluny_abbey_02 } } } #2304
-	        else_if = { limit = { game_start_date >= 1066.9.15 } title:b_cluny.title_province = { add_special_district = cluny_abbey_01_district } }
-	        else = { title:b_cluny.title_province = { add_special_district_slot = cluny_abbey_01_district } }
+	        if = { limit = { game_start_date >= 1178.10.1 } title:b_macon.title_province = { add_special_district = cluny_abbey_01_district special_district = { add_building = cluny_abbey_02 } } } #2304
+	        else_if = { limit = { game_start_date >= 1066.9.15 } title:b_macon.title_province = { add_special_district = cluny_abbey_01_district } }
+	        else = { title:b_macon.title_province = { add_special_district_slot = cluny_abbey_01_district } }
 	        title:b_york.title_province = { add_special_district = york_walls_01_district } #1595
 	        title:b_damascus.title_province = { add_special_district = damascus_mosque_01_district } #5924
 	        title:b_lhasa.title_province = { add_special_district = jokhang_01_district } #9237
@@ -520,17 +521,17 @@ on_game_start = {
 	        if = { limit = { game_start_date >= 1066.9.15 } title:b_novgorod.title_province = { add_special_district = holy_wisdom_01_district } } #5137
 	        else = { title:b_novgorod.title_province = { add_special_district_slot = holy_wisdom_01_district } }
 	        title:b_kano.title_province = { add_special_district_slot = kano_walls_01_district } #6519
-	        title:b_somapur.title_province = { add_special_district = somapura_university_01_district } #848
-	        if = { limit = { game_start_date >= 1178.10.1 } title:b_firenze.title_province = { add_special_district = duomo_florence_01_district } } #2543
-	        else = { title:b_firenze.title_province = { add_special_district = duomo_florence_01_district } }
-	        title:b_konarak.title_province = { add_special_district_slot = konark_temple_01_district } #928
-	        title:b_fes.title_province = { add_special_district = al_qarawiyyin_university_01_district } #4694
+	        title:b_naogaon.title_province = { add_special_district = somapura_university_01_district } #848
+	        if = { limit = { game_start_date >= 1178.10.1 } title:b_florence.title_province = { add_special_district = duomo_florence_01_district } } #2543
+	        else = { title:b_florence.title_province = { add_special_district = duomo_florence_01_district } }
+	        title:b_puri.title_province = { add_special_district_slot = konark_temple_01_district } #928
+
 	        title:b_kairouan.title_province = { add_special_district = kairouan_basins_01_district } #4594
-	        title:b_al-ghaba.title_province = { add_special_district = ghana_palace_01_district } #6628 #NOTE: likely existed since the 8th, but earliest (only) source on palace is from 1068
-	        title:b_visegrad_hun.title_province = { add_special_district_slot = visegrad_castle_01_district } #3803
+	        title:b_koumbi_saleh.title_province = { add_special_district = ghana_palace_01_district } #6628 #NOTE: likely existed since the 8th, but earliest (only) source on palace is from 1068
+	        title:b_visegrad.title_province = { add_special_district_slot = visegrad_castle_01_district } #3803
 	        if = { limit = { game_start_date >= 1161.9.15 } title:b_leczyca.title_province = { add_special_district = wawel_cathedral_01_district } } #4924 #Date of consecreation of Archcollegiate Church of St. Mary and St. Alexius in Tum
 	        else = { title:b_leczyca.title_province = { add_special_district_slot = wawel_cathedral_01_district } }
-	        title:b_vatapi.title_province = { add_special_district = vatapi_caves_01_district } #1198
+	        title:b_badami.title_province = { add_special_district = vatapi_caves_01_district } #1198
 	        if = { limit = { game_start_date >= 1178.10.1 } title:b_jaisalmer.title_province = { add_special_district = jaisalmer_fort_01_district } } #3387
 	        else = { title:b_jaisalmer.title_province = { add_special_district_slot = jaisalmer_fort_01_district } } #3387
 		}
@@ -542,7 +543,7 @@ on_game_start = {
 			}
 			#always exists
 	        title:b_kathmandu.title_province = { add_special_district = boudhanath_01_district } #9116
-	        title:b_sanchi.title_province = { add_special_district = sanchi_stupa_01_district } #3323
+	        title:b_bhilsa.title_province = { add_special_district = sanchi_stupa_01_district } #3323
 			title:b_avranches.title_province = { add_special_district = mont_st_michel_01_district } #2167
 
 			#only buildable
@@ -556,49 +557,49 @@ on_game_start = {
 			#Great Buddha of Kamakura - from the 1250s
 			title:b_kamakura.title_province = { add_special_district_slot = buddha_kamakura_01_district }
 			#Kizuki Taisha
-			title:b_kizuki_taisha.title_province = { add_special_district = izumo_taisha_01_district }
+			title:b_izumo.title_province = { add_special_district = izumo_taisha_01_district }
 			#Stone Pagoda of Mireuksa
-			title:b_Goryeo_Jeolla_Jeonju.title_province = { add_special_district = stone_pagoda_01_district }
+			title:b_jeonju.title_province = { add_special_district = stone_pagoda_01_district }
 			#Tomb of a Goguryeo King
-			title:b_Liao_Xijing.title_province = { add_special_district = goguryeo_tomb_01_district }
+			title:b_golmin_salggiyan.title_province = { add_special_district = goguryeo_tomb_01_district }
 			#Iron Lion of Cangzhou - from the 950s
 			if = { limit = { game_start_date >= 1066.9.15 } title:b_qingchi.title_province = { add_special_district = iron_lion_cangzhou_01_district } }
 			else = { title:b_qingchi.title_province = { add_special_district_slot = iron_lion_cangzhou_01_district } }
 			#Temple of Confucius
-			title:b_fuqu.title_province = { add_special_district = confucius_temple_01_district }
+			title:b_qufu.title_province = { add_special_district = confucius_temple_01_district }
 			#Gaocheng Observatory #NOTE: technically in continuous use from the 8th century, but the major expansion depicted is from the 1200s
-			title:b_yangzhai.title_province = { add_special_district_slot = dengfeng_observatory_01_district } #1
+			title:b_yangdi.title_province = { add_special_district_slot = dengfeng_observatory_01_district } #1
 			#Maijishan Grottoes
 			title:b_chengji.title_province = { add_special_district = maijishan_grottoes_01_district }
 			#Yuelu Academy - from 976
 			if = { limit = { game_start_date >= 1066.9.15 } title:b_changsha.title_province = { add_special_district = yuelu_academy_01_district } }
 			else = { title:b_changsha.title_province = { add_special_district_slot = yuelu_academy_01_district } }
 			#Imperial Citadel of Lin'an - from the 1130s-1150s
-			if = { limit = { game_start_date >= 1038.9.15 } title:b_qiantang.title_province = { add_special_district = citadel_linan_01_district } } #2
-			else = { title:b_qiantang.title_province = { add_special_district_slot = citadel_linan_01_district } } #2
+			if = { limit = { game_start_date >= 1038.9.15 } title:b_hangzhou.title_province = { add_special_district = citadel_linan_01_district } } #2
+			else = { title:b_hangzhou.title_province = { add_special_district_slot = citadel_linan_01_district } } #2
 			#Fanfang of Guangzhou
 			title:b_nanhai.title_province = { add_special_district = fanfang_guangzhou_01_district }
 			#My Son Sanctuary
-			title:b_my_son.title_province = { add_special_district = my_son_sanctuary_01_district }
+			title:b_simhapura.title_province = { add_special_district = my_son_sanctuary_01_district }
 			#Ha Long Bay
-			title:b_long_hung.title_province = { add_special_district = ha_long_bay_01_district }
+			title:b_quang_yen.title_province = { add_special_district = ha_long_bay_01_district }
 			#Three Pagodas of Dali
-			title:b_dali_1.title_province = { add_special_district = three_pagodas_dali_01_district }
+			title:b_taihe_dali.title_province = { add_special_district = three_pagodas_dali_01_district }
 			#Thuriang Kilns - from the 1200s
 			title:b_sukhothai.title_province = { add_special_district_slot = thuriang_kilns_01_district } #3
 			#Lingapura Pyramid - from the 900s
 			if = { limit = { game_start_date >= 1066.9.15 } title:b_koh_ker.title_province = { add_special_district = pyramid_lingapura_01_district } }
 			else = { title:b_koh_ker.title_province = { add_special_district_slot = pyramid_lingapura_01_district } }
-			if = { limit = { game_start_date >= 1066.1.1 } title:b_SUM_Muara_Takus.title_province = { add_special_district = muara_takus_01_district } }
-			else = { title:b_SUM_Muara_Takus.title_province = { add_special_district_slot = muara_takus_01_district } } #8
+			if = { limit = { game_start_date >= 1066.1.1 } title:b_kampar.title_province = { add_special_district = muara_takus_01_district } }
+			else = { title:b_kampar.title_province = { add_special_district_slot = muara_takus_01_district } } #8
 			#Wilwatikta Palace - sometime in the mid 1300s
-			title:b_JAV_Daha.title_province = { add_special_district_slot = wilwatikta_palace_01_district } #4
+			title:b_trowulan.title_province = { add_special_district_slot = wilwatikta_palace_01_district } #4
 			#Gunung Api
-			title:b_BOR_Brunei.title_province = { add_special_district = gunung_api_01_district } #5
+			title:b_trusan.title_province = { add_special_district = gunung_api_01_district } #5
 			#Chocolate Hills
-			title:b_PHI_Bool.title_province = { add_special_district = chocolate_hills_01_district }
+			title:b_bool.title_province = { add_special_district = chocolate_hills_01_district }
 			#Suwalesi Megaliths
-			title:b_SUL_Malangke.title_province = { add_special_district = suwalesi_megaliths_01_district } #6
+			title:b_malangke.title_province = { add_special_district = suwalesi_megaliths_01_district } #6
 			#Temples of Angkor
 			#From 1150 province history builds angkor_wat_01_district instead
 			if = { limit = { game_start_date < 1150.1.1 } title:b_angkor.title_province = { add_special_district = temples_angkor_01_district } } #7
@@ -612,11 +613,11 @@ on_game_start = {
 					has_gdp_dlc_trigger = yes # Silk & Silver
 				}
 			}
-			title:b_zhouzhi.title_province = { add_special_district = changan_market_01_district } #Chang'an
-			title:b_potala.title_province = { add_special_district = lhasa_market_01_district } #Lhasa
-			title:b_lahur.title_province = { add_special_district = lahur_bazaar_01_district } #Lahur
-			title:b_dunhuang_2.title_province = { add_special_district = dunhuang_market_01_district } #Dunhuang
-			title:b_gurganj.title_province = { add_special_district = gurganj_bazaar_01_district } #Gurganj
+			title:b_xianyang.title_province = { add_special_district = changan_market_01_district } #Chang'an
+			title:b_gyama.title_province = { add_special_district = lhasa_market_01_district } #Lhasa
+			title:b_lahore.title_province = { add_special_district = lahur_bazaar_01_district } #Lahur
+			title:b_shazhou.title_province = { add_special_district = dunhuang_market_01_district } #Dunhuang
+			title:b_urgench.title_province = { add_special_district = gurganj_bazaar_01_district } #Gurganj
 			title:b_tabriz.title_province = { add_special_district = tabriz_bazaar_01_district } #Tabriz
 			title:b_hamadan.title_province = { add_special_district = hamadan_bazaar_01_district } #Hamadan
 			title:b_kashgar.title_province = { add_special_district = sunday_bazaar_01_district } #Kashgar
@@ -750,7 +751,7 @@ on_game_start = {
 		}
 
 		### UNIVERSITIES ###
-		title:b_fes.title_province = {
+		title:b_fez.title_province = {
 			if = {
 				limit = {
 					has_special_district_slot = no #Depends on DLC
@@ -758,7 +759,7 @@ on_game_start = {
 				add_special_district_slot = generic_university_district
 			}
 		}
-		title:b_somapur.title_province = {
+		title:b_naogaon.title_province = {
 			if = {
 				limit = {
 					has_special_district_slot = no #Depends on DLC
@@ -771,20 +772,20 @@ on_game_start = {
 		title:b_madrid.title_province = { add_special_district_slot = generic_university_district }
 		#title:b_oxford.title_province = { add_special_district_slot = generic_university_district } # Added in province history
 		title:b_cambridge.title_province = { add_special_district_slot = generic_university_district }
-		title:b_padua.title_province = { add_special_district_slot = generic_university_district }
+
 		title:b_coimbra.title_province = { add_special_district_slot = generic_university_district }
-		title:b_napoli.title_province = { add_special_district_slot = generic_university_district }
+
 		title:b_milano.title_province = { add_special_district_slot = generic_university_district }
 		title:b_vienna.title_province = { add_special_district_slot = generic_university_district }
-		title:b_praha.title_province = { add_special_district_slot = generic_university_district }
+		title:b_prague.title_province = { add_special_district_slot = generic_university_district }
 		title:b_perugia.title_province = { add_special_district_slot = generic_university_district }
-		title:b_malappuram.title_province = { add_special_district_slot = generic_university_district }
+		title:b_malapuram.title_province = { add_special_district_slot = generic_university_district }
 		title:b_janakpur.title_province = { add_special_district_slot = generic_university_district }
 		title:b_uppsala.title_province = { add_special_district_slot = generic_university_district }
-		title:b_montlhery.title_province = { add_special_district_slot = generic_university_district } # Technically should be Paris, but that's occupied by Notre Dame
-		title:b_qartajana.title_province = { add_special_district_slot = generic_university_district } # Technically should be Tunis, but that's occupied by a cathedral
-		title:b_wazwan.title_province = { add_special_district_slot = generic_university_district } # Technically should be Isfahan, but that's occupied by the Friday Mosque
-		title:b_sarsar.title_province = { add_special_district_slot = generic_university_district } # Technically should be Baghdad, but that's occupied by the House of Wisdom
+		title:b_corbeil.title_province = { add_special_district_slot = generic_university_district } # Technically should be Paris, but that's occupied by Notre Dame
+		title:b_tebourba.title_province = { add_special_district_slot = generic_university_district } # Technically should be Tunis, but that's occupied by a cathedral
+		title:b_nimvar.title_province = { add_special_district_slot = generic_university_district } # Technically should be Isfahan, but that's occupied by the Friday Mosque
+		title:b_baqubah.title_province = { add_special_district_slot = generic_university_district } # Technically should be Baghdad, but that's occupied by the House of Wisdom
 		title:b_speyer.title_province = { add_special_district_slot = generic_university_district } # 1350ish, should be in Heidelberg but that's a church
 		title:b_krakow.title_province = { add_special_district_slot = generic_university_district } # 1364
 		title:b_rostock.title_province = { add_special_district_slot = generic_university_district } # 1400ish
@@ -1556,11 +1557,17 @@ on_game_start = {
 
 		### FERTILE LANDS ###
 		# For deserts that are supposed to be very fertile
-		title:c_taizz = { add_county_modifier = fertile_desert_mountains_modifier }
-		title:c_mandab = { add_county_modifier = fertile_desert_mountains_modifier }
-		title:c_zabid = { add_county_modifier = fertile_desert_mountains_modifier }
-		title:c_sanaa = { add_county_modifier = fertile_desert_mountains_modifier }
+
 		title:c_dathina = { add_county_modifier = fertile_desert_mountains_modifier }
+		title:c_hirda = { add_county_modifier = fertile_desert_mountains_modifier }
+		title:c_ibb = { add_county_modifier = fertile_desert_mountains_modifier }
+		title:c_sana = { add_county_modifier = fertile_desert_mountains_modifier }
+		title:c_taizz = { add_county_modifier = fertile_desert_mountains_modifier }
+		title:c_zabid = { add_county_modifier = fertile_desert_mountains_modifier }
+
+
+
+
 
 		### CEDARS OF LEBANON ###
 		# The cedar forests of Mount Lebanon
@@ -1845,40 +1852,65 @@ on_game_start = {
 
 
 		### HENDEKAPOLIS ###
-		title:c_ionia = { add_county_modifier = dodekapolis_modifier }
+
 		title:c_chios = { add_county_modifier = dodekapolis_modifier }
-		title:c_aeolis = { add_county_modifier = dodekapolis_modifier }
-		title:c_lesbos = { add_county_modifier = dodekapolis_modifier }
+		title:c_karasi = { add_county_modifier = dodekapolis_modifier }
+		title:c_lemnos = { add_county_modifier = dodekapolis_modifier }
+		title:c_saruhan = { add_county_modifier = dodekapolis_modifier }
+		title:c_smyrna = { add_county_modifier = dodekapolis_modifier }
+
+
+
 
 		### GREECE BACKWATER COUNTIES ###
 		if = {
 			limit = { has_ep3_dlc_trigger = yes }
-			title:c_laconia = { add_county_modifier = backwater_county_modifier }
-			title:c_messenia = { add_county_modifier = backwater_county_modifier }
-			title:c_korinthos = { add_county_modifier = backwater_county_modifier }
-			title:c_achaia = { add_county_modifier = backwater_county_modifier }
-			title:c_cephalonia = { add_county_modifier = backwater_county_modifier }
-			title:c_attica = { add_county_modifier = backwater_county_modifier }
-			title:c_boeotia = { add_county_modifier = backwater_county_modifier }
+
+			title:c_achaea = { add_county_modifier = backwater_county_modifier }
 			title:c_aetolia = { add_county_modifier = backwater_county_modifier }
-			title:c_naxos = { add_county_modifier = backwater_county_modifier }
+			title:c_albania = { add_county_modifier = backwater_county_modifier }
+			title:c_attica = { add_county_modifier = backwater_county_modifier }
+			title:c_central_macedonia = { add_county_modifier = backwater_county_modifier }
+			title:c_chalkidiki = { add_county_modifier = backwater_county_modifier }
+			title:c_corinthia = { add_county_modifier = backwater_county_modifier }
 			title:c_euboea = { add_county_modifier = backwater_county_modifier }
+			title:c_evros = { add_county_modifier = backwater_county_modifier }
+			title:c_ionian_islands = { add_county_modifier = backwater_county_modifier }
+			title:c_laconia = { add_county_modifier = backwater_county_modifier }
+			title:c_lower_macedonia = { add_county_modifier = backwater_county_modifier }
+			title:c_messenia = { add_county_modifier = backwater_county_modifier }
+			title:c_naxos = { add_county_modifier = backwater_county_modifier }
 			title:c_neopatras = { add_county_modifier = backwater_county_modifier }
-			title:c_demetrias = { add_county_modifier = backwater_county_modifier }
-			title:c_thessaliotis = { add_county_modifier = backwater_county_modifier }
-			title:c_thessalia = { add_county_modifier = backwater_county_modifier }
-			title:c_epeiros = { add_county_modifier = backwater_county_modifier }
-		    title:c_ionian_islands = { add_county_modifier = backwater_county_modifier }
-			title:c_veria = { add_county_modifier = backwater_county_modifier }
-			title:c_metzovo = { add_county_modifier = backwater_county_modifier }
-			title:c_chalkidike = { add_county_modifier = backwater_county_modifier }
-			title:c_thessalonika = { add_county_modifier = backwater_county_modifier }
-			title:c_serres = { add_county_modifier = backwater_county_modifier }
-			title:c_mosynopolis = { add_county_modifier = backwater_county_modifier }
-			title:c_ohrid = { add_county_modifier = backwater_county_modifier }
-			title:c_antipatreia = { add_county_modifier = backwater_county_modifier }
-			title:c_dyrrachion = { add_county_modifier = backwater_county_modifier }
-			title:c_avlonas = { add_county_modifier = backwater_county_modifier }
+			title:c_north_epirus = { add_county_modifier = backwater_county_modifier }
+			title:c_prilep = { add_county_modifier = backwater_county_modifier }
+			title:c_south_epirus = { add_county_modifier = backwater_county_modifier }
+			title:c_thessaly = { add_county_modifier = backwater_county_modifier }
+			title:c_upper_macedonia = { add_county_modifier = backwater_county_modifier }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		}
 
 		### Pandidakterion IN CONSTANTINOPLE ###
@@ -1887,7 +1919,8 @@ on_game_start = {
 				has_ep3_dlc_trigger = yes
 				current_date >= 1046.1.1
 			}
-			title:c_byzantion = { add_county_modifier = pandidakterion_university_modifier }
+
+		title:c_constantinople = { add_county_modifier = pandidakterion_university_modifier }
 		}
 
 		### Varangian Guard ###
@@ -2301,7 +2334,7 @@ on_game_start = {
 		### EP3 BYZANTIUM IMPORTANT COUNTIES ###
 		if = {
 			limit = { has_ep3_dlc_trigger = yes }
-			title:c_antiocheia = {
+			title:c_antakya = {
 				set_important_location = {
 					title = title:e_byzantium
 					enter_realm_event = ep3_emperor_yearly.2000
@@ -2315,7 +2348,7 @@ on_game_start = {
 					enter_realm_event = ep3_emperor_yearly.2000
 				}
 			}
-			title:c_jerusalem = {
+			title:c_filastin = {
 				set_important_location = {
 					title = title:e_byzantium
 					enter_realm_event = ep3_emperor_yearly.2000
@@ -2343,7 +2376,7 @@ on_game_start = {
 					enter_realm_event = ep3_emperor_yearly.2000
 				}
 			}
-			title:c_abbadan = {
+			title:c_basra = {
 				set_important_location = {
 					title = title:e_byzantium
 					enter_realm_event = ep3_emperor_yearly.2000
@@ -2357,7 +2390,7 @@ on_game_start = {
 					enter_realm_event = ep3_emperor_yearly.2000
 				}
 			}
-			title:c_edessa = {
+			title:c_ar_ruha = {
 				set_important_location = {
 					title = title:e_byzantium
 					enter_realm_event = ep3_emperor_yearly.2000
@@ -2385,7 +2418,7 @@ on_game_start = {
 					enter_realm_event = ep3_emperor_yearly.2000
 				}
 			}
-			title:c_siracusa = {
+			title:c_noto = {
 				set_important_location = {
 					title = title:e_byzantium
 					enter_realm_event = ep3_emperor_yearly.2000
@@ -2399,7 +2432,7 @@ on_game_start = {
 					enter_realm_event = ep3_emperor_yearly.2000
 				}
 			}
-			title:c_roma = { # Vaticano
+			title:c_marittima = { # Vaticano
 				set_important_location = {
 					title = title:e_byzantium
 					enter_realm_event = ep3_emperor_yearly.2000
@@ -2413,21 +2446,8 @@ on_game_start = {
 					enter_realm_event = ep3_emperor_yearly.2000
 				}
 			}
-			title:c_roma_urbs = { # Roma
-				set_important_location = {
-					title = title:e_byzantium
-					enter_realm_event = ep3_emperor_yearly.2000
-				}
-				set_important_location = {
-					title = title:h_roman_empire
-					enter_realm_event = ep3_emperor_yearly.2000
-				}
-				set_important_location = {
-					title = title:h_eastern_roman_empire
-					enter_realm_event = ep3_emperor_yearly.2000
-				}
-			}
-			title:c_ravenna = {
+
+			title:c_romagna = {
 				set_important_location = {
 					title = title:e_byzantium
 					enter_realm_event = ep3_emperor_yearly.2000
@@ -2455,7 +2475,7 @@ on_game_start = {
 					enter_realm_event = ep3_emperor_yearly.2000
 				}
 			}
-			title:c_tangiers = {
+			title:c_habat = {
 				set_important_location = {
 					title = title:e_byzantium
 					enter_realm_event = ep3_emperor_yearly.2000
@@ -2483,7 +2503,7 @@ on_game_start = {
 					enter_realm_event = ep3_emperor_yearly.2000
 				}
 			}
-			title:c_lombardia = {
+			title:c_milano = {
 				set_important_location = {
 					title = title:e_byzantium
 					enter_realm_event = ep3_emperor_yearly.2000
@@ -2497,7 +2517,7 @@ on_game_start = {
 					enter_realm_event = ep3_emperor_yearly.2000
 				}
 			}
-			title:c_trier = {
+			title:c_hunsruck = {
 				set_important_location = {
 					title = title:e_byzantium
 					enter_realm_event = ep3_emperor_yearly.2000
@@ -2539,7 +2559,7 @@ on_game_start = {
 					enter_realm_event = ep3_emperor_yearly.2000
 				}
 			}
-			title:c_chandax = {
+			title:c_crete = {
 				set_important_location = {
 					title = title:e_byzantium
 					enter_realm_event = ep3_emperor_yearly.2000
@@ -2553,7 +2573,7 @@ on_game_start = {
 					enter_realm_event = ep3_emperor_yearly.2000
 				}
 			}
-			title:c_tourraine = {
+			title:c_touraine = {
 				set_important_location = {
 					title = title:e_byzantium
 					enter_realm_event = ep3_emperor_yearly.2000
@@ -2567,7 +2587,7 @@ on_game_start = {
 					enter_realm_event = ep3_emperor_yearly.2000
 				}
 			}
-			title:c_byzantion = {
+			title:c_constantinople = {
 				set_important_location = {
 					title = title:e_byzantium
 					enter_realm_event = roman_restoration.1200
