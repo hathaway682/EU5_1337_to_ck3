@@ -1,0 +1,151 @@
+﻿Beta 相对普通版开局修正审计
+范围：game/common/on_action/game_start.txt 中新增的直接伯爵领及省份修正。
+原版尼罗河条目是对照原文；模组已将其映射到 10 个有效伯爵领。
+存在仅表示 ID 存在，仍需核对地理位置；数字省份逐一对照 Beta 与模组男爵领。
+
+backwater_county_modifier (1 条)
+  title:c_corfu | 模组无此头衔 | Beta game_start.txt:1719
+
+bounty_of_the_nile_modifier (13 条)
+  title:c_damietta | 模组无此头衔 | Beta game_start.txt:1624
+  title:c_al-buhaira | 模组无此头衔 | Beta game_start.txt:1625
+  title:c_al-gharbiya | 模组无此头衔 | Beta game_start.txt:1626
+  title:c_sharkiya | 模组无此头衔 | Beta game_start.txt:1627
+  title:c_cairo | 头衔存在，地理待核 | Beta game_start.txt:1628
+  title:c_giza | 模组无此头衔 | Beta game_start.txt:1629
+  title:c_fayyum | 模组无此头衔 | Beta game_start.txt:1630
+  title:c_bahnasa | 头衔存在，地理待核 | Beta game_start.txt:1631
+  title:c_ushmun | 模组无此头衔 | Beta game_start.txt:1632
+  title:c_asyut | 头衔存在，地理待核 | Beta game_start.txt:1633
+  title:c_qus | 模组无此头衔 | Beta game_start.txt:1634
+  title:c_aswan | 模组无此头衔 | Beta game_start.txt:1635
+  title:c_kalabsha | 模组无此头衔 | Beta game_start.txt:1636
+
+carrara_marble_modifier (1 条)
+  province:2531 | 编号指向不同地点 | b_luni -> b_sora | Beta game_start.txt:1620
+
+cedars_of_lebanon_modifier (2 条)
+  title:c_beirut | 模组无此头衔 | Beta game_start.txt:1560
+  title:c_tripoli | 模组无此头衔 | Beta game_start.txt:1561
+
+granary_of_hindustan_modifier (26 条)
+  title:c_manikpur | 头衔存在，地理待核 | Beta game_start.txt:1647
+  title:c_asni | 模组无此头衔 | Beta game_start.txt:1648
+  title:c_prayaga | 模组无此头衔 | Beta game_start.txt:1649
+  title:c_chunar | 模组无此头衔 | Beta game_start.txt:1650
+  title:c_varanasi | 头衔存在，地理待核 | Beta game_start.txt:1651
+  title:c_jaunpur | 模组无此头衔 | Beta game_start.txt:1652
+  title:c_sasaram | 模组无此头衔 | Beta game_start.txt:1653
+  title:c_kusinagara | 模组无此头衔 | Beta game_start.txt:1654
+  title:c_mithila | 模组无此头衔 | Beta game_start.txt:1655
+  title:c_bangaon | 模组无此头衔 | Beta game_start.txt:1656
+  title:c_magadha | 模组无此头衔 | Beta game_start.txt:1657
+  title:c_mudgagiri | 模组无此头衔 | Beta game_start.txt:1658
+  title:c_laksmanavati | 模组无此头衔 | Beta game_start.txt:1659
+  title:c_gauda | 模组无此头衔 | Beta game_start.txt:1660
+  title:c_madhupur | 模组无此头衔 | Beta game_start.txt:1661
+  title:c_bikrampur | 模组无此头衔 | Beta game_start.txt:1662
+  title:c_candradvipa | 模组无此头衔 | Beta game_start.txt:1663
+  title:c_samatata | 模组无此头衔 | Beta game_start.txt:1664
+  title:c_nabadwipa | 模组无此头衔 | Beta game_start.txt:1665
+  title:c_saptagrama | 模组无此头衔 | Beta game_start.txt:1666
+  title:c_tamralipti | 模组无此头衔 | Beta game_start.txt:1667
+  title:c_pundravardhana | 模组无此头衔 | Beta game_start.txt:1668
+  title:c_kanyakubja | 模组无此头衔 | Beta game_start.txt:1669
+  title:c_kol | 模组无此头衔 | Beta game_start.txt:1670
+  title:c_delhi | 头衔存在，地理待核 | Beta game_start.txt:1671
+  title:c_mathura | 模组无此头衔 | Beta game_start.txt:1672
+
+granary_of_the_mediterranean_modifier (8 条)
+  title:c_palermo | 模组无此头衔 | Beta game_start.txt:1638
+  title:c_caltagirone | 模组无此头衔 | Beta game_start.txt:1639
+  title:c_trapani | 模组无此头衔 | Beta game_start.txt:1640
+  title:c_messina | 模组无此头衔 | Beta game_start.txt:1641
+  title:c_catania | 模组无此头衔 | Beta game_start.txt:1642
+  title:c_siracusa | 模组无此头衔 | Beta game_start.txt:1643
+  title:c_agrigento | 模组无此头衔 | Beta game_start.txt:1644
+  title:c_malta | 模组无此头衔 | Beta game_start.txt:1645
+
+granary_of_the_south_modifier (20 条)
+  title:c_yangzhou | 头衔存在，地理待核 | Beta game_start.txt:1674
+  title:c_lujiang | 模组无此头衔 | Beta game_start.txt:1675
+  title:c_shuzhou | 模组无此头衔 | Beta game_start.txt:1676
+  title:c_yunyang | 模组无此头衔 | Beta game_start.txt:1677
+  title:c_jiangling | 模组无此头衔 | Beta game_start.txt:1678
+  title:c_hanyang | 头衔存在，地理待核 | Beta game_start.txt:1679
+  title:c_liyang | 模组无此头衔 | Beta game_start.txt:1680
+  title:c_langzhou | 模组无此头衔 | Beta game_start.txt:1681
+  title:c_ezhou | 模组无此头衔 | Beta game_start.txt:1682
+  title:c_yuezhou_1 | 模组无此头衔 | Beta game_start.txt:1683
+  title:c_huangzhou | 头衔存在，地理待核 | Beta game_start.txt:1684
+  title:c_tanzhou | 模组无此头衔 | Beta game_start.txt:1685
+  title:c_hongzhou | 模组无此头衔 | Beta game_start.txt:1686
+  title:c_raozhou | 头衔存在，地理待核 | Beta game_start.txt:1687
+  title:c_nankang | 头衔存在，地理待核 | Beta game_start.txt:1688
+  title:c_chizhou | 头衔存在，地理待核 | Beta game_start.txt:1689
+  title:c_xuanzhou | 模组无此头衔 | Beta game_start.txt:1690
+  title:c_jiangning | 模组无此头衔 | Beta game_start.txt:1691
+  title:c_runzhou | 模组无此头衔 | Beta game_start.txt:1692
+  title:c_changzhou | 头衔存在，地理待核 | Beta game_start.txt:1693
+
+kashi_lustreware_modifier (1 条)
+  province:4047 | 编号指向不同地点 | b_qashan -> b_bokovskaya | Beta game_start.txt:1612
+
+mastic_of_chios_modifier (1 条)
+  province:486 | 编号指向不同地点 | b_chios -> b_dyrnes | Beta game_start.txt:1610
+
+naphta_modifier (1 条)
+  title:c_shirvan | 头衔存在，地理待核 | Beta game_start.txt:1606
+
+pearl_fishing_banks_modifier (19 条)
+  title:c_dahlak | 模组无此头衔 | Beta game_start.txt:1565
+  title:c_massawa | 模组无此头衔 | Beta game_start.txt:1566
+  title:c_bur | 模组无此头衔 | Beta game_start.txt:1567
+  title:c_dhafra | 模组无此头衔 | Beta game_start.txt:1568
+  title:c_uqayr | 模组无此头衔 | Beta game_start.txt:1569
+  title:c_julfar | 头衔存在，地理待核 | Beta game_start.txt:1570
+  title:c_qatif | 模组无此头衔 | Beta game_start.txt:1571
+  title:c_kotte | 模组无此头衔 | Beta game_start.txt:1572
+  title:c_madurai | 模组无此头衔 | Beta game_start.txt:1573
+  title:c_lianzhou_1 | 模组无此头衔 | Beta game_start.txt:1574
+  title:c_qinzhou_2 | 模组无此头衔 | Beta game_start.txt:1575
+  title:c_ise | 头衔存在，地理待核 | Beta game_start.txt:1576
+  title:c_PHI_sulu | 模组无此头衔 | Beta game_start.txt:1577
+  title:c_aru | 头衔存在，地理待核 | Beta game_start.txt:1578
+  title:c_THAI_tenasserim | 模组无此头衔 | Beta game_start.txt:1579
+  title:c_PHI_south_palawan | 模组无此头衔 | Beta game_start.txt:1580
+  title:c_PHI_bool_and_cebu | 模组无此头衔 | Beta game_start.txt:1581
+  title:c_yazhou | 头衔存在，地理待核 | Beta game_start.txt:1582
+  title:c_danzhou_1 | 模组无此头衔 | Beta game_start.txt:1583
+
+samarkandi_paper_modifier (1 条)
+  province:4404 | 编号指向不同地点 | b_samarkand -> b_bazarny_syzgan | Beta game_start.txt:1618
+
+toledo_bladesmiths_modifier (1 条)
+  province:1919 | 编号指向不同地点 | b_toledo -> b_cherbourg | Beta game_start.txt:1616
+
+venetian_glass_modifier (1 条)
+  province:2517 | 编号指向不同地点 | b_venezia -> b_nicastro | Beta game_start.txt:1614
+
+walrus_ivory_modifier (16 条)
+  title:c_vestisland | 模组无此头衔 | Beta game_start.txt:1587
+  title:c_nordrland | 模组无此头衔 | Beta game_start.txt:1588
+  title:c_vastvag | 模组无此头衔 | Beta game_start.txt:1589
+  title:c_bothin | 模组无此头衔 | Beta game_start.txt:1590
+  title:c_skolt | 模组无此头衔 | Beta game_start.txt:1591
+  title:c_ter | 模组无此头衔 | Beta game_start.txt:1592
+  title:c_kintus | 模组无此头衔 | Beta game_start.txt:1593
+  title:c_viena | 模组无此头衔 | Beta game_start.txt:1594
+  title:c_kholmogory | 头衔存在，地理待核 | Beta game_start.txt:1595
+  title:c_koutajoki | 模组无此头衔 | Beta game_start.txt:1596
+  title:c_akkel | 模组无此头衔 | Beta game_start.txt:1597
+  title:c_jovvkuj | 模组无此头衔 | Beta game_start.txt:1598
+  title:c_east_kiilt | 模组无此头衔 | Beta game_start.txt:1599
+  title:c_karasjohka | 模组无此头衔 | Beta game_start.txt:1600
+  title:c_aviovara | 模组无此头衔 | Beta game_start.txt:1601
+  title:c_rounala | 模组无此头衔 | Beta game_start.txt:1602
+
+已确认的同名位置问题：
+  c_shirvan：Beta 用于巴库及阿普歇伦；模组中巴库位于 c_baku，c_shirvan 为其他地点。
+  c_yazhou：Beta 的珍珠产地在海南；模组 c_yazhou 位于四川雅州。
+

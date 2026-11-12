@@ -1627,20 +1627,17 @@ on_game_start = {
 		province:2531 = { add_province_modifier = carrara_marble_modifier }
 
 		### REGIONAL CROP BOUNTIES ###
-		# Bounty of the Nile
-		title:c_damietta = { add_county_modifier = bounty_of_the_nile_modifier }
-		title:c_al-buhaira = { add_county_modifier = bounty_of_the_nile_modifier }
-		title:c_al-gharbiya = { add_county_modifier = bounty_of_the_nile_modifier }
-		title:c_sharkiya = { add_county_modifier = bounty_of_the_nile_modifier }
-		title:c_cairo = { add_county_modifier = bounty_of_the_nile_modifier }
-		title:c_giza = { add_county_modifier = bounty_of_the_nile_modifier }
-		title:c_fayyum = { add_county_modifier = bounty_of_the_nile_modifier }
-		title:c_bahnasa = { add_county_modifier = bounty_of_the_nile_modifier }
-		title:c_ushmun = { add_county_modifier = bounty_of_the_nile_modifier }
+		# Bounty of the Nile: vanilla sites mapped to EU5-map counties.
 		title:c_asyut = { add_county_modifier = bounty_of_the_nile_modifier }
-		title:c_qus = { add_county_modifier = bounty_of_the_nile_modifier }
-		title:c_aswan = { add_county_modifier = bounty_of_the_nile_modifier }
-		title:c_kalabsha = { add_county_modifier = bounty_of_the_nile_modifier }
+		title:c_bahnasa = { add_county_modifier = bounty_of_the_nile_modifier }
+		title:c_buhayra = { add_county_modifier = bounty_of_the_nile_modifier }
+		title:c_cairo = { add_county_modifier = bounty_of_the_nile_modifier }
+		title:c_dakahliyya = { add_county_modifier = bounty_of_the_nile_modifier }
+		title:c_gharbiyya = { add_county_modifier = bounty_of_the_nile_modifier }
+		title:c_minya = { add_county_modifier = bounty_of_the_nile_modifier }
+		title:c_nobatia = { add_county_modifier = bounty_of_the_nile_modifier }
+		title:c_qusiyya = { add_county_modifier = bounty_of_the_nile_modifier }
+		title:c_sharqiyya = { add_county_modifier = bounty_of_the_nile_modifier }
 		# Granary of the Mediterranean
 		title:c_palermo = { add_county_modifier = granary_of_the_mediterranean_modifier }
 		title:c_caltagirone = { add_county_modifier = granary_of_the_mediterranean_modifier }
