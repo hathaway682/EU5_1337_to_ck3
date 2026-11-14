@@ -4104,7 +4104,7 @@ ayd_umur = {
 
 aylangir_borjigin = {
 	name = "name_aylangir"
-		dynasty = borjigin_dynasty
+		dynasty_house = mb_tribe_house_barlas
 	culture = mongol
 	religion = tengri_pagan
 	father = ichil_borjigin
@@ -9186,7 +9186,7 @@ bur_yolande_dreux = {
 
 burgul_noyan_borjigin = {
 	name = "name_burgul"
-		dynasty = borjigin_dynasty
+		dynasty_house = mb_tribe_house_barlas
 	culture = karluk
 	religion = tengri_pagan
 	father = aylangir_borjigin
@@ -13962,7 +13962,7 @@ chg_tamashirin_borjigin = {
 
 chg_taraghai_noyan_borjigin = {
 	name = "name_taraghai"
-		dynasty = borjigin_dynasty
+		dynasty_house = mb_tribe_house_barlas
 	culture = karluk
 	religion = sunni
 	father = burgul_noyan_borjigin
@@ -21043,14 +21043,6 @@ eu5_regent_ard = {
 	1300.1.1 = { birth = yes }
 }
 
-eu5_regent_art = {
-	name = "name_eu5_arlat"
-	culture = mongol
-	religion = sunni
-    rite = shafii
-	1300.1.1 = { birth = yes }
-}
-
 eu5_regent_aru = {
 	name = "name_eu5_aru"
 	culture = malay
@@ -21428,14 +21420,6 @@ eu5_regent_bql = {
 	culture = beja
 	religion = sunni
     rite = maliki
-	1300.1.1 = { birth = yes }
-}
-
-eu5_regent_brl = {
-	name = "name_eu5_barlas"
-	culture = mongol
-	religion = sunni
-    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -22026,14 +22010,6 @@ eu5_regent_dge = {
 	culture = turkmen
 	religion = sunni
     rite = hanafi
-	1300.1.1 = { birth = yes }
-}
-
-eu5_regent_dgh = {
-	name = "name_eu5_dughlat"
-	culture = mongol
-	religion = sunni
-    rite = maliki
 	1300.1.1 = { birth = yes }
 }
 
@@ -23023,14 +22999,6 @@ eu5_regent_jlo = {
 	name = "name_eu5_jailolo"
 	culture = maluku
 	religion = tolotang
-	1300.1.1 = { birth = yes }
-}
-
-eu5_regent_jly = {
-	name = "name_eu5_jalayirs"
-	culture = mongol
-	religion = sunni
-    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
@@ -24915,14 +24883,6 @@ eu5_regent_qul = {
 	1300.1.1 = { birth = yes }
 }
 
-eu5_regent_qun = {
-	name = "name_eu5_qara_unas"
-	culture = mongol
-	religion = sunni
-    rite = shafii
-	1300.1.1 = { birth = yes }
-}
-
 eu5_regent_qyn = {
 	name = "name_eu5_qingyuan"
 	culture = bouxcuengh
@@ -25233,14 +25193,6 @@ eu5_regent_skk = {
 	name = "name_eu5_sikkim"
 	culture = lhomon
 	religion = vajrayana_faith
-	1300.1.1 = { birth = yes }
-}
-
-eu5_regent_sld = {
-	name = "name_eu5_suldus"
-	culture = mongol
-	religion = sunni
-    rite = shafii
 	1300.1.1 = { birth = yes }
 }
 
