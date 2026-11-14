@@ -7,13 +7,6 @@ eu5_regent_rig = {
 	1300.1.1 = { birth = yes }
 }
 
-eu5_regent_lub = {
-	name = "name_eu5_lubeck"
-	culture = saxon
-	religion = catholic
-	1300.1.1 = { birth = yes }
-}
-
 eu5_regent_brm = {
 	name = "name_eu5_bremen"
 	culture = saxon
@@ -426,13 +419,6 @@ eu5_regent_gub = {
 
 eu5_regent_pea = {
 	name = "name_eu5_perugia"
-	culture = italian
-	religion = catholic
-	1300.1.1 = { birth = yes }
-}
-
-eu5_regent_sie = {
-	name = "name_eu5_siena"
 	culture = italian
 	religion = catholic
 	1300.1.1 = { birth = yes }
@@ -1232,6 +1218,7 @@ eu5_regent_tmn = {
 
 eu5_regent_bat = {
 	name = "name_eu5_baatud"
+	dynasty = baatud_dynasty
 	culture = oirat
 	religion = tengri_pagan
 	1300.1.1 = { birth = yes }
@@ -1239,6 +1226,7 @@ eu5_regent_bat = {
 
 eu5_regent_crs = {
 	name = "name_eu5_choros"
+	dynasty = choros_dynasty
 	culture = oirat
 	religion = tengri_pagan
 	1300.1.1 = { birth = yes }
@@ -1246,6 +1234,7 @@ eu5_regent_crs = {
 
 eu5_regent_khd = {
 	name = "name_eu5_khoid"
+	dynasty = khoid_dynasty
 	culture = oirat
 	religion = tengri_pagan
 	1300.1.1 = { birth = yes }
@@ -1253,6 +1242,7 @@ eu5_regent_khd = {
 
 eu5_regent_trh = {
 	name = "name_eu5_torghut"
+	dynasty = torghut_dynasty
 	culture = oirat
 	religion = tengri_pagan
 	1300.1.1 = { birth = yes }
@@ -5580,6 +5570,7 @@ eu5_regent_khf = {
 
 eu5_regent_ngd = {
 	name = "name_eu5_neguderi"
+	dynasty = eu5_tribe_neguderi_dynasty
 	culture = mongol
 	religion = sunni
     rite = shafii
@@ -5588,6 +5579,7 @@ eu5_regent_ngd = {
 
 eu5_regent_bsd = {
 	name = "name_eu5_besud"
+	dynasty = eu5_tribe_besud_dynasty
 	culture = mongol
 	religion = sunni
     rite = shafii
@@ -5596,6 +5588,7 @@ eu5_regent_bsd = {
 
 eu5_regent_apd = {
 	name = "name_eu5_apardi"
+	dynasty = eu5_tribe_apardi_dynasty
 	culture = mongol
 	religion = sunni
     rite = shafii
@@ -5604,6 +5597,7 @@ eu5_regent_apd = {
 
 eu5_regent_ysu = {
 	name = "name_eu5_yasa_uri"
+	dynasty = eu5_tribe_yasauri_dynasty
 	culture = mongol
 	religion = sunni
     rite = shafii
@@ -5612,6 +5606,7 @@ eu5_regent_ysu = {
 
 eu5_regent_ktt = {
 	name = "name_eu5_khuttal"
+	dynasty = eu5_tribe_khuttal_dynasty
 	culture = mongol
 	religion = sunni
     rite = shafii

@@ -5,18 +5,18 @@
 CK3 的宗教地图模式按 faith 上色，`rite` 决定显示哪个教会/学派，两者都是宗教状态。
 
 用法：
-    python _religion_checkpoint.py save [标签]
+    python religion_snapshot.py save [标签]
         在当前状态下打一个保存点，存到 gen_debug/religion_checkpoints/
         文件名 faith_<时间戳>[_标签].json
         结构 {"format": 2, "created": ..., "faith": {ID: faith}, "rite": {ID: rite}}
 
-    python _religion_checkpoint.py list
+    python religion_snapshot.py list
         列出所有保存点
 
-    python _religion_checkpoint.py restore latest            # 干跑
-    python _religion_checkpoint.py restore latest --apply    # 真写
-    python _religion_checkpoint.py restore faith_20261022_0130.json --apply
-    python _religion_checkpoint.py restore latest --apply --faith-only   # 只还原 faith
+    python religion_snapshot.py restore latest            # 干跑
+    python religion_snapshot.py restore latest --apply    # 真写
+    python religion_snapshot.py restore faith_20261022_0130.json --apply
+    python religion_snapshot.py restore latest --apply --faith-only   # 只还原 faith
 
 还原原则（外科手术式）：
   - `faith =` 行：只改与快照不一致的省份，其它行原样保留；
@@ -29,19 +29,21 @@ CK3 的宗教地图模式按 faith 上色，`rite` 决定显示哪个教会/学�
 
 兼容：format 1（老快照，扁平 {ID: faith}）只还原 faith，不动 rite——
 因为老快照里「没有 rite 字段」不等于「当时没有 rite 行」。
+
+2026-11-14 从 gen_debug/_religion_checkpoint.py 移入本 skill，逻辑未改，
+只是路径改用 _common，保存点仍落在 gen_debug/religion_checkpoints/。
 """
-import io, json, os, re, sys, time
+import io
+import json
+import os
+import sys
+import time
 from collections import Counter
 
-GEN = os.path.dirname(os.path.abspath(__file__))
-MOD = r"D:\Documents\Paradox Interactive\Crusader Kings III\mod\EU5_Modern_Borders_noshape"
-SRC = os.path.join(MOD, "history", "provinces", "00_generated_provinces.txt")
-SNAPDIR = os.path.join(GEN, "religion_checkpoints")
+import _common as C
 
-BOM = "\ufeff"
-BLOCK = re.compile(r"^(\d+) = \{\s*$")
-FAITH = re.compile(r"^(\s*)faith = (\S+)\s*$")
-RITE = re.compile(r"^(\s*)rite = (\S+)\s*$")
+SNAPDIR = os.path.join(C.MOD, "gen_debug", "religion_checkpoints")
+SRC = C.PROV
 
 
 def read_text(path):
@@ -54,41 +56,45 @@ def read_text(path):
 
 def write_text(path, text):
     """text 已经是用目标行尾符拼好的，直接按字节写，不做任何换行翻译。"""
-    io.open(path, "wb").write((BOM + text).encode("utf-8"))
+    io.open(path, "wb").write((C.BOM + text).encode("utf-8"))
 
 
 def iter_blocks(lines):
-    """yield (pid, body_lines, close_line)。块 = `123 = {` ... `}`，body 不含两端。"""
+    """yield (pid, body_lines, start_index, close_index)。
+
+    按**大括号深度**切，不能取「第一个 `}`」——省份块里有 `1337.4.1 = { ... }`
+    日期子块，它的闭括号缩进是 `\t\t\t`。按第一个 `}` 切会把子块尾巴当顶层、
+    并把闭括号写成无缩进的 `}`，整个文件掉几万字节缩进（2026-11-14 踩过）。
+    """
     i, n = 0, len(lines)
     while i < n:
-        m = BLOCK.match(lines[i])
+        m = C.BLOCK_OPEN.match(lines[i])
         if not m:
-            yield None, [lines[i]], None
+            yield None, [lines[i]], i, i
             i += 1
             continue
-        pid = int(m.group(1))
-        j = i + 1
-        body = []
-        while j < n and lines[j].strip() != "}":
-            body.append(lines[j])
+        d, j = 0, i
+        while j < n:
+            d += lines[j].count("{") - lines[j].count("}")
+            if d == 0:
+                break
             j += 1
-        close = lines[j] if j < n else "}"
-        yield pid, body, close
+        yield int(m.group(1)), lines[i + 1:j], i, j
         i = j + 1
 
 
 def parse_state(text, sep):
     """-> (faith{}, rite{})，只取每个省份块内第一条 faith / rite。"""
     faith, rite = {}, {}
-    for pid, body, _close in iter_blocks(text.split(sep)):
+    for pid, body, _s, _c in iter_blocks(text.split(sep)):
         if pid is None:
             continue
         for line in body:
-            m = FAITH.match(line)
+            m = C.FAITH_LINE.match(line)
             if m and pid not in faith:
                 faith[pid] = m.group(2)
                 continue
-            m = RITE.match(line)
+            m = C.RITE_LINE.match(line)
             if m and pid not in rite:
                 rite[pid] = m.group(2)
     return faith, rite
@@ -120,8 +126,8 @@ def cmd_save(label):
     with io.open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write(json.dumps(obj, ensure_ascii=False, indent=0))
     print("保存点已写入: %s" % path)
-    print("省份数: %d（有 faith %d / 有 rite %d）" % (len(set(faith) | set(rite)),
-                                                  len(faith), len(rite)))
+    print("省份数: %d（有 faith %d / 有 rite %d）"
+          % (len(set(faith) | set(rite)), len(faith), len(rite)))
     print("faith 种类: %d" % len(set(faith.values())))
     for k, v in Counter(faith.values()).most_common(10):
         print("   %-28s %d" % (k, v))
@@ -184,25 +190,22 @@ def cmd_restore(name, apply, faith_only):
     seen_f, seen_r = set(), set()
     ch_f, ch_r, add_r, del_r = [], [], [], []
 
-    for pid, body, close in iter_blocks(lines):
+    for pid, body, start, close in iter_blocks(lines):
         if pid is None:
-            out.extend(body)
+            out.extend(lines[start:close + 1])
             continue
-        out.append("%d = {" % pid)
         if pid not in snap_f:
-            # 快照里没有这个省：完全不动
-            out.extend(body)
-            if close is not None:
-                out.append(close)
+            # 快照里没有这个省：完全不动（整块原样搬回）
+            out.extend(lines[start:close + 1])
             continue
-
+        out.append(lines[start])
         want_f = snap_f.get(pid)
         want_r = snap_r.get(pid) if do_rite else None
         new_body = []
         faith_idx = None
         rite_done = False
         for line in body:
-            mf = FAITH.match(line)
+            mf = C.FAITH_LINE.match(line)
             if mf:
                 seen_f.add(pid)
                 if want_f is not None and mf.group(2) != want_f:
@@ -211,7 +214,7 @@ def cmd_restore(name, apply, faith_only):
                 faith_idx = len(new_body)
                 new_body.append(line)
                 continue
-            mr = RITE.match(line)
+            mr = C.RITE_LINE.match(line)
             if mr:
                 seen_r.add(pid)
                 if do_rite:
@@ -227,16 +230,15 @@ def cmd_restore(name, apply, faith_only):
             new_body.append(line)
 
         if do_rite and want_r is not None and not rite_done:
-            indent = "    "
+            indent = "\t"
             if faith_idx is not None:
-                indent = FAITH.match(new_body[faith_idx]).group(1)
+                indent = C.FAITH_LINE.match(new_body[faith_idx]).group(1)
             pos = (faith_idx + 1) if faith_idx is not None else len(new_body)
             new_body.insert(pos, "%srite = %s" % (indent, want_r))
             add_r.append((pid, want_r))
 
         out.extend(new_body)
-        if close is not None:
-            out.append(close)
+        out.append(lines[close])
 
     new_text = sep.join(out)
     only_snap = sorted(set(snap_f) - seen_f)
@@ -280,11 +282,10 @@ def cmd_restore(name, apply, faith_only):
           % (len(ch_f), len(ch_r) + len(add_r) + len(del_r),
              len(ch_r), len(add_r), len(del_r)))
     print("备份 -> %s" % os.path.basename(bak))
-    chk = io.open(SRC, "rb").read()
-    print("校验: CRLF=%d LF=%d BOM=%s faith=%d rite=%d"
-          % (chk.count(b"\r\n"), chk.count(b"\n"), chk[:3] == b"\xef\xbb\xbf",
-             len(re.findall(rb"(?m)^\s*faith = ", chk)),
-             len(re.findall(rb"(?m)^\s*rite = ", chk))))
+    st = C.byte_stats()
+    print("校验: CRLF=%d 裸LF=%d BOM=%s 括号=%d/%d"
+          % (st["crlf"], st["lone_lf"], "有" if st["bom"] else "★缺",
+             st["open"], st["close"]))
 
 
 def main():

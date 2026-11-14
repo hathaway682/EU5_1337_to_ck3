@@ -27,8 +27,7 @@
 - **按 title_map 批量补内容前，必须先过 `_title_overrides.csv`**：清单/CSV 里的 `title_key` 常是**改名前的旧键**（SIC 记 `k_sicily` 实为 `k_trinacria`；DLH 记 `k_delhi` 实为 `e_hindustan`）。给旧键补内容 = 同一世系在新旧键各写一遍（2026-10-30 补类1 踩到，已删旧键块回退）。判据：`override[tag] != csv_key` 就跳过。
 
 ## 三、生成器纪律
-用户手改文件绝不覆盖；默认 dry run；非必要不全量重建；诊断默认只读、报告结论+改法等用户说「改」；行号一律绝对行号；游戏安装目录只读，产物放工作区。
-- **只改 politics.json 的输入时，链路只需 `export_politics.py` → `_patch_title_history.py`，绝不要跑 `_fix_politics_output.py`**：它是总装脚本，一次写 20 多个产物——province history 的 21046 条 culture/faith/holding、characters 的 government/regent、`zz_eu5_titular.txt` 颜色、tributaries、primary titles、两种语言本地化。2026-10-28、2026-10-29 各犯一次（第二次冲掉省份历史与本地化，靠备份还原）。跑之前先问：这一步真的需要动这个文件吗。
+用户手改文件绝不覆盖；默认 dry run；非必要不全量重建；诊断默认只读、报告结论+改法等用户说「改」；行号一律绝对行号；游戏安装目录只读，产物放工作区。- **只改 politics.json 的输入时，链路只需 `export_politics.py` → `_patch_title_history.py`，绝不要跑 `_fix_politics_output.py`**：它是总装脚本，一次写 20 多个产物——province history 的 21046 条 culture/faith/holding、characters 的 government/regent、`zz_eu5_titular.txt` 颜色、tributaries、primary titles、两种语言本地化。2026-10-28、2026-10-29 各犯一次（第二次冲掉省份历史与本地化，靠备份还原）。跑之前先问：这一步真的需要动这个文件吗。
 - **`zz_eu5_titles.txt` 绝不可整体重建**：`_patch_title_history.py` 按 politics 重写 holder/government/liege，会冲掉后续补丁层。该脚本**只补不改**。补丁层清单见 `PIPELINES.md` 三。
 
 ## 四、其它
@@ -55,3 +54,12 @@
 - **首都 5 县是「已持有、只校正首府」型**：五个国家 rank 都是 d/k/c，country 行挂 `d_`/`k_`/`c_` 高阶头衔而非 `b_<首都>`，原持有者（霍恩贝格 HHB）另有 `c_swabian_alb`，所以**不改 title_map 任何行、不新建降级男爵领**；只有 holder 不是本国 ruler 的三个县（c_malmohus 教会人物、c_kosovo 地方领主、c_neckar HHB ruler）改了 1337.4.1 holder，`c_malmohus` 顺带 `ecclesiastical_government → feudal_government`。判据见「六」第 4 条（LUN 裁定）。
 - **重跑补丁脚本时第 6 节可能把 RAV/RIM 的 country 行再绑一次**：`_export_title_map.py` 会按 seat/barony_of 写回旧绑定，脚本按既定规则自动修回，不是 bug；看到 "2 rows rebound" 说明期间有人重跑过导出。
 - 坑：`fix_holstein_denmark.py` 第 2 节原先在已打补丁的数据上会崩（`c_holstein` 的 `1337.1.1` liege 已被手改成 `k_denmark`、holder 移进单独 `1337.4.1` 块）；已加幂等分支，命中已落地状态就整段不写，绝不覆盖手改行。
+
+## 七、宗教 skill（`.workbuddy-ai/skills/ck3-religion-pipeline/`，2026-11-14 建）
+宗教改动一律走这个 skill，不要临时写脚本。四个工具：`religion_audit.py`（省份只读体检）、`religion_set.py`（改省份 faith/rite）、`religion_chars.py`（改角色 religion/rite + 跨宗教执政统计）、`religion_snapshot.py`（faith+rite 保存点/还原，原 `gen_debug/_religion_checkpoint.py` 已移入并删除）。参考：`pipeline.md`（10 层执行顺序）、`rites.md`（多 rite 全表）、`pitfalls.md`、`cu-source.md`、`holy-sites.md`、`faith-defs.md`。
+- **★ 切省份块必须按大括号深度，不能取「第一个 `}`」**。省份块里有 `1337.4.1 = { ... }` 日期子块，其闭括号缩进 `\t\t\t`；按第一个 `}` 切会把子块尾巴当顶层、写回时闭括号变无缩进 `}`。2026-11-14 实测改 1 个省掉 2 万字节缩进，**BOM/CRLF/括号全平衡、体检不报错**，只有跟备份 diff 才看得出。旧 `_religion_checkpoint.py` 也带这个 bug。改完必须比字节数和 md5。
+- mod **没有** `common/religion/faith_types/` 和 `rite_types/`，faith/rite 定义全继承原版（103 faith / 152 rite）。要改教义得整块抄原版，CK3 同名块是替换不是合并。
+- 12 个省只有 `rite = acharya` 没有 `faith` 行，是既定写法（有 rite 就不写 faith），不是漏数据。
+- 角色块会重复出现：`zz_eu5_characters.txt` 是完整定义，`zz_eu5_government.txt` 是纯 effect 补丁块，后者不能塞 `religion =`。
+- 跨宗教统计必须先用 `eu5_ck3_faith_map.csv` 把 EU5 `religion_definition` 翻成 CK3 faith 再比，否则 `theravada` vs `theravada_faith` 全是假阳性；同 religion 的兄弟 faith（miaphysitism vs armenian_apostolic）不算错。当前真跨宗教 153 人（BYZ 42 / CHG 20 / MGE 17）。
+- 圣地 270 个，已确认 198 / 未确认 72；`common/religion/holy_site_types/00_holy_site_types.txt` 只改 `county`/`barony`，不动 modifiers。mod 无 faith_types 所以「被引用」= 出现在原版 faith 的 `holy_sites` 列表里，不被引用的就是孤儿，用 `gen_debug/_drop_orphan_holy_sites.py` 清。

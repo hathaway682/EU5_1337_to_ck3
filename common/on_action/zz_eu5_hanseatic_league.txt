@@ -5,7 +5,7 @@ eu5_hanseatic_league_setup = {
 	effect = {
 		if = {
 			limit = { has_gdp_dlc_trigger = yes }
-			character:eu5_regent_lub = {
+			character:mb_city_167168 = {
 				create_confederation = {
 					name = HANSEATIC_LEAGUE_NAME
 					type = confederation_type:trade_league
@@ -19,7 +19,7 @@ eu5_hanseatic_league_setup = {
 				add_confederation_member_title = title:c_elbmarch
 				add_confederation_member_title = title:c_wesermarch
 				set_cohesion = 0
-				hanseatic_apply_member_benefits_effect = { CHARACTER = character:eu5_regent_lub }
+				hanseatic_apply_member_benefits_effect = { CHARACTER = character:mb_city_167168 }
 				hanseatic_apply_member_benefits_effect = { CHARACTER = character:eu5_regent_ham }
 				hanseatic_apply_member_benefits_effect = { CHARACTER = character:eu5_regent_brm }
 			}

@@ -18,12 +18,26 @@ _HERE = os.path.abspath(__file__)
 MOD = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(
     os.path.dirname(_HERE)))))
 PROV = os.path.join(MOD, "history", "provinces", "00_generated_provinces.txt")
-FAITH_TYPES = os.path.join(MOD, "common", "religion", "faith_types", "00_faith_types.txt")
-RITE_DIR = os.path.join(MOD, "common", "religion", "rite_types")
 LANDED = os.path.join(MOD, "common", "landed_titles", "00_landed_titles.txt")
 LOC_ZH = os.path.join(MOD, "localization", "simp_chinese")
-VANILLA = r"E:\SteamLibrary\steamapps\common\Crusader Kings III\game"
+
+VANILLA = os.environ.get("CK3_GAME") or \
+    r"E:\SteamLibrary\steamapps\common\Crusader Kings III\game"
 VANILLA_LOC_ZH = os.path.join(VANILLA, "localization", "simp_chinese")
+
+
+def _pick(rel, default_name=None):
+    """mod 里有就用 mod 的，没有就用原版的（mod 的 common/religion/ 子目录是空的）。"""
+    for base in (MOD, VANILLA):
+        p = os.path.join(base, rel)
+        if os.path.exists(p):
+            return p
+    raise SystemExit("找不到定义目录：%s\n（mod 与原版都没有，检查 CK3_GAME 环境变量）" % rel)
+
+
+FAITH_TYPES = _pick(os.path.join("common", "religion", "faith_types",
+                                 "00_faith_types.txt"))
+RITE_DIR = _pick(os.path.join("common", "religion", "rite_types"))
 
 BOM = "\ufeff"
 BLOCK_OPEN = re.compile(r"^(\d+) = \{\s*$")
@@ -68,28 +82,36 @@ def byte_stats(path=None):
 # ---------------------------------------------------------------- 块解析
 
 def iter_blocks(lines):
-    """yield (pid, body_lines, close_index)。非省块行 yield (None, [line], i)。"""
+    """yield (pid, body_lines, start_index, close_index)。非省块行 yield (None, [line], i, i)。
+
+    **必须按大括号深度切，不能取「第一个 `}`」。** 省份块里还有
+    `1337.4.1 = { ... }` 这类日期子块，它的闭括号缩进是 `\t\t\t`；
+    按第一个 `}` 切会把子块尾巴当成顶层行，写回时又把闭括号写成无缩进的 `}`，
+    整个文件会掉几万字节的缩进（2026-11-14 踩过，靠 .bak_religionset_* 恢复）。
+
+    块原文 = lines[start:close + 1]，这样不改的块可以原样搬回去。
+    """
     i, n = 0, len(lines)
     while i < n:
         m = BLOCK_OPEN.match(lines[i])
         if not m:
-            yield None, [lines[i]], i
+            yield None, [lines[i]], i, i
             i += 1
             continue
-        pid = int(m.group(1))
-        j = i + 1
-        body = []
-        while j < n and lines[j].strip() != "}":
-            body.append(lines[j])
+        d, j = 0, i
+        while j < n:
+            d += lines[j].count("{") - lines[j].count("}")
+            if d == 0:
+                break
             j += 1
-        yield pid, body, j
+        yield int(m.group(1)), lines[i + 1:j], i, j
         i = j + 1
 
 
 def parse_state(lines):
     """-> (faith{pid: val}, rite{pid: val})，每块只取第一条。"""
     faith, rite = {}, {}
-    for pid, body, _ in iter_blocks(lines):
+    for pid, body, _s, _c in iter_blocks(lines):
         if pid is None:
             continue
         for line in body:

@@ -33,6 +33,33 @@ assert st["lone_lf"] == 0 and st["bom"] and st["open"] == st["close"]
 d = {int(k): v for k, v in json.load(f).items()}   # 不转就全是 None / '-' 或 KeyError
 ```
 
+### ★ 按「第一个 `}`」切省份块会丢缩进（2026-11-14，最贵的一次）
+
+省份块里嵌着日期子块：
+
+```txt
+8834 = {
+	culture = bai
+	1337.4.1 = {
+		holder = xxx
+	}          ← 缩进 \t\t\t，这是子块的闭括号
+}              ← 缩进 \t，这才是省份块的闭括号
+```
+
+`while lines[j].strip() != "}"` 会在**子块的闭括号**处停下，于是：
+- 子块尾巴被当成顶层行搬来搬去；
+- 写回时闭括号被写成无缩进的 `}`。
+
+实测：改 1 个省，整个文件从 4354721 字节掉到 4334637，**掉掉 2 万字节全是缩进**，
+括号数还是平衡的、BOM/CRLF 也对，所以体检不报错——只有跟备份 diff 才看得出来。
+
+正确做法：**按大括号深度切**，`d += line.count("{") - line.count("}")`，`d == 0` 才是块尾。
+`_common.iter_blocks()` 和 `religion_snapshot.py` 都已改成这样，返回
+`(pid, body, start, close)`，**不改的块用 `lines[start:close+1]` 整块原样搬回**，
+不要自己拼 `"%d = {" % pid` + `"}"`。
+
+教训：改文件类工具写完后，除了查 BOM/CRLF/括号，还要**跟备份比一次字节数和 md5**。
+
 ## 二、faith / rite 语义
 
 ### 4. 「有 rite 就不写 faith」
@@ -92,7 +119,7 @@ pops 是人口分布，国家宗教是国教。两者不一致时按具体任务
 ### 13. 改之前先打保存点
 
 ```bash
-cd <MOD>/gen_debug && python _religion_checkpoint.py save 改之前
+$PY $SK/religion_snapshot.py save 改之前
 ```
 
 ### 14. 非必要不全量重建
@@ -115,3 +142,37 @@ cd <MOD>/gen_debug && python _religion_checkpoint.py save 改之前
 ### 18. 本地化从原版找
 
 mod 的 `localization/simp_chinese/` 只覆盖少量 key。查不到就查原版 `game/localization/simp_chinese/`，都没有再问用户，**不许编名字**。
+
+## 六、结构性的坑
+
+### 19. mod 没有 `common/religion/faith_types/` 和 `rite_types/`
+
+faith/rite 的定义全部来自原版 CK3。后果：
+- 想改某个 faith 的教义/圣地绑定，必须**新建** `common/religion/faith_types/00_faith_types.txt`；
+- 而 CK3 的同名块是**整块替换**不是字段合并 —— 只写一半字段会把原版教义冲掉。要么只放新增 faith，要么整份抄原版再改。
+- 详见 `faith-defs.md`。
+
+### 20. EU5 的 setup 路径随版本改过
+
+旧：`game/main_menu/setup/start/05_characters.txt`
+新：`game/main_menu/setup/1337/05_characters.txt`（还有 `1658/` 和 `templates/`）
+
+`religion_chars.py` 的 `load_eu5_char_tags()` 两种都试。写新脚本时不要硬编码 `start/`。
+
+### 21. 同一角色 key 在 `history/characters/` 里出现两次
+
+`zz_eu5_characters.txt` 是完整定义（有 `name` / `culture` / `dynasty`），
+`zz_eu5_government.txt` 里是同一个 key 的纯 effect 补丁块（只有 `1337.4.1 = { effect = ... }`）。
+
+往 effect 块里插 `religion =` 会写出畸形数据。判据：**块里有没有 `name` / `culture` / `dynasty`**，
+`religion_chars.py` 的 `is_definition()` 就是干这个的。
+
+### 22. 孤儿圣地：位置改得再对也不生效
+
+mod 没有 `faith_types`，所以圣地「被引用」= 出现在**原版** faith 的 `holy_sites` 列表里。
+不在任何原版 faith 列表里的圣地块是死数据。判据与清理见 `holy-sites.md`。
+
+### 23. 圣地只改 `county` / `barony`
+
+`parameters` / `county_holder_character_modifier` / `county_modifier_scaled` 是从原版抄来的加成，
+不要跟着位置一起改。`county` 必须真的包含 `barony`，否则不生效。

@@ -6,8 +6,8 @@ CK3 的宗教地图是**两层**：
 
 | 层 | 字段 | 作用 | 数量 |
 |---|---|---|---|
-| faith（信仰） | `faith =` | 地图上色的单位、教义、宗教领袖 | mod 定义 103 个，省份用到 55 种 |
-| rite（礼/宗派） | `rite =` | 同一个 faith 内的教会/学派细分，决定显示哪个教派名 | mod 定义 152 个，省份用到 28 种 |
+| faith（信仰） | `faith =` | 地图上色的单位、教义、宗教领袖 | **原版定义 103 个**（mod 没有 faith_types），省份用到 55 种 |
+| rite（礼/宗派） | `rite =` | 同一个 faith 内的教会/学派细分，决定显示哪个教派名 | **原版定义 152 个**（mod 没有 rite_types），省份用到 28 种 |
 
 **关键机制**（`common/religion/`）：
 
@@ -72,17 +72,24 @@ CK3 的宗教地图是**两层**：
 
 `history/characters/*.txt` 的 `religion = pagan` 是生成器的占位值，本身不带 EU5 宗教信息。`_apply_char_religion.py` 用 `culture` 反推：取该文化在 `06_pops.txt` 里人口最多的宗教，只有属于 `folk_*` 组才处理。映射结果仍是 `pagan` 的（如 `bantu_religion`）**保持不动**，这是用户认可的终态。
 
+现状：**10017 个角色定义块**，10012 个有 `religion`（48 种），1950 个有 `rite`（24 种）。
+
+改单个/一批角色的宗教用 `scripts/religion_chars.py`（见 `SKILL.md`）。两个必须知道的坑：
+
+1. **同一个 key 在 `history/characters/` 里可能出现两次**：一次是 `zz_eu5_characters.txt` 的完整定义（有 `name` / `culture` / `dynasty`），一次是 `zz_eu5_government.txt` 里只有 `1337.4.1 = { effect = { ... } }` 的补丁块。后者不能塞 `religion =`，工具用 `is_definition()` 排除。
+2. **跨宗教统计必须先换算**：EU5 `religion_definition` 是 EU5 的 key（`theravada`、`tengri`），角色里是 CK3 faith（`theravada_faith`、`tengri_pagan`）。直接比字符串会得出几百个假阳性，必须经 `eu5_ck3_faith_map.csv` 翻译后再比，并且把「同 religion 的兄弟 faith」单列（如 `miaphysitism` vs `armenian_apostolic` 不算错）。
+
 ## 六、保存点
 
-`gen_debug/_religion_checkpoint.py` 管 faith + rite 两层，是改宗教前必打的保险：
+`scripts/religion_snapshot.py` 管 faith + rite 两层，是改宗教前必打的保险
+（2026-11-14 从 `gen_debug/_religion_checkpoint.py` 移入本 skill，逻辑未改）：
 
 ```bash
-cd <MOD>/gen_debug
-python _religion_checkpoint.py save 标签       # 存到 religion_checkpoints/faith_<ts>_<标签>.json
-python _religion_checkpoint.py list
-python _religion_checkpoint.py restore latest            # 干跑
-python _religion_checkpoint.py restore latest --apply    # 真写
-python _religion_checkpoint.py restore latest --apply --faith-only
+$PY $SK/religion_snapshot.py save 标签       # 存到 gen_debug/religion_checkpoints/faith_<ts>_<标签>.json
+$PY $SK/religion_snapshot.py list
+$PY $SK/religion_snapshot.py restore latest            # 干跑
+$PY $SK/religion_snapshot.py restore latest --apply    # 真写
+$PY $SK/religion_snapshot.py restore latest --apply --faith-only
 ```
 
 还原是外科手术式的：只改与快照不一致的行，culture/holding/注释一个字节不动；快照里没 rite 的省，文件里多出的 `rite =` 行会被删掉。
