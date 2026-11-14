@@ -3268,8 +3268,211 @@ k_norway = {
 }
 
 k_novgorod = {
+	#867.1.1 = { change_development_level = 0 }
+	#1066.1.1 = { change_development_level = 2 }
+
+	1136.1.2 = {
+		holder = mb_nov_125224
+	succession_laws = { feudal_elective_succession_law } # Certain chronicles say 1196 is when the right to elect rulers was confirmed, but in practice Novgorod elected its rulers since 1136 when they dismissed their Posadnik
+}
+1137.1.2 = {
+	holder = mb_nov_125225
+}
+1141.1.2 = {
+	holder = mb_nov_125226
+}
+1144.1.2 = {
+	holder = mb_nov_125227
+}
+1146.1.2 = {
+	holder = mb_nov_125224
+}
+1147.1.2 = {
+	holder = mb_nov_125226
+}
+1157.1.2 = {
+	holder = mb_nov_125225
+}
+1160.1.2 = {
+	holder = mb_nov_125227
+}
+1161.1.2 = {
+	holder = mb_nov_125228
+}
+1167.1.2 = {
+	holder = mb_nov_125229
+}
+1168.1.2 = {
+	holder = mb_nov_125225
+}
+1170.1.2 = {
+	holder = mb_nov_125230
+}
+1171.1.2 = {
+	holder = mb_nov_125231
+}
+1171.7.2 = {
+	holder = mb_nov_125230
+}
+1172.1.2 = {
+	holder = mb_nov_125231
+}
+1175.1.2 = {
+	holder = mb_nov_125230
+}
+1175.7.2 = {
+	holder = mb_nov_125232
+}
+1176.1.2 = {
+	holder = mb_nov_125233
+}
+1177.1.2 = {
+	holder = mb_nov_125232
+}
+1180.1.2 = {
+	holder = mb_nov_125233
+}
+1184.1.2 = {
+	holder = mb_nov_125231
+}
+1186.1.2 = {
+	holder = mb_nov_125233
+}
+1189.1.2 = {
+	holder = mb_nov_125234
+}
+1204.1.2 = {
+	holder = mb_nov_125233
+}
+1205.1.2 = {
+	holder = mb_nov_125235
+}
+1208.1.2 = {
+	holder = mb_nov_125236
+}
+1210.1.2 = {
+	holder = mb_nov_125237
+}
+1212.1.2 = {
+	holder = mb_nov_125236
+}
+1215.1.2 = {
+	holder = mb_nov_125238
+}
+1216.1.2 = {
+	holder = mb_nov_125236
+}
+1219.1.2 = {
+	holder = mb_nov_125239
+}
+1219.7.2 = {
+	holder = mb_nov_125236
+}
+1220.1.2 = {
+	holder = mb_nov_125240
+}
+1221.1.2 = {
+	holder = mb_nov_125241
+}
+1225.1.2 = {
+	holder = mb_nov_125242
+}
+1226.1.2 = {
+	holder = mb_nov_125240
+}
+1229.1.2 = {
+	holder = mb_nov_125243
+}
+1229.12.13 = {
+	holder = mb_nov_125244
+}
+1243.1.2 = {
+	holder = mb_nov_125245
+}
+1250.1.2 = {
+	holder = mb_nov_125246
+}
+1255.1.2 = {
+	holder = mb_nov_125247
+}
+1258.1.2 = {
+	holder = mb_nov_125248
+}
+1268.1.2 = {
+	holder = mb_nov_125249
+}
+1274.1.2 = {
+	holder = mb_nov_125250
+}
+1280.1.2 = {
+	holder = mb_nov_125251
+}
+1286.1.2 = {
+	holder = mb_nov_125252
+}
+1290.1.2 = {
+	holder = mb_nov_125253
+}
+1292.1.2 = {
+	holder = mb_nov_125254
+}
+1294.1.2 = {
+	holder = mb_nov_125252
+}
+1297.1.2 = {
+	holder = mb_nov_125253
+}
+1298.1.2 = {
+	holder = mb_nov_125254
+}
+1299.1.2 = {
+	holder = mb_nov_125252
+}
+1301.1.2 = {
+	holder = mb_nov_125254
+}
+1302.1.2 = {
+	holder = mb_nov_125252
+}
+1303.1.2 = {
+	holder = mb_nov_125254
+}
+1305.1.2 = {
+	holder = mb_nov_125253
+}
+1306.1.2 = {
+	holder = mb_nov_125255
+}
+1312.1.2 = {
+	holder = mb_nov_125254
+}
+1317.1.2 = {
+	holder = mb_nov_125256
+}
+1324.1.2 = {
+	holder = mb_nov_125257
+}
+1328.1.2 = {
+	holder = mb_nov_125258
+}
+1330.1.2 = {
+	holder = mb_nov_125256
+}
+1332.1.2 = {
+	holder = mb_nov_125258
+}
+1333.1.2 = {
+	holder = mb_nov_125259
+}
+1334.1.2 = {
+	holder = mb_nov_125258
+}
+1335.1.2 = {
+	holder = mb_nov_125260
+}
+
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -5080,7 +5283,7 @@ d_east_novgorod = {
 		holder = mos_ivan_i_danilovich_kalita_rurikovich
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -7714,7 +7917,7 @@ d_karagay = {
 
 d_karelia = {
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -8407,7 +8610,7 @@ d_polesia = {
 
 d_pomorye = {
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -9328,7 +9531,7 @@ d_tonga = {
 
 d_totma = {
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -9568,7 +9771,7 @@ d_west_mossi = {
 
 d_west_novgorod = {
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -11916,7 +12119,7 @@ c_aunus_karelia = {
 		change_prosperity_level = 6
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -13682,7 +13885,7 @@ c_belozerskaya = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -13922,7 +14125,7 @@ c_bezhetsk = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -13932,7 +14135,7 @@ c_bezhetskaya = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -18679,7 +18882,7 @@ c_derevskaya = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -19988,8 +20191,8 @@ c_elbmarch = {
 		change_prosperity_level = 27
 	}
 	1337.4.1 = {
-		holder = eu5_regent_ham
-		government = republic_government
+		holder = lun_otto_iii_luneburg
+		government = feudal_government
 	}
 }
 
@@ -24613,7 +24816,7 @@ c_inner_aunus_karelia = {
 		change_prosperity_level = 4
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -26656,7 +26859,7 @@ c_kargopol = {
 		change_prosperity_level = 4
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -27592,7 +27795,7 @@ c_kholmogory = {
 		change_prosperity_level = 6
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -28033,7 +28236,7 @@ c_knyazhaya = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -31019,7 +31222,7 @@ c_luzhkaya = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -34803,7 +35006,7 @@ c_nagornaya = {
 		change_prosperity_level = 13
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -37176,7 +37379,7 @@ c_obonezhskaya = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -37618,7 +37821,7 @@ c_onega = {
 		change_prosperity_level = 4
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -39976,7 +40179,7 @@ c_pomorye = {
 		change_prosperity_level = 3
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -41987,7 +42190,7 @@ c_rzhevskaya = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -43612,7 +43815,7 @@ c_shenkursk = {
 		change_prosperity_level = 4
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -48240,7 +48443,7 @@ c_torzhok = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -48261,7 +48464,7 @@ c_totma = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -49131,7 +49334,7 @@ c_tverskaya = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -51008,7 +51211,7 @@ c_velsk = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -51384,7 +51587,7 @@ c_vodskaya = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -51441,7 +51644,7 @@ c_volkhovskaya = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -51461,7 +51664,7 @@ c_vologda = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -52220,8 +52423,8 @@ c_wesermarch = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = eu5_regent_brm
-		government = republic_government
+		holder = old_johann_iii_oldenburg
+		government = feudal_government
 	}
 }
 
@@ -52693,7 +52896,7 @@ c_white_karelia = {
 		change_prosperity_level = 4
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -53729,7 +53932,7 @@ c_yaren = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -53817,7 +54020,7 @@ c_yazhelbitskaya = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -53880,7 +54083,7 @@ c_yemetsk = {
 		change_prosperity_level = 4
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -54615,7 +54818,7 @@ c_zaonezhye = {
 		change_prosperity_level = 3
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -55052,7 +55255,7 @@ c_zvenigorod = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = eu5_rep_nov
+		holder = mb_nov_125260
 		government = republic_government
 	}
 }
@@ -57537,12 +57740,6 @@ b_ohrdruf = {
 b_oke_ila = {
 	1337.4.1 = {
 		holder = eu5_regent_oke
-	}
-}
-
-b_oldenburg = {
-	1337.4.1 = {
-		holder = old_johann_iii_oldenburg
 	}
 }
 

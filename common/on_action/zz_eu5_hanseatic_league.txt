@@ -16,12 +16,10 @@ eu5_hanseatic_league_setup = {
 				set_variable = is_hanseatic_league
 				set_variable = hanseatic_baltic_identity
 				set_coa = k_hansa
-				add_confederation_member_title = title:c_elbmarch
-				add_confederation_member_title = title:c_wesermarch
+				add_confederation_member_title = title:c_south_livonia
 				set_cohesion = 0
 				hanseatic_apply_member_benefits_effect = { CHARACTER = character:mb_city_167168 }
-				hanseatic_apply_member_benefits_effect = { CHARACTER = character:eu5_regent_ham }
-				hanseatic_apply_member_benefits_effect = { CHARACTER = character:eu5_regent_brm }
+				hanseatic_apply_member_benefits_effect = { CHARACTER = character:eu5_regent_rig }
 			}
 		}
 	}

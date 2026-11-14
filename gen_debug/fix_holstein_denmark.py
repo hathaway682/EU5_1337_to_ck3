@@ -59,19 +59,12 @@ Provinces 608/611 are already castle_holding -- nothing to do there.
    from seat/barony_of, so a full export writes the old binding back -- re-run
    this script after any such export.
 
-7. Hanseatic seats (user decision 2026-11-10). The same standard workflow, for
-   the two Free Cities: HAM owns only the location hamburg in c_elbmarch, BRM
-   owns only bremen in c_wesermarch. Lock each town as its county's first barony,
-   seat its ruler on the county, rebind the title map's country rows, and add
-   every touched key to eu5_reassign_keep.json:
-     c_elbmarch    b_harburg   -> b_hamburg     LUN -> HAM
-     c_wesermarch  b_oldenburg -> b_bremen      OLD -> BRM
-   LUN is a duchy (d_eu5_lun) holding eleven locations, so losing c_elbmarch
-   leaves it plenty of land: its country row stays on the duchy and no b_harburg
-   block is created. OLD holds only the three locations of c_wesermarch, so its
-   country row is rebound to b_oldenburg and that barony takes its holder --
-   exactly the RIM/b_rimini case in section 6. Both new rulers are republics,
-   so the counties' 1337.4.1 government line changes with the holder.
+7. Hanseatic seats (user decision 2026-11-10, CANCELLED 2026-11-14). The lock
+   that seated HAM on c_elbmarch and BRM on c_wesermarch was withdrawn at the
+   user's request: both counties are back with LUN and OLD, and HAM / BRM are
+   baronies of them again (b_hamburg, b_bremen). The code that applied it is gone
+   from this script -- only this note stays, because section 8 below still refers
+   to the "LUN has plenty of land" call.
 
 8. Capital seats (user decision 2026-11-14). Five EU5 national capitals that are
    also flavour locations (except stuttgart) but were not their county's first
@@ -586,136 +579,9 @@ if romagna_title_map():
 if extend_keep(["c_romagna", "b_ravenna", "b_rimini"]):
     wrote.append("eu5_reassign_keep.json")
 
-# ---- 7. Hanseatic seats (user decision 2026-11-10) ----
-# HAM and BRM each own a single location inside their county. LUN keeps its
-# duchy, so only c_elbmarch's holder changes; OLD has nothing outside
-# c_wesermarch, so it is demoted to b_oldenburg like RIM in section 6.
-HANSE = [
-    dict(county="elbmarch", seat="hamburg", old_seat="harburg",
-         new_tag="HAM", new_ruler="eu5_regent_ham", old_ruler="lun_otto_iii_luneburg",
-         old_tag=None, old_en="Harburg", old_zh="哈尔堡",
-         county_en="Elbe Marshes", county_zh="易北河沼泽"),
-    dict(county="wesermarch", seat="bremen", old_seat="oldenburg",
-         new_tag="BRM", new_ruler="eu5_regent_brm", old_ruler="old_johann_iii_oldenburg",
-         old_tag="OLD", old_en="Oldenburgo", old_zh="奥尔登堡",
-         county_en="Weser Marshes", county_zh="威悉河沼泽"),
-]
-
-
-def seat_rebind_history(spec):
-    """c_<county> 1337.4.1 holder/government -> the new seat's ruler.
-
-    The old holder only drops to b_<old_seat> when it has no other land, which
-    is what old_tag marks."""
-    p = MOD + r"\history\titles\zz_eu5_titles.txt"
-    t = read(p)
-    eol = eol_of(t)
-    flat = t.replace("\r\n", "\n")
-    county = spec["county"]
-    cm = re.search(r"(?ms)^c_%s = \{.*?^\}" % county, flat)
-    assert cm, "c_%s history block not found" % county
-    blk = cm.group(0)
-    segs = [s for s in re.finditer(r"(?ms)^\t1337\.4\.1 = \{.*?^\t\}", blk)
-            if "holder =" in s.group(0)]
-    assert len(segs) == 1, "c_%s: expected one 1337.4.1 holder entry" % county
-    seg = segs[0].group(0)
-    changed = False
-    if "holder = " + spec["new_ruler"] not in seg:
-        old = re.search(r"holder = (\w+)", seg).group(1)
-        assert old == spec["old_ruler"], "c_%s holder %s, expected %s" % (
-            county, old, spec["old_ruler"])
-        seg2 = seg.replace("holder = " + old, "holder = " + spec["new_ruler"], 1)
-        gm = re.search(r"government = (\w+)", seg2)
-        assert gm, "c_%s 1337 entry has no government" % county
-        seg2 = seg2.replace("government = " + gm.group(1),
-                            "government = republic_government", 1)
-        blk2 = blk[:segs[0].start()] + seg2 + blk[segs[0].end():]
-        flat = flat[:cm.start()] + blk2 + flat[cm.end():]
-        print("  zz_eu5_titles: c_%s holder %s -> %s, republic" % (
-            county, old, spec["new_ruler"]))
-        changed = True
-    if spec["old_tag"]:
-        key = "b_" + spec["old_seat"]
-        if not re.search(r"(?m)^" + key + r" = \{", flat):
-            marks = [(m.group(1), m.start()) for m in
-                     re.finditer(r"(?m)^(b_[A-Za-z0-9_]+) = \{", flat)]
-            after = sorted(k for k, _ in marks if k > key)
-            at = next(s for k, s in marks if k == after[0]) if after else len(flat)
-            block = "\n".join([key + " = {", "\t1337.4.1 = {",
-                               "\t\tholder = " + spec["old_ruler"], "\t}", "}", "", ""])
-            flat = flat[:at] + block + flat[at:]
-            print("  zz_eu5_titles: new %s block for %s" % (key, spec["old_ruler"]))
-            changed = True
-    if changed:
-        assert flat.count("{") == flat.count("}"), "brace mismatch in zz_eu5_titles"
-        write(p, flat.replace("\n", eol))
-    return changed
-
-
-def csv_cell(x):
-    return ('"' + x.replace('"', '""') + '"') if ("," in x or '"' in x) else x
-
-
-def seat_rebind_title_map(spec):
-    """country rows: new_tag -> c_<county>; old_tag -> b_<old_seat> when applicable."""
-    p = MOD + r"\gen_debug\eu5_ck3_title_map.csv"
-    raw = io.open(p, "rb").read()
-    bom = raw[:3] == b"\xef\xbb\xbf"
-    crlf = b"\r\n" in raw
-    lines = raw.decode("utf-8-sig").replace("\r\n", "\n").split("\n")
-    new = {
-        spec["new_tag"]: {7: "c_" + spec["county"], 8: "c",
-                          9: spec["county_en"], 10: spec["county_zh"],
-                          14: "republic_government",
-                          16: "country-below-county-rank: its land is its counties"},
-    }
-    old = {spec["new_tag"]: "b_" + spec["seat"]}
-    if spec["old_tag"]:
-        new[spec["old_tag"]] = {7: "b_" + spec["old_seat"], 8: "b",
-                                9: spec["old_en"], 10: spec["old_zh"], 14: "",
-                                16: "country-below-county-rank: its land is a barony"}
-        old[spec["old_tag"]] = "c_" + spec["county"]
-    hit = 0
-    for i, ln in enumerate(lines):
-        for tag, repl in new.items():
-            if not ln.startswith("country," + tag + ","):
-                continue
-            f = next(csv.reader([ln]))
-            assert len(f) == 17, "title_map line %d has %d columns" % (i + 1, len(f))
-            if f[7] == repl[7]:
-                continue
-            assert f[7] == old[tag], "title_map %s expected %s, found %s" % (
-                tag, old[tag], f[7])
-            for idx, val in repl.items():
-                f[idx] = val
-            lines[i] = ",".join(csv_cell(x) for x in f)
-            hit += 1
-    if not hit:
-        print("  eu5_ck3_title_map.csv already rebound for c_%s, skipped" % spec["county"])
-        return False
-    text = "\n".join(lines)
-    if crlf:
-        text = text.replace("\n", "\r\n")
-    io.open(p, "wb").write((b"\xef\xbb\xbf" if bom else b"") + text.encode("utf-8"))
-    print("  eu5_ck3_title_map.csv: %d rows rebound for c_%s" % (hit, spec["county"]))
-    return True
-
-
-print("Hanseatic seats:")
-hanse_keep = []
-for spec in HANSE:
-    for path in (LT_MOD, LT_EXP):
-        if reorder_seat(path, spec["county"], spec["seat"]):
-            wrote.append("%s (c_%s)" % (os.path.basename(path), spec["county"]))
-    if seat_rebind_history(spec):
-        wrote.append("zz_eu5_titles.txt (c_%s)" % spec["county"])
-    if seat_rebind_title_map(spec):
-        wrote.append("eu5_ck3_title_map.csv (c_%s)" % spec["county"])
-    hanse_keep += ["c_" + spec["county"], "b_" + spec["seat"]]
-    if spec["old_tag"]:
-        hanse_keep.append("b_" + spec["old_seat"])
-if extend_keep(hanse_keep):
-    wrote.append("eu5_reassign_keep.json")
+# ---- 7. (cancelled 2026-11-14) Hanseatic seats ----
+# The 2026-11-10 lock of c_elbmarch / c_wesermarch was withdrawn: HAM and BRM
+# are baronies again and both counties are back with LUN and OLD. Nothing here.
 
 # ---- 8. Capital seats (user decision 2026-11-14) ----
 # Five capitals whose county was led from another town. ORM and WBG already hold
