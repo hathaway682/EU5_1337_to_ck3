@@ -1,6 +1,8 @@
 # Bavarian, from central_germanic_group
 
 867.1.1 = {
+	discover_innovation = innovation_pattern_welding
+
 	discover_innovation = innovation_barracks
 	discover_innovation = innovation_bannus
 	discover_innovation = innovation_catapult
@@ -9,7 +11,7 @@
 	discover_innovation = innovation_gavelkind
 	discover_innovation = innovation_currency_01
 	discover_innovation = innovation_crop_rotation
-	discover_innovation = innovation_development_01
+	discover_innovation = innovation_prosperity_01
 }
 
 950.1.1 = {
@@ -25,11 +27,17 @@
 }
 
 1066.1.1 = {
+	discover_innovation = innovation_coppicing
+	discover_innovation = innovation_craft_ordinances
+	discover_innovation = innovation_heavy_plow
+	discover_innovation = innovation_monasticism
+	discover_innovation = innovation_prospecting
+
 	discover_innovation = innovation_battlements
 	discover_innovation = innovation_mangonel
 	discover_innovation = innovation_house_soldiers
 	#
-	discover_innovation = innovation_development_02	
+	discover_innovation = innovation_prosperity_02	
 	discover_innovation = innovation_manorialism
 	discover_innovation = innovation_currency_02
 	discover_innovation = innovation_baliffs
@@ -40,6 +48,10 @@
 }
 
 1178.1.1 = {
+	discover_innovation = innovation_merchant_law
+	discover_innovation = innovation_riveted_mail
+	discover_innovation = innovation_vaulting
+
 	discover_innovation = innovation_arched_saddle
 	discover_innovation = innovation_armilary_sphere
 	discover_innovation = innovation_royal_prerogative
@@ -60,7 +72,7 @@
 1250.1.1 = {
 	discover_innovation = innovation_guilds
 	discover_innovation = innovation_currency_03
-	discover_innovation = innovation_development_03
+	discover_innovation = innovation_prosperity_03
 	discover_innovation = innovation_windmills
 }
 
@@ -81,5 +93,12 @@
 
 1336.1.1 = {
 	discover_innovation = innovation_advanced_bowmaking
+}
+
+
+# 1337: armour and ironworking traditions.
+1337.3.30 = {
+	discover_innovation = innovation_blast_furnaces
+	discover_innovation = innovation_coat_of_plates
 }
 

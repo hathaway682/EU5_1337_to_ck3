@@ -29,6 +29,7 @@ eu5_1337_silk_road_innovations = {
             culture:goryeo = {
                 tgp_silk_road_innovation_setup_add_effect = { INNOVATION = block_printing }
                 tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = tea_culture }
             }
             culture:viet = {
                 tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
@@ -52,6 +53,34 @@ eu5_1337_silk_road_innovations = {
             }
             culture:cham = {
                 tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+            }
+        }
+        # Lacquer production in Tibet, Vietnam and Burma at the 1337 start.
+        if = {
+            limit = {
+                game_start_date = 1337.4.1
+                OR = {
+                    has_tgp_dlc_trigger = yes
+                    has_gdp_dlc_trigger = yes
+                }
+            }
+            culture:bodpa = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquerware }
+            }
+            culture:tsangpa = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquerware }
+            }
+            culture:sumpa = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquerware }
+            }
+            culture:zhangzhung = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquerware }
+            }
+            culture:viet = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquerware }
+            }
+            culture:burmese = {
+                tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquerware }
             }
         }
     }

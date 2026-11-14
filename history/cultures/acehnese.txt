@@ -31,7 +31,7 @@
 # 1337 scenario: north Sumatran port polities and trade.
 1000.1.1 = {
     discover_innovation = innovation_bannus
-    discover_innovation = innovation_development_01
+    discover_innovation = innovation_prosperity_01
     discover_innovation = innovation_city_planning
     discover_innovation = innovation_ledger
     discover_innovation = innovation_gavelkind
@@ -42,7 +42,7 @@
 
 1100.1.1 = {
     discover_innovation = innovation_currency_02
-    discover_innovation = innovation_development_02
+    discover_innovation = innovation_prosperity_02
     discover_innovation = innovation_chronicle_writing
     discover_innovation = innovation_baliffs
     discover_innovation = innovation_hereditary_rule
@@ -64,3 +64,15 @@
 	discover_innovation = innovation_horseshoes
 	discover_innovation = innovation_royal_prerogative
 }
+
+# 1337: commercial and architectural institutions.
+1337.3.20 = {
+	discover_innovation = innovation_craft_ordinances
+}
+
+
+# 1337: commercial and architectural institutions.
+1337.3.30 = {
+	discover_innovation = innovation_merchant_law
+}
+

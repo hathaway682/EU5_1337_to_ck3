@@ -1,6 +1,10 @@
 ﻿# Norse, frome north germanic group
 
 867.1.1 = {
+	discover_innovation = innovation_mead_brewing
+	discover_innovation = innovation_pattern_welding
+	discover_innovation = innovation_stockfisk
+
 	discover_innovation = innovation_barracks
 	discover_innovation = innovation_mustering_grounds
 	discover_innovation = innovation_quilted_armor
@@ -20,7 +24,7 @@
 	discover_innovation = innovation_bannus
 	discover_innovation = innovation_catapult
 	#
-	discover_innovation = innovation_development_01
+	discover_innovation = innovation_prosperity_01
 	discover_innovation = innovation_city_planning
 	discover_innovation = innovation_crop_rotation
 	discover_innovation = innovation_casus_belli
@@ -30,6 +34,12 @@
 }
 
 1066.1.1 = {
+	discover_innovation = innovation_coppicing
+	discover_innovation = innovation_craft_ordinances
+	discover_innovation = innovation_heavy_plow
+	discover_innovation = innovation_monasticism
+	discover_innovation = innovation_prospecting
+
 	discover_innovation = innovation_mangonel
 	discover_innovation = innovation_house_soldiers
 	#
@@ -38,3 +48,9 @@
 	discover_innovation = innovation_chronicle_writing
 	#
 }
+
+# CK3 1.21 Beta innovation history.
+1178.1.1 = {
+	discover_innovation = innovation_riveted_mail
+}
+

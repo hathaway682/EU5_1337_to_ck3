@@ -4,11 +4,13 @@
 	discover_innovation = innovation_catapult
 	discover_innovation = innovation_quilted_armor
 	#
-	discover_innovation = innovation_development_01
+	discover_innovation = innovation_prosperity_01
 	discover_innovation = innovation_casus_belli
 }
 
 950.1.1 = {
+	discover_innovation = innovation_pattern_welding
+
 	discover_innovation = innovation_motte
 	discover_innovation = innovation_barracks
 	discover_innovation = innovation_bannus
@@ -25,6 +27,12 @@
 }
 
 1066.1.1 = {
+	discover_innovation = innovation_coppicing
+	discover_innovation = innovation_craft_ordinances
+	discover_innovation = innovation_heavy_plow
+	discover_innovation = innovation_monasticism
+	discover_innovation = innovation_prospecting
+
 	discover_innovation = innovation_burhs
 	discover_innovation = innovation_mangonel
 	discover_innovation = innovation_horseshoes
@@ -39,8 +47,10 @@
 }
 
 1178.1.1 = {
+	discover_innovation = innovation_riveted_mail
+
 	discover_innovation = innovation_arched_saddle
-	discover_innovation = innovation_development_02
+	discover_innovation = innovation_prosperity_02
 	discover_innovation = innovation_chronicle_writing
 	discover_innovation = innovation_royal_prerogative
 	discover_innovation = innovation_armilary_sphere
@@ -57,6 +67,12 @@
 }
 
 # 1337 scenario: water-powered mills and related machinery.
+# CK3 1.21 Beta innovation history.
+1178.1.2 = {
+	discover_innovation = innovation_merchant_law
+	discover_innovation = innovation_vaulting
+}
+
 1333.1.1 = {
 	discover_innovation = innovation_windmills
 }
@@ -65,3 +81,9 @@
 1336.11.1 = {
 	discover_innovation = innovation_advanced_bowmaking
 }
+
+# 1337: armour and ironworking traditions.
+1337.3.30 = {
+	discover_innovation = innovation_coat_of_plates
+}
+
