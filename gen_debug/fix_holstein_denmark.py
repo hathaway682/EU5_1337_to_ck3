@@ -64,7 +64,7 @@ Provinces 608/611 are already castle_holding -- nothing to do there.
    user's request: both counties are back with LUN and OLD, and HAM / BRM are
    baronies of them again (b_hamburg, b_bremen). The code that applied it is gone
    from this script -- only this note stays, because section 8 below still refers
-   to the "LUN has plenty of land" call.
+   to the "LUN has plenty of land" call. Section 10 replaced it for c_elbmarch.
 
 8. Capital seats (user decision 2026-11-14). Five EU5 national capitals that are
    also flavour locations (except stuttgart) but were not their county's first
@@ -93,6 +93,16 @@ Provinces 608/611 are already castle_holding -- nothing to do there.
    barony in both trees, write melk into RANK_STATE.json, and add c_ober_dem_
    wienerwald + b_melk to eu5_reassign_keep.json. Re-run this script after any
    full export or --barony-order rank_state run, which re-derives those picks.
+
+10. Elbmarch seat (user decision 2026-11-14). c_elbmarch is led from b_stade and
+    held by Bremen's archbishop: BRE (Brema, bre_burchard_grelle) owns three of
+    the county's six locations -- stade, neuhaus, bremervorde -- while LUN keeps
+    only harburg inside it and ten locations elsewhere, so LUN stays a duchy,
+    keeps its d_eu5_lun country row and no barony is demoted. The county's
+    1337.4.1 holder and government follow the new seat (feudal ->
+    ecclesiastical). BRE's own country row stays on d_et_hamburg, the landless
+    ecclesiastical duchy it already holds in 07_pam_ecclesiastical_titles.txt.
+    c_elbmarch + b_stade join eu5_reassign_keep.json.
 """
 import csv, datetime, io, json, os, re, shutil
 from collections import defaultdict
@@ -658,6 +668,21 @@ for path in (LT_MOD, LT_EXP):
 if correct_rank_state([melk]):
     wrote.append("RANK_STATE.json")
 if extend_keep(["c_ober_dem_wienerwald", "b_melk"]):
+    wrote.append("eu5_reassign_keep.json")
+
+
+# ---- 10. Elbmarch seat (user decision 2026-11-14) ----
+# See the module docstring: b_stade leads c_elbmarch and Bremen's archbishop holds
+# the county. LUN keeps its duchy and its ten other locations, so nothing else moves.
+print("Elbmarch seat:")
+elbmarch = dict(county="elbmarch", seat="stade", ruler="bre_burchard_grelle",
+                gov="ecclesiastical_government")
+for path in (LT_MOD, LT_EXP):
+    if reorder_seat(path, elbmarch["county"], elbmarch["seat"]):
+        wrote.append("%s (c_elbmarch)" % os.path.basename(path))
+if capital_seat_history(elbmarch):
+    wrote.append("zz_eu5_titles.txt (c_elbmarch)")
+if extend_keep(["c_elbmarch", "b_stade"]):
     wrote.append("eu5_reassign_keep.json")
 
 print("written:", ", ".join(wrote))
