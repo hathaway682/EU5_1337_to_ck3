@@ -1,1 +1,70 @@
 ﻿
+war = {
+	name = "war_eu5_first_lithuanian_crusade"
+	start_date = 1337.3.1
+	end_date = 1338.11.1
+	targeted_titles = { k_lithuania }
+	casus_belli = major_religious_war
+	attackers = { teu_dietrich_von_altenburg liv_eberhard_von_monheim }
+	defenders = { lit_gediminas_gediminids }
+}
+
+war = {
+	name = "war_eu5_fate_of_tlemcen"
+	start_date = 1335.1.1
+	end_date = 1337.5.1
+	targeted_titles = { k_tahert }
+	casus_belli = clan_invasion_war
+	attackers = { mor_abu_al_hasan_ali }
+	defenders = { tle_abu_tashufin }
+}
+
+war = {
+	name = "war_eu5_scaliger_war"
+	start_date = 1336.6.22
+	end_date = 1339.1.24
+	targeted_titles = { c_padua }
+	casus_belli = eu5_scaliger_war_cb
+	attackers = {
+		ven_francesco_dandolo
+		gub_jacopo_gabrielli
+		mlo_azzone_i_visconti
+		fer_obizzo_iii_este
+		man_luigi_i_gonzaga
+		crt_viago_zeno
+		rag_filippo_belegno
+	}
+	defenders = {
+		ver_mastino_ii_scala
+		ver_alberto_ii_scala
+		mb_city_1062102
+		ver_arrigo_castracani
+	}
+}
+
+# Temporary representation of Muhammad Khan's bid for the Ilkhanate.
+war = {
+	name = "war_eu5_huleguid_claim"
+	start_date = 1336.7.24
+	end_date = 1337.7.10
+	targeted_titles = {
+		k_eu5_hlg
+		# The kingdom is titular, so include Musa Khan's counties.
+		c_ahvaz c_basra c_bataih c_wasit
+	}
+	casus_belli = claim_cb
+	attackers = { jal_hasan_buzurg ere_eretna sut_hajji_taghay }
+	defenders = { hlg_musa_khan grg_togha_temur hll_ahmad_rumaythah krt_mu_izz_uddin_husayn_ibn_ghiyath_uddin }
+	claimant = jal_muhammad_khan
+}
+
+war = {
+	name = "war_eu5_scottish_civil_war"
+	start_date = 1337.3.15
+	end_date = 1356.1.20
+	targeted_titles = { k_scotland }
+	casus_belli = eu5_scottish_claimant_faction_war
+	attackers = { sco_edward_balliol loi_eoin_mac_aonghais }
+	defenders = { sco_david_ii ros_william_5th_earl moy_john_randolph }
+	claimant = sco_edward_balliol
+}

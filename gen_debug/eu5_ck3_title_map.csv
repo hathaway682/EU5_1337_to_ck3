@@ -1124,7 +1124,7 @@ country,LNG,k,Liáng,梁,,,k_eu5_lng,k,Liáng,梁,tughluq_borjigin,tughluq_borji
 country,LNK,c,Landak,万那,,,b_ngabang,b,Ngabang,雅邦,eu5_regent_lnk,eu5_regent_lnk,,mandala_government,yes,"generated-regent,country-below-county-rank: its land is a barony"
 country,LNN,c,Leiningen,莱宁根,,,b_leiningen,b,Leiningen,莱宁根,lnn_friedrich_vi_leiningen_dagsburg,lnn_friedrich_vi_leiningen_dagsburg,,,yes,"vassal,country-below-county-rank: its land is a barony"
 country,LNO,c,Lanao,拉瑙,,,c_agus,c,Agus,阿古斯,eu5_regent_lno,eu5_regent_lno,,wanua_government,yes,"generated-regent,country-below-county-rank: its land is its counties"
-country,LOI,c,Isles,群岛,,,c_outer_hebrides,c,Outer Hebrides,外赫布里底群岛,loi_eoin_mac_aonghais,loi_eoin_mac_aonghais,k_eu5_sbl,feudal_government,yes,"vassal,country-below-county-rank: its land is its counties"
+country,LOI,c,Isles,群岛,,,c_outer_hebrides,c,Outer Hebrides,外赫布里底群岛,loi_eoin_mac_aonghais,loi_eoin_mac_aonghais,d_scottish_lowlands,feudal_government,yes,"vassal,country-below-county-rank: its land is its counties"
 country,LOL,c,Loloda,洛洛达,,,b_loloda,b,Loloda,洛洛达,eu5_regent_lol,eu5_regent_lol,,wanua_government,yes,"generated-regent,country-below-county-rank: its land is a barony"
 country,LON,k,León,莱昂,,,k_leon,k,León,莱昂,,lon_alfonso_ix_burgundy,,feudal_government,yes,no-ruler-in-eu5
 country,LOO,c,Loon,洛恩,,,c_loon,c,Loon,洛恩,loo_dietrich_iv_von_heinsberg,loo_dietrich_iv_von_heinsberg,e_hre,feudal_government,yes,"union,vassal,country-below-county-rank: its land is its counties"
@@ -1725,7 +1725,7 @@ country,SAW,c,Saarwerden,萨尔韦尔登,,,b_saarwerden,b,Saarwerden,萨尔韦�
 country,SAY,c,Sayollan,萨约兰,,,b_sayula,b,Sayula,萨尤拉,eu5_regent_say,eu5_regent_say,,,yes,"generated-regent,country-below-county-rank: its land is a barony"
 country,SBA,c,Shiba,斯波,,,c_nf_shiba,c,Shiba,斯波,jap_shiba_takatsune,jap_shiba_takatsune,e_japan,japan_feudal_government,yes,"shugo-daimyo,vassal,japan-noble-family,country-below-county-rank: its land is its counties"
 country,SBG,c,Santubong,山都望,,,c_santubong,c,Santubong,山都望,eu5_regent_sbg,eu5_regent_sbg,,mandala_government,yes,"generated-regent,country-below-county-rank: its land is its counties"
-country,SBL,k,Balliol,巴利奥尔,,,k_eu5_sbl,k,Balliol,巴利奥尔,sco_edward_balliol,sco_edward_balliol,,feudal_government,yes,
+country,SBL,c,Balliol,巴利奥尔,,,d_scottish_lowlands,d,Scottish Lowlands,苏格兰低地,sco_edward_balliol,sco_edward_balliol,k_scotland,feudal_government,yes,
 country,SBU,c,Selimbau,塞林包,,,b_selimbau,b,Selimbau,塞林包,sbu_abang_kina,sbu_abang_kina,,wanua_government,yes,country-below-county-rank: its land is a barony
 country,SBY,c,Subay,苏拜,,,c_dhalam,c,Ḍalam,达拉姆,eu5_regent_sby,eu5_regent_sby,,tribal_government,yes,"generated-regent,country-below-county-rank: its land is its counties"
 country,SBZ,c,$sabzevar$,$sabzevar$,,,c_sabzevar,c,Sabzevār,萨卜泽瓦尔,sbz_ala_ad_din_muhammad,sbz_ala_ad_din_muhammad,,clan_government,yes,"tributary,country-below-county-rank: its land is its counties"
@@ -4743,7 +4743,7 @@ county,MOR,-,Morocco,摩洛哥,Oujda,乌季达,c_oujda,c,Wejda,乌季达,mor_abu
 county,JAP,-,Japan,日本,Ōmi,近江,c_oumi,c,Ōmi,近江,jap_kyougoku_douyo,jap_kyougoku_douyo,e_japan,japan_feudal_government,yes,seat-of JAP (Japan)
 county,CAS,-,Castile,卡斯蒂利亚,$ourense$,$ourense$,c_ourense,c,Ourense,奥伦塞,cas_alfonso_xi_burgundy,cas_alfonso_xi_burgundy,,,yes,seat-of CAS (Castile)
 county,WSK,-,Weskarini,韦斯卡里尼,Outaouais,乌塔韦,c_outaouais,c,Outaouais,乌塔韦,eu5_regent_wsk,eu5_regent_wsk,,herder_government,yes,seat-of WSK (Weskarini)
-county,LOI,-,Isles,群岛,Outer Hebrides,外赫布里底群岛,c_outer_hebrides,c,Outer Hebrides,外赫布里底群岛,loi_eoin_mac_aonghais,loi_eoin_mac_aonghais,k_eu5_sbl,feudal_government,yes,seat-of LOI (Isles)
+county,LOI,-,Isles,群岛,Outer Hebrides,外赫布里底群岛,c_outer_hebrides,c,Outer Hebrides,外赫布里底群岛,loi_eoin_mac_aonghais,loi_eoin_mac_aonghais,d_scottish_lowlands,feudal_government,yes,seat-of LOI (Isles)
 county,,-,,,Outter Islands,塞舌尔外岛,c_outter_islands,c,Outter Islands,塞舌尔外岛,,gen_wilderness_holder,k_gen_wilderness,,yes,"unowned-in-eu5,seated-by-the-conversion"
 county,UTR,-,Utrecht,乌得勒支,Overijssel,上艾瑟尔,c_overijssel,c,Overijssel,上艾瑟尔,utr_jan_van_diest,utr_jan_van_diest,e_hre,theocracy_government,yes,seat-of UTR (Utrecht)
 county,KIE,-,Kyiv,基辅,Ovruch,奥夫鲁奇,c_ovruch,c,Ovruch,奥夫鲁奇,kie_teodoras_ivanovich_rurikovich,kie_teodoras_ivanovich_rurikovich,,feudal_government,yes,seat-of KIE (Kyiv)

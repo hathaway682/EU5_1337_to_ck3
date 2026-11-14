@@ -37689,6 +37689,12 @@ jal_muhammad_khan = {
     rite = hanafi
 	father = jal_esen_temur
 	1310.1.1 = { birth = yes }
+	1337.4.1 = {
+		effect = {
+			set_employer = character:jal_hasan_buzurg
+			add_pressed_claim = title:k_eu5_hlg
+		}
+	}
 }
 
 jap_aisu_masataka = {
@@ -75624,6 +75630,9 @@ sco_edward_balliol = {
 	father = sco_john_balliol_of_scotland
 	mother = sco_isabella_warenne
 	1283.1.1 = { birth = yes }
+	1337.4.1 = {
+		effect = { add_pressed_claim = title:k_scotland }
+	}
 }
 
 sco_edward_bruce = {

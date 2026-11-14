@@ -46,6 +46,21 @@ d_commune_verona = {
 	}
 }
 
+d_commune_padua = {
+	color = { 130 215 190 }
+	capital = c_padua
+	no_automatic_claims = yes
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				government_has_flag = government_is_republic
+			}
+			add = @correct_government_primary_score
+		}
+	}
+}
+
 d_commune_ancona = {
 	color = { 245 245 195 }
 	capital = c_marche
