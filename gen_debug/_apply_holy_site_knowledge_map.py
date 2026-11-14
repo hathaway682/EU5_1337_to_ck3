@@ -11,6 +11,7 @@ SRC = os.path.join(MOD, "common", "religion", "holy_site_types", "00_holy_site_t
 LT = os.path.join(MOD, "common", "landed_titles", "00_landed_titles.txt")
 APPLY = "--apply" in sys.argv
 BLOCK = re.compile(r"([A-Za-z0-9_\-]+)\s*=\s*\{")
+BAKDIR = r"F:\EU5_Modern_Borders_bak\20261114_holysite_word"
 
 # 圣地 key -> 目标男爵领
 MAP = {
@@ -18,7 +19,7 @@ MAP = {
     "bahrein": "b_manama",
     "lalish": "b_sinjar",
     "sufed": "b_safed",
-    "ctesiphon": "b_baghdad",
+    "ctesiphon": "b_dayr_aqul",       # 泰西封 → 代尔阿库勒（原版泰西封/王宫遗址在 b_an-nahrawan，mod 无该男爵领；避让巴格达智慧谷建筑，用户定 2026-11-14）
     "mount_damavand": "b_damavand",
     "xingqing": "b_ningxia",
     "jorvik": "b_york",
@@ -32,7 +33,6 @@ MAP = {
     "nanning": "b_xuanhua_nanning",
     "zunyi": "b_bozhou",
     "vaishali": "b_weithali",
-    "tiantai": "b_tiantai",
     "kathmandu": "b_kathmandu",
     "kanchipuram": "b_kanchipuram",
     "ujjayini": "b_ujjain",
@@ -41,8 +41,8 @@ MAP = {
     "bantey_srei": "b_angkor",
     "kochi": "b_kochi",
     "manipur": "b_imphal",
-    "sanchi": "b_bhopal",
-    "udabhanda": "b_attock",
+    "sanchi": "b_bhilsa",             # 桑吉大塔 → 比尔沙（Bhilsa 即 Vidisha 旧称，紧邻桑吉；用户手改 2026-11-14，原 b_bhopal 博帕尔）
+    "udabhanda": "b_udabhanda",       # 乌达班达=洪德（印度沙希故都）；mod 有同名男爵领 b_udabhanda（c_kashmir），同一个词。2026-11-14 改（原 b_attock）
     "chang_an": "b_jingzhao",
     # 点状地物（山/寺/城址）：按元代县、日本郡判定落点
     "mount_tai": "b_fengfu",          # 泰山 → 泰安州奉符县
@@ -61,41 +61,33 @@ MAP = {
     "rebgong": "b_tongren",           # 捏工（热贡）→ 同仁
     "muze": "b_mengzi",               # 目则 → 蒙自
     "kutai": "b_kutai_lama",          # 库泰 → 库泰喇嘛（东加里曼丹）
-    "iona": "b_mull",                 # 艾奥纳 → b_mull（CK 原版名「艾奥纳」，内赫布里底）
     # 河流：照 CK 原版 b_changjiang(c_yuezhou_1) / b_ob(c_ob) 的落点
     "yangtze": "b_baling",            # 长江 → 岳州巴陵
     "ob": "b_ob",                     # 鄂毕 → b_ob（c_obdorsk）
-    "taebaek": "b_samcheok",          # 太白山主峰在太白市（原三陟郡）→ c_gangneung/b_samcheok
+    "taebaek": "b_gapsan",            # 太白山 → 甲山（用户查 EU5 地图定，2026-11-14；原 c_gangneung/b_samcheok 三陟）
+    "mani": "b_inju",                 # 摩尼山 → 仁州（江华岛旧称仁州，c_kaesong 同县；原 b_kaesong 开城）
+    "dvin": "b_khor_virap",           # 德温 → 霍尔维拉普（用户查 EU5，2026-11-14；原 b_yerevan 埃里温）
+    "shikharj": "b_katrasgarh",       # 尸佉罗时（Shikharji 耆那教圣地）→ 卡特拉斯加尔（EU5 shikharji location=katrasgarh；原 c_pandua/b_baragram 潘杜阿）
     # 全量对照 CK3 原版圣地表后采纳的 3 条（原版目标在 mod 存在且判定更贴）
     "adur_farnbag": "b_kariyan",      # 阿杜尔·法伦巴格圣火 → 卡里扬（县本已是 c_kariyan，男爵领从洪杰换回卡里扬）
     "badd": "b_ahar",                 # 巴德（巴巴克城堡，阿拉斯巴兰）→ 阿哈尔，县随之 c_tabriz→c_ardabil
     "hitakami": "b_isawa",            # 日高见/北上川 → 胆泽（奥州胆泽郡，县同为 c_rikuchuu）
     # 行尾注释盘点后采纳的 2 条
-    "emei": "b_emei",                 # 峨眉山 → 嘉定府峨眉（原 c_rongzhou 融州，广西融水；本块原无 barony 行，需插入）
-    "bumiayu": "b_bumi_ayu",          # 南苏门答腊 Candi Bumiayu → 布米阿尤（c_ogan 奥甘，原 b_musi 上穆西）
     # 无中文本地化那批（原版 simp_chinese 缺 holy_site_<key>_name，名字匹配从没覆盖过）
-    "armagh": "b_armagh",             # 阿马 → 阿马（原 b_dundalk 邓多克，同县 c_oriel）
-    "yamama": "b_al_yamamah",         # 耶马迈 → 耶马迈（原 b_ad_dilam 迪勒姆，同县 c_yamama）
-    "badrinath": "b_badrinath",       # 伯德里纳特 → 伯德里纳特（原 b_uttarkashi 北加希，同县 c_garhwal）
-    "shringeri": "b_sringeri",        # 斯灵盖里 → 斯灵盖里（原 b_basavapattana，同县 c_banavasi）
-    "sparta": "b_mystras",            # 斯巴达 → 米斯特拉斯（原 b_kythira 基西拉岛，同县 c_laconia）
-    "suzhou": "b_wuxian",             # 苏州 → 吴县（苏州城；原 b_changshu 常熟。注意 b_suzhou 是四川黎州）
-    "hangzhou": "b_hangzhou",         # 杭州 → 杭州（原 b_fuyang_hangzhou 富阳，同县 c_hangzhou）
-    "jiuhua": "b_qingyang",           # 九华山 → 池州青阳（mod 译作「庆阳」；原 b_dongliu 东流，同县 c_chizhou）
-    "bulguksa": "b_gyeongju",         # 佛国寺 → 庆州（原 b_boseongbu 宝城府，同县 c_gyeongju）
-    "putuo": "b_changguo",            # 普陀山 → 昌国州（舟山，元属庆元路；原 b_baling 巴陵，岳阳，完全错）
-    "nanhua": "b_qujiang",            # 南华寺 → 韶州曲江（c_shaozhou 中文名误作「邵州」；原 b_jiyin 济阴，山东，完全错）
-    "tate": "b_niikawa",              # 立山 → 越中新川郡（原 b_tsukama 筑摩，信浓，错）
-    "jianchang": "b_nancheng",        # 建昌府 → 南城（原 b_jingchuan 泾川，甘肃，完全错）
-    "zhuolu": "b_baoan_baoan",        # 涿鹿 → 保安州（元涿鹿属保安州；原 b_baideng 白登，大同，错）
-    "quzhou": "b_xian_quzhou",        # 衢州 → 衢州西安县（原 b_liujiang 流江，四川广安，完全错）
-    "dongting": "b_baling",           # 洞庭湖 → 岳州巴陵（原 b_langzhong 阆中，四川，完全错）
-    "mogao": "b_shazhou",             # 莫高窟 → 沙州敦煌（原 b_anding_suzhou 安定，同县 c_shazhou）
-    "heiankyo": "b_kyoto",            # 平安京 → 京都（原 b_kuse 久世，同县 c_yamashiro）
-    "mount_kunyu": "b_wendeng",       # 昆嵛山 → 宁海州文登（原 b_penglai 蓬莱，登州，隔了一座山）
     # 用户拍板（2026-10-23）：取最近的可用男爵领
-    "hiei": "b_kurita",               # 比叡山 → 近江栗太郡（草津，紧邻滋贺郡；原 b_takashima 高岛在近江最北）
-    "linzi": "b_zichuan",             # 临淄 → 青州淄川（淄博；原 b_yidu_qingzhou 益都偏东）
+    # EU5 圣地 location 核对（2026-11-14）：EU5 common/holy_sites/ 直接标了 location，可精确到地块
+    "wutai": "b_jianzhou_daizhou",    # 五台山 → 代州坚州（EU5 mount_wutai location=jianzhou_daizhou；原 b_daizhou 代州治）
+    "haridwar": "b_gangadvara",       # 哈立德瓦尔 → 恒河门（EU5 haridwar_kumbh_mela location=gangadvara，Haridwar=恒河之门；原 c_puadh/b_thanesar 坦内萨尔）
+    # 2026-11-14 第二轮「同一个词 / 一城异名」普查（用户批准 10 条一起改）
+    "ellora": "b_daulatabad",         # 埃洛拉石窟 → 道拉塔巴德（=德瓦吉里）。原版 c_devagiri 下即 b_elapura+b_jalna，mod 的 b_jalna 在 c_upper_marathwada，两县对应；原 c_lower_vidarbha/b_mahagaon 在 Vidarbha，错 250 km
+    "khao_khlang_nai": "b_sri_thep",  # 考克朗奈是西贴古城内的建筑，原版就在 b_sri_thep；mod 有 b_sri_thep（西贴）自成一县
+    "ranakpur": "b_pali",             # 罗拿迦补罗在帕利县境内（原版挂 c_naddula=纳多尔，同在帕利县）；原 b_kurki
+    "ranaheim": "b_nidaros",          # 拉纳海姆=Ranheim，特隆赫姆东郊；尼达罗斯=特隆赫姆旧称（一城异名）；原 b_orkdal 奥克达尔
+    "mizdahqan": "b_xojeli",          # 米兹达赫甘粟特墓地在火者里（Xojeli）城边 4 km；原 b_shimbay 希姆拜
+    "takht-e_soleyman": "b_takht_e_soleyman",  # 同一个词：mod 有 b_takht_e_soleyman（所罗门王座，c_barza，含布坎/米扬多阿布）；原 c_urmia/b_urmia
+    "gyaitang": "b_dadandang",        # 建塘=中甸（香格里拉）藏语名，元代汉文作旦当/大旦当；mod 同县有 b_dadandang（大旦当）；原 b_nixi 泥西
+    "kilimanjaro": "b_moshi",         # 莫希在乞力马扎罗南麓；原版 c_kilimanjaro 另一 barony 是 b_kwa_mgogo（莫希乡下），即该县落莫希一带；原 c_upper_pangani/b_usangi
+    "gangganegara": "b_beruas",       # 刚迦尼国遗址一般定在木威（Beruas）；原 b_manjung 曼绒（曼绒是县、木威是镇）
 }
 
 
@@ -203,7 +195,11 @@ def main():
 
     new = "\r\n".join(lines)
     ts = time.strftime("%Y%m%d_%H%M%S")
-    bak = SRC + ".bak_holysite_knowledge_" + ts
+    # 备份按约定放归档盘（项目目录内不得残留 bak）
+    bakdir = os.path.join(BAKDIR, "common", "religion", "holy_site_types")
+    if not os.path.isdir(bakdir):
+        os.makedirs(bakdir)
+    bak = os.path.join(bakdir, "00_holy_site_types.txt.bak_" + ts)
     shutil.copy2(SRC, bak)
     io.open(SRC, "wb").write(b"\xef\xbb\xbf" + new.encode("utf-8"))
     print("\nAPPLIED %d 处。备份：%s" % (len(plan), bak))

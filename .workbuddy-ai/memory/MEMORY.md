@@ -51,5 +51,7 @@
 4. **原持有者不是一律降级为男爵领**：只有「EU5 里除了这个 county 没有别的地」才像 RIM→`b_rimini` 那样，把它的 country 行从 `c_` 改挂 `b_<原首府>` 并在 `zz_eu5_titles.txt` 新建该 `b_` 块承接 holder。**公国 / 多地的原持有者什么都不动**——用户原话「吕讷堡又不是只拿了一块地，你纠结他干什么」：LUN rank d、11 个 location、country 行挂 `d_eu5_lun`，失去 `c_elbmarch` 后仍有地，`country,LUN` 与 `b_harburg` 都不动。
 5. **`gen_debug/eu5_reassign_keep.json`**：加 `c_<county>`、`b_X`，以及（有降级时）`b_<原首府>`，防 `--barony-order rank_state` 重跑把座位抢回去。
 6. 完整重跑 `_export_title_map.py` 会按 `seat` / `barony_of` 把 country 行写回旧绑定，**导出后必须重跑 `fix_holstein_denmark.py`**。
-已落地：c_holstein/kiel、HRE 同名首府 5 县、c_oriel、c_flaming/c_palatinate、c_romagna（RAV/RIM）、c_elbmarch（HAM/LUN）、c_wesermarch（BRM/OLD）。
+已落地：c_holstein/kiel、HRE 同名首府 5 县、c_oriel、c_flaming/c_palatinate、c_romagna（RAV/RIM）、c_elbmarch（HAM/LUN）、c_wesermarch（BRM/OLD）、**首都 5 县（2026-11-14）**：c_gamrun/b_hormuz、c_malmohus/b_lund、c_kosovo/b_prizren、c_main_franconia/b_wurzburg、c_neckar/b_stuttgart。
+- **首都 5 县是「已持有、只校正首府」型**：五个国家 rank 都是 d/k/c，country 行挂 `d_`/`k_`/`c_` 高阶头衔而非 `b_<首都>`，原持有者（霍恩贝格 HHB）另有 `c_swabian_alb`，所以**不改 title_map 任何行、不新建降级男爵领**；只有 holder 不是本国 ruler 的三个县（c_malmohus 教会人物、c_kosovo 地方领主、c_neckar HHB ruler）改了 1337.4.1 holder，`c_malmohus` 顺带 `ecclesiastical_government → feudal_government`。判据见「六」第 4 条（LUN 裁定）。
+- **重跑补丁脚本时第 6 节可能把 RAV/RIM 的 country 行再绑一次**：`_export_title_map.py` 会按 seat/barony_of 写回旧绑定，脚本按既定规则自动修回，不是 bug；看到 "2 rows rebound" 说明期间有人重跑过导出。
 - 坑：`fix_holstein_denmark.py` 第 2 节原先在已打补丁的数据上会崩（`c_holstein` 的 `1337.1.1` liege 已被手改成 `k_denmark`、holder 移进单独 `1337.4.1` 块）；已加幂等分支，命中已落地状态就整段不写，绝不覆盖手改行。

@@ -13,7 +13,20 @@
 				}
 			}
 			else_if = {
-				limit = { has_holding = yes }
+				limit = {
+					has_holding = yes
+					NOT = {
+						AND = {
+							NOT = { has_global_variable = cu_wilderness_start_initialized }
+							OR = {
+								this = province:17696
+								this = province:18213
+								this = province:15625
+								this = province:7437
+							}
+						}
+					}
+				}
 				remove_holding = yes
 			}
 		}

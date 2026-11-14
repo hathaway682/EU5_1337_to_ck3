@@ -551,7 +551,7 @@ e_eu5_kit = {
 	}
 }
 
-e_eu5_lat = {
+e_latin_empire = {
 	1216.6.11 = {
 		holder = lat_pierre_ii_courtenay
 	}
@@ -2151,7 +2151,7 @@ k_eu5_dgl = {
 	}
 }
 
-k_eu5_glc = {
+k_spanish_galicia = {
 	910.1.1 = {
 		holder = lon_ordono_ii_leon
 	}
@@ -2352,7 +2352,7 @@ k_eu5_jal = {
 	}
 }
 
-k_eu5_koj = {
+k_jerusalem = {
 	1163.7.18 = {
 		holder = koj_amalrico_i_jerusalem
 	}
@@ -2440,7 +2440,7 @@ k_eu5_lng = {
 	}
 }
 
-k_eu5_lon = {
+k_leon = {
 	718.9.8 = {
 		holder = lon_pelagio_asturias
 	}
@@ -2740,7 +2740,7 @@ k_lusung = {
 	}
 }
 
-k_eu5_the = {
+k_thessalonika = {
 	1204.5.16 = {
 		holder = the_bonifacio_i_monferrato
 	}
@@ -3267,6 +3267,13 @@ k_norway = {
 	1337.4.1 = {
 		holder = swe_magnus_eriksson
 		government = feudal_government
+	}
+}
+
+k_novgorod = {
+	1337.4.1 = {
+		holder = eu5_rep_nov
+		government = republic_government
 	}
 }
 
@@ -5397,9 +5404,6 @@ d_east_novgorod = {
 	1328.1.1 = {
 		holder = mos_ivan_i_danilovich_kalita_rurikovich
 	}
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		holder = eu5_rep_nov
 		government = republic_government
@@ -6014,16 +6018,6 @@ d_eu5_gau = {
 }
 
 
-d_eu5_ggx = {
-	1337.1.1 = {
-		liege = k_eu5_lng
-	}
-	1337.4.1 = {
-		holder = eu5_regent_ggx
-		government = tribal_government
-	}
-}
-
 d_eu5_glm = {
 	1247.1.1 = {
 		holder = glm_konstantin_yaroslavich_rurikovich
@@ -6060,16 +6054,6 @@ d_eu5_glo = {
 	}
 }
 
-d_eu5_gnn = {
-	1337.1.1 = {
-		liege = k_eu5_lng
-	}
-	1337.4.1 = {
-		holder = eu5_regent_gnn
-		government = tribal_government
-	}
-}
-
 d_eu5_grs = {
 	1325.11.21 = {
 		holder = mos_ivan_i_danilovich_kalita_rurikovich
@@ -6080,29 +6064,9 @@ d_eu5_grs = {
 	}
 }
 
-d_eu5_inj = {
-	1304.1.1 = {
-		holder = inj_sharaf_al_din_mahmud_shah
-	}
-	1336.1.1 = {
-		holder = inj_ghiyas_al_din_kai_khusrau
-	}
-	1337.4.1 = {
-		holder = inj_ghiyas_al_din_kai_khusrau
-		government = clan_government
-	}
-}
-
 d_eu5_itz = {
 	1337.4.1 = {
 		holder = itz_kan_ek
-		government = feudal_government
-	}
-}
-
-d_eu5_jsl = {
-	1337.4.1 = {
-		holder = jsl_gharsi_singh_bhati
 		government = feudal_government
 	}
 }
@@ -6120,16 +6084,6 @@ d_eu5_kch = {
 	1337.4.1 = {
 		holder = kch_panteleimon_mstislavich_rurikovich
 		government = feudal_government
-	}
-}
-
-d_eu5_kmm = {
-	1337.1.1 = {
-		liege = e_hre
-	}
-	1337.4.1 = {
-		holder = kmm_johann_i_lauenburg
-		government = ecclesiastical_government
 	}
 }
 
@@ -6169,17 +6123,6 @@ d_eu5_krt = {
 	1337.4.1 = {
 		holder = krt_mu_izz_uddin_husayn_ibn_ghiyath_uddin
 		government = clan_government
-	}
-}
-
-d_eu5_ksh = {
-
-	1301.1.1 = {
-		holder = ksh_suhadeva_lohara
-	}
-	1337.4.1 = {
-		holder = ksh_haidar_khan_lohara
-		government = feudal_government
 	}
 }
 
@@ -6266,13 +6209,6 @@ d_eu5_lgc = {
 	1337.4.1 = {
 		holder = lgc_boleslaw_iii_the_generous_piast
 		government = feudal_government
-	}
-}
-
-d_eu5_lhj = {
-	1337.4.1 = {
-		holder = lhj_naservand_ruler
-		government = clan_government
 	}
 }
 
@@ -6371,16 +6307,6 @@ d_et_mainz = {
 		holder = mai_heinrich_iii_von_virneburg
 		clerical_region = et_1178_mainz_region
 		liege = e_hre
-	}
-}
-
-d_eu5_mhu = {
-	1337.1.1 = {
-		liege = k_eu5_lng
-	}
-	1337.4.1 = {
-		holder = eu5_regent_mhu
-		government = tribal_government
 	}
 }
 
@@ -6583,23 +6509,6 @@ d_eu5_pan = {
 }
 
 
-d_eu5_pdn = {
-	1337.1.1 = {
-		liege = k_eu5_lng
-	}
-	1337.4.1 = {
-		holder = eu5_regent_pdn
-		government = tribal_government
-	}
-}
-
-d_eu5_pdu = {
-	1337.4.1 = {
-		holder = eu5_regent_pdu
-		government = feudal_government
-	}
-}
-
 d_eu5_plk = {
 	1275.1.20 = {
 		holder = czk_boleslaw_ii_piast
@@ -6762,16 +6671,6 @@ d_eu5_pok = {
 	1337.4.1 = {
 		holder = pok_narimantas_gediminds
 		government = feudal_government
-	}
-}
-
-d_eu5_qjg = {
-	1337.1.1 = {
-		liege = k_eu5_lng
-	}
-	1337.4.1 = {
-		holder = eu5_regent_qjg
-		government = tribal_government
 	}
 }
 
@@ -7012,16 +6911,6 @@ d_eu5_sme = {
 	}
 }
 
-d_eu5_smg = {
-	1337.1.1 = {
-		liege = k_eu5_lng
-	}
-	1337.4.1 = {
-		holder = eu5_regent_smg
-		government = tribal_government
-	}
-}
-
 d_eu5_srm = {
 	1337.1.1 = {
 		holder = eu5_regent_srm
@@ -7200,16 +7089,6 @@ d_eu5_ths = {
 	}
 }
 
-d_eu5_tnz = {
-	1337.1.1 = {
-		liege = k_eu5_lng
-	}
-	1337.4.1 = {
-		holder = eu5_regent_tnz
-		government = tribal_government
-	}
-}
-
 d_eu5_tps = {
 	1337.1.1 = {
 		liege = k_lithuania
@@ -7278,16 +7157,6 @@ d_eu5_trs = {
 	1337.4.1 = {
 		holder = trs_konstantin_yurievich_rurikovich
 		government = feudal_government
-	}
-}
-
-d_eu5_try = {
-	1333.1.1 = {
-		holder = try_connor_o_donnell
-	}
-	1337.4.1 = {
-		holder = try_connor_o_donnell
-		government = tribal_government
 	}
 }
 
@@ -7602,36 +7471,6 @@ d_eu5_wrc = {
 	1337.4.1 = {
 		holder = boh_john_luxembourg
 		government = feudal_government
-	}
-}
-
-d_eu5_wur = {
-	1337.1.1 = {
-		liege = e_hre
-	}
-	1337.4.1 = {
-		holder = wur_ulrich_iii_wurttemberg
-		government = feudal_government
-	}
-}
-
-d_eu5_ygs = {
-	1337.1.1 = {
-		liege = k_eu5_lng
-	}
-	1337.4.1 = {
-		holder = eu5_regent_ygs
-		government = tribal_government
-	}
-}
-
-d_eu5_ynj = {
-	1337.1.1 = {
-		liege = k_eu5_lng
-	}
-	1337.4.1 = {
-		holder = eu5_regent_ynj
-		government = tribal_government
 	}
 }
 
@@ -8202,9 +8041,6 @@ d_karagay = {
 }
 
 d_karelia = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		holder = eu5_rep_nov
 		government = republic_government
@@ -8899,9 +8735,6 @@ d_polesia = {
 }
 
 d_pomorye = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		holder = eu5_rep_nov
 		government = republic_government
@@ -9825,9 +9658,6 @@ d_tonga = {
 }
 
 d_totma = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		holder = eu5_rep_nov
 		government = republic_government
@@ -10070,9 +9900,6 @@ d_west_mossi = {
 }
 
 d_west_novgorod = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		holder = eu5_rep_nov
 		government = republic_government
@@ -12448,9 +12275,6 @@ c_attu = {
 }
 
 c_aunus_karelia = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 6
 	}
@@ -14245,9 +14069,6 @@ c_beloozero = {
 }
 
 c_belozerskaya = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
@@ -14493,9 +14314,6 @@ c_bezanozano = {
 }
 
 c_bezhetsk = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
@@ -14506,9 +14324,6 @@ c_bezhetsk = {
 }
 
 c_bezhetskaya = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
@@ -19312,9 +19127,6 @@ c_derbyshire = {
 }
 
 c_derevskaya = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
@@ -25301,9 +25113,6 @@ c_iningai = {
 }
 
 c_inner_aunus_karelia = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 4
 	}
@@ -27361,9 +27170,6 @@ c_kargasok = {
 }
 
 c_kargopol = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 4
 	}
@@ -28310,9 +28116,6 @@ c_khiva = {
 }
 
 c_kholmogory = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 6
 	}
@@ -28756,9 +28559,6 @@ c_kletsk = {
 }
 
 c_knyazhaya = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
@@ -29080,7 +28880,7 @@ c_kosovo = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = ser_pribac_hrebeljanovic
+		holder = ser_stefan_dusan
 		government = feudal_government
 	}
 }
@@ -31776,9 +31576,6 @@ c_luxico = {
 }
 
 c_luzhkaya = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
@@ -32448,8 +32245,8 @@ c_malmohus = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = mbplus_clergy_451600
-		government = ecclesiastical_government
+		holder = swe_magnus_eriksson
+		government = feudal_government
 	}
 }
 
@@ -35587,9 +35384,6 @@ c_nagaur = {
 }
 
 c_nagornaya = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 13
 	}
@@ -36156,7 +35950,7 @@ c_neckar = {
 		change_prosperity_level = 26
 	}
 	1337.4.1 = {
-		holder = hhb_rudolf_iii_hohenberg_rotenburg
+		holder = wur_ulrich_iii_wurttemberg
 		government = feudal_government
 	}
 }
@@ -37987,9 +37781,6 @@ c_oberwallis = {
 }
 
 c_obonezhskaya = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
@@ -38434,9 +38225,6 @@ c_onabeesh = {
 }
 
 c_onega = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 4
 	}
@@ -40815,9 +40603,6 @@ c_pomo = {
 }
 
 c_pomorye = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 3
 	}
@@ -42849,9 +42634,6 @@ c_rzhev = {
 }
 
 c_rzhevskaya = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
@@ -44493,9 +44275,6 @@ c_shenandoah = {
 }
 
 c_shenkursk = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 4
 	}
@@ -49177,9 +48956,6 @@ c_toropets = {
 }
 
 c_torzhok = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
@@ -49201,9 +48977,6 @@ c_tosa = {
 }
 
 c_totma = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
@@ -50082,9 +49855,6 @@ c_tver = {
 }
 
 c_tverskaya = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
@@ -51984,9 +51754,6 @@ c_ve_nadu = {
 }
 
 c_velsk = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
@@ -52369,9 +52136,6 @@ c_vladimir = {
 }
 
 c_vodskaya = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
@@ -52429,9 +52193,6 @@ c_voikar = {
 }
 
 c_volkhovskaya = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
@@ -52452,9 +52213,6 @@ c_volodymyr = {
 }
 
 c_vologda = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
@@ -53700,9 +53458,6 @@ c_whanganui = {
 }
 
 c_white_karelia = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 4
 	}
@@ -54744,9 +54499,6 @@ c_yaransk = {
 }
 
 c_yaren = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
@@ -54835,9 +54587,6 @@ c_yazd = {
 }
 
 c_yazhelbitskaya = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
@@ -54904,9 +54653,6 @@ c_yelets = {
 }
 
 c_yemetsk = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 4
 	}
@@ -55648,9 +55394,6 @@ c_zanzibar = {
 }
 
 c_zaonezhye = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 3
 	}
@@ -56094,9 +55837,6 @@ c_zumbo = {
 }
 
 c_zvenigorod = {
-	1337.1.1 = {
-		liege = k_opolye
-	}
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
@@ -60153,4 +59893,22 @@ b_shamakhi = {
 # MB+ Chalkidike: preserve the existing castle for Alexios Branas.
 b_polygyros = {
 	1337.4.1 = { holder = mb_balkan_Branas3 liege = c_chalkidiki }
+}
+
+b_kochi = {
+	1337.4.1 = {
+		holder = eu5_regent_pdu
+	}
+}
+
+b_koszalin = {
+	1337.4.1 = {
+		holder = kmm_johann_i_lauenburg
+	}
+}
+
+b_lahijan = {
+	1337.4.1 = {
+		holder = lhj_naservand_ruler
+	}
 }

@@ -1512,13 +1512,12 @@ d_bahr_al_maghrib_raiders = {
 	ai_primary_priority = { add = -1000 }
 }
 e_latin_empire = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_constantinople
 	color = { 150 105 56 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
+	definite_form = yes
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
 }
 e_beth_nahrain = {
 	landless = yes
@@ -5337,13 +5336,15 @@ d_asturias = {
 	color = { 207 104 0 }
 }
 k_spanish_galicia = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_coruna
 	color = { 255 224 94 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
+	can_be_named_after_dynasty = no
+	can_create = {
+		trigger_if = {
+			limit = { is_ai = yes }
+			faith = { religion_tag = christianity_religion }
+		}
+	}
 }
 d_porto = {
 	capital = c_tras_os_montes
@@ -5754,13 +5755,14 @@ d_eastern_desert = {
 	ai_primary_priority = { add = -1000 }
 }
 k_jerusalem = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_filastin
 	color = { 180 180 180 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
+	can_create = {
+		faith = { religion_tag = christianity_religion }
+	}
+	can_create_on_partition = {
+		faith = { religion_tag = christianity_religion }
+	}
 }
 d_oultrejourdain = {
 	landless = yes

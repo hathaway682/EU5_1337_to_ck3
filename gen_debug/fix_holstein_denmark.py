@@ -72,6 +72,34 @@ Provinces 608/611 are already castle_holding -- nothing to do there.
    country row is rebound to b_oldenburg and that barony takes its holder --
    exactly the RIM/b_rimini case in section 6. Both new rulers are republics,
    so the counties' 1337.4.1 government line changes with the holder.
+
+8. Capital seats (user decision 2026-11-14). Five EU5 national capitals that are
+   also flavour locations (except stuttgart) but were not their county's first
+   barony, so the county was led from some other town:
+     c_gamrun          b_gamrun      -> b_hormuz     ORM (holder already ORM's ruler)
+     c_malmohus        b_helsingborg -> b_lund       SKE (was an ecclesiastical holder)
+     c_kosovo          b_peja        -> b_prizren    SER (was a local Serbian lord)
+     c_main_franconia  b_hassfurt    -> b_wurzburg   WBG (holder already WBG's ruler)
+     c_neckar          b_horb        -> b_stuttgart  WUR (Hohenberg held the county;
+                                        "霍恩贝格狗运占了第一个地点把符腾堡首府斯图加特抢走了")
+   Where the 1337.4.1 holder was not already the capital country's ruler, it and
+   the government line follow the new seat. No barony demotions and no title-map
+   rebinds here: all five countries are duchy/kingdom/county rank whose country
+   rows already sit on d_/k_/c_ titles rather than on b_<capital>, and the
+   displaced Hohenberg still holds c_swabian_alb -- the same "LUN has plenty of
+   land" call from section 7. county/barony rows likewise stay as they are.
+
+9. Melk seat (user decision 2026-11-14). c_ober_dem_wienerwald was led from
+   b_amstetten: Passau holds St. Polten as an outlying town, and rank_state's
+   enclave rule handed the county to Austria, picking the town of the winning
+   power by population alone. Once rank_state prefers EU5's city/town rank first
+   (see _capital_correct.py pick_town), that same pick is b_melk. Both amstetten
+   and melk are Austrian and the county's 1337.4.1 holder is already Habsburg
+   Austria (hab_albrecht_ii_habsburg, feudal_government), so no holder,
+   government or eu5_ck3_title_map.csv row changes. Lock b_melk as the first
+   barony in both trees, write melk into RANK_STATE.json, and add c_ober_dem_
+   wienerwald + b_melk to eu5_reassign_keep.json. Re-run this script after any
+   full export or --barony-order rank_state run, which re-derives those picks.
 """
 import csv, datetime, io, json, os, re, shutil
 from collections import defaultdict
@@ -687,6 +715,83 @@ for spec in HANSE:
     if spec["old_tag"]:
         hanse_keep.append("b_" + spec["old_seat"])
 if extend_keep(hanse_keep):
+    wrote.append("eu5_reassign_keep.json")
+
+# ---- 8. Capital seats (user decision 2026-11-14) ----
+# Five capitals whose county was led from another town. ORM and WBG already hold
+# their county, so only the barony order changes there; SKE, SER and WUR also
+# take over the 1337.4.1 holder/government line.
+CAPITAL_SEATS = [
+    dict(county="gamrun",         seat="hormuz",   ruler="orm_kut_al_din_tahamtan",
+         gov="clan_government"),
+    dict(county="malmohus",       seat="lund",     ruler="swe_magnus_eriksson",
+         gov="feudal_government"),
+    dict(county="kosovo",         seat="prizren",  ruler="ser_stefan_dusan",
+         gov="feudal_government"),
+    dict(county="main_franconia", seat="wurzburg", ruler="wbg_otto_ii_von_wolfskeel",
+         gov="ecclesiastical_government"),
+    dict(county="neckar",         seat="stuttgart", ruler="wur_ulrich_iii_wurttemberg",
+         gov="feudal_government"),
+]
+
+
+def capital_seat_history(spec):
+    """1337.4.1 holder/government follow the new seat when they are not already right."""
+    p = MOD + r"\history\titles\zz_eu5_titles.txt"
+    t = read(p)
+    eol = eol_of(t)
+    flat = t.replace("\r\n", "\n")
+    county = spec["county"]
+    cm = re.search(r"(?ms)^c_%s = \{.*?^\}" % re.escape(county), flat)
+    assert cm, "c_%s history block not found" % county
+    blk = cm.group(0)
+    segs = [s for s in re.finditer(r"(?ms)^\t1337\.4\.1 = \{.*?^\t\}", blk)
+            if "holder =" in s.group(0)]
+    assert len(segs) == 1, "c_%s: expected one 1337.4.1 holder entry" % county
+    s = segs[0]
+    seg = s.group(0)
+    if "holder = " + spec["ruler"] in seg:
+        return False
+    h = re.search(r"holder = (\w+)", seg)
+    assert h, "c_%s 1337 entry has no holder" % county
+    seg2 = seg.replace("holder = " + h.group(1), "holder = " + spec["ruler"], 1)
+    gm = re.search(r"government = (\w+)", seg2)
+    if gm and gm.group(1) != spec["gov"]:
+        seg2 = seg2.replace("government = " + gm.group(1),
+                            "government = " + spec["gov"], 1)
+    blk2 = blk[:s.start()] + seg2 + blk[s.end():]
+    flat2 = flat[:cm.start()] + blk2 + flat[cm.end():]
+    assert flat2.count("{") == flat2.count("}"), "brace mismatch in zz_eu5_titles"
+    write(p, flat2.replace("\n", eol))
+    print("  zz_eu5_titles: c_%s holder %s -> %s, government -> %s" %
+          (county, h.group(1), spec["ruler"], spec["gov"]))
+    return True
+
+
+print("Capital seats:")
+cap_keep = []
+for spec in CAPITAL_SEATS:
+    for path in (LT_MOD, LT_EXP):
+        if reorder_seat(path, spec["county"], spec["seat"]):
+            wrote.append("%s (c_%s)" % (os.path.basename(path), spec["county"]))
+    if capital_seat_history(spec):
+        wrote.append("zz_eu5_titles.txt (c_%s)" % spec["county"])
+    cap_keep += ["c_" + spec["county"], "b_" + spec["seat"]]
+if extend_keep(cap_keep):
+    wrote.append("eu5_reassign_keep.json")
+
+
+# ---- 9. Melk seat (user decision 2026-11-14) ----
+# See the module docstring: only the barony order, RANK_STATE.json's pick and the
+# keep-list change. Austria already holds the county and both towns.
+print("Melk seat:")
+melk = ("ober_dem_wienerwald", "melk")
+for path in (LT_MOD, LT_EXP):
+    if reorder_seat(path, *melk):
+        wrote.append("%s (c_ober_dem_wienerwald)" % os.path.basename(path))
+if correct_rank_state([melk]):
+    wrote.append("RANK_STATE.json")
+if extend_keep(["c_ober_dem_wienerwald", "b_melk"]):
     wrote.append("eu5_reassign_keep.json")
 
 print("written:", ", ".join(wrote))

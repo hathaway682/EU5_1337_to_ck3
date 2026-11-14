@@ -1,0 +1,14 @@
+原版：有特殊建筑的圣地 = 6 / 273
+mod：建筑挂载点 = 158 个建筑 / 184 个 barony
+
+=== A. 原版圣地有建筑，mod 圣地落在同一 barony（4）===
+  badd                 原版 b_ahar              (prov 4540) 建筑 rainbow_mountains_01         mod b_ahar ✓
+  borobudur            原版 b_JAV_Borobodur     (prov 11341) 建筑 borobudur_01                 mod b_borobudur ✓
+  hitakami             原版 b_isawa             (prov 10697) 建筑 chinjufu_01                  mod b_isawa ✓
+  mount_damavand       原版 b_firrim            (prov 4316) 建筑 mount_damavand_01            mod b_damavand ✓
+
+=== B. 原版圣地有建筑，但 mod 圣地不在建筑所在 barony（2）===
+  baekdu               原版 b_FIC_Liao_Changbaishan(prov 11836) 建筑 mount_baekdu_01            | mod 圣地 b_huju               而建筑在 b_samsu
+  rome                 原版 b_vaticano        (prov 2577) 建筑 holy_site_st_peters_basilica_01 | mod 圣地 b_rome               而建筑在 b_bracciano
+
+=== C. 原版圣地有建筑，但 mod 没有对应圣地或建筑没迁移（0）===
