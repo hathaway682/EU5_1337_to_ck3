@@ -1877,7 +1877,7 @@ eu5_1337_historical_military_orders_effect = {
 				scope:eu5_1337_order_40_leader = {
 					add_trait = order_member
 					change_government = ecclesiastical_government
-					set_primary_title_to = title:d_knights_calatrava
+					set_primary_title_to = title:d_ck2_calatrava_territory
 					if = {
 						limit = { NOT = { liege = character:cas_alfonso_xi_burgundy } }
 						create_title_and_vassal_change = { type = granted save_scope_as = eu5_1337_calatrava_liege_change add_claim_on_loss = no }
