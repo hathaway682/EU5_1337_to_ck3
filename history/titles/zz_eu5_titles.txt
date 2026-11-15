@@ -4202,6 +4202,99 @@ k_yemen = {
 
 
 
+# Restored MB+ British and Nordic duchies.
+d_cornwall = {
+	1337.1.1 = { liege = k_england }
+	1337.4.1 = { holder = eng_edward_the_black_prince government = feudal_government }
+}
+
+d_esthonia = {
+	1337.1.1 = { liege = k_denmark }
+	1337.4.1 = { holder = dan_otto_christoffersen government = feudal_government }
+}
+
+d_finland = {
+	1337.1.1 = { liege = k_sweden }
+	1337.4.1 = {
+		holder = mb_scand_450760
+		government = feudal_government
+	}
+}
+
+d_gwynedd = {
+	1337.1.1 = { liege = k_england }
+	1337.4.1 = { holder = eng_edward_the_black_prince government = feudal_government }
+}
+
+d_halogaland = {
+	1337.1.1 = { liege = k_norway }
+	1337.4.1 = { holder = mb_scand_450780 government = feudal_government }
+}
+
+d_iceland = {
+	1337.1.1 = { liege = k_norway }
+	1299.11.1 = {
+		holder = nor_hakan_magnusson
+	}
+	1319.5.8 = {
+		holder = swe_magnus_eriksson
+	}
+	1337.4.1 = {
+		holder = mb_scand_450700
+		government = feudal_government
+	}
+}
+
+d_ireland_lordship = {
+	1337.1.1 = { liege = k_england }
+	1337.4.1 = { holder = ple_john_darcy_baron_darcy_de_knayth government = feudal_government }
+}
+
+d_jamtland = {
+	1337.1.1 = { liege = k_norway }
+	1337.4.1 = { holder = mb_scand_143130M6 government = feudal_government }
+}
+
+d_lancaster = {
+	1337.1.1 = { liege = k_england }
+	1337.4.1 = { holder = eng_henry_lancaster government = feudal_government }
+}
+
+d_norfolk = {
+	1337.1.1 = { liege = k_england }
+	1337.4.1 = { holder = eng_thomas_of_brotherton government = feudal_government }
+}
+
+d_northern_isles = {
+	1337.1.1 = { liege = k_norway }
+	1337.4.1 = { holder = ork_malise_v government = feudal_government }
+}
+
+d_ostergotland = {
+	1337.1.1 = { liege = k_sweden }
+	1337.4.1 = { holder = swe_magnus_eriksson government = feudal_government }
+}
+
+d_skane = {
+	1337.1.1 = { liege = k_sweden }
+	1337.4.1 = { holder = mbplus_clergy_451600 government = ecclesiastical_government }
+}
+
+d_trondelag = {
+	1337.1.1 = { liege = k_norway }
+	1337.4.1 = { holder = mb_scand_450780 government = feudal_government }
+}
+
+d_vastergotland = {
+	1337.1.1 = { liege = k_sweden }
+	1337.4.1 = { holder = mb_scand_450727 government = feudal_government }
+}
+
+d_viken = {
+	1337.1.1 = { liege = k_norway }
+	1337.4.1 = { holder = mb_scand_170009 government = feudal_government }
+}
+
 d_et_toledo = {
 	1337.4.1 = {
 		liege = k_castille
@@ -7363,12 +7456,7 @@ d_extremadura = {
 	}
 }
 
-d_finland = {
-	1337.4.1 = {
-		holder = swe_magnus_eriksson
-		government = feudal_government
-	}
-}
+
 
 d_flanders = {
 	1128.7.28 = {
@@ -7823,18 +7911,7 @@ d_hunan = {
 	}
 }
 
-d_iceland = {
-	1299.11.1 = {
-		holder = nor_hakan_magnusson
-	}
-	1319.5.8 = {
-		holder = swe_magnus_eriksson
-	}
-	1337.4.1 = {
-		holder = swe_magnus_eriksson
-		government = feudal_government
-	}
-}
+
 
 d_ile_de_france = {
 	1337.4.1 = {
@@ -8443,8 +8520,9 @@ d_munster = {
 }
 
 d_murcia = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_juan_manuel
 	}
 }
 
@@ -10203,11 +10281,12 @@ c_agayakan = {
 }
 
 c_agder = {
+	1337.1.1 = { liege = k_norway }
 	1337.4.1 = {
 		change_prosperity_level = 15
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450783
 		government = feudal_government
 	}
 }
@@ -10387,11 +10466,12 @@ c_akele_guzai = {
 }
 
 c_akershus = {
+	1337.1.1 = { liege = d_viken }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_170009
 		government = feudal_government
 	}
 }
@@ -10602,11 +10682,12 @@ c_alania = {
 }
 
 c_alarcon = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_juan_nunez_de_prado
 	}
 }
 
@@ -10632,11 +10713,12 @@ c_alatyr = {
 }
 
 c_alava = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_457610
 	}
 }
 
@@ -10653,11 +10735,12 @@ c_alazapa = {
 }
 
 c_albacete = {
+	1337.1.1 = { liege = d_murcia }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_457633
 	}
 }
 
@@ -10684,11 +10767,12 @@ c_albert_nile = {
 }
 
 c_alcaniz = {
+	1337.1.1 = { liege = k_aragon }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = ara_peter_iv_arago
+		holder = ck2_iberia_71698
 		government = feudal_government
 	}
 }
@@ -10739,11 +10823,12 @@ c_alexeyevka = {
 }
 
 c_algarve = {
+	1337.1.1 = { liege = k_portugal }
 	1337.4.1 = {
 		change_prosperity_level = 26
 	}
 	1337.4.1 = {
-		holder = por_afonso_iv_portugal
+		holder = ck2_iberia_459532
 		government = feudal_government
 	}
 }
@@ -10892,11 +10977,12 @@ c_altmark = {
 }
 
 c_alto_alentejo = {
+	1337.1.1 = { liege = k_portugal }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = por_afonso_iv_portugal
+		holder = ck2_iberia_142507
 		government = feudal_government
 	}
 }
@@ -11177,11 +11263,12 @@ c_andong = {
 }
 
 c_angermanland = {
+	1337.1.1 = { liege = k_sweden }
 	1337.4.1 = {
 		change_prosperity_level = 13
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_487071
 		government = feudal_government
 	}
 }
@@ -11916,11 +12003,12 @@ c_assupink = {
 }
 
 c_astorga = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_457590
 	}
 }
 
@@ -12251,11 +12339,12 @@ c_avignonnais = {
 }
 
 c_avila = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_72637
 	}
 }
 
@@ -12481,11 +12570,12 @@ c_bacs = {
 }
 
 c_badajoz = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_juan_manuel
 	}
 }
 
@@ -12684,11 +12774,12 @@ c_baixing = {
 }
 
 c_baixo_alentejo = {
+	1337.1.1 = { liege = k_portugal }
 	1337.4.1 = {
 		change_prosperity_level = 26
 	}
 	1337.4.1 = {
-		holder = por_afonso_iv_portugal
+		holder = ck2_iberia_142802
 		government = feudal_government
 	}
 }
@@ -13128,11 +13219,12 @@ c_barat_daya = {
 }
 
 c_barbastro = {
+	1337.1.1 = { liege = k_aragon }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = ara_peter_iv_arago
+		holder = ara_ramon_berenguer_empuries
 		government = feudal_government
 	}
 }
@@ -13576,11 +13668,12 @@ c_baykit = {
 }
 
 c_bayonne = {
+	1337.1.1 = { liege = d_eu5_aqn }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_aq_navar_de_dax
 		government = feudal_government
 	}
 }
@@ -13708,14 +13801,15 @@ c_bechinsko = {
 }
 
 c_bedfordshire = {
+	1337.1.1 = { liege = k_england }
 	1337.1.1 = {
 	}
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
-		government = feudal_government
+		holder = eng_john_stratford
+		government = ecclesiastical_government
 	}
 }
 
@@ -13740,11 +13834,12 @@ c_behbahan = {
 }
 
 c_beira_alta = {
+	1337.1.1 = { liege = k_portugal }
 	1337.4.1 = {
 		change_prosperity_level = 19
 	}
 	1337.4.1 = {
-		holder = por_afonso_iv_portugal
+		holder = ck2_iberia_459554
 		government = feudal_government
 	}
 }
@@ -13925,11 +14020,13 @@ c_bena = {
 }
 
 c_benavente = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_72960
+		government = ecclesiastical_government
 	}
 }
 
@@ -13977,11 +14074,12 @@ c_bergamo = {
 }
 
 c_bergenhus = {
+	1337.1.1 = { liege = k_norway }
 	1337.4.1 = {
 		change_prosperity_level = 17
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450730
 		government = feudal_government
 	}
 }
@@ -14000,11 +14098,12 @@ c_bergisches_land = {
 }
 
 c_berkshire = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = eng_laurence_hastings_1st_earl_of_pembroke
 		government = feudal_government
 	}
 }
@@ -14323,11 +14422,12 @@ c_biryuk = {
 }
 
 c_biscay = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_457610
 	}
 }
 
@@ -14410,11 +14510,12 @@ c_bjelovar = {
 }
 
 c_blekinge = {
+	1337.1.1 = { liege = d_skane }
 	1337.4.1 = {
 		change_prosperity_level = 21
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_1227895
 		government = feudal_government
 	}
 }
@@ -14538,11 +14639,12 @@ c_boh = {
 }
 
 c_bohus = {
+	1337.1.1 = { liege = k_norway }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = nor_jan_havtoresson
 		government = feudal_government
 	}
 }
@@ -15349,11 +15451,12 @@ c_burgas = {
 }
 
 c_burgos = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_juana_nunez_lara
 	}
 }
 
@@ -15402,11 +15505,12 @@ c_burugardi = {
 }
 
 c_buskerud = {
+	1337.1.1 = { liege = d_viken }
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_170009
 		government = feudal_government
 	}
 }
@@ -15479,11 +15583,12 @@ c_cacaxtles = {
 }
 
 c_caceres = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_458006
 	}
 }
 
@@ -15631,11 +15736,12 @@ c_camanducaia = {
 }
 
 c_cambridgeshire = {
+	1337.1.1 = { liege = d_norfolk }
 	1337.4.1 = {
 		change_prosperity_level = 25
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = eng_thomas_of_brotherton
 		government = feudal_government
 	}
 }
@@ -15848,11 +15954,12 @@ c_casco = {
 }
 
 c_castellon = {
+	1337.1.1 = { liege = k_aragon }
 	1337.4.1 = {
 		change_prosperity_level = 27
 	}
 	1337.4.1 = {
-		holder = ara_peter_iv_arago
+		holder = ck2_iberia_460011
 		government = feudal_government
 	}
 }
@@ -17400,11 +17507,12 @@ c_cismonte = {
 }
 
 c_ciudad_rodrigo = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_72637
 	}
 }
 
@@ -17841,7 +17949,7 @@ c_corinthia = {
 }
 
 c_cork = {
-	1337.1.1 = { liege = d_leinster }
+	1337.1.1 = { liege = d_ireland_lordship }
 	1329.1.1 = {
 		holder = dms_maurice_fitzgerald
 	}
@@ -17870,11 +17978,12 @@ c_cornouaille = {
 }
 
 c_cornwall = {
+	1337.1.1 = { liege = d_cornwall }
 	1337.4.1 = {
 		change_prosperity_level = 26
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = eng_edward_the_black_prince
 		government = feudal_government
 	}
 }
@@ -17890,11 +17999,12 @@ c_corum = {
 }
 
 c_coruna = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_pedro_fernandez_castro
 	}
 }
 
@@ -18105,11 +18215,12 @@ c_cuchumatan = {
 }
 
 c_cuenca = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_72490
 	}
 }
 
@@ -18170,13 +18281,14 @@ c_cumaribo = {
 }
 
 c_cumberland = {
+	1337.1.1 = { liege = k_england }
 	1337.1.1 = {
 	}
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_eng_anselm_cumberland
 		government = feudal_government
 	}
 }
@@ -18382,11 +18494,12 @@ c_dalai_nuur = {
 }
 
 c_dalarna = {
+	1337.1.1 = { liege = k_sweden }
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_194271M3
 		government = feudal_government
 	}
 }
@@ -18408,11 +18521,12 @@ c_dali = {
 }
 
 c_dalsland = {
+	1337.1.1 = { liege = k_sweden }
 	1337.4.1 = {
 		change_prosperity_level = 12
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_194250M1
 		government = feudal_government
 	}
 }
@@ -18856,13 +18970,14 @@ c_derajat = {
 }
 
 c_derbyshire = {
+	1337.1.1 = { liege = k_england }
 	1337.1.1 = {
 	}
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_eng_reginald_cobham
 		government = feudal_government
 	}
 }
@@ -18927,11 +19042,12 @@ c_devkot = {
 }
 
 c_devon = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_eng_hugh_de_courtenay
 		government = feudal_government
 	}
 }
@@ -19409,11 +19525,12 @@ c_dorohei = {
 }
 
 c_dorset = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 25
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_eng_hugh_de_courtenay
 		government = feudal_government
 	}
 }
@@ -19499,13 +19616,14 @@ c_dubawnt = {
 }
 
 c_dublin = {
+	1337.1.1 = { liege = d_ireland_lordship }
 	1337.1.1 = {
 	}
 	1337.4.1 = {
 		change_prosperity_level = 27
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = ple_john_darcy_baron_darcy_de_knayth
 		government = feudal_government
 	}
 }
@@ -19645,11 +19763,12 @@ c_e_omita_i = {
 }
 
 c_east_asturias = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 17
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_enrique_ii_trastamara
 	}
 }
 
@@ -19676,11 +19795,12 @@ c_east_dennaakke = {
 }
 
 c_east_farthing = {
+	1337.1.1 = { liege = d_iceland }
 	1337.4.1 = {
 		change_prosperity_level = 0
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450700
 		government = feudal_government
 	}
 }
@@ -19804,11 +19924,12 @@ c_east_luxembourg = {
 }
 
 c_east_mancha = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_juan_nunez_de_prado
 	}
 }
 
@@ -19869,11 +19990,12 @@ c_east_qassim = {
 }
 
 c_east_riding = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 19
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = eng_thomas_wake
 		government = feudal_government
 	}
 }
@@ -19951,11 +20073,12 @@ c_eastern_gobi = {
 }
 
 c_eastern_jutland = {
+	1337.1.1 = { liege = k_denmark }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = dan_valdemar_atterdag
+		holder = mbplus_family_1227924
 		government = feudal_government
 	}
 }
@@ -20455,21 +20578,23 @@ c_essequibo = {
 }
 
 c_essex = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 27
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = eng_humphrey_de_bohun_6th_earl_of_hereford
 		government = feudal_government
 	}
 }
 
 c_estonia = {
+	1337.1.1 = { liege = d_esthonia }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = dan_valdemar_atterdag
+		holder = dan_otto_christoffersen
 		government = feudal_government
 	}
 }
@@ -20807,11 +20932,12 @@ c_filastin = {
 }
 
 c_finland = {
+	1337.1.1 = { liege = d_finland }
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450760
 		government = feudal_government
 	}
 }
@@ -21012,11 +21138,12 @@ c_friuli = {
 }
 
 c_funen = {
+	1337.1.1 = { liege = d_holstein }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = dan_valdemar_atterdag
+		holder = shl_gerhard_iii_holstein_rendsburg
 		government = feudal_government
 	}
 }
@@ -21423,11 +21550,12 @@ c_gaspe = {
 }
 
 c_gastrikland = {
+	1337.1.1 = { liege = k_sweden }
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_194262M
 		government = feudal_government
 	}
 }
@@ -21574,11 +21702,12 @@ c_gilyuy = {
 }
 
 c_gipuzkoa = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_457610
 	}
 }
 
@@ -21606,11 +21735,12 @@ c_girgenti = {
 }
 
 c_girona = {
+	1337.1.1 = { liege = k_aragon }
 	1337.4.1 = {
 		change_prosperity_level = 23
 	}
 	1337.4.1 = {
-		holder = ara_peter_iv_arago
+		holder = ara_pere_iv_ribagorza
 		government = feudal_government
 	}
 }
@@ -21644,13 +21774,14 @@ c_glogow = {
 }
 
 c_gloucestershire = {
+	1337.1.1 = { liege = k_england }
 	1337.1.1 = {
 	}
 	1337.4.1 = {
 		change_prosperity_level = 28
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_eng_thomas_berkeley
 		government = feudal_government
 	}
 }
@@ -21810,12 +21941,13 @@ c_gongchang = {
 }
 
 c_gonge = {
+	1337.1.1 = { liege = d_skane }
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
-		government = feudal_government
+		holder = mbplus_clergy_451600
+		government = ecclesiastical_government
 	}
 }
 
@@ -21983,11 +22115,12 @@ c_gothia = {
 }
 
 c_gotland = {
+	1337.1.1 = { liege = k_sweden }
 	1337.4.1 = {
 		change_prosperity_level = 17
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_194281M
 		government = feudal_government
 	}
 }
@@ -22650,7 +22783,7 @@ c_gwiriko = {
 }
 
 c_gwynedd = {
-	1337.1.1 = { liege = d_eu5_wls }
+	1337.1.1 = { liege = d_gwynedd }
 	1337.1.1 = {
 	}
 	1337.4.1 = {
@@ -22917,21 +23050,23 @@ c_halkomelem = {
 }
 
 c_halland = {
+	1337.1.1 = { liege = d_skane }
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_451800
 		government = feudal_government
 	}
 }
 
 c_halsingland = {
+	1337.1.1 = { liege = k_sweden }
 	1337.4.1 = {
 		change_prosperity_level = 10
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_487072
 		government = feudal_government
 	}
 }
@@ -23012,11 +23147,12 @@ c_hamid = {
 }
 
 c_hampshire = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 28
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = eng_hugh_le_despenser
 		government = feudal_government
 	}
 }
@@ -23380,11 +23516,12 @@ c_headdhetanwan = {
 }
 
 c_hedmark = {
+	1337.1.1 = { liege = d_jamtland }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_452603
 		government = feudal_government
 	}
 }
@@ -23437,11 +23574,12 @@ c_hejian = {
 }
 
 c_hellin = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_juan_manuel
 	}
 }
 
@@ -23515,14 +23653,15 @@ c_herat = {
 }
 
 c_herefordshire = {
+	1337.1.1 = { liege = k_england }
 	1337.1.1 = {
 	}
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
-		government = feudal_government
+		holder = mb_eng_richard_hereford
+		government = ecclesiastical_government
 	}
 }
 
@@ -24145,11 +24284,12 @@ c_hue = {
 }
 
 c_huelva = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_458011
 	}
 }
 
@@ -25323,11 +25463,12 @@ c_jacui = {
 }
 
 c_jaen = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_juan_nunez_de_prado
 	}
 }
 
@@ -25402,11 +25543,12 @@ c_jaminjung = {
 }
 
 c_jamtland = {
+	1337.1.1 = { liege = d_jamtland }
 	1337.4.1 = {
 		change_prosperity_level = 10
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_143130M6
 		government = feudal_government
 	}
 }
@@ -27413,11 +27555,12 @@ c_kenogami = {
 }
 
 c_kent = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 27
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = eng_john_of_kent
 		government = feudal_government
 	}
 }
@@ -27940,7 +28083,7 @@ c_kikonteku = {
 }
 
 c_kildare = {
-	1337.1.1 = { liege = d_leinster }
+	1337.1.1 = { liege = d_ireland_lordship }
 	1329.1.1 = {
 		holder = kid_maurice_fitzgerald
 	}
@@ -27980,13 +28123,14 @@ c_kilivila = {
 }
 
 c_kilkenny = {
+	1337.1.1 = { liege = d_ireland_lordship }
 	1337.1.1 = {
 	}
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = ord_james_butler_i
 		government = feudal_government
 	}
 }
@@ -29501,7 +29645,7 @@ c_lamu_archipelago = {
 }
 
 c_lancashire = {
-	1337.1.1 = { liege = k_england }
+	1337.1.1 = { liege = d_lancaster }
 	1322.3.22 = {
 		holder = eng_henry_lancaster
 	}
@@ -29705,11 +29849,12 @@ c_lehigh = {
 }
 
 c_leicestershire = {
+	1337.1.1 = { liege = d_lancaster }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = eng_henry_lancaster
 		government = feudal_government
 	}
 }
@@ -29789,11 +29934,12 @@ c_leon = {
 }
 
 c_lerma = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_juana_nunez_lara
 	}
 }
 
@@ -29981,7 +30127,7 @@ c_limburg = {
 }
 
 c_limerick = {
-	1337.1.1 = { liege = d_leinster }
+	1337.1.1 = { liege = d_ireland_lordship }
 	1337.1.1 = {
 	}
 	1337.4.1 = {
@@ -30017,11 +30163,12 @@ c_linan = {
 }
 
 c_lincolnshire = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_eng_alice_de_lacy
 		government = feudal_government
 	}
 }
@@ -31034,11 +31181,12 @@ c_lugenda = {
 }
 
 c_lugo = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_pedro_fernandez_castro
 	}
 }
 
@@ -31868,12 +32016,13 @@ c_mallorca = {
 }
 
 c_malmohus = {
+	1337.1.1 = { liege = d_skane }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
-		government = feudal_government
+		holder = mbplus_clergy_451600
+		government = ecclesiastical_government
 	}
 }
 
@@ -32874,13 +33023,14 @@ c_mearim = {
 }
 
 c_meath = {
+	1337.1.1 = { liege = d_ireland_lordship }
 	1337.1.1 = {
 	}
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = kid_maurice_fitzgerald
 		government = feudal_government
 	}
 }
@@ -33161,11 +33311,12 @@ c_meramec = {
 }
 
 c_merida = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_juan_manuel
 	}
 }
 
@@ -33662,11 +33813,12 @@ c_minganie = {
 }
 
 c_minho = {
+	1337.1.1 = { liege = k_portugal }
 	1337.4.1 = {
 		change_prosperity_level = 27
 	}
 	1337.4.1 = {
-		holder = por_afonso_iv_portugal
+		holder = por_pedro_barcelos
 		government = feudal_government
 	}
 }
@@ -34221,11 +34373,12 @@ c_monongahela = {
 }
 
 c_montana = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_72933
 	}
 }
 
@@ -34684,11 +34837,12 @@ c_munsterland = {
 }
 
 c_murcia = {
+	1337.1.1 = { liege = d_murcia }
 	1337.4.1 = {
 		change_prosperity_level = 25
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_juan_manuel
 	}
 }
 
@@ -35646,11 +35800,12 @@ c_neosho = {
 }
 
 c_nerike = {
+	1337.1.1 = { liege = d_ostergotland }
 	1337.4.1 = {
 		change_prosperity_level = 13
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450690
 		government = feudal_government
 	}
 }
@@ -35746,11 +35901,12 @@ c_nevernais = {
 }
 
 c_new_catalonia = {
+	1337.1.1 = { liege = k_aragon }
 	1337.4.1 = {
 		change_prosperity_level = 30
 	}
 	1337.4.1 = {
-		holder = ara_peter_iv_arago
+		holder = ara_ferdinand_arago
 		government = feudal_government
 	}
 }
@@ -36242,31 +36398,34 @@ c_nomlaki = {
 }
 
 c_nor_trondelag = {
+	1337.1.1 = { liege = d_trondelag }
 	1337.4.1 = {
 		change_prosperity_level = 8
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_1290050M8
 		government = feudal_government
 	}
 }
 
 c_nordland = {
+	1337.1.1 = { liege = d_halogaland }
 	1337.4.1 = {
 		change_prosperity_level = 8
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450780
 		government = feudal_government
 	}
 }
 
 c_norfolk = {
+	1337.1.1 = { liege = d_norfolk }
 	1337.4.1 = {
 		change_prosperity_level = 27
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = eng_thomas_of_brotherton
 		government = feudal_government
 	}
 }
@@ -36284,11 +36443,12 @@ c_norra_osterbotten = {
 }
 
 c_norrejylland = {
+	1337.1.1 = { liege = k_denmark }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = dan_valdemar_atterdag
+		holder = mb_scand_1227894
 		government = feudal_government
 	}
 }
@@ -36403,11 +36563,12 @@ c_north_epirus = {
 }
 
 c_north_farthing = {
+	1337.1.1 = { liege = d_iceland }
 	1337.4.1 = {
 		change_prosperity_level = 3
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_452612
 		government = feudal_government
 	}
 }
@@ -36569,11 +36730,12 @@ c_north_pskov = {
 }
 
 c_north_riding = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 21
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = eng_henry_percy_ii
 		government = feudal_government
 	}
 }
@@ -36711,11 +36873,12 @@ c_north_yandin = {
 }
 
 c_northamptonshire = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_eng_william_de_bohun
 		government = feudal_government
 	}
 }
@@ -36763,7 +36926,7 @@ c_northern_desh = {
 }
 
 c_northern_isles = {
-	1337.1.1 = { liege = k_norway }
+	1337.1.1 = { liege = d_northern_isles }
 	1330.1.1 = {
 		holder = ork_malise_v
 	}
@@ -36870,11 +37033,12 @@ c_northland = {
 }
 
 c_northumberland = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_eng_gilbert_de_umfraville
 		government = feudal_government
 	}
 }
@@ -36937,13 +37101,14 @@ c_nottaway = {
 }
 
 c_nottinghamshire = {
+	1337.1.1 = { liege = k_england }
 	1337.1.1 = {
 	}
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = ple_john_darcy_baron_darcy_de_knayth
 		government = feudal_government
 	}
 }
@@ -37224,11 +37389,12 @@ c_nye = {
 }
 
 c_nyland = {
+	1337.1.1 = { liege = d_finland }
 	1337.4.1 = {
 		change_prosperity_level = 13
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_Horn1
 		government = feudal_government
 	}
 }
@@ -37916,11 +38082,12 @@ c_opole = {
 }
 
 c_oppland = {
+	1337.1.1 = { liege = k_norway }
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = nor_sigurd_havtoresson
 		government = feudal_government
 	}
 }
@@ -38176,31 +38343,34 @@ c_ossabaw = {
 }
 
 c_ostergotland = {
+	1337.1.1 = { liege = k_sweden }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450650
 		government = feudal_government
 	}
 }
 
 c_ostfold = {
+	1337.1.1 = { liege = d_viken }
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_170009
 		government = feudal_government
 	}
 }
 
 c_ostra_smaland = {
+	1337.1.1 = { liege = k_sweden }
 	1337.4.1 = {
 		change_prosperity_level = 15
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450620
 		government = feudal_government
 	}
 }
@@ -38370,11 +38540,12 @@ c_oumi = {
 }
 
 c_ourense = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_pedro_fernandez_castro
 	}
 }
 
@@ -38474,11 +38645,12 @@ c_owari = {
 }
 
 c_oxfordshire = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 26
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_eng_john_de_vere
 		government = feudal_government
 	}
 }
@@ -39924,11 +40096,12 @@ c_placentia = {
 }
 
 c_plasencia = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_73091
 	}
 }
 
@@ -41629,11 +41802,12 @@ c_riau_siak = {
 }
 
 c_ribatejo = {
+	1337.1.1 = { liege = k_portugal }
 	1337.4.1 = {
 		change_prosperity_level = 26
 	}
 	1337.4.1 = {
-		holder = por_afonso_iv_portugal
+		holder = ck2_iberia_142586
 		government = feudal_government
 	}
 }
@@ -41775,11 +41949,12 @@ c_rodos = {
 }
 
 c_rogaland = {
+	1337.1.1 = { liege = k_norway }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450730
 		government = feudal_government
 	}
 }
@@ -41848,11 +42023,12 @@ c_roman_flanders = {
 }
 
 c_romsdalen = {
+	1337.1.1 = { liege = k_norway }
 	1337.4.1 = {
 		change_prosperity_level = 10
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_1290061M
 		government = feudal_government
 	}
 }
@@ -42457,11 +42633,12 @@ c_sakwatamau = {
 }
 
 c_salamanca = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_72637
 	}
 }
 
@@ -42776,11 +42953,12 @@ c_santee = {
 }
 
 c_santiago = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_pedro_fernandez_castro
 		government = ecclesiastical_government
 	}
 }
@@ -43056,11 +43234,12 @@ c_saskatchewan = {
 }
 
 c_satakunta = {
+	1337.1.1 = { liege = d_finland }
 	1337.4.1 = {
 		change_prosperity_level = 10
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450760
 		government = feudal_government
 	}
 }
@@ -43268,11 +43447,12 @@ c_seenplatte = {
 }
 
 c_segovia = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_457532
 	}
 }
 
@@ -44012,11 +44192,12 @@ c_shouzhou = {
 }
 
 c_shropshire = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = eng_roger_mortimer_2nd_earl_of_march
 		government = feudal_government
 	}
 }
@@ -44646,31 +44827,34 @@ c_snake_river = {
 }
 
 c_sodermanland = {
+	1337.1.1 = { liege = k_sweden }
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450648
 		government = feudal_government
 	}
 }
 
 c_sodra_osterbotten = {
+	1337.1.1 = { liege = d_finland }
 	1337.4.1 = {
 		change_prosperity_level = 8
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_170024M2
 		government = feudal_government
 	}
 }
 
 c_sogn = {
+	1337.1.1 = { liege = k_norway }
 	1337.4.1 = {
 		change_prosperity_level = 10
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_194317M3
 		government = feudal_government
 	}
 }
@@ -44704,11 +44888,12 @@ c_soissonais = {
 }
 
 c_somerset = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_eng_hugh_de_courtenay
 		government = feudal_government
 	}
 }
@@ -44795,11 +44980,12 @@ c_sopron = {
 }
 
 c_sor_trondelag = {
+	1337.1.1 = { liege = d_trondelag }
 	1337.4.1 = {
 		change_prosperity_level = 17
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450790
 		government = feudal_government
 	}
 }
@@ -44818,11 +45004,12 @@ c_sorath = {
 }
 
 c_soria = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_juan_manuel
 	}
 }
 
@@ -44954,11 +45141,12 @@ c_south_epirus = {
 }
 
 c_south_farthing = {
+	1337.1.1 = { liege = d_iceland }
 	1337.4.1 = {
 		change_prosperity_level = 6
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450700
 		government = feudal_government
 	}
 }
@@ -45440,11 +45628,12 @@ c_stadacona = {
 }
 
 c_staffordshire = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_eng_ralph_de_stafford
 		government = feudal_government
 	}
 }
@@ -45589,11 +45778,12 @@ c_sudair = {
 }
 
 c_suffolk = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_eng_robert_de_ufford
 		government = feudal_government
 	}
 }
@@ -45872,11 +46062,12 @@ c_surgut = {
 }
 
 c_surrey = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = eng_john_warenne_ii
 		government = feudal_government
 	}
 }
@@ -45903,11 +46094,12 @@ c_sus = {
 }
 
 c_sussex = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = eng_richard_fitzalan_ii
 		government = feudal_government
 	}
 }
@@ -47076,11 +47268,12 @@ c_taunus = {
 }
 
 c_tavastland = {
+	1337.1.1 = { liege = d_finland }
 	1337.4.1 = {
 		change_prosperity_level = 10
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_Horn1
 		government = feudal_government
 	}
 }
@@ -47360,11 +47553,12 @@ c_ternate = {
 }
 
 c_teruel = {
+	1337.1.1 = { liege = k_aragon }
 	1337.4.1 = {
 		change_prosperity_level = 19
 	}
 	1337.4.1 = {
-		holder = ara_peter_iv_arago
+		holder = ck2_iberia_71698
 		government = feudal_government
 	}
 }
@@ -47898,17 +48092,18 @@ c_tinputz = {
 }
 
 c_tioharad = {
+	1337.1.1 = { liege = d_ostergotland }
 	1337.4.1 = {
 		change_prosperity_level = 12
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450682
 		government = feudal_government
 	}
 }
 
 c_tipperary = {
-	1337.1.1 = { liege = d_leinster }
+	1337.1.1 = { liege = d_ireland_lordship }
 	1333.1.1 = {
 		holder = cwm_edmond_mac_an_iarla_de_burgh
 	}
@@ -48525,11 +48720,12 @@ c_trakamma = {
 }
 
 c_tras_os_montes = {
+	1337.1.1 = { liege = k_portugal }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = por_afonso_iv_portugal
+		holder = ck2_iberia_459514
 		government = feudal_government
 	}
 }
@@ -48646,11 +48842,12 @@ c_troitskoye_kuroedovo = {
 }
 
 c_troms = {
+	1337.1.1 = { liege = k_norway }
 	1337.4.1 = {
 		change_prosperity_level = 6
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_186001M17
 		government = feudal_government
 	}
 }
@@ -48686,11 +48883,12 @@ c_trubchevsk = {
 }
 
 c_trujillo = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_458021
 	}
 }
 
@@ -49201,11 +49399,12 @@ c_turrbal = {
 }
 
 c_tursan = {
+	1337.1.1 = { liege = d_eu5_aqn }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = aqn_bernard_ezi_v_albret
 		government = feudal_government
 	}
 }
@@ -49624,11 +49823,12 @@ c_umbindhamu = {
 }
 
 c_ume_lappmark = {
+	1337.1.1 = { liege = k_sweden }
 	1337.4.1 = {
 		change_prosperity_level = 10
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_SEAsiaMMBB294
 		government = feudal_government
 	}
 }
@@ -50652,11 +50852,12 @@ c_uren = {
 }
 
 c_urgell = {
+	1337.1.1 = { liege = k_aragon }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = ara_peter_iv_arago
+		holder = ara_james_i_urgell
 		government = feudal_government
 	}
 }
@@ -50943,11 +51144,12 @@ c_valentinois = {
 }
 
 c_valladolid = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 26
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_457532
 	}
 }
 
@@ -51070,11 +51272,12 @@ c_vardar = {
 }
 
 c_varmland = {
+	1337.1.1 = { liege = k_sweden }
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450630
 		government = feudal_government
 	}
 }
@@ -51100,31 +51303,34 @@ c_vashki = {
 }
 
 c_vasterbotten = {
+	1337.1.1 = { liege = k_sweden }
 	1337.4.1 = {
 		change_prosperity_level = 12
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_487070
 		government = feudal_government
 	}
 }
 
 c_vastergotland = {
+	1337.1.1 = { liege = d_vastergotland }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450727
 		government = feudal_government
 	}
 }
 
 c_vastmanland = {
+	1337.1.1 = { liege = k_sweden }
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450840
 		government = feudal_government
 	}
 }
@@ -51207,11 +51413,12 @@ c_velsk = {
 }
 
 c_vendsyssel_thy = {
+	1337.1.1 = { liege = k_denmark }
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = dan_valdemar_atterdag
+		holder = mb_scand_1227894
 		government = feudal_government
 	}
 }
@@ -51293,11 +51500,12 @@ c_verzhavsk = {
 }
 
 c_vestfold = {
+	1337.1.1 = { liege = d_viken }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_170009
 		government = feudal_government
 	}
 }
@@ -51397,11 +51605,12 @@ c_vilkmerge = {
 }
 
 c_villanueva_de_la_serena = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_juan_manuel
 	}
 }
 
@@ -51777,11 +51986,12 @@ c_vyazma = {
 }
 
 c_vyborg = {
+	1337.1.1 = { liege = d_finland }
 	1337.4.1 = {
 		change_prosperity_level = 15
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450760
 		government = feudal_government
 	}
 }
@@ -52136,11 +52346,12 @@ c_warwa = {
 }
 
 c_warwickshire = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_eng_thomas_de_beauchamp
 		government = feudal_government
 	}
 }
@@ -52212,7 +52423,7 @@ c_wassulu = {
 }
 
 c_waterford = {
-	1337.1.1 = { liege = d_leinster }
+	1337.1.1 = { liege = d_ireland_lordship }
 	1337.1.1 = {
 	}
 	1337.4.1 = {
@@ -52419,11 +52630,12 @@ c_wesermarch = {
 }
 
 c_west_asturias = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_enrique_ii_trastamara
 	}
 }
 
@@ -52450,11 +52662,12 @@ c_west_dennaakke = {
 }
 
 c_west_farthing = {
+	1337.1.1 = { liege = d_iceland }
 	1337.4.1 = {
 		change_prosperity_level = 3
 	}
 	1337.4.1 = {
-		holder = swe_magnus_eriksson
+		holder = mb_scand_450700
 		government = feudal_government
 	}
 }
@@ -52552,11 +52765,12 @@ c_west_luxembourg = {
 }
 
 c_west_mancha = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = cas_juan_nunez_de_prado
 	}
 }
 
@@ -52617,13 +52831,14 @@ c_west_qassim = {
 }
 
 c_west_riding = {
+	1337.1.1 = { liege = k_england }
 	1337.1.1 = {
 	}
 	1337.4.1 = {
 		change_prosperity_level = 17
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_eng_hugh_frenes
 		government = feudal_government
 	}
 }
@@ -52713,11 +52928,12 @@ c_western_gobi = {
 }
 
 c_western_jutland = {
+	1337.1.1 = { liege = k_denmark }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = dan_valdemar_atterdag
+		holder = mb_scand_93538
 		government = feudal_government
 	}
 }
@@ -52784,11 +53000,12 @@ c_westerwald = {
 }
 
 c_westmorland = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 15
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_eng_robert_de_clifford
 		government = feudal_government
 	}
 }
@@ -52846,13 +53063,14 @@ c_wewoka = {
 }
 
 c_wexford = {
+	1337.1.1 = { liege = k_england }
 	1337.1.1 = {
 	}
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_ire_simon_craig
 		government = feudal_government
 	}
 }
@@ -52938,11 +53156,12 @@ c_willimapu = {
 }
 
 c_wiltshire = {
+	1337.1.1 = { liege = k_england }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
+		holder = mb_eng_alice_de_lacy
 		government = feudal_government
 	}
 }
@@ -53067,14 +53286,15 @@ c_wonju = {
 }
 
 c_worcestershire = {
+	1337.1.1 = { liege = k_england }
 	1337.1.1 = {
 	}
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = eng_edward_iii
-		government = feudal_government
+		holder = mb_eng_simon_montagu
+		government = ecclesiastical_government
 	}
 }
 
@@ -54752,11 +54972,13 @@ c_zamfara = {
 }
 
 c_zamora = {
+	1337.1.1 = { liege = k_castille }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = cas_alfonso_xi_burgundy
+		holder = ck2_iberia_72960
+		government = ecclesiastical_government
 	}
 }
 
@@ -59305,3 +59527,4 @@ b_lahijan = {
 		holder = lhj_naservand_ruler
 	}
 }
+ 

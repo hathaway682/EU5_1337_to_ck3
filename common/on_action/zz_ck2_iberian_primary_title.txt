@@ -1,0 +1,6 @@
+﻿on_game_start = { on_actions = { ck2_iberian_primary_title_setup } }
+ck2_iberian_primary_title_setup = {
+	effect = {
+		character:cas_juan_manuel = { set_primary_title_to = title:d_murcia }
+	}
+}

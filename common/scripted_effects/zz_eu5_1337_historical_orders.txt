@@ -1842,8 +1842,23 @@ eu5_1337_historical_military_orders_effect = {
 				}
 			}
 			scope:eu5_1337_order_40_leader = { change_first_name = eu5_order_head_cas_juan_nunez_de_prado }
+			# Found with an unlanded acting master, then transfer the order to the landed historical master.
+			create_character = {
+				age = 45
+				gender = male
+				dynasty = none
+				random_traits = yes
+				faith = rite:roman_rite.faith
+				rite = rite:roman_rite
+				culture = culture:castilian
+				location = title:b_tomelloso.title_province
+				trait = order_member
+				trait = celibate
+				trait = education_martial_3
+				save_scope_as = eu5_1337_calatrava_acting_leader
+			}
 			eu5_1337_found_order_effect = {
-				LEADER = scope:eu5_1337_order_40_leader
+				LEADER = scope:eu5_1337_calatrava_acting_leader
 				CAPITAL = b_tomelloso
 				TYPE = ho_christian_order_of_calatrava
 				HOLDING = castle_holding
@@ -1851,6 +1866,25 @@ eu5_1337_historical_military_orders_effect = {
 				ORDER_SCOPE = eu5_1337_order_40
 				FLAG = eu5_1337_order_40_created
 				TRAIT = order_member
+			}
+			if = {
+				limit = { exists = scope:eu5_1337_order_40 scope:eu5_1337_order_40_leader = { has_title = title:c_west_mancha } }
+				scope:eu5_1337_order_40.leader.primary_title = {
+					create_title_and_vassal_change = { type = granted save_scope_as = eu5_1337_calatrava_transfer add_claim_on_loss = no }
+					change_title_holder_include_vassals = { holder = scope:eu5_1337_order_40_leader change = scope:eu5_1337_calatrava_transfer }
+					resolve_title_and_vassal_change = scope:eu5_1337_calatrava_transfer
+				}
+				scope:eu5_1337_order_40_leader = {
+					add_trait = order_member
+					change_government = ecclesiastical_government
+					set_primary_title_to = title:d_knights_calatrava
+					if = {
+						limit = { NOT = { liege = character:cas_alfonso_xi_burgundy } }
+						create_title_and_vassal_change = { type = granted save_scope_as = eu5_1337_calatrava_liege_change add_claim_on_loss = no }
+						change_liege = { liege = character:cas_alfonso_xi_burgundy change = scope:eu5_1337_calatrava_liege_change }
+						resolve_title_and_vassal_change = scope:eu5_1337_calatrava_liege_change
+					}
+				}
 			}
 			eu5_1337_lease_order_branch_effect = { BARONY = b_calatrava ORDER = scope:eu5_1337_order_40 HOLDING = castle_holding }
 
