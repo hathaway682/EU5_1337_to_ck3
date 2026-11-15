@@ -5484,40 +5484,6 @@ d_et_aquileia = {
 	}
 }
 
-d_eu5_arb = {
-	1192.1.1 = {
-		holder = arb_ugone_i_arborea
-	}
-	1206.1.1 = {
-		holder = arb_ugone_i_arborea
-	}
-	1211.1.1 = {
-		holder = arb_pietro_ii_arborea
-	}
-	1241.1.1 = {
-		holder = arb_mariano_ii_arborea
-	}
-	1297.1.1 = {
-		holder = arb_giovanni_arborea
-	}
-	1304.3.23 = {
-		holder = arb_andreotto_arborea
-	}
-	1308.4.3 = {
-		holder = arb_mariano_iii_arborea
-	}
-	1321.4.5 = {
-		holder = arb_ugone_ii_arborea
-	}
-	1335.4.5 = {
-		holder = arb_pietro_iii_arborea
-	}
-	1337.4.1 = {
-		holder = arb_pietro_iii_arborea
-		government = feudal_government
-	}
-}
-
 d_eu5_ars = {
 	1237.1.1 = {
 		holder = ars_robert_i_artois
@@ -5753,7 +5719,7 @@ d_eu5_chr = {
 	}
 }
 
-d_eu5_cnn = {
+d_connaught = {
 	1324.1.1 = {
 		holder = cnn_toirdelbach_o_conchobair
 	}
@@ -5761,9 +5727,7 @@ d_eu5_cnn = {
 		holder = cnn_toirdelbach_o_conchobair
 		government = tribal_government
 	}
-}
-
-d_eu5_crh = {
+}d_eu5_crh = {
 	1295.11.1 = {
 		holder = tir_henry_gorizia
 	}
@@ -5801,55 +5765,6 @@ d_eu5_dgh = {
 	}
 }
 
-d_eu5_dru = {
-	1101.4.24 = {
-		holder = dru_roman_vseslavich_rurikovich
-	}
-	1116.1.1 = {
-		holder = pok_rogvolod_vseslavich_rurikovich
-	}
-	1127.1.1 = {
-		holder = dru_rogvolod_iii_rurikovich
-	}
-	1132.6.1 = {
-		holder = pok_vasilko_sviatoslavich_rurikovich
-	}
-	1140.1.1 = {
-		holder = dru_rogvolod_iii_rurikovich
-	}
-	1144.1.1 = {
-		holder = dru_gleb_rogvolodich_rurikovich
-	}
-	1151.1.1 = {
-		holder = dru_gleb_rostislavich_rurikovich
-	}
-	1158.1.1 = {
-		holder = dru_rogvolod_iii_rurikovich
-	}
-	1159.1.1 = {
-		holder = dru_gleb_rogvolodich_rurikovich
-	}
-	1162.1.1 = {
-		holder = dru_rogvolod_iii_rurikovich
-	}
-	1170.1.1 = {
-		holder = dru_gleb_rogvolodich_rurikovich
-	}
-	1186.1.1 = {
-		holder = dru_boris_rogvolodich_rurikovich
-	}
-	1217.1.1 = {
-		holder = dru_vojtech_borisovich_rurikovich
-	}
-	1337.1.1 = {
-		liege = k_lithuania
-	}
-	1337.4.1 = {
-		holder = eu5_regent_dru
-		government = feudal_government
-	}
-}
-
 d_eu5_epi = {
 	1205.1.1 = {
 		holder = epi_michael_i_komnenos_doukas
@@ -5883,13 +5798,6 @@ d_eu5_epi = {
 	}
 	1337.4.1 = {
 		holder = epi_theodoros_synadenos
-		government = feudal_government
-	}
-}
-
-d_eu5_feo = {
-	1337.1.1 = {
-		holder = feo_demetrios_gabras
 		government = feudal_government
 	}
 }
@@ -5956,20 +5864,6 @@ d_eu5_glm = {
 	}
 }
 
-d_eu5_glo = {
-	1310.12.11 = {
-		holder = glg_mechthild_von_braunschweig_luneburg
-	}
-	1337.1.1 = {
-		liege = k_bohemia
-		holder = jaw_henryk_i_javorski
-	}
-	1337.4.1 = {
-		holder = jaw_henryk_i_javorski
-		government = feudal_government
-	}
-}
-
 d_eu5_grs = {
 	1325.11.21 = {
 		holder = mos_ivan_i_danilovich_kalita_rurikovich
@@ -6000,16 +5894,6 @@ d_eu5_kch = {
 	1337.4.1 = {
 		holder = kch_panteleimon_mstislavich_rurikovich
 		government = feudal_government
-	}
-}
-
-d_eu5_kni = {
-	1319.6.18 = {
-		holder = kni_helion_de_villeneuve
-	}
-	1337.4.1 = {
-		holder = kni_helion_de_villeneuve
-		government = ecclesiastical_government
 	}
 }
 
@@ -6092,16 +5976,6 @@ d_eu5_lbv = {
 	}
 }
 
-d_eu5_lcz = {
-	1337.1.1 = {
-		liege = k_poland
-	}
-	1337.4.1 = {
-		holder = lcz_wladyslaw_i_piast
-		government = feudal_government
-	}
-}
-
 d_eu5_lei = {
 	1323.1.1 = {
 		holder = lei_domhnall_mac_art_caomhanach
@@ -6109,32 +5983,6 @@ d_eu5_lei = {
 	1337.4.1 = {
 		holder = lei_domhnall_mac_art_caomhanach
 		government = tribal_government
-	}
-}
-
-d_eu5_lgc = {
-	1278.1.1 = {
-		holder = lgc_henryk_v_the_fat_piast
-	}
-	1296.2.22 = {
-		holder = lgc_boleslaw_iii_the_generous_piast
-	}
-	1337.1.1 = {
-		liege = k_bohemia
-	}
-	1337.4.1 = {
-		holder = lgc_boleslaw_iii_the_generous_piast
-		government = feudal_government
-	}
-}
-
-d_eu5_lie = {
-	1337.1.1 = {
-		liege = e_hre
-	}
-	1337.4.1 = {
-		holder = lie_adolf_ii_von_der_mark
-		government = ecclesiastical_government
 	}
 }
 
@@ -6261,26 +6109,6 @@ d_eu5_mkr = {
 }
 
 
-d_eu5_mpe = {
-	1337.4.1 = {
-		holder = eu5_regent_mpe
-		government = feudal_government
-	}
-}
-
-d_eu5_mrm = {
-	1013.1.1 = {
-		holder = mrm_gleb_vladimirovich_rurikovich
-	}
-	1330.1.1 = {
-		holder = mrm_vasily_yaroslavich_rurikovich
-	}
-	1337.4.1 = {
-		holder = mrm_vasily_yaroslavich_rurikovich
-		government = feudal_government
-	}
-}
-
 d_eu5_mua = {
 	1337.4.1 = {
 		holder = mua_panya_khamphong
@@ -6323,42 +6151,6 @@ d_eu5_nsl = {
 	}
 	1337.4.1 = {
 		holder = nsl_semyon_alexandrovich_rurikovich
-		government = feudal_government
-	}
-}
-
-d_eu5_oel = {
-	1337.1.1 = {
-		liege = k_bohemia
-	}
-	1337.4.1 = {
-		holder = oel_konrad_i_piast
-		government = feudal_government
-	}
-}
-
-d_eu5_opl = {
-	1281.5.14 = {
-		holder = opl_boleslaw_i_piast
-	}
-	1313.5.14 = {
-		holder = opl_boleslaw_ii_piast
-	}
-	1337.1.1 = {
-		liege = k_bohemia
-	}
-	1337.4.1 = {
-		holder = opl_boleslaw_ii_piast
-		government = feudal_government
-	}
-}
-
-d_eu5_opv = {
-	1337.1.1 = {
-		liege = k_bohemia
-	}
-	1337.4.1 = {
-		holder = opv_mikolaj_ii_premyslid
 		government = feudal_government
 	}
 }
@@ -6424,22 +6216,6 @@ d_eu5_pan = {
 	}
 }
 
-
-d_eu5_plk = {
-	1275.1.20 = {
-		holder = czk_boleslaw_ii_piast
-	}
-	1313.4.20 = {
-		holder = plk_waclaw_piast
-	}
-	1337.1.1 = {
-		liege = k_poland
-	}
-	1337.4.1 = {
-		holder = plk_boleslaw_iii_piast
-		government = feudal_government
-	}
-}
 
 d_eu5_pnk = {
 	988.1.1 = {
@@ -6672,25 +6448,6 @@ d_eu5_rtp = {
 }
 
 
-d_eu5_rzh = {
-	1235.1.1 = {
-		holder = fmb_yuri_konstantinovich_rurikovich
-	}
-	1274.1.1 = {
-		holder = rzh_yuri_yurievich_rurikovich
-	}
-	1315.1.1 = {
-		holder = rzh_fedor_yurievich_rurikovich
-	}
-	1337.1.1 = {
-		liege = k_lithuania
-	}
-	1337.4.1 = {
-		holder = rzh_fedor_yurievich_rurikovich
-		government = feudal_government
-	}
-}
-
 d_eu5_sdg = {
 	1337.1.1 = {
 		holder = eu5_regent_sdg
@@ -6702,41 +6459,6 @@ d_eu5_sdg = {
 	}
 }
 
-
-d_eu5_sdz = {
-	1337.1.1 = {
-		liege = k_poland
-	}
-	1337.4.1 = {
-		holder = sdz_przemysl_i_piast
-		government = feudal_government
-	}
-}
-
-d_eu5_sky = {
-	1217.1.1 = {
-		holder = sky_fyodor_ivanovich_rurikovich
-	}
-	1238.1.1 = {
-		holder = sky_ivan_vsevolodovich_kasha_rurikovich
-	}
-	1247.1.1 = {
-		holder = sky_ivan_vsevolodovich_kasha_rurikovich
-	}
-	1281.1.1 = {
-		holder = sky_ivan_vsevolodovich_kasha_rurikovich
-	}
-	1315.1.1 = {
-		holder = sky_vladimir_vsevolodovich_rurikovich
-	}
-	1330.1.1 = {
-		holder = sky_dmitriy_fyodorovych_rurikovich
-	}
-	1337.4.1 = {
-		holder = sky_dmitriy_fyodorovych_rurikovich
-		government = feudal_government
-	}
-}
 
 d_eu5_slv = {
 	1080.1.1 = {
@@ -6904,22 +6626,6 @@ d_eu5_sut = {
 	}
 }
 
-d_eu5_swd = {
-	1301.1.1 = {
-		holder = swd_bernard_ii_swidnicki
-	}
-	1326.5.6 = {
-		holder = swd_bolko_ii_small
-	}
-	1337.1.1 = {
-		liege = e_hre
-	}
-	1337.4.1 = {
-		holder = swd_bolko_ii_small
-		government = feudal_government
-	}
-}
-
 d_eu5_szh = {
 	1337.1.1 = {
 		holder = eu5_regent_szh
@@ -6962,16 +6668,6 @@ d_eu5_tep = {
 }
 
 
-d_eu5_tes = {
-	1337.1.1 = {
-		liege = k_bohemia
-	}
-	1337.4.1 = {
-		holder = tes_kazimir_piast
-		government = feudal_government
-	}
-}
-
 d_eu5_ths = {
 	1239.1.1 = {
 		holder = ths_manuel_komnenos_doukas
@@ -7001,16 +6697,6 @@ d_eu5_ths = {
 		holder = epi_nikephoros_ii_orsini
 	}
 	1337.4.1 = {
-		government = feudal_government
-	}
-}
-
-d_eu5_tps = {
-	1337.1.1 = {
-		liege = k_lithuania
-	}
-	1337.4.1 = {
-		holder = eu5_regent_tps
 		government = feudal_government
 	}
 }
@@ -7062,80 +6748,6 @@ d_eu5_trk = {
 	}
 }
 
-
-d_eu5_trs = {
-	1246.1.1 = {
-		holder = trs_yuri_mikhailovich_rurikovich
-	}
-	1300.1.1 = {
-		holder = trs_konstantin_yurievich_rurikovich
-	}
-	1337.4.1 = {
-		holder = trs_konstantin_yurievich_rurikovich
-		government = feudal_government
-	}
-}
-
-d_eu5_tuv = {
-	988.1.1 = {
-		holder = kie_sviatopolk_rurikovich
-	}
-	1045.1.1 = {
-		holder = kie_iziaslav_rurikovich
-	}
-	1078.10.3 = {
-		holder = tuv_yaropolk_izyaslavich_rurikovich
-	}
-	1087.11.22 = {
-		holder = kie_sviatopolk_ii_rurikovich
-	}
-	1093.4.13 = {
-		holder = tuv_vyacheslav_yaropolkovich_rurikovich
-	}
-	1148.1.1 = {
-		holder = tuv_yuri_yaroslavich_rurikovich
-	}
-	1151.1.1 = {
-		holder = tuv_yuri_yaroslavich_rurikovich
-	}
-	1157.1.1 = {
-		holder = tuv_yuri_yaroslavich_rurikovich
-	}
-	1168.1.1 = {
-		holder = tuv_ivan_yurievich_rurikovich
-	}
-	1170.1.1 = {
-		holder = tuv_sviatopolk_yurievich_rurikovich
-	}
-	1190.4.19 = {
-		holder = tuv_gleb_yurievich_rurikovich
-	}
-	1195.1.1 = {
-		holder = tuv_andrei_ivanovich_rurikovich
-	}
-	1223.6.1 = {
-		holder = tuv_vladimir_sviatopolkovich_rurikovich
-	}
-	1228.1.1 = {
-		holder = tuv_yuri_andreievich_rurikovich
-	}
-	1280.1.1 = {
-		holder = tuv_semyon_yurievich_rurikovich
-	}
-	1320.1.1 = {
-		holder = tuv_dmitry_yurievich_rurikovich
-	}
-	1322.1.1 = {
-		holder = tuv_danylo_dmitrovich_rurikovich
-	}
-	1337.1.1 = {
-		liege = k_lithuania
-	}
-	1337.4.1 = {
-		holder = tuv_danylo_dmitrovich_rurikovich
-		government = feudal_government
-	}
-}
 
 d_eu5_tyr = {
 	1125.1.1 = {
@@ -7386,22 +6998,6 @@ d_eu5_wrc = {
 	}
 	1337.4.1 = {
 		holder = boh_john_luxembourg
-		government = feudal_government
-	}
-}
-
-d_eu5_zag = {
-	1304.1.1 = {
-		holder = glg_henryk_iii_piast
-	}
-	1310.12.11 = {
-		holder = zag_henryk_iv_wierny_piast
-	}
-	1337.1.1 = {
-		liege = k_bohemia
-	}
-	1337.4.1 = {
-		holder = zag_henryk_iv_wierny_piast
 		government = feudal_government
 	}
 }
