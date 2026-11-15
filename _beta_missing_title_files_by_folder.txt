@@ -1,0 +1,516 @@
+﻿Beta 缺失原版头衔引用：按文件夹分类
+扫描日期：2026-11-16；范围：Beta common 与 events，以及模组 common 与 events 中的同类引用。
+缺失头衔：Beta landed_titles 中定义、模组 landed_titles 中未定义。仅计直接 title: 引用、明确头衔字段和头衔列表；排除注释与字符串。
+引用次数为文本出现次数；并未推断实际条件分支、DLC、动态生成、脚本定义名跨文件覆盖或运行时执行。
+状态以同路径覆盖与 descriptor.mod replace_path 划分；模组文件含自有文件及覆盖文件。
+
+未同路径覆盖的 Beta 文件：107 个文件，792 处引用，193 个不同头衔
+
+[common/achievements] 2 文件 / 16 处
+  ep5_achievements.txt | 10 处 | c_venezia×2, c_cephalonia×1, c_cherso×1, c_corfu×1, c_dyrrachion×1, c_pula×1, c_ragusa×1, c_veneto×1, c_zadar×1
+    行号：52:c_venezia, 53:c_venezia, 54:c_veneto, 55:c_pula, 56:c_zadar, 57:c_cherso, 58:c_ragusa, 59:c_dyrrachion, 60:c_corfu, 61:c_cephalonia
+  standard_achievements.txt | 6 处 | c_ayodhya×1, c_dvaraka×1, c_kanchipuram×1, c_mathura×1, c_sthanisvara×1, c_ujjayini×1
+    行号：322:c_ayodhya, 323:c_mathura, 324:c_sthanisvara, 325:c_kanchipuram, 326:c_ujjayini, 327:c_dvaraka
+
+[common/activities/activity_types] 4 文件 / 30 处
+  coronation.txt | 2 处 | c_byzantion×2
+    行号：3578:c_byzantion, 3974:c_byzantion
+  ecumenical_council.txt | 3 处 | c_byzantion×2, c_jerusalem×1
+    行号：1353:c_jerusalem, 1374:c_byzantion, 1607:c_byzantion
+  inspection.txt | 1 处 | c_byzantion×1
+    行号：982:c_byzantion
+  pilgrimage.txt | 24 处 | b_makka×4, c_jerusalem×4, c_byzantion×2, c_sinai×2, c_ayodhya×1, c_baduspan×1, c_dvaraka×1, c_gaya×1, c_kanchipuram×1, c_kusinagara×1, c_mathura×1, c_paderborn×1, c_radha×1, c_roma×1, c_sthanisvara×1, c_ujjayini×1
+    行号：92:b_makka, 264:b_makka, 356:c_roma, 357:c_jerusalem, 358:c_byzantion, 366:c_sinai, 367:c_jerusalem, 376:c_sinai, 377:c_jerusalem, 385:c_ayodhya, 386:c_mathura, 387:c_sthanisvara, 388:c_kanchipuram, 389:c_ujjayini, 390:c_dvaraka, 397:c_gaya, 398:c_kusinagara, 405:c_radha, 411:c_baduspan, 417:c_paderborn, 1502:b_makka, 1523:b_makka, 3530:c_jerusalem, 3538:c_byzantion
+
+[common/buildings/great_district_buildings] 1 文件 / 4 处
+  republic_great_plaza_district_buildings.txt | 4 处 | h_roman_republic×4
+    行号：29:h_roman_republic, 82:h_roman_republic, 133:h_roman_republic, 183:h_roman_republic
+
+[common/buildings/special_buildings] 1 文件 / 1 处
+  00_special_buildings.txt | 1 处 | b_roma×1
+    行号：3140:b_roma
+
+[common/casus_belli_types] 1 文件 / 6 处
+  00_event_war.txt | 6 处 | c_maine×3, c_sable×3
+    行号：537:c_maine, 543:c_maine, 553:c_sable, 553:c_maine, 554:c_sable, 561:c_sable
+
+[common/council_tasks] 6 文件 / 21 处
+  00_chancellor_tasks.txt | 2 处 | c_byzantion×2
+    行号：246:c_byzantion, 247:c_byzantion
+  00_court_chaplain_tasks.txt | 2 处 | c_byzantion×2
+    行号：1066:c_byzantion, 1067:c_byzantion
+  00_kurultai_tasks.txt | 8 处 | c_byzantion×8
+    行号：764:c_byzantion, 765:c_byzantion, 2228:c_byzantion, 2229:c_byzantion, 3672:c_byzantion, 3673:c_byzantion, 5115:c_byzantion, 5116:c_byzantion
+  00_marshal_tasks.txt | 4 处 | c_byzantion×4
+    行号：39:c_byzantion, 40:c_byzantion, 70:c_byzantion, 71:c_byzantion
+  00_spymaster_tasks.txt | 2 处 | c_byzantion×2
+    行号：594:c_byzantion, 595:c_byzantion
+  00_steward_tasks.txt | 3 处 | c_byzantion×2, c_maragha×1
+    行号：1275:c_byzantion, 1276:c_byzantion, 1348:c_maragha
+
+[common/culture/creation_names] 2 文件 / 19 处
+  00_names.txt | 18 处 | d_artois×4, d_liege×4, c_amalfi×1, c_ancona×1, c_como×1, c_firenze×1, c_genoa×1, c_lombardia×1, c_orvieto×1, c_ragusa×1, c_ravenna×1, c_treviso×1
+    行号：535:d_artois, 550:d_liege, 565:d_artois, 568:d_liege, 577:d_artois, 580:d_liege, 595:d_artois, 598:d_liege, 1147:c_genoa, 1167:c_firenze, 1207:c_lombardia, 1257:c_como, 1277:c_treviso, 1307:c_ravenna, 1337:c_ancona, 1347:c_orvieto, 1357:c_amalfi, 1367:c_ragusa
+  00_names_hybrid.txt | 1 处 | d_semigallia×1
+    行号：507:d_semigallia
+
+[common/culture/traditions] 1 文件 / 1 处
+  00_regional_traditions.txt | 1 处 | c_byzantion×1
+    行号：81:c_byzantion
+
+[common/customizable_localization] 1 文件 / 1 处
+  00_pilgrimage_custom_loc.txt | 1 处 | b_makka×1
+    行号：16:b_makka
+
+[common/decisions] 1 文件 / 4 处
+  10_religious_decisions.txt | 4 处 | c_roma×4
+    行号：1423:c_roma, 1431:c_roma, 1454:c_roma, 1496:c_roma
+
+[common/decisions/dlc_decisions] 1 文件 / 13 处
+  ep3_decisions.txt | 13 处 | c_byzantion×10, c_roma_urbs×3
+    行号：305:c_byzantion, 321:c_byzantion, 580:c_byzantion, 589:c_byzantion, 620:c_byzantion, 1099:c_byzantion, 1383:c_byzantion, 1384:c_roma_urbs, 1403:c_byzantion, 1480:c_byzantion, 1481:c_roma_urbs, 2275:c_roma_urbs, 2276:c_byzantion
+
+[common/decisions/dlc_decisions/ep_3] 1 文件 / 2 处
+  06_ep3_admin_decisions.txt | 2 处 | c_byzantion×2
+    行号：1222:c_byzantion, 1224:c_byzantion
+
+[common/decisions/dlc_decisions/fp_1] 1 文件 / 2 处
+  00_fp1_major_decisions.txt | 2 处 | c_isle_of_man×1, c_kiev×1
+    行号：324:c_kiev, 481:c_isle_of_man
+
+[common/decisions/dlc_decisions/gdp] 2 文件 / 4 处
+  gdp_guelph_ghibelline_decisions.txt | 3 处 | c_genoa×1, c_tortona×1, c_treviso×1
+    行号：1168:c_treviso, 1216:c_tortona, 1234:c_genoa
+  gdp_republic_decisions.txt | 1 处 | c_roma_urbs×1
+    行号：421:c_roma_urbs
+
+[common/districts] 2 文件 / 2 处
+  great_districts.txt | 1 处 | h_roman_republic×1
+    行号：106:h_roman_republic
+  holding_districts.txt | 1 处 | b_vaticano×1
+    行号：152:b_vaticano
+
+[common/event_backgrounds] 2 文件 / 24 处
+  01_event_backgrounds.txt | 22 处 | c_byzantion×18, c_jerusalem×4
+    行号：585:c_byzantion, 590:c_byzantion, 908:c_byzantion, 2157:c_byzantion, 2161:c_byzantion, 2720:c_byzantion, 2724:c_byzantion, 2945:c_byzantion, 7975:c_byzantion, 7979:c_byzantion, 10072:c_byzantion, 12913:c_jerusalem, 12916:c_jerusalem, 12946:c_byzantion, 12949:c_byzantion, 13485:c_jerusalem, 13502:c_byzantion, 16932:c_byzantion, 18447:c_byzantion, 19142:c_jerusalem, 19164:c_byzantion, 19411:c_byzantion
+  activity_backgrounds.txt | 2 处 | c_byzantion×1, c_jerusalem×1
+    行号：1921:c_jerusalem, 1929:c_byzantion
+
+[common/event_themes] 1 文件 / 2 处
+  00_event_themes.txt | 2 处 | c_byzantion×1, c_jerusalem×1
+    行号：2367:c_jerusalem, 2375:c_byzantion
+
+[common/laws] 1 文件 / 3 处
+  04_republic_laws.txt | 3 处 | h_roman_republic×3
+    行号：660:h_roman_republic, 674:h_roman_republic, 680:h_roman_republic
+
+[common/on_action] 3 文件 / 8 处
+  army_on_actions.txt | 1 处 | c_roma×1
+    行号：41:c_roma
+  ruler_designer.txt | 1 处 | b_makka×1
+    行号：33:b_makka
+  title_on_actions.txt | 6 处 | c_jerusalem×4, c_antiocheia×1, c_roma×1
+    行号：999:c_antiocheia, 1000:c_jerusalem, 1002:c_roma, 1027:c_jerusalem, 3478:c_jerusalem, 3499:c_jerusalem
+
+[common/script_values] 3 文件 / 9 处
+  00_war_values.txt | 1 处 | c_byzantion×1
+    行号：384:c_byzantion
+  99_chancellor_values.txt | 2 处 | c_byzantion×2
+    行号：317:c_byzantion, 318:c_byzantion
+  99_marshal_values.txt | 6 处 | c_byzantion×6
+    行号：65:c_byzantion, 66:c_byzantion, 97:c_byzantion, 161:c_byzantion, 162:c_byzantion, 193:c_byzantion
+
+[common/scripted_effects] 11 文件 / 226 处
+  00_flavorization_effects.txt | 1 处 | d_cham×1
+    行号：202:d_cham
+  00_gdp_guelph_ghibelline_scripted_effects.txt | 30 处 | c_genoa×5, c_guastalla×5, c_lombardia×5, c_polesine×5, c_tortona×5, c_treviso×5
+    行号：1953:c_treviso, 2001:c_tortona, 2019:c_genoa, 2025:c_guastalla, 2031:c_polesine, 2037:c_lombardia, 2175:c_treviso, 2178:c_treviso, 2181:c_treviso, 2287:c_tortona, 2290:c_tortona, 2293:c_tortona, 2329:c_genoa, 2332:c_genoa, 2335:c_genoa, 2343:c_guastalla, 2346:c_guastalla, 2349:c_guastalla, 2357:c_polesine, 2360:c_polesine, 2363:c_polesine, 2371:c_lombardia, 2374:c_lombardia, 2377:c_lombardia, 2566:c_treviso, 2614:c_tortona, 2632:c_genoa, 2638:c_guastalla, 2644:c_polesine, 2650:c_lombardia
+  00_major_decisions_scripted_effects_3.txt | 10 处 | h_carolingian×6, c_byzantion×4
+    行号：946:c_byzantion, 955:c_byzantion, 1001:c_byzantion, 1003:c_byzantion, 1241:h_carolingian, 1258:h_carolingian, 1268:h_carolingian, 1280:h_carolingian, 1287:h_carolingian, 1293:h_carolingian
+  00_pilgrimage_effects.txt | 1 处 | b_makka×1
+    行号：370:b_makka
+  00_tributary_setup_effects.txt | 59 处 | c_BOR_sambas×3, c_SUM_indragiri×3, c_SUM_lambri×3, c_MAL_gangganegara×2, c_MAL_kedah×2, c_MAL_pahang×2, c_SUM_lingga×2, c_SUM_panai×2, c_SUM_pekanbaru×2, c_SUM_rokan×2, c_guile×2, c_yanchuan×2, c_yinzhou_1×2, c_BOR_banjar×1, c_IDO_bali×1, c_JAV_cimanuk×1, c_JAV_galuh×1, c_JAV_lumajang×1, c_JAV_madura×1, c_JAV_sunda×1, c_MAL_gelanggi×1, c_MAL_johor×1, c_SUM_bengkulu×1, c_SUM_dharmasraya×1, c_SUM_east_sumatra×1, c_SUM_jambi×1, c_SUM_kampar×1, c_SUM_karang_brahi×1, c_SUM_lampung×1, c_SUM_meranti×1, c_SUM_minangkabau×1, c_SUM_muara_takus×1, c_SUM_pasemah×1, c_SuMa_ternate×1, c_THAI_takua_pa×1, c_THAI_tambralinga×1, c_guzhou×1, c_nanping×1, c_riau×1, c_shaoqing×1, c_ulleong×1, c_yanzhou_3×1, c_zongzhou×1
+    行号：1118:c_yinzhou_1, 1130:c_yanchuan, 1142:c_guile, 1152:c_SUM_east_sumatra, 1155:c_SUM_lampung, 1158:c_SUM_pasemah, 1161:c_SUM_bengkulu, 1164:c_SUM_lingga, 1167:c_SUM_dharmasraya, 1170:c_SUM_indragiri, 1173:c_SUM_meranti, 1176:c_SUM_kampar, 1179:c_SUM_muara_takus, 1182:c_SUM_pekanbaru, 1185:c_SUM_rokan, 1188:c_SUM_panai, 1191:c_SUM_lambri, 1194:c_MAL_gelanggi, 1197:c_MAL_johor, 1200:c_MAL_pahang, 1203:c_MAL_gangganegara, 1206:c_MAL_kedah, 1209:c_THAI_takua_pa, 1212:c_THAI_tambralinga, 1218:c_riau, 1221:c_JAV_sunda, 1224:c_JAV_galuh, 1227:c_JAV_cimanuk, 1234:c_BOR_sambas, 1244:c_ulleong, 1259:c_yinzhou_1, 1265:c_zongzhou, 1271:c_shaoqing, 1277:c_yanchuan, 1280:c_yanzhou_3, 1286:c_guzhou, 1292:c_nanping, 1295:c_guile, 1317:c_SUM_jambi, 1320:c_SUM_karang_brahi, 1327:c_SUM_indragiri, 1337:c_SUM_panai, 1340:c_SUM_rokan, 1343:c_SUM_lambri, 1346:c_SUM_lingga, 1350:c_MAL_kedah, 1353:c_MAL_pahang, 1356:c_MAL_gangganegara, 1363:c_BOR_sambas, 1385:c_SUM_indragiri, 1388:c_SUM_minangkabau, 1391:c_SUM_lambri, 1398:c_SUM_pekanbaru, 1405:c_JAV_lumajang, 1408:c_JAV_madura, 1411:c_IDO_bali, 1414:c_SuMa_ternate, 1421:c_BOR_sambas, 1427:c_BOR_banjar
+  01_exp1_historical_artifacts_creation_effect.txt | 1 处 | c_nf_minamoto_kawachi×1
+    行号：4740:c_nf_minamoto_kawachi
+  07_dlc_ep3_scripted_effects.txt | 1 处 | c_byzantion×1
+    行号：7702:c_byzantion
+  10_dlc_tgp_japan_scripted_effects.txt | 116 处 | c_omi×22, c_shimosa×20, c_kozuke×18, c_kawachi×10, c_suo×10, c_tokisara×10, c_totomi×10, c_nushiro×4, c_osumi×4, c_bitchu×2, c_hoki×2, c_isawa×2, c_korehari×2
+    行号：658:c_nushiro, 659:c_nushiro, 663:c_nushiro, 664:c_nushiro, 686:c_bitchu, 687:c_bitchu, 762:c_tokisara, 763:c_tokisara, 979:c_isawa, 980:c_isawa, 1175:c_kawachi, 1176:c_kawachi, 1180:c_kawachi, 1181:c_kawachi, 1263:c_kozuke, 1264:c_kozuke, 1268:c_kozuke, 1269:c_kozuke, 1273:c_kozuke, 1274:c_kozuke, 1278:c_kozuke, 1279:c_kozuke, 1283:c_kozuke, 1284:c_kozuke, 1288:c_kozuke, 1289:c_kozuke, 1293:c_kozuke, 1294:c_kozuke, 1303:c_kozuke, 1304:c_kozuke, 1308:c_kozuke, 1309:c_kozuke, 1541:c_omi, 1542:c_omi, 1546:c_omi, 1547:c_omi, 1551:c_omi, 1552:c_omi, 1556:c_omi, 1557:c_omi, 1561:c_omi, 1562:c_omi, 1566:c_omi, 1567:c_omi, 1571:c_omi, 1572:c_omi, 1576:c_omi, 1577:c_omi, 1581:c_omi, 1582:c_omi, 1587:c_osumi, 1588:c_osumi, 1592:c_osumi, 1593:c_osumi, 1964:c_shimosa, 1965:c_shimosa, 1969:c_shimosa, 1970:c_shimosa, 1974:c_shimosa, 1975:c_shimosa, 1979:c_shimosa, 1980:c_shimosa, 1984:c_shimosa, 1985:c_shimosa, 1989:c_shimosa, 1990:c_shimosa, 1994:c_shimosa, 1995:c_shimosa, 1999:c_shimosa, 2000:c_shimosa, 2004:c_shimosa, 2005:c_shimosa, 2009:c_shimosa, 2010:c_shimosa, 2061:c_suo, 2062:c_suo, 2066:c_suo, 2067:c_suo, 2071:c_suo, 2072:c_suo, 2076:c_suo, 2077:c_suo, 2081:c_suo, 2082:c_suo, 2123:c_korehari, 2124:c_korehari, 2177:c_totomi, 2178:c_totomi, 2182:c_totomi, 2183:c_totomi, 2187:c_totomi, 2188:c_totomi, 2192:c_totomi, 2193:c_totomi, 2197:c_totomi, 2198:c_totomi, 2211:c_tokisara, 2212:c_tokisara, 2216:c_tokisara, 2217:c_tokisara, 2221:c_tokisara, 2222:c_tokisara, 2245:c_kawachi, 2246:c_omi, 2251:c_kawachi, 2252:c_omi, 2283:c_tokisara, 2287:c_tokisara, 2293:c_kawachi, 2297:c_kawachi, 2304:c_hoki, 2308:c_hoki, 2350:c_kawachi, 2354:c_kawachi, 2373:c_omi, 2377:c_omi
+  11_dlc_pam_scripted_effects.txt | 2 处 | c_roma×2
+    行号：507:c_roma, 634:c_roma
+  gdp_republic_effects.txt | 2 处 | h_roman_republic×2
+    行号：1249:h_roman_republic, 1291:h_roman_republic
+  pam_effects.txt | 3 处 | c_jerusalem×3
+    行号：4376:c_jerusalem, 4790:c_jerusalem, 4805:c_jerusalem
+
+[common/scripted_triggers] 7 文件 / 30 处
+  00_gdp_guelph_ghibelline_triggers.txt | 11 处 | c_genoa×2, c_tortona×2, c_treviso×2, b_crema×1, b_forli×1, c_ancona×1, c_como×1, c_orvieto×1
+    行号：243:c_como, 281:c_ancona, 286:b_crema, 288:b_forli, 293:c_orvieto, 356:c_treviso, 370:c_tortona, 372:c_genoa, 457:c_treviso, 465:c_tortona, 468:c_genoa
+  00_pilgrimage_triggers.txt | 1 处 | b_makka×1
+    行号：29:b_makka
+  03_fp2_scripted_triggers.txt | 1 处 | c_lyon×1
+    行号：667:c_lyon
+  07_ep3_triggers.txt | 3 处 | h_roman_republic×2, c_byzantion×1
+    行号：35:h_roman_republic, 65:h_roman_republic, 75:c_byzantion
+  07_frankokratia_triggers.txt | 4 处 | c_byzantion×4
+    行号：300:c_byzantion, 304:c_byzantion, 308:c_byzantion, 309:c_byzantion
+  gdp_republic_triggers.txt | 8 处 | c_amalfi×1, c_ancona×1, c_bremen×1, c_genoa×1, c_gutland×1, c_hamburg×1, c_ragusa×1, c_venezia×1
+    行号：1125:c_amalfi, 1127:c_genoa, 1128:c_venezia, 1129:c_ancona, 1130:c_ragusa, 1133:c_hamburg, 1134:c_bremen, 1135:c_gutland
+  pam_scripted_triggers.txt | 2 处 | c_antiocheia×1, c_ile_de_france×1
+    行号：3536:c_ile_de_france, 3537:c_antiocheia
+
+[common/story_cycles] 1 文件 / 4 处
+  pam_story_cycle_slavic_rite.txt | 4 处 | c_brno×4
+    行号：264:c_brno, 296:c_brno, 360:c_brno, 361:c_brno
+
+[common/succession_election] 1 文件 / 2 处
+  01_princely_elective.txt | 2 处 | k_franconia×1, k_swabia×1
+    行号：111:k_swabia, 112:k_franconia
+
+[common/tutorial_lesson_chains] 1 文件 / 1 处
+  00_tutorial_lesson_chains.txt | 1 处 | c_nf_qin_79E6_4×1
+    行号：32:c_nf_qin_79E6_4
+
+[events] 4 文件 / 28 处
+  birth_events.txt | 9 处 | c_byzantion×3, c_roma×3, c_roma_urbs×3
+    行号：3465:c_byzantion, 3466:c_roma, 3467:c_roma_urbs, 3474:c_byzantion, 3475:c_roma, 3476:c_roma_urbs, 3486:c_byzantion, 3487:c_roma, 3488:c_roma_urbs
+  bookmark_events.txt | 15 处 | c_cabra×4, c_agrigento×1, c_amalfi×1, c_avlonas×1, c_caltagirone×1, c_corfu×1, c_dyrrachion×1, c_napoli×1, c_opava×1, c_palermo×1, c_siracusa×1, c_trapani×1
+    行号：1128:c_opava, 1253:c_napoli, 1254:c_amalfi, 1256:c_siracusa, 1257:c_caltagirone, 1258:c_agrigento, 1259:c_palermo, 1260:c_trapani, 1676:c_dyrrachion, 1677:c_avlonas, 1678:c_corfu, 1879:c_cabra, 1886:c_cabra, 1925:c_cabra, 1932:c_cabra
+  tutorial_events.txt | 2 处 | c_ennis×2
+    行号：42:c_ennis, 290:c_ennis
+  varangian_events.txt | 2 处 | c_byzantion×2
+    行号：68:c_byzantion, 145:c_byzantion
+
+[events/activities/coronation_activity] 3 文件 / 15 处
+  coronation_events.txt | 2 处 | b_vaticano×1, c_byzantion×1
+    行号：1618:c_byzantion, 1858:b_vaticano
+  coronation_events_1.txt | 1 处 | c_byzantion×1
+    行号：924:c_byzantion
+  coronation_events_6.txt | 12 处 | c_byzantion×9, b_vaticano×2, b_roma×1
+    行号：5022:c_byzantion, 5029:c_byzantion, 6932:c_byzantion, 6939:c_byzantion, 7749:b_vaticano, 9414:b_vaticano, 9415:b_roma, 11794:c_byzantion, 11801:c_byzantion, 13135:c_byzantion, 13144:c_byzantion, 13155:c_byzantion
+
+[events/activities/imperial_examination_activity] 1 文件 / 6 处
+  emperor_prep_phase_imperial_examination_events.txt | 6 处 | c_bamian×3, c_chalkidike×3
+    行号：941:c_bamian, 943:c_chalkidike, 974:c_bamian, 976:c_bamian, 986:c_chalkidike, 988:c_chalkidike
+
+[events/activities/pilgrimage_activity] 3 文件 / 26 处
+  hajj_events.txt | 7 处 | b_makka×7
+    行号：41:b_makka, 49:b_makka, 90:b_makka, 95:b_makka, 147:b_makka, 186:b_makka, 187:b_makka
+  pilgrimage_events.txt | 17 处 | b_makka×2, c_ayodhya×1, c_baduspan×1, c_byzantion×1, c_dvaraka×1, c_gaya×1, c_jerusalem×1, c_kanchipuram×1, c_kusinagara×1, c_mathura×1, c_paderborn×1, c_radha×1, c_roma×1, c_sinai×1, c_sthanisvara×1, c_ujjayini×1
+    行号：920:b_makka, 930:b_makka, 9688:c_roma, 9750:c_jerusalem, 9798:c_byzantion, 9867:c_sinai, 9971:c_ayodhya, 10005:c_mathura, 10039:c_sthanisvara, 10073:c_kanchipuram, 10107:c_ujjayini, 10141:c_dvaraka, 10176:c_gaya, 10210:c_kusinagara, 10318:c_radha, 10353:c_baduspan, 10388:c_paderborn
+  pilgrimage_events_seasia.txt | 2 处 | c_magadha×2
+    行号：2090:c_magadha, 2126:c_magadha
+
+[events/artifacts] 1 文件 / 24 处
+  historical_artifacts_events.txt | 24 处 | c_nf_taira_kanmu×6, c_nf_minamoto_kawachi×4, c_mazandaran×2, c_nf_fujiwara_ashikaga×2, c_nf_fujiwara_kanin×2, c_nf_fujiwara_oshu×2, c_nf_fujiwara_uona×2, c_nf_minamoto_kiso×2, c_nf_minamoto_seiwa×2
+    行号：515:c_nf_minamoto_seiwa, 517:c_nf_minamoto_seiwa, 524:c_nf_minamoto_kawachi, 526:c_nf_minamoto_kawachi, 534:c_nf_minamoto_kawachi, 536:c_nf_minamoto_kawachi, 553:c_nf_fujiwara_uona, 555:c_nf_fujiwara_uona, 562:c_nf_fujiwara_oshu, 564:c_nf_fujiwara_oshu, 572:c_nf_fujiwara_kanin, 574:c_nf_fujiwara_kanin, 581:c_nf_fujiwara_ashikaga, 583:c_nf_fujiwara_ashikaga, 591:c_nf_minamoto_kiso, 593:c_nf_minamoto_kiso, 632:c_nf_taira_kanmu, 634:c_nf_taira_kanmu, 642:c_nf_taira_kanmu, 644:c_nf_taira_kanmu, 653:c_nf_taira_kanmu, 655:c_nf_taira_kanmu, 773:c_mazandaran, 775:c_mazandaran
+
+[events/decisions_events] 4 文件 / 26 处
+  iberia_north_africa_events.txt | 1 处 | c_alto_aragon×1
+    行号：1277:c_alto_aragon
+  middle_europe_decisions_events.txt | 10 处 | c_napoli×5, c_palermo×5
+    行号：432:c_palermo, 452:c_palermo, 457:c_palermo, 464:c_palermo, 473:c_palermo, 518:c_napoli, 539:c_napoli, 544:c_napoli, 551:c_napoli, 560:c_napoli
+  roman_restoration_events.txt | 9 处 | c_byzantion×3, c_antiocheia×2, c_jerusalem×2, c_roma×2
+    行号：1383:c_antiocheia, 1384:c_jerusalem, 1386:c_roma, 1446:c_antiocheia, 1490:c_jerusalem, 1578:c_roma, 3211:c_byzantion, 3247:c_byzantion, 3254:c_byzantion
+  south_asia_events.txt | 6 处 | c_lahur×5, b_indraprastha×1
+    行号：1781:b_indraprastha, 1797:c_lahur, 1799:c_lahur, 1801:c_lahur, 1803:c_lahur, 1824:c_lahur
+
+[events/dlc/ach] 1 文件 / 1 处
+  ach_coronation_events.txt | 1 处 | c_byzantion×1
+    行号：5477:c_byzantion
+
+[events/dlc/ce1] 2 文件 / 10 处
+  epidemic_events.txt | 9 处 | b_kanyakubja×3, b_praha×3, b_roma×3
+    行号：7950:b_roma, 7968:b_praha, 7986:b_kanyakubja, 8001:b_praha, 8004:b_roma, 8007:b_kanyakubja, 8027:b_praha, 8030:b_roma, 8033:b_kanyakubja
+  epidemic_events_2.txt | 1 处 | c_aachen×1
+    行号：793:c_aachen
+
+[events/dlc/ep3] 11 文件 / 125 处
+  ep3_emperor_yearly_2.txt | 61 处 | c_roma_urbs×6, c_antiocheia×5, c_edessa×5, c_jerusalem×5, c_abbadan×4, c_byzantion×4, c_chandax×4, c_lombardia×4, c_ravenna×4, c_roma×4, c_siracusa×4, c_tangiers×4, c_tourraine×4, c_trier×4
+    行号：21:c_antiocheia, 28:c_antiocheia, 34:c_jerusalem, 41:c_jerusalem, 61:c_abbadan, 67:c_edessa, 74:c_edessa, 86:c_siracusa, 92:c_roma_urbs, 98:c_ravenna, 110:c_tangiers, 122:c_lombardia, 128:c_trier, 143:c_chandax, 149:c_tourraine, 163:c_tourraine, 169:c_chandax, 184:c_trier, 190:c_lombardia, 202:c_tangiers, 214:c_ravenna, 221:c_roma, 222:c_roma_urbs, 225:c_roma, 226:c_roma_urbs, 231:c_siracusa, 243:c_edessa, 249:c_abbadan, 261:c_jerusalem, 267:c_antiocheia, 278:c_roma, 279:c_roma_urbs, 283:c_antiocheia, 286:c_jerusalem, 292:c_abbadan, 295:c_edessa, 301:c_siracusa, 304:c_roma_urbs, 307:c_ravenna, 313:c_tangiers, 319:c_lombardia, 322:c_trier, 328:c_chandax, 331:c_tourraine, 343:c_roma_urbs, 344:c_roma, 358:c_antiocheia, 359:c_jerusalem, 377:c_abbadan, 396:c_ravenna, 415:c_lombardia, 416:c_trier, 433:c_tangiers, 434:c_tourraine, 451:c_edessa, 469:c_siracusa, 470:c_chandax, 1581:c_byzantion, 1603:c_byzantion, 1673:c_byzantion, 1709:c_byzantion
+  ep3_emperor_yearly_3.txt | 3 处 | c_byzantion×3
+    行号：1213:c_byzantion, 1221:c_byzantion, 1238:c_byzantion
+  ep3_emperor_yearly_8.txt | 6 处 | c_byzantion×3, c_abydos×2, c_bithynia×1
+    行号：972:c_abydos, 1022:c_byzantion, 1023:c_bithynia, 1035:c_byzantion, 1054:c_abydos, 1254:c_byzantion
+  ep3_frankokratia_events.txt | 28 处 | c_byzantion×21, c_cherso×2, c_kalliopolis×2, c_zadar×2, c_dyrrachion×1
+    行号：2104:c_byzantion, 2738:c_byzantion, 2749:c_byzantion, 2755:c_byzantion, 3833:c_byzantion, 3859:c_byzantion, 3865:c_byzantion, 4497:c_byzantion, 4509:c_byzantion, 4519:c_byzantion, 4526:c_byzantion, 5028:c_zadar, 5038:c_zadar, 5046:c_cherso, 5056:c_cherso, 5064:c_dyrrachion, 5118:c_kalliopolis, 5128:c_kalliopolis, 6694:c_byzantion, 6704:c_byzantion, 6715:c_byzantion, 6729:c_byzantion, 6890:c_byzantion, 7874:c_byzantion, 7885:c_byzantion, 7891:c_byzantion, 8389:c_byzantion, 8398:c_byzantion
+  ep3_governor_yearly_3.txt | 4 处 | c_byzantion×4
+    行号：3282:c_byzantion, 3289:c_byzantion, 5438:c_byzantion, 5451:c_byzantion
+  ep3_laamp_events.txt | 7 处 | c_zichia×7
+    行号：8561:c_zichia, 8709:c_zichia, 8932:c_zichia, 8934:c_zichia, 8974:c_zichia, 9006:c_zichia, 9007:c_zichia
+  ep3_roman_restoration_events.txt | 1 处 | c_byzantion×1
+    行号：23:c_byzantion
+  ep3_story_cycle_admin_eunuch_events.txt | 1 处 | c_byzantion×1
+    行号：1652:c_byzantion
+  ep3_story_cycle_grand_ambitions_events.txt | 3 处 | c_byzantion×3
+    行号：274:c_byzantion, 3428:c_byzantion, 3653:c_byzantion
+  ep3_story_cycle_harrying_of_the_north_events.txt | 2 处 | c_bedford×2
+    行号：589:c_bedford, 605:c_bedford
+  ep3_travel_events_3.txt | 9 处 | b_kaisereia×4, b_jarash×1, b_maab×1, b_tiberias×1, b_tyana×1, b_zurra×1
+    行号：98:b_maab, 99:b_jarash, 101:b_zurra, 103:b_tiberias, 391:b_tyana, 1106:b_kaisereia, 1346:b_kaisereia, 1355:b_kaisereia, 1366:b_kaisereia
+
+[events/dlc/fp1] 2 文件 / 9 处
+  fp1_major_decision_events.txt | 8 处 | c_kiev×8
+    行号：177:c_kiev, 179:c_kiev, 185:c_kiev, 195:c_kiev, 202:c_kiev, 210:c_kiev, 212:c_kiev, 229:c_kiev
+  fp1_scandinavian_adventurer_events.txt | 1 处 | b_lister×1
+    行号：203:b_lister
+
+[events/dlc/fp2] 4 文件 / 22 处
+  fp2_lyonese_monk_events.txt | 1 处 | b_roma×1
+    行号：257:b_roma
+  fp2_struggle_events.txt | 2 处 | c_napoli×2
+    行号：10708:c_napoli, 10994:c_napoli
+  fp2_yearly_events.txt | 18 处 | c_amaya×3, c_najera×3, c_navarra×3, c_almader×2, c_malagon×2, c_medellin×2, c_viscaya×2, b_jerez×1
+    行号：2394:c_amaya, 2395:c_najera, 2396:c_navarra, 2409:c_amaya, 2410:c_najera, 2411:c_navarra, 3284:c_amaya, 3285:c_najera, 3286:c_navarra, 3728:c_viscaya, 3737:c_viscaya, 3899:c_malagon, 3900:c_almader, 3901:c_medellin, 3919:c_malagon, 3920:c_almader, 3921:c_medellin, 4191:b_jerez
+  neutral_struggle_events.txt | 1 处 | c_jingzhao×1
+    行号：256:c_jingzhao
+
+[events/dlc/fp3] 1 文件 / 2 处
+  fp3_heritage_events.txt | 2 处 | c_rayy×2
+    行号：440:c_rayy, 506:c_rayy
+
+[events/dlc/gdp] 1 文件 / 5 处
+  gdp_republic_events.txt | 5 处 | c_roma_urbs×5
+    行号：82:c_roma_urbs, 89:c_roma_urbs, 100:c_roma_urbs, 102:c_roma_urbs, 105:c_roma_urbs
+
+[events/dlc/pam] 1 文件 / 2 处
+  pam_holy_myron_events.txt | 2 处 | c_dhofar×1, c_jerusalem×1
+    行号：156:c_jerusalem, 162:c_dhofar
+
+[events/dlc/pam/heresy] 1 文件 / 4 处
+  pam_heresy_historical_events.txt | 4 处 | b_praha×1, b_tephrice×1, b_urgell×1, b_yarlestre×1
+    行号：57:b_yarlestre, 84:b_praha, 214:b_tephrice, 240:b_urgell
+
+[events/dlc/tgp] 1 文件 / 10 处
+  tgp_silk_road_events.txt | 10 处 | c_jingzhao×3, c_lhasa×3, c_gurganj×2, c_lahur×2
+    行号：12:c_jingzhao, 19:c_lhasa, 376:c_jingzhao, 377:c_lhasa, 378:c_lahur, 380:c_gurganj, 390:c_jingzhao, 391:c_lhasa, 392:c_lahur, 394:c_gurganj
+
+[events/religion_events] 2 文件 / 26 处
+  great_holy_war_events.txt | 16 处 | c_jerusalem×4, c_roma×2, c_algier×1, c_byzantion×1, c_cologne×1, c_damascus×1, c_halberstadt×1, c_ile_de_france×1, c_korinthos×1, c_paphlagonia×1, c_toulouse×1, c_venaissin×1
+    行号：932:c_jerusalem, 938:c_roma, 953:c_byzantion, 958:c_paphlagonia, 968:c_korinthos, 978:c_venaissin, 983:c_toulouse, 988:c_ile_de_france, 993:c_cologne, 998:c_halberstadt, 1019:c_damascus, 1044:c_algier, 1066:c_jerusalem, 1092:c_roma, 1148:c_jerusalem, 1156:c_jerusalem
+  local_shrine_events.txt | 10 处 | b_qianfeng×10
+    行号：107:b_qianfeng, 112:b_qianfeng, 316:b_qianfeng, 429:b_qianfeng, 456:b_qianfeng, 518:b_qianfeng, 650:b_qianfeng, 662:b_qianfeng, 678:b_qianfeng, 712:b_qianfeng
+
+[events/scheme_events] 2 文件 / 3 处
+  laamp_base_contract_scheme_events.txt | 1 处 | c_byzantion×1
+    行号：27746:c_byzantion
+  scheme_critical_moments_events.txt | 2 处 | c_byzantion×2
+    行号：9438:c_byzantion, 9475:c_byzantion
+
+[events/story_cycles] 2 文件 / 11 处
+  ep3_story_cycle_hasan.txt | 9 处 | b_alamut×8, c_qazwin×1
+    行号：175:c_qazwin, 563:b_alamut, 567:b_alamut, 863:b_alamut, 871:b_alamut, 877:b_alamut, 881:b_alamut, 887:b_alamut, 895:b_alamut
+  pam_story_cycle_slavic_rite_events.txt | 2 处 | c_brno×2
+    行号：756:c_brno, 758:c_brno
+
+[events/test_events] 1 文件 / 1 处
+  debug.txt | 1 处 | c_kandy×1
+    行号：998:c_kandy
+
+[events/yearly_events] 1 文件 / 1 处
+  yearly_events_republic.txt | 1 处 | c_venezia×1
+    行号：3690:c_venezia
+
+模组文件：27 个文件，422 处引用，206 个不同头衔
+
+[common/character_interactions] 1 文件 / 1 处
+  00_dynast_interactions.txt | 1 处 | c_byzantion×1
+    行号：2122:c_byzantion
+
+[common/customizable_localization] 1 文件 / 4 处
+  00_pl_custom_loc_extra.txt | 4 处 | b_hammerstein×1, b_schwetz×1, c_golden_hills×1, c_kujawy×1
+    行号：889:b_hammerstein, 890:b_schwetz, 931:c_kujawy, 942:c_golden_hills
+
+[common/decisions/dlc_decisions/pam] 1 文件 / 11 处
+  pam_decisions.txt | 11 处 | c_jerusalem×6, c_dhofar×3, c_kerala×2
+    行号：2396:c_jerusalem, 4411:c_jerusalem, 5656:c_jerusalem, 5667:c_jerusalem, 5712:c_dhofar, 5723:c_jerusalem, 5724:c_dhofar, 5768:c_kerala, 5779:c_jerusalem, 5780:c_dhofar, 5781:c_kerala
+
+[common/holy_orders] 2 文件 / 107 处
+  00_christian_holy_orders.txt | 95 处 | c_jerusalem×7, c_alcacer_do_sal×4, c_calatrava×4, c_roma×4, c_bedford×3, c_chalon×3, c_frankfurt×3, c_metz×3, c_athlone×2, c_baden×2, c_beirut×2, c_brysis×2, c_casentino×2, c_edessa×2, c_hayk×2, c_kaiserslautern×2, c_lycandus×2, c_macon×2, c_orleans×2, c_pembrokeshire×2, c_poitiers×2, c_praha×2, c_prusa×2, c_sinai×2, c_ulster×2, c_veszprem×2, b_cluny×1, b_saint_denis×1, c_acre×1, c_amiens×1, c_antiocheia×1, c_beziers×1, c_boeotia×1, c_cetina×1, c_chalkidike×1, c_cieszyn×1, c_coimbra×1, c_hildesheim×1, c_ile_de_france×1, c_ionia×1, c_khachen×1, c_kiev×1, c_livs×1, c_malbork×1, c_narke×1, c_nasibin×1, c_ninive×1, c_novgorod×1, c_ohrid×1, c_passau×1, c_tao×1, c_toulouse×1, c_vaucouleurs×1, c_worms×1
+    行号：21:c_beirut, 37:c_jerusalem, 79:c_beirut, 108:c_jerusalem, 128:c_jerusalem, 177:c_jerusalem, 235:c_malbork, 311:c_calatrava, 339:c_calatrava, 376:c_calatrava, 383:c_calatrava, 670:c_jerusalem, 791:c_livs, 947:c_jerusalem, 1022:c_alcacer_do_sal, 1048:c_alcacer_do_sal, 1090:c_alcacer_do_sal, 1097:c_alcacer_do_sal, 1183:c_acre, 1268:c_praha, 1337:c_jerusalem, 1458:c_lycandus, 1466:c_lycandus, 1593:c_antiocheia, 1719:c_edessa, 1770:c_edessa, 1919:c_macon, 1940:b_cluny, 1959:c_macon, 2010:c_casentino, 2040:c_casentino, 2109:c_orleans, 2118:c_orleans, 2144:c_frankfurt, 2179:c_frankfurt, 2188:c_frankfurt, 2534:c_poitiers, 2579:c_poitiers, 2861:c_baden, 2886:c_metz, 2919:c_metz, 2920:c_vaucouleurs, 2930:c_metz, 3018:c_worms, 3093:c_passau, 3094:c_praha, 3123:c_kaiserslautern, 3166:c_baden, 3175:c_kaiserslautern, 3245:c_hildesheim, 3612:c_beziers, 3661:b_saint_denis, 3670:c_ile_de_france, 3728:c_amiens, 3848:c_roma, 3936:c_roma, 3968:c_roma, 3977:c_roma, 4060:c_cetina, 4086:c_veszprem, 4122:c_veszprem, 4192:c_cieszyn, 4335:c_bedford, 4364:c_bedford, 4421:c_bedford, 4449:c_chalon, 4470:c_chalon, 4498:c_chalon, 4619:c_narke, 4662:c_coimbra, 4805:c_athlone, 4851:c_athlone, 4880:c_ulster, 4931:c_ulster, 4961:c_pembrokeshire, 5012:c_pembrokeshire, 5122:c_brysis, 5123:c_prusa, 5186:c_chalkidike, 5284:c_prusa, 5343:c_ionia, 5456:c_tao, 5524:c_brysis, 5589:c_ohrid, 5655:c_kiev, 5720:c_novgorod, 5788:c_boeotia, 6141:c_hayk, 6142:c_khachen, 6208:c_hayk, 6274:c_ninive, 6330:c_nasibin, 6387:c_sinai, 6394:c_sinai, 6552:c_toulouse
+  00_muslim_holy_orders.txt | 12 处 | c_aleppo×3, c_cilicia×3, c_maragha×3, c_philomelium×3
+    行号：88:c_cilicia, 89:c_aleppo, 165:c_cilicia, 166:c_aleppo, 175:c_cilicia, 176:c_aleppo, 409:c_maragha, 410:c_philomelium, 444:c_maragha, 445:c_philomelium, 454:c_maragha, 455:c_philomelium
+
+[common/on_action] 1 文件 / 62 处
+  game_start.txt | 62 处 | b_makka×1, c_aalborg×1, c_aarhus×1, c_agdeside×1, c_aland×1, c_austisland×1, c_bornholm×1, c_bothin×1, c_burghausen×1, c_dal×1, c_dalabergslagen×1, c_eystridalir×1, c_faereyar×1, c_falkenstein×1, c_finnveden×1, c_firdafylki×1, c_frontenhausen×1, c_fyn×1, c_gauldala×1, c_geisenhausen×1, c_gudbrandsdalir×1, c_gutland×1, c_harjadalen×1, c_hedmork×1, c_helgum×1, c_hordalandi×1, c_jamtfir×1, c_kinda×1, c_lolland_falster×1, c_medelpad×1, c_morarna×1, c_more×1, c_namdalfylki×1, c_narke×1, c_nedenes×1, c_njudung×1, c_nordmark×1, c_nordrland×1, c_norwegian_more×1, c_oland×1, c_orkney×1, c_passau×1, c_raniriki×1, c_ribe×1, c_ringkobing×1, c_rogalandi×1, c_sevede×1, c_shetland×1, c_sjaelland×1, c_skane×1, c_skara×1, c_sodermannaland×1, c_sudurland×1, c_telemark×1, c_trandheim×1, c_upland×1, c_varend×1, c_vastvag×1, c_vestisland×1, c_viborg×1, c_vingulmork×1, c_vorbasse×1
+    行号：646:b_makka, 872:c_upland, 874:c_sodermannaland, 875:c_aland, 880:c_dalabergslagen, 883:c_skara, 884:c_dal, 885:c_nordmark, 888:c_kinda, 889:c_narke, 891:c_more, 892:c_sevede, 893:c_varend, 894:c_njudung, 895:c_finnveden, 896:c_oland, 899:c_medelpad, 902:c_gutland, 905:c_vingulmork, 906:c_raniriki, 908:c_telemark, 910:c_nedenes, 911:c_agdeside, 913:c_rogalandi, 914:c_hordalandi, 917:c_trandheim, 918:c_norwegian_more, 919:c_firdafylki, 921:c_hedmork, 922:c_gudbrandsdalir, 923:c_eystridalir, 924:c_gauldala, 926:c_vastvag, 927:c_bothin, 928:c_namdalfylki, 930:c_vestisland, 931:c_nordrland, 932:c_austisland, 933:c_sudurland, 935:c_orkney, 936:c_faereyar, 937:c_shetland, 939:c_jamtfir, 940:c_morarna, 941:c_helgum, 942:c_harjadalen, 945:c_sjaelland, 946:c_fyn, 947:c_lolland_falster, 949:c_skane, 951:c_bornholm, 954:c_aarhus, 955:c_viborg, 956:c_ringkobing, 957:c_aalborg, 960:c_vorbasse, 961:c_ribe, 2996:c_passau, 2997:c_frontenhausen, 2998:c_geisenhausen, 2999:c_falkenstein, 3000:c_burghausen
+
+[common/on_action/activities] 1 文件 / 16 处
+  pilgrimage_on_actions.txt | 16 处 | c_jerusalem×3, c_ayodhya×1, c_byzantion×1, c_dasapura×1, c_dhamalpur×1, c_gaya×1, c_kanchipuram×1, c_kusinagara×1, c_mazandaran×1, c_radha×1, c_roma×1, c_sripatha×1, c_sthanisvara×1, c_sullum×1
+    行号：202:c_roma, 203:c_jerusalem, 204:c_byzantion, 205:c_sullum, 225:c_jerusalem, 244:c_jerusalem, 264:c_ayodhya, 265:c_sripatha, 266:c_sthanisvara, 267:c_kanchipuram, 268:c_dasapura, 269:c_dhamalpur, 291:c_gaya, 292:c_kusinagara, 310:c_radha, 324:c_mazandaran
+
+[common/script_values] 4 文件 / 66 处
+  01_dlc_fp1_script_values.txt | 1 处 | c_wolgast×1
+    行号：971:c_wolgast
+  02_religion_values.txt | 61 处 | c_roma×6, c_jerusalem×5, c_adanse×3, c_aswan×3, c_awkar×3, c_bhumilka×3, c_braslau×3, c_daura×3, c_gaya×3, c_gobi_maominggan×3, c_jilib×3, c_kiev×3, c_kopathal×3, c_mazandaran×3, c_pielinen×3, c_sripatha×3, c_upland×3, c_visegrad×3, c_byzantion×2
+    行号：1903:c_roma, 1933:c_jerusalem, 1955:c_mazandaran, 1970:c_upland, 1985:c_braslau, 2000:c_kiev, 2022:c_pielinen, 2037:c_kopathal, 2052:c_visegrad, 2091:c_awkar, 2121:c_daura, 2136:c_adanse, 2166:c_aswan, 2181:c_jilib, 2211:c_roma, 2226:c_sripatha, 2241:c_bhumilka, 2256:c_gaya, 2271:c_gobi_maominggan, 2307:c_roma, 2337:c_jerusalem, 2359:c_mazandaran, 2374:c_upland, 2389:c_braslau, 2404:c_kiev, 2426:c_pielinen, 2441:c_kopathal, 2456:c_visegrad, 2495:c_awkar, 2525:c_daura, 2540:c_adanse, 2570:c_aswan, 2585:c_jilib, 2615:c_roma, 2630:c_sripatha, 2645:c_bhumilka, 2660:c_gaya, 2675:c_gobi_maominggan, 2711:c_roma, 2741:c_jerusalem, 2763:c_mazandaran, 2778:c_upland, 2793:c_braslau, 2808:c_kiev, 2830:c_pielinen, 2845:c_kopathal, 2860:c_visegrad, 2899:c_awkar, 2929:c_daura, 2944:c_adanse, 2974:c_aswan, 2989:c_jilib, 3019:c_roma, 3034:c_sripatha, 3049:c_bhumilka, 3064:c_gaya, 3079:c_gobi_maominggan, 3158:c_jerusalem, 4424:c_byzantion, 4444:c_byzantion, 4468:c_jerusalem
+  99_court_chaplain_values.txt | 1 处 | b_vhrbosna×1
+    行号：1026:b_vhrbosna
+  destiny_score_interest_value.txt | 3 处 | c_byzantion×1, c_jerusalem×1, c_roma×1
+    行号：1689:c_roma, 1699:c_byzantion, 1709:c_jerusalem
+
+[common/scripted_effects] 10 文件 / 133 处
+  00_artifact_badge_scripted_effects.txt | 2 处 | b_roma×2
+    行号：90:b_roma, 299:b_roma
+  00_decisions_effects.txt | 2 处 | c_keve×2
+    行号：1985:c_keve, 1986:c_keve
+  00_historical_characters_scripted_effects.txt | 16 处 | b_firenze×5, b_roma×3, b_almansa×1, b_assissi×1, b_kiev×1, b_maragha×1, b_nikaea×1, b_oslosyslar×1, b_tangiers×1, b_udayavara×1
+    行号：519:b_udayavara, 867:b_firenze, 1180:b_oslosyslar, 1284:b_tangiers, 1654:b_firenze, 1739:b_firenze, 3311:b_nikaea, 4008:b_maragha, 4208:b_firenze, 4251:b_almansa, 4543:b_roma, 4544:b_roma, 4545:b_roma, 6195:b_assissi, 6562:b_firenze, 7401:b_kiev
+  00_holy_order_effects.txt | 31 处 | c_maragha×3, b_argonne×2, b_prusa×2, c_amida×2, c_casentino×2, b_gryfino×1, b_kreusnach×1, c_alcacer_do_sal×1, c_aleppo×1, c_algier×1, c_andujar×1, c_athlone×1, c_calatrava×1, c_cilicia×1, c_coimbra×1, c_khachen×1, c_krems×1, c_melitene×1, c_ninive×1, c_pembrokeshire×1, c_shahrazur×1, c_sinai×1, c_tarragona×1, c_tripoli×1, c_ulster×1
+    行号：1750:b_argonne, 2033:c_athlone, 2104:c_ulster, 2160:c_pembrokeshire, 2373:c_casentino, 2385:c_casentino, 2807:b_argonne, 3060:b_gryfino, 3363:b_kreusnach, 3582:b_prusa, 3776:b_prusa, 4643:c_khachen, 4821:c_ninive, 4956:c_sinai, 5064:c_tarragona, 5077:c_coimbra, 5140:c_tripoli, 5153:c_krems, 5224:c_calatrava, 5267:c_alcacer_do_sal, 5315:c_cilicia, 5364:c_melitene, 5385:c_aleppo, 5432:c_maragha, 5481:c_amida, 5494:c_shahrazur, 5515:c_maragha, 5564:c_amida, 5577:c_maragha, 5678:c_algier, 5767:c_andujar
+  00_major_decisions_scripted_effects.txt | 39 处 | c_roma×14, c_byzantion×10, c_JAV_janggala×3, c_BOR_berau×2, c_PHI_sulu×2, c_amami×2, c_ucinaa×2, c_ile_de_france×1, c_lanarkshire×1, c_orleans×1, c_toulouse×1
+    行号：19:c_byzantion, 21:c_byzantion, 89:c_roma, 90:c_byzantion, 96:c_byzantion, 103:c_byzantion, 112:c_byzantion, 116:c_roma, 117:c_byzantion, 124:c_roma, 131:c_roma, 140:c_roma, 260:c_roma, 266:c_roma, 273:c_roma, 282:c_roma, 360:c_roma, 366:c_roma, 373:c_roma, 382:c_roma, 687:c_byzantion, 689:c_byzantion, 722:c_byzantion, 1064:c_roma, 2168:c_ile_de_france, 2181:c_orleans, 2207:c_toulouse, 2489:c_lanarkshire, 2918:c_JAV_janggala, 2986:c_JAV_janggala, 2990:c_JAV_janggala, 3079:c_ucinaa, 3083:c_ucinaa, 3087:c_amami, 3091:c_amami, 3163:c_BOR_berau, 3167:c_BOR_berau, 3199:c_PHI_sulu, 3204:c_PHI_sulu
+  00_mongol_invasion_effects.txt | 2 处 | c_EM_ononum×1, c_khentii×1
+    行号：20:c_EM_ononum, 33:c_khentii
+  01_dlc_fp1_scripted_effects.txt | 2 处 | c_guines×1, c_trandheim×1
+    行号：23:c_trandheim, 102:c_guines
+  06_dlc_ce1_legend_effects.txt | 10 处 | c_ailech×2, c_athlone×2, c_byzantion×2, c_ossory×2, c_kanchipuram×1, c_tiruvannamalai×1
+    行号：611:c_kanchipuram, 613:c_tiruvannamalai, 662:c_ailech, 665:c_athlone, 672:c_ailech, 675:c_athlone, 686:c_ossory, 694:c_ossory, 712:c_byzantion, 721:c_byzantion
+  07_frankokratia_scripted_effects.txt | 13 处 | c_byzantion×7, c_dyrrachion×2, c_gacka×2, c_zadar×2
+    行号：676:c_zadar, 686:c_zadar, 704:c_gacka, 714:c_gacka, 732:c_dyrrachion, 742:c_dyrrachion, 1501:c_byzantion, 1504:c_byzantion, 1514:c_byzantion, 2533:c_byzantion, 2537:c_byzantion, 2541:c_byzantion, 2560:c_byzantion
+  09_dlc_mpo_scripted_effects.txt | 16 处 | c_venezia×3, c_breslau×2, c_genoa×2, c_kiev×2, c_krakowska×2, c_novgorod×2, b_kiev×1, c_byzantion×1, c_nakhshab×1
+    行号：1556:c_nakhshab, 1610:c_breslau, 1620:c_breslau, 1628:c_krakowska, 1638:c_krakowska, 1646:c_novgorod, 1656:c_novgorod, 1664:c_kiev, 1674:c_kiev, 1676:b_kiev, 1718:c_venezia, 1728:c_venezia, 1730:c_venezia, 1754:c_genoa, 1764:c_genoa, 1773:c_byzantion
+
+[common/scripted_triggers] 3 文件 / 8 处
+  00_artifact_badge_triggers.txt | 1 处 | b_roma×1
+    行号：6:b_roma
+  00_hunt_triggers.txt | 6 处 | c_badi×2, c_faereyar×1, c_hormuz×1, c_lesbos×1, c_siracusa×1
+    行号：348:c_badi, 349:c_faereyar, 350:c_hormuz, 351:c_lesbos, 353:c_siracusa, 381:c_badi
+  cu_neighbor_reassigned_counties.txt | 1 处 | c_diskit×1
+    行号：32:c_diskit
+
+[common/situation/situations] 1 文件 / 6 处
+  gdp_guelph_ghibelline_situation.txt | 6 处 | c_genoa×1, c_guastalla×1, c_lombardia×1, c_polesine×1, c_tortona×1, c_treviso×1
+    行号：457:c_treviso, 537:c_tortona, 567:c_genoa, 578:c_guastalla, 588:c_polesine, 598:c_lombardia
+
+[common/tutorial_lessons] 1 文件 / 6 处
+  00_tutorial_lessons_basics.txt | 6 处 | c_ormond×4, c_nf_qin_79E6_4×1, c_thomond×1
+    行号：132:c_nf_qin_79E6_4, 861:c_ormond, 942:c_ormond, 997:c_thomond, 1334:c_ormond, 2835:c_ormond
+
+[events/decisions_events] 1 文件 / 2 处
+  major_decisions_events.txt | 2 处 | c_algier×1, c_tripolitana×1
+    行号：1658:c_tripolitana, 1661:c_algier
+
+已被同路径覆盖的 Beta 文件：39 个文件，1384 处引用，783 个不同头衔
+
+[common/character_interactions] 1 文件 / 1 处
+  00_dynast_interactions.txt | 1 处 | c_byzantion×1
+    行号：2061:c_byzantion
+
+[common/customizable_localization] 1 文件 / 69 处
+  00_pl_custom_loc_extra.txt | 69 处 | b_hammerstein×1, b_schweibus×1, b_schwetz×1, b_sprottau×1, b_szczecin×1, c_golden_hills×1, c_kujawy×1, c_nf_agelastos×1, c_nf_alopos×1, c_nf_ampelas×1, c_nf_angelos×1, c_nf_aplakes×1, c_nf_arcruni×1, c_nf_areobindenos×1, c_nf_argyros×1, c_nf_basiliakos×1, c_nf_batatzes×1, c_nf_botaneiates×1, c_nf_branas×1, c_nf_bryennios×1, c_nf_diogenes×1, c_nf_doukas×1, c_nf_dragosevic×1, c_nf_durres×1, c_nf_gabras×1, c_nf_garidas×1, c_nf_gerontas×1, c_nf_hexavoulis×1, c_nf_kamateros×1, c_nf_kamytzes×1, c_nf_kantakouzenos×1, c_nf_karandenos×1, c_nf_kardias×1, c_nf_katakalitzes×1, c_nf_kaukadenos×1, c_nf_komnenos×1, c_nf_komnenos_doukas×1, c_nf_kontostephanos×1, c_nf_kourkouas×1, c_nf_krateros×1, c_nf_lachanodrakon×1, c_nf_lampardas×1, c_nf_macrodoukas×1, c_nf_makedon×1, c_nf_makrembolites×1, c_nf_maleinos×1, c_nf_maleios×1, c_nf_maurikios×1, c_nf_melissenos×1, c_nf_murzuphlos×1, c_nf_ooryphas×1, c_nf_ouranos×1, c_nf_pahlavuni×1, c_nf_palaiologos×1, c_nf_pastillas×1, c_nf_pegonites×1, c_nf_petraliphas×1, c_nf_phokas×1, c_nf_pleustes×1, c_nf_raoul×1, c_nf_rogerios×1, c_nf_saronites×1, c_nf_sellokalas×1, c_nf_skleros×1, c_nf_synadenos×1, c_nf_tarchaneiotes×1, c_nf_taronites×1, c_nf_tornikes×1, c_nf_varajnuni×1
+    行号：573:c_nf_ampelas, 574:c_nf_aplakes, 575:c_nf_agelastos, 576:c_nf_doukas, 577:c_nf_gerontas, 578:c_nf_hexavoulis, 579:c_nf_kardias, 580:c_nf_katakalitzes, 581:c_nf_kourkouas, 582:c_nf_krateros, 583:c_nf_lachanodrakon, 584:c_nf_makedon, 585:c_nf_maleios, 586:c_nf_maleinos, 587:c_nf_maurikios, 588:c_nf_melissenos, 589:c_nf_pastillas, 590:c_nf_ooryphas, 591:c_nf_sellokalas, 592:c_nf_skleros, 593:c_nf_arcruni, 594:c_nf_argyros, 595:c_nf_basiliakos, 596:c_nf_botaneiates, 597:c_nf_bryennios, 598:c_nf_diogenes, 599:c_nf_dragosevic, 600:c_nf_kamateros, 601:c_nf_karandenos, 602:c_nf_kaukadenos, 603:c_nf_komnenos, 604:c_nf_makrembolites, 605:c_nf_murzuphlos, 606:c_nf_ouranos, 607:c_nf_pahlavuni, 608:c_nf_palaiologos, 609:c_nf_pegonites, 610:c_nf_phokas, 611:c_nf_pleustes, 612:c_nf_synadenos, 613:c_nf_tarchaneiotes, 614:c_nf_taronites, 615:c_nf_varajnuni, 616:c_nf_saronites, 617:c_nf_garidas, 618:c_nf_areobindenos, 619:c_nf_alopos, 620:c_nf_durres, 621:c_nf_angelos, 622:c_nf_batatzes, 623:c_nf_branas, 624:c_nf_gabras, 625:c_nf_kamytzes, 626:c_nf_kantakouzenos, 627:c_nf_komnenos_doukas, 628:c_nf_kontostephanos, 629:c_nf_lampardas, 630:c_nf_macrodoukas, 631:c_nf_petraliphas, 632:c_nf_raoul, 633:c_nf_rogerios, 634:c_nf_tornikes, 887:b_szczecin, 890:b_hammerstein, 891:b_schwetz, 893:b_sprottau, 894:b_schweibus, 932:c_kujawy, 943:c_golden_hills
+
+[common/decisions] 6 文件 / 86 处
+  00_major_decisions_east_europe.txt | 15 处 | c_antipatreia×1, c_arbanon×1, c_donjikraji×1, c_dyrrachion×1, c_pagania×1, c_pset×1, c_rama×1, c_soli×1, c_usora×1, c_vhrbosna×1, c_vodica×1, c_vrbas×1, c_zachlumia×1, c_zavrsje×1, d_semigallia×1
+    行号：752:c_zachlumia, 753:c_rama, 754:c_zavrsje, 755:c_vhrbosna, 756:c_usora, 757:c_soli, 758:c_vrbas, 759:c_pagania, 760:c_vodica, 761:c_pset, 762:c_donjikraji, 907:c_arbanon, 908:c_dyrrachion, 909:c_antipatreia, 1312:d_semigallia
+  80_major_decisions.txt | 20 处 | b_fes×5, b_napoli×5, b_padua×5, b_tirakka×5
+    行号：1865:b_fes, 1868:b_padua, 1873:b_tirakka, 1881:b_napoli, 1894:b_fes, 1895:b_fes, 1898:b_fes, 1901:b_fes, 1985:b_padua, 1986:b_padua, 1989:b_padua, 1992:b_padua, 2024:b_napoli, 2025:b_napoli, 2028:b_napoli, 2031:b_napoli, 2037:b_tirakka, 2038:b_tirakka, 2041:b_tirakka, 2044:b_tirakka
+  80_major_decisions_east_asia.txt | 6 处 | c_PHI_sulu×2, c_BOR_berau×1, c_JAV_madura×1, c_amami×1, c_ucinaa×1
+    行号：195:c_JAV_madura, 297:c_amami, 298:c_ucinaa, 520:c_BOR_berau, 630:c_PHI_sulu, 643:c_PHI_sulu
+  80_major_decisions_middle_east.txt | 1 处 | c_jerusalem×1
+    行号：329:c_jerusalem
+  80_major_decisions_middle_europe.txt | 5 处 | c_napoli×2, c_palermo×2, c_geneva×1
+    行号：33:c_geneva, 584:c_palermo, 590:c_napoli, 631:c_palermo, 638:c_napoli
+  80_major_decisions_roman.txt | 39 处 | c_byzantion×14, c_roma×11, c_roma_urbs×6, c_antiocheia×3, c_jerusalem×3, d_liege×2
+    行号：451:c_byzantion, 452:c_antiocheia, 453:c_jerusalem, 455:c_roma, 469:c_byzantion, 470:c_antiocheia, 471:c_jerusalem, 473:c_roma, 476:c_byzantion, 480:c_antiocheia, 484:c_jerusalem, 492:c_roma, 555:c_byzantion, 558:c_byzantion, 559:c_byzantion, 576:c_byzantion, 578:c_byzantion, 584:c_byzantion, 593:c_byzantion, 613:c_byzantion, 617:c_byzantion, 647:c_roma_urbs, 649:c_roma_urbs, 652:c_roma_urbs, 667:c_roma_urbs, 674:c_roma_urbs, 683:c_roma_urbs, 723:c_byzantion, 785:c_byzantion, 847:c_roma, 911:c_roma, 917:c_roma, 947:c_roma, 950:c_roma, 963:c_roma, 972:c_roma, 989:c_roma, 1234:d_liege, 1249:d_liege
+
+[common/decisions/dlc_decisions/pam] 1 文件 / 11 处
+  pam_decisions.txt | 11 处 | c_jerusalem×6, c_dhofar×3, c_kerala×2
+    行号：2754:c_jerusalem, 4823:c_jerusalem, 6071:c_jerusalem, 6082:c_jerusalem, 6127:c_dhofar, 6138:c_jerusalem, 6139:c_dhofar, 6183:c_kerala, 6194:c_jerusalem, 6195:c_dhofar, 6196:c_kerala
+
+[common/decisions/dlc_decisions/tgp] 1 文件 / 20 处
+  tgp_silk_road_decisions.txt | 20 处 | c_gurganj×4, c_jingzhao×4, c_lahur×4, c_lhasa×4, b_dunhuang_2×1, b_gurganj×1, b_lahur×1, b_potala×1
+    行号：88:c_jingzhao, 99:c_jingzhao, 110:c_jingzhao, 125:b_potala, 142:c_lhasa, 153:c_lhasa, 164:c_lhasa, 179:b_lahur, 196:c_lahur, 207:c_lahur, 218:c_lahur, 233:b_dunhuang_2, 287:b_gurganj, 304:c_gurganj, 315:c_gurganj, 326:c_gurganj, 398:c_jingzhao, 401:c_lahur, 407:c_lhasa, 410:c_gurganj
+
+[common/great_projects/types] 1 文件 / 131 处
+  00_great_project_types.txt | 131 处 | b_anxi_2×8, b_FIC_Liao_Huangcaocun×3, b_Goryeo_Bukgye_Cheolju×3, b_Goryeo_Bukgye_Uiju×3, b_Liao_Chaoyang×3, b_Liao_Chengzhou×3, b_Liao_Dandong×3, b_Liao_Fengcheng×3, b_Liao_Fuzhou2×3, b_Liao_Guidezhou×3, b_Liao_Liping×3, b_Liao_Qizhou×3, b_Liao_Shuangzhou×3, b_Liao_Suizhou×3, b_Liao_Weizhou2×3, b_Liao_Wuanzhou×3, b_Liao_Yuanzhou×3, b_cirlzj_longtan×3, b_cirlzj_yuhejing×3, b_jinshan_2×3, b_shicheng_2×3, b_yanle×3, b_cirlxj_yangcheng×2, b_dengkou×2, b_fangqu×2, b_fengan×2, b_helan×2, b_hengshan_3×2, b_huaian_2×2, b_huaide×2, b_huairong_2×2, b_huile×2, b_jiuyuan×2, b_linzhou_yincheng×2, b_ningshuo×2, b_pinggao×2, b_rouxuan×2, b_rulin×2, b_shengwei×2, b_tiande×2, b_wulan×2, b_wuluhai×2, b_wuyan×2, b_xiazhou_dejing_east×2, b_yaode×2, c_pinzhou×2, c_LIAO_chaoyang×1, c_LIAO_diezhou×1, c_LIAO_guidezhou×1, c_LIAO_liaozhou×1, c_LIAO_wuzhou×1, c_LIAO_yinzhou×1, c_guizhou_2×1, c_jizhou_1×1, c_lnj_liaoxi×1, c_lnj_liaoxibei×1, c_tanzhou_2×1, c_woye×1
+    行号：4449:b_wulan, 4455:b_wulan, 4489:b_fengan, 4495:b_fengan, 4569:b_yaode, 4575:b_yaode, 4609:b_huile, 4615:b_huile, 4729:b_shengwei, 4735:b_shengwei, 4809:b_helan, 4815:b_helan, 4849:b_dengkou, 4855:b_dengkou, 4889:b_wuluhai, 4895:b_wuluhai, 4969:b_jiuyuan, 4975:b_jiuyuan, 5009:b_tiande, 5015:b_tiande, 5129:b_huairong_2, 5135:b_huairong_2, 5169:b_pinggao, 5175:b_pinggao, 5210:b_huaide, 5216:b_huaide, 5251:b_fangqu, 5257:b_fangqu, 5292:b_huaian_2, 5298:b_huaian_2, 5374:b_hengshan_3, 5380:b_hengshan_3, 5414:b_wuyan, 5420:b_wuyan, 5454:b_ningshuo, 5460:b_ningshuo, 5534:b_rulin, 5540:b_rulin, 5614:b_linzhou_yincheng, 5620:b_linzhou_yincheng, 5654:b_xiazhou_dejing_east, 5660:b_xiazhou_dejing_east, 5774:b_rouxuan, 5780:b_rouxuan, 5814:b_cirlxj_yangcheng, 5820:b_cirlxj_yangcheng, 5909:c_guizhou_2, 5910:c_tanzhou_2, 5911:c_jizhou_1, 5912:c_pinzhou, 5931:b_jinshan_2, 5939:b_yanle, 5963:b_shicheng_2, 5971:b_anxi_2, 5990:b_jinshan_2, 5993:b_yanle, 6002:b_shicheng_2, 6005:b_anxi_2, 6035:b_jinshan_2, 6036:b_yanle, 6039:b_shicheng_2, 6042:b_anxi_2, 6046:b_anxi_2, 6464:c_pinzhou, 6465:c_lnj_liaoxi, 6466:c_lnj_liaoxibei, 6467:c_LIAO_chaoyang, 6468:c_woye, 6469:c_LIAO_liaozhou, 6470:c_LIAO_wuzhou, 6471:c_LIAO_yinzhou, 6472:c_LIAO_guidezhou, 6473:c_LIAO_diezhou, 6493:b_anxi_2, 6501:b_cirlzj_longtan, 6509:b_cirlzj_yuhejing, 6517:b_Liao_Liping, 6525:b_Liao_Chaoyang, 6533:b_Liao_Wuanzhou, 6541:b_Liao_Chengzhou, 6549:b_Liao_Suizhou, 6557:b_Liao_Weizhou2, 6565:b_Liao_Yuanzhou, 6573:b_Liao_Shuangzhou, 6581:b_Liao_Qizhou, 6589:b_Liao_Fuzhou2, 6597:b_FIC_Liao_Huangcaocun, 6605:b_Liao_Guidezhou, 6613:b_Liao_Fengcheng, 6621:b_Liao_Dandong, 6629:b_Goryeo_Bukgye_Uiju, 6637:b_Goryeo_Bukgye_Cheolju, 6648:b_anxi_2, 6651:b_cirlzj_longtan, 6654:b_cirlzj_yuhejing, 6657:b_Liao_Liping, 6660:b_Liao_Chaoyang, 6663:b_Liao_Wuanzhou, 6666:b_Liao_Chengzhou, 6669:b_Liao_Suizhou, 6672:b_Liao_Weizhou2, 6675:b_Liao_Yuanzhou, 6678:b_Liao_Shuangzhou, 6681:b_Liao_Qizhou, 6684:b_Liao_Fuzhou2, 6687:b_FIC_Liao_Huangcaocun, 6690:b_Liao_Guidezhou, 6693:b_Liao_Fengcheng, 6696:b_Liao_Dandong, 6699:b_Goryeo_Bukgye_Uiju, 6702:b_Goryeo_Bukgye_Cheolju, 6731:b_anxi_2, 6735:b_anxi_2, 6737:b_cirlzj_longtan, 6738:b_cirlzj_yuhejing, 6739:b_Liao_Liping, 6740:b_Liao_Chaoyang, 6741:b_Liao_Wuanzhou, 6742:b_Liao_Chengzhou, 6743:b_Liao_Suizhou, 6744:b_Liao_Weizhou2, 6745:b_Liao_Yuanzhou, 6746:b_Liao_Shuangzhou, 6747:b_Liao_Qizhou, 6748:b_Liao_Fuzhou2, 6749:b_FIC_Liao_Huangcaocun, 6750:b_Liao_Guidezhou, 6751:b_Liao_Fengcheng, 6752:b_Liao_Dandong, 6753:b_Goryeo_Bukgye_Uiju, 6754:b_Goryeo_Bukgye_Cheolju
+
+[common/holy_orders] 2 文件 / 112 处
+  00_christian_holy_orders.txt | 100 处 | c_jerusalem×7, c_alcacer_do_sal×4, c_calatrava×4, c_konstanz×4, c_roma×4, c_chalon×3, c_firenze×3, c_halberstadt×3, c_metz×3, c_athlone×2, c_baden×2, c_beirut×2, c_byzantion×2, c_casentino×2, c_edessa×2, c_hayk×2, c_kaiserslautern×2, c_lycandus×2, c_macon×2, c_orleans×2, c_pembrokeshire×2, c_poitiers×2, c_praha×2, c_prusa×2, c_sinai×2, c_ulster×2, c_veszprem×2, b_cluny×1, b_saint_denis×1, c_acre×1, c_amiens×1, c_antiocheia×1, c_beziers×1, c_boeotia×1, c_cetina×1, c_chalkidike×1, c_cieszyn×1, c_coimbra×1, c_halikarnassos×1, c_hildesheim×1, c_ile_de_france×1, c_khachen×1, c_kiev×1, c_livs×1, c_malbork×1, c_narke×1, c_nasibin×1, c_ninive×1, c_novgorod×1, c_ohrid×1, c_passau×1, c_riga×1, c_tao×1, c_toulouse×1, c_vaucouleurs×1, c_worms×1
+    行号：21:c_beirut, 37:c_jerusalem, 79:c_beirut, 103:c_jerusalem, 121:c_jerusalem, 170:c_jerusalem, 222:c_malbork, 293:c_calatrava, 319:c_calatrava, 356:c_calatrava, 363:c_calatrava, 636:c_jerusalem, 752:c_riga, 753:c_livs, 910:c_jerusalem, 980:c_alcacer_do_sal, 1004:c_alcacer_do_sal, 1046:c_alcacer_do_sal, 1053:c_alcacer_do_sal, 1139:c_acre, 1224:c_praha, 1293:c_jerusalem, 1414:c_lycandus, 1422:c_lycandus, 1549:c_antiocheia, 1675:c_edessa, 1726:c_edessa, 1859:c_macon, 1878:b_cluny, 1897:c_macon, 1943:c_casentino, 1971:c_casentino, 2040:c_orleans, 2049:c_orleans, 2070:c_halberstadt, 2103:c_halberstadt, 2112:c_halberstadt, 2165:c_firenze, 2194:c_firenze, 2203:c_firenze, 2425:c_poitiers, 2468:c_poitiers, 2556:c_konstanz, 2597:c_konstanz, 2636:c_konstanz, 2658:c_konstanz, 2744:c_baden, 2764:c_metz, 2795:c_metz, 2796:c_vaucouleurs, 2806:c_metz, 2894:c_worms, 2969:c_passau, 2970:c_praha, 2994:c_kaiserslautern, 3035:c_baden, 3044:c_kaiserslautern, 3114:c_hildesheim, 3474:c_beziers, 3523:b_saint_denis, 3532:c_ile_de_france, 3590:c_amiens, 3710:c_roma, 3793:c_roma, 3823:c_roma, 3832:c_roma, 3915:c_cetina, 3936:c_veszprem, 3970:c_veszprem, 4040:c_cieszyn, 4285:c_chalon, 4304:c_chalon, 4332:c_chalon, 4453:c_narke, 4496:c_coimbra, 4632:c_athlone, 4678:c_athlone, 4707:c_ulster, 4758:c_ulster, 4788:c_pembrokeshire, 4839:c_pembrokeshire, 4942:c_byzantion, 4943:c_prusa, 5001:c_chalkidike, 5092:c_prusa, 5144:c_halikarnassos, 5250:c_tao, 5311:c_byzantion, 5369:c_ohrid, 5428:c_kiev, 5486:c_novgorod, 5547:c_boeotia, 5865:c_hayk, 5866:c_khachen, 5925:c_hayk, 5984:c_ninive, 6033:c_nasibin, 6083:c_sinai, 6090:c_sinai, 6232:c_toulouse
+  00_muslim_holy_orders.txt | 12 处 | c_aleppo×3, c_cilicia×3, c_maragha×3, c_philomelium×3
+    行号：88:c_cilicia, 89:c_aleppo, 165:c_cilicia, 166:c_aleppo, 175:c_cilicia, 176:c_aleppo, 397:c_maragha, 398:c_philomelium, 430:c_maragha, 431:c_philomelium, 440:c_maragha, 441:c_philomelium
+
+[common/on_action] 1 文件 / 252 处
+  game_start.txt | 252 处 | b_cluny×3, b_SUM_Muara_Takus×2, b_fes×2, b_firenze×2, b_qiantang×2, b_somapur×2, c_bothin×2, c_byzantion×2, c_nordrland×2, c_siracusa×2, c_trier×2, c_vastvag×2, c_vestisland×2, b_BOR_Brunei×1, b_Goryeo_Jeolla_Jeonju×1, b_JAV_Daha×1, b_Liao_Xijing×1, b_PHI_Bool×1, b_SUL_Malangke×1, b_cirlxj_yangcheng×1, b_dali_1×1, b_dengkou×1, b_dunhuang_2×1, b_fangqu×1, b_fengan×1, b_fuqu×1, b_gurganj×1, b_helan×1, b_hengshan_3×1, b_huaian_2×1, b_huaide×1, b_huairong_2×1, b_huile×1, b_jiuyuan×1, b_kizuki_taisha×1, b_konarak×1, b_lahur×1, b_linzhou_yincheng×1, b_long_hung×1, b_makka×1, b_malappuram×1, b_montlhery×1, b_my_son×1, b_napoli×1, b_ningshuo×1, b_padua×1, b_pinggao×1, b_potala×1, b_praha×1, b_qartajana×1, b_rouxuan×1, b_rulin×1, b_sanchi×1, b_sarsar×1, b_shengwei×1, b_tiande×1, b_vatapi×1, b_visegrad_hun×1, b_wazwan×1, b_wulan×1, b_wuluhai×1, b_wuyan×1, b_xiazhou_dejing_east×1, b_yangzhai×1, b_yaode×1, c_PHI_bool_and_cebu×1, c_PHI_south_palawan×1, c_PHI_sulu×1, c_THAI_tenasserim×1, c_aalborg×1, c_aarhus×1, c_abbadan×1, c_achaia×1, c_aeolis×1, c_agdeside×1, c_agrigento×1, c_akkel×1, c_aland×1, c_antiocheia×1, c_antipatreia×1, c_asni×1, c_aswan×1, c_austisland×1, c_aviovara×1, c_avlonas×1, c_bangaon×1, c_beirut×1, c_bikrampur×1, c_boeotia×1, c_bornholm×1, c_bur×1, c_burghausen×1, c_caltagirone×1, c_candradvipa×1, c_catania×1, c_cephalonia×1, c_chalkidike×1, c_chandax×1, c_chunar×1, c_cologne×1, c_corfu×1, c_dahlak×1, c_dal×1, c_dalabergslagen×1, c_damietta×1, c_danzhou_1×1, c_demetrias×1, c_dhafra×1, c_dyrrachion×1, c_east_kiilt×1, c_edessa×1, c_epeiros×1, c_eystridalir×1, c_ezhou×1, c_faereyar×1, c_falkenstein×1, c_fayyum×1, c_finnveden×1, c_firdafylki×1, c_frontenhausen×1, c_fyn×1, c_gauda×1, c_gauldala×1, c_geisenhausen×1, c_giza×1, c_gudbrandsdalir×1, c_gutland×1, c_harjadalen×1, c_hedmork×1, c_helgum×1, c_hongzhou×1, c_hordalandi×1, c_ionia×1, c_jamtfir×1, c_jaunpur×1, c_jerusalem×1, c_jiangling×1, c_jiangning×1, c_jovvkuj×1, c_kalabsha×1, c_kanyakubja×1, c_karasjohka×1, c_kinda×1, c_kintus×1, c_kol×1, c_korinthos×1, c_kotte×1, c_koutajoki×1, c_kusinagara×1, c_laksmanavati×1, c_langzhou×1, c_lesbos×1, c_lianzhou_1×1, c_liyang×1, c_lolland_falster×1, c_lombardia×1, c_lujiang×1, c_madhupur×1, c_madurai×1, c_magadha×1, c_mainz×1, c_malta×1, c_mandab×1, c_massawa×1, c_mathura×1, c_medelpad×1, c_messina×1, c_metzovo×1, c_mithila×1, c_morarna×1, c_more×1, c_mosynopolis×1, c_mudgagiri×1, c_nabadwipa×1, c_namdalfylki×1, c_narke×1, c_nedenes×1, c_njudung×1, c_nordmark×1, c_norwegian_more×1, c_ohrid×1, c_oland×1, c_orkney×1, c_palermo×1, c_passau×1, c_prayaga×1, c_pundravardhana×1, c_qatif×1, c_qinzhou_2×1, c_qus×1, c_raniriki×1, c_ravenna×1, c_ribe×1, c_ringkobing×1, c_rogalandi×1, c_roma×1, c_roma_urbs×1, c_rounala×1, c_runzhou×1, c_samatata×1, c_sanaa×1, c_saptagrama×1, c_sasaram×1, c_serres×1, c_sevede×1, c_sharkiya×1, c_shetland×1, c_shuzhou×1, c_sjaelland×1, c_skane×1, c_skara×1, c_skolt×1, c_sodermannaland×1, c_sudurland×1, c_tamralipti×1, c_tangiers×1, c_tanzhou×1, c_telemark×1, c_ter×1, c_thessalia×1, c_thessaliotis×1, c_thessalonika×1, c_tourraine×1, c_trandheim×1, c_trapani×1, c_tripoli×1, c_upland×1, c_uqayr×1, c_ushmun×1, c_varend×1, c_veria×1, c_viborg×1, c_viena×1, c_vingulmork×1, c_vorbasse×1, c_xuanzhou×1, c_yuezhou_1×1, c_yunyang×1
+    行号：201:c_cologne, 205:c_mainz, 209:c_trier, 511:b_cluny, 512:b_cluny, 513:b_cluny, 523:b_somapur, 524:b_firenze, 525:b_firenze, 526:b_konarak, 527:b_fes, 530:b_visegrad_hun, 533:b_vatapi, 545:b_sanchi, 559:b_kizuki_taisha, 561:b_Goryeo_Jeolla_Jeonju, 563:b_Liao_Xijing, 568:b_fuqu, 570:b_yangzhai, 577:b_qiantang, 578:b_qiantang, 582:b_my_son, 584:b_long_hung, 586:b_dali_1, 592:b_SUM_Muara_Takus, 593:b_SUM_Muara_Takus, 595:b_JAV_Daha, 597:b_BOR_Brunei, 599:b_PHI_Bool, 601:b_SUL_Malangke, 616:b_potala, 617:b_lahur, 618:b_dunhuang_2, 619:b_gurganj, 645:b_makka, 753:b_fes, 761:b_somapur, 774:b_padua, 776:b_napoli, 779:b_praha, 781:b_malappuram, 784:b_montlhery, 785:b_qartajana, 786:b_wazwan, 787:b_sarsar, 817:b_wulan, 818:b_fengan, 820:b_yaode, 821:b_huile, 824:b_shengwei, 826:b_helan, 827:b_dengkou, 828:b_wuluhai, 830:b_jiuyuan, 831:b_tiande, 835:b_huairong_2, 836:b_pinggao, 837:b_huaide, 838:b_fangqu, 839:b_huaian_2, 841:b_hengshan_3, 842:b_wuyan, 843:b_ningshuo, 845:b_rulin, 847:b_linzhou_yincheng, 848:b_xiazhou_dejing_east, 852:b_rouxuan, 853:b_cirlxj_yangcheng, 863:c_upland, 865:c_sodermannaland, 866:c_aland, 871:c_dalabergslagen, 874:c_skara, 875:c_dal, 876:c_nordmark, 879:c_kinda, 880:c_narke, 882:c_more, 883:c_sevede, 884:c_varend, 885:c_njudung, 886:c_finnveden, 887:c_oland, 890:c_medelpad, 893:c_gutland, 896:c_vingulmork, 897:c_raniriki, 899:c_telemark, 901:c_nedenes, 902:c_agdeside, 904:c_rogalandi, 905:c_hordalandi, 908:c_trandheim, 909:c_norwegian_more, 910:c_firdafylki, 912:c_hedmork, 913:c_gudbrandsdalir, 914:c_eystridalir, 915:c_gauldala, 917:c_vastvag, 918:c_bothin, 919:c_namdalfylki, 921:c_vestisland, 922:c_nordrland, 923:c_austisland, 924:c_sudurland, 926:c_orkney, 927:c_faereyar, 928:c_shetland, 930:c_jamtfir, 931:c_morarna, 932:c_helgum, 933:c_harjadalen, 936:c_sjaelland, 937:c_fyn, 938:c_lolland_falster, 940:c_skane, 942:c_bornholm, 945:c_aarhus, 946:c_viborg, 947:c_ringkobing, 948:c_aalborg, 951:c_vorbasse, 952:c_ribe, 1553:c_mandab, 1555:c_sanaa, 1560:c_beirut, 1561:c_tripoli, 1565:c_dahlak, 1566:c_massawa, 1567:c_bur, 1568:c_dhafra, 1569:c_uqayr, 1571:c_qatif, 1572:c_kotte, 1573:c_madurai, 1574:c_lianzhou_1, 1575:c_qinzhou_2, 1577:c_PHI_sulu, 1579:c_THAI_tenasserim, 1580:c_PHI_south_palawan, 1581:c_PHI_bool_and_cebu, 1583:c_danzhou_1, 1587:c_vestisland, 1588:c_nordrland, 1589:c_vastvag, 1590:c_bothin, 1591:c_skolt, 1592:c_ter, 1593:c_kintus, 1594:c_viena, 1596:c_koutajoki, 1597:c_akkel, 1598:c_jovvkuj, 1599:c_east_kiilt, 1600:c_karasjohka, 1601:c_aviovara, 1602:c_rounala, 1624:c_damietta, 1627:c_sharkiya, 1629:c_giza, 1630:c_fayyum, 1632:c_ushmun, 1634:c_qus, 1635:c_aswan, 1636:c_kalabsha, 1638:c_palermo, 1639:c_caltagirone, 1640:c_trapani, 1641:c_messina, 1642:c_catania, 1643:c_siracusa, 1644:c_agrigento, 1645:c_malta, 1648:c_asni, 1649:c_prayaga, 1650:c_chunar, 1652:c_jaunpur, 1653:c_sasaram, 1654:c_kusinagara, 1655:c_mithila, 1656:c_bangaon, 1657:c_magadha, 1658:c_mudgagiri, 1659:c_laksmanavati, 1660:c_gauda, 1661:c_madhupur, 1662:c_bikrampur, 1663:c_candradvipa, 1664:c_samatata, 1665:c_nabadwipa, 1666:c_saptagrama, 1667:c_tamralipti, 1668:c_pundravardhana, 1669:c_kanyakubja, 1670:c_kol, 1672:c_mathura, 1675:c_lujiang, 1676:c_shuzhou, 1677:c_yunyang, 1678:c_jiangling, 1680:c_liyang, 1681:c_langzhou, 1682:c_ezhou, 1683:c_yuezhou_1, 1685:c_tanzhou, 1686:c_hongzhou, 1690:c_xuanzhou, 1691:c_jiangning, 1692:c_runzhou, 1696:c_ionia, 1698:c_aeolis, 1699:c_lesbos, 1706:c_korinthos, 1707:c_achaia, 1708:c_cephalonia, 1710:c_boeotia, 1715:c_demetrias, 1716:c_thessaliotis, 1717:c_thessalia, 1718:c_epeiros, 1719:c_corfu, 1720:c_veria, 1721:c_metzovo, 1722:c_chalkidike, 1723:c_thessalonika, 1724:c_serres, 1725:c_mosynopolis, 1726:c_ohrid, 1727:c_antipatreia, 1728:c_dyrrachion, 1729:c_avlonas, 1738:c_byzantion, 2152:c_antiocheia, 2166:c_jerusalem, 2194:c_abbadan, 2208:c_edessa, 2236:c_siracusa, 2250:c_roma, 2264:c_roma_urbs, 2278:c_ravenna, 2306:c_tangiers, 2334:c_lombardia, 2348:c_trier, 2390:c_chandax, 2404:c_tourraine, 2418:c_byzantion, 2814:c_passau, 2815:c_frontenhausen, 2816:c_geisenhausen, 2817:c_falkenstein, 2818:c_burghausen
+
+[common/on_action/activities] 1 文件 / 18 处
+  pilgrimage_on_actions.txt | 18 处 | c_jerusalem×3, c_sinai×2, c_ayodhya×1, c_baduspan×1, c_byzantion×1, c_dvaraka×1, c_gaya×1, c_kanchipuram×1, c_kusinagara×1, c_mathura×1, c_paderborn×1, c_radha×1, c_roma×1, c_sthanisvara×1, c_ujjayini×1
+    行号：202:c_roma, 203:c_jerusalem, 204:c_byzantion, 224:c_sinai, 225:c_jerusalem, 243:c_sinai, 244:c_jerusalem, 264:c_ayodhya, 265:c_mathura, 266:c_sthanisvara, 267:c_kanchipuram, 268:c_ujjayini, 269:c_dvaraka, 291:c_gaya, 292:c_kusinagara, 310:c_radha, 324:c_baduspan, 338:c_paderborn
+
+[common/religion/holy_site_types] 1 文件 / 236 处
+  00_holy_site_types.txt | 236 处 | b_an×2, c_JAV_mataram×2, c_baduspan×2, c_dvin×2, c_jerusalem×2, c_kerala×2, c_kerch×2, c_kiev×2, b_FIC_Liao_Changbaishan×1, b_JAV_Borobodur×1, b_JAV_Mataram×1, b_SUL_Amparita×1, b_SUM_Muara_Takus×1, b_amami×1, b_aptapet_ainu×1, b_awzaj×1, b_cup_pet×1, b_elapura×1, b_firrim×1, b_fuqu×1, b_hengshan_2×1, b_hiiumaa×1, b_hulwan×1, b_ise_jingu×1, b_itsukushima×1, b_kashima_hitachi×1, b_kizuki_taisha×1, b_kofuku_ji×1, b_konarak×1, b_kunjakari×1, b_lafak×1, b_mizdahqan×1, b_mtwapa×1, b_my_son×1, b_olbia_ETEL×1, b_opereperkep×1, b_qianfeng×1, b_ranakpur×1, b_rivand×1, b_sanchi×1, b_shatrunjaya×1, b_shikarji×1, b_simajiri×1, b_subu×1, b_tarayka×1, b_tenerife×1, b_vaisali×1, b_vaticano×1, b_yarlestre×1, b_yiyang_1×1, c_BAL_dongpyeong_yizhou×1, c_BAL_east_amnok×1, c_BOR_iban×1, c_BOR_kudat×1, c_BOR_kutai_utara×1, c_BOR_sukadana×1, c_BOR_taiao×1, c_IDO_sonba_i×1, c_MAL_gangganegara×1, c_PHI_cotabato×1, c_PHI_ivatan×1, c_PHI_samar×1, c_PHI_south_palawan×1, c_PHI_tondo×1, c_SUM_muara_takus×1, c_SUM_riak_nan_berbedur×1, c_SuMa_ajatappareng×1, c_SuMa_siang×1, c_SuMa_wenang×1, c_acre×1, c_akkel×1, c_albi×1, c_alto_aragon×1, c_alxa×1, c_amami×1, c_andamans×1, c_antiocheia×1, c_aswan×1, c_awkar×1, c_ayodhya×1, c_baalbek×1, c_bakharz×1, c_beirut×1, c_bianzhou×1, c_binh_nguyen×1, c_bochuan×1, c_bordeaux×1, c_braslau×1, c_byzantion×1, c_canarias×1, c_chakla×1, c_chiang_rung×1, c_chupka×1, c_cologne×1, c_dagon×1, c_damascus×1, c_damin_i_koh×1, c_danakil×1, c_daura×1, c_devagiri×1, c_dorostorum×1, c_dunhuang×1, c_dvaraka×1, c_el_fasher×1, c_eman_molihewen×1, c_eman_yam_alin×1, c_esztergom×1, c_ezhou×1, c_fes×1, c_gaeseong×1, c_garumele×1, c_garwhal×1, c_gaya×1, c_gilgit×1, c_goseong×1, c_gyaitang×1, c_harar×1, c_haripunjaya×1, c_hayk×1, c_hiiumaa×1, c_hoanya×1, c_igbo×1, c_ilam×1, c_ioci×1, c_irahistan×1, c_isawa×1, c_iskar×1, c_itil×1, c_jenne×1, c_jingzhao×1, c_jingzhou_2×1, c_jumla×1, c_kaffa×1, c_kakisalmi×1, c_kanchipuram×1, c_karakorum×1, c_kasa×1, c_kataka×1, c_kathmandu×1, c_kayor×1, c_kepala_burung×1, c_kilimanjaro×1, c_kirinyaga×1, c_kisi×1, c_kukiya×1, c_kumasi×1, c_kurdar×1, c_lhasa×1, c_lop_buri×1, c_lyon×1, c_makhir×1, c_mandestan×1, c_mathura×1, c_menas×1, c_mogadishu×1, c_mombasa×1, c_monyin×1, c_multan×1, c_muze×1, c_naddula×1, c_nakkavaram×1, c_nallamala×1, c_naqis×1, c_ngawa×1, c_niani×1, c_nikki×1, c_ninive×1, c_novgorod×1, c_ob×1, c_odessa×1, c_olkhon×1, c_paderborn×1, c_papua_selatan×1, c_phiti×1, c_plocka×1, c_poszony×1, c_qatif×1, c_qayaliq×1, c_qizhou_1×1, c_quoc_oai×1, c_quzhou_1×1, c_ragusa×1, c_rama×1, c_rebgong×1, c_rima×1, c_riqan×1, c_roma×1, c_rugen×1, c_sarysyn×1, c_sennar×1, c_sherbro×1, c_shezhou×1, c_sijilmasa×1, c_sinai×1, c_sinjar×1, c_sthanisvara×1, c_tarayka×1, c_tavan_bogd×1, c_tezu×1, c_thessalia×1, c_tigre×1, c_tinmallal×1, c_tongcheng×1, c_torun×1, c_trandheim×1, c_tyumen×1, c_ucinaa×1, c_udabhanda×1, c_ujjayini×1, c_upland×1, c_uraiyur×1, c_urmiya×1, c_vaisali×1, c_valabhi×1, c_vatsagulma×1, c_vidisa×1, c_vien_chan×1, c_viscaya×1, c_visegrad×1, c_wadan×1, c_wakhsh×1, c_wandala×1, c_xinhzou×1, c_yanchuan×1, c_yingzhou_5×1, c_yongzhou_1×1, c_yunyang×1, c_zemigalians×1
+    行号：8:c_jerusalem, 42:c_roma, 43:b_vaticano, 74:c_cologne, 167:c_byzantion, 226:c_antiocheia, 258:c_tigre, 289:c_dvin, 318:c_dvin, 347:c_beirut, 434:c_kerala, 504:c_rama, 537:c_ragusa, 567:c_esztergom, 597:c_albi, 694:c_lyon, 822:c_sinai, 853:c_tinmallal, 882:c_fes, 883:b_subu, 914:b_an, 943:c_damascus, 1064:c_sijilmasa, 1095:c_qatif, 1128:c_sinjar, 1156:c_baalbek, 1186:c_ninive, 1245:c_mandestan, 1275:c_bakharz, 1339:c_acre, 1368:c_jerusalem, 1398:c_kerch, 1429:c_itil, 1459:c_kerala, 1460:b_kunjakari, 1645:c_udabhanda, 1705:b_hulwan, 1740:c_gaya, 1797:c_vidisa, 1798:b_sanchi, 1826:c_vatsagulma, 1855:c_dagon, 1914:c_phiti, 1943:c_nallamala, 2004:c_ayodhya, 2034:c_mathura, 2063:c_sthanisvara, 2092:c_kanchipuram, 2121:c_ujjayini, 2150:c_dvaraka, 2179:c_kataka, 2180:b_konarak, 2270:c_JAV_mataram, 2271:b_JAV_Borobodur, 2301:c_SUM_muara_takus, 2302:b_SUM_Muara_Takus, 2332:c_JAV_mataram, 2333:b_JAV_Mataram, 2363:b_my_son, 2423:c_lop_buri, 2486:c_valabhi, 2487:b_shatrunjaya, 2516:c_damin_i_koh, 2517:b_shikarji, 2547:c_naddula, 2548:b_ranakpur, 2578:c_devagiri, 2579:b_elapura, 2609:c_uraiyur, 2697:c_rima, 2725:c_tezu, 2756:c_kathmandu, 2786:c_ilam, 2815:c_garwhal, 2843:c_jumla, 2903:c_ngawa, 2931:c_chakla, 2960:c_gyaitang, 2989:c_rebgong, 3047:c_tongcheng, 3076:c_alxa, 3140:c_riqan, 3169:c_irahistan, 3200:b_rivand, 3230:c_wakhsh, 3231:b_awzaj, 3260:c_urmiya, 3289:c_baduspan, 3318:c_baduspan, 3319:b_firrim, 3379:b_an, 3408:c_hayk, 3437:c_kurdar, 3438:b_mizdahqan, 3466:c_dunhuang, 3517:c_upland, 3547:c_paderborn, 3577:c_trandheim, 3607:b_yarlestre, 3637:c_kiev, 3669:c_kakisalmi, 3698:c_hiiumaa, 3699:b_hiiumaa, 3728:c_akkel, 3789:c_kiev, 3819:c_novgorod, 3878:c_plocka, 3909:c_zemigalians, 3940:c_torun, 3969:c_braslau, 3999:c_rugen, 4031:c_visegrad, 4061:c_kerch, 4091:c_odessa, 4092:b_olbia_ETEL, 4121:c_poszony, 4150:c_sarysyn, 4181:c_karakorum, 4210:c_qayaliq, 4240:c_tavan_bogd, 4268:c_dorostorum, 4357:c_thessalia, 4418:c_multan, 4479:b_lafak, 4537:c_lhasa, 4597:c_tyumen, 4655:c_ob, 4684:c_olkhon, 4726:c_viscaya, 4755:c_alto_aragon, 4784:c_bordeaux, 4826:c_awkar, 4856:c_jenne, 4885:c_niani, 4915:c_kukiya, 4945:c_wadan, 4981:c_daura, 5011:c_garumele, 5040:c_igbo, 5068:c_el_fasher, 5096:c_wandala, 5132:c_kisi, 5162:c_sherbro, 5191:c_kayor, 5220:c_kasa, 5285:c_kumasi, 5343:c_nikki, 5383:c_aswan, 5444:c_naqis, 5472:c_sennar, 5514:c_canarias, 5515:b_tenerife, 5613:c_danakil, 5643:c_kaffa, 5672:c_harar, 5701:c_makhir, 5729:c_mogadishu, 5763:c_kirinyaga, 5793:c_mombasa, 5794:b_mtwapa, 5822:c_kilimanjaro, 5855:c_gilgit, 5885:c_nakkavaram, 5914:c_andamans, 5948:c_yingzhou_5, 5949:b_hengshan_2, 5977:c_xinhzou, 5978:b_yiyang_1, 6038:b_qianfeng, 6126:c_shezhou, 6225:b_ise_jingu, 6254:b_itsukushima, 6373:c_SuMa_wenang, 6401:c_SuMa_siang, 6430:c_monyin, 6489:c_chiang_rung, 6527:c_quzhou_1, 6557:c_jingzhou_2, 6587:c_jingzhao, 6620:c_PHI_cotabato, 6649:c_PHI_samar, 6678:c_PHI_tondo, 6707:c_PHI_ivatan, 6736:c_PHI_south_palawan, 6780:c_vien_chan, 6864:c_binh_nguyen, 6899:c_eman_molihewen, 6927:c_eman_yam_alin, 6956:c_chupka, 6985:c_BAL_dongpyeong_yizhou, 7020:c_amami, 7021:b_amami, 7051:c_ucinaa, 7052:b_simajiri, 7085:c_BOR_iban, 7114:c_BOR_kudat, 7143:c_BOR_taiao, 7171:c_BOR_sukadana, 7200:c_BOR_kutai_utara, 7241:b_fuqu, 7271:c_bianzhou, 7336:c_SuMa_ajatappareng, 7337:b_SUL_Amparita, 7395:c_papua_selatan, 7424:c_kepala_burung, 7460:c_hoanya, 7490:c_IDO_sonba_i, 7518:c_SUM_riak_nan_berbedur, 7547:c_MAL_gangganegara, 7581:c_menas, 7582:b_opereperkep, 7612:c_ioci, 7613:b_aptapet_ainu, 7642:c_tarayka, 7643:b_tarayka, 7672:c_iskar, 7673:b_cup_pet, 7703:c_isawa, 7736:c_yongzhou_1, 7765:c_muze, 7853:c_yanchuan, 7887:c_haripunjaya, 7915:c_quoc_oai, 7944:c_ezhou, 7974:c_bochuan, 8015:c_BAL_east_amnok, 8016:b_FIC_Liao_Changbaishan, 8106:c_gaeseong, 8136:c_goseong, 8169:c_qizhou_1, 8198:c_yunyang, 8228:b_kofuku_ji, 8258:c_vaisali, 8259:b_vaisali, 8347:b_kizuki_taisha, 8376:b_kashima_hitachi
+
+[common/script_values] 4 文件 / 73 处
+  01_dlc_fp1_script_values.txt | 1 处 | c_kolobrzeg×1
+    行号：971:c_kolobrzeg
+  02_religion_values.txt | 67 处 | c_roma×6, c_jerusalem×5, c_aswan×3, c_awkar×3, c_baduspan×3, c_braslau×3, c_daura×3, c_gaya×3, c_kakisalmi×3, c_kasa×3, c_kiev×3, c_kumasi×3, c_langshan×3, c_mathura×3, c_mogadishu×3, c_owu×3, c_qayaliq×3, c_somnath×3, c_upland×3, c_visegrad×3, c_byzantion×2
+    行号：1903:c_roma, 1933:c_jerusalem, 1955:c_baduspan, 1970:c_upland, 1985:c_braslau, 2000:c_kiev, 2022:c_kakisalmi, 2037:c_qayaliq, 2052:c_visegrad, 2091:c_awkar, 2106:c_kasa, 2121:c_daura, 2136:c_kumasi, 2151:c_owu, 2166:c_aswan, 2181:c_mogadishu, 2211:c_roma, 2226:c_mathura, 2241:c_somnath, 2256:c_gaya, 2271:c_langshan, 2307:c_roma, 2337:c_jerusalem, 2359:c_baduspan, 2374:c_upland, 2389:c_braslau, 2404:c_kiev, 2426:c_kakisalmi, 2441:c_qayaliq, 2456:c_visegrad, 2495:c_awkar, 2510:c_kasa, 2525:c_daura, 2540:c_kumasi, 2555:c_owu, 2570:c_aswan, 2585:c_mogadishu, 2615:c_roma, 2630:c_mathura, 2645:c_somnath, 2660:c_gaya, 2675:c_langshan, 2711:c_roma, 2741:c_jerusalem, 2763:c_baduspan, 2778:c_upland, 2793:c_braslau, 2808:c_kiev, 2830:c_kakisalmi, 2845:c_qayaliq, 2860:c_visegrad, 2899:c_awkar, 2914:c_kasa, 2929:c_daura, 2944:c_kumasi, 2959:c_owu, 2974:c_aswan, 2989:c_mogadishu, 3019:c_roma, 3034:c_mathura, 3049:c_somnath, 3064:c_gaya, 3079:c_langshan, 3158:c_jerusalem, 4414:c_byzantion, 4434:c_byzantion, 4460:c_jerusalem
+  99_court_chaplain_values.txt | 2 处 | b_mahoyadapuram×1, b_visoki×1
+    行号：993:b_mahoyadapuram, 1055:b_visoki
+  destiny_score_interest_value.txt | 3 处 | c_byzantion×1, c_jerusalem×1, c_roma×1
+    行号：1689:c_roma, 1699:c_byzantion, 1709:c_jerusalem
+
+[common/scripted_effects] 12 文件 / 331 处
+  00_almohad_invasion_effects.txt | 2 处 | c_tinmallal×2
+    行号：4:c_tinmallal, 12:c_tinmallal
+  00_artifact_badge_scripted_effects.txt | 2 处 | b_vaticano×2
+    行号：90:b_vaticano, 290:b_vaticano
+  00_decisions_effects.txt | 2 处 | c_keve×1, c_krasso×1
+    行号：1970:c_keve, 1971:c_krasso
+  00_historical_characters_scripted_effects.txt | 76 处 | b_JAV_Kahuripan×6, b_firenze×5, b_kyo×4, b_Goryeo_Gaeseong_Gaeseong×3, b_roma×3, b_chonae×2, b_indraprastha×2, b_moskva×2, b_reykjavik×2, b_srinagara×2, b_venezia×2, b_IDO_Bedulu×1, b_IDO_Lombok×1, b_SUM_Palembang×1, b_almansa×1, b_amastris×1, b_assissi×1, b_balasaghun×1, b_breslau×1, b_cassino×1, b_chalkis×1, b_clairvaux×1, b_darkhad×1, b_dhandhuka×1, b_dorylaion×1, b_everstein×1, b_ikonion×1, b_ilchester×1, b_jelling×1, b_kenduli×1, b_kiev×1, b_mahoyadapuram×1, b_maragha×1, b_nagusa×1, b_nanded×1, b_nikaea×1, b_olafsvik×1, b_orvieto×1, b_oslosyslar×1, b_pushkar×1, b_rais×1, b_rayy×1, b_reydarfjall×1, b_samosata×1, b_satala×1, b_sayram×1, b_sigtuna×1, b_tangiers×1, b_tyana×1, b_udayavara×1, b_vaijayanti×1, b_vestfirdir×1, b_vijayapura_bis×1, b_wu×1
+    行号：163:b_vijayapura_bis, 211:b_mahoyadapuram, 312:b_dhandhuka, 369:b_srinagara, 416:b_vaijayanti, 464:b_nanded, 519:b_udayavara, 617:b_srinagara, 772:b_clairvaux, 819:b_cassino, 867:b_firenze, 1046:b_olafsvik, 1090:b_reykjavik, 1132:b_reydarfjall, 1180:b_oslosyslar, 1284:b_tangiers, 1434:b_ilchester, 1518:b_rais, 1654:b_firenze, 1739:b_firenze, 1782:b_venezia, 1824:b_reykjavik, 2042:b_ikonion, 2700:b_venezia, 2761:b_sigtuna, 2868:b_darkhad, 2959:b_moskva, 3001:b_chonae, 3180:b_chalkis, 3311:b_nikaea, 3436:b_chonae, 3696:b_samosata, 3781:b_amastris, 3824:b_tyana, 3997:b_satala, 4008:b_maragha, 4208:b_firenze, 4251:b_almansa, 4484:b_everstein, 4543:b_roma, 4544:b_roma, 4545:b_roma, 4710:b_kyo, 4800:b_Goryeo_Gaeseong_Gaeseong, 4851:b_Goryeo_Gaeseong_Gaeseong, 4901:b_Goryeo_Gaeseong_Gaeseong, 4946:b_SUM_Palembang, 4991:b_JAV_Kahuripan, 5036:b_JAV_Kahuripan, 5081:b_JAV_Kahuripan, 5127:b_JAV_Kahuripan, 5173:b_JAV_Kahuripan, 5220:b_JAV_Kahuripan, 5265:b_IDO_Bedulu, 5311:b_IDO_Lombok, 5528:b_wu, 5974:b_nagusa, 6019:b_kyo, 6107:b_kyo, 6148:b_kyo, 6195:b_assissi, 6243:b_orvieto, 6562:b_firenze, 6925:b_vestfirdir, 7036:b_jelling, 7355:b_breslau, 7401:b_kiev, 7449:b_moskva, 7858:b_rayy, 8183:b_pushkar, 8230:b_indraprastha, 8277:b_indraprastha, 8465:b_balasaghun, 8553:b_dorylaion, 8598:b_sayram, 8843:b_kenduli
+  00_holy_order_effects.txt | 152 处 | b_corvey×3, b_deggendorf×3, b_kirriemuir×3, b_lorsch×3, b_lure×3, b_pomposa×3, b_rhizus×3, b_saint_albans×3, b_sankt_gallen×3, b_wolverhampton×3, c_maragha×3, b_aigialos×2, b_amfissa×2, b_apemea×2, b_argonne×2, b_biograd×2, b_birr×2, b_cassino×2, b_farfa×2, b_grand×2, b_gynaikokastron×2, b_helge×2, b_leylan×2, b_lorient×2, b_nazianzus×2, b_sanleonardodeyague×2, b_selymbria×2, b_shamkur×2, b_shimazana×2, b_solin×2, b_st_davids×2, b_taoskari×2, b_zermion×2, c_amida×2, c_casentino×2, c_firenze×2, b_akhtamar×1, b_amorion×1, b_antartus×1, b_applecross×1, b_arca×1, b_bangor×1, b_beodericsworth×1, b_castiglione×1, b_chynov×1, b_citeaux×1, b_cluny×1, b_combourg×1, b_dabrowa_gorn×1, b_dovadola×1, b_drysa×1, b_faulquemont×1, b_fishabur×1, b_fontevraud×1, b_fronsac×1, b_gallarate×1, b_gazirat_ibn_umar×1, b_haugsdorf×1, b_ierrisos×1, b_jedburgh×1, b_jugha×1, b_kafartutha×1, b_khuftidkan×1, b_kreusnach×1, b_krichim×1, b_krsko×1, b_maials×1, b_mattija×1, b_miletus×1, b_naestved×1, b_nagyszeben×1, b_pannonhalma×1, b_qartajana×1, b_ramsbury×1, b_rila×1, b_saint_dizier×1, b_sarthe×1, b_squilluce×1, b_stagoi×1, b_stargard×1, b_stcatherine×1, b_tall_afrin×1, b_tigre×1, b_varnhem×1, b_wadi_natrun×1, b_yuriev×1, c_alcacer_do_sal×1, c_aleppo×1, c_algier×1, c_andujar×1, c_athlone×1, c_calatrava×1, c_cilicia×1, c_coimbra×1, c_khachen×1, c_konstanz×1, c_krems×1, c_melitene×1, c_ninive×1, c_pembrokeshire×1, c_shahrazur×1, c_sinai×1, c_tarragona×1, c_tripoli×1, c_ulster×1
+    行号：1714:b_farfa, 1718:b_cassino, 1722:b_saint_albans, 1724:b_wolverhampton, 1746:b_lorsch, 1751:b_deggendorf, 1755:b_argonne, 1780:b_pomposa, 1787:b_saint_albans, 1789:b_wolverhampton, 1794:b_corvey, 1798:b_sankt_gallen, 1802:b_lure, 1806:b_lorsch, 1815:b_deggendorf, 1822:b_lorient, 1828:b_solin, 1829:b_biograd, 1839:b_pomposa, 1843:b_solin, 1852:b_sankt_gallen, 1856:c_konstanz, 1899:b_lure, 1905:b_pomposa, 1908:b_corvey, 1970:b_sanleonardodeyague, 2054:b_birr, 2055:c_athlone, 2125:b_bangor, 2126:c_ulster, 2170:b_applecross, 2171:b_kirriemuir, 2181:b_st_davids, 2182:c_pembrokeshire, 2246:b_combourg, 2259:b_cluny, 2336:b_grand, 2382:b_fronsac, 2392:b_naestved, 2403:b_dovadola, 2411:c_casentino, 2423:c_casentino, 2479:b_farfa, 2540:b_cassino, 2548:b_castiglione, 2555:c_firenze, 2567:c_firenze, 2623:b_kirriemuir, 2779:b_faulquemont, 2840:b_argonne, 2855:b_corvey, 2859:b_lorsch, 2874:b_pannonhalma, 2931:b_biograd, 3005:b_sanleonardodeyague, 3016:b_citeaux, 3064:b_grand, 3068:b_lorient, 3071:b_saint_dizier, 3080:b_gallarate, 3094:b_varnhem, 3099:b_stargard, 3109:b_nagyszeben, 3111:b_dabrowa_gorn, 3172:b_chynov, 3226:b_krsko, 3234:b_kirriemuir, 3283:b_sarthe, 3285:b_st_davids, 3294:b_fontevraud, 3338:b_ramsbury, 3391:b_jedburgh, 3393:b_birr, 3405:b_kreusnach, 3456:b_deggendorf, 3464:b_sankt_gallen, 3468:b_lure, 3481:b_saint_albans, 3530:b_wolverhampton, 3531:b_beodericsworth, 3546:b_selymbria, 3554:b_helge, 3605:b_gynaikokastron, 3608:b_aigialos, 3611:b_squilluce, 3627:b_apemea, 3630:b_nazianzus, 3633:b_amfissa, 3636:b_rhizus, 3651:b_ierrisos, 3727:b_stagoi, 3762:b_helge, 3821:b_apemea, 3833:b_miletus, 3901:b_nazianzus, 3913:b_rhizus, 3980:b_taoskari, 4055:b_taoskari, 4058:b_krichim, 4070:b_selymbria, 4129:b_gynaikokastron, 4139:b_aigialos, 4149:b_rhizus, 4220:b_rila, 4232:b_yuriev, 4348:b_amfissa, 4409:b_drysa, 4497:b_shimazana, 4572:b_tigre, 4579:b_shimazana, 4587:b_wadi_natrun, 4688:c_khachen, 4736:b_shamkur, 4751:b_akhtamar, 4759:b_jugha, 4820:b_shamkur, 4828:b_fishabur, 4866:c_ninive, 4900:b_gazirat_ibn_umar, 4968:b_kafartutha, 4976:b_stcatherine, 5001:c_sinai, 5102:b_maials, 5109:c_tarragona, 5122:c_coimbra, 5178:b_antartus, 5185:c_tripoli, 5191:b_haugsdorf, 5198:c_krems, 5269:c_calatrava, 5312:c_alcacer_do_sal, 5360:c_cilicia, 5402:b_arca, 5409:c_melitene, 5422:b_tall_afrin, 5430:c_aleppo, 5469:b_leylan, 5477:c_maragha, 5519:b_zermion, 5526:c_amida, 5532:b_khuftidkan, 5539:c_shahrazur, 5552:b_amorion, 5560:c_maragha, 5602:b_zermion, 5609:c_amida, 5615:b_leylan, 5622:c_maragha, 5632:b_qartajana, 5716:b_mattija, 5723:c_algier, 5812:c_andujar
+  00_major_decisions_scripted_effects.txt | 41 处 | c_roma×14, c_byzantion×10, c_JAV_madura×3, c_BOR_berau×2, c_PHI_sulu×2, c_amami×2, c_ucinaa×2, c_annandale×1, c_ile_de_france×1, c_lanarkshire×1, c_orleans×1, c_toulouse×1, d_semigallia×1
+    行号：19:c_byzantion, 21:c_byzantion, 89:c_roma, 90:c_byzantion, 96:c_byzantion, 103:c_byzantion, 112:c_byzantion, 116:c_roma, 117:c_byzantion, 124:c_roma, 131:c_roma, 140:c_roma, 260:c_roma, 266:c_roma, 273:c_roma, 282:c_roma, 360:c_roma, 366:c_roma, 373:c_roma, 382:c_roma, 687:c_byzantion, 689:c_byzantion, 722:c_byzantion, 1064:c_roma, 2180:c_ile_de_france, 2193:c_orleans, 2219:c_toulouse, 2503:c_lanarkshire, 2508:c_annandale, 2932:c_JAV_madura, 3000:c_JAV_madura, 3004:c_JAV_madura, 3093:c_ucinaa, 3097:c_ucinaa, 3101:c_amami, 3105:c_amami, 3175:c_BOR_berau, 3179:c_BOR_berau, 3211:c_PHI_sulu, 3216:c_PHI_sulu, 3501:d_semigallia
+  00_mongol_invasion_effects.txt | 2 处 | c_khentii×2
+    行号：20:c_khentii, 33:c_khentii
+  01_dlc_fp1_scripted_effects.txt | 14 处 | c_isle_of_man×8, d_artois×4, c_guines×1, c_trandheim×1
+    行号：23:c_trandheim, 67:d_artois, 74:d_artois, 75:d_artois, 105:d_artois, 108:c_guines, 385:c_isle_of_man, 396:c_isle_of_man, 398:c_isle_of_man, 404:c_isle_of_man, 407:c_isle_of_man, 410:c_isle_of_man, 435:c_isle_of_man, 439:c_isle_of_man
+  06_dlc_ce1_legend_effects.txt | 10 处 | c_ailech×2, c_athlone×2, c_byzantion×2, c_ossory×2, c_kanchipuram×1, c_muluvagil×1
+    行号：611:c_kanchipuram, 613:c_muluvagil, 662:c_ailech, 665:c_athlone, 672:c_ailech, 675:c_athlone, 686:c_ossory, 694:c_ossory, 712:c_byzantion, 721:c_byzantion
+  07_frankokratia_scripted_effects.txt | 13 处 | c_byzantion×7, c_cherso×2, c_dyrrachion×2, c_zadar×2
+    行号：676:c_zadar, 686:c_zadar, 704:c_cherso, 714:c_cherso, 732:c_dyrrachion, 742:c_dyrrachion, 1505:c_byzantion, 1508:c_byzantion, 1518:c_byzantion, 2545:c_byzantion, 2549:c_byzantion, 2553:c_byzantion, 2572:c_byzantion
+  09_dlc_mpo_scripted_effects.txt | 16 处 | c_venezia×3, c_breslau×2, c_genoa×2, c_kiev×2, c_krakowska×2, c_novgorod×2, b_breslau×1, b_kiev×1, c_byzantion×1
+    行号：1624:c_breslau, 1634:c_breslau, 1636:b_breslau, 1642:c_krakowska, 1652:c_krakowska, 1660:c_novgorod, 1670:c_novgorod, 1678:c_kiev, 1688:c_kiev, 1690:b_kiev, 1732:c_venezia, 1742:c_venezia, 1744:c_venezia, 1768:c_genoa, 1778:c_genoa, 1787:c_byzantion
+  10_dlc_tgp_silk_road_scripted_effects.txt | 1 处 | c_jingzhao×1
+    行号：373:c_jingzhao
+
+[common/scripted_triggers] 3 文件 / 8 处
+  00_artifact_badge_triggers.txt | 1 处 | b_vaticano×1
+    行号：6:b_vaticano
+  00_coa_triggers.txt | 1 处 | c_isle_of_man×1
+    行号：238:c_isle_of_man
+  00_hunt_triggers.txt | 6 处 | c_dahlak×2, c_faereyar×1, c_hormuz×1, c_lesbos×1, c_malta×1
+    行号：345:c_dahlak, 346:c_faereyar, 347:c_hormuz, 348:c_lesbos, 350:c_malta, 375:c_dahlak
+
+[common/situation/situations] 2 文件 / 10 处
+  gdp_guelph_ghibelline_situation.txt | 6 处 | c_genoa×1, c_guastalla×1, c_lombardia×1, c_polesine×1, c_tortona×1, c_treviso×1
+    行号：445:c_treviso, 525:c_tortona, 555:c_genoa, 566:c_guastalla, 576:c_polesine, 586:c_lombardia
+  tgp_silk_road.txt | 4 处 | b_dunhuang_2×1, b_gurganj×1, b_lahur×1, b_potala×1
+    行号：77:b_potala, 78:b_lahur, 79:b_dunhuang_2, 80:b_gurganj
+
+[common/tutorial_lessons] 1 文件 / 8 处
+  00_tutorial_lessons_basics.txt | 8 处 | c_ormond×4, b_emly×2, c_nf_qin_79E6_4×1, c_thomond×1
+    行号：132:c_nf_qin_79E6_4, 527:b_emly, 555:b_emly, 861:c_ormond, 942:c_ormond, 997:c_thomond, 1334:c_ormond, 2836:c_ormond
+
+[events/decisions_events] 1 文件 / 18 处
+  major_decisions_events.txt | 18 处 | b_fes×4, b_napoli×4, b_padua×4, b_tirakka×4, c_algier×1, c_tripolitana×1
+    行号：993:b_fes, 994:b_fes, 999:b_fes, 1005:b_fes, 1203:b_padua, 1204:b_padua, 1209:b_padua, 1215:b_padua, 1293:b_napoli, 1294:b_napoli, 1299:b_napoli, 1305:b_napoli, 1323:b_tirakka, 1324:b_tirakka, 1329:b_tirakka, 1335:b_tirakka, 1664:c_tripolitana, 1667:c_algier
+
+位于 replace_path 的 Beta 文件：2 个文件，50 处引用，48 个不同头衔
+
+[common/bookmarks/bookmarks] 1 文件 / 35 处
+  00_bookmarks.txt | 35 处 | c_najera×2, c_nf_minamoto_kawachi×2, c_casentino×1, c_daura×1, c_emil×1, c_ghazza×1, c_harran×1, c_irbil×1, c_khentii×1, c_maine×1, c_mazandaran×1, c_merchant_dalesmanni×1, c_merchant_faliero×1, c_merchant_sahu×1, c_merchant_sanudo×1, c_merchant_sun_5B6B×1, c_merchant_wuhsha×1, c_messina×1, c_montaigu×1, c_nf_fujiwara_matsudono×1, c_nf_fujiwara_oshu×1, c_nf_huang_9EC4×1, c_nf_kiyohara×1, c_nf_minamoto_kiso×1, c_nf_minamoto_murakami×1, c_nf_new_noble_dynasty×1, c_nf_qin_79E6_4×1, c_nf_xia_liang×1, c_olomouc×1, c_pacatiana×1, c_seleucia×1, c_tiberias×1, c_zela×1
+    行号：136:c_mazandaran, 277:c_najera, 688:c_montaigu, 749:c_daura, 1458:c_maine, 1801:c_olomouc, 1851:c_messina, 2047:c_najera, 2572:c_zela, 2585:c_pacatiana, 2753:c_ghazza, 2796:c_seleucia, 2828:c_harran, 2857:c_irbil, 2889:c_tiberias, 3081:c_khentii, 3140:c_emil, 3211:c_nf_huang_9EC4, 3312:c_nf_qin_79E6_4, 3333:c_nf_xia_liang, 3399:c_nf_new_noble_dynasty, 3604:c_nf_minamoto_kawachi, 3646:c_nf_minamoto_murakami, 3688:c_nf_kiyohara, 3745:c_nf_minamoto_kawachi, 3828:c_nf_fujiwara_matsudono, 3870:c_nf_fujiwara_oshu, 3912:c_nf_minamoto_kiso, 3982:c_merchant_sun_5B6B, 4000:c_merchant_faliero, 4018:c_merchant_wuhsha, 4066:c_merchant_sahu, 4098:c_merchant_sanudo, 4160:c_casentino, 4191:c_merchant_dalesmanni
+
+[common/bookmarks/challenge_characters] 1 文件 / 15 处
+  00_challenge_characters.txt | 15 处 | c_acre×1, c_albarracin×1, c_albi×1, c_baalbek×1, c_coimbra×1, c_dembiya×1, c_kerak×1, c_orangallu×1, c_poitiers×1, c_sibi_mali×1, c_siracusa×1, c_tmutarakan×1, c_ulster×1, c_valois×1, c_worms×1
+    行号：15:c_kerak, 40:c_dembiya, 115:c_acre, 365:c_albarracin, 390:c_ulster, 416:c_baalbek, 566:c_worms, 841:c_albi, 916:c_tmutarakan, 941:c_valois, 966:c_siracusa, 1091:c_coimbra, 1191:c_poitiers, 1241:c_orangallu, 1266:c_sibi_mali
+

@@ -111,8 +111,9 @@ ck2_iberia_457531 = {
 	culture = castilian
 	religion = catholic
 	rite = roman_rite
-	dynasty = ivree_dynasty
+	dynasty_house = house_burgundy_castile
 	father = cas_sancho_iv_burgundy
+	mother = cas_maria_molina
 	1290.1.1 = { birth = yes }
 	1319.7.25 = { death = yes }
 }
@@ -123,7 +124,7 @@ ck2_iberia_457532 = {
 	culture = castilian
 	religion = catholic
 	rite = roman_rite
-	dynasty = ivree_dynasty
+	dynasty_house = house_burgundy_castile
 	female = yes
 	father = ck2_iberia_457531
 	mother = ara_blanche_anjou
@@ -137,7 +138,7 @@ ck2_iberia_457562 = {
 	culture = castilian
 	religion = catholic
 	rite = roman_rite
-	dynasty = ck2_iberia_dynasty_779
+	dynasty = valencia_campos_dynasty
 	1283.1.1 = { birth = yes }
 	1316.8.1 = { death = yes }
 }
@@ -148,7 +149,7 @@ ck2_iberia_457590 = {
 	culture = castilian
 	religion = catholic
 	rite = roman_rite
-	dynasty = ck2_iberia_dynasty_779
+	dynasty = valencia_campos_dynasty
 	father = ck2_iberia_457562
 	mother = ck2_iberia_71509
 	1316.8.1 = { birth = yes }
@@ -186,7 +187,9 @@ ck2_iberia_457621 = {
 	culture = castilian
 	religion = catholic
 	rite = roman_rite
-	dynasty = ivree_dynasty
+	dynasty = manuel_dynasty
+	father = cas_fernando_iii_burgundy
+	mother = cas_beatrix_hohenstaufen
 	1234.1.1 = { birth = yes }
 	1283.12.25 = { death = yes }
 }
@@ -330,7 +333,7 @@ ck2_iberia_459524 = {
 	culture = portuguese
 	religion = catholic
 	rite = roman_rite
-	dynasty = robertian_dynasty
+	dynasty_house = house_burgundy_portuguese
 	female = yes
 	1292.1.1 = { birth = yes }
 	1367.1.1 = { death = yes }
@@ -342,7 +345,8 @@ ck2_iberia_459530 = {
 	culture = portuguese
 	religion = catholic
 	rite = roman_rite
-	dynasty = robertian_dynasty
+	dynasty = sousa_arronches_dynasty
+	father = por_afonso_iii_portugal
 	1260.1.1 = { birth = yes }
 	1310.4.24 = { death = yes }
 }
@@ -365,7 +369,7 @@ ck2_iberia_459532 = {
 	culture = portuguese
 	religion = catholic
 	rite = roman_rite
-	dynasty = ck2_iberia_dynasty_1020118
+	dynasty = sousa_arronches_dynasty
 	father = ck2_iberia_459530
 	mother = ck2_iberia_459531
 	1305.1.1 = { birth = yes }
@@ -378,7 +382,7 @@ ck2_iberia_459552 = {
 	culture = portuguese
 	religion = catholic
 	rite = roman_rite
-	dynasty = ck2_iberia_dynasty_1020117
+	dynasty = sousa_chichorro_dynasty
 	1275.1.1 = { birth = yes }
 	1323.1.1 = { death = yes }
 }
@@ -401,7 +405,7 @@ ck2_iberia_459554 = {
 	culture = portuguese
 	religion = catholic
 	rite = roman_rite
-	dynasty = ck2_iberia_dynasty_1020117
+	dynasty = sousa_chichorro_dynasty
 	father = ck2_iberia_459552
 	mother = ck2_iberia_459553
 	1320.1.1 = { birth = yes }
