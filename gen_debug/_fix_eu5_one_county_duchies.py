@@ -70,15 +70,15 @@ PAIRS = [
 OLD_KEYS = [p[1] for p in PAIRS]
 
 CONNAUGHT_BLOCK = (
-    "d_connaught = {\r\n"
-    "\t1324.1.1 = {\r\n"
-    "\t\tholder = cnn_toirdelbach_o_conchobair\r\n"
-    "\t}\r\n"
-    "\t1337.4.1 = {\r\n"
-    "\t\tholder = cnn_toirdelbach_o_conchobair\r\n"
-    "\t\tgovernment = tribal_government\r\n"
-    "\t}\r\n"
-    "}"
+    "d_connaught = {\n"
+    "\t1324.1.1 = {\n"
+    "\t\tholder = cnn_toirdelbach_o_conchobair\n"
+    "\t}\n"
+    "\t1337.4.1 = {\n"
+    "\t\tholder = cnn_toirdelbach_o_conchobair\n"
+    "\t\tgovernment = tribal_government\n"
+    "\t}\n"
+    "}\n\n"
 )
 
 
@@ -107,6 +107,7 @@ def top_blocks(t):
 def drop_blocks(t, targets, replace_with=None):
     """删掉顶层块（连块后空行），replace_with={name: text} 可原地替换。"""
     replace_with = replace_with or {}
+    nl = "\r\n" if "\r\n" in t else "\n"
     blocks = top_blocks(t)
     out = []
     last = 0
@@ -114,12 +115,9 @@ def drop_blocks(t, targets, replace_with=None):
     for name, s, e in blocks:
         out.append(t[last:s])
         if name in targets:
-            k = e
-            while t.startswith("\r\n", k):
-                k += 2
             if name in replace_with:
-                out.append(replace_with[name])
-            last = k
+                out.append(replace_with[name].replace("\n", nl))
+            last = e
             n += 1
         else:
             out.append(t[s:e])

@@ -5727,7 +5727,9 @@ d_connaught = {
 		holder = cnn_toirdelbach_o_conchobair
 		government = tribal_government
 	}
-}d_eu5_crh = {
+}
+
+d_eu5_crh = {
 	1295.11.1 = {
 		holder = tir_henry_gorizia
 	}
@@ -7200,9 +7202,8 @@ d_ghana = {
 }
 
 d_gotaland = {
-	1337.1.1 = { liege = k_sweden }
 	1337.4.1 = {
-		holder = mb_scand_450727
+		holder = swe_magnus_eriksson
 		government = feudal_government
 	}
 }
@@ -8844,8 +8845,9 @@ d_skaneland = {
 }
 
 d_slavonia = {
+	1337.1.1 = { holder = ck2_east_32652 liege = k_hungary }
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_32652
 		government = feudal_government
 	}
 }
@@ -8858,8 +8860,9 @@ d_sloboda_ukraine = {
 }
 
 d_slovakia = {
+	1337.1.1 = { holder = ck2_east_93713 liege = k_hungary }
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_93713
 		government = feudal_government
 	}
 }
@@ -9182,8 +9185,9 @@ d_transdanubia = {
 }
 
 d_transylvania = {
+	1337.1.1 = { holder = ck2_east_470040 liege = k_hungary }
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_470040
 		government = feudal_government
 	}
 }
@@ -11514,11 +11518,12 @@ c_ashca = {
 }
 
 c_ashmyany = {
+	1337.1.1 = { liege = k_lithuania }
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = lit_gediminas_gediminids
+		holder = pok_narimantas_gediminds
 		government = feudal_government
 	}
 }
@@ -12117,11 +12122,12 @@ c_bacau = {
 }
 
 c_bacs = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_470151
 		government = feudal_government
 	}
 }
@@ -12754,11 +12760,12 @@ c_baramahal = {
 }
 
 c_baranya = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 19
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_93694
 		government = feudal_government
 	}
 }
@@ -13876,7 +13883,8 @@ c_bihar = {
 		change_prosperity_level = 19
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		liege = d_transylvania
+		holder = ck2_east_470062
 		government = feudal_government
 	}
 }
@@ -14061,7 +14069,8 @@ c_bjelovar = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		liege = d_slavonia
+		holder = ck2_east_32653
 		government = feudal_government
 	}
 }
@@ -14739,11 +14748,12 @@ c_brescia = {
 }
 
 c_breslauja = {
+	1337.1.1 = { liege = k_lithuania }
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = lit_gediminas_gediminids
+		holder = pok_narimantas_gediminds
 		government = feudal_government
 	}
 }
@@ -14762,11 +14772,12 @@ c_bresse = {
 }
 
 c_bresta = {
+	1337.1.1 = { liege = k_lithuania }
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = lit_gediminas_gediminids
+		holder = lit_kestutis_gediminds
 		government = feudal_government
 	}
 }
@@ -14998,11 +15009,12 @@ c_bure = {
 }
 
 c_burgas = {
+	1337.1.1 = { liege = k_bulgaria }
 	1337.4.1 = {
 		change_prosperity_level = 26
 	}
 	1337.4.1 = {
-		holder = bul_ivan_alexander
+		holder = bul_ivan_stefan
 		government = feudal_government
 	}
 }
@@ -17712,11 +17724,12 @@ c_crete = {
 }
 
 c_csanad = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_470151
 		government = feudal_government
 	}
 }
@@ -17944,11 +17957,12 @@ c_czersk = {
 }
 
 c_czestochowa = {
+	1337.1.1 = { liege = k_poland }
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = pol_casimir_iii_piast
+		holder = sdz_przemysl_i_piast
 		government = feudal_government
 	}
 }
@@ -18901,7 +18915,8 @@ c_doboka = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		liege = d_transylvania
+		holder = ck2_east_470202
 		government = feudal_government
 	}
 }
@@ -20325,21 +20340,23 @@ c_farghana = {
 }
 
 c_feher = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_470040
 		government = feudal_government
 	}
 }
 
 c_fejer = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_470114
 		government = feudal_government
 	}
 }
@@ -21875,11 +21892,12 @@ c_gresivaudan = {
 }
 
 c_grodno = {
+	1337.1.1 = { liege = k_lithuania }
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = lit_gediminas_gediminids
+		holder = lit_kestutis_gediminds
 		government = feudal_government
 	}
 }
@@ -23282,11 +23300,12 @@ c_hetao = {
 }
 
 c_heves = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_470212
 		government = feudal_government
 	}
 }
@@ -23624,11 +23643,12 @@ c_hongju = {
 }
 
 c_hont = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_93726
 		government = feudal_government
 	}
 }
@@ -27749,11 +27769,12 @@ c_kiokee = {
 }
 
 c_kiralyfold = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_470040
 		government = feudal_government
 	}
 }
@@ -27913,11 +27934,12 @@ c_klamath = {
 }
 
 c_kletsk = {
+	1337.1.1 = { liege = k_lithuania }
 	1337.4.1 = {
 		change_prosperity_level = 13
 	}
 	1337.4.1 = {
-		holder = lit_gediminas_gediminids
+		holder = pok_narimantas_gediminds
 		government = feudal_government
 	}
 }
@@ -27933,11 +27955,12 @@ c_knyazhaya = {
 }
 
 c_kobryn = {
+	1337.1.1 = { liege = k_lithuania }
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = lit_gediminas_gediminids
+		holder = lit_kestutis_gediminds
 		government = feudal_government
 	}
 }
@@ -28405,7 +28428,8 @@ c_kraszna = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		liege = d_transylvania
+		holder = ck2_east_470062
 		government = feudal_government
 	}
 }
@@ -28876,11 +28900,12 @@ c_kutulo = {
 }
 
 c_kuyavia = {
+	1337.1.1 = { liege = k_poland }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = pol_casimir_iii_piast
+		holder = ck2_east_471534
 		government = feudal_government
 	}
 }
@@ -29071,11 +29096,12 @@ c_laghouat = {
 }
 
 c_lahoysk = {
+	1337.1.1 = { liege = k_lithuania }
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = lit_gediminas_gediminids
+		holder = vbk_algirdas_gediminds
 		government = feudal_government
 	}
 }
@@ -29610,11 +29636,12 @@ c_liaozhou = {
 }
 
 c_lida = {
+	1337.1.1 = { liege = k_lithuania }
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = lit_gediminas_gediminids
+		holder = lit_kestutis_gediminds
 		government = feudal_government
 	}
 }
@@ -29661,11 +29688,12 @@ c_lijiang = {
 }
 
 c_lika = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 17
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = bos_mladen_subic
 		government = feudal_government
 	}
 }
@@ -32003,11 +32031,12 @@ c_marajoara = {
 }
 
 c_maramaros = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_470070
 		government = feudal_government
 	}
 }
@@ -32650,11 +32679,12 @@ c_medina = {
 }
 
 c_medininkai = {
+	1337.1.1 = { liege = k_lithuania }
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = lit_gediminas_gediminids
+		holder = lit_kestutis_gediminds
 		government = feudal_government
 	}
 }
@@ -33416,11 +33446,12 @@ c_mino = {
 }
 
 c_minsk = {
+	1337.1.1 = { liege = k_lithuania }
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = lit_gediminas_gediminids
+		holder = vbk_algirdas_gediminds
 		government = feudal_government
 	}
 }
@@ -35933,11 +35964,12 @@ c_nodaway = {
 }
 
 c_nograd = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 21
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_93726
 		government = feudal_government
 	}
 }
@@ -36097,11 +36129,12 @@ c_north_darfur = {
 }
 
 c_north_dobruja = {
+	1337.1.1 = { liege = k_bulgaria }
 	1337.4.1 = {
 		change_prosperity_level = 17
 	}
 	1337.4.1 = {
-		holder = bul_ivan_alexander
+		holder = byz_shisman
 		government = feudal_government
 	}
 }
@@ -36246,11 +36279,12 @@ c_north_muntenia = {
 }
 
 c_north_oltenia = {
+	1337.1.1 = { liege = d_wallachia }
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = wal_basarab
+		holder = wal_nicolae_alexandru
 		government = feudal_government
 	}
 }
@@ -36738,12 +36772,13 @@ c_novosyolovo = {
 }
 
 c_nowy_sacz = {
+	1337.1.1 = { liege = k_poland }
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = pol_casimir_iii_piast
-		government = feudal_government
+		holder = ck2_east_96116
+		government = theocracy_government
 	}
 }
 
@@ -39740,11 +39775,12 @@ c_pocutia = {
 }
 
 c_podlasie = {
+	1337.1.1 = { liege = k_lithuania }
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = lit_gediminas_gediminids
+		holder = lit_kestutis_gediminds
 		government = feudal_government
 	}
 }
@@ -40046,11 +40082,12 @@ c_poznan = {
 }
 
 c_pozsony = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_93713
 		government = feudal_government
 	}
 }
@@ -43839,11 +43876,12 @@ c_shuya = {
 }
 
 c_siauliai = {
+	1337.1.1 = { liege = k_lithuania }
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = lit_gediminas_gediminids
+		holder = lit_kestutis_gediminds
 		government = feudal_government
 	}
 }
@@ -44293,11 +44331,12 @@ c_slesvig = {
 }
 
 c_sliven = {
+	1337.1.1 = { liege = k_bulgaria }
 	1337.4.1 = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = bul_ivan_alexander
+		holder = bul_ivan_stefan
 		government = feudal_government
 	}
 }
@@ -44316,11 +44355,12 @@ c_slonin = {
 }
 
 c_slutsk = {
+	1337.1.1 = { liege = k_lithuania }
 	1337.4.1 = {
 		change_prosperity_level = 13
 	}
 	1337.4.1 = {
-		holder = lit_gediminas_gediminids
+		holder = pok_narimantas_gediminds
 		government = feudal_government
 	}
 }
@@ -44456,11 +44496,12 @@ c_somerset = {
 }
 
 c_somogy = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 19
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_93694
 		government = feudal_government
 	}
 }
@@ -44527,11 +44568,12 @@ c_songzhou = {
 }
 
 c_sopron = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_470101
 		government = feudal_government
 	}
 }
@@ -44675,11 +44717,12 @@ c_south_darfur = {
 }
 
 c_south_dobruja = {
+	1337.1.1 = { liege = k_bulgaria }
 	1337.4.1 = {
 		change_prosperity_level = 17
 	}
 	1337.4.1 = {
-		holder = bul_ivan_alexander
+		holder = bul_ivan_stefan
 		government = feudal_government
 	}
 }
@@ -45684,11 +45727,12 @@ c_suullar_myraan = {
 }
 
 c_suwalki = {
+	1337.1.1 = { liege = k_lithuania }
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = lit_gediminas_gediminids
+		holder = lit_kestutis_gediminds
 		government = feudal_government
 	}
 }
@@ -45747,11 +45791,12 @@ c_suzun = {
 }
 
 c_svir = {
+	1337.1.1 = { liege = k_lithuania }
 	1337.4.1 = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = lit_gediminas_gediminids
+		holder = pok_narimantas_gediminds
 		government = feudal_government
 	}
 }
@@ -45892,11 +45937,12 @@ c_syunik = {
 }
 
 c_szabolcs = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 21
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_470212
 		government = feudal_government
 	}
 }
@@ -45906,7 +45952,8 @@ c_szatmar = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		liege = d_transylvania
+		holder = ck2_east_470062
 		government = feudal_government
 	}
 }
@@ -45926,27 +45973,30 @@ c_szekelyfold = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		liege = d_transylvania
+		holder = ck2_east_470202
 		government = feudal_government
 	}
 }
 
 c_szepes = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_93744
 		government = feudal_government
 	}
 }
 
 c_szolnok = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_93673
 		government = feudal_government
 	}
 }
@@ -48095,11 +48145,12 @@ c_torbat_e_jam = {
 }
 
 c_torda = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 21
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_470040
 		government = feudal_government
 	}
 }
@@ -48255,11 +48306,12 @@ c_towosaghy = {
 }
 
 c_trakai = {
+	1337.1.1 = { liege = k_lithuania }
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = lit_gediminas_gediminids
+		holder = lit_kestutis_gediminds
 		government = feudal_government
 	}
 }
@@ -48328,7 +48380,8 @@ c_trencsen = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		liege = d_slovakia
+		holder = ck2_east_93707
 		government = feudal_government
 	}
 }
@@ -50840,11 +50893,12 @@ c_varmland = {
 }
 
 c_vas = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 19
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_470122
 		government = feudal_government
 	}
 }
@@ -50871,7 +50925,7 @@ c_vasterbotten = {
 }
 
 c_vastergotland = {
-	1337.1.1 = { liege = d_gotaland }
+	1337.1.1 = { liege = k_sweden }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
@@ -51109,11 +51163,12 @@ c_victoria_nile = {
 }
 
 c_vidin = {
+	1337.1.1 = { liege = k_bulgaria }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = bul_ivan_alexander
+		holder = ck2_east_467524
 		government = feudal_government
 	}
 }
@@ -51487,11 +51542,12 @@ c_vosges = {
 }
 
 c_vukovar_syrmia = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_32644
 		government = feudal_government
 	}
 }
@@ -52197,11 +52253,12 @@ c_west_asturias = {
 }
 
 c_west_banat = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_470151
 		government = feudal_government
 	}
 }
@@ -52679,11 +52736,12 @@ c_wichi = {
 }
 
 c_wielun = {
+	1337.1.1 = { liege = k_poland }
 	1337.4.1 = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = pol_casimir_iii_piast
+		holder = sdz_przemysl_i_piast
 		government = feudal_government
 	}
 }
@@ -54479,11 +54537,12 @@ c_zagore = {
 }
 
 c_zagreb = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_32652
 		government = feudal_government
 	}
 }
@@ -54499,11 +54558,12 @@ c_zaklohpakab = {
 }
 
 c_zala = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_470122
 		government = feudal_government
 	}
 }
@@ -54623,11 +54683,12 @@ c_zarand = {
 }
 
 c_zarand_hun = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_470135
 		government = feudal_government
 	}
 }
@@ -54730,11 +54791,12 @@ c_zekog = {
 }
 
 c_zemplen = {
+	1337.1.1 = { liege = k_hungary }
 	1337.4.1 = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = hun_karoly_robert
+		holder = ck2_east_470191
 		government = feudal_government
 	}
 }

@@ -1,0 +1,61 @@
+﻿# Restrict Hanseatic benefits to each member and its vassals.
+hanseatic_apply_member_benefits_effect = {
+	$CHARACTER$ = {
+		hanseatic_give_member_modifier_effect = yes
+
+		every_noble_family = {
+			holder ?= { hanseatic_give_member_modifier_effect = yes }
+		}
+
+		every_sub_realm_county = {
+			custom = every_hanseatic_county
+			hanseatic_give_county_modifier_effect = yes
+		}
+	}
+}
+
+hanseatic_remove_member_benefits_effect = {
+	$CHARACTER$ = {
+		hanseatic_take_member_modifier_effect = yes
+
+		every_noble_family = {
+			holder ?= { hanseatic_take_member_modifier_effect = yes }
+		}
+
+		every_sub_realm_county = {
+			custom = every_hanseatic_county
+			hanseatic_take_county_modifier_effect = yes
+		}
+	}
+}
+
+hanseatic_elevate_all_members_effect = {
+	$LEAGUE$ = {
+		every_confederation_member = {
+			save_scope_as = elevated_member
+			scope:elevated_member = {
+				add_to_list = hanseatic_league_families
+
+				every_noble_family = {
+					holder ?= { add_to_list = hanseatic_league_families }
+				}
+
+				every_sub_realm_county = {
+					add_to_list = hanseatic_league_counties
+				}
+			}
+		}
+
+		every_in_list = {
+			list = hanseatic_league_counties
+			custom = every_hanseatic_county
+			hanseatic_give_county_modifier_effect = yes
+		}
+
+		every_in_list = {
+			list = hanseatic_league_families
+			custom = every_hanseatic_family
+			hanseatic_give_member_modifier_effect = yes
+		}
+	}
+}
