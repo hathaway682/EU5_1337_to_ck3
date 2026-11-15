@@ -1,35 +1,24 @@
-# Oirat, part of Mongolic group
+# 1337 scenario: culture-specific history based on the supplied research plan.
+# Historical innovations adapted from D:/Documents/Paradox Interactive/Crusader Kings III/mod/EU5_Modern_Borders_noshape/history/cultures/buryat.txt.
 
 867.1.1 = {
 	discover_innovation = innovation_mustering_grounds
-	discover_innovation = innovation_quilted_armor
-	#
 	discover_innovation = innovation_plenary_assemblies
+	discover_innovation = innovation_quilted_armor
 }
 
 950.1.1 = {
-	# Tribal Innovations
+	discover_innovation = innovation_bannus
 	discover_innovation = innovation_catapult
-	#
+	discover_innovation = innovation_crop_rotation
 }
 
-# Mongol imperial era: military organization and administration.
 1240.1.1 = {
 	discover_innovation = innovation_casus_belli
-	discover_innovation = innovation_ledger
 	discover_innovation = innovation_currency_01
-	discover_innovation = innovation_arched_saddle
+	discover_innovation = innovation_ledger
 }
 
-# 1337: steppe exchange and documented crossbow transmission.
-1336.11.1 = {
-	discover_innovation = innovation_currency_02
-	discover_innovation = innovation_horseshoes
-	discover_innovation = innovation_house_soldiers
-}
-
-# 1337: steppe pattern welding.
 1336.12.15 = {
 	discover_innovation = innovation_pattern_welding
 }
-

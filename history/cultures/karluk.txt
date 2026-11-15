@@ -1,55 +1,83 @@
-# Chuvash
-# Pecheneg
-# Bashkir
-# Kimek
-# Cuman
-# Kipchak
-# Laktan
-# Karluk
-# Kirghiz
-# Uriankhai
-
-# Bolghar, Khazar, Oghuz, Uyghur, Yughur, Shatuo & Ongud in separate files
+# 1337 scenario: culture-specific history based on the supplied research plan.
+# Historical innovations adapted from D:/Documents/Paradox Interactive/Crusader Kings III/mod/EU5_Modern_Borders_noshape/history/cultures/karluk.txt.
 
 867.1.1 = {
 	discover_innovation = innovation_bannus
 	discover_innovation = innovation_mustering_grounds
-	discover_innovation = innovation_quilted_armor
-	#
 	discover_innovation = innovation_plenary_assemblies
-	#
+	discover_innovation = innovation_quilted_armor
+}
+
+949.12.30 = {
+	discover_innovation = innovation_barracks
+	discover_innovation = innovation_casus_belli
+	discover_innovation = innovation_catapult
+	discover_innovation = innovation_city_planning
+	discover_innovation = innovation_crop_rotation
+	discover_innovation = innovation_currency_01
+	discover_innovation = innovation_gavelkind
+	discover_innovation = innovation_ledger
+	discover_innovation = innovation_motte
+	discover_innovation = innovation_pattern_welding
+	discover_innovation = innovation_prosperity_01
 }
 
 950.1.1 = {
-	# Tribal Innovations
-	discover_innovation = innovation_barracks
-	discover_innovation = innovation_catapult
+	discover_innovation = innovation_war_camels
+	join_era = culture_era_early_medieval
 }
 
-# Mongol imperial era: military organization and administration.
-1240.1.1 = {
-	discover_innovation = innovation_casus_belli
-	discover_innovation = innovation_ledger
-	discover_innovation = innovation_currency_01
+1066.1.1 = {
 	discover_innovation = innovation_arched_saddle
-	discover_innovation = innovation_house_soldiers
-}
-
-# 1337: steppe exchange and documented crossbow transmission.
-1336.11.1 = {
+	discover_innovation = innovation_armilary_sphere
+	discover_innovation = innovation_baliffs
+	discover_innovation = innovation_battlements
+	discover_innovation = innovation_burhs
+	discover_innovation = innovation_chronicle_writing
+	discover_innovation = innovation_coppicing
+	discover_innovation = innovation_craft_ordinances
 	discover_innovation = innovation_currency_02
+	discover_innovation = innovation_heavy_plow
+	discover_innovation = innovation_hereditary_rule
 	discover_innovation = innovation_horseshoes
+	discover_innovation = innovation_house_soldiers
+	discover_innovation = innovation_mangonel
+	discover_innovation = innovation_manorialism
+	discover_innovation = innovation_monasticism
+	discover_innovation = innovation_prospecting
+	discover_innovation = innovation_prosperity_02
+	discover_innovation = innovation_riveted_mail
+	discover_innovation = innovation_royal_prerogative
 }
 
-# 1337: steppe pattern welding.
-1336.12.15 = {
-	discover_innovation = innovation_pattern_welding
+1150.1.1 = {
+	join_era = culture_era_high_medieval
 }
 
+1178.1.1 = {
+	discover_innovation = innovation_castle_baileys
+	discover_innovation = innovation_guilds
+	discover_innovation = innovation_hoardings
+	discover_innovation = innovation_land_grants
+	discover_innovation = innovation_men_at_arms
+	discover_innovation = innovation_merchant_law
+	discover_innovation = innovation_trebuchet
+	discover_innovation = innovation_vaulting
+	discover_innovation = innovation_windmills
+}
 
-# 1337: regional production and exchange traditions.
+1250.1.1 = {
+	discover_innovation = innovation_coat_of_plates
+}
+
 1336.12.20 = {
 	discover_innovation = innovation_carpet_weaving
 	discover_innovation = innovation_damascus_steel
 }
 
+1150.1.2 = {
+	discover_innovation = innovation_divine_right
+	discover_innovation = innovation_currency_03
+	discover_innovation = innovation_prosperity_03
+	discover_innovation = innovation_advanced_bowmaking
+}
