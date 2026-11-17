@@ -520,8 +520,11 @@
 		title:d_equatoria = { set_de_jure_liege_title = title:k_darfur }
 		title:d_sistan = { set_de_jure_liege_title = title:k_makran }
 		title:d_baltic = { set_de_jure_liege_title = title:k_livonia }
+		title:k_livonia = { set_de_jure_liege_title = title:e_west_slavia }
 		title:d_galicia = { set_de_jure_liege_title = title:k_spanish_galicia }
+		title:k_spanish_galicia = { set_de_jure_liege_title = title:e_spain }
 		title:d_levant = { set_de_jure_liege_title = title:k_jerusalem }
+		title:k_jerusalem = { set_de_jure_liege_title = title:e_arabia }
 		#征服者
 		character:tur_orhan = {
 			add_trait = conqueror
