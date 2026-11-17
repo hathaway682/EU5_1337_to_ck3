@@ -837,6 +837,7 @@ mbplus_clergy_serb_011 = {
 
 # MB+ 00_ASIA_TURKIC.txt: 1229940
 mbplus_abbasid_1229940 = {
+	father = mb_genealogy_225000
 	name = "mbplus_abbasid_1229940_name"
 	culture = turkish
 	religion = sunni
@@ -1093,6 +1094,7 @@ mbplus_abbasid_1500044 = {
 
 # MB+ 00_ASIA_TURKIC.txt: 1600005
 mbplus_abbasid_1600005 = {
+	father = mb_genealogy_3042
 	name = "mbplus_abbasid_1600005_name"
 	culture = turkish
 	religion = sunni
@@ -1445,6 +1447,7 @@ mbplus_abbasid_1900887 = {
 
 # MB+ 00_ASIA_MIDDLE_EAST.txt: 216013
 mbplus_abbasid_216013 = {
+	father = mb_genealogy_216020
 	name = "mbplus_abbasid_216013_name"
 	culture = persian
 	religion = mazdayasna
@@ -2690,6 +2693,7 @@ mbplus_cardinal_family_1062616 = {
 
 # MB+ 00_EUROPE_ITALY.txt: 1062630
 mbplus_cardinal_family_1062630 = {
+	father = mb_genealogy_1062629
 	name = "mbplus_cardinal_family_1062630_name"
 	culture = italian
 	religion = catholic
@@ -2749,6 +2753,7 @@ mbplus_cardinal_family_138052 = {
 
 # MB+ 00_EUROPE_FRANCE.txt: 138151
 mbplus_cardinal_family_138151 = {
+	father = mb_genealogy_205554
 	name = "mbplus_cardinal_family_138151_name"
 	culture = occitan
 	religion = catholic
@@ -2896,6 +2901,8 @@ mbplus_cardinal_family_144605 = {
 
 # MB+ 00_EUROPE_IBERIA.txt: 168106
 mbplus_cardinal_family_168106 = {
+	father = mb_genealogy_168104
+	mother = mb_genealogy_visigothic0002
 	name = "mbplus_cardinal_family_168106_name"
 	culture = basque
 	religion = catholic
@@ -2945,6 +2952,7 @@ mbplus_cardinal_family_168120 = {
 
 # MB+ 00_EUROPE_FRANCE.txt: 205535
 mbplus_cardinal_family_205535 = {
+	father = mb_genealogy_223673
 	name = "mbplus_cardinal_family_205535_name"
 	culture = occitan
 	religion = catholic
@@ -2956,6 +2964,7 @@ mbplus_cardinal_family_205535 = {
 
 # MB+ 00_EUROPE_FRANCE.txt: 205556
 mbplus_cardinal_family_205556 = {
+	father = mb_genealogy_205551
 	name = "mbplus_cardinal_family_205556_name"
 	culture = occitan
 	religion = catholic
@@ -3032,6 +3041,7 @@ mbplus_cardinal_family_323 = {
 
 # MB+ 00_EUROPE_FRANCE.txt: 40070
 mbplus_cardinal_family_40070 = {
+	father = mb_genealogy_40068
 	name = "mbplus_cardinal_family_40070_name"
 	culture = french
 	religion = catholic
@@ -3156,6 +3166,8 @@ mbplus_cardinal_family_40198 = {
 
 # MB+ 00_EUROPE_FRANCE.txt: 40203
 mbplus_cardinal_family_40203 = {
+	father = mb_genealogy_40202
+	mother = mb_genealogy_40071
 	name = "mbplus_cardinal_family_40203_name"
 	culture = french
 	religion = catholic
@@ -3179,6 +3191,7 @@ mbplus_cardinal_family_40315 = {
 
 # MB+ 00_EUROPE_FRANCE.txt: 455543
 mbplus_cardinal_family_455543 = {
+	father = mb_genealogy_455542
 	name = "mbplus_cardinal_family_455543_name"
 	culture = occitan
 	religion = catholic
@@ -3212,6 +3225,7 @@ mbplus_cardinal_family_MB_pres_raimond = {
 
 # MB+ 00_EUROPE_IBERIA.txt: basque0097
 mbplus_cardinal_family_basque0097 = {
+	father = mb_genealogy_basque0098
 	name = "mbplus_cardinal_family_basque0097_name"
 	culture = basque
 	religion = catholic
@@ -3277,6 +3291,7 @@ mbplus_cardinal_family_occitan0079 = {
 
 # MB+ 00_EUROPE_ITALY.txt: 1063611
 mbplus_family_1063611 = {
+	father = mb_genealogy_1063610
 	name = "mbplus_family_1063611_name"
 	culture = italian
 	religion = catholic
@@ -3767,6 +3782,7 @@ mbplus_family_1227486 = {
 
 # MB+ 00_EUROPE_BRITISH_ISLES.txt: 1227488
 mbplus_family_1227488 = {
+	father = mb_genealogy_1227487
 	name = "mbplus_family_1227488_name"
 	culture = italian
 	religion = catholic
@@ -3891,6 +3907,8 @@ mbplus_family_1227497 = {
 
 # MB+ 00_EUROPE_ITALY.txt: 1227502
 mbplus_family_1227502 = {
+	father = mb_genealogy_30858
+	mother = mb_genealogy_1167113
 	name = "mbplus_family_1227502_name"
 	culture = italian
 	religion = catholic
@@ -3917,6 +3935,8 @@ mbplus_family_1227923 = {
 
 # MB+ 00_EUROPE_ERE.txt: 125727
 mbplus_family_125727 = {
+	father = epi_nikephoros_i_komnenos_doukas
+	mother = mb_genealogy_125745
 	name = "mbplus_family_125727_name"
 	culture = italian
 	religion = orthodox
@@ -3928,6 +3948,7 @@ mbplus_family_125727 = {
 
 # MB+ 00_EUROPE_ERE.txt: 125731
 mbplus_family_125731 = {
+	father = mb_genealogy_125730
 	name = "mbplus_family_125731_name"
 	culture = italian
 	religion = orthodox
@@ -4012,6 +4033,7 @@ mbplus_family_138102 = {
 
 # MB+ 00_EUROPE_FRANCE.txt: 138103
 mbplus_family_138103 = {
+	father = mb_genealogy_205622
 	name = "mbplus_family_138103_name"
 	culture = italian
 	religion = catholic
@@ -4107,6 +4129,8 @@ mbplus_family_138343 = {
 
 # MB+ 00_EUROPE_IBERIA.txt: 142211
 mbplus_family_142211 = {
+	father = mb_genealogy_142210
+	mother = mb_genealogy_142458
 	name = "mbplus_family_142211_name"
 	culture = italian
 	religion = catholic
@@ -4118,6 +4142,8 @@ mbplus_family_142211 = {
 
 # MB+ 00_EUROPE_IBERIA.txt: 142411
 mbplus_family_142411 = {
+	father = mb_genealogy_142392
+	mother = mb_genealogy_73006
 	name = "mbplus_family_142411_name"
 	culture = italian
 	religion = catholic
@@ -4216,6 +4242,8 @@ mbplus_family_151009 = {
 
 # MB+ 00_EUROPE_BALTOSCANDIA.txt: 151010
 mbplus_family_151010 = {
+	father = mb_genealogy_170022
+	mother = mb_genealogy_201525
 	name = "mbplus_family_151010_name"
 	culture = italian
 	religion = catholic
@@ -4277,6 +4305,7 @@ mbplus_family_151020 = {
 
 # MB+ 00_EUROPE_BALTOSCANDIA.txt: 151021
 mbplus_family_151021 = {
+	father = mb_genealogy_201513
 	name = "mbplus_family_151021_name"
 	culture = italian
 	religion = catholic
@@ -4378,6 +4407,7 @@ mbplus_family_200605 = {
 
 # MB+ 00_EUROPE_BALTOSCANDIA.txt: 201530
 mbplus_family_201530 = {
+	father = mb_genealogy_101538
 	name = "mbplus_family_201530_name"
 	culture = italian
 	religion = catholic
@@ -4592,6 +4622,8 @@ mbplus_family_20330 = {
 
 # MB+ 00_EUROPE_BRITISH_ISLES.txt: 211513
 mbplus_family_211513 = {
+	father = mb_genealogy_211509
+	mother = mb_genealogy_1227538
 	name = "mbplus_family_211513_name"
 	culture = italian
 	religion = catholic
@@ -4770,6 +4802,8 @@ mbplus_family_31444 = {
 
 # MB+ 00_EUROPE_ITALY.txt: 31445
 mbplus_family_31445 = {
+	father = mb_genealogy_211531
+	mother = mb_genealogy_211530
 	name = "mbplus_family_31445_name"
 	culture = italian
 	religion = catholic
@@ -4781,6 +4815,7 @@ mbplus_family_31445 = {
 
 # MB+ 00_EUROPE_ERE.txt: 31446
 mbplus_family_31446 = {
+	father = mb_genealogy_215517
 	name = "mbplus_family_31446_name"
 	culture = italian
 	religion = orthodox
@@ -4877,6 +4912,8 @@ mbplus_family_34167 = {
 
 # MB+ 00_EUROPE_FRANCE.txt: 40091
 mbplus_family_40091 = {
+	father = mb_genealogy_40090
+	mother = mb_genealogy_40097
 	name = "mbplus_family_40091_name"
 	culture = italian
 	religion = catholic
@@ -4888,6 +4925,7 @@ mbplus_family_40091 = {
 
 # MB+ 00_EUROPE_FRANCE.txt: 40294
 mbplus_family_40294 = {
+	father = mb_genealogy_138066
 	name = "mbplus_family_40294_name"
 	culture = italian
 	religion = catholic
@@ -4898,6 +4936,8 @@ mbplus_family_40294 = {
 
 # MB+ 00_EUROPE_FRANCE.txt: 40298
 mbplus_family_40298 = {
+	father = mb_genealogy_40296
+	mother = mb_genealogy_40273
 	name = "mbplus_family_40298_name"
 	culture = italian
 	religion = catholic
@@ -5213,6 +5253,7 @@ mbplus_family_70843 = {
 
 # MB+ 00_EUROPE_ERE.txt: 70844
 mbplus_family_70844 = {
+	father = mb_genealogy_167499
 	name = "mbplus_family_70844_name"
 	culture = italian
 	religion = catholic
@@ -5224,6 +5265,7 @@ mbplus_family_70844 = {
 
 # MB+ 00_EUROPE_ERE.txt: 70847
 mbplus_family_70847 = {
+	father = mb_genealogy_167500
 	name = "mbplus_family_70847_name"
 	culture = italian
 	religion = catholic
@@ -5312,6 +5354,7 @@ mbplus_family_70859 = {
 
 # MB+ 00_EUROPE_BRITISH_ISLES.txt: 70863
 mbplus_family_70863 = {
+	father = mb_genealogy_144183
 	name = "mbplus_family_70863_name"
 	culture = italian
 	religion = catholic
@@ -5399,6 +5442,7 @@ mbplus_family_70874 = {
 
 # MB+ 00_EUROPE_IBERIA.txt: 71742
 mbplus_family_71742 = {
+	father = mb_genealogy_71741
 	name = "mbplus_family_71742_name"
 	culture = italian
 	religion = catholic
@@ -5449,6 +5493,8 @@ mbplus_family_72217 = {
 
 # MB+ 00_EUROPE_IBERIA.txt: 72798
 mbplus_family_72798 = {
+	father = mb_genealogy_72788
+	mother = mb_genealogy_91092
 	name = "mbplus_family_72798_name"
 	culture = italian
 	religion = catholic
@@ -5883,6 +5929,8 @@ mbplus_family_72830 = {
 
 # MB+ 00_EUROPE_IBERIA.txt: 72858
 mbplus_family_72858 = {
+	father = mb_genealogy_208550
+	mother = mb_genealogy_72787
 	name = "mbplus_family_72858_name"
 	culture = italian
 	religion = catholic
@@ -5906,6 +5954,8 @@ mbplus_family_72929 = {
 
 # MB+ 00_EUROPE_IBERIA.txt: 73009
 mbplus_family_73009 = {
+	father = mb_genealogy_72986
+	mother = mb_genealogy_72419
 	name = "mbplus_family_73009_name"
 	culture = italian
 	religion = catholic
@@ -5929,6 +5979,7 @@ mbplus_family_73483 = {
 
 # MB+ 00_EUROPE_GERMANY.txt: 93662
 mbplus_family_93662 = {
+	father = mb_genealogy_93660
 	name = "mbplus_family_93662_name"
 	culture = italian
 	religion = catholic
@@ -6241,6 +6292,7 @@ mbplus_family_MB_luna_teresa = {
 
 # MB+ ecclesiastical.txt: MB_mandagot_sister
 mbplus_family_MB_mandagot_sister = {
+	father = mb_genealogy_MB_mandagot_pierre
 	name = "mbplus_family_MB_mandagot_sister_name"
 	culture = italian
 	religion = catholic
@@ -6486,6 +6538,7 @@ mbplus_family_galician0347 = {
 
 # MB+ 00_EUROPE_ITALY.txt: italian0001
 mbplus_family_italian0001 = {
+	father = mb_genealogy_214095
 	name = "mbplus_family_italian0001_name"
 	culture = italian
 	religion = catholic
@@ -6509,6 +6562,7 @@ mbplus_family_sicilian0026 = {
 
 # MB+ 00_EUROPE_ITALY.txt: sicilian0040
 mbplus_family_sicilian0040 = {
+	father = mb_genealogy_sicilian0037
 	name = "mbplus_family_sicilian0040_name"
 	culture = italian
 	religion = catholic
@@ -7914,6 +7968,7 @@ mb_yuan_Chucai1 = {
 
 # MB+ 217304
 mb_yuan_217304 = {
+	mother = mb_genealogy_MB_Boraqchin
 	name = "mb_yuan_name_217304"
 	culture = mongol
 	religion = tengri_pagan
@@ -8020,6 +8075,7 @@ mb_yuan_1413462 = {
 
 # MB+ tangut0026
 mb_yuan_tangut0026 = {
+	father = mb_genealogy_tangut0025
 	name = "mb_yuan_name_tangut0026"
 	culture = qiang
 	religion = mahayana_faith
@@ -8031,6 +8087,7 @@ mb_yuan_tangut0026 = {
 
 # MB+ 1413461
 mb_yuan_1413461 = {
+	father = mb_genealogy_1413353
 	name = "mb_yuan_name_1413461"
 	culture = khitan
 	religion = mahayana_faith
@@ -8168,6 +8225,7 @@ mb_tribe_217217 = {
 
 # MB+ 217259 (source marks fictional)
 mb_tribe_217259 = {
+	father = mb_genealogy_Jalair16
 	name = "mb_tribe_name_217259"
 	culture = mongol
 	religion = tengri_pagan
@@ -8178,6 +8236,7 @@ mb_tribe_217259 = {
 
 # MB+ 248195
 mb_tribe_248195 = {
+	father = mb_genealogy_248194
 	name = "mb_tribe_name_248195"
 	culture = mongol
 	religion = tengri_pagan
@@ -8198,6 +8257,7 @@ mb_tribe_248212 = {
 
 # MB+ 248232 (source marks fictional)
 mb_tribe_248232 = {
+	father = mb_genealogy_248231
 	name = "mb_tribe_name_248232"
 	culture = mongol
 	religion = tengri_pagan
@@ -8208,6 +8268,7 @@ mb_tribe_248232 = {
 
 # MB+ 217215
 mb_tribe_217215 = {
+	father = mb_genealogy_217214
 	name = "mb_tribe_name_217215"
 	culture = mongol
 	religion = tengri_pagan
@@ -8241,6 +8302,7 @@ mb_city_167167 = {
 
 # MB+ 167166
 mb_city_167166 = {
+	father = mb_genealogy_167165
 	name = "mb_city_name_167166"
 	dynasty = mb_city_warendorp
 	culture = saxon
@@ -8273,6 +8335,7 @@ mb_city_1061419 = {
 
 # MB+ 1061416
 mb_city_1061416 = {
+	father = mb_genealogy_1061413
 	name = "mb_city_name_1061416"
 	dynasty = mb_city_monte_santa_maria
 	culture = italian
@@ -8305,6 +8368,7 @@ mb_city_1062099 = {
 
 # MB+ 1062098
 mb_city_1062098 = {
+	father = mb_genealogy_1062097
 	name = "mb_city_name_1062098"
 	dynasty = mb_city_sasso
 	culture = cisalpine
@@ -8752,6 +8816,7 @@ mb_scand_SEAsiaMMBB294 = {
 }
 
 mb_scand_SEAsiaMMBB293 = {
+	father = mb_genealogy_SEAsiaMMBB292
 	name = "mb_scand_name_SEAsiaMMBB293"
 	culture = sami
 	religion = finnish_pagan
@@ -8781,6 +8846,7 @@ mb_scand_1227894 = {
 }
 
 mb_scand_1227893 = {
+	father = mb_genealogy_1227892
 	name = "mb_scand_name_1227893"
 	culture = danish
 	religion = catholic
@@ -8802,6 +8868,7 @@ mb_scand_143130M6 = {
 }
 
 mb_scand_143130M5 = {
+	father = mb_genealogy_143130M4
 	name = "mb_scand_name_143130M5"
 	culture = norwegian
 	religion = catholic
@@ -8909,6 +8976,7 @@ mb_scand_450780 = {
 }
 
 mb_scand_450782 = {
+	father = mb_genealogy_1290056
 	name = "mb_scand_name_450782"
 	culture = norwegian
 	religion = catholic
@@ -8920,6 +8988,7 @@ mb_scand_450782 = {
 }
 
 mb_scand_450781 = {
+	father = mb_genealogy_1290055
 	name = "mb_scand_name_450781"
 	culture = norwegian
 	religion = catholic
@@ -8941,6 +9010,7 @@ mb_scand_194262M = {
 }
 
 mb_scand_194262 = {
+	father = mb_genealogy_194261
 	name = "mb_scand_name_194262"
 	culture = swedish
 	religion = catholic
@@ -8962,6 +9032,7 @@ mb_scand_1290050M8 = {
 }
 
 mb_scand_1290050M7 = {
+	father = mb_genealogy_1290050M6
 	name = "mb_scand_name_1290050M7"
 	culture = norwegian
 	religion = catholic
@@ -8983,6 +9054,7 @@ mb_scand_194250M1 = {
 }
 
 mb_scand_194250M = {
+	father = mb_genealogy_194250
 	name = "mb_scand_name_194250M"
 	culture = swedish
 	religion = catholic
@@ -9003,6 +9075,7 @@ mb_scand_186001M17 = {
 }
 
 mb_scand_186001M16 = {
+	father = mb_genealogy_186001M15
 	name = "mb_scand_name_186001M16"
 	culture = sami
 	religion = finnish_pagan
@@ -9033,6 +9106,7 @@ mb_scand_487070 = {
 }
 
 mb_scand_143145 = {
+	father = mb_genealogy_143144
 	name = "mb_scand_name_143145"
 	culture = norwegian
 	religion = catholic
@@ -9054,6 +9128,8 @@ mb_scand_1290061M = {
 }
 
 mb_scand_1290061 = {
+	father = mb_genealogy_1290056
+	mother = mb_genealogy_1290060
 	name = "mb_scand_name_1290061"
 	culture = norwegian
 	religion = catholic
@@ -9076,6 +9152,8 @@ mb_scand_450650 = {
 }
 
 mb_scand_450652 = {
+	father = mb_genealogy_450654
+	mother = mb_genealogy_450655
 	name = "mb_scand_name_450652"
 	culture = swedish
 	religion = catholic
@@ -9108,6 +9186,7 @@ mb_scand_93538 = {
 }
 
 mb_scand_93537 = {
+	father = mb_genealogy_93535
 	name = "mb_scand_name_93537"
 	culture = danish
 	religion = catholic
@@ -9158,6 +9237,7 @@ mb_scand_451800 = {
 }
 
 mb_scand_451801 = {
+	father = mb_genealogy_451804
 	name = "mb_scand_name_451801"
 	culture = danish
 	religion = catholic
@@ -9286,6 +9366,7 @@ mb_scand_170024M2 = {
 }
 
 mb_scand_170024M = {
+	father = mb_genealogy_170024
 	name = "mb_scand_name_170024M"
 	culture = swedish
 	religion = catholic
@@ -9309,6 +9390,7 @@ mb_scand_450648 = {
 }
 
 mb_scand_450659 = {
+	mother = mb_genealogy_450653
 	name = "mb_scand_name_450659"
 	culture = swedish
 	religion = catholic
@@ -9321,6 +9403,7 @@ mb_scand_450659 = {
 }
 
 mb_scand_450647 = {
+	father = mb_genealogy_194256
 	name = "mb_scand_name_450647"
 	culture = swedish
 	religion = catholic
@@ -9342,6 +9425,7 @@ mb_scand_450840 = {
 }
 
 mb_scand_450841 = {
+	father = mb_genealogy_194226
 	name = "mb_scand_name_450841"
 	culture = swedish
 	religion = catholic
@@ -9415,6 +9499,8 @@ mb_scand_450690 = {
 }
 
 mb_scand_450833 = {
+	father = mb_genealogy_450830
+	mother = mb_genealogy_450831
 	name = "mb_scand_name_450833"
 	culture = swedish
 	religion = catholic
@@ -9447,6 +9533,7 @@ mb_scand_194317M3 = {
 }
 
 mb_scand_194317M2 = {
+	father = mb_genealogy_194317M1
 	name = "mb_scand_name_194317M2"
 	culture = norwegian
 	religion = catholic
@@ -9468,6 +9555,7 @@ mb_scand_194281M = {
 }
 
 mb_scand_194281 = {
+	father = mb_genealogy_194280
 	name = "mb_scand_name_194281"
 	culture = swedish
 	religion = catholic
@@ -9489,6 +9577,7 @@ mb_scand_Horn1 = {
 }
 
 mb_scand_194232 = {
+	father = mb_genealogy_194231
 	name = "mb_scand_name_194232"
 	culture = swedish
 	religion = catholic
@@ -9548,6 +9637,7 @@ mb_scand_194271M3 = {
 }
 
 mb_scand_194271M2 = {
+	father = mb_genealogy_194271M1
 	name = "mb_scand_name_194271M2"
 	culture = swedish
 	religion = catholic
@@ -9580,6 +9670,7 @@ mb_scand_450612 = {
 }
 
 mb_scand_450611 = {
+	father = mb_genealogy_450604
 	name = "mb_scand_name_450611"
 	culture = swedish
 	religion = catholic
@@ -9602,6 +9693,8 @@ mb_scand_450727 = {
 }
 
 mb_scand_450723 = {
+	father = mb_genealogy_450724
+	mother = mb_genealogy_450725
 	name = "mb_scand_name_450723"
 	culture = swedish
 	religion = catholic
@@ -9613,6 +9706,8 @@ mb_scand_450723 = {
 }
 
 mb_scand_450720 = {
+	father = mb_genealogy_450721
+	mother = mb_genealogy_450722
 	name = "mb_scand_name_450720"
 	culture = swedish
 	religion = catholic
@@ -9745,6 +9840,8 @@ mb_scand_170009 = {
 }
 
 mb_scand_453061 = {
+	father = mb_genealogy_453512
+	mother = mb_genealogy_203543
 	name = "mb_scand_name_453061"
 	culture = scottish
 	religion = catholic
@@ -9756,6 +9853,8 @@ mb_scand_453061 = {
 }
 
 mb_scand_6906 = {
+	father = mb_genealogy_6905
+	mother = mb_genealogy_6904
 	name = "mb_scand_name_6906"
 	culture = norwegian
 	religion = catholic
@@ -9818,6 +9917,7 @@ mb_scand_487072 = {
 
 # MB+ HuianHuHanMB51
 mb_yuan_HuianHuHanMB51 = {
+	father = mb_genealogy_HuianHuHanMB45
 	name = "mb_yuan_name_HuianHuHanMB51"
 	dynasty = mb_yuan_dynasty_hu_liang
 	culture = han
@@ -9828,6 +9928,7 @@ mb_yuan_HuianHuHanMB51 = {
 
 # MB+ zhuojun_zhao_541
 mb_yuan_zhuojun_zhao_541 = {
+	father = mb_genealogy_zhuojun_zhao_519
 	name = "mb_yuan_name_zhuojun_zhao_541"
 	dynasty = mb_yuan_county_dynasty_zhao_8D99_1
 	culture = han
@@ -9838,6 +9939,7 @@ mb_yuan_zhuojun_zhao_541 = {
 
 # MB+ GuianHanHanMB28
 mb_yuan_GuianHanHanMB28 = {
+	father = mb_genealogy_GuianHanHanMB22
 	name = "mb_yuan_name_GuianHanHanMB28"
 	dynasty = mb_yuan_county_dynasty_peiguo_han_dyn
 	culture = han
@@ -9848,6 +9950,7 @@ mb_yuan_GuianHanHanMB28 = {
 
 # MB+ TangTaiyueHanMB31
 mb_yuan_TangTaiyueHanMB31 = {
+	father = mb_genealogy_TangTaiyueHanMB22
 	name = "mb_yuan_name_TangTaiyueHanMB31"
 	dynasty = mb_yuan_county_dynasty_1000050373
 	culture = han
@@ -9858,6 +9961,7 @@ mb_yuan_TangTaiyueHanMB31 = {
 
 # MB+ nanchang_chen_022M4
 mb_yuan_nanchang_chen_022M4 = {
+	father = mb_genealogy_nanchang_chen_022M3
 	name = "mb_yuan_name_nanchang_chen_022M4"
 	dynasty = mb_yuan_county_dynasty_chen_9673_101
 	culture = han
@@ -9868,6 +9972,7 @@ mb_yuan_nanchang_chen_022M4 = {
 
 # MB+ MeishanJiaHanMB5
 mb_yuan_MeishanJiaHanMB5 = {
+	father = mb_genealogy_MeishanJiaHanMB4
 	name = "mb_yuan_name_MeishanJiaHanMB5"
 	dynasty = mb_yuan_county_dynasty_jia_8CC8_13
 	culture = han
@@ -9878,6 +9983,7 @@ mb_yuan_MeishanJiaHanMB5 = {
 
 # MB+ nanan_liu_014M
 mb_yuan_nanan_liu_014M = {
+	father = mb_genealogy_nanan_liu_014
 	name = "mb_yuan_name_nanan_liu_014M"
 	dynasty = mb_yuan_county_dynasty_peiguo_han_dyn
 	culture = han
@@ -9888,6 +9994,7 @@ mb_yuan_nanan_liu_014M = {
 
 # MB+ LuoyuanYuHanMB16
 mb_yuan_LuoyuanYuHanMB16 = {
+	father = mb_genealogy_LuoyuanYuHanMB9
 	name = "mb_yuan_name_LuoyuanYuHanMB16"
 	dynasty = mb_yuan_county_dynasty_luoyuan_yu_dyn
 	culture = han
@@ -9898,6 +10005,7 @@ mb_yuan_LuoyuanYuHanMB16 = {
 
 # MB+ XinchangXiHanMB19
 mb_yuan_XinchangXiHanMB19 = {
+	father = mb_genealogy_XinchangXiHanMB10
 	name = "mb_yuan_name_XinchangXiHanMB19"
 	dynasty = mb_yuan_county_dynasty_shi_53F2_1
 	culture = han
@@ -9908,6 +10016,7 @@ mb_yuan_XinchangXiHanMB19 = {
 
 # MB+ WujunWuHanMB10
 mb_yuan_WujunWuHanMB10 = {
+	father = mb_genealogy_WujunWuHanMB8
 	name = "mb_yuan_name_WujunWuHanMB10"
 	dynasty = mb_yuan_county_dynasty_wujun_lu_dyn
 	culture = han
@@ -9918,6 +10027,7 @@ mb_yuan_WujunWuHanMB10 = {
 
 # MB+ BohaiQiuHanMB41
 mb_yuan_BohaiQiuHanMB41 = {
+	father = mb_genealogy_BohaiQiuHanMB33
 	name = "mb_yuan_name_BohaiQiuHanMB41"
 	dynasty = mb_yuan_county_dynasty_changli_pishina_dyn
 	culture = han
@@ -9928,6 +10038,7 @@ mb_yuan_BohaiQiuHanMB41 = {
 
 # MB+ YongquiSongHanMB30
 mb_yuan_YongquiSongHanMB30 = {
+	father = mb_genealogy_YongquiSongHanMB19
 	name = "mb_yuan_name_YongquiSongHanMB30"
 	dynasty = mb_yuan_county_dynasty_song_5B8B_1
 	culture = han
@@ -9938,6 +10049,7 @@ mb_yuan_YongquiSongHanMB30 = {
 
 # MB+ zichuan_wang_006M6
 mb_yuan_zichuan_wang_006M6 = {
+	father = mb_genealogy_zichuan_wang_006M5
 	name = "mb_yuan_name_zichuan_wang_006M6"
 	dynasty = mb_yuan_county_dynasty_wang_6C6A_12
 	culture = han
@@ -9948,6 +10060,7 @@ mb_yuan_zichuan_wang_006M6 = {
 
 # MB+ FengqiuZhaoHanMB58
 mb_yuan_FengqiuZhaoHanMB58 = {
+	father = mb_genealogy_FengqiuZhaoHanMB55
 	name = "mb_yuan_name_FengqiuZhaoHanMB58"
 	dynasty = mb_yuan_county_dynasty_zhao_8D99_1
 	culture = han
@@ -9958,6 +10071,7 @@ mb_yuan_FengqiuZhaoHanMB58 = {
 
 # MB+ LuoyangJiaHanMB40
 mb_yuan_LuoyangJiaHanMB40 = {
+	father = mb_genealogy_LuoyangJiaHanMB34
 	name = "mb_yuan_name_LuoyangJiaHanMB40"
 	dynasty = mb_yuan_county_dynasty_jia_8CC8_13
 	culture = han
@@ -9968,6 +10082,7 @@ mb_yuan_LuoyangJiaHanMB40 = {
 
 # MB+ WenxianGuoHanMB46
 mb_yuan_WenxianGuoHanMB46 = {
+	father = mb_genealogy_WenxianGuoHanMB39
 	name = "mb_yuan_name_WenxianGuoHanMB46"
 	dynasty = mb_yuan_county_dynasty_1000050364
 	culture = han
@@ -9978,6 +10093,7 @@ mb_yuan_WenxianGuoHanMB46 = {
 
 # MB+ WanquanXueHanMB45
 mb_yuan_WanquanXueHanMB45 = {
+	father = mb_genealogy_WanquanXueHanMB39
 	name = "mb_yuan_name_WanquanXueHanMB45"
 	dynasty = mb_yuan_county_dynasty_wanquan_xue_dyn
 	culture = han
@@ -9988,6 +10104,7 @@ mb_yuan_WanquanXueHanMB45 = {
 
 # MB+ HuayinZhouHanMB22
 mb_yuan_HuayinZhouHanMB22 = {
+	father = mb_genealogy_HuayinZhouHanMB10
 	name = "mb_yuan_name_HuayinZhouHanMB22"
 	dynasty = mb_yuan_county_dynasty_zhou_5468_10
 	culture = han
@@ -9998,6 +10115,7 @@ mb_yuan_HuayinZhouHanMB22 = {
 
 # MB+ DeAnWangHanMB10
 mb_yuan_DeAnWangHanMB10 = {
+	father = mb_genealogy_DeAnWangHanMB4
 	name = "mb_yuan_name_DeAnWangHanMB10"
 	dynasty = mb_yuan_county_dynasty_wang_6C6A_12
 	culture = han
@@ -10008,6 +10126,7 @@ mb_yuan_DeAnWangHanMB10 = {
 
 # MB+ lingshou_han_053M5
 mb_yuan_lingshou_han_053M5 = {
+	father = mb_genealogy_lingshou_han_053M4
 	name = "mb_yuan_name_lingshou_han_053M5"
 	dynasty = mb_yuan_county_dynasty_han_97D3_12
 	culture = han
@@ -10018,6 +10137,7 @@ mb_yuan_lingshou_han_053M5 = {
 
 # MB+ HouguanLuHanMB39
 mb_yuan_HouguanLuHanMB39 = {
+	father = mb_genealogy_HouguanLuHanMB33
 	name = "mb_yuan_name_HouguanLuHanMB39"
 	dynasty = mb_yuan_county_dynasty_wujun_lu_dyn
 	culture = han
@@ -10028,6 +10148,7 @@ mb_yuan_HouguanLuHanMB39 = {
 
 # MB+ leping_xiang_015M5
 mb_yuan_leping_xiang_015M5 = {
+	father = mb_genealogy_leping_xiang_015M4
 	name = "mb_yuan_name_leping_xiang_015M5"
 	dynasty = mb_yuan_county_dynasty_leping_xiang_dyn
 	culture = han
@@ -10038,6 +10159,7 @@ mb_yuan_leping_xiang_015M5 = {
 
 # MB+ WuxianFanHanMB24
 mb_yuan_WuxianFanHanMB24 = {
+	father = mb_genealogy_WuxianFanHanMB16
 	name = "mb_yuan_name_WuxianFanHanMB24"
 	dynasty = mb_yuan_county_dynasty_runan_fan_dyn
 	culture = han
@@ -10048,6 +10170,7 @@ mb_yuan_WuxianFanHanMB24 = {
 
 # MB+ RuGaoWangHanMB34
 mb_yuan_RuGaoWangHanMB34 = {
+	father = mb_genealogy_RuGaoWangHanMB29
 	name = "mb_yuan_name_RuGaoWangHanMB34"
 	dynasty = mb_yuan_county_dynasty_rugao_wang_dyn
 	culture = han
@@ -10058,6 +10181,7 @@ mb_yuan_RuGaoWangHanMB34 = {
 
 # MB+ jiangling_sun_009M5
 mb_yuan_jiangling_sun_009M5 = {
+	father = mb_genealogy_jiangling_sun_009M4
 	name = "mb_yuan_name_jiangling_sun_009M5"
 	dynasty = mb_yuan_county_dynasty_sun_5B6B_10
 	culture = tujia
@@ -10068,6 +10192,7 @@ mb_yuan_jiangling_sun_009M5 = {
 
 # MB+ SEAsiaMMB256
 mb_yuan_SEAsiaMMB256 = {
+	father = mb_genealogy_SEAsiaMMB255
 	name = "mb_yuan_name_SEAsiaMMB256"
 	culture = tujia
 	religion = bimoism
@@ -10077,6 +10202,7 @@ mb_yuan_SEAsiaMMB256 = {
 
 # MB+ SanyasngZhangHanMB25
 mb_yuan_SanyasngZhangHanMB25 = {
+	father = mb_genealogy_SanyasngZhangHanMB24
 	name = "mb_yuan_name_SanyasngZhangHanMB25"
 	dynasty = mb_yuan_county_dynasty_zhang_5F35_100
 	culture = han
@@ -10087,6 +10213,7 @@ mb_yuan_SanyasngZhangHanMB25 = {
 
 # MB+ Ming1
 mb_yuan_Ming1 = {
+	father = mb_genealogy_zhu_chuyi_1
 	name = "mb_yuan_name_Ming1"
 	dynasty = rtr_ming_zhu_dynasty
 	culture = han
@@ -10097,6 +10224,7 @@ mb_yuan_Ming1 = {
 
 # MB+ NanfengZengHanMB18
 mb_yuan_NanfengZengHanMB18 = {
+	father = mb_genealogy_NanfengZengHanMB10
 	name = "mb_yuan_name_NanfengZengHanMB18"
 	dynasty = mb_yuan_county_dynasty_zeng_66FE_1
 	culture = han
@@ -10108,6 +10236,7 @@ mb_yuan_NanfengZengHanMB18 = {
 
 # MB+ QiantangYuHanMB27
 mb_yuan_QiantangYuHanMB27 = {
+	father = mb_genealogy_QiantangYuHanMB21
 	name = "mb_yuan_name_QiantangYuHanMB27"
 	dynasty = mb_yuan_county_dynasty_shangrao_yu_dyn
 	culture = han
@@ -10119,6 +10248,7 @@ mb_yuan_QiantangYuHanMB27 = {
 
 # MB+ 1803227MM2
 mb_yuan_1803227MM2 = {
+	father = mb_genealogy_1803227MM
 	name = "mb_yuan_name_1803227MM2"
 	dynasty = mb_yuan_county_dynasty_wang_6C6A_12
 	culture = han
@@ -10129,6 +10259,7 @@ mb_yuan_1803227MM2 = {
 
 # MB+ ChonganLiuHanMB37
 mb_yuan_ChonganLiuHanMB37 = {
+	father = mb_genealogy_ChonganLiuHanMB30
 	name = "mb_yuan_name_ChonganLiuHanMB37"
 	dynasty = mb_yuan_county_dynasty_peiguo_han_dyn
 	culture = han
@@ -10139,6 +10270,7 @@ mb_yuan_ChonganLiuHanMB37 = {
 
 # MB+ XianyouCaiHanMB24
 mb_yuan_XianyouCaiHanMB24 = {
+	father = mb_genealogy_XianyouCaiHanMB16
 	name = "mb_yuan_name_XianyouCaiHanMB24"
 	dynasty = mb_yuan_county_dynasty_chenliu_cai_dyn
 	culture = han
@@ -10150,6 +10282,7 @@ mb_yuan_XianyouCaiHanMB24 = {
 
 # MB+ JiangningQinHanMB33
 mb_yuan_JiangningQinHanMB33 = {
+	father = mb_genealogy_JiangningQinHanMB27
 	name = "mb_yuan_name_JiangningQinHanMB33"
 	dynasty = mb_yuan_county_dynasty_khitan_admin_fic_qin_79e6
 	culture = han
@@ -10160,6 +10293,7 @@ mb_yuan_JiangningQinHanMB33 = {
 
 # MB+ linan_qian_229M5
 mb_yuan_linan_qian_229M5 = {
+	father = mb_genealogy_linan_qian_229M4
 	name = "mb_yuan_name_linan_qian_229M5"
 	dynasty = mb_yuan_county_dynasty_linan_qian_dyn
 	culture = han
@@ -10171,6 +10305,7 @@ mb_yuan_linan_qian_229M5 = {
 
 # MB+ taiyuan_murong_030M5
 mb_yuan_taiyuan_murong_030M5 = {
+	father = mb_genealogy_taiyuan_murong_030M4
 	name = "mb_yuan_name_taiyuan_murong_030M5"
 	dynasty = mb_yuan_county_dynasty_105818
 	culture = han
@@ -10181,6 +10316,7 @@ mb_yuan_taiyuan_murong_030M5 = {
 
 # MB+ anxi_du_036M8
 mb_yuan_anxi_du_036M8 = {
+	father = mb_genealogy_anxi_du_036M7
 	name = "mb_yuan_name_anxi_du_036M8"
 	dynasty = mb_yuan_county_dynasty_jingzhao_du_dyn
 	culture = han
@@ -10191,6 +10327,7 @@ mb_yuan_anxi_du_036M8 = {
 
 # MB+ XianyouFuHanMB22
 mb_yuan_XianyouFuHanMB22 = {
+	father = mb_genealogy_XianyouFuHanMB10
 	name = "mb_yuan_name_XianyouFuHanMB22"
 	dynasty = mb_yuan_county_dynasty_fu_5085_3
 	culture = han
@@ -10201,6 +10338,7 @@ mb_yuan_XianyouFuHanMB22 = {
 
 # MB+ LinchuanWangHanMB34
 mb_yuan_LinchuanWangHanMB34 = {
+	father = mb_genealogy_LinchuanWangHanMB26
 	name = "mb_yuan_name_LinchuanWangHanMB34"
 	dynasty = mb_yuan_county_dynasty_linchuan_wang_dyn
 	culture = han
@@ -10211,6 +10349,7 @@ mb_yuan_LinchuanWangHanMB34 = {
 
 # MB+ hongnong_yang_491M8
 mb_yuan_hongnong_yang_491M8 = {
+	father = mb_genealogy_hongnong_yang_491M7
 	name = "mb_yuan_name_hongnong_yang_491M8"
 	dynasty = mb_yuan_county_dynasty_hongnong_yang_dyn
 	culture = han
@@ -10222,6 +10361,7 @@ mb_yuan_hongnong_yang_491M8 = {
 
 # MB+ ChengjiLiuHanMB7
 mb_yuan_ChengjiLiuHanMB7 = {
+	father = mb_genealogy_ChengjiLiuHanMB6
 	name = "mb_yuan_name_ChengjiLiuHanMB7"
 	dynasty = mb_yuan_county_dynasty_peiguo_han_dyn
 	culture = han
@@ -10232,6 +10372,7 @@ mb_yuan_ChengjiLiuHanMB7 = {
 
 # MB+ XinyuYangHanMB22
 mb_yuan_XinyuYangHanMB22 = {
+	father = mb_genealogy_XinyuYangHanMB16
 	name = "mb_yuan_name_XinyuYangHanMB22"
 	dynasty = mb_yuan_county_dynasty_xinyu_yang_dyn
 	culture = han
@@ -10242,6 +10383,7 @@ mb_yuan_XinyuYangHanMB22 = {
 
 # MB+ DiaoHanMB9
 mb_yuan_DiaoHanMB9 = {
+	father = mb_genealogy_DiaoHanMB8
 	name = "mb_yuan_name_DiaoHanMB9"
 	dynasty = mb_yuan_county_dynasty_bohai_diao_dyn
 	culture = han
@@ -10252,6 +10394,7 @@ mb_yuan_DiaoHanMB9 = {
 
 # MB+ ChengwuPangHanMB30
 mb_yuan_ChengwuPangHanMB30 = {
+	father = mb_genealogy_ChengwuPangHanMB24
 	name = "mb_yuan_name_ChengwuPangHanMB30"
 	dynasty = mb_yuan_county_dynasty_chengwu_pang_dyn
 	culture = han
@@ -10262,6 +10405,7 @@ mb_yuan_ChengwuPangHanMB30 = {
 
 # MB+ ShiJurchenHanMB25
 mb_yuan_ShiJurchenHanMB25 = {
+	father = mb_genealogy_ShiJurchenHanMB17
 	name = "mb_yuan_name_ShiJurchenHanMB25"
 	dynasty = mb_yuan_county_dynasty_jin_han_shi2
 	culture = han
@@ -10273,6 +10417,7 @@ mb_yuan_ShiJurchenHanMB25 = {
 
 # MB+ ShangdangMiaoHanMB44
 mb_yuan_ShangdangMiaoHanMB44 = {
+	father = mb_genealogy_ShangdangMiaoHanMB41
 	name = "mb_yuan_name_ShangdangMiaoHanMB44"
 	dynasty = mb_yuan_county_dynasty_1000050261
 	culture = han
@@ -10283,6 +10428,7 @@ mb_yuan_ShangdangMiaoHanMB44 = {
 
 # MB+ wannian_li_005M0
 mb_yuan_wannian_li_005M0 = {
+	father = mb_genealogy_wannian_li_005M8
 	name = "mb_yuan_name_wannian_li_005M0"
 	dynasty = mb_yuan_county_dynasty_li_674E_87
 	culture = han
@@ -10293,6 +10439,7 @@ mb_yuan_wannian_li_005M0 = {
 
 # MB+ JurchenPucha61
 mb_yuan_JurchenPucha61 = {
+	father = mb_genealogy_JurchenPucha55
 	name = "mb_yuan_name_JurchenPucha61"
 	dynasty = mb_yuan_county_dynasty_pucha_alchuqu
 	culture = jurchen
@@ -10304,6 +10451,7 @@ mb_yuan_JurchenPucha61 = {
 
 # MB+ LiuMongols7
 mb_yuan_LiuMongols7 = {
+	father = mb_genealogy_LiuMongols6
 	name = "mb_yuan_name_LiuMongols7"
 	dynasty = mb_yuan_county_dynasty_jin_han_liu1
 	culture = han
@@ -10315,6 +10463,7 @@ mb_yuan_LiuMongols7 = {
 
 # MB+ Hachiun4
 mb_yuan_Hachiun4 = {
+	father = mb_genealogy_Hachiun3
 	name = "mb_yuan_name_Hachiun4"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10325,6 +10474,7 @@ mb_yuan_Hachiun4 = {
 
 # MB+ XiaoKhitai10
 mb_yuan_XiaoKhitai10 = {
+	father = mb_genealogy_XiaoKhitai9
 	name = "mb_yuan_name_XiaoKhitai10"
 	dynasty = mb_yuan_county_dynasty_1000049119
 	culture = khitan
@@ -10336,6 +10486,7 @@ mb_yuan_XiaoKhitai10 = {
 
 # MB+ KublaiLine1
 mb_yuan_KublaiLine1 = {
+	father = kublai_khan
 	name = "mb_yuan_name_KublaiLine1"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10346,6 +10497,7 @@ mb_yuan_KublaiLine1 = {
 
 # MB+ OnggiradDes4
 mb_yuan_OnggiradDes4 = {
+	father = mb_genealogy_OnggiradDes3
 	name = "mb_yuan_name_OnggiradDes4"
 	dynasty = mb_yuan_county_dynasty_101946
 	culture = mongol
@@ -10356,6 +10508,7 @@ mb_yuan_OnggiradDes4 = {
 
 # MB+ Mongke3
 mb_yuan_Mongke3 = {
+	father = mb_genealogy_Mongke2
 	name = "mb_yuan_name_Mongke3"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10366,6 +10519,7 @@ mb_yuan_Mongke3 = {
 
 # MB+ Hulegu3
 mb_yuan_Hulegu3 = {
+	father = mb_genealogy_Hulegu2
 	name = "mb_yuan_name_Hulegu3"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10376,6 +10530,7 @@ mb_yuan_Hulegu3 = {
 
 # MB+ JuluGuoHanMB29
 mb_yuan_JuluGuoHanMB29 = {
+	father = mb_genealogy_JuluGuoHanMB26
 	name = "mb_yuan_name_JuluGuoHanMB29"
 	dynasty = mb_yuan_county_dynasty_1000050364
 	culture = han
@@ -10396,6 +10551,7 @@ mb_yuan_SEAsiaMMB289 = {
 
 # MB+ JurchenYeonHanMB18
 mb_yuan_JurchenYeonHanMB18 = {
+	father = mb_genealogy_JurchenYeonHanMB10
 	name = "mb_yuan_name_JurchenYeonHanMB18"
 	dynasty = mb_yuan_county_dynasty_jin_han_yan
 	culture = han
@@ -10407,6 +10563,7 @@ mb_yuan_JurchenYeonHanMB18 = {
 
 # MB+ Kolgen4
 mb_yuan_Kolgen4 = {
+	father = mb_genealogy_Kolgen3
 	name = "mb_yuan_name_Kolgen4"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10417,6 +10574,7 @@ mb_yuan_Kolgen4 = {
 
 # MB+ JurchenLiiHanMB4
 mb_yuan_JurchenLiiHanMB4 = {
+	father = mb_genealogy_JurchenLiiHanMB3
 	name = "mb_yuan_name_JurchenLiiHanMB4"
 	dynasty = mb_yuan_county_dynasty_jin_han_li4
 	culture = han
@@ -10428,6 +10586,7 @@ mb_yuan_JurchenLiiHanMB4 = {
 
 # MB+ QingfengChaoHanMB14
 mb_yuan_QingfengChaoHanMB14 = {
+	father = mb_genealogy_QingfengChaoHanMB9
 	name = "mb_yuan_name_QingfengChaoHanMB14"
 	dynasty = mb_yuan_county_dynasty_chao_5DE2_1
 	culture = han
@@ -10438,6 +10597,7 @@ mb_yuan_QingfengChaoHanMB14 = {
 
 # MB+ JinMongols12
 mb_yuan_JinMongols12 = {
+	father = mb_genealogy_JinMongols11
 	name = "mb_yuan_name_JinMongols12"
 	dynasty = mb_yuan_county_dynasty_jin_han_shi1
 	culture = han
@@ -10449,6 +10609,7 @@ mb_yuan_JinMongols12 = {
 
 # MB+ Qasar18
 mb_yuan_Qasar18 = {
+	father = mb_genealogy_Qasar16
 	name = "mb_yuan_name_Qasar18"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10460,6 +10621,7 @@ mb_yuan_Qasar18 = {
 
 # MB+ AriqBoke3
 mb_yuan_AriqBoke3 = {
+	father = mb_genealogy_AriqBoke2
 	name = "mb_yuan_name_AriqBoke3"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10470,6 +10632,7 @@ mb_yuan_AriqBoke3 = {
 
 # MB+ Khorachar4
 mb_yuan_Khorachar4 = {
+	father = mb_genealogy_Khorachar3
 	name = "mb_yuan_name_Khorachar4"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10480,6 +10643,7 @@ mb_yuan_Khorachar4 = {
 
 # MB+ ongud0028
 mb_yuan_ongud0028 = {
+	father = mb_genealogy_ongud0027
 	name = "mb_yuan_name_ongud0028"
 	dynasty = mb_yuan_county_dynasty_2003102
 	culture = ongud
@@ -10490,6 +10654,7 @@ mb_yuan_ongud0028 = {
 
 # MB+ Sarban7
 mb_yuan_Sarban7 = {
+	father = mb_genealogy_Sarban6
 	name = "mb_yuan_name_Sarban7"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10500,6 +10665,7 @@ mb_yuan_Sarban7 = {
 
 # MB+ Sarban12
 mb_yuan_Sarban12 = {
+	father = mb_genealogy_Sarban11
 	name = "mb_yuan_name_Sarban12"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10511,6 +10677,7 @@ mb_yuan_Sarban12 = {
 
 # MB+ Sarban3
 mb_yuan_Sarban3 = {
+	father = mb_genealogy_Sarban2
 	name = "mb_yuan_name_Sarban3"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10521,6 +10688,7 @@ mb_yuan_Sarban3 = {
 
 # MB+ Tangad6
 mb_yuan_Tangad6 = {
+	father = mb_genealogy_Tangad3
 	name = "mb_yuan_name_Tangad6"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10531,6 +10699,7 @@ mb_yuan_Tangad6 = {
 
 # MB+ JurchenFuca54
 mb_yuan_JurchenFuca54 = {
+	father = mb_genealogy_JurchenFuca52
 	name = "mb_yuan_name_JurchenFuca54"
 	dynasty = mb_yuan_county_dynasty_jurchen_fuca_dyn
 	culture = jurchen
@@ -10542,6 +10711,7 @@ mb_yuan_JurchenFuca54 = {
 
 # MB+ YifengZhangHanMB10
 mb_yuan_YifengZhangHanMB10 = {
+	father = mb_genealogy_YifengZhangHanMB8
 	name = "mb_yuan_name_YifengZhangHanMB10"
 	dynasty = mb_yuan_county_dynasty_yifeng_zhang_dyn
 	culture = han
@@ -10552,6 +10722,7 @@ mb_yuan_YifengZhangHanMB10 = {
 
 # MB+ Sarban10
 mb_yuan_Sarban10 = {
+	father = mb_genealogy_Sarban9
 	name = "mb_yuan_name_Sarban10"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10562,6 +10733,7 @@ mb_yuan_Sarban10 = {
 
 # MB+ Tangad8
 mb_yuan_Tangad8 = {
+	father = mb_genealogy_Tangad5
 	name = "mb_yuan_name_Tangad8"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10572,6 +10744,7 @@ mb_yuan_Tangad8 = {
 
 # MB+ JurchenYangHanMB17
 mb_yuan_JurchenYangHanMB17 = {
+	father = mb_genealogy_JurchenYangHanMB10
 	name = "mb_yuan_name_JurchenYangHanMB17"
 	dynasty = mb_yuan_county_dynasty_jin_han_yang
 	culture = han
@@ -10583,6 +10756,7 @@ mb_yuan_JurchenYangHanMB17 = {
 
 # MB+ Tangad7
 mb_yuan_Tangad7 = {
+	father = mb_genealogy_Tangad4
 	name = "mb_yuan_name_Tangad7"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10593,6 +10767,7 @@ mb_yuan_Tangad7 = {
 
 # MB+ JurchenSheyen56
 mb_yuan_JurchenSheyen56 = {
+	father = mb_genealogy_JurchenSheyen48
 	name = "mb_yuan_name_JurchenSheyen56"
 	dynasty = mb_yuan_county_dynasty_1051112
 	culture = jurchen
@@ -10604,6 +10779,7 @@ mb_yuan_JurchenSheyen56 = {
 
 # MB+ Daridai5
 mb_yuan_Daridai5 = {
+	father = mb_genealogy_Daridai4
 	name = "mb_yuan_name_Daridai5"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10614,6 +10790,7 @@ mb_yuan_Daridai5 = {
 
 # MB+ Qasar3
 mb_yuan_Qasar3 = {
+	father = mb_genealogy_Qasar2
 	name = "mb_yuan_name_Qasar3"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10624,6 +10801,7 @@ mb_yuan_Qasar3 = {
 
 # MB+ Temuge8
 mb_yuan_Temuge8 = {
+	father = mb_genealogy_Temuge7
 	name = "mb_yuan_name_Temuge8"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10634,6 +10812,7 @@ mb_yuan_Temuge8 = {
 
 # MB+ Temuge4
 mb_yuan_Temuge4 = {
+	father = mb_genealogy_Temuge3
 	name = "mb_yuan_name_Temuge4"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10644,6 +10823,7 @@ mb_yuan_Temuge4 = {
 
 # MB+ JurchenJietugudan70
 mb_yuan_JurchenJietugudan70 = {
+	father = mb_genealogy_JurchenJietugudan64
 	name = "mb_yuan_name_JurchenJietugudan70"
 	dynasty = mb_yuan_county_dynasty_jietugudan
 	culture = jurchen
@@ -10655,6 +10835,7 @@ mb_yuan_JurchenJietugudan70 = {
 
 # MB+ JadranChina5
 mb_yuan_JadranChina5 = {
+	father = mb_genealogy_JadranChina4
 	name = "mb_yuan_name_JadranChina5"
 	dynasty = mb_yuan_county_dynasty_1040066
 	culture = mongol
@@ -10665,6 +10846,7 @@ mb_yuan_JadranChina5 = {
 
 # MB+ Jurchedei19
 mb_yuan_Jurchedei19 = {
+	father = mb_genealogy_Jurchedei18
 	name = "mb_yuan_name_Jurchedei19"
 	dynasty = mb_yuan_county_dynasty_UruudMongol
 	culture = mongol
@@ -10675,6 +10857,7 @@ mb_yuan_Jurchedei19 = {
 
 # MB+ Ongud24
 mb_yuan_Ongud24 = {
+	father = mb_genealogy_Ongud22
 	name = "mb_yuan_name_Ongud24"
 	dynasty = mb_yuan_county_dynasty_OngudMon
 	culture = ongud
@@ -10685,6 +10868,7 @@ mb_yuan_Ongud24 = {
 
 # MB+ BoyeHanHanMB28
 mb_yuan_BoyeHanHanMB28 = {
+	father = mb_genealogy_BoyeHanHanMB24
 	name = "mb_yuan_name_BoyeHanHanMB28"
 	dynasty = mb_yuan_county_dynasty_han_97D3_12
 	culture = han
@@ -10695,6 +10879,7 @@ mb_yuan_BoyeHanHanMB28 = {
 
 # MB+ AlchiOng5
 mb_yuan_AlchiOng5 = {
+	father = mb_genealogy_AlchiOng4
 	name = "mb_yuan_name_AlchiOng5"
 	dynasty = mb_yuan_county_dynasty_101946
 	culture = mongol
@@ -10705,6 +10890,7 @@ mb_yuan_AlchiOng5 = {
 
 # MB+ Manghud10
 mb_yuan_Manghud10 = {
+	father = mb_genealogy_Manghud8
 	name = "mb_yuan_name_Manghud10"
 	dynasty = mb_yuan_county_dynasty_Manghud
 	culture = mongol
@@ -10715,6 +10901,7 @@ mb_yuan_Manghud10 = {
 
 # MB+ Temuge12
 mb_yuan_Temuge12 = {
+	father = mb_genealogy_Temuge11
 	name = "mb_yuan_name_Temuge12"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10725,6 +10912,7 @@ mb_yuan_Temuge12 = {
 
 # MB+ AnyangDuHanMB50
 mb_yuan_AnyangDuHanMB50 = {
+	father = mb_genealogy_AnyangDuHanMB39
 	name = "mb_yuan_name_AnyangDuHanMB50"
 	dynasty = mb_yuan_county_dynasty_jingzhao_du_dyn
 	culture = han
@@ -10735,6 +10923,7 @@ mb_yuan_AnyangDuHanMB50 = {
 
 # MB+ JurchenWugulun29
 mb_yuan_JurchenWugulun29 = {
+	father = mb_genealogy_JurchenWugulun25
 	name = "mb_yuan_name_JurchenWugulun29"
 	dynasty = mb_yuan_county_dynasty_ukurun_dubagu
 	culture = jurchen
@@ -10746,6 +10935,7 @@ mb_yuan_JurchenWugulun29 = {
 
 # MB+ WannianWangHanMB44
 mb_yuan_WannianWangHanMB44 = {
+	father = mb_genealogy_WannianWangHanMB37
 	name = "mb_yuan_name_WannianWangHanMB44"
 	dynasty = mb_yuan_county_dynasty_wannian_wang_dyn
 	culture = han
@@ -10757,6 +10947,7 @@ mb_yuan_WannianWangHanMB44 = {
 
 # MB+ guangdu_yuwen_043M3
 mb_yuan_guangdu_yuwen_043M3 = {
+	father = mb_genealogy_guangdu_yuwen_043M2
 	name = "mb_yuan_name_guangdu_yuwen_043M3"
 	dynasty = mb_yuan_county_dynasty_henan_yuwen_dyn
 	culture = han
@@ -10767,6 +10958,7 @@ mb_yuan_guangdu_yuwen_043M3 = {
 
 # MB+ JuanchengLiHanMB40
 mb_yuan_JuanchengLiHanMB40 = {
+	father = mb_genealogy_JuanchengLiHanMB34
 	name = "mb_yuan_name_JuanchengLiHanMB40"
 	dynasty = mb_yuan_county_dynasty_li_674E_87
 	culture = han
@@ -10777,6 +10969,7 @@ mb_yuan_JuanchengLiHanMB40 = {
 
 # MB+ Godan3
 mb_yuan_Godan3 = {
+	father = mb_genealogy_Godan2
 	name = "mb_yuan_name_Godan3"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10788,6 +10981,7 @@ mb_yuan_Godan3 = {
 
 # MB+ Guyug3
 mb_yuan_Guyug3 = {
+	father = mb_genealogy_Guyug2
 	name = "mb_yuan_name_Guyug3"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10798,6 +10992,7 @@ mb_yuan_Guyug3 = {
 
 # MB+ ZengHanMB26
 mb_yuan_ZengHanMB26 = {
+	father = mb_genealogy_ZengHanMB23
 	name = "mb_yuan_name_ZengHanMB26"
 	dynasty = mb_yuan_county_dynasty_zeng_66FE_13
 	culture = han
@@ -10809,6 +11004,7 @@ mb_yuan_ZengHanMB26 = {
 
 # MB+ JiananXuHanMB41
 mb_yuan_JiananXuHanMB41 = {
+	father = mb_genealogy_JiananXuHanMB33
 	name = "mb_yuan_name_JiananXuHanMB41"
 	dynasty = mb_yuan_county_dynasty_gaoyang_xu_dyn
 	culture = han
@@ -10819,6 +11015,7 @@ mb_yuan_JiananXuHanMB41 = {
 
 # MB+ LiangYangHanMB40
 mb_yuan_LiangYangHanMB40 = {
+	father = mb_genealogy_LiangYangHanMB34
 	name = "mb_yuan_name_LiangYangHanMB40"
 	dynasty = mb_yuan_county_dynasty_anding_liang_dyn
 	culture = han
@@ -10829,6 +11026,7 @@ mb_yuan_LiangYangHanMB40 = {
 
 # MB+ Godan4M
 mb_yuan_Godan4M = {
+	father = mb_genealogy_Godan2M
 	name = "mb_yuan_name_Godan4M"
 	dynasty = borjigin_dynasty
 	culture = mongol
@@ -10840,6 +11038,7 @@ mb_yuan_Godan4M = {
 
 # MB+ DeqingDingHanMB30
 mb_yuan_DeqingDingHanMB30 = {
+	father = mb_genealogy_DeqingDingHanMB22
 	name = "mb_yuan_name_DeqingDingHanMB30"
 	dynasty = mb_yuan_county_dynasty_xiangfu_ding_dyn
 	culture = han
@@ -10850,6 +11049,7 @@ mb_yuan_DeqingDingHanMB30 = {
 
 # MB+ NanchengDengHanMB36
 mb_yuan_NanchengDengHanMB36 = {
+	father = mb_genealogy_NanchengDengHanMB30
 	name = "mb_yuan_name_NanchengDengHanMB36"
 	dynasty = mb_yuan_county_dynasty_zhongjiang_deng_dyn
 	culture = han
@@ -10860,6 +11060,7 @@ mb_yuan_NanchengDengHanMB36 = {
 
 # MB+ YananHanHanMB7
 mb_yuan_YananHanHanMB7 = {
+	father = mb_genealogy_YananHanHanMB6
 	name = "mb_yuan_name_YananHanHanMB7"
 	dynasty = mb_yuan_county_dynasty_yanan_han_dyn
 	culture = han
@@ -10870,6 +11071,7 @@ mb_yuan_YananHanHanMB7 = {
 
 # MB+ YongjiaLiuHanMB28
 mb_yuan_YongjiaLiuHanMB28 = {
+	father = mb_genealogy_YongjiaLiuHanMB21
 	name = "mb_yuan_name_YongjiaLiuHanMB28"
 	dynasty = mb_yuan_county_dynasty_peiguo_han_dyn
 	culture = han
@@ -10880,6 +11082,7 @@ mb_yuan_YongjiaLiuHanMB28 = {
 
 # MB+ ShaowuHuangHanMB45
 mb_yuan_ShaowuHuangHanMB45 = {
+	father = mb_genealogy_ShaowuHuangHanMB36
 	name = "mb_yuan_name_ShaowuHuangHanMB45"
 	dynasty = mb_yuan_county_dynasty_huang_9EC3_16
 	culture = han
@@ -10890,6 +11093,7 @@ mb_yuan_ShaowuHuangHanMB45 = {
 
 # MB+ fucheng_liu_011M7
 mb_yuan_fucheng_liu_011M7 = {
+	father = mb_genealogy_fucheng_liu_011M6
 	name = "mb_yuan_name_fucheng_liu_011M7"
 	dynasty = mb_yuan_county_dynasty_fucheng_liu_dyn
 	culture = han
@@ -10900,6 +11104,7 @@ mb_yuan_fucheng_liu_011M7 = {
 
 # MB+ HuangHanMB29
 mb_yuan_HuangHanMB29 = {
+	father = mb_genealogy_HuangHanMB19
 	name = "mb_yuan_name_HuangHanMB29"
 	dynasty = mb_yuan_county_dynasty_huang_9EC3_16
 	culture = han
@@ -10910,6 +11115,7 @@ mb_yuan_HuangHanMB29 = {
 
 # MB+ huayang_fan_097M4
 mb_yuan_huayang_fan_097M4 = {
+	father = mb_genealogy_huayang_fan_097M3
 	name = "mb_yuan_name_huayang_fan_097M4"
 	dynasty = mb_yuan_county_dynasty_runan_fan_dyn
 	culture = han
@@ -10920,6 +11126,7 @@ mb_yuan_huayang_fan_097M4 = {
 
 # MB+ Khitan51
 mb_yuan_Khitan51 = {
+	father = mb_genealogy_Khitan48
 	name = "mb_yuan_name_Khitan51"
 	dynasty = mb_yuan_county_dynasty_1000048353
 	culture = khitan
@@ -10931,6 +11138,7 @@ mb_yuan_Khitan51 = {
 
 # MB+ fuyang_xie_029M7
 mb_yuan_fuyang_xie_029M7 = {
+	father = mb_genealogy_fuyang_xie_029M6
 	name = "mb_yuan_name_fuyang_xie_029M7"
 	dynasty = mb_yuan_county_dynasty_goushi_xie_dyn
 	culture = han
@@ -10941,6 +11149,7 @@ mb_yuan_fuyang_xie_029M7 = {
 
 # MB+ xiaxian_sima_033M4
 mb_yuan_xiaxian_sima_033M4 = {
+	father = mb_genealogy_xiaxian_sima_033M3
 	name = "mb_yuan_name_xiaxian_sima_033M4"
 	dynasty = mb_yuan_county_dynasty_henei_sima_dyn
 	culture = han
@@ -10951,6 +11160,7 @@ mb_yuan_xiaxian_sima_033M4 = {
 
 # MB+ weishi_liu_149M3
 mb_yuan_weishi_liu_149M3 = {
+	father = mb_genealogy_weishi_liu_149M2
 	name = "mb_yuan_name_weishi_liu_149M3"
 	dynasty = mb_yuan_county_dynasty_peiguo_han_dyn
 	culture = han
@@ -10961,6 +11171,7 @@ mb_yuan_weishi_liu_149M3 = {
 
 # MB+ jiaoshui_cai_021M6
 mb_yuan_jiaoshui_cai_021M6 = {
+	father = mb_genealogy_jiaoshui_cai_021M5
 	name = "mb_yuan_name_jiaoshui_cai_021M6"
 	dynasty = mb_yuan_county_dynasty_chenliu_cai_dyn
 	culture = bouxcuengh
@@ -10971,6 +11182,7 @@ mb_yuan_jiaoshui_cai_021M6 = {
 
 # MB+ ZhangHanMB43
 mb_yuan_ZhangHanMB43 = {
+	father = mb_genealogy_ZhangHanMB40
 	name = "mb_yuan_name_ZhangHanMB43"
 	dynasty = mb_yuan_county_dynasty_1000050313
 	culture = han
@@ -10981,6 +11193,7 @@ mb_yuan_ZhangHanMB43 = {
 
 # MB+ 1802450M6
 mb_yuan_1802450M6 = {
+	father = mb_genealogy_1802450M5
 	name = "mb_yuan_name_1802450M6"
 	dynasty = mb_yuan_county_dynasty_shen_6C88_10
 	culture = han
@@ -10991,6 +11204,7 @@ mb_yuan_1802450M6 = {
 
 # MB+ MeishanHanMB26
 mb_yuan_MeishanHanMB26 = {
+	father = mb_genealogy_MeishanHanMB18
 	name = "mb_yuan_name_MeishanHanMB26"
 	dynasty = mb_yuan_county_dynasty_su_82CF
 	culture = han
@@ -11001,6 +11215,7 @@ mb_yuan_MeishanHanMB26 = {
 
 # MB+ chuqiu_bian_029M
 mb_yuan_chuqiu_bian_029M = {
+	father = mb_genealogy_chuqiu_bian_029
 	name = "mb_yuan_name_chuqiu_bian_029M"
 	dynasty = mb_yuan_county_dynasty_1000048939
 	culture = bouxcuengh
@@ -11011,6 +11226,7 @@ mb_yuan_chuqiu_bian_029M = {
 
 # MB+ xiangyi_zheng_023M4
 mb_yuan_xiangyi_zheng_023M4 = {
+	father = mb_genealogy_xiangyi_zheng_023M3
 	name = "mb_yuan_name_xiangyi_zheng_023M4"
 	dynasty = mb_yuan_county_dynasty_zheng_912D_104
 	culture = han
@@ -11021,6 +11237,7 @@ mb_yuan_xiangyi_zheng_023M4 = {
 
 # MB+ SEAsiaMMB218
 mb_yuan_SEAsiaMMB218 = {
+	father = mb_genealogy_SEAsiaMMB217
 	name = "mb_yuan_name_SEAsiaMMB218"
 	culture = hlai
 	religion = confucian_faith
@@ -11030,6 +11247,7 @@ mb_yuan_SEAsiaMMB218 = {
 
 # MB+ putian_song_062M3
 mb_yuan_putian_song_062M3 = {
+	father = mb_genealogy_putian_song_062M2
 	name = "mb_yuan_name_putian_song_062M3"
 	dynasty = mb_yuan_county_dynasty_xihe_song_dyn
 	culture = han
@@ -11040,6 +11258,7 @@ mb_yuan_putian_song_062M3 = {
 
 # MB+ jinling_hu_045M4
 mb_yuan_jinling_hu_045M4 = {
+	father = mb_genealogy_jinling_hu_045M3
 	name = "mb_yuan_name_jinling_hu_045M4"
 	dynasty = mb_yuan_county_dynasty_hu_80E1_2
 	culture = han
@@ -11050,6 +11269,7 @@ mb_yuan_jinling_hu_045M4 = {
 
 # MB+ BohaiOuyangHanMB37
 mb_yuan_BohaiOuyangHanMB37 = {
+	father = mb_genealogy_BohaiOuyangHanMB30
 	name = "mb_yuan_name_BohaiOuyangHanMB37"
 	dynasty = mb_yuan_county_dynasty_bohai_ouyang_dyn
 	culture = han
@@ -11060,6 +11280,7 @@ mb_yuan_BohaiOuyangHanMB37 = {
 
 # MB+ PuchengWuHanMB42
 mb_yuan_PuchengWuHanMB42 = {
+	father = mb_genealogy_PuchengWuHanMB36
 	name = "mb_yuan_name_PuchengWuHanMB42"
 	dynasty = mb_yuan_county_dynasty_linchuan_wu_dyn
 	culture = yao
@@ -11070,6 +11291,7 @@ mb_yuan_PuchengWuHanMB42 = {
 
 # MB+ KaifengXiangHanMB37
 mb_yuan_KaifengXiangHanMB37 = {
+	father = mb_genealogy_KaifengXiangHanMB32
 	name = "mb_yuan_name_KaifengXiangHanMB37"
 	dynasty = mb_yuan_county_dynasty_kaifeng_xiang_dyn
 	culture = han
@@ -11080,6 +11302,7 @@ mb_yuan_KaifengXiangHanMB37 = {
 
 # MB+ HenanLuHanMB37
 mb_yuan_HenanLuHanMB37 = {
+	father = mb_genealogy_HenanLuHanMB33
 	name = "mb_yuan_name_HenanLuHanMB37"
 	dynasty = mb_yuan_county_dynasty_henan_lv_dyn
 	culture = han
@@ -11090,6 +11313,7 @@ mb_yuan_HenanLuHanMB37 = {
 
 # MB+ TangutClans22
 mb_yuan_TangutClans22 = {
+	father = mb_genealogy_TangutClans21
 	name = "mb_yuan_name_TangutClans22"
 	culture = tangut
 	religion = vajrayana_faith
@@ -11100,6 +11324,7 @@ mb_yuan_TangutClans22 = {
 
 # MB+ tangut0005
 mb_yuan_tangut0005 = {
+	father = mb_genealogy_tangut0004
 	name = "mb_yuan_name_tangut0005"
 	dynasty = mb_yuan_county_dynasty_2003082
 	culture = tangut
@@ -11111,6 +11336,7 @@ mb_yuan_tangut0005 = {
 
 # MB+ NSteppeMB391
 mb_yuan_NSteppeMB391 = {
+	father = mb_genealogy_NSteppeMB390
 	name = "mb_yuan_name_NSteppeMB391"
 	culture = tangut
 	religion = vajrayana_faith
@@ -11121,6 +11347,7 @@ mb_yuan_NSteppeMB391 = {
 
 # MB+ nogaid0006
 mb_yuan_nogaid0006 = {
+	father = mb_genealogy_nogaid0005
 	name = "mb_yuan_name_nogaid0006"
 	dynasty = mb_yuan_county_dynasty_2003111
 	culture = mongol
@@ -11131,6 +11358,7 @@ mb_yuan_nogaid0006 = {
 
 # MB+ dodaid0006
 mb_yuan_dodaid0006 = {
+	father = mb_genealogy_dodaid0005
 	name = "mb_yuan_name_dodaid0006"
 	dynasty = mb_yuan_county_dynasty_2003101
 	culture = mongol
@@ -11141,6 +11369,7 @@ mb_yuan_dodaid0006 = {
 
 # MB+ 305984
 mb_yuan_305984 = {
+	father = mb_genealogy_305983
 	name = "mb_yuan_name_305984"
 	dynasty = mb_yuan_county_dynasty_2003083
 	culture = bodpa
@@ -11152,6 +11381,7 @@ mb_yuan_305984 = {
 
 # MB+ chanaid0006
 mb_yuan_chanaid0006 = {
+	father = mb_genealogy_chanaid0005
 	name = "mb_yuan_name_chanaid0006"
 	dynasty = mb_yuan_county_dynasty_2003116
 	culture = mongol
@@ -11163,6 +11393,7 @@ mb_yuan_chanaid0006 = {
 
 # MB+ XiaSimaHanMB54
 mb_yuan_XiaSimaHanMB54 = {
+	father = mb_genealogy_XiaSimaHanMB48
 	name = "mb_yuan_name_XiaSimaHanMB54"
 	dynasty = mb_yuan_county_dynasty_henei_sima_dyn
 	culture = han
@@ -11173,6 +11404,7 @@ mb_yuan_XiaSimaHanMB54 = {
 
 # MB+ 1413495
 mb_yuan_1413495 = {
+	father = mb_genealogy_1413485
 	name = "mb_yuan_name_1413495"
 	dynasty = mb_yuan_dynasty_yelu
 	culture = khitan
@@ -11184,6 +11416,7 @@ mb_yuan_1413495 = {
 
 # MB+ TangutClansTiande21
 mb_yuan_TangutClansTiande21 = {
+	father = mb_genealogy_TangutClansTiande20
 	name = "mb_yuan_name_TangutClansTiande21"
 	culture = tangut
 	religion = vajrayana_faith
@@ -11194,6 +11427,7 @@ mb_yuan_TangutClansTiande21 = {
 
 # MB+ SEAsiaMMB237
 mb_yuan_SEAsiaMMB237 = {
+	father = mb_genealogy_SEAsiaMMB236
 	name = "mb_yuan_name_SEAsiaMMB237"
 	culture = bouxcuengh
 	religion = moism
@@ -11203,6 +11437,7 @@ mb_yuan_SEAsiaMMB237 = {
 
 # MB+ NSteppeMB257
 mb_yuan_NSteppeMB257 = {
+	father = mb_genealogy_NSteppeMB256
 	name = "mb_yuan_name_NSteppeMB257"
 	culture = ongud
 	religion = vajrayana_faith
@@ -11213,6 +11448,7 @@ mb_yuan_NSteppeMB257 = {
 
 # MB+ NSteppeMB487
 mb_yuan_NSteppeMB487 = {
+	father = mb_genealogy_NSteppeMB486
 	name = "mb_yuan_name_NSteppeMB487"
 	culture = khitan
 	religion = mahayana_faith
@@ -11223,6 +11459,7 @@ mb_yuan_NSteppeMB487 = {
 
 # MB+ TangutClanXifeng17
 mb_yuan_TangutClanXifeng17 = {
+	father = mb_genealogy_TangutClanXifeng16
 	name = "mb_yuan_name_TangutClanXifeng17"
 	dynasty = mb_yuan_county_dynasty_1029318
 	culture = tangut
@@ -11235,6 +11472,7 @@ mb_yuan_TangutClanXifeng17 = {
 # MB+ Korea and Dai Viet county and duchy holders.
 # MB+ GoryeoKorea971; county: c_haeju
 mb_eastasia_GoryeoKorea971 = {
+	father = mb_genealogy_GoryeoKorea967
 	name = "mb_eastasia_name_GoryeoKorea971"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11246,6 +11484,7 @@ mb_eastasia_GoryeoKorea971 = {
 
 # MB+ GoryeoKorea1431; county: c_hwangju
 mb_eastasia_GoryeoKorea1431 = {
+	father = mb_genealogy_GoryeoKorea1430
 	name = "mb_eastasia_name_GoryeoKorea1431"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11257,6 +11496,7 @@ mb_eastasia_GoryeoKorea1431 = {
 
 # MB+ GoryeoKorea713; county: c_dongju
 mb_eastasia_GoryeoKorea713 = {
+	father = mb_genealogy_GoryeoKorea705
 	name = "mb_eastasia_name_GoryeoKorea713"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11268,6 +11508,7 @@ mb_eastasia_GoryeoKorea713 = {
 
 # MB+ GoryeoKorea740; county: c_chunju
 mb_eastasia_GoryeoKorea740 = {
+	father = mb_genealogy_GoryeoKorea739
 	name = "mb_eastasia_name_GoryeoKorea740"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11279,6 +11520,7 @@ mb_eastasia_GoryeoKorea740 = {
 
 # MB+ GoryeoKorea1169; county: c_uiju
 mb_eastasia_GoryeoKorea1169 = {
+	father = mb_genealogy_GoryeoKorea1163
 	name = "mb_eastasia_name_GoryeoKorea1169"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11290,6 +11532,7 @@ mb_eastasia_GoryeoKorea1169 = {
 
 # MB+ GoryeoKorea602; county: c_seogyeong
 mb_eastasia_GoryeoKorea602 = {
+	father = mb_genealogy_GoryeoKorea601
 	name = "mb_eastasia_name_GoryeoKorea602"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11301,6 +11544,7 @@ mb_eastasia_GoryeoKorea602 = {
 
 # MB+ GoryeoKorea454; county: c_andong
 mb_eastasia_GoryeoKorea454 = {
+	father = mb_genealogy_GoryeoKorea450
 	name = "mb_eastasia_name_GoryeoKorea454"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11312,6 +11556,7 @@ mb_eastasia_GoryeoKorea454 = {
 
 # MB+ 1900526; county: c_gyeongju
 mb_eastasia_1900526 = {
+	father = mb_genealogy_1900524
 	name = "mb_eastasia_name_1900526"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11323,6 +11568,7 @@ mb_eastasia_1900526 = {
 
 # MB+ GoryeoKorea265; county: c_jinju
 mb_eastasia_GoryeoKorea265 = {
+	father = mb_genealogy_GoryeoKorea264
 	name = "mb_eastasia_name_GoryeoKorea265"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11334,6 +11580,7 @@ mb_eastasia_GoryeoKorea265 = {
 
 # MB+ GoryeoKorea580; county: c_myeongju
 mb_eastasia_GoryeoKorea580 = {
+	father = mb_genealogy_GoryeoKorea579
 	name = "mb_eastasia_name_GoryeoKorea580"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11345,6 +11592,7 @@ mb_eastasia_GoryeoKorea580 = {
 
 # MB+ GoryeoKorea492; county: c_wonju
 mb_eastasia_GoryeoKorea492 = {
+	father = mb_genealogy_GoryeoKorea490
 	name = "mb_eastasia_name_GoryeoKorea492"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11356,6 +11604,7 @@ mb_eastasia_GoryeoKorea492 = {
 
 # MB+ GoryeoKorea1193; county: c_chungju
 mb_eastasia_GoryeoKorea1193 = {
+	father = mb_genealogy_GoryeoKorea1192
 	name = "mb_eastasia_name_GoryeoKorea1193"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11367,6 +11616,7 @@ mb_eastasia_GoryeoKorea1193 = {
 
 # MB+ GoryeoKorea1293; county: c_hongju
 mb_eastasia_GoryeoKorea1293 = {
+	father = mb_genealogy_GoryeoKorea1286
 	name = "mb_eastasia_name_GoryeoKorea1293"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11378,6 +11628,7 @@ mb_eastasia_GoryeoKorea1293 = {
 
 # MB+ GoryeoKorea1329; county: c_gongju
 mb_eastasia_GoryeoKorea1329 = {
+	father = mb_genealogy_GoryeoKorea1326
 	name = "mb_eastasia_name_GoryeoKorea1329"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11389,6 +11640,7 @@ mb_eastasia_GoryeoKorea1329 = {
 
 # MB+ UiBang8; county: c_jeonju
 mb_eastasia_UiBang8 = {
+	father = mb_genealogy_UiBang7
 	name = "mb_eastasia_name_UiBang8"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11400,6 +11652,7 @@ mb_eastasia_UiBang8 = {
 
 # MB+ GoryeoKorea241; county: c_namwon
 mb_eastasia_GoryeoKorea241 = {
+	father = mb_genealogy_GoryeoKorea236
 	name = "mb_eastasia_name_GoryeoKorea241"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11411,6 +11664,7 @@ mb_eastasia_GoryeoKorea241 = {
 
 # MB+ GoryeoKorea74; county: c_naju
 mb_eastasia_GoryeoKorea74 = {
+	father = mb_genealogy_GoryeoKorea65
 	name = "mb_eastasia_name_GoryeoKorea74"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11422,6 +11676,7 @@ mb_eastasia_GoryeoKorea74 = {
 
 # MB+ PhamMB16; county: c_xu_nghe
 mb_eastasia_PhamMB16 = {
+	father = mb_genealogy_PhamHist4
 	name = "mb_eastasia_name_PhamMB16"
 	culture = viet
 	religion = mahayana_faith
@@ -11432,6 +11687,7 @@ mb_eastasia_PhamMB16 = {
 
 # MB+ HoMB22; county: c_hoan_chau
 mb_eastasia_HoMB22 = {
+	father = mb_genealogy_HoMB21
 	name = "mb_eastasia_name_HoMB22"
 	culture = viet
 	religion = mahayana_faith
@@ -11442,6 +11698,7 @@ mb_eastasia_HoMB22 = {
 
 # MB+ DinhMB19; county: c_nam_sac
 mb_eastasia_DinhMB19 = {
+	father = mb_genealogy_DinhMB18
 	name = "mb_eastasia_name_DinhMB19"
 	culture = viet
 	religion = mahayana_faith
@@ -11452,6 +11709,7 @@ mb_eastasia_DinhMB19 = {
 
 # MB+ LyMB11; county: c_bac_ha
 mb_eastasia_LyMB11 = {
+	father = mb_genealogy_LyMB10
 	name = "mb_eastasia_name_LyMB11"
 	culture = viet
 	religion = mahayana_faith
@@ -11462,6 +11720,7 @@ mb_eastasia_LyMB11 = {
 
 # MB+ DoanMB21; county: c_lang_son
 mb_eastasia_DoanMB21 = {
+	father = mb_genealogy_DoanMB20
 	name = "mb_eastasia_name_DoanMB21"
 	culture = viet
 	religion = mahayana_faith
@@ -11472,6 +11731,7 @@ mb_eastasia_DoanMB21 = {
 
 # MB+ TienLeMB17; county: c_ai_chau
 mb_eastasia_TienLeMB17 = {
+	father = mb_genealogy_TienLeMB16
 	name = "mb_eastasia_name_TienLeMB17"
 	culture = viet
 	religion = mahayana_faith
@@ -11482,6 +11742,7 @@ mb_eastasia_TienLeMB17 = {
 
 # MB+ Dai Viet holders: An Bang and Thien Truong.
 mb_eastasia_DoMB15 = {
+	father = mb_genealogy_DoMB14
 	name = "mb_eastasia_name_DoMB15"
 	culture = viet
 	religion = mahayana_faith
@@ -11492,6 +11753,8 @@ mb_eastasia_DoMB15 = {
 }
 
 mb_eastasia_1000080079Missing1Kid9 = {
+	father = mb_genealogy_1000080079Missing1Kid3
+	mother = mb_genealogy_1000080079Missing1Kid7
 	name = "mb_eastasia_name_1000080079Missing1Kid9"
 	culture = viet
 	religion = mahayana_faith
@@ -11503,6 +11766,7 @@ mb_eastasia_1000080079Missing1Kid9 = {
 # MB+ Korea and Dai Viet: geographic matches.
 # MB+ GoryeoKorea668; approximate geographic match: c_yeongwon
 mb_eastasia_GoryeoKorea668 = {
+	father = mb_genealogy_GoryeoKorea667
 	name = "mb_eastasia_name_GoryeoKorea668"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11514,6 +11778,7 @@ mb_eastasia_GoryeoKorea668 = {
 
 # MB+ GoryeoKorea645; approximate geographic match: c_seongju
 mb_eastasia_GoryeoKorea645 = {
+	father = mb_genealogy_GoryeoKorea644
 	name = "mb_eastasia_name_GoryeoKorea645"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11525,6 +11790,7 @@ mb_eastasia_GoryeoKorea645 = {
 
 # MB+ GoryeoKorea323; approximate geographic match: c_ulju
 mb_eastasia_GoryeoKorea323 = {
+	father = mb_genealogy_GoryeoKorea322
 	name = "mb_eastasia_name_GoryeoKorea323"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11536,6 +11802,7 @@ mb_eastasia_GoryeoKorea323 = {
 
 # MB+ GoryeoKorea420; approximate geographic match: c_ilseon
 mb_eastasia_GoryeoKorea420 = {
+	father = mb_genealogy_GoryeoKorea415
 	name = "mb_eastasia_name_GoryeoKorea420"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11547,6 +11814,7 @@ mb_eastasia_GoryeoKorea420 = {
 
 # MB+ GoryeoKorea100; approximate geographic match: c_boseong
 mb_eastasia_GoryeoKorea100 = {
+	father = mb_genealogy_GoryeoKorea99
 	name = "mb_eastasia_name_GoryeoKorea100"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11558,6 +11826,7 @@ mb_eastasia_GoryeoKorea100 = {
 
 # MB+ GoryeoKorea805; approximate geographic match: c_gwangju
 mb_eastasia_GoryeoKorea805 = {
+	father = mb_genealogy_GoryeoKorea804
 	name = "mb_eastasia_name_GoryeoKorea805"
 	culture = goryeo
 	religion = mahayana_faith
@@ -11569,6 +11838,7 @@ mb_eastasia_GoryeoKorea805 = {
 
 # MB+ SEAsiaMB152; approximate geographic match: c_tuyen_quang
 mb_eastasia_SEAsiaMB152 = {
+	father = mb_genealogy_SEAsiaMB151
 	name = "mb_eastasia_name_SEAsiaMB152"
 	culture = bouxcuengh
 	religion = moism
@@ -11578,6 +11848,7 @@ mb_eastasia_SEAsiaMB152 = {
 
 # MB+ MaiMB25; approximate geographic match: c_yen_moc
 mb_eastasia_MaiMB25 = {
+	father = mb_genealogy_MaiMB24
 	name = "mb_eastasia_name_MaiMB25"
 	culture = viet
 	religion = mahayana_faith
@@ -11588,6 +11859,7 @@ mb_eastasia_MaiMB25 = {
 
 # MB+ SEAsiaMB399; approximate geographic match: c_kandarpapura
 mb_eastasia_SEAsiaMB399 = {
+	father = mb_genealogy_SEAsiaMB398
 	name = "mb_eastasia_name_SEAsiaMB399"
 	culture = cham
 	religion = shaiva_faith
@@ -11622,6 +11894,7 @@ mb_mam_yem_8000472 = {
 
 # MB+ 12364288M3
 mb_mam_yem_12364288M3 = {
+	father = mb_genealogy_12364288M2
 	name = "mb_mam_yem_name_12364288M3"
 	culture = egyptian
 	religion = sunni
@@ -11702,6 +11975,7 @@ mb_mam_yem_Rassid13 = {
 
 # MB+ 12361403
 mb_mam_yem_12361403 = {
+	father = mb_genealogy_12361402
 	name = "mb_mam_yem_name_12361403"
 	culture = bedouin
 	religion = shia
@@ -11714,6 +11988,7 @@ mb_mam_yem_12361403 = {
 
 # MB+ 1236039M12
 mb_mam_yem_1236039M12 = {
+	father = mb_genealogy_1236039M11
 	name = "mb_mam_yem_name_1236039M12"
 	culture = yemeni
 	religion = sunni
@@ -11736,6 +12011,7 @@ mb_mam_yem_478080 = {
 
 # MB+ Sadad3
 mb_mam_yem_Sadad3 = {
+	father = mb_genealogy_Sadad2
 	name = "mb_mam_yem_name_Sadad3"
 	culture = yemeni
 	religion = sunni
@@ -11743,4 +12019,3867 @@ mb_mam_yem_Sadad3 = {
 	dynasty = mb_mam_yem_dyn_1000101550
 	1282.1.1 = { birth = yes }
 	1340.1.1 = { death = yes }
+}
+
+# MB+ ancestors for existing characters.
+# MB+ ancestor 1000080079Missing1Kid3
+mb_genealogy_1000080079Missing1Kid3 = {
+	name = "mb_genealogy_name_1000080079Missing1Kid3"
+	culture = viet
+	religion = mahayana_faith
+	dynasty = tran_dynasty
+	1228.1.1 = { birth = yes }
+	1300.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1000080079Missing1Kid7
+mb_genealogy_1000080079Missing1Kid7 = {
+	father = dai_canh
+	name = "mb_genealogy_name_1000080079Missing1Kid7"
+	culture = viet
+	religion = mahayana_faith
+	dynasty = tran_dynasty
+	female = yes
+	1235.1.1 = { birth = yes }
+	1288.1.1 = { death = yes }
+}
+
+# MB+ ancestor 101538
+mb_genealogy_101538 = {
+	name = "mb_genealogy_name_101538"
+	culture = norse
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = 482
+	975.1.2 = { birth = yes }
+	1047.1.4 = { death = yes }
+}
+
+# MB+ ancestor 1061413
+mb_genealogy_1061413 = {
+	name = "mb_genealogy_name_1061413"
+	culture = italian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = mb_city_monte_santa_maria
+	1120.1.1 = { birth = yes }
+	1163.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1062097
+mb_genealogy_1062097 = {
+	name = "mb_genealogy_name_1062097"
+	culture = italian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = mb_city_sasso
+	1263.1.1 = { birth = yes }
+	1321.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1062629
+mb_genealogy_1062629 = {
+	name = "mb_genealogy_name_1062629"
+	culture = italian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty_house = mb_genealogy_house_house_suponi
+	1260.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1063610
+mb_genealogy_1063610 = {
+	name = "mb_genealogy_name_1063610"
+	culture = italian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = mb_genealogy_dynasty_1000035485
+	1212.1.1 = { birth = yes }
+	1276.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1167113
+mb_genealogy_1167113 = {
+	name = "mb_genealogy_name_1167113"
+	culture = cisalpine
+	religion = christian_faith
+	rite = beneventan_rite
+	dynasty = 8682
+	female = yes
+	1042.1.1 = { birth = yes }
+	1092.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1227487
+mb_genealogy_1227487 = {
+	name = "mb_genealogy_name_1227487"
+	culture = norman
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = mb_genealogy_dynasty_1000100068
+	1119.1.1 = { birth = yes }
+	1163.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1227538
+mb_genealogy_1227538 = {
+	name = "mb_genealogy_name_1227538"
+	culture = italian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = 8682
+	female = yes
+	1150.1.1 = { birth = yes }
+	1205.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1227892
+mb_genealogy_1227892 = {
+	name = "mb_genealogy_name_1227892"
+	culture = danish
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_1025003
+	1240.1.1 = { birth = yes }
+	1305.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1236039M11
+mb_genealogy_1236039M11 = {
+	name = "mb_genealogy_name_1236039M11"
+	culture = yemeni
+	religion = sunni
+	rite = shafii
+	dynasty = mb_mam_yem_dyn_1042164
+	1241.1.1 = { birth = yes }
+	1311.1.1 = { death = yes }
+}
+
+# MB+ ancestor 12361402
+mb_genealogy_12361402 = {
+	name = "mb_genealogy_name_12361402"
+	culture = bedouin
+	religion = shia
+	rite = zayidi
+	dynasty_house = mb_mam_yem_house_sulayman
+	trait = sayyid
+	1243.1.1 = { birth = yes }
+	1316.1.1 = { death = yes }
+}
+
+# MB+ ancestor 12364288M2
+mb_genealogy_12364288M2 = {
+	name = "mb_genealogy_name_12364288M2"
+	culture = egyptian
+	religion = sunni
+	rite = maliki
+	dynasty = mb_mam_yem_dyn_1000101143
+	1270.1.1 = { birth = yes }
+	1332.1.1 = { death = yes }
+}
+
+
+# MB+ ancestor 125730
+mb_genealogy_125730 = {
+	name = "mb_genealogy_name_125730"
+	culture = greek
+	religion = christian_faith
+	rite = byzantine_rite
+	dynasty_house = house_komnenos_doukas
+	1280.1.1 = { birth = yes }
+	1327.1.1 = { death = yes }
+}
+
+# MB+ ancestor 125745
+mb_genealogy_125745 = {
+	name = "mb_genealogy_name_125745"
+	culture = greek
+	religion = christian_faith
+	rite = byzantine_rite
+	dynasty = 101074
+	female = yes
+	1241.1.1 = { birth = yes }
+	1258.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1290050M6
+mb_genealogy_1290050M6 = {
+	name = "mb_genealogy_name_1290050M6"
+	culture = norwegian
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_1000053616
+	1230.1.1 = { birth = yes }
+	1300.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1290055
+mb_genealogy_1290055 = {
+	name = "mb_genealogy_name_1290055"
+	culture = norwegian
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_129
+	1217.1.1 = { birth = yes }
+	1275.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1290056
+mb_genealogy_1290056 = {
+	name = "mb_genealogy_name_1290056"
+	culture = norwegian
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_129
+	father = mb_genealogy_1290055
+	1245.1.1 = { birth = yes }
+	1313.7.7 = { death = yes }
+}
+
+# MB+ ancestor 1290060
+mb_genealogy_1290060 = {
+	name = "mb_genealogy_name_1290060"
+	culture = norwegian
+	religion = catholic
+	rite = roman_rite
+	dynasty = 453
+	female = yes
+	1246.1.1 = { birth = yes }
+	1307.1.1 = { death = yes }
+}
+
+# MB+ ancestor 138066
+mb_genealogy_138066 = {
+	name = "mb_genealogy_name_138066"
+	culture = french
+	religion = christian_faith
+	rite = carolingian_christianity
+	dynasty_house = house_limoges
+	886.1.1 = { birth = yes }
+	945.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1413353
+mb_genealogy_1413353 = {
+	name = "mb_genealogy_name_1413353"
+	culture = khitan
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_yuan_dynasty_yelu
+	972.1.1 = { birth = yes }
+	1021.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1413485
+mb_genealogy_1413485 = {
+	name = "mb_genealogy_name_1413485"
+	culture = khitan
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_yuan_dynasty_yelu
+	1246.1.1 = { birth = yes }
+	1327.1.1 = { death = yes }
+}
+
+# MB+ ancestor 142210
+mb_genealogy_142210 = {
+	name = "mb_genealogy_name_142210"
+	culture = portuguese
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = 769
+	1129.1.1 = { birth = yes }
+	1190.1.1 = { death = yes }
+}
+
+# MB+ ancestor 142392
+mb_genealogy_142392 = {
+	name = "mb_genealogy_name_142392"
+	culture = portuguese
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = 1020120
+	1187.1.1 = { birth = yes }
+	1222.1.1 = { death = yes }
+}
+
+# MB+ ancestor 142458
+mb_genealogy_142458 = {
+	name = "mb_genealogy_name_142458"
+	culture = portuguese
+	religion = catholic
+	rite = roman_rite
+	dynasty_house = house_braganza
+	female = yes
+	1150.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+
+# MB+ ancestor 143130M4
+mb_genealogy_143130M4 = {
+	name = "mb_genealogy_name_143130M4"
+	culture = norwegian
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_444
+	1235.1.1 = { birth = yes }
+	1300.1.1 = { death = yes }
+}
+
+# MB+ ancestor 143144
+mb_genealogy_143144 = {
+	name = "mb_genealogy_name_143144"
+	culture = norwegian
+	religion = norse_pagan
+	rite = norse_pagan
+	dynasty = mb_scand_dynasty_100280
+	1200.1.1 = { birth = yes }
+	1270.1.1 = { death = yes }
+}
+
+# MB+ ancestor 144183
+mb_genealogy_144183 = {
+	name = "mb_genealogy_name_144183"
+	culture = norman
+	religion = catholic
+	rite = roman_rite
+	dynasty_house = mb_genealogy_house_house_montfort
+	1243.1.1 = { birth = yes }
+}
+
+# MB+ ancestor 166865
+mb_genealogy_166865 = {
+	name = "mb_genealogy_name_166865"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = genghis_khan
+	1195.1.1 = { birth = yes }
+	1238.1.1 = { death = yes }
+}
+
+# MB+ ancestor 166898
+mb_genealogy_166898 = {
+	name = "mb_genealogy_name_166898"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = jochi_borjigin
+	1212.1.1 = { birth = yes }
+	1259.1.1 = { death = yes }
+}
+
+# MB+ ancestor 166911
+mb_genealogy_166911 = {
+	name = "mb_genealogy_name_166911"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_172007
+	1222.1.1 = { birth = yes }
+	1256.1.1 = { death = yes }
+}
+
+# MB+ ancestor 166913
+mb_genealogy_166913 = {
+	name = "mb_genealogy_name_166913"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = chg_ogedei_borjigin
+	1210.1.1 = { birth = yes }
+	1255.1.1 = { death = yes }
+}
+
+# MB+ ancestor 167165
+mb_genealogy_167165 = {
+	name = "mb_genealogy_name_167165"
+	culture = saxon
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = mb_city_warendorp
+	1180.1.1 = { birth = yes }
+	1235.1.1 = { death = yes }
+}
+
+# MB+ ancestor 167499
+mb_genealogy_167499 = {
+	name = "mb_genealogy_name_167499"
+	culture = italian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = 622
+	1090.1.1 = { birth = yes }
+	1140.1.1 = { death = yes }
+}
+
+# MB+ ancestor 167500
+mb_genealogy_167500 = {
+	name = "mb_genealogy_name_167500"
+	culture = italian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = 622
+	father = mb_genealogy_167499
+	1130.1.1 = { birth = yes }
+	1190.1.1 = { death = yes }
+}
+
+# MB+ ancestor 168104
+mb_genealogy_168104 = {
+	name = "mb_genealogy_name_168104"
+	culture = basque
+	religion = christian_faith
+	rite = carolingian_christianity
+	dynasty = 388
+	718.1.1 = { birth = yes }
+	778.1.1 = { death = yes }
+}
+
+# MB+ ancestor 170022
+mb_genealogy_170022 = {
+	name = "mb_genealogy_name_170022"
+	culture = danish
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_1025003
+	1170.1.1 = { birth = yes }
+	1242.1.1 = { death = yes }
+}
+
+# MB+ ancestor 170024
+mb_genealogy_170024 = {
+	name = "mb_genealogy_name_170024"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_381
+	1226.1.1 = { birth = yes }
+	1259.1.1 = { death = yes }
+}
+
+# MB+ ancestor 172007
+mb_genealogy_172007 = {
+	name = "mb_genealogy_name_172007"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = chg_ogedei_borjigin
+	1206.1.1 = { birth = yes }
+	1248.4.20 = { death = yes }
+}
+
+# MB+ ancestor 172009
+mb_genealogy_172009 = {
+	name = "mb_genealogy_name_172009"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = chg_ogedei_borjigin
+	1207.1.1 = { birth = yes }
+	1251.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1802450M5
+mb_genealogy_1802450M5 = {
+	name = "mb_genealogy_name_1802450M5"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_shen_6C88_10
+	1239.1.1 = { birth = yes }
+	1310.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1803227MM
+mb_genealogy_1803227MM = {
+	name = "mb_genealogy_name_1803227MM"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_wang_6C6A_12
+	1259.1.1 = { birth = yes }
+	1320.1.1 = { death = yes }
+}
+
+# MB+ ancestor 186001M15
+mb_genealogy_186001M15 = {
+	name = "mb_genealogy_name_186001M15"
+	culture = sami
+	religion = finnish_pagan
+	dynasty = mb_scand_dynasty_837
+	1210.1.1 = { birth = yes }
+	1300.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1900524
+mb_genealogy_1900524 = {
+	name = "mb_genealogy_name_1900524"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_eastasia_dynasty_1000062005
+	1250.1.1 = { birth = yes }
+	1313.1.1 = { death = yes }
+}
+
+# MB+ ancestor 194226
+mb_genealogy_194226 = {
+	name = "mb_genealogy_name_194226"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_121
+	1250.1.1 = { birth = yes }
+	1315.1.1 = { death = yes }
+}
+
+# MB+ ancestor 194231
+mb_genealogy_194231 = {
+	name = "mb_genealogy_name_194231"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_497
+	1215.1.1 = { birth = yes }
+	1290.1.1 = { death = yes }
+}
+
+# MB+ ancestor 194250
+mb_genealogy_194250 = {
+	name = "mb_genealogy_name_194250"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_100297
+	1250.1.1 = { birth = yes }
+	1315.1.1 = { death = yes }
+}
+
+# MB+ ancestor 194256
+mb_genealogy_194256 = {
+	name = "mb_genealogy_name_194256"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_148
+	1250.1.1 = { birth = yes }
+	1315.1.1 = { death = yes }
+}
+
+# MB+ ancestor 194261
+mb_genealogy_194261 = {
+	name = "mb_genealogy_name_194261"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_100006
+	1214.1.1 = { birth = yes }
+	1290.1.1 = { death = yes }
+}
+
+# MB+ ancestor 194271M1
+mb_genealogy_194271M1 = {
+	name = "mb_genealogy_name_194271M1"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_1040
+	1239.1.1 = { birth = yes }
+	1312.1.1 = { death = yes }
+}
+
+# MB+ ancestor 194280
+mb_genealogy_194280 = {
+	name = "mb_genealogy_name_194280"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_495
+	1180.1.1 = { birth = yes }
+	1270.1.1 = { death = yes }
+}
+
+# MB+ ancestor 194317M1
+mb_genealogy_194317M1 = {
+	name = "mb_genealogy_name_194317M1"
+	culture = norwegian
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_1045072
+	1243.1.1 = { birth = yes }
+	1300.1.1 = { death = yes }
+}
+
+# MB+ ancestor 201513
+mb_genealogy_201513 = {
+	name = "mb_genealogy_name_201513"
+	culture = danish
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = estrid_dynasty
+	1096.1.15 = { birth = yes }
+}
+
+# MB+ ancestor 201525
+mb_genealogy_201525 = {
+	name = "mb_genealogy_name_201525"
+	culture = danish
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = 482
+	female = yes
+	1183.1.1 = { birth = yes }
+	1267.1.1 = { death = yes }
+}
+
+# MB+ ancestor 203543
+mb_genealogy_203543 = {
+	name = "mb_genealogy_name_203543"
+	culture = scottish
+	religion = catholic
+	rite = roman_rite
+	dynasty = 371
+	female = yes
+	1253.1.1 = { birth = yes }
+	1292.11.9 = { death = yes }
+}
+
+# MB+ ancestor 205551
+mb_genealogy_205551 = {
+	name = "mb_genealogy_name_205551"
+	culture = occitan
+	religion = christian_faith
+	rite = roman_rite
+	dynasty_house = house_foix
+	1100.1.1 = { birth = yes }
+	1148.1.1 = { death = yes }
+}
+
+# MB+ ancestor 205554
+mb_genealogy_205554 = {
+	name = "mb_genealogy_name_205554"
+	culture = occitan
+	religion = christian_faith
+	rite = roman_rite
+	dynasty_house = house_foix
+	1155.1.1 = { birth = yes }
+	1223.2.27 = { death = yes }
+}
+
+# MB+ ancestor 205622
+mb_genealogy_205622 = {
+	name = "mb_genealogy_name_205622"
+	culture = occitan
+	religion = christian_faith
+	rite = roman_rite
+	dynasty_house = house_comborn
+	1161.1.1 = { birth = yes }
+	1230.3.29 = { death = yes }
+}
+
+# MB+ ancestor 208550
+mb_genealogy_208550 = {
+	name = "mb_genealogy_name_208550"
+	culture = galician
+	religion = christian_faith
+	rite = roman_rite
+	dynasty_house = mb_genealogy_house_house_traba
+	1092.1.1 = { birth = yes }
+	1154.12.1 = { death = yes }
+}
+
+# MB+ ancestor 211509
+mb_genealogy_211509 = {
+	name = "mb_genealogy_name_211509"
+	culture = sicilian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = 678
+	1138.1.1 = { birth = yes }
+}
+
+# MB+ ancestor 211530
+mb_genealogy_211530 = {
+	name = "mb_genealogy_name_211530"
+	culture = sicilian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = 678
+	female = yes
+	1148.1.1 = { birth = yes }
+	1197.1.1 = { death = yes }
+}
+
+# MB+ ancestor 211531
+mb_genealogy_211531 = {
+	name = "mb_genealogy_name_211531"
+	culture = italian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = 7188
+	1147.1.1 = { birth = yes }
+	1197.1.1 = { death = yes }
+}
+
+# MB+ ancestor 214095
+mb_genealogy_214095 = {
+	name = "mb_genealogy_name_214095"
+	culture = cisalpine
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = 8682
+	1175.1.1 = { birth = yes }
+	1246.1.1 = { death = yes }
+}
+
+# MB+ ancestor 215517
+mb_genealogy_215517 = {
+	name = "mb_genealogy_name_215517"
+	culture = greek
+	religion = christian_faith
+	rite = byzantine_rite
+	dynasty_house = house_komnenos_doukas
+	1170.1.2 = { birth = yes }
+}
+
+# MB+ ancestor 216020
+mb_genealogy_216020 = {
+	name = "mb_genealogy_name_216020"
+	culture = persian
+	religion = mazdayasna
+	rite = mazdayasna
+	dynasty = mbplus_abbasid_dynn_dabuyid
+	710.1.1 = { birth = yes }
+	741.1.1 = { death = yes }
+}
+
+# MB+ ancestor 217214
+mb_genealogy_217214 = {
+	name = "mb_genealogy_name_217214"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty_house = mb_tribe_house_suldus
+	1232.7.27 = { birth = yes }
+	1297.5.24 = { death = yes }
+}
+
+# MB+ ancestor 217265
+mb_genealogy_217265 = {
+	mother = mb_genealogy_172010
+	name = "mb_genealogy_name_217265"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = tolui_borjigin
+	1209.1.10 = { birth = yes }
+	1258.1.1 = { death = yes }
+}
+
+# MB+ ancestor 223673
+mb_genealogy_223673 = {
+	name = "mb_genealogy_name_223673"
+	culture = occitan
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = 727
+	1103.1.1 = { birth = yes }
+	1148.4.16 = { death = yes }
+}
+
+# MB+ ancestor 225000
+mb_genealogy_225000 = {
+	name = "mb_genealogy_name_225000"
+	culture = turkmen
+	religion = sunni
+	rite = hanafi
+	dynasty = seljukids_dynasty
+	1132.1.1 = { birth = yes }
+}
+
+# MB+ ancestor 248194
+mb_genealogy_248194 = {
+	name = "mb_genealogy_name_248194"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = mb_tribe_qaraunas_dynasty
+	1211.1.1 = { birth = yes }
+	1263.1.1 = { death = yes }
+}
+
+# MB+ ancestor 248231
+mb_genealogy_248231 = {
+	name = "mb_genealogy_name_248231"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = mb_tribe_dughlat_dynasty
+	1218.1.1 = { birth = yes }
+	1287.1.1 = { death = yes }
+}
+
+# MB+ ancestor 303279
+mb_genealogy_303279 = {
+	name = "mb_genealogy_name_303279"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = bartan_baghatur_borjigin
+	1136.1.1 = { birth = yes }
+	1168.1.1 = { death = yes }
+}
+
+# MB+ ancestor 3042
+mb_genealogy_3042 = {
+	name = "mb_genealogy_name_3042"
+	culture = turkmen
+	religion = sunni
+	rite = hanafi
+	dynasty = seljukids_dynasty
+	1055.1.2 = { birth = yes }
+}
+
+# MB+ ancestor 305983
+mb_genealogy_305983 = {
+	name = "mb_genealogy_name_305983"
+	culture = bodpa
+	religion = vajrayana_faith
+	rite = lamaism
+	dynasty = mb_yuan_county_dynasty_2003083
+	1260.1.1 = { birth = yes }
+	1320.1.1 = { death = yes }
+}
+
+# MB+ ancestor 30858
+mb_genealogy_30858 = {
+	name = "mb_genealogy_name_30858"
+	culture = cisalpine
+	religion = christian_faith
+	rite = beneventan_rite
+	dynasty_house = house_lampertidi
+	1042.1.1 = { birth = yes }
+	1075.1.1 = { death = yes }
+}
+
+# MB+ ancestor 40068
+mb_genealogy_40068 = {
+	name = "mb_genealogy_name_40068"
+	culture = french
+	religion = christian_faith
+	rite = carolingian_christianity
+	dynasty = 100145
+	884.1.1 = { birth = yes }
+	933.1.1 = { death = yes }
+}
+
+# MB+ ancestor 40071
+mb_genealogy_40071 = {
+	name = "mb_genealogy_name_40071"
+	culture = french
+	religion = christian_faith
+	rite = carolingian_christianity
+	dynasty = 100145
+	female = yes
+	mother = mbplus_cardinal_family_323
+	1012.1.1 = { birth = yes }
+	1068.1.1 = { death = yes }
+}
+
+# MB+ ancestor 40090
+mb_genealogy_40090 = {
+	name = "mb_genealogy_name_40090"
+	culture = french
+	religion = christian_faith
+	rite = carolingian_christianity
+	dynasty = 541
+	970.1.1 = { birth = yes }
+	1028.4.6 = { death = yes }
+}
+
+# MB+ ancestor 40097
+mb_genealogy_40097 = {
+	name = "mb_genealogy_name_40097"
+	culture = french
+	religion = christian_faith
+	rite = carolingian_christianity
+	dynasty = 723
+	female = yes
+	971.1.1 = { birth = yes }
+	1040.4.1 = { death = yes }
+}
+
+# MB+ ancestor 40202
+mb_genealogy_40202 = {
+	name = "mb_genealogy_name_40202"
+	culture = occitan
+	religion = christian_faith
+	rite = carolingian_christianity
+	dynasty = 40021
+	1010.1.1 = { birth = yes }
+	1060.1.1 = { death = yes }
+}
+
+# MB+ ancestor 40273
+mb_genealogy_40273 = {
+	name = "mb_genealogy_name_40273"
+	culture = french
+	religion = christian_faith
+	rite = carolingian_christianity
+	dynasty_house = house_limoges
+	female = yes
+	970.1.1 = { birth = yes }
+	1025.1.1 = { death = yes }
+}
+
+# MB+ ancestor 40296
+mb_genealogy_40296 = {
+	name = "mb_genealogy_name_40296"
+	culture = french
+	religion = christian_faith
+	rite = carolingian_christianity
+	dynasty_house = house_limoges
+	father = mbplus_family_40294
+	962.1.1 = { birth = yes }
+	1025.10.27 = { death = yes }
+}
+
+# MB+ ancestor 450604
+mb_genealogy_450604 = {
+	name = "mb_genealogy_name_450604"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_153
+	1244.1.2 = { birth = yes }
+	1294.1.2 = { death = yes }
+}
+
+# MB+ ancestor 450654
+mb_genealogy_450654 = {
+	name = "mb_genealogy_name_450654"
+	culture = danish
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = estrid_dynasty
+	1229.1.1 = { birth = yes }
+	1310.1.1 = { death = yes }
+}
+
+# MB+ ancestor 450655
+mb_genealogy_450655 = {
+	name = "mb_genealogy_name_450655"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	dynasty = bjalbo_atten_dynasty
+	female = yes
+	1213.1.1 = { birth = yes }
+	1261.1.1 = { death = yes }
+}
+
+# MB+ ancestor 450721
+mb_genealogy_450721 = {
+	name = "mb_genealogy_name_450721"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_137
+	1240.1.2 = { birth = yes }
+	1310.1.2 = { death = yes }
+}
+
+# MB+ ancestor 450722
+mb_genealogy_450722 = {
+	name = "mb_genealogy_name_450722"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_136
+	female = yes
+	father = mb_genealogy_450830
+	1248.1.1 = { birth = yes }
+	1307.1.2 = { death = yes }
+}
+
+# MB+ ancestor 450724
+mb_genealogy_450724 = {
+	name = "mb_genealogy_name_450724"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_137
+	1265.1.2 = { birth = yes }
+	1315.1.2 = { death = yes }
+}
+
+# MB+ ancestor 450725
+mb_genealogy_450725 = {
+	name = "mb_genealogy_name_450725"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_137
+	female = yes
+	1270.1.2 = { birth = yes }
+	1330.1.2 = { death = yes }
+}
+
+# MB+ ancestor 450830
+mb_genealogy_450830 = {
+	name = "mb_genealogy_name_450830"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_136
+	1232.1.1 = { birth = yes }
+	1281.1.1 = { death = yes }
+}
+
+# MB+ ancestor 450831
+mb_genealogy_450831 = {
+	name = "mb_genealogy_name_450831"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	female = yes
+	1253.1.2 = { birth = yes }
+	1308.1.2 = { death = yes }
+}
+
+# MB+ ancestor 451804
+mb_genealogy_451804 = {
+	name = "mb_genealogy_name_451804"
+	culture = danish
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = mb_scand_dynasty_118
+	1279.1.2 = { birth = yes }
+	1305.1.2 = { death = yes }
+}
+
+# MB+ ancestor 453063
+mb_genealogy_453063 = {
+	name = "mb_genealogy_name_453063"
+	culture = scottish
+	religion = catholic
+	dynasty = dunbar_dynasty
+	1242.1.1 = { birth = yes }
+	1308.10.10 = { death = yes }
+}
+
+# MB+ ancestor 453064
+mb_genealogy_453064 = {
+	name = "mb_genealogy_name_453064"
+	culture = scottish
+	religion = catholic
+	dynasty = 101600
+	female = yes
+	1242.1.1 = { birth = yes }
+	1308.1.1 = { death = yes }
+}
+
+# MB+ ancestor 453401
+mb_genealogy_453401 = {
+	name = "mb_genealogy_name_453401"
+	culture = english
+	religion = catholic
+	dynasty = hastings_dynasty
+	1286.9.29 = { birth = yes }
+	1325.1.20 = { death = yes }
+}
+
+# MB+ ancestor 453402
+mb_genealogy_453402 = {
+	name = "mb_genealogy_name_453402"
+	culture = english
+	religion = christian_faith
+	rite = roman_rite
+	female = yes
+	1297.1.1 = { birth = yes }
+	1347.1.1 = { death = yes }
+}
+
+# MB+ ancestor 453512
+mb_genealogy_453512 = {
+	name = "mb_genealogy_name_453512"
+	culture = scottish
+	religion = catholic
+	rite = roman_rite
+	dynasty = bruce_dynasty
+	1243.1.1 = { birth = yes }
+	1304.3.4 = { death = yes }
+}
+
+# MB+ ancestor 454111
+mb_genealogy_454111 = {
+	name = "mb_genealogy_name_454111"
+	culture = english
+	religion = catholic
+	rite = roman_rite
+	dynasty = butler_dynasty
+	1263.1.1 = { birth = yes }
+	1321.7.1 = { death = yes }
+}
+
+# MB+ ancestor 454112
+mb_genealogy_454112 = {
+	name = "mb_genealogy_name_454112"
+	culture = english
+	religion = catholic
+	rite = roman_rite
+	dynasty_house = mb_genealogy_house_house_fitzgerald
+	female = yes
+	1265.1.1 = { birth = yes }
+	1333.1.1 = { death = yes }
+}
+
+# MB+ ancestor 455542
+mb_genealogy_455542 = {
+	name = "mb_genealogy_name_455542"
+	culture = occitan
+	religion = christian_faith
+	rite = roman_rite
+	dynasty_house = house_foix
+	1235.1.1 = { birth = yes }
+	1303.3.3 = { death = yes }
+}
+
+# MB+ ancestor 6904
+mb_genealogy_6904 = {
+	name = "mb_genealogy_name_6904"
+	culture = danish
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = estrid_dynasty
+	female = yes
+	1244.1.1 = { birth = yes }
+	1287.3.24 = { death = yes }
+}
+
+# MB+ ancestor 6905
+mb_genealogy_6905 = {
+	name = "mb_genealogy_name_6905"
+	culture = norwegian
+	religion = catholic
+	rite = roman_rite
+	dynasty = sverre_aetten_dynasty
+	1238.5.1 = { birth = yes }
+	1280.5.9 = { death = yes }
+}
+
+# MB+ ancestor 71741
+mb_genealogy_71741 = {
+	name = "mb_genealogy_name_71741"
+	culture = catalan
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = barcelona_dynasty
+	1265.1.1 = { birth = yes }
+	1285.5.22 = { death = yes }
+}
+
+# MB+ ancestor 72419
+mb_genealogy_72419 = {
+	name = "mb_genealogy_name_72419"
+	culture = castilian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty_house = house_lara
+	female = yes
+	1162.1.1 = { birth = yes }
+	1212.1.1 = { death = yes }
+}
+
+# MB+ ancestor 72787
+mb_genealogy_72787 = {
+	name = "mb_genealogy_name_72787"
+	culture = asturleonese
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = 12180
+	female = yes
+	1087.1.1 = { birth = yes }
+	1140.1.1 = { death = yes }
+}
+
+# MB+ ancestor 72788
+mb_genealogy_72788 = {
+	name = "mb_genealogy_name_72788"
+	culture = galician
+	religion = christian_faith
+	rite = roman_rite
+	dynasty_house = mb_genealogy_house_house_traba
+	1091.1.1 = { birth = yes }
+	1168.1.1 = { death = yes }
+}
+
+# MB+ ancestor 72986
+mb_genealogy_72986 = {
+	name = "mb_genealogy_name_72986"
+	culture = castilian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = 7025
+	1165.1.1 = { birth = yes }
+	1234.1.1 = { death = yes }
+}
+
+# MB+ ancestor 73006
+mb_genealogy_73006 = {
+	name = "mb_genealogy_name_73006"
+	culture = castilian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = 7025
+	female = yes
+	father = mb_genealogy_72986
+	mother = mb_genealogy_72419
+	1195.1.1 = { birth = yes }
+	1255.1.1 = { death = yes }
+}
+
+# MB+ ancestor 91092
+mb_genealogy_91092 = {
+	name = "mb_genealogy_name_91092"
+	culture = portuguese
+	religion = christian_faith
+	rite = roman_rite
+	dynasty_house = house_burgundy_portuguese
+	female = yes
+	1100.1.1 = { birth = yes }
+	1165.1.1 = { death = yes }
+}
+
+# MB+ ancestor 93057
+mb_genealogy_93057 = {
+	name = "mb_genealogy_name_93057"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = qasar_borjigin
+	1200.1.1 = { birth = yes }
+	1250.1.1 = { death = yes }
+}
+
+# MB+ ancestor 93071
+mb_genealogy_93071 = {
+	name = "mb_genealogy_name_93071"
+	culture = mongol
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = borjigin_dynasty
+	father = chagatai_khan
+	1210.1.1 = { birth = yes }
+	1260.1.1 = { death = yes }
+}
+
+# MB+ ancestor 93535
+mb_genealogy_93535 = {
+	name = "mb_genealogy_name_93535"
+	culture = danish
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = estrid_dynasty
+	1228.1.1 = { birth = yes }
+	1304.1.1 = { death = yes }
+}
+
+# MB+ ancestor 93660
+mb_genealogy_93660 = {
+	name = "mb_genealogy_name_93660"
+	culture = hungarian
+	religion = catholic
+	rite = roman_rite
+	dynasty = 101566
+	1160.1.1 = { birth = yes }
+	1218.1.1 = { death = yes }
+}
+
+# MB+ ancestor AlchiOng4
+mb_genealogy_AlchiOng4 = {
+	name = "mb_genealogy_name_AlchiOng4"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = mb_yuan_county_dynasty_101946
+	1269.6.14 = { birth = yes }
+	1328.10.7 = { death = yes }
+}
+
+# MB+ ancestor AnyangDuHanMB39
+mb_genealogy_AnyangDuHanMB39 = {
+	name = "mb_genealogy_name_AnyangDuHanMB39"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_jingzhao_du_dyn
+	1258.8.9 = { birth = yes }
+	1321.2.24 = { death = yes }
+}
+
+# MB+ ancestor AriqBoke1
+mb_genealogy_AriqBoke1 = {
+	name = "mb_genealogy_name_AriqBoke1"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = ariq_boke_borjigin
+	1244.6.15 = { birth = yes }
+	1302.9.23 = { death = yes }
+}
+
+# MB+ ancestor AriqBoke2
+mb_genealogy_AriqBoke2 = {
+	name = "mb_genealogy_name_AriqBoke2"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_AriqBoke1
+	1270.3.8 = { birth = yes }
+	1328.11.14 = { death = yes }
+}
+
+# MB+ ancestor BohaiOuyangHanMB30
+mb_genealogy_BohaiOuyangHanMB30 = {
+	name = "mb_genealogy_name_BohaiOuyangHanMB30"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_bohai_ouyang_dyn
+	1264.5.12 = { birth = yes }
+	1328.10.29 = { death = yes }
+}
+
+# MB+ ancestor BohaiQiuHanMB33
+mb_genealogy_BohaiQiuHanMB33 = {
+	name = "mb_genealogy_name_BohaiQiuHanMB33"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_changli_pishina_dyn
+	1258.10.12 = { birth = yes }
+	1323.3.27 = { death = yes }
+}
+
+# MB+ ancestor BoyeHanHanMB24
+mb_genealogy_BoyeHanHanMB24 = {
+	name = "mb_genealogy_name_BoyeHanHanMB24"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_han_97D3_12
+	1244.3.18 = { birth = yes }
+	1311.12.4 = { death = yes }
+}
+
+# MB+ ancestor ChengjiLiuHanMB6
+mb_genealogy_ChengjiLiuHanMB6 = {
+	name = "mb_genealogy_name_ChengjiLiuHanMB6"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_peiguo_han_dyn
+	1265.5.25 = { birth = yes }
+	1329.12.9 = { death = yes }
+}
+
+# MB+ ancestor ChengwuPangHanMB24
+mb_genealogy_ChengwuPangHanMB24 = {
+	name = "mb_genealogy_name_ChengwuPangHanMB24"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_chengwu_pang_dyn
+	1233.4.9 = { birth = yes }
+	1303.8.2 = { death = yes }
+}
+
+# MB+ ancestor ChonganLiuHanMB30
+mb_genealogy_ChonganLiuHanMB30 = {
+	name = "mb_genealogy_name_ChonganLiuHanMB30"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_peiguo_han_dyn
+	1258.5.16 = { birth = yes }
+	1322.8.31 = { death = yes }
+}
+
+# MB+ ancestor Daridai1
+mb_genealogy_Daridai1 = {
+	name = "mb_genealogy_name_Daridai1"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_303279
+	1158.8.15 = { birth = yes }
+	1219.4.23 = { death = yes }
+}
+
+# MB+ ancestor Daridai2
+mb_genealogy_Daridai2 = {
+	name = "mb_genealogy_name_Daridai2"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Daridai1
+	1190.6.12 = { birth = yes }
+	1252.11.8 = { death = yes }
+}
+
+# MB+ ancestor Daridai3
+mb_genealogy_Daridai3 = {
+	name = "mb_genealogy_name_Daridai3"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Daridai2
+	1223.9.4 = { birth = yes }
+	1285.3.17 = { death = yes }
+}
+
+# MB+ ancestor Daridai4
+mb_genealogy_Daridai4 = {
+	name = "mb_genealogy_name_Daridai4"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Daridai3
+	1255.11.28 = { birth = yes }
+	1318.8.5 = { death = yes }
+}
+
+# MB+ ancestor DeAnWangHanMB4
+mb_genealogy_DeAnWangHanMB4 = {
+	name = "mb_genealogy_name_DeAnWangHanMB4"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_wang_6C6A_12
+	1262.5.13 = { birth = yes }
+	1325.2.27 = { death = yes }
+}
+
+# MB+ ancestor DeqingDingHanMB22
+mb_genealogy_DeqingDingHanMB22 = {
+	name = "mb_genealogy_name_DeqingDingHanMB22"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_xiangfu_ding_dyn
+	1243.5.25 = { birth = yes }
+	1308.10.8 = { death = yes }
+}
+
+# MB+ ancestor DiaoHanMB8
+mb_genealogy_DiaoHanMB8 = {
+	name = "mb_genealogy_name_DiaoHanMB8"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_bohai_diao_dyn
+	1261.5.27 = { birth = yes }
+	1324.10.15 = { death = yes }
+}
+
+# MB+ ancestor DinhMB18
+mb_genealogy_DinhMB18 = {
+	name = "mb_genealogy_name_DinhMB18"
+	culture = viet
+	religion = mahayana_faith
+	dynasty = mb_eastasia_dynasty_1000060005
+	1255.6.13 = { birth = yes }
+	1319.11.7 = { death = yes }
+}
+
+# MB+ ancestor DoMB14
+mb_genealogy_DoMB14 = {
+	name = "mb_genealogy_name_DoMB14"
+	culture = viet
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = viet_do
+	1250.6.14 = { birth = yes }
+	1315.10.7 = { death = yes }
+}
+
+# MB+ ancestor DoanMB20
+mb_genealogy_DoanMB20 = {
+	name = "mb_genealogy_name_DoanMB20"
+	culture = viet
+	religion = mahayana_faith
+	dynasty = mb_eastasia_dynasty_VietDoan
+	1268.2.14 = { birth = yes }
+	1332.8.25 = { death = yes }
+}
+
+# MB+ ancestor FengqiuZhaoHanMB55
+mb_genealogy_FengqiuZhaoHanMB55 = {
+	name = "mb_genealogy_name_FengqiuZhaoHanMB55"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_zhao_8D99_1
+	1242.11.6 = { birth = yes }
+	1310.3.21 = { death = yes }
+}
+
+# MB+ ancestor Godan1
+mb_genealogy_Godan1 = {
+	name = "mb_genealogy_name_Godan1"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_172009
+	1231.8.15 = { birth = yes }
+	1289.6.23 = { death = yes }
+}
+
+# MB+ ancestor Godan1M
+mb_genealogy_Godan1M = {
+	name = "mb_genealogy_name_Godan1M"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_172009
+	1233.1.1 = { birth = yes }
+	1289.6.23 = { death = yes }
+}
+
+# MB+ ancestor Godan2
+mb_genealogy_Godan2 = {
+	name = "mb_genealogy_name_Godan2"
+	culture = mongol
+	religion = vajrayana_faith
+	rite = lamaism
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Godan1
+	1255.3.9 = { birth = yes }
+	1308.11.17 = { death = yes }
+}
+
+# MB+ ancestor Godan2M
+mb_genealogy_Godan2M = {
+	name = "mb_genealogy_name_Godan2M"
+	culture = mongol
+	religion = vajrayana_faith
+	rite = lamaism
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Godan1M
+	1257.8.14 = { birth = yes }
+	1312.3.27 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea1163
+mb_genealogy_GoryeoKorea1163 = {
+	name = "mb_genealogy_name_GoryeoKorea1163"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = korean_du_dureung
+	1254.8.12 = { birth = yes }
+	1322.3.7 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea1192
+mb_genealogy_GoryeoKorea1192 = {
+	name = "mb_genealogy_name_GoryeoKorea1192"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = korean_min_hwangryeo
+	1264.5.27 = { birth = yes }
+	1325.12.4 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea1286
+mb_genealogy_GoryeoKorea1286 = {
+	name = "mb_genealogy_name_GoryeoKorea1286"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = korean_seo_icheon
+	1269.7.25 = { birth = yes }
+	1332.3.11 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea1326
+mb_genealogy_GoryeoKorea1326 = {
+	name = "mb_genealogy_name_GoryeoKorea1326"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = korean_o_gochang
+	1267.11.29 = { birth = yes }
+	1330.9.17 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea1430
+mb_genealogy_GoryeoKorea1430 = {
+	name = "mb_genealogy_name_GoryeoKorea1430"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_eastasia_dynasty_1000027803
+	1269.12.21 = { birth = yes }
+	1332.9.5 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea236
+mb_genealogy_GoryeoKorea236 = {
+	name = "mb_genealogy_name_GoryeoKorea236"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = korean_choe_jiksan
+	1249.7.14 = { birth = yes }
+	1311.4.28 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea264
+mb_genealogy_GoryeoKorea264 = {
+	name = "mb_genealogy_name_GoryeoKorea264"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_eastasia_dynasty_1000027813
+	1247.8.22 = { birth = yes }
+	1310.5.19 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea322
+mb_genealogy_GoryeoKorea322 = {
+	name = "mb_genealogy_name_GoryeoKorea322"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_eastasia_dynasty_1000155220
+	1248.2.24 = { birth = yes }
+	1311.9.18 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea415
+mb_genealogy_GoryeoKorea415 = {
+	name = "mb_genealogy_name_GoryeoKorea415"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = korean_choe_ubong
+	1252.1.12 = { birth = yes }
+	1314.6.25 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea450
+mb_genealogy_GoryeoKorea450 = {
+	name = "mb_genealogy_name_GoryeoKorea450"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = korean_gwon_andong
+	1251.4.15 = { birth = yes }
+	1314.8.6 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea490
+mb_genealogy_GoryeoKorea490 = {
+	name = "mb_genealogy_name_GoryeoKorea490"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_eastasia_dynasty_1000027801
+	1260.2.2 = { birth = yes }
+	1320.12.12 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea579
+mb_genealogy_GoryeoKorea579 = {
+	name = "mb_genealogy_name_GoryeoKorea579"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_eastasia_dynasty_1000062005
+	1266.8.3 = { birth = yes }
+	1329.11.21 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea601
+mb_genealogy_GoryeoKorea601 = {
+	name = "mb_genealogy_name_GoryeoKorea601"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_eastasia_dynasty_1000155137
+	1267.3.22 = { birth = yes }
+	1331.7.5 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea644
+mb_genealogy_GoryeoKorea644 = {
+	name = "mb_genealogy_name_GoryeoKorea644"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_eastasia_dynasty_1000155105
+	1268.12.7 = { birth = yes }
+	1330.5.21 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea65
+mb_genealogy_GoryeoKorea65 = {
+	name = "mb_genealogy_name_GoryeoKorea65"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_eastasia_dynasty_1000155017
+	1253.6.27 = { birth = yes }
+	1322.10.7 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea667
+mb_genealogy_GoryeoKorea667 = {
+	name = "mb_genealogy_name_GoryeoKorea667"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = korean_pyeong_chungju
+	1257.4.26 = { birth = yes }
+	1320.10.6 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea705
+mb_genealogy_GoryeoKorea705 = {
+	name = "mb_genealogy_name_GoryeoKorea705"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_eastasia_dynasty_1000155206
+	1242.11.2 = { birth = yes }
+	1306.6.18 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea739
+mb_genealogy_GoryeoKorea739 = {
+	name = "mb_genealogy_name_GoryeoKorea739"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = korean_bak_silla
+	1259.11.22 = { birth = yes }
+	1324.3.6 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea804
+mb_genealogy_GoryeoKorea804 = {
+	name = "mb_genealogy_name_GoryeoKorea804"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = korean_jo_wonju
+	1268.11.8 = { birth = yes }
+	1331.6.14 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea967
+mb_genealogy_GoryeoKorea967 = {
+	name = "mb_genealogy_name_GoryeoKorea967"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = korean_jeong_dongnae
+	1266.4.15 = { birth = yes }
+	1329.10.24 = { death = yes }
+}
+
+# MB+ ancestor GoryeoKorea99
+mb_genealogy_GoryeoKorea99 = {
+	name = "mb_genealogy_name_GoryeoKorea99"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_eastasia_dynasty_1000155181
+	1267.6.22 = { birth = yes }
+	1331.10.6 = { death = yes }
+}
+
+# MB+ ancestor GuianHanHanMB22
+mb_genealogy_GuianHanHanMB22 = {
+	name = "mb_genealogy_name_GuianHanHanMB22"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_peiguo_han_dyn
+	1271.3.12 = { birth = yes }
+	1329.8.26 = { death = yes }
+}
+
+# MB+ ancestor Guyug1
+mb_genealogy_Guyug1 = {
+	name = "mb_genealogy_name_Guyug1"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_166911
+	1244.8.15 = { birth = yes }
+	1301.3.24 = { death = yes }
+}
+
+# MB+ ancestor Guyug2
+mb_genealogy_Guyug2 = {
+	name = "mb_genealogy_name_Guyug2"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Guyug1
+	1269.5.12 = { birth = yes }
+	1325.9.8 = { death = yes }
+}
+
+# MB+ ancestor Hachiun1
+mb_genealogy_Hachiun1 = {
+	name = "mb_genealogy_name_Hachiun1"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = hachiun_borjigin
+	1193.5.18 = { birth = yes }
+	1255.11.24 = { death = yes }
+}
+
+# MB+ ancestor Hachiun2
+mb_genealogy_Hachiun2 = {
+	name = "mb_genealogy_name_Hachiun2"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Hachiun1
+	1220.8.3 = { birth = yes }
+	1283.2.17 = { death = yes }
+}
+
+# MB+ ancestor Hachiun3
+mb_genealogy_Hachiun3 = {
+	name = "mb_genealogy_name_Hachiun3"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Hachiun2
+	1250.4.29 = { birth = yes }
+	1312.9.5 = { death = yes }
+}
+
+# MB+ ancestor HenanLuHanMB33
+mb_genealogy_HenanLuHanMB33 = {
+	name = "mb_genealogy_name_HenanLuHanMB33"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_henan_lv_dyn
+	1250.4.25 = { birth = yes }
+	1313.12.10 = { death = yes }
+}
+
+# MB+ ancestor HoMB21
+mb_genealogy_HoMB21 = {
+	name = "mb_genealogy_name_HoMB21"
+	culture = viet
+	religion = mahayana_faith
+	dynasty = mb_eastasia_dynasty_viet_d007
+	1264.8.15 = { birth = yes }
+	1330.4.3 = { death = yes }
+}
+
+# MB+ ancestor HouguanLuHanMB33
+mb_genealogy_HouguanLuHanMB33 = {
+	name = "mb_genealogy_name_HouguanLuHanMB33"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_wujun_lu_dyn
+	1274.8.3 = { birth = yes }
+	1330.12.18 = { death = yes }
+}
+
+# MB+ ancestor HuangHanMB19
+mb_genealogy_HuangHanMB19 = {
+	name = "mb_genealogy_name_HuangHanMB19"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	1273.6.8 = { birth = yes }
+	1336.10.22 = { death = yes }
+}
+
+# MB+ ancestor HuayinZhouHanMB10
+mb_genealogy_HuayinZhouHanMB10 = {
+	name = "mb_genealogy_name_HuayinZhouHanMB10"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_zhou_5468_10
+	1251.6.23 = { birth = yes }
+	1314.11.7 = { death = yes }
+}
+
+# MB+ ancestor HuianHuHanMB45
+mb_genealogy_HuianHuHanMB45 = {
+	name = "mb_genealogy_name_HuianHuHanMB45"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_dynasty_hu_liang
+	1254.6.8 = { birth = yes }
+	1321.10.24 = { death = yes }
+}
+
+# MB+ ancestor Hulegu1
+mb_genealogy_Hulegu1 = {
+	name = "mb_genealogy_name_Hulegu1"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = hulegu_khan_borjigin
+	1243.6.12 = { birth = yes }
+	1301.9.28 = { death = yes }
+}
+
+# MB+ ancestor Hulegu2
+mb_genealogy_Hulegu2 = {
+	name = "mb_genealogy_name_Hulegu2"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Hulegu1
+	1272.3.5 = { birth = yes }
+	1324.11.17 = { death = yes }
+}
+
+# MB+ ancestor JadranChina4
+mb_genealogy_JadranChina4 = {
+	name = "mb_genealogy_name_JadranChina4"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = mb_yuan_county_dynasty_1040066
+	1262.5.19 = { birth = yes }
+	1318.10.7 = { death = yes }
+}
+
+# MB+ ancestor Jalair16
+mb_genealogy_Jalair16 = {
+	name = "mb_genealogy_name_Jalair16"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = jalayirids_dynasty
+	1200.8.5 = { birth = yes }
+	1258.5.18 = { death = yes }
+}
+
+# MB+ ancestor JiananXuHanMB33
+mb_genealogy_JiananXuHanMB33 = {
+	name = "mb_genealogy_name_JiananXuHanMB33"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_gaoyang_xu_dyn
+	1243.6.4 = { birth = yes }
+	1306.11.17 = { death = yes }
+}
+
+# MB+ ancestor JiangningQinHanMB27
+mb_genealogy_JiangningQinHanMB27 = {
+	name = "mb_genealogy_name_JiangningQinHanMB27"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_khitan_admin_fic_qin_79e6
+	1247.8.17 = { birth = yes }
+	1313.3.1 = { death = yes }
+}
+
+# MB+ ancestor JinMongols11
+mb_genealogy_JinMongols11 = {
+	name = "mb_genealogy_name_JinMongols11"
+	culture = han
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_yuan_county_dynasty_jin_han_shi1
+	1256.8.12 = { birth = yes }
+	1305.3.11 = { death = yes }
+}
+
+# MB+ ancestor JuanchengLiHanMB34
+mb_genealogy_JuanchengLiHanMB34 = {
+	name = "mb_genealogy_name_JuanchengLiHanMB34"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_li_674E_87
+	1235.7.2 = { birth = yes }
+	1301.12.13 = { death = yes }
+}
+
+# MB+ ancestor JuluGuoHanMB26
+mb_genealogy_JuluGuoHanMB26 = {
+	name = "mb_genealogy_name_JuluGuoHanMB26"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_1000050364
+	1259.7.12 = { birth = yes }
+	1316.3.29 = { death = yes }
+}
+
+# MB+ ancestor Jurchedei18
+mb_genealogy_Jurchedei18 = {
+	name = "mb_genealogy_name_Jurchedei18"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = mb_yuan_county_dynasty_UruudMongol
+	1257.3.5 = { birth = yes }
+	1315.8.12 = { death = yes }
+}
+
+# MB+ ancestor JurchenFuca52
+mb_genealogy_JurchenFuca52 = {
+	name = "mb_genealogy_name_JurchenFuca52"
+	culture = jurchen
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_yuan_county_dynasty_jurchen_fuca_dyn
+	1272.12.13 = { birth = yes }
+	1335.7.26 = { death = yes }
+}
+
+# MB+ ancestor JurchenJietugudan64
+mb_genealogy_JurchenJietugudan64 = {
+	name = "mb_genealogy_name_JurchenJietugudan64"
+	culture = jurchen
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_yuan_county_dynasty_jietugudan
+	1253.12.14 = { birth = yes }
+	1316.5.20 = { death = yes }
+}
+
+# MB+ ancestor JurchenLiiHanMB3
+mb_genealogy_JurchenLiiHanMB3 = {
+	name = "mb_genealogy_name_JurchenLiiHanMB3"
+	culture = han
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_yuan_county_dynasty_jin_han_li4
+	1263.9.22 = { birth = yes }
+	1325.4.7 = { death = yes }
+}
+
+# MB+ ancestor JurchenPucha55
+mb_genealogy_JurchenPucha55 = {
+	name = "mb_genealogy_name_JurchenPucha55"
+	culture = jurchen
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_yuan_county_dynasty_pucha_alchuqu
+	1266.10.29 = { birth = yes }
+	1329.5.12 = { death = yes }
+}
+
+# MB+ ancestor JurchenSheyen48
+mb_genealogy_JurchenSheyen48 = {
+	name = "mb_genealogy_name_JurchenSheyen48"
+	culture = jurchen
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_yuan_county_dynasty_1051112
+	1258.3.12 = { birth = yes }
+	1313.9.28 = { death = yes }
+}
+
+# MB+ ancestor JurchenWugulun25
+mb_genealogy_JurchenWugulun25 = {
+	name = "mb_genealogy_name_JurchenWugulun25"
+	culture = jurchen
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_yuan_county_dynasty_ukurun_dubagu
+	1249.9.18 = { birth = yes }
+	1312.1.31 = { death = yes }
+}
+
+# MB+ ancestor JurchenYangHanMB10
+mb_genealogy_JurchenYangHanMB10 = {
+	name = "mb_genealogy_name_JurchenYangHanMB10"
+	culture = han
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_yuan_county_dynasty_jin_han_yang
+	1270.1.8 = { birth = yes }
+	1336.8.16 = { death = yes }
+}
+
+# MB+ ancestor JurchenYeonHanMB10
+mb_genealogy_JurchenYeonHanMB10 = {
+	name = "mb_genealogy_name_JurchenYeonHanMB10"
+	culture = han
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_yuan_county_dynasty_jin_han_yan
+	1259.10.14 = { birth = yes }
+	1322.5.3 = { death = yes }
+}
+
+# MB+ ancestor KaifengXiangHanMB32
+mb_genealogy_KaifengXiangHanMB32 = {
+	name = "mb_genealogy_name_KaifengXiangHanMB32"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_kaifeng_xiang_dyn
+	1249.9.7 = { birth = yes }
+	1312.12.14 = { death = yes }
+}
+
+# MB+ ancestor Khitan48
+mb_genealogy_Khitan48 = {
+	name = "mb_genealogy_name_Khitan48"
+	culture = khitan
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_yuan_county_dynasty_1000048353
+	1243.5.31 = { birth = yes }
+	1306.8.15 = { death = yes }
+}
+
+# MB+ ancestor Khorachar1
+mb_genealogy_Khorachar1 = {
+	name = "mb_genealogy_name_Khorachar1"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_166913
+	1230.4.12 = { birth = yes }
+	1289.9.28 = { death = yes }
+}
+
+# MB+ ancestor Khorachar3
+mb_genealogy_Khorachar3 = {
+	name = "mb_genealogy_name_Khorachar3"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Khorachar1
+	1257.11.23 = { birth = yes }
+	1318.3.9 = { death = yes }
+}
+
+# MB+ ancestor Kolgen1
+mb_genealogy_Kolgen1 = {
+	name = "mb_genealogy_name_Kolgen1"
+	culture = mongol
+	religion = shangqing_faith
+	rite = quanzhen
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_166865
+	1218.6.14 = { birth = yes }
+	1262.9.22 = { death = yes }
+}
+
+# MB+ ancestor Kolgen2
+mb_genealogy_Kolgen2 = {
+	name = "mb_genealogy_name_Kolgen2"
+	culture = mongol
+	religion = shangqing_faith
+	rite = quanzhen
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Kolgen1
+	1241.3.8 = { birth = yes }
+	1295.11.16 = { death = yes }
+}
+
+# MB+ ancestor Kolgen3
+mb_genealogy_Kolgen3 = {
+	name = "mb_genealogy_name_Kolgen3"
+	culture = mongol
+	religion = shangqing_faith
+	rite = quanzhen
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Kolgen2
+	1268.7.23 = { birth = yes }
+	1326.4.5 = { death = yes }
+}
+
+# MB+ ancestor LiangYangHanMB34
+mb_genealogy_LiangYangHanMB34 = {
+	name = "mb_genealogy_name_LiangYangHanMB34"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_anding_liang_dyn
+	1251.5.9 = { birth = yes }
+	1317.10.26 = { death = yes }
+}
+
+# MB+ ancestor LinchuanWangHanMB26
+mb_genealogy_LinchuanWangHanMB26 = {
+	name = "mb_genealogy_name_LinchuanWangHanMB26"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_linchuan_wang_dyn
+	1262.8.11 = { birth = yes }
+	1325.12.23 = { death = yes }
+}
+
+# MB+ ancestor LiuMongols6
+mb_genealogy_LiuMongols6 = {
+	name = "mb_genealogy_name_LiuMongols6"
+	culture = han
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_yuan_county_dynasty_jin_han_liu1
+	1252.8.5 = { birth = yes }
+	1308.12.14 = { death = yes }
+}
+
+# MB+ ancestor LuoyangJiaHanMB34
+mb_genealogy_LuoyangJiaHanMB34 = {
+	name = "mb_genealogy_name_LuoyangJiaHanMB34"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_jia_8CC8_13
+	1254.3.21 = { birth = yes }
+	1319.8.7 = { death = yes }
+}
+
+# MB+ ancestor LuoyuanYuHanMB9
+mb_genealogy_LuoyuanYuHanMB9 = {
+	name = "mb_genealogy_name_LuoyuanYuHanMB9"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_luoyuan_yu_dyn
+	1238.2.6 = { birth = yes }
+	1302.7.19 = { death = yes }
+}
+
+# MB+ ancestor LyMB10
+mb_genealogy_LyMB10 = {
+	name = "mb_genealogy_name_LyMB10"
+	culture = viet
+	religion = mahayana_faith
+	dynasty = viet_ly
+	1258.7.13 = { birth = yes }
+	1320.3.29 = { death = yes }
+}
+
+# MB+ ancestor MB_mandagot_pierre
+mb_genealogy_MB_mandagot_pierre = {
+	name = "mb_genealogy_name_MB_mandagot_pierre"
+	culture = occitan
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = mb_genealogy_dynasty_MB_dynn_mandagot
+	1215.1.1 = { birth = yes }
+	1280.1.1 = { death = yes }
+}
+
+# MB+ ancestor MB_stratford_robert_elder
+mb_genealogy_MB_stratford_robert_elder = {
+	name = "mb_genealogy_name_MB_stratford_robert_elder"
+	culture = english
+	religion = catholic
+	dynasty = stratford_dynasty
+	1245.1.1 = { birth = yes }
+	1310.1.1 = { death = yes }
+}
+
+# MB+ ancestor MB_virneburg_ruprecht
+mb_genealogy_MB_virneburg_ruprecht = {
+	name = "mb_genealogy_name_MB_virneburg_ruprecht"
+	culture = franconian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = mb_genealogy_dynasty_1000103211
+	1255.1.1 = { birth = yes }
+	1308.1.1 = { death = yes }
+}
+
+# MB+ ancestor MaiMB24
+mb_genealogy_MaiMB24 = {
+	name = "mb_genealogy_name_MaiMB24"
+	culture = viet
+	religion = mahayana_faith
+	dynasty = mb_eastasia_dynasty_muong_d004
+	1249.5.3 = { birth = yes }
+	1312.11.18 = { death = yes }
+}
+
+# MB+ ancestor Manghud8
+mb_genealogy_Manghud8 = {
+	name = "mb_genealogy_name_Manghud8"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = mb_yuan_county_dynasty_Manghud
+	1265.11.30 = { birth = yes }
+	1328.6.24 = { death = yes }
+}
+
+# MB+ ancestor MeishanHanMB18
+mb_genealogy_MeishanHanMB18 = {
+	name = "mb_genealogy_name_MeishanHanMB18"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_su_82CF
+	1254.8.13 = { birth = yes }
+	1319.2.28 = { death = yes }
+}
+
+# MB+ ancestor MeishanJiaHanMB4
+mb_genealogy_MeishanJiaHanMB4 = {
+	name = "mb_genealogy_name_MeishanJiaHanMB4"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_jia_8CC8_13
+	1249.12.4 = { birth = yes }
+	1321.6.11 = { death = yes }
+}
+
+# MB+ ancestor Mongke1
+mb_genealogy_Mongke1 = {
+	name = "mb_genealogy_name_Mongke1"
+	culture = mongol
+	religion = shangqing_faith
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_217265
+	1241.8.17 = { birth = yes }
+	1297.3.24 = { death = yes }
+}
+
+# MB+ ancestor Mongke2
+mb_genealogy_Mongke2 = {
+	name = "mb_genealogy_name_Mongke2"
+	culture = mongol
+	religion = shangqing_faith
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Mongke1
+	1268.5.29 = { birth = yes }
+	1325.11.7 = { death = yes }
+}
+
+# MB+ ancestor NSteppeMB256
+mb_genealogy_NSteppeMB256 = {
+	name = "mb_genealogy_name_NSteppeMB256"
+	culture = ongud
+	religion = vajrayana_faith
+	rite = lamaism
+	1240.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+}
+
+# MB+ ancestor NSteppeMB390
+mb_genealogy_NSteppeMB390 = {
+	name = "mb_genealogy_name_NSteppeMB390"
+	culture = qiang
+	religion = vajrayana_faith
+	rite = lamaism
+	1240.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+}
+
+# MB+ ancestor NSteppeMB486
+mb_genealogy_NSteppeMB486 = {
+	name = "mb_genealogy_name_NSteppeMB486"
+	culture = khitan
+	religion = mahayana_faith
+	rite = avatamsaka
+	1240.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+}
+
+# MB+ ancestor NanchengDengHanMB30
+mb_genealogy_NanchengDengHanMB30 = {
+	name = "mb_genealogy_name_NanchengDengHanMB30"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_zhongjiang_deng_dyn
+	1242.12.3 = { birth = yes }
+	1310.7.16 = { death = yes }
+}
+
+# MB+ ancestor NanfengZengHanMB10
+mb_genealogy_NanfengZengHanMB10 = {
+	name = "mb_genealogy_name_NanfengZengHanMB10"
+	culture = han
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_yuan_county_dynasty_zeng_66FE_1
+	1250.8.23 = { birth = yes }
+	1313.11.7 = { death = yes }
+}
+
+# MB+ ancestor OnggiradDes3
+mb_genealogy_OnggiradDes3 = {
+	name = "mb_genealogy_name_OnggiradDes3"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = mb_yuan_county_dynasty_101946
+	1251.8.22 = { birth = yes }
+	1310.4.17 = { death = yes }
+}
+
+# MB+ ancestor Ongud22
+mb_genealogy_Ongud22 = {
+	name = "mb_genealogy_name_Ongud22"
+	culture = ongud
+	religion = tengri_pagan
+	dynasty = mb_yuan_county_dynasty_OngudMon
+	1254.5.3 = { birth = yes }
+	1310.12.17 = { death = yes }
+}
+
+# MB+ ancestor PhamHist4
+mb_genealogy_PhamHist4 = {
+	name = "mb_genealogy_name_PhamHist4"
+	culture = viet
+	religion = mahayana_faith
+	dynasty = mb_eastasia_dynasty_viet_d003
+	1255.1.1 = { birth = yes }
+	1320.11.1 = { death = yes }
+}
+
+# MB+ ancestor PuchengWuHanMB36
+mb_genealogy_PuchengWuHanMB36 = {
+	name = "mb_genealogy_name_PuchengWuHanMB36"
+	culture = yao
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_linchuan_wu_dyn
+	1250.8.14 = { birth = yes }
+	1313.1.30 = { death = yes }
+}
+
+# MB+ ancestor Qasar1
+mb_genealogy_Qasar1 = {
+	name = "mb_genealogy_name_Qasar1"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_93057
+	1224.6.18 = { birth = yes }
+	1287.9.3 = { death = yes }
+}
+
+# MB+ ancestor Qasar10
+mb_genealogy_Qasar10 = {
+	name = "mb_genealogy_name_Qasar10"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = qasar_borjigin
+	1203.5.14 = { birth = yes }
+	1248.11.7 = { death = yes }
+}
+
+# MB+ ancestor Qasar12
+mb_genealogy_Qasar12 = {
+	name = "mb_genealogy_name_Qasar12"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Qasar10
+	1216.2.6 = { birth = yes }
+	1279.9.12 = { death = yes }
+}
+
+# MB+ ancestor Qasar14
+mb_genealogy_Qasar14 = {
+	name = "mb_genealogy_name_Qasar14"
+	culture = mongol
+	religion = zhengyi
+	rite = zhengyi
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Qasar12
+	1245.10.18 = { birth = yes }
+	1308.6.3 = { death = yes }
+}
+
+# MB+ ancestor Qasar16
+mb_genealogy_Qasar16 = {
+	name = "mb_genealogy_name_Qasar16"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Qasar14
+	1274.12.5 = { birth = yes }
+	1331.8.16 = { death = yes }
+}
+
+# MB+ ancestor Qasar2
+mb_genealogy_Qasar2 = {
+	name = "mb_genealogy_name_Qasar2"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Qasar1
+	1254.3.11 = { birth = yes }
+	1307.11.26 = { death = yes }
+}
+
+# MB+ ancestor QiantangYuHanMB21
+mb_genealogy_QiantangYuHanMB21 = {
+	name = "mb_genealogy_name_QiantangYuHanMB21"
+	culture = han
+	religion = mahayana_faith
+	rite = pundarika
+	dynasty = mb_yuan_county_dynasty_shangrao_yu_dyn
+	1252.7.14 = { birth = yes }
+	1316.1.30 = { death = yes }
+}
+
+# MB+ ancestor QingfengChaoHanMB9
+mb_genealogy_QingfengChaoHanMB9 = {
+	name = "mb_genealogy_name_QingfengChaoHanMB9"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_chao_5DE2_1
+	1261.3.14 = { birth = yes }
+	1323.7.2 = { death = yes }
+}
+
+# MB+ ancestor RuGaoWangHanMB29
+mb_genealogy_RuGaoWangHanMB29 = {
+	name = "mb_genealogy_name_RuGaoWangHanMB29"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_rugao_wang_dyn
+	1254.10.9 = { birth = yes }
+	1319.5.26 = { death = yes }
+}
+
+# MB+ ancestor SEAsiaMB151
+mb_genealogy_SEAsiaMB151 = {
+	name = "mb_genealogy_name_SEAsiaMB151"
+	culture = bouxcuengh
+	religion = moism
+	1240.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+}
+
+# MB+ ancestor SEAsiaMB398
+mb_genealogy_SEAsiaMB398 = {
+	name = "mb_genealogy_name_SEAsiaMB398"
+	culture = cham
+	religion = shaiva_faith
+	rite = shaivism
+	1240.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+}
+
+# MB+ ancestor SEAsiaMMB217
+mb_genealogy_SEAsiaMMB217 = {
+	name = "mb_genealogy_name_SEAsiaMMB217"
+	culture = hlai
+	religion = confucian_faith
+	1240.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+}
+
+# MB+ ancestor SEAsiaMMB236
+mb_genealogy_SEAsiaMMB236 = {
+	name = "mb_genealogy_name_SEAsiaMMB236"
+	culture = bouxcuengh
+	religion = moism
+	1240.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+}
+
+# MB+ ancestor SEAsiaMMB255
+mb_genealogy_SEAsiaMMB255 = {
+	name = "mb_genealogy_name_SEAsiaMMB255"
+	culture = tujia
+	religion = bimoism
+	1240.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+}
+
+# MB+ ancestor SEAsiaMMBB292
+mb_genealogy_SEAsiaMMBB292 = {
+	name = "mb_genealogy_name_SEAsiaMMBB292"
+	culture = sami
+	religion = finnish_pagan
+	1210.1.1 = { birth = yes }
+	1300.1.1 = { death = yes }
+}
+
+# MB+ ancestor Sadad2
+mb_genealogy_Sadad2 = {
+	name = "mb_genealogy_name_Sadad2"
+	culture = yemeni
+	religion = sunni
+	rite = shafii
+	dynasty = mb_mam_yem_dyn_1000101550
+	1230.1.1 = { birth = yes }
+	1300.1.1 = { death = yes }
+}
+
+# MB+ ancestor SanyasngZhangHanMB24
+mb_genealogy_SanyasngZhangHanMB24 = {
+	name = "mb_genealogy_name_SanyasngZhangHanMB24"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_zhang_5F35_100
+	1248.5.20 = { birth = yes }
+	1314.11.3 = { death = yes }
+}
+
+# MB+ ancestor Sarban1
+mb_genealogy_Sarban1 = {
+	name = "mb_genealogy_name_Sarban1"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_93071
+	1232.4.15 = { birth = yes }
+	1285.9.28 = { death = yes }
+}
+
+# MB+ ancestor Sarban11
+mb_genealogy_Sarban11 = {
+	name = "mb_genealogy_name_Sarban11"
+	culture = mongol
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Sarban1
+	1260.3.9 = { birth = yes }
+	1312.11.24 = { death = yes }
+}
+
+# MB+ ancestor Sarban2
+mb_genealogy_Sarban2 = {
+	name = "mb_genealogy_name_Sarban2"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Sarban1
+	1257.8.22 = { birth = yes }
+	1310.6.14 = { death = yes }
+}
+
+# MB+ ancestor Sarban5
+mb_genealogy_Sarban5 = {
+	name = "mb_genealogy_name_Sarban5"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_93071
+	1236.11.5 = { birth = yes }
+	1289.3.21 = { death = yes }
+}
+
+# MB+ ancestor Sarban6
+mb_genealogy_Sarban6 = {
+	name = "mb_genealogy_name_Sarban6"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Sarban5
+	1260.7.19 = { birth = yes }
+	1316.11.7 = { death = yes }
+}
+
+# MB+ ancestor Sarban8
+mb_genealogy_Sarban8 = {
+	name = "mb_genealogy_name_Sarban8"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_93071
+	1240.2.28 = { birth = yes }
+	1292.8.14 = { death = yes }
+}
+
+# MB+ ancestor Sarban9
+mb_genealogy_Sarban9 = {
+	name = "mb_genealogy_name_Sarban9"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Sarban8
+	1263.6.10 = { birth = yes }
+	1318.10.23 = { death = yes }
+}
+
+# MB+ ancestor ShangdangMiaoHanMB41
+mb_genealogy_ShangdangMiaoHanMB41 = {
+	name = "mb_genealogy_name_ShangdangMiaoHanMB41"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_1000050261
+	1256.10.12 = { birth = yes }
+	1325.5.28 = { death = yes }
+}
+
+# MB+ ancestor ShaowuHuangHanMB36
+mb_genealogy_ShaowuHuangHanMB36 = {
+	name = "mb_genealogy_name_ShaowuHuangHanMB36"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_huang_9EC3_16
+	1252.9.2 = { birth = yes }
+	1319.1.15 = { death = yes }
+}
+
+# MB+ ancestor ShiJurchenHanMB17
+mb_genealogy_ShiJurchenHanMB17 = {
+	name = "mb_genealogy_name_ShiJurchenHanMB17"
+	culture = han
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_yuan_county_dynasty_jin_han_shi2
+	1264.6.14 = { birth = yes }
+	1328.11.21 = { death = yes }
+}
+
+# MB+ ancestor TangTaiyueHanMB22
+mb_genealogy_TangTaiyueHanMB22 = {
+	name = "mb_genealogy_name_TangTaiyueHanMB22"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_1000050373
+	1247.9.23 = { birth = yes }
+	1310.1.9 = { death = yes }
+}
+
+# MB+ ancestor Tangad1
+mb_genealogy_Tangad1 = {
+	name = "mb_genealogy_name_Tangad1"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_166898
+	1234.3.21 = { birth = yes }
+	1292.7.15 = { death = yes }
+}
+
+# MB+ ancestor Tangad2
+mb_genealogy_Tangad2 = {
+	name = "mb_genealogy_name_Tangad2"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_166898
+	1239.10.5 = { birth = yes }
+	1297.2.28 = { death = yes }
+}
+
+# MB+ ancestor Tangad3
+mb_genealogy_Tangad3 = {
+	name = "mb_genealogy_name_Tangad3"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Tangad1
+	1258.8.14 = { birth = yes }
+	1316.11.30 = { death = yes }
+}
+
+# MB+ ancestor Tangad4
+mb_genealogy_Tangad4 = {
+	name = "mb_genealogy_name_Tangad4"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Tangad1
+	1262.5.7 = { birth = yes }
+	1320.9.18 = { death = yes }
+}
+
+# MB+ ancestor Tangad5
+mb_genealogy_Tangad5 = {
+	name = "mb_genealogy_name_Tangad5"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Tangad2
+	1264.12.23 = { birth = yes }
+	1324.4.11 = { death = yes }
+}
+
+# MB+ ancestor TangutClanXifeng16
+mb_genealogy_TangutClanXifeng16 = {
+	name = "mb_genealogy_name_TangutClanXifeng16"
+	culture = qiang
+	religion = vajrayana_faith
+	rite = lamaism
+	dynasty = mb_yuan_county_dynasty_1029318
+	1249.8.11 = { birth = yes }
+	1316.2.28 = { death = yes }
+}
+
+# MB+ ancestor TangutClans21
+mb_genealogy_TangutClans21 = {
+	name = "mb_genealogy_name_TangutClans21"
+	culture = qiang
+	religion = vajrayana_faith
+	rite = lamaism
+	1255.5.3 = { birth = yes }
+	1311.11.29 = { death = yes }
+}
+
+# MB+ ancestor TangutClansTiande20
+mb_genealogy_TangutClansTiande20 = {
+	name = "mb_genealogy_name_TangutClansTiande20"
+	culture = qiang
+	religion = vajrayana_faith
+	rite = lamaism
+	1248.5.14 = { birth = yes }
+	1312.11.8 = { death = yes }
+}
+
+# MB+ ancestor Temuge1
+mb_genealogy_Temuge1 = {
+	name = "mb_genealogy_name_Temuge1"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = temuge_borjigin
+	1196.8.12 = { birth = yes }
+	1251.3.17 = { death = yes }
+}
+
+# MB+ ancestor Temuge10
+mb_genealogy_Temuge10 = {
+	name = "mb_genealogy_name_Temuge10"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Temuge9
+	1233.2.23 = { birth = yes }
+	1294.7.15 = { death = yes }
+}
+
+# MB+ ancestor Temuge11
+mb_genealogy_Temuge11 = {
+	name = "mb_genealogy_name_Temuge11"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Temuge10
+	1262.8.11 = { birth = yes }
+	1322.1.24 = { death = yes }
+}
+
+# MB+ ancestor Temuge2
+mb_genealogy_Temuge2 = {
+	name = "mb_genealogy_name_Temuge2"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Temuge1
+	1224.5.30 = { birth = yes }
+	1283.11.9 = { death = yes }
+}
+
+# MB+ ancestor Temuge3
+mb_genealogy_Temuge3 = {
+	name = "mb_genealogy_name_Temuge3"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Temuge2
+	1250.9.22 = { birth = yes }
+	1309.4.5 = { death = yes }
+}
+
+# MB+ ancestor Temuge5
+mb_genealogy_Temuge5 = {
+	name = "mb_genealogy_name_Temuge5"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = temuge_borjigin
+	1200.4.8 = { birth = yes }
+	1259.12.21 = { death = yes }
+}
+
+# MB+ ancestor Temuge6
+mb_genealogy_Temuge6 = {
+	name = "mb_genealogy_name_Temuge6"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Temuge5
+	1229.6.14 = { birth = yes }
+	1290.9.3 = { death = yes }
+}
+
+# MB+ ancestor Temuge7
+mb_genealogy_Temuge7 = {
+	name = "mb_genealogy_name_Temuge7"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_genealogy_Temuge6
+	1257.11.25 = { birth = yes }
+	1316.8.10 = { death = yes }
+}
+
+# MB+ ancestor Temuge9
+mb_genealogy_Temuge9 = {
+	name = "mb_genealogy_name_Temuge9"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = temuge_borjigin
+	1203.11.30 = { birth = yes }
+	1264.5.7 = { death = yes }
+}
+
+# MB+ ancestor TienLeMB16
+mb_genealogy_TienLeMB16 = {
+	name = "mb_genealogy_name_TienLeMB16"
+	culture = viet
+	religion = mahayana_faith
+	dynasty = mb_eastasia_dynasty_nha_tian_le_dyn
+	1257.3.14 = { birth = yes }
+	1320.6.9 = { death = yes }
+}
+
+# MB+ ancestor UiBang7
+mb_genealogy_UiBang7 = {
+	name = "mb_genealogy_name_UiBang7"
+	culture = goryeo
+	religion = mahayana_faith
+	rite = yogacara
+	dynasty = korean_i_jeonju
+	1222.1.1 = { birth = yes }
+	1300.1.1 = { death = yes }
+}
+
+# MB+ ancestor WannianWangHanMB37
+mb_genealogy_WannianWangHanMB37 = {
+	name = "mb_genealogy_name_WannianWangHanMB37"
+	culture = han
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_yuan_county_dynasty_wannian_wang_dyn
+	1258.8.11 = { birth = yes }
+	1320.4.27 = { death = yes }
+}
+
+# MB+ ancestor WanquanXueHanMB39
+mb_genealogy_WanquanXueHanMB39 = {
+	name = "mb_genealogy_name_WanquanXueHanMB39"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_wanquan_xue_dyn
+	1260.10.8 = { birth = yes }
+	1323.4.24 = { death = yes }
+}
+
+# MB+ ancestor WenxianGuoHanMB39
+mb_genealogy_WenxianGuoHanMB39 = {
+	name = "mb_genealogy_name_WenxianGuoHanMB39"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_1000050364
+	1255.4.7 = { birth = yes }
+	1317.10.23 = { death = yes }
+}
+
+# MB+ ancestor WujunWuHanMB8
+mb_genealogy_WujunWuHanMB8 = {
+	name = "mb_genealogy_name_WujunWuHanMB8"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_wujun_lu_dyn
+	1258.8.17 = { birth = yes }
+	1321.3.9 = { death = yes }
+}
+
+# MB+ ancestor WuxianFanHanMB16
+mb_genealogy_WuxianFanHanMB16 = {
+	name = "mb_genealogy_name_WuxianFanHanMB16"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_runan_fan_dyn
+	1255.3.22 = { birth = yes }
+	1318.7.30 = { death = yes }
+}
+
+# MB+ ancestor XiaSimaHanMB48
+mb_genealogy_XiaSimaHanMB48 = {
+	name = "mb_genealogy_name_XiaSimaHanMB48"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_henei_sima_dyn
+	1246.10.21 = { birth = yes }
+	1311.2.4 = { death = yes }
+}
+
+# MB+ ancestor XianyouCaiHanMB16
+mb_genealogy_XianyouCaiHanMB16 = {
+	name = "mb_genealogy_name_XianyouCaiHanMB16"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_chenliu_cai_dyn
+	1268.7.24 = { birth = yes }
+	1331.12.8 = { death = yes }
+}
+
+# MB+ ancestor XianyouFuHanMB10
+mb_genealogy_XianyouFuHanMB10 = {
+	name = "mb_genealogy_name_XianyouFuHanMB10"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_fu_5085_3
+	1242.8.21 = { birth = yes }
+	1305.12.3 = { death = yes }
+}
+
+# MB+ ancestor XiaoKhitai9
+mb_genealogy_XiaoKhitai9 = {
+	name = "mb_genealogy_name_XiaoKhitai9"
+	culture = khitan
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_yuan_county_dynasty_1000049119
+	1240.9.4 = { birth = yes }
+	1308.6.21 = { death = yes }
+}
+
+# MB+ ancestor XinchangXiHanMB10
+mb_genealogy_XinchangXiHanMB10 = {
+	name = "mb_genealogy_name_XinchangXiHanMB10"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_shi_53F2_1
+	1261.3.22 = { birth = yes }
+	1328.6.9 = { death = yes }
+}
+
+# MB+ ancestor XinyuYangHanMB16
+mb_genealogy_XinyuYangHanMB16 = {
+	name = "mb_genealogy_name_XinyuYangHanMB16"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_xinyu_yang_dyn
+	1251.4.7 = { birth = yes }
+	1324.7.18 = { death = yes }
+}
+
+# MB+ ancestor YananHanHanMB6
+mb_genealogy_YananHanHanMB6 = {
+	name = "mb_genealogy_name_YananHanHanMB6"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_yanan_han_dyn
+	1252.8.30 = { birth = yes }
+	1315.3.12 = { death = yes }
+}
+
+# MB+ ancestor YifengZhangHanMB8
+mb_genealogy_YifengZhangHanMB8 = {
+	name = "mb_genealogy_name_YifengZhangHanMB8"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_yifeng_zhang_dyn
+	1251.5.23 = { birth = yes }
+	1318.10.11 = { death = yes }
+}
+
+# MB+ ancestor YongjiaLiuHanMB21
+mb_genealogy_YongjiaLiuHanMB21 = {
+	name = "mb_genealogy_name_YongjiaLiuHanMB21"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_peiguo_han_dyn
+	1238.7.22 = { birth = yes }
+	1305.1.14 = { death = yes }
+}
+
+# MB+ ancestor YongquiSongHanMB19
+mb_genealogy_YongquiSongHanMB19 = {
+	name = "mb_genealogy_name_YongquiSongHanMB19"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_song_5B8B_1
+	1244.5.19 = { birth = yes }
+	1309.8.15 = { death = yes }
+}
+
+# MB+ ancestor ZengHanMB23
+mb_genealogy_ZengHanMB23 = {
+	name = "mb_genealogy_name_ZengHanMB23"
+	culture = han
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_yuan_county_dynasty_zeng_66FE_13
+	1238.9.21 = { birth = yes }
+	1305.4.14 = { death = yes }
+}
+
+# MB+ ancestor ZhangHanMB40
+mb_genealogy_ZhangHanMB40 = {
+	name = "mb_genealogy_name_ZhangHanMB40"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_1000050313
+	1271.7.6 = { birth = yes }
+	1335.11.22 = { death = yes }
+}
+
+# MB+ ancestor anxi_du_036M7
+mb_genealogy_anxi_du_036M7 = {
+	name = "mb_genealogy_name_anxi_du_036M7"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_jingzhao_du_dyn
+	1250.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+}
+
+# MB+ ancestor basque0098
+mb_genealogy_basque0098 = {
+	name = "mb_genealogy_name_basque0098"
+	culture = basque
+	religion = catholic
+	rite = roman_rite
+	dynasty = galinda
+	758.1.1 = { birth = yes }
+	808.1.1 = { death = yes }
+}
+
+# MB+ ancestor chanaid0005
+mb_genealogy_chanaid0005 = {
+	name = "mb_genealogy_name_chanaid0005"
+	culture = mongol
+	religion = vajrayana_faith
+	rite = lamaism
+	dynasty = mb_yuan_county_dynasty_2003116
+	1260.1.1 = { birth = yes }
+	1320.1.1 = { death = yes }
+}
+
+# MB+ ancestor chuqiu_bian_029
+mb_genealogy_chuqiu_bian_029 = {
+	name = "mb_genealogy_name_chuqiu_bian_029"
+	culture = bouxcuengh
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_1000048939
+	1236.1.1 = { birth = yes }
+	1302.1.1 = { death = yes }
+}
+
+# MB+ ancestor dodaid0005
+mb_genealogy_dodaid0005 = {
+	name = "mb_genealogy_name_dodaid0005"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = mb_yuan_county_dynasty_2003101
+	1260.1.1 = { birth = yes }
+	1320.1.1 = { death = yes }
+}
+
+# MB+ ancestor fucheng_liu_011M6
+mb_genealogy_fucheng_liu_011M6 = {
+	name = "mb_genealogy_name_fucheng_liu_011M6"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_fucheng_liu_dyn
+	1240.1.1 = { birth = yes }
+	1300.1.1 = { death = yes }
+}
+
+# MB+ ancestor fuyang_xie_029M6
+mb_genealogy_fuyang_xie_029M6 = {
+	name = "mb_genealogy_name_fuyang_xie_029M6"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_goushi_xie_dyn
+	1235.1.1 = { birth = yes }
+	1300.1.1 = { death = yes }
+}
+
+# MB+ ancestor guangdu_yuwen_043M2
+mb_genealogy_guangdu_yuwen_043M2 = {
+	name = "mb_genealogy_name_guangdu_yuwen_043M2"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_henan_yuwen_dyn
+	1250.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+}
+
+# MB+ ancestor hongnong_yang_491M7
+mb_genealogy_hongnong_yang_491M7 = {
+	name = "mb_genealogy_name_hongnong_yang_491M7"
+	culture = han
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_yuan_county_dynasty_hongnong_yang_dyn
+	1250.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+}
+
+# MB+ ancestor huayang_fan_097M3
+mb_genealogy_huayang_fan_097M3 = {
+	name = "mb_genealogy_name_huayang_fan_097M3"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_runan_fan_dyn
+	1250.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+}
+
+# MB+ ancestor jiangling_sun_009M4
+mb_genealogy_jiangling_sun_009M4 = {
+	name = "mb_genealogy_name_jiangling_sun_009M4"
+	culture = tujia
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_sun_5B6B_10
+	1250.1.1 = { birth = yes }
+	1310.1.1 = { death = yes }
+}
+
+# MB+ ancestor jiaoshui_cai_021M5
+mb_genealogy_jiaoshui_cai_021M5 = {
+	name = "mb_genealogy_name_jiaoshui_cai_021M5"
+	culture = bouxcuengh
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_chenliu_cai_dyn
+	1235.1.1 = { birth = yes }
+	1300.1.1 = { death = yes }
+}
+
+# MB+ ancestor jinling_hu_045M3
+mb_genealogy_jinling_hu_045M3 = {
+	name = "mb_genealogy_name_jinling_hu_045M3"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_hu_80E1_2
+	1240.1.1 = { birth = yes }
+	1310.1.1 = { death = yes }
+}
+
+# MB+ ancestor leping_xiang_015M4
+mb_genealogy_leping_xiang_015M4 = {
+	name = "mb_genealogy_name_leping_xiang_015M4"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_leping_xiang_dyn
+	1260.1.1 = { birth = yes }
+	1320.1.1 = { death = yes }
+}
+
+# MB+ ancestor linan_qian_229M4
+mb_genealogy_linan_qian_229M4 = {
+	name = "mb_genealogy_name_linan_qian_229M4"
+	culture = han
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty = mb_yuan_county_dynasty_linan_qian_dyn
+	1250.1.1 = { birth = yes }
+	1320.1.1 = { death = yes }
+}
+
+# MB+ ancestor lingshou_han_053M4
+mb_genealogy_lingshou_han_053M4 = {
+	name = "mb_genealogy_name_lingshou_han_053M4"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_han_97D3_12
+	1260.1.1 = { birth = yes }
+	1330.1.1 = { death = yes }
+}
+
+# MB+ ancestor nanan_liu_014
+mb_genealogy_nanan_liu_014 = {
+	name = "mb_genealogy_name_nanan_liu_014"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_peiguo_han_dyn
+	1243.1.1 = { birth = yes }
+	1307.1.1 = { death = yes }
+}
+
+# MB+ ancestor nanchang_chen_022M3
+mb_genealogy_nanchang_chen_022M3 = {
+	name = "mb_genealogy_name_nanchang_chen_022M3"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_chen_9673_101
+	1240.1.1 = { birth = yes }
+	1300.1.1 = { death = yes }
+}
+
+# MB+ ancestor nogaid0005
+mb_genealogy_nogaid0005 = {
+	name = "mb_genealogy_name_nogaid0005"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = mb_yuan_county_dynasty_2003111
+	1260.1.1 = { birth = yes }
+	1320.1.1 = { death = yes }
+}
+
+# MB+ ancestor ongud0027
+mb_genealogy_ongud0027 = {
+	name = "mb_genealogy_name_ongud0027"
+	culture = ongud
+	religion = tengri_pagan
+	dynasty = mb_yuan_county_dynasty_2003102
+	1260.1.1 = { birth = yes }
+	1320.1.1 = { death = yes }
+}
+
+# MB+ ancestor putian_song_062M2
+mb_genealogy_putian_song_062M2 = {
+	name = "mb_genealogy_name_putian_song_062M2"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_xihe_song_dyn
+	1269.1.1 = { birth = yes }
+	1330.1.1 = { death = yes }
+}
+
+# MB+ ancestor sicilian0037
+mb_genealogy_sicilian0037 = {
+	name = "mb_genealogy_name_sicilian0037"
+	culture = sicilian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty_house = house_marsico
+	1103.1.1 = { birth = yes }
+	1166.1.1 = { death = yes }
+}
+
+# MB+ ancestor taiyuan_murong_030M4
+mb_genealogy_taiyuan_murong_030M4 = {
+	name = "mb_genealogy_name_taiyuan_murong_030M4"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_105818
+	1240.1.1 = { birth = yes }
+	1300.1.1 = { death = yes }
+}
+
+# MB+ ancestor tangut0004
+mb_genealogy_tangut0004 = {
+	name = "mb_genealogy_name_tangut0004"
+	culture = qiang
+	religion = vajrayana_faith
+	rite = lamaism
+	dynasty = mb_yuan_county_dynasty_2003082
+	1260.1.1 = { birth = yes }
+	1320.1.1 = { death = yes }
+}
+
+# MB+ ancestor tangut0025
+mb_genealogy_tangut0025 = {
+	name = "mb_genealogy_name_tangut0025"
+	culture = qiang
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_yuan_dynasty_ngwemi
+	1100.1.1 = { birth = yes }
+	1160.1.1 = { death = yes }
+}
+
+# MB+ ancestor visigothic0002
+mb_genealogy_visigothic0002 = {
+	name = "mb_genealogy_name_visigothic0002"
+	culture = visigothic
+	religion = catholic
+	rite = roman_rite
+	female = yes
+	738.1.1 = { birth = yes }
+	797.1.1 = { death = yes }
+}
+
+# MB+ ancestor wannian_li_005M8
+mb_genealogy_wannian_li_005M8 = {
+	name = "mb_genealogy_name_wannian_li_005M8"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_li_674E_87
+	1250.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+}
+
+# MB+ ancestor weishi_liu_149M2
+mb_genealogy_weishi_liu_149M2 = {
+	name = "mb_genealogy_name_weishi_liu_149M2"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_peiguo_han_dyn
+	1240.1.1 = { birth = yes }
+	1310.1.1 = { death = yes }
+}
+
+# MB+ ancestor xiangyi_zheng_023M3
+mb_genealogy_xiangyi_zheng_023M3 = {
+	name = "mb_genealogy_name_xiangyi_zheng_023M3"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_zheng_912D_104
+	1235.1.1 = { birth = yes }
+	1320.1.1 = { death = yes }
+}
+
+# MB+ ancestor xiaxian_sima_033M3
+mb_genealogy_xiaxian_sima_033M3 = {
+	name = "mb_genealogy_name_xiaxian_sima_033M3"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_henei_sima_dyn
+	1250.1.1 = { birth = yes }
+	1315.1.1 = { death = yes }
+}
+
+# MB+ ancestor zhu_chuyi_1
+mb_genealogy_zhu_chuyi_1 = {
+	name = "mb_genealogy_name_zhu_chuyi_1"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = rtr_ming_zhu_dynasty
+	1256.1.1 = { birth = yes }
+	1327.1.1 = { death = yes }
+}
+
+# MB+ ancestor zhuojun_zhao_519
+mb_genealogy_zhuojun_zhao_519 = {
+	name = "mb_genealogy_name_zhuojun_zhao_519"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_zhao_8D99_1
+	1254.1.1 = { birth = yes }
+	1322.7.15 = { death = yes }
+}
+
+# MB+ ancestor zichuan_wang_006M5
+mb_genealogy_zichuan_wang_006M5 = {
+	name = "mb_genealogy_name_zichuan_wang_006M5"
+	culture = han
+	religion = confucian_faith
+	rite = daoxue
+	dynasty = mb_yuan_county_dynasty_wang_6C6A_12
+	1250.1.1 = { birth = yes }
+	1325.1.1 = { death = yes }
+}
+
+# MB+ ancestors for existing characters.
+# MB+ ancestor 1000080079Missing1
+mb_genealogy_1000080079Missing1 = {
+	name = "mb_genealogy_name_1000080079Missing1"
+	culture = viet
+	religion = mahayana_faith
+	dynasty = tran_dynasty
+	1184.1.1 = { birth = yes }
+	1234.1.1 = { death = yes }
+}
+
+# MB+ ancestor 10041444
+mb_genealogy_10041444 = {
+	name = "mb_genealogy_name_10041444"
+	culture = japanese
+	religion = mahayana_faith
+	rite = pundarika
+	dynasty = aso_dynasty
+	1055.1.1 = { birth = yes }
+	1120.1.1 = { death = yes }
+}
+
+# MB+ ancestor 100530
+mb_genealogy_100530 = {
+	name = "mb_genealogy_name_100530"
+	culture = swedish
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = sverker_dynasty
+	1039.1.1 = { birth = yes }
+	1106.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1063381
+mb_genealogy_1063381 = {
+	name = "mb_genealogy_name_1063381"
+	culture = italian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = malatesta_dynasty
+	1125.1.1 = { birth = yes }
+	1189.1.1 = { death = yes }
+}
+
+# MB+ ancestor 12208005
+mb_genealogy_12208005 = {
+	name = "mb_genealogy_name_12208005"
+	culture = japanese
+	religion = shinto_faith
+	rite = shinto
+	dynasty = mb_genealogy_dynasty_10007061
+	1075.1.1 = { birth = yes }
+	1135.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1230915
+mb_genealogy_1230915 = {
+	name = "mb_genealogy_name_1230915"
+	culture = english
+	religion = catholic
+	dynasty = wake_dynasty
+	1268.1.1 = { birth = yes }
+	1300.4.10 = { death = yes }
+}
+
+# MB+ ancestor 12375933
+mb_genealogy_12375933 = {
+	name = "mb_genealogy_name_12375933"
+	culture = japanese
+	religion = vajrayana_faith
+	rite = mantrayana
+	dynasty = suwa_dynasty
+	1190.1.1 = { birth = yes }
+	1260.1.1 = { death = yes }
+}
+
+# MB+ ancestor 12380411
+mb_genealogy_12380411 = {
+	name = "mb_genealogy_name_12380411"
+	culture = japanese
+	religion = shinto_faith
+	rite = shinto
+	dynasty_house = mb_genealogy_house_house_nedu_clan
+	1152.1.1 = { birth = yes }
+	1202.1.1 = { death = yes }
+}
+
+# MB+ ancestor 1603013
+mb_genealogy_1603013 = {
+	name = "mb_genealogy_name_1603013"
+	culture = saxon
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = ravensberg_dynasty
+	1193.1.1 = { birth = yes }
+	1249.1.15 = { death = yes }
+}
+
+# MB+ ancestor 161629
+mb_genealogy_161629 = {
+	name = "mb_genealogy_name_161629"
+	culture = english
+	religion = catholic
+	dynasty = mortimer_dynasty
+	1251.1.1 = { birth = yes }
+	1304.7.17 = { death = yes }
+}
+
+# MB+ ancestor 161639
+mb_genealogy_161639 = {
+	name = "mb_genealogy_name_161639"
+	culture = french
+	religion = christian_faith
+	rite = roman_rite
+	female = yes
+	1275.1.1 = { birth = yes }
+	1329.1.1 = { death = yes }
+}
+
+# MB+ ancestor 212932
+mb_genealogy_212932 = {
+	name = "mb_genealogy_name_212932"
+	culture = bavarian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = andechs_dynasty
+	1146.1.2 = { birth = yes }
+	1204.8.12 = { death = yes }
+}
+
+# MB+ ancestor 212937
+mb_genealogy_212937 = {
+	name = "mb_genealogy_name_212937"
+	culture = bavarian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty_house = house_wettin
+	female = yes
+	1152.1.2 = { birth = yes }
+	1202.1.2 = { death = yes }
+}
+
+# MB+ ancestor 454993
+mb_genealogy_454993 = {
+	name = "mb_genealogy_name_454993"
+	culture = french
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = coucy_dynasty
+	female = yes
+	1225.1.1 = { birth = yes }
+	1275.1.1 = { death = yes }
+}
+
+# MB+ ancestor 454994
+mb_genealogy_454994 = {
+	name = "mb_genealogy_name_454994"
+	culture = french
+	religion = christian_faith
+	rite = roman_rite
+	dynasty_house = house_guines
+	1221.1.1 = { birth = yes }
+	1282.2.1 = { death = yes }
+}
+
+# MB+ ancestor 462044
+mb_genealogy_462044 = {
+	name = "mb_genealogy_name_462044"
+	culture = swabian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = habsburg_dynasty
+	1188.1.1 = { birth = yes }
+	1239.12.13 = { death = yes }
+}
+
+# MB+ ancestor 744000
+mb_genealogy_744000 = {
+	name = "mb_genealogy_name_744000"
+	culture = kannada
+	religion = shaiva_faith
+	rite = advaitism
+	dynasty = sangama_dynasty
+	1235.1.1 = { birth = yes }
+	1300.1.1 = { death = yes }
+}
+
+# MB+ ancestor 7644
+mb_genealogy_7644 = {
+	name = "mb_genealogy_name_7644"
+	culture = swabian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty_house = house_hupoldinger
+	female = yes
+	1192.1.1 = { birth = yes }
+	1260.4.30 = { death = yes }
+}
+
+# MB+ ancestor cisalpine0035
+mb_genealogy_cisalpine0035 = {
+	name = "mb_genealogy_name_cisalpine0035"
+	culture = cisalpine
+	religion = christian_faith
+	rite = roman_rite
+	dynasty_house = house_obertenghi
+	1075.1.1 = { birth = yes }
+	1140.1.1 = { death = yes }
+}
+
+# MB+ ancestor japanese_nakatomi_2
+mb_genealogy_japanese_nakatomi_2 = {
+	name = "mb_genealogy_name_japanese_nakatomi_2"
+	culture = japanese
+	religion = shinto_faith
+	rite = shinto
+	dynasty = japanese_nakatomi
+	582.1.1 = { birth = yes }
+	646.1.1 = { death = yes }
+}
+
+# MB+ ancestors for existing characters.
+# MB+ ancestor 10040811
+mb_genealogy_10040811 = {
+	name = "mb_genealogy_name_10040811"
+	culture = japanese
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty_house = mb_genealogy_house_house_akazawa_clan
+	female = yes
+	1302.1.1 = { birth = yes }
+	1360.1.1 = { death = yes }
+}
+
+# MB+ ancestor 10132095
+mb_genealogy_10132095 = {
+	name = "mb_genealogy_name_10132095"
+	culture = japanese
+	religion = mahayana_faith
+	rite = dhyana
+	dynasty_house = mb_genealogy_house_10006129
+	female = yes
+	1274.1.1 = { birth = yes }
+	1337.2.3 = { death = yes }
+}
+
+# MB+ ancestor 1062119
+mb_genealogy_1062119 = {
+	name = "mb_genealogy_name_1062119"
+	culture = cisalpine
+	religion = christian_faith
+	rite = roman_rite
+	dynasty = 8726
+	female = yes
+	1270.1.1 = { birth = yes }
+	1330.1.1 = { death = yes }
+}
+
+# MB+ ancestor 11003293
+mb_genealogy_11003293 = {
+	name = "mb_genealogy_name_11003293"
+	culture = japanese
+	religion = mahayana_faith
+	rite = yogacara
+	dynasty_house = mb_genealogy_house_house_yoshida_clan
+	female = yes
+	1300.1.1 = { birth = yes }
+	1360.1.1 = { death = yes }
+}
+
+# MB+ ancestor 12221027
+mb_genealogy_12221027 = {
+	name = "mb_genealogy_name_12221027"
+	culture = japanese
+	religion = vajrayana_faith
+	rite = mantrayana
+	dynasty_house = mb_genealogy_house_house_nagai2_clan
+	female = yes
+	1280.1.1 = { birth = yes }
+	1330.1.1 = { death = yes }
+}
+
+# MB+ ancestor 172003
+mb_genealogy_172003 = {
+	name = "mb_genealogy_name_172003"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = mb_yuan_county_dynasty_101946
+	female = yes
+	1139.1.1 = { birth = yes }
+	1212.1.1 = { death = yes }
+}
+
+# MB+ ancestor 172004
+mb_genealogy_172004 = {
+	name = "mb_genealogy_name_172004"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = mb_yuan_county_dynasty_101946
+	female = yes
+	1166.1.1 = { birth = yes }
+	1230.1.1 = { death = yes }
+}
+
+# MB+ ancestor 172010
+mb_genealogy_172010 = {
+	name = "mb_genealogy_name_172010"
+	culture = kerait
+	religion = shangqing_faith
+	dynasty = 1041002
+	female = yes
+	1190.1.1 = { birth = yes }
+	1252.2.1 = { death = yes }
+}
+
+# MB+ ancestor 450653
+mb_genealogy_450653 = {
+	name = "mb_genealogy_name_450653"
+	culture = swedish
+	religion = catholic
+	rite = roman_rite
+	dynasty = bjalbo_atten_dynasty
+	female = yes
+	1274.1.1 = { birth = yes }
+	1350.6.1 = { death = yes }
+}
+
+# MB+ ancestor 454524
+mb_genealogy_454524 = {
+	name = "mb_genealogy_name_454524"
+	culture = french
+	religion = christian_faith
+	rite = roman_rite
+	dynasty_house = mb_genealogy_house_house_Artois
+	female = yes
+	1243.1.1 = { birth = yes }
+	1302.1.1 = { death = yes }
+}
+
+# MB+ ancestor 454580
+mb_genealogy_454580 = {
+	name = "mb_genealogy_name_454580"
+	culture = english
+	religion = catholic
+	dynasty = 365
+	female = yes
+	1260.1.1 = { birth = yes }
+	1293.1.1 = { death = yes }
+}
+
+# MB+ ancestor 70903
+mb_genealogy_70903 = {
+	name = "mb_genealogy_name_70903"
+	culture = castilian
+	religion = christian_faith
+	rite = roman_rite
+	dynasty_house = mb_genealogy_house_house_savoie
+	female = yes
+	1236.1.1 = { birth = yes }
+	1292.2.23 = { death = yes }
+}
+
+# MB+ ancestor MB_Boraqchin
+mb_genealogy_MB_Boraqchin = {
+	name = "mb_genealogy_name_MB_Boraqchin"
+	culture = mongol
+	religion = tengri_pagan
+	dynasty = mb_yuan_county_dynasty_1040066
+	female = yes
+	1183.1.1 = { birth = yes }
+	1242.1.1 = { death = yes }
 }

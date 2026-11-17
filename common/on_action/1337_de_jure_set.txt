@@ -526,6 +526,31 @@
 		title:k_spanish_galicia = { set_de_jure_liege_title = title:e_spain }
 		title:d_levant = { set_de_jure_liege_title = title:k_jerusalem }
 		title:k_jerusalem = { set_de_jure_liege_title = title:e_arabia }
+		title:k_gur = {
+		   	every_in_de_jure_hierarchy = {
+		   		limit = {
+		   			tier = tier_duchy
+		   		}
+		   		set_de_jure_liege_title = title:k_gurma
+		   	}
+		}
+		title:k_kong = {
+		   	every_in_de_jure_hierarchy = {
+		   		limit = {
+		   			tier = tier_duchy
+		   		}
+		   		set_de_jure_liege_title = title:k_akan
+		   	}
+		}
+		title:k_takrur = {
+		   	every_in_de_jure_hierarchy = {
+		   		limit = {
+		   			tier = tier_duchy
+		   		}
+		   		set_de_jure_liege_title = title:k_kaabu
+		   	}
+		}
+		title:d_central_africa = { set_de_jure_liege_title = title:k_central_africa }
 		#征服者
 		character:tur_orhan = {
 			add_trait = conqueror
