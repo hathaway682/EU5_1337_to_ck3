@@ -2143,7 +2143,7 @@ k_eu5_crd = {
 
 k_eu5_dgl = {
 	1337.4.1 = {
-		holder = eu5_regent_dgl
+		holder = dgl_omar
 		government = clan_government
 	}
 }
@@ -2560,7 +2560,7 @@ k_eu5_luw = {
 
 k_eu5_mab = {
 	1337.4.1 = {
-		holder = eu5_regent_mab
+		holder = mab_jalaluddi_ahsan_khan_mabar
 		government = clan_government
 	}
 }
@@ -7915,8 +7915,10 @@ d_lower_yik = {
 }
 
 d_macedonia = {
+	1337.1.1 = { holder = byz_john_kantakouzenos }
+	1337.1.1 = { liege = e_byzantium }
 	1337.4.1 = {
-		holder = byz_andronikos_iii_palaiologos
+		holder = byz_john_kantakouzenos
 		government = administrative_government
 	}
 }
@@ -7937,7 +7939,7 @@ d_majar = {
 
 d_maldives = {
 	1337.4.1 = {
-		holder = eu5_regent_dgl
+		holder = dgl_omar
 		government = clan_government
 	}
 }
@@ -15722,11 +15724,12 @@ c_central_kongo = {
 }
 
 c_central_macedonia = {
+	1337.1.1 = { liege = d_macedonia }
 	1337.4.1 = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = byz_andronikos_iii_palaiologos
+		holder = byz_john_kantakouzenos
 		government = administrative_government
 	}
 }
@@ -15900,11 +15903,12 @@ c_chalbi = {
 }
 
 c_chalkidiki = {
+	1337.1.1 = { liege = d_macedonia }
 	1337.4.1 = {
 		change_prosperity_level = 23
 	}
 	1337.4.1 = {
-		holder = byz_andronikos_iii_palaiologos
+		holder = byz_john_kantakouzenos
 		government = administrative_government
 	}
 }
@@ -17238,7 +17242,7 @@ c_cola_nadu = {
 		change_prosperity_level = 30
 	}
 	1337.4.1 = {
-		holder = eu5_regent_mab
+		holder = mab_jalaluddi_ahsan_khan_mabar
 		government = clan_government
 	}
 }
@@ -26278,7 +26282,7 @@ c_kanara = {
 		change_prosperity_level = 30
 	}
 	1337.4.1 = {
-		holder = eu5_regent_hnv
+		holder = hnv_jamal_ud_din_honnavara
 		government = clan_government
 	}
 }
@@ -27330,7 +27334,7 @@ c_khalifatabad = {
 		change_prosperity_level = 27
 	}
 	1337.4.1 = {
-		holder = eu5_regent_sgn
+		holder = sgn_bahram_khan
 		government = clan_government
 	}
 }
@@ -27613,7 +27617,7 @@ c_khulna = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = eu5_regent_stn
+		holder = stn_shamsuddin_ilyas_shah
 		government = clan_government
 	}
 }
@@ -30321,11 +30325,12 @@ c_lower_lurio = {
 }
 
 c_lower_macedonia = {
+	1337.1.1 = { liege = d_macedonia }
 	1337.4.1 = {
 		change_prosperity_level = 17
 	}
 	1337.4.1 = {
-		holder = byz_andronikos_iii_palaiologos
+		holder = byz_john_kantakouzenos
 		government = administrative_government
 	}
 }
@@ -31557,7 +31562,7 @@ c_maldives = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = eu5_regent_dgl
+		holder = dgl_omar
 		government = clan_government
 	}
 }
@@ -34576,7 +34581,7 @@ c_mymensingh = {
 		change_prosperity_level = 32
 	}
 	1337.4.1 = {
-		holder = eu5_regent_sgn
+		holder = sgn_bahram_khan
 		government = clan_government
 	}
 }
@@ -34667,7 +34672,7 @@ c_nadia = {
 		change_prosperity_level = 38
 	}
 	1337.4.1 = {
-		holder = eu5_regent_stn
+		holder = stn_shamsuddin_ilyas_shah
 		government = clan_government
 	}
 }
@@ -36577,7 +36582,7 @@ c_northern_sindh = {
 		change_prosperity_level = 23
 	}
 	1337.4.1 = {
-		holder = eu5_regent_sma
+		holder = sma_jam_unar_samma
 		government = clan_government
 	}
 }
@@ -38473,7 +38478,7 @@ c_pandua = {
 		change_prosperity_level = 38
 	}
 	1337.4.1 = {
-		holder = eu5_regent_stn
+		holder = stn_shamsuddin_ilyas_shah
 		government = clan_government
 	}
 }
@@ -43898,7 +43903,7 @@ c_sibi = {
 		change_prosperity_level = 19
 	}
 	1337.4.1 = {
-		holder = eu5_regent_sma
+		holder = sma_jam_unar_samma
 		government = clan_government
 	}
 }
@@ -44521,7 +44526,7 @@ c_sonargaon = {
 		change_prosperity_level = 36
 	}
 	1337.4.1 = {
-		holder = eu5_regent_sgn
+		holder = sgn_bahram_khan
 		government = clan_government
 	}
 }
@@ -45901,7 +45906,7 @@ c_sylhet = {
 		change_prosperity_level = 22
 	}
 	1337.4.1 = {
-		holder = eu5_regent_trf
+		holder = trf_syed_shah_nasiruddin
 		government = clan_government
 	}
 }
@@ -48038,7 +48043,7 @@ c_tondai_nadu = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = eu5_regent_mab
+		holder = mab_jalaluddi_ahsan_khan_mabar
 		government = clan_government
 	}
 }
@@ -50267,7 +50272,7 @@ c_upper_sindh = {
 		change_prosperity_level = 23
 	}
 	1337.4.1 = {
-		holder = eu5_regent_sma
+		holder = sma_jam_unar_samma
 		government = clan_government
 	}
 }
@@ -57686,7 +57691,7 @@ b_paqwayranra = {
 
 b_pasai = {
 	1337.4.1 = {
-		holder = eu5_regent_psa
+		holder = psa_mahmud_malik_azh_zahir
 		government = clan_government
 	}
 }
@@ -57844,7 +57849,7 @@ b_qusqu = {
 
 b_rajouri = {
 	1337.4.1 = {
-		holder = eu5_regent_rjr
+		holder = rjr_sirdar_khan_jarral
 	}
 }
 
