@@ -2176,7 +2176,7 @@ k_spanish_galicia = {
 	}
 }
 
-k_eu5_grg = {
+k_khorasan = {
 	1335.12.1 = {
 		holder = grg_togha_temur
 	}
@@ -2340,7 +2340,7 @@ k_eu5_ime = {
 k_eu5_jae = {
 }
 
-k_eu5_jal = {
+k_mesopotamia = {
 	1332.1.1 = {
 		holder = jal_hasan_buzurg
 	}
@@ -5357,7 +5357,7 @@ d_eu5_aai = {
 	}
 }
 
-d_eu5_ach = {
+d_morea = {
 	1205.1.1 = {
 		holder = ach_guillaume_i_champlitte
 	}
@@ -5510,7 +5510,7 @@ d_eu5_ars = {
 	}
 }
 
-d_eu5_ath = {
+d_northern_greece = {
 	1308.10.5 = {
 		holder = ath_gautier_v_brienne
 	}
@@ -5761,7 +5761,7 @@ d_eu5_czk = {
 	}
 }
 
-d_eu5_dgh = {
+d_tarim = {
 	1337.4.1 = {
 		holder = mb_tribe_248234
 		government = nomad_government
@@ -5900,7 +5900,7 @@ d_eu5_kos = {
 	}
 }
 
-d_eu5_krt = {
+d_eastern_khorasan = {
 	1332.1.1 = {
 		holder = krt_mu_izz_uddin_husayn_ibn_ghiyath_uddin
 	}
@@ -6082,7 +6082,7 @@ d_eu5_mis = {
 	}
 }
 
-d_eu5_mkr = {
+d_baluchistan = {
 	1337.1.1 = {
 		holder = mkr_ghiyath_al_din_dinar
 	}
@@ -6597,7 +6597,7 @@ d_eu5_sty = {
 	}
 }
 
-d_eu5_sut = {
+d_armenian_highlands = {
 	1312.1.1 = {
 		holder = sut_sutay
 	}
@@ -7752,6 +7752,11 @@ d_lower_don = {
 		holder = glh_giyas_al_din_mohammed_oz_beg_borjigin
 		government = nomad_government
 	}
+}
+
+d_levant = {
+	1337.1.1 = { holder = mb_mam_yem_34993 liege = k_egypt }
+	1337.4.1 = { government = clan_government }
 }
 
 d_lower_egypt = {
@@ -9152,8 +9157,8 @@ d_upper_austria = {
 }
 
 d_upper_egypt = {
+	1337.1.1 = { holder = mb_mam_yem_8000472 liege = k_egypt }
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
 		government = clan_government
 	}
 }
@@ -9547,7 +9552,7 @@ c_achaea = {
 		holder = pat_guglielmo_frangipani
 	}
 	1337.1.1 = {
-		liege = d_eu5_ach
+		liege = d_morea
 	}
 	1337.4.1 = {
 		change_prosperity_level = 20
@@ -9586,7 +9591,8 @@ c_aden = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = yem_al_mujahid_ali
+		holder = mb_mam_yem_478080
+		liege = k_yemen
 		government = clan_government
 	}
 }
@@ -10072,7 +10078,8 @@ c_al_jifar = {
 		change_prosperity_level = 19
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_mam_yem_8000471
+		liege = k_egypt
 		government = clan_government
 	}
 }
@@ -10253,7 +10260,8 @@ c_alexandria = {
 		change_prosperity_level = 37
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_mam_yem_485007
+		liege = k_egypt
 		government = clan_government
 	}
 }
@@ -10435,7 +10443,7 @@ c_alto_alentejo = {
 
 c_amadiya = {
 	1337.1.1 = {
-		liege = d_eu5_sut
+		liege = d_armenian_highlands
 	}
 	1337.4.1 = {
 		change_prosperity_level = 10
@@ -11477,7 +11485,8 @@ c_asyut = {
 		change_prosperity_level = 30
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_mam_yem_8000472
+		liege = d_upper_egypt
 		government = clan_government
 	}
 }
@@ -12159,7 +12168,8 @@ c_bahnasa = {
 		change_prosperity_level = 26
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_mam_yem_8000472
+		liege = d_upper_egypt
 		government = clan_government
 	}
 }
@@ -12386,7 +12396,7 @@ c_bambouk = {
 
 c_bampur = {
 	1337.1.1 = {
-		liege = d_eu5_mkr
+		liege = d_baluchistan
 	}
 	1337.4.1 = {
 		change_prosperity_level = 14
@@ -12505,7 +12515,7 @@ c_banjar = {
 
 c_bannajbur = {
 	1337.1.1 = {
-		liege = d_eu5_mkr
+		liege = d_baluchistan
 	}
 	1337.4.1 = {
 		change_prosperity_level = 10
@@ -13851,7 +13861,8 @@ c_birali = {
 		change_prosperity_level = 8
 	}
 	1337.4.1 = {
-		holder = yem_al_mujahid_ali
+		holder = mb_mam_yem_Sadad3
+		liege = k_yemen
 		government = clan_government
 	}
 }
@@ -13912,7 +13923,7 @@ c_bishnupur = {
 
 c_bitlis = {
 	1337.1.1 = {
-		liege = d_eu5_sut
+		liege = d_armenian_highlands
 	}
 	1337.4.1 = {
 		change_prosperity_level = 10
@@ -14804,7 +14815,8 @@ c_buhayra = {
 		change_prosperity_level = 28
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_mam_yem_485007
+		liege = k_egypt
 		government = clan_government
 	}
 }
@@ -17927,7 +17939,8 @@ c_dakahliyya = {
 		change_prosperity_level = 26
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_mam_yem_8000505
+		liege = k_egypt
 		government = clan_government
 	}
 }
@@ -18183,7 +18196,8 @@ c_dathina = {
 		change_prosperity_level = 7
 	}
 	1337.4.1 = {
-		holder = yem_al_mujahid_ali
+		holder = mb_mam_yem_478080
+		liege = k_yemen
 		government = clan_government
 	}
 }
@@ -19081,7 +19095,8 @@ c_duba = {
 		change_prosperity_level = 3
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mda_wudayy_bin_jammaz
+		liege = k_egypt
 		government = clan_government
 	}
 }
@@ -20412,7 +20427,8 @@ c_filastin = {
 		change_prosperity_level = 27
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_mam_yem_34993
+		liege = k_egypt
 		government = clan_government
 	}
 }
@@ -21154,7 +21170,8 @@ c_gharbiyya = {
 		change_prosperity_level = 25
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_mam_yem_8000504
+		liege = k_egypt
 		government = clan_government
 	}
 }
@@ -22241,7 +22258,7 @@ c_guzzula = {
 
 c_gwadar = {
 	1337.1.1 = {
-		liege = d_eu5_mkr
+		liege = d_baluchistan
 	}
 	1337.4.1 = {
 		change_prosperity_level = 13
@@ -22400,7 +22417,8 @@ c_hadramawt = {
 		change_prosperity_level = 6
 	}
 	1337.4.1 = {
-		holder = yem_al_mujahid_ali
+		holder = mb_mam_yem_Rassid13
+		liege = k_yemen
 		government = clan_government
 	}
 }
@@ -22798,7 +22816,7 @@ c_harima = {
 
 c_harput = {
 	1337.1.1 = {
-		liege = d_eu5_sut
+		liege = d_armenian_highlands
 	}
 	1337.4.1 = {
 		change_prosperity_level = 12
@@ -23377,7 +23395,8 @@ c_hirda = {
 		change_prosperity_level = 9
 	}
 	1337.4.1 = {
-		holder = yem_al_mujahid_ali
+		holder = mb_mam_yem_12361403
+		liege = k_yemen
 		government = clan_government
 	}
 }
@@ -23761,7 +23780,8 @@ c_hudaida = {
 		change_prosperity_level = 9
 	}
 	1337.4.1 = {
-		holder = yem_al_mujahid_ali
+		holder = mb_mam_yem_12361403
+		liege = k_yemen
 		government = clan_government
 	}
 }
@@ -24069,7 +24089,8 @@ c_ibb = {
 		change_prosperity_level = 8
 	}
 	1337.4.1 = {
-		holder = yem_al_mujahid_ali
+		holder = mb_mam_yem_1236039M12
+		liege = k_yemen
 		government = clan_government
 	}
 }
@@ -25112,7 +25133,8 @@ c_jazan = {
 		change_prosperity_level = 8
 	}
 	1337.4.1 = {
-		holder = yem_al_mujahid_ali
+		holder = mb_mam_yem_12361403
+		liege = k_yemen
 		government = clan_government
 	}
 }
@@ -29253,7 +29275,8 @@ c_latakia = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = fdl_muzzaffar_ad_din_musa_ibn_muhanna
+		liege = k_egypt
 		government = clan_government
 	}
 }
@@ -29310,7 +29333,8 @@ c_lebanon = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_mam_yem_34993
+		liege = k_egypt
 		government = clan_government
 	}
 }
@@ -31125,7 +31149,8 @@ c_madian = {
 		change_prosperity_level = 2
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_mam_yem_1500043M
+		liege = k_egypt
 		government = clan_government
 	}
 }
@@ -32065,7 +32090,8 @@ c_marib = {
 		change_prosperity_level = 7
 	}
 	1337.4.1 = {
-		holder = yem_al_mujahid_ali
+		holder = mb_mam_yem_Rassid13
+		liege = k_yemen
 		government = clan_government
 	}
 }
@@ -32892,7 +32918,7 @@ c_meru = {
 
 c_merv = {
 	1337.1.1 = {
-		liege = d_eu5_krt
+		liege = d_eastern_khorasan
 	}
 	1337.4.1 = {
 		change_prosperity_level = 14
@@ -33418,7 +33444,8 @@ c_minya = {
 		change_prosperity_level = 26
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_mam_yem_8000472
+		liege = d_upper_egypt
 		government = clan_government
 	}
 }
@@ -34040,7 +34067,7 @@ c_mosopeleacipi = {
 
 c_mosul = {
 	1337.1.1 = {
-		liege = d_eu5_sut
+		liege = d_armenian_highlands
 	}
 	1337.4.1 = {
 		change_prosperity_level = 22
@@ -35195,7 +35222,7 @@ c_naxos = {
 		holder = nax_niccolo_sanudo
 	}
 	1337.1.1 = {
-		liege = d_eu5_ach
+		liege = d_morea
 	}
 	1337.4.1 = {
 		change_prosperity_level = 16
@@ -36972,7 +36999,8 @@ c_oasis = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_mam_yem_12364288M3
+		liege = k_egypt
 		government = clan_government
 	}
 }
@@ -40815,7 +40843,8 @@ c_qura = {
 		change_prosperity_level = 0
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mda_wudayy_bin_jammaz
+		liege = k_egypt
 		government = clan_government
 	}
 }
@@ -41192,7 +41221,8 @@ c_red_sea_coast = {
 		change_prosperity_level = 19
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_mam_yem_8000472
+		liege = d_upper_egypt
 		government = clan_government
 	}
 }
@@ -42400,7 +42430,8 @@ c_sana = {
 		change_prosperity_level = 9
 	}
 	1337.4.1 = {
-		holder = yem_al_mujahid_ali
+		holder = mb_mam_yem_Rassid13
+		liege = k_yemen
 		government = clan_government
 	}
 }
@@ -42906,7 +42937,8 @@ c_sayhad = {
 		change_prosperity_level = 5
 	}
 	1337.4.1 = {
-		holder = yem_al_mujahid_ali
+		holder = mb_mam_yem_Rassid13
+		liege = k_yemen
 		government = clan_government
 	}
 }
@@ -43448,7 +43480,8 @@ c_sharat = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_mam_yem_1500043M
+		liege = k_egypt
 		government = clan_government
 	}
 }
@@ -43458,7 +43491,8 @@ c_sharqiyya = {
 		change_prosperity_level = 24
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_mam_yem_8000505
+		liege = k_egypt
 		government = clan_government
 	}
 }
@@ -46019,7 +46053,8 @@ c_tabuk = {
 		change_prosperity_level = 0
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mda_wudayy_bin_jammaz
+		liege = k_egypt
 		government = clan_government
 	}
 }
@@ -46290,7 +46325,8 @@ c_taizz = {
 		change_prosperity_level = 9
 	}
 	1337.4.1 = {
-		holder = yem_al_mujahid_ali
+		holder = mb_mam_yem_1236039M12
+		liege = k_yemen
 		government = clan_government
 	}
 }
@@ -47602,7 +47638,8 @@ c_tih = {
 		change_prosperity_level = 17
 	}
 	1337.4.1 = {
-		holder = mam_an_nasir_bahri
+		holder = mb_mam_yem_8000471
+		liege = k_egypt
 		government = clan_government
 	}
 }
@@ -47738,7 +47775,7 @@ c_tiwi = {
 
 c_tiz = {
 	1337.1.1 = {
-		liege = d_eu5_mkr
+		liege = d_baluchistan
 	}
 	1337.4.1 = {
 		change_prosperity_level = 13
@@ -50784,7 +50821,7 @@ c_valtellina = {
 
 c_van = {
 	1337.1.1 = {
-		liege = d_eu5_sut
+		liege = d_armenian_highlands
 	}
 	1337.4.1 = {
 		change_prosperity_level = 12
