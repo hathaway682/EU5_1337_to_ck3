@@ -1,11 +1,4 @@
-﻿# =========================================================
-# 美洲 / 大洋洲：按 EU5 文化组（eu5_groups 首位组）归并后的文化定义
-# 由 gen_debug/_gen_group_cultures.py 生成；983 个 EU5 文化 -> 129 个组文化
-# 定义体（ethos/traditions/name_list/gfx/ethnicities）直接取自组内 barony 最多的成员，
-# heritage/language 统一指向该组的支柱 <group>_group / eu5_heritage_<group>_group。
-# =========================================================
-
-abenakian = {
+﻿abenakian = {
 	color = { 218 100 81 }
 
 	ethos = ethos_bureaucratic
@@ -24,14 +17,37 @@ abenakian = {
 
 	coa_gfx = { dravidian_group_coa_gfx }
 	building_gfx = { arabic_group_building_gfx mena_building_gfx }
-	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { nivkh_clothing_gfx ugro_permian_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { mena_unit_gfx }
 	house_coa_frame = house_frame_08
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		100 = gen_ethnicity_385_mikmaq_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -55,12 +71,35 @@ aikana = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_264_aikana_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -84,12 +123,35 @@ aingae = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_444_kofan_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -113,12 +175,35 @@ algic = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_523_wiyot_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -142,12 +227,35 @@ andean = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_357_chillque_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -170,14 +278,37 @@ anishinabe = {
 
 	coa_gfx = { berber_group_coa_gfx }
 	building_gfx = { berber_group_building_gfx mena_building_gfx }
-	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { mena_unit_gfx }
 	house_coa_frame = house_frame_06
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		100 = gen_ethnicity_248_weskarini_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -201,14 +332,37 @@ apsaalooke_hiraaca = {
 
 	coa_gfx = { iranian_group_coa_gfx }
 	building_gfx = { iranian_building_gfx }
-	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { iranian_unit_gfx }
 	house_coa_frame = house_frame_12
 	house_coa_mask_offset = { 0.0 -0.04 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_299_hiraaca_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -232,12 +386,35 @@ atacame = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_302_atacame_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -260,12 +437,35 @@ atakapa = {
 
 	coa_gfx = { japanese_coa_gfx }
 	building_gfx = { chinese_building_gfx }
-	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 	house_coa_frame = house_japan
 
 	ethnicities = {
-		100 = gen_ethnicity_303_atakapa_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -296,7 +496,30 @@ atallan = {
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_405_guancavilca_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -324,7 +547,7 @@ australian = {
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_322_ganggalida_culture_0
+		100 = papuan
 	}
 }
 
@@ -349,14 +572,37 @@ aymara = {
 
 	coa_gfx = { east_african_group_coa_gfx }
 	building_gfx = { chinese_building_gfx }
-	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { mena_unit_gfx }
 	house_coa_frame = house_frame_07
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_265_aimara_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -380,12 +626,35 @@ bagua = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_316_bagua_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -416,7 +685,30 @@ barbakoan = {
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_310_cara_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -441,12 +733,35 @@ besiro = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { chinese_building_gfx }
-	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { iberian_muslim_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_468_monkox_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -470,12 +785,35 @@ bora_huitoto = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_465_uitoto_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -499,12 +837,35 @@ cacan = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_484_pazioca_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -527,12 +888,35 @@ caddoan = {
 
 	coa_gfx = { japanese_coa_gfx }
 	building_gfx = { chinese_building_gfx }
-	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 	house_coa_frame = house_japan
 
 	ethnicities = {
-		100 = gen_ethnicity_337_caddo_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -563,7 +947,30 @@ calima = {
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_339_calima_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -594,7 +1001,30 @@ caribe = {
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_343_carib_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -618,12 +1048,35 @@ charrua = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_348_guenoa_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -646,12 +1099,35 @@ cherokee = {
 
 	coa_gfx = { japanese_coa_gfx }
 	building_gfx = { chinese_building_gfx }
-	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 	house_coa_frame = house_japan
 
 	ethnicities = {
-		100 = gen_ethnicity_354_otali_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -675,14 +1151,37 @@ chibchan = {
 
 	coa_gfx = { west_african_group_coa_gfx }
 	building_gfx = { african_building_gfx mena_building_gfx }
-	clothing_gfx = { african_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { sub_sahran_unit_gfx }
 	house_coa_frame = house_frame_29
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_290_ngabe_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -713,7 +1212,30 @@ chicham = {
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_422_shuar_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -736,12 +1258,35 @@ chickasaw_choctaw = {
 
 	coa_gfx = { japanese_coa_gfx }
 	building_gfx = { chinese_building_gfx }
-	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 	house_coa_frame = house_japan
 
 	ethnicities = {
-		100 = gen_ethnicity_257_choctaw_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -764,12 +1309,35 @@ chitimacha = {
 
 	coa_gfx = { japanese_coa_gfx }
 	building_gfx = { chinese_building_gfx }
-	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 	house_coa_frame = house_japan
 
 	ethnicities = {
-		100 = gen_ethnicity_267_bayagoula_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -793,14 +1361,37 @@ chiwere = {
 
 	coa_gfx = { iranian_group_coa_gfx }
 	building_gfx = { iranian_building_gfx }
-	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { iranian_unit_gfx }
 	house_coa_frame = house_frame_12
 	house_coa_mask_offset = { 0.0 -0.04 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_323_waghtochtatta_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -831,7 +1422,30 @@ choco = {
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_387_embera_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -854,14 +1468,37 @@ chono = {
 
 	coa_gfx = { west_african_group_coa_gfx }
 	building_gfx = { african_building_gfx mena_building_gfx }
-	clothing_gfx = { african_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { sub_sahran_unit_gfx }
 	house_coa_frame = house_frame_20
 	house_coa_mask_offset = { 0.0 0.025 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_364_chono_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -886,14 +1523,37 @@ chumashan = {
 
 	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
 	building_gfx = { iberian_building_gfx }
-	clothing_gfx = { iberian_christian_clothing_gfx western_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { iberian_christian_unit_gfx }
 	house_coa_frame = house_frame_03
 	house_coa_mask_offset = { 0.0 0.055 }
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_366_chumash_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -918,12 +1578,35 @@ ckunsa = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { chinese_building_gfx }
-	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { iberian_muslim_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_356_licanantay_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -947,12 +1630,35 @@ coahuilteco = {
 
 	coa_gfx = { japanese_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_japan
 
 	ethnicities = {
-		100 = gen_ethnicity_368_coahuilteco_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -977,12 +1683,35 @@ cree = {
 
 	coa_gfx = { chinese_group_coa_gfx }
 	building_gfx = { western_building_gfx }
-	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
+	clothing_gfx = { nivkh_clothing_gfx ugro_permian_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { norse_unit_gfx }
 	house_coa_frame = house_china
 
 	ethnicities = {
-		100 = gen_ethnicity_300_innu_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1007,14 +1736,37 @@ cuicas = {
 
 	coa_gfx = { west_african_group_coa_gfx }
 	building_gfx = { african_building_gfx mena_building_gfx }
-	clothing_gfx = { african_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { sub_sahran_unit_gfx }
 	house_coa_frame = house_frame_20
 	house_coa_mask_offset = { 0.0 0.025 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_372_cuicas_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1039,14 +1791,37 @@ cuitlatec = {
 
 	coa_gfx = { central_african_group_coa_gfx }
 	building_gfx = { african_building_gfx mena_building_gfx }
-	clothing_gfx = { african_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { sub_sahran_unit_gfx }
 	house_coa_frame = house_frame_20
 	house_coa_mask_offset = { 0.0 0.025 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_373_cuitlatec_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1070,12 +1845,35 @@ culli = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_344_pashash_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1099,14 +1897,37 @@ dakota = {
 
 	coa_gfx = { iranian_group_coa_gfx }
 	building_gfx = { iranian_building_gfx }
-	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { iranian_unit_gfx }
 	house_coa_frame = house_frame_12
 	house_coa_mask_offset = { 0.0 -0.04 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_324_nakoda_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1130,14 +1951,37 @@ dhegiha = {
 
 	coa_gfx = { berber_group_coa_gfx }
 	building_gfx = { berber_group_building_gfx mena_building_gfx }
-	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { mena_unit_gfx }
 	house_coa_frame = house_frame_06
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		100 = gen_ethnicity_338_cahokia_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1161,12 +2005,35 @@ eastern_otomanguean = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_284_mixtec_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1197,7 +2064,30 @@ guahibo = {
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_403_guahibo_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1221,12 +2111,35 @@ haida = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_414_haida_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1249,14 +2162,37 @@ haudenosaunee = {
 
 	coa_gfx = { berber_group_coa_gfx }
 	building_gfx = { berber_group_building_gfx mena_building_gfx }
-	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { nivkh_clothing_gfx ugro_permian_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { mena_unit_gfx }
 	house_coa_frame = house_frame_06
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		100 = gen_ethnicity_306_kanienkehaka_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1280,12 +2216,35 @@ henia_kamiare = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_417_henia_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1309,14 +2268,37 @@ hinonoeitiit = {
 
 	coa_gfx = { iranian_group_coa_gfx }
 	building_gfx = { iranian_building_gfx }
-	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { iranian_unit_gfx }
 	house_coa_frame = house_frame_12
 	house_coa_mask_offset = { 0.0 -0.04 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_413_haaninin_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1341,14 +2323,37 @@ hokan = {
 
 	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
 	building_gfx = { iberian_building_gfx }
-	clothing_gfx = { iberian_christian_clothing_gfx western_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { iberian_christian_unit_gfx }
 	house_coa_frame = house_frame_03
 	house_coa_mask_offset = { 0.0 0.055 }
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_255_cochimi_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1373,15 +2378,14 @@ inuit = {
 
 	coa_gfx = { chinese_group_coa_gfx }
 	building_gfx = { western_building_gfx }
-	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
+	clothing_gfx = { nivkh_clothing_gfx ugro_permian_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { norse_unit_gfx }
 	house_coa_frame = house_frame_09
 
 	ethnicities = {
-		25 = gen_ethnicity_384_dorset_culture_0
-		15 = gen_ethnicity_384_dorset_culture_1
-		35 = gen_ethnicity_384_dorset_culture_2
-		25 = gen_ethnicity_384_dorset_culture_3
+		50 = asian
+		40 = circumpolar_dark_hair
+		10 = circumpolar_brown_hair
 	}
 }
 
@@ -1404,14 +2408,37 @@ iroquoian = {
 
 	coa_gfx = { dravidian_group_coa_gfx }
 	building_gfx = { arabic_group_building_gfx mena_building_gfx }
-	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { nivkh_clothing_gfx ugro_permian_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { mena_unit_gfx }
 	house_coa_frame = house_frame_08
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		100 = gen_ethnicity_296_stadaconan_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1436,14 +2463,37 @@ jirajaran = {
 
 	coa_gfx = { west_african_group_coa_gfx }
 	building_gfx = { african_building_gfx mena_building_gfx }
-	clothing_gfx = { african_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { sub_sahran_unit_gfx }
 	house_coa_frame = house_frame_20
 	house_coa_mask_offset = { 0.0 0.025 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_312_jirajaran_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1467,12 +2517,35 @@ kambiwa = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_431_kambiwa_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1496,12 +2569,35 @@ kanisian = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_432_kanisian_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1523,12 +2619,35 @@ kawesqar = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { mena_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { eastern_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_404_kawesqar_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1552,12 +2671,35 @@ kayambi = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_437_kayambi_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1581,14 +2723,37 @@ ktunaxa = {
 
 	coa_gfx = { iranian_group_coa_gfx }
 	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { northern_unit_gfx }
 	house_coa_frame = house_frame_12
 	house_coa_mask_offset = { 0.0 -0.04 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_447_ktunaxa_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1612,12 +2777,35 @@ kwaza = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_449_kwaza_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1640,14 +2828,37 @@ lenape = {
 
 	coa_gfx = { berber_group_coa_gfx }
 	building_gfx = { berber_group_building_gfx mena_building_gfx }
-	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { nivkh_clothing_gfx ugro_permian_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { mena_unit_gfx }
 	house_coa_frame = house_frame_06
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		100 = gen_ethnicity_454_munsee_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1671,13 +2882,35 @@ lule = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		75 = gen_ethnicity_453_lule_culture_0
-		25 = gen_ethnicity_453_lule_culture_1
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1701,12 +2934,35 @@ macro_je = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_271_kanhgag_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1737,7 +2993,30 @@ malibu = {
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_455_malibu_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1762,12 +3041,35 @@ manoki = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_458_manoki_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1789,12 +3091,35 @@ mapudungun = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { mena_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { eastern_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_418_het_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1818,12 +3143,35 @@ maskoy = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_389_enlhet_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1846,14 +3194,37 @@ massachusett = {
 
 	coa_gfx = { berber_group_coa_gfx }
 	building_gfx = { berber_group_building_gfx mena_building_gfx }
-	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { nivkh_clothing_gfx ugro_permian_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { mena_unit_gfx }
 	house_coa_frame = house_frame_06
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		100 = gen_ethnicity_462_pequot_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1877,12 +3248,35 @@ mataco_guaicuru = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_247_guaikuru_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1907,14 +3301,37 @@ maya = {
 
 	coa_gfx = { west_african_group_coa_gfx }
 	building_gfx = { african_building_gfx mena_building_gfx }
-	clothing_gfx = { african_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { mena_unit_gfx }
 	house_coa_frame = house_frame_29
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_362_yucatec_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1945,7 +3362,7 @@ micronesian = {
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_269_kajoor_ri_majel_culture_0
+		100 = asian_austronesian
 	}
 }
 
@@ -1969,12 +3386,35 @@ misumalpan = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_448_lenca_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -1998,12 +3438,35 @@ moseten = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_513_tsimanes_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2027,12 +3490,35 @@ movima = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_346_cayubaba_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2056,12 +3542,35 @@ muchik = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_341_xllang_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2085,12 +3594,35 @@ mura = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_469_mura_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2113,12 +3645,35 @@ muskogee = {
 
 	coa_gfx = { japanese_coa_gfx }
 	building_gfx = { chinese_building_gfx }
-	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 	house_coa_frame = house_japan
 
 	ethnicities = {
-		100 = gen_ethnicity_272_coosa_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2142,14 +3697,37 @@ myaamia = {
 
 	coa_gfx = { berber_group_coa_gfx }
 	building_gfx = { berber_group_building_gfx mena_building_gfx }
-	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { nivkh_clothing_gfx ugro_permian_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { mena_unit_gfx }
 	house_coa_frame = house_frame_06
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		100 = gen_ethnicity_304_myaamia_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2174,16 +3752,37 @@ nadene = {
 
 	coa_gfx = { iranian_group_coa_gfx }
 	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { western_unit_gfx }
 	house_coa_frame = house_frame_12
 	house_coa_mask_offset = { 0.0 -0.04 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		50 = gen_ethnicity_263_denesoline_culture_0
-		25 = gen_ethnicity_263_denesoline_culture_1
-		25 = gen_ethnicity_263_denesoline_culture_2
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2206,14 +3805,37 @@ nahua = {
 
 	coa_gfx = { west_african_group_coa_gfx }
 	building_gfx = { african_building_gfx mena_building_gfx }
-	clothing_gfx = { african_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { sub_sahran_unit_gfx }
 	house_coa_frame = house_frame_20
 	house_coa_mask_offset = { 0.0 0.025 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_426_nahua_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2237,12 +3859,35 @@ napuruna = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_471_napuruna_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2265,12 +3910,35 @@ natchez = {
 
 	coa_gfx = { japanese_coa_gfx }
 	building_gfx = { chinese_building_gfx }
-	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 	house_coa_frame = house_japan
 
 	ethnicities = {
-		100 = gen_ethnicity_309_natchez_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2294,14 +3962,37 @@ nuuchi_nuwu = {
 
 	coa_gfx = { occitan_coa_gfx frankish_group_coa_gfx western_coa_gfx }
 	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { western_unit_gfx }
 	house_coa_frame = house_frame_03
 	house_coa_mask_offset = { 0.0 0.055 }
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_436_nuuchi_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2325,14 +4016,37 @@ otopamean = {
 
 	coa_gfx = { central_african_group_coa_gfx }
 	building_gfx = { african_building_gfx mena_building_gfx }
-	clothing_gfx = { african_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { sub_sahran_unit_gfx }
 	house_coa_frame = house_frame_20
 	house_coa_mask_offset = { 0.0 0.025 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_355_otomanguean_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2357,14 +4071,37 @@ paiute = {
 
 	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
 	building_gfx = { iberian_building_gfx }
-	clothing_gfx = { iberian_christian_clothing_gfx western_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { iberian_christian_unit_gfx }
 	house_coa_frame = house_frame_03
 	house_coa_mask_offset = { 0.0 0.055 }
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_467_monachi_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2392,7 +4129,7 @@ pama_nyungan = {
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_279_noongar_culture_0
+		100 = papuan
 	}
 }
 
@@ -2423,7 +4160,30 @@ panche = {
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_483_panche_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2447,12 +4207,35 @@ pano = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_394_uni_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2476,12 +4259,35 @@ panzaleo = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_358_quitu_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2505,14 +4311,37 @@ penutian = {
 
 	coa_gfx = { occitan_coa_gfx frankish_group_coa_gfx western_coa_gfx }
 	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { western_unit_gfx }
 	house_coa_frame = house_frame_03
 	house_coa_mask_offset = { 0.0 0.055 }
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_360_nimiipuu_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2543,7 +4372,30 @@ pijao = {
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_485_pijao_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2572,7 +4424,7 @@ polynesian = {
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_388_maori_culture_0
+		100 = asian_austronesian
 	}
 }
 
@@ -2595,14 +4447,37 @@ powhatan = {
 
 	coa_gfx = { dravidian_group_coa_gfx }
 	building_gfx = { arabic_group_building_gfx mena_building_gfx }
-	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { nivkh_clothing_gfx ugro_permian_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { mena_unit_gfx }
 	house_coa_frame = house_frame_08
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		100 = gen_ethnicity_251_pamlico_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2626,14 +4501,37 @@ puebloan = {
 
 	coa_gfx = { frankish_group_coa_gfx western_coa_gfx }
 	building_gfx = { western_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { western_unit_gfx }
 	house_coa_frame = house_frame_03
 	house_coa_mask_offset = { 0.0 0.055 }
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_420_hohokam_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2657,12 +4555,35 @@ pukina = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_352_charka_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2687,14 +4608,37 @@ pume = {
 
 	coa_gfx = { west_african_group_coa_gfx }
 	building_gfx = { african_building_gfx mena_building_gfx }
-	clothing_gfx = { african_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { sub_sahran_unit_gfx }
 	house_coa_frame = house_frame_20
 	house_coa_mask_offset = { 0.0 0.025 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_488_pume_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2718,14 +4662,37 @@ purepecha = {
 
 	coa_gfx = { central_african_group_coa_gfx }
 	building_gfx = { african_building_gfx mena_building_gfx }
-	clothing_gfx = { african_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { sub_sahran_unit_gfx }
 	house_coa_frame = house_frame_20
 	house_coa_mask_offset = { 0.0 0.025 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_489_purepecha_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2750,14 +4717,37 @@ quechuan = {
 
 	coa_gfx = { east_african_group_coa_gfx }
 	building_gfx = { chinese_building_gfx }
-	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { mena_unit_gfx }
 	house_coa_frame = house_frame_07
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_286_wari_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2780,14 +4770,37 @@ quingnam = {
 
 	coa_gfx = { west_african_group_coa_gfx }
 	building_gfx = { african_building_gfx mena_building_gfx }
-	clothing_gfx = { african_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { sub_sahran_unit_gfx }
 	house_coa_frame = house_frame_20
 	house_coa_mask_offset = { 0.0 0.025 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_359_chimu_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2810,17 +4823,37 @@ salishan = {
 
 	coa_gfx = { swedish_coa_gfx western_coa_gfx }
 	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { northern_unit_gfx }
 	house_coa_frame = house_frame_21
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 1.0 1.0 }
 
 	ethnicities = {
-		25 = gen_ethnicity_277_shuswap_culture_0
-		15 = gen_ethnicity_277_shuswap_culture_1
-		35 = gen_ethnicity_277_shuswap_culture_2
-		25 = gen_ethnicity_277_shuswap_culture_3
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2844,12 +4877,35 @@ seeptsa = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_363_cholon_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2873,14 +4929,37 @@ shawnee = {
 
 	coa_gfx = { berber_group_coa_gfx }
 	building_gfx = { berber_group_building_gfx mena_building_gfx }
-	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { nivkh_clothing_gfx ugro_permian_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { mena_unit_gfx }
 	house_coa_frame = house_frame_06
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		100 = gen_ethnicity_347_chalahgawtha_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2904,14 +4983,37 @@ shoshoni = {
 
 	coa_gfx = { occitan_coa_gfx frankish_group_coa_gfx western_coa_gfx }
 	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { western_unit_gfx }
 	house_coa_frame = house_frame_03
 	house_coa_mask_offset = { 0.0 0.055 }
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_260_numu_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2935,12 +5037,35 @@ sihni = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_428_itonama_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -2964,14 +5089,37 @@ siksika = {
 
 	coa_gfx = { iranian_group_coa_gfx }
 	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { northern_unit_gfx }
 	house_coa_frame = house_frame_12
 	house_coa_mask_offset = { 0.0 -0.04 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_270_siksika_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3002,7 +5150,30 @@ sinu = {
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_501_sinu_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3026,14 +5197,37 @@ skarureh = {
 
 	coa_gfx = { berber_group_coa_gfx }
 	building_gfx = { berber_group_building_gfx mena_building_gfx }
-	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { nivkh_clothing_gfx ugro_permian_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { mena_unit_gfx }
 	house_coa_frame = house_frame_06
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		100 = gen_ethnicity_477_skarureh_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3058,12 +5252,35 @@ ta_arawakan = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_253_ciboney_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3087,12 +5304,35 @@ takic = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_503_timbisha_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3116,14 +5356,37 @@ tanoan = {
 
 	coa_gfx = { occitan_coa_gfx frankish_group_coa_gfx western_coa_gfx }
 	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { western_unit_gfx }
 	house_coa_frame = house_frame_03
 	house_coa_mask_offset = { 0.0 0.055 }
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_430_kaigwu_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3147,12 +5410,35 @@ tarairiu = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_505_tarairiu_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3183,7 +5469,30 @@ tayrona = {
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		100 = gen_ethnicity_508_tayrona_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3207,12 +5516,35 @@ timoto = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_506_tatuy_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3237,12 +5569,35 @@ timucua = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_340_timucua_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3265,14 +5620,37 @@ totozoquean = {
 
 	coa_gfx = { west_african_group_coa_gfx }
 	building_gfx = { african_building_gfx mena_building_gfx }
-	clothing_gfx = { african_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { sub_sahran_unit_gfx }
 	house_coa_frame = house_frame_20
 	house_coa_mask_offset = { 0.0 0.025 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_423_totonac_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3296,12 +5674,35 @@ truka = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_511_truka_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3325,17 +5726,37 @@ tsehesenestsestotse = {
 
 	coa_gfx = { iranian_group_coa_gfx }
 	building_gfx = { iranian_building_gfx }
-	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { iranian_unit_gfx }
 	house_coa_frame = house_frame_12
 	house_coa_mask_offset = { 0.0 -0.04 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		25 = gen_ethnicity_512_tsetsehesahese_culture_0
-		15 = gen_ethnicity_512_tsetsehesahese_culture_1
-		35 = gen_ethnicity_512_tsetsehesahese_culture_2
-		25 = gen_ethnicity_512_tsetsehesahese_culture_3
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3357,12 +5778,35 @@ tshon = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { mena_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { eastern_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_408_gununa_kune_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3385,14 +5829,37 @@ tsimshian = {
 
 	coa_gfx = { swedish_coa_gfx western_coa_gfx }
 	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { northern_unit_gfx }
 	house_coa_frame = house_frame_21
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 1.0 1.0 }
 
 	ethnicities = {
-		100 = gen_ethnicity_514_tsimshian_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3417,14 +5884,37 @@ tucanoan = {
 
 	coa_gfx = { west_african_group_coa_gfx }
 	building_gfx = { african_building_gfx mena_building_gfx }
-	clothing_gfx = { african_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { sub_sahran_unit_gfx }
 	house_coa_frame = house_frame_20
 	house_coa_mask_offset = { 0.0 0.025 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_399_karapana_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3448,12 +5938,35 @@ tupi = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_254_ava_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3476,12 +5989,35 @@ tutelo = {
 
 	coa_gfx = { japanese_coa_gfx }
 	building_gfx = { chinese_building_gfx }
-	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 	house_coa_frame = house_japan
 
 	ethnicities = {
-		10 = gen_ethnicity_345_tsoyaha_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3506,12 +6042,35 @@ txapakura = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_510_txapakura_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3535,12 +6094,35 @@ uru = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_517_uru_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3563,17 +6145,37 @@ wakashan = {
 
 	coa_gfx = { swedish_coa_gfx western_coa_gfx }
 	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { northern_unit_gfx }
 	house_coa_frame = house_frame_21
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 1.0 1.0 }
 
 	ethnicities = {
-		45 = gen_ethnicity_415_kwakiutl_culture_0
-		5 = gen_ethnicity_415_kwakiutl_culture_1
-		35 = gen_ethnicity_415_kwakiutl_culture_2
-		15 = gen_ethnicity_415_kwakiutl_culture_3
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3597,12 +6199,35 @@ waqha = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_496_tonokote_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3627,14 +6252,37 @@ warao = {
 
 	coa_gfx = { west_african_group_coa_gfx }
 	building_gfx = { african_building_gfx mena_building_gfx }
-	clothing_gfx = { african_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { sub_sahran_unit_gfx }
 	house_coa_frame = house_frame_20
 	house_coa_mask_offset = { 0.0 0.025 }
 	house_coa_mask_scale = { 0.95 0.95 }
 
 	ethnicities = {
-		100 = gen_ethnicity_521_warao_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3658,12 +6306,35 @@ warpe = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_522_warpe_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3686,14 +6357,37 @@ wendat = {
 
 	coa_gfx = { berber_group_coa_gfx }
 	building_gfx = { berber_group_building_gfx mena_building_gfx }
-	clothing_gfx = { afr_berber_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { nivkh_clothing_gfx ugro_permian_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { mena_unit_gfx }
 	house_coa_frame = house_frame_06
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		100 = gen_ethnicity_262_attigneenongnahac_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3717,12 +6411,35 @@ xinka = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_524_xinka_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3744,12 +6461,35 @@ yaghan = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { mena_building_gfx }
-	clothing_gfx = { byzantine_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { eastern_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		10 = gen_ethnicity_525_yaghan_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3773,15 +6513,35 @@ yuki = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		70 = gen_ethnicity_520_wappo_culture_0
-		15 = gen_ethnicity_520_wappo_culture_1
-		10 = gen_ethnicity_520_wappo_culture_2
-		5 = gen_ethnicity_520_wappo_culture_3
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3805,17 +6565,16 @@ yupik = {
 
 	coa_gfx = { anglo_saxon_coa_gfx western_coa_gfx }
 	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
+	clothing_gfx = { nivkh_clothing_gfx ugro_permian_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { western_unit_gfx }
 	house_coa_frame = house_frame_24
 	house_coa_mask_offset = { 0.0 0.055 }
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		45 = gen_ethnicity_307_kaniag_culture_0
-		5 = gen_ethnicity_307_kaniag_culture_1
-		35 = gen_ethnicity_307_kaniag_culture_2
-		15 = gen_ethnicity_307_kaniag_culture_3
+		50 = asian
+		40 = circumpolar_dark_hair
+		10 = circumpolar_brown_hair
 	}
 }
 
@@ -3839,12 +6598,35 @@ yutonahua = {
 
 	coa_gfx = { japanese_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_japan
 
 	ethnicities = {
-		100 = gen_ethnicity_287_xumani_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
@@ -3869,12 +6651,35 @@ zamuco = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { chinese_building_gfx }
-	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { iberian_muslim_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_313_ayoreo_culture_0
+		5 = amerindian_1
+		5 = amerindian_2
+		5 = amerindian_3
+		5 = amerindian_4
+		4 = amerindian_5
+		4 = amerindian_6
+		4 = amerindian_7
+		4 = amerindian_8
+		4 = amerindian_9
+		4 = amerindian_10
+		4 = amerindian_11
+		4 = amerindian_12
+		4 = amerindian_13
+		4 = amerindian_14
+		4 = amerindian_15
+		4 = amerindian_16
+		4 = amerindian_17
+		4 = amerindian_18
+		4 = amerindian_19
+		4 = amerindian_20
+		4 = amerindian_21
+		4 = amerindian_22
+		4 = amerindian_23
+		4 = amerindian_24
 	}
 }
 
