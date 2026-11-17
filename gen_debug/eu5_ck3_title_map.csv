@@ -78,7 +78,7 @@ country,AMP,c,Amapila,阿马皮拉,,,b_tlacalahuastla,b,Tlacalahuastla,特拉卡
 country,AMR,c,Al Mira,米拉,,,c_hawran,c,Al-Hawran,哈夫兰,amr_shata_bin_ahmad,amr_shata_bin_ahmad,k_egypt,clan_government,yes,"vassal,country-below-county-rank: its land is its counties"
 country,AMT,c,Amacoztitlan,阿玛科兹蒂特兰,,,b_amaticoztitlan,b,Amaticoztitlan,阿马蒂科斯特兰,eu5_regent_amt,eu5_regent_amt,,,yes,"generated-regent,country-below-county-rank: its land is a barony"
 country,ANB,c,Arnsberg,阿恩斯贝格,,,b_arnsberg,b,Arnsberg,阿恩斯贝格,anb_wilhelm_i_arnsberg,anb_wilhelm_i_arnsberg,,,yes,"vassal,country-below-county-rank: its land is a barony"
-country,ANC,c,Ancona,安科纳,,,c_marche,c,Pikenón,马尔凯,eu5_regent_anc,,d_commune_ancona,,yes,"generated-regent,country-below-county-rank: its land is its counties"
+country,ANC,c,Ancona,安科纳,,,d_commune_ancona,d,Ancona,安科纳,eu5_regent_anc,,,,yes,rebind to d_commune_ancona (was c_marche)
 country,ANG,c,Angoulême,昂古莱姆,,,c_angouleme,c,Angulema,昂古莱姆,nav_philip_iii_evreux,nav_philip_iii_evreux,k_france,feudal_government,yes,"union,vassal,country-below-county-rank: its land is its counties"
 country,ANH,c,Anhalt,安哈尔特,,,b_zerbst,b,Serbišćo,采尔布斯特,anh_albrecht_ii_anhalt_zerbst_kothen,anh_albrecht_ii_anhalt_zerbst_kothen,,,yes,"vassal,country-below-county-rank: its land is a barony"
 country,ANI,c,Aruni,阿鲁尼,,,b_aruni,b,Aruni,阿鲁尼,eu5_regent_ani,eu5_regent_ani,,,yes,"generated-regent,country-below-county-rank: its land is a barony"
@@ -223,7 +223,7 @@ country,BLA,c,Buleda,布莱达,,,c_gwadar,c,Gwadar,瓜达尔,eu5_regent_bla,eu5_
 country,BLB,c,Lebus,莱布斯,,,b_lebus,b,Lubuš,莱布斯,blb_stefan_ii,blb_stefan_ii,,,yes,"vassal,country-below-county-rank: its land is a barony"
 country,BLD,c,Bârlad,伯尔拉德,,,c_barlad,c,Bârlad,伯尔拉德,eu5_regent_bld,eu5_regent_bld,,feudal_government,yes,"tributary,generated-regent,country-below-county-rank: its land is its counties"
 country,BLE,c,Bale,巴莱,,,c_oromia,c,Oromia,奥罗米亚,eu5_regent_ble,eu5_regent_ble,e_abyssinia,clan_government,yes,"vassal,generated-regent,country-below-county-rank: its land is its counties"
-country,BLG,c,Bologna,博洛尼亚,,,c_bologna,c,Boloña,博洛尼亚,blg_taddeo_pepoli,,d_commune_bologna,,yes,country-below-county-rank: its land is its counties
+country,BLG,c,Bologna,博洛尼亚,,,d_commune_bologna,d,Bologna,博洛尼亚,blg_taddeo_pepoli,,,,yes,rebind to d_commune_bologna (was c_bologna)
 country,BLI,k,Bali,巴厘,,,k_eu5_bli,k,Bali,巴厘,bli_sri_astasura_ratnabhumibanten,bli_sri_astasura_ratnabhumibanten,,mandala_government,yes,
 country,BLL,c,Bouillon,布永,,,b_bouillon,b,Bouillon,布永,lie_adolf_ii_von_der_mark,,,,yes,"union,vassal,country-below-county-rank: its land is a barony"
 country,BLM,c,Belmont,贝尔蒙,,,b_ilanz,b,Glion,伊兰茨,eu5_regent_blm,eu5_regent_blm,,,yes,"vassal,generated-regent,country-below-county-rank: its land is a barony"
@@ -586,14 +586,14 @@ country,FCL,c,Firceall,菲斯卡尔,,,b_tullamore,b,Tullamaur,塔拉莫尔,fcl_o
 country,FDL,c,Āl Faḍl,法德勒,,,c_tadmur,c,Palmyra,泰德穆尔,fdl_muzzaffar_ad_din_musa_ibn_muhanna,fdl_muzzaffar_ad_din_musa_ibn_muhanna,k_egypt,clan_government,yes,"vassal,country-below-county-rank: its land is its counties"
 country,FEL,c,Feltre,费尔特雷,,,,,,,,,,,,"no-ruler-in-eu5,country-below-county-rank: its land is its counties,landless-in-eu5,was c_belluno"
 country,FEO,d,Theodoro,狄奥多罗,,,c_gothia,c,Gothia,哥提亚,feo_demetrios_gabras,feo_demetrios_gabras,,feudal_government,yes,rebind to c_gothia (was d_eu5_feo)
-country,FER,c,Ferrara,费拉拉,,,c_ferrara,c,Firrara,费拉拉,fer_obizzo_iii_este,,d_commune_ferrara,,yes,country-below-county-rank: its land is its counties
+country,FER,c,Ferrara,费拉拉,,,d_commune_ferrara,d,Ferrara,费拉拉,fer_obizzo_iii_este,,,,yes,rebind to d_commune_ferrara (was c_ferrara)
 country,FEZ,c,Fez,非斯,,,,,,,,,,,,"no-ruler-in-eu5,country-below-county-rank: its land is its counties,landless-in-eu5,was c_fez"
 country,FIN,c,Finland,芬兰,,,,,,,,,,,,"no-ruler-in-eu5,landless-in-eu5,was d_finland"
 country,FLA,c,Flanders,佛兰德,,,d_flanders,d,Flanders,佛兰德,fla_louis_i_dampierre,fla_louis_i_dampierre,k_france,feudal_government,yes,"union,vassal"
 country,FLD,c,Fulda,富尔达,,,c_vogelsberg,c,Vogelsberg,福格尔斯贝格,fld_heinrich_vi_von_hohenberg,fld_heinrich_vi_von_hohenberg,e_hre,ecclesiastical_government,yes,"vassal,country-below-county-rank: its land is its counties"
 country,FLK,c,Falkenstein,法尔肯施泰因,,,c_wetterau,c,Wetterau,韦特劳,flk_phillip_vi_falkenstein,flk_phillip_vi_falkenstein,e_hre,feudal_government,yes,"vassal,country-below-county-rank: its land is its counties"
 country,FLN,c,Fulun,富伦,,,b_hailang,b,Hailang,海林,eu5_regent_fln,eu5_regent_fln,,,yes,"vassal,generated-regent,country-below-county-rank: its land is a barony"
-country,FLO,d,Florence,佛罗伦萨,,,d_eu5_flo,d,Florence,佛罗伦萨,gub_jacopo_gabrielli,gub_jacopo_gabrielli,e_hre,republic_government,yes,vassal
+country,FLO,d,Florence,佛罗伦萨,,,d_commune_firenze,d,Firenze,佛罗伦萨,gub_jacopo_gabrielli,gub_jacopo_gabrielli,e_hre,republic_government,yes,rebind to d_commune_firenze (was d_eu5_flo)
 country,FLY,c,Offaly,奥法利,,,b_daingean,b,Dingin,丹甘,fly_muirchertach_og_mac_muircherartaig_o_conchobhair,fly_muirchertach_og_mac_muircherartaig_o_conchobhair,,,yes,country-below-county-rank: its land is a barony
 country,FMA,c,Fermanagh,弗马纳,,,b_enniskillen,b,Lisnaskae,利斯纳斯基,fma_ruaidhri_maguire,fma_ruaidhri_maguire,,,yes,country-below-county-rank: its land is a barony
 country,FMB,d,Fomin-Berezuesk,福明‑别列祖斯克,,,c_bely,c,Belĕjŭ,别雷,fmb_fyodor_konstantinovich_krasny_rurikovich,fmb_fyodor_konstantinovich_krasny_rurikovich,d_smolensk,feudal_government,yes,"lowered d->c,vassal,country-below-county-rank: its land is its counties"
@@ -1160,7 +1160,7 @@ country,MAJ,k,Majapahit,满者伯夷,,,e_majapahit,e,Majapahit,满者伯夷,maj_
 country,MAK,k,Makuria,马库里亚,,,k_eu5_mak,k,Makuria,马库里亚,mak_al_amir_abi,mak_al_amir_abi,,clan_government,yes,
 country,MAL,e,Mali,马里,,,e_mali,e,Mali,马里,mal_musa_keita,mal_musa_keita,,clan_government,yes,
 country,MAM,k,Egypt,埃及,,,k_egypt,k,Egypt,埃及,mam_an_nasir_bahri,mam_an_nasir_bahri,,clan_government,yes,
-country,MAN,c,Mantua,曼托瓦,,,c_mantua,c,Mantoúa,曼托瓦,man_luigi_i_gonzaga,,d_commune_mantua,,yes,"vassal,country-below-county-rank: its land is its counties"
+country,MAN,c,Mantua,曼托瓦,,,d_commune_mantua,d,Mantua,曼托瓦,man_luigi_i_gonzaga,,e_hre,,yes,rebind to d_commune_mantua (was c_mantua)
 country,MAO,c,Maolian,毛怜,,,b_gyeongseong,b,Gyeongseong,镜城,,,,,yes,"no-ruler-in-eu5,country-below-county-rank: its land is a barony"
 country,MAR,c,Maryul,麻域,,,c_ladakh,c,Ladakh,拉达克,mar_rinchen,mar_rinchen,e_tibet,feudal_government,yes,"vassal,country-below-county-rank: its land is its counties"
 country,MAS,c,Maisouna,迈索纳,,,,,,,eu5_regent_mas,,,,,"generated-regent,country-below-county-rank: its land is its counties,landless-in-eu5,was c_maisouna"
@@ -1243,7 +1243,7 @@ country,MLK,c,Moloka'i,莫洛卡伊,,,b_moloka_i,b,Moloka'i,莫洛凯,mlk_hualan
 country,MLL,k,Mallorca,马略卡,,,k_mediterranean_sea,k,Baleo-Tyrrhenia,巴利阿里‑第勒尼亚,mll_james_iii_mallorca,mll_james_iii_mallorca,,,yes,"lowered k->d,vassal"
 country,MLM,c,Mong Lem,孟连,,,c_menglian,c,Mènglián,孟连,eu5_regent_mlm,eu5_regent_mlm,h_china,tribal_government,yes,"vassal,generated-regent,country-below-county-rank: its land is its counties"
 country,MLN,c,Malinalco,马利纳尔科,,,c_matlatzinco,c,Matlatzinco,马特拉钦科,eu5_regent_mln,eu5_regent_mln,,feudal_government,yes,"generated-regent,country-below-county-rank: its land is its counties"
-country,MLO,d,Milan,米兰,,,d_lombardy,d,Lombardy,伦巴第,mlo_azzone_i_visconti,mlo_azzone_i_visconti,e_hre,republic_government,yes,vassal
+country,MLO,d,Milan,米兰,,,d_commune_milan,d,Milan,米兰,mlo_azzone_i_visconti,mlo_azzone_i_visconti,e_hre,republic_government,yes,rebind to d_commune_milan (was d_lombardy)
 country,MLS,c,Wolastokwewiyik,沃拉斯托基维克,,,,,,,eu5_regent_mls,,,,,"generated-regent,country-below-county-rank: its land is its counties,landless-in-eu5,was c_madawaska"
 country,MLT,c,Malacato,马拉卡托,,,b_malacatos,b,Malacatos,马拉卡托斯,eu5_regent_mlt,eu5_regent_mlt,,,yes,"generated-regent,country-below-county-rank: its land is a barony"
 country,MMA,c,Möng Mao,勐卯,,,c_mangshi,c,Mángshī,茫施,mma_hkan_hpa,mma_hkan_hpa,h_china,tribal_government,yes,"vassal,country-below-county-rank: its land is its counties"
@@ -1536,7 +1536,7 @@ country,PAN,c,Pǔ'ān,普安,,,d_eu5_pan,d,Pǔ'ān,普安,eu5_regent_pan,eu5_reg
 country,PAP,k,Rome,罗马,,,k_papal_state,k,Rome,罗马,pap_benedetto_xii,pap_benedetto_xii,,ecclesiastical_government,yes,
 country,PAR,c,Parma,帕尔马,,,c_parma,c,Parme,帕尔马,eu5_rep_par,mb_city_1062102,d_eu5_ver,republic_government,yes,"consul,vassal,consul-holds,country-below-county-rank: its land is its counties"
 country,PAT,d,Patras,帕特雷,,,c_achaea,c,Achaḯa,亚该亚,pat_guglielmo_frangipani,pat_guglielmo_frangipani,d_eu5_ach,ecclesiastical_government,yes,"lowered d->c,vassal,country-below-county-rank: its land is its counties"
-country,PAV,c,Pavia,帕维亚,,,c_pavia,c,Pavía,帕维亚,pav_musso_beccaria,,d_commune_pavia,,yes,"vassal,country-below-county-rank: its land is its counties"
+country,PAV,c,Pavia,帕维亚,,,d_commune_pavia,d,Pavia,帕维亚,pav_musso_beccaria,,e_hre,,yes,rebind to d_commune_pavia (was c_pavia)
 country,PCD,c,Píngchádòng,平茶洞,,,b_xiushan,b,Zhōnghé,秀山,eu5_regent_pcd,eu5_regent_pcd,,tribal_government,yes,"vassal,generated-regent,country-below-county-rank: its land is a barony"
 country,PCH,c,Pacaha,帕卡哈,,,,,,,eu5_regent_pch,,,,,"generated-regent,country-below-county-rank: its land is its counties,landless-in-eu5,was c_pacaha"
 country,PCJ,c,Paka Jaqis,帕卡贾基斯,,,c_tiwanaku,c,Tiwanaku,蒂亚瓦纳科,eu5_regent_pcj,eu5_regent_pcj,,feudal_government,yes,"generated-regent,country-below-county-rank: its land is its counties"
@@ -1661,11 +1661,11 @@ country,QUL,c,Qulla,库尧,,,c_hatunqulla,c,Hatunqulla,哈通库利亚,eu5_regen
 country,QUN,c,Qara'unas,哈剌兀纳思,,,c_kabul,c,Kābul,喀布尔,eu5_regent_qun,mb_tribe_248197,,nomad_government,yes,"tributary,generated-regent,country-below-county-rank: its land is its counties"
 country,QUZ,c,Quizquiz,基斯基斯,,,,,,,eu5_regent_quz,,,,,"generated-regent,country-below-county-rank: its land is a barony,landless-in-eu5,was b_chucalissa"
 country,QYN,c,Qìngyuǎn,庆远,,,d_eu5_qyn,d,Qìngyuǎn,庆远,eu5_regent_qyn,eu5_regent_qyn,k_eu5_lng,tribal_government,yes,"vassal,generated-regent"
-country,RAG,c,Ragusa,拉古萨,,,c_south_dalmatia,c,Dalmatía Notía,南达尔马提亚,rag_filippo_belegno,,d_commune_ragusa,,yes,"vassal,country-below-county-rank: its land is its counties"
+country,RAG,c,Ragusa,拉古萨,,,d_commune_ragusa,d,Ragusa,拉古萨,rag_filippo_belegno,,k_venice,,yes,rebind to d_commune_ragusa (was c_south_dalmatia)
 country,RAN,c,Rano,拉诺,,,b_rano,b,Rano,拉诺,eu5_regent_ran,eu5_regent_ran,,,yes,"tributary,generated-regent,country-below-county-rank: its land is a barony"
 country,RAP,c,Te Rapuwai,特拉普怀,,,,,,,eu5_regent_rap,,,,,"generated-regent,country-below-county-rank: its land is its counties,landless-in-eu5,was c_murihiku"
 country,RAR,c,Rarámuri,拉拉穆里,,,,,,,eu5_regent_rar,,,,,"generated-regent,country-below-county-rank: its land is its counties,landless-in-eu5,was c_sinaloa"
-country,RAV,c,Ravenna,拉文纳,,,c_romagna,c,Rōmanía,罗马涅,rav_ostasio_i_polenta,rav_ostasio_i_polenta,,republic_government,yes,country-below-county-rank: its land is its counties
+country,RAV,c,Ravenna,拉文纳,,,d_commune_ravenna,d,Ravenna,拉文纳,rav_ostasio_i_polenta,rav_ostasio_i_polenta,,republic_government,yes,rebind to d_commune_ravenna (was c_romagna)
 country,RAW,d,Rawa,拉瓦,,,d_eu5_raw,d,Rawa,拉瓦,raw_siemowit_ii_piast,raw_siemowit_ii_piast,k_poland,feudal_government,yes,vassal
 country,RBG,c,Rietberg,里特贝格,,,b_rietberg,b,Rietberg,里特贝格,rbg_konrad_i_von_rietberg,rbg_konrad_i_von_rietberg,,,yes,"vassal,country-below-county-rank: its land is a barony"
 country,RCB,d,Racibórz,拉齐布日,,,b_raciborz,b,Ratibor,拉齐布日,opv_mikolaj_ii_premyslid,,,,yes,"union,vassal,country-below-county-rank: its land is a barony"
@@ -1766,7 +1766,7 @@ country,SHR,c,Saharan,撒哈拉,,,b_churu,b,Churu,久鲁,eu5_regent_shr,eu5_rege
 country,SHS,c,Sondershausen,松德斯豪森,,,b_sondershausen,b,Sondershausen,松德斯豪森,shs_heinrich_v_sondershausen,shs_heinrich_v_sondershausen,c_thuringer_becken,,yes,"vassal,country-below-county-rank: its land is a barony"
 country,SIB,c,Sibe,锡伯,,,,,,,eu5_regent_sib,,,,,"vassal,generated-regent,country-below-county-rank: its land is nothing,landless-in-eu5"
 country,SIC,k,Sicily,西西里,,,k_trinacria,k,Trinacria,特里纳克里亚,sic_federico_iii_sicily,sic_federico_iii_sicily,,feudal_government,yes,
-country,SIE,c,Siena,锡耶纳,,,c_siena,c,Sina,锡耶纳,eu5_regent_sie,,d_commune_siena,,yes,"vassal,generated-regent,country-below-county-rank: its land is its counties"
+country,SIE,c,Siena,锡耶纳,,,d_commune_siena,d,Siena,锡耶纳,eu5_regent_sie,,e_hre,,yes,rebind to d_commune_siena (was c_siena)
 country,SIG,c,Siang,锡昂,,,b_sengkae,b,Sengkae,森卡埃,eu5_regent_sig,eu5_regent_sig,,wanua_government,yes,"generated-regent,country-below-county-rank: its land is a barony"
 country,SIH,c,Sihanaka,西哈纳卡,,,,,,,,,,,,"no-ruler-in-eu5,country-below-county-rank: its land is a barony,landless-in-eu5,was b_ambatondrazaka"
 country,SII,c,Skiri,斯基里,,,,,,,eu5_regent_sii,,,,,"generated-regent,country-below-county-rank: its land is its counties,landless-in-eu5,was c_kaya_paha"
@@ -2141,7 +2141,7 @@ country,VDZ,c,Vayots Dzor,瓦约茨佐尔,,,b_gladzor,b,Gladzor,格拉佐尔,eu5
 country,VED,c,Venda,文达,,,,,,,eu5_regent_ved,,,,,"tributary,generated-regent,country-below-county-rank: its land is its counties,landless-in-eu5,was c_middle_limpopo"
 country,VEL,c,Veldenz,费尔登茨,,,b_lichtenberg_veldenz,b,Thallichtenberg,塔尔利希滕贝格,vel_georg_i_von_veldenz,vel_georg_i_von_veldenz,,,yes,"vassal,country-below-county-rank: its land is a barony"
 country,VEN,d,Venice,威尼斯,,,k_venice,k,Venice,威尼斯,ven_francesco_dandolo,ven_francesco_dandolo,,republic_government,yes,
-country,VER,c,Verona,维罗纳,,,d_eu5_ver,d,Verona,维罗纳,ver_mastino_ii_scala,ver_mastino_ii_scala,e_hre,republic_government,yes,vassal
+country,VER,c,Verona,维罗纳,,,d_commune_verona,d,Verona,维罗纳,ver_mastino_ii_scala,ver_mastino_ii_scala,e_hre,republic_government,yes,rebind to d_commune_verona (was d_eu5_ver)
 country,VEZ,c,Vezo,威祖,,,,,,,eu5_regent_vez,,,,,"generated-regent,country-below-county-rank: its land is its counties,landless-in-eu5,was c_maroserana"
 country,VID,k,Vidin,维丁,,,,,,,,,,,,"no-ruler-in-eu5,landless-in-eu5,was k_eu5_vid"
 country,VIJ,k,Vijayanagar,毗奢耶那伽罗,,,k_eu5_vij,k,Vijayanagar,毗奢耶那伽罗,vij_harihara_sangama,vij_harihara_sangama,,feudal_government,yes,

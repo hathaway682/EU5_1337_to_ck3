@@ -5805,33 +5805,7 @@ d_eu5_epi = {
 	}
 }
 
-d_eu5_flo = {
-	1256.1.1 = {
-		holder = mlo_ermanno_della_torre
-	}
-	1289.1.1 = {
-		holder = gub_rosso_gabrielli
-	}
-	1305.1.1 = {
-		holder = gub_bino_gabrielli
-	}
-	1314.1.1 = {
-		holder = flo_averardo_medici_ii
-	}
-	1331.1.1 = {
-		holder = gub_jacopo_gabrielli
-	}
-	1335.11.1 = {
-		holder = gub_jacopo_gabrielli
-	}
-	1337.1.1 = {
-		liege = e_hre
-	}
-	1337.4.1 = {
-		holder = gub_jacopo_gabrielli
-		government = republic_government
-	}
-}
+
 
 d_eu5_gau = {
 	1337.1.1 = {
@@ -6925,42 +6899,7 @@ d_eu5_vbk = {
 	}
 }
 
-d_eu5_ver = {
-	1210.1.1 = {
-		holder = ver_redondello_dalle_carceri
-	}
-	1229.1.1 = {
-		holder = ven_reniero_zeno
-	}
-	1262.1.1 = {
-		holder = ver_mastino_i_scala
-	}
-	1277.10.26 = {
-		holder = ver_alberto_scala
-	}
-	1301.9.3 = {
-		holder = ver_bartolomeo_scala
-	}
-	1304.3.7 = {
-		holder = ver_alboino_scala
-	}
-	1308.1.1 = {
-		holder = ver_alboino_scala
-	}
-	1311.11.29 = {
-		holder = ver_cangrande_scala
-	}
-	1329.7.22 = {
-		holder = ver_mastino_ii_scala
-	}
-	1337.1.1 = {
-		liege = e_hre
-	}
-	1337.4.1 = {
-		holder = ver_mastino_ii_scala
-		government = republic_government
-	}
-}
+
 
 d_west_kongo = {
 	1337.4.1 = {
@@ -7746,72 +7685,7 @@ d_lithuania = {
 	}
 }
 
-d_lombardy = {
-	1029.1.1 = {
-		holder = mlo_alberto_azzo_ii_este
-	}
-	1097.8.20 = {
-		holder = mlo_folco_i_este
-	}
-	1136.1.1 = {
-		holder = mlo_obizzo_i_este
-	}
-	1197.1.1 = {
-		holder = mlo_pagano_i_della_torre
-	}
-	1241.1.6 = {
-		holder = mlo_pagano_ii_della_torre
-	}
-	1253.1.1 = {
-		holder = sal_manfredo_ii_lancia
-	}
-	1256.1.1 = {
-		holder = mlo_martino_della_torre
-	}
-	1259.1.1 = {
-		holder = par_oberto_ii_pallavicini
-	}
-	1263.11.20 = {
-		holder = par_oberto_ii_pallavicini
-	}
-	1264.1.1 = {
-		holder = mlo_filippo_della_torre
-	}
-	1265.9.24 = {
-		holder = lca_napo_della_torre
-	}
-	1277.1.21 = {
-		holder = mlo_ottone_visconti
-	}
-	1278.8.5 = {
-		holder = mfa_guglielmo_vii_monferrato
-	}
-	1281.12.27 = {
-		holder = mlo_ottone_visconti
-	}
-	1287.12.27 = {
-		holder = mlo_matteo_i_visconti
-	}
-	1302.6.1 = {
-		holder = crm_guido_della_torre
-	}
-	1311.1.6 = {
-		holder = mlo_matteo_i_visconti
-	}
-	1322.6.24 = {
-		holder = mlo_galeazzo_i_visconti
-	}
-	1328.8.6 = {
-		holder = mlo_azzone_i_visconti
-	}
-	1337.1.1 = {
-		liege = e_hre
-	}
-	1337.4.1 = {
-		holder = mlo_azzone_i_visconti
-		government = republic_government
-	}
-}
+
 
 d_lorraine = {
 	1047.1.1 = {
@@ -30793,7 +30667,7 @@ c_lucca = {
 		holder = ver_mastino_ii_scala
 	}
 	1337.1.1 = {
-		liege = d_eu5_ver
+		liege = d_commune_verona
 	}
 	1337.4.1 = {
 		change_prosperity_level = 30
@@ -38367,7 +38241,7 @@ c_padua = {
 		holder = ver_alberto_ii_scala
 	}
 	1337.1.1 = {
-		liege = d_eu5_ver
+		liege = d_commune_verona
 	}
 	1337.4.1 = {
 		change_prosperity_level = 34
@@ -38769,7 +38643,7 @@ c_parma = {
 		holder = ver_alberto_ii_scala
 	}
 	1337.1.1 = {
-		liege = d_eu5_ver
+		liege = d_commune_verona
 	}
 	1337.4.1 = {
 		change_prosperity_level = 34
