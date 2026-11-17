@@ -8111,7 +8111,7 @@ mb_yuan_SEAsiaMMB283 = {
 # MB+ 217261 (source marks fictional)
 mb_tribe_217261 = {
 	name = "mb_tribe_name_217261"
-	culture = mongol
+	culture = kuzhu_moghol
 	religion = sunni
 	rite = shafii
 	dynasty = jalayirids_dynasty
@@ -8123,7 +8123,7 @@ mb_tribe_217261 = {
 # MB+ 248197
 mb_tribe_248197 = {
 	name = "mb_tribe_name_248197"
-	culture = mongol
+	culture = kuzhu_moghol
 	religion = sunni
 	rite = shafii
 	dynasty = mb_tribe_qaraunas_dynasty
@@ -8135,7 +8135,7 @@ mb_tribe_248197 = {
 # MB+ 248214 (source marks fictional)
 mb_tribe_248214 = {
 	name = "mb_tribe_name_248214"
-	culture = mongol
+	culture = kuzhu_moghol
 	religion = sunni
 	rite = shafii
 	dynasty = mb_tribe_arlat_dynasty
@@ -8147,7 +8147,7 @@ mb_tribe_248214 = {
 # MB+ 248234 (source marks fictional)
 mb_tribe_248234 = {
 	name = "mb_tribe_name_248234"
-	culture = mongol
+	culture = kuzhu_moghol
 	religion = sunni
 	rite = maliki
 	dynasty = mb_tribe_dughlat_dynasty
@@ -8159,7 +8159,7 @@ mb_tribe_248234 = {
 # MB+ 217246 (source marks fictional)
 mb_tribe_217246 = {
 	name = "mb_tribe_name_217246"
-	culture = mongol
+	culture = kuzhu_moghol
 	religion = sunni
 	rite = shafii
 	dynasty_house = mb_tribe_house_suldus
@@ -15882,4 +15882,764 @@ mb_genealogy_MB_Boraqchin = {
 	female = yes
 	1183.1.1 = { birth = yes }
 	1242.1.1 = { death = yes }
+}
+
+# MB+ culture-region vassals for Golden Horde and Chagatai.
+# MB+ 1231202
+mb_steppe_1231202 = {
+	name = "mb_steppe_name_1231202"
+	culture = persian
+	religion = sunni
+	rite = shafii
+	dynasty = mb_steppe_dynasty_1059024
+	1242.1.1 = { birth = yes }
+	1308.1.1 = { death = yes }
+}
+
+# MB+ 1233371M
+mb_steppe_1233371M = {
+	name = "mb_steppe_name_1233371M"
+	culture = bashkir
+	religion = sunni
+	rite = hanafi
+	dynasty = mb_steppe_dynasty_1029159
+	1230.1.1 = { birth = yes }
+	1315.1.1 = { death = yes }
+}
+
+# MB+ 1233371M2
+mb_steppe_1233371M2 = {
+	name = "mb_steppe_name_1233371M2"
+	culture = kipchak
+	religion = sunni
+	rite = hanafi
+	dynasty = mb_steppe_dynasty_1029159
+	father = mb_steppe_1233371M
+	1265.1.1 = { birth = yes }
+	1350.1.1 = { death = yes }
+}
+
+# MB+ 1233632
+mb_steppe_1233632 = {
+	name = "mb_steppe_name_1233632"
+	culture = chuvash
+	religion = sunni
+	dynasty = mb_steppe_dynasty_12271
+	1261.1.1 = { birth = yes }
+	1309.1.1 = { death = yes }
+}
+
+# MB+ 1233633
+mb_steppe_1233633 = {
+	name = "mb_steppe_name_1233633"
+	culture = chuvash
+	religion = tengri_pagan
+	rite = hanafi
+	dynasty = mb_steppe_dynasty_12271
+	father = mb_steppe_1233632
+	1288.1.1 = { birth = yes }
+	1344.1.1 = { death = yes }
+}
+
+# MB+ 1233647
+mb_steppe_1233647 = {
+	name = "mb_steppe_name_1233647"
+	culture = mordvin
+	religion = sunni
+	dynasty = mb_steppe_dynasty_1000053376
+	1260.1.1 = { birth = yes }
+	1307.1.1 = { death = yes }
+}
+
+# MB+ 1233648
+mb_steppe_1233648 = {
+	name = "mb_steppe_name_1233648"
+	culture = mordvin
+	religion = finnish_pagan
+	rite = slavic_rite
+	dynasty = mb_steppe_dynasty_1000053376
+	father = mb_steppe_1233647
+	1286.1.1 = { birth = yes }
+	1342.1.1 = { death = yes }
+}
+
+# MB+ 1233662
+mb_steppe_1233662 = {
+	name = "mb_steppe_name_1233662"
+	culture = mari
+	religion = sunni
+	dynasty = mb_steppe_dynasty_1000053377
+	1283.1.1 = { birth = yes }
+	1332.1.1 = { death = yes }
+}
+
+# MB+ 1233663
+mb_steppe_1233663 = {
+	name = "mb_steppe_name_1233663"
+	culture = mari
+	religion = finnish_pagan
+	dynasty = mb_steppe_dynasty_1000053377
+	father = mb_steppe_1233662
+	1314.1.1 = { birth = yes }
+	1358.1.1 = { death = yes }
+}
+
+# MB+ 1233710
+mb_steppe_1233710 = {
+	name = "mb_steppe_name_1233710"
+	culture = kuzhu_tartar
+	religion = sunni
+	dynasty = mb_steppe_dynasty_1000100689
+	1270.1.1 = { birth = yes }
+	1330.1.1 = { death = yes }
+}
+
+# MB+ 1233711
+mb_steppe_1233711 = {
+	name = "mb_steppe_name_1233711"
+	culture = chuvash
+	religion = tengri_pagan
+	dynasty = mb_steppe_dynasty_1000100689
+	father = mb_steppe_1233710
+	1315.1.1 = { birth = yes }
+	1360.1.1 = { death = yes }
+}
+
+# MB+ 125537
+mb_steppe_125537 = {
+	name = "mb_steppe_name_125537"
+	culture = mongol
+	religion = sunni
+	dynasty = borjigin_dynasty
+	1279.1.1 = { birth = yes }
+	1321.1.2 = { death = yes }
+}
+
+# MB+ 125544
+mb_steppe_125544 = {
+	name = "mb_steppe_name_125544"
+	culture = kuzhu_tartar
+	religion = sunni
+	rite = hanafi
+	dynasty = borjigin_dynasty
+	father = mb_steppe_125537
+	1308.1.1 = { birth = yes }
+	1355.1.2 = { death = yes }
+}
+
+# MB+ 125548
+mb_steppe_125548 = {
+	name = "mb_steppe_name_125548"
+	culture = mongol
+	religion = sunni
+	dynasty = borjigin_dynasty
+	1270.1.1 = { birth = yes }
+	1310.1.1 = { death = yes }
+}
+
+# MB+ 125549
+mb_steppe_125549 = {
+	name = "mb_steppe_name_125549"
+	culture = mongol
+	religion = tengri_pagan
+	rite = hanafi
+	dynasty = borjigin_dynasty
+	father = mb_steppe_125548
+	1294.1.1 = { birth = yes }
+	1338.1.1 = { death = yes }
+}
+
+# MB+ 194218
+mb_steppe_194218 = {
+	name = "mb_steppe_name_194218"
+	culture = kuzhu_tartar
+	religion = sunni
+	dynasty = mb_steppe_dynasty_852
+	1250.1.1 = { birth = yes }
+	1310.1.1 = { death = yes }
+}
+
+# MB+ 194219
+mb_steppe_194219 = {
+	name = "mb_steppe_name_194219"
+	culture = uriankhai
+	religion = shamanism
+	dynasty = mb_steppe_dynasty_852
+	father = mb_steppe_194218
+	1290.1.1 = { birth = yes }
+	1350.1.1 = { death = yes }
+}
+
+# MB+ 194221
+mb_steppe_194221 = {
+	name = "mb_steppe_name_194221"
+	culture = kirghiz
+	religion = sunni
+	dynasty = mb_steppe_dynasty_854
+	1250.1.1 = { birth = yes }
+	1310.1.1 = { death = yes }
+}
+
+# MB+ 194222
+mb_steppe_194222 = {
+	name = "mb_steppe_name_194222"
+	culture = kipchak
+	religion = tengri_pagan
+	dynasty = mb_steppe_dynasty_854
+	father = mb_steppe_194221
+	1290.1.1 = { birth = yes }
+	1350.1.1 = { death = yes }
+}
+
+# MB+ 3026078
+mb_steppe_3026078 = {
+	name = "mb_steppe_name_3026078"
+	culture = kuzhu_tartar
+	religion = sunni
+	dynasty = mb_steppe_dynasty_2001092
+	1240.10.22 = { birth = yes }
+	1310.7.13 = { death = yes }
+}
+
+# MB+ 3026079
+mb_steppe_3026079 = {
+	name = "mb_steppe_name_3026079"
+	culture = kipchak
+	religion = tengri_pagan
+	rite = hanafi
+	dynasty = mb_steppe_dynasty_2001092
+	father = mb_steppe_3026078
+	1270.10.22 = { birth = yes }
+	1350.7.13 = { death = yes }
+}
+
+# MB+ 3030400
+mb_steppe_3030400 = {
+	name = "mb_steppe_name_3030400"
+	culture = kuzhu_tartar
+	religion = sunni
+	dynasty = mb_steppe_dynasty_2001139
+	1229.2.14 = { birth = yes }
+	1310.5.20 = { death = yes }
+}
+
+# MB+ 3030401
+mb_steppe_3030401 = {
+	name = "mb_steppe_name_3030401"
+	culture = uriankhai
+	religion = tengri_pagan
+	dynasty = mb_steppe_dynasty_2001139
+	father = mb_steppe_3030400
+	1270.2.14 = { birth = yes }
+	1340.5.20 = { death = yes }
+}
+
+# MB+ 34943
+mb_steppe_34943 = {
+	name = "mb_steppe_name_34943"
+	culture = bolghar
+	religion = sunni
+	rite = hanafi
+	dynasty = mb_steppe_dynasty_591
+	1263.1.1 = { birth = yes }
+	1310.1.1 = { death = yes }
+}
+
+# MB+ 34944
+mb_steppe_34944 = {
+	name = "mb_steppe_name_34944"
+	culture = bolghar
+	religion = sunni
+	rite = hanafi
+	dynasty = mb_steppe_dynasty_591
+	father = mb_steppe_34943
+	1300.1.1 = { birth = yes }
+	1345.1.1 = { death = yes }
+}
+
+# MB+ 93039
+mb_steppe_93039 = {
+	name = "mb_steppe_name_93039"
+	culture = alan
+	religion = orthodox
+	rite = georgian_rite
+	dynasty = mb_steppe_dynasty_100603
+	1260.1.1 = { birth = yes }
+	1313.1.1 = { death = yes }
+}
+
+# MB+ 93047
+mb_steppe_93047 = {
+	name = "mb_steppe_name_93047"
+	culture = khazar
+	religion = orthodox
+	rite = georgian_rite
+	dynasty = mb_steppe_dynasty_100603
+	father = mb_steppe_93039
+	1295.1.1 = { birth = yes }
+	1345.1.1 = { death = yes }
+}
+
+# MB+ Atyrau4
+mb_steppe_Atyrau4 = {
+	name = "mb_steppe_name_Atyrau4"
+	culture = kuzhu_tartar
+	religion = sunni
+	1272.6.19 = { birth = yes }
+	1331.2.11 = { death = yes }
+}
+
+# MB+ Atyrau6
+mb_steppe_Atyrau6 = {
+	name = "mb_steppe_name_Atyrau6"
+	culture = kuzhu_tartar
+	religion = tengri_pagan
+	father = mb_steppe_Atyrau4
+	1301.10.28 = { birth = yes }
+	1359.3.19 = { death = yes }
+}
+
+# MB+ BulgarJalmatMB48
+mb_steppe_BulgarJalmatMB48 = {
+	name = "mb_steppe_name_BulgarJalmatMB48"
+	culture = bolghar
+	religion = sunni
+	rite = hanafi
+	1247.2.15 = { birth = yes }
+	1310.5.30 = { death = yes }
+}
+
+# MB+ BulgarJalmatMB51
+mb_steppe_BulgarJalmatMB51 = {
+	name = "mb_steppe_name_BulgarJalmatMB51"
+	culture = kazani
+	religion = sunni
+	rite = hanafi
+	father = mb_steppe_BulgarJalmatMB48
+	1282.4.7 = { birth = yes }
+	1345.8.24 = { death = yes }
+}
+
+# MB+ CatateaAlba2
+mb_steppe_CatateaAlba2 = {
+	name = "mb_steppe_name_CatateaAlba2"
+	culture = kuzhu_tartar
+	religion = sunni
+	dynasty = mb_steppe_dynasty_1045097
+	1252.6.30 = { birth = yes }
+	1315.11.8 = { death = yes }
+}
+
+# MB+ CatateaAlba4
+mb_steppe_CatateaAlba4 = {
+	name = "mb_steppe_name_CatateaAlba4"
+	culture = kuzhu_tartar
+	religion = orthodox
+	rite = slavic_rite
+	dynasty = mb_steppe_dynasty_1045097
+	father = mb_steppe_CatateaAlba2
+	1281.2.11 = { birth = yes }
+	1342.5.17 = { death = yes }
+}
+
+# MB+ Chagatai4
+mb_steppe_Chagatai4 = {
+	name = "mb_steppe_name_Chagatai4"
+	culture = mongol
+	religion = sunni
+	dynasty = borjigin_dynasty
+	1278.3.17 = { birth = yes }
+	1334.7.23 = { death = yes }
+}
+
+# MB+ Chagatai7
+mb_steppe_Chagatai7 = {
+	name = "mb_steppe_name_Chagatai7"
+	culture = kuzhu_moghol
+	religion = tengri_pagan
+	dynasty = borjigin_dynasty
+	father = mb_steppe_Chagatai4
+	1305.4.12 = { birth = yes }
+	1362.8.5 = { death = yes }
+}
+
+# MB+ CumanHerder43
+mb_steppe_CumanHerder43 = {
+	name = "mb_steppe_name_CumanHerder43"
+	culture = kuzhu_tartar
+	religion = sunni
+	1251.10.18 = { birth = yes }
+	1299.4.6 = { death = yes }
+}
+
+# MB+ CumanHerder44
+mb_steppe_CumanHerder44 = {
+	name = "mb_steppe_name_CumanHerder44"
+	culture = crimean
+	religion = orthodox
+	rite = slavic_rite
+	father = mb_steppe_CumanHerder43
+	1284.5.27 = { birth = yes }
+	1343.11.13 = { death = yes }
+}
+
+# MB+ CumanHerder88
+mb_steppe_CumanHerder88 = {
+	name = "mb_steppe_name_CumanHerder88"
+	culture = kuzhu_tartar
+	religion = sunni
+	1249.4.10 = { birth = yes }
+	1301.11.25 = { death = yes }
+}
+
+# MB+ CumanHerder89
+mb_steppe_CumanHerder89 = {
+	name = "mb_steppe_name_CumanHerder89"
+	culture = mishar
+	religion = orthodox
+	rite = slavic_rite
+	father = mb_steppe_CumanHerder88
+	1282.6.3 = { birth = yes }
+	1342.10.19 = { death = yes }
+}
+
+# MB+ KirghizCentral1
+mb_steppe_KirghizCentral1 = {
+	name = "mb_steppe_name_KirghizCentral1"
+	culture = kuzhu_tartar
+	religion = sunni
+	rite = hanafi
+	dynasty = mb_steppe_dynasty_854
+	1218.1.1 = { birth = yes }
+	1299.1.1 = { death = yes }
+}
+
+# MB+ KirghizCentral2
+mb_steppe_KirghizCentral2 = {
+	name = "mb_steppe_name_KirghizCentral2"
+	culture = kirghiz
+	religion = sunni
+	rite = hanafi
+	dynasty = mb_steppe_dynasty_854
+	father = mb_steppe_KirghizCentral1
+	1258.1.1 = { birth = yes }
+	1340.1.1 = { death = yes }
+}
+
+# MB+ Manghud7
+mb_steppe_Manghud7 = {
+	name = "mb_steppe_name_Manghud7"
+	culture = mongol
+	religion = sunni
+	dynasty = mb_steppe_dynasty_Manghud
+	1260.5.8 = { birth = yes }
+	1323.2.15 = { death = yes }
+}
+
+# MB+ Manghud9
+mb_steppe_Manghud9 = {
+	name = "mb_steppe_name_Manghud9"
+	culture = nogai
+	religion = sunni
+	rite = hanafi
+	dynasty = mb_steppe_dynasty_Manghud
+	father = mb_steppe_Manghud7
+	1290.8.17 = { birth = yes }
+	1352.10.29 = { death = yes }
+}
+
+# MB+ MogyerMB22
+mb_steppe_MogyerMB22 = {
+	name = "mb_steppe_name_MogyerMB22"
+	culture = kuzhu_tartar
+	religion = sunni
+	rite = hanafi
+	1267.3.17 = { birth = yes }
+	1325.10.9 = { death = yes }
+}
+
+# MB+ MogyerMB23
+mb_steppe_MogyerMB23 = {
+	name = "mb_steppe_name_MogyerMB23"
+	culture = mogyer
+	religion = sunni
+	rite = hanafi
+	father = mb_steppe_MogyerMB22
+	1294.8.4 = { birth = yes }
+	1352.1.20 = { death = yes }
+}
+
+# MB+ NorthTribals1041
+mb_steppe_NorthTribals1041 = {
+	name = "mb_steppe_name_NorthTribals1041"
+	culture = khanty
+	religion = sunni
+	1263.6.8 = { birth = yes }
+	1327.10.21 = { death = yes }
+}
+
+# MB+ NorthTribals1048
+mb_steppe_NorthTribals1048 = {
+	name = "mb_steppe_name_NorthTribals1048"
+	culture = khanty
+	religion = siberian_pagan
+	father = mb_steppe_NorthTribals1041
+	1291.7.22 = { birth = yes }
+	1355.11.5 = { death = yes }
+}
+
+# MB+ NorthTribals1692
+mb_steppe_NorthTribals1692 = {
+	name = "mb_steppe_name_NorthTribals1692"
+	culture = samoyed
+	religion = sunni
+	1243.9.8 = { birth = yes }
+	1308.12.17 = { death = yes }
+}
+
+# MB+ NorthTribals1693
+mb_steppe_NorthTribals1693 = {
+	name = "mb_steppe_name_NorthTribals1693"
+	culture = samoyed
+	religion = siberian_pagan
+	father = mb_steppe_NorthTribals1692
+	1272.5.4 = { birth = yes }
+	1337.8.13 = { death = yes }
+}
+
+# MB+ NorthTribals2595
+mb_steppe_NorthTribals2595 = {
+	name = "mb_steppe_name_NorthTribals2595"
+	culture = kuzhu_tartar
+	religion = sunni
+	1263.3.13 = { birth = yes }
+	1326.6.26 = { death = yes }
+}
+
+# MB+ NorthTribals2599
+mb_steppe_NorthTribals2599 = {
+	name = "mb_steppe_name_NorthTribals2599"
+	culture = uriankhai
+	religion = tengri_pagan
+	father = mb_steppe_NorthTribals2595
+	1293.9.5 = { birth = yes }
+	1356.12.19 = { death = yes }
+}
+
+# MB+ Ograk42
+mb_steppe_Ograk42 = {
+	name = "mb_steppe_name_Ograk42"
+	culture = kuzhu_tartar
+	religion = sunni
+	1274.2.26 = { birth = yes }
+	1332.10.3 = { death = yes }
+}
+
+# MB+ Ograk45
+mb_steppe_Ograk45 = {
+	name = "mb_steppe_name_Ograk45"
+	culture = oirat
+	religion = tengri_pagan
+	father = mb_steppe_Ograk42
+	1302.6.30 = { birth = yes }
+	1359.9.15 = { death = yes }
+}
+
+# MB+ Toksoba2
+mb_steppe_Toksoba2 = {
+	name = "mb_steppe_name_Toksoba2"
+	culture = kuzhu_tartar
+	religion = sunni
+	dynasty = mb_steppe_dynasty_1042048
+	1248.1.1 = { birth = yes }
+	1300.1.1 = { death = yes }
+}
+
+# MB+ Toksoba3
+mb_steppe_Toksoba3 = {
+	name = "mb_steppe_name_Toksoba3"
+	culture = kuzhu_tartar
+	religion = tengri_pagan
+	rite = slavic_rite
+	dynasty = mb_steppe_dynasty_1042048
+	father = mb_steppe_Toksoba2
+	1272.1.1 = { birth = yes }
+	1340.1.1 = { death = yes }
+}
+
+# MB+ culture-region vassals for Golden Horde and Chagatai.
+# MB+ BashkirSakmaraMB20
+mb_steppe_BashkirSakmaraMB20 = {
+	name = "mb_steppe_name_BashkirSakmaraMB20"
+	culture = bashkir
+	religion = sunni
+	rite = hanafi
+	1253.4.3 = { birth = yes }
+	1318.9.17 = { death = yes }
+}
+
+# MB+ BashkirSakmaraMB21
+mb_steppe_BashkirSakmaraMB21 = {
+	name = "mb_steppe_name_BashkirSakmaraMB21"
+	culture = bashkir
+	religion = sunni
+	rite = hanafi
+	father = mb_steppe_BashkirSakmaraMB20
+	1282.10.28 = { birth = yes }
+	1347.3.14 = { death = yes }
+}
+
+# MB+ Dorbet
+mb_steppe_Dorbet = {
+	name = "mb_steppe_name_Dorbet"
+	culture = oirat
+	religion = tengri_pagan
+	dynasty = mb_steppe_dynasty_1040078
+	father = mb_steppe_Dorbet1
+	1299.1.1 = { birth = yes }
+	1360.1.1 = { death = yes }
+}
+
+# MB+ Dorbet1
+mb_steppe_Dorbet1 = {
+	name = "mb_steppe_name_Dorbet1"
+	culture = oirat
+	religion = sunni
+	dynasty = mb_steppe_dynasty_1040078
+	1265.1.1 = { birth = yes }
+	1315.1.1 = { death = yes }
+}
+
+# MB+ Shurud10
+mb_steppe_Shurud10 = {
+	name = "mb_steppe_name_Shurud10"
+	culture = kipchak
+	religion = tengri_pagan
+	dynasty = mb_steppe_dynasty_1000102403
+	father = mb_steppe_Shurud6
+	1298.6.3 = { birth = yes }
+	1361.8.19 = { death = yes }
+}
+
+# MB+ Shurud6
+mb_steppe_Shurud6 = {
+	name = "mb_steppe_name_Shurud6"
+	culture = khitan
+	religion = mahayana_faith
+	rite = avatamsaka
+	dynasty = mb_steppe_dynasty_1000102403
+	1268.11.29 = { birth = yes }
+	1331.5.10 = { death = yes }
+}
+
+# MB+ Voronezh2
+mb_steppe_Voronezh2 = {
+	name = "mb_steppe_name_Voronezh2"
+	culture = kuzhu_tartar
+	religion = orthodox
+	rite = slavic_rite
+	dynasty_house = mb_steppe_house_house_yimek
+	1258.10.17 = { birth = yes }
+	1312.3.9 = { death = yes }
+}
+
+# MB+ Voronezh4
+mb_steppe_Voronezh4 = {
+	name = "mb_steppe_name_Voronezh4"
+	culture = bolghar
+	religion = orthodox
+	rite = slavic_rite
+	dynasty_house = mb_steppe_house_house_yimek
+	father = mb_steppe_Voronezh2
+	1283.4.6 = { birth = yes }
+	1340.11.18 = { death = yes }
+}
+
+# MB+ culture-region vassals for Golden Horde and Chagatai.
+# MB+ 480160
+mb_steppe_480160 = {
+	name = "mb_steppe_name_480160"
+	culture = alan
+	religion = orthodox
+	rite = byzantine_rite
+	dynasty = mb_steppe_dynasty_100604
+	father = mb_steppe_93046
+	1295.1.1 = { birth = yes }
+	1350.1.1 = { death = yes }
+}
+
+# MB+ 93046
+mb_steppe_93046 = {
+	name = "mb_steppe_name_93046"
+	culture = alan
+	religion = orthodox
+	rite = byzantine_rite
+	dynasty = mb_steppe_dynasty_100604
+	1270.1.1 = { birth = yes }
+	1313.1.1 = { death = yes }
+}
+
+# MB+ Ilgam4
+mb_steppe_Ilgam4 = {
+	name = "mb_steppe_name_Ilgam4"
+	culture = bolghar
+	religion = sunni
+	rite = hanafi
+	dynasty = mb_steppe_dynasty_591
+	1269.8.5 = { birth = yes }
+	1330.12.17 = { death = yes }
+}
+
+# MB+ Ilgam6
+mb_steppe_Ilgam6 = {
+	name = "mb_steppe_name_Ilgam6"
+	culture = bolghar
+	religion = sunni
+	rite = hanafi
+	dynasty = mb_steppe_dynasty_591
+	father = mb_steppe_Ilgam4
+	1301.2.14 = { birth = yes }
+	1362.5.28 = { death = yes }
+}
+
+# MB+ culture-region vassals for Golden Horde and Chagatai.
+# MB+ 34915
+mb_steppe_34915 = {
+	name = "mb_steppe_name_34915"
+	culture = mongol
+	religion = sunni
+	dynasty = borjigin_dynasty
+	1271.1.1 = { birth = yes }
+	1315.1.1 = { death = yes }
+}
+
+# MB+ 34917
+mb_steppe_34917 = {
+	name = "mb_steppe_name_34917"
+	culture = kipchak
+	religion = sunni
+	rite = hanafi
+	dynasty = borjigin_dynasty
+	father = mb_steppe_34915
+	1290.1.1 = { birth = yes }
+	1344.1.1 = { death = yes }
+}
+
+# MB+ MB_HerderLachykUba18
+mb_steppe_MB_HerderLachykUba18 = {
+	name = "mb_steppe_name_MB_HerderLachykUba18"
+	culture = mordvin
+	religion = sunni
+	1242.11.20 = { birth = yes }
+	1316.4.27 = { death = yes }
+}
+
+# MB+ MB_HerderLachykUba19
+mb_steppe_MB_HerderLachykUba19 = {
+	name = "mb_steppe_name_MB_HerderLachykUba19"
+	culture = mordvin
+	religion = finnish_pagan
+	father = mb_steppe_MB_HerderLachykUba18
+	1271.2.24 = { birth = yes }
+	1350.8.21 = { death = yes }
 }

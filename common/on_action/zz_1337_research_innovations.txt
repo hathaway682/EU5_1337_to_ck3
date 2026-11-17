@@ -600,6 +600,25 @@ eu5_1337_research_innovations = {
 					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
 				}
 			}
+			culture:kuzhu_moghol = {
+				add_innovation = innovation_bricks
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
 			culture:kashmiri = {
 				if = {
 					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
