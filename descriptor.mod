@@ -3,7 +3,7 @@ tags={
 	"Total Conversion"
 	"Map"
 }
-name="Project_EU5_to_CK3"
+name="Universalis Kings"
 picture="universalis_kings_cover.png"
 replace_path="gfx/map/map_object_data"
 replace_path="gfx/map/map_object_data/generated"
