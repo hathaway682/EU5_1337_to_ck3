@@ -837,14 +837,14 @@ lebanese_hybrid = {
 		}
 		OR = {
 			capital_county ?= {
-				title:k_syria = {
+				title:k_jerusalem = {
 					is_de_jure_liege_or_above_target = prev
 				}
 			}
-			primary_title = title:k_syria
+			primary_title = title:k_jerusalem
 		}
 		any_sub_realm_county = {
-			title:k_syria = {
+			title:k_jerusalem = {
 				is_de_jure_liege_or_above_target = prev
 			}
 		}
@@ -1068,7 +1068,7 @@ aromanian = {
 				title:k_thessalonika = {
 					is_de_jure_liege_or_above_target = prev
 				}
-				title:k_epirus = {
+				title:d_northern_greece = {
 					is_de_jure_liege_or_above_target = prev
 				}
 				title:k_hellas = {

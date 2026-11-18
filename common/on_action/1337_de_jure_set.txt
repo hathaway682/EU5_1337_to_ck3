@@ -393,14 +393,14 @@
 		#   		set_de_jure_liege_title = title:k_bengal
 		#   	}
 		# }
-		# title:k_delhi = { set_de_jure_liege_title = title:e_hindustan }
-		# title:k_rajputana = { set_de_jure_liege_title = title:e_hindustan }
-		# title:k_malwa = { set_de_jure_liege_title = title:e_hindustan }
-		# title:k_tamilakam = { set_de_jure_liege_title = title:e_hindustan }
-		# title:k_bengal = { set_de_jure_liege_title = title:e_hindustan }
+		title:k_delhi = { set_de_jure_liege_title = title:e_hindustan }
+		title:k_rajputana = { set_de_jure_liege_title = title:e_hindustan }
+		title:k_malwa = { set_de_jure_liege_title = title:e_hindustan }
+		title:k_tamilakam = { set_de_jure_liege_title = title:e_hindustan }
+		title:k_bengal = { set_de_jure_liege_title = title:e_hindustan }
 		# #东南亚
-		# title:d_lesser_sunda = { set_de_jure_liege_title = title:k_yavakadvipa }
-		# title:k_yavakadvipa = { set_de_jure_liege_title = title:e_majapahit }
+		title:d_lesser_sunda = { set_de_jure_liege_title = title:k_yavakadvipa }
+		title:k_yavakadvipa = { set_de_jure_liege_title = title:e_majapahit }
 		#斯瓦西里
 		title:d_middle_amur = { set_de_jure_liege_title = title:k_luzhen }
 		title:k_swahili_coast = {
@@ -479,6 +479,67 @@
 		  		set_de_jure_liege_title = title:e_chagatai
 		  	}
 		}
+		#大元
+		title:e_zhongyuan = {
+			every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+				set_de_jure_liege_title = title:e_great_yuan
+			}
+		}
+		title:e_yongliang = {
+			every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+				set_de_jure_liege_title = title:e_great_yuan
+			}
+		}
+		title:e_jingyang = {
+			every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+				set_de_jure_liege_title = title:e_great_yuan
+			}
+		}
+		title:e_liangyi = {
+			every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+				set_de_jure_liege_title = title:e_great_yuan
+			}
+		}
+		title:e_tibet = {
+			every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+				set_de_jure_liege_title = title:e_great_yuan
+			}
+		}
+		title:e_andong = {
+			every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+				set_de_jure_liege_title = title:e_great_yuan
+			}
+		}
+		title:e_goryeo = {
+			every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+				set_de_jure_liege_title = title:e_great_yuan
+			}
+		}
+		title:e_great_yuan = {
+			set_de_jure_liege_title = title:h_china
+		} 
+		
 		#海间
 		title:k_lotharingia = {
 		   	every_in_de_jure_hierarchy = {
@@ -512,7 +573,6 @@
 		   		set_de_jure_liege_title = title:k_siam
 		   	}
 		}
-		title:k_siam = { set_de_jure_liege_title = title:e_suvarnabhumi }
 		title:k_galicia-volhynia = { set_de_jure_liege_title = title:e_west_slavia }
 		title:k_white_rus = { set_de_jure_liege_title = title:e_west_slavia }
 		title:k_ruthenia = { set_de_jure_liege_title = title:e_west_slavia }
@@ -551,6 +611,32 @@
 		   	}
 		}
 		title:d_central_africa = { set_de_jure_liege_title = title:k_central_africa }
+		title:e_suvarnabhumi = {
+			every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+				set_de_jure_liege_title = title:e_kambuja
+			}
+		}
+		title:d_taiwan = { set_de_jure_liege_title = title:k_jiangdong }
+		title:d_levant = { set_de_jure_liege_title = title:k_jerusalem }
+		title:e_srivijaya = {
+			every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+				set_de_jure_liege_title = title:e_majapahit
+			}
+		}
+		title:e_nusantara = {
+			every_in_de_jure_hierarchy = {
+		  		limit = {
+		  			tier = tier_kingdom
+		  		}
+				set_de_jure_liege_title = title:e_majapahit
+			}
+		}
 		#征服者
 		character:tur_orhan = {
 			add_trait = conqueror

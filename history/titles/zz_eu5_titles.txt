@@ -916,7 +916,7 @@ e_golden_horde = {
 	}
 }
 
-e_goryeo = {
+k_goguryeo = {
 	1274.1.1 = {
 		holder = kor_chungnyeol
 	}
@@ -938,6 +938,12 @@ e_goryeo = {
 	1337.4.1 = {
 		holder = kor_chungsuk
 		government = meritocratic_government
+	}
+}
+
+e_goryeo = {
+	1337.4.1 = {
+		holder = 0
 	}
 }
 
@@ -1222,7 +1228,7 @@ e_mali = {
 	}
 }
 
-e_tibet = {
+k_tsang = {
 	1337.1.1 = {
 		holder = tib_namkha_lekpa
 		liege = h_china
@@ -1230,6 +1236,12 @@ e_tibet = {
 	1337.4.1 = {
 		holder = tib_namkha_lekpa
 		government = theocracy_government
+	}
+}
+
+e_tibet = {
+	1337.4.1 = {
+		holder = 0
 	}
 }
 
@@ -7013,7 +7025,7 @@ d_gur = {
 d_gwandong = {
 	1337.1.1 = {
 		holder = mb_eastasia_GoryeoKorea713
-		liege = e_goryeo
+		liege = k_goguryeo
 	}
 	1337.4.1 = {
 		government = meritocratic_government
@@ -7023,7 +7035,7 @@ d_gwandong = {
 d_gwanseo = {
 	1337.1.1 = {
 		holder = mb_eastasia_GoryeoKorea602
-		liege = e_goryeo
+		liege = k_goguryeo
 	}
 	1337.4.1 = {
 		government = meritocratic_government
@@ -7043,7 +7055,7 @@ d_gyeonggi = {
 d_haeseo = {
 	1337.1.1 = {
 		holder = mb_eastasia_GoryeoKorea971
-		liege = e_goryeo
+		liege = k_goguryeo
 	}
 	1337.4.1 = {
 		government = meritocratic_government
@@ -7137,7 +7149,7 @@ d_home_counties = {
 d_honam = {
 	1337.1.1 = {
 		holder = mb_eastasia_UiBang8
-		liege = e_goryeo
+		liege = k_goguryeo
 	}
 	1337.4.1 = {
 		government = meritocratic_government
@@ -7147,7 +7159,7 @@ d_honam = {
 d_hoseo = {
 	1337.1.1 = {
 		holder = mb_eastasia_GoryeoKorea1193
-		liege = e_goryeo
+		liege = k_goguryeo
 	}
 	1337.4.1 = {
 		government = meritocratic_government
@@ -9073,7 +9085,7 @@ d_yedisan = {
 d_yeongnam = {
 	1337.1.1 = {
 		holder = mb_eastasia_1900526
-		liege = e_goryeo
+		liege = k_goguryeo
 	}
 	1337.4.1 = {
 		government = meritocratic_government
@@ -12081,7 +12093,7 @@ c_balor = {
 
 c_balti = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 3
@@ -15589,7 +15601,7 @@ c_chambeshi = {
 
 c_chamdo = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 18
@@ -18259,7 +18271,7 @@ c_derevskaya = {
 
 c_derge = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 12
@@ -19324,7 +19336,7 @@ c_eastern_adamawa = {
 
 c_eastern_bhutan = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 18
@@ -21252,7 +21264,7 @@ c_gongju = {
 
 c_gonjo = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 12
@@ -21884,7 +21896,7 @@ c_guenoa = {
 
 c_guge = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 8
@@ -22512,7 +22524,7 @@ c_hanseong = {
 	}
 	1337.4.1 = {
 		holder = mb_eastasia_GoryeoKorea805
-		liege = e_goryeo
+		liege = k_goguryeo
 		government = meritocratic_government
 	}
 }
@@ -28746,7 +28758,7 @@ c_kwaskwuti = {
 
 c_kyenarong = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 12
@@ -28839,7 +28851,7 @@ c_laconia = {
 
 c_ladakh = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 6
@@ -29542,7 +29554,7 @@ c_lincolnshire = {
 
 c_ling = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 12
@@ -29654,7 +29666,7 @@ c_liptako = {
 
 c_lithang = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 12
@@ -31634,7 +31646,7 @@ c_mangyshlak = {
 
 c_mangyul = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 8
@@ -34797,7 +34809,7 @@ c_nanen = {
 
 c_nangchen = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 6
@@ -36608,7 +36620,7 @@ c_ntsoana_tsatsi = {
 
 c_nubhor = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 12
@@ -38142,7 +38154,7 @@ c_pagaruyung = {
 
 c_pagsho = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 12
@@ -38823,7 +38835,7 @@ c_pelly_river = {
 
 c_pemako = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 7
@@ -39891,7 +39903,7 @@ c_poyiitahtai = {
 
 c_poyul = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 12
@@ -40184,7 +40196,7 @@ c_puquina = {
 
 c_purang = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 8
@@ -41718,7 +41730,7 @@ c_rustamdar = {
 
 c_rutok = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 5
@@ -42351,7 +42363,7 @@ c_sangmelima = {
 
 c_sangon = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 12
@@ -45047,7 +45059,7 @@ c_spessart = {
 
 c_spiti = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 7
@@ -48429,7 +48441,7 @@ c_tsang = {
 
 c_tsawarong = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 12
@@ -52425,7 +52437,7 @@ c_western_adamawa = {
 
 c_western_bhutan = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 18
@@ -54384,7 +54396,7 @@ c_yuryakh = {
 
 c_yushu = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 2
@@ -54554,7 +54566,7 @@ c_zamyany = {
 
 c_zangskar = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 6
@@ -54692,7 +54704,7 @@ c_zavolochye = {
 
 c_zayul = {
 	1337.1.1 = {
-		liege = e_tibet
+		liege = k_tsang
 	}
 	1337.4.1 = {
 		change_prosperity_level = 12

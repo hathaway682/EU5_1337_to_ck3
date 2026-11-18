@@ -35,16 +35,16 @@ avadhi = {
 	trigger = {
 		OR = {
 			capital_county = {
-				title:k_delhi = {
+				title:d_awadh = {
 					is_de_jure_liege_or_above_target = prev
 				}
 			}
-			has_primary_title = title:k_delhi
+			has_primary_title = title:d_awadh
 		}
 		culture = { has_cultural_pillar = heritage_indo_aryan }
 		any_sub_realm_county = {
 			culture = scope:culture
-			kingdom = title:k_delhi
+			duchy = title:d_awadh
 		}
 	}
 }
@@ -210,16 +210,29 @@ dhundari = {
 	trigger = {
 		OR = {
 			capital_county = {
-				title:d_rajputana = {
-					is_de_jure_liege_or_above_target = prev
+				OR = {
+					this = title:c_dhundhar
+					this = title:c_shekhawati
+					this = title:c_gird
+					this = title:c_mewat
 				}
 			}
-			has_primary_title = title:d_rajputana
+			OR = {
+				has_primary_title = title:c_dhundhar
+				has_primary_title = title:c_shekhawati
+				has_primary_title = title:c_gird
+				has_primary_title = title:c_mewat
+			}
 		}
 		culture = culture:rajput
 		any_sub_realm_county = {
 			culture = culture:rajput
-			duchy = title:d_rajputana
+			OR = {
+				this = title:c_dhundhar
+				this = title:c_shekhawati
+				this = title:c_gird
+				this = title:c_mewat
+			}
 		}
 	}
 }
@@ -228,16 +241,23 @@ mewari = {
 	trigger = {
 		OR = {
 			capital_county = {
-				title:d_rajputana = {
-					is_de_jure_liege_or_above_target = prev
+				OR = {
+					this = title:c_mewar
+					this = title:c_hadoti
 				}
 			}
-			has_primary_title = title:d_rajputana
+			OR = {
+				has_primary_title = title:c_mewar
+				has_primary_title = title:c_hadoti
+			}
 		}
 		culture = culture:rajput
 		any_sub_realm_county = {
 			culture = culture:rajput
-			duchy = title:d_rajputana
+			OR = {
+				this = title:c_mewar
+				this = title:c_hadoti
+			}
 		}
 	}
 }
@@ -246,24 +266,34 @@ marwari = {
 	trigger = {
 		OR = {
 			capital_county = {
-				title:d_rajputana = {
-					is_de_jure_liege_or_above_target = prev
+				OR = {
+					this = title:c_marwar
+					this = title:c_godwar
+					this = title:c_jaisalmer
+					this = title:c_nagaur
+					this = title:c_jangladesh
+					this = title:c_sarasvata
 				}
 			}
-			capital_county = {
-				title:d_rajputana = {
-					is_de_jure_liege_or_above_target = prev
-				}
+			OR = {
+				has_primary_title = title:c_marwar
+				has_primary_title = title:c_godwar
+				has_primary_title = title:c_jaisalmer
+				has_primary_title = title:c_nagaur
+				has_primary_title = title:c_jangladesh
+				has_primary_title = title:c_sarasvata
 			}
-			has_primary_title = title:d_rajputana
-			has_primary_title = title:d_rajputana
 		}
 		culture = culture:rajput
 		any_sub_realm_county = {
 			culture = culture:rajput
 			OR = {
-				duchy = title:d_rajputana
-				duchy = title:d_rajputana
+				this = title:c_marwar
+				this = title:c_godwar
+				this = title:c_jaisalmer
+				this = title:c_nagaur
+				this = title:c_jangladesh
+				this = title:c_sarasvata
 			}
 		}
 	}
@@ -942,16 +972,14 @@ venetian = {
 	trigger = {
 		OR = {
 			capital_county = {
-				title:d_veneto = {
-					is_de_jure_liege_or_above_target = prev
-				}
+				this = title:c_venice
 			}
-			has_primary_title = title:d_veneto
+			has_primary_title = title:c_venice
 		}
 		culture = { has_cultural_pillar = heritage_latin }
 		any_sub_realm_county = {
 			culture = { has_cultural_pillar = heritage_latin }
-			duchy = title:d_veneto
+			this = title:c_venice
 		}
 	}
 }
@@ -1488,16 +1516,32 @@ veronese = {
 	trigger = {
 		OR = {
 			capital_county = {
-				title:d_veneto = {
-					is_de_jure_liege_or_above_target = prev
+				OR = {
+					this = title:c_verona
+					this = title:c_vicenza
+					this = title:c_padua
+					this = title:c_belluno
+					this = title:c_friuli
 				}
 			}
-			has_primary_title = title:d_veneto
+			OR = {
+				has_primary_title = title:c_verona
+				has_primary_title = title:c_vicenza
+				has_primary_title = title:c_padua
+				has_primary_title = title:c_belluno
+				has_primary_title = title:c_friuli
+			}
 		}
 		culture = { has_cultural_pillar = heritage_latin }
 		any_sub_realm_county = {
 			culture = { has_cultural_pillar = heritage_latin }
-			duchy = title:d_veneto
+			OR = {
+				this = title:c_verona
+				this = title:c_vicenza
+				this = title:c_padua
+				this = title:c_belluno
+				this = title:c_friuli
+			}
 		}
 	}
 }
@@ -1617,15 +1661,15 @@ lebanese = {
 		}
 		OR = {
 			capital_county = {
-				title:k_syria = {
+				title:k_jerusalem = {
 					is_de_jure_liege_or_above_target = prev
 				}
 			}
-			primary_title = title:k_syria
+			primary_title = title:k_jerusalem
 		}
 		culture = { has_cultural_pillar = heritage_arabic }
 		any_sub_realm_county = {
-			title:k_syria = {
+			title:k_jerusalem = {
 				is_de_jure_liege_or_above_target = prev
 			}
 		}
@@ -1639,15 +1683,15 @@ syrian = {
 		}
 		OR = {
 			capital_county = {
-				title:k_syria = {
+				title:k_jerusalem = {
 					is_de_jure_liege_or_above_target = prev
 				}
 			}
-			primary_title = title:k_syria
+			primary_title = title:k_jerusalem
 		}
 		culture = { has_cultural_pillar = heritage_arabic }
 		any_sub_realm_county = {
-			title:k_syria = {
+			title:k_jerusalem = {
 				is_de_jure_liege_or_above_target = prev
 			}
 		}
@@ -1703,7 +1747,7 @@ palestinian = {
 			capital_county = {
 				title_province = { geographical_region = world_middle_east_jerusalem }
 			}
-			primary_title = title:d_levant
+			primary_title = title:k_jerusalem
 			primary_title = title:d_levant
 		}
 		faith.religion = religion:islam_religion
