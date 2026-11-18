@@ -1,0 +1,118 @@
+﻿eu5_colonial_enterprise = {
+ icon = { reference = "gfx/interface/icons/great_projects/_default.dds" }
+ illustration = { reference = "gfx/interface/illustrations/great_projects/asia_great_project_default.dds" }
+ name = { desc = great_project_type_eu5_colonial_enterprise }
+ is_shown = {
+  is_landed = yes
+  highest_held_title_tier >= tier_kingdom
+  NOT = { government_has_flag = government_is_wilderness }
+ }
+ province_filter = all
+ owner = founder_primary_title_owner
+ can_start_planning = { is_landed = yes highest_held_title_tier >= tier_kingdom }
+ is_location_valid = {
+  scope:province = {
+   is_county_capital = yes
+   county = { is_wilderness_county_trigger = yes NOT = { has_county_modifier = block_settlement_ability } NOT = { has_county_modifier = settling_expedition_underway } }
+   duchy = {
+    custom_tooltip = {
+     text = eu5_colonial_enterprise_duchy_available_tt
+     NOT = {
+      any_de_jure_county = {
+       title_province = {
+        any_great_project_in_province = {
+         great_project_type = eu5_colonial_enterprise
+         OR = {
+          great_project_construction_phase_is = planned
+          great_project_construction_phase_is = in_progress
+         }
+        }
+       }
+      }
+     }
+    }
+    OR = {
+     any_de_jure_county = {
+      is_wilderness_county_trigger = yes
+      any_neighboring_county = {
+       holder ?= { OR = { this = root target_is_liege_or_above = root } }
+      }
+     }
+     AND = {
+      current_date >= 1492.10.12
+      any_de_jure_county = { is_wilderness_county_trigger = yes title_province = { is_coastal = yes } }
+      root = { capital_province = { geographical_region = world_europe } any_sub_realm_county = { title_province = { is_coastal = yes } } }
+     }
+    }
+   }
+  }
+ }
+ cost = { gold = 150 }
+ construction_time = 18
+ contributor_cooldown = 0
+ allowed_contributor_filter = { owner = yes vassals = yes tributaries = yes }
+ is_valid = {
+  scope:owner ?= { is_landed = yes highest_held_title_tier >= tier_kingdom }
+  NOT = {
+   any_contribution = {
+    contribution_id = settlement
+    contribution_is_funded = yes
+    NOT = { contributor ?= { is_alive = yes is_landless_merchant = yes suzerain ?= scope:owner } }
+   }
+  }
+  scope:province.duchy ?= {
+   any_de_jure_county = { is_wilderness_county_trigger = yes }
+  }
+ }
+ on_complete = {
+  every_contribution = {
+   limit = { contribution_id = settlement contribution_is_funded = yes }
+   contributor ?= { eu5_colonial_enterprise_complete_effect = yes }
+  }
+ }
+ on_cancel = { }
+ project_contributions = {
+  settlement = {
+   contributor_is_valid = { is_landless_merchant = yes suzerain ?= scope:owner }
+   allowed_contributor_filter = { tributaries = yes }
+   cost = { gold = 400 }
+   is_required = yes
+   contributor_cooldown = 0
+   on_contribution_funded = { great_project_notify_contribution = yes }
+   ai_will_do = { value = 100 }
+   ai_check_interval = 3
+  }
+  supplies = {
+   contributor_is_valid = { OR = { this = scope:owner is_vassal_or_below_of = scope:owner AND = { is_landless_merchant = yes suzerain ?= scope:owner } } }
+   cost = { gold = 200 }
+   is_required = no
+   contributor_cooldown = 0
+   on_contribution_funded = { great_project_notify_contribution = yes }
+   on_complete = { scope:province.duchy = { every_de_jure_county = { add_county_modifier = { modifier = eu5_colonial_supplies_modifier years = 20 } } } }
+   ai_will_do = { value = 50 }
+   ai_check_interval = 12
+  }
+  settlers = {
+   contributor_is_valid = { OR = { this = scope:owner is_vassal_or_below_of = scope:owner AND = { is_landless_merchant = yes suzerain ?= scope:owner } } }
+   cost = { gold = 250 }
+   is_required = no
+   contributor_cooldown = 0
+   on_contribution_funded = { great_project_notify_contribution = yes }
+   on_complete = { scope:province.duchy = { every_de_jure_county = { add_county_modifier = { modifier = eu5_colonial_settlers_modifier years = 20 } } } }
+   ai_will_do = { value = 50 }
+   ai_check_interval = 12
+  }
+  defenses = {
+   contributor_is_valid = { OR = { this = scope:owner is_vassal_or_below_of = scope:owner AND = { is_landless_merchant = yes suzerain ?= scope:owner } } }
+   cost = { gold = 200 }
+   is_required = no
+   contributor_cooldown = 0
+   on_contribution_funded = { great_project_notify_contribution = yes }
+   on_complete = { scope:province.duchy = { every_de_jure_county = { add_county_modifier = { modifier = eu5_colonial_defenses_modifier years = 20 } } } }
+   ai_will_do = { value = 50 }
+   ai_check_interval = 12
+  }
+ }
+ ai_will_do = { value = 10 }
+ ai_check_interval = 30
+}

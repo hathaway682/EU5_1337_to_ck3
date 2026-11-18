@@ -1,0 +1,28 @@
+﻿namespace = eu5_new_world_discovery
+
+# Global dispatch ensures that the rulers are selected on the discovery date.
+eu5_new_world_discovery.0001 = {
+ hidden = yes
+ scope = none
+ immediate = {
+  every_ruler = {
+   limit = {
+    is_landed = yes
+    highest_held_title_tier >= tier_kingdom
+    capital_province = { geographical_region = world_europe }
+    NOT = { government_has_flag = government_is_wilderness }
+   }
+   trigger_event = { id = eu5_new_world_discovery.0002 }
+  }
+ }
+}
+
+eu5_new_world_discovery.0002 = {
+ type = character_event
+ title = eu5_new_world_discovery.0002.t
+ desc = eu5_new_world_discovery.0002.desc
+ theme = realm
+ override_background = { reference = courtyard }
+ left_portrait = { character = root animation = personality_bold }
+ option = { name = eu5_new_world_discovery.0002.a }
+}
