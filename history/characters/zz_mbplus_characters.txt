@@ -16757,3 +16757,16 @@ mb_genealogy_Chagatai2 = {
 	1255.8.22 = { birth = yes }
 	1312.4.8 = { death = yes }
 }
+
+# MB+ Volhynia and left-bank vassals (1337).
+# MB+ 472514: source father 472511 matches the existing Sviatoslav Glebovich.
+mb_rus_472514 = {
+	name = "mb_rus_name_472514"
+	culture = russian
+	religion = orthodox
+	rite = slavic_rite
+	dynasty_house = mb_rus_rostislavichi_house
+	father = bry_svyatoslav_glebovich_rurikovich
+	1300.1.2 = { birth = yes }
+	1350.1.2 = { death = yes }
+}

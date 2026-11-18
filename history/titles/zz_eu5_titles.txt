@@ -1750,7 +1750,7 @@ k_champa = {
 	}
 	1337.4.1 = {
 		holder = cha_jaya_ananda
-		government = wanua_government
+		government = mandala_government
 	}
 }
 
@@ -4047,6 +4047,15 @@ k_viet = {
 	1337.4.1 = {
 		holder = dai_vuong
 		government = meritocratic_government
+	}
+}
+
+# MB+ independent Zaydi Imamate, loaded before its counties.
+d_zayidi = {
+	1337.1.1 = {
+		holder = mb_mam_yem_Rassid13
+		liege = 0
+		government = clan_government
 	}
 }
 
@@ -7486,8 +7495,9 @@ d_karagay = {
 
 d_karelia = {
 	1337.4.1 = {
-		holder = mb_nov_125260
-		government = republic_government
+		holder = ck2_nov_260321
+		liege = k_novgorod
+		government = feudal_government
 	}
 }
 
@@ -9245,7 +9255,8 @@ d_volhynia = {
 		holder = vol_boleslaw_jerzy_ii_piast
 	}
 	1337.4.1 = {
-		holder = vol_boleslaw_jerzy_ii_piast
+		holder = lit_liubartas_gediminds
+		liege = k_galicia-volhynia
 		government = feudal_government
 	}
 }
@@ -11670,8 +11681,9 @@ c_aunus_karelia = {
 		change_prosperity_level = 6
 	}
 	1337.4.1 = {
-		holder = mb_nov_125260
-		government = republic_government
+		holder = ck2_nov_260321
+		liege = d_karelia
+		government = feudal_government
 	}
 }
 
@@ -13491,6 +13503,7 @@ c_belz = {
 	}
 	1337.4.1 = {
 		holder = vol_boleslaw_jerzy_ii_piast
+
 		government = feudal_government
 	}
 }
@@ -16194,7 +16207,9 @@ c_chelm = {
 		change_prosperity_level = 20
 	}
 	1337.4.1 = {
-		holder = vol_boleslaw_jerzy_ii_piast
+		holder = lit_liubartas_gediminds
+		liege = d_volhynia
+
 		government = feudal_government
 	}
 }
@@ -22468,7 +22483,7 @@ c_hadramawt = {
 	}
 	1337.4.1 = {
 		holder = mb_mam_yem_Rassid13
-		liege = k_yemen
+		liege = d_zayidi
 		government = clan_government
 	}
 }
@@ -24240,7 +24255,8 @@ c_ichnia = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = kie_teodoras_ivanovich_rurikovich
+		holder = mb_rus_472514
+		liege = d_left_bank_ukraine
 		government = feudal_government
 	}
 }
@@ -24461,7 +24477,7 @@ c_indrapura = {
 	}
 	1337.4.1 = {
 		holder = cha_jaya_ananda
-		government = wanua_government
+		government = mandala_government
 	}
 }
 
@@ -24525,8 +24541,9 @@ c_inner_aunus_karelia = {
 		change_prosperity_level = 4
 	}
 	1337.4.1 = {
-		holder = mb_nov_125260
-		government = republic_government
+		holder = ck2_nov_260321
+		liege = d_karelia
+		government = feudal_government
 	}
 }
 
@@ -26591,8 +26608,9 @@ c_kargopol = {
 		change_prosperity_level = 4
 	}
 	1337.4.1 = {
-		holder = mb_nov_125260
-		government = republic_government
+		holder = ck2_nov_260317
+		liege = k_novgorod
+		government = feudal_government
 	}
 }
 
@@ -26901,7 +26919,7 @@ c_kauthara = {
 	}
 	1337.4.1 = {
 		holder = cha_jaya_ananda
-		government = wanua_government
+		government = mandala_government
 	}
 }
 
@@ -27536,8 +27554,9 @@ c_kholmogory = {
 		change_prosperity_level = 6
 	}
 	1337.4.1 = {
-		holder = mb_nov_125260
-		government = republic_government
+		holder = ck2_nov_260309
+		liege = k_novgorod
+		government = feudal_government
 	}
 }
 
@@ -28263,7 +28282,8 @@ c_korela = {
 		change_prosperity_level = 6
 	}
 	1337.4.1 = {
-		holder = pok_narimantas_gediminds
+		holder = mb_nov_125257
+		liege = k_novgorod
 		government = feudal_government
 	}
 }
@@ -28472,7 +28492,8 @@ c_kremenets = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = vol_boleslaw_jerzy_ii_piast
+		holder = lit_liubartas_gediminds
+		liege = d_volhynia
 		government = feudal_government
 	}
 }
@@ -30088,7 +30109,8 @@ c_lopskaya = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = pok_narimantas_gediminds
+		holder = ck2_nov_472000
+		liege = k_novgorod
 		government = feudal_government
 	}
 }
@@ -30731,7 +30753,8 @@ c_lubny = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = kie_teodoras_ivanovich_rurikovich
+		holder = mb_rus_472514
+		liege = d_left_bank_ukraine
 		government = feudal_government
 	}
 }
@@ -30975,7 +30998,8 @@ c_lutsk = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = vol_boleslaw_jerzy_ii_piast
+		holder = lit_liubartas_gediminds
+		liege = d_volhynia
 		government = feudal_government
 	}
 }
@@ -31221,7 +31245,7 @@ c_madhyamagrama = {
 	}
 	1337.4.1 = {
 		holder = cha_jaya_ananda
-		government = wanua_government
+		government = mandala_government
 	}
 }
 
@@ -32175,7 +32199,7 @@ c_marib = {
 	}
 	1337.4.1 = {
 		holder = mb_mam_yem_Rassid13
-		liege = k_yemen
+		liege = d_zayidi
 		government = clan_government
 	}
 }
@@ -37202,8 +37226,9 @@ c_obonezhskaya = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = mb_nov_125260
-		government = republic_government
+		holder = ck2_nov_472000
+		liege = k_novgorod
+		government = feudal_government
 	}
 }
 
@@ -37646,8 +37671,9 @@ c_onega = {
 		change_prosperity_level = 4
 	}
 	1337.4.1 = {
-		holder = mb_nov_125260
-		government = republic_government
+		holder = ck2_nov_260309
+		liege = k_novgorod
+		government = feudal_government
 	}
 }
 
@@ -38109,7 +38135,8 @@ c_otranto = {
 		change_prosperity_level = 29
 	}
 	1337.4.1 = {
-		holder = nap_robert_i_anjou
+		holder = arg_gautier_vi_brienne
+		liege = k_naples
 		government = feudal_government
 	}
 }
@@ -38558,7 +38585,7 @@ c_panduranga = {
 	}
 	1337.4.1 = {
 		holder = cha_jaya_ananda
-		government = wanua_government
+		government = mandala_government
 	}
 }
 
@@ -39200,7 +39227,8 @@ c_pereiaslav = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = kie_teodoras_ivanovich_rurikovich
+		holder = mb_rus_472514
+		liege = d_left_bank_ukraine
 		government = feudal_government
 	}
 }
@@ -39999,7 +40027,8 @@ c_poltava = {
 		change_prosperity_level = 18
 	}
 	1337.4.1 = {
-		holder = kie_teodoras_ivanovich_rurikovich
+		holder = mb_rus_472514
+		liege = d_left_bank_ukraine
 		government = feudal_government
 	}
 }
@@ -40021,8 +40050,9 @@ c_pomorye = {
 		change_prosperity_level = 3
 	}
 	1337.4.1 = {
-		holder = mb_nov_125260
-		government = republic_government
+		holder = ck2_nov_260321
+		liege = d_karelia
+		government = feudal_government
 	}
 }
 
@@ -41616,7 +41646,8 @@ c_rivne = {
 		change_prosperity_level = 16
 	}
 	1337.4.1 = {
-		holder = vol_boleslaw_jerzy_ii_piast
+		holder = lit_liubartas_gediminds
+		liege = d_volhynia
 		government = feudal_government
 	}
 }
@@ -42539,7 +42570,7 @@ c_sana = {
 	}
 	1337.4.1 = {
 		holder = mb_mam_yem_Rassid13
-		liege = k_yemen
+		liege = d_zayidi
 		government = clan_government
 	}
 }
@@ -43051,7 +43082,7 @@ c_sayhad = {
 	}
 	1337.4.1 = {
 		holder = mb_mam_yem_Rassid13
-		liege = k_yemen
+		liege = d_zayidi
 		government = clan_government
 	}
 }
@@ -43697,8 +43728,9 @@ c_shenkursk = {
 		change_prosperity_level = 4
 	}
 	1337.4.1 = {
-		holder = mb_nov_125260
-		government = republic_government
+		holder = ck2_nov_260317
+		liege = k_novgorod
+		government = feudal_government
 	}
 }
 
@@ -45213,7 +45245,7 @@ c_southern_highland = {
 	}
 	1337.4.1 = {
 		holder = cha_jaya_ananda
-		government = wanua_government
+		government = mandala_government
 	}
 }
 
@@ -51184,8 +51216,9 @@ c_velsk = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = mb_nov_125260
-		government = republic_government
+		holder = ck2_nov_260296
+		liege = k_novgorod
+		government = feudal_government
 	}
 }
 
@@ -51369,7 +51402,7 @@ c_vijaya = {
 	}
 	1337.4.1 = {
 		holder = cha_jaya_ananda
-		government = wanua_government
+		government = mandala_government
 	}
 }
 
@@ -51633,7 +51666,8 @@ c_volodymyr = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = vol_boleslaw_jerzy_ii_piast
+		holder = lit_liubartas_gediminds
+		liege = d_volhynia
 		government = feudal_government
 	}
 }
@@ -52889,8 +52923,9 @@ c_white_karelia = {
 		change_prosperity_level = 4
 	}
 	1337.4.1 = {
-		holder = mb_nov_125260
-		government = republic_government
+		holder = ck2_nov_260321
+		liege = d_karelia
+		government = feudal_government
 	}
 }
 
@@ -53939,8 +53974,9 @@ c_yaren = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = mb_nov_125260
-		government = republic_government
+		holder = ck2_nov_260265
+		liege = k_novgorod
+		government = feudal_government
 	}
 }
 
@@ -54093,8 +54129,9 @@ c_yemetsk = {
 		change_prosperity_level = 4
 	}
 	1337.4.1 = {
-		holder = mb_nov_125260
-		government = republic_government
+		holder = ck2_nov_260309
+		liege = k_novgorod
+		government = feudal_government
 	}
 }
 
@@ -54839,8 +54876,9 @@ c_zaonezhye = {
 		change_prosperity_level = 3
 	}
 	1337.4.1 = {
-		holder = mb_nov_125260
-		government = republic_government
+		holder = ck2_nov_260321
+		liege = d_karelia
+		government = feudal_government
 	}
 }
 
@@ -55295,7 +55333,8 @@ c_zviahel = {
 		change_prosperity_level = 14
 	}
 	1337.4.1 = {
-		holder = vol_boleslaw_jerzy_ii_piast
+		holder = lit_liubartas_gediminds
+		liege = d_volhynia
 		government = feudal_government
 	}
 }

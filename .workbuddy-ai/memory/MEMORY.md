@@ -27,16 +27,26 @@
 - **按 title_map 批量补内容前，必须先过 `_title_overrides.csv`**：清单/CSV 里的 `title_key` 常是**改名前的旧键**（SIC 记 `k_sicily` 实为 `k_trinacria`；DLH 记 `k_delhi` 实为 `e_hindustan`）。给旧键补内容 = 同一世系在新旧键各写一遍（2026-10-30 补类1 踩到，已删旧键块回退）。判据：`override[tag] != csv_key` 就跳过。
 
 ## 三、生成器纪律
+- **★ 绝不对真实文件做「写入测试」（2026-11-18 第二次犯）**：为排查 `OSError 22` 用 `open(p,'wb').write(b'x')` 试写 `common/landed_titles/zz_vanilla_titulars.txt`，252 KB / 10437 行变 1 字节，git HEAD 恢复后丢了工作区 2 行未提交差异。只读检查（`os.stat` / `'r+b'` 打开即关）即可，**`'wb'` 打开即截断**。脚本写产物一律「临时文件 + `os.replace` 原子替换」，不对目标直接 `open('wb')`。
 用户手改文件绝不覆盖；默认 dry run；非必要不全量重建；诊断默认只读、报告结论+改法等用户说「改」；行号一律绝对行号；游戏安装目录只读，产物放工作区。- **只改 politics.json 的输入时，链路只需 `export_politics.py` → `_patch_title_history.py`，绝不要跑 `_fix_politics_output.py`**：它是总装脚本，一次写 20 多个产物——province history 的 21046 条 culture/faith/holding、characters 的 government/regent、`zz_eu5_titular.txt` 颜色、tributaries、primary titles、两种语言本地化。2026-10-28、2026-10-29 各犯一次（第二次冲掉省份历史与本地化，靠备份还原）。跑之前先问：这一步真的需要动这个文件吗。
 - **`zz_eu5_titles.txt` 绝不可整体重建**：`_patch_title_history.py` 按 politics 重写 holder/government/liege，会冲掉后续补丁层。该脚本**只补不改**。补丁层清单见 `PIPELINES.md` 三。
 
 ## 四、其它
+- **EU5 新版目录变了（2026-11 发现）**：`main_menu/setup/start/10_countries.txt` 已拆成
+  `main_menu/setup/1337/10_countries.txt`（另有 `1658/`），模板仍在 `setup/templates/`。
+  硬编码 `setup/start` 的脚本会静默失效。`_gov_rules.py` 已改成探测 `("1337","start")` 并
+  在都找不到时 raise（原先只打印 "sea rule skipped" 就跳过整条区域规则）。
+- **东南亚曼陀罗的判定口径（2026-11-18 用户拍板）**：以 `_gov_rules._sea` 的
+  `reforms = { mandala_system }` 为准，**这是正确口径**；`export_politics.py` 里
+  「东南亚 monarchy + 非穆斯林 → mandala」是过宽旁路，**不要拿 politics json 的 mandala
+  当基准去改 CK3 数据**（会有 50 多个 tag 被误判成"错配"）。唯一例外是占婆 CHA：
+  模板换成 `vietnamese_champa_monarchy` 后不带 mandala_system，已写进 `MANDALA_EXCEPTIONS`。
 - 复合名每部分是独立 key，按 EU5 部分拼接（中文无分隔符、英文空格）。
 - Git：master=发布分支，eu5-coa 分支存纹章；禁 git worktree；GitHub Desktop 提交，push 前 fetch。
 - 地图可视化一律 `ck3-mapviz`，严禁自己算投影打点。
 - **CU 会在开局重算 development**：`common/on_action/cu_neighbor_reassigned_initialization.txt` 里的 `cu_neighbor_reassigned_development_initialize` 会按邻接重新初始化各地发展度，把 `history/titles/` 里写的 `change_development_level` 全部冲掉。现已整段注释；**重跑生成器或更新 CU 后必须检查是否被写回**。判断"发展度没生效"先看这里，别怀疑写法。
 - **备份归档**：所有 `*.bak*` 放 `F:/EU5_Modern_Borders_bak/`，**按原目录结构分层保留**，项目目录内不得残留 bak。
-- **编码**：mod 的 `.txt`/`.yml` 是 UTF-8-BOM + CRLF。追加内容一律写 `\r\n`（用 `\n` 会写出裸 LF）。`json.dumps` 用 `newline="\n"`。删整行正则必须带 `[^\r\n]*\r?$`，否则只删前缀把值留成孤立行；CRLF 里 `[^\r\n]*$` 匹配不到（`$` 前卡着 `\r`），要写 `\r?$` 或用 `.*$`。
+- **编码**：mod 的 `.txt`/`.yml` 通常是 UTF-8-BOM + CRLF，追加内容写 `\r\n`。**但 `history/titles/zz_eu5_titles.txt` 与 `history/characters/zz_eu5_government.txt` 在 2026-11 已是纯 LF（59387 / 13154 行，行数也从 10 月的 90537 缩了）**——改这两个文件前先数 `b'\r\n'` 与 `b'\n'`，按实际行尾写；硬塞 `\r` 会写出混合行尾（2026-11-18 已犯一次，靠 `replace(b'\r\n', b'\n')` 复原）。`json.dumps` 用 `newline="\n"`。删整行正则必须带 `[^\r\n]*\r?$`，否则只删前缀把值留成孤立行；CRLF 里 `[^\r\n]*$` 匹配不到（`$` 前卡着 `\r`），要写 `\r?$` 或用 `.*$`。
 
 ## 五、已完成 / 遗留
 - 已完成勿重做：168 支系→42 宗族；154 复合君主名重译；4361 宗教人物改写；印度教整县染色；BKZ/SKN 7 角色 maliki；CU 法理树重建（2026-10-29）；ALB/MLL 恢复王国并清 stale liege；LIT 升王国 + 8 公国（2026-10-29）；**类1「有头衔没历史」补世系 244 标题（15 建块 + 229 插入，1532 人），类1 missing 1327→0（2026-10-30，脚本 `_fill_lost_lineages.py`，报告 `_filled_lineages_report.csv`）**。

@@ -1,4 +1,4 @@
-# From RICE (Steam Workshop 1158310/3817210692), required by the Andean cultures
+﻿# From RICE (Steam Workshop 1158310/3817210692), required by the Andean cultures
 # (quechuan / aymara / pukina / ckunsa / atacame groups). Copied so the mod does not
 # depend on RICE being loaded; icon RICE_mountain_cave.dds copied alongside.
 # Only change vs. the original: is_shown now lists this mod's heritage pillars
@@ -28,7 +28,7 @@ tradition_RICE_andean_hydraulic_engineering = {
 	}
 
 	parameters = {
-		hill_farms_building_bonuses = yes
+		mountaineer_ruralism_mountain_production = yes
 	}
 
 	character_modifier = {
@@ -36,11 +36,11 @@ tradition_RICE_andean_hydraulic_engineering = {
 	}
 
 	county_modifier = {
-		terraced_hills_development_growth_factor = 0.1
-		wetlands_development_growth_factor = 0.1
-		hills_development_growth_factor = 0.1
-		mountains_development_growth_factor = 0.1
-		desert_mountains_development_growth_factor = 0.1
+		terraced_hills_prosperity_growth_factor = 0.1
+		wetlands_prosperity_growth_factor = 0.1
+		hills_prosperity_growth_factor = 0.1
+		mountains_prosperity_growth_factor = 0.1
+		desert_mountains_prosperity_growth_factor = 0.1
 	}
 
 	cost = {

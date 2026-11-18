@@ -417,33 +417,6 @@ d_eu5_wrc = {
 
 
 
-k_aydin = {
-	color = { 238 43 172 }
-	capital = c_aydin
-}
-
-
-
-k_eretnid = {
-	color = { 253 182 182 }
-	capital = c_sivas
-}
-
-
-
-
-
-k_mentese = {
-	color = { 60 130 20 }
-	capital = c_mugla
-}
-
-k_ottoman = {
-	color = { 247 145 30 }
-	capital = c_hudavendigar
-}
-
-
 
 
 
@@ -731,79 +704,6 @@ e_eu5_ymt = {
 	capital = c_yamashiro
 }
 
-e_ilkhanate = {
-	color = { 140 180 20 }
-}
-
-e_golden_horde = {
-	capital = c_beljamen
-	color = { 243 180 17 }
-}
-
-
-k_sicily = {
-	color = { 180 160 80 }
-	capital = c_mazara
-}
-
-k_cyprus = {
-	color = { 215 215 20 }
-	capital = c_cyprus
-}
-
-k_trebizond = {
-	color = { 100 151 33 }
-	capital = c_trebizond
-}
-
-e_chagatai = {
-	color = { 204 135 92 }
-	capital = c_almaliq
-}
-
-e_majapahit = {
-	color = { 250 234 15 }
-	capital = c_trowulan
-}
-
-k_candar = {
-	color = { 238 79 182 }
-	capital = c_kastamonu
-}
-
-k_germiyan = {
-	color = { 255 180 180 }
-	capital = c_kutahya
-}
-
-k_karaman = {
-	color = { 120 41 92 }
-	capital = c_konya
-}
-
-k_saruhan = {
-	color = { 144 171 225 }
-	capital = c_saruhan
-}
-
-k_tekke = {
-	color = { 244 153 189 }
-	capital = c_antalya
-}
-
-
-
-
-
-k_albania = {
-	color = { 110 0 0 }
-	capital = c_albania
-}
-
-k_mediterranean_sea = {
-	color = { 180 0 0 }
-	capital = c_mallorca
-}
 
 d_eu5_nrk = {
 	landless = yes
@@ -827,14 +727,4 @@ d_eu5_vbk = {
 	landless = yes
 	color = { 56 113 212 }
 	capital = c_vitebsk
-}
-
-e_hindustan = {		# Titular, created by special decision by Islamic Invaders
-	color = { 0 76 76 }
-
-	capital = c_central_doab
-
-	ai_primary_priority = {
-		add = @always_primary_score
-	}
 }

@@ -17,6 +17,9 @@
 # the moment it is held. The list is gen_debug/_title_overrides.csv, country scope, title_key.
 # Regenerating with Ck3MapGen writes those shims back — re-apply the prune afterwards.
 
+@correct_culture_primary_score = 100
+@better_than_the_alternatives_score = 50
+
 h_roman_empire = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -25,6 +28,11 @@ h_roman_empire = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
+	can_be_named_after_dynasty = no
+
 }
 h_eastern_roman_empire = {
 	landless = yes
@@ -34,6 +42,11 @@ h_eastern_roman_empire = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
+	can_be_named_after_dynasty = no
+
 }
 h_dar_al_islam = {
 	landless = yes
@@ -43,6 +56,21 @@ h_dar_al_islam = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+	#ruler_uses_title_name = no
+
+	always_follows_primary_heir = yes
+
+	destroy_if_invalid_heir = yes
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	can_destroy = {
+	}
+
 }
 h_india = {
 	landless = yes
@@ -61,6 +89,15 @@ k_fashion = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	destroy_on_succession = yes
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	de_jure_drift_disabled = yes
+
 }
 d_iconoclast = {
 	landless = yes
@@ -97,6 +134,9 @@ k_danelaw = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	de_jure_drift_disabled = yes
+
 }
 k_daneland = {
 	landless = yes
@@ -196,6 +236,13 @@ e_red_horde = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_white_horde = {
 	landless = yes
@@ -205,6 +252,13 @@ e_white_horde = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_aarlud_khanate = {
 	landless = yes
@@ -214,6 +268,13 @@ e_aarlud_khanate = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_togskol_khanate = {
 	landless = yes
@@ -223,6 +284,13 @@ e_togskol_khanate = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_baruun_khanate = {
 	landless = yes
@@ -232,6 +300,13 @@ e_baruun_khanate = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_great_yuan = {
 	landless = yes
@@ -241,6 +316,13 @@ e_great_yuan = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_blue_horde = {
 	landless = yes
@@ -250,6 +332,13 @@ e_blue_horde = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_omnod_dalai_khanate = {
 	landless = yes
@@ -259,6 +348,13 @@ e_omnod_dalai_khanate = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_uyghur_khanate = {
 	landless = yes
@@ -268,6 +364,11 @@ e_uyghur_khanate = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_kirghiz_khanate = {
 	landless = yes
@@ -277,6 +378,11 @@ e_kirghiz_khanate = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_mongol_empire = {
 	landless = yes
@@ -286,6 +392,21 @@ e_mongol_empire = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
 }
 e_great_liao = {
 	landless = yes
@@ -295,6 +416,9 @@ e_great_liao = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_use_nomadic_naming = no
+
 }
 e_jin = {
 	landless = yes
@@ -304,6 +428,9 @@ e_jin = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_use_nomadic_naming = no
+
 }
 e_timurids = {
 	landless = yes
@@ -313,6 +440,11 @@ e_timurids = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 k_bosporan_kingdom = {
 	landless = yes
@@ -322,6 +454,9 @@ k_bosporan_kingdom = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
 }
 d_karaism = {
 	landless = yes
@@ -439,6 +574,17 @@ k_sakya_trizin = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
+	ruler_uses_title_name = no
+
+	always_follows_primary_heir = yes
+
+	destroy_if_invalid_heir = yes
+
+	can_use_nomadic_naming = no
+
 }
 k_guiyi = {
 	landless = yes
@@ -457,6 +603,9 @@ k_switzerland = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
 }
 k_austria = {
 	landless = yes
@@ -484,6 +633,9 @@ k_visigoths = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
 }
 e_outremer = {
 	landless = yes
@@ -502,6 +654,12 @@ k_toledo = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	cultural_names = {
+		name_list_roman = cn_toletum
+		name_list_greek = cn_toletum
+	}
+
 }
 d_knights_templar = {
 	landless = yes
@@ -1563,6 +1721,12 @@ e_ruucuu = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	cultural_names = {
+		name_list_yamato = cn_ryukyu
+		name_list_emishi = cn_ryukyu
+	}
+
 }
 e_north_sea = {
 	landless = yes
@@ -1572,6 +1736,9 @@ e_north_sea = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
 }
 e_carthage = {
 	landless = yes
@@ -1581,6 +1748,11 @@ e_carthage = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
+	can_be_named_after_dynasty = no
+
 }
 k_pechenegs = {
 	landless = yes
@@ -2257,6 +2429,11 @@ k_krete = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	cultural_names = {
+		name_list_italian = cn_candia
+	}
+
 }
 d_krete = {
 	landless = yes
@@ -3112,6 +3289,13 @@ k_armenian_principality = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	de_jure_drift_disabled = yes
+
+	always_follows_primary_heir = yes
+
+	definite_form = yes
+
 }
 k_old_armenia = {
 	landless = yes
@@ -3528,15 +3712,7 @@ d_livonia = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_livonia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 110 80 168 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
+
 k_moravia = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -3608,6 +3784,12 @@ k_sorbia = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	cultural_names = {
+		name_list_polabian = cn_polabia
+		#Kingdom of Polabia
+	}
+
 }
 d_meissen = {
 	landless = yes
@@ -3864,6 +4046,11 @@ k_magyar = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
+	de_jure_drift_disabled = yes
+
 }
 d_volga_bulgaria = {
 	capital = c_bolghar
@@ -4709,6 +4896,9 @@ e_bactria = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
 }
 d_isfahan = {
 	landless = yes
@@ -5133,6 +5323,12 @@ k_aquitaine = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	cultural_names = {
+		name_list_roman = cn_aquitania
+		name_list_greek = cn_aquitania
+	}
+
 }
 d_gascogne = {
 	landless = yes
@@ -5231,6 +5427,21 @@ k_badajoz = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	cultural_names = {
+		name_list_bedouin = cn_xenxir
+		name_list_baranis = cn_xenxir
+		name_list_butr = cn_xenxir
+		name_list_zaghawa = cn_xenxir
+		name_list_levantine = cn_xenxir
+		name_list_egyptian = cn_xenxir
+		name_list_maghrebi = cn_xenxir
+		name_list_andalusian = cn_xenxir
+		name_list_yemeni = cn_xenxir
+	}
+
 }
 d_beja = {
 	landless = yes
@@ -5267,6 +5478,23 @@ k_valencia = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	cultural_names = {
+		name_list_roman = cn_carthaginensis
+		# Al Sarq means "the Levant", but was the contemporary name for eastern Iberia amongst Arabic speakers.
+		name_list_bedouin = cn_al_sarq
+		name_list_baranis = cn_al_sarq
+		name_list_butr = cn_al_sarq
+		name_list_zaghawa = cn_al_sarq
+		name_list_levantine = cn_al_sarq
+		name_list_egyptian = cn_al_sarq
+		name_list_maghrebi = cn_al_sarq
+		name_list_andalusian = cn_al_sarq
+		name_list_yemeni = cn_al_sarq
+	}
+
 }
 d_mallorca = {
 	landless = yes
@@ -5330,22 +5558,15 @@ k_asturias = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
 }
 d_asturias = {
 	capital = c_west_asturias
 	color = { 207 104 0 }
 }
-k_spanish_galicia = {
-	capital = c_coruna
-	color = { 255 224 94 }
-	can_be_named_after_dynasty = no
-	can_create = {
-		trigger_if = {
-			limit = { is_ai = yes }
-			faith = { religion_tag = christianity_religion }
-		}
-	}
-}
+
 d_porto = {
 	capital = c_tras_os_montes
 	color = { 192 98 5 }
@@ -5421,6 +5642,11 @@ k_canarias = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	cultural_names = {
+		name_list_guanches = cn_guanac
+	}
+
 }
 d_tlemcen = {
 	landless = yes
@@ -5754,16 +5980,7 @@ d_eastern_desert = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_jerusalem = {
-	capital = c_filastin
-	color = { 180 180 180 }
-	can_create = {
-		faith = { religion_tag = christianity_religion }
-	}
-	can_create_on_partition = {
-		faith = { religion_tag = christianity_religion }
-	}
-}
+
 d_oultrejourdain = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -7420,6 +7637,13 @@ k_gyalrong = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	cultural_names = {
+		name_list_han = cn_jiarong
+		name_list_tangut = cn_ryarong
+		name_list_qiang = cn_ryarong
+	}
+
 }
 d_gyalrong = {
 	landless = yes
@@ -8581,6 +8805,9 @@ k_cossack = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
 }
 d_nankaido = {
 	landless = yes
@@ -8698,6 +8925,156 @@ k_chrysanthemum_throne = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	figurehead = yes
+
+	allow_domicile = no
+
+	always_follows_primary_heir = yes
+
+	definite_form = yes
+
+	dlc_feature = all_under_heaven
+
+	personal_relation_entry = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:target
+					scope:liege ?= scope:target
+				}
+				desc = japan_personal_relation_ceremonial_liege_same
+			}
+			triggered_desc = {
+				trigger = { exists = scope:liege }
+				desc = japan_personal_relation_ceremonial_liege_other
+			}
+		}
+	}
+
+	posthumous_regnal_male_names = {
+		Ankan Antoku
+		Daigo
+		En_yU_
+		Heizei
+		Higashiyama
+		Horikawa
+		IchijO_
+		Jun_an Junna Junnin Junchi Junmu
+		Kameyama Kanmu Kashiwabara Kazan
+		Keitai
+		Kinmei
+		KO_bun KO_chi KO_kaku_2 KO_kO_ Komatsu KO_mei KO_mu KO_myO_ KO_nin Konoe Kotoku KO_zei
+		Momozono Monmu Montoku
+		Murakami
+		Nakamikado Nara
+		NijO_ Nin_an Ninchi NinkO_ Ninmu NinmyO_ NinshO_
+		O_gimachi
+		Reichi Reigen Reimei ReishO_ Reizei
+		RokujO_
+		Saga_JP Sakuramachi SanjO_
+		Seiwa Senka
+		ShijO_ Shirakawa
+		ShO_kO_ ShO_mu ShO_toku
+		SukO_ Sushun Sutoku Suzaku
+		Takakura
+		Tenji Tenmu
+		Toba_JP
+		Tsuchimikado
+		Uda_JP
+		YO_mei YO_zei
+		# Unisex
+		AnegakO_ji
+		Atago
+		AyanokO_ji
+		BunchO_ BunryU_ BunshO_
+		BO_jO_
+		Eian
+		Enso
+		Genka
+		GojO_
+		HachijO_
+		Higashiyama
+		Imadegawa
+		Iwakura
+		Junmei Junmei_2
+		Kaen Kan_an Karasuma Kasuga
+		Katoku
+		Keimei KenshO_ Kentoku
+		Kinugasa Kitano Kitashirakawa Kitayama Kiyomizu Kiyotaki
+		Koga
+		KujO_ Kurama
+		KyO_goku
+		KO_bun KO_ka
+		Mantoku Matsunoo
+		Meiho Meitei
+		Mibu
+		Murasakino Muromachi
+		Narutaki
+		Okazaki
+		Omuro
+		OshinokO_ji
+		Reitoku
+		Sakuragi
+		ShichijO_ ShO_ka ShU_bun
+		Taireki TaiO_ Takao Takatsukasa
+		TenkyU_ TenkO_ Tensei
+		TO_in
+		Umezu
+		Yamashina Yase_JP
+		O_hara O_inomikado O_miya
+	}
+
+	posthumous_regnal_female_names = {
+		Gen_an Genchi Genken GenkO_ Genmei Gennei Gennin GenshO_ GentO_ Gentoku Genzei
+		JitO_
+		KO_ken KO_gyoku
+		MeishO_
+		Saimei
+		Suiko
+		# Unisex
+		AnegakO_ji
+		Atago
+		AyanokO_ji
+		BunchO_ BunryU_ BunshO_
+		BO_jO_
+		Eian
+		Enso
+		Genka
+		GojO_
+		HachijO_
+		Imadegawa
+		Iwakura
+		Junmei_2
+		Kaen Kan_an Karasuma Kasuga
+		Katoku
+		Keimei KenshO_ Kentoku
+		Kinugasa Kitano Kitashirakawa Kitayama Kiyomizu Kiyotaki
+		Koga
+		KujO_ Kurama
+		KyO_goku
+		KO_bun KO_ka
+		Mantoku Matsunoo
+		Meiho Meitei
+		Mibu
+		Murasakino Muromachi
+		Narutaki
+		Okazaki
+		Omuro
+		OshinokO_ji
+		Reitoku
+		Sakuragi
+		ShichijO_ ShO_ka ShU_bun
+		Taireki TaiO_ Takao Takatsukasa
+		TenkyU_ TenkO_ Tensei
+		TO_in
+		Umezu
+		Yamashina Yase_JP
+		O_hara O_inomikado O_miya
+	}
+
 }
 d_laamp_shunkan = {
 	landless = yes
@@ -9695,6 +10072,9 @@ e_minister_chancellor = {
 	can_be_named_after_dynasty = no
 	definite_form = yes
 	ruler_uses_title_name = no
+
+	dlc_feature = all_under_heaven
+
 }
 e_minister_censor = {
 	landless = yes
@@ -9711,6 +10091,9 @@ e_minister_censor = {
 	can_be_named_after_dynasty = no
 	definite_form = yes
 	ruler_uses_title_name = no
+
+	dlc_feature = all_under_heaven
+
 }
 e_minister_grand_marshal = {
 	landless = yes
@@ -9727,6 +10110,9 @@ e_minister_grand_marshal = {
 	can_be_named_after_dynasty = no
 	definite_form = yes
 	ruler_uses_title_name = no
+
+	dlc_feature = all_under_heaven
+
 }
 e_minister_of_personnel = {
 	landless = yes
@@ -9743,6 +10129,9 @@ e_minister_of_personnel = {
 	can_be_named_after_dynasty = no
 	definite_form = yes
 	ruler_uses_title_name = no
+
+	dlc_feature = all_under_heaven
+
 }
 e_minister_of_revenue = {
 	landless = yes
@@ -9759,6 +10148,9 @@ e_minister_of_revenue = {
 	can_be_named_after_dynasty = no
 	definite_form = yes
 	ruler_uses_title_name = no
+
+	dlc_feature = all_under_heaven
+
 }
 e_minister_of_rites = {
 	landless = yes
@@ -9775,6 +10167,9 @@ e_minister_of_rites = {
 	can_be_named_after_dynasty = no
 	definite_form = yes
 	ruler_uses_title_name = no
+
+	dlc_feature = all_under_heaven
+
 }
 e_minister_of_war = {
 	landless = yes
@@ -9791,6 +10186,9 @@ e_minister_of_war = {
 	can_be_named_after_dynasty = no
 	definite_form = yes
 	ruler_uses_title_name = no
+
+	dlc_feature = all_under_heaven
+
 }
 e_minister_of_justice = {
 	landless = yes
@@ -9807,6 +10205,9 @@ e_minister_of_justice = {
 	can_be_named_after_dynasty = no
 	definite_form = yes
 	ruler_uses_title_name = no
+
+	dlc_feature = all_under_heaven
+
 }
 e_minister_of_works = {
 	landless = yes
@@ -9823,6 +10224,9 @@ e_minister_of_works = {
 	can_be_named_after_dynasty = no
 	definite_form = yes
 	ruler_uses_title_name = no
+
+	dlc_feature = all_under_heaven
+
 }
 d_laamp_xuanji = {
 	landless = yes
@@ -10040,15 +10444,7 @@ d_sipsongpanna = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_siam = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 88 137 172 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
+
 e_brunei = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -10273,6 +10669,33 @@ k_yongson_throne = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	figurehead = yes
+
+	allow_domicile = no
+
+	always_follows_primary_heir = yes
+
+	definite_form = yes
+
+	personal_relation_entry = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:target
+					scope:liege ?= scope:target
+				}
+				desc = japan_personal_relation_ceremonial_liege_same
+			}
+			triggered_desc = {
+				trigger = { exists = scope:liege }
+				desc = japan_personal_relation_ceremonial_liege_other
+			}
+		}
+	}
+
 }
 d_liuqiu = {
 	landless = yes
@@ -10432,4 +10855,18 @@ h_kingdom_of_heaven = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
+	always_follows_primary_heir = yes
+
+	destroy_if_invalid_heir = yes
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	can_destroy = {
+	}
+
 }
