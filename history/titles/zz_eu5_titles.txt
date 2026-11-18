@@ -1110,10 +1110,11 @@ e_ilkhanate = {
 		holder = arpa_keun_borjigin
 	}
 	1337.4.1 = {
+		holder = hlg_musa_khan
+		government = nomad_government
 		effect = {
-		character:jal_hasan_buzurg = { add_pressed_claim = title:e_ilkhanate }
-		character:grg_togha_temur = { add_pressed_claim = title:e_ilkhanate }
-		character:hlg_musa_khan = { add_pressed_claim = title:e_ilkhanate }
+			character:jal_hasan_buzurg = { add_pressed_claim = title:e_ilkhanate }
+			character:grg_togha_temur = { add_pressed_claim = title:e_ilkhanate }
 		}
 	}
 }
@@ -2042,13 +2043,6 @@ k_eu5_hcn = {
 	}
 	1337.4.1 = {
 		holder = hcn_munanzi_borjigin
-		government = nomad_government
-	}
-}
-
-k_eu5_hlg = {
-	1337.4.1 = {
-		holder = hlg_musa_khan
 		government = nomad_government
 	}
 }
