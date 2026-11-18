@@ -129,14 +129,16 @@ mbplus_cardinal_MB_napoli_annibale_ceccano = {
 
 # MB+ ecclesiastical.txt: MB_aix_pierre_despres
 mbplus_cardinal_MB_aix_pierre_despres = {
+	# MB+ attributes at 1337.4.1, character MB_aix_pierre_despres.
+	trait = celibate
+	trait = education_learning_4
+	trait = ambitious
 	name = "eu5_cardinal_aix_en_provence_name"
 	culture = occitan
 	religion = catholic
 	rite = roman_rite
 	dynasty = mbplus_cardinal_dynn_pres
 	father = mbplus_cardinal_family_MB_pres_raimond
-	trait = celibate
-	trait = education_learning_4
 	1285.1.1 = { birth = yes }
 	1361.5.16 = { death = yes }
 }
@@ -173,14 +175,16 @@ mbplus_clergy_MB_toledo_jimeno_luna = {
 
 # MB+ source 00_EUROPE_IBERIA.txt: 458003; office d_et_santiago.
 mbplus_clergy_458003 = {
+	# MB+ attributes at 1337.4.1, character 458003.
+	trait = celibate
+	trait = education_learning_3
+	trait = ill
 	name = "eu5_archbishop_1337_santiago_name"
 	culture = galician
 	religion = catholic
 	rite = roman_rite
 	dynasty = mbplus_clergy_dynasty_12116
 	father = mbplus_family_MB_limia_fernan_yanez
-	trait = celibate
-	trait = education_learning_3
 	1288.1.1 = { birth = yes }
 	1338.1.1 = { death = yes }
 }
@@ -440,6 +444,10 @@ mbplus_clergy_MB_aix_armand_narces = {
 
 # MB+ source ecclesiastical.txt: MB_embrun_bertrand_deaulx; office d_et_embrun.
 mbplus_clergy_MB_embrun_bertrand_deaulx = {
+	# MB+ attributes at 1337.4.1, character MB_embrun_bertrand_deaulx.
+	trait = celibate
+	trait = education_learning_4
+	trait = ambitious
 	name = "eu5_archbishop_1337_embrun_name"
 	culture = occitan
 	religion = catholic
@@ -447,8 +455,6 @@ mbplus_clergy_MB_embrun_bertrand_deaulx = {
 	dynasty = mbplus_clergy_dynasty_MB_dynn_deaulx
 	father = mbplus_family_MB_embrun_deaulx_father
 	mother = mbplus_family_MB_mandagot_sister
-	trait = celibate
-	trait = education_learning_4
 	1290.1.1 = { birth = yes }
 	1355.10.21 = { death = yes }
 }
@@ -545,14 +551,16 @@ mbplus_clergy_MB_ravenna_francesco_michiel = {
 
 # MB+ source ecclesiastical.txt: MB_pisa_simone_saltarelli; office d_et_pisa.
 mbplus_clergy_MB_pisa_simone_saltarelli = {
+	# MB+ attributes at 1337.4.1, character MB_pisa_simone_saltarelli.
+	trait = celibate
+	trait = education_learning_4
+	trait = theologian
 	name = "eu5_archbishop_1337_pisa_name"
 	culture = italian
 	religion = catholic
 	rite = roman_rite
 	dynasty = mbplus_clergy_dynasty_MB_dynn_saltarelli
 	father = mbplus_family_MB_saltarelli_guido
-	trait = celibate
-	trait = education_learning_4
 	1262.1.1 = { birth = yes }
 	1342.9.24 = { death = yes }
 }
@@ -638,6 +646,15 @@ mbplus_clergy_MB_benevento_guglielmo_isnardi = {
 
 # MB+ source 00_EUROPE_GERMANY.txt: 470133; office d_et_esztergom.
 mbplus_clergy_470133 = {
+	# MB+ attributes at 1337.4.1, character 470133.
+	martial = 5
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 6
+	trait = celibate
+	trait = education_learning_4
+	trait = zealous
+	trait = temperate
 	name = "eu5_archbishop_1337_esztergom_name"
 	culture = hungarian
 	religion = catholic
@@ -645,8 +662,6 @@ mbplus_clergy_470133 = {
 
 	dynasty = eu5_noble_telegdi_dynasty
 	father = mbplus_family_470130
-	trait = celibate
-	trait = education_learning_4
 	1275.1.1 = { birth = yes }
 	1349.10.1 = { death = yes }
 }
@@ -702,6 +717,11 @@ mbplus_clergy_MB_gniezno_janislaw = {
 
 # MB+ source 00_EUROPE_BALTOSCANDIA.txt: 451600; office d_et_lund.
 mbplus_clergy_451600 = {
+	# MB+ attributes at 1337.4.1, character 451600.
+	martial = 4
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 5
 	name = "eu5_archbishop_1337_lund_name"
 	culture = danish
 	religion = catholic
@@ -4394,6 +4414,13 @@ mbplus_family_200603 = {
 
 # MB+ 00_EUROPE_BALTOSCANDIA.txt: 200605
 mbplus_family_200605 = {
+	# MB+ attributes at 1337.4.1, character 200605.
+	martial = 7
+	diplomacy = 5
+	stewardship = 7
+	intrigue = 7
+	trait = gluttonous
+	trait = education_intrigue_1
 	name = "mbplus_family_200605_name"
 	culture = italian
 	religion = catholic
@@ -5084,6 +5111,14 @@ mbplus_family_470134 = {
 
 # MB+ 00_EUROPE_GERMANY.txt: 470135
 mbplus_family_470135 = {
+	# MB+ attributes at 1337.4.1, character 470135.
+	martial = 7
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 4
+	trait = calm
+	trait = lazy
+	trait = education_martial_2
 	name = "mbplus_family_470135_name"
 	culture = italian
 	religion = catholic
@@ -5096,6 +5131,14 @@ mbplus_family_470135 = {
 
 # MB+ 00_EUROPE_GERMANY.txt: 470136
 mbplus_family_470136 = {
+	# MB+ attributes at 1337.4.1, character 470136.
+	martial = 5
+	diplomacy = 4
+	stewardship = 7
+	intrigue = 4
+	trait = wrathful
+	trait = arrogant
+	trait = education_diplomacy_3
 	name = "mbplus_family_470136_name"
 	culture = italian
 	religion = catholic
@@ -5108,6 +5151,13 @@ mbplus_family_470136 = {
 
 # MB+ 00_EUROPE_GERMANY.txt: 470137
 mbplus_family_470137 = {
+	# MB+ attributes at 1337.4.1, character 470137.
+	martial = 5
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 4
+	trait = arrogant
+	trait = education_learning_1
 	name = "mbplus_family_470137_name"
 	culture = italian
 	religion = catholic
@@ -5120,6 +5170,14 @@ mbplus_family_470137 = {
 
 # MB+ 00_EUROPE_GERMANY.txt: 470138
 mbplus_family_470138 = {
+	# MB+ attributes at 1337.4.1, character 470138.
+	martial = 5
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 4
+	trait = ill
+	trait = arrogant
+	trait = education_martial_2
 	name = "mbplus_family_470138_name"
 	culture = italian
 	religion = catholic
@@ -5132,6 +5190,14 @@ mbplus_family_470138 = {
 
 # MB+ 00_EUROPE_GERMANY.txt: 470139
 mbplus_family_470139 = {
+	# MB+ attributes at 1337.4.1, character 470139.
+	martial = 2
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 4
+	trait = humble
+	trait = diligent
+	trait = education_intrigue_2
 	name = "mbplus_family_470139_name"
 	culture = italian
 	religion = catholic
@@ -5144,6 +5210,14 @@ mbplus_family_470139 = {
 
 # MB+ 00_EUROPE_GERMANY.txt: 470140
 mbplus_family_470140 = {
+	# MB+ attributes at 1337.4.1, character 470140.
+	martial = 2
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 4
+	trait = lustful
+	trait = diligent
+	trait = education_stewardship_2
 	name = "mbplus_family_470140_name"
 	culture = italian
 	religion = catholic
@@ -5156,6 +5230,13 @@ mbplus_family_470140 = {
 
 # MB+ 00_EUROPE_GERMANY.txt: 470141
 mbplus_family_470141 = {
+	# MB+ attributes at 1337.4.1, character 470141.
+	martial = 5
+	diplomacy = 5
+	stewardship = 7
+	intrigue = 4
+	trait = zealous
+	trait = education_learning_2
 	name = "mbplus_family_470141_name"
 	culture = italian
 	religion = catholic
@@ -5180,6 +5261,15 @@ mbplus_family_478503 = {
 
 # MB+ 00_EUROPE_ITALY.txt: 478504
 mbplus_family_478504 = {
+	# MB+ attributes at 1337.4.1, character 478504.
+	martial = 8
+	diplomacy = 8
+	stewardship = 5
+	intrigue = 7
+	trait = greedy
+	trait = cynical
+	trait = clubfooted
+	trait = education_martial_2
 	name = "mbplus_family_478504_name"
 	culture = italian
 	religion = catholic
@@ -5366,6 +5456,13 @@ mbplus_family_70863 = {
 
 # MB+ 00_EUROPE_ITALY.txt: 70866
 mbplus_family_70866 = {
+	# MB+ attributes at 1337.4.1, character 70866.
+	martial = 5
+	diplomacy = 3
+	stewardship = 3
+	intrigue = 7
+	learning = 3
+	trait = education_martial_4
 	name = "mbplus_family_70866_name"
 	culture = italian
 	religion = catholic
@@ -5403,6 +5500,14 @@ mbplus_family_70871 = {
 
 # MB+ 00_EUROPE_ITALY.txt: 70872
 mbplus_family_70872 = {
+	# MB+ attributes at 1337.4.1, character 70872.
+	martial = 3
+	diplomacy = 3
+	stewardship = 3
+	intrigue = 3
+	learning = 3
+	trait = education_learning_3
+	trait = temperate
 	name = "mbplus_family_70872_name"
 	culture = italian
 	religion = catholic
@@ -5415,6 +5520,14 @@ mbplus_family_70872 = {
 
 # MB+ 00_EUROPE_ITALY.txt: 70873
 mbplus_family_70873 = {
+	# MB+ attributes at 1337.4.1, character 70873.
+	martial = 6
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 3
+	learning = 3
+	trait = education_martial_3
+	trait = just
 	name = "mbplus_family_70873_name"
 	culture = italian
 	religion = catholic
@@ -5427,6 +5540,14 @@ mbplus_family_70873 = {
 
 # MB+ 00_EUROPE_ITALY.txt: 70874
 mbplus_family_70874 = {
+	# MB+ attributes at 1337.4.1, character 70874.
+	martial = 3
+	diplomacy = 4
+	stewardship = 6
+	intrigue = 5
+	learning = 7
+	trait = education_intrigue_2
+	trait = honest
 	name = "mbplus_family_70874_name"
 	culture = italian
 	religion = catholic
@@ -6398,9 +6519,11 @@ mbplus_family_MB_palermo_giovanni_orsini = {
 
 # MB+ ecclesiastical.txt: MB_palermo_matteo_orsini
 mbplus_family_MB_palermo_matteo_orsini = {
+	# MB+ attributes at 1337.4.1, character MB_palermo_matteo_orsini.
+	trait = celibate
+	trait = education_learning_4
 	name = "mbplus_family_MB_palermo_matteo_orsini_name"
 	culture = italian
-	trait = celibate
 	religion = catholic
 	rite = roman_rite
 	dynasty = orsini_dynasty
@@ -7992,6 +8115,10 @@ mb_yuan_tangut0030 = {
 
 # MB+ 1413469
 mb_yuan_1413469 = {
+	# MB+ attributes at 1337.4.1, character 1413469.
+	trait = intellect_good_3
+	trait = education_stewardship_4
+	trait = ill
 	name = "mb_yuan_name_1413469"
 	culture = khitan
 	religion = mahayana_faith
@@ -8122,6 +8249,8 @@ mb_tribe_217261 = {
 
 # MB+ 248197
 mb_tribe_248197 = {
+	# MB+ attributes at 1337.4.1, character 248197.
+	trait = ambitious
 	name = "mb_tribe_name_248197"
 	culture = kuzhu_moghol
 	religion = sunni
@@ -8825,6 +8954,14 @@ mb_scand_SEAsiaMMBB293 = {
 }
 
 mb_scand_487071 = {
+	# MB+ attributes at 1337.4.1, character 487071.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 5
+	trait = greedy
+	trait = zealous
+	trait = education_martial_2
 	name = "mb_scand_name_487071"
 	culture = swedish
 	religion = catholic
@@ -8879,6 +9016,13 @@ mb_scand_143130M5 = {
 }
 
 mb_eng_robert_de_clifford = {
+	# MB+ attributes at 1337.4.1, character 454602.
+	martial = 8
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 5
+	trait = chaste
+	trait = education_martial_2
 	name = "name_robert"
 	dynasty = mb_eng_clifford_dynasty
 	culture = english
@@ -8888,6 +9032,13 @@ mb_eng_robert_de_clifford = {
 }
 
 mb_eng_william_de_bohun = {
+	# MB+ attributes at 1337.4.1, character 454562.
+	martial = 7
+	diplomacy = 8
+	stewardship = 7
+	intrigue = 8
+	trait = diligent
+	trait = education_martial_2
 	name = "name_william"
 	dynasty = bohun_dynasty
 	culture = english
@@ -8898,6 +9049,13 @@ mb_eng_william_de_bohun = {
 }
 
 mb_eng_john_de_vere = {
+	# MB+ attributes at 1337.4.1, character 454586.
+	martial = 8
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 5
+	trait = brave
+	trait = education_martial_2
 	name = "name_john"
 	dynasty = mb_eng_vere_dynasty
 	culture = english
@@ -8917,6 +9075,13 @@ mb_eng_alphonso_de_vere = {
 }
 
 mb_scand_450790 = {
+	# MB+ attributes at 1337.4.1, character 450790.
+	martial = 8
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 6
+	trait = lustful
+	trait = education_intrigue_1
 	name = "mb_scand_name_450790"
 	culture = norwegian
 	religion = catholic
@@ -8930,6 +9095,12 @@ mb_scand_450790 = {
 }
 
 mb_scand_450783 = {
+	# MB+ attributes at 1337.4.1, character 450783.
+	martial = 5
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 7
+	trait = education_intrigue_1
 	name = "mb_scand_name_450783"
 	culture = norwegian
 	religion = catholic
@@ -8964,6 +9135,12 @@ mb_scand_450784 = {
 }
 
 mb_scand_450780 = {
+	# MB+ attributes at 1337.4.1, character 450780.
+	martial = 5
+	diplomacy = 4
+	stewardship = 7
+	intrigue = 6
+	trait = education_intrigue_2
 	name = "mb_scand_name_450780"
 	culture = norwegian
 	religion = catholic
@@ -9085,6 +9262,13 @@ mb_scand_186001M16 = {
 }
 
 mb_scand_450760 = {
+	# MB+ attributes at 1337.4.1, character 450760.
+	martial = 6
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 4
+	trait = greedy
+	trait = education_martial_3
 	name = "mb_scand_name_450760"
 	culture = swedish
 	religion = catholic
@@ -9095,6 +9279,13 @@ mb_scand_450760 = {
 }
 
 mb_scand_487070 = {
+	# MB+ attributes at 1337.4.1, character 487070.
+	martial = 5
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 4
+	trait = generous
+	trait = education_learning_2
 	name = "mb_scand_name_487070"
 	culture = swedish
 	religion = catholic
@@ -9140,6 +9331,12 @@ mb_scand_1290061 = {
 }
 
 mb_scand_450650 = {
+	# MB+ attributes at 1337.4.1, character 450650.
+	martial = 5
+	diplomacy = 4
+	stewardship = 7
+	intrigue = 5
+	trait = education_martial_2
 	name = "mb_scand_name_450650"
 	culture = swedish
 	religion = catholic
@@ -9216,6 +9413,16 @@ mb_eng_john_cobham = {
 }
 
 mb_ire_simon_craig = {
+	# MB+ attributes at 1337.4.1, character 454018.
+	martial = 8
+	diplomacy = 8
+	stewardship = 4
+	intrigue = 8
+	trait = chaste
+	trait = arbitrary
+	trait = zealous
+	trait = brave
+	trait = education_intrigue_2
 	name = "mb_eng_name_simon"
 	dynasty = mb_eng_craig_dynasty
 	culture = english
@@ -9225,6 +9432,12 @@ mb_ire_simon_craig = {
 }
 
 mb_scand_451800 = {
+	# MB+ attributes at 1337.4.1, character 451800.
+	martial = 8
+	diplomacy = 8
+	stewardship = 8
+	intrigue = 6
+	trait = education_stewardship_2
 	name = "mb_scand_name_451800"
 	culture = danish
 	religion = catholic
@@ -9248,6 +9461,13 @@ mb_scand_451801 = {
 }
 
 mb_scand_450630 = {
+	# MB+ attributes at 1337.4.1, character 450630.
+	martial = 5
+	diplomacy = 6
+	stewardship = 8
+	intrigue = 8
+	trait = inbred
+	trait = education_intrigue_2
 	name = "mb_scand_name_450630"
 	culture = swedish
 	religion = catholic
@@ -9280,6 +9500,14 @@ mb_scand_450631 = {
 }
 
 mb_scand_450700 = {
+	# MB+ attributes at 1337.4.1, character 450700.
+	martial = 6
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 4
+	trait = humble
+	trait = brave
+	trait = education_intrigue_2
 	name = "mb_scand_name_450700"
 	culture = swedish
 	religion = catholic
@@ -9302,6 +9530,12 @@ mb_scand_450701 = {
 }
 
 mb_eng_simon_montagu = {
+	# MB+ attributes at 1337.4.1, character 82042.
+	martial = 5
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 5
+	trait = education_learning_3
 	name = "mb_eng_name_simon"
 	dynasty = montagu_dynasty
 	culture = english
@@ -9312,6 +9546,14 @@ mb_eng_simon_montagu = {
 }
 
 mb_scand_450730 = {
+	# MB+ attributes at 1337.4.1, character 450730.
+	martial = 7
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 5
+	trait = lustful
+	trait = lazy
+	trait = education_martial_2
 	name = "mb_scand_name_450730"
 	culture = norwegian
 	religion = catholic
@@ -9377,6 +9619,12 @@ mb_scand_170024M = {
 }
 
 mb_scand_450648 = {
+	# MB+ attributes at 1337.4.1, character 450648.
+	martial = 6
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 8
+	trait = education_intrigue_1
 	name = "mb_scand_name_450648"
 	culture = swedish
 	religion = catholic
@@ -9390,6 +9638,12 @@ mb_scand_450648 = {
 }
 
 mb_scand_450659 = {
+	# MB+ attributes at 1337.4.1, character 450659.
+	martial = 6
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 5
+	trait = education_intrigue_1
 	mother = mb_genealogy_450653
 	name = "mb_scand_name_450659"
 	culture = swedish
@@ -9414,6 +9668,12 @@ mb_scand_450647 = {
 }
 
 mb_scand_450840 = {
+	# MB+ attributes at 1337.4.1, character 450840.
+	martial = 4
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 7
+	trait = education_learning_2
 	name = "mb_scand_name_450840"
 	culture = swedish
 	religion = catholic
@@ -9436,6 +9696,13 @@ mb_scand_450841 = {
 }
 
 mb_scand_452612 = {
+	# MB+ attributes at 1337.4.1, character 452612.
+	martial = 4
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 6
+	trait = calm
+	trait = education_stewardship_2
 	name = "mb_scand_name_452612"
 	culture = icelandic
 	religion = catholic
@@ -9468,6 +9735,8 @@ mb_scand_452610 = {
 }
 
 mb_eng_ralph_de_stafford = {
+	# MB+ attributes at 1337.4.1, character ralph_de_stafford.
+	trait = education_martial_3
 	name = "name_ralph"
 	dynasty = stafford_dynasty
 	culture = english
@@ -9487,6 +9756,12 @@ mb_eng_edmund_de_stafford = {
 }
 
 mb_scand_450690 = {
+	# MB+ attributes at 1337.4.1, character 450690.
+	martial = 5
+	diplomacy = 8
+	stewardship = 7
+	intrigue = 7
+	trait = education_martial_2
 	name = "mb_scand_name_450690"
 	culture = swedish
 	religion = catholic
@@ -9588,6 +9863,8 @@ mb_scand_194232 = {
 }
 
 mbplus_family_1227924 = {
+	# MB+ attributes at 1337.4.1, character 1227924.
+	trait = education_martial_2
 	name = "mbplus_family_1227924_name"
 	culture = danish
 	religion = catholic
@@ -9599,6 +9876,15 @@ mbplus_family_1227924 = {
 }
 
 mb_eng_anselm_cumberland = {
+	# MB+ attributes at 1337.4.1, character 454017.
+	martial = 4
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 6
+	trait = deceitful
+	trait = cynical
+	trait = clubfooted
+	trait = education_martial_3
 	name = "mb_eng_name_anselm"
 	dynasty = mb_eng_cumberland_dynasty
 	culture = english
@@ -9608,6 +9894,14 @@ mb_eng_anselm_cumberland = {
 }
 
 mb_eng_hugh_frenes = {
+	# MB+ attributes at 1337.4.1, character 454042.
+	martial = 8
+	diplomacy = 5
+	stewardship = 4
+	intrigue = 6
+	trait = gluttonous
+	trait = diligent
+	trait = education_martial_2
 	name = "name_hugh"
 	dynasty = mb_eng_frenes_dynasty
 	culture = english
@@ -9617,6 +9911,14 @@ mb_eng_hugh_frenes = {
 }
 
 mb_eng_robert_de_ufford = {
+	# MB+ attributes at 1337.4.1, character 454030.
+	martial = 5
+	diplomacy = 8
+	stewardship = 8
+	intrigue = 8
+	trait = wrathful
+	trait = zealous
+	trait = education_martial_2
 	name = "name_robert"
 	dynasty = mb_eng_ufford_dynasty
 	culture = english
@@ -9648,6 +9950,13 @@ mb_scand_194271M2 = {
 }
 
 mb_scand_450620 = {
+	# MB+ attributes at 1337.4.1, character 450620.
+	martial = 6
+	diplomacy = 4
+	stewardship = 6
+	intrigue = 7
+	trait = lazy
+	trait = education_intrigue_1
 	name = "mb_scand_name_450620"
 	culture = swedish
 	religion = catholic
@@ -9681,6 +9990,12 @@ mb_scand_450611 = {
 }
 
 mb_scand_450727 = {
+	# MB+ attributes at 1337.4.1, character 450727.
+	martial = 6
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 4
+	trait = education_intrigue_2
 	name = "mb_scand_name_450727"
 	culture = swedish
 	religion = catholic
@@ -9693,6 +10008,13 @@ mb_scand_450727 = {
 }
 
 mb_scand_450723 = {
+	# MB+ attributes at 1337.4.1, character 450723.
+	martial = 7
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 8
+	trait = wrathful
+	trait = education_intrigue_1
 	father = mb_genealogy_450724
 	mother = mb_genealogy_450725
 	name = "mb_scand_name_450723"
@@ -9718,6 +10040,10 @@ mb_scand_450720 = {
 }
 
 mb_eng_alice_de_lacy = {
+	# MB+ attributes at 1337.4.1, character 454023.
+	sexuality = heterosexual
+	trait = deceitful
+	trait = education_diplomacy_2
 	name = "name_alice"
 	dynasty = mb_eng_lacy_dynasty
 	culture = english
@@ -9747,6 +10073,13 @@ mb_aq_guitart_de_dax = {
 }
 
 mb_scand_450682 = {
+	# MB+ attributes at 1337.4.1, character 450682.
+	martial = 5
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 4
+	trait = generous
+	trait = education_intrigue_1
 	name = "mb_scand_name_450682"
 	culture = swedish
 	religion = catholic
@@ -9797,6 +10130,14 @@ mb_eng_maurice_berkeley = {
 }
 
 mb_eng_thomas_de_beauchamp = {
+	# MB+ attributes at 1337.4.1, character 454592.
+	martial = 8
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 5
+	trait = diligent
+	trait = lustful
+	trait = education_martial_2
 	name = "name_thomas"
 	dynasty = beauchamp_dynasty
 	culture = english
@@ -9840,6 +10181,13 @@ mb_scand_170009 = {
 }
 
 mb_scand_453061 = {
+	# MB+ attributes at 1337.4.1, character 453061.
+	martial = 6
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 6
+	trait = temperate
+	trait = education_intrigue_2
 	father = mb_genealogy_453512
 	mother = mb_genealogy_203543
 	name = "mb_scand_name_453061"
@@ -9865,6 +10213,12 @@ mb_scand_6906 = {
 }
 
 mb_scand_452603 = {
+	# MB+ attributes at 1337.4.1, character 452603.
+	martial = 4
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 6
+	trait = education_intrigue_1
 	name = "mb_scand_name_452603"
 	culture = norwegian
 	religion = catholic
@@ -9897,6 +10251,13 @@ mb_scand_452600 = {
 }
 
 mb_eng_richard_hereford = {
+	# MB+ attributes at 1337.4.1, character 454596.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 5
+	trait = calm
+	trait = education_learning_3
 	name = "name_richard"
 	dynasty = mb_eng_hereford_dynasty
 	culture = english
@@ -9906,6 +10267,15 @@ mb_eng_richard_hereford = {
 }
 
 mb_scand_487072 = {
+	# MB+ attributes at 1337.4.1, character 487072.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 5
+	trait = brave
+	trait = cynical
+	trait = generous
+	trait = education_martial_2
 	name = "mb_scand_name_487072"
 	culture = swedish
 	religion = catholic
@@ -11687,6 +12057,11 @@ mb_eastasia_PhamMB16 = {
 
 # MB+ HoMB22; county: c_hoan_chau
 mb_eastasia_HoMB22 = {
+	# MB+ attributes at 1337.4.1, character HoMB22.
+	trait = ambitious
+	trait = deceitful
+	trait = brave
+	trait = education_martial_3
 	father = mb_genealogy_HoMB21
 	name = "mb_eastasia_name_HoMB22"
 	culture = viet
@@ -11871,6 +12246,14 @@ mb_eastasia_SEAsiaMB399 = {
 # MB+ Mamluk and Yemeni vassals.
 # MB+ 485007
 mb_mam_yem_485007 = {
+	# MB+ attributes at 1337.4.1, character 485007.
+	martial = 8
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 4
+	trait = generous
+	trait = honest
+	trait = education_intrigue_1
 	name = "mb_mam_yem_name_485007"
 	culture = cuman
 	religion = sunni
@@ -11930,6 +12313,8 @@ mb_mam_yem_1500043M = {
 
 # MB+ 8000471
 mb_mam_yem_8000471 = {
+	# MB+ attributes at 1337.4.1, character 8000471.
+	trait = education_martial_3
 	name = "mb_mam_yem_name_8000471"
 	culture = cuman
 	religion = sunni
@@ -11941,6 +12326,9 @@ mb_mam_yem_8000471 = {
 
 # MB+ 8000504
 mb_mam_yem_8000504 = {
+	# MB+ attributes at 1337.4.1, character 8000504.
+	trait = strong
+	trait = education_martial_2
 	name = "mb_mam_yem_name_8000504"
 	culture = alan
 	religion = sunni
@@ -11952,6 +12340,10 @@ mb_mam_yem_8000504 = {
 
 # MB+ 8000505
 mb_mam_yem_8000505 = {
+	# MB+ attributes at 1337.4.1, character 8000505.
+	trait = beauty_good_1
+	trait = callous
+	trait = education_intrigue_3
 	name = "mb_mam_yem_name_8000505"
 	culture = alan
 	religion = sunni
@@ -12000,6 +12392,13 @@ mb_mam_yem_1236039M12 = {
 
 # MB+ 478080
 mb_mam_yem_478080 = {
+	# MB+ attributes at 1337.4.1, character 478080.
+	martial = 8
+	diplomacy = 6
+	stewardship = 6
+	intrigue = 6
+	trait = greedy
+	trait = education_learning_2
 	name = "mb_mam_yem_name_478080"
 	culture = turkmen
 	religion = sunni
@@ -12614,6 +13013,16 @@ mb_genealogy_194317M1 = {
 
 # MB+ ancestor 201513
 mb_genealogy_201513 = {
+	# MB+ attributes at 1337.4.1, character 201513.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 5
+	trait = diligent
+	trait = just
+	trait = brave
+	trait = education_martial_3
+	trait = saint
 	name = "mb_genealogy_name_201513"
 	culture = danish
 	religion = christian_faith
@@ -12692,6 +13101,15 @@ mb_genealogy_208550 = {
 
 # MB+ ancestor 211509
 mb_genealogy_211509 = {
+	# MB+ attributes at 1337.4.1, character 211509.
+	martial = 4
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 7
+	trait = lustful
+	trait = arrogant
+	trait = bastard
+	trait = education_martial_2
 	name = "mb_genealogy_name_211509"
 	culture = sicilian
 	religion = christian_faith
@@ -12736,6 +13154,17 @@ mb_genealogy_214095 = {
 
 # MB+ ancestor 215517
 mb_genealogy_215517 = {
+	# MB+ attributes at 1337.4.1, character 215517.
+	martial = 8
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 6
+	learning = 7
+	trait = brave
+	trait = diligent
+	trait = humble
+	trait = education_martial_2
+	trait = legitimized_bastard
 	name = "mb_genealogy_name_215517"
 	culture = greek
 	religion = christian_faith
@@ -12790,6 +13219,14 @@ mb_genealogy_223673 = {
 
 # MB+ ancestor 225000
 mb_genealogy_225000 = {
+	# MB+ attributes at 1337.4.1, character 225000.
+	martial = 7
+	diplomacy = 8
+	stewardship = 8
+	intrigue = 6
+	trait = lustful
+	trait = cynical
+	trait = education_martial_2
 	name = "mb_genealogy_name_225000"
 	culture = turkmen
 	religion = sunni
@@ -12831,6 +13268,13 @@ mb_genealogy_303279 = {
 
 # MB+ ancestor 3042
 mb_genealogy_3042 = {
+	# MB+ attributes at 1337.4.1, character 3042.
+	martial = 10
+	diplomacy = 8
+	stewardship = 8
+	intrigue = 8
+	trait = calm
+	trait = education_martial_2
 	name = "mb_genealogy_name_3042"
 	culture = turkmen
 	religion = sunni
@@ -13090,6 +13534,14 @@ mb_genealogy_453401 = {
 
 # MB+ ancestor 453402
 mb_genealogy_453402 = {
+	# MB+ attributes at 1337.4.1, character 453402.
+	martial = 4
+	diplomacy = 3
+	stewardship = 4
+	intrigue = 7
+	trait = temperate
+	trait = lustful
+	trait = education_intrigue_2
 	name = "mb_genealogy_name_453402"
 	culture = english
 	religion = christian_faith
@@ -15829,6 +16281,14 @@ mb_genealogy_172010 = {
 
 # MB+ ancestor 450653
 mb_genealogy_450653 = {
+	# MB+ attributes at 1337.4.1, character 450653.
+	martial = 7
+	diplomacy = 6
+	stewardship = 8
+	intrigue = 8
+	trait = greedy
+	trait = temperate
+	trait = education_learning_2
 	name = "mb_genealogy_name_450653"
 	culture = swedish
 	religion = catholic
@@ -16561,6 +17021,13 @@ mb_steppe_Voronezh4 = {
 # MB+ culture-region vassals for Golden Horde and Chagatai.
 # MB+ 480160
 mb_steppe_480160 = {
+	# MB+ attributes at 1337.4.1, character 480160.
+	martial = 6
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 5
+	trait = craven
+	trait = education_learning_2
 	name = "mb_steppe_name_480160"
 	culture = alan
 	religion = orthodox

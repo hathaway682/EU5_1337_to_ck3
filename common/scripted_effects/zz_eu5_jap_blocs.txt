@@ -5,7 +5,6 @@ eu5_setup_historical_house_bloc_effect = {
             has_dlc_feature = all_under_heaven
         }
         character:jap_ashikaga_takauji.house ?= {
-			set_house_aspiration = { type = strength }
             tgp_create_historical_house_bloc_effect = { TYPE = strength }
             tgp_join_historical_house_bloc_effect = { JOINER = character:jap_koumyou_tenno.house } # EU5 NTC
             tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kou_no_moronao.house } # EU5 KOU
@@ -105,11 +104,16 @@ eu5_setup_historical_house_bloc_effect = {
             tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ookura_nagatoshi.house } # EU5 OKR
             tgp_join_historical_house_bloc_effect = { JOINER = character:jap_tsuchimochi_nobue.house } # EU5 TMD
             tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hishikari_atsushige.house } # EU5 HSR
+			house_confederation ?= {
+				every_confederation_member_house = {
+					set_house_aspiration = { type = strength }
+				}
+			}
         }
         character:jap_go_daigo_tenno.house ?= {
-			set_house_aspiration = { type = service }
             tgp_create_historical_house_bloc_effect = { TYPE = service }
             tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kitabatake_chikafusa.house } # EU5 KTB
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_houjou_tokiyuki.house } # Hojo Tokiyuki
             tgp_join_historical_house_bloc_effect = { JOINER = character:jap_oyama_hidetomo.house } # EU5 OYM
             tgp_join_historical_house_bloc_effect = { JOINER = character:jap_asayama_kagetsura.house } # EU5 ASY
             tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kawano_michimori.house } # EU5 KNO
@@ -153,6 +157,11 @@ eu5_setup_historical_house_bloc_effect = {
             tgp_join_historical_house_bloc_effect = { JOINER = character:jap_miyoshi_hirohide.house } # EU5 MYH
             tgp_join_historical_house_bloc_effect = { JOINER = character:jap_akizuki_tanetada.house } # EU5 AKZ
             tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kajiki_masahira.house } # EU5 KJK
+			house_confederation ?= {
+				every_confederation_member_house = {
+					set_house_aspiration = { type = service }
+				}
+			}
         }
     }
 }

@@ -32,9 +32,16 @@ pap_gerald_odonis = {
 }
 
 bur_hugh_vaucemain = {
-	martial = 5
-	diplomacy = 14
-	stewardship = 15
+	# MB+ attributes at 1337.4.1, character MB_hugues_vaucemain.
+	martial = 2
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 3
+	learning = 8
+	trait = education_learning_3
+	trait = devoted
+	trait = patient
+	trait = just
 	religion = catholic
 	culture = french
 	name = "name_hugh"
@@ -52,9 +59,15 @@ fra_guglielmo_cremona = {
 }
 
 bur_jean_chaudenay = {
-	martial = 5
-	diplomacy = 12
-	stewardship = 14
+	# MB+ attributes at 1337.4.1, character MB_citeaux_jean_chaudenay.
+	martial = 3
+	diplomacy = 7
+	stewardship = 9
+	intrigue = 5
+	learning = 8
+	trait = education_stewardship_2
+	trait = devoted
+	trait = patient
 	religion = catholic
 	culture = french
 	name = "name_john"
@@ -62,9 +75,15 @@ bur_jean_chaudenay = {
 }
 
 nap_raymond_gramat = {
-	martial = 6
-	diplomacy = 12
-	stewardship = 14
+	# MB+ attributes at 1337.4.1, character MB_montecassino_raimondo.
+	martial = 3
+	diplomacy = 8
+	stewardship = 9
+	intrigue = 7
+	learning = 11
+	trait = education_stewardship_3
+	trait = devoted
+	trait = diligent
 	religion = catholic
 	culture = occitan
 	name = "name_raymond"
@@ -72,6 +91,13 @@ nap_raymond_gramat = {
 }
 
 cas_blanca_lacerda_lara = {
+	# MB+ attributes at 1337.4.1, character 457558.
+	martial = 8
+	diplomacy = 8
+	stewardship = 6
+	intrigue = 5
+	trait = arbitrary
+	trait = education_stewardship_2
 	female = yes
 	mother = cas_juana_nunez_lara
 	father = cas_fernando_lacerda_jr
@@ -258,9 +284,15 @@ gra_ibn_al_hakim_al_rundi = {
 }
 
 cas_juan_nunez_de_prado = {
-	martial = 17
-	diplomacy = 12
-	stewardship = 14
+	# MB+ attributes at 1337.4.1, character MB_calatrava_juan_nunez_prado.
+	martial = 7
+	diplomacy = 6
+	stewardship = 6
+	intrigue = 7
+	trait = bastard
+	trait = ambitious
+	trait = education_martial_2
+	trait = order_member
 	religion = catholic
 	culture = castilian
 	name = "name_john"
@@ -288,9 +320,15 @@ cas_rodrigo_perez_alcantara = {
 }
 
 por_estevao_goncalves_leitao = {
-	martial = 14
-	diplomacy = 11
-	stewardship = 14
+	# MB+ attributes at 1337.4.1, character MB_christ_estevao_leitao.
+	martial = 9
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 5
+	learning = 4
+	trait = education_martial_3
+	trait = order_member
+	trait = brave
 	religion = catholic
 	culture = portuguese
 	name = "name_stephen"
@@ -308,9 +346,14 @@ por_goncalo_vasques = {
 }
 
 ara_pere_de_thous = {
-	martial = 14
-	diplomacy = 13
-	stewardship = 16
+	# MB+ attributes at 1337.4.1, character MB_montesa_pere_thous.
+	martial = 7
+	diplomacy = 6
+	stewardship = 8
+	intrigue = 5
+	learning = 5
+	trait = education_martial_3
+	trait = order_member
 	religion = catholic
 	culture = catalan
 	name = "name_peter"

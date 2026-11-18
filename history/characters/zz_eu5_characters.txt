@@ -115,10 +115,14 @@ ach_anton_the_flemish = {
 }
 
 ach_catherine_valois = {
+	# MB+ attributes at 1337.4.1, character 461717.
+	martial = 5
+	diplomacy = 9
+	stewardship = 9
+	intrigue = 8
+	trait = calm
+	trait = education_learning_3
 	female = yes
-	martial = 8
-	diplomacy = 10
-	stewardship = 13
 	name = "name_catherine"
 		dynasty_house = house_valois
 	culture = french
@@ -216,6 +220,8 @@ ach_louis_burgundy = {
 }
 
 ach_martino_zaccaria = {
+	# MB+ attributes at 1337.4.1, character 31464.
+	trait = education_diplomacy_1
 	martial = 14
 	diplomacy = 13
 	stewardship = 9
@@ -240,8 +246,12 @@ ach_mathilde_avesnes = {
 }
 
 ach_robert_taranto = {
-	martial = 15
-	diplomacy = 10
+	# MB+ attributes at 1337.4.1, character 461718.
+	martial = 8
+	diplomacy = 8
+	intrigue = 6
+	trait = chaste
+	trait = education_martial_2
 	stewardship = 5
 	name = "name_robert"
 		dynasty_house = house_anjou
@@ -533,9 +543,13 @@ ale_beatrice_pierrepont = {
 }
 
 ale_charles_ii_valois = {
-	martial = 15
-	diplomacy = 8
-	stewardship = 5
+	# MB+ attributes at 1337.4.1, character 455513.
+	martial = 4
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 4
+	trait = chaste
+	trait = education_learning_3
 	name = "name_charles"
 		dynasty_house = house_valois
 	culture = french
@@ -546,9 +560,11 @@ ale_charles_ii_valois = {
 }
 
 ale_charles_iii_valois = {
-	martial = 0
-	diplomacy = 0
-	stewardship = 0
+	# MB+ attributes at 1337.4.1, character 455514.
+	martial = 7
+	diplomacy = 7
+	stewardship = 4
+	intrigue = 6
 	name = "name_charles"
 		dynasty_house = house_valois
 	culture = french
@@ -622,6 +638,12 @@ ale_marguerite_dampierre = {
 }
 
 ale_maria_burgundy_castile = {
+	# MB+ attributes at 1337.4.1, character 457560.
+	martial = 8
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 6
+	trait = education_learning_3
 	female = yes
 	name = "name_mary"
 		dynasty_house = house_burgundy_castile
@@ -729,6 +751,8 @@ aly_yusuf = {
 }
 
 ama_david_mageraghty = {
+	# MB+ attributes at 1337.4.1, character MB_armagh_david_mageraghty.
+	trait = education_learning_4
 	name = "name_david"
 	culture = irish
 	religion = catholic
@@ -1164,6 +1188,13 @@ anh_albrecht_ii_anhalt_zerbst_kothen = {
 }
 
 anh_beatrix_wittenberg = {
+	# MB+ attributes at 1337.4.1, character 462106.
+	martial = 4
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 6
+	trait = diligent
+	trait = education_intrigue_2
 	female = yes
 	name = "name_beatrix"
 		dynasty = askanier_dynasty
@@ -1708,9 +1739,14 @@ aqn_rose_albret = {
 }
 
 aqu_bertrando_genasio = {
-	martial = 13
-	diplomacy = 13
-	stewardship = 15
+	# MB+ attributes at 1337.4.1, character 413022.
+	martial = 6
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 7
+	trait = diligent
+	trait = zealous
+	trait = education_learning_3
 	name = "name_bertrand"
 	culture = occitan
 	religion = catholic
@@ -1769,6 +1805,8 @@ aqu_furlano_della_torre = {
 }
 
 aqu_ludovico_della_torre = {
+	# MB+ attributes at 1337.4.1, character cisalpine0608.
+	trait = education_learning_3
 	martial = 10
 	diplomacy = 15
 	stewardship = 13
@@ -1852,9 +1890,12 @@ ara_alfons_iii_arago = {
 }
 
 ara_alfons_iv_ribagorza = {
-	martial = 3
-	diplomacy = 1
-	stewardship = 1
+	# MB+ attributes at 1337.4.1, character 460571.
+	martial = 5
+	diplomacy = 8
+	stewardship = 7
+	intrigue = 7
+	trait = education_martial_2
 	name = "name_alphonse"
 		dynasty = barcelona_dynasty
 	culture = catalan
@@ -1975,9 +2016,14 @@ ara_elionor_ribagorza = {
 }
 
 ara_ferdinand_arago = {
-	martial = 5
-	diplomacy = 3
-	stewardship = 5
+	# MB+ attributes at 1337.4.1, character 460530.
+	martial = 4
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 7
+	trait = wrathful
+	trait = brave
+	trait = education_martial_2
 	name = "name_ferdinand"
 		dynasty = barcelona_dynasty
 	culture = catalan
@@ -2011,9 +2057,14 @@ ara_jacme_i_arago = {
 }
 
 ara_james_i_urgell = {
-	martial = 15
-	diplomacy = 13
-	stewardship = 8
+	# MB+ attributes at 1337.4.1, character 460520.
+	martial = 8
+	diplomacy = 5
+	stewardship = 7
+	intrigue = 6
+	trait = lustful
+	trait = zealous
+	trait = education_diplomacy_3
 	name = "name_james"
 		dynasty_house = house_urgell
 	culture = catalan
@@ -2038,6 +2089,11 @@ ara_jaume_ii_arago = {
 }
 
 ara_joan_prades = {
+	# MB+ attributes at 1337.4.1, character 460572.
+	martial = 4
+	diplomacy = 6
+	stewardship = 4
+	intrigue = 5
 	name = "name_john"
 		dynasty = barcelona_dynasty
 	culture = catalan
@@ -2090,6 +2146,13 @@ ara_jolan_arpad = {
 }
 
 ara_juan_arago = {
+	# MB+ attributes at 1337.4.1, character 460540.
+	martial = 7
+	diplomacy = 5
+	stewardship = 7
+	intrigue = 4
+	trait = ill
+	trait = education_martial_2
 	name = "name_john"
 		dynasty = barcelona_dynasty
 	culture = catalan
@@ -2100,6 +2163,12 @@ ara_juan_arago = {
 }
 
 ara_leonor_burgundy = {
+	# MB+ attributes at 1337.4.1, character 457521.
+	martial = 5
+	diplomacy = 8
+	stewardship = 7
+	intrigue = 8
+	trait = education_intrigue_2
 	female = yes
 	name = "name_eleanor"
 		dynasty_house = house_burgundy_castile
@@ -2176,9 +2245,12 @@ ara_pere_iii_arago = {
 }
 
 ara_pere_iv_ribagorza = {
-	martial = 8
-	diplomacy = 15
-	stewardship = 13
+	# MB+ attributes at 1337.4.1, character 460570.
+	martial = 5
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 7
+	trait = education_intrigue_3
 	name = "name_peter"
 		dynasty = barcelona_dynasty
 	culture = catalan
@@ -2189,9 +2261,15 @@ ara_pere_iv_ribagorza = {
 }
 
 ara_peter_iv_arago = {
-	martial = 16
-	diplomacy = 10
-	stewardship = 15
+	# MB+ attributes at 1337.4.1, character 460500.
+	martial = 7
+	diplomacy = 8
+	stewardship = 9
+	intrigue = 8
+	trait = ambitious
+	trait = arrogant
+	trait = diligent
+	trait = education_intrigue_2
 	name = "name_peter"
 		dynasty = barcelona_dynasty
 	culture = catalan
@@ -2321,6 +2399,16 @@ ara_teresa_entenza = {
 }
 
 ara_violant_arago = {
+	# MB+ attributes at 1337.4.1, character 460567.
+	martial = 5
+	diplomacy = 5
+	stewardship = 7
+	intrigue = 5
+	trait = chaste
+	trait = just
+	trait = greedy
+	trait = honest
+	trait = education_stewardship_2
 	female = yes
 	name = "name_yolande"
 		dynasty = barcelona_dynasty
@@ -2353,9 +2441,14 @@ arb_beneita = {
 }
 
 arb_brancaleone_doria = {
-	martial = 0
-	diplomacy = 0
-	stewardship = 0
+	# MB+ attributes at 1337.4.1, character 71160.
+	martial = 3
+	diplomacy = 3
+	stewardship = 5
+	intrigue = 3
+	learning = 3
+	trait = education_martial_1
+	trait = honest
 	name = "name_brancaleone"
 		dynasty = doria_dynasty
 	culture = cisalpine
@@ -3295,6 +3388,13 @@ aum_beatrix_chatillon = {
 }
 
 aum_blanche_ponthieu = {
+	# MB+ attributes at 1337.4.1, character 457640.
+	martial = 4
+	diplomacy = 4
+	stewardship = 8
+	intrigue = 7
+	trait = brave
+	trait = education_stewardship_2
 	female = yes
 	name = "name_blanche"
 		dynasty_house = house_burgundy_castile
@@ -3306,10 +3406,13 @@ aum_blanche_ponthieu = {
 }
 
 aum_catherine_artois = {
+	# MB+ attributes at 1337.4.1, character 455518.
+	diplomacy = 4
+	stewardship = 7
+	intrigue = 8
+	trait = education_intrigue_1
 	female = yes
 	martial = 5
-	diplomacy = 10
-	stewardship = 8
 	name = "name_catherine"
 		dynasty_house = house_artois
 	culture = french
@@ -3440,6 +3543,14 @@ aum_jeanne_mello = {
 }
 
 aum_jeanne_ponthieu = {
+	# MB+ attributes at 1337.4.1, character 457641.
+	martial = 7
+	diplomacy = 4
+	stewardship = 8
+	intrigue = 5
+	trait = arbitrary
+	trait = wrathful
+	trait = education_stewardship_2
 	female = yes
 	name = "name_joanna"
 		dynasty_house = house_burgundy_castile
@@ -4734,6 +4845,14 @@ bde_friedrich_ii_baden = {
 }
 
 bde_friedrich_iii_baden = {
+	# MB+ attributes at 1337.4.1, character 462312.
+	martial = 7
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 7
+	trait = honest
+	trait = arrogant
+	trait = education_martial_2
 	name = "name_frederick"
 		dynasty = baden_dynasty
 	culture = swabian
@@ -4784,6 +4903,14 @@ bde_kunigunde_von_zollern = {
 }
 
 bde_rudolf_iv_baden = {
+	# MB+ attributes at 1337.4.1, character 462310.
+	martial = 6
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 7
+	trait = calm
+	trait = temperate
+	trait = education_martial_2
 	name = "name_rudolf"
 		dynasty = baden_dynasty
 	culture = swabian
@@ -4793,6 +4920,14 @@ bde_rudolf_iv_baden = {
 }
 
 bde_rudolf_v_baden = {
+	# MB+ attributes at 1337.4.1, character 462313.
+	martial = 7
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 7
+	trait = humble
+	trait = generous
+	trait = education_martial_2
 	name = "name_rudolf"
 		dynasty = baden_dynasty
 	culture = swabian
@@ -5788,6 +5923,12 @@ bls_marguerite_blois = {
 }
 
 bls_marguerite_valois = {
+	# MB+ attributes at 1337.4.1, character 455511.
+	martial = 7
+	diplomacy = 8
+	stewardship = 7
+	intrigue = 5
+	trait = education_learning_2
 	female = yes
 	name = "name_margaret"
 		dynasty_house = house_valois
@@ -5879,6 +6020,14 @@ bnb_adelheid_bernburg = {
 }
 
 bnb_agnes_wittenberg = {
+	# MB+ attributes at 1337.4.1, character 462391.
+	martial = 10
+	diplomacy = 1
+	stewardship = 4
+	intrigue = 1
+	trait = pneumonic
+	trait = diligent
+	trait = education_intrigue_2
 	female = yes
 	name = "name_agnes"
 		dynasty = askanier_dynasty
@@ -6055,6 +6204,14 @@ bod_francesco_zorzi = {
 }
 
 bod_guglielma_pallavicini = {
+	# MB+ attributes at 1337.4.1, character 70729.
+	martial = 4
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 5
+	trait = honest
+	trait = content
+	trait = education_stewardship_2
 	female = yes
 	name = "name_willelma"
 		dynasty = pallavicini_dynasty
@@ -6097,6 +6254,14 @@ bod_isabella_pallavicini = {
 }
 
 bod_marulla_zaccaria = {
+	# MB+ attributes at 1337.4.1, character 70731.
+	martial = 4
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 4
+	trait = weak
+	trait = honest
+	trait = education_diplomacy_3
 	female = yes
 	name = "name_marulla"
 		dynasty = zaccaria_dynasty
@@ -6108,9 +6273,14 @@ bod_marulla_zaccaria = {
 }
 
 bod_niccolo_i_zorzi = {
-	martial = 8
-	diplomacy = 8
-	stewardship = 10
+	# MB+ attributes at 1337.4.1, character 70732.
+	martial = 5
+	diplomacy = 6
+	stewardship = 4
+	intrigue = 7
+	trait = calm
+	trait = deceitful
+	trait = education_diplomacy_2
 	name = "name_nicholas"
 		dynasty = zorzi_dynasty
 	culture = cisalpine
@@ -6162,6 +6332,13 @@ bod_ubertino_pallavicini = {
 }
 
 boh_anne_luxembourg = {
+	# MB+ attributes at 1337.4.1, character 462617.
+	martial = 8
+	diplomacy = 6
+	stewardship = 4
+	intrigue = 4
+	trait = education_stewardship_2
+	trait = twin
 	female = yes
 	name = "name_anna"
 		dynasty = luxembourg_dynasty
@@ -6187,6 +6364,12 @@ boh_anne_premyslid = {
 }
 
 boh_beatrice_de_bourbon = {
+	# MB+ attributes at 1337.4.1, character 455657.
+	martial = 8
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 8
+	trait = education_diplomacy_3
 	female = yes
 	name = "name_beatrix"
 		dynasty_house = house_bourbon
@@ -6199,10 +6382,14 @@ boh_beatrice_de_bourbon = {
 }
 
 boh_blanche_valois = {
+	# MB+ attributes at 1337.4.1, character 455537.
+	martial = 5
+	diplomacy = 4
+	stewardship = 4
+	intrigue = 5
+	trait = arrogant
+	trait = education_intrigue_1
 	female = yes
-	martial = 3
-	diplomacy = 17
-	stewardship = 10
 	name = "name_blanche"
 		dynasty_house = house_valois
 	culture = french
@@ -6214,10 +6401,17 @@ boh_blanche_valois = {
 }
 
 boh_charles_iv_luxembourg = {
+	# MB+ attributes at 1337.4.1, character 462614.
+	martial = 7
+	diplomacy = 9
+	stewardship = 9
+	intrigue = 9
+	trait = arrogant
+	trait = lifestyle_blademaster
+	trait = temperate
+	trait = just
+	trait = education_diplomacy_4
 	dna = 462614_karl_iv_luxembourg
-	martial = 17
-	diplomacy = 18
-	stewardship = 18
 	name = "name_charles"
 		dynasty = luxembourg_dynasty
 	culture = czech
@@ -6324,10 +6518,18 @@ boh_jindrich_dube = {
 }
 
 boh_john_luxembourg = {
+	# MB+ attributes at 1337.4.1, character 462610.
+	martial = 8
+	diplomacy = 5
+	stewardship = 7
+	intrigue = 8
+	trait = brave
+	trait = chaste
+	trait = gregarious
+	trait = education_martial_2
+	trait = blind
+	trait = faith_warrior
 	dna = 462610_jan_the_blind_bohemia
-	martial = 11
-	diplomacy = 9
-	stewardship = 13
 	name = "name_john"
 		dynasty = luxembourg_dynasty
 	culture = french
@@ -6357,6 +6559,11 @@ boh_katerina_vartenberk = {
 }
 
 boh_margaret_hungary = {
+	# MB+ attributes at 1337.4.1, character 455538.
+	martial = 5
+	diplomacy = 6
+	stewardship = 6
+	intrigue = 5
 	female = yes
 	name = "name_margaret"
 		dynasty = luxembourg_dynasty
@@ -6480,6 +6687,14 @@ boh_wenceslaus_iii_premyslid = {
 }
 
 boh_wenceslaus_luxembourg = {
+	# MB+ attributes at 1337.4.1, character 462605.
+	martial = 5
+	diplomacy = 8
+	stewardship = 5
+	intrigue = 5
+	trait = lustful
+	trait = deceitful
+	trait = education_martial_2
 	name = "name_wenceslas"
 		dynasty = luxembourg_dynasty
 	culture = czech
@@ -6549,6 +6764,11 @@ bos_jelena_subic = {
 }
 
 bos_katarina_kotromanic = {
+	# MB+ attributes at 1337.4.1, character 468801.
+	martial = 7
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 6
 	female = yes
 	name = "name_catherine"
 		dynasty = kotromanic_dynasty
@@ -6560,6 +6780,12 @@ bos_katarina_kotromanic = {
 }
 
 bos_katarina_kotromanic_sister = {
+	# MB+ attributes at 1337.4.1, character 468806.
+	martial = 6
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 7
+	trait = education_intrigue_2
 	female = yes
 	name = "name_catherine"
 		dynasty = kotromanic_dynasty
@@ -6722,8 +6948,11 @@ bos_shishman_wife_stephen_kotromanic = {
 }
 
 bos_stephen_kotromanic = {
-	martial = 9
-	diplomacy = 10
+	# MB+ attributes at 1337.4.1, character 468800.
+	martial = 4
+	diplomacy = 6
+	intrigue = 4
+	trait = education_intrigue_2
 	stewardship = 8
 	name = "name_stephen"
 		dynasty = kotromanic_dynasty
@@ -6757,6 +6986,13 @@ bos_tvrtko_ohmucevic = {
 }
 
 bos_vladislav_kotromanic = {
+	# MB+ attributes at 1337.4.1, character 468805.
+	martial = 5
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 4
+	trait = lustful
+	trait = education_martial_2
 	name = "name_vladislav"
 		dynasty = kotromanic_dynasty
 	culture = bosnian
@@ -6806,6 +7042,13 @@ bou_beatrice_burgundian = {
 }
 
 bou_isabelle_valois = {
+	# MB+ attributes at 1337.4.1, character 455506.
+	martial = 7
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 5
+	trait = cynical
+	trait = education_intrigue_1
 	female = yes
 	name = "name_elizabeth"
 		dynasty_house = house_valois
@@ -6843,9 +7086,13 @@ bou_jeanne_chatillon = {
 }
 
 bou_louis_i_bourbon = {
-	martial = 9
-	diplomacy = 17
-	stewardship = 8
+	# MB+ attributes at 1337.4.1, character 455650.
+	martial = 6
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 8
+	trait = clubfooted
+	trait = education_learning_2
 	name = "name_louis"
 		dynasty_house = house_bourbon
 	culture = french
@@ -6856,6 +7103,13 @@ bou_louis_i_bourbon = {
 }
 
 bou_marie_avesnes = {
+	# MB+ attributes at 1337.4.1, character 455615.
+	martial = 8
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 8
+	trait = temperate
+	trait = education_intrigue_2
 	female = yes
 	name = "name_mary"
 		dynasty = avesnes_dynasty
@@ -6906,9 +7160,14 @@ bou_pierre_d_andre = {
 }
 
 bou_pierre_i_bourbon = {
-	martial = 8
-	diplomacy = 11
-	stewardship = 5
+	# MB+ attributes at 1337.4.1, character 455651.
+	martial = 6
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 4
+	trait = zealous
+	trait = honest
+	trait = education_diplomacy_3
 	name = "name_peter"
 		dynasty_house = house_bourbon
 	culture = french
@@ -7445,6 +7704,13 @@ brb_jan_ii_van_brabant = {
 }
 
 brb_jan_iii_van_brabant = {
+	# MB+ attributes at 1337.4.1, character 487044.
+	martial = 7
+	diplomacy = 6
+	stewardship = 8
+	intrigue = 7
+	trait = lustful
+	trait = education_diplomacy_2
 	name = "name_john"
 		dynasty = reginar_dynasty
 	culture = dutch
@@ -7475,9 +7741,12 @@ brb_jeanne_argies = {
 }
 
 brb_johanna_van_brabant = {
+	# MB+ attributes at 1337.4.1, character 487012.
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	trait = education_stewardship_2
 	female = yes
-	martial = 3
-	diplomacy = 11
 	stewardship = 8
 	name = "name_joanna"
 		dynasty = reginar_dynasty
@@ -7521,6 +7790,13 @@ brb_margaret_of_england = {
 }
 
 brb_margaretha_van_brabant = {
+	# MB+ attributes at 1337.4.1, character 487050.
+	martial = 5
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 7
+	trait = greedy
+	trait = education_stewardship_2
 	female = yes
 	name = "name_margaret"
 		dynasty = reginar_dynasty
@@ -7544,6 +7820,12 @@ brb_marguerite_dampierre = {
 }
 
 brb_maria_van_brabant = {
+	# MB+ attributes at 1337.4.1, character 487051.
+	martial = 7
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 7
+	trait = education_stewardship_2
 	female = yes
 	name = "name_mary"
 		dynasty = reginar_dynasty
@@ -7658,6 +7940,13 @@ brd_totto_bardi = {
 }
 
 bre_burchard_grelle = {
+	# MB+ attributes at 1337.4.1, character 420251.
+	martial = 5
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 8
+	trait = temperate
+	trait = education_learning_3
 	name = "Burchard"
 	culture = saxon
 	religion = catholic
@@ -7743,9 +8032,12 @@ bri_catherine_laval = {
 }
 
 bri_charles_chatillon = {
-	martial = 11
-	diplomacy = 15
-	stewardship = 11
+	# MB+ attributes at 1337.4.1, character 455784.
+	martial = 5
+	diplomacy = 6
+	stewardship = 6
+	intrigue = 6
+	trait = education_stewardship_2
 	name = "name_charles"
 		dynasty = chatillon_dynasty
 	culture = french
@@ -7894,6 +8186,8 @@ bri_yann_ii_dreux = {
 }
 
 bri_yann_iii_dreux = {
+	# MB+ attributes at 1337.4.1, character 455750.
+	trait = just
 	martial = 7
 	diplomacy = 9
 	stewardship = 6
@@ -7969,9 +8263,14 @@ bru_jutta_hesse = {
 }
 
 bru_magnus_braunschweig_wolfenbuttel = {
-	martial = 5
-	diplomacy = 11
-	stewardship = 9
+	# MB+ attributes at 1337.4.1, character 462826.
+	martial = 9
+	diplomacy = 8
+	stewardship = 8
+	intrigue = 8
+	trait = lustful
+	trait = just
+	trait = education_diplomacy_3
 	name = "name_magnus"
 		dynasty_house = house_welfen
 	culture = saxon
@@ -7982,9 +8281,12 @@ bru_magnus_braunschweig_wolfenbuttel = {
 }
 
 bru_magnus_ii_braunschweig_wolfenbuttel = {
-	martial = 6
-	diplomacy = 4
-	stewardship = 4
+	# MB+ attributes at 1337.4.1, character 462828.
+	martial = 5
+	diplomacy = 5
+	stewardship = 8
+	intrigue = 5
+	trait = education_stewardship_2
 	name = "name_magnus"
 		dynasty_house = house_welfen
 	culture = saxon
@@ -8005,6 +8307,14 @@ bru_otto_i_braunschweig = {
 }
 
 bru_otto_i_braunschweig_gottingen = {
+	# MB+ attributes at 1337.4.1, character 462823.
+	martial = 7
+	diplomacy = 6
+	stewardship = 6
+	intrigue = 8
+	trait = gluttonous
+	trait = chaste
+	trait = education_diplomacy_3
 	name = "name_otto"
 		dynasty_house = house_welfen
 	culture = saxon
@@ -8409,6 +8719,8 @@ bul_irene_palaiologina = {
 }
 
 bul_irene_palaiologos = {
+	# MB+ attributes at 1337.4.1, character 465512.
+	trait = born_in_the_purple
 	female = yes
 	name = "name_mary"
 		dynasty_house = house_palaiologos
@@ -8422,10 +8734,15 @@ bul_irene_palaiologos = {
 }
 
 bul_ivan_alexander = {
+	# MB+ attributes at 1337.4.1, character 467500.
+	martial = 6
+	diplomacy = 5
+	stewardship = 7
+	intrigue = 5
+	trait = zealous
+	trait = generous
+	trait = education_stewardship_2
 	dna = 467500_ivan_alexander_bulgaria
-	martial = 8
-	diplomacy = 10
-	stewardship = 16
 	name = "name_john.name_alexander"
 		dynasty = sratsimir_dynasty
 	culture = bulgarian
@@ -8648,9 +8965,12 @@ bul_michael_shishman = {
 }
 
 bul_michail_iv_asen = {
-	martial = 12
-	diplomacy = 7
-	stewardship = 7
+	# MB+ attributes at 1337.4.1, character 467510.
+	martial = 5
+	diplomacy = 4
+	stewardship = 6
+	intrigue = 7
+	trait = education_martial_2
 	name = "name_michael"
 		dynasty = sratsimir_dynasty
 	culture = bulgarian
@@ -9070,6 +9390,12 @@ bur_jeanne_chatillon = {
 }
 
 bur_jeanne_iii_capet = {
+	# MB+ attributes at 1337.4.1, character 455913.
+	martial = 6
+	diplomacy = 5
+	stewardship = 7
+	intrigue = 6
+	trait = education_intrigue_2
 	female = yes
 	name = "name_joanna"
 		dynasty_house = house_capet
@@ -9236,10 +9562,14 @@ bym_kazimierz_ii_piast = {
 }
 
 bym_lukardis_mecklenburg = {
+	# MB+ attributes at 1337.4.1, character 451987.
+	martial = 3
+	diplomacy = 5
+	stewardship = 7
+	intrigue = 6
+	trait = arrogant
+	trait = education_learning_3
 	female = yes
-	martial = 2
-	diplomacy = 8
-	stewardship = 5
 	name = "name_liutgard"
 		dynasty = mecklenburg_dynasty
 	culture = saxon
@@ -9495,10 +9825,15 @@ byz_andronikos_ii_palaiologos = {
 }
 
 byz_andronikos_iii_palaiologos = {
+	# MB+ attributes at 1337.4.1, character 465500.
+	martial = 6
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 9
+	trait = wrathful
+	trait = greedy
+	trait = education_martial_2
 	dna = 465500_andronikos_iii_palaiologos
-	martial = 8
-	diplomacy = 15
-	stewardship = 8
 	name = "name_andronikos"
 		dynasty_house = house_palaiologos
 	culture = greek
@@ -9509,6 +9844,11 @@ byz_andronikos_iii_palaiologos = {
 }
 
 byz_andronikos_kantakouzenos = {
+	# MB+ attributes at 1337.4.1, character 465536.
+	martial = 6
+	diplomacy = 8
+	stewardship = 6
+	intrigue = 7
 	name = "name_andronikos"
 		dynasty = kantakouzenos_dynasty
 	culture = greek
@@ -10752,9 +11092,16 @@ byz_john_i_tzimiskes = {
 }
 
 byz_john_kantakouzenos = {
-	martial = 8
-	diplomacy = 20
-	stewardship = 13
+	# MB+ attributes at 1337.4.1, character 465530.
+	martial = 5
+	diplomacy = 9
+	stewardship = 6
+	intrigue = 6
+	trait = diligent
+	trait = calm
+	trait = ambitious
+	trait = education_learning_2
+	trait = lifestyle_scholar
 	name = "name_john"
 		dynasty = kantakouzenos_dynasty
 	culture = greek
@@ -10787,6 +11134,8 @@ byz_john_palaiologos = {
 }
 
 byz_john_v_palaiologos = {
+	# MB+ attributes at 1337.4.1, character 465510.
+	trait = born_in_the_purple
 	martial = 0
 	diplomacy = 0
 	stewardship = 0
@@ -10800,6 +11149,8 @@ byz_john_v_palaiologos = {
 }
 
 byz_john_xiv_kalekas = {
+	# MB+ attributes at 1337.4.1, character 145037.
+	trait = education_learning_3
 	martial = 8
 	diplomacy = 15
 	stewardship = 13
@@ -11249,10 +11600,13 @@ byz_maria_doukaina_komnene_palaiologina = {
 }
 
 byz_maria_kantakouzene = {
+	# MB+ attributes at 1337.4.1, character 465535.
+	martial = 4
+	diplomacy = 8
+	stewardship = 4
+	intrigue = 6
+	trait = education_learning_2
 	female = yes
-	martial = 1
-	diplomacy = 3
-	stewardship = 3
 	name = "name_mary"
 		dynasty = kantakouzenos_dynasty
 	culture = greek
@@ -11278,6 +11632,14 @@ byz_maria_of_alania = {
 }
 
 byz_matthaios_kantakouzenos = {
+	# MB+ attributes at 1337.4.1, character 465531.
+	martial = 7
+	diplomacy = 8
+	stewardship = 6
+	intrigue = 8
+	trait = wrathful
+	trait = gluttonous
+	trait = education_diplomacy_3
 	name = "name_matthew"
 		dynasty = kantakouzenos_dynasty
 	culture = greek
@@ -11421,6 +11783,8 @@ byz_michael_palaiologos = {
 }
 
 byz_michael_palaiologos_ii = {
+	# MB+ attributes at 1337.4.1, character 465513.
+	trait = born_in_the_purple
 	martial = 0
 	diplomacy = 0
 	stewardship = 0
@@ -11507,9 +11871,14 @@ byz_nerva = {
 }
 
 byz_nikephoros_gregoras = {
-	martial = 8
-	diplomacy = 15
-	stewardship = 9
+	# MB+ attributes at 1337.4.1, character 465216.
+	martial = 4
+	diplomacy = 4
+	stewardship = 4
+	intrigue = 4
+	trait = cynical
+	trait = diligent
+	trait = education_learning_3
 	name = "name_nikephoros"
 	culture = greek
 	religion = orthodox
@@ -11739,6 +12108,12 @@ byz_septimius_severus = {
 }
 
 byz_shisman = {
+	# MB+ attributes at 1337.4.1, character 467522.
+	martial = 7
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 7
+	trait = education_martial_2
 	name = "name_shishman"
 		dynasty = shishman_dynasty
 	culture = bulgarian
@@ -11833,6 +12208,13 @@ byz_theodora_ii = {
 }
 
 byz_theodora_kantakouzene = {
+	# MB+ attributes at 1337.4.1, character 465534.
+	martial = 5
+	diplomacy = 6
+	stewardship = 8
+	intrigue = 8
+	trait = temperate
+	trait = education_learning_2
 	female = yes
 	name = "name_theodora"
 		dynasty = kantakouzenos_dynasty
@@ -12227,10 +12609,17 @@ cas_alfonso_x_burgundy = {
 }
 
 cas_alfonso_xi_burgundy = {
+	# MB+ attributes at 1337.4.1, character 457500.
+	martial = 6
+	diplomacy = 8
+	stewardship = 6
+	intrigue = 8
+	sexuality = heterosexual
+	trait = lazy
+	trait = cynical
+	trait = education_intrigue_2
+	trait = adulterer
 	dna = 457500_alfonso_xi_avenger
-	martial = 16
-	diplomacy = 11
-	stewardship = 13
 	name = "name_alphonse"
 		dynasty_house = house_burgundy_castile
 	culture = castilian
@@ -12317,9 +12706,14 @@ cas_enrique_i_burgundy = {
 }
 
 cas_enrique_ii_trastamara = {
-	martial = 0
-	diplomacy = 0
-	stewardship = 0
+	# MB+ attributes at 1337.4.1, character 457510.
+	martial = 5
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 7
+	trait = ambitious
+	trait = just
+	trait = twin
 	name = "name_henry"
 		dynasty_house = house_trastamara
 	culture = castilian
@@ -12343,6 +12737,8 @@ cas_fadrique_alfonso_burgundy = {
 }
 
 cas_fernando_alfonso_burgundy = {
+	# MB+ attributes at 1337.4.1, character 71528.
+	trait = bastard
 	name = "name_ferdinand"
 		dynasty_house = house_burgundy_castile
 	culture = castilian
@@ -12431,6 +12827,8 @@ cas_henri_burgundian = {
 }
 
 cas_ines_castro = {
+	# MB+ attributes at 1337.4.1, character 457673.
+	trait = bastard
 	female = yes
 	martial = 5
 	diplomacy = 13
@@ -12444,11 +12842,16 @@ cas_ines_castro = {
 }
 
 cas_juan_manuel = {
+	# MB+ attributes at 1337.4.1, character 457630.
+	martial = 5
+	diplomacy = 4
+	stewardship = 6
+	intrigue = 5
+	trait = education_stewardship_3
+	trait = lifestyle_scholar
+	trait = lifestyle_poet
 	mother = mb_genealogy_70903
 	father = ck2_iberia_457621
-	martial = 8
-	diplomacy = 9
-	stewardship = 14
 	name = "name_john"
 		dynasty = manuel_dynasty
 	culture = castilian
@@ -12494,6 +12897,9 @@ cas_juana_nunez_lara = {
 }
 
 cas_leonor_guzman = {
+	# MB+ attributes at 1337.4.1, character 73146.
+	sexuality = heterosexual
+	trait = beauty_good_2
 	female = yes
 	martial = 3
 	diplomacy = 13
@@ -12532,6 +12938,8 @@ cas_maria_molina = {
 }
 
 cas_maria_portugal = {
+	# MB+ attributes at 1337.4.1, character 459504.
+	trait = bastard
 	female = yes
 	martial = 4
 	diplomacy = 10
@@ -12580,6 +12988,14 @@ cas_nuno_perez_lara = {
 }
 
 cas_pedro_aguilar = {
+	# MB+ attributes at 1337.4.1, character 457502.
+	martial = 6
+	diplomacy = 4
+	stewardship = 8
+	intrigue = 4
+	trait = bastard
+	trait = ill
+	trait = education_stewardship_2
 	name = "name_peter"
 		dynasty_house = house_burgundy_castile
 	culture = castilian
@@ -12608,9 +13024,15 @@ cas_pedro_gonzalez_lara = {
 }
 
 cas_pedro_i_burgundy = {
-	martial = 0
-	diplomacy = 0
-	stewardship = 0
+	# MB+ attributes at 1337.4.1, character 457501.
+	martial = 4
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 7
+	trait = paranoid
+	trait = arbitrary
+	trait = deceitful
+	trait = lisping
 	name = "name_peter"
 		dynasty_house = house_burgundy_castile
 	culture = castilian
@@ -12647,9 +13069,13 @@ cas_pedro_nunez_guzman_ii = {
 }
 
 cas_sancho_alfonso_burgundy = {
-	martial = 0
-	diplomacy = 0
-	stewardship = 0
+	# MB+ attributes at 1337.4.1, character 457503.
+	martial = 4
+	diplomacy = 4
+	stewardship = 7
+	intrigue = 7
+	trait = bastard
+	trait = education_martial_2
 	name = "name_sancho"
 		dynasty_house = house_burgundy_castile
 	culture = castilian
@@ -15816,9 +16242,14 @@ cro_martell_karoly = {
 }
 
 cro_mladen_iii_subic = {
-	martial = 8
-	diplomacy = 13
-	stewardship = 10
+	# MB+ attributes at 1337.4.1, character 470012.
+	martial = 5
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 4
+	trait = chaste
+	trait = arrogant
+	trait = education_learning_3
 	name = "name_mladen"
 		dynasty = subic_dynasty
 	culture = croatian
@@ -15966,6 +16397,8 @@ crr_giacomo_i_del_carretto = {
 }
 
 crr_giorgio_del_carretto = {
+	# MB+ attributes at 1337.4.1, character cisalpine0437.
+	trait = education_martial_1
 	name = "name_george"
 		dynasty_house = house_carretto
 	culture = cisalpine
@@ -15996,6 +16429,14 @@ crr_lazzarino_del_carretto = {
 }
 
 crr_leonora_fieschi = {
+	# MB+ attributes at 1337.4.1, character 71119.
+	martial = 5
+	diplomacy = 6
+	stewardship = 4
+	intrigue = 5
+	trait = trusting
+	trait = honest
+	trait = education_learning_2
 	female = yes
 	name = "name_eleanor"
 		dynasty = fieschi_dynasty
@@ -16872,6 +17313,13 @@ czk_siemowit_i_piast = {
 }
 
 czk_siemowit_iii_piast = {
+	# MB+ attributes at 1337.4.1, character 471518.
+	martial = 8
+	diplomacy = 4
+	stewardship = 7
+	intrigue = 7
+	trait = chaste
+	trait = education_martial_3
 	name = "name_siemowit"
 		dynasty = piast_dynasty
 	culture = polish
@@ -17400,6 +17848,14 @@ dan_olaf_hunger = {
 }
 
 dan_otto_christoffersen = {
+	# MB+ attributes at 1337.4.1, character 451523.
+	martial = 5
+	diplomacy = 7
+	stewardship = 4
+	intrigue = 7
+	trait = diligent
+	trait = cynical
+	trait = education_martial_2
 	name = "name_otto"
 		dynasty = estrid_dynasty
 	culture = danish
@@ -17944,6 +18400,13 @@ dhf_al_wathiq_ibrahim = {
 }
 
 dhm_richard_de_bury = {
+	# MB+ attributes at 1337.4.1, character 129035.
+	martial = 4
+	diplomacy = 6
+	stewardship = 6
+	intrigue = 6
+	learning = 8
+	trait = education_learning_3
 	name = "name_richard"
 	culture = english
 	religion = catholic
@@ -18060,6 +18523,13 @@ dlh_jalalat_ud_din_razia = {
 }
 
 dlh_muhammad_bin_tughluq = {
+	# MB+ attributes at 1337.4.1, character 170258.
+	trait = education_learning_4
+	trait = paranoid
+	trait = lifestyle_scholar
+	trait = impatient
+	trait = zealous
+	trait = stubborn
 	name = "name_muhammad"
 		dynasty = tughlaq_dynasty
 	culture = hindustani
@@ -18761,6 +19231,14 @@ eng_alfred_the_great = {
 }
 
 eng_alice_of_norfolk = {
+	# MB+ attributes at 1337.4.1, character 454553.
+	martial = 7
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 5
+	trait = greedy
+	trait = wrathful
+	trait = education_learning_2
 	female = yes
 	name = "name_alice"
 		dynasty_house = house_plantagenet
@@ -18885,6 +19363,13 @@ eng_bartholomew_burghersh_the_younger = {
 }
 
 eng_blanche_lancaster = {
+	# MB+ attributes at 1337.4.1, character 454530.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 6
+	trait = lazy
+	trait = education_diplomacy_1
 	female = yes
 	name = "name_blanche"
 		dynasty_house = house_lancaster
@@ -18972,9 +19457,13 @@ eng_edgar_the_peaceful = {
 }
 
 eng_edmund_arundel = {
-	martial = 4
+	# MB+ attributes at 1337.4.1, character 454574.
+	martial = 7
+	stewardship = 7
+	intrigue = 5
+	trait = lazy
+	trait = education_stewardship_2
 	diplomacy = 5
-	stewardship = 5
 	name = "name_edmond"
 		dynasty = fitzalan_dynasty
 	culture = english
@@ -19081,10 +19570,18 @@ eng_edward_ii = {
 }
 
 eng_edward_iii = {
+	# MB+ attributes at 1337.4.1, character 454500.
+	martial = 7
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 6
+	sexuality = heterosexual
+	trait = just
+	trait = arrogant
+	trait = gregarious
+	trait = ambitious
+	trait = education_stewardship_4
 	dna = 454500_edward_iii_england
-	martial = 17
-	diplomacy = 13
-	stewardship = 16
 	name = "name_edward"
 		dynasty_house = house_plantagenet
 	culture = english
@@ -19105,9 +19602,16 @@ eng_edward_of_norfolk = {
 }
 
 eng_edward_the_black_prince = {
-	martial = 16
-	diplomacy = 13
-	stewardship = 9
+	# MB+ attributes at 1337.4.1, character 454501.
+	martial = 10
+	diplomacy = 6
+	stewardship = 3
+	intrigue = 4
+	trait = greedy
+	trait = wrathful
+	trait = callous
+	trait = arrogant
+	trait = education_martial_4
 	name = "name_edward"
 		dynasty_house = house_plantagenet
 	culture = english
@@ -19248,6 +19752,15 @@ eng_gilbert_stapleton = {
 }
 
 eng_giorgio_del_vasto = {
+	# MB+ attributes at 1337.4.1, character 71196.
+	martial = 3
+	diplomacy = 5
+	stewardship = 3
+	intrigue = 8
+	learning = 3
+	trait = deceitful
+	trait = devoted
+	trait = education_learning_3
 	name = "name_george"
 		dynasty_house = house_del_vasto
 	culture = cisalpine
@@ -19324,6 +19837,13 @@ eng_hawise_i_blois = {
 }
 
 eng_henry_grosmont = {
+	# MB+ attributes at 1337.4.1, character 454527.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 6
+	trait = temperate
+	trait = education_martial_2
 	name = "name_henry"
 		dynasty_house = house_lancaster
 	culture = english
@@ -19364,6 +19884,13 @@ eng_henry_iii = {
 }
 
 eng_henry_lancaster = {
+	# MB+ attributes at 1337.4.1, character 454525.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 5
+	trait = arrogant
+	trait = education_martial_2
 	mother = mb_genealogy_454524
 	name = "name_henry"
 		dynasty_house = house_lancaster
@@ -19451,6 +19978,14 @@ eng_humphrey_de_bohun_4h_earl_of_hereford = {
 }
 
 eng_humphrey_de_bohun_6th_earl_of_hereford = {
+	# MB+ attributes at 1337.4.1, character 454560.
+	martial = 7
+	diplomacy = 5
+	stewardship = 7
+	intrigue = 5
+	trait = honest
+	trait = ill
+	trait = education_martial_2
 	name = "name_humphrey"
 		dynasty = bohun_dynasty
 	culture = english
@@ -19483,6 +20018,13 @@ eng_isabel_atholl = {
 }
 
 eng_isabel_beaumont = {
+	# MB+ attributes at 1337.4.1, character 454528.
+	martial = 5
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 8
+	trait = honest
+	trait = education_intrigue_2
 	female = yes
 	name = "name_elizabeth"
 		dynasty_house = house_beaumont
@@ -19523,10 +20065,13 @@ eng_isabel_percy = {
 }
 
 eng_isabella_of_france = {
+	# MB+ attributes at 1337.4.1, character 455525.
+	martial = 7
+	diplomacy = 6
+	stewardship = 4
+	intrigue = 4
+	trait = education_intrigue_2
 	female = yes
-	martial = 3
-	diplomacy = 11
-	stewardship = 9
 	name = "name_elizabeth"
 		dynasty_house = house_capet
 	culture = french
@@ -19537,6 +20082,13 @@ eng_isabella_of_france = {
 }
 
 eng_isabella_of_woodstock = {
+	# MB+ attributes at 1337.4.1, character 454502.
+	martial = 4
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 4
+	trait = craven
+	trait = education_learning_2
 	female = yes
 	name = "name_elizabeth"
 		dynasty_house = house_plantagenet
@@ -19548,6 +20100,8 @@ eng_isabella_of_woodstock = {
 }
 
 eng_james_audley_2nd_baron_audley = {
+	# MB+ attributes at 1337.4.1, character 161684.
+	trait = bastard
 	name = "name_james"
 		dynasty = audley_dynasty
 	culture = english
@@ -19569,6 +20123,13 @@ eng_jeanne_scarpone = {
 }
 
 eng_joan_lancaster = {
+	# MB+ attributes at 1337.4.1, character 454532.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 6
+	trait = temperate
+	trait = education_intrigue_1
 	female = yes
 	name = "name_joanna"
 		dynasty_house = house_lancaster
@@ -19592,6 +20153,13 @@ eng_joan_mortimer = {
 }
 
 eng_joan_of_england = {
+	# MB+ attributes at 1337.4.1, character 454503.
+	martial = 7
+	diplomacy = 8
+	stewardship = 4
+	intrigue = 8
+	trait = brave
+	trait = education_diplomacy_3
 	female = yes
 	name = "name_joanna"
 		dynasty_house = house_plantagenet
@@ -19603,6 +20171,13 @@ eng_joan_of_england = {
 }
 
 eng_joan_of_kent = {
+	# MB+ attributes at 1337.4.1, character 454515.
+	martial = 3
+	diplomacy = 9
+	stewardship = 9
+	intrigue = 4
+	trait = lustful
+	trait = education_stewardship_2
 	female = yes
 	name = "name_joanna"
 		dynasty_house = house_plantagenet
@@ -19613,6 +20188,14 @@ eng_joan_of_kent = {
 }
 
 eng_joan_of_the_tower = {
+	# MB+ attributes at 1337.4.1, character 454506.
+	martial = 6
+	diplomacy = 5
+	stewardship = 8
+	intrigue = 6
+	trait = arbitrary
+	trait = greedy
+	trait = education_intrigue_2
 	female = yes
 	name = "name_joanna"
 		dynasty_house = house_plantagenet
@@ -19752,6 +20335,12 @@ eng_john_of_eltham = {
 }
 
 eng_john_of_kent = {
+	# MB+ attributes at 1337.4.1, character 454513.
+	martial = 8
+	diplomacy = 8
+	stewardship = 5
+	intrigue = 4
+	trait = education_stewardship_2
 	name = "name_john"
 		dynasty_house = house_plantagenet
 	culture = english
@@ -19761,6 +20350,8 @@ eng_john_of_kent = {
 }
 
 eng_john_stratford = {
+	# MB+ attributes at 1337.4.1, character 155259.
+	trait = education_learning_4
 	father = mb_genealogy_MB_stratford_robert_elder
 	name = "name_john"
 		dynasty = stratford_dynasty
@@ -19782,10 +20373,14 @@ eng_john_warenne = {
 }
 
 eng_john_warenne_ii = {
+	# MB+ attributes at 1337.4.1, character 454581.
+	martial = 7
+	diplomacy = 8
+	stewardship = 7
+	intrigue = 5
+	trait = diligent
+	trait = education_stewardship_3
 	mother = mb_genealogy_454580
-	martial = 14
-	diplomacy = 14
-	stewardship = 12
 	name = "name_john"
 		dynasty = warenne_dynasty
 	culture = english
@@ -19821,6 +20416,15 @@ eng_laurence_hastings = {
 }
 
 eng_laurence_hastings_1st_earl_of_pembroke = {
+	# MB+ attributes at 1337.4.1, character 453400.
+	martial = 8
+	diplomacy = 4
+	stewardship = 4
+	intrigue = 7
+	trait = generous
+	trait = just
+	trait = brave
+	trait = education_martial_2
 	father = mb_genealogy_453401
 	mother = mb_genealogy_453402
 	name = "name_laurence"
@@ -19847,6 +20451,12 @@ eng_leonor_burgundy = {
 }
 
 eng_margaret_of_kent = {
+	# MB+ attributes at 1337.4.1, character 454514.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 4
+	trait = education_stewardship_2
 	female = yes
 	name = "name_margaret"
 		dynasty_house = house_plantagenet
@@ -19857,6 +20467,13 @@ eng_margaret_of_kent = {
 }
 
 eng_margaret_of_norfolk = {
+	# MB+ attributes at 1337.4.1, character 454552.
+	martial = 4
+	diplomacy = 6
+	stewardship = 8
+	intrigue = 6
+	trait = arbitrary
+	trait = education_diplomacy_2
 	female = yes
 	name = "name_margaret"
 		dynasty_house = house_plantagenet
@@ -19936,6 +20553,13 @@ eng_maud_de_chaworth = {
 }
 
 eng_maud_lancaster = {
+	# MB+ attributes at 1337.4.1, character 454531.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 6
+	trait = temperate
+	trait = education_intrigue_1
 	female = yes
 	name = "name_matilda"
 		dynasty_house = house_lancaster
@@ -19994,10 +20618,15 @@ eng_owain_lawgoch = {
 }
 
 eng_philippa_de_hainault = {
+	# MB+ attributes at 1337.4.1, character 455611.
+	martial = 6
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 4
+	trait = lustful
+	trait = gluttonous
+	trait = education_intrigue_2
 	female = yes
-	martial = 3
-	diplomacy = 13
-	stewardship = 11
 	name = "name_philippa"
 		dynasty = avesnes_dynasty
 	culture = french
@@ -20029,9 +20658,13 @@ eng_richard_fitzalan = {
 }
 
 eng_richard_fitzalan_ii = {
-	martial = 15
+	# MB+ attributes at 1337.4.1, character 454570.
+	martial = 7
+	stewardship = 7
+	intrigue = 8
+	trait = brave
+	trait = education_intrigue_2
 	diplomacy = 7
-	stewardship = 15
 	name = "name_richard"
 		dynasty = fitzalan_dynasty
 	culture = english
@@ -20152,6 +20785,13 @@ eng_sweyn_forkbeard = {
 }
 
 eng_thomas_of_brotherton = {
+	# MB+ attributes at 1337.4.1, character 454550.
+	martial = 8
+	diplomacy = 8
+	stewardship = 5
+	intrigue = 4
+	trait = calm
+	trait = education_intrigue_2
 	name = "name_thomas"
 		dynasty_house = house_plantagenet
 	culture = english
@@ -20590,6 +21230,11 @@ eta_jean_evreux = {
 }
 
 eta_louis_evreux = {
+	# MB+ attributes at 1337.4.1, character 455818.
+	martial = 7
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 4
 	name = "name_louis"
 		dynasty_house = house_de_evreux
 	culture = french
@@ -27776,6 +28421,12 @@ feo_maria_gabras = {
 }
 
 fer_alda_este = {
+	# MB+ attributes at 1337.4.1, character 463206.
+	martial = 5
+	diplomacy = 5
+	stewardship = 8
+	intrigue = 7
+	trait = bastard
 	female = yes
 	name = "name_alda"
 		dynasty = deste_dynasty
@@ -27787,9 +28438,14 @@ fer_alda_este = {
 }
 
 fer_aldobrandino_este = {
-	martial = 2
-	diplomacy = 9
-	stewardship = 9
+	# MB+ attributes at 1337.4.1, character 70704.
+	martial = 5
+	diplomacy = 8
+	stewardship = 7
+	intrigue = 6
+	trait = theologian
+	trait = education_learning_4
+	trait = bastard
 	name = "name_aldobrandino"
 		dynasty = deste_dynasty
 	culture = cisalpine
@@ -27823,9 +28479,12 @@ fer_aldobrandino_ii_este = {
 }
 
 fer_aldobrandino_iii_este = {
-	martial = 0
-	diplomacy = 0
-	stewardship = 0
+	# MB+ attributes at 1337.4.1, character 463204.
+	martial = 7
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 7
+	trait = bastard
 	name = "name_aldobrandino"
 		dynasty = deste_dynasty
 	culture = cisalpine
@@ -27836,9 +28495,12 @@ fer_aldobrandino_iii_este = {
 }
 
 fer_azzo_este = {
-	martial = 2
-	diplomacy = 1
-	stewardship = 1
+	# MB+ attributes at 1337.4.1, character 70707.
+	martial = 7
+	diplomacy = 4
+	stewardship = 6
+	intrigue = 5
+	trait = bastard
 	name = "name_azzo"
 		dynasty = deste_dynasty
 	culture = cisalpine
@@ -27897,6 +28559,13 @@ fer_beatrice_correggio = {
 }
 
 fer_beatrice_este = {
+	# MB+ attributes at 1337.4.1, character 463205.
+	martial = 7
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 7
+	trait = education_stewardship_2
+	trait = bastard
 	female = yes
 	name = "name_beatrix"
 		dynasty = deste_dynasty
@@ -27908,6 +28577,14 @@ fer_beatrice_este = {
 }
 
 fer_beatrice_este_ii = {
+	# MB+ attributes at 1337.4.1, character 70702.
+	martial = 4
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 5
+	trait = arrogant
+	trait = greedy
+	trait = education_stewardship_2
 	female = yes
 	name = "name_beatrix"
 		dynasty = deste_dynasty
@@ -27949,6 +28626,14 @@ fer_domenica_pio = {
 }
 
 fer_elisa_este = {
+	# MB+ attributes at 1337.4.1, character 70713.
+	martial = 4
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 5
+	trait = lazy
+	trait = education_diplomacy_3
+	trait = bastard
 	female = yes
 	name = "name_elisa"
 		dynasty = deste_dynasty
@@ -28045,6 +28730,13 @@ fer_jacopina_fieschi = {
 }
 
 fer_lippa_ariosti = {
+	# MB+ attributes at 1337.4.1, character 463199.
+	martial = 3
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 8
+	trait = lustful
+	trait = education_stewardship_2
 	female = yes
 	name = "Lippa"
 	culture = cisalpine
@@ -28053,6 +28745,14 @@ fer_lippa_ariosti = {
 }
 
 fer_nicolo_i_este = {
+	# MB+ attributes at 1337.4.1, character 70709.
+	martial = 5
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 4
+	trait = brave
+	trait = gluttonous
+	trait = education_stewardship_3
 	name = "name_nicholas"
 		dynasty = deste_dynasty
 	culture = cisalpine
@@ -28075,10 +28775,15 @@ fer_obizzo_ii_este = {
 }
 
 fer_obizzo_iii_este = {
+	# MB+ attributes at 1337.4.1, character 463200.
+	martial = 5
+	diplomacy = 8
+	stewardship = 7
+	intrigue = 8
+	trait = lustful
+	trait = calm
+	trait = education_martial_2
 	mother = mb_genealogy_1062119
-	martial = 10
-	diplomacy = 16
-	stewardship = 13
 	name = "name_obizzo"
 		dynasty = deste_dynasty
 	culture = cisalpine
@@ -28099,6 +28804,8 @@ fer_orsina_este = {
 }
 
 fer_orsolina_macaruffi = {
+	# MB+ attributes at 1337.4.1, character cisalpine0149.
+	trait = education_diplomacy_1
 	female = yes
 	name = "name_ursula"
 	culture = cisalpine
@@ -28107,9 +28814,14 @@ fer_orsolina_macaruffi = {
 }
 
 fer_rinaldo_este = {
-	martial = 0
-	diplomacy = 0
-	stewardship = 0
+	# MB+ attributes at 1337.4.1, character 70710.
+	martial = 6
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 7
+	trait = greedy
+	trait = trusting
+	trait = education_intrigue_3
 	name = "name_reginald"
 		dynasty = deste_dynasty
 	culture = cisalpine
@@ -28249,6 +28961,8 @@ fla_jean_dampierre = {
 }
 
 fla_louis_i_dampierre = {
+	# MB+ attributes at 1337.4.1, character 455710.
+	trait = disloyal
 	martial = 11
 	diplomacy = 5
 	stewardship = 5
@@ -28275,6 +28989,12 @@ fla_louis_ii_dampierre = {
 }
 
 fla_marguerite_capet = {
+	# MB+ attributes at 1337.4.1, character 455508.
+	martial = 5
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 8
+	trait = education_intrigue_2
 	female = yes
 	name = "name_margaret"
 		dynasty_house = house_capet
@@ -28924,6 +29644,8 @@ foi_gaston_i_foix = {
 }
 
 foi_gaston_ii_foix = {
+	# MB+ attributes at 1337.4.1, character 455540.
+	trait = brave
 	martial = 13
 	diplomacy = 9
 	stewardship = 5
@@ -28937,6 +29659,8 @@ foi_gaston_ii_foix = {
 }
 
 foi_gaston_iii_foix = {
+	# MB+ attributes at 1337.4.1, character 455541.
+	trait = ambitious
 	name = "name_gaston"
 		dynasty = foix_dynasty
 	culture = occitan
@@ -29203,6 +29927,12 @@ fra_blanche_burgundy = {
 }
 
 fra_blanche_capet_ii = {
+	# MB+ attributes at 1337.4.1, character 455421.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 4
+	trait = education_stewardship_2
 	female = yes
 	name = "name_blanche"
 		dynasty_house = house_capet
@@ -29247,7 +29977,11 @@ fra_charlemagne = {
 }
 
 fra_charles_artois = {
-	martial = 7
+	# MB+ attributes at 1337.4.1, character 455524.
+	martial = 6
+	intrigue = 5
+	trait = hunchbacked
+	trait = education_learning_2
 	diplomacy = 4
 	stewardship = 7
 	name = "name_charles"
@@ -29294,9 +30028,12 @@ fra_charles_iv_capet = {
 }
 
 fra_charles_lacerda = {
-	martial = 10
+	# MB+ attributes at 1337.4.1, character 457570.
+	martial = 8
+	stewardship = 5
+	intrigue = 6
+	trait = education_intrigue_2
 	diplomacy = 5
-	stewardship = 10
 	name = "name_charles"
 		dynasty_house = house_cerda
 	culture = french
@@ -29398,8 +30135,14 @@ fra_enguerrand_v_coucy = {
 }
 
 fra_enguerrand_vi_coucy = {
-	martial = 5
-	diplomacy = 10
+	# MB+ attributes at 1337.4.1, character 454980.
+	martial = 6
+	diplomacy = 8
+	intrigue = 8
+	trait = brave
+	trait = calm
+	trait = honest
+	trait = education_martial_2
 	stewardship = 8
 	name = "name_enguerrand"
 		dynasty = coucy_dynasty
@@ -29725,6 +30468,13 @@ fra_isabeau_thouars = {
 }
 
 fra_isabelle_antoing = {
+	# MB+ attributes at 1337.4.1, character 457557.
+	martial = 4
+	diplomacy = 5
+	stewardship = 4
+	intrigue = 5
+	trait = zealous
+	trait = education_diplomacy_2
 	female = yes
 	name = "name_elizabeth"
 	culture = french
@@ -29744,6 +30494,12 @@ fra_jacqueline_trie = {
 }
 
 fra_jacques_artois = {
+	# MB+ attributes at 1337.4.1, character 455522.
+	martial = 7
+	diplomacy = 8
+	stewardship = 6
+	intrigue = 7
+	trait = education_learning_2
 	name = "name_james"
 		dynasty_house = house_artois
 	culture = french
@@ -29754,9 +30510,12 @@ fra_jacques_artois = {
 }
 
 fra_jean_artois = {
-	martial = 15
-	diplomacy = 15
-	stewardship = 11
+	# MB+ attributes at 1337.4.1, character 455520.
+	martial = 4
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 4
+	trait = education_learning_3
 	name = "name_john"
 		dynasty_house = house_artois
 	culture = french
@@ -29780,9 +30539,15 @@ fra_jean_beaumont = {
 }
 
 fra_jean_chatillon = {
-	martial = 13
-	diplomacy = 7
-	stewardship = 13
+	# MB+ attributes at 1337.4.1, character 455777.
+	martial = 7
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 6
+	trait = lustful
+	trait = brave
+	trait = cynical
+	trait = education_martial_2
 	name = "name_john"
 		dynasty = chatillon_dynasty
 	culture = french
@@ -29848,6 +30613,14 @@ fra_jean_ii_sully = {
 }
 
 fra_jean_ii_valois = {
+	# MB+ attributes at 1337.4.1, character 455502.
+	martial = 5
+	diplomacy = 2
+	stewardship = 5
+	intrigue = 4
+	trait = arbitrary
+	trait = deceitful
+	trait = education_intrigue_1
 	name = "name_john"
 		dynasty_house = house_valois
 	culture = french
@@ -29943,10 +30716,16 @@ fra_jeanne_chateauvillain_ii = {
 }
 
 fra_jeanne_chatillon = {
+	# MB+ attributes at 1337.4.1, character 455778.
+	martial = 5
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 6
+	trait = temperate
+	trait = diligent
+	trait = craven
+	trait = education_intrigue_1
 	female = yes
-	martial = 8
-	diplomacy = 8
-	stewardship = 8
 	name = "name_joanna"
 		dynasty = chatillon_dynasty
 	culture = french
@@ -30068,6 +30847,15 @@ fra_joan_roger = {
 }
 
 fra_jutta_luxembourg = {
+	# MB+ attributes at 1337.4.1, character 462600.
+	martial = 5
+	diplomacy = 6
+	stewardship = 4
+	intrigue = 4
+	trait = honest
+	trait = greedy
+	trait = ill
+	trait = education_diplomacy_2
 	female = yes
 	name = "name_bonne"
 		dynasty = luxembourg_dynasty
@@ -30080,6 +30868,14 @@ fra_jutta_luxembourg = {
 }
 
 fra_katharina_habsburg = {
+	# MB+ attributes at 1337.4.1, character 462031.
+	martial = 7
+	diplomacy = 8
+	stewardship = 8
+	intrigue = 8
+	trait = brave
+	trait = calm
+	trait = education_intrigue_1
 	female = yes
 	name = "name_catherine"
 		dynasty = habsburg_dynasty
@@ -30318,6 +31114,12 @@ fra_margarete_burgundian = {
 }
 
 fra_marguerite_bourbon = {
+	# MB+ attributes at 1337.4.1, character 455653.
+	martial = 5
+	diplomacy = 8
+	stewardship = 8
+	intrigue = 4
+	trait = education_diplomacy_2
 	female = yes
 	name = "name_margaret"
 		dynasty_house = house_bourbon
@@ -30410,6 +31212,12 @@ fra_maria_van_brabant = {
 }
 
 fra_marie_capet = {
+	# MB+ attributes at 1337.4.1, character 455420.
+	martial = 4
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 4
+	trait = education_stewardship_2
 	female = yes
 	name = "name_mary"
 		dynasty_house = house_capet
@@ -30518,6 +31326,11 @@ fra_peronnelle_i_thouars = {
 }
 
 fra_philip_valois = {
+	# MB+ attributes at 1337.4.1, character 455504.
+	martial = 4
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 7
 	name = "name_philip"
 		dynasty_house = house_valois
 	culture = french
@@ -30528,9 +31341,16 @@ fra_philip_valois = {
 }
 
 fra_philip_vi_valois = {
-	martial = 11
-	diplomacy = 9
-	stewardship = 9
+	# MB+ attributes at 1337.4.1, character 455500.
+	martial = 3
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 4
+	trait = wrathful
+	trait = deceitful
+	trait = arrogant
+	trait = zealous
+	trait = education_martial_1
 	name = "name_philip"
 		dynasty_house = house_valois
 	culture = french
@@ -30704,6 +31524,14 @@ fra_robert = {
 }
 
 fra_robert_artois = {
+	# MB+ attributes at 1337.4.1, character 455523.
+	martial = 7
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 5
+	trait = lazy
+	trait = temperate
+	trait = education_learning_2
 	name = "name_robert"
 		dynasty_house = house_artois
 	culture = french
@@ -31177,6 +32005,13 @@ gbh_adelheid_von_everstein = {
 }
 
 gbh_agnes_braunschweig_grubenhagen = {
+	# MB+ attributes at 1337.4.1, character 462813.
+	martial = 5
+	diplomacy = 6
+	stewardship = 3
+	intrigue = 7
+	trait = just
+	trait = education_intrigue_2
 	female = yes
 	name = "name_agnes"
 		dynasty_house = house_welfen
@@ -31265,9 +32100,14 @@ gbh_heinrich_i_braunschweig_grubenhagen = {
 }
 
 gbh_heinrich_ii_braunschweig_grubenhagen = {
-	martial = 5
-	diplomacy = 11
-	stewardship = 8
+	# MB+ attributes at 1337.4.1, character 462808.
+	martial = 7
+	diplomacy = 8
+	stewardship = 9
+	intrigue = 8
+	trait = lustful
+	trait = generous
+	trait = education_martial_2
 	name = "name_henry"
 		dynasty_house = house_welfen
 	culture = saxon
@@ -31289,6 +32129,13 @@ gbh_helvis_of_ibelin = {
 }
 
 gbh_johann = {
+	# MB+ attributes at 1337.4.1, character 462811.
+	martial = 6
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 6
+	trait = arrogant
+	trait = education_learning_3
 	name = "name_john"
 		dynasty_house = house_welfen
 	culture = saxon
@@ -31299,6 +32146,14 @@ gbh_johann = {
 }
 
 gbh_johann_i_braunschweig_grubenhagen = {
+	# MB+ attributes at 1337.4.1, character 462819.
+	martial = 5
+	diplomacy = 5
+	stewardship = 9
+	intrigue = 5
+	trait = calm
+	trait = stuttering
+	trait = education_learning_3
 	name = "name_john"
 		dynasty_house = house_welfen
 	culture = saxon
@@ -31322,6 +32177,13 @@ gbh_jutta_von_brandenburg = {
 }
 
 gbh_louis = {
+	# MB+ attributes at 1337.4.1, character 462812.
+	martial = 8
+	diplomacy = 3
+	stewardship = 3
+	intrigue = 4
+	trait = lazy
+	trait = education_martial_2
 	name = "name_louis"
 		dynasty_house = house_welfen
 	culture = saxon
@@ -31345,9 +32207,13 @@ gbh_otto_braunschweig_grubenhagen = {
 }
 
 gbh_otto_von_tarent = {
-	martial = 9
-	diplomacy = 9
-	stewardship = 8
+	# MB+ attributes at 1337.4.1, character 462810.
+	martial = 8
+	diplomacy = 3
+	stewardship = 3
+	intrigue = 4
+	trait = lazy
+	trait = education_martial_2
 	name = "name_otto"
 		dynasty_house = house_welfen
 	culture = saxon
@@ -31378,6 +32244,14 @@ gbh_riddag_braunschweig_grubenhagen = {
 }
 
 gbh_wilhelm_i_braunschweig_grubenhagen = {
+	# MB+ attributes at 1337.4.1, character 462818.
+	martial = 5
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 5
+	trait = lustful
+	trait = calm
+	trait = education_martial_2
 	name = "name_william"
 		dynasty_house = house_welfen
 	culture = saxon
@@ -31420,6 +32294,12 @@ gel_eduard_van_gelre = {
 }
 
 gel_eleanor_of_woodstock = {
+	# MB+ attributes at 1337.4.1, character 454505.
+	martial = 8
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 4
+	trait = education_stewardship_2
 	female = yes
 	name = "name_eleanor"
 		dynasty_house = house_plantagenet
@@ -33853,6 +34733,13 @@ gor_albert_iii_gorizia = {
 }
 
 gor_anna_habsburg = {
+	# MB+ attributes at 1337.4.1, character 462026.
+	martial = 5
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 4
+	trait = lustful
+	trait = education_stewardship_2
 	female = yes
 	name = "name_anna"
 		dynasty = habsburg_dynasty
@@ -34311,9 +35198,14 @@ gra_qamar = {
 }
 
 gra_yusuf_i_nasrid = {
-	martial = 13
-	diplomacy = 14
-	stewardship = 16
+	# MB+ attributes at 1337.4.1, character 487000.
+	martial = 8
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 5
+	trait = arrogant
+	trait = lustful
+	trait = education_diplomacy_2
 	name = "name_joseph"
 		dynasty = nasrid_dynasty
 	culture = andalusian
@@ -34952,9 +35844,14 @@ hab_albrecht_i_habsburg = {
 }
 
 hab_albrecht_ii_habsburg = {
-	martial = 8
-	diplomacy = 13
-	stewardship = 16
+	# MB+ attributes at 1337.4.1, character 462020.
+	martial = 6
+	diplomacy = 6
+	stewardship = 8
+	intrigue = 4
+	trait = just
+	trait = education_martial_2
+	trait = clubfooted
 	name = "name_albert"
 		dynasty = habsburg_dynasty
 	culture = bavarian
@@ -35018,6 +35915,12 @@ hab_friedrich_i_habsburg = {
 }
 
 hab_friedrich_ii_habsburg = {
+	# MB+ attributes at 1337.4.1, character 462037.
+	martial = 5
+	diplomacy = 5
+	stewardship = 4
+	intrigue = 5
+	trait = education_martial_2
 	name = "name_frederick"
 		dynasty = habsburg_dynasty
 	culture = bavarian
@@ -35057,6 +35960,12 @@ hab_leopold_i_habsburg = {
 }
 
 hab_leopold_ii_habsburg = {
+	# MB+ attributes at 1337.4.1, character 462038.
+	martial = 5
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 5
+	trait = education_martial_2
 	name = "name_leopold"
 		dynasty = habsburg_dynasty
 	culture = bavarian
@@ -35067,9 +35976,14 @@ hab_leopold_ii_habsburg = {
 }
 
 hab_otto_habsburg = {
-	martial = 13
-	diplomacy = 15
-	stewardship = 11
+	# MB+ attributes at 1337.4.1, character 462035.
+	martial = 5
+	diplomacy = 5
+	stewardship = 4
+	intrigue = 4
+	trait = ill
+	trait = diligent
+	trait = education_martial_2
 	name = "name_otto"
 		dynasty = habsburg_dynasty
 	culture = bavarian
@@ -35170,6 +36084,12 @@ hai_guillaume_ii_de_hainault = {
 }
 
 hai_isabelle_avesnes = {
+	# MB+ attributes at 1337.4.1, character 487013.
+	martial = 4
+	diplomacy = 5
+	stewardship = 8
+	intrigue = 5
+	trait = education_stewardship_2
 	female = yes
 	name = "name_elizabeth"
 		dynasty = avesnes_dynasty
@@ -35219,10 +36139,15 @@ hai_jean_ii_de_hainault = {
 }
 
 hai_jeanne_valois = {
+	# MB+ attributes at 1337.4.1, character 455501.
+	martial = 6
+	diplomacy = 4
+	stewardship = 7
+	intrigue = 7
+	trait = wrathful
+	trait = honest
+	trait = education_learning_2
 	female = yes
-	martial = 3
-	diplomacy = 13
-	stewardship = 9
 	name = "name_joanna"
 		dynasty_house = house_valois
 	culture = french
@@ -35496,6 +36421,16 @@ hbn_abdallah_ibn_shahab_al_din_zani = {
 }
 
 hbs_albrecht_ii_von_braunschweig_luneburg = {
+	# MB+ attributes at 1337.4.1, character 462824.
+	martial = 7
+	diplomacy = 6
+	stewardship = 9
+	intrigue = 7
+	trait = humble
+	trait = generous
+	trait = calm
+	trait = chaste
+	trait = education_learning_3
 	name = "name_albert"
 		dynasty_house = house_welfen
 	culture = saxon
@@ -35573,9 +36508,14 @@ hcn_munanzi_son_borjigin = {
 }
 
 hdh_heinrich_iii_von_braunschweig_luneburg = {
+	# MB+ attributes at 1337.4.1, character 462825.
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 5
+	trait = humble
+	trait = chaste
+	trait = education_learning_3
 	martial = 5
-	diplomacy = 19
-	stewardship = 10
 	name = "name_henry"
 		dynasty_house = house_welfen
 	culture = saxon
@@ -36043,6 +36983,13 @@ hll_ahmad_rumaythah = {
 }
 
 hna_adelheid_von_nassau = {
+	# MB+ attributes at 1337.4.1, character 462369.
+	martial = 4
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 5
+	trait = lustful
+	trait = education_intrigue_1
 	female = yes
 	name = "name_adelaide"
 		dynasty = nassau_dynasty
@@ -36361,6 +37308,16 @@ hoh_gotfried_von_zimmern = {
 }
 
 hox_dietrich_i_von_dalwigk = {
+	# MB+ attributes at 1337.4.1, character MB_corvey_dietrich_dalwigk.
+	martial = 4
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 5
+	learning = 5
+	trait = education_stewardship_2
+	trait = devoted
+	trait = diligent
+	trait = just
 	name = "name_theodoric"
 		dynasty = dalwigk_dynasty
 	culture = saxon
@@ -36812,9 +37769,14 @@ hun_kalman = {
 }
 
 hun_karoly_robert = {
-	martial = 9
-	diplomacy = 13
-	stewardship = 13
+	# MB+ attributes at 1337.4.1, character 469500.
+	martial = 6
+	diplomacy = 6
+	stewardship = 8
+	intrigue = 5
+	trait = just
+	trait = lisping
+	trait = education_martial_2
 	name = "name_charles"
 		dynasty_house = house_anjou
 	culture = hungarian
@@ -37805,6 +38767,8 @@ jap_akamatsu_ienori = {
 }
 
 jap_akamatsu_mitsunori = {
+	# MB+ attributes at 1337.4.1, character 10053506.
+	trait = education_intrigue_1
 	name = "name_mitsunori"
 		dynasty_house = house_akamatsu
 	culture = japanese
@@ -37823,6 +38787,10 @@ jap_akamatsu_norimura = {
 }
 
 jap_akamatsu_norisuke = {
+	# MB+ attributes at 1337.4.1, character 10053501.
+	martial = 9
+	prowess = 19
+	trait = education_martial_3
 	name = "name_norisuke"
 		dynasty_house = house_akamatsu
 	culture = japanese
@@ -37832,6 +38800,13 @@ jap_akamatsu_norisuke = {
 }
 
 jap_akamatsu_norisuke_sokuyuu = {
+	# MB+ attributes at 1337.4.1, character 10053503.
+	martial = 10
+	diplomacy = 7
+	prowess = 14
+	trait = education_diplomacy_3
+	trait = diligent
+	trait = intellect_good_2
 	name = "name_norisuke_alternative"
 		dynasty_house = house_akamatsu
 	culture = japanese
@@ -37842,6 +38817,9 @@ jap_akamatsu_norisuke_sokuyuu = {
 }
 
 jap_akamatsu_sadanori = {
+	# MB+ attributes at 1337.4.1, character 10053505.
+	trait = education_martial_2
+	trait = brave
 	name = "name_sadanori"
 		dynasty_house = house_akamatsu
 	culture = japanese
@@ -37870,6 +38848,9 @@ jap_akamatsu_tomonori = {
 }
 
 jap_akamatsu_ujinori = {
+	# MB+ attributes at 1337.4.1, character 10053504.
+	trait = education_martial_2
+	trait = strong
 	name = "name_ujinori"
 		dynasty_house = house_akamatsu
 	culture = japanese
@@ -38134,6 +39115,10 @@ jap_ano_kinsuke = {
 }
 
 jap_ano_renshi = {
+	# MB+ attributes at 1337.4.1, character 11007814.
+	intrigue = 9
+	trait = education_stewardship_3
+	trait = lifestyle_poet
 	female = yes
 	name = "name_renshi"
 		dynasty_house = house_ano
@@ -38233,6 +39218,15 @@ jap_arima_tsurasumi = {
 }
 
 jap_asakura_hirokage = {
+	# MB+ attributes at 1337.4.1, character 10030001.
+	martial = 8
+	diplomacy = 9
+	stewardship = 6
+	intrigue = 9
+	learning = 8
+	prowess = 12
+	trait = education_stewardship_3
+	trait = strong
 	name = "name_hirokage"
 		dynasty = asakura_dynasty
 	culture = japanese
@@ -38241,6 +39235,15 @@ jap_asakura_hirokage = {
 }
 
 jap_asakura_takakage = {
+	# MB+ attributes at 1337.4.1, character 10030002.
+	martial = 6
+	diplomacy = 8
+	stewardship = 7
+	intrigue = 9
+	learning = 7
+	prowess = 16
+	trait = education_martial_3
+	trait = brave
 	name = "name_takakage"
 		dynasty = asakura_dynasty
 	culture = japanese
@@ -38478,6 +39481,12 @@ jap_ashikaga_sadauji = {
 }
 
 jap_ashikaga_tadafuyu = {
+	# MB+ attributes at 1337.4.1, character 10040036.
+	martial = 5
+	prowess = 15
+	trait = education_martial_3
+	trait = ambitious
+	trait = impatient
 	name = "name_tadafuyu"
 		dynasty_house = house_ashikaga
 	culture = japanese
@@ -38488,9 +39497,21 @@ jap_ashikaga_tadafuyu = {
 }
 
 jap_ashikaga_tadayoshi = {
-	martial = 15
-	diplomacy = 8
-	stewardship = 12
+	# MB+ attributes at 1337.4.1, character 12139029.
+	martial = 7
+	diplomacy = 13
+	stewardship = 6
+	intrigue = 9
+	learning = 6
+	prowess = 11
+	trait = education_diplomacy_4
+	trait = intellect_good_2
+	trait = just
+	trait = chaste
+	trait = temperate
+	trait = lifestyle_poet
+	trait = lifestyle_mystic
+	trait = administrator
 	name = "name_tadayoshi"
 		dynasty_house = house_ashikaga
 	culture = japanese
@@ -38502,9 +39523,18 @@ jap_ashikaga_tadayoshi = {
 }
 
 jap_ashikaga_takauji = {
-	martial = 15
+	# MB+ attributes at 1337.4.1, character 12139028.
+	martial = 7
+	stewardship = 6
+	intrigue = 9
+	learning = 6
+	prowess = 15
+	trait = education_martial_4
+	trait = ambitious
+	trait = brave
+	trait = arbitrary
+	trait = lifestyle_poet
 	diplomacy = 13
-	stewardship = 12
 	name = "name_takauji"
 		dynasty_house = house_ashikaga
 	culture = japanese
@@ -38556,9 +39586,16 @@ jap_ashikaga_yoriuji = {
 }
 
 jap_ashikaga_yoshiakira = {
-	martial = 11
-	diplomacy = 9
-	stewardship = 7
+	# MB+ attributes at 1337.4.1, character 10040002.
+	martial = 8
+	diplomacy = 10
+	stewardship = 12
+	intrigue = 8
+	learning = 9
+	prowess = 12
+	trait = education_diplomacy_3
+	trait = administrator
+	trait = lifestyle_poet
 	name = "name_yoshiakira"
 		dynasty_house = house_ashikaga
 	culture = japanese
@@ -38727,6 +39764,8 @@ jap_aso_koreyoshi = {
 }
 
 jap_aso_korezumi = {
+	# MB+ attributes at 1337.4.1, character 10041469.
+	trait = education_learning_4
 	name = "name_korezumi"
 		dynasty = aso_dynasty
 	culture = japanese
@@ -38895,6 +39934,8 @@ jap_chiba_naritane = {
 }
 
 jap_chiba_sadatane = {
+	# MB+ attributes at 1337.4.1, character 12150160.
+	learning = 3
 	mother = mb_genealogy_10132095
 	name = "name_sadatane"
 		dynasty_house = house_chiba
@@ -39421,6 +40462,12 @@ jap_date_munemura = {
 }
 
 jap_date_munetoo = {
+	# MB+ attributes at 1337.4.1, character 12071025.
+	martial = 8
+	intrigue = 8
+	prowess = 12
+	trait = schemer
+	trait = education_intrigue_3
 	name = "name_munetoo"
 		dynasty_house = house_date
 	culture = japanese
@@ -39470,6 +40517,9 @@ jap_date_yoshihiro = {
 }
 
 jap_date_yukitomo = {
+	# MB+ attributes at 1337.4.1, character 12071020.
+	stewardship = 9
+	trait = education_stewardship_3
 	name = "name_yukitomo"
 		dynasty_house = house_date
 	culture = japanese
@@ -39592,6 +40642,10 @@ jap_enya_sadayasu = {
 }
 
 jap_enya_takasada = {
+	# MB+ attributes at 1337.4.1, character 12601615.
+	martial = 8
+	prowess = 18
+	trait = education_martial_3
 	name = "name_takasada"
 		dynasty_house = house_enya
 	culture = japanese
@@ -41104,9 +42158,21 @@ jap_genshou_tenno = {
 }
 
 jap_go_daigo_tenno = {
-	martial = 8
-	diplomacy = 11
-	stewardship = 14
+	# MB+ attributes at 1337.4.1, character 10041075.
+	martial = 4
+	diplomacy = 12
+	stewardship = 10
+	intrigue = 5
+	learning = 10
+	prowess = 8
+	trait = education_diplomacy_3
+	trait = intellect_good_2
+	trait = ambitious
+	trait = arbitrary
+	trait = diligent
+	trait = arrogant
+	trait = gregarious
+	trait = lustful
 	name = "name_takaharu"
 		dynasty_house = house_daikakuji
 	culture = japanese
@@ -41157,6 +42223,11 @@ jap_go_ichijou_tenno = {
 }
 
 jap_go_murakami_tenno = {
+	# MB+ attributes at 1337.4.1, character 10041077.
+	diplomacy = 15
+	learning = 12
+	trait = education_intrigue_1
+	trait = lifestyle_poet
 	name = "name_noriyoshi"
 		dynasty_house = house_daikakuji
 	culture = japanese
@@ -41355,6 +42426,8 @@ jap_gotou_sanetoo = {
 }
 
 jap_hanazono_tenno = {
+	# MB+ attributes at 1337.4.1, character 10041074.
+	trait = education_intrigue_1
 	name = "name_tomihito"
 		dynasty_house = house_jimyouin
 	culture = japanese
@@ -41938,6 +43011,8 @@ jap_hiraga_sukemune = {
 }
 
 jap_hiraga_tomokane = {
+	# MB+ attributes at 1337.4.1, character 10056420.
+	trait = education_diplomacy_1
 	name = "name_tomokane_alternative"
 		dynasty_house = house_hiraga
 	culture = japanese
@@ -42140,6 +43215,13 @@ jap_horikawa_tenno = {
 }
 
 jap_hosokawa_akiharu = {
+	# MB+ attributes at 1337.4.1, character 10040523.
+	martial = 7
+	diplomacy = 8
+	stewardship = 9
+	intrigue = 8
+	prowess = 11
+	trait = education_diplomacy_2
 	name = "name_akiharu"
 		dynasty_house = house_hosokawa
 	culture = japanese
@@ -42149,6 +43231,13 @@ jap_hosokawa_akiharu = {
 }
 
 jap_hosokawa_akiuji = {
+	# MB+ attributes at 1337.4.1, character 10040579.
+	martial = 11
+	diplomacy = 9
+	prowess = 21
+	trait = education_martial_3
+	trait = craven
+	trait = schemer
 	name = "name_akiuji"
 		dynasty_house = house_hosokawa
 	culture = japanese
@@ -42167,6 +43256,13 @@ jap_hosokawa_jouzen = {
 }
 
 jap_hosokawa_kazuuji = {
+	# MB+ attributes at 1337.4.1, character 10040509.
+	martial = 8
+	diplomacy = 10
+	stewardship = 9
+	intrigue = 8
+	prowess = 18
+	trait = education_martial_3
 	name = "name_kazuuji"
 		dynasty_house = house_hosokawa
 	culture = japanese
@@ -42186,6 +43282,22 @@ jap_hosokawa_kimiyori = {
 }
 
 jap_hosokawa_kiyouji = {
+	# MB+ attributes at 1337.4.1, character 10040599.
+	martial = 1
+	diplomacy = 2
+	stewardship = 3
+	intrigue = 3
+	prowess = 11
+	trait = education_martial_3
+	trait = strong
+	trait = lifestyle_blademaster
+	trait = impatient
+	trait = arrogant
+	trait = brave
+	trait = ambitious
+	trait = paranoid
+	trait = aggressive_attacker
+	trait = scarred
 	name = "name_kiyouji"
 		dynasty_house = house_hosokawa
 	culture = japanese
@@ -42204,6 +43316,13 @@ jap_hosokawa_koukai = {
 }
 
 jap_hosokawa_morouji = {
+	# MB+ attributes at 1337.4.1, character 10040511.
+	martial = 7
+	diplomacy = 8
+	stewardship = 7
+	intrigue = 8
+	prowess = 15
+	trait = education_martial_2
 	name = "name_morouji"
 		dynasty_house = house_hosokawa
 	culture = japanese
@@ -42231,6 +43350,9 @@ jap_hosokawa_nariuji = {
 }
 
 jap_hosokawa_shigeuji = {
+	# MB+ attributes at 1337.4.1, character 10040580.
+	martial = 7
+	prowess = 11
 	name = "name_shigeuji"
 		dynasty_house = house_hosokawa
 	culture = japanese
@@ -42259,6 +43381,13 @@ jap_hosokawa_ujiharu = {
 }
 
 jap_hosokawa_yoriari = {
+	# MB+ attributes at 1337.4.1, character 10040512.
+	martial = 9
+	diplomacy = 8
+	stewardship = 8
+	intrigue = 8
+	prowess = 13
+	trait = education_diplomacy_2
 	name = "name_yoriari"
 		dynasty_house = house_hosokawa
 	culture = japanese
@@ -42268,6 +43397,15 @@ jap_hosokawa_yoriari = {
 }
 
 jap_hosokawa_yoriharu = {
+	# MB+ attributes at 1337.4.1, character 10040510.
+	martial = 8
+	diplomacy = 9
+	stewardship = 10
+	intrigue = 7
+	prowess = 18
+	trait = education_martial_3
+	trait = brave
+	trait = diligent
 	name = "name_yoriharu"
 		dynasty_house = house_hosokawa
 	culture = japanese
@@ -42287,6 +43425,19 @@ jap_hosokawa_yorisada = {
 }
 
 jap_hosokawa_yoriyuki = {
+	# MB+ attributes at 1337.4.1, character 10040535.
+	martial = 10
+	diplomacy = 8
+	stewardship = 10
+	intrigue = 9
+	learning = 9
+	prowess = 14
+	trait = education_diplomacy_4
+	trait = diligent
+	trait = intellect_good_2
+	trait = lifestyle_mystic
+	trait = lifestyle_poet
+	trait = humble
 	name = "name_yoriyuki"
 		dynasty_house = house_hosokawa
 	culture = japanese
@@ -42447,6 +43598,16 @@ jap_houjou_tokiyori = {
 }
 
 jap_houjou_tokiyuki = {
+	# MB+ attributes at 1337.4.1, character 10132313.
+	martial = 8
+	diplomacy = 5
+	stewardship = 3
+	intrigue = 7
+	learning = 2
+	prowess = 18
+	trait = education_martial_3
+	trait = unyielding_defender
+	trait = intellect_good_2
 	name = "name_tokiyuki"
 		dynasty_house = house_houjou
 	culture = japanese
@@ -42850,6 +44011,14 @@ jap_imagawa_motouji = {
 }
 
 jap_imagawa_nakaaki = {
+	# MB+ attributes at 1337.4.1, character 12395223.
+	martial = 7
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 8
+	learning = 7
+	prowess = 11
+	trait = education_diplomacy_1
 	name = "name_nakaaki"
 		dynasty_house = house_imagawa
 	culture = japanese
@@ -42859,6 +44028,16 @@ jap_imagawa_nakaaki = {
 }
 
 jap_imagawa_norikuni = {
+	# MB+ attributes at 1337.4.1, character 12395214.
+	martial = 7
+	diplomacy = 10
+	stewardship = 7
+	intrigue = 8
+	learning = 8
+	prowess = 11
+	trait = education_learning_3
+	trait = lifestyle_poet
+	trait = lifestyle_mystic
 	name = "name_norikuni"
 		dynasty_house = house_imagawa
 	culture = japanese
@@ -42868,6 +44047,14 @@ jap_imagawa_norikuni = {
 }
 
 jap_imagawa_noriuji = {
+	# MB+ attributes at 1337.4.1, character 12395220.
+	martial = 7
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 8
+	learning = 7
+	prowess = 11
+	trait = education_intrigue_1
 	name = "name_noriuji"
 		dynasty_house = house_imagawa
 	culture = japanese
@@ -42877,6 +44064,18 @@ jap_imagawa_noriuji = {
 }
 
 jap_imagawa_sadayo = {
+	# MB+ attributes at 1337.4.1, character 12395221.
+	martial = 10
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 8
+	learning = 10
+	prowess = 14
+	trait = education_learning_4
+	trait = intellect_good_2
+	trait = lifestyle_poet
+	trait = lifestyle_mystic
+	trait = strategist
 	name = "name_sadayo"
 		dynasty_house = house_imagawa
 	culture = japanese
@@ -42895,6 +44094,14 @@ jap_imagawa_ujiie = {
 }
 
 jap_imagawa_ujikane = {
+	# MB+ attributes at 1337.4.1, character 12395222.
+	martial = 7
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 8
+	learning = 7
+	prowess = 11
+	trait = education_intrigue_2
 	name = "name_ujikane"
 		dynasty_house = house_imagawa
 	culture = japanese
@@ -42904,6 +44111,14 @@ jap_imagawa_ujikane = {
 }
 
 jap_imagawa_yasunori = {
+	# MB+ attributes at 1337.4.1, character 12395226.
+	martial = 7
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 8
+	learning = 7
+	prowess = 11
+	trait = education_intrigue_1
 	name = "name_yasunori"
 		dynasty_house = house_imagawa
 	culture = japanese
@@ -43069,6 +44284,12 @@ jap_ise_sadanobu = {
 }
 
 jap_ise_sadatsugu = {
+	# MB+ attributes at 1337.4.1, character 10040124.
+	stewardship = 7
+	trait = education_stewardship_4
+	trait = administrator
+	trait = lifestyle_mystic
+	trait = temperate
 	name = "name_sadatsugu"
 		dynasty_house = house_ise
 	culture = japanese
@@ -43088,6 +44309,10 @@ jap_ise_toshitsugu = {
 }
 
 jap_ishidou_yorifusa = {
+	# MB+ attributes at 1337.4.1, character 12139103.
+	martial = 9
+	stewardship = 7
+	prowess = 13
 	name = "name_yorifusa"
 		dynasty_house = house_ishidou
 	culture = japanese
@@ -43313,6 +44538,9 @@ jap_isshiki_kimifuka = {
 }
 
 jap_isshiki_naouji = {
+	# MB+ attributes at 1337.4.1, character 10049504.
+	martial = 3
+	prowess = 7
 	name = "name_naouji"
 		dynasty_house = house_isshiki
 	culture = japanese
@@ -43322,6 +44550,9 @@ jap_isshiki_naouji = {
 }
 
 jap_isshiki_norimitsu = {
+	# MB+ attributes at 1337.4.1, character 10049505.
+	martial = 9
+	prowess = 13
 	name = "name_norimitsu"
 		dynasty_house = house_isshiki
 	culture = japanese
@@ -43331,6 +44562,9 @@ jap_isshiki_norimitsu = {
 }
 
 jap_isshiki_noriuji = {
+	# MB+ attributes at 1337.4.1, character 10049503.
+	martial = 4
+	prowess = 8
 	name = "name_noriuji"
 		dynasty_house = house_isshiki
 	culture = japanese
@@ -43742,6 +44976,13 @@ jap_kaneko_tadashige = {
 }
 
 jap_kaneyoshi_shinno = {
+	# MB+ attributes at 1337.4.1, character 10041908.
+	martial = 10
+	diplomacy = 9
+	learning = 11
+	prowess = 14
+	trait = education_diplomacy_4
+	trait = lifestyle_poet
 	name = "name_kaneyoshi"
 		dynasty_house = house_daikakuji
 	culture = japanese
@@ -44097,6 +45338,8 @@ jap_kikkawa_tomotsune = {
 }
 
 jap_kikkawa_tsuneaki = {
+	# MB+ attributes at 1337.4.1, character 10056233.
+	trait = education_martial_1
 	name = "name_tsuneaki"
 		dynasty_house = house_kikkawa
 	culture = japanese
@@ -44115,6 +45358,8 @@ jap_kikkawa_tsunehide = {
 }
 
 jap_kikkawa_tsunekane = {
+	# MB+ attributes at 1337.4.1, character 10056241.
+	trait = education_martial_1
 	name = "name_tsunekane_alternative"
 		dynasty_house = house_kikkawa
 	culture = japanese
@@ -44134,6 +45379,8 @@ jap_kikkawa_tsunemitsu = {
 }
 
 jap_kikkawa_tsunemori = {
+	# MB+ attributes at 1337.4.1, character 10056234.
+	trait = education_martial_1
 	name = "name_tsunemori"
 		dynasty_house = house_kikkawa
 	culture = japanese
@@ -44242,6 +45489,8 @@ jap_kikuchi_takefusa = {
 }
 
 jap_kikuchi_takehito = {
+	# MB+ attributes at 1337.4.1, character 10066024.
+	trait = education_diplomacy_1
 	name = "name_takehito_alternative"
 		dynasty_house = house_kikuchi
 	culture = japanese
@@ -44251,6 +45500,14 @@ jap_kikuchi_takehito = {
 }
 
 jap_kikuchi_takemitsu = {
+	# MB+ attributes at 1337.4.1, character 10066022.
+	martial = 11
+	prowess = 23
+	trait = child_of_concubine_female
+	trait = education_martial_4
+	trait = unyielding_defender
+	trait = open_terrain_expert
+	trait = brave
 	name = "name_takemitsu"
 		dynasty_house = house_kikuchi
 	culture = japanese
@@ -44260,6 +45517,11 @@ jap_kikuchi_takemitsu = {
 }
 
 jap_kikuchi_takeshige = {
+	# MB+ attributes at 1337.4.1, character 10066023.
+	martial = 9
+	prowess = 19
+	trait = education_martial_3
+	trait = brave
 	name = "name_takeshige"
 		dynasty_house = house_kikuchi
 	culture = japanese
@@ -44279,6 +45541,9 @@ jap_kikuchi_taketoki = {
 }
 
 jap_kikuchi_taketoshi = {
+	# MB+ attributes at 1337.4.1, character 10066029.
+	trait = education_martial_2
+	trait = child_of_concubine_female
 	name = "name_taketoshi"
 		dynasty_house = house_kikuchi
 	culture = japanese
@@ -44288,6 +45553,9 @@ jap_kikuchi_taketoshi = {
 }
 
 jap_kikuchi_takeyoshi = {
+	# MB+ attributes at 1337.4.1, character 10066028.
+	trait = education_martial_2
+	trait = child_of_concubine_female
 	name = "name_takeyoshi_alternative"
 		dynasty_house = house_kikuchi
 	culture = japanese
@@ -44511,6 +45779,10 @@ jap_kira_osauji = {
 }
 
 jap_kira_sadaie = {
+	# MB+ attributes at 1337.4.1, character 12395015.
+	martial = 8
+	prowess = 18
+	trait = education_martial_3
 	name = "name_sadaie"
 		dynasty_house = house_kira
 	culture = japanese
@@ -44558,6 +45830,15 @@ jap_kira_tsuneuji = {
 }
 
 jap_kitabatake_akiie = {
+	# MB+ attributes at 1337.4.1, character 10125125.
+	martial = 10
+	diplomacy = 10
+	learning = 10
+	prowess = 22
+	trait = education_martial_4
+	trait = intellect_good_2
+	trait = brave
+	trait = beauty_good_3
 	mother = mb_genealogy_11003293
 	name = "name_akiie"
 		dynasty_house = house_kitabatake
@@ -44577,6 +45858,13 @@ jap_kitabatake_akinari = {
 }
 
 jap_kitabatake_akinobu = {
+	# MB+ attributes at 1337.4.1, character 10125126.
+	martial = 5
+	diplomacy = 7
+	intrigue = 8
+	learning = 8
+	prowess = 9
+	trait = education_intrigue_2
 	name = "name_akinobu"
 		dynasty_house = house_kitabatake
 	culture = japanese
@@ -44586,6 +45874,12 @@ jap_kitabatake_akinobu = {
 }
 
 jap_kitabatake_akiyoshi = {
+	# MB+ attributes at 1337.4.1, character 10125127.
+	martial = 8
+	stewardship = 7
+	learning = 9
+	prowess = 12
+	trait = education_stewardship_4
 	name = "name_akiyoshi"
 		dynasty_house = house_kitabatake
 	culture = japanese
@@ -44595,6 +45889,20 @@ jap_kitabatake_akiyoshi = {
 }
 
 jap_kitabatake_chikafusa = {
+	# MB+ attributes at 1337.4.1, character 10125120.
+	martial = 5
+	diplomacy = 11
+	stewardship = 10
+	intrigue = 9
+	learning = 12
+	prowess = 9
+	trait = education_intrigue_4
+	trait = schemer
+	trait = lifestyle_mystic
+	trait = theologian
+	trait = lifestyle_poet
+	trait = paranoid
+	trait = devoted
 	name = "name_chikafusa"
 		dynasty_house = house_kitabatake
 	culture = japanese
@@ -45060,6 +46368,18 @@ jap_kou_no_morofuyu = {
 }
 
 jap_kou_no_moronao = {
+	# MB+ attributes at 1337.4.1, character 12139567.
+	martial = 13
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 12
+	learning = 7
+	prowess = 17
+	trait = shrewd
+	trait = education_stewardship_4
+	trait = strategist
+	trait = brave
+	trait = lifestyle_poet
 	name = "name_moronao_alternative"
 		dynasty_house = house_kou
 	culture = japanese
@@ -45088,6 +46408,12 @@ jap_kou_no_morouji = {
 }
 
 jap_kou_no_moroyasu = {
+	# MB+ attributes at 1337.4.1, character 12139566.
+	martial = 9
+	diplomacy = 12
+	stewardship = 11
+	trait = education_martial_3
+	trait = brave
 	name = "name_moroyasu"
 		dynasty_house = house_kou
 	culture = japanese
@@ -45144,6 +46470,9 @@ jap_koubun_tenno = {
 }
 
 jap_kougon_tenno = {
+	# MB+ attributes at 1337.4.1, character 10041076.
+	trait = education_intrigue_1
+	trait = lifestyle_poet
 	name = "name_kazuhito"
 		dynasty_house = house_jimyouin
 	culture = japanese
@@ -45187,6 +46516,8 @@ jap_koukou_tenno = {
 }
 
 jap_koumyou_tenno = {
+	# MB+ attributes at 1337.4.1, character 10041080.
+	trait = education_intrigue_1
 	name = "name_yutahito"
 		dynasty_house = house_jimyouin
 	culture = japanese
@@ -45660,6 +46991,17 @@ jap_kusakabe_no_ouji = {
 }
 
 jap_kusunoki_masanori = {
+	# MB+ attributes at 1337.4.1, character 12560007.
+	martial = 8
+	diplomacy = 7
+	prowess = 20
+	trait = education_martial_4
+	trait = strategist
+	trait = intellect_good_2
+	trait = schemer
+	trait = reckless
+	trait = organizer
+	trait = rough_terrain_expert
 	name = "name_masanori"
 		dynasty = kusunoki_dynasty
 	culture = japanese
@@ -45710,6 +47052,11 @@ jap_kusunoki_masatoo = {
 }
 
 jap_kusunoki_masatsura = {
+	# MB+ attributes at 1337.4.1, character 12560005.
+	martial = 10
+	prowess = 20
+	trait = education_martial_3
+	trait = brave
 	name = "name_masatsura"
 		dynasty = kusunoki_dynasty
 	culture = japanese
@@ -45749,6 +47096,10 @@ jap_kutsuna_kunishige = {
 }
 
 jap_kutsuna_shigekiyo = {
+	# MB+ attributes at 1337.4.1, character 12691725.
+	martial = 9
+	prowess = 17
+	trait = education_martial_2
 	name = "name_shigekiyo"
 		dynasty_house = house_kutsuna
 	culture = japanese
@@ -45768,6 +47119,10 @@ jap_kutsuna_shigetoshi = {
 }
 
 jap_kutsuna_shigeyoshi = {
+	# MB+ attributes at 1337.4.1, character 12691720.
+	martial = 9
+	prowess = 17
+	trait = education_martial_2
 	name = "name_shigeyoshi_alternative"
 		dynasty_house = house_kutsuna
 	culture = japanese
@@ -45787,6 +47142,10 @@ jap_kutsuna_toshihira = {
 }
 
 jap_kutsuna_yoshinori = {
+	# MB+ attributes at 1337.4.1, character 12691726.
+	martial = 9
+	prowess = 19
+	trait = education_martial_3
 	name = "name_yoshinori_alternative"
 		dynasty_house = house_kutsuna
 	culture = japanese
@@ -45806,6 +47165,21 @@ jap_kuwata_ou = {
 }
 
 jap_kyougoku_douyo = {
+	# MB+ attributes at 1337.4.1, character 10044203.
+	martial = 7
+	diplomacy = 10
+	stewardship = 10
+	intrigue = 9
+	learning = 11
+	prowess = 13
+	trait = education_intrigue_4
+	trait = schemer
+	trait = intellect_good_2
+	trait = gregarious
+	trait = cynical
+	trait = arbitrary
+	trait = lifestyle_poet
+	trait = administrator
 	name = "name_douyo"
 		dynasty_house = house_kyougoku
 	culture = japanese
@@ -47401,6 +48775,8 @@ jap_momonoi_tadakazu = {
 }
 
 jap_momonoi_tadanobu = {
+	# MB+ attributes at 1337.4.1, character 12187236.
+	trait = education_martial_3
 	name = "name_tadanobu"
 		dynasty_house = house_momonoi
 	culture = japanese
@@ -47410,6 +48786,10 @@ jap_momonoi_tadanobu = {
 }
 
 jap_momonoi_tadatsune = {
+	# MB+ attributes at 1337.4.1, character 12187235.
+	trait = education_martial_3
+	trait = strong
+	trait = aggressive_attacker
 	name = "name_tadatsune_alternative"
 		dynasty_house = house_momonoi
 	culture = japanese
@@ -47499,6 +48879,13 @@ jap_montoku_tenno = {
 }
 
 jap_mori_chikahira = {
+	# MB+ attributes at 1337.4.1, character 12270796.
+	martial = 8
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 8
+	prowess = 12
+	trait = education_diplomacy_1
 	name = "name_chikahira"
 		dynasty_house = house_mori
 	culture = japanese
@@ -47508,6 +48895,13 @@ jap_mori_chikahira = {
 }
 
 jap_mori_motoharu = {
+	# MB+ attributes at 1337.4.1, character 12666010.
+	martial = 15
+	diplomacy = 9
+	stewardship = 7
+	intrigue = 10
+	prowess = 25
+	trait = education_martial_3
 	name = "name_motoharu"
 		dynasty_house = house_mori
 	culture = japanese
@@ -47517,6 +48911,13 @@ jap_mori_motoharu = {
 }
 
 jap_mori_sadachika = {
+	# MB+ attributes at 1337.4.1, character 12270790.
+	martial = 8
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 8
+	prowess = 12
+	trait = education_intrigue_1
 	name = "name_sadachika"
 		dynasty_house = house_mori
 	culture = japanese
@@ -47536,6 +48937,13 @@ jap_mori_suemitsu = {
 }
 
 jap_mori_tokichika = {
+	# MB+ attributes at 1337.4.1, character 12270784.
+	martial = 8
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 8
+	prowess = 16
+	trait = education_diplomacy_1
 	name = "name_tokichika"
 		dynasty_house = house_mori
 	culture = japanese
@@ -47991,6 +49399,10 @@ jap_munakata_ujiyuki = {
 }
 
 jap_muneyoshi_shinno = {
+	# MB+ attributes at 1337.4.1, character 10041903.
+	learning = 11
+	trait = education_learning_4
+	trait = lifestyle_poet
 	name = "name_muneyoshi"
 		dynasty_house = house_daikakuji
 	culture = japanese
@@ -48489,6 +49901,8 @@ jap_nanbu_masayuki = {
 }
 
 jap_nanbu_masayuki_12th_head = {
+	# MB+ attributes at 1337.4.1, character 12040180.
+	trait = education_diplomacy_2
 	name = "name_masayuki"
 		dynasty_house = house_nanbu
 	culture = japanese
@@ -48564,6 +49978,8 @@ jap_nanbu_nobumasa = {
 }
 
 jap_nanbu_nobunaga = {
+	# MB+ attributes at 1337.4.1, character 12040162.
+	trait = education_diplomacy_1
 	name = "name_nobunaga"
 		dynasty_house = house_nanbu
 	culture = japanese
@@ -48632,6 +50048,8 @@ jap_nanbu_sukemasa = {
 }
 
 jap_nanbu_sukenaga = {
+	# MB+ attributes at 1337.4.1, character 12040164.
+	trait = education_intrigue_1
 	name = "name_sukenaga"
 		dynasty_house = house_nanbu
 	culture = japanese
@@ -48641,6 +50059,8 @@ jap_nanbu_sukenaga = {
 }
 
 jap_nanbu_tameshige = {
+	# MB+ attributes at 1337.4.1, character 12040163.
+	trait = education_diplomacy_1
 	name = "name_tameshige"
 		dynasty_house = house_nanbu
 	culture = japanese
@@ -48678,6 +50098,8 @@ jap_nanbu_yoshimoto = {
 }
 
 jap_nanbu_yoshiyuki = {
+	# MB+ attributes at 1337.4.1, character 12040150.
+	trait = education_martial_1
 	name = "name_yoshiyuki"
 		dynasty_house = house_nanbu
 	culture = japanese
@@ -49291,6 +50713,8 @@ jap_nitta_tomouji = {
 }
 
 jap_nitta_yoshiaki = {
+	# MB+ attributes at 1337.4.1, character 12185043.
+	trait = education_martial_3
 	name = "name_yoshiaki"
 		dynasty_house = house_nitta
 	culture = japanese
@@ -49320,6 +50744,10 @@ jap_nitta_yoshikane = {
 }
 
 jap_nitta_yoshimune = {
+	# MB+ attributes at 1337.4.1, character 12185045.
+	martial = 7
+	prowess = 17
+	trait = education_martial_3
 	name = "name_yoshimune"
 		dynasty_house = house_nitta
 	culture = japanese
@@ -49329,6 +50757,14 @@ jap_nitta_yoshimune = {
 }
 
 jap_nitta_yoshioki = {
+	# MB+ attributes at 1337.4.1, character 12185044.
+	martial = 7
+	intrigue = 3
+	prowess = 17
+	trait = education_martial_3
+	trait = brave
+	trait = impatient
+	trait = honest
 	name = "name_yoshioki"
 		dynasty_house = house_nitta
 	culture = japanese
@@ -49338,9 +50774,16 @@ jap_nitta_yoshioki = {
 }
 
 jap_nitta_yoshisada = {
-	martial = 15
-	diplomacy = 6
-	stewardship = 11
+	# MB+ attributes at 1337.4.1, character 12185040.
+	martial = 7
+	diplomacy = 5
+	stewardship = 4
+	intrigue = 4
+	learning = 1
+	prowess = 19
+	trait = education_martial_4
+	trait = intellect_good_2
+	trait = brave
 	name = "name_yoshisada"
 		dynasty_house = house_nitta
 	culture = japanese
@@ -49435,6 +50878,10 @@ jap_ogasawara_ienaga = {
 }
 
 jap_ogasawara_masanaga = {
+	# MB+ attributes at 1337.4.1, character 12360720.
+	martial = 9
+	prowess = 13
+	trait = strategist
 	mother = mb_genealogy_10040811
 	name = "name_masanaga"
 		dynasty_house = house_ogasawara
@@ -49543,6 +50990,17 @@ jap_ogasawara_nagauji_iwami = {
 }
 
 jap_ogasawara_sadamune = {
+	# MB+ attributes at 1337.4.1, character 12360710.
+	martial = 9
+	diplomacy = 11
+	stewardship = 8
+	intrigue = 7
+	learning = 11
+	prowess = 19
+	trait = education_martial_3
+	trait = lifestyle_hunter
+	trait = diligent
+	trait = lifestyle_mystic
 	name = "name_sadamune"
 		dynasty_house = house_ogasawara
 	culture = japanese
@@ -50180,6 +51638,12 @@ jap_oouchi_hirosada = {
 }
 
 jap_oouchi_hiroyo = {
+	# MB+ attributes at 1337.4.1, character 10057014.
+	martial = 10
+	diplomacy = 8
+	intrigue = 8
+	prowess = 14
+	trait = education_intrigue_3
 	name = "name_hiroyo"
 		dynasty_house = house_oouchi
 	culture = japanese
@@ -50189,6 +51653,9 @@ jap_oouchi_hiroyo = {
 }
 
 jap_oouchi_hiroyuki = {
+	# MB+ attributes at 1337.4.1, character 10057018.
+	martial = 7
+	prowess = 11
 	name = "name_hiroyuki"
 		dynasty_house = house_oouchi
 	culture = japanese
@@ -50368,6 +51835,8 @@ jap_reizei_tenno = {
 }
 
 jap_rokkaku_tokinobu = {
+	# MB+ attributes at 1337.4.1, character 10044006.
+	trait = education_diplomacy_1
 	name = "name_yoritsuna"
 		dynasty_house = house_rokkaku
 	culture = japanese
@@ -50377,6 +51846,8 @@ jap_rokkaku_tokinobu = {
 }
 
 jap_rokkaku_ujiyori = {
+	# MB+ attributes at 1337.4.1, character 10044007.
+	trait = education_diplomacy_1
 	name = "name_ujiyori"
 		dynasty_house = house_rokkaku
 	culture = japanese
@@ -51053,6 +52524,8 @@ jap_shiba_iekane = {
 }
 
 jap_shiba_ienaga = {
+	# MB+ attributes at 1337.4.1, character 10029006.
+	trait = education_intrigue_2
 	name = "name_ienaga"
 		dynasty_house = house_shiba
 	culture = japanese
@@ -51092,6 +52565,17 @@ jap_shiba_muneuji = {
 }
 
 jap_shiba_takatsune = {
+	# MB+ attributes at 1337.4.1, character 12139049.
+	martial = 7
+	diplomacy = 9
+	stewardship = 8
+	intrigue = 7
+	prowess = 11
+	trait = education_stewardship_3
+	trait = arrogant
+	trait = ambitious
+	trait = architect
+	trait = callous
 	mother = mb_genealogy_12221027
 	name = "name_takatsune"
 		dynasty_house = house_shiba
@@ -51102,6 +52586,8 @@ jap_shiba_takatsune = {
 }
 
 jap_shiba_ujitsune = {
+	# MB+ attributes at 1337.4.1, character 10029007.
+	trait = education_diplomacy_2
 	name = "name_ujitsune"
 		dynasty_house = house_shiba
 	culture = japanese
@@ -51111,6 +52597,8 @@ jap_shiba_ujitsune = {
 }
 
 jap_shiba_ujiyori = {
+	# MB+ attributes at 1337.4.1, character 10029008.
+	trait = education_intrigue_1
 	name = "name_ujiyori"
 		dynasty_house = house_shiba
 	culture = japanese
@@ -51237,6 +52725,8 @@ jap_shijou_takasuke = {
 }
 
 jap_shijou_takatoshi = {
+	# MB+ attributes at 1337.4.1, character 11007609.
+	learning = 10
 	name = "name_takatoshi"
 		dynasty_house = house_shijou
 	culture = japanese
@@ -51531,6 +53021,15 @@ jap_shouni_tsunesuke = {
 }
 
 jap_shouni_yorihisa = {
+	# MB+ attributes at 1337.4.1, character 10068018.
+	martial = 9
+	diplomacy = 7
+	intrigue = 7
+	prowess = 13
+	trait = education_intrigue_3
+	trait = schemer
+	trait = patient
+	trait = ambitious
 	name = "name_yorihisa"
 		dynasty_house = house_shouni
 	culture = japanese
@@ -51745,6 +53244,8 @@ jap_sue_hironaga = {
 }
 
 jap_sue_hirotsuna = {
+	# MB+ attributes at 1337.4.1, character 12661484.
+	trait = education_intrigue_1
 	name = "name_hirotsuna_alternative"
 		dynasty_house = house_sue
 	culture = japanese
@@ -51804,6 +53305,8 @@ jap_suiko_tenno = {
 }
 
 jap_sukou_tenno = {
+	# MB+ attributes at 1337.4.1, character 10041081.
+	trait = education_intrigue_1
 	name = "name_okihito"
 		dynasty_house = house_jimyouin
 	culture = japanese
@@ -51883,6 +53386,8 @@ jap_suwa_yorishige = {
 }
 
 jap_suwa_yoritsugu = {
+	# MB+ attributes at 1337.4.1, character 12375971.
+	trait = education_learning_4
 	name = "name_yoritsugu_alternative"
 		dynasty = suwa_dynasty
 	culture = japanese
@@ -52598,6 +54103,14 @@ jap_takeda_nobumune = {
 }
 
 jap_takeda_nobunari = {
+	# MB+ attributes at 1337.4.1, character 12360170.
+	martial = 8
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 9
+	learning = 7
+	prowess = 12
+	trait = education_diplomacy_2
 	name = "name_nobunari"
 		dynasty_house = house_takeda
 	culture = japanese
@@ -52617,6 +54130,16 @@ jap_takeda_nobutaka = {
 }
 
 jap_takeda_nobutake = {
+	# MB+ attributes at 1337.4.1, character 12360160.
+	martial = 8
+	diplomacy = 9
+	stewardship = 8
+	intrigue = 9
+	learning = 7
+	prowess = 16
+	trait = education_martial_2
+	trait = diligent
+	trait = lifestyle_poet
 	name = "name_nobutake"
 		dynasty_house = house_takeda
 	culture = japanese
@@ -52666,6 +54189,14 @@ jap_takeda_tokitsuna = {
 }
 
 jap_takeda_ujinobu = {
+	# MB+ attributes at 1337.4.1, character 12360171.
+	martial = 7
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 9
+	learning = 7
+	prowess = 11
+	trait = education_stewardship_2
 	name = "name_ujinobu"
 		dynasty_house = house_takeda
 	culture = japanese
@@ -52988,6 +54519,8 @@ jap_toki_mitsuyuki = {
 }
 
 jap_toki_naouji = {
+	# MB+ attributes at 1337.4.1, character 10025315.
+	trait = education_diplomacy_1
 	name = "name_naouji"
 		dynasty_house = house_toki
 	culture = japanese
@@ -53006,6 +54539,8 @@ jap_toki_yoriaki = {
 }
 
 jap_toki_yorikatsu = {
+	# MB+ attributes at 1337.4.1, character 10025314.
+	trait = education_diplomacy_1
 	name = "name_yorikatsu_alternative"
 		dynasty_house = house_toki
 	culture = japanese
@@ -53025,6 +54560,8 @@ jap_toki_yorikiyo = {
 }
 
 jap_toki_yorisada = {
+	# MB+ attributes at 1337.4.1, character 10025309.
+	trait = education_intrigue_1
 	name = "name_yorisada"
 		dynasty_house = house_toki
 	culture = japanese
@@ -53035,6 +54572,8 @@ jap_toki_yorisada = {
 }
 
 jap_toki_yoritada = {
+	# MB+ attributes at 1337.4.1, character 10025316.
+	trait = education_diplomacy_1
 	name = "name_yoritada"
 		dynasty_house = house_toki
 	culture = japanese
@@ -53044,6 +54583,8 @@ jap_toki_yoritada = {
 }
 
 jap_toki_yoritoo = {
+	# MB+ attributes at 1337.4.1, character 10025310.
+	trait = education_intrigue_1
 	name = "name_yoritoo"
 		dynasty_house = house_toki
 	culture = japanese
@@ -53053,6 +54594,13 @@ jap_toki_yoritoo = {
 }
 
 jap_toki_yoriyasu = {
+	# MB+ attributes at 1337.4.1, character 10025313.
+	martial = 10
+	diplomacy = 8
+	stewardship = 8
+	prowess = 14
+	trait = lifestyle_poet
+	trait = education_intrigue_3
 	name = "name_yoriyasu"
 		dynasty_house = house_toki
 	culture = japanese
@@ -53346,6 +54894,8 @@ jap_tou_tokitsune = {
 }
 
 jap_tou_tsuneaki = {
+	# MB+ attributes at 1337.4.1, character 12425006.
+	learning = 5
 	name = "name_tsuneaki_alternative"
 		dynasty_house = house_tou
 	culture = japanese
@@ -53587,6 +55137,14 @@ jap_uesugi_nichijou = {
 }
 
 jap_uesugi_noriaki = {
+	# MB+ attributes at 1337.4.1, character 10017006.
+	martial = 9
+	diplomacy = 8
+	stewardship = 9
+	intrigue = 8
+	prowess = 13
+	trait = education_diplomacy_3
+	trait = intellect_good_2
 	name = "name_noriaki"
 		dynasty_house = house_uesugi
 	culture = japanese
@@ -53596,6 +55154,13 @@ jap_uesugi_noriaki = {
 }
 
 jap_uesugi_norifuji = {
+	# MB+ attributes at 1337.4.1, character 10017007.
+	martial = 8
+	diplomacy = 8
+	stewardship = 7
+	intrigue = 8
+	prowess = 12
+	trait = education_intrigue_1
 	name = "name_norifuji"
 		dynasty_house = house_uesugi
 	culture = japanese
@@ -53615,6 +55180,13 @@ jap_uesugi_norifusa = {
 }
 
 jap_uesugi_noriharu = {
+	# MB+ attributes at 1337.4.1, character 10017010.
+	martial = 8
+	diplomacy = 8
+	stewardship = 7
+	intrigue = 8
+	prowess = 12
+	trait = education_intrigue_1
 	name = "name_noriharu"
 		dynasty_house = house_uesugi
 	culture = japanese
@@ -53624,6 +55196,13 @@ jap_uesugi_noriharu = {
 }
 
 jap_uesugi_norikata = {
+	# MB+ attributes at 1337.4.1, character 10017011.
+	martial = 8
+	diplomacy = 8
+	stewardship = 7
+	intrigue = 8
+	prowess = 12
+	trait = education_diplomacy_2
 	name = "name_norikata"
 		dynasty_house = house_uesugi
 	culture = japanese
@@ -53633,6 +55212,13 @@ jap_uesugi_norikata = {
 }
 
 jap_uesugi_norimasa = {
+	# MB+ attributes at 1337.4.1, character 10017009.
+	martial = 8
+	diplomacy = 8
+	stewardship = 7
+	intrigue = 8
+	prowess = 12
+	trait = education_stewardship_1
 	name = "name_norimasa"
 		dynasty_house = house_uesugi
 	culture = japanese
@@ -53642,6 +55228,13 @@ jap_uesugi_norimasa = {
 }
 
 jap_uesugi_shigeaki = {
+	# MB+ attributes at 1337.4.1, character 10017003.
+	martial = 5
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 9
+	prowess = 9
+	trait = education_diplomacy_1
 	name = "name_shigeaki"
 		dynasty_house = house_uesugi
 	culture = japanese
@@ -53690,6 +55283,13 @@ jap_uesugi_shigeyuki = {
 }
 
 jap_uesugi_tomofusa = {
+	# MB+ attributes at 1337.4.1, character 10017046.
+	martial = 7
+	diplomacy = 8
+	stewardship = 7
+	intrigue = 8
+	prowess = 11
+	trait = education_intrigue_1
 	name = "name_tomofusa"
 		dynasty_house = house_uesugi
 	culture = japanese
@@ -53699,6 +55299,13 @@ jap_uesugi_tomofusa = {
 }
 
 jap_uesugi_tomomune = {
+	# MB+ attributes at 1337.4.1, character 10017047.
+	martial = 7
+	diplomacy = 8
+	stewardship = 7
+	intrigue = 8
+	prowess = 11
+	trait = education_diplomacy_1
 	name = "name_tomomune"
 		dynasty_house = house_uesugi
 	culture = japanese
@@ -53708,6 +55315,13 @@ jap_uesugi_tomomune = {
 }
 
 jap_uesugi_tomosada = {
+	# MB+ attributes at 1337.4.1, character 10017030.
+	martial = 7
+	diplomacy = 9
+	stewardship = 8
+	intrigue = 8
+	prowess = 11
+	trait = education_stewardship_2
 	name = "name_tomosada"
 		dynasty_house = house_uesugi
 	culture = japanese
@@ -53736,6 +55350,13 @@ jap_uesugi_yorishige = {
 }
 
 jap_uesugi_yoshinori = {
+	# MB+ attributes at 1337.4.1, character 10017008.
+	martial = 8
+	diplomacy = 8
+	stewardship = 8
+	intrigue = 8
+	prowess = 12
+	trait = education_diplomacy_1
 	name = "name_yoshinori"
 		dynasty_house = house_uesugi
 	culture = japanese
@@ -53883,6 +55504,14 @@ jap_utsunomiya_kagetsuna = {
 }
 
 jap_utsunomiya_kintsuna = {
+	# MB+ attributes at 1337.4.1, character 12130050.
+	martial = 14
+	learning = 10
+	prowess = 24
+	trait = education_martial_3
+	trait = brave
+	trait = strong
+	trait = lifestyle_poet
 	name = "name_kintsuna"
 		dynasty = fujiwara_dynasty
 		dynasty_house = house_utsunomiya
@@ -54253,6 +55882,8 @@ jap_yamana_masauji = {
 }
 
 jap_yamana_moroyoshi = {
+	# MB+ attributes at 1337.4.1, character 10050007.
+	trait = education_diplomacy_1
 	name = "name_moroyoshi"
 		dynasty_house = house_yamana
 	culture = japanese
@@ -54282,6 +55913,17 @@ jap_yamana_shigemura = {
 }
 
 jap_yamana_tokiuji = {
+	# MB+ attributes at 1337.4.1, character 12186256.
+	martial = 8
+	diplomacy = 10
+	stewardship = 9
+	intrigue = 10
+	learning = 8
+	prowess = 12
+	trait = education_intrigue_3
+	trait = schemer
+	trait = greedy
+	trait = ambitious
 	name = "name_tokiuji"
 		dynasty_house = house_yamana
 	culture = japanese
@@ -54322,6 +55964,8 @@ jap_yamana_yoshisada = {
 }
 
 jap_yamana_yoshitada = {
+	# MB+ attributes at 1337.4.1, character 10050008.
+	trait = education_stewardship_1
 	name = "name_yoshitada"
 		dynasty_house = house_yamana
 	culture = japanese
@@ -54566,6 +56210,10 @@ jap_yuuki_akitomo = {
 }
 
 jap_yuuki_chikatomo = {
+	# MB+ attributes at 1337.4.1, character 12064010.
+	diplomacy = 8
+	trait = education_diplomacy_3
+	trait = patient
 	name = "name_chikatomo"
 		dynasty_house = house_yuuki
 	culture = japanese
@@ -54585,6 +56233,10 @@ jap_yuuki_hirotsuna = {
 }
 
 jap_yuuki_munehiro = {
+	# MB+ attributes at 1337.4.1, character 12064005.
+	diplomacy = 10
+	trait = education_diplomacy_3
+	trait = content
 	name = "name_munehiro"
 		dynasty_house = house_yuuki
 	culture = japanese
@@ -54902,6 +56554,13 @@ jul_gerhard_v_julich = {
 }
 
 jul_gerhard_vi_julich = {
+	# MB+ attributes at 1337.4.1, character 462932.
+	martial = 5
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 4
+	trait = wrathful
+	trait = education_intrigue_1
 	name = "name_gerard"
 		dynasty = julich_dynasty
 	culture = saxon
@@ -54924,6 +56583,13 @@ jul_jeanne_de_hainaut = {
 }
 
 jul_wilhelm_i_julich = {
+	# MB+ attributes at 1337.4.1, character 462930.
+	martial = 8
+	diplomacy = 8
+	stewardship = 5
+	intrigue = 6
+	trait = zealous
+	trait = education_stewardship_2
 	name = "name_william"
 		dynasty = julich_dynasty
 	culture = franconian
@@ -55566,6 +57232,14 @@ kid_john_fitzgerald_1250 = {
 }
 
 kid_maurice_fitzgerald = {
+	# MB+ attributes at 1337.4.1, character 454122.
+	martial = 4
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 4
+	trait = diligent
+	trait = honest
+	trait = education_martial_2
 	name = "name_maurice"
 		dynasty = fitzgerald_dynasty
 	culture = english
@@ -56403,9 +58077,14 @@ kni_friedrich_von_zollern = {
 }
 
 kni_helion_de_villeneuve = {
-	martial = 13
+	# MB+ attributes at 1337.4.1, character 478502.
+	martial = 7
+	stewardship = 5
+	intrigue = 5
+	trait = greedy
+	trait = education_martial_3
+	trait = order_member
 	diplomacy = 8
-	stewardship = 8
 	name = "name_helion"
 		dynasty = villeneuve_dynasty
 	culture = occitan
@@ -56647,6 +58326,12 @@ koj_sibilla_jerusalem = {
 }
 
 kol_walram_von_julich = {
+	# MB+ attributes at 1337.4.1, character 487032.
+	martial = 6
+	diplomacy = 3
+	stewardship = 3
+	intrigue = 5
+	trait = education_learning_2
 	name = "Walram"
 		dynasty = julich_dynasty
 	culture = franconian
@@ -56657,6 +58342,9 @@ kol_walram_von_julich = {
 }
 
 kor_chunghye = {
+	# MB+ attributes at 1337.4.1, character gaeseong_wang_328.
+	trait = callous
+	trait = lustful
 	martial = 9
 	diplomacy = 3
 	stewardship = 5
@@ -56697,6 +58385,8 @@ kor_chungseon = {
 }
 
 kor_chungsuk = {
+	# MB+ attributes at 1337.4.1, character gaeseong_wang_324.
+	trait = child_of_concubine_male
 	martial = 9
 	diplomacy = 2
 	stewardship = 3
@@ -57334,6 +59024,9 @@ lbv_heinrich_xiii_wittelsbach = {
 }
 
 lbv_heinrich_xiv_wittelsbach = {
+	# MB+ attributes at 1337.4.1, character 462760.
+	trait = gluttonous
+	trait = education_diplomacy_3
 	name = "name_henry"
 		dynasty = wittelsbach_dynasty
 	culture = bavarian
@@ -57699,6 +59392,8 @@ leu_ulrich_leuchtenberg = {
 }
 
 lgc_boleslaw_iii_the_generous_piast = {
+	# MB+ attributes at 1337.4.1, character 471730.
+	trait = generous
 	name = "name_boleslav"
 		dynasty = piast_dynasty
 	culture = polish
@@ -57846,6 +59541,13 @@ lic_ludwig_ii_von_lichtenberg = {
 }
 
 lie_adolf_ii_von_der_mark = {
+	# MB+ attributes at 1337.4.1, character 462002.
+	martial = 5
+	diplomacy = 6
+	stewardship = 8
+	intrigue = 4
+	trait = zealous
+	trait = education_learning_2
 	name = "name_adolf"
 		dynasty = mark_dynasty
 	culture = saxon
@@ -57890,10 +59592,18 @@ lit_euphemia_rurikovich = {
 }
 
 lit_gediminas_gediminids = {
+	# MB+ attributes at 1337.4.1, character 473500.
+	martial = 7
+	diplomacy = 7
+	stewardship = 10
+	intrigue = 7
+	trait = cynical
+	trait = ambitious
+	trait = diligent
+	trait = intellect_good_2
+	trait = education_diplomacy_4
+	trait = administrator
 	dna = 473500_gediminas_of_lithuania
-	martial = 18
-	diplomacy = 16
-	stewardship = 18
 	name = "name_gediminas"
 		dynasty = gediminid_dynasty
 	culture = lithuanian
@@ -58080,6 +59790,12 @@ loi_aonghais = {
 }
 
 loi_eoin_mac_aonghais = {
+	# MB+ attributes at 1337.4.1, character 420019.
+	martial = 5
+	diplomacy = 4
+	stewardship = 8
+	intrigue = 4
+	trait = education_martial_2
 	name = "name_john"
 		dynasty = mac_domhnaill_dynasty
 	culture = norse_gael
@@ -58930,6 +60646,13 @@ lukeni_luansanze_nsaku = {
 }
 
 lun_elisabeth_luneburg = {
+	# MB+ attributes at 1337.4.1, character 462836.
+	martial = 5
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 5
+	trait = chaste
+	trait = education_learning_2
 	female = yes
 	name = "name_elizabeth"
 		dynasty_house = house_welfen
@@ -59000,6 +60723,13 @@ lun_marie = {
 }
 
 lun_mathilde_luneburg = {
+	# MB+ attributes at 1337.4.1, character 462837.
+	martial = 5
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 5
+	trait = honest
+	trait = education_stewardship_2
 	female = yes
 	name = "name_matilda"
 		dynasty_house = house_welfen
@@ -59011,10 +60741,14 @@ lun_mathilde_luneburg = {
 }
 
 lun_mathilde_mecklenburg = {
+	# MB+ attributes at 1337.4.1, character 451984.
+	martial = 2
+	diplomacy = 5
+	stewardship = 7
+	intrigue = 7
+	trait = lustful
+	trait = education_intrigue_1
 	female = yes
-	martial = 5
-	diplomacy = 6
-	stewardship = 9
 	name = "name_matilda"
 		dynasty = mecklenburg_dynasty
 	culture = saxon
@@ -59052,9 +60786,12 @@ lun_otto_ii_luneburg = {
 }
 
 lun_otto_iii_luneburg = {
-	martial = 8
-	diplomacy = 11
-	stewardship = 13
+	# MB+ attributes at 1337.4.1, character 462835.
+	martial = 5
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 5
+	trait = education_martial_2
 	name = "name_otto"
 		dynasty_house = house_welfen
 	culture = saxon
@@ -59065,9 +60802,14 @@ lun_otto_iii_luneburg = {
 }
 
 lun_wilhelm_ii_luneburg = {
-	martial = 8
-	diplomacy = 13
-	stewardship = 15
+	# MB+ attributes at 1337.4.1, character 462838.
+	martial = 7
+	diplomacy = 8
+	stewardship = 9
+	intrigue = 4
+	trait = generous
+	trait = brave
+	trait = education_martial_2
 	name = "name_william"
 		dynasty_house = house_welfen
 	culture = saxon
@@ -59226,6 +60968,13 @@ mahmud_ghazan_borjigin = {
 }
 
 mai_heinrich_iii_von_virneburg = {
+	# MB+ attributes at 1337.4.1, character 487017.
+	martial = 6
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 7
+	trait = chaste
+	trait = education_learning_3
 	father = mb_genealogy_MB_virneburg_ruprecht
 	name = "name_henry"
 	culture = franconian
@@ -59593,6 +61342,15 @@ mal_muhammad_qu = {
 }
 
 mal_musa_keita = {
+	# MB+ attributes at 1337.4.1, character 161035.
+	disallow_random_traits = yes
+	trait = zealous
+	trait = generous
+	trait = arrogant
+	trait = architect
+	trait = education_stewardship_4
+	trait = hajjaj
+	trait = pilgrim
 	martial = 10
 	diplomacy = 15
 	stewardship = 17
@@ -59751,9 +61509,15 @@ mam_an_Nasir_Ahmad_bahri = {
 }
 
 mam_an_nasir_bahri = {
-	martial = 15
+	# MB+ attributes at 1337.4.1, character 485000.
+	martial = 4
+	stewardship = 10
+	intrigue = 8
+	trait = ambitious
+	trait = administrator
+	trait = patient
+	trait = education_stewardship_3
 	diplomacy = 8
-	stewardship = 12
 	name = "name_muhammad"
 		dynasty = bahri_dynasty
 	culture = kuzhu_tartar
@@ -59926,6 +61690,14 @@ man_agnese_pico = {
 }
 
 man_anna_dovara = {
+	# MB+ attributes at 1337.4.1, character 70814.
+	martial = 3
+	diplomacy = 6
+	stewardship = 6
+	intrigue = 5
+	trait = ambitious
+	trait = deceitful
+	trait = education_diplomacy_3
 	female = yes
 	name = "name_anna"
 	culture = cisalpine
@@ -59947,6 +61719,12 @@ man_antonia_correggio = {
 }
 
 man_beatrice_gonzaga = {
+	# MB+ attributes at 1337.4.1, character 70819.
+	martial = 6
+	diplomacy = 4
+	stewardship = 6
+	intrigue = 5
+	trait = education_stewardship_1
 	female = yes
 	name = "name_beatrix"
 		dynasty = gonzaga_dynasty
@@ -59994,9 +61772,13 @@ man_federico_gonzaga = {
 }
 
 man_feltrino_gonzaga = {
-	martial = 13
-	diplomacy = 13
-	stewardship = 11
+	# MB+ attributes at 1337.4.1, character 413029.
+	martial = 7
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 5
+	trait = lustful
+	trait = education_martial_2
 	name = "name_feltrino"
 		dynasty = gonzaga_dynasty
 	culture = cisalpine
@@ -60007,8 +61789,12 @@ man_feltrino_gonzaga = {
 }
 
 man_filippino_gonzaga = {
-	martial = 10
-	diplomacy = 13
+	# MB+ attributes at 1337.4.1, character 413027.
+	martial = 7
+	diplomacy = 5
+	intrigue = 5
+	trait = humble
+	trait = education_martial_2
 	stewardship = 8
 	name = "name_philip"
 		dynasty = gonzaga_dynasty
@@ -60020,6 +61806,13 @@ man_filippino_gonzaga = {
 }
 
 man_gigliola_gonzaga = {
+	# MB+ attributes at 1337.4.1, character 70815.
+	martial = 4
+	diplomacy = 5
+	stewardship = 4
+	intrigue = 7
+	trait = craven
+	trait = education_intrigue_4
 	female = yes
 	name = "name_gillette"
 		dynasty = gonzaga_dynasty
@@ -60040,9 +61833,13 @@ man_guido_corrado_corradi = {
 }
 
 man_guido_gonzaga = {
-	martial = 9
-	diplomacy = 16
-	stewardship = 11
+	# MB+ attributes at 1337.4.1, character 413028.
+	martial = 7
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 5
+	trait = arrogant
+	trait = education_martial_2
 	name = "name_wido"
 		dynasty = gonzaga_dynasty
 	culture = cisalpine
@@ -60053,6 +61850,14 @@ man_guido_gonzaga = {
 }
 
 man_ludovico_ii_gonzaga = {
+	# MB+ attributes at 1337.4.1, character 70823.
+	martial = 6
+	diplomacy = 4
+	stewardship = 6
+	intrigue = 4
+	trait = strong
+	trait = humble
+	trait = education_intrigue_1
 	name = "name_louis"
 		dynasty = gonzaga_dynasty
 	culture = cisalpine
@@ -60063,9 +61868,13 @@ man_ludovico_ii_gonzaga = {
 }
 
 man_luigi_i_gonzaga = {
-	martial = 8
-	diplomacy = 15
-	stewardship = 16
+	# MB+ attributes at 1337.4.1, character 413024.
+	martial = 5
+	diplomacy = 5
+	stewardship = 8
+	intrigue = 5
+	trait = lustful
+	trait = education_martial_3
 	name = "name_louis"
 		dynasty = gonzaga_dynasty
 	culture = cisalpine
@@ -60075,6 +61884,13 @@ man_luigi_i_gonzaga = {
 }
 
 man_margherita_gonzaga = {
+	# MB+ attributes at 1337.4.1, character 70821.
+	martial = 4
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 5
+	sexuality = homosexual
+	trait = education_intrigue_2
 	female = yes
 	name = "name_margaret"
 		dynasty = gonzaga_dynasty
@@ -60120,6 +61936,14 @@ man_tommasina_gonzaga = {
 }
 
 man_tommasina_gonzaga_ii = {
+	# MB+ attributes at 1337.4.1, character 70822.
+	martial = 6
+	diplomacy = 4
+	stewardship = 6
+	intrigue = 5
+	trait = intellect_good_1
+	trait = shy
+	trait = education_learning_1
 	female = yes
 	name = "name_thomassine"
 		dynasty = gonzaga_dynasty
@@ -60131,9 +61955,14 @@ man_tommasina_gonzaga_ii = {
 }
 
 man_ugolino_gonzaga = {
-	martial = 5
-	diplomacy = 9
-	stewardship = 9
+	# MB+ attributes at 1337.4.1, character 70820.
+	martial = 4
+	diplomacy = 6
+	stewardship = 6
+	intrigue = 5
+	trait = gregarious
+	trait = just
+	trait = education_stewardship_4
 	name = "name_hugh"
 		dynasty = gonzaga_dynasty
 	culture = cisalpine
@@ -60287,6 +62116,8 @@ mcm_toirdhealbhach_mac_diarmada_ua_briain = {
 }
 
 mda_wudayy_bin_jammaz = {
+	# MB+ attributes at 1337.4.1, character 1500240.
+	trait = sayyid
 	martial = 12
 	diplomacy = 4
 	stewardship = 7
@@ -60310,9 +62141,13 @@ mdi_abu_Bakr_i = {
 }
 
 mdn_ludwig_von_braunschweig_luneburg = {
-	martial = 3
-	diplomacy = 11
-	stewardship = 10
+	# MB+ attributes at 1337.4.1, character 462841.
+	martial = 6
+	diplomacy = 6
+	stewardship = 6
+	intrigue = 6
+	trait = calm
+	trait = education_learning_2
 	name = "name_louis"
 		dynasty_house = house_welfen
 	culture = saxon
@@ -60734,6 +62569,8 @@ mfa_giovanni_i_monferrato = {
 }
 
 mfa_giovanni_palaiologos = {
+	# MB+ attributes at 1337.4.1, character 465523.
+	trait = education_martial_2
 	martial = 15
 	diplomacy = 15
 	stewardship = 9
@@ -60856,6 +62693,8 @@ mfa_ranieri_i_monferrato = {
 }
 
 mfa_teodoro_i_palaiologos = {
+	# MB+ attributes at 1337.4.1, character 465520.
+	trait = education_martial_2
 	martial = 5
 	diplomacy = 15
 	stewardship = 13
@@ -60870,6 +62709,8 @@ mfa_teodoro_i_palaiologos = {
 }
 
 mfa_violante_palaiologos = {
+	# MB+ attributes at 1337.4.1, character 462670.
+	trait = education_diplomacy_2
 	female = yes
 	name = "name_yolande"
 		dynasty_house = house_palaiologos
@@ -60900,6 +62741,13 @@ mfe_burchard_iv_mansfeld_querfurt = {
 }
 
 mfe_burchard_v_mansfeld_querfurt = {
+	# MB+ attributes at 1337.4.1, character 462132.
+	martial = 5
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 6
+	trait = lustful
+	trait = education_learning_2
 	name = "Burchard"
 		dynasty = mansfeld_dynasty
 	culture = saxon
@@ -60918,6 +62766,15 @@ mfe_burchard_vi_mansfeld_querfurt = {
 }
 
 mfe_gebhard_iii_mansfeld_querfurt = {
+	# MB+ attributes at 1337.4.1, character 462133.
+	martial = 4
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 7
+	trait = lustful
+	trait = gluttonous
+	trait = just
+	trait = education_diplomacy_3
 	name = "name_gebhard"
 		dynasty = mansfeld_dynasty
 	culture = saxon
@@ -61018,6 +62875,15 @@ mie_jean_i_brienne_beaumont = {
 }
 
 mie_jean_ii_brienne_beaumont = {
+	# MB+ attributes at 1337.4.1, character 455432.
+	martial = 7
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 5
+	trait = calm
+	trait = greedy
+	trait = lustful
+	trait = education_martial_2
 	name = "name_john"
 		dynasty_house = house_beaumont
 	culture = french
@@ -61027,6 +62893,11 @@ mie_jean_ii_brienne_beaumont = {
 }
 
 mie_jeanne_brienne_beaumont = {
+	# MB+ attributes at 1337.4.1, character 455437.
+	martial = 5
+	diplomacy = 6
+	stewardship = 6
+	intrigue = 5
 	female = yes
 	name = "name_joanna"
 		dynasty_house = house_beaumont
@@ -61049,6 +62920,14 @@ mie_louis_i_acre = {
 }
 
 mie_louis_ii_brienne_beaumont = {
+	# MB+ attributes at 1337.4.1, character 455436.
+	martial = 4
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 5
+	trait = cynical
+	trait = brave
+	trait = education_martial_2
 	name = "name_louis"
 		dynasty_house = house_beaumont
 	culture = french
@@ -61173,10 +63052,14 @@ mkg_sangia_melanga = {
 }
 
 mkl_agnes_mecklenburg = {
+	# MB+ attributes at 1337.4.1, character 451985.
+	martial = 5
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 7
+	trait = generous
+	trait = education_diplomacy_1
 	female = yes
-	martial = 2
-	diplomacy = 8
-	stewardship = 5
 	name = "name_agnes"
 		dynasty = mecklenburg_dynasty
 	culture = saxon
@@ -61197,9 +63080,14 @@ mkl_albrecht_i_mecklenburg = {
 }
 
 mkl_albrecht_ii_mecklenburg = {
-	martial = 5
-	diplomacy = 12
-	stewardship = 10
+	# MB+ attributes at 1337.4.1, character 451980.
+	martial = 9
+	diplomacy = 8
+	stewardship = 8
+	intrigue = 7
+	trait = calm
+	trait = generous
+	trait = education_learning_2
 	name = "name_albert"
 		dynasty = mecklenburg_dynasty
 	culture = saxon
@@ -61223,10 +63111,14 @@ mkl_anna_saxe_wittenberg = {
 }
 
 mkl_beatrix_mecklenburg = {
+	# MB+ attributes at 1337.4.1, character 451986.
+	stewardship = 7
+	intrigue = 5
+	trait = chaste
+	trait = education_learning_2
 	female = yes
 	martial = 3
 	diplomacy = 9
-	stewardship = 9
 	name = "name_beatrix"
 		dynasty = mecklenburg_dynasty
 	culture = saxon
@@ -61337,9 +63229,13 @@ mkl_johann_i_mecklenburg = {
 }
 
 mkl_johann_i_mecklenburg_stargard = {
-	martial = 5
-	diplomacy = 3
-	stewardship = 3
+	# MB+ attributes at 1337.4.1, character 451983.
+	martial = 9
+	diplomacy = 4
+	stewardship = 7
+	intrigue = 7
+	trait = lustful
+	trait = education_martial_2
 	name = "name_john"
 		dynasty = mecklenburg_dynasty
 	culture = saxon
@@ -61555,6 +63451,14 @@ mlk_nuakea = {
 }
 
 mll_constanza_arago = {
+	# MB+ attributes at 1337.4.1, character 460550.
+	martial = 5
+	diplomacy = 8
+	stewardship = 6
+	intrigue = 4
+	trait = cynical
+	trait = temperate
+	trait = education_diplomacy_1
 	female = yes
 	name = "name_constance"
 		dynasty = barcelona_dynasty
@@ -61593,9 +63497,12 @@ mll_ferdinand_mallorca = {
 }
 
 mll_ferran_mallorca = {
-	martial = 9
-	diplomacy = 8
-	stewardship = 8
+	# MB+ attributes at 1337.4.1, character 460607.
+	martial = 5
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 8
+	trait = wrathful
 	name = "name_ferdinand"
 		dynasty = barcelona_dynasty
 	culture = catalan
@@ -61641,9 +63548,13 @@ mll_jacme_ii_mallorca = {
 }
 
 mll_james_iii_mallorca = {
-	martial = 8
-	diplomacy = 9
-	stewardship = 11
+	# MB+ attributes at 1337.4.1, character 460620.
+	martial = 4
+	diplomacy = 5
+	stewardship = 8
+	intrigue = 7
+	trait = deceitful
+	trait = education_martial_2
 	name = "name_james"
 		dynasty = barcelona_dynasty
 	culture = catalan
@@ -61654,6 +63565,11 @@ mll_james_iii_mallorca = {
 }
 
 mll_jaume_iv_mallorca = {
+	# MB+ attributes at 1337.4.1, character 460621.
+	martial = 4
+	diplomacy = 8
+	stewardship = 4
+	intrigue = 5
 	name = "name_james"
 		dynasty = barcelona_dynasty
 	culture = catalan
@@ -61710,6 +63626,8 @@ mlo_antiochia_visconti = {
 }
 
 mlo_antoniolo_della_torre = {
+	# MB+ attributes at 1337.4.1, character cisalpine0585.
+	trait = education_diplomacy_2
 	name = "name_anthony"
 		dynasty = della_torre_dynasty
 	culture = cisalpine
@@ -61731,9 +63649,16 @@ mlo_azzo_v_este = {
 }
 
 mlo_azzone_i_visconti = {
-	martial = 13
-	diplomacy = 8
-	stewardship = 13
+	# MB+ attributes at 1337.4.1, character 463140.
+	martial = 7
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 8
+	trait = chaste
+	trait = diligent
+	trait = generous
+	trait = education_stewardship_2
+	trait = gout_ridden
 	name = "name_azzo"
 		dynasty = visconti_dynasty
 	culture = cisalpine
@@ -61783,9 +63708,14 @@ mlo_benedetto_di_asinago = {
 }
 
 mlo_bernabo_visconti = {
-	martial = 11
-	diplomacy = 8
-	stewardship = 9
+	# MB+ attributes at 1337.4.1, character 463152.
+	martial = 7
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 7
+	trait = lustful
+	trait = wrathful
+	trait = education_stewardship_2
 	name = "name_barnabas"
 		dynasty = visconti_dynasty
 	culture = cisalpine
@@ -61903,9 +63833,13 @@ mlo_galeazzo_i_visconti = {
 }
 
 mlo_galeazzo_ii_visconti = {
-	martial = 13
-	diplomacy = 10
-	stewardship = 8
+	# MB+ attributes at 1337.4.1, character 463151.
+	martial = 3
+	diplomacy = 4
+	stewardship = 2
+	intrigue = 7
+	trait = deceitful
+	trait = education_martial_2
 	name = "name_galahad"
 		dynasty = visconti_dynasty
 	culture = cisalpine
@@ -61936,6 +63870,8 @@ mlo_gaspare_visconti = {
 }
 
 mlo_gianfrancesco_correggio = {
+	# MB+ attributes at 1337.4.1, character cisalpine0750.
+	trait = education_stewardship_2
 	martial = 15
 	diplomacy = 9
 	stewardship = 8
@@ -61955,6 +63891,8 @@ mlo_giovanni_balduccio = {
 }
 
 mlo_giovanni_della_torre = {
+	# MB+ attributes at 1337.4.1, character cisalpine0594.
+	trait = education_diplomacy_3
 	name = "name_john"
 		dynasty = della_torre_dynasty
 	culture = cisalpine
@@ -61976,9 +63914,14 @@ mlo_giovanni_della_torre_ii = {
 }
 
 mlo_giovanni_visconti = {
-	martial = 3
-	diplomacy = 16
-	stewardship = 13
+	# MB+ attributes at 1337.4.1, character 463146.
+	martial = 7
+	diplomacy = 7
+	stewardship = 4
+	intrigue = 6
+	trait = calm
+	trait = theologian
+	trait = education_learning_2
 	name = "name_john"
 		dynasty = visconti_dynasty
 	culture = cisalpine
@@ -62068,6 +64011,8 @@ mlo_leonardo_visconti = {
 }
 
 mlo_lodrisio_visconti = {
+	# MB+ attributes at 1337.4.1, character cisalpine0632.
+	trait = education_stewardship_3
 	martial = 16
 	diplomacy = 8
 	stewardship = 8
@@ -62092,9 +64037,13 @@ mlo_lombardo_della_torre = {
 }
 
 mlo_luchino_visconti = {
-	martial = 13
-	diplomacy = 8
-	stewardship = 13
+	# MB+ attributes at 1337.4.1, character 463147.
+	martial = 6
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 7
+	trait = lustful
+	trait = education_martial_2
 	name = "name_lucas"
 		dynasty = visconti_dynasty
 	culture = cisalpine
@@ -62158,6 +64107,13 @@ mlo_matteo_i_visconti = {
 }
 
 mlo_matteo_ii_visconti = {
+	# MB+ attributes at 1337.4.1, character 463150.
+	martial = 4
+	diplomacy = 5
+	stewardship = 4
+	intrigue = 7
+	trait = arrogant
+	trait = education_intrigue_2
 	name = "name_matthew"
 		dynasty = visconti_dynasty
 	culture = cisalpine
@@ -62328,6 +64284,13 @@ mlo_uberto_visconti = {
 }
 
 mlo_valentina_doria = {
+	# MB+ attributes at 1337.4.1, character 463149.
+	martial = 7
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 7
+	trait = humble
+	trait = education_diplomacy_1
 	female = yes
 	name = "name_valentina"
 		dynasty = doria_dynasty
@@ -62481,6 +64444,13 @@ mon_jean_i_montfort = {
 }
 
 mon_jean_montfort = {
+	# MB+ attributes at 1337.4.1, character 455755.
+	trait = brave
+	trait = ambitious
+	trait = arrogant
+	trait = strategist
+	trait = education_martial_3
+	trait = disinherited
 	martial = 9
 	diplomacy = 9
 	stewardship = 9
@@ -62848,9 +64818,18 @@ mos_helena = {
 }
 
 mos_ivan_i_danilovich_kalita_rurikovich = {
-	martial = 14
-	diplomacy = 18
-	stewardship = 13
+	# MB+ attributes at 1337.4.1, character 472840.
+	martial = 8
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 7
+	sexuality = heterosexual
+	disallow_random_traits = yes
+	trait = education_stewardship_4
+	trait = generous
+	trait = zealous
+	trait = just
+	trait = avaricious
 	name = "name_john"
 		dynasty = rurikovich_dynasty
 	culture = russian
@@ -62861,6 +64840,8 @@ mos_ivan_i_danilovich_kalita_rurikovich = {
 }
 
 mos_ivan_ii_ivanovich_rurikovich = {
+	# MB+ attributes at 1337.4.1, character 472855.
+	trait = beauty_good_1
 	name = "name_john"
 		dynasty = rurikovich_dynasty
 	culture = russian
@@ -62872,6 +64853,8 @@ mos_ivan_ii_ivanovich_rurikovich = {
 }
 
 mos_simeon_ivanovich_gordyy_rurikovich = {
+	# MB+ attributes at 1337.4.1, character 472851.
+	trait = arrogant
 	name = "name_simeon"
 		dynasty = rurikovich_dynasty
 	culture = russian
@@ -63000,6 +64983,14 @@ mou_pierre_iv_essone = {
 }
 
 moy_john_randolph = {
+	# MB+ attributes at 1337.4.1, character 453004.
+	martial = 6
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 4
+	trait = honest
+	trait = stuttering
+	trait = education_learning_2
 	name = "name_john"
 		dynasty = randolph_dynasty
 	culture = scottish
@@ -63797,6 +65788,9 @@ msp_orietta_malaspina = {
 }
 
 msp_spinetta_malaspina = {
+	# MB+ attributes at 1337.4.1, character cisalpine0042.
+	trait = lifestyle_blademaster
+	trait = education_martial_3
 	martial = 15
 	diplomacy = 13
 	stewardship = 13
@@ -64605,6 +66599,14 @@ nam_robert_dampierre = {
 }
 
 nap_anastasia_orsini = {
+	# MB+ attributes at 1337.4.1, character 70869.
+	martial = 5
+	diplomacy = 3
+	stewardship = 7
+	intrigue = 7
+	learning = 3
+	trait = education_learning_3
+	trait = gluttonous
 	female = yes
 	name = "name_anastasia"
 		dynasty = orsini_dynasty
@@ -64884,6 +66886,14 @@ nap_gentile_ii_orsini = {
 }
 
 nap_giocomo_orsini_ii = {
+	# MB+ attributes at 1337.4.1, character 70868.
+	martial = 3
+	diplomacy = 4
+	stewardship = 7
+	intrigue = 3
+	learning = 6
+	trait = education_learning_3
+	trait = ambitious
 	name = "name_james"
 		dynasty = orsini_dynasty
 	culture = italo_norman
@@ -64917,6 +66927,10 @@ nap_giovannella_cabanni = {
 }
 
 nap_giovanni_boccaccio = {
+	# MB+ attributes at 1337.4.1, character 214093.
+	learning = 12
+	trait = intellect_good_3
+	trait = lifestyle_scholar
 	martial = 5
 	diplomacy = 15
 	stewardship = 16
@@ -65100,6 +67114,13 @@ nap_marguerite_daulnay = {
 }
 
 nap_maria_anjou_ii = {
+	# MB+ attributes at 1337.4.1, character 461704.
+	martial = 5
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 5
+	trait = humble
+	trait = education_stewardship_2
 	female = yes
 	name = "name_mary"
 		dynasty_house = house_anjou
@@ -65164,6 +67185,14 @@ nap_niccolo_acciaioli = {
 }
 
 nap_nicola_orsini = {
+	# MB+ attributes at 1337.4.1, character 70867.
+	martial = 8
+	diplomacy = 4
+	stewardship = 3
+	intrigue = 6
+	learning = 5
+	trait = education_stewardship_1
+	trait = zealous
 	name = "name_nicholas"
 		dynasty = orsini_dynasty
 	culture = italo_norman
@@ -65241,9 +67270,16 @@ nap_robert_baux = {
 }
 
 nap_robert_i_anjou = {
+	# MB+ attributes at 1337.4.1, character 461700.
+	diplomacy = 8
+	stewardship = 5
+	intrigue = 8
+	learning = 8
+	trait = generous
+	trait = calm
+	trait = shrewd
+	trait = education_intrigue_2
 	martial = 8
-	diplomacy = 15
-	stewardship = 11
 	name = "name_robert"
 		dynasty_house = house_anjou
 	culture = french
@@ -65274,9 +67310,14 @@ nap_roberto_durazzo = {
 }
 
 nap_roberto_orsini = {
-	martial = 9
-	diplomacy = 13
-	stewardship = 13
+	# MB+ attributes at 1337.4.1, character 70864.
+	martial = 5
+	diplomacy = 8
+	stewardship = 3
+	intrigue = 7
+	learning = 8
+	trait = education_stewardship_2
+	trait = calm
 	name = "name_robert"
 		dynasty = orsini_dynasty
 	culture = italian
@@ -65344,6 +67385,12 @@ nap_violante_aragon = {
 }
 
 nav_agnes_evreux = {
+	# MB+ attributes at 1337.4.1, character 455815.
+	martial = 6
+	diplomacy = 4
+	stewardship = 6
+	intrigue = 7
+	trait = lisping
 	female = yes
 	name = "name_agnes"
 		dynasty_house = house_de_evreux
@@ -65376,9 +67423,13 @@ nav_blanche_evreux = {
 }
 
 nav_charles_ii_evreux = {
-	martial = 1
-	diplomacy = 1
-	stewardship = 1
+	# MB+ attributes at 1337.4.1, character 455813.
+	martial = 4
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 7
+	trait = arrogant
+	trait = education_martial_2
 	name = "name_charles"
 		dynasty_house = house_de_evreux
 	culture = french
@@ -65490,10 +67541,14 @@ nav_inigo_arista = {
 }
 
 nav_jeanne_ii_capet = {
+	# MB+ attributes at 1337.4.1, character 455835.
+	martial = 8
+	diplomacy = 6
+	stewardship = 6
+	intrigue = 6
+	sexuality = heterosexual
+	trait = education_intrigue_2
 	female = yes
-	martial = 11
-	diplomacy = 10
-	stewardship = 11
 	name = "name_joanna"
 		dynasty_house = house_capet
 	culture = french
@@ -65575,9 +67630,13 @@ nav_philip_evreux = {
 }
 
 nav_philip_iii_evreux = {
-	martial = 8
-	diplomacy = 13
-	stewardship = 18
+	# MB+ attributes at 1337.4.1, character 455810.
+	martial = 4
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 8
+	trait = just
+	trait = education_intrigue_1
 	name = "name_philip"
 		dynasty_house = house_de_evreux
 	culture = french
@@ -65875,6 +67934,8 @@ neg_andrea_cornaro = {
 }
 
 neg_balzana_gozzadini = {
+	# MB+ attributes at 1337.4.1, character 31485.
+	trait = education_diplomacy_1
 	female = yes
 	name = "name_balzana"
 	culture = cisalpine
@@ -66023,6 +68084,8 @@ neg_giorgio_ii_ghisi = {
 }
 
 neg_giovanni_dalle_carceri = {
+	# MB+ attributes at 1337.4.1, character 31486.
+	trait = education_diplomacy_1
 	name = "name_john"
 		dynasty = carceri_dynasty
 	culture = cisalpine
@@ -66191,6 +68254,8 @@ neg_niccolo_dalle_carceri = {
 }
 
 neg_pietro_dalle_carceri = {
+	# MB+ attributes at 1337.4.1, character 31484.
+	trait = education_stewardship_2
 	name = "name_peter"
 		dynasty = carceri_dynasty
 	culture = cisalpine
@@ -66224,6 +68289,11 @@ neg_rizzardo_dalle_carceri = {
 }
 
 neg_simona_fadrique = {
+	# MB+ attributes at 1337.4.1, character 461556.
+	martial = 7
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 4
 	female = yes
 	name = "name_simone"
 		dynasty_house = house_fadrique
@@ -66908,6 +68978,13 @@ nsh_johann_nassau = {
 }
 
 nsi_adolph_i_nassau = {
+	# MB+ attributes at 1337.4.1, character 462364.
+	martial = 6
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 5
+	trait = lustful
+	trait = education_intrigue_1
 	name = "name_adolf"
 		dynasty = nassau_dynasty
 	culture = saxon
@@ -66917,6 +68994,13 @@ nsi_adolph_i_nassau = {
 }
 
 nsi_gerlach_i_nassau = {
+	# MB+ attributes at 1337.4.1, character 462362.
+	martial = 6
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 8
+	trait = generous
+	trait = education_martial_2
 	name = "name_gerlach"
 		dynasty = nassau_dynasty
 	culture = franconian
@@ -66994,6 +69078,15 @@ nss_otto_ii_nassau = {
 }
 
 nsw_johann_i_nassau = {
+	# MB+ attributes at 1337.4.1, character 462366.
+	martial = 6
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 5
+	trait = gluttonous
+	trait = calm
+	trait = lustful
+	trait = education_martial_3
 	name = "name_john"
 		dynasty = nassau_dynasty
 	culture = saxon
@@ -67651,6 +69744,14 @@ old_johann_ii_oldenburg = {
 }
 
 old_johann_iii_oldenburg = {
+	# MB+ attributes at 1337.4.1, character 462917.
+	martial = 7
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 7
+	trait = chaste
+	trait = generous
+	trait = education_learning_3
 	name = "name_john"
 		dynasty = oldenburg_dynasty
 	culture = saxon
@@ -67958,6 +70059,13 @@ ord_elizabeth_butler = {
 }
 
 ord_james_butler_i = {
+	# MB+ attributes at 1337.4.1, character 454110.
+	martial = 7
+	diplomacy = 7
+	stewardship = 1
+	intrigue = 4
+	trait = brave
+	trait = education_martial_1
 	father = mb_genealogy_454111
 	mother = mb_genealogy_454112
 	name = "name_james"
@@ -67969,6 +70077,12 @@ ord_james_butler_i = {
 }
 
 ord_james_butler_ii = {
+	# MB+ attributes at 1337.4.1, character 454113.
+	martial = 7
+	diplomacy = 3
+	stewardship = 4
+	intrigue = 3
+	trait = education_martial_2
 	name = "name_james"
 		dynasty = butler_dynasty
 	culture = english
@@ -68159,6 +70273,8 @@ oss_carroll_mac_gilla_patraic = {
 }
 
 osw_jan_piast = {
+	# MB+ attributes at 1337.4.1, character 125947.
+	trait = education_learning_3
 	name = "name_john"
 		dynasty = piast_dynasty
 	culture = polish
@@ -68318,6 +70434,8 @@ pad_alvise_forzate = {
 }
 
 pad_azzo_correggio = {
+	# MB+ attributes at 1337.4.1, character cisalpine0767.
+	trait = education_martial_3
 	martial = 5
 	diplomacy = 5
 	stewardship = 8
@@ -68341,6 +70459,8 @@ pad_beatrice_carrara = {
 }
 
 pad_beatrice_correggio = {
+	# MB+ attributes at 1337.4.1, character cisalpine0765.
+	trait = education_stewardship_1
 	female = yes
 	name = "name_beatrix"
 		dynasty = correggio_dynasty
@@ -68594,6 +70714,8 @@ pad_giacomo_ii_carrara = {
 }
 
 pad_giberto_iv_correggio = {
+	# MB+ attributes at 1337.4.1, character cisalpine0766.
+	trait = education_martial_2
 	martial = 9
 	diplomacy = 8
 	stewardship = 8
@@ -68628,6 +70750,8 @@ pad_guglielmo_rossi = {
 }
 
 pad_guido_iv_correggio = {
+	# MB+ attributes at 1337.4.1, character cisalpine0763.
+	trait = education_martial_2
 	martial = 9
 	diplomacy = 9
 	stewardship = 10
@@ -68677,6 +70801,8 @@ pad_isabetta_gradenigo = {
 }
 
 pad_jacopina_correggio = {
+	# MB+ attributes at 1337.4.1, character cisalpine0753.
+	trait = education_intrigue_2
 	female = yes
 	name = "name_jacqueline"
 		dynasty = correggio_dynasty
@@ -68819,6 +70945,10 @@ pad_marzio_forzate = {
 }
 
 pad_niccolo_carrara = {
+	# MB+ attributes at 1337.4.1, character 1226881.
+	trait = generous
+	trait = brave
+	trait = education_martial_2
 	martial = 11
 	diplomacy = 13
 	stewardship = 8
@@ -69184,6 +71314,9 @@ pap_clement_v = {
 }
 
 pap_clemente_vi = {
+	# MB+ attributes at 1337.4.1, character MB_sens_pierre_roger.
+	trait = education_learning_4
+	trait = ambitious
 	martial = 5
 	diplomacy = 15
 	stewardship = 11
@@ -69196,9 +71329,16 @@ pap_clemente_vi = {
 }
 
 pap_francesco_petrarca = {
-	martial = 3
-	diplomacy = 15
-	stewardship = 19
+	# MB+ attributes at 1337.4.1, character 214092.
+	martial = 2
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 4
+	learning = 9
+	trait = education_learning_4
+	trait = lifestyle_poet
+	trait = lifestyle_scholar
+	trait = zealous
 	name = "name_francis"
 	culture = italian
 	religion = catholic
@@ -69293,6 +71433,9 @@ pap_guillaume_court = {
 }
 
 pap_helie_talleyrand_perigord = {
+	# MB+ attributes at 1337.4.1, character MB_cd_san_pietro_helie.
+	trait = education_learning_3
+	trait = ambitious
 	martial = 3
 	diplomacy = 18
 	stewardship = 10
@@ -69407,6 +71550,9 @@ pap_matteo_rosso_orsini_ii = {
 }
 
 pap_napoleone_cardinale_orsini = {
+	# MB+ attributes at 1337.4.1, character MB_cd_san_adriano_napoleone_orsini.
+	trait = education_learning_2
+	trait = ambitious
 	martial = 5
 	diplomacy = 13
 	stewardship = 15
@@ -69604,6 +71750,8 @@ pap_urbano_vi = {
 }
 
 par_azzo_i_correggio = {
+	# MB+ attributes at 1337.4.1, character 1062035.
+	trait = education_stewardship_1
 	martial = 5
 	diplomacy = 13
 	stewardship = 8
@@ -69699,6 +71847,8 @@ par_salvino_della_torre = {
 }
 
 pat_guglielmo_frangipani = {
+	# MB+ attributes at 1337.4.1, character MB_patras_guglielmo_frangipani.
+	trait = education_learning_4
 	martial = 7
 	diplomacy = 13
 	stewardship = 10
@@ -69720,6 +71870,8 @@ pav_antonio_beccaria = {
 }
 
 pav_castellino_beccaria = {
+	# MB+ attributes at 1337.4.1, character 1064625.
+	trait = education_stewardship_1
 	martial = 15
 	diplomacy = 11
 	stewardship = 9
@@ -69764,6 +71916,8 @@ pav_corrado_beccaria = {
 }
 
 pav_fiorello_beccaria = {
+	# MB+ attributes at 1337.4.1, character 1064626.
+	trait = education_martial_1
 	name = "name_florus"
 		dynasty = beccaria_dynasty
 	culture = cisalpine
@@ -69775,6 +71929,8 @@ pav_fiorello_beccaria = {
 }
 
 pav_leodrisino_beccaria = {
+	# MB+ attributes at 1337.4.1, character 1064628.
+	trait = education_stewardship_2
 	name = "name_louis"
 		dynasty = beccaria_dynasty
 	culture = cisalpine
@@ -69820,6 +71976,8 @@ pav_manfredo_beccaria_iii = {
 }
 
 pav_milano_beccaria = {
+	# MB+ attributes at 1337.4.1, character cisalpine0520.
+	trait = education_diplomacy_1
 	name = "name_milano"
 		dynasty = beccaria_dynasty
 	culture = cisalpine
@@ -69830,6 +71988,8 @@ pav_milano_beccaria = {
 }
 
 pav_musso_beccaria = {
+	# MB+ attributes at 1337.4.1, character 1064624.
+	trait = education_diplomacy_3
 	martial = 9
 	diplomacy = 9
 	stewardship = 8
@@ -70965,6 +73125,13 @@ ple_elizabeth_darcy_countess_of_ormond = {
 }
 
 ple_john_darcy_2nd_baron_darcy_of_knaith = {
+	# MB+ attributes at 1337.4.1, character 454100.
+	martial = 7
+	diplomacy = 4
+	stewardship = 3
+	intrigue = 3
+	trait = wrathful
+	trait = education_martial_3
 	name = "name_john"
 		dynasty = darcy_dynasty
 	culture = english
@@ -70975,6 +73142,13 @@ ple_john_darcy_2nd_baron_darcy_of_knaith = {
 }
 
 ple_john_darcy_baron_darcy_de_knayth = {
+	# MB+ attributes at 1337.4.1, character 454101.
+	martial = 8
+	diplomacy = 4
+	stewardship = 7
+	intrigue = 7
+	trait = arrogant
+	trait = education_martial_3
 	name = "name_john"
 		dynasty = darcy_dynasty
 	culture = english
@@ -71501,10 +73675,15 @@ pol_boleslaw_the_pious_piast = {
 }
 
 pol_casimir_iii_piast = {
+	# MB+ attributes at 1337.4.1, character 471500.
+	martial = 7
+	diplomacy = 8
+	stewardship = 9
+	intrigue = 7
+	trait = humble
+	trait = intellect_good_3
+	trait = education_stewardship_4
 	dna = 471500_kazimierz_iii_the_great
-	martial = 17
-	diplomacy = 15
-	stewardship = 18
 	name = "name_casimir"
 		dynasty = piast_dynasty
 	culture = polish
@@ -71733,9 +73912,15 @@ por_afonso_iii_portugal = {
 }
 
 por_afonso_iv_portugal = {
-	martial = 16
-	diplomacy = 9
-	stewardship = 14
+	# MB+ attributes at 1337.4.1, character 459500.
+	martial = 9
+	diplomacy = 5
+	stewardship = 7
+	intrigue = 6
+	trait = brave
+	trait = wrathful
+	trait = stubborn
+	trait = education_martial_2
 	name = "name_alphonse"
 		dynasty_house = house_burgundy_portuguese
 	culture = portuguese
@@ -71761,10 +73946,16 @@ por_beatriz_castile = {
 }
 
 por_beatriz_portugal = {
+	# MB+ attributes at 1337.4.1, character 457534.
+	martial = 5
+	diplomacy = 4
+	stewardship = 8
+	intrigue = 5
+	trait = lustful
+	trait = diligent
+	trait = craven
+	trait = education_intrigue_2
 	female = yes
-	martial = 7
-	diplomacy = 13
-	stewardship = 11
 	name = "name_beatrix"
 		dynasty_house = house_burgundy_castile
 	culture = castilian
@@ -71828,6 +74019,8 @@ por_pedro_barcelos = {
 }
 
 por_pedro_i_portugal = {
+	# MB+ attributes at 1337.4.1, character 459501.
+	trait = just
 	martial = 7
 	diplomacy = 7
 	stewardship = 9
@@ -71918,6 +74111,8 @@ pro_anfos_ii_arago = {
 }
 
 pro_antonio_grimaldi = {
+	# MB+ attributes at 1337.4.1, character 73730.
+	trait = education_martial_3
 	martial = 14
 	diplomacy = 10
 	stewardship = 10
@@ -72545,9 +74740,13 @@ rav_maddalena_malatesta = {
 }
 
 rav_ostasio_i_polenta = {
-	martial = 9
-	diplomacy = 18
-	stewardship = 8
+	# MB+ attributes at 1337.4.1, character 1063099.
+	martial = 5
+	diplomacy = 4
+	stewardship = 6
+	intrigue = 6
+	trait = wrathful
+	trait = education_martial_2
 	name = "name_ostasio"
 		dynasty = polenta_dynasty
 	culture = cisalpine
@@ -72588,6 +74787,8 @@ rav_pandolfo_polenta = {
 }
 
 raw_siemowit_ii_piast = {
+	# MB+ attributes at 1337.4.1, character 125991.
+	trait = chaste
 	name = "name_siemowit"
 		dynasty = piast_dynasty
 	culture = polish
@@ -72853,6 +75054,8 @@ rie_udelhild_rieneck = {
 }
 
 rig_friedrich_von_pernstein = {
+	# MB+ attributes at 1337.4.1, character 30428.
+	trait = education_learning_2
 	name = "name_frederick"
 	culture = saxon
 	religion = catholic
@@ -73259,6 +75462,13 @@ ros_matilda_de_brus = {
 }
 
 ros_william_5th_earl = {
+	# MB+ attributes at 1337.4.1, character 453003.
+	martial = 6
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 4
+	trait = wrathful
+	trait = education_martial_2
 	name = "name_william"
 		dynasty = o_bolan_dynasty
 	culture = gaelic
@@ -74050,6 +76260,12 @@ sal_bonifacio_del_vasto = {
 }
 
 sal_bonifacio_del_vasto_ii = {
+	# MB+ attributes at 1337.4.1, character 71221.
+	martial = 6
+	diplomacy = 7
+	stewardship = 4
+	intrigue = 5
+	trait = education_martial_1
 	name = "name_boniface"
 		dynasty_house = house_del_vasto
 	culture = cisalpine
@@ -74116,9 +76332,13 @@ sal_federico_del_vasto = {
 }
 
 sal_federico_ii_del_vasto = {
-	martial = 1
-	diplomacy = 2
-	stewardship = 2
+	# MB+ attributes at 1337.4.1, character 420305.
+	martial = 5
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 6
+	trait = lustful
+	trait = education_stewardship_2
 	name = "name_frederick"
 		dynasty_house = house_del_vasto
 	culture = cisalpine
@@ -74164,8 +76384,14 @@ sal_luisa_di_ceva = {
 }
 
 sal_manfredo_del_vasto = {
-	martial = 13
-	diplomacy = 8
+	# MB+ attributes at 1337.4.1, character 420304.
+	martial = 8
+	diplomacy = 7
+	intrigue = 9
+	trait = diligent
+	trait = wrathful
+	trait = deceitful
+	trait = education_intrigue_3
 	stewardship = 5
 	name = "name_manfred"
 		dynasty_house = house_del_vasto
@@ -74229,6 +76455,14 @@ sal_manfredo_iii_del_vasto = {
 }
 
 sal_manfredo_iv_del_vasto = {
+	# MB+ attributes at 1337.4.1, character 71207.
+	martial = 3
+	diplomacy = 3
+	stewardship = 7
+	intrigue = 3
+	learning = 5
+	trait = paranoid
+	trait = education_stewardship_3
 	name = "name_manfred"
 		dynasty_house = house_del_vasto
 	culture = cisalpine
@@ -74265,6 +76499,14 @@ sal_marguerite_de_la_tour = {
 }
 
 sal_ricciarda_visconti = {
+	# MB+ attributes at 1337.4.1, character 463144.
+	martial = 7
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 7
+	trait = diligent
+	trait = gluttonous
+	trait = education_intrigue_1
 	female = yes
 	name = "name_ricarda"
 		dynasty = visconti_dynasty
@@ -74278,6 +76520,12 @@ sal_ricciarda_visconti = {
 }
 
 sal_teodoro_del_vasto = {
+	# MB+ attributes at 1337.4.1, character 71219.
+	martial = 5
+	diplomacy = 5
+	stewardship = 4
+	intrigue = 6
+	trait = education_diplomacy_2
 	name = "name_theodore"
 		dynasty_house = house_del_vasto
 	culture = cisalpine
@@ -74288,9 +76536,14 @@ sal_teodoro_del_vasto = {
 }
 
 sal_tommaso_del_vasto = {
-	martial = 5
-	diplomacy = 13
-	stewardship = 9
+	# MB+ attributes at 1337.4.1, character 420301.
+	martial = 7
+	diplomacy = 6
+	stewardship = 8
+	intrigue = 6
+	trait = craven
+	trait = stuttering
+	trait = education_martial_2
 	name = "name_thomas"
 		dynasty_house = house_del_vasto
 	culture = cisalpine
@@ -74453,9 +76706,12 @@ sao_bonifacio_fadrique = {
 }
 
 sao_giacomo_fadrique = {
-	martial = 13
-	diplomacy = 7
-	stewardship = 7
+	# MB+ attributes at 1337.4.1, character 461552.
+	martial = 7
+	diplomacy = 6
+	stewardship = 4
+	intrigue = 8
+	trait = education_intrigue_2
 	name = "name_james"
 		dynasty_house = house_fadrique
 	culture = catalan
@@ -74466,6 +76722,13 @@ sao_giacomo_fadrique = {
 }
 
 sao_giovanna_fadrique = {
+	# MB+ attributes at 1337.4.1, character 461557.
+	martial = 6
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 7
+	trait = deceitful
+	trait = cynical
 	female = yes
 	name = "name_joanna"
 		dynasty_house = house_fadrique
@@ -74477,9 +76740,13 @@ sao_giovanna_fadrique = {
 }
 
 sao_giovanni_fadrique = {
-	martial = 11
-	diplomacy = 7
-	stewardship = 7
+	# MB+ attributes at 1337.4.1, character 461553.
+	martial = 4
+	diplomacy = 8
+	stewardship = 5
+	intrigue = 5
+	trait = diligent
+	trait = education_stewardship_3
 	name = "name_john"
 		dynasty_house = house_fadrique
 	culture = catalan
@@ -74490,6 +76757,12 @@ sao_giovanni_fadrique = {
 }
 
 sao_guglielmo_fadrique = {
+	# MB+ attributes at 1337.4.1, character 461555.
+	martial = 6
+	diplomacy = 8
+	stewardship = 5
+	intrigue = 6
+	trait = craven
 	name = "name_william"
 		dynasty_house = house_fadrique
 	culture = catalan
@@ -74512,6 +76785,12 @@ sao_marulla_verona = {
 }
 
 sao_pietro_fadrique = {
+	# MB+ attributes at 1337.4.1, character 461551.
+	martial = 4
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 7
+	trait = honest
 	name = "name_peter"
 		dynasty_house = house_fadrique
 	culture = catalan
@@ -74641,9 +76920,11 @@ sav_amedee_v_savoy = {
 }
 
 sav_amedee_vi_savoy = {
-	martial = 0
-	diplomacy = 0
-	stewardship = 0
+	# MB+ attributes at 1337.4.1, character 462155.
+	martial = 8
+	diplomacy = 4
+	stewardship = 8
+	intrigue = 7
 	name = "name_amadeus"
 		dynasty = savoy_dynasty
 	culture = arpitan
@@ -74667,9 +76948,13 @@ sav_anne_burgundian = {
 }
 
 sav_aymon_savoy = {
-	martial = 11
-	diplomacy = 15
-	stewardship = 5
+	# MB+ attributes at 1337.4.1, character 462154.
+	martial = 6
+	diplomacy = 4
+	stewardship = 6
+	intrigue = 7
+	trait = generous
+	trait = education_intrigue_2
 	name = "name_haimo"
 		dynasty = savoy_dynasty
 	culture = arpitan
@@ -74704,6 +76989,11 @@ sav_beatrix_faucigny = {
 }
 
 sav_blanche_marie_savoy = {
+	# MB+ attributes at 1337.4.1, character 462156.
+	martial = 4
+	diplomacy = 8
+	stewardship = 5
+	intrigue = 7
 	female = yes
 	name = "name_blanche"
 		dynasty = savoy_dynasty
@@ -74849,6 +77139,13 @@ sav_isabelle_grandson = {
 }
 
 sav_jacques_savoy_achaia = {
+	# MB+ attributes at 1337.4.1, character 462690.
+	martial = 5
+	diplomacy = 8
+	stewardship = 5
+	intrigue = 6
+	trait = wrathful
+	trait = education_martial_2
 	name = "name_james"
 		dynasty = savoy_dynasty
 	culture = arpitan
@@ -75311,6 +77608,13 @@ sco_alexander_stewart = {
 }
 
 sco_alice_beaumont = {
+	# MB+ attributes at 1337.4.1, character 453049.
+	martial = 4
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 4
+	trait = gluttonous
+	trait = education_stewardship_2
 	female = yes
 	name = "name_alice"
 		dynasty_house = house_beaumont
@@ -75322,6 +77626,12 @@ sco_alice_beaumont = {
 }
 
 sco_alice_de_comyn = {
+	# MB+ attributes at 1337.4.1, character 453043.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 4
+	trait = education_intrigue_1
 	female = yes
 	name = "name_alice"
 		dynasty = comyn_dynasty
@@ -75373,6 +77683,12 @@ sco_archibald_douglas = {
 }
 
 sco_archibald_douglas_3rd_earl = {
+	# MB+ attributes at 1337.4.1, character 453606.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 5
+	trait = education_stewardship_2
 	name = "name_archibald"
 		dynasty = douglas_dynasty
 	culture = scottish
@@ -75382,6 +77698,12 @@ sco_archibald_douglas_3rd_earl = {
 }
 
 sco_beatrice_beaumont = {
+	# MB+ attributes at 1337.4.1, character 453051.
+	martial = 6
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 5
+	trait = education_stewardship_2
 	female = yes
 	name = "name_beatrix"
 		dynasty_house = house_beaumont
@@ -75393,6 +77715,14 @@ sco_beatrice_beaumont = {
 }
 
 sco_black_agnes = {
+	# MB+ attributes at 1337.4.1, character 453062.
+	martial = 8
+	diplomacy = 6
+	stewardship = 8
+	intrigue = 4
+	trait = brave
+	trait = diligent
+	trait = education_martial_2
 	female = yes
 	name = "name_agnes"
 		dynasty = randolph_dynasty
@@ -75475,6 +77805,13 @@ sco_david_i = {
 }
 
 sco_david_ii = {
+	# MB+ attributes at 1337.4.1, character 453500.
+	martial = 4
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 8
+	trait = arbitrary
+	trait = education_learning_2
 	name = "name_david"
 		dynasty = bruce_dynasty
 	culture = scottish
@@ -75511,6 +77848,12 @@ sco_david_iii_strathbogie = {
 }
 
 sco_david_iv_strathbogie = {
+	# MB+ attributes at 1337.4.1, character 453008.
+	martial = 5
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 5
+	trait = education_martial_2
 	name = "name_david"
 		dynasty = strathbogie_dynasty
 	culture = scottish
@@ -75599,9 +77942,11 @@ sco_edgar = {
 }
 
 sco_edward_balliol = {
-	martial = 6
-	diplomacy = 11
-	stewardship = 8
+	# MB+ attributes at 1337.4.1, character 230530.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 5
 	name = "name_edward"
 		dynasty = balliol_dynasty
 	culture = scottish
@@ -75625,6 +77970,12 @@ sco_edward_bruce = {
 }
 
 sco_eleanor_de_brus = {
+	# MB+ attributes at 1337.4.1, character 453519.
+	martial = 6
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 4
+	trait = education_stewardship_2
 	female = yes
 	name = "name_eleanor"
 		dynasty = bruce_dynasty
@@ -75636,6 +77987,14 @@ sco_eleanor_de_brus = {
 }
 
 sco_eleanor_douglas = {
+	# MB+ attributes at 1337.4.1, character 453518.
+	martial = 6
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 4
+	trait = generous
+	trait = arrogant
+	trait = education_intrigue_2
 	female = yes
 	name = "name_eleanor"
 		dynasty = douglas_dynasty
@@ -75804,6 +78163,12 @@ sco_james_stewart = {
 }
 
 sco_joan_beaumont = {
+	# MB+ attributes at 1337.4.1, character 453050.
+	martial = 5
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 5
+	trait = education_stewardship_2
 	female = yes
 	name = "name_joanna"
 		dynasty_house = house_beaumont
@@ -75839,8 +78204,12 @@ sco_john_balliol_of_scotland = {
 }
 
 sco_john_beaumont = {
-	martial = 9
-	diplomacy = 13
+	# MB+ attributes at 1337.4.1, character 453046.
+	martial = 8
+	diplomacy = 7
+	intrigue = 4
+	trait = generous
+	trait = education_intrigue_1
 	stewardship = 5
 	name = "name_john"
 		dynasty_house = house_beaumont
@@ -75892,6 +78261,13 @@ sco_john_comyn_iv_of_badenoch = {
 }
 
 sco_john_douglas = {
+	# MB+ attributes at 1337.4.1, character 453610.
+	martial = 7
+	diplomacy = 3
+	stewardship = 3
+	intrigue = 3
+	trait = stuttering
+	trait = education_martial_2
 	name = "name_john"
 		dynasty = douglas_dynasty
 	culture = scottish
@@ -75901,6 +78277,12 @@ sco_john_douglas = {
 }
 
 sco_katherine_beaumont = {
+	# MB+ attributes at 1337.4.1, character 453042.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 4
+	trait = education_intrigue_1
 	female = yes
 	name = "name_catherine"
 		dynasty_house = house_beaumont
@@ -76066,6 +78448,13 @@ sco_nn_ingen_cinaed = {
 }
 
 sco_patrick_dunbar = {
+	# MB+ attributes at 1337.4.1, character 453014.
+	martial = 5
+	diplomacy = 4
+	stewardship = 7
+	intrigue = 9
+	trait = cynical
+	trait = education_martial_2
 	father = mb_genealogy_453063
 	mother = mb_genealogy_453064
 	name = "name_patrick"
@@ -76076,6 +78465,12 @@ sco_patrick_dunbar = {
 }
 
 sco_richard_beaumont_ii = {
+	# MB+ attributes at 1337.4.1, character 453047.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 4
+	trait = education_martial_2
 	name = "name_richard"
 		dynasty_house = house_beaumont
 	culture = english
@@ -76186,6 +78581,13 @@ sco_robert_the_bruce = {
 }
 
 sco_thomas_beaumont = {
+	# MB+ attributes at 1337.4.1, character 453048.
+	martial = 4
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 4
+	trait = humble
+	trait = education_intrigue_1
 	name = "name_thomas"
 		dynasty_house = house_beaumont
 	culture = english
@@ -76272,6 +78674,14 @@ sco_william_douglas = {
 }
 
 sco_william_douglas_earl = {
+	# MB+ attributes at 1337.4.1, character 453611.
+	martial = 6
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 6
+	trait = just
+	trait = greedy
+	trait = education_martial_2
 	name = "name_william"
 		dynasty = douglas_dynasty
 	culture = scottish
@@ -76465,6 +78875,13 @@ ser_ioannes_palaiologos = {
 }
 
 ser_ivan_dragushin = {
+	# MB+ attributes at 1337.4.1, character 468550.
+	martial = 4
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 7
+	trait = zealous
+	trait = education_martial_2
 	name = "name_john"
 		dynasty = terter_dynasty
 	culture = bulgarian
@@ -76704,10 +79121,18 @@ ser_stefan_dragutin = {
 }
 
 ser_stefan_dusan = {
+	# MB+ attributes at 1337.4.1, character 468500.
+	martial = 9
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 7
+	sexuality = heterosexual
+	trait = diligent
+	trait = zealous
+	trait = ambitious
+	trait = strong
+	trait = education_martial_4
 	dna = 468500_sfefan_uros_iv_dusan
-	martial = 19
-	diplomacy = 13
-	stewardship = 16
 	name = "name_stephen.name_uros"
 		dynasty = nemanjic_dynasty
 	culture = serbian
@@ -76815,6 +79240,12 @@ ser_stefan_vladislav_ii = {
 }
 
 ser_teodora_nemanjic = {
+	# MB+ attributes at 1337.4.1, character 468504.
+	martial = 5
+	diplomacy = 7
+	stewardship = 8
+	intrigue = 7
+	trait = education_stewardship_2
 	female = yes
 	name = "name_theodora"
 		dynasty = nemanjic_dynasty
@@ -77777,9 +80208,14 @@ sic_pietro_lancia = {
 }
 
 sic_raimondo_peralta = {
-	martial = 13
-	diplomacy = 8
-	stewardship = 8
+	# MB+ attributes at 1337.4.1, character 71193.
+	martial = 6
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 8
+	learning = 4
+	trait = cynical
+	trait = education_stewardship_4
 	name = "name_raymond"
 		dynasty_house = house_peralta
 	culture = sicilian
@@ -78110,6 +80546,14 @@ slt_konrad_von_durrach = {
 }
 
 slz_friedrich_von_leibnitz = {
+	# MB+ attributes at 1337.4.1, character 487010.
+	martial = 6
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 7
+	trait = chaste
+	trait = zealous
+	trait = education_diplomacy_3
 	name = "name_frederick"
 	culture = bavarian
 	religion = catholic
@@ -78773,6 +81217,14 @@ ste_elisabeth_schwerin = {
 }
 
 ste_otto_i_stettin = {
+	# MB+ attributes at 1337.4.1, character 451950.
+	martial = 5
+	diplomacy = 4
+	stewardship = 7
+	intrigue = 7
+	trait = greedy
+	trait = craven
+	trait = education_martial_2
 	name = "name_otto"
 		dynasty = gryf_dynasty
 	culture = saxon
@@ -78893,9 +81345,15 @@ stp_guy_v_chatillon = {
 }
 
 stp_jean_chatillon = {
-	martial = 9
-	diplomacy = 5
-	stewardship = 5
+	# MB+ attributes at 1337.4.1, character MB_premontre_jean_chatillon.
+	martial = 3
+	diplomacy = 6
+	stewardship = 8
+	intrigue = 5
+	learning = 8
+	trait = education_stewardship_2
+	trait = devoted
+	trait = patient
 	name = "name_john"
 		dynasty = chatillon_dynasty
 	culture = french
@@ -78937,6 +81395,15 @@ stp_marie_chatillon = {
 }
 
 stp_marie_dreux = {
+	# MB+ attributes at 1337.4.1, character 455788.
+	martial = 6
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 6
+	trait = just
+	trait = zealous
+	trait = calm
+	trait = education_intrigue_2
 	female = yes
 	name = "name_mary"
 		dynasty_house = house_dreux
@@ -79153,6 +81620,13 @@ swb_albrecht_ii_askanier = {
 }
 
 swb_elisabeth_askanier = {
+	# MB+ attributes at 1337.4.1, character 462105.
+	martial = 5
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 6
+	trait = chaste
+	trait = education_stewardship_2
 	female = yes
 	name = "name_elizabeth"
 		dynasty = askanier_dynasty
@@ -79210,6 +81684,12 @@ swb_kunegunda_lokietkowna = {
 }
 
 swb_miesko_askanier = {
+	# MB+ attributes at 1337.4.1, character 462107.
+	martial = 6
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 6
+	trait = education_stewardship_2
 	name = "name_mieszko"
 		dynasty = askanier_dynasty
 	culture = saxon
@@ -79220,6 +81700,14 @@ swb_miesko_askanier = {
 }
 
 swb_otto_askanier = {
+	# MB+ attributes at 1337.4.1, character 462103.
+	martial = 5
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 6
+	trait = chaste
+	trait = arrogant
+	trait = education_martial_2
 	name = "name_otto"
 		dynasty = askanier_dynasty
 	culture = saxon
@@ -79250,6 +81738,14 @@ swb_rudolf_askanier = {
 }
 
 swb_rudolf_ii_askanier = {
+	# MB+ attributes at 1337.4.1, character 462104.
+	martial = 8
+	diplomacy = 9
+	stewardship = 6
+	intrigue = 6
+	trait = diligent
+	trait = chaste
+	trait = education_martial_2
 	name = "name_rudolf"
 		dynasty = askanier_dynasty
 	culture = saxon
@@ -79260,6 +81756,11 @@ swb_rudolf_ii_askanier = {
 }
 
 swb_wenzel_askanier = {
+	# MB+ attributes at 1337.4.1, character 462109.
+	martial = 7
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 6
 	name = "Wenzel"
 		dynasty = askanier_dynasty
 	culture = saxon
@@ -79270,6 +81771,14 @@ swb_wenzel_askanier = {
 }
 
 swd_agnes_habsburg = {
+	# MB+ attributes at 1337.4.1, character 462032.
+	martial = 5
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 6
+	trait = just
+	trait = chaste
+	trait = education_stewardship_2
 	female = yes
 	name = "name_agnes"
 		dynasty = habsburg_dynasty
@@ -79524,10 +82033,16 @@ swe_knut_jonsson = {
 }
 
 swe_magnus_eriksson = {
+	# MB+ attributes at 1337.4.1, character 450500.
+	martial = 6
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 6
+	trait = generous
+	trait = cynical
+	trait = brave
+	trait = education_diplomacy_1
 	dna = 450500_magnus_iv_eriksson
-	martial = 5
-	diplomacy = 1
-	stewardship = 3
 	name = "name_magnus"
 		dynasty = bjalbo_atten_dynasty
 	culture = swedish
@@ -80366,9 +82881,15 @@ teu_albrecht_braunschweig_grubenhagen = {
 }
 
 teu_dietrich_von_altenburg = {
-	martial = 12
+	# MB+ attributes at 1337.4.1, character 474000.
+	martial = 7
+	stewardship = 5
+	intrigue = 8
+	trait = just
+	trait = brave
+	trait = education_martial_3
+	trait = order_member
 	diplomacy = 6
-	stewardship = 15
 	name = "name_theodoric"
 		dynasty = altenburg_dynasty
 	culture = saxon
@@ -80751,6 +83272,8 @@ thp_andrea_thopia = {
 }
 
 thp_helene_anjou = {
+	# MB+ attributes at 1337.4.1, character 1226543.
+	trait = bastard
 	female = yes
 	name = "name_helen"
 		dynasty_house = house_anjou
@@ -80954,6 +83477,13 @@ tir_henry_gorizia = {
 }
 
 tir_jan_jindrich_luxembourg = {
+	# MB+ attributes at 1337.4.1, character 462616.
+	martial = 7
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 7
+	trait = education_stewardship_2
+	trait = lustful
 	name = "name_john.name_henry"
 		dynasty = luxembourg_dynasty
 	culture = czech
@@ -82405,6 +84935,13 @@ tur_muhammad = {
 }
 
 tur_murad = {
+	# MB+ attributes at 1337.4.1, character 476502.
+	martial = 9
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 6
+	trait = diligent
+	trait = education_martial_2
 	name = "name_murad"
 		dynasty = ottomans_dynasty
 	culture = turkmen
@@ -82439,10 +84976,18 @@ tur_nilufer = {
 }
 
 tur_orhan = {
+	# MB+ attributes at 1337.4.1, character 476500.
+	martial = 9
+	diplomacy = 6
+	stewardship = 8
+	intrigue = 7
+	learning = 7
+	sexuality = heterosexual
+	trait = education_martial_3
+	trait = ambitious
+	trait = just
+	trait = forgiving
 	dna = 476500_orhan_gazi
-	martial = 19
-	diplomacy = 16
-	stewardship = 15
 	name = "name_orhan"
 		dynasty = ottomans_dynasty
 	culture = turkmen
@@ -83207,9 +85752,11 @@ ubv_agnes_wittelsbach = {
 }
 
 ubv_albrecht_wittelsbach = {
-	martial = 1
-	diplomacy = 1
-	stewardship = 1
+	# MB+ attributes at 1337.4.1, character 462746.
+	martial = 5
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 4
 	name = "name_albert"
 		dynasty = wittelsbach_dynasty
 	culture = bavarian
@@ -83220,6 +85767,12 @@ ubv_albrecht_wittelsbach = {
 }
 
 ubv_anna_wittelsbach = {
+	# MB+ attributes at 1337.4.1, character 462734.
+	martial = 5
+	diplomacy = 4
+	stewardship = 6
+	intrigue = 5
+	trait = education_stewardship_2
 	female = yes
 	name = "name_anna"
 		dynasty = wittelsbach_dynasty
@@ -83297,10 +85850,17 @@ ubv_ludwig_ii_wittelsbach = {
 }
 
 ubv_ludwig_iv_wittelsbach = {
+	# MB+ attributes at 1337.4.1, character 462740.
+	martial = 7
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 5
+	trait = temperate
+	trait = arrogant
+	trait = diligent
+	trait = education_intrigue_1
+	trait = excommunicated
 	dna = 462740_ludwig_iv_wittelsbach
-	martial = 16
-	diplomacy = 10
-	stewardship = 13
 	name = "name_louis"
 		dynasty = wittelsbach_dynasty
 	culture = bavarian
@@ -83324,9 +85884,13 @@ ubv_ludwig_vi_wittelsbach = {
 }
 
 ubv_margaret_avesnes = {
+	# MB+ attributes at 1337.4.1, character 462741.
+	martial = 5
+	diplomacy = 6
+	intrigue = 6
+	trait = brave
+	trait = education_intrigue_2
 	female = yes
-	martial = 3
-	diplomacy = 9
 	stewardship = 5
 	name = "name_margaret"
 		dynasty = avesnes_dynasty
@@ -83390,6 +85954,13 @@ ubv_rudolf_i_wittelsbach = {
 }
 
 ubv_stephen_ii_wittelsbach = {
+	# MB+ attributes at 1337.4.1, character 462730.
+	martial = 6
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 8
+	trait = temperate
+	trait = education_intrigue_2
 	name = "name_stephen"
 		dynasty = wittelsbach_dynasty
 	culture = bavarian
@@ -83410,9 +85981,16 @@ ubv_stephen_iii_wittelsbach = {
 }
 
 ubv_wilhelm_wittelsbach = {
-	martial = 13
-	diplomacy = 9
-	stewardship = 8
+	# MB+ attributes at 1337.4.1, character 462745.
+	martial = 5
+	diplomacy = 6
+	stewardship = 7
+	intrigue = 8
+	trait = lazy
+	trait = just
+	trait = greedy
+	trait = temperate
+	trait = education_learning_2
 	name = "name_william"
 		dynasty = wittelsbach_dynasty
 	culture = bavarian
@@ -83423,9 +86001,17 @@ ubv_wilhelm_wittelsbach = {
 }
 
 ubv_william_ockham = {
-	martial = 1
-	diplomacy = 5
-	stewardship = 7
+	# MB+ attributes at 1337.4.1, character 1337Unlanded2.
+	martial = 2
+	diplomacy = 6
+	stewardship = 4
+	intrigue = 7
+	learning = 10
+	trait = cynical
+	trait = intellect_good_2
+	trait = stubborn
+	trait = lifestyle_scholar
+	trait = education_learning_4
 	name = "name_william"
 	culture = english
 	religion = catholic
@@ -83481,6 +86067,12 @@ ulaghchi_borjigin = {
 }
 
 uls_elizabeth_de_burgh_4th_countess_ulster = {
+	# MB+ attributes at 1337.4.1, character 454614.
+	martial = 6
+	diplomacy = 4
+	stewardship = 6
+	intrigue = 5
+	trait = education_learning_2
 	female = yes
 	name = "name_elizabeth"
 		dynasty = de_burgh_dynasty
@@ -83493,6 +86085,13 @@ uls_elizabeth_de_burgh_4th_countess_ulster = {
 }
 
 uls_joan_de_burgh = {
+	# MB+ attributes at 1337.4.1, character 454107.
+	martial = 5
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 5
+	trait = arrogant
+	trait = education_stewardship_2
 	female = yes
 	name = "name_joanna"
 		dynasty = de_burgh_dynasty
@@ -83826,6 +86425,15 @@ utr_guy_de_hainault = {
 }
 
 utr_jan_van_diest = {
+	# MB+ attributes at 1337.4.1, character 462006.
+	martial = 6
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 7
+	trait = calm
+	trait = generous
+	trait = gluttonous
+	trait = education_learning_2
 	name = "name_john"
 	dynasty = von_Diest_dynasty
 	culture = dutch
@@ -83843,6 +86451,9 @@ vajravarmi_borjigin = {
 }
 
 vbk_algirdas_gediminds = {
+	# MB+ attributes at 1337.4.1, character 473506.
+	martial = 8
+	stewardship = 9
 	name = "name_algirdas"
 		dynasty = gediminid_dynasty
 	culture = lithuanian
@@ -84853,9 +87464,12 @@ ven_franceschina_steno = {
 }
 
 ven_francesco_dandolo = {
-	martial = 16
-	diplomacy = 16
-	stewardship = 8
+	# MB+ attributes at 1337.4.1, character 463600.
+	martial = 5
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 8
+	trait = education_learning_2
 	name = "name_francis"
 		dynasty = dandolo_dynasty
 	culture = cisalpine
@@ -86061,6 +88675,16 @@ ver_agnese_ruggieri = {
 }
 
 ver_alberto_ii_scala = {
+	# MB+ attributes at 1337.4.1, character 412072.
+	martial = 6
+	diplomacy = 4
+	stewardship = 8
+	intrigue = 4
+	trait = just
+	trait = lustful
+	trait = greedy
+	trait = zealous
+	trait = education_martial_2
 	name = "name_albert"
 		dynasty = scala_dynasty
 	culture = cisalpine
@@ -86106,6 +88730,8 @@ ver_altino_castracani = {
 }
 
 ver_antonio_rossi = {
+	# MB+ attributes at 1337.4.1, character cisalpine0815.
+	trait = education_learning_2
 	name = "name_anthony"
 		dynasty = rossi_dynasty
 	culture = cisalpine
@@ -86174,6 +88800,13 @@ ver_beatrice_da_camino = {
 }
 
 ver_beatrice_scala = {
+	# MB+ attributes at 1337.4.1, character 412082.
+	martial = 5
+	diplomacy = 4
+	stewardship = 6
+	intrigue = 5
+	trait = bastard
+	trait = education_stewardship_2
 	female = yes
 	name = "name_beatrix"
 		dynasty = scala_dynasty
@@ -86213,6 +88846,15 @@ ver_cagnolo_nogarola = {
 }
 
 ver_cangrande_ii_scala = {
+	# MB+ attributes at 1337.4.1, character 412080.
+	martial = 4
+	diplomacy = 4
+	stewardship = 4
+	intrigue = 7
+	trait = cynical
+	trait = greedy
+	trait = arbitrary
+	trait = education_stewardship_2
 	name = "name_canius.name_magnus"
 		dynasty = scala_dynasty
 	culture = cisalpine
@@ -86236,6 +88878,14 @@ ver_cangrande_scala = {
 }
 
 ver_caterina_da_camino = {
+	# MB+ attributes at 1337.4.1, character 70694.
+	martial = 3
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 4
+	trait = just
+	trait = ambitious
+	trait = education_stewardship_2
 	female = yes
 	name = "name_catherine"
 		dynasty = da_camino_dynasty
@@ -86284,6 +88934,8 @@ ver_contessa_fogliano = {
 }
 
 ver_costanza_rossi = {
+	# MB+ attributes at 1337.4.1, character cisalpine0814.
+	trait = education_stewardship_1
 	female = yes
 	name = "name_constance"
 		dynasty = rossi_dynasty
@@ -86305,9 +88957,13 @@ ver_francesco_fogliano = {
 }
 
 ver_fregnano_scala = {
-	martial = 5
-	diplomacy = 2
-	stewardship = 2
+	# MB+ attributes at 1337.4.1, character 412081.
+	martial = 7
+	diplomacy = 6
+	stewardship = 6
+	intrigue = 7
+	trait = bastard
+	trait = education_stewardship_2
 	name = "name_fregnano"
 		dynasty = scala_dynasty
 	culture = cisalpine
@@ -86326,6 +88982,8 @@ ver_gherardo_v_da_camino = {
 }
 
 ver_giacomo_rossi = {
+	# MB+ attributes at 1337.4.1, character 1062147.
+	trait = education_stewardship_3
 	martial = 5
 	diplomacy = 11
 	stewardship = 9
@@ -86383,6 +89041,8 @@ ver_giovanni_castracani_ii = {
 }
 
 ver_giovanni_correggio = {
+	# MB+ attributes at 1337.4.1, character cisalpine0771.
+	trait = education_martial_2
 	name = "name_john"
 		dynasty = correggio_dynasty
 	culture = cisalpine
@@ -86485,9 +89145,14 @@ ver_mastino_i_scala = {
 }
 
 ver_mastino_ii_scala = {
-	martial = 11
-	diplomacy = 8
-	stewardship = 10
+	# MB+ attributes at 1337.4.1, character 412078.
+	martial = 7
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 6
+	trait = lustful
+	trait = diligent
+	trait = education_stewardship_4
 	name = "name_mastin"
 		dynasty = scala_dynasty
 	culture = cisalpine
@@ -86575,6 +89240,8 @@ ver_rizzardo_vii_da_camino = {
 }
 
 ver_simone_correggio = {
+	# MB+ attributes at 1337.4.1, character cisalpine0749.
+	trait = education_martial_1
 	name = "name_simeon"
 		dynasty = correggio_dynasty
 	culture = cisalpine
@@ -86593,6 +89260,14 @@ ver_stilichia_donigo = {
 }
 
 ver_taddea_carrara = {
+	# MB+ attributes at 1337.4.1, character 412079.
+	martial = 7
+	diplomacy = 5
+	stewardship = 8
+	intrigue = 7
+	trait = cynical
+	trait = humble
+	trait = education_intrigue_2
 	female = yes
 	name = "name_thaddea"
 		dynasty = carrara_dynasty
@@ -87541,10 +90216,16 @@ vya_fedor_svyatoslavich_rurikovich = {
 }
 
 wal_basarab = {
+	# MB+ attributes at 1337.4.1, character 475550.
+	martial = 6
+	diplomacy = 7
+	stewardship = 7
+	intrigue = 8
+	trait = arbitrary
+	trait = ambitious
+	trait = zealous
+	trait = education_martial_3
 	dna = 475550_Ioan_basarab_i_founder
-	martial = 16
-	diplomacy = 9
-	stewardship = 11
 	name = "Basarab"
 		dynasty = basarab_dynasty
 	culture = vlach
@@ -88582,6 +91263,10 @@ yua_rinchinbal = {
 }
 
 yua_togon_temur = {
+	# MB+ attributes at 1337.4.1, character 217284.
+	trait = education_learning_2
+	trait = callous
+	trait = arbitrary
 	martial = 13
 	diplomacy = 10
 	stewardship = 11
@@ -88810,6 +91495,8 @@ zie_bolko_ii_ziebice = {
 }
 
 zie_bonne_savoie = {
+	# MB+ attributes at 1337.4.1, character 462144.
+	trait = bastard
 	female = yes
 	name = "name_bonne"
 		dynasty = savoy_dynasty
