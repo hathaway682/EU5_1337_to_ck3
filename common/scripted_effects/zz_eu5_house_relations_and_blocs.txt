@@ -1,3 +1,171 @@
+eu5_setup_historical_house_bloc_effect = {
+    if = {
+        limit = {
+            game_start_date = 1337.4.1
+            has_dlc_feature = all_under_heaven
+        }
+        character:jap_ashikaga_takauji.house ?= {
+            tgp_create_historical_house_bloc_effect = { TYPE = strength }
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_koumyou_tenno.house } # EU5 NTC
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kou_no_moronao.house } # EU5 KOU
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hosokawa_kazuuji.house } # EU5 HSK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_akamatsu_norimura.house } # EU5 AKM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nitsuki_yoriaki.house } # EU5 NKI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_chuujou_kagenaga.house } # EU5 CJO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_imagawa_norikuni.house } # EU5 IMG
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ishidou_yoshifusa.house } # EU5 ISD
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_takeda_nobutake.house } # EU5 TKD
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_shiba_takatsune.house } # EU5 SBA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_chiba_sadatane.house } # EU5 CBA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_satake_sadayoshi.house } # EU5 STK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kyougoku_douyo.house } # EU5 KGK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_toki_yorisada.house } # EU5 TKI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ogasawara_sadamune.house } # EU5 OGS
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_uesugi_noriaki.house } # EU5 UES
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_togashi_takaie.house } # EU5 TGS
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_yoshimi_yoritaka.house } # EU5 YSM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_momonoi_tadatsune.house } # EU5 MMI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kira_sadayoshi.house } # EU5 KRA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_yamana_masauji.house } # EU5 YMN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_enya_takasada.house } # EU5 ENY
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ueno_yorikane.house } # EU5 UEN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_matsuda_moritomo.house } # EU5 MTD
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_minami_munetsugu.house } # EU5 MNM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_washizu_nagahiro.house } # EU5 WSZ
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kotou_takezane.house } # EU5 KTO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hatakeyama_takakuni.house } # EU5 HTK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_shouni_yorihisa.house } # EU5 SHN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kii_fuyutsuna.house } # EU5 KII
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ootomo_ujiyasu.house } # EU5 OTM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_shimazu_sadahisa.house } # EU5 SMZ
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_souma_chikatane.house } # EU5 SOM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ashina_morimune.house } # EU5 ASN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_yuuki_tomosuke.house } # EU5 YUK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_utsunomiya_kintsuna.house } # EU5 UTN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_isshiki_noriuji.house } # EU5 ISK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_masuda_kanemi.house } # EU5 MSD
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_oouchi_hiroyuki.house } # EU5 OUC
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_yamashiro_hiroshi_ruler.house } # EU5 YSR
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_sagara_yorihiro_later.house } # EU5 SGR
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_sou_morikuni.house } # EU5 SOU
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_waga_nagayoshi.house } # EU5 WAG
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_daihouji_nagamori.house } # EU5 DHJ
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_naganuma_munehide.house } # EU5 NGM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nikaidou_yukitomo.house } # EU5 NKD
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_inawashiro_muneyasu.house } # EU5 IWS
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ishikawa_sadamitsu.house } # EU5 ISW
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_miura_takatsugu.house } # EU5 MIU
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_rokkaku_tokinobu.house } # EU5 RKK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_miya_ruler.house } # EU5 MIY
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kikkawa_tsunemori.house } # EU5 KKW
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_munakata_ujitoshi_younger.house } # EU5 MKT
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_asakura_hirokage.house } # EU5 ASA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_chousokabe_nobuyoshi.house } # EU5 CSK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ise_sadatsugu.house } # EU5 ISE
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ikeda_norimasa.house } # EU5 IKE
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_itou_sukemune.house } # EU5 ITO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_mori_chikahira.house } # EU5 MRI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_oda_yukihiro.house } # EU5 ODA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_daijou_takamoto.house } # EU5 TAK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_mashiko_sadamasa.house } # EU5 MKO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_takou_tomotsune.house } # EU5 TKO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nasu_sukefuji.house } # EU5 NAS
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_oogo_mitsuyuki.house } # EU5 OGO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_honma_yasunori.house } # EU5 HNM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_tooyama_tomokado.house } # EU5 TOY
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_tou_ujimura.house } # EU5 HIG
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ema_ruler.house } # EU5 EMA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nakajima_takaie.house } # EU5 NKJ
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ooba_ruler.house } # EU5 OBA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nagano_sukefusa.house } # EU5 NGN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_takashima_noritsuna.house } # EU5 TKM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_aisu_noritoshi.house } # EU5 AIS
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_yuasa_munefuji.house } # EU5 YUS
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_yabe_tomotsuna.house } # EU5 YAB
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ogamo_ujimoto.house } # EU5 OGA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_suetsugu_takamune.house } # EU5 STU
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_mizawa_tametada.house } # EU5 MZW
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_mitoya_sukeshige.house } # EU5 MTY
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_akana_tsunetsura.house } # EU5 AKN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hiraga_naomune.house } # EU5 HRG
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kobayakawa_tomohira.house } # EU5 KBK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_wachi_sukesane.house } # EU5 WCH
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_sue_hiromasa.house } # EU5 SUE
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_migita_shigesada.house } # EU5 MIG
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kagawa_kagefusa.house } # EU5 KAG
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kouzai_sukeyasu.house } # EU5 KOZ
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kaneko_iehiro_later.house } # EU5 KNE
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_aki_tomochika.house } # EU5 AKI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_oohira_toshikuni.house } # EU5 OHR
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nagano_motomori.house } # EU5 BZG
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_taku_munekiyo.house } # EU5 AKU
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hata_nao.house } # EU5 AHT
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_arima_sumiyo.house } # EU5 ARI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ookura_nagatoshi.house } # EU5 OKR
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_tsuchimochi_nobue.house } # EU5 TMD
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hishikari_atsushige.house } # EU5 HSR
+			house_confederation ?= {
+				every_confederation_member_house = {
+					set_house_aspiration = { type = strength }
+				}
+			}
+        }
+        character:jap_go_daigo_tenno.house ?= {
+            tgp_create_historical_house_bloc_effect = { TYPE = service }
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kitabatake_chikafusa.house } # EU5 KTB
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_houjou_tokiyuki.house } # Hojo Tokiyuki
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_oyama_hidetomo.house } # EU5 OYM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_asayama_kagetsura.house } # EU5 ASY
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kawano_michimori.house } # EU5 KNO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nanbu_nobunaga.house } # EU5 NBU
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kudou_sadayuki.house } # EU5 KDO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kasai_munekiyo.house } # EU5 KSI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_date_yukitomo.house } # EU5 DTE
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ooida_tsunetaka.house } # EU5 OID
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_oguni_masamitsu.house } # EU5 OGU
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ii_yukinao.house } # EU5 IIX
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_anenokouji_takamoto.house } # EU5 AKJ
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kusunoki_masatsura.house } # EU5 KSN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nawa_yoshitaka.house } # EU5 NAW
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_tokuno_tadamasa.house } # EU5 TKN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_doi_michiyo.house } # EU5 DOI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kutsuna_shigeyoshi.house } # EU5 KNT
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_shijou_takamune.house } # EU5 SHJ
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kikuchi_takeshige.house } # EU5 KKC
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_aso_koretoki.house } # EU5 ASO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ijuuin_hisachika.house } # EU5 IJU
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kimotsuki_kaneshige.house } # EU5 KMT
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nagai_takafuyu.house } # EU5 NAI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hei_chikamitsu.house } # EU5 HEI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_asonuma_tomotsuna_ii.house } # EU5 ANM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_tozawa_gensei.house } # EU5 TZW
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hienuki_ieshige.house } # EU5 HIE
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_sagae_motomasa.house } # EU5 SGE
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_tamura_ruler.house } # EU5 TMR
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_suwa_nobutsugu.house } # EU5 SUW
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_andou_morosue.house } # EU5 AKT
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_isa_tokikata.house } # EU5 ISA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kawanobe_sukeshige.house } # EU5 KNB
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hatta_haruhisa.house } # EU5 HTA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nitta_yoshisada.house } # EU5 NIT
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_yamaguchi_ruler.house } # EU5 YMG
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_toshima_tomoyasu.house } # EU5 TOS
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_unnou_yoriyuki.house } # EU5 UNN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kousaka_shinkaku.house } # EU5 KOK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_gotou_motoaki.house } # EU5 GTO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_shou_sukeuji.house } # EU5 SHO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_miyoshi_hirohide.house } # EU5 MYH
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_akizuki_tanetada.house } # EU5 AKZ
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kajiki_masahira.house } # EU5 KJK
+			house_confederation ?= {
+				every_confederation_member_house = {
+					set_house_aspiration = { type = service }
+				}
+			}
+        }
+    }
+}
+
 # EU5 1337 diplomacy: dependency subject_type = vassal.
 eu5_setup_vassal_house_relations_effect = {
     if = {

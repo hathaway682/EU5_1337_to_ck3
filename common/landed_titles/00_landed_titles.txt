@@ -116953,7 +116953,7 @@ e_suvarnabhumi = {
 	}
 	k_pagan = {
 		color = { 143 70 136 }
-		capital = c_kale
+		capital = c_pinya
 
 		ai_primary_priority = {
 			if = {
@@ -122854,7 +122854,7 @@ e_west_slavia = {
 	}
 	k_white_rus = {
 		color = { 180 205 170 }
-		capital = c_breslauja
+		capital = c_polotsk
 
 		ai_primary_priority = {
 			if = {
@@ -135488,20 +135488,6 @@ e_chagatai = {
 	}
 }
 
-e_great_yuan = {
-	color = { 204 201 180 }
-	can_be_named_after_dynasty = no
-	can_use_nomadic_naming = no
-
-	definite_form = yes
-
-	capital = c_youzhou
-
-	can_create = {
-		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
-	}
-}
-
 e_majapahit = {
 	color = { 250 234 15 }
 	capital = c_trowulan
@@ -135584,4 +135570,18 @@ k_mentese = {
 k_ottoman = {
 	color = { 247 145 30 }
 	capital = c_hudavendigar
+}
+
+e_great_yuan = {
+	color = { 204 201 180 }
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
+	capital = c_shuntian
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
 }

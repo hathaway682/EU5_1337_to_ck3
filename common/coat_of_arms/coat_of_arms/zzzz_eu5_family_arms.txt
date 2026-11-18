@@ -20678,3 +20678,35 @@ house_utsunomiya = {
 		instance = { position = { 0.5 0.502832 } scale = { 1.0875 0.725 } }
 	}
 }
+
+# EU5 1337: NTC uses JAP_monarchy; STC uses its own arms.
+house_jimyouin = {
+	pattern = "eu5dyn_pattern_solid.dds"
+	color1 = "eu5dyn_red"
+	color2 = "eu5dyn_yellow"
+	colored_emblem = {
+		texture = "eu5dyn_ce_chrysanthemum_japan.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.5 1.0 } }
+	}
+}
+
+house_daikakuji = {
+	pattern = "eu5dyn_pattern_solid.dds"
+	color1 = "eu5dyn_white"
+	color2 = "eu5dyn_yellow"
+	color3 = "eu5dyn_red"
+	colored_emblem = {
+		texture = "eu5dyn_ce_frame_circle.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 1.2375 0.825 } }
+	}
+	colored_emblem = {
+		texture = "eu5dyn_ce_chrysanthemum_japan.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 1.5 1.0 } }
+	}
+}
