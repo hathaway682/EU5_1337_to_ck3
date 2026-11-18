@@ -1428,7 +1428,7 @@ country,NST,c,Nashit'ush,纳什图什,,,,,,,eu5_regent_nst,,,,,"generated-regent
 country,NSU,c,Nsudi,恩苏迪,,,b_masinga,b,Masinga,马辛加,eu5_regent_nsu,eu5_regent_nsu,,,yes,"generated-regent,country-below-county-rank: its land is a barony"
 country,NSW,c,Nassau-Weilburg,拿骚‑魏尔堡,,,b_usingen,b,Usingen,乌辛根,nsi_gerlach_i_nassau,nsi_gerlach_i_nassau,,,yes,"union,vassal,country-below-county-rank: its land is a barony"
 country,NTA,c,Canta,坎塔,,,b_cantamarca,b,Cantamarca,坎塔马尔卡,eu5_regent_nta,eu5_regent_nta,,,yes,"generated-regent,country-below-county-rank: its land is a barony"
-country,NTC,e,Jimyōin,持明院,,,e_eu5_ntc,e,Jimyōin,持明院,jap_koumyou_tenno,jap_koumyou_tenno,,japan_administrative_government,yes,vassal
+country,NTC,e,Jimyōin,持明院,,,c_nf_yamato,c,Jimyōin,持明院,jap_koumyou_tenno,jap_koumyou_tenno,e_japan,japan_feudal_government,yes,"vassal,noble-family-title"
 country,NTH,c,Ngāi Tūhoe,雅屠霍依,,,,,,,eu5_regent_nth,,,,,"generated-regent,country-below-county-rank: its land is nothing,landless-in-eu5"
 country,NTK,c,Nentego,嫩特戈,,,,,,,eu5_regent_ntk,,,,,"generated-regent,country-below-county-rank: its land is its counties,landless-in-eu5,was c_nanticoke"
 country,NTL,c,Mahajangā,马哈赞加,,,b_mahajanga,b,Mahajangā,马哈赞加,eu5_regent_ntl,eu5_regent_ntl,,,yes,"tributary,generated-regent,country-below-county-rank: its land is a barony"
@@ -1844,7 +1844,7 @@ country,SSH,c,Suksuhu,苏克素护,,,b_fushun_liaoyang,b,Fushun,抚顺,,,,,yes,"
 country,SSI,c,Străşineţ,斯托罗日涅茨,,,b_storozhynets,b,Străşineţ,斯托罗日涅茨,eu5_regent_ssi,eu5_regent_ssi,,,yes,"tributary,generated-regent,country-below-county-rank: its land is a barony"
 country,SSK,d,Slutsk,斯卢茨克,,,d_eu5_ssk,d,Slutsk,斯卢茨克,lit_gediminas_gediminids,lit_gediminas_gediminids,,feudal_government,yes,union
 country,SSP,c,Sansepolcro,圣塞波尔克罗,,,,,,,,,,,,"no-ruler-in-eu5,country-below-county-rank: its land is a barony,landless-in-eu5,was b_sansepolcro"
-country,STC,e,Daikakuji,大觉寺,,,e_eu5_stc,e,Daikakuji,大觉寺,jap_go_daigo_tenno,jap_go_daigo_tenno,,japan_administrative_government,yes,vassal
+country,STC,e,Daikakuji,大觉寺,,,c_nf_yamato_stc,c,Daikakuji,大觉寺,jap_go_daigo_tenno,jap_go_daigo_tenno,e_japan,japan_feudal_government,yes,"vassal,noble-family-title"
 country,STD,c,Stadacona,斯塔达科纳,,,,,,,eu5_regent_std,,,,,"generated-regent,country-below-county-rank: its land is its counties,landless-in-eu5,was c_kikonteku"
 country,STE,d,Stettin,斯德丁,,,d_eu5_ste,d,Stettin,斯德丁,ste_otto_i_stettin,ste_otto_i_stettin,e_hre,feudal_government,yes,vassal
 country,STG,c,St. Gallen,圣加仑,,,b_st_gallen,b,Sankt Gallen,圣加仑,eu5_regent_stg,eu5_regent_stg,,,yes,"vassal,generated-regent,country-below-county-rank: its land is a barony"
@@ -2268,7 +2268,7 @@ country,YKG,c,Yukaghir,尤卡吉尔,,,,,,,eu5_regent_ykg,,,,,"generated-regent,c
 country,YMG,c,Yamaguchi,山口,,,c_nf_yamaguchi,c,Yamaguchi,山口,jap_yamaguchi_ruler,jap_yamaguchi_ruler,e_japan,japan_feudal_government,yes,"vassal,japan-noble-family,country-below-county-rank: its land is its counties"
 country,YMN,c,Yamana,山名,,,c_nf_yamana,c,Yamana,山名,jap_yamana_masauji,jap_yamana_masauji,e_japan,japan_feudal_government,yes,"shugo-daimyo,vassal,japan-noble-family,country-below-county-rank: its land is its counties"
 country,YMS,c,Yamasee,亚马西,,,,,,,eu5_regent_yms,,,,,"generated-regent,country-below-county-rank: its land is its counties,landless-in-eu5,was c_congaree"
-country,YMT,e,Yamato,大和,,,e_eu5_ymt,e,Yamato,大和,,jap_go_daigo_tenno,,japan_feudal_government,yes,no-ruler-in-eu5
+country,YMT,e,Yamato,大和,,,k_chrysanthemum_throne,k,Chrysanthemum Throne,菊花王座,,jap_koumyou_tenno,e_japan,japan_feudal_government,yes,ceremonial throne
 country,YNG,c,Yǒngníng,永宁,,,c_muli,c,Mùlǐ,木里,eu5_regent_yng,eu5_regent_yng,d_eu5_bzh,tribal_government,yes,"vassal,generated-regent,country-below-county-rank: its land is its counties"
 country,YNH,c,Yánhé,沿河,,,b_yanhe,b,Yánhé,沿河,eu5_regent_ynh,eu5_regent_ynh,,tribal_government,yes,"vassal,generated-regent,country-below-county-rank: its land is a barony"
 country,YNJ,c,Yuánjiāng,元江,,,c_yuanjiang,c,Yuánjiāng,元江,eu5_regent_ynj,eu5_regent_ynj,k_eu5_lng,tribal_government,yes,"vassal,generated-regent,country-below-county-rank: its land is its counties"
@@ -3498,7 +3498,7 @@ county,CHI,-,China,中华,Hézhōu,合州,c_hezhou_sichuan,c,Hézhōu,合州,yua
 county,TOO,-,Tohono O'odham,托霍诺奥德汉,Hia-Ced O'odham,沙塞奥德汉,c_hia_ced_oodham,c,Hia-Ced O'odham,沙塞奥德汉,eu5_regent_too,eu5_regent_too,,herder_government,yes,seat-of TOO (Tohono O'odham)
 county,JAP,-,Japan,日本,Hida,飞驒,c_hida,c,Hida,飞驒,jap_kyougoku_douyo,jap_kyougoku_douyo,e_japan,japan_feudal_government,yes,seat-of JAP (Japan)
 county,ANU,-,Ainu,阿伊努,Hidaka,日高,c_hidaka,c,Hidaka,日高,eu5_regent_anu,eu5_regent_anu,h_china,herder_government,yes,seat-of ANU (Ainu)
-county,JAP,-,Japan,日本,Higo,肥后,c_higo,c,Higo,肥后,jap_shouni_yorihisa,jap_shouni_yorihisa,e_japan,japan_feudal_government,yes,seat-of JAP (Japan)
+county,JAP,-,Japan,日本,Higo,肥后,c_higo,c,Higo,肥后,jap_shouni_yorihisa,jap_kikuchi_takeshige,e_japan,japan_feudal_government,yes,"seat-of JAP (Japan),MB+ 1337 province-holder"
 county,HGY,-,Higuey,伊圭,Higüey,伊圭,c_higuey,c,Higüey,伊圭,eu5_regent_hgy,eu5_regent_hgy,,herder_government,yes,seat-of HGY (Higuey)
 county,,-,,,Hikueru,希库埃鲁环礁,c_hikueru,c,Hikueru,希库埃鲁环礁,,gen_wilderness_holder,k_gen_wilderness,,yes,"unowned-in-eu5,seated-by-the-conversion"
 county,FDL,-,Āl Faḍl,法德勒,Hims,霍姆斯,c_hims,c,Hims,霍姆斯,fdl_muzzaffar_ad_din_musa_ibn_muhanna,fdl_muzzaffar_ad_din_musa_ibn_muhanna,k_egypt,clan_government,yes,seat-of FDL (Āl Faḍl)
@@ -3630,9 +3630,9 @@ county,TPQ,-,Tupiniquim,图皮尼金,Itapicuru,伊塔皮库鲁,c_itapicuru,c,Ita
 county,NWN,-,Nanwuine'nan,阿西尼博因,Itkanaahtuusu,伊特卡纳图苏,c_itkanaahtuusu,c,Itkanaahtuusu,伊特卡纳图苏,eu5_regent_nwn,eu5_regent_nwn,,herder_government,yes,seat-of NWN (Nanwuine'nan)
 county,,-,,,Itu,伊图,c_itu,c,Itu,伊图,,gen_wilderness_holder,k_gen_wilderness,,yes,"unowned-in-eu5,seated-by-the-conversion"
 county,NDV,-,Ñandeva,南德瓦,Ivai,伊瓦伊,c_ivai,c,Ivai,伊瓦伊,eu5_regent_ndv,eu5_regent_ndv,,herder_government,yes,seat-of NDV (Ñandeva)
-county,JAP,-,Japan,日本,Iwaki,磐城,c_iwaki,c,Iwaki,磐城,jap_ashikaga_takauji,jap_ashikaga_takauji,,japan_feudal_government,yes,seat-of JAP (Japan)
+county,JAP,-,Japan,日本,Iwaki,磐城,c_iwaki,c,Iwaki,磐城,jap_ashikaga_takauji,jap_kitabatake_akiie,,japan_feudal_government,yes,"seat-of JAP (Japan),southern court allocation"
 county,JAP,-,Japan,日本,Iwami,石见,c_iwami,c,Iwami,石见,jap_ueno_yorikane,jap_ueno_yorikane,e_japan,japan_feudal_government,yes,seat-of JAP (Japan)
-county,JAP,-,Japan,日本,Iwase,石背,c_iwase,c,Iwase,石背,jap_ashikaga_takauji,jap_ashikaga_takauji,,japan_feudal_government,yes,seat-of JAP (Japan)
+county,JAP,-,Japan,日本,Iwase,石背,c_iwase,c,Iwase,石背,jap_ashikaga_takauji,jap_kitabatake_akiie,e_japan,japan_feudal_government,yes,"seat-of JAP (Japan),southern court allocation"
 county,,-,,,Iwur,伊乌尔,c_iwur,c,Iwur,伊乌尔,,gen_wilderness_holder,k_gen_wilderness,,yes,"unowned-in-eu5,seated-by-the-conversion"
 county,JAP,-,Japan,日本,Iyo,伊予,c_iyo,c,Iyo,伊予,jap_kawano_michimori,jap_kawano_michimori,e_japan,japan_feudal_government,yes,seat-of JAP (Japan)
 county,HZP,-,Hazaraspids,哈扎拉斯普,Īz̄eh,伊泽,c_izeh,c,Īz̄eh,伊泽,hzp_rukn_al_din_yusuf_shah,hzp_rukn_al_din_yusuf_shah,,clan_government,yes,seat-of HZP (Hazaraspids)
@@ -3930,7 +3930,7 @@ county,RDY,-,Reddi,罗底,Kosta,科斯塔,c_kosta,c,Kosta,科斯塔,rdy_prolaya_
 county,KOS,-,Kostroma,科斯特罗马,Kostroma,科斯特罗马,c_kostroma,c,Kostromá,科斯特罗马,mos_ivan_i_danilovich_kalita_rurikovich,mos_ivan_i_danilovich_kalita_rurikovich,,feudal_government,yes,seat-of KOS (Kostroma)
 county,,-,,,Kotosh,科托什,c_kotosh,c,Kotosh,科托什,,gen_wilderness_holder,k_gen_wilderness,,yes,"unowned-in-eu5,seated-by-the-conversion"
 county,VIL,-,Vili,维利,Kouilou,奎卢,c_kouilou,c,Kouilou,奎卢,eu5_regent_vil,eu5_regent_vil,,herder_government,yes,seat-of VIL (Vili)
-county,JAP,-,Japan,日本,Kōzuke,上野,c_kouzuke,c,Kōzuke,上野,jap_uesugi_noriaki,jap_uesugi_noriaki,e_japan,japan_feudal_government,yes,seat-of JAP (Japan)
+county,JAP,-,Japan,日本,Kōzuke,上野,c_kouzuke,c,Kōzuke,上野,jap_uesugi_noriaki,jap_nitta_yoshisada,e_japan,japan_feudal_government,yes,"seat-of JAP (Japan),MB+ 1337 province-holder"
 county,KZK,-,Kozelsk,科泽利斯克,Kozelsk,科泽利斯克,c_kozelsk,c,Kozelĭskŭ,科泽利斯克,kzk_titus_mstislavich_rurikovich,kzk_titus_mstislavich_rurikovich,d_eu5_kch,feudal_government,yes,seat-of KZK (Kozelsk)
 county,VYA,-,Vyazma,维亚济马,Kozlov,科兹洛夫,c_kozlov,c,Kozlovŭ,科兹洛夫,vya_fedor_svyatoslavich_rurikovich,vya_fedor_svyatoslavich_rurikovich,d_eu5_smo,feudal_government,yes,seat-of VYA (Vyazma)
 county,,-,,,Kpelle,克佩勒,c_kpelle,c,Kpelle,克佩勒,,gen_wilderness_holder,k_gen_wilderness,,yes,"unowned-in-eu5,seated-by-the-conversion"
@@ -4353,7 +4353,7 @@ county,,-,,,Miksiw Sipisis,米克休西比,c_miksiw_sipisis,c,Miksiw Sipisis,米
 county,MLO,-,Milan,米兰,Milan,米兰,c_milano,c,Milán,米兰,mlo_azzone_i_visconti,mlo_azzone_i_visconti,e_hre,republic_government,yes,seat-of MLO (Milan)
 county,FCB,-,Franche-Comté,弗朗什‑孔泰,Millieu,米约,c_millieu,c,Millieu,米约,bur_jeanne_iii_capet,bur_jeanne_iii_capet,e_hre,feudal_government,yes,seat-of FCB (Franche-Comté)
 county,HCK,-,Hoocak,霍查克,Millioke,米利奥克,c_millioke,c,Millioke,米利奥克,eu5_regent_hck,eu5_regent_hck,,herder_government,yes,seat-of HCK (Hoocak)
-county,JAP,-,Japan,日本,Mimasaka,美作,c_mimasaka,c,Mimasaka,美作,jap_ashikaga_takauji,jap_ashikaga_takauji,,japan_feudal_government,yes,seat-of JAP (Japan)
+county,JAP,-,Japan,日本,Mimasaka,美作,c_mimasaka,c,Mimasaka,美作,jap_ashikaga_takauji,jap_gotou_motoaki,e_japan,japan_feudal_government,yes,"seat-of JAP (Japan),historical allocation"
 county,ORM,-,Ormus,霍尔木兹,Mīnāb,米纳卜,c_minab,c,Mīnāb,米纳卜,orm_kut_al_din_tahamtan,orm_kut_al_din_tahamtan,,clan_government,yes,seat-of ORM (Ormus)
 county,MGD,-,Wenduling,文都灵,Mindanao,棉兰老,c_mindanao,c,Mindanao,棉兰老,eu5_regent_mgd,eu5_regent_mgd,,wanua_government,yes,seat-of MGD (Wenduling)
 county,OFO,-,Ofo,奥夫,Mineami,米尼阿米,c_mineami,c,Mineami,米尼阿米,eu5_regent_ofo,eu5_regent_ofo,,herder_government,yes,seat-of OFO (Ofo)
@@ -4698,7 +4698,7 @@ county,,-,,,Ongkakaringa,翁卡卡林加,c_ongkakaringa,c,Ongkakaringa,翁卡卡
 county,ONO,-,Ononda'gega',奥农达格加,Onondagega,奥农达加,c_onondagega,c,Onondagega,奥农达加,eu5_regent_ono,eu5_regent_ono,,tribal_government,yes,seat-of ONO (Ononda'gega')
 county,ONN,-,Onondowa'ga,奥农多瓦加,Onondowaga,奥农多瓦加,c_onondowaga,c,Onondowaga,奥农多瓦加,eu5_regent_onn,eu5_regent_onn,,tribal_government,yes,seat-of ONN (Onondowa'ga)
 county,ONY,-,Onyota'aka,奥尼奥塔阿卡,Onyotaaka,奥尼奥塔卡,c_onyotaaka,c,Onyotaaka,奥尼奥塔卡,eu5_regent_ony,eu5_regent_ony,,tribal_government,yes,seat-of ONY (Onyota'aka)
-county,JAP,-,Japan,日本,Ōsumi,大隅,c_oosumi,c,Ōsumi,大隅,jap_shimazu_sadahisa,jap_shimazu_sadahisa,e_japan,japan_feudal_government,yes,seat-of JAP (Japan)
+county,JAP,-,Japan,日本,Ōsumi,大隅,c_oosumi,c,Ōsumi,大隅,jap_shimazu_sadahisa,jap_kimotsuki_kaneshige,e_japan,japan_feudal_government,yes,"seat-of JAP (Japan),MB+ 1337 province-holder"
 county,OPV,-,Opava,奥帕瓦,Opavsko,奥帕瓦斯科,c_opavsko,c,Opavsko,奥帕瓦斯科,opv_mikolaj_ii_premyslid,opv_mikolaj_ii_premyslid,k_bohemia,feudal_government,yes,seat-of OPV (Opava)
 county,OPL,-,Opole,奥波莱,Opole,奥波莱,c_opole,c,Ôpole,奥波莱,opl_boleslaw_ii_piast,opl_boleslaw_ii_piast,k_bohemia,feudal_government,yes,seat-of OPL (Opole)
 county,NOR,-,Norway,挪威,Oppland,奥普兰,c_oppland,c,Oppland,奥普兰,swe_magnus_eriksson,nor_sigurd_havtoresson,k_norway,feudal_government,yes,seat-of NOR (Norway)
@@ -5009,9 +5009,9 @@ county,ARU,-,Aru,哑鲁,Riau Siak,廖内锡亚克,c_riau_siak,c,Riau Siak,廖内
 county,POR,-,Portugal,葡萄牙,Ribatejo,里巴特茹,c_ribatejo,c,Ribatejo,里巴特茹,por_afonso_iv_portugal,ck2_iberia_142586,k_portugal,feudal_government,yes,seat-of POR (Portugal)
 county,ANS,-,Ansbach,安斯巴赫,Franconian Heights,弗兰肯高地,c_ries,c,Franconian Heights,弗兰肯高地,ans_johann_ii_von_nurnberg,ans_johann_ii_von_nurnberg,e_hre,feudal_government,yes,seat-of ANS (Ansbach)
 county,MAA,-,Maasai,马赛,Rift Valley,大裂谷,c_rift_valley,c,Rift Valley,大裂谷,eu5_regent_maa,eu5_regent_maa,,herder_government,yes,seat-of MAA (Maasai)
-county,JAP,-,Japan,日本,Rikuchū,陆中,c_rikuchuu,c,Rikuchū,陆中,jap_ashikaga_takauji,jap_ashikaga_takauji,,japan_feudal_government,yes,seat-of JAP (Japan)
-county,JAP,-,Japan,日本,Rikuō,陆奥,c_rikuou,c,Rikuō,陆奥,jap_ashikaga_takauji,jap_ashikaga_takauji,,japan_feudal_government,yes,seat-of JAP (Japan)
-county,JAP,-,Japan,日本,Rikuzen,陆前,c_rikuzen,c,Rikuzen,陆前,jap_shiba_takatsune,jap_shiba_takatsune,e_japan,japan_feudal_government,yes,seat-of JAP (Japan)
+county,JAP,-,Japan,日本,Rikuchū,陆中,c_rikuchuu,c,Rikuchū,陆中,jap_ashikaga_takauji,jap_kitabatake_akiie,,japan_feudal_government,yes,"seat-of JAP (Japan),southern court allocation"
+county,JAP,-,Japan,日本,Rikuō,陆奥,c_rikuou,c,Rikuō,陆奥,jap_ashikaga_takauji,jap_kitabatake_akiie,,japan_feudal_government,yes,"seat-of JAP (Japan),southern court allocation"
+county,JAP,-,Japan,日本,Rikuzen,陆前,c_rikuzen,c,Rikuzen,陆前,jap_shiba_takatsune,jap_kitabatake_akiie,e_japan,japan_feudal_government,yes,"seat-of JAP (Japan),southern court allocation"
 county,MLS,-,Wolastokwewiyik,沃拉斯托基维克,Rimouski,里穆斯基,c_rimouski,c,Rimouski,里穆斯基,eu5_regent_mls,eu5_regent_mls,,herder_government,yes,seat-of MLS (Wolastokwewiyik)
 county,,-,,,River Dakelh,达凯尔河谷,c_river_dakelh,c,River Dakelh,达凯尔河谷,,gen_wilderness_holder,k_gen_wilderness,,yes,"unowned-in-eu5,seated-by-the-conversion"
 county,VOL,-,Volhynia,沃里尼亚,Ostroh,奥斯特罗格,c_rivne,c,Rivne,奥斯特罗格,vol_boleslaw_jerzy_ii_piast,vol_boleslaw_jerzy_ii_piast,,feudal_government,yes,seat-of VOL (Volhynia)
@@ -5060,7 +5060,7 @@ county,BMR,-,Bambara,班巴拉,Safaré,萨法雷,c_safare,c,Safare,萨法雷,eu5
 county,SYY,-,Saqiyya,萨基亚,Safhat al-Jibal,吉巴勒山脊,c_safhat_jibal,c,Safhat al-Jibal,吉巴勒山脊,syy_shuja_al_din_abu_bakr_ramaki,syy_shuja_al_din_abu_bakr_ramaki,,tribal_government,yes,seat-of SYY (Saqiyya)
 county,CND,-,Candarids,詹达尔,Safranbolu,萨夫兰博卢,c_safranbolu,c,Taraklıborglu,萨夫兰博卢,cnd_suleyman,cnd_suleyman,,clan_government,yes,seat-of CND (Candarids)
 county,SAG,-,Sagaing,实皆,Sagaing,实皆,c_sagaing,c,Sagaing,实皆,sag_anawrahta,sag_anawrahta,,mandala_government,yes,seat-of SAG (Sagaing)
-county,JAP,-,Japan,日本,Sagami,相模,c_sagami,c,Sagami,相模,jap_ashikaga_takauji,jap_ashikaga_takauji,,japan_feudal_government,yes,seat-of JAP (Japan)
+county,JAP,-,Japan,日本,Sagami,相模,c_sagami,c,Sagami,相模,jap_ashikaga_takauji,jap_ashikaga_tadayoshi,e_japan,japan_feudal_government,yes,"seat-of JAP (Japan),historical allocation"
 county,OSK,-,Osaakiiwaki,奥萨基瓦基,Saginaw,萨吉诺,c_saginaw,c,Saginaw,萨吉诺,eu5_regent_osk,eu5_regent_osk,,herder_government,yes,seat-of OSK (Osaakiiwaki)
 county,,-,,,Saguenay,萨格奈,c_saguenay,c,Saguenay,萨格奈,,gen_wilderness_holder,k_gen_wilderness,,yes,"unowned-in-eu5,seated-by-the-conversion"
 county,,-,,,Saguia el-Hamra,萨基耶海姆拉,c_saguia_el_hamra,c,Saguia el-Hamra,萨基耶海姆拉,,gen_wilderness_holder,k_gen_wilderness,,yes,"unowned-in-eu5,seated-by-the-conversion"
@@ -5155,7 +5155,7 @@ county,MED,-,Medri Bahri,梅德里巴赫里,Serae,塞拉埃,c_serae,c,Serae,塞�
 county,,-,,,Seram,塞兰,c_seram,c,Seram,塞兰,,gen_wilderness_holder,k_gen_wilderness,,yes,"unowned-in-eu5,seated-by-the-conversion"
 county,GLH,-,Jochi,术赤,Sergiyevsk,谢尔吉耶夫斯克,c_sergiyevsk,c,Sergiyevsk,谢尔吉耶夫斯克,glh_giyas_al_din_mohammed_oz_beg_borjigin,glh_giyas_al_din_mohammed_oz_beg_borjigin,,nomad_government,yes,seat-of GLH (Jochi)
 county,GOL,-,Golog,果洛,Setha,色达,c_setha,c,Setha,色达,eu5_regent_gol,eu5_regent_gol,h_china,tribal_government,yes,seat-of GOL (Golog)
-county,JAP,-,Japan,日本,Settsu,摄津,c_settsu,c,Settsu,摄津,jap_akamatsu_norimura,jap_akamatsu_norimura,e_japan,japan_feudal_government,yes,seat-of JAP (Japan)
+county,JAP,-,Japan,日本,Settsu,摄津,c_settsu,c,Settsu,摄津,jap_akamatsu_norimura,jap_kusunoki_masatsura,e_japan,japan_feudal_government,yes,"seat-of JAP (Japan),southern court allocation"
 county,CAS,-,Castile,卡斯蒂利亚,$sevilla$,$sevilla$,c_sevilla,c,Sevilha,伊什比利耶,cas_alfonso_xi_burgundy,cas_alfonso_xi_burgundy,,,yes,seat-of CAS (Castile)
 county,AAL,-,Al 'Alī,阿里,Shaam,沙姆,c_shaam,c,Shaam,沙姆,aal_jumaz_bin_muhammed,aal_jumaz_bin_muhammed,k_egypt,clan_government,yes,seat-of AAL (Al 'Alī)
 county,UNA,-,Wënami,乌纳米,Shackamaxon,沙卡马克松,c_shackamaxon,c,Nya Göteborg,沙卡马克松,eu5_regent_una,eu5_regent_una,,herder_government,yes,seat-of UNA (Wënami)
@@ -5191,7 +5191,7 @@ county,CHI,-,China,中华,Shilka,石勒喀,c_shilka,c,Shilka,石勒喀,yua_togon
 county,JAP,-,Japan,日本,Shima,志摩,c_shima,c,Shima,志摩,jap_kitabatake_chikafusa,jap_kitabatake_chikafusa,e_japan,japan_feudal_government,yes,seat-of JAP (Japan)
 county,JAP,-,Japan,日本,Shimotsuke,下野,c_shimotsuke,c,Shimotsuke,下野,jap_oyama_tomosato,jap_oyama_tomosato,e_japan,japan_feudal_government,yes,seat-of JAP (Japan)
 county,JAP,-,Japan,日本,Shimōsa,下总,c_shimousa,c,Shimōsa,下总,jap_chiba_sadatane,jap_chiba_sadatane,e_japan,japan_feudal_government,yes,seat-of JAP (Japan)
-county,JAP,-,Japan,日本,Shinano,信浓,c_shinano,c,Shinano,信浓,jap_ogasawara_sadamune,jap_ogasawara_sadamune,e_japan,japan_feudal_government,yes,seat-of JAP (Japan)
+county,JAP,-,Japan,日本,Shinano,信浓,c_shinano,c,Shinano,信浓,jap_ogasawara_sadamune,jap_suwa_nobutsugu,e_japan,japan_feudal_government,yes,"seat-of JAP (Japan),MB+ 1337 province-holder"
 county,INJ,-,Injuids,因珠,Širâz,设拉子,c_shiraz,c,Širâz,设拉子,inj_ghiyas_al_din_kai_khusrau,inj_ghiyas_al_din_kai_khusrau,,clan_government,yes,seat-of INJ (Injuids)
 county,CEW,-,Chewa,切瓦,Shire,希雷,c_shire,c,Shire,希雷,eu5_regent_cew,eu5_regent_cew,,herder_government,yes,seat-of CEW (Chewa)
 county,ANU,-,Ainu,阿伊努,Shiribeshi,后志,c_shiribeshi,c,Shiribeshi,后志,eu5_regent_anu,eu5_regent_anu,h_china,herder_government,yes,seat-of ANU (Ainu)
@@ -5669,7 +5669,7 @@ county,BNL,-,Lam,拉姆,Udakh,欧达赫,c_udakh,c,Udakh,欧达赫,eu5_regent_bnl
 county,GLH,-,Jochi,术赤,Ufa,乌法,c_ufa,c,Ufa,乌法,glh_giyas_al_din_mohammed_oz_beg_borjigin,glh_giyas_al_din_mohammed_oz_beg_borjigin,,nomad_government,yes,seat-of GLH (Jochi)
 county,,-,,,Ugalla,乌加拉,c_ugalla,c,Ugalla,乌加拉,,gen_wilderness_holder,k_gen_wilderness,,yes,"unowned-in-eu5,seated-by-the-conversion"
 county,UGL,-,Uglich,乌格利奇,Uglich,乌格利奇,c_uglich,c,Ugličŭ,乌格利奇,mos_ivan_i_danilovich_kalita_rurikovich,mos_ivan_i_danilovich_kalita_rurikovich,,feudal_government,yes,seat-of UGL (Uglich)
-county,JAP,-,Japan,日本,Ugo,羽后,c_ugo,c,Ugo,羽后,jap_shiba_takatsune,jap_shiba_takatsune,e_japan,japan_feudal_government,yes,seat-of JAP (Japan)
+county,JAP,-,Japan,日本,Ugo,羽后,c_ugo,c,Ugo,羽后,jap_shiba_takatsune,jap_kitabatake_akiie,e_japan,japan_feudal_government,yes,"seat-of JAP (Japan),southern court allocation"
 county,KOR,-,Goryeo,高丽,Uiju,义州,c_uiju,c,Uiju,义州,kor_chungsuk,kor_chungsuk,h_china,meritocratic_government,yes,seat-of KOR (Goryeo)
 county,GLH,-,Jochi,术赤,Uil,乌伊尔,c_uil,c,Uil,乌伊尔,glh_giyas_al_din_mohammed_oz_beg_borjigin,glh_giyas_al_din_mohammed_oz_beg_borjigin,,nomad_government,yes,seat-of GLH (Jochi)
 county,,-,,,Uktus,乌克图斯,c_uktus,c,Uktus,乌克图斯,,gen_wilderness_holder,k_gen_wilderness,,yes,"unowned-in-eu5,seated-by-the-conversion"
@@ -5778,7 +5778,7 @@ county,,-,,,Uyaancii,乌扬迪,c_uyaancii,c,Uyaancii,乌扬迪,,gen_wilderness_h
 county,KRK,-,Karanka,卡朗卡,Uyuni,乌尤尼,c_uyuni,c,Uyuni,乌尤尼,eu5_regent_krk,eu5_regent_krk,,feudal_government,yes,seat-of KRK (Karanka)
 county,,-,,,Uza,乌萨,c_uza,c,Uza,乌萨,,gen_wilderness_holder,k_gen_wilderness,,yes,"unowned-in-eu5,seated-by-the-conversion"
 county,GRG,-,Gurgan,朱里章,Uzboy,乌兹博伊,c_uzboy,c,Uzboy,乌兹博伊,grg_togha_temur,grg_togha_temur,,nomad_government,yes,seat-of GRG (Gurgan)
-county,JAP,-,Japan,日本,Uzen,羽前,c_uzen,c,Uzen,羽前,jap_ashikaga_takauji,jap_ashikaga_takauji,,japan_feudal_government,yes,seat-of JAP (Japan)
+county,JAP,-,Japan,日本,Uzen,羽前,c_uzen,c,Uzen,羽前,jap_ashikaga_takauji,jap_kitabatake_akiie,,japan_feudal_government,yes,"seat-of JAP (Japan),southern court allocation"
 county,DGR,-,Bagar,婆迦尔,Vagad,瓦加德,c_vagad,c,Vagad,瓦加德,dgr_dungar_singh_sisodia,dgr_dungar_singh_sisodia,,feudal_government,yes,seat-of DGR (Bagar)
 county,ARA,-,Aragon,阿拉贡,$valencia$,$valencia$,c_valencia,c,Valencia,巴兰西耶,ara_peter_iv_arago,ara_peter_iv_arago,,feudal_government,yes,seat-of ARA (Aragon)
 county,VLN,-,Valentinois,瓦朗蒂努瓦,Valentinois,瓦朗蒂努瓦,c_valentinois,c,Valentinois,瓦朗蒂努瓦,vln_aymar_v_poitiers,vln_aymar_v_poitiers,k_france,feudal_government,yes,seat-of VLN (Valentinois)
@@ -6017,7 +6017,7 @@ county,TSA,-,Tsamosa,萨莫萨,Yakama,亚卡马,c_yakama,c,Yakama,亚卡马,eu5_
 county,SAK,-,Sakha,萨哈,Yakutia,雅库特,c_yakutia,c,Yakutia,雅库特,eu5_regent_sak,eu5_regent_sak,,herder_government,yes,seat-of SAK (Sakha)
 county,KLB,-,Kilab,基拉卜,Al-Yamāma,耶马迈,c_yamama,c,Al-Yamāma,耶马迈,eu5_regent_klb,eu5_regent_klb,,clan_government,yes,seat-of KLB (Kilab)
 county,JAP,-,Japan,日本,Yamashiro,山城,c_yamashiro,c,Yamashiro,山城,jap_ashikaga_takauji,jap_ashikaga_takauji,,japan_feudal_government,yes,seat-of JAP (Japan)
-county,JAP,-,Japan,日本,Yamato,大和,c_yamato,c,Yamato,大和,jap_kou_no_moronao,jap_kou_no_moronao,e_japan,japan_feudal_government,yes,seat-of JAP (Japan)
+county,JAP,-,Japan,日本,Yamato,大和,c_yamato,c,Yamato,大和,jap_kou_no_moronao,jap_go_daigo_tenno,e_japan,japan_feudal_government,yes,"seat-of JAP (Japan),MB+ 1337 province-holder"
 county,,-,,,Yana,雅拿,c_yana,c,Yana,雅拿,,gen_wilderness_holder,k_gen_wilderness,,yes,"unowned-in-eu5,seated-by-the-conversion"
 county,CHI,-,China,中华,Yán'ān,延安,c_yanan,c,Yán'ān,延安,yua_togon_temur,yua_togon_temur,,celestial_government,yes,seat-of CHI (China)
 county,MDA,-,Medina,麦地那,Yanbu',延布,c_yanbu,c,Yanbu',延布,mda_wudayy_bin_jammaz,mda_wudayy_bin_jammaz,k_egypt,clan_government,yes,seat-of MDA (Medina)

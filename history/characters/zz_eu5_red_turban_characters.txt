@@ -1,0 +1,288 @@
+# Fixed historical characters from EU5 red_turban_rebellions and flavor_chi.123.
+eu5_rtr_peng = {
+	name = "eu5_rtr_peng_name"
+	dynasty = dyn_eu5_rtr_peng
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1310.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_han = {
+	name = "eu5_rtr_han_name"
+	dynasty = dyn_eu5_rtr_han
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1320.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_liu = {
+	name = "eu5_rtr_liu_name"
+	dynasty = dyn_eu5_rtr_liu
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1321.1.1 = { birth = yes }
+	1337.4.1 = {
+		employer = eu5_rtr_han
+		effect = {
+			if = {
+				limit = { NOT = { liege_or_court_owner ?= character:eu5_rtr_han } }
+				set_employer = character:eu5_rtr_han
+			}
+		}
+	}
+}
+
+
+eu5_rtr_zou = {
+	name = "eu5_rtr_zou_name"
+	dynasty = dyn_eu5_rtr_zou
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1320.1.1 = { birth = yes }
+	1337.4.1 = {
+		employer = eu5_rtr_xu
+		effect = {
+			if = {
+				limit = { NOT = { liege_or_court_owner ?= character:eu5_rtr_xu } }
+				set_employer = character:eu5_rtr_xu
+			}
+		}
+	}
+}
+
+
+eu5_rtr_xu = {
+	name = "eu5_rtr_xu_name"
+	dynasty = dyn_eu5_rtr_xu
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1320.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_ni = {
+	name = "eu5_rtr_ni_name"
+	dynasty = dyn_eu5_rtr_ni
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1320.1.1 = { birth = yes }
+	1337.4.1 = {
+		employer = eu5_rtr_xu
+		effect = {
+			if = {
+				limit = { NOT = { liege_or_court_owner ?= character:eu5_rtr_xu } }
+				set_employer = character:eu5_rtr_xu
+			}
+		}
+	}
+}
+
+
+eu5_rtr_chen = {
+	name = "eu5_rtr_chen_name"
+	dynasty = dyn_eu5_rtr_chen
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1320.1.1 = { birth = yes }
+	1337.4.1 = {
+		employer = eu5_rtr_xu
+		effect = {
+			if = {
+				limit = { NOT = { liege_or_court_owner ?= character:eu5_rtr_xu } }
+				set_employer = character:eu5_rtr_xu
+			}
+		}
+	}
+}
+
+
+eu5_rtr_zhang = {
+	name = "eu5_rtr_zhang_name"
+	dynasty = dyn_eu5_rtr_zhang
+	culture = han
+	religion = confucian_faith
+	1321.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_fang = {
+	name = "eu5_rtr_fang_name"
+	dynasty = dyn_eu5_rtr_fang
+	culture = han
+	religion = confucian_faith
+	1319.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_mao = {
+	name = "eu5_rtr_mao_name"
+	dynasty = dyn_eu5_rtr_mao
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1320.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_ming = {
+	name = "eu5_rtr_ming_name"
+	dynasty = dyn_eu5_rtr_ming
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1328.10.2 = { birth = yes }
+	1337.4.1 = {
+		employer = eu5_rtr_xu
+		effect = {
+			if = {
+				limit = { NOT = { liege_or_court_owner ?= character:eu5_rtr_xu } }
+				set_employer = character:eu5_rtr_xu
+			}
+		}
+	}
+}
+
+
+eu5_rtr_guo = {
+	name = "eu5_rtr_guo_name"
+	dynasty = dyn_eu5_rtr_guo
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1302.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_zhu = {
+	name = "eu5_rtr_zhu_name"
+	dynasty = dyn_eu5_rtr_zhu
+	culture = han
+	religion = mahayana_faith
+	rite = dhyana
+	1328.10.21 = { birth = yes }
+}
+
+
+eu5_rtr_ma = {
+	name = "eu5_rtr_ma_name"
+	dynasty = dyn_eu5_rtr_ma
+	culture = han
+	religion = confucian_faith
+	female = yes
+	1332.7.18 = { birth = yes }
+	1337.4.1 = {
+		employer = eu5_rtr_guo
+		effect = {
+			if = {
+				limit = { NOT = { liege_or_court_owner ?= character:eu5_rtr_guo } }
+				set_employer = character:eu5_rtr_guo
+			}
+		}
+	}
+}
+
+
+eu5_rtr_chen_youding = {
+	name = "eu5_rtr_chen_youding_name"
+	dynasty = dyn_eu5_rtr_chen_youding
+	culture = han
+	religion = confucian_faith
+	1330.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_he = {
+	name = "eu5_rtr_he_name"
+	dynasty = dyn_eu5_rtr_he
+	culture = han
+	religion = confucian_faith
+	1321.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_li = {
+	name = "eu5_rtr_li_name"
+	dynasty = dyn_eu5_rtr_li
+	culture = han
+	religion = confucian_faith
+	1323.1.1 = { birth = yes }
+}
+
+
+# Chaghan Temur, adapted from MB+ ChaghanTemur.
+eu5_rtr_chaghan_temur = {
+	name = "eu5_rtr_chaghan_temur_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	father = eu5_rtr_mb_ancestor_166862M27
+	culture = mongol
+	religion = vajrayana_faith
+	rite = lamaism
+	martial = 8
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 5
+	learning = 4
+	trait = education_martial_4
+	trait = brave
+	trait = aggressive_attacker
+	trait = flexible_leader
+	trait = zealous
+	1310.1.1 = { birth = yes }
+	1362.1.1 = { death = yes }
+}
+
+eu5_rtr_koke = {
+	name = "eu5_rtr_koke_name"
+	dynasty = dyn_eu5_rtr_koke
+	father = eu5_rtr_chaghan_temur
+	culture = mongol
+	religion = vajrayana_faith
+	1330.1.1 = { birth = yes }
+	1337.4.1 = {
+		employer = eu5_rtr_chaghan_temur
+		effect = {
+			if = {
+				limit = { NOT = { liege_or_court_owner ?= character:eu5_rtr_chaghan_temur } }
+				set_employer = character:eu5_rtr_chaghan_temur
+			}
+		}
+	}
+}
+
+
+eu5_rtr_han_liner = {
+	name = "eu5_rtr_han_liner_name"
+	dynasty = dyn_eu5_rtr_han
+	father = eu5_rtr_han
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1339.2.23 = { birth = yes }
+}
+
+
+eu5_rtr_zhu_biao = {
+	name = "eu5_rtr_zhu_biao_name"
+	dynasty = dyn_eu5_rtr_zhu
+	father = eu5_rtr_zhu
+	culture = han
+	religion = confucian_faith
+	1355.10.10 = { birth = yes }
+}
+
+
+eu5_rtr_naghachu = {
+	name = "eu5_rtr_naghachu_name"
+	culture = mongol
+	religion = vajrayana_faith
+	1340.1.1 = { birth = yes }
+}

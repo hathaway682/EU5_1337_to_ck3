@@ -1,0 +1,40 @@
+﻿# Reuse the imported EU5 arms for the 1337 characters and their starting titles.
+dyn_eu5_rtr_han = rtr_han_dynasty
+dyn_eu5_rtr_xu = rtr_tianwan_xu_dynasty
+dyn_eu5_rtr_chen = rtr_chen_dynasty
+dyn_eu5_rtr_zhang = rtr_wu_zhang_dynasty
+dyn_eu5_rtr_fang = rtr_fang_dynasty
+dyn_eu5_rtr_mao = rtr_mao_dynasty
+dyn_eu5_rtr_ming = rtr_xia_ming_dynasty
+dyn_eu5_rtr_guo = rtr_guo_dynasty
+dyn_eu5_rtr_zhu = rtr_ming_zhu_dynasty
+dyn_eu5_rtr_chen_youding = rtr_nanping_chen_dynasty
+dyn_eu5_rtr_he = rtr_dongguan_he_dynasty
+dyn_eu5_rtr_li = rtr_li_dynasty
+d_laamp_eu5_rtr_han = rtr_han_dynasty
+d_laamp_eu5_rtr_xu = rtr_tianwan_xu_dynasty
+d_laamp_eu5_rtr_zhu = rtr_ming_zhu_dynasty
+d_laamp_eu5_rtr_mao = rtr_mao_dynasty
+d_laamp_eu5_rtr_guo = rtr_guo_dynasty
+c_merchant_eu5_rtr_zhang = rtr_wu_zhang_dynasty
+c_merchant_eu5_rtr_fang = rtr_fang_dynasty
+c_nf_eu5_yuan_chen_youding = rtr_nanping_chen_dynasty
+c_nf_eu5_yuan_he = rtr_dongguan_he_dynasty
+c_nf_eu5_yuan_li = rtr_li_dynasty
+
+# Generic, identifiable placeholders: no matching authored family arms were found.
+dyn_eu5_rtr_peng = {
+	pattern = "eu5dyn_pattern_solid.dds"
+	color1 = "eu5dyn_red"
+	color2 = "eu5dyn_white"
+	colored_emblem = { texture = "ce_sun.dds" color1 = color2 instance = { position = { 0.5 0.5 } scale = { 0.9 0.6 } } }
+}
+d_laamp_eu5_rtr_peng = dyn_eu5_rtr_peng
+
+mb_yuan_county_dynasty_101946 = {
+	pattern = "eu5dyn_pattern_solid.dds"
+	color1 = "eu5dyn_blue"
+	color2 = "eu5dyn_white"
+	colored_emblem = { texture = "ce_mongol_bird.dds" color1 = color2 instance = { position = { 0.5 0.5 } scale = { 0.9 0.6 } } }
+}
+c_nf_eu5_yuan_chaghan = mb_yuan_county_dynasty_101946

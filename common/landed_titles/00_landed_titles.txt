@@ -1,4 +1,9 @@
-﻿# De jure tree rebuilt on Crusader Universalis (2026-10-29).
+@correct_culture_primary_score = 100
+@correct_government_primary_score = 200
+@better_than_the_alternatives_score = 50
+@always_primary_score = 1000
+@never_primary_score = -1000
+# De jure tree rebuilt on Crusader Universalis (2026-10-29).
 # h/e/k come from CU; every duchy is placed under the CU kingdom holding the
 # largest share of its baronies in CU; duchies outside CU coverage keep their old
 # kingdom. c_/b_ blocks and all province ids are untouched.
@@ -21404,11 +21409,222 @@ h_america = {
 }
 
 h_china = {
+
+	# Imperial ministry titles, restored to the celestial empire de jure.
+	e_minister_chancellor = {
+		landless = yes
+		capital = c_shuntian
+		color = { 228 237 113 }
+		can_create = { always = no }
+		can_create_on_partition = { always = no }
+		no_automatic_claims = yes
+		ai_primary_priority = { add = -1000 }
+		allow_domicile = no
+		destroy_if_invalid_heir = yes
+		de_jure_drift_disabled = yes
+		can_use_nomadic_naming = no
+		can_be_named_after_dynasty = no
+		definite_form = yes
+		ruler_uses_title_name = no
+
+		dlc_feature = all_under_heaven
+
+	}
+
+	e_minister_censor = {
+		landless = yes
+		capital = c_shuntian
+		color = { 185 192 35 }
+		can_create = { always = no }
+		can_create_on_partition = { always = no }
+		no_automatic_claims = yes
+		ai_primary_priority = { add = -1000 }
+		allow_domicile = no
+		destroy_if_invalid_heir = yes
+		de_jure_drift_disabled = yes
+		can_use_nomadic_naming = no
+		can_be_named_after_dynasty = no
+		definite_form = yes
+		ruler_uses_title_name = no
+
+		dlc_feature = all_under_heaven
+
+	}
+
+	e_minister_grand_marshal = {
+		landless = yes
+		capital = c_shuntian
+		color = { 212 150 69 }
+		can_create = { always = no }
+		can_create_on_partition = { always = no }
+		no_automatic_claims = yes
+		ai_primary_priority = { add = -1000 }
+		allow_domicile = no
+		destroy_if_invalid_heir = yes
+		de_jure_drift_disabled = yes
+		can_use_nomadic_naming = no
+		can_be_named_after_dynasty = no
+		definite_form = yes
+		ruler_uses_title_name = no
+
+		dlc_feature = all_under_heaven
+
+	}
+
+	e_minister_of_personnel = {
+		landless = yes
+		capital = c_shuntian
+		color = { 228 237 59 }
+		can_create = { always = no }
+		can_create_on_partition = { always = no }
+		no_automatic_claims = yes
+		ai_primary_priority = { add = -1000 }
+		allow_domicile = no
+		destroy_if_invalid_heir = yes
+		de_jure_drift_disabled = yes
+		can_use_nomadic_naming = no
+		can_be_named_after_dynasty = no
+		definite_form = yes
+		ruler_uses_title_name = no
+
+		dlc_feature = all_under_heaven
+
+	}
+
+	e_minister_of_revenue = {
+		landless = yes
+		capital = c_shuntian
+		color = { 206 247 0 }
+		can_create = { always = no }
+		can_create_on_partition = { always = no }
+		no_automatic_claims = yes
+		ai_primary_priority = { add = -1000 }
+		allow_domicile = no
+		destroy_if_invalid_heir = yes
+		de_jure_drift_disabled = yes
+		can_use_nomadic_naming = no
+		can_be_named_after_dynasty = no
+		definite_form = yes
+		ruler_uses_title_name = no
+
+		dlc_feature = all_under_heaven
+
+	}
+
+	e_minister_of_rites = {
+		landless = yes
+		capital = c_shuntian
+		color = { 248 247 0 }
+		can_create = { always = no }
+		can_create_on_partition = { always = no }
+		no_automatic_claims = yes
+		ai_primary_priority = { add = -1000 }
+		allow_domicile = no
+		destroy_if_invalid_heir = yes
+		de_jure_drift_disabled = yes
+		can_use_nomadic_naming = no
+		can_be_named_after_dynasty = no
+		definite_form = yes
+		ruler_uses_title_name = no
+
+		dlc_feature = all_under_heaven
+
+	}
+
+	e_minister_of_war = {
+		landless = yes
+		capital = c_shuntian
+		color = { 255 168 10 }
+		can_create = { always = no }
+		can_create_on_partition = { always = no }
+		no_automatic_claims = yes
+		ai_primary_priority = { add = -1000 }
+		allow_domicile = no
+		destroy_if_invalid_heir = yes
+		de_jure_drift_disabled = yes
+		can_use_nomadic_naming = no
+		can_be_named_after_dynasty = no
+		definite_form = yes
+		ruler_uses_title_name = no
+
+		dlc_feature = all_under_heaven
+
+	}
+
+	e_minister_of_justice = {
+		landless = yes
+		capital = c_shuntian
+		color = { 255 237 13 }
+		can_create = { always = no }
+		can_create_on_partition = { always = no }
+		no_automatic_claims = yes
+		ai_primary_priority = { add = -1000 }
+		allow_domicile = no
+		destroy_if_invalid_heir = yes
+		de_jure_drift_disabled = yes
+		can_use_nomadic_naming = no
+		can_be_named_after_dynasty = no
+		definite_form = yes
+		ruler_uses_title_name = no
+
+		dlc_feature = all_under_heaven
+
+	}
+
+	e_minister_of_works = {
+		landless = yes
+		capital = c_shuntian
+		color = { 239 255 13 }
+		can_create = { always = no }
+		can_create_on_partition = { always = no }
+		no_automatic_claims = yes
+		ai_primary_priority = { add = -1000 }
+		allow_domicile = no
+		destroy_if_invalid_heir = yes
+		de_jure_drift_disabled = yes
+		can_use_nomadic_naming = no
+		can_be_named_after_dynasty = no
+		definite_form = yes
+		ruler_uses_title_name = no
+
+		dlc_feature = all_under_heaven
+
+	}
+
 	color = { 230 180 10 }
 	capital = c_shuntian
+
+	disable_regnal_numbers = always
+
+	can_create = {
+		custom_tooltip = {
+			text = dynastic_cycle.tt.forbid_title_creation
+			NOT = { exists = situation:dynastic_cycle }
+		}
+	}
+
+	can_create_on_partition = {
+		custom_tooltip = {
+			text = dynastic_cycle.tt.forbid_title_creation
+			NOT = { exists = situation:dynastic_cycle }
+		}
+	}
+
+	can_destroy = {
+		custom_tooltip = {
+			text = dynastic_cycle.tt.forbid_title_destruction
+			NOT = { exists = situation:dynastic_cycle }
+		}
+	}
+
 	e_jingyang = {
 		color = { 169 40 40 }
 		capital = c_yingtian
+
+		can_create = {
+			rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+		}
+
 		k_fujian = {
 			color = { 70 100 240 }
 			capital = c_fuzhou
@@ -24362,6 +24578,11 @@ h_china = {
 		k_viet = {
 			color = { 20 110 140 }
 			capital = c_thang_long
+
+			cultural_names = {
+				name_list_han = cn_annan
+			}
+
 			d_red_river_delta = {
 				color = { 20 110 140 }
 				capital = c_thang_long
@@ -24641,6 +24862,11 @@ h_china = {
 	e_liangyi = {
 		color = { 60 150 190 }
 		capital = c_chengdu
+
+		can_create = {
+			rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+		}
+
 		k_dali = {
 			color = { 240 240 220 }
 			capital = c_dali
@@ -26159,9 +26385,23 @@ h_china = {
 	e_lingnan = {
 		color = { 0 120 31 }
 		capital = c_guangzhou
+
+		cultural_names = {
+			name_list_vietnamese = cn_nam_viet
+		}
+
+		can_create = {
+			rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+		}
+
 		k_lingnan = {
 			color = { 0 120 21 }
 			capital = c_guangzhou
+
+			cultural_names = {
+				name_list_vietnamese = cn_linh_nam
+			}
+
 		}
 		k_lingxi = {
 			color = { 81 127 99 }
@@ -26171,6 +26411,11 @@ h_china = {
 	e_yongliang = {
 		color = { 180 180 190 }
 		capital = c_xian
+
+		can_create = {
+			rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+		}
+
 		k_guannei = {
 			color = { 150 150 140 }
 			capital = c_xian
@@ -27075,6 +27320,11 @@ h_china = {
 	e_zhongyuan = {
 		color = { 230 200 10 }
 		capital = c_kaifeng
+
+		can_create = {
+			rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+		}
+
 		k_daibei = {
 			color = { 60 35 10 }
 			capital = c_datong
@@ -39674,9 +39924,33 @@ h_europe = {
 e_abyssinia = {
 	color = { 181 133 68 }
 	capital = c_argobba
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_east_african }
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
 	k_abyssinia = {
 		color = { 120 62 20 }
 		capital = c_lasta
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_east_african }
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_central_ethiopia = {
 			color = { 205 155 95 }
 			capital = c_lasta
@@ -40421,6 +40695,16 @@ e_abyssinia = {
 	k_nubia = {
 		color = { 180 85 39 }
 		capital = c_makuria
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_east_african }
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_butana = {
 			color = { 128 60 20 }
 			capital = c_lower_butana
@@ -40912,14 +41196,37 @@ e_abyssinia = {
 e_amur = {
 	color = { 108 65 15 }
 	capital = c_amur_estuary
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
 }
 
 e_andong = {
 	color = { 50 50 50 }
 	capital = c_xiliao
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	cultural_names = {
+        name_list_balhae = cn_yodong
+        name_list_korean = cn_yodong
+    }
+
 	k_balhae = {
 		color = { 95 105 170 }
 		capital = c_mudan
+
+		cultural_names = {
+	        name_list_khitan = cn_dan_gur
+	        name_list_korean = cn_balhae
+	        name_list_balhae = cn_balhae
+	        name_list_jurchen = cn_dazhen
+	    }
+
 	}
 	k_luzhen = {
 		color = { 180 50 140 }
@@ -41992,9 +42299,43 @@ e_andong = {
 e_arabia = {
 	color = { 32 150 85 }
 	capital = c_shaam
+
+	definite_form = yes
+
+	can_destroy = {
+		custom_tooltip = {
+			text = persian_struggle.tt.forbid_title_destruction
+			NOT = { exists = struggle:persian_struggle }
+		}
+	}
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_arabic }
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
 	k_arabia = {
 		color = { 124 199 50 }
 		capital = c_medina
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					NOT = { culture = culture:egyptian }
+					culture = { has_cultural_pillar = heritage_arabic }
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_bahrein = {
 			color = {80 120 10}
 			capital = c_al_ahsa
@@ -43711,6 +44052,22 @@ e_arabia = {
 	k_egypt = {
 		color = { 10 255 80 }
 		capital = c_cairo
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:egyptian
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_arabic }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_cyrenaica = {
 			color = {32 150 63}
 			capital = c_jebel_akhdar
@@ -44686,6 +45043,16 @@ e_arabia = {
 	k_yemen = {
 		color = { 218 234 33 }
 		capital = c_zabid
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_arabic }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_south_yemen = {
 			color = { 240 250 50 }
 			capital = c_ibb
@@ -46340,6 +46707,24 @@ e_arabia = {
 e_azania = {
 	color = { 218 86 25 }
 	capital = c_banaadir
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_somalian }
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
+	cultural_names = {
+		name_list_somali = e_ajuraan
+	}
+
 	k_bale = {
 		color = { 32 116 126 }
 		capital = c_oromia
@@ -46347,6 +46732,16 @@ e_azania = {
 	k_zanj = {
 		color = { 252 209 22 }
 		capital = c_zanzibar
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:swahili
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_tana = {
 			color = {253 234 159}
 			capital = c_lower_gafana
@@ -47962,6 +48357,20 @@ e_azania = {
 e_bengal = {
 	color = { 0 120 40 }
 	capital = c_gaur
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = culture:bengali
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
 	k_bengal = {
 		color = { 40 160 40 }
 		capital = c_gaur
@@ -49153,24 +49562,113 @@ e_bengal = {
 	k_kamarupa = {
 		color = { 6 127 80 }
 		capital = c_baro_bhuyan
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:assamese
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 	}
 	k_orissa = {
 		color = { 110 145 40 }
 		capital = c_rajabandi
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:oriya
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 	}
 }
 
 e_britannia = {
 	color = { 172 22 22 }
 	capital = c_middlesex
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				OR = {
+					culture = { has_cultural_pillar = heritage_west_germanic }
+					culture = { has_cultural_pillar = heritage_goidelic }
+					culture = { has_cultural_pillar = heritage_brythonic }
+				}
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
 }
 
 e_byzantium = {
 	color = hsv{ 0.9 1 0.3 }
 	capital = c_constantinople
+
+	definite_form = yes
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+		custom_tooltip = {
+			text = holds_latin_empire_tt
+			NOT = {
+				any_held_title = {
+					this = title:e_latin_empire
+				}
+			}
+		}
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_byzantine }
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
 	k_anatolia = {
 		color = { 200 50 50 }
 		capital = c_konya
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:greek
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					NOT = { culture = culture:greek }
+					culture = {
+						OR = {
+							has_cultural_pillar = heritage_byzantine
+							has_cultural_pillar = heritage_caucasian
+						}
+					}
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
+		cultural_names = {
+			name_list_greek = cn_anatolikon
+			name_list_turkish = cn_anadolu
+		}
+
 		d_cilicia = {
 			color = {223 117 26}
 			capital = c_tarsus
@@ -49531,6 +50029,20 @@ e_byzantium = {
 	k_armenia = {
 		color = { 203 76 76 }
 		capital = c_ani
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:armenian
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
+		cultural_names = {
+			name_list_armenian = cn_hayastan
+		}
+
 		d_armenia = {
 			color = { 203 76 76 }
 			capital = c_ani
@@ -50172,6 +50684,16 @@ e_byzantium = {
 	k_bulgaria = {
 		color = { 113 88 101 }
 		capital = c_tarnovo
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:bulgarian
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_bulgaria = {
 			color = { 113 88 101 }
 			capital = c_tarnovo
@@ -50595,6 +51117,20 @@ e_byzantium = {
 	k_croatia = {
 		color = { 122 46 58 }
 		capital = c_north_dalmatia
+
+		cultural_names = {
+			name_list_roman = cn_dalmatia
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:croatian
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_bosnia = {
 			color = { 194 115 115 }
 			capital = c_bosnia
@@ -51316,10 +51852,42 @@ e_byzantium = {
 	k_epirus = {
 		color = { 139 68 114 }
 		capital = c_south_epirus
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:greek
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					NOT = { culture = culture:greek }
+					culture = {
+						OR = {
+							has_cultural_pillar = heritage_byzantine
+							has_cultural_pillar = heritage_caucasian
+						}
+					}
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 	}
 	k_georgia = {
 		color = { 200 193 193 }
 		capital = c_kartli
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:georgian
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_georgia = {
 			color = { 200 193 193 }
 			capital = c_kartli
@@ -51591,6 +52159,28 @@ e_byzantium = {
 	k_hellas = {
 		color = { 210 70 165 }
 		capital = c_attica
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:greek
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					NOT = { culture = culture:greek }
+					culture = {
+						OR = {
+							has_cultural_pillar = heritage_byzantine
+							has_cultural_pillar = heritage_caucasian
+						}
+					}
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_morea = {
 			color = {185 55 200}
 			capital = c_achaea
@@ -52424,6 +53014,28 @@ e_byzantium = {
 	k_nikaea = {
 		color = { 136 37 120 }
 		capital = c_sultanonu
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:greek
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					NOT = { culture = culture:greek }
+					culture = {
+						OR = {
+							has_cultural_pillar = heritage_byzantine
+							has_cultural_pillar = heritage_caucasian
+						}
+					}
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_marmara = {
 			color = { 146 47 130 }
 			capital = c_sultanonu
@@ -53179,6 +53791,28 @@ e_byzantium = {
 	k_pontus = {
 		color = { 205 130 85 }
 		capital = c_trebizond
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:greek
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					NOT = { culture = culture:greek }
+					culture = {
+						OR = {
+							has_cultural_pillar = heritage_byzantine
+							has_cultural_pillar = heritage_caucasian
+						}
+					}
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_pontus = {
 			color = { 150 130 20 }
 			capital = c_trebizond
@@ -54367,6 +55001,16 @@ e_byzantium = {
 	k_serbia = {
 		color = { 113 98 61 }
 		capital = c_kosovo
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:serbian
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_serbia = {
 			color = { 113 98 61 }
 			capital = c_raska
@@ -54757,6 +55401,28 @@ e_byzantium = {
 	k_thessalonika = {
 		color = { 175 30 130 }
 		capital = c_constantinople
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:greek
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					NOT = { culture = culture:greek }
+					culture = {
+						OR = {
+							has_cultural_pillar = heritage_byzantine
+							has_cultural_pillar = heritage_caucasian
+						}
+					}
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_macedonia = {
 			color = {189 19 130}
 			capital = c_chalkidiki
@@ -55609,6 +56275,23 @@ e_byzantium = {
 	k_albania = {
 		color = { 110 0 0 }
 		capital = c_albania
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:albanian
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					NOT = { culture = culture:albanian }
+					culture = { has_cultural_pillar = heritage_albanian }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_albania = {
 			color = { 137 27 99 }
 			capital = c_albania
@@ -55832,9 +56515,24 @@ e_byzantium = {
 e_carpathia = {
 	color = { 210 115 35 }
 	capital = c_pest
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
 	k_dacia = {
 		color = { 237 147 52 }
 		capital = c_north_muntenia
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:vlach
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_wallachia = {
 			color = { 237 147 52 }
 			capital = c_north_muntenia
@@ -56360,6 +57058,16 @@ e_carpathia = {
 	k_hungary = {
 		color = { 250 120 90 }
 		capital = c_buda
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:hungarian
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_north_alfold = {
 			color = { 241 58 58 }
 			capital = c_bihar
@@ -58453,17 +59161,48 @@ e_carpathia = {
 	k_moldavia = {
 		color = { 180 150 20}
 		capital = c_suceava
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:vlach
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 	}
 }
 
 e_caspian-pontic_steppe = {
 	color = { 230 180 10 }
 	capital = c_pologoye_zaymishche
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
 }
 
 e_deccan = {
 	color = { 190 20 50 }
 	capital = c_kalyana_karnakassala
+
+	definite_form = yes
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_dravidian }
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
 	k_andhra = {
 		color = { 110 0 20 }
 		capital = c_northern_rayalaseema
@@ -58471,10 +59210,30 @@ e_deccan = {
 	k_karnata = {
 		color = { 150 20 0 }
 		capital = c_kalyana_karnakassala
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:kannada
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 	}
 	k_lanka = {
 		color = { 221 187 80 }
 		capital = c_vanni
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:sinhala
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 	}
 	k_maharastra = {
 		color = { 150 0 20 }
@@ -58483,6 +59242,16 @@ e_deccan = {
 	k_tamilakam = {
 		color = { 200 25 65 }
 		capital = c_cola_nadu
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:tamil
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_malabar = {
 			color = { 140 75 75 }
 			capital = c_kutta_nadu
@@ -59967,15 +60736,72 @@ e_deccan = {
 	k_telingana = {
 		color = { 185 39 45 }
 		capital = c_warangal
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:telugu
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 	}
 }
 
 e_france = {
 	color = { 11 22 170 }
 	capital = c_pays_france
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = culture:french
+			}
+			add = @correct_culture_primary_score
+		}
+		if = {
+			limit = {
+				OR = {
+					culture = culture:norman
+					culture = culture:occitan
+				}
+			}
+			add = @better_than_the_alternatives_score
+		}
+	}
+
 	k_brittany = {
 		color = { 197 215 217 }
 		capital = c_vannetais
+
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				culture = { has_cultural_pillar = heritage_brythonic }
+			}
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:breton
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
+		cultural_names = {
+			name_list_roman = cn_armorica
+			name_list_greek = cn_armorica
+		}
+
 		d_brittany = {
 			color = {166 190 191}
 			capital = c_vannetais
@@ -60265,6 +61091,30 @@ e_france = {
 	k_france = {
 		color = { 15 27 187 }
 		capital = c_pays_france
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:french
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					OR = {
+						culture = culture:norman
+						culture = culture:occitan
+					}
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
+		cultural_names = {
+			name_list_roman = cn_gallia
+			name_list_greek = cn_gallia
+		}
+
 		d_anjou = {
 			color = {5 95 235}
 			capital = c_anjou
@@ -63176,6 +64026,24 @@ e_france = {
 	k_england = {
 		color = { 202 26 26 }
 		capital = c_middlesex
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					OR = {
+						culture = culture:english
+						culture = culture:anglo_saxon
+					}
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
+		cultural_names = {
+			name_list_roman = cn_britannia
+			name_list_greek = cn_britannia
+		}
+
 		d_east_anglia = {
 			color = {200 90 0}
 			capital = c_norfolk
@@ -65730,6 +66598,36 @@ e_france = {
 	k_ireland = {
 		color = { 6 127 2 }
 		capital = c_dublin
+
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				culture = { has_cultural_pillar = heritage_goidelic }
+			}
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:irish
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					culture = culture:gaelic
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
+		cultural_names = {
+			name_list_roman = cn_hibernia
+			name_list_greek = cn_hibernia
+		}
+
 		d_connaught = {
 			color = {43 229 108}
 			capital = c_mayo
@@ -67395,6 +68293,34 @@ e_france = {
 	k_scotland = {
 		color = { 230 140 0 }
 		capital = c_fife
+
+		cultural_names = {
+			name_list_irish = cn_alba
+			name_list_gaelic = cn_alba
+			name_list_pictish = cn_pictland
+			name_list_roman = cn_caledonia
+			name_list_greek = cn_caledonia
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					OR = {
+						culture = culture:scottish
+						culture = culture:gaelic
+						culture = culture:pictish
+					}
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					culture = culture:irish
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_hebrides = {
 			color = { 225 120 30 }
 			capital = c_inner_hebrides
@@ -68419,6 +69345,40 @@ e_france = {
 	k_wales = {
 		color = { 135 25 3 }
 		capital = c_deheubarth
+
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				culture = { has_cultural_pillar = heritage_brythonic }
+			}
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:welsh
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					OR = {
+						culture = culture:cumbrian
+						culture = culture:cornish
+						culture = culture:breton
+					}
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
+		cultural_names = {
+			name_list_roman = cn_cambria
+			name_list_greek = cn_cambria
+		}
+
 		d_wales = {
 			color = { 135 25 3 }
 			capital = c_deheubarth
@@ -68845,13 +69805,90 @@ e_france = {
 e_goryeo = {
 	color = { 220 205 250 }
 	capital = c_kaesong
+
+	can_create = {
+		trigger_if = {
+			limit = {
+				culture = {
+					OR = {
+						has_cultural_pillar = heritage_korean
+						any_parent_culture = { has_cultural_pillar = heritage_korean }
+					}
+				}
+			}
+			custom_tooltip = {
+				text = unify_goryeo_decision_requirement_tt
+				NOT = { government_has_mechanic = administrative }
+			}
+		}
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	personal_relation_entry = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:target
+					scope:vassal ?= scope:target
+				}
+				desc = japan_personal_relation_ceremonial_regent_same
+			}
+			triggered_desc = {
+				trigger = { exists = scope:vassal }
+				desc = japan_personal_relation_ceremonial_regent_other
+			}
+		}
+	}
+
+	personal_relation_vassal = {
+		has_title = title:k_yongson_throne
+	}
+
 	k_baekje = {
 		color = { 90 160 115 }
 		capital = c_jeonju
+
+		cultural_names = {
+			name_list_yamato = cn_kudara
+			name_list_emishi = cn_kudara
+		}
+
+		can_create = {
+			# Cannot be created by Goryeo after it is formed
+			custom_tooltip = {
+				text = unify_goryeo_decision_blocker_tt
+				NOT = {
+					top_liege = {
+						has_title = title:e_goryeo
+						has_government = meritocratic_government
+					}
+				}
+			}
+		}
+
 	}
 	k_goguryeo = {
 		color = { 55 85 190 }
 		capital = c_seogyeong
+
+		cultural_names = {
+			name_list_yamato = cn_koma
+			name_list_emishi = cn_koma
+		}
+
+		can_create = {
+			# Cannot be created by Goryeo after it is formed
+			custom_tooltip = {
+				text = unify_goryeo_decision_blocker_tt
+				NOT = {
+					top_liege = {
+						has_title = title:e_goryeo
+						has_government = meritocratic_government
+					}
+				}
+			}
+		}
+
 		d_gwanseo = {
 			color = {160 72 175}
 			capital = c_seogyeong
@@ -69575,12 +70612,49 @@ e_goryeo = {
 	k_silla = {
 		color = { 120 45 40 }
 		capital = c_gyeongju
+
+		cultural_names = {
+			name_list_yamato = cn_shiragi
+			name_list_emishi = cn_shiragi
+		}
+
+		can_create = {
+			# Cannot be created by Goryeo after it is formed
+			custom_tooltip = {
+				text = unify_goryeo_decision_blocker_tt
+				NOT = {
+					top_liege = {
+						has_title = title:e_goryeo
+						has_government = meritocratic_government
+					}
+				}
+			}
+		}
+
 	}
 }
 
 e_guinea = {
 	color = { 175 173 90 }
 	capital = c_temne
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				OR = {
+					culture = { has_cultural_pillar = heritage_west_african }
+					culture = { has_cultural_pillar = heritage_akan }
+					culture = { has_cultural_pillar = heritage_yoruba }
+				}
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
 	k_akan = {
 		color = { 225 25 25 }
 		capital = c_asante
@@ -70729,13 +71803,49 @@ e_guinea = {
 e_hre = {
 	color = { 255 255 255 }
 	capital = c_julich
+
+	definite_form = yes
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_central_germanic }
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
 	k_bavaria = {
 		color = { 70 80 80 }
 		capital = c_donau_moos
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_central_germanic }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 	}
 	k_bohemia = {
 		color = { 176 110 32 }
 		capital = c_prague
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:czech
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_bohemia = {
 			color = {195 110 11}
 			capital = c_prague
@@ -71447,6 +72557,30 @@ e_hre = {
 	k_east_francia = {
 		color = { 160 160 160 }
 		capital = c_untermain
+
+		can_create = {
+			trigger_if = {
+				limit = { is_ai = yes }
+				NOT = { exists = title:e_hre }
+			}
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:franconian
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					NOT = { culture = culture:franconian }
+					culture = { has_cultural_pillar = heritage_central_germanic }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_hesse = {
 			color = {180 160 160}
 			capital = c_hessen_bergland
@@ -76742,14 +77876,78 @@ e_hre = {
 	k_frisia = {
 		color = { 245 100 20 }
 		capital = c_south_holland
+
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				OR = {
+					culture = culture:frisian
+					culture = culture:dutch
+				}
+			}
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					OR = {
+						culture = culture:frisian
+						culture = culture:dutch
+					}
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 	}
 	k_lotharingia = {
 		color = { 110 110 160 }
 		capital = c_east_luxembourg
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_central_germanic }
+				}
+				add = @better_than_the_alternatives_score
+			}
+			if = {
+				limit = {
+					OR = {
+						culture = culture:french
+						culture = culture:norman
+						culture = culture:occitan
+					}
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 	}
 	k_burgundy = {
 		color = { 134 0 37 }
 		capital = c_avignonnais
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					OR = {
+						culture = culture:french
+						culture = culture:norman
+						culture = culture:occitan
+					}
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
+		cultural_names = {
+			name_list_roman = cn_viennensis
+			name_list_greek = cn_viennensis
+		}
+
 		d_franche_comte = {
 			color = {159 20 58}
 			capital = c_millieu
@@ -77626,9 +78824,44 @@ e_hre = {
 e_italy = {
 	color = { 234 217 110 }
 	capital = c_marittima
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+		gg_can_create_northern_italian_titles_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = culture:italian
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
 	k_italy = {
 		color = { 244 227 160 }
 		capital = c_milano
+
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				faith = { religion_tag = christianity_religion }
+			}
+			gg_can_create_northern_italian_titles_trigger = yes
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:italian
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_emilia = {
 			color = { 225 180 180 }
 			capital = c_modena
@@ -81167,6 +82400,9 @@ e_italy = {
 	k_naples = {
 		color = { 131 90 158 }
 		capital = c_lavoro
+
+		can_create = { gg_can_create_northern_italian_titles_trigger = yes }
+
 		d_apulia = {
 			color = {167 172 63}
 			capital = c_bari
@@ -82231,10 +83467,35 @@ e_italy = {
 	k_romagna = {
 		color = { 215 141 152 }
 		capital = c_romagna
+
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				faith = { religion_tag = christianity_religion }
+			}
+			gg_can_create_northern_italian_titles_trigger = yes
+		}
+
+		cultural_names = {
+			name_list_greek = cn_ravenna
+		}
+
 	}
 	k_sardinia = {
 		color = { 210 165 255 }
 		capital = c_cagliari
+
+		cultural_names = {
+			name_list_catalan = cn_sardenya_i_corsega
+			name_list_greek = cn_sardhnia_kai_thn_korsikn
+			name_list_italian = cn_sardegna_e_corsica
+			name_list_cisalpine = cn_sardegna_e_corsica
+			name_list_sicilian = cn_sardegna_e_corsica
+			name_list_sardinian = cn_sardegna_e_corsica
+		}
+
 		d_sardinia = {
 			color = {217 159 255}
 			capital = c_cagliari
@@ -82950,9 +84211,52 @@ e_italy = {
 e_japan = {
 	color = { 255 100 255 }
 	capital = c_yamashiro
+
+	landless = no
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_japonic }
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
+	personal_relation_entry = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:target
+					scope:vassal ?= scope:target
+				}
+				desc = japan_personal_relation_ceremonial_regent_same
+			}
+			triggered_desc = {
+				trigger = { exists = scope:vassal }
+				desc = japan_personal_relation_ceremonial_regent_other
+			}
+		}
+	}
+
+	personal_relation_vassal = {
+		has_title = title:k_chrysanthemum_throne
+	}
+
 	k_azuma = {
 		color = { 125 15 65 }
 		capital = c_mino
+
+		can_be_named_after_dynasty = no
+
+		can_create = {
+			japan_government_japan_kingdom_restriction_trigger = yes
+		}
+
 		d_hokurikudou = {
 			color = {191 137 165}
 			capital = c_echizen
@@ -83540,6 +84844,13 @@ e_japan = {
 	k_tsukushi = {
 		color = { 210 145 30 }
 		capital = c_chikuzen
+
+		can_be_named_after_dynasty = no
+
+		can_create = {
+			japan_government_japan_kingdom_restriction_trigger = yes
+		}
+
 		d_saikaidou = {
 			color = { 210 145 30 }
 			capital = c_chikuzen
@@ -83798,6 +85109,20 @@ e_japan = {
 	k_yamato = {
 		color = { 96 3 6 }
 		capital = c_yamashiro
+
+		can_be_named_after_dynasty = no
+
+		can_create = {
+			japan_government_japan_kingdom_restriction_trigger = yes
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = { culture = culture:japanese }
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_kinai = {
 			color = {68 18 14}
 			capital = c_yamashiro
@@ -84289,6 +85614,17 @@ e_japan = {
 	k_hitakami = {
 		color = { 45 15 125 }
 		capital = c_rikuzen
+
+		can_be_named_after_dynasty = no
+
+		can_create = {
+			japan_government_japan_kingdom_restriction_trigger = yes
+		}
+
+		cultural_names = {
+			name_list_yamato = cn_michinoku
+		}
+
 		d_ou = {
 			color = { 45 15 125 }
 			capital = c_rikuzen
@@ -84562,6 +85898,20 @@ e_japan = {
 	k_aynumosir = {
 		color = { 141 70 23 }
 		capital = c_southern_sakhalin
+
+		can_create = {
+			japan_government_japan_kingdom_restriction_trigger = yes
+		}
+
+		cultural_names = {
+			name_list_yamato = cn_ezo
+			name_list_emishi = cn_oshima
+			name_list_han = cn_kuye
+			name_list_mohe = cn_sahaliyan
+			name_list_jurchen = cn_sahaliyan
+			name_list_nivkh = cn_ygh_mif
+		}
+
 		d_ezo = {
 			color = {141 70 23}
 			capital = c_kitami
@@ -84889,6 +86239,11 @@ e_japan = {
 e_kambuja = {
 	color = { 41 69 238 }
 	capital = c_angkor
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
 	k_champa = {
 		color = { 104 63 176 }
 		capital = c_vijaya
@@ -85577,6 +86932,11 @@ e_kambuja = {
 e_kanem_bornu = {
 	color = { 55 230 250 }
 	capital = c_kanem
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
 	k_darfur = {
 		color = { 186 52 99 }
 		capital = c_south_darfur
@@ -86453,11 +87813,39 @@ e_kanem_bornu = {
 e_kara_khitai = {
 	color = { 10 10 10 }
 	capital = c_issyk_kul
+
+	can_use_nomadic_naming = no
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	cultural_names = {
+		name_list_khitan = cn_kara_khitai
+	}
+
 }
 
 e_maghreb = {
 	color = { 209 63 44 }
 	capital = c_kairouan
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				OR = {
+					culture = culture:butr
+					culture = culture:baranis
+				}
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
 	k_africa = {
 		color = { 67 96 179 }
 		capital = c_tunis
@@ -87735,6 +89123,19 @@ e_maghreb = {
 	k_maghreb = {
 		color = { 196 36 18 }
 		capital = c_fez
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					OR = {
+						culture = culture:butr
+						culture = culture:baranis
+					}
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_canary_islands = {
 			color = {42 127 201}
 			capital = c_canary_islands
@@ -89930,6 +91331,19 @@ e_maghreb = {
 	k_tahert = {
 		color = { 210 235 87 }
 		capital = c_tlemcen
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					OR = {
+						culture = culture:butr
+						culture = culture:baranis
+					}
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_algiers = {
 			color = { 106 171 60 }
 			capital = c_mitidja
@@ -90810,6 +92224,24 @@ e_maghreb = {
 e_mali = {
 	color = { 225 223 0 }
 	capital = c_old_manding
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				OR = {
+					culture = { has_cultural_pillar = heritage_west_african }
+					culture = { has_cultural_pillar = heritage_sahelian }
+					culture = { has_cultural_pillar = heritage_senegambian }
+				}
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
 	k_ghana = {
 		color = { 209 144 4 }
 		capital = c_ghana
@@ -92269,6 +93701,20 @@ e_mali = {
 e_mongolia = {
 	color = { 90 90 240 }
 	capital = c_orkhon
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_mongolic }
+			}
+			add = @better_than_the_alternatives_score
+		}
+	}
+
 	k_angara = {
 		color = { 55 55 55 }
 		capital = c_kansk
@@ -93066,6 +94512,9 @@ e_mongolia = {
 	k_naiman = {
 		color = { 180 180 180 }
 		capital = c_gobi_altai
+
+		definite_form = yes
+
 	}
 	k_naimania = {
 		color = { 190 230 15 }
@@ -93074,6 +94523,20 @@ e_mongolia = {
 	k_otuken = {
 		color = { 20 65 25 }
 		capital = c_orkhon
+
+		cultural_names = {
+			name_list_khitan = cn_great_liao	# technically should only be the Liao specifically
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_mongolic }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_lower_selenga = {
 			color = {10 56 10}
 			capital = c_dzhida
@@ -94101,6 +95564,11 @@ e_mongolia = {
 e_nusantara = {
 	color = { 107 160 60 }
 	capital = c_katagalugan
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
 	k_kabisay-an = {
 		color = { 196 66 10 }
 		capital = c_panay
@@ -95944,6 +97412,24 @@ e_nusantara = {
 	k_ruucuu = {
 		color = { 0 130 60 }
 		capital = c_ryuukyuu
+
+		can_be_named_after_dynasty = no
+
+		cultural_names = {
+			name_list_yamato = cn_ryukyu
+			name_list_emishi = cn_ryukyu
+		}
+
+		can_create = {
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = { culture = culture:japanese }
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_ryuukyuu = {
 			color = { 0 137 41 }
 			capital = c_ryuukyuu
@@ -96932,14 +98418,54 @@ e_nusantara = {
 e_persia = {
 	color = { 30 240 230 }
 	capital = c_isfahan
+
+	definite_form = yes
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = culture:persian
+			}
+			add = @better_than_the_alternatives_score
+		}
+	}
+
 }
 
 e_rajastan = {
 	color = { 255 100 0 }
 	capital = c_central_doab
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_indo_aryan }
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
 	k_delhi = {
 		color = { 220 150 75 }
 		capital = c_delhi
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:hindustani
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_doab = {
 			color = { 210 65 12 }
 			capital = c_delhi
@@ -98460,6 +99986,16 @@ e_rajastan = {
 	k_gujarat = {
 		color = { 155 80 28 }
 		capital = c_khekassala
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:gujarati
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 	}
 	k_himalaya = {
 		color = { 250 40 0 }
@@ -98468,6 +100004,16 @@ e_rajastan = {
 	k_kashmir = {
 		color = { 245 155 31 }
 		capital = c_kashmir
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:hindustani
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 	}
 	k_kosala = {
 		color = { 205 60 10 }
@@ -99072,10 +100618,30 @@ e_rajastan = {
 	k_punjab = {
 		color = { 255 90 20 }
 		capital = c_mahja
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:punjabi
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 	}
 	k_rajputana = {
 		color = { 200 70 0 }
 		capital = c_dhundhar
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:rajput
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_rajputana = {
 			color = { 200 70 0 }
 			capital = c_dhundhar
@@ -99775,19 +101341,79 @@ e_rajastan = {
 	k_sindh = {
 		color = { 225 135 20 }
 		capital = c_lower_sindh
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:sindhi
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 	}
 }
 
 e_russia = {
 	color = { 50 150 55 }
 	capital = c_kyiv
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_east_slavic }
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
+	cultural_names = {
+		name_list_norse = cn_gardariki
+		name_list_icelandic = cn_gardariki
+		name_list_swedish = cn_gardariki
+		name_list_danish = cn_gardariki
+		name_list_norwegian = cn_gardariki
+	}
+
 	k_bjarmaland = {
 		color = { 188 238 234 }
 		capital = c_kholmogory
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_east_slavic }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 	}
 	k_novgorod = {
 		color = { 137 194 100 }
 		capital = c_luzhkaya
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_east_slavic }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
+		cultural_names = {
+			name_list_norse = cn_gardariki
+			name_list_icelandic = cn_gardariki
+			name_list_swedish = cn_gardariki
+			name_list_danish = cn_gardariki
+			name_list_norwegian = cn_gardariki
+		}
+
 		d_east_novgorod = {
 			color = { 137 194 100 }
 			capital = c_volkhovskaya
@@ -101340,6 +102966,16 @@ e_russia = {
 	k_opolye = {
 		color = { 87 144 50 }
 		capital = c_vladimir
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_east_slavic }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_moscow = {
 			color = {10 150 10}
 			capital = c_moscow
@@ -103939,9 +105575,36 @@ e_russia = {
 e_scandinavia = {
 	color = { 62 122 189 }
 	capital = c_malmohus
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				OR = {
+					culture = { has_cultural_pillar = heritage_north_germanic }
+					culture = { has_cultural_pillar = heritage_balto_finnic }
+				}
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
 	k_denmark = {
 		color = { 247 77 54 }
 		capital = c_zealand
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:danish
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_denmark = {
 			color = { 247 77 54 }
 			capital = c_zealand
@@ -104247,6 +105910,25 @@ e_scandinavia = {
 	k_finland = {
 		color = { 180 110 0 }
 		capital = c_finland
+
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				culture = { has_cultural_pillar = heritage_balto_finnic }
+			}
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:finnish
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_finland = {
 			color = {200 160 0}
 			capital = c_finland
@@ -104830,6 +106512,21 @@ e_scandinavia = {
 	k_norway = {
 		color = { 130 4 40 }
 		capital = c_akershus
+
+		cultural_names = {
+			name_list_norse = cn_noregr
+			name_list_icelandic = cn_noregr
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:norwegian
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_iceland = {
 			color = {255 245 245}
 			capital = c_west_farthing
@@ -105584,6 +107281,36 @@ e_scandinavia = {
 	k_sapmi = {
 		color = { 5 5 160 }
 		capital = c_vasterbotten
+
+		cultural_names = {
+			name_list_english = cn_lapland
+			name_list_scottish = cn_lapland
+			name_list_anglo_saxon = cn_lapland
+
+			name_list_norwegian = cn_lappland
+			name_list_swedish = cn_lappland
+			name_list_norse = cn_lappland
+			name_list_icelandic = cn_lappland
+		}
+
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				culture = { has_cultural_pillar = heritage_balto_finnic }
+			}
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:sami
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_kola = {
 			color = {44 20 169}
 			capital = c_south_kola
@@ -106125,6 +107852,16 @@ e_scandinavia = {
 	k_sweden = {
 		color = { 50 110 165 }
 		capital = c_uppland
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:swedish
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_gotaland = {
 			color = { 38 93 163 }
 			capital = c_vastergotland
@@ -106535,14 +108272,88 @@ e_scandinavia = {
 e_siberia = {
 	color = { 205 212 250 }
 	capital = c_chimgi_tura
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
 }
 
 e_spain = {
 	color = { 233 200 20 }
 	capital = c_toledo
+
+	can_be_named_after_dynasty = no
+
+	cultural_names = {
+		name_list_bedouin = cn_isbaniya
+		name_list_butr = cn_isbaniya
+		name_list_baranis = cn_isbaniya
+		name_list_zaghawa = cn_isbaniya
+		name_list_levantine = cn_isbaniya
+		name_list_egyptian = cn_isbaniya
+		name_list_maghrebi = cn_isbaniya
+		name_list_andalusian = cn_isbaniya
+		name_list_yemeni = cn_isbaniya
+	}
+
+	can_create = {
+		custom_description = {
+			text = form_hispania_must_end_struggle_trigger
+
+			NOT = { exists = struggle:iberian_struggle }
+		}
+
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_iberian }
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
 	k_andalusia = {
 		color = { 31 138 40 }
 		capital = c_cordoba
+
+		can_be_named_after_dynasty = no
+
+		cultural_names = {
+			name_list_bedouin = cn_al_andalus
+			name_list_baranis = cn_al_andalus
+			name_list_butr = cn_al_andalus
+			name_list_zaghawa = cn_al_andalus
+			name_list_levantine = cn_al_andalus
+	 		name_list_egyptian = cn_al_andalus
+	 		name_list_maghrebi = cn_al_andalus
+	 		name_list_andalusian = cn_al_andalus
+	 		name_list_yemeni = cn_al_andalus
+			name_list_roman = cn_baetica
+			name_list_greek = cn_baetica
+	 	}
+
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				culture = { has_cultural_pillar = heritage_arabic }
+			}
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:andalusian
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_granada = {
 			color = {40 150 40}
 			capital = c_granada
@@ -107582,6 +109393,27 @@ e_spain = {
 	k_aragon = {
 		color = { 166 98 22 }
 		capital = c_barcelona
+
+		can_be_named_after_dynasty = no
+
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				faith = { religion_tag = christianity_religion }
+			}
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_iberian }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_aragon = {
 			color = {160 90 20}
 			capital = c_zaragoza
@@ -109032,6 +110864,45 @@ e_spain = {
 	k_castille = {
 		color = { 243 209 23 }
 		capital = c_valladolid
+
+		can_be_named_after_dynasty = no
+
+		cultural_names = {
+			name_list_bedouin = cn_castalla
+			name_list_baranis = cn_castalla
+			name_list_butr = cn_castalla
+			name_list_zaghawa = cn_castalla
+			name_list_levantine = cn_castalla
+			name_list_egyptian = cn_castalla
+			name_list_maghrebi = cn_castalla
+			name_list_andalusian = cn_castalla
+			name_list_yemeni = cn_castalla
+		}
+
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				faith = { religion_tag = christianity_religion }
+			}
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:castilian
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_iberian }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_castile = {
 			color = {242 196 12}
 			capital = c_burgos
@@ -110900,6 +112771,39 @@ e_spain = {
 	k_leon = {
 		color = { 253 158 51 }
 		capital = c_leon
+
+		can_be_named_after_dynasty = no
+
+		cultural_names = {
+			name_list_bedouin = cn_liyyun
+			name_list_baranis = cn_liyyun
+			name_list_butr = cn_liyyun
+			name_list_zaghawa = cn_liyyun
+			name_list_levantine = cn_liyyun
+			name_list_egyptian = cn_liyyun
+			name_list_maghrebi = cn_liyyun
+			name_list_andalusian = cn_liyyun
+			name_list_yemeni = cn_liyyun
+		}
+
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				faith = { religion_tag = christianity_religion }
+			}
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_iberian }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_extremadura = {
 			color = {118 223 36}
 			capital = c_badajoz
@@ -112031,6 +113935,33 @@ e_spain = {
 	k_navarra = {
 		color = { 150 120 5 }
 		capital = c_navarre
+
+		can_be_named_after_dynasty = no
+
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				faith = { religion_tag = christianity_religion }
+			}
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:basque
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_iberian }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_navarre = {
 			color = {140 130 0}
 			capital = c_navarre
@@ -112311,6 +114242,47 @@ e_spain = {
 	k_portugal = {
 		color = { 182 88 5 }
 		capital = c_estremadura
+
+		can_be_named_after_dynasty = no
+
+		cultural_names = {
+			name_list_bedouin = cn_burtughal
+			name_list_baranis = cn_burtughal
+			name_list_butr = cn_burtughal
+			name_list_zaghawa = cn_burtughal
+			name_list_levantine = cn_burtughal
+			name_list_egyptian = cn_burtughal
+			name_list_maghrebi = cn_burtughal
+			name_list_andalusian = cn_burtughal
+			name_list_yemeni = cn_burtughal
+			name_list_roman = cn_lusitania
+			name_list_greek = cn_lusitania
+		}
+
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				faith = { religion_tag = christianity_religion }
+			}
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:portuguese
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_iberian }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_north_portugal = {
 			color = { 182 108 45 }
 			capital = c_beira_litoral
@@ -113761,6 +115733,11 @@ e_spain = {
 e_srivijaya = {
 	color = { 15 105 125 }
 	capital = c_mataram
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
 	k_hujung_medini = {
 		color = { 15 55 75 }
 		capital = c_kelantan
@@ -114977,6 +116954,16 @@ e_suvarnabhumi = {
 	k_pagan = {
 		color = { 143 70 136 }
 		capital = c_kale
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_burman }
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_arakhan = {
 			color = {179 61 120}
 			capital = c_northern_arakhan
@@ -116078,14 +118065,44 @@ e_suvarnabhumi = {
 e_tartaria = {
 	color = { 205 5 5 }
 	capital = c_sarykopa
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_turkic }
+			}
+			add = @better_than_the_alternatives_score
+		}
+	}
+
 }
 
 e_tibet = {
 	color = { 250 40 0 }
 	capital = c_lhato
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
 	k_amdo = {
 		color = { 70 40 105 }
 		capital = c_xining
+
+		cultural_names = {
+			name_list_han = cn_qinghai
+			name_list_mongol = cn_koke_nayur
+			name_list_buryat = cn_koke_nayur
+			name_list_oirat = cn_koke_nayur
+			name_list_naiman = cn_koke_nayur
+			name_list_kerait = cn_koke_nayur
+			name_list_jurchen = cn_huhu_noor
+		}
+
 	}
 	k_guge = {
 		color = { 197 255 198 }
@@ -117340,28 +119357,114 @@ e_tibet = {
 e_turan = {
 	color = { 175 237 135 }
 	capital = c_bukhara
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_turkic }
+			}
+			add = @better_than_the_alternatives_score
+		}
+	}
+
 }
 
 e_volga-ural = {
 	color = { 94 83 70 }
 	capital = c_bolghar
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
 }
 
 e_wendish_empire = {
 	color = { 130 10 0 }
 	capital = c_south_livonia
+
+	definite_form = yes
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_baltic }
+			}
+			add = @correct_culture_primary_score
+		}
+		else_if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_balto_finnic }
+			}
+			add = @better_than_the_alternatives_score
+		}
+	}
+
 	k_pomerania = {
 		color = { 145 130 40 }
 		capital = c_stettin
+
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				culture = culture:pommeranian
+			}
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:pommeranian
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 	}
 }
 
 e_west_slavia = {
 	color = { 130 20 50 }
 	capital = c_krakow
+
+	definite_form = yes
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_west_slavic }
+			}
+			add = @better_than_the_alternatives_score
+		}
+	}
+
 	k_poland = {
 		color = { 150 23 23 }
 		capital = c_krakow
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:polish
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_central_poland = {
 			color = { 190 75 50 }
 			capital = c_kuyavia
@@ -120196,6 +122299,16 @@ e_west_slavia = {
 	k_lithuania = {
 		color = { 90 10 0 }
 		capital = c_vilnius
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:lithuanian
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 		d_lithuania = {
 			color = { 81 0 0 }
 			capital = c_vilnius
@@ -120742,6 +122855,16 @@ e_west_slavia = {
 	k_white_rus = {
 		color = { 180 205 170 }
 		capital = c_breslauja
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_east_slavic }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_black_ruthenia = {
 			color = { 160 205 190 }
 			capital = c_novogrudok
@@ -121644,6 +123767,16 @@ e_west_slavia = {
 	k_ruthenia = {
 		color = { 70 150 90 }
 		capital = c_kyiv
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_east_slavic }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_left_bank_ukraine = {
 			color = {37 143 71}
 			capital = c_pereiaslav
@@ -122309,6 +124442,16 @@ e_west_slavia = {
 	k_galicia-volhynia = {
 		color = { 50 150 130 }
 		capital = c_volodymyr
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_east_slavic }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_red_ruthenia = {
 			color = {80 212 60}
 			capital = c_pocutia
@@ -123449,6 +125592,17 @@ e_west_slavia = {
 
 e_ilkhanate = {
 	color = { 140 180 20 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
 	k_daylam = {
 		color = { 10 175 165 }
 		capital = c_gilan
@@ -126078,6 +128232,16 @@ e_ilkhanate = {
 	k_persia = {
 		color = { 60 150 230 }
 		capital = c_isfahan
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:persian
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_fars = {
 			color = {35 65 135}
 			capital = c_shiraz
@@ -127282,9 +129446,30 @@ e_ilkhanate = {
 e_golden_horde = {
 	capital = c_beljamen
 	color = { 243 180 17 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
 	k_caspian_steppe = {
 		color = { 166 82 10 }
 		capital = c_pologoye_zaymishche
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_turkic }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 		d_lower_yik = {
 			color = { 173 54 54 }
 			capital = c_ryn
@@ -128401,6 +130586,16 @@ e_golden_horde = {
 	k_pontic_steppe = {
 		color = { 85 40 5 }
 		capital = c_qalancak
+
+		cultural_names = {
+			name_list_russian = cn_zaporizhia
+			name_list_polish = cn_dzikie_pola
+			name_list_lithuanian = cn_dykra
+			name_list_hungarian = cn_etelkoz
+			name_list_anglo_saxon = cn_new_england
+			name_list_english = cn_new_england
+		}
+
 		d_azov = {
 			color = {92 76 12}
 			capital = c_tana
@@ -129709,6 +131904,9 @@ e_golden_horde = {
 	k_volga_bulgaria = {
 		color = { 97 56 55 }
 		capital = c_bolghar
+
+		can_be_named_after_dynasty = no
+
 		d_bashkiria = {
 			color = {58 64 62}
 			capital = c_krasnaya_gorka
@@ -130750,14 +132948,54 @@ e_golden_horde = {
 	k_cuman = {
 		color = { 131 84 50 }
 		capital = c_sarykopa
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:cuman
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
+		cultural_names = {
+			name_list_cuman = cn_cumania
+			name_list_kipchak = cn_cumania
+		}
+
 	}
 	k_kipchak = {
 		color = { 200 150 50 }
 		capital = c_zmeinogorsk
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_turkic }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 	}
 	k_qara_dala = {
 		color = { 81 34 0 }
 		capital = c_arykbalyk
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:cuman
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
+		cultural_names = {
+			name_list_cuman = cn_black_cumania
+			name_list_kipchak = cn_black_cumania
+		}
+
 	}
 	k_ob = {
 		color = { 180 180 250 }
@@ -131609,11 +133847,59 @@ e_golden_horde = {
 k_sicily = {
 	color = { 180 160 80 }
 	capital = c_mazara
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				OR = {
+					culture = culture:italian
+					culture = culture:norman
+				}
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+
 }
 
 k_cyprus = {
 	color = { 215 215 20 }
 	capital = c_cyprus
+
+	can_create = {
+		trigger_if = {
+			limit = {
+				is_ai = yes
+			}
+			faith = { religion_tag = christianity_religion }
+		}
+	}
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = culture:greek
+			}
+			add = @correct_culture_primary_score
+		}
+		if = {
+			limit = {
+				NOT = { culture = culture:greek }
+				culture = {
+					OR = {
+						has_cultural_pillar = heritage_byzantine
+						has_cultural_pillar = heritage_caucasian
+					}
+				}
+			}
+			add = @better_than_the_alternatives_score
+		}
+	}
+
+	cultural_names = {
+		name_list_turkish = cn_kibris
+	}
+
 }
 
 k_trebizond = {
@@ -131624,9 +133910,25 @@ k_trebizond = {
 e_chagatai = {
 	color = { 204 135 92 }
 	capital = c_almaliq
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	#definite_form = yes
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
 	k_dzungaria = {
 		color = { 163 46 104 }
 		capital = c_turpan
+
+		cultural_names = {
+			name_list_uyghur = cn_qocho
+		}
+
 		d_dzungaria = {
 			color = { 163 46 104 }
 			capital = c_turpan
@@ -132373,10 +134675,30 @@ e_chagatai = {
 	k_khotan = {
 		color = { 150 120 200 }
 		capital = c_khotan
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_turkic }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 	}
 	k_syr_darya = {
 		color = { 194 214 62 }
 		capital = c_chach
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_turkic }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
 	}
 	k_transoxiana = {
 		color = { 35 175 75 }
@@ -133183,6 +135505,11 @@ e_great_yuan = {
 e_majapahit = {
 	color = { 250 234 15 }
 	capital = c_trowulan
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
 }
 
 k_candar = {

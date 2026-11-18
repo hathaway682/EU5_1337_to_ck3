@@ -1,0 +1,134 @@
+﻿bm_japan_two_courts = {
+	start_date = 1337.4.1
+	is_playable = yes
+	group = bm_group_generated
+	weight = { value = 90 }
+
+	character = {
+		name = "bm_japan_courts_takauji"
+		dynasty_house = house_ashikaga
+		dynasty_splendor_level = 2
+		type = male
+		birth = 1305.8.18
+		title = e_japan
+		government = japan_feudal_government
+		culture = japanese
+		religion = shinto_faith
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		history_id = jap_ashikaga_takauji
+		position = { 350 505 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = "bm_japan_courts_tadayoshi"
+		dynasty_house = house_ashikaga
+		dynasty_splendor_level = 2
+		type = male
+		birth = 1306.1.1
+		title = c_sagami
+		government = japan_feudal_government
+		culture = japanese
+		religion = shinto_faith
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = jap_ashikaga_tadayoshi
+		position = { 1120 770 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = "bm_japan_courts_moronao"
+		dynasty_house = house_kou
+		dynasty_splendor_level = 2
+		type = male
+		birth = 1305.1.1
+		title = c_mikawa
+		government = japan_feudal_government
+		culture = japanese
+		religion = shinto_faith
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = jap_kou_no_moronao
+		position = { 970 520 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = "bm_japan_courts_doyo"
+		dynasty_house = house_kyougoku
+		dynasty_splendor_level = 2
+		type = male
+		birth = 1296.1.1
+		title = c_oumi
+		government = japan_feudal_government
+		culture = japanese
+		religion = shinto_faith
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = jap_kyougoku_douyo
+		position = { 650 485 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = "bm_japan_courts_go_daigo"
+		dynasty_house = house_daikakuji
+		dynasty_splendor_level = 2
+		type = male
+		birth = 1288.11.26
+		title = c_yamato
+		government = japan_feudal_government
+		culture = japanese
+		religion = shinto_faith
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = jap_go_daigo_tenno
+		position = { 650 760 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = "bm_japan_courts_masatsura"
+		dynasty = kusunoki_dynasty
+		dynasty_splendor_level = 2
+		type = male
+		birth = 1305.1.1
+		title = c_settsu
+		government = japan_feudal_government
+		culture = japanese
+		religion = shinto_faith
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = jap_kusunoki_masatsura
+		position = { 350 760 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = "bm_japan_courts_yoshisada"
+		dynasty_house = house_nitta
+		dynasty_splendor_level = 2
+		type = male
+		birth = 1301.1.1
+		title = c_kouzuke
+		government = japan_feudal_government
+		culture = japanese
+		religion = shinto_faith
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = jap_nitta_yoshisada
+		position = { 820 260 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = "bm_japan_courts_akiie"
+		dynasty_house = house_kitabatake
+		dynasty_splendor_level = 2
+		type = male
+		birth = 1318.4.3
+		title = d_ou
+		government = japan_feudal_government
+		culture = japanese
+		religion = shinto_faith
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = jap_kitabatake_akiie
+		position = { 1150 230 }
+		animation = personality_bold
+	}
+}

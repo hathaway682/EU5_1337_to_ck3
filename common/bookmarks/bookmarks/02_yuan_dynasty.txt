@@ -1,0 +1,140 @@
+﻿bm_yuan_dynasty = {
+	start_date = 1337.4.1
+	is_playable = yes
+	group = bm_group_generated
+	weight = { value = 80 }
+
+	character = {
+		name = "bm_yuan_bayan"
+		type = male
+		birth = 1280.1.1
+		title = e_minister_chancellor
+		government = celestial_government
+		culture = mongol
+		religion = vajrayana_faith
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = yua_bayan_merkid
+		position = { 1060 225 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = "bm_yuan_han"
+		dynasty = dyn_eu5_rtr_han
+		dynasty_splendor_level = 1
+		type = male
+		birth = 1320.1.1
+		title = d_laamp_eu5_rtr_han
+		government = landless_adventurer_government
+		culture = han
+		religion = maitreya_faith
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = eu5_rtr_han
+		position = { 850 490 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = "bm_yuan_zhu"
+		dynasty = dyn_eu5_rtr_zhu
+		dynasty_splendor_level = 1
+		type = male
+		birth = 1328.10.21
+		title = d_laamp_eu5_rtr_zhu
+		government = landless_adventurer_government
+		culture = han
+		religion = mahayana_faith
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = eu5_rtr_zhu
+		position = { 1100 755 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = "bm_yuan_xu"
+		dynasty = dyn_eu5_rtr_xu
+		dynasty_splendor_level = 1
+		type = male
+		birth = 1320.1.1
+		title = d_laamp_eu5_rtr_xu
+		government = landless_adventurer_government
+		culture = han
+		religion = maitreya_faith
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = eu5_rtr_xu
+		position = { 400 610 }
+		animation = personality_bold
+
+		character = {
+			name = "bm_yuan_chen_youliang"
+			relation = "BM_YUAN_RELATION_FOLLOWER"
+			dynasty = dyn_eu5_rtr_chen
+			type = male
+			birth = 1320.1.1
+			culture = han
+			religion = maitreya_faith
+			history_id = eu5_rtr_chen
+			animation = personality_bold
+		}
+	}
+
+	character = {
+		name = "bm_yuan_zhang"
+		dynasty = dyn_eu5_rtr_zhang
+		dynasty_splendor_level = 1
+		type = male
+		birth = 1321.1.1
+		title = c_merchant_eu5_rtr_zhang
+		government = merchant_government
+		culture = han
+		religion = confucian_faith
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = eu5_rtr_zhang
+		position = { 1150 485 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = "bm_yuan_chaghan"
+		dynasty = mb_yuan_county_dynasty_101946
+		dynasty_splendor_level = 1
+		type = male
+		birth = 1310.1.1
+		title = c_nf_eu5_yuan_chaghan
+		government = celestial_government
+		culture = mongol
+		religion = vajrayana_faith
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = eu5_rtr_chaghan_temur
+		position = { 550 245 }
+		animation = personality_bold
+
+		character = {
+			name = "bm_yuan_koke"
+			relation = "BOOKMARK_RELATION_SON"
+			dynasty = dyn_eu5_rtr_koke
+			type = male
+			birth = 1330.1.1
+			culture = mongol
+			religion = vajrayana_faith
+			history_id = eu5_rtr_koke
+			animation = personality_bold
+		}
+	}
+
+	character = {
+		name = "bm_yuan_he"
+		dynasty = dyn_eu5_rtr_he
+		dynasty_splendor_level = 1
+		type = male
+		birth = 1321.1.1
+		title = c_nf_eu5_yuan_he
+		government = celestial_government
+		culture = han
+		religion = confucian_faith
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = eu5_rtr_he
+		position = { 700 810 }
+		animation = personality_bold
+	}
+}
