@@ -81,3 +81,78 @@ d_laamp_eu5_rtr_zhu = {
 		}
 	}
 }
+
+# Historical 1337 salt merchants.
+c_merchant_eu5_rtr_zhang = {
+	1337.4.1 = {
+		holder = eu5_rtr_zhang
+		government = merchant_government
+	}
+}
+
+
+c_merchant_eu5_rtr_fang = {
+	1337.4.1 = {
+		holder = eu5_rtr_fang
+		government = merchant_government
+	}
+}
+
+# Yuan loyalist family heads at the 1337 bookmark.
+c_nf_eu5_yuan_chen_youding = {
+	1337.4.1 = {
+		liege = h_china
+		holder = eu5_rtr_chen_youding
+		government = celestial_government
+		succession_laws = { noble_family_succession_law }
+	}
+}
+
+
+c_nf_eu5_yuan_he = {
+	1337.4.1 = {
+		liege = h_china
+		holder = eu5_rtr_he
+		government = celestial_government
+		succession_laws = { noble_family_succession_law }
+	}
+}
+
+
+c_nf_eu5_yuan_li = {
+	1337.4.1 = {
+		liege = h_china
+		holder = eu5_rtr_li
+		government = celestial_government
+		succession_laws = { noble_family_succession_law }
+	}
+}
+
+
+c_nf_eu5_yuan_chaghan = {
+	1337.4.1 = {
+		liege = h_china
+		holder = eu5_rtr_chaghan_temur
+		government = celestial_government
+		succession_laws = { noble_family_succession_law }
+	}
+}
+
+# Yuan central appointments at the 1337 bookmark.
+e_minister_chancellor = {
+	1337.4.1 = {
+		holder = yua_bayan_merkid
+		liege = h_china
+		government = celestial_government
+		succession_laws = { celestial_ministry_appointment_succession_law }
+	}
+}
+
+e_minister_grand_marshal = {
+	1337.4.1 = {
+		holder = yua_majartai
+		liege = h_china
+		government = celestial_government
+		succession_laws = { celestial_grand_marshal_appointment_succession_law }
+	}
+}

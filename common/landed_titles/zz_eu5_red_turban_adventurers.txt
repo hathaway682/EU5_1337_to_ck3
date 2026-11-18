@@ -39,3 +39,77 @@ d_laamp_eu5_rtr_zhu = {
 	capital = c_fengyang
 	dlc_feature = landless_adventurer
 }
+
+# Historical 1337 salt merchants.
+c_merchant_eu5_rtr_zhang = {
+	color = { 175 50 45 }
+	capital = c_gaoyou
+	ai_primary_priority = { add = -1000 }
+}
+
+
+c_merchant_eu5_rtr_fang = {
+	color = { 175 50 45 }
+	capital = c_wenzhou
+	ai_primary_priority = { add = -1000 }
+}
+
+# Yuan loyalist noble families.
+c_nf_eu5_yuan_chen_youding = {
+	color = { 175 50 45 }
+	capital = c_yanping
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = all_under_heaven
+	ai_primary_priority = { add = -1000 }
+}
+
+
+c_nf_eu5_yuan_he = {
+	color = { 175 50 45 }
+	capital = c_dongguan
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = all_under_heaven
+	ai_primary_priority = { add = -1000 }
+}
+
+
+c_nf_eu5_yuan_li = {
+	color = { 175 50 45 }
+	capital = c_xian
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = all_under_heaven
+	ai_primary_priority = { add = -1000 }
+}
+
+
+c_nf_eu5_yuan_chaghan = {
+	color = { 175 50 45 }
+	capital = c_kaifeng
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
+	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = all_under_heaven
+	ai_primary_priority = { add = -1000 }
+}
