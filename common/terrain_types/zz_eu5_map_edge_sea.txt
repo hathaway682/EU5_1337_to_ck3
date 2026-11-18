@@ -1,0 +1,8 @@
+eu5_map_edge_sea = {
+	color = hsv { 0.0 0.0 0.1 0 }
+	travel_danger_color = hsv { 0.0 0.0 1.0 0.0 }
+	travel_danger_score = 20
+	provision_cost = 100
+	movement_speed = 1000
+	province_modifier = { travel_danger = 50 }
+}

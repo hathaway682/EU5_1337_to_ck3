@@ -5,6 +5,19 @@ eu5_new_world_discovery.0001 = {
  hidden = yes
  scope = none
  immediate = {
+  # The charts follow each ruler's primary title, as with voyages of discovery.
+  title:k_castille.holder ?= {
+   primary_title ?= {
+    set_variable = eu5_charted_north_america
+    set_variable = eu5_charted_south_america
+   }
+  }
+  title:k_portugal.holder ?= {
+   primary_title ?= {
+    set_variable = eu5_charted_north_america
+    set_variable = eu5_charted_south_america
+   }
+  }
   every_ruler = {
    limit = {
     is_landed = yes

@@ -1,0 +1,64 @@
+﻿# COUNTY scope. The ruler's primary title stores the charts, so they follow the title on succession.
+eu5_colonial_county_charted_trigger = {
+ OR = {
+  AND = { title_province = { geographical_region = eu5_continent_europe } $RULER$ = { primary_title ?= { has_variable = eu5_charted_europe } } }
+  AND = { title_province = { geographical_region = eu5_continent_africa } $RULER$ = { primary_title ?= { has_variable = eu5_charted_africa } } }
+  AND = { title_province = { geographical_region = eu5_continent_asia } $RULER$ = { primary_title ?= { has_variable = eu5_charted_asia } } }
+  AND = { title_province = { geographical_region = eu5_subcontinent_north_america } $RULER$ = { primary_title ?= { has_variable = eu5_charted_north_america } } }
+  AND = { title_province = { geographical_region = eu5_subcontinent_south_america } $RULER$ = { primary_title ?= { has_variable = eu5_charted_south_america } } }
+  AND = { title_province = { geographical_region = eu5_continent_oceania } $RULER$ = { primary_title ?= { has_variable = eu5_charted_oceania } } }
+  AND = { title_province = { geographical_region = eu5_continent_atlantic_ocean_continent } $RULER$ = { primary_title ?= { has_variable = eu5_charted_atlantic } } }
+ }
+}
+# COUNTY scope. Shared by the planning UI and AI target selection.
+eu5_colonial_project_target_trigger = {
+ is_wilderness_county_trigger = yes
+ NOT = { has_county_modifier = block_settlement_ability }
+ NOT = { has_county_modifier = settling_expedition_underway }
+ duchy ?= {
+  NOT = {
+   any_de_jure_county = {
+    title_province = {
+     any_great_project_in_province = {
+      great_project_type = eu5_colonial_enterprise
+      OR = { great_project_construction_phase_is = planned great_project_construction_phase_is = in_progress }
+     }
+    }
+   }
+  }
+  OR = {
+   any_de_jure_county = {
+    is_wilderness_county_trigger = yes
+    any_neighboring_county = { holder ?= { OR = { this = $RULER$ target_is_liege_or_above = $RULER$ } } }
+   }
+   AND = {
+    $RULER$ = {
+     culture ?= { has_innovation = innovation_pilot_books }
+     capital_province = { geographical_region = world_europe }
+     any_sub_realm_county = { title_province = { is_coastal = yes } }
+    }
+    any_de_jure_county = {
+     is_wilderness_county_trigger = yes
+     title_province = { is_coastal = yes }
+     eu5_colonial_county_charted_trigger = { RULER = $RULER$ }
+    }
+   }
+  }
+ }
+}
+
+# Identify the crown itself or its sovereign without requiring independence.
+eu5_ai_iberian_spanish_crown_trigger = {
+ OR = {
+  has_title = title:e_spain
+  has_title = title:k_castille
+  has_title = title:k_aragon
+  top_liege ?= { OR = { has_title = title:e_spain has_title = title:k_castille has_title = title:k_aragon } }
+ }
+}
+eu5_ai_portuguese_crown_trigger = {
+ OR = {
+  has_title = title:k_portugal
+  top_liege ?= { has_title = title:k_portugal }
+ }
+}

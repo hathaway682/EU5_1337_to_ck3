@@ -1,0 +1,82 @@
+﻿# AI uses the same target trigger as human planning; one candidate per duchy.
+yearly_playable_pulse = { on_actions = { eu5_ai_plan_colonial_enterprise } }
+eu5_ai_plan_colonial_enterprise = {
+ trigger = {
+  is_ai = yes
+  is_landed = yes
+  highest_held_title_tier >= tier_kingdom
+  NOT = { government_has_flag = government_is_wilderness }
+  is_at_war = no
+  gold >= 650
+  NOT = { is_planning_great_project = eu5_colonial_enterprise }
+  any_tributary = { is_landless_merchant = yes gold >= 400 }
+ }
+ effect = {
+  random = {
+   chance = 15
+   every_ruler = {
+    limit = { government_has_flag = government_is_wilderness }
+    every_held_title = {
+     limit = { tier = tier_county eu5_colonial_project_target_trigger = { RULER = root } }
+     add_to_list = eu5_ai_colonial_candidates
+    }
+   }
+   ordered_in_list = {
+    list = eu5_ai_colonial_candidates
+    order_by = {
+     value = 1000000
+     subtract = { value = "title_province.squared_distance(root.capital_province)" divide = 100 }
+     # Historical preferences are weights, not exclusive colonial claims.
+     if = {
+      limit = {
+       root = { eu5_ai_iberian_spanish_crown_trigger = yes }
+       title_province = { geographical_region = eu5_continent_america }
+      }
+      add = 20000000
+     }
+     if = {
+      limit = {
+       root = { eu5_ai_iberian_spanish_crown_trigger = yes }
+       kingdom ?= title:k_caribbean
+      }
+      add = 40000000
+     }
+     if = {
+      limit = {
+       root = { eu5_ai_iberian_spanish_crown_trigger = yes }
+       OR = { kingdom ?= title:k_mesoamerica kingdom ?= title:k_central_america }
+      }
+      add = 20000000
+     }
+     if = {
+      limit = {
+       root = { eu5_ai_portuguese_crown_trigger = yes }
+       kingdom ?= title:k_brazil
+      }
+      add = 60000000
+     }
+     if = {
+      limit = {
+       root = { eu5_ai_portuguese_crown_trigger = yes }
+       title_province = { OR = {
+        geographical_region = eu5_subcontinent_west_africa
+        geographical_region = eu5_subcontinent_east_africa
+        geographical_region = eu5_subcontinent_south_asia
+       } }
+      }
+      add = 20000000
+     }
+     every_neighboring_county = { limit = { holder ?= { OR = { this = root target_is_liege_or_above = root } } } add = 10000000 }
+    }
+    position = 0
+    save_scope_as = eu5_ai_colonial_target
+   }
+   if = {
+    limit = { exists = scope:eu5_ai_colonial_target }
+    scope:eu5_ai_colonial_target.title_province = {
+     plan_great_project = { founder = root great_project_type = eu5_colonial_enterprise }
+    }
+   }
+  }
+ }
+}
