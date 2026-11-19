@@ -1,0 +1,11 @@
+﻿# 1337 开局按 EU5 的宫廷语言设置各国宫廷语言。
+# EU5 的宫廷语言就是该国文化（setup/countries 的 culture_definition）的语言：
+# 先按 EU5 文化名找同名 CK3 文化，找不到就用该文化所属 EU5 方言的上级语言的 CK3 文化。
+# 没有 EU5 国家标签的角色（mb_yuan_*、摄政等）用其最高头衔首都省份文化的语言。
+on_game_start_after_lobby = { on_actions = { eu5_start_court_language } }
+
+eu5_start_court_language = {
+	effect = {
+		eu5_set_court_language_effect = yes
+	}
+}

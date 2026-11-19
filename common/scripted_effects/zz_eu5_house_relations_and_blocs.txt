@@ -4,6 +4,9 @@ eu5_setup_historical_house_bloc_effect = {
             game_start_date = 1337.4.1
             has_dlc_feature = all_under_heaven
         }
+        character:jap_ashikaga_takauji = {
+            c
+        }
         character:jap_ashikaga_takauji.house ?= {
             tgp_create_historical_house_bloc_effect = { TYPE = strength }
             tgp_join_historical_house_bloc_effect = { JOINER = character:jap_koumyou_tenno.house } # EU5 NTC
