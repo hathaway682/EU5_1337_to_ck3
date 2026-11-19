@@ -1,0 +1,730 @@
+﻿# Adapted from Age of Discovery 0.75d nwt_voyage_events.txt.
+namespace = nwt_voyage
+
+nwt_voyage.30 = {
+	type = character_event
+	title = nwt_voyage.30.t
+	desc = { desc = nwt_voyage.30.desc desc = aod_vs_status }
+	theme = realm
+	override_background = { reference = ocean }
+	left_portrait = {
+		character = scope:nwt_captain
+		animation = worry
+	}
+	trigger = { exists = scope:nwt_captain }
+
+	option = {
+		name = nwt_voyage.30.a
+		random_list = {
+			60 = {
+				modifier = { add = { value = scope:nwt_captain.martial multiply = 3 } }
+				desc = nwt_voyage.30.a.good
+				scope:nwt_captain = { add_prestige = 50 }
+				aod_vs_morale_add_10 = yes
+			}
+			25 = {
+				desc = nwt_voyage.30.a.hurt
+				scope:nwt_captain = { add_trait = wounded_1 }
+				aod_vs_crew_sub_15 = yes
+			}
+			12 = {
+				modifier = { add = { value = scope:nwt_captain.martial multiply = -0.5 } }
+				desc = nwt_voyage.30.a.lost
+				nwt_voyage_lost_effect = { REASON = death_sea_storm }
+			}
+		}
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = nwt_voyage.30.b
+		custom_tooltip = eu5_voyage_delay_45_tt
+		hidden_effect = { scope:eu5_voyage_title = { change_variable = { name = eu5_voyage_delay add = 45 } } }
+		aod_vs_supplies_sub_10 = yes
+		ai_chance = { base = 50 }
+	}
+}
+
+nwt_voyage.31 = {
+	type = character_event
+	title = nwt_voyage.31.t
+	desc = { desc = nwt_voyage.31.desc desc = aod_vs_status }
+	theme = realm
+	override_background = { reference = ocean }
+	left_portrait = {
+		character = scope:nwt_captain
+		animation = sick
+	}
+	trigger = { exists = scope:nwt_captain }
+
+	option = {
+		name = nwt_voyage.31.a
+		trigger = { gold >= 50 }
+		remove_short_term_gold = 50
+		aod_vs_supplies_add_20 = yes
+		ai_chance = { base = 60 }
+	}
+	option = {
+		name = nwt_voyage.31.b
+		random_list = {
+			50 = {
+				modifier = { add = { value = scope:nwt_captain.learning multiply = 2 } }
+				desc = nwt_voyage.31.b.good
+				scope:nwt_captain = { add_stress = 20 }
+				aod_vs_crew_sub_5 = yes
+			}
+			40 = {
+				desc = nwt_voyage.31.b.ill
+				scope:nwt_captain = { add_trait = ill }
+				aod_vs_crew_sub_15 = yes
+				aod_vs_morale_sub_10 = yes
+			}
+			10 = {
+				desc = nwt_voyage.31.b.back
+				custom_tooltip = { text = eu5_voyage_abandoned_tt scope:eu5_voyage_title = { set_variable = eu5_exploration_failed } }
+			}
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+nwt_voyage.32 = {
+	type = character_event
+	title = nwt_voyage.32.t
+	desc = { desc = nwt_voyage.32.desc desc = aod_vs_status }
+	theme = realm
+	override_background = { reference = ocean }
+	left_portrait = {
+		character = scope:nwt_captain
+		animation = anger
+	}
+	trigger = { exists = scope:nwt_captain }
+
+	option = {
+		name = nwt_voyage.32.a
+		random_list = {
+			50 = {
+				modifier = { add = { value = scope:nwt_captain.martial multiply = 2 } }
+				modifier = { add = { value = scope:nwt_captain.prowess multiply = 1 } }
+				desc = nwt_voyage.32.a.good
+				scope:nwt_captain = { add_prestige = 75 }
+				aod_vs_morale_add_25 = yes
+				aod_vs_crew_sub_5 = yes
+			}
+			20 = {
+				desc = nwt_voyage.32.a.lost
+				nwt_voyage_lost_effect = { REASON = death_disappearance }
+			}
+		}
+		ai_chance = { base = 40 }
+	}
+	option = {
+		name = nwt_voyage.32.b
+		trigger = { gold >= 100 }
+		remove_short_term_gold = 100
+		aod_vs_morale_add_30 = yes
+		ai_chance = { base = 60 }
+	}
+	option = {	# AoD v0.72: give in and turn for home
+		name = nwt_voyage.32.c
+		custom_tooltip = { text = eu5_voyage_abandoned_tt scope:eu5_voyage_title = { set_variable = eu5_exploration_failed } }
+		scope:nwt_captain = { add_stress = 30 }
+		ai_chance = { base = 5 }
+	}
+}
+
+nwt_voyage.33 = {
+	type = character_event
+	title = nwt_voyage.33.t
+	desc = { desc = nwt_voyage.33.desc desc = aod_vs_status }
+	theme = realm
+	override_background = { reference = ocean }
+	left_portrait = {
+		character = scope:nwt_captain
+		animation = happiness
+	}
+	trigger = { exists = scope:nwt_captain }
+
+	option = {
+		name = nwt_voyage.33.a
+		add_prestige = 25
+		scope:nwt_captain = { add_prestige = 25 }
+		aod_vs_morale_add_15 = yes
+	}
+}
+
+nwt_voyage.51 = {
+	type = character_event
+	title = nwt_voyage.51.t
+	desc = { desc = nwt_voyage.51.desc desc = aod_vs_status }
+	theme = realm
+	override_background = { reference = bp3_coast }
+	left_portrait = { character = scope:nwt_captain animation = happiness }
+
+	option = {	# exchange gifts
+		name = nwt_voyage.51.a
+		add_gold = 75
+		scope:nwt_captain = { add_prestige = 50 }
+		aod_vs_supplies_add_15 = yes
+		ai_chance = { base = 50 }
+	}
+	option = {	# plant the banner and claim the land
+		name = nwt_voyage.51.b
+		add_prestige = 75
+		add_piety = 25
+		scope:nwt_captain = { add_diplomacy_lifestyle_xp = 200 }
+		ai_chance = { base = 50 }
+	}
+}
+
+nwt_voyage.52 = {
+	type = character_event
+	title = nwt_voyage.52.t
+	desc = { desc = nwt_voyage.52.desc desc = aod_vs_status }
+	theme = martial
+	override_background = { reference = wilderness_jungle }
+	left_portrait = { character = scope:nwt_captain animation = fear }
+
+	option = {	# fight back
+		name = nwt_voyage.52.a
+		random_list = {
+			55 = {
+				modifier = { add = { value = scope:nwt_captain.martial multiply = 2 } }
+				modifier = { add = scope:nwt_captain.prowess }
+				desc = nwt_voyage.52.a.win
+				scope:nwt_captain = { add_prestige = 100 add_martial_lifestyle_xp = 300 }
+			}
+			30 = {
+				desc = nwt_voyage.52.a.hurt
+				scope:nwt_captain = { add_trait = wounded_1 }
+				aod_vs_crew_sub_10 = yes
+			}
+			15 = {
+				modifier = { add = { value = scope:nwt_captain.prowess multiply = -0.5 } }
+				desc = nwt_voyage.52.a.dead
+				custom_tooltip = eu5_voyage_captain_loss_tt
+				scope:nwt_captain = { death = { death_reason = death_battle } }
+			}
+		}
+		ai_chance = { base = 40 }
+	}
+	option = {	# back to the boats
+		name = nwt_voyage.52.b
+		scope:nwt_captain = { add_stress = 20 }
+		add_prestige = -15
+		ai_chance = { base = 30 }
+	}
+	option = {	# show open hands
+		name = nwt_voyage.52.c
+		random_list = {
+			40 = {
+				modifier = { add = { value = scope:nwt_captain.diplomacy multiply = 3 } }
+				desc = nwt_voyage.52.c.good
+				scope:nwt_captain = { add_prestige = 75 }
+				add_prestige = 25
+			}
+			45 = {
+				desc = nwt_voyage.52.c.hurt
+				scope:nwt_captain = { add_trait = wounded_1 }
+			}
+			15 = {
+				desc = nwt_voyage.52.a.dead
+				custom_tooltip = eu5_voyage_captain_loss_tt
+				scope:nwt_captain = { death = { death_reason = death_battle } }
+			}
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+nwt_voyage.53 = {
+	type = character_event
+	title = nwt_voyage.53.t
+	desc = { desc = nwt_voyage.53.desc desc = aod_vs_status }
+	theme = diplomacy
+	override_background = { reference = wilderness_forest }
+	left_portrait = { character = scope:nwt_captain animation = personality_honorable }
+
+	option = {	# accept
+		name = nwt_voyage.53.a
+		random_list = {
+			75 = {
+				desc = nwt_voyage.53.a.good
+				scope:nwt_captain = { add_diplomacy_lifestyle_xp = 300 add_prestige = 50 }
+				aod_vs_supplies_add_20 = yes
+				aod_vs_morale_add_10 = yes
+				add_prestige = 50
+			}
+			25 = {
+				desc = nwt_voyage.53.a.ill
+				scope:nwt_captain = { add_trait = ill }
+			}
+		}
+		ai_chance = { base = 70 }
+	}
+	option = {	# refuse, it may be a trap
+		name = nwt_voyage.53.b
+		scope:nwt_captain = { add_stress = 10 }
+		ai_chance = { base = 30 }
+	}
+}
+
+nwt_voyage.54 = {
+	type = character_event
+	title = nwt_voyage.54.t
+	desc = { desc = nwt_voyage.54.desc desc = aod_vs_status }
+	theme = stewardship
+	override_background = { reference = wilderness_jungle }
+	left_portrait = { character = scope:nwt_captain animation = scheme }
+
+	option = {	# trade for it
+		name = nwt_voyage.54.a
+		add_gold = 100
+		ai_chance = { base = 60 }
+	}
+	option = {	# take it by force
+		name = nwt_voyage.54.b
+		random_list = {
+			60 = {
+				desc = nwt_voyage.54.b.good
+				add_gold = 250
+				add_piety = -25
+			}
+			40 = {
+				desc = nwt_voyage.52.a.hurt
+				scope:nwt_captain = { add_trait = wounded_1 }
+				aod_vs_crew_sub_10 = yes
+			}
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+nwt_voyage.56 = {
+	type = character_event
+	title = nwt_voyage.56.t
+	desc = { desc = nwt_voyage.56.desc desc = aod_vs_status }
+	theme = diplomacy
+	override_background = { reference = bp3_coast }
+	left_portrait = { character = scope:nwt_captain animation = happiness }
+	trigger = { exists = scope:nwt_captain scope:nwt_captain = { is_alive = yes } }
+
+	option = {	# trade beads, knives and cloth for food
+		name = nwt_voyage.56.a
+		aod_vs_supplies_add_30 = yes
+		scope:nwt_captain = { add_diplomacy_lifestyle_xp = 150 }
+		ai_chance = { base = 70 }
+	}
+	option = {	# take what we need
+		name = nwt_voyage.56.b
+		aod_vs_supplies_add_30 = yes
+		add_piety = -20
+		random_list = {
+			60 = { desc = nwt_voyage.56.b.good }
+			40 = {
+				desc = nwt_voyage.56.b.bad
+				aod_vs_crew_sub_10 = yes
+			}
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+nwt_voyage.57 = {
+	type = character_event
+	title = nwt_voyage.57.t
+	desc = { desc = nwt_voyage.57.desc desc = aod_vs_status }
+	theme = realm
+	override_background = { reference = bp3_coast }
+	left_portrait = { character = scope:nwt_captain animation = personality_rational }
+	trigger = { exists = scope:nwt_captain scope:nwt_captain = { is_alive = yes } }
+
+	option = {	# careen the ships and scrape the hulls
+		name = nwt_voyage.57.a
+		aod_vs_morale_add_10 = yes
+		aod_vs_supplies_sub_5 = yes
+		scope:nwt_captain = { add_stewardship_lifestyle_xp = 200 }
+		ai_chance = { base = 60 }
+	}
+	option = {	# no time, patch them and press on
+		name = nwt_voyage.57.b
+		random_list = {
+			60 = { desc = nwt_voyage.57.b.good }
+			40 = {
+				desc = nwt_voyage.57.b.bad
+				aod_vs_supplies_sub_20 = yes
+				aod_vs_crew_sub_5 = yes
+			}
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+nwt_voyage.58 = {
+	type = character_event
+	title = nwt_voyage.58.t
+	desc = { desc = nwt_voyage.58.desc desc = aod_vs_status }
+	theme = realm
+	override_background = { reference = bp3_coast }
+	left_portrait = { character = scope:nwt_captain animation = anger }
+	trigger = { exists = scope:nwt_captain scope:nwt_captain = { is_alive = yes } }
+
+	option = {	# let them stay, a few less mouths
+		name = nwt_voyage.58.a
+		aod_vs_crew_sub_15 = yes
+		aod_vs_supplies_add_10 = yes
+		aod_vs_morale_add_10 = yes
+		ai_chance = { base = 50 }
+	}
+	option = {	# drag them back in chains
+		name = nwt_voyage.58.b
+		random_list = {
+			60 = {
+				modifier = { add = { value = scope:nwt_captain.martial multiply = 2 } }
+				desc = nwt_voyage.58.b.good
+				aod_vs_morale_sub_5 = yes
+				scope:nwt_captain = { add_dread = 5 }
+			}
+			40 = {
+				desc = nwt_voyage.58.b.bad
+				aod_vs_crew_sub_10 = yes
+				aod_vs_morale_sub_15 = yes
+			}
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+nwt_voyage.80 = {
+	type = character_event
+	title = nwt_voyage.80.t
+	desc = { desc = nwt_voyage.80.desc desc = aod_vs_status }
+	theme = realm
+	override_background = { reference = ocean }
+	left_portrait = { character = scope:nwt_captain animation = worry }
+	trigger = { exists = scope:nwt_captain scope:nwt_captain = { is_alive = yes } }
+
+	option = {	# ration the water
+		name = nwt_voyage.80.a
+		aod_vs_supplies_add_5 = yes
+		aod_vs_morale_sub_10 = yes
+		custom_tooltip = eu5_voyage_delay_20_tt
+		hidden_effect = { scope:eu5_voyage_title = { change_variable = { name = eu5_voyage_delay add = 20 } } }
+		ai_chance = { base = 50 }
+	}
+	option = {	# lower the boats and tow the ships
+		name = nwt_voyage.80.b
+		random_list = {
+			60 = {
+				modifier = { add = { value = scope:nwt_captain.martial multiply = 2 } }
+				desc = nwt_voyage.80.b.good
+				aod_vs_morale_add_5 = yes
+				scope:nwt_captain = { add_martial_lifestyle_xp = 150 }
+			}
+			40 = {
+				desc = nwt_voyage.80.b.bad
+				aod_vs_crew_sub_5 = yes
+				aod_vs_supplies_sub_10 = yes
+				custom_tooltip = eu5_voyage_delay_30_tt
+				hidden_effect = { scope:eu5_voyage_title = { change_variable = { name = eu5_voyage_delay add = 30 } } }
+			}
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+nwt_voyage.81 = {
+	type = character_event
+	title = nwt_voyage.81.t
+	desc = { desc = nwt_voyage.81.desc desc = aod_vs_status }
+	theme = realm
+	override_background = { reference = ocean }
+	left_portrait = { character = scope:nwt_captain animation = personality_bold }
+	trigger = { exists = scope:nwt_captain scope:nwt_captain = { is_alive = yes } }
+
+	option = {	# follow the birds to the unknown shore
+		name = nwt_voyage.81.a
+		random_list = {
+			55 = {
+				modifier = { add = { value = scope:nwt_captain.learning multiply = 2 } }
+				desc = nwt_voyage.81.a.good
+				add_prestige = 100
+				scope:nwt_captain = { add_prestige = 100 add_learning_lifestyle_xp = 200 }
+				aod_vs_supplies_add_25 = yes
+				aod_vs_morale_add_10 = yes
+			}
+			45 = {
+				desc = nwt_voyage.81.a.bad
+				aod_vs_supplies_sub_15 = yes
+				aod_vs_morale_sub_10 = yes
+				custom_tooltip = eu5_voyage_delay_30_tt
+				hidden_effect = { scope:eu5_voyage_title = { change_variable = { name = eu5_voyage_delay add = 30 } } }
+			}
+		}
+		ai_chance = { base = 50 }
+	}
+	option = {	# hold the course
+		name = nwt_voyage.81.b
+		scope:nwt_captain = { add_stewardship_lifestyle_xp = 100 }
+		ai_chance = { base = 50 }
+	}
+}
+
+nwt_voyage.82 = {
+	type = character_event
+	title = nwt_voyage.82.t
+	desc = { desc = nwt_voyage.82.desc desc = aod_vs_status }
+	theme = realm
+	override_background = { reference = ocean }
+	left_portrait = { character = scope:nwt_captain animation = fear }
+	trigger = { exists = scope:nwt_captain scope:nwt_captain = { is_alive = yes } }
+
+	option = {	# all hands to the buckets
+		name = nwt_voyage.82.a
+		random_list = {
+			65 = {
+				modifier = { add = { value = scope:nwt_captain.martial multiply = 2 } }
+				desc = nwt_voyage.82.a.good
+				aod_vs_supplies_sub_5 = yes
+				scope:nwt_captain = { add_prestige = 30 }
+			}
+			35 = {
+				desc = nwt_voyage.82.a.bad
+				aod_vs_supplies_sub_25 = yes
+				aod_vs_crew_sub_10 = yes
+			}
+		}
+		ai_chance = { base = 70 }
+	}
+	option = {	# cut the burning ship loose
+		name = nwt_voyage.82.b
+		aod_vs_crew_sub_20 = yes
+		aod_vs_supplies_sub_15 = yes
+		aod_vs_morale_sub_10 = yes
+		ai_chance = { base = 30 }
+	}
+}
+
+nwt_voyage.83 = {
+	type = character_event
+	title = nwt_voyage.83.t
+	desc = { desc = nwt_voyage.83.desc desc = aod_vs_status }
+	theme = realm
+	override_background = { reference = ocean }
+	left_portrait = { character = scope:nwt_captain animation = personality_rational }
+	trigger = { exists = scope:nwt_captain scope:nwt_captain = { is_alive = yes } }
+
+	option = {	# a good omen, tell the men
+		name = nwt_voyage.83.a
+		aod_vs_morale_add_15 = yes
+		add_piety = 15
+		ai_chance = { base = 60 }
+	}
+	option = {	# harpoon one for the cooking pots
+		name = nwt_voyage.83.b
+		random_list = {
+			60 = {
+				modifier = { add = scope:nwt_captain.prowess }
+				desc = nwt_voyage.83.b.good
+				aod_vs_supplies_add_20 = yes
+			}
+			40 = {
+				desc = nwt_voyage.83.b.bad
+				aod_vs_crew_sub_5 = yes
+				aod_vs_morale_sub_10 = yes
+			}
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+nwt_voyage.84 = {
+	type = character_event
+	title = nwt_voyage.84.t
+	desc = { desc = nwt_voyage.84.desc desc = aod_vs_status }
+	theme = realm
+	override_background = { reference = bp3_coast }
+	left_portrait = { character = scope:nwt_captain animation = happiness }
+	trigger = { exists = scope:nwt_captain scope:nwt_captain = { is_alive = yes } }
+
+	option = {	# fill every barrel and cask
+		name = nwt_voyage.84.a
+		aod_vs_supplies_add_30 = yes
+		custom_tooltip = eu5_voyage_delay_10_tt
+		hidden_effect = { scope:eu5_voyage_title = { change_variable = { name = eu5_voyage_delay add = 10 } } }
+		ai_chance = { base = 60 }
+	}
+	option = {	# let the men rest ashore a week
+		name = nwt_voyage.84.b
+		aod_vs_supplies_add_15 = yes
+		aod_vs_morale_add_20 = yes
+		custom_tooltip = eu5_voyage_delay_15_tt
+		hidden_effect = { scope:eu5_voyage_title = { change_variable = { name = eu5_voyage_delay add = 15 } } }
+		ai_chance = { base = 40 }
+	}
+}
+
+nwt_voyage.85 = {
+	type = character_event
+	title = nwt_voyage.85.t
+	desc = { desc = nwt_voyage.85.desc desc = aod_vs_status }
+	theme = realm
+	override_background = { reference = ocean }
+	left_portrait = { character = scope:nwt_captain animation = personality_rational }
+	trigger = { exists = scope:nwt_captain scope:nwt_captain = { is_alive = yes } }
+
+	option = {	# trust the stars and the astrolabe
+		name = nwt_voyage.85.a
+		random_list = {
+			60 = {
+				modifier = { add = { value = scope:nwt_captain.learning multiply = 3 } }
+				desc = nwt_voyage.85.a.good
+				scope:nwt_captain = { add_learning_lifestyle_xp = 200 add_prestige = 40 }
+				aod_vs_morale_add_10 = yes
+			}
+			40 = {
+				desc = nwt_voyage.85.a.bad
+				aod_vs_supplies_sub_15 = yes
+				aod_vs_morale_sub_10 = yes
+				custom_tooltip = eu5_voyage_delay_25_tt
+				hidden_effect = { scope:eu5_voyage_title = { change_variable = { name = eu5_voyage_delay add = 25 } } }
+			}
+		}
+		ai_chance = { base = 50 }
+	}
+	option = {	# listen to the old pilot
+		name = nwt_voyage.85.b
+		aod_vs_morale_add_5 = yes
+		scope:nwt_captain = { add_prestige = -20 }
+		ai_chance = { base = 50 }
+	}
+}
+
+nwt_voyage.86 = {
+	type = character_event
+	title = nwt_voyage.86.t
+	desc = { desc = nwt_voyage.86.desc desc = aod_vs_status }
+	theme = realm
+	override_background = { reference = ocean }
+	left_portrait = { character = scope:nwt_captain animation = rage }
+	trigger = { exists = scope:nwt_captain scope:nwt_captain = { is_alive = yes } }
+
+	option = {	# run out the guns
+		name = nwt_voyage.86.a
+		random_list = {
+			50 = {
+				modifier = { add = { value = scope:nwt_captain.martial multiply = 3 } }
+				desc = nwt_voyage.86.a.good
+				add_gold = 80
+				add_prestige = 60
+				scope:nwt_captain = { add_prestige = 80 add_martial_lifestyle_xp = 200 }
+				aod_vs_morale_add_15 = yes
+				aod_vs_supplies_add_10 = yes
+			}
+			35 = {
+				desc = nwt_voyage.86.a.hurt
+				aod_vs_crew_sub_15 = yes
+				scope:nwt_captain = { add_trait = wounded_1 }
+			}
+			15 = {
+				modifier = { add = { value = scope:nwt_captain.martial multiply = -0.5 } }
+				desc = nwt_voyage.86.a.lost
+				nwt_voyage_lost_effect = { REASON = death_battle }
+			}
+		}
+		ai_chance = { base = 50 }
+	}
+	option = {	# crowd on sail and flee
+		name = nwt_voyage.86.b
+		random_list = {
+			70 = {
+				desc = nwt_voyage.86.b.good
+				aod_vs_morale_sub_5 = yes
+			}
+			30 = {
+				desc = nwt_voyage.86.b.bad
+				aod_vs_supplies_sub_20 = yes
+				aod_vs_crew_sub_5 = yes
+			}
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+nwt_voyage.90 = {
+	type = character_event
+	title = nwt_voyage.90.t
+	desc = { desc = nwt_voyage.90.desc desc = aod_vs_status }
+	theme = stewardship
+	override_background = { reference = ocean }
+	left_portrait = { character = scope:nwt_captain animation = scheme }
+	trigger = { exists = scope:nwt_captain scope:nwt_captain = { is_alive = yes } }
+
+	option = {	# share it out fairly
+		name = nwt_voyage.90.a
+		aod_vs_morale_add_20 = yes
+		add_gold = 40
+		ai_chance = { base = 50 }
+	}
+	option = {	# every coin belongs to the crown
+		name = nwt_voyage.90.b
+		add_gold = 120
+		aod_vs_morale_sub_20 = yes
+		ai_chance = { base = 50 }
+	}
+}
+
+nwt_voyage.91 = {
+	type = character_event
+	title = nwt_voyage.91.t
+	desc = { desc = nwt_voyage.91.desc desc = aod_vs_status }
+	theme = realm
+	override_background = { reference = ocean }
+	left_portrait = { character = scope:nwt_captain animation = sick }
+	trigger = { exists = scope:nwt_captain scope:nwt_captain = { is_alive = yes } }
+
+	option = {	# half rations to the end
+		name = nwt_voyage.91.a
+		aod_vs_supplies_add_15 = yes
+		aod_vs_morale_sub_15 = yes
+		ai_chance = { base = 50 }
+	}
+	option = {	# eat the ship's rats and the boot leather
+		name = nwt_voyage.91.b
+		random_list = {
+			50 = {
+				desc = nwt_voyage.91.b.good
+				aod_vs_supplies_add_10 = yes
+			}
+			50 = {
+				desc = nwt_voyage.91.b.bad
+				aod_vs_crew_sub_15 = yes
+				scope:nwt_captain = { add_trait = ill }
+			}
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+nwt_voyage.92 = {
+	type = character_event
+	title = nwt_voyage.92.t
+	desc = { desc = nwt_voyage.92.desc desc = aod_vs_status }
+	theme = realm
+	override_background = { reference = bp3_coast }
+	left_portrait = { character = scope:nwt_captain animation = happiness }
+	trigger = { exists = scope:nwt_captain scope:nwt_captain = { is_alive = yes } }
+
+	option = {	# put in for fresh water and news
+		name = nwt_voyage.92.a
+		aod_vs_supplies_add_30 = yes
+		aod_vs_morale_add_15 = yes
+		custom_tooltip = eu5_voyage_delay_10_tt
+		hidden_effect = { scope:eu5_voyage_title = { change_variable = { name = eu5_voyage_delay add = 10 } } }
+		ai_chance = { base = 60 }
+	}
+	option = {	# home is close, sail on
+		name = nwt_voyage.92.b
+		aod_vs_morale_add_10 = yes
+		ai_chance = { base = 40 }
+	}
+}

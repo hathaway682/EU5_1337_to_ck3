@@ -6,28 +6,36 @@
  is_shown = {
   is_landed = yes
   highest_held_title_tier >= tier_kingdom
-  culture ?= { has_innovation = innovation_pilot_books }
   capital_province = { geographical_region = world_europe }
-  any_sub_realm_county = { title_province = { is_coastal = yes } }
   NOT = { government_has_flag = government_is_wilderness }
  }
  is_valid = {
-  gold >= 150
+  culture ?= { has_innovation = innovation_pilot_books }
+  custom_tooltip = {
+   text = eu5_chart_seas_coast_requirement_tt
+   any_sub_realm_county = { title_province = { is_coastal = yes } }
+  }
   is_at_war = no
-  primary_title = {
-   NOT = { has_variable = eu5_exploration_underway }
+  custom_tooltip = {
+   text = eu5_chart_seas_voyage_available_tt
+   primary_title = { NOT = { has_variable = eu5_exploration_underway } }
    OR = {
-    NOT = { has_variable = eu5_charted_europe }
-    NOT = { has_variable = eu5_charted_africa }
-    NOT = { has_variable = eu5_charted_asia }
-    NOT = { has_variable = eu5_charted_north_america }
-    NOT = { has_variable = eu5_charted_south_america }
-    NOT = { has_variable = eu5_charted_oceania }
-    NOT = { has_variable = eu5_charted_atlantic }
+    NOT = { eu5_character_has_chart_trigger = { REGION = europe } }
+    NOT = { eu5_character_has_chart_trigger = { REGION = africa } }
+    NOT = { eu5_character_has_chart_trigger = { REGION = asia } }
+    NOT = { eu5_character_has_chart_trigger = { REGION = north_america } }
+    NOT = { eu5_character_has_chart_trigger = { REGION = south_america } }
+    NOT = { eu5_character_has_chart_trigger = { REGION = oceania } }
+    NOT = { eu5_character_has_chart_trigger = { REGION = atlantic } }
    }
   }
  }
- effect = { trigger_event = eu5_colonial_exploration.0001 }
+ # Cost is paid in the destination event, so cancelling the event remains free.
+ minimum_cost = { gold = 150 }
+ effect = {
+  custom_tooltip = eu5_chart_seas_decision_effect_tt
+  hidden_effect = { trigger_event = eu5_colonial_exploration.0001 }
+ }
  ai_check_interval = 3
  ai_potential = { is_ai = yes gold >= 650 }
  ai_will_do = { value = 35 }

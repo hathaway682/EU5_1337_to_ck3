@@ -1,6 +1,6 @@
 ﻿namespace = eu5_colonial_exploration
 
-# The player or AI selects one destination; the title owns the voyage and its resulting chart.
+# The voyage is scheduled on its starting title; completed charts are shared across eligible realm titles.
 eu5_colonial_exploration.0001 = {
  type = character_event
  title = eu5_colonial_exploration.0001.t
@@ -10,22 +10,40 @@ eu5_colonial_exploration.0001 = {
  left_portrait = { character = root animation = personality_bold }
  option = {
   name = eu5_colonial_exploration.0001.europe
-  trigger = { primary_title = { NOT = { has_variable = eu5_charted_europe } } gold >= 150 }
+  trigger = { NOT = { eu5_character_has_chart_trigger = { REGION = europe } } gold >= 150 }
   add_gold = -150
+  custom_tooltip = eu5_voyage_launch_tt
+  hidden_effect = { eu5_exploration_appoint_captain_effect = yes }
   primary_title = {
    set_variable = eu5_exploration_underway
    set_variable = eu5_exploring_europe
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 2 }
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 4 }
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 6 }
+   trigger_event = { id = eu5_colonial_exploration.0015 months = 8 }
+   trigger_event = { id = eu5_colonial_exploration.0015 months = 9 }
+   trigger_event = { id = eu5_colonial_exploration.0016 months = 10 }
+   trigger_event = { id = eu5_colonial_exploration.0016 months = 11 }
    trigger_event = { id = eu5_colonial_exploration.0002 months = 12 }
   }
   ai_chance = { base = 20 }
  }
  option = {
   name = eu5_colonial_exploration.0001.africa
-  trigger = { primary_title = { NOT = { has_variable = eu5_charted_africa } } gold >= 150 }
+  trigger = { NOT = { eu5_character_has_chart_trigger = { REGION = africa } } gold >= 150 }
   add_gold = -150
+  custom_tooltip = eu5_voyage_launch_tt
+  hidden_effect = { eu5_exploration_appoint_captain_effect = yes }
   primary_title = {
    set_variable = eu5_exploration_underway
    set_variable = eu5_exploring_africa
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 2 }
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 4 }
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 6 }
+   trigger_event = { id = eu5_colonial_exploration.0015 months = 8 }
+   trigger_event = { id = eu5_colonial_exploration.0015 months = 9 }
+   trigger_event = { id = eu5_colonial_exploration.0016 months = 10 }
+   trigger_event = { id = eu5_colonial_exploration.0016 months = 11 }
    trigger_event = { id = eu5_colonial_exploration.0002 months = 12 }
   }
   ai_chance = {
@@ -35,11 +53,20 @@ eu5_colonial_exploration.0001 = {
  }
  option = {
   name = eu5_colonial_exploration.0001.asia
-  trigger = { primary_title = { NOT = { has_variable = eu5_charted_asia } } gold >= 150 }
+  trigger = { NOT = { eu5_character_has_chart_trigger = { REGION = asia } } gold >= 150 }
   add_gold = -150
+  custom_tooltip = eu5_voyage_launch_tt
+  hidden_effect = { eu5_exploration_appoint_captain_effect = yes }
   primary_title = {
    set_variable = eu5_exploration_underway
    set_variable = eu5_exploring_asia
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 2 }
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 4 }
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 6 }
+   trigger_event = { id = eu5_colonial_exploration.0015 months = 8 }
+   trigger_event = { id = eu5_colonial_exploration.0015 months = 9 }
+   trigger_event = { id = eu5_colonial_exploration.0016 months = 10 }
+   trigger_event = { id = eu5_colonial_exploration.0016 months = 11 }
    trigger_event = { id = eu5_colonial_exploration.0002 months = 12 }
   }
   ai_chance = {
@@ -49,11 +76,20 @@ eu5_colonial_exploration.0001 = {
  }
  option = {
   name = eu5_colonial_exploration.0001.north_america
-  trigger = { primary_title = { NOT = { has_variable = eu5_charted_north_america } } gold >= 150 }
+  trigger = { NOT = { eu5_character_has_chart_trigger = { REGION = north_america } } gold >= 150 }
   add_gold = -150
+  custom_tooltip = eu5_voyage_launch_tt
+  hidden_effect = { eu5_exploration_appoint_captain_effect = yes }
   primary_title = {
    set_variable = eu5_exploration_underway
    set_variable = eu5_exploring_north_america
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 2 }
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 4 }
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 6 }
+   trigger_event = { id = eu5_colonial_exploration.0015 months = 8 }
+   trigger_event = { id = eu5_colonial_exploration.0015 months = 9 }
+   trigger_event = { id = eu5_colonial_exploration.0016 months = 10 }
+   trigger_event = { id = eu5_colonial_exploration.0016 months = 11 }
    trigger_event = { id = eu5_colonial_exploration.0002 months = 12 }
   }
   ai_chance = {
@@ -63,11 +99,20 @@ eu5_colonial_exploration.0001 = {
  }
  option = {
   name = eu5_colonial_exploration.0001.south_america
-  trigger = { primary_title = { NOT = { has_variable = eu5_charted_south_america } } gold >= 150 }
+  trigger = { NOT = { eu5_character_has_chart_trigger = { REGION = south_america } } gold >= 150 }
   add_gold = -150
+  custom_tooltip = eu5_voyage_launch_tt
+  hidden_effect = { eu5_exploration_appoint_captain_effect = yes }
   primary_title = {
    set_variable = eu5_exploration_underway
    set_variable = eu5_exploring_south_america
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 2 }
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 4 }
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 6 }
+   trigger_event = { id = eu5_colonial_exploration.0015 months = 8 }
+   trigger_event = { id = eu5_colonial_exploration.0015 months = 9 }
+   trigger_event = { id = eu5_colonial_exploration.0016 months = 10 }
+   trigger_event = { id = eu5_colonial_exploration.0016 months = 11 }
    trigger_event = { id = eu5_colonial_exploration.0002 months = 12 }
   }
   ai_chance = {
@@ -78,22 +123,40 @@ eu5_colonial_exploration.0001 = {
  }
  option = {
   name = eu5_colonial_exploration.0001.oceania
-  trigger = { primary_title = { NOT = { has_variable = eu5_charted_oceania } } gold >= 150 }
+  trigger = { NOT = { eu5_character_has_chart_trigger = { REGION = oceania } } gold >= 150 }
   add_gold = -150
+  custom_tooltip = eu5_voyage_launch_tt
+  hidden_effect = { eu5_exploration_appoint_captain_effect = yes }
   primary_title = {
    set_variable = eu5_exploration_underway
    set_variable = eu5_exploring_oceania
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 2 }
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 4 }
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 6 }
+   trigger_event = { id = eu5_colonial_exploration.0015 months = 8 }
+   trigger_event = { id = eu5_colonial_exploration.0015 months = 9 }
+   trigger_event = { id = eu5_colonial_exploration.0016 months = 10 }
+   trigger_event = { id = eu5_colonial_exploration.0016 months = 11 }
    trigger_event = { id = eu5_colonial_exploration.0002 months = 12 }
   }
   ai_chance = { base = 30 }
  }
  option = {
   name = eu5_colonial_exploration.0001.atlantic
-  trigger = { primary_title = { NOT = { has_variable = eu5_charted_atlantic } } gold >= 150 }
+  trigger = { NOT = { eu5_character_has_chart_trigger = { REGION = atlantic } } gold >= 150 }
   add_gold = -150
+  custom_tooltip = eu5_voyage_launch_tt
+  hidden_effect = { eu5_exploration_appoint_captain_effect = yes }
   primary_title = {
    set_variable = eu5_exploration_underway
    set_variable = eu5_exploring_atlantic
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 2 }
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 4 }
+   trigger_event = { id = eu5_colonial_exploration.0010 months = 6 }
+   trigger_event = { id = eu5_colonial_exploration.0015 months = 8 }
+   trigger_event = { id = eu5_colonial_exploration.0015 months = 9 }
+   trigger_event = { id = eu5_colonial_exploration.0016 months = 10 }
+   trigger_event = { id = eu5_colonial_exploration.0016 months = 11 }
    trigger_event = { id = eu5_colonial_exploration.0002 months = 12 }
   }
   ai_chance = { base = 30 }
@@ -105,15 +168,52 @@ eu5_colonial_exploration.0002 = {
  hidden = yes
  scope = landed_title
  immediate = {
-  if = { limit = { has_variable = eu5_exploring_europe } remove_variable = eu5_exploring_europe set_variable = eu5_charted_europe }
-  if = { limit = { has_variable = eu5_exploring_africa } remove_variable = eu5_exploring_africa set_variable = eu5_charted_africa }
-  if = { limit = { has_variable = eu5_exploring_asia } remove_variable = eu5_exploring_asia set_variable = eu5_charted_asia }
-  if = { limit = { has_variable = eu5_exploring_north_america } remove_variable = eu5_exploring_north_america set_variable = eu5_charted_north_america }
-  if = { limit = { has_variable = eu5_exploring_south_america } remove_variable = eu5_exploring_south_america set_variable = eu5_charted_south_america }
-  if = { limit = { has_variable = eu5_exploring_oceania } remove_variable = eu5_exploring_oceania set_variable = eu5_charted_oceania }
-  if = { limit = { has_variable = eu5_exploring_atlantic } remove_variable = eu5_exploring_atlantic set_variable = eu5_charted_atlantic }
-  remove_variable = eu5_exploration_underway
-  holder ?= { trigger_event = eu5_colonial_exploration.0003 }
+  if = {
+   limit = { has_variable = eu5_voyage_delay var:eu5_voyage_delay > 0 }
+   trigger_event = { id = eu5_colonial_exploration.0002 days = 5 }
+   change_variable = { name = eu5_voyage_delay add = -5 }
+  }
+  else = {
+   if = {
+    limit = { has_variable = eu5_voyage_captain NOT = { var:eu5_voyage_captain ?= { is_alive = yes } } }
+    set_variable = eu5_exploration_failed
+   }
+   if = {
+    limit = { var:eu5_voyage_captain ?= { OR = { var:aod_v_crew <= 0 var:aod_v_morale <= 0 } } }
+    set_variable = eu5_exploration_failed
+   }
+   var:eu5_voyage_captain ?= { remove_variable = eu5_exploration_command }
+   remove_variable = eu5_voyage_captain
+   remove_variable = eu5_voyage_delay
+   if = {
+    limit = { has_variable = eu5_exploration_failed }
+    remove_variable = eu5_exploration_failed
+    if = { limit = { has_variable = eu5_exploring_europe } remove_variable = eu5_exploring_europe }
+    if = { limit = { has_variable = eu5_exploring_africa } remove_variable = eu5_exploring_africa }
+    if = { limit = { has_variable = eu5_exploring_asia } remove_variable = eu5_exploring_asia }
+    if = { limit = { has_variable = eu5_exploring_north_america } remove_variable = eu5_exploring_north_america }
+    if = { limit = { has_variable = eu5_exploring_south_america } remove_variable = eu5_exploring_south_america }
+    if = { limit = { has_variable = eu5_exploring_oceania } remove_variable = eu5_exploring_oceania }
+    if = { limit = { has_variable = eu5_exploring_atlantic } remove_variable = eu5_exploring_atlantic }
+    remove_variable = eu5_exploration_underway
+    holder ?= { trigger_event = eu5_colonial_exploration.0004 }
+   }
+   else = {
+    if = { limit = { has_variable = eu5_exploring_europe } remove_variable = eu5_exploring_europe set_variable = eu5_charted_europe }
+    if = { limit = { has_variable = eu5_exploring_africa } remove_variable = eu5_exploring_africa set_variable = eu5_charted_africa }
+    if = { limit = { has_variable = eu5_exploring_asia } remove_variable = eu5_exploring_asia set_variable = eu5_charted_asia }
+    if = { limit = { has_variable = eu5_exploring_north_america } remove_variable = eu5_exploring_north_america set_variable = eu5_charted_north_america }
+    if = { limit = { has_variable = eu5_exploring_south_america } remove_variable = eu5_exploring_south_america set_variable = eu5_charted_south_america }
+    if = { limit = { has_variable = eu5_exploring_oceania } remove_variable = eu5_exploring_oceania set_variable = eu5_charted_oceania }
+    if = { limit = { has_variable = eu5_exploring_atlantic } remove_variable = eu5_exploring_atlantic set_variable = eu5_charted_atlantic }
+    remove_variable = eu5_exploration_underway
+    save_scope_as = eu5_chart_source_title
+    holder ?= {
+     eu5_sync_realm_charts_effect = yes
+     trigger_event = eu5_colonial_exploration.0003
+    }
+   }
+  }
  }
 }
 
@@ -125,4 +225,113 @@ eu5_colonial_exploration.0003 = {
  override_background = { reference = bp3_coast }
  left_portrait = { character = root animation = personality_bold }
  option = { name = eu5_colonial_exploration.0003.a }
+}
+
+# Adapted AoD voyage events: at sea.
+eu5_colonial_exploration.0010 = {
+ hidden = yes
+ scope = landed_title
+ immediate = {
+  if = {
+   limit = { has_variable = eu5_exploration_underway NOT = { has_variable = eu5_exploration_failed } exists = holder var:eu5_voyage_captain ?= { is_alive = yes } }
+   save_scope_as = eu5_voyage_title
+   var:eu5_voyage_captain = { save_scope_as = nwt_captain aod_vs_sea_tick_effect = yes }
+   if = {
+    limit = { scope:nwt_captain = { var:aod_v_crew <= 0 } }
+    holder = { nwt_voyage_lost_effect = { REASON = death_disappearance } }
+   }
+   else_if = {
+    limit = { scope:nwt_captain = { var:aod_v_morale <= 15 } }
+    holder = { trigger_event = nwt_voyage.32 }
+   }
+   else = {
+    holder = { random = { chance = 65 random_list = {
+     16 = { trigger_event = nwt_voyage.30 }
+     12 = { trigger_event = nwt_voyage.31 }
+     10 = { trigger_event = nwt_voyage.33 }
+     12 = { trigger_event = nwt_voyage.80 }
+     10 = { trigger_event = nwt_voyage.81 }
+     8 = { trigger_event = nwt_voyage.82 }
+     10 = { trigger_event = nwt_voyage.83 }
+     12 = { trigger_event = nwt_voyage.84 }
+     10 = { trigger_event = nwt_voyage.85 }
+     8 = { trigger_event = nwt_voyage.86 }
+    } } }
+   }
+  }
+ }
+}
+
+# Adapted AoD voyage events: coastal or return phase.
+eu5_colonial_exploration.0015 = {
+ hidden = yes
+ scope = landed_title
+ immediate = {
+  if = {
+   limit = { has_variable = eu5_exploration_underway NOT = { has_variable = eu5_exploration_failed } exists = holder var:eu5_voyage_captain ?= { is_alive = yes } }
+   save_scope_as = eu5_voyage_title
+   var:eu5_voyage_captain = { save_scope_as = nwt_captain  }
+   if = {
+    limit = { scope:nwt_captain = { var:aod_v_crew <= 0 } }
+    holder = { nwt_voyage_lost_effect = { REASON = death_disappearance } }
+   }
+   else_if = {
+    limit = { scope:nwt_captain = { var:aod_v_morale <= 15 } }
+    holder = { trigger_event = nwt_voyage.32 }
+   }
+   else = {
+    holder = { random_list = {
+     20 = { trigger_event = nwt_voyage.51 }
+     20 = { trigger_event = nwt_voyage.52 }
+     15 = { trigger_event = nwt_voyage.53 }
+     15 = { trigger_event = nwt_voyage.54 }
+     15 = { trigger_event = nwt_voyage.56 }
+     10 = { trigger_event = nwt_voyage.57 }
+     10 = { trigger_event = nwt_voyage.58 }
+    } }
+   }
+  }
+ }
+}
+
+# Adapted AoD voyage events: at sea.
+eu5_colonial_exploration.0016 = {
+ hidden = yes
+ scope = landed_title
+ immediate = {
+  if = {
+   limit = { has_variable = eu5_exploration_underway NOT = { has_variable = eu5_exploration_failed } exists = holder var:eu5_voyage_captain ?= { is_alive = yes } }
+   save_scope_as = eu5_voyage_title
+   var:eu5_voyage_captain = { save_scope_as = nwt_captain aod_vs_sea_tick_effect = yes }
+   if = {
+    limit = { scope:nwt_captain = { var:aod_v_crew <= 0 } }
+    holder = { nwt_voyage_lost_effect = { REASON = death_disappearance } }
+   }
+   else_if = {
+    limit = { scope:nwt_captain = { var:aod_v_morale <= 15 } }
+    holder = { trigger_event = nwt_voyage.32 }
+   }
+   else = {
+    holder = { random = { chance = 55 random_list = {
+     15 = { trigger_event = nwt_voyage.30 }
+     10 = { trigger_event = nwt_voyage.80 }
+     8 = { trigger_event = nwt_voyage.82 }
+     10 = { trigger_event = nwt_voyage.86 }
+     15 = { trigger_event = nwt_voyage.90 }
+     15 = { trigger_event = nwt_voyage.91 }
+     12 = { trigger_event = nwt_voyage.92 }
+    } } }
+   }
+  }
+ }
+}
+
+eu5_colonial_exploration.0004 = {
+ type = character_event
+ title = eu5_colonial_exploration.0004.t
+ desc = eu5_colonial_exploration.0004.desc
+ theme = realm
+ override_background = { reference = bp3_coast }
+ left_portrait = { character = root animation = personality_bold }
+ option = { name = eu5_colonial_exploration.0004.a }
 }

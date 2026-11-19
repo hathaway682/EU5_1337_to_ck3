@@ -7,6 +7,32 @@ eu5_1337_research_innovations = {
 	effect = {
 		if = {
 			limit = { game_start_date = 1337.4.1 }
+			culture:turkmen = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:oirat = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = grenades }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:kirghiz = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+			}
 			culture:bedouin = {
 				if = {
 					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
@@ -1028,9 +1054,7 @@ eu5_1337_research_innovations = {
 			}
 			culture:tocharian = {
 			}
-			culture:turkmen = {
-				add_innovation = innovation_bricks
-			}
+
 			culture:tuyuhun = {
 			}
 			culture:uyghur = {

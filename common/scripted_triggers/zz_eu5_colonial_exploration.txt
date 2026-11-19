@@ -1,13 +1,21 @@
-﻿# COUNTY scope. The ruler's primary title stores the charts, so they follow the title on succession.
+﻿# Characters can use charts on their own kingdom-or-higher titles or those of their top liege.
+eu5_character_has_chart_trigger = {
+ OR = {
+  any_held_title = { tier >= tier_kingdom has_variable = eu5_charted_$REGION$ }
+  top_liege ?= { any_held_title = { tier >= tier_kingdom has_variable = eu5_charted_$REGION$ } }
+ }
+}
+
+# COUNTY scope. Check the appropriate chart across the ruler and their top liege.
 eu5_colonial_county_charted_trigger = {
  OR = {
-  AND = { title_province = { geographical_region = eu5_continent_europe } $RULER$ = { primary_title ?= { has_variable = eu5_charted_europe } } }
-  AND = { title_province = { geographical_region = eu5_continent_africa } $RULER$ = { primary_title ?= { has_variable = eu5_charted_africa } } }
-  AND = { title_province = { geographical_region = eu5_continent_asia } $RULER$ = { primary_title ?= { has_variable = eu5_charted_asia } } }
-  AND = { title_province = { geographical_region = eu5_subcontinent_north_america } $RULER$ = { primary_title ?= { has_variable = eu5_charted_north_america } } }
-  AND = { title_province = { geographical_region = eu5_subcontinent_south_america } $RULER$ = { primary_title ?= { has_variable = eu5_charted_south_america } } }
-  AND = { title_province = { geographical_region = eu5_continent_oceania } $RULER$ = { primary_title ?= { has_variable = eu5_charted_oceania } } }
-  AND = { title_province = { geographical_region = eu5_continent_atlantic_ocean_continent } $RULER$ = { primary_title ?= { has_variable = eu5_charted_atlantic } } }
+  AND = { title_province = { geographical_region = eu5_continent_europe } $RULER$ = { eu5_character_has_chart_trigger = { REGION = europe } } }
+  AND = { title_province = { geographical_region = eu5_continent_africa } $RULER$ = { eu5_character_has_chart_trigger = { REGION = africa } } }
+  AND = { title_province = { geographical_region = eu5_continent_asia } $RULER$ = { eu5_character_has_chart_trigger = { REGION = asia } } }
+  AND = { title_province = { geographical_region = eu5_subcontinent_north_america } $RULER$ = { eu5_character_has_chart_trigger = { REGION = north_america } } }
+  AND = { title_province = { geographical_region = eu5_subcontinent_south_america } $RULER$ = { eu5_character_has_chart_trigger = { REGION = south_america } } }
+  AND = { title_province = { geographical_region = eu5_continent_oceania } $RULER$ = { eu5_character_has_chart_trigger = { REGION = oceania } } }
+  AND = { title_province = { geographical_region = eu5_continent_atlantic_ocean_continent } $RULER$ = { eu5_character_has_chart_trigger = { REGION = atlantic } } }
  }
 }
 # COUNTY scope. Shared by the planning UI and AI target selection.
