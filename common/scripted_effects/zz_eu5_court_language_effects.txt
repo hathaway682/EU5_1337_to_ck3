@@ -1,119 +1,29 @@
 ﻿eu5_set_court_language_effect = {
-	if = {
-		limit = { has_dlc_feature = royal_court }
-		character:eth_amedee_i_solomon = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_ethiopic } } # e_abyssinia
-		character:byz_andronikos_iii_palaiologos = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_greek } } # e_byzantium
-		character:chg_changsi = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_mongolic } } # e_chagatai
-		character:kit_bukuku_bachwezi = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_sabaki } } # e_eu5_kit
-		character:chg_ogedei_borjigin = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_mongolic } } # e_eu5_mge
-		character:ogk_adolf_von_nassau = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_high_german } } # e_eu5_ogk
-		character:glh_giyas_al_din_mohammed_oz_beg_borjigin = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_mongolic } } # e_golden_horde
-		character:dlh_muhammad_bin_tughluq = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_sauraseni } } # e_hindustan
-		character:ubv_ludwig_iv_wittelsbach = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_high_german } } # e_hre
-		character:hlg_musa_khan = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_mongolic } } # e_ilkhanate
-		character:jap_ashikaga_takauji = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_japonic } } # e_japan
-		character:khm_trasak_paem = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_mon_khmer } } # e_kambuja
-		character:kbo_salmama = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_tubu } } # e_kanem_bornu
-		character:lat_baudouin_ii_courtenay = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_french } } # e_latin_empire
-		character:maj_tribhuwana = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_austronesian } } # e_majapahit
-		character:mal_musa_keita = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_manding } } # e_mali
-		character:yua_bayan_merkid = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_mongolic } } # e_minister_chancellor
-		character:yua_majartai = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_mongolic } } # e_minister_grand_marshal
-		character:yua_togon_temur = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_mongolic } } # h_china
-		character:ifa_jamal_i_walashma = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_cushitic } } # k_adal
-		character:tun_abu_yahya_abu_bakr_ii = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_arabic } } # k_africa
-		character:aju_arliqo_i = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_cushitic } } # k_ajuraan
-		character:alb_charles_durazzo = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_albanian } } # k_albania
-		character:cil_leo_iv = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_armenian } } # k_anatolia
-		character:ara_peter_iv_arago = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_occitano_romance } } # k_aragon
-		character:ayd_umur = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_turkic } } # k_aydin
-		character:boh_john_luxembourg = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_czech_slovak } } # k_bohemia
-		character:bul_ivan_alexander = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_slavonic } } # k_bulgaria
-		character:cnd_suleyman = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_turkic } } # k_candar
-		character:cas_alfonso_xi_burgundy = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_iberian } } # k_castille
-		character:cha_jaya_ananda = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_chamic } } # k_champa
-		character:jap_koumyou_tenno = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_japonic } } # k_chrysanthemum_throne
-		character:cyp_hugues_iv = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_french } } # k_cyprus
-		character:dan_valdemar_atterdag = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_norse } } # k_denmark
-		character:mb_yuan_SEAsiaMMBMongol4 = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_chinese } } # k_dongchuan
-		character:qch_uruktemur = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_turkic } } # k_dzungaria
-		character:mam_an_nasir_bahri = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_arabic } } # k_egypt
-		character:eng_edward_iii = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_anglic } } # k_england
-		character:ere_eretna = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_turkic } } # k_eretnid
-		character:eu5_regent_alo = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_sudanic } } # k_eu5_alo
-		character:eu5_regent_ben = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_yoruba } } # k_eu5_ben
-		character:bgt_alguncha_borjigin = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_mongolic } } # k_eu5_bgt
-		character:bli_sri_astasura_ratnabhumibanten = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_austronesian } } # k_eu5_bli
-		character:dgl_omar = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_sinhalese } } # k_eu5_dgl
-		character:hcn_munanzi_borjigin = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_mongolic } } # k_eu5_hcn
-		character:hsl_veera_ballala_iii_hoysala = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_kannada } } # k_eu5_hsl
-		character:ime_bagrat_i = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_georgian } } # k_eu5_ime
-		character:tughluq_borjigin = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_burmese } } # k_eu5_lng
-		character:eu5_regent_luw = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_austronesian } } # k_eu5_luw
-		character:mab_jalaluddi_ahsan_khan_mabar = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_sauraseni } } # k_eu5_mab
-		character:mak_al_amir_abi = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_sudanic } } # k_eu5_mak
-		character:mdi_abu_Bakr_i = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_cushitic } } # k_eu5_mdi
-		character:oge_temurchi_borjigin = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_mongolic } } # k_eu5_oge
-		character:ori_narasimha_deva_iii_purba_ganga = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_magadhan } } # k_eu5_ori
-		character:otc_yanashiri_borjigin = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_mongolic } } # k_eu5_otc
-		character:yar_fyodor_rostislavich_cherny_rurikovich = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_east_slavic } } # k_eu5_pzl
-		character:qas_shiliemen_borjigin = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_mongolic } } # k_eu5_qas
-		character:kor_ko = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_korean } } # k_eu5_syg
-		character:vij_harihara_sangama = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_kannada } } # k_eu5_vij
-		character:fra_philip_vi_valois = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_french } } # k_france
-		character:vol_boleslaw_jerzy_ii_piast = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_east_slavic } } # k_galicia-volhynia
-		character:gen_galeotto_spinola = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_italian } } # k_genoa
-		character:geo_george_v = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_georgian } } # k_georgia
-		character:grm_yakub_i = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_turkic } } # k_germiyan
-		character:kor_chungsuk = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_korean } } # k_goguryeo
-		character:mb_yuan_Chucai7 = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_chinese } } # k_guannei
-		character:mb_yuan_Khasi3 = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_chinese } } # k_henan
-		character:mb_yuan_tangut0034 = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_chinese } } # k_hexi
-		character:mb_yuan_SEAsiaMMBMongol2 = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_chinese } } # k_hunan
-		character:hun_karoly_robert = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_magyar } } # k_hungary
-		character:cyp_henri_ii_lusignan = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_french } } # k_jerusalem
-		character:mb_yuan_SEAsiaMMB277 = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_chinese } } # k_jiangdong
-		character:mb_yuan_SEAsiaMMB283 = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_chinese } } # k_jiangxi
-		character:kar_alaeddin_halil_mirza = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_turkic } } # k_karaman
-		character:grg_togha_temur = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_mongolic } } # k_khorasan
-		character:lon_alfonso_ix_burgundy = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_iberian } } # k_leon
-		character:lit_gediminas_gediminids = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_baltic } } # k_lithuania
-		character:liv_eberhard_von_monheim = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_high_german } } # k_livonia
-		character:eu5_regent_tdo = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_austronesian } } # k_lusung
-		character:mb_yuan_SEAsiaMMBMongol6 = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_tungusic } } # k_luzhen
-		character:mor_abu_al_hasan_ali = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_arabic } } # k_maghreb
-		character:jmb_akarendrawarman = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_austronesian } } # k_malayadvipa
-		character:mll_james_iii_mallorca = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_occitano_romance } } # k_mediterranean_sea
-		character:men_orkhan = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_turkic } } # k_mentese
-		character:jal_hasan_buzurg = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_mongolic } } # k_mesopotamia
-		character:nap_robert_i_anjou = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_italian } } # k_naples
-		character:nav_jeanne_ii_capet = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_basque } } # k_navarra
-		character:swe_magnus_eriksson = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_norse } } # k_norway
-		character:mb_nov_125260 = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_east_slavic } } # k_novgorod
-		character:mos_ivan_i_danilovich_kalita_rurikovich = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_east_slavic } } # k_opolye
-		character:byz_john_xiv_kalekas = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_greek } } # k_orthodox
-		character:tur_orhan = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_turkic } } # k_ottoman
-		character:mb_yuan_244012 = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_mongolic } } # k_otuken
-		character:pin_uzana = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_burmese } } # k_pagan
-		character:pap_benedetto_xii = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_occitano_romance } } # k_papal_state
-		character:pis_fazio_novello_gherardesca = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_italian } } # k_pisa
-		character:pol_casimir_iii_piast = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_lechitic } } # k_poland
-		character:por_afonso_iv_portugal = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_iberian } } # k_portugal
-		character:sru_saruhan = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_turkic } } # k_saruhan
-		character:sco_david_ii = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_anglic } } # k_scotland
-		character:ser_stefan_dusan = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_south_slavic } } # k_serbia
-		character:suk_ngua_nam_thum = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_tai } } # k_siam
-		character:cas_alfonso_vii_burgundy = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_iberian } } # k_spanish_galicia
-		character:tle_abu_tashufin = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_berber } } # k_tahert
-		character:tek_sinanuddin_hizir = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_turkic } } # k_tekke
-		character:the_demetrios_komnenos_doukas = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_greek } } # k_thessalonika
-		character:tre_basil_komnenos = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_greek } } # k_trebizond
-		character:sic_federico_iii_sicily = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_italian } } # k_trinacria
-		character:tib_namkha_lekpa = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_tibetan } } # k_tsang
-		character:ven_francesco_dandolo = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_italian } } # k_venice
-		character:dai_vuong = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_vietnamese } } # k_viet
-		character:yem_al_mujahid_ali = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_arabic } } # k_yemen
-		character:zan_daud_mahdali = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_sabaki } } # k_zanj
-		character:eu5_regent_zmw = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_sabaki } } # k_zimbabwe
-	}
+	character:ara_peter_iv_arago = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_occitano_romance } } # k_aragon (ARA: catalan_dialect)
+	character:chg_changsi = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_turkic } } # e_chagatai (CHG: karluk_language)
+	character:chg_ogedei_borjigin = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_turkic } } # e_eu5_mge (CHG: karluk_language)
+	character:cyp_henri_ii_lusignan = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_french } } # k_jerusalem (CYP: french_language)
+	character:cyp_hugues_iv = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_french } } # k_cyprus (CYP: french_language)
+	character:dan_valdemar_atterdag = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_saxon } } # k_denmark (DAN: low_german_dialect)
+	character:dlh_muhammad_bin_tughluq = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_iranian } } # e_hindustan (DLH: persian_language)
+	character:eng_edward_iii = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_french } } # k_england (ENG: norman_dialect)
+	character:glh_giyas_al_din_mohammed_oz_beg_borjigin = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_turkic } } # e_golden_horde (GLH: kipchak_language)
+	character:grg_togha_temur = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_turkic } } # k_khorasan (GRG: turkmen_dialect)
+	character:hlg_musa_khan = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_iranian } } # e_ilkhanate (HLG: persian_language)
+	character:hun_karoly_robert = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_latin } } # k_hungary (HUN: church_dialect)
+	character:jal_hasan_buzurg = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_iranian } } # k_mesopotamia (JAL: persian_language)
+	character:lat_baudouin_ii_courtenay = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_french } } # e_latin_empire (LAT: french_language)
+	character:lit_gediminas_gediminids = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_east_slavic } } # k_lithuania (LIT: belarusian_dialect)
+	character:liv_eberhard_von_monheim = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_latin } } # k_livonia (LIV: church_dialect)
+	character:mab_jalaluddi_ahsan_khan_mabar = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_iranian } } # k_eu5_mab (MAB: persian_language)
+	character:nav_jeanne_ii_capet = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_occitano_romance } } # k_navarra (NAV: aragonese_dialect)
+	character:ogk_adolf_von_nassau = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_saxon } } # e_eu5_ogk (OGK: low_german_dialect)
+	character:pap_benedetto_xii = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_latin } } # k_papal_state (PAP: church_dialect)
+	character:pol_casimir_iii_piast = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_latin } } # k_poland (POL: church_dialect)
+	character:sco_david_ii = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_french } } # k_scotland (SCO: norman_dialect)
+	character:sic_federico_iii_sicily = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_occitano_romance } } # k_trinacria (SIC: catalan_dialect)
+	character:yua_bayan_merkid = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_chinese } } # e_minister_chancellor (YUA: northern_mandarin_dialect)
+	character:yua_majartai = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_chinese } } # e_minister_grand_marshal (YUA: northern_mandarin_dialect)
+	character:yua_togon_temur = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_chinese } } # h_china (YUA: northern_mandarin_dialect)
+	character:zan_daud_mahdali = { if = { limit = { is_alive = yes has_royal_court = yes } set_court_language = language_iranian } } # k_zanj (ZAN: persian_language)
 }

@@ -8189,7 +8189,8 @@ on_game_start_after_lobby = {
 		title:k_papal_state.holder ?= {
 			enforce_papal_latin_court_language_effect = yes
 		}
-
+		eu5_set_court_language_effect = yes
+		
 		# A faith's organization members are exactly its clergy, so this never touches the laity.
 		religion:christianity_religion = {
 			every_faith = {

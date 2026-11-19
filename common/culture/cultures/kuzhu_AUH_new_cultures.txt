@@ -43,21 +43,19 @@ kuzhu_moghol = {
 
 	name_order_convention = dynasty_always_first
 	ethos = ethos_bellicose
-	heritage = heritage_iranian
-	language = language_mongolic
+	heritage = heritage_turkic
+	language = language_turkic
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
-	parents = { mongol persian }
+	parents = { mongol karluk }
+	created = 1222.1.1
 
 	traditions = {
-		tradition_language_scholars		
+		tradition_horse_breeder
+		tradition_sacred_mountains
 		tradition_dryland_dwellers
-		tradition_religious_patronage
+		tradition_hit_and_run
 	}
-	dlc_tradition = {
-		trait = tradition_devoted_horsemanship
-		requires_dlc_flag = khans_of_the_steppe
-	}	
 	dlc_tradition = {
 		trait = tradition_fp3_beacon_of_learning
 		requires_dlc_flag = legacy_of_persia
@@ -69,8 +67,7 @@ kuzhu_moghol = {
 		fallback = tradition_poetry
 	}
 
-
-	name_list = name_list_mongol
+	name_list = name_list_karluk
 
 	coa_gfx = { iranian_group_coa_gfx }
 	building_gfx = { iranian_building_gfx }
@@ -91,21 +88,22 @@ kuzhu_tartar = {
 	name_order_convention = dynasty_always_first
 	ethos = ethos_bellicose
 	heritage = heritage_turkic
-	language = language_mongolic
+	language = language_turkic
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
-	parents = { mongol turkish }
+	parents = { mongol cuman }
+	created = 1242.1.1
 
 	traditions = {
-		tradition_kuzhu_proved_by_sword
-		tradition_dryland_dwellers
-		tradition_caravaneers
-		tradition_religious_patronage
-		
+		tradition_warrior_culture
+		tradition_pastoralists
+		tradition_eye_for_an_eye
+		tradition_hit_and_run
 	}
 	dlc_tradition = {
-		trait = tradition_devoted_horsemanship
+		trait = tradition_mpo_wolves_of_the_deep_steppe
 		requires_dlc_flag = khans_of_the_steppe
+		fallback = tradition_horse_lords
 	}
 	dlc_tradition = {
 		trait = tradition_fp3_enlightened_magnates
@@ -113,7 +111,7 @@ kuzhu_tartar = {
 		fallback = tradition_poetry
 	}
 
-	name_list = name_list_mongol
+	name_list = name_list_cuman
 
 	coa_gfx = { steppe_coa_gfx iranian_group_coa_gfx}
 	building_gfx = { steppe_building_gfx }
