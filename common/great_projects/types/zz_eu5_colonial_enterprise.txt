@@ -31,7 +31,15 @@
    any_contribution = {
     contribution_id = settlement
     contribution_is_funded = yes
-    NOT = { contributor ?= { is_alive = yes is_landless_merchant = yes suzerain ?= scope:owner } }
+    NOT = {
+     contributor ?= {
+      is_alive = yes
+      OR = {
+       AND = { is_landless_merchant = yes suzerain ?= scope:owner }
+       AND = { is_landed = yes OR = { this = scope:owner is_vassal_or_below_of = scope:owner } }
+      }
+     }
+    }
    }
   }
   scope:province.duchy ?= {
@@ -39,16 +47,46 @@
   }
  }
  on_complete = {
-  every_contribution = {
-   limit = { contribution_id = settlement contribution_is_funded = yes }
-   contributor ?= { eu5_colonial_enterprise_complete_effect = yes }
+  custom_tooltip = {
+   text = eu5_colonial_settlement_outcome_tt
+   every_contribution = {
+    limit = { contribution_id = settlement contribution_is_funded = yes }
+    contributor ?= { eu5_colonial_enterprise_complete_effect = yes }
+   }
   }
  }
  on_cancel = { }
  project_contributions = {
   settlement = {
-   contributor_is_valid = { is_landless_merchant = yes suzerain ?= scope:owner }
-   allowed_contributor_filter = { tributaries = yes }
+   contributor_is_valid = {
+    custom_tooltip = {
+     text = eu5_colonial_settlement_investor_tt
+     OR = {
+      AND = { is_landless_merchant = yes suzerain ?= scope:owner }
+      AND = {
+       is_landed = yes
+       OR = { this = scope:owner is_vassal_or_below_of = scope:owner }
+       scope:province.duchy ?= {
+        any_de_jure_county = {
+         is_wilderness_county_trigger = yes
+         any_title_to_title_neighboring_county = {
+          holder ?= {
+           OR = {
+            this = root
+            AND = {
+             root = { NOT = { this = scope:owner } }
+             is_vassal_or_below_of = root
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   allowed_contributor_filter = { owner = yes vassals = yes tributaries = yes }
    cost = { gold = 100 }
    is_required = yes
    contributor_cooldown = 0

@@ -2840,6 +2840,12 @@ on_game_start = {
 
 			### BLOCS
 			eu5_setup_historical_house_bloc_effect = yes
+			# Fix historical reign names after the Chrysanthemum Throne is assigned.
+			if = {
+			limit = { game_start_date = 1337.4.1 }
+				character:jap_go_daigo_tenno ?= { set_regnal_name = eu5_regnal_go_daigo }
+				character:jap_koumyou_tenno ?= { set_regnal_name = eu5_regnal_komyo }
+			}
 			eu5_setup_vassal_house_relations_effect = yes
 		}
 		#

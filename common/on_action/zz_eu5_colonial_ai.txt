@@ -9,7 +9,6 @@ eu5_ai_plan_colonial_enterprise = {
   is_at_war = no
   gold >= 650
   NOT = { is_planning_great_project = eu5_colonial_enterprise }
-  any_tributary = { is_landless_merchant = yes gold >= 400 }
  }
  effect = {
   random = {
@@ -17,7 +16,28 @@ eu5_ai_plan_colonial_enterprise = {
    every_ruler = {
     limit = { government_has_flag = government_is_wilderness }
     every_held_title = {
-     limit = { tier = tier_county eu5_colonial_project_target_trigger = { RULER = root } }
+     limit = {
+      tier = tier_county
+      eu5_colonial_project_target_trigger = { RULER = root }
+      OR = {
+       root = { any_tributary = { is_landless_merchant = yes gold >= 100 } }
+       duchy ?= {
+        any_de_jure_county = {
+         is_wilderness_county_trigger = yes
+         any_title_to_title_neighboring_county = {
+          holder ?= {
+           is_landed = yes
+           OR = {
+            AND = { this = root gold >= 100 }
+            AND = { liege ?= root gold >= 100 }
+            any_liege_or_above = { liege ?= root is_landed = yes gold >= 100 }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
      add_to_list = eu5_ai_colonial_candidates
     }
    }

@@ -1,29 +1,37 @@
-﻿# Contribution completion runs in the investing merchant's character scope.
+﻿# Contribution completion runs in the principal investor's character scope.
 eu5_colonial_enterprise_complete_effect = {
- save_scope_as = eu5_colonial_merchant
+ save_scope_as = eu5_colonial_recipient
+ if = {
+  limit = { is_landless_merchant = yes }
+  save_scope_as = eu5_colonial_merchant
+ }
+ else = { government_type ?= { save_scope_as = eu5_colonial_original_government } }
  scope:province.duchy = { save_scope_as = eu5_colonial_duchy }
  scope:owner = { save_scope_as = eu5_colonial_patron }
  if = {
   limit = { is_alive = yes scope:owner ?= { is_landed = yes } }
-  if = { limit = { is_tributary = yes } end_tributary = yes }
+  if = { limit = { exists = scope:eu5_colonial_merchant is_tributary = yes } end_tributary = yes }
   create_title_and_vassal_change = { type = returned save_scope_as = eu5_colonial_title_change }
   scope:eu5_colonial_duchy = {
    every_de_jure_county = {
     limit = { is_wilderness_county_trigger = yes }
     add_to_list = eu5_colonial_wilderness_counties
-    change_title_holder = { holder = scope:eu5_colonial_merchant change = scope:eu5_colonial_title_change government_base = scope:eu5_colonial_patron take_baronies = yes }
+    change_title_holder = { holder = scope:eu5_colonial_recipient change = scope:eu5_colonial_title_change government_base = scope:eu5_colonial_patron take_baronies = yes }
    }
    if = {
-    limit = { OR = { NOT = { exists = holder } holder ?= scope:eu5_colonial_patron } }
-    change_title_holder = { holder = scope:eu5_colonial_merchant change = scope:eu5_colonial_title_change government_base = scope:eu5_colonial_patron }
+    limit = {
+     NOT = { holder ?= scope:eu5_colonial_recipient }
+     OR = { NOT = { exists = holder } holder ?= scope:eu5_colonial_patron }
+    }
+    change_title_holder = { holder = scope:eu5_colonial_recipient change = scope:eu5_colonial_title_change government_base = scope:eu5_colonial_patron }
    }
   }
   # Convert the wilderness holdings before title gain fires; otherwise
   # wilderness_on_title_gain immediately returns the counties to the wilderness holder.
   every_in_list = {
     list = eu5_colonial_wilderness_counties
-    set_county_culture = scope:eu5_colonial_merchant.culture
-    set_county_faith = scope:eu5_colonial_merchant.faith
+    set_county_culture = scope:eu5_colonial_recipient.culture
+    set_county_faith = scope:eu5_colonial_recipient.faith
     generate_coa = yes
     every_county_province = {
      if = {
@@ -40,7 +48,27 @@ eu5_colonial_enterprise_complete_effect = {
       every_built_regular_district = { if = { limit = { has_building = dense_growth } remove_building = dense_growth } }
       holding_district ?= { if = { limit = { has_building = scree_slopes } remove_building = scree_slopes } }
       every_built_regular_district = { if = { limit = { has_building = scree_slopes } remove_building = scree_slopes } }
-      set_holding_type = city_holding
+      if = {
+       limit = { exists = scope:eu5_colonial_merchant }
+       set_holding_type = city_holding
+      }
+      else_if = {
+       limit = { scope:eu5_colonial_recipient.capital_province ?= { has_holding_type = tribal_holding } }
+       set_holding_type = tribal_holding
+      }
+      else_if = {
+       limit = { scope:eu5_colonial_recipient.capital_province ?= { has_holding_type = nomad_holding } }
+       set_holding_type = nomad_holding
+      }
+      else_if = {
+       limit = { scope:eu5_colonial_recipient.capital_province ?= { has_holding_type = city_holding } }
+       set_holding_type = city_holding
+      }
+      else_if = {
+       limit = { scope:eu5_colonial_recipient.capital_province ?= { has_holding_type = temple_holding } }
+       set_holding_type = temple_holding
+      }
+      else = { set_holding_type = castle_holding }
      }
      else_if = {
       limit = { has_holding_type = wilderness_holding is_county_capital = no }
@@ -49,7 +77,9 @@ eu5_colonial_enterprise_complete_effect = {
     }
   }
   resolve_title_and_vassal_change = scope:eu5_colonial_title_change
-  scope:eu5_colonial_merchant = {
+  if = {
+   limit = { exists = scope:eu5_colonial_merchant }
+   scope:eu5_colonial_merchant = {
    # Preserve another ruler's duchy and create a titular republic instead.
    if = {
     limit = { NOT = { scope:eu5_colonial_duchy.holder ?= this } }
@@ -79,8 +109,8 @@ eu5_colonial_enterprise_complete_effect = {
    resolve_title_and_vassal_change = scope:eu5_colonial_vassal_change
    domicile ?= { move_domicile = scope:eu5_colonial_merchant.capital_province }
   }
-  # Merchants who financed optional contributions join the new republic.
-  scope:great_project = {
+   # Merchants who financed optional contributions join the new republic.
+   scope:great_project = {
     every_contribution = {
      limit = {
       contribution_is_funded = yes
@@ -90,5 +120,15 @@ eu5_colonial_enterprise_complete_effect = {
      contributor = { gdp_merchant_becomes_patrician_effect = { LIEGE = scope:eu5_colonial_merchant } }
     }
    }
+  }
+  else = {
+   # The landed investor retains their original government and liege.
+   scope:eu5_colonial_recipient = {
+    if = {
+     limit = { exists = scope:eu5_colonial_original_government NOT = { government_type ?= scope:eu5_colonial_original_government } }
+     change_government = scope:eu5_colonial_original_government
+    }
+   }
+  }
  }
 }
