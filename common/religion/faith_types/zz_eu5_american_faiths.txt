@@ -11,11 +11,167 @@
 eu5_mayan = {
 	main_rite = eu5_mayan
 	historical = yes
-	faith_details = { religion = eu5_mayan_religion color = { 0.18 0.65 0.49 } icon = eu5_mayan reformed_icon = eu5_mayan graphical_faith = "pagan_gfx" }
+	faith_details = { religion = eu5_nahuatl_religion color = { 0.18 0.65 0.49 } icon = eu5_mayan reformed_icon = eu5_mayan graphical_faith = "pagan_gfx" }
 	eminent_holy_sites = { eu5_chichen_itza eu5_baak }
 	holy_sites = { eu5_yax_mutal eu5_mayapan eu5_tho }
 
 	doctrines = { unreformed_faith_doctrine }
+
+	localization = {
+		HighGodName = eu5_mayan_high
+		HighGodName2 = eu5_mayan_high
+		HighGodNamePossessive = eu5_mayan_high_possessive
+		HighGodNameSheHe = CHARACTER_SHEHE_HE
+		HighGodHerselfHimself = CHARACTER_HIMSELF
+		HighGodHerHis = CHARACTER_HERHIS_HIS
+		HighGodNameAlternate = eu5_mayan_high
+		HighGodNameAlternatePossessive = eu5_mayan_high_possessive
+
+		#Creator
+		CreatorName = eu5_mayan_creator
+		CreatorNamePossessive = eu5_mayan_creator_possessive
+		CreatorSheHe = CHARACTER_SHEHE_HE
+		CreatorHerHis = CHARACTER_HERHIS_HIS
+		CreatorHerHim = CHARACTER_HERHIM_HIM
+
+		#HealthGod
+		HealthGodName = eu5_mayan_health
+		HealthGodNamePossessive = eu5_mayan_health_possessive
+		HealthGodSheHe = CHARACTER_SHEHE_SHE
+		HealthGodHerHis = CHARACTER_HERHIS_HER
+		HealthGodHerHim = CHARACTER_HERHIM_HER
+
+		#FertilityGod
+		FertilityGodName = eu5_mayan_fertility
+		FertilityGodNamePossessive = eu5_mayan_fertility_possessive
+		FertilityGodSheHe = CHARACTER_SHEHE_SHE
+		FertilityGodHerHis = CHARACTER_HERHIS_HER
+		FertilityGodHerHim = CHARACTER_HERHIM_HER
+
+		#WealthGod
+		WealthGodName = eu5_mayan_wealth
+		WealthGodNamePossessive = eu5_mayan_wealth_possessive
+		WealthGodSheHe = CHARACTER_SHEHE_HE
+		WealthGodHerHis = CHARACTER_HERHIS_HIS
+		WealthGodHerHim = CHARACTER_HERHIM_HIM
+
+		#HouseholdGod
+		HouseholdGodName = eu5_mayan_household
+		HouseholdGodNamePossessive = eu5_mayan_household_possessive
+		HouseholdGodSheHe = CHARACTER_SHEHE_SHE
+		HouseholdGodHerHis = CHARACTER_HERHIS_HER
+		HouseholdGodHerHim = CHARACTER_HERHIM_HER
+
+		#FateGod
+		FateGodName = eu5_mayan_fate
+		FateGodNamePossessive = eu5_mayan_fate_possessive
+		FateGodSheHe = CHARACTER_SHEHE_HE
+		FateGodHerHis = CHARACTER_HERHIS_HIS
+		FateGodHerHim = CHARACTER_HERHIM_HIM
+
+		#KnowledgeGod
+		KnowledgeGodName = eu5_mayan_knowledge
+		KnowledgeGodNamePossessive = eu5_mayan_knowledge_possessive
+		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
+
+		#WarGod
+		WarGodName = eu5_mayan_war
+		WarGodNamePossessive = eu5_mayan_war_possessive
+		WarGodSheHe = CHARACTER_SHEHE_HE
+		WarGodHerHis = CHARACTER_HERHIS_HIS
+		WarGodHerHim = CHARACTER_HERHIM_HIM
+
+		#TricksterGod
+		TricksterGodName = eu5_mayan_trickster
+		TricksterGodNamePossessive = eu5_mayan_trickster_possessive
+		TricksterGodSheHe = CHARACTER_SHEHE_THEY
+		TricksterGodHerHis = CHARACTER_HERHIS_THEIR
+		TricksterGodHerHim = CHARACTER_HERHIM_THEM
+		#NightGod
+		NightGodName = eu5_mayan_night
+		NightGodNamePossessive = eu5_mayan_night_possessive
+		NightGodSheHe = CHARACTER_SHEHE_SHE
+		NightGodHerHis = CHARACTER_HERHIS_HER
+		NightGodHerHim = CHARACTER_HERHIM_HER
+
+		#WaterGod
+		WaterGodName = eu5_mayan_water
+		WaterGodNamePossessive = eu5_mayan_water_possessive
+		WaterGodSheHe = CHARACTER_SHEHE_HE
+		WaterGodHerHis = CHARACTER_HERHIS_HIS
+		WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+
+		PantheonTerm = eu5_mayan_pantheon
+		PantheonTerm2 = eu5_mayan_pantheon
+		PantheonTerm3 = eu5_mayan_pantheon
+		PantheonTermHasHave = pantheon_term_have
+		GoodGodNames = { eu5_mayan_high eu5_mayan_water eu5_mayan_health eu5_mayan_creator }
+		DevilName = eu5_mayan_danger
+		DevilNamePossessive = eu5_mayan_danger_possessive
+		DevilSheHe = CHARACTER_SHEHE_IT
+		DevilHerHis = CHARACTER_HERHIS_ITS
+		DevilHerselfHimself = CHARACTER_ITSELF
+		EvilGodNames = { eu5_mayan_danger }
+		HouseOfWorship = eu5_mayan_shrine
+		HouseOfWorship2 = eu5_mayan_shrine
+		HouseOfWorship3 = eu5_mayan_shrine
+		HouseOfWorshipPlural = eu5_mayan_shrines
+		ReligiousSymbol = eu5_mayan_symbol
+		ReligiousSymbol2 = eu5_mayan_symbol
+		ReligiousSymbol3 = eu5_mayan_symbol
+		ReligiousText = eu5_mayan_text
+		ReligiousText2 = eu5_mayan_text
+		ReligiousText3 = eu5_mayan_text
+		ReligiousHeadName = eu5_mayan_head
+		ReligiousHeadNameFemale = eu5_mayan_head
+		ReligiousHeadTitleName = eu5_mayan_head_title
+		DevoteeMale = eu5_mayan_devotee
+		DevoteeMalePlural = eu5_mayan_devotees
+		DevoteeFemale = eu5_mayan_devotee
+		DevoteeFemalePlural = eu5_mayan_devotees
+		DevoteeNeuter = eu5_mayan_devotee
+		DevoteeNeuterPlural = eu5_mayan_devotees
+		PriestMale = eu5_mayan_priest
+		PriestMalePlural = eu5_mayan_priests
+		PriestFemale = eu5_mayan_priest
+		PriestFemalePlural = eu5_mayan_priests
+		PriestNeuter = eu5_mayan_priest
+		PriestNeuterPlural = eu5_mayan_priests
+		AltPriestTermPlural = eu5_mayan_priests
+		BishopMale = eu5_mayan_bishop
+		BishopMalePlural = eu5_mayan_bishops
+		BishopFemale = eu5_mayan_bishop
+		BishopFemalePlural = eu5_mayan_bishops
+		BishopNeuter = eu5_mayan_bishop
+		BishopNeuterPlural = eu5_mayan_bishops
+		DivineRealm = eu5_mayan_realm
+		DivineRealm2 = eu5_mayan_realm
+		DivineRealm3 = eu5_mayan_realm
+		PositiveAfterLife = eu5_mayan_afterlife_good
+		PositiveAfterLife2 = eu5_mayan_afterlife_good
+		PositiveAfterLife3 = eu5_mayan_afterlife_good
+		NegativeAfterLife = eu5_mayan_afterlife_other
+		NegativeAfterLife2 = eu5_mayan_afterlife_other
+		NegativeAfterLife3 = eu5_mayan_afterlife_other
+		DeathDeityName = eu5_mayan_death
+		DeathDeityNamePossessive = eu5_mayan_death_possessive
+		DeathDeitySheHe = CHARACTER_SHEHE_THEY
+		DeathDeityHerHis = CHARACTER_HERHIS_THEIR
+		DeathDeityHerHim = CHARACTER_HERHIM_THEM
+		WitchGodName = eu5_mayan_witch
+		WitchGodNamePossessive = eu5_mayan_witch_possessive
+		WitchGodSheHe = CHARACTER_SHEHE_HE
+		WitchGodHerHis = CHARACTER_HERHIS_HIS
+		WitchGodHerHim = CHARACTER_HERHIM_HIM
+		WitchGodMistressMaster = witch_spirit
+		WitchGodMotherFather = witch_source
+
+		GHWName = ghw_great_holy_war
+		GHWNamePlural = ghw_great_holy_wars
+	}
 }
 
 eu5_inti = {

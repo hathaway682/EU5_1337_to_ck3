@@ -1,0 +1,33 @@
+# EU5 Chupanid design, assigned to the 1337 Chobanid dynasty.
+chobanid_dynasty = {
+	pattern = "eu5dyn_pattern_solid.dds"
+	color1 = "eu5dyn_blue_light"
+	color2 = "eu5dyn_yellow"
+	color3 = "eu5dyn_white"
+	color4 = "eu5dyn_red_scarlet"
+
+	colored_emblem = {
+		texture = "eu5dyn_ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.9525 0.635 } }
+	}
+	colored_emblem = {
+		texture = "eu5dyn_ce_frame_circle.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 0.6375 0.425 } }
+	}
+	colored_emblem = {
+		texture = "eu5dyn_ce_tamgha_chupan.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.6375 0.425 } }
+	}
+	colored_emblem = {
+		texture = "eu5dyn_ce_mongol_round_frame_03.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.5 0.5 } scale = { 1.02 0.68 } }
+	}
+}

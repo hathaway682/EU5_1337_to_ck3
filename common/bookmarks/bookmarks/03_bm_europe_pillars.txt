@@ -1,0 +1,54 @@
+﻿bm_europe_pillars = {
+	start_date = 1337.4.1
+	is_playable = yes
+	group = bm_group_generated
+	weight = { value = 87 }
+
+	character = {
+		name = "bm_hundred_years_alfonso"
+		dynasty_house = house_burgundy_castile
+		dynasty_splendor_level = 3
+		type = male
+		birth = 1311.8.13
+		title = k_castille
+		government = feudal_government
+		culture = castilian
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = cas_alfonso_xi_burgundy
+		position = { 380 240 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = "bm_europe_granada"
+		dynasty = nasrid_dynasty
+		dynasty_splendor_level = 2
+		type = male
+		birth = 1318.6.29
+		title = d_granada
+		government = clan_government
+		culture = andalusian
+		religion = sunni
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = gra_yusuf_i_nasrid
+		position = { 760 510 }
+		animation = personality_bold
+	}
+
+	character = {
+		name = "bm_europe_morocco"
+		dynasty = marinid_dynasty
+		dynasty_splendor_level = 2
+		type = male
+		birth = 1297.1.1
+		title = k_maghreb
+		government = clan_government
+		culture = butr
+		religion = sunni
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = mor_abu_al_hasan_ali
+		position = { 380 785 }
+		animation = personality_bold
+	}
+}
