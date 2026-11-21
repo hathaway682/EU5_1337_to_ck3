@@ -1,0 +1,42 @@
+﻿# Apply the banks' starting progression after merchant domiciles and routes exist.
+on_game_start_after_lobby = {
+	on_actions = { eu5_historical_banks_start }
+}
+
+eu5_historical_banks_start = {
+	effect = {
+		character:brd_piero_bardi = {
+			add_realm_law_skip_effects = company_purpose_creditor
+			add_realm_law_skip_effects = company_size_huge
+			if = { limit = { NOT = { has_trait = lifestyle_merchant } } add_trait = lifestyle_merchant }
+			add_trait_xp = { trait = lifestyle_merchant track = creditor value = 100 }
+			domicile = { add_acumen = { value = 17000 subtract = acumen } }
+			title:c_merchant_eu5_bank_bardi = {
+				set_trade_good_category_xp = { target = trade_good_category:trade_category_precious_metals value = 15000 }
+			}
+			merchant_creditor_capstone_reward_effect = yes
+		}
+		character:eu5_bank_giovanni_peruzzi = {
+			add_realm_law_skip_effects = company_purpose_creditor
+			add_realm_law_skip_effects = company_size_huge
+			if = { limit = { NOT = { has_trait = lifestyle_merchant } } add_trait = lifestyle_merchant }
+			add_trait_xp = { trait = lifestyle_merchant track = creditor value = 100 }
+			domicile = { add_acumen = { value = 17000 subtract = acumen } }
+			title:c_merchant_eu5_bank_peruzzi = {
+				set_trade_good_category_xp = { target = trade_good_category:trade_category_precious_metals value = 15000 }
+			}
+			merchant_creditor_capstone_reward_effect = yes
+		}
+		character:acc_acciaiolo_acciaioli = {
+			add_realm_law_skip_effects = company_purpose_creditor
+			add_realm_law_skip_effects = company_size_huge
+			if = { limit = { NOT = { has_trait = lifestyle_merchant } } add_trait = lifestyle_merchant }
+			add_trait_xp = { trait = lifestyle_merchant track = creditor value = 100 }
+			domicile = { add_acumen = { value = 17000 subtract = acumen } }
+			title:c_merchant_eu5_bank_acciaioli = {
+				set_trade_good_category_xp = { target = trade_good_category:trade_category_precious_metals value = 15000 }
+			}
+			merchant_creditor_capstone_reward_effect = yes
+		}
+	}
+}

@@ -42,7 +42,7 @@ eu5_colonial_project_target_trigger = {
    AND = {
     $RULER$ = {
      culture ?= { has_innovation = innovation_pilot_books }
-     capital_province = { geographical_region = world_europe }
+     #capital_province = { geographical_region = world_europe }
      any_sub_realm_county = { title_province = { is_coastal = yes } }
     }
     any_de_jure_county = {
