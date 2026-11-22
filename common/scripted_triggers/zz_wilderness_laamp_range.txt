@@ -1,13 +1,9 @@
 ﻿ep3_laamp_diplo_range_trigger = {
 	custom_description = {
 		text = ep3_laamp_diplo_range_trigger_tt
-		subject = scope:actor
-		object = scope:recipient
-
-
-
-		NOT = { $TARGET$ = { has_trait = wilderness } }
-
+		subject = $LAAMP$
+		object = $TARGET$
+		NOT = { $TARGET$ = { has_government = wilderness_government } }
 		trigger_if = {
 			limit = { exists = $LAAMP$.domicile.domicile_location }
 			trigger_if = {

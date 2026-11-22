@@ -1400,11 +1400,6 @@ arrange_marriage_interaction = {
 
 #This interaction is referenced in code! If it's renamed you have to ping a coder
 marry_off_interaction = {
-	is_valid = {
-		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
-		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
-	}
-
 	icon = icon_marriage
 	category = interaction_category_diplomacy
 	common_interaction = yes
@@ -1666,7 +1661,7 @@ marry_off_interaction = {
 
 	is_shown = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
-		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
+		scope:secondary_actor ?= { tnh_non_wilderness_character_trigger = yes }
 		# Enable only for yourself if you're a landless adventurer
 		trigger_if = {
 			limit = {

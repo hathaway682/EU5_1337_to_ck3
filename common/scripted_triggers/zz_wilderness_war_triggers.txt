@@ -1,22 +1,54 @@
 ﻿herders_and_tributary_constraints = {
-
-	NOT = { has_trait = wilderness }
-	NOT = { government_has_flag = government_is_wilderness }
-	trigger_if = {
-		limit = { government_has_flag = government_is_herder }
-		custom_tooltip = {
-			text = is_a_herder_actor_cb_tt
-			always = no
-		}
-	}
-	is_tributary = no
-
-
+	NOT = { has_government = wilderness_government }
 	trigger_if = {
 		limit = { exists = scope:defender }
 		scope:defender = {
-			NOT = { has_trait = wilderness }
-			NOT = { government_has_flag = government_is_wilderness }
+			NOT = { has_government = wilderness_government }
+			save_temporary_scope_as = recipient # done for is_a_herder_defender_tt
+			NOR = {
+				custom_tooltip = {
+					text = is_a_herder_defender_tt					# herders can't fight
+					government_has_flag = government_is_herder
+				}
+				is_tributary_of_suzerain_or_above = scope:attacker	# can't fight your tributaries or your tributaries' tributaries
+			}
+			# You cannot attack your Confederation buddies tributaries
+			trigger_if = {
+				limit = {
+					exists = suzerain
+					suzerain != this
+					scope:attacker = { is_confederation_member = yes }
+					suzerain = { is_confederation_member = yes }
+				}
+				NOT = { scope:attacker.confederation = suzerain.confederation }
+			}
+		}
+		scope:attacker = { # Tributaries cannot attack their Suzerain or Suzerain's Confederation buddies
+			NOR = {
+				is_tributary_of_suzerain_or_above = scope:defender	# can't attack your own suzerain
+				trigger_if = {
+					limit = {
+						exists = suzerain
+						suzerain != this
+						scope:defender = { is_confederation_member = yes }
+						suzerain = { is_confederation_member = yes }
+					}
+					# if you have a suzerain who's part of a confederation, you may not attack any of its members
+					scope:defender.confederation = suzerain.confederation
+				}
+			}
+		}
+		#Mandala Vassals shouldn't attack their Liege's Tributaries
+		trigger_if = {
+			limit = {
+				scope:attacker = {
+					is_independent_ruler = no
+					liege ?= { government_has_flag = government_is_mandala }
+				}
+			}
+			NOT = {
+				scope:defender = { is_tributary_of = scope:attacker.liege }
+			}
 		}
 	}
 }

@@ -1,25 +1,6 @@
 ﻿barony_cannot_construct_holding = {
 	OR = {
-
-		barony.title_province = {
-			OR = {
-				terrain = desert
-				terrain = desert_mountains
-			}
-			geographical_region = world_africa_sahara
-		}
-
-
-
-
-
-
-
-		county ?= {
-			OR = {
-				is_wilderness_county_trigger = yes
-				is_colony_county_trigger = yes
-			}
-		}
+		county ?= { holder ?= { has_government = wilderness_government } }
+		barony.title_province = { cu_corridor_province_trigger = yes }
 	}
 }

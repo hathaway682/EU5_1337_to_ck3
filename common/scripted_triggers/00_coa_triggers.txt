@@ -126,6 +126,19 @@ coa_feudal_trigger = {
 	government_has_flag = government_is_feudal
 }
 
+coa_merchant_trigger = {
+	OR = {
+		AND = {
+			exists = root
+			government_has_flag = government_is_merchant
+		}
+		scope:title ?= {
+			exists = holder
+			holder = { government_has_flag = government_is_merchant }
+		}
+	}
+}
+
 coa_french_trigger = {
 	OR = {
 		scope:culture = { has_coa_gfx = french_coa_gfx }
@@ -222,7 +235,7 @@ coa_manx_trigger = {
 			any_liege_or_above = {
 				primary_title = {
 					OR = {
-						this = title:c_inner_hebrides
+						this = title:c_isle_of_man
 						this = title:d_the_isles # Mann
 					}
 				}
