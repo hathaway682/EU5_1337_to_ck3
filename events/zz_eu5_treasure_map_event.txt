@@ -1,0 +1,2522 @@
+﻿namespace = ep3_laamp_decision_event
+
+scripted_effect 1000_update_last_location_effect = {
+	if = {
+		limit = { has_variable = return_from_location }
+		remove_variable = return_from_location
+		set_variable = {
+			name = return_from_location
+			value = $LOCATION_FLAG$
+		}
+	}
+	else = {
+		set_variable = {
+			name = return_from_location
+			value = $LOCATION_FLAG$
+		}
+	}
+}
+
+scripted_trigger 1000_is_a_nomadic_holding_trigger = {
+	scope:visiting_location = {
+		is_nomadic_location_trigger = yes
+		holding_is_tribal = yes
+	}
+}
+
+scripted_effect 1001_return_to_second_effect = {
+	custom_tooltip = ep3_laamp_decision_event.return.tt
+	trigger_event = ep3_laamp_decision_event.1001
+}
+
+scripted_effect 1010_remember_vendor_character_effect = {
+	#Do we already remember them?
+	if = {
+		limit = {
+			has_variable = laamp_remembered_$GUILD$s_list #Notice the 's' right after GUILD (= 'merchants' instead of 'merchant')
+			any_in_list = {
+				variable = laamp_remembered_$GUILD$s_list
+				this = $CHARACTER$
+			}
+		}
+		#Replace old entry with a new one
+		remove_list_variable = {
+			name = laamp_remembered_$GUILD$s_list
+			target = $CHARACTER$
+		}
+		add_to_variable_list = {
+			name = laamp_remembered_$GUILD$s_list
+			target = $CHARACTER$
+			years = 10
+		}
+	}
+	#Otherwise just add 'em to the list
+	else = {
+		add_to_variable_list = {
+			name = laamp_remembered_$GUILD$s_list
+			target = $CHARACTER$
+			years = 10
+		}
+	}
+}
+
+scripted_trigger 1010_basic_merchant_checks_trigger = {
+	NOT = { 
+		has_any_bad_relationship_with_character_trigger = { CHARACTER = root }
+	}
+	is_available_adult = yes
+	#No double-dipping
+	trigger_if = {
+		limit = { exists = scope:laamp_supply_merchant }
+		this != scope:laamp_supply_merchant
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_artifact_peddler }
+		this != scope:laamp_artifact_peddler
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_town_crier }
+		this != scope:laamp_town_crier
+	}
+
+	#Tavern
+	trigger_if = {
+		limit = { exists = scope:laamp_storyteller }
+		this != scope:laamp_storyteller
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_first_recruit }
+		this != scope:laamp_first_recruit
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_second_recruit }
+		this != scope:laamp_second_recruit
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_third_recruit }
+		this != scope:laamp_third_recruit
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_generic_jane }
+		this != scope:laamp_generic_jane
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_spouse_material }
+		this != scope:laamp_spouse_material
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_hooded_figure }
+		this != scope:laamp_hooded_figure
+	}
+
+	#Church
+	trigger_if = {
+		limit = { exists = scope:laamp_healer_character }
+		this != scope:laamp_healer_character
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_clergy_character }
+		this != scope:laamp_clergy_character
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_physician_recruit }
+		this != scope:laamp_physician_recruit
+	}
+
+	#Castle
+	trigger_if = {
+		limit = { exists = scope:laamp_plain_guard }
+		this != scope:laamp_plain_guard
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_talented_guard }
+		this != scope:laamp_talented_guard
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_disgruntled_moa }
+		this != scope:laamp_disgruntled_moa
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_maa_reinforcer }
+		this != scope:laamp_maa_reinforcer
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_bodyguard_recruit }
+		this != scope:laamp_bodyguard_recruit
+	}
+
+	#City
+	trigger_if = {
+		limit = { exists = scope:laamp_weaponsmith_craftsman }
+		this != scope:laamp_weaponsmith_craftsman
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_armorer_craftsman}
+		this != scope:laamp_armorer_craftsman
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_jeweler_craftsman }
+		this != scope:laamp_jeweler_craftsman
+	}
+	trigger_if = {
+		limit = { exists = scope:laamp_quartermaster_recruit }
+		this != scope:laamp_quartermaster_recruit
+	}
+}
+
+scripted_trigger 1010_is_a_saved_merchant_trigger = {
+	root = {
+		is_target_in_variable_list = {
+			name = laamp_remembered_merchants_list
+			target = scope:saved_character_check
+		}
+	}
+}
+
+scripted_trigger 1010_is_a_saved_peddler_trigger = {
+	root = {
+		is_target_in_variable_list = {
+			name = laamp_remembered_peddlers_list
+			target = scope:saved_character_check
+		}
+	}
+}
+
+scripted_trigger 1010_is_a_saved_crier_trigger = {
+	root = {
+		is_target_in_variable_list = {
+			name = laamp_remembered_criers_list
+			target = scope:saved_character_check
+		}
+	}
+}
+
+scripted_trigger 1010_is_a_saved_storyteller_trigger = {
+	root = {
+		is_target_in_variable_list = {
+			name = laamp_remembered_storytellers_list
+			target = scope:saved_character_check
+		}
+	}
+}
+
+scripted_trigger 1010_is_a_saved_thief_trigger = {
+	root = {
+		is_target_in_variable_list = {
+			name = laamp_remembered_thiefs_list #Don't judge me, 'thiefs' is most consequential
+			target = scope:saved_character_check
+		}
+	}
+}
+
+scripted_trigger 1010_is_a_saved_healer_trigger = {
+	root = {
+		is_target_in_variable_list = {
+			name = laamp_remembered_healers_list
+			target = scope:saved_character_check
+		}
+	}
+}
+
+scripted_trigger 1010_is_a_saved_clergy_trigger = {
+	root = {
+		is_target_in_variable_list = {
+			name = laamp_remembered_clergys_list
+			target = scope:saved_character_check
+		}
+	}
+}
+
+scripted_trigger 1010_is_a_saved_physician_trigger = {
+	root = {
+		is_target_in_variable_list = {
+			name = laamp_remembered_physicians_list
+			target = scope:saved_character_check
+		}
+	}
+}
+
+scripted_trigger 1010_is_a_saved_bodyguard_trigger = {
+	root = {
+		is_target_in_variable_list = {
+			name = laamp_remembered_bodyguards_list
+			target = scope:saved_character_check
+		}
+	}
+}
+
+scripted_trigger 1010_is_a_saved_weaponsmith_trigger = {
+	root = {
+		is_target_in_variable_list = {
+			name = laamp_remembered_weaponsmiths_list
+			target = scope:saved_character_check
+		}
+	}
+}
+
+scripted_trigger 1010_is_a_saved_armorer_trigger = {
+	root = {
+		is_target_in_variable_list = {
+			name = laamp_remembered_armorers_list
+			target = scope:saved_character_check
+		}
+	}
+}
+
+scripted_trigger 1010_is_a_saved_jeweler_trigger = {
+	root = {
+		is_target_in_variable_list = {
+			name = laamp_remembered_jewelers_list
+			target = scope:saved_character_check
+		}
+	}
+}
+
+scripted_trigger 1010_is_a_saved_quartermaster_trigger = {
+	root = {
+		is_target_in_variable_list = {
+			name = laamp_remembered_quartermasters_list
+			target = scope:saved_character_check
+		}
+	}
+}
+
+scripted_effect 1025_set_and_check_scene_loc_tracker_scope_effect = {
+	if = {
+		limit = {
+			NOT = { exists = scope:$SCENE$_loc_tracker }	#e.g. scope:weaponsmith_loc_tracker
+		}
+		save_scope_value_as = {
+			name = $SCENE$_loc_tracker
+			value = 0
+		}
+	}
+	else_if = {
+		limit = { scope:$SCENE$_loc_tracker ?= 1 }
+		save_scope_value_as = {
+			name = $SCENE$_loc_tracker
+			value = 0
+		}
+	}
+	else = {
+		save_scope_value_as = {
+			name = $SCENE$_loc_tracker
+			value = 1
+		}			
+	}
+}
+
+scripted_effect 1025_finished_contract_effect = {
+	#Set up the cooldown for the contract action
+	set_variable = {
+		name = 1025_has_contracted_recently
+		days = visit_settlement_minimum_cooldown_days
+	}
+	#We're done here
+	save_scope_value_as = { 
+		name = laamp_decision_has_contracted 
+		value = flag:yes	
+	}
+	#Go back to the main event
+	hidden_effect = { 1001_return_to_second_effect = yes }
+}
+
+scripted_effect 1025_save_random_county_province_effect = {
+	random_county_in_region = {
+		region = $REGION$
+		random_county_province = { save_scope_as = contract_province }	
+	}
+}
+
+scripted_effect 1025_set_contract_location_effect = {
+	if = {
+		limit = { scope:visiting_location = { geographical_region = eu5_subcontinent_north_america } }
+		1025_save_random_county_province_effect = { REGION = eu5_subcontinent_north_america }
+		if = { limit = { NOT = { exists = scope:contract_province } } scope:visiting_location = { save_scope_as = contract_province } }
+	}
+	else_if = {
+		limit = { scope:visiting_location = { geographical_region = eu5_subcontinent_south_america } }
+		1025_save_random_county_province_effect = { REGION = eu5_subcontinent_south_america }
+		if = { limit = { NOT = { exists = scope:contract_province } } scope:visiting_location = { save_scope_as = contract_province } }
+	}
+	else = {
+	random_list = {
+		#North Europe
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_europe_north }
+			}
+			1025_save_random_county_province_effect = { REGION = world_europe_north }
+		}
+		#West Europe
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_europe_west }
+			}
+			1025_save_random_county_province_effect = { REGION = world_europe_west }
+		}
+		#East Europe
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_europe_east }
+			}
+			1025_save_random_county_province_effect = { REGION = world_europe_east }
+		}
+		#South Europe
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_europe_south }
+			}
+			1025_save_random_county_province_effect = { REGION = world_europe_south }
+		}
+		#Middle East
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_middle_east }
+			}
+			1025_save_random_county_province_effect = { REGION = world_middle_east }
+		}
+		#India
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_india }
+			}
+			1025_save_random_county_province_effect = { REGION = world_india }
+		}
+		#North Africa
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_africa_north }
+			}
+			1025_save_random_county_province_effect = { REGION = world_africa_north }
+		}
+		#West Africa
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_africa_west }
+			}
+			1025_save_random_county_province_effect = { REGION = world_africa_west }
+		}
+		#East Africa
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_africa_east }
+			}
+			1025_save_random_county_province_effect = { REGION = world_africa_east }
+		}
+		#Sahara
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_africa_sahara }
+			}
+			1025_save_random_county_province_effect = { REGION = world_africa_sahara }
+		}
+		#Siberia
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_siberia }
+			}
+			1025_save_random_county_province_effect = { REGION = world_siberia }
+		}
+		#West Steppe
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_steppe_west }
+			}
+			1025_save_random_county_province_effect = { REGION = world_steppe_west }
+		}
+		#Central Steppe
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_steppe_central }
+			}
+			1025_save_random_county_province_effect = { REGION = world_steppe_central }
+		}
+		#East Steppe
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_steppe_east }
+			}
+			1025_save_random_county_province_effect = { REGION = world_steppe_east }
+		}
+		#Tarim
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_steppe_tarim }
+			}
+			1025_save_random_county_province_effect = { REGION = world_steppe_tarim }
+		}
+		#Tibet
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_tibet }
+			}
+			1025_save_random_county_province_effect = { REGION = world_tibet }
+		}
+		# Mainland SE Asia
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_asia_southeast_mainland }
+			}
+			1025_save_random_county_province_effect = { REGION = world_asia_southeast_mainland }
+		}
+		# Maritime SE Asia
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_asia_southeast_islands }
+			}
+			1025_save_random_county_province_effect = { REGION = world_asia_southeast_islands }
+		}
+		#China
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_asia_china }
+			}
+			1025_save_random_county_province_effect = { REGION = world_asia_china }
+		}
+		#Japan
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_asia_japan }
+			}
+			1025_save_random_county_province_effect = { REGION = world_asia_japan }
+		}
+		#Korea
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_asia_korea }
+			}
+			1025_save_random_county_province_effect = { REGION = world_asia_korea }
+		}
+		#Sakhalin-Hokkaido
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_asia_sakhalin_hokkaido }
+			}
+			1025_save_random_county_province_effect = { REGION = world_asia_sakhalin_hokkaido }
+		}
+		#North East Asia
+		10 = {
+			trigger = {
+				scope:visiting_location = { geographical_region = world_asia_north_east }
+			}
+			1025_save_random_county_province_effect = { REGION = world_asia_north_east }
+		}
+	}	
+	}
+}
+
+scripted_effect 1025_randomize_and_remember_contract_type_effect = {
+	#Find an employer to check the trigger against
+	scope:visiting_location.county = {
+		holder ?= {
+			if = {
+				limit = { 1025_is_appropriate_landed_contract_employer_trigger = yes }
+				add_to_temporary_list = potential_contract_employers
+			}
+			every_vassal_or_below ?= {
+				limit = { 1025_is_appropriate_landed_contract_employer_trigger = yes }
+				add_to_temporary_list = potential_contract_employers 
+			}	
+			top_liege ?= {
+				if = {
+					limit = { 1025_is_appropriate_landed_contract_employer_trigger = yes }
+					add_to_temporary_list = potential_contract_employers
+				}
+				every_vassal_or_below ?= {
+					limit = { 1025_is_appropriate_landed_contract_employer_trigger = yes }
+					add_to_temporary_list = potential_contract_employers 
+				}	
+			}
+		}
+		every_neighboring_county ?= { 
+			holder ?= {
+				if = {
+					limit = { 1025_is_appropriate_landed_contract_employer_trigger = yes }
+				}
+				add_to_temporary_list = potential_contract_employers
+				every_vassal_or_below ?= {
+					limit = { 1025_is_appropriate_landed_contract_employer_trigger = yes }
+					add_to_temporary_list = potential_contract_employers 
+				}
+				top_liege ?= {
+					if = {
+						limit = { 1025_is_appropriate_landed_contract_employer_trigger = yes }
+						add_to_temporary_list = potential_contract_employers
+					}
+					every_vassal_or_below ?= {
+						limit = { 1025_is_appropriate_landed_contract_employer_trigger = yes }
+						add_to_temporary_list = potential_contract_employers 
+					}	
+				}
+			}	
+		}
+	}
+	#Pick actual contract groups
+	random_list = {
+		#Nothing at all!
+		10 = { 
+			modifier = {
+				1000_is_a_nomadic_holding_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				num_offered_task_contracts > 5
+				add = 20
+			}
+			modifier = {
+				num_offered_task_contracts > 10
+				add = 20
+			}
+			#No contracts
+		}
+		#Treasure Map
+		5 = {
+			#Do we already have a treasure map contract?
+			trigger = {
+				NOR = {
+					#Is this contract type already saved from our last visit?
+					trigger_if = {
+						limit = { 1025_location_has_a_saved_contract_type_trigger = yes }
+						1025_saved_location_contract_type_matches_this_type_trigger = { CONTRACT_TYPE_FLAG = flag:treasure_map_contract }
+					}
+					trigger_else = { always = no }
+					#Do we already have an active Treasure Map contract?
+					any_character_artifact = { has_variable = 1025_treasure_map }
+					any_character_task_contract = { task_contract_type = laamp_treasure_map_contract }
+					#Are we on cooldown?
+					has_variable = 1025_had_treasure_map_contract_recently
+					#Has this contract type already been assigned to another contract scope this visit?
+					1025_contract_type_is_assigned_trigger = { CONTRACT_TYPE_FLAG = flag:treasure_map_contract } 
+				}
+			}
+			#Set the type
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:treasure_map_contract
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			set_variable = {
+				name = 1025_$NUM$_contract_desc
+				value = flag:treasure_map_contract
+			}
+		}
+		#Legendary Contract
+		5 = {
+			#Did we spawn a legendary contract recently?
+			trigger = {
+				prestige_level >= tier_kingdom
+				1025_can_create_legendary_contract_trigger = yes
+				NOR = { 
+					#Are we on cooldown?
+					has_variable = 1025_had_legendary_contract_recently
+					#Has this contract type already been assigned to another contract scope this visit?
+					1025_contract_type_is_assigned_trigger = { CONTRACT_TYPE_FLAG = flag:legendary_contract } 
+				}
+			}
+			#Set the type
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:legendary_contract
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			set_variable = {
+				name = 1025_$NUM$_contract_desc
+				value = flag:legendary_contract
+			}
+			#Yes, I will whack you with a double cooldown on legendaries. It's shorter if you don't pick the option though
+			set_variable = {
+				name = 1025_had_legendary_contract_recently
+				days = visit_settlement_minimum_cooldown_days
+			}
+		}
+		#Transport Contracts
+		20 = {
+			#Did we spawn transport contracts recently?
+			trigger = {
+				NOR = {
+					#Is this contract type already saved from our last visit?
+					trigger_if = {
+						limit = { 1025_location_has_a_saved_contract_type_trigger = yes }
+						1025_saved_location_contract_type_matches_this_type_trigger = { CONTRACT_TYPE_FLAG = flag:transport_contracts }
+					}
+					trigger_else = { always = no }
+					#Are we on cooldown?
+					has_variable = 1025_had_transport_contracts_recently
+					#Has this contract type already been assigned to another contract scope this visit?
+					1025_contract_type_is_assigned_trigger = { CONTRACT_TYPE_FLAG = flag:transport_contracts } 
+				}
+				#Can we actually spawn any transport contracts?
+				any_in_List = {
+					list = potential_contract_employers
+					save_temporary_scope_as = considered_employer
+					can_create_transport_contract_trigger = { LAAMP = root EMPLOYER = scope:considered_employer }
+				} 
+			}
+			#More transports for the baggage train
+			modifier = {
+				domicile ?= { has_domicile_building = baggage_train_01 }
+				factor = 2
+			}
+			#Set the type
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:transport_contracts
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			set_variable = {
+				name = 1025_$NUM$_contract_desc
+				value = flag:transport_contracts
+			}
+		}
+		#Criminal Contracts
+		20 = {
+			#Did we spawn criminal contracts recently?
+			trigger = {
+				NOR = {
+					#Is this contract type already saved from our last visit?
+					trigger_if = {
+						limit = { 1025_location_has_a_saved_contract_type_trigger = yes }
+						1025_saved_location_contract_type_matches_this_type_trigger = { CONTRACT_TYPE_FLAG = flag:criminal_contracts }
+					}
+					trigger_else = { always = no }
+					#Are we on cooldown?
+					has_variable = 1025_had_criminal_contracts_recently
+					#Has this contract type already been assigned to another contract scope this visit?
+					1025_contract_type_is_assigned_trigger = { CONTRACT_TYPE_FLAG = flag:criminal_contracts } 
+				}
+				#Can we actually spawn any criminal contracts?
+				any_in_list = {
+					list = potential_contract_employers
+					save_temporary_scope_as = considered_employer
+					can_create_criminal_contract_trigger = { LAAMP = root EMPLOYER = scope:considered_employer }
+				} 
+			}
+			#More criminals... if corrupt location
+			modifier = {
+				scope:visiting_location.county = { has_county_corruption_trigger = yes }
+				add = 10
+			}
+			modifier = {
+				scope:visiting_location.county = { county_control < county_control_baseline }
+				add = 10
+			}
+			#Are you actually looking for criminal contracts?
+			modifier = {
+				has_trait = honest
+				factor = 0.5
+			}
+			modifier = {
+				has_trait = deceitful
+				factor = 2
+			}
+			#Set the type
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:criminal_contracts
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			set_variable = {
+				name = 1025_$NUM$_contract_desc
+				value = flag:criminal_contracts
+			}
+		}
+		#Justicar Contracts
+		20 = { 
+			#Did we spawn justicar contracts recently?
+			trigger = {
+				NOR = {
+					#Is this contract type already saved from our last visit?
+					trigger_if = {
+						limit = { 1025_location_has_a_saved_contract_type_trigger = yes }
+						1025_saved_location_contract_type_matches_this_type_trigger = { CONTRACT_TYPE_FLAG = flag:justicar_contracts }
+					}
+					trigger_else = { always = no }
+					#Are we on cooldown?
+					has_variable = 1025_had_justicar_contracts_recently
+					#Has this contract type already been assigned to another contract scope this visit?
+					1025_contract_type_is_assigned_trigger = { CONTRACT_TYPE_FLAG = flag:justicar_contracts } 
+				}
+				#Can we actually spawn any justicar contracts?
+				any_in_list = {
+					list = potential_contract_employers
+					save_temporary_scope_as = considered_employer
+					can_create_justicar_contract_trigger = { LAAMP = root EMPLOYER = scope:considered_employer }
+				}
+			}
+			#More criminals... if corrupt location
+			modifier = {
+				scope:visiting_location.county = { has_county_corruption_trigger = yes }
+				add = 10
+			}
+			modifier = {
+				scope:visiting_location.county = { county_control < county_control_baseline }
+				add = 10
+			}
+			#You're pretty law-abiding?
+			modifier = {
+				OR = {
+					has_trait = honest
+					has_trait = just
+					has_trait = gallant
+					has_focus = martial_chivalry_focus
+				}
+				factor = 2
+			}
+			modifier = {
+				has_trait = deceitful
+				factor = 0.5
+			}
+			#Set the type
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:justicar_contracts
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			set_variable = {
+				name = 1025_$NUM$_contract_desc
+				value = flag:justicar_contracts
+			}
+		}
+		#Hireling Contracts
+		20 = { 
+			#Did we spawn hireling contracts recently?
+			trigger = {
+				NOR = {
+					#Is this contract type already saved from our last visit?
+					trigger_if = {
+						limit = { 1025_location_has_a_saved_contract_type_trigger = yes }
+						1025_saved_location_contract_type_matches_this_type_trigger = { CONTRACT_TYPE_FLAG = flag:hireling_contracts }
+					}
+					trigger_else = { always = no }
+					#Are we on cooldown?
+					has_variable = 1025_had_hireling_contracts_recently
+					#Has this contract type already been assigned to another contract scope this visit?
+					1025_contract_type_is_assigned_trigger = { CONTRACT_TYPE_FLAG = flag:hireling_contracts } 
+				}
+				#Can we actually spawn any hireling contracts?
+				any_in_list = {
+					list = potential_contract_employers
+					save_temporary_scope_as = considered_employer
+					can_create_hireling_contract_trigger = { LAAMP = root EMPLOYER = scope:considered_employer }
+				} 
+			}
+			#Set the type
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:hireling_contracts
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			set_variable = {
+				name = 1025_$NUM$_contract_desc
+				value = flag:hireling_contracts
+			}
+		}
+		#Diplomacy Contracts
+		20 = { 
+			#Did we spawn diplomacy contracts recently?
+			trigger = {
+				NOR = {
+					#Is this contract type already saved from our last visit?
+					trigger_if = {
+						limit = { 1025_location_has_a_saved_contract_type_trigger = yes }
+						1025_saved_location_contract_type_matches_this_type_trigger = { CONTRACT_TYPE_FLAG = flag:diplomacy_contracts }
+					}
+					trigger_else = { always = no }
+					#Are we on cooldown?
+					has_variable = 1025_had_diplomacy_contracts_recently
+					#Has this contract type already been assigned to another contract scope this visit?
+					1025_contract_type_is_assigned_trigger = { CONTRACT_TYPE_FLAG = flag:diplomacy_contracts } 
+				}
+				#Can we actually spawn any diplomacy contracts?
+				any_in_list = {
+					list = potential_contract_employers
+					save_temporary_scope_as = considered_employer
+					can_create_diplomacy_contract_trigger = { LAAMP = root EMPLOYER = scope:considered_employer }
+				} 
+			}
+			#Set the type
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:diplomacy_contracts
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			set_variable = {
+				name = 1025_$NUM$_contract_desc
+				value = flag:diplomacy_contracts
+			}
+		}
+		#Stewardship Contracts
+		20 = { 
+			#Did we spawn stewardship contracts recently?
+			trigger = {
+				NOR = {
+					#Is this contract type already saved from our last visit?
+					trigger_if = {
+						limit = { 1025_location_has_a_saved_contract_type_trigger = yes }
+						1025_saved_location_contract_type_matches_this_type_trigger = { CONTRACT_TYPE_FLAG = flag:stewardship_contracts }
+					}
+					trigger_else = { always = no }
+					#Are we on cooldown?
+					has_variable = 1025_had_stewardship_contracts_recently
+					#Has this contract type already been assigned to another contract scope this visit?
+					1025_contract_type_is_assigned_trigger = { CONTRACT_TYPE_FLAG = flag:stewardship_contracts }
+				}
+				#Can we actually spawn any stewardship contracts?
+				any_in_list = {
+					list = potential_contract_employers
+					save_temporary_scope_as = considered_employer
+					can_create_stewardship_contract_trigger = { LAAMP = root EMPLOYER = scope:considered_employer }
+				}
+			}
+			#More organization in highly developed areas
+			modifier = {
+				scope:visiting_location.county = { prosperity_level > bad_prosperity_level }
+				add = 10
+			}
+			modifier = {
+				scope:visiting_location.county = { prosperity_level > medium_prosperity_level }
+				add = 10
+			}
+			#You're shrewd?
+			modifier = {
+				OR = {
+					has_trait = governor
+					has_trait = diligent
+					has_trait = administrator
+				}
+				factor = 2
+			}
+			#Set the type
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:stewardship_contracts
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			set_variable = {
+				name = 1025_$NUM$_contract_desc
+				value = flag:stewardship_contracts
+			}
+		}
+		#Learning Contracts
+		20 = { 
+			#Did we spawn learning contracts recently?
+			trigger = {
+				NOR = {
+					#Is this contract type already saved from our last visit?
+					trigger_if = {
+						limit = { 1025_location_has_a_saved_contract_type_trigger = yes }
+						1025_saved_location_contract_type_matches_this_type_trigger = { CONTRACT_TYPE_FLAG = flag:learning_contracts }
+					}
+					trigger_else = { always = no }
+					#Are we on cooldown?
+					has_variable = 1025_had_learning_contracts_recently
+					#Has this contract type already been assigned to another contract scope this visit?
+					1025_contract_type_is_assigned_trigger = { CONTRACT_TYPE_FLAG = flag:learning_contracts } 
+				}
+				#Can we actually spawn any learning contracts?
+				any_in_list = {
+					list = potential_contract_employers
+					save_temporary_scope_as = considered_employer
+					can_create_learning_contract_trigger = { LAAMP = root EMPLOYER = scope:considered_employer }
+				}
+			}
+			modifier = {
+				scope:visiting_location.county = { prosperity_level > medium_prosperity_level }
+				add = 10
+			}
+			modifier = {
+				scope:visiting_location = { holding_is_church = yes }
+				add = 10
+			}
+			#You're... academic?
+			modifier = {
+				has_trait = erudite
+				factor = 2
+			}
+			#Set the type
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:learning_contracts
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			set_variable = {
+				name = 1025_$NUM$_contract_desc
+				value = flag:learning_contracts
+			}
+		}
+		#Intrigue Contracts
+		20 = { 
+			#Did we spawn intrigue contracts recently?
+			trigger = {
+				NOR = {
+					#Is this contract type already saved from our last visit?
+					trigger_if = {
+						limit = { 1025_location_has_a_saved_contract_type_trigger = yes }
+						1025_saved_location_contract_type_matches_this_type_trigger = { CONTRACT_TYPE_FLAG = flag:intrigue_contracts }
+					}
+					trigger_else = { always = no }
+					#Are we on cooldown?
+					has_variable = 1025_had_intrigue_contracts_recently
+					#Has this contract type already been assigned to another contract scope this visit?
+					1025_contract_type_is_assigned_trigger = { CONTRACT_TYPE_FLAG = flag:intrigue_contracts }
+				}
+				#Can we actually spawn any intrigue contracts?
+				any_in_list = {
+					list = potential_contract_employers
+					save_temporary_scope_as = considered_employer
+					can_create_intrigue_contract_trigger = { LAAMP = root EMPLOYER = scope:considered_employer }
+				}
+			}
+			modifier = {
+				scope:visiting_location = { holding_is_church = yes }
+				add = 10
+			}
+			#You're... schemer?
+			modifier = {
+				has_trait = schemer
+				factor = 2
+			}
+			#Set the type
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:intrigue_contracts
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			set_variable = {
+				name = 1025_$NUM$_contract_desc
+				value = flag:intrigue_contracts
+			}
+		}
+		#Add more contract types below VV
+	}
+	scope:visiting_location = {
+		#Clean up any old variables
+		if = {
+			limit = { has_variable = 1025_saved_$NUM$_contract_type }
+			remove_variable = 1025_saved_$NUM$_contract_type
+		}
+		#We will not be saving legendary contracts as those are more volatile (does employer still exist? etc)
+		if = {
+			limit = { scope:1025_$NUM$_contract ?= flag:legendary_contract }
+			#Nothing
+		}
+		else_if = {
+			limit = { exists = scope:1025_$NUM$_contract }
+			#Remember this to avoid decision-scumming
+			set_variable = {
+				name = 1025_saved_$NUM$_contract_type #i.e. 1025_saved_first_contract_type
+				value = scope:1025_$NUM$_contract #i.e. flag:treasure_map_contract
+				days = visit_settlement_minimum_cooldown_days
+			}
+		}
+		else = {
+			save_scope_value_as = {
+				name = 1025_$NUM$_no_contract
+				value = flag:no_contract
+			}
+			#Remember this to avoid decision-scumming
+			set_variable = {
+				name = 1025_saved_$NUM$_contract_type
+				value = scope:1025_$NUM$_no_contract
+				days = visit_settlement_minimum_cooldown_days
+			}
+		}
+	}	
+}
+
+scripted_effect 1025_generate_employer_effect = {
+	#Treasure Map
+	if = {
+		limit = { scope:1025_$NUM$_contract = flag:treasure_map_contract }
+		#Find an employer for the treasure map contract
+		random_pool_character = {
+			province = scope:visiting_location
+			limit = {
+				1025_is_old_and_unable_trigger = yes
+				1025_appropriate_contract_employer_trigger = yes
+			}
+			save_scope_as = 1025_$NUM$_contract_employer
+		}
+		#Or create someone
+		if = {
+			limit = {
+				NOT = { exists = scope:1025_$NUM$_contract_employer }
+			}
+			create_character = {
+				template = generic_peasant_character
+				age = { 50 70 }
+				location = scope:visiting_location
+				dynasty = none
+				culture = scope:visiting_location.culture
+				faith = scope:visiting_location.faith
+				rite = scope:visiting_location.rite
+				save_scope_as = 1025_$NUM$_contract_employer
+			}
+			scope:1025_$NUM$_contract_employer = {
+				random_list = {
+					10 = { add_trait = blind }
+					10 = { add_trait = one_legged }
+					10 = { add_trait = one_eyed }
+					10 = { add_trait = infirm }
+					10 = { add_trait = wounded_2 }
+				}
+			}
+		}
+	}
+}
+
+scripted_effect 1025_find_ruler_and_spawn_legendary_contract_effect = { 
+	#Saves us a scope:employing_ruler
+	random_county_in_region = {
+		region = $REGION$
+		limit = { 1025_region_has_suitable_employer_trigger = yes }
+		save_scope_as = contract_county
+		#Find the ruler
+		scope:contract_county.holder = { save_scope_as = employing_ruler }
+	}
+	#Legendary... contracts?
+	random_list = {
+		#Raid
+		10 = {
+			trigger = {
+				can_create_task_contract = {
+					type_name = laamp_raid_contract
+					employer = scope:employing_ruler
+				}
+			}
+			create_task_contract = {
+				task_contract_type = laamp_raid_contract
+				location = scope:employing_ruler.capital_province
+				task_contract_employer = scope:employing_ruler
+				task_contract_tier = task_contract_t3_value #Legendary!
+				save_scope_as = 1025_legendary_contract
+			}
+		}
+		10 = {
+			trigger = {
+				can_create_task_contract = {
+					type_name = laamp_steal_artifact_contract
+					employer = scope:employing_ruler
+				}
+			}
+			create_task_contract = {
+				task_contract_type = laamp_steal_artifact_contract
+				location = scope:employing_ruler.capital_province
+				task_contract_employer = scope:employing_ruler
+				task_contract_tier = task_contract_t3_value #Legendary!
+				save_scope_as = 1025_legendary_contract
+			}
+		}
+		10 = {
+			trigger = {
+				can_create_task_contract = {
+					type_name = laamp_treasure_hunting_contract
+					employer = scope:employing_ruler
+				}
+			}
+			create_task_contract = {
+				task_contract_type = laamp_treasure_hunting_contract
+				location = scope:employing_ruler.capital_province
+				task_contract_employer = scope:employing_ruler
+				task_contract_tier = task_contract_t3_value #Legendary!
+				save_scope_as = 1025_legendary_contract
+			}
+		}
+		10 = {
+			trigger = {
+				can_create_task_contract = {
+					type_name = laamp_transport_vip
+					employer = scope:employing_ruler
+				}
+			}
+			create_task_contract = {
+				task_contract_type = laamp_transport_vip
+				location = scope:employing_ruler.capital_province
+				task_contract_employer = scope:employing_ruler
+				task_contract_tier = task_contract_t3_value #Legendary!
+				save_scope_as = 1025_legendary_contract
+			}
+		}
+		10 = {
+			trigger = {
+				can_create_task_contract = {
+					type_name = laamp_transport_artifact
+					employer = scope:employing_ruler
+				}
+			}
+			create_task_contract = {
+				task_contract_type = laamp_transport_artifact
+				location = scope:employing_ruler.capital_province
+				task_contract_employer = scope:employing_ruler
+				task_contract_tier = task_contract_t3_value #Legendary!
+				save_scope_as = 1025_legendary_contract
+			}
+		}
+		10 = {
+			trigger = {
+				can_create_task_contract = {
+					type_name = laamp_transport_gold
+					employer = scope:employing_ruler
+				}
+			}
+			create_task_contract = {
+				task_contract_type = laamp_transport_gold
+				location = scope:employing_ruler.capital_province
+				task_contract_employer = scope:employing_ruler
+				task_contract_tier = task_contract_t3_value #Legendary!
+				save_scope_as = 1025_legendary_contract
+			}
+		}
+		10 = {
+			trigger = {
+				can_create_task_contract = {
+					type_name = laamp_transport_animal
+					employer = scope:employing_ruler
+				}
+			}
+			create_task_contract = {
+				task_contract_type = laamp_transport_animal
+				location = scope:employing_ruler.capital_province
+				task_contract_employer = scope:employing_ruler
+				task_contract_tier = task_contract_t3_value #Legendary!
+				save_scope_as = 1025_legendary_contract
+			}
+		}
+	}
+	scope:1025_legendary_contract = {
+		set_variable = {
+			name = retain_despite_distance
+			value = yes
+		}
+	}
+}
+
+scripted_effect 1025_option_picked_spawn_contract_effect = {
+	#Treasure Map
+	switch = {
+		trigger = scope:1025_$NUM$_contract
+		flag:treasure_map_contract = {
+			hidden_effect = {
+				#Create treasure map contract
+				create_task_contract = {
+					task_contract_type = laamp_treasure_map_contract
+					location = scope:visiting_location
+					task_contract_employer = scope:1025_$NUM$_contract_employer
+					task_contract_tier = scope:1025_$NUM$_contract_employer.task_contract_tier_value
+					save_scope_as = 1025_treasure_map_contract
+				}
+				scope:1025_treasure_map_contract ?= {
+					#Pick treasure location
+					1025_set_contract_location_effect = yes
+					#Save location on contract
+					if = {
+						limit = { exists = scope:contract_province }
+						set_variable = {
+							name = contract_treasure_location
+							value = scope:contract_province
+						}
+					}
+					#Fallback
+					else = {
+						random_county_in_region = {
+							region = world_asia_minor #Something something Bosnia
+							random_county_province = { save_scope_as = treasure_province }	
+						}
+						set_variable = {
+							name = contract_treasure_location
+							value = scope:treasure_province
+						}
+					}
+					#Save the pick-up location
+					set_variable = {
+						name = contract_picked_up_in_location
+						value = scope:visiting_location
+					}
+				}
+			}
+			#What do you mean _in your face_ :c
+			scope:1025_treasure_map_contract = {
+				open_view_data = {
+					view = task_contract
+					player = root
+				}
+			}
+		}
+		#Legendary Contract
+		flag:legendary_contract = {
+			hidden_effect = { #Comment out this hidden_effect = { ... } to better survey what contracts become available while debugging
+				#North Europe
+				if = {
+					limit = {
+						scope:visiting_location = { geographical_region = world_europe_north }
+					}
+					1025_find_ruler_and_spawn_legendary_contract_effect = { REGION = world_europe_north }
+				}
+				#West Europe
+				else_if = {
+					limit = {
+						scope:visiting_location = { geographical_region = world_europe_west }
+					}
+					1025_find_ruler_and_spawn_legendary_contract_effect = { REGION = world_europe_west }
+				}
+				#East Europe
+				else_if = {
+					limit = {
+						scope:visiting_location = { geographical_region = world_europe_east }
+					}
+					1025_find_ruler_and_spawn_legendary_contract_effect = { REGION = world_europe_east }
+				}
+				#South Europe
+				else_if = {
+					limit = {
+						scope:visiting_location = { geographical_region = world_europe_south }
+					}
+					1025_find_ruler_and_spawn_legendary_contract_effect = { REGION = world_europe_south }
+				}
+				#Middle East
+				else_if = {
+					limit = {
+						scope:visiting_location = { geographical_region = world_middle_east }
+					}
+					1025_find_ruler_and_spawn_legendary_contract_effect = { REGION = world_middle_east }
+				}
+				#India
+				else_if = {
+					limit = {
+						scope:visiting_location = { geographical_region = world_india }
+					}
+					1025_find_ruler_and_spawn_legendary_contract_effect = { REGION = world_india }
+				}
+				#North Africa
+				else_if = {
+					limit = {
+						scope:visiting_location = { geographical_region = world_africa_north }
+					}
+					1025_find_ruler_and_spawn_legendary_contract_effect = { REGION = world_africa_north }
+				}
+				#West Africa
+				else_if = {
+					limit = {
+						scope:visiting_location = { geographical_region = world_africa_west }
+					}
+					1025_find_ruler_and_spawn_legendary_contract_effect = { REGION = world_africa_west }
+				}
+				#East Africa
+				else_if = {
+					limit = {
+						scope:visiting_location = { geographical_region = world_africa_east }
+					}
+					1025_find_ruler_and_spawn_legendary_contract_effect = { REGION = world_africa_east }
+				}
+				#West Steppe
+				else_if = {
+					limit = {
+						scope:visiting_location = { geographical_region = world_steppe_west }
+					}
+					1025_find_ruler_and_spawn_legendary_contract_effect = { REGION = world_steppe_west }
+				}
+				#East Steppe
+				else_if = {
+					limit = {
+						scope:visiting_location = { geographical_region = world_steppe_east }
+					}
+					1025_find_ruler_and_spawn_legendary_contract_effect = { REGION = world_steppe_east }
+				}
+				#YOLO
+				else = {
+					random_ruler = {
+						limit = {
+							save_temporary_scope_as = ruler_check
+							valid_laamp_basic_trigger = {
+								EMPLOYER = scope:ruler_check
+								LAAMP = root
+							}
+						}
+						save_scope_as = employing_ruler
+					}
+				}
+			}
+			#What do you mean _in your face_ :c
+			scope:1025_legendary_contract ?= {
+				open_view_data = {
+					view = task_contract
+					player = root
+				}
+			}
+		}
+		#Transport Contracts
+		flag:transport_contracts = {
+			hidden_effect = {
+				populate_task_contracts_for_area = {
+					location = scope:visiting_location
+					amount = num_contracts_spawned_value
+					group = { laamp_contracts_transport_group }
+				}
+			}	
+		}
+		#Criminal Contracts
+		flag:criminal_contracts = {
+			hidden_effect = {
+				populate_task_contracts_for_area = {
+					location = scope:visiting_location
+					amount = num_contracts_spawned_value
+					group = { laamp_contracts_criminal_group }
+				}
+			}	
+		}
+		#Justicar Contracts
+		flag:justicar_contracts = {
+			hidden_effect = {
+				populate_task_contracts_for_area = {
+					location = scope:visiting_location
+					amount = num_contracts_spawned_value
+					group = { laamp_contracts_justicar_group }
+				}
+			}	
+		}
+		#Hireling Contracts
+		flag:hireling_contracts = {
+			hidden_effect = {
+				populate_task_contracts_for_area = {
+					location = scope:visiting_location
+					amount = num_contracts_spawned_value
+					group = { laamp_contracts_hireling_group laamp_contracts_martial_group } #Stashing martial here, for now
+				}
+			}	
+		}
+		#Diplomacy Contracts
+		flag:diplomacy_contracts = {
+			hidden_effect = {
+				populate_task_contracts_for_area = {
+					location = scope:visiting_location
+					amount = num_contracts_spawned_value
+					group = { laamp_contracts_diplomacy_group }
+				}
+			}	
+		}
+		#Stewardship Contracts
+		flag:stewardship_contracts = { 
+			hidden_effect = {
+				populate_task_contracts_for_area = {
+					location = scope:visiting_location
+					amount = num_contracts_spawned_value
+					group = { laamp_contracts_stewardship_group }
+				}
+			}	
+		}
+		#Learning Contracts
+		flag:learning_contracts = { 
+			hidden_effect = {
+				populate_task_contracts_for_area = {
+					location = scope:visiting_location
+					amount = num_contracts_spawned_value
+					group = { laamp_contracts_learning_group }
+				}
+			}	
+		}
+		#Intrigue Contracts
+		flag:intrigue_contracts = {
+			hidden_effect = {
+				populate_task_contracts_for_area = {
+					location = scope:visiting_location
+					amount = num_contracts_spawned_value
+					group = { laamp_contracts_intrigue_group }
+				}
+			}	
+		}
+		#Add more contract types below VV
+	}
+}
+
+scripted_effect 1025_option_tooltip_and_cooldown_contract_type_effect = {
+	#Contract stuff
+	switch = {
+		trigger = scope:1025_$NUM$_contract
+		#Treasure Map
+		flag:treasure_map_contract = {
+			custom_tooltip = ep3_laamp_decision_event.1025.treasure_map_contract_tt
+			#Set up the cooldown for the contract type
+			set_variable = {
+				name = 1025_had_treasure_map_contract_recently
+				days = visit_settlement_large_cooldown_days
+			}
+			#Prestige cost
+			add_prestige = minor_prestige_loss
+		}
+		#Legendary Contract
+		flag:legendary_contract = {
+			custom_tooltip = ep3_laamp_decision_event.1025.legendary_contract_tt
+			#Set up the cooldown for the contract type
+			set_variable = {
+				name = 1025_had_legendary_contract_recently
+				days = visit_settlement_large_cooldown_days
+			}
+			#Prestige cost
+			add_prestige = medium_prestige_loss
+		}
+		#Transport Contracts
+		flag:transport_contracts = {
+			custom_tooltip = ep3_laamp_decision_event.1025.transport_contracts_tt
+			#Set up the cooldown for the contract type
+			set_variable = {
+				name = 1025_had_transport_contracts_recently
+				days = visit_settlement_cooldown_days
+			}
+			#Prestige cost
+			add_prestige = minor_prestige_loss
+		}
+		#Criminal Contracts
+		flag:criminal_contracts = {
+			custom_tooltip = ep3_laamp_decision_event.1025.criminal_contracts_tt
+			#Set up the cooldown for the contract type
+			set_variable = {
+				name = 1025_had_criminal_contracts_recently
+				days = visit_settlement_cooldown_days
+			}
+			#No prestige cost
+		}
+		#Justicar Contracts
+		flag:justicar_contracts = {
+			custom_tooltip = ep3_laamp_decision_event.1025.justicar_contracts_tt
+			#Set up the cooldown for the contract type
+			set_variable = {
+				name = 1025_had_justicar_contracts_recently
+				days = visit_settlement_cooldown_days
+			}
+			#Prestige cost
+			add_prestige = minor_prestige_loss
+		}
+		#Hireling Contracts
+		flag:hireling_contracts = {
+			custom_tooltip = ep3_laamp_decision_event.1025.hireling_contracts_tt
+			#Set up the cooldown for the contract type
+			set_variable = {
+				name = 1025_had_hireling_contracts_recently
+				days = visit_settlement_cooldown_days
+			}
+			#Prestige cost
+			add_prestige = minor_prestige_loss
+		}
+		#Diplomacy Contracts
+		flag:diplomacy_contracts = {
+			custom_tooltip = ep3_laamp_decision_event.1025.diplomacy_contracts_tt
+			#Set up the cooldown for the contract type
+			set_variable = {
+				name = 1025_had_diplomacy_contracts_recently
+				days = visit_settlement_cooldown_days
+			}
+			#Prestige cost
+			add_prestige = minor_prestige_loss
+		}
+		#Stewardship Contracts
+		flag:stewardship_contracts = {
+			custom_tooltip = ep3_laamp_decision_event.1025.stewardship_contracts_tt
+			#Set up the cooldown for the contract type
+			set_variable = {
+				name = 1025_had_stewardship_contracts_recently
+				days = visit_settlement_cooldown_days
+			}
+			#Prestige cost
+			add_prestige = minor_prestige_loss
+		}
+		#Learning Contracts
+		flag:learning_contracts = {
+			custom_tooltip = ep3_laamp_decision_event.1025.learning_contracts_tt
+			#Set up the cooldown for the contract type
+			set_variable = {
+				name = 1025_had_learning_contracts_recently
+				days = visit_settlement_cooldown_days
+			}
+			#Prestige cost
+			add_prestige = minor_prestige_loss
+		}
+		#Intrigue Contracts
+		flag:intrigue_contracts = {
+			custom_tooltip = ep3_laamp_decision_event.1025.intrigue_contracts_tt
+			#Set up the cooldown for the contract type
+			set_variable = {
+				name = 1025_had_intrigue_contracts_recently
+				days = visit_settlement_cooldown_days
+			}
+			#Prestige cost
+			add_prestige = minor_prestige_loss
+		}
+		#Add more contract types below VV
+	}	
+}
+
+scripted_effect 1025_translate_variable_into_flag_effect = {
+	scope:visiting_location = {
+		#The Nothingness
+		if = {
+			limit = { var:1025_saved_$NUM$_contract_type ?= flag:no_contract }
+			#Nothing
+		}
+		#Treasure Map
+		if = {
+			limit = { var:1025_saved_$NUM$_contract_type ?= flag:treasure_map_contract }
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:treasure_map_contract
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			root = {
+				set_variable = {
+					name = 1025_$NUM$_contract_desc
+					value = flag:treasure_map_contract
+				}
+			}
+		}
+		#Transport Contracts
+		if = {
+			limit = { var:1025_saved_$NUM$_contract_type ?= flag:transport_contracts }
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:transport_contracts
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			root = {
+				set_variable = {
+					name = 1025_$NUM$_contract_desc
+					value = flag:transport_contracts
+				}
+			}
+		}
+		#Criminal Contracts
+		if = {
+			limit = { var:1025_saved_$NUM$_contract_type ?= flag:criminal_contracts }
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:criminal_contracts
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			root = {
+				set_variable = {
+					name = 1025_$NUM$_contract_desc
+					value = flag:criminal_contracts
+				}
+			}
+		}
+		#Justicar Contracts
+		if = {
+			limit = { var:1025_saved_$NUM$_contract_type ?= flag:justicar_contracts }
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:justicar_contracts
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			root = {
+				set_variable = {
+					name = 1025_$NUM$_contract_desc
+					value = flag:justicar_contracts
+				}
+			}
+		}
+		#Hireling Contracts
+		if = {
+			limit = { var:1025_saved_$NUM$_contract_type ?= flag:hireling_contracts }
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:hireling_contracts
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			root = {
+				set_variable = {
+					name = 1025_$NUM$_contract_desc
+					value = flag:hireling_contracts
+				}
+			}
+		}
+		#Diplomacy Contracts
+		if = {
+			limit = { var:1025_saved_$NUM$_contract_type ?= flag:diplomacy_contracts }
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:diplomacy_contracts
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			root = {
+				set_variable = {
+					name = 1025_$NUM$_contract_desc
+					value = flag:diplomacy_contracts
+				}
+			}
+		}
+		#Stewardship Contracts
+		if = {
+			limit = { var:1025_saved_$NUM$_contract_type ?= flag:stewardship_contracts }
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:stewardship_contracts
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			root = {
+				set_variable = {
+					name = 1025_$NUM$_contract_desc
+					value = flag:stewardship_contracts
+				}
+			}
+		}
+		#Learning Contracts
+		if = {
+			limit = { var:1025_saved_$NUM$_contract_type ?= flag:learning_contracts }
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:learning_contracts
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			root = {
+				set_variable = {
+					name = 1025_$NUM$_contract_desc
+					value = flag:learning_contracts
+				}
+			}
+		}
+		#Intrigue Contracts
+		if = {
+			limit = { var:1025_saved_$NUM$_contract_type ?= flag:intrigue_contracts }
+			save_scope_value_as = {
+				name = 1025_$NUM$_contract
+				value = flag:intrigue_contracts
+			}
+			#Save as a temporary variable that is removed after exiting the decision to avoid desc-bloat
+			root = {
+				set_variable = {
+					name = 1025_$NUM$_contract_desc
+					value = flag:intrigue_contracts
+				}
+			}
+		}
+		#Add more contract types below VV
+	}
+}
+
+scripted_trigger 1025_location_has_a_saved_contract_type_trigger = {
+	scope:visiting_location = {
+		has_variable = {
+			name = 1025_saved_first_contract_type
+			name = 1025_saved_second_contract_type
+			name = 1025_saved_third_contract_type
+		}
+	}
+}
+
+scripted_trigger 1025_saved_location_contract_type_matches_this_type_trigger = {
+	scope:visiting_location = {
+		OR = {
+			var:1025_saved_first_contract_type ?= $CONTRACT_TYPE_FLAG$
+			var:1025_saved_second_contract_type ?= $CONTRACT_TYPE_FLAG$
+			var:1025_saved_third_contract_type ?= $CONTRACT_TYPE_FLAG$
+		}
+	}
+}
+
+scripted_trigger 1025_region_has_suitable_employer_trigger = {	
+	holder = { 
+		highest_held_title_tier > tier_duchy
+		NOT = { is_in_list = checked_holders }
+		save_temporary_scope_as = holder_check
+		valid_laamp_basic_trigger = {
+			EMPLOYER = scope:holder_check
+			LAAMP = root
+		}
+		#Copying the special contracts from the character interaction, for now. MUST match the random_list in 1025_find_ruler_and_spawn_legendary_contract_effect
+		root = {
+			OR = {
+				can_create_task_contract = {
+					type_name = laamp_raid_contract
+					employer = scope:holder_check
+				}
+				can_create_task_contract = {
+					type_name = laamp_steal_artifact_contract
+					employer = scope:holder_check
+				}
+				can_create_task_contract = {
+					type_name = laamp_treasure_hunting_contract
+					employer = scope:holder_check
+				}
+				can_create_task_contract = {
+					type_name = laamp_transport_vip
+					employer = scope:holder_check
+				}
+				can_create_task_contract = {
+					type_name = laamp_transport_artifact
+					employer = scope:holder_check
+				}
+				can_create_task_contract = {
+					type_name = laamp_transport_gold
+					employer = scope:holder_check
+				}
+				can_create_task_contract = {
+					type_name = laamp_transport_animal
+					employer = scope:holder_check
+				}
+			}
+		}
+		add_to_temporary_list = checked_holders
+	}
+}
+
+scripted_trigger 1025_can_create_legendary_contract_trigger = {
+	scope:visiting_location = {
+		switch = {
+			trigger = geographical_region
+			world_europe_north = {
+				any_county_in_region = {
+					region = world_europe_north
+					1025_region_has_suitable_employer_trigger = yes
+				}
+			}
+			world_europe_west = {
+				any_county_in_region = {
+					region = world_europe_west
+					1025_region_has_suitable_employer_trigger = yes
+				}
+			}
+			world_europe_east = {
+				any_county_in_region = {
+					region = world_europe_east
+					1025_region_has_suitable_employer_trigger = yes
+				}
+			}
+			world_europe_south = {
+				any_county_in_region = {
+					region = world_europe_south
+					1025_region_has_suitable_employer_trigger = yes
+				}
+			}
+			world_middle_east = {
+				any_county_in_region = {
+					region = world_middle_east
+					1025_region_has_suitable_employer_trigger = yes
+				}
+			}
+			world_india = {
+				any_county_in_region = {
+					region = world_india
+					1025_region_has_suitable_employer_trigger = yes
+				}
+			}
+			world_africa_north = {
+				any_county_in_region = {
+					region = world_africa_north
+					1025_region_has_suitable_employer_trigger = yes
+				}
+			}
+			world_africa_west = {
+				any_county_in_region = {
+					region = world_africa_west
+					1025_region_has_suitable_employer_trigger = yes
+				}
+			}
+			world_africa_east = {
+				any_county_in_region = {
+					region = world_africa_east
+					1025_region_has_suitable_employer_trigger = yes
+				}
+			}
+			world_steppe_west = {
+				any_county_in_region = {
+					region = world_steppe_west
+					1025_region_has_suitable_employer_trigger = yes
+				}
+			}
+			world_steppe_east = {
+				any_county_in_region = {
+					region = world_steppe_east
+					1025_region_has_suitable_employer_trigger = yes
+				}
+			}
+			world_tibet = {
+				any_county_in_region = {
+					region = world_tibet
+					1025_region_has_suitable_employer_trigger = yes
+				}
+			}
+			world_asia_east = {
+				any_county_in_region = {
+					region = world_asia_east
+					1025_region_has_suitable_employer_trigger = yes
+				}
+			}
+			world_asia_north_east = {
+				any_county_in_region = {
+					region = world_asia_north_east
+					1025_region_has_suitable_employer_trigger = yes
+				}
+			}
+			world_asia_southeast = {
+				any_county_in_region = {
+					region = world_asia_southeast
+					1025_region_has_suitable_employer_trigger = yes
+				}
+			}
+		}
+	}
+}
+
+scripted_trigger 1025_contract_type_is_assigned_trigger = {
+	OR = {
+		scope:1025_first_contract ?= $CONTRACT_TYPE_FLAG$
+		scope:1025_second_contract ?= $CONTRACT_TYPE_FLAG$
+		scope:1025_third_contract ?= $CONTRACT_TYPE_FLAG$
+	}
+}
+
+scripted_trigger 1025_is_old_and_unable_trigger = {
+	age > 50
+	is_imprisoned = no
+	OR = {
+		has_trait = blind
+		has_trait = one_legged
+		has_trait = one_eyed
+		has_trait = infirm
+		has_trait = wounded_1
+	}
+}
+
+scripted_trigger 1025_appropriate_contract_employer_trigger = {
+	# Players shouldn't get tangled up in contracts, ever.
+	is_ai = yes
+	# Plus some standard stuff.
+	is_alive = yes
+	is_adult = yes
+	is_incapable = no
+	# Don't offer to work with those who've wronged us.
+	NOR = {
+		government_has_flag = government_is_landless_adventurer
+		# No one we're at war with.
+		is_at_war_with = root
+		# Rivals are cheap to grab.
+		has_relation_rival = root
+		# Expulsion
+		custom_tooltip = {
+			text = adventurer_expelled_trigger_tt
+			OR = {
+				has_opinion_modifier = {
+					target = root
+					modifier = eviction_ignored_opinion
+				}
+				any_liege_or_above = {
+					has_opinion_modifier = {
+						target = root
+						modifier = eviction_ignored_opinion
+					}
+				}
+			}
+		}
+	}
+}
+
+scripted_trigger 1025_is_appropriate_landed_contract_employer_trigger = {
+	1025_appropriate_contract_employer_trigger = yes
+	this.capital_province ?= {
+		squared_distance = {
+			target = root.domicile.domicile_location
+			value < define:NTaskContract|ADVENTURER_DISTANCE_RESTRICTION
+		}
+	}
+}
+
+scripted_trigger 1025_is_gated_due_to_thievery_trigger = {
+	has_trait = gallowsbait
+	has_trait_xp = {
+		trait = gallowsbait
+		track = thief
+		value >= 60
+	}
+}
+
+scripted_trigger 1025_is_renowned_thief_trigger = {
+	trigger_if = {
+		limit = { scope:1025_$NUM$_contract = flag:treasure_map_contract }
+		custom_tooltip = {
+			text = gallowsbait_thief_blocked_from_contract.tt
+			1025_is_gated_due_to_thievery_trigger = no
+		}
+	}
+	trigger_else = { always = yes }
+}
+
+scripted_trigger 1025_no_contracts_trigger = {
+	OR = {
+		#All contract types are on cooldown, I guess
+		NOR = { 
+			exists = scope:1025_first_contract
+			exists = scope:1025_second_contract 
+			exists = scope:1025_third_contract 
+		}
+		has_variable = 1025_has_contracted_recently
+	} 
+}
+
+ep3_laamp_decision_event.1025 = {
+	id_override_priority = 1000
+	type = character_event
+	title = ep3_laamp_decision_event.1025.t
+	window = visit_settlement_window
+	desc = {
+		#What're they doing?
+		first_valid = {
+			#We've returned to this scene, now what
+			#Use this when we have all contract types on cooldown. Should be a bored crier.
+			##COOLDOWN
+			triggered_desc = {
+				trigger = { 1025_no_contracts_trigger = yes }
+				desc = ep3_laamp_decision_event.1025.desc_nothing
+			}
+			#RETURN: Tribal - Legendary contract
+			random_valid = {
+				triggered_desc = { 
+					trigger = {
+						scope:visiting_location = { holding_is_tribal = yes }
+						exists = scope:been_to_contract
+						scope:contract_loc_tracker ?= 0
+						OR = {
+							scope:1025_first_contract ?= flag:legendary_contract
+							scope:1025_second_contract ?= flag:legendary_contract
+							scope:1025_third_contract ?= flag:legendary_contract
+						}
+					}
+					desc = ep3_laamp_decision_event.1025.desc_tribal_legendary_returned_01 
+				}
+				triggered_desc = { 
+					trigger = {
+						scope:visiting_location = { holding_is_tribal = yes }
+						scope:contract_loc_tracker ?= 1
+						OR = {
+							scope:1025_first_contract ?= flag:legendary_contract
+							scope:1025_second_contract ?= flag:legendary_contract
+							scope:1025_third_contract ?= flag:legendary_contract
+						}
+					}
+					desc = ep3_laamp_decision_event.1025.desc_tribal_legendary_returned_02
+				}
+			}
+			#RETURN: Legendary contract
+			random_valid = {
+				triggered_desc = { 
+					trigger = { 
+						exists = scope:been_to_contract
+						scope:contract_loc_tracker ?= 0
+						OR = {
+							scope:1025_first_contract ?= flag:legendary_contract
+							scope:1025_second_contract ?= flag:legendary_contract
+							scope:1025_third_contract ?= flag:legendary_contract
+						}
+					}
+					desc = ep3_laamp_decision_event.1025.desc_legendary_returned_01 
+				}
+				triggered_desc = { 
+					trigger = { 
+						scope:contract_loc_tracker ?= 1
+						OR = {
+							scope:1025_first_contract ?= flag:legendary_contract
+							scope:1025_second_contract ?= flag:legendary_contract
+							scope:1025_third_contract ?= flag:legendary_contract
+						}
+					}
+					desc = ep3_laamp_decision_event.1025.desc_legendary_returned_02
+				}
+			}
+			#RETURN: Tribal - No legendary contract
+			random_valid = {
+				triggered_desc = { 
+					trigger = {
+						scope:visiting_location = { holding_is_tribal = yes }
+						exists = scope:been_to_contract
+						scope:contract_loc_tracker ?= 0
+					}
+					desc = ep3_laamp_decision_event.1025.desc_tribal_returned_01 
+				}
+				triggered_desc = { 
+					trigger = {
+						scope:visiting_location = { holding_is_tribal = yes }
+						scope:contract_loc_tracker ?= 1 
+					}
+					desc = ep3_laamp_decision_event.1025.desc_tribal_returned_02
+				}
+			}
+			#RETURN: No legendary contract
+			random_valid = {
+				triggered_desc = { 
+					trigger = {
+						exists = scope:been_to_contract
+						scope:contract_loc_tracker ?= 0
+					}
+					desc = ep3_laamp_decision_event.1025.desc_returned_01 
+				}
+				triggered_desc = { 
+					trigger = { scope:contract_loc_tracker ?= 1 }
+					desc = ep3_laamp_decision_event.1025.desc_returned_02
+				}
+			}
+			#FIRST TIME: Tribal - Legendary contract - Reused Elder
+			triggered_desc = {
+				trigger = {
+					scope:visiting_location = { holding_is_tribal = yes }
+					exists = scope:laamp_recurring_town_crier
+					NOR = { 
+						exists = scope:been_to_contract
+						has_variable = 1025_has_contracted_recently
+					}
+					OR = {
+						scope:1025_first_contract ?= flag:legendary_contract
+						scope:1025_second_contract ?= flag:legendary_contract
+						scope:1025_third_contract ?= flag:legendary_contract
+					}
+				}
+				desc = ep3_laamp_decision_event.1025.desc_tribal_legendary_reused_crier
+			}
+			#FIRST TIME: Legendary contract - Reused Town Crier
+			triggered_desc = {
+				trigger = {
+					exists = scope:laamp_recurring_town_crier
+					NOR = { 
+						exists = scope:been_to_contract
+						has_variable = 1025_has_contracted_recently
+					}
+					OR = {
+						scope:1025_first_contract ?= flag:legendary_contract
+						scope:1025_second_contract ?= flag:legendary_contract
+						scope:1025_third_contract ?= flag:legendary_contract
+					}
+				}
+				desc = ep3_laamp_decision_event.1025.desc_legendary_reused_crier
+			}
+			#FIRST TIME: Tribal - Legendary contract
+			triggered_desc = {
+				trigger = {
+					scope:visiting_location = { holding_is_tribal = yes }
+					NOR = { 
+						exists = scope:been_to_contract
+						has_variable = 1025_has_contracted_recently
+					}
+					OR = {
+						scope:1025_first_contract ?= flag:legendary_contract
+						scope:1025_second_contract ?= flag:legendary_contract
+						scope:1025_third_contract ?= flag:legendary_contract
+					}
+				}
+				desc = ep3_laamp_decision_event.1025.desc_tribal_legendary
+			}
+			#FIRST TIME: Legendary contract
+			triggered_desc = {
+				trigger = {
+					NOR = { 
+						exists = scope:been_to_contract
+						has_variable = 1025_has_contracted_recently
+					}
+					OR = {
+						scope:1025_first_contract ?= flag:legendary_contract
+						scope:1025_second_contract ?= flag:legendary_contract
+						scope:1025_third_contract ?= flag:legendary_contract
+					}
+				}
+				desc = ep3_laamp_decision_event.1025.desc_legendary
+			}
+			#FIRST TIME: Tribal - No legendary contract - Reused Town Crier
+			triggered_desc = {
+				trigger = {
+					scope:visiting_location = { holding_is_tribal = yes }
+					exists = scope:laamp_recurring_town_crier
+					NOR = { 
+						exists = scope:been_to_contract
+						has_variable = 1025_has_contracted_recently
+					}
+				}
+				desc = ep3_laamp_decision_event.1025.desc_tribal_reused_crier
+			}
+			#FIRST TIME: No legendary contract - Reused Town Crier
+			triggered_desc = {
+				trigger = {
+					exists = scope:laamp_recurring_town_crier
+					NOR = { 
+						exists = scope:been_to_contract
+						has_variable = 1025_has_contracted_recently
+					}
+				}
+				desc = ep3_laamp_decision_event.1025.desc_reused_crier
+			}
+			#FIRST TIME: Tribal - No legendary contract
+			triggered_desc = {
+				trigger = {
+					scope:visiting_location = { holding_is_tribal = yes }
+					NOR = { 
+						exists = scope:been_to_contract
+						has_variable = 1025_has_contracted_recently
+					}
+				}
+				desc = ep3_laamp_decision_event.1025.desc_tribal
+			}
+			#FIRST TIME: No legendary contract
+			triggered_desc = {
+				trigger = {
+					NOR = { 
+						exists = scope:been_to_contract
+						has_variable = 1025_has_contracted_recently
+					}
+				}
+				desc = ep3_laamp_decision_event.1025.desc
+			}
+		}
+		#Concatenated and outsourced to custom_loc - trust me, this is less cursed than the alternative
+		#A exists
+		triggered_desc = {
+			trigger = { 
+				exists = scope:1025_first_contract
+				NOR = {
+					exists = scope:1025_second_contract
+					exists = scope:1025_third_contract
+				}
+			}
+			desc = ep3_laamp_decision_event.1025.desc_concatenated_A
+		}
+		#AB exists
+		triggered_desc = {
+			trigger = { 
+				exists = scope:1025_first_contract
+				exists = scope:1025_second_contract
+				NOT = { exists = scope:1025_third_contract }
+			}
+			desc = ep3_laamp_decision_event.1025.desc_concatenated_AB
+		}
+		#ABC exists
+		triggered_desc = {
+			trigger = { 
+				exists = scope:1025_first_contract
+				exists = scope:1025_second_contract
+				exists = scope:1025_third_contract
+			}
+			desc = ep3_laamp_decision_event.1025.desc_concatenated_ABC
+		}
+		#B exists
+		triggered_desc = {
+			trigger = { 
+				exists = scope:1025_second_contract
+				NOR = {
+					exists = scope:1025_first_contract
+					exists = scope:1025_third_contract
+				}
+			}
+			desc = ep3_laamp_decision_event.1025.desc_concatenated_B
+		}
+		#BC exists
+		triggered_desc = {
+			trigger = { 
+				NOT = { exists = scope:1025_first_contract }
+				exists = scope:1025_second_contract
+				exists = scope:1025_third_contract
+			}
+			desc = ep3_laamp_decision_event.1025.desc_concatenated_BC
+		}
+		#C exists
+		triggered_desc = {
+			trigger = { 
+				exists = scope:1025_third_contract
+				NOR = {
+					exists = scope:1025_first_contract
+					exists = scope:1025_second_contract
+				}
+			}
+			desc = ep3_laamp_decision_event.1025.desc_concatenated_C
+		}
+		#AC exists
+		triggered_desc = {
+			trigger = { 
+				exists = scope:1025_first_contract
+				exists = scope:1025_third_contract
+				NOT = { exists = scope:1025_second_contract }
+			}
+			desc = ep3_laamp_decision_event.1025.desc_concatenated_AC
+		}
+	}
+	theme = landless_adventurer
+	override_sound = { reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity" }
+	override_background = {
+		trigger = { 1000_is_a_nomadic_holding_trigger = yes }
+		reference = mpo_camp_steppe
+	}
+	override_background = { reference = garden_location }
+	left_portrait = {
+		trigger = { exists = scope:visiting_partner }
+		character = scope:visiting_partner
+		animation = survey
+	}
+	center_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { 1025_no_contracts_trigger = yes }
+			animation = worry
+		}
+		animation = interested
+	}
+	right_portrait = {
+		character = scope:laamp_town_crier
+		triggered_animation = {
+			trigger = { 1025_no_contracts_trigger = yes }
+			animation = boredom
+		}
+		animation = debating
+	}
+	immediate = {
+		#To prevent the character, for whatever reason, managing to not have the variable be removed when exiting VS
+		temporarily_lock_visit_settlement_effect = yes
+		#Can we _not_ repeat the loc?
+		1025_set_and_check_scene_loc_tracker_scope_effect = { SCENE = contract }
+		#Run all of this once
+		if = {
+			limit = {
+				NOT = { exists = scope:been_to_contract }
+			}
+			#Spawn a Town Crier
+			random_pool_character = {
+				province = scope:visiting_location
+				limit = {
+					1010_basic_merchant_checks_trigger = yes
+					save_temporary_scope_as = saved_character_check
+					#Let's avoid double-dipping
+					1010_is_a_saved_crier_trigger = yes
+					1010_is_a_saved_merchant_trigger = no
+					1010_is_a_saved_peddler_trigger = no
+					1010_is_a_saved_storyteller_trigger = no
+					1010_is_a_saved_thief_trigger = no
+					1010_is_a_saved_healer_trigger = no
+					1010_is_a_saved_clergy_trigger = no
+					1010_is_a_saved_physician_trigger = no
+					1010_is_a_saved_bodyguard_trigger = no
+					1010_is_a_saved_weaponsmith_trigger = no
+					1010_is_a_saved_armorer_trigger = no
+					1010_is_a_saved_jeweler_trigger = no
+					1010_is_a_saved_quartermaster_trigger = no
+					#_Elder_
+					trigger_if = {
+						limit = { 
+							scope:visiting_location = { holding_is_tribal = yes }
+						}
+						age >= 50
+					}
+				}
+				save_scope_as = laamp_town_crier
+				#Some more loc flavor shenanigans for these saved scopes
+				save_scope_as = laamp_recurring_town_crier
+			}
+			#Otherwise find a Town Crier in the pool
+			if = {
+				limit = { 
+					NOT = { exists = scope:laamp_town_crier }
+				}
+				random_pool_character = {
+					province = scope:visiting_location
+					limit = { 
+						1010_basic_merchant_checks_trigger = yes
+						is_available_healthy_adult = yes
+						NOT = { has_trait = shy }
+						#_Elder_
+						trigger_if = {
+							limit = { 
+								scope:visiting_location = { holding_is_tribal = yes }
+							}
+							age >= 50
+						}
+					}
+					save_scope_as = laamp_town_crier
+				}
+			}
+			#Otherwise create a Town Crier
+			if = {
+				limit = {
+					NOT = { exists = scope:laamp_town_crier }
+				}
+				#Create Elder to stuff in pool
+				if = {
+					limit = { 
+						scope:visiting_location = { holding_is_tribal = yes }
+					}
+					create_character = {
+						template = generic_peasant_character
+						location = scope:visiting_location
+						age = { 50 60 }
+						dynasty = none
+						culture = scope:visiting_location.culture
+						faith = scope:visiting_location.faith
+						rite = scope:visiting_location.rite
+						save_scope_as = laamp_town_crier
+					}
+				}
+				#Create Town Crier to stuff in pool
+				else = {
+					create_character = {
+						template = generic_peasant_character
+						location = scope:visiting_location
+						dynasty = none
+						culture = scope:visiting_location.culture
+						faith = scope:visiting_location.faith
+						rite = scope:visiting_location.rite
+						save_scope_as = laamp_town_crier
+					}
+				}
+			}
+			#Remember the Town Crier
+			1010_remember_vendor_character_effect = { GUILD = crier CHARACTER = scope:laamp_town_crier }
+			#First Contract
+			if = {
+				limit = {
+					NOT = { exists = scope:1025_first_contract }
+				}
+				#Did we, or someone else, check for contracts here recently?
+				if = {
+					limit = {
+						scope:visiting_location = { has_variable = 1025_saved_first_contract_type }
+					}
+					#Translating values from variable to flag translates to number?
+					1025_translate_variable_into_flag_effect = { NUM = first }
+				}
+				#Otherwise generate a new type
+				else = {
+					1025_randomize_and_remember_contract_type_effect = { NUM = first }
+				}	
+			}
+			#Set up the employer, if necessary
+			if = {
+				limit = { exists = scope:1025_first_contract }
+				1025_generate_employer_effect = { NUM = first }
+			}
+			#Second Contract
+			if = {
+				limit = {
+					NOT = { exists = scope:1025_second_contract }
+				}
+				#Did we, or someone else, check for contracts here recently?
+				if = {
+					limit = {
+						scope:visiting_location = { has_variable = 1025_saved_second_contract_type }
+					}
+					#Translating values from variable to flag
+					1025_translate_variable_into_flag_effect = { NUM = second }
+				}
+				#Otherwise generate a new type
+				else = {
+					1025_randomize_and_remember_contract_type_effect = { NUM = second }
+				}
+			}
+			#Set up the employer, if necessary
+			if = {
+				limit = { exists = scope:1025_second_contract }
+				1025_generate_employer_effect = { NUM = second }
+			}
+			#If no legendary contract, Third Contract
+			if = {
+				limit = {
+					NOT = { exists = scope:1025_third_contract }
+				}
+				#Did we, or someone else, check for contracts here recently?
+				if = {
+					limit = {
+						scope:visiting_location = { has_variable = 1025_saved_third_contract_type }
+					}
+					#Translating values from variable to flag
+					1025_translate_variable_into_flag_effect = { NUM = third }
+				}
+				#Otherwise generate a new type
+				else = {
+					1025_randomize_and_remember_contract_type_effect = { NUM = third }
+				}
+			}
+			#Set up the employer, if necessary
+			if = {
+				limit = { exists = scope:1025_third_contract }
+				1025_generate_employer_effect = { NUM = third }
+			}
+		}
+	}
+	#Contract A
+	option = {
+		name = ep3_laamp_decision_event.1025.a
+		trigger = { 
+			exists = scope:1025_first_contract
+			1025_is_renowned_thief_trigger = { NUM = first }
+		}
+		show_as_unavailable = { exists = scope:1025_first_contract }
+		#Remove the remember-variable for A
+		scope:visiting_location = { remove_variable ?= 1025_saved_first_contract_type }
+		#Spawn contract(s)
+		1025_option_picked_spawn_contract_effect = { NUM = first }
+		#Pick tooltip and set up the cooldown for the contract type
+		1025_option_tooltip_and_cooldown_contract_type_effect = { NUM = first }
+		#Done here; go back to the main event
+		1025_finished_contract_effect = yes
+	}
+	#Contract B
+	option = {
+		name = ep3_laamp_decision_event.1025.b
+		trigger = { 
+			exists = scope:1025_second_contract
+			1025_is_renowned_thief_trigger = { NUM = second }
+		}
+		show_as_unavailable = { exists = scope:1025_second_contract }
+		#Remove the remember-variable for B
+		scope:visiting_location = { remove_variable ?= 1025_saved_second_contract_type }
+		#Spawn contract(s)
+		1025_option_picked_spawn_contract_effect = { NUM = second }
+		#Pick tooltip and set up the cooldown for the contract type
+		1025_option_tooltip_and_cooldown_contract_type_effect = { NUM = second }
+		#Done here; go back to the main event
+		1025_finished_contract_effect = yes
+	}
+	#Contract C
+	option = {
+		name = ep3_laamp_decision_event.1025.c
+		trigger = { 
+			exists = scope:1025_third_contract
+			1025_is_renowned_thief_trigger = { NUM = third }
+		}
+		show_as_unavailable = { exists = scope:1025_third_contract }
+		#Remove the remember-variable for C
+		scope:visiting_location = { remove_variable ?= 1025_saved_third_contract_type }
+		#Spawn contract(s)
+		1025_option_picked_spawn_contract_effect = { NUM = third }
+		#Pick tooltip and set up the cooldown for the contract type
+		1025_option_tooltip_and_cooldown_contract_type_effect = { NUM = third }
+		#Done here; go back to the main event
+		1025_finished_contract_effect = yes
+	}
+	#I want to do something else
+	option = {
+		#Nothing here
+		name = {
+			trigger = {
+				NOT = { 
+					exists = scope:been_to_contract
+					exists = scope:1025_first_contract
+					exists = scope:1025_second_contract
+					exists = scope:1025_third_contract
+				}
+			}
+			text = ep3_laamp_decision_event.1025.d_nothing
+		}
+		name = ep3_laamp_decision_event.1025.d
+		if = {
+			limit = { 
+				NOT = { 
+					exists = scope:1025_first_contract
+					exists = scope:1025_second_contract
+					exists = scope:1025_third_contract
+				}
+			}
+			save_scope_value_as = {
+				name = laamp_decision_has_contracted
+				value = flag:no
+			}
+		}
+		#For desc flavor
+		else = { save_scope_as = been_to_contract }
+		#Go back to the main event
+		1001_return_to_second_effect = yes
+	}
+	after = {
+		#What was our last location
+		1000_update_last_location_effect = { LOCATION_FLAG = flag:contract }
+	}
+}
