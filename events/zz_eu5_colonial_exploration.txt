@@ -141,26 +141,6 @@ eu5_colonial_exploration.0001 = {
   }
   ai_chance = { base = 30 }
  }
- option = {
-  name = eu5_colonial_exploration.0001.atlantic
-  trigger = { NOT = { eu5_character_has_chart_trigger = { REGION = atlantic } } gold >= 150 }
-  add_gold = -150
-  custom_tooltip = eu5_voyage_launch_tt
-  hidden_effect = { eu5_exploration_appoint_captain_effect = yes }
-  primary_title = {
-   set_variable = eu5_exploration_underway
-   set_variable = eu5_exploring_atlantic
-   trigger_event = { id = eu5_colonial_exploration.0010 months = 2 }
-   trigger_event = { id = eu5_colonial_exploration.0010 months = 4 }
-   trigger_event = { id = eu5_colonial_exploration.0010 months = 6 }
-   trigger_event = { id = eu5_colonial_exploration.0015 months = 8 }
-   trigger_event = { id = eu5_colonial_exploration.0015 months = 9 }
-   trigger_event = { id = eu5_colonial_exploration.0016 months = 10 }
-   trigger_event = { id = eu5_colonial_exploration.0016 months = 11 }
-   trigger_event = { id = eu5_colonial_exploration.0002 months = 12 }
-  }
-  ai_chance = { base = 30 }
- }
  option = { name = eu5_colonial_exploration.0001.cancel ai_chance = { base = 0 } }
 }
 
