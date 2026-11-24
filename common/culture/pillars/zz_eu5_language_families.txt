@@ -1,0 +1,257 @@
+﻿siouan_language_family = {
+	type = heritage
+	audio_parameter = mena
+	parameters = {
+	}
+	is_shown = {
+		heritage_is_shown_trigger = { HERITAGE = siouan_language_family }
+	}
+}
+
+iroquoian_language_family = {
+	type = heritage
+	audio_parameter = mena
+	parameters = {
+	}
+	is_shown = {
+		heritage_is_shown_trigger = { HERITAGE = iroquoian_language_family }
+	}
+}
+
+muskogean_language_family = {
+	type = heritage
+	audio_parameter = indian
+	parameters = {
+	}
+	is_shown = {
+		heritage_is_shown_trigger = { HERITAGE = muskogean_language_family }
+	}
+}
+
+otomanguean_language_family = {
+	type = heritage
+	audio_parameter = mena
+	parameters = {
+	}
+	is_shown = {
+		heritage_is_shown_trigger = { HERITAGE = otomanguean_language_family }
+	}
+}
+
+eskaleut_language_family = {
+	type = heritage
+	audio_parameter = sea
+	parameters = {
+	}
+	is_shown = {
+		heritage_is_shown_trigger = { HERITAGE = eskaleut_language_family }
+	}
+}
+
+cariban_language_family = {
+	type = heritage
+	audio_parameter = european
+	parameters = {
+	}
+	is_shown = {
+		heritage_is_shown_trigger = { HERITAGE = cariban_language_family }
+	}
+}
+
+arawakan_language_family = {
+	type = heritage
+	audio_parameter = european
+	parameters = {
+	}
+	is_shown = {
+		heritage_is_shown_trigger = { HERITAGE = arawakan_language_family }
+	}
+}
+
+eu5_language_siouan_language_family = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = { LANGUAGE = eu5_language_siouan_language_family }
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = eu5_language_siouan_language_family }
+			multiply = 10
+		}
+	}
+}
+
+eu5_language_iroquoian_language_family = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = { LANGUAGE = eu5_language_iroquoian_language_family }
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = eu5_language_iroquoian_language_family }
+			multiply = 10
+		}
+	}
+}
+
+eu5_language_eastern_algonquian_language_family = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = { LANGUAGE = eu5_language_eastern_algonquian_language_family }
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = eu5_language_eastern_algonquian_language_family }
+			multiply = 10
+		}
+	}
+}
+
+eu5_language_central_algonquian_language_family = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = { LANGUAGE = eu5_language_central_algonquian_language_family }
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = eu5_language_central_algonquian_language_family }
+			multiply = 10
+		}
+	}
+}
+
+eu5_language_northern_yutonahua_language_family = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = { LANGUAGE = eu5_language_northern_yutonahua_language_family }
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = eu5_language_northern_yutonahua_language_family }
+			multiply = 10
+		}
+	}
+}
+
+eu5_language_plains_algonquian_language_family = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = { LANGUAGE = eu5_language_plains_algonquian_language_family }
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = eu5_language_plains_algonquian_language_family }
+			multiply = 10
+		}
+	}
+}
+
+eu5_language_muskogean_language_family = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = { LANGUAGE = eu5_language_muskogean_language_family }
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = eu5_language_muskogean_language_family }
+			multiply = 10
+		}
+	}
+}
+
+eu5_language_otomanguean_language_family = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = { LANGUAGE = eu5_language_otomanguean_language_family }
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = eu5_language_otomanguean_language_family }
+			multiply = 10
+		}
+	}
+}
+
+eu5_language_eskaleut_language_family = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = { LANGUAGE = eu5_language_eskaleut_language_family }
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = eu5_language_eskaleut_language_family }
+			multiply = 10
+		}
+	}
+}
+
+eu5_language_southern_yutonahua_language_family = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = { LANGUAGE = eu5_language_southern_yutonahua_language_family }
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = eu5_language_southern_yutonahua_language_family }
+			multiply = 10
+		}
+	}
+}
+
+eu5_language_cariban_language_family = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = { LANGUAGE = eu5_language_cariban_language_family }
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = eu5_language_cariban_language_family }
+			multiply = 10
+		}
+	}
+}
+
+eu5_language_arawakan_language_family = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = { LANGUAGE = eu5_language_arawakan_language_family }
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = eu5_language_arawakan_language_family }
+			multiply = 10
+		}
+	}
+}
+
+algonquian_language_family = {
+	type = heritage
+	audio_parameter = indian
+	parameters = {
+	}
+	is_shown = {
+		heritage_is_shown_trigger = { HERITAGE = algonquian_language_family }
+	}
+}
+
+yutonahua_language_family = {
+	type = heritage
+	audio_parameter = mena
+	parameters = {
+	}
+	is_shown = {
+		heritage_is_shown_trigger = { HERITAGE = yutonahua_language_family }
+	}
+}
