@@ -88,7 +88,10 @@ phx_jialu_yellow_river_works = {
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_jialu_corvee_spark
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_simmering situation_current_phase = phx_rtr_phase_flood_spark } }
+					trigger_situation_catalyst = catalyst_phx_rtr_jialu_corvee_spark
+				}
 			}
 		}
 	}
@@ -108,7 +111,7 @@ phx_jialu_yellow_river_works = {
 		scope:owner ?= {
 			if = {
 				limit = { is_alive = yes }
-				add_legitimacy = 250
+				if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
 				add_prestige = 300
 				trigger_event = phx_yuan.0350
 			}
@@ -119,14 +122,20 @@ phx_jialu_yellow_river_works = {
 				exists = situation:dynastic_cycle
 			}
 			situation:dynastic_cycle = {
-				trigger_situation_catalyst = catalyst_hegemon_natural_disaster_recovered
+				if = {
+					limit = { OR = { situation_current_phase = situation_dynastic_cycle_phase_stability_expansion situation_current_phase = situation_dynastic_cycle_phase_stability_advancement situation_current_phase = situation_dynastic_cycle_phase_instability situation_current_phase = situation_dynastic_cycle_phase_instability_conquest } }
+					trigger_situation_catalyst = catalyst_hegemon_natural_disaster_recovered
+				}
 			}
 		}
 		set_global_variable = phx_red_turban_unrest_begun
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_jialu_corvee_spark
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_simmering situation_current_phase = phx_rtr_phase_flood_spark } }
+					trigger_situation_catalyst = catalyst_phx_rtr_jialu_corvee_spark
+				}
 			}
 		}
 	}

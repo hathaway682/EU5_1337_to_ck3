@@ -43,7 +43,7 @@ phx_yuan.0001 = {
 
 	option = {
 		name = phx_yuan.0001.a
-		add_legitimacy = 75
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
 		if = {
 			limit = {
 				character:yua_toqto ?= { is_alive = yes }
@@ -141,7 +141,7 @@ phx_yuan.0010 = {
 			limit = { has_character_modifier = phx_yuan_bayan_regency_modifier }
 			remove_character_modifier = phx_yuan_bayan_regency_modifier
 		}
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		if = {
 			limit = { exists = scope:toghtogha }
 			scope:toghtogha = {
@@ -205,7 +205,10 @@ phx_yuan.0020 = {
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_yellow_river_breach
+				if = {
+					limit = { situation_current_phase = phx_rtr_phase_simmering }
+					trigger_situation_catalyst = catalyst_phx_rtr_yellow_river_breach
+				}
 			}
 		}
 		if = {
@@ -214,7 +217,10 @@ phx_yuan.0020 = {
 				exists = situation:dynastic_cycle
 			}
 			situation:dynastic_cycle = {
-				trigger_situation_catalyst = catalyst_hegemon_natural_disaster
+				if = {
+					limit = { OR = { situation_current_phase = situation_dynastic_cycle_phase_stability_expansion situation_current_phase = situation_dynastic_cycle_phase_stability_advancement situation_current_phase = situation_dynastic_cycle_phase_instability situation_current_phase = situation_dynastic_cycle_phase_instability_conquest } }
+					trigger_situation_catalyst = catalyst_hegemon_natural_disaster
+				}
 			}
 		}
 	}
@@ -222,7 +228,7 @@ phx_yuan.0020 = {
 	option = {
 		name = phx_yuan.0020.a
 		remove_short_term_gold = 150
-		add_legitimacy = 75
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
 		custom_tooltip = phx_yuan_yellow_river_unrest_tt
 		ai_chance = { base = 55 }
 	}
@@ -230,7 +236,7 @@ phx_yuan.0020 = {
 	option = {
 		name = phx_yuan.0020.b
 		add_gold = 100
-		add_legitimacy = -100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = -100 }
 		custom_tooltip = phx_yuan_yellow_river_unrest_tt
 		ai_chance = { base = 45 }
 	}
@@ -262,7 +268,10 @@ phx_yuan.0030 = {
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_red_banner_raised
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_simmering situation_current_phase = phx_rtr_phase_flood_spark } }
+					trigger_situation_catalyst = catalyst_phx_rtr_red_banner_raised
+				}
 			}
 		}
 		ai_chance = { base = 85 }
@@ -292,7 +301,10 @@ phx_yuan.0035 = {
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_red_banner_raised
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_simmering situation_current_phase = phx_rtr_phase_flood_spark } }
+					trigger_situation_catalyst = catalyst_phx_rtr_red_banner_raised
+				}
 			}
 		}
 		if = {
@@ -301,7 +313,10 @@ phx_yuan.0035 = {
 				exists = situation:dynastic_cycle
 			}
 			situation:dynastic_cycle = {
-				trigger_situation_catalyst = catalyst_hegemon_in_civil_war
+				if = {
+					limit = { OR = { situation_current_phase = situation_dynastic_cycle_phase_stability_expansion situation_current_phase = situation_dynastic_cycle_phase_stability_advancement situation_current_phase = situation_dynastic_cycle_phase_instability situation_current_phase = situation_dynastic_cycle_phase_instability_conquest } }
+					trigger_situation_catalyst = catalyst_hegemon_in_civil_war
+				}
 			}
 		}
 	}
@@ -798,6 +813,7 @@ phx_yuan.0310 = {
 		# 1. Li Shanchang (Grand Administrator & Quartermaster)
 		create_character = {
 			name = "phx_name_li_shanchang"
+			dynasty = none
 			age = 38
 			gender = male
 			culture = culture:han
@@ -819,6 +835,7 @@ phx_yuan.0310 = {
 		# 2. Liu Ji / Liu Bowen (Master Strategist of Zhedong)
 		create_character = {
 			name = "phx_name_liu_ji"
+			dynasty = none
 			age = 41
 			gender = male
 			culture = culture:han
@@ -840,6 +857,7 @@ phx_yuan.0310 = {
 		# 3. Xu Da (Supreme General of the Ming)
 		create_character = {
 			name = "phx_name_xu_da"
+			dynasty = none
 			age = 24
 			gender = male
 			culture = culture:han
@@ -860,6 +878,7 @@ phx_yuan.0310 = {
 		# 4. Chang Yuchun (Ten-Thousand-Man Vanguard)
 		create_character = {
 			name = "phx_name_chang_yuchun"
+			dynasty = none
 			age = 25
 			gender = male
 			culture = culture:han
@@ -1016,7 +1035,7 @@ phx_yuan.0320 = {
 			years = 25
 		}
 		add_prestige = 350
-		add_legitimacy = 200
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
 		if = {
 			limit = { exists = scope:chen_youliang }
 			scope:chen_youliang = {
@@ -1107,7 +1126,7 @@ phx_yuan.0330 = {
 		}
 		add_pressed_claim = title:k_henan
 		add_pressed_claim = title:k_hebei
-		add_legitimacy = 250
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
 		add_prestige = 400
 		spawn_army = {
 			name = phx_rtr_northern_expedition_host_name
@@ -1134,7 +1153,7 @@ phx_yuan.0330 = {
 		name = phx_yuan.0330.b
 		add_stewardship_lifestyle_xp = 350
 		add_gold = 350
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		ai_chance = { base = 10 }
 	}
 }
@@ -1261,7 +1280,7 @@ phx_yuan.0350 = {
 	option = {
 		name = phx_yuan.0350.a
 		add_prestige = 200
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		custom_tooltip = phx_yuan_0350_labor_spark_tt
 		ai_chance = { base = 70 }
 	}
@@ -1269,11 +1288,14 @@ phx_yuan.0350 = {
 	option = {
 		name = phx_yuan.0350.b
 		remove_short_term_gold = 150
-		add_legitimacy = 250
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_imperial_reform_stabilization
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_simmering situation_current_phase = phx_rtr_phase_flood_spark situation_current_phase = phx_rtr_phase_warring_factions } }
+					trigger_situation_catalyst = catalyst_phx_rtr_imperial_reform_stabilization
+				}
 			}
 		}
 		ai_chance = { base = 30 }
@@ -1625,7 +1647,10 @@ phx_yuan.0390 = {
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_northern_retreat
+				if = {
+					limit = { situation_current_phase = phx_rtr_phase_warring_factions }
+					trigger_situation_catalyst = catalyst_phx_rtr_northern_retreat
+				}
 			}
 		}
 	}

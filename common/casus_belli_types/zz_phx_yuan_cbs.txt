@@ -120,7 +120,10 @@ phx_rtr_uprising_seizure_cb = {
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_red_banner_raised
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_simmering situation_current_phase = phx_rtr_phase_flood_spark } }
+					trigger_situation_catalyst = catalyst_phx_rtr_red_banner_raised
+				}
 			}
 		}
 		if = {
@@ -129,7 +132,10 @@ phx_rtr_uprising_seizure_cb = {
 				exists = situation:dynastic_cycle
 			}
 			situation:dynastic_cycle = {
-				trigger_situation_catalyst = catalyst_hegemon_in_civil_war
+				if = {
+					limit = { OR = { situation_current_phase = situation_dynastic_cycle_phase_stability_expansion situation_current_phase = situation_dynastic_cycle_phase_stability_advancement situation_current_phase = situation_dynastic_cycle_phase_instability situation_current_phase = situation_dynastic_cycle_phase_instability_conquest } }
+					trigger_situation_catalyst = catalyst_hegemon_in_civil_war
+				}
 			}
 		}
 	}
@@ -262,17 +268,20 @@ phx_rtr_uprising_seizure_cb = {
 				}
 			}
 			add_prestige = 350
-			add_legitimacy = 150
+			if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		}
 
 		scope:defender = {
-			add_legitimacy = -150
+			if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = -150 }
 		}
 
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_contender_seized_base
+				if = {
+					limit = { situation_current_phase = phx_rtr_phase_flood_spark }
+					trigger_situation_catalyst = catalyst_phx_rtr_contender_seized_base
+				}
 			}
 		}
 
@@ -312,7 +321,7 @@ phx_rtr_uprising_seizure_cb = {
 		scope:defender = {
 			accolade_defender_war_end_glory_gain_med_effect = yes
 			add_prestige = 250
-			add_legitimacy = 100
+			if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		}
 		scope:attacker = {
 			pay_short_term_gold_reparations_effect = { GOLD_VALUE = 2 }
@@ -321,7 +330,10 @@ phx_rtr_uprising_seizure_cb = {
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_imperial_reform_stabilization
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_simmering situation_current_phase = phx_rtr_phase_flood_spark situation_current_phase = phx_rtr_phase_warring_factions } }
+					trigger_situation_catalyst = catalyst_phx_rtr_imperial_reform_stabilization
+				}
 			}
 		}
 		modify_allies_of_participants_fame_values = {

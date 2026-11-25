@@ -182,6 +182,7 @@ phx_red_turban_rebellion = {
 	phases = {
 		# Phase 1: Simmering Discontent (1337-1344)
 		phx_rtr_phase_simmering = {
+			max_duration = { years = 12 }
 			icon = "gfx/interface/icons/situation_types/dynastic_cycle.dds"
 			illustration = "gfx/interface/illustrations/event_scenes/tgp_asia_throne_room.dds"
 
@@ -229,6 +230,7 @@ phx_red_turban_rebellion = {
 
 		# Phase 2: Breach & Spark (Yellow River Breach & One-Eyed Stone Man)
 		phx_rtr_phase_flood_spark = {
+			max_duration = { years = 10 }
 			icon = "gfx/interface/icons/situation_types/natural_disaster_flood.dds"
 			illustration = "gfx/interface/illustrations/event_scenes/tgp_overflowing_river.dds"
 
@@ -288,6 +290,7 @@ phx_red_turban_rebellion = {
 
 		# Phase 3: Warring Contenders (Ming vs Han vs Zhou vs Song vs Yuan)
 		phx_rtr_phase_warring_factions = {
+			max_duration = { years = 30 }
 			icon = "gfx/interface/icons/situation_types/natural_disaster_generic.dds"
 			illustration = "gfx/interface/illustrations/event_scenes/mpo_raid_burning_asian.dds"
 
@@ -344,6 +347,7 @@ phx_red_turban_rebellion = {
 
 		# Phase 4: Mandate Decided (New Dynasty Established or Yuan Restored)
 		phx_rtr_phase_resolution = {
+			max_duration = { years = 20 }
 			icon = "gfx/interface/icons/situation_types/silk_road_situation.dds"
 			illustration = "gfx/interface/illustrations/event_scenes/tgp_chinese_city.dds"
 

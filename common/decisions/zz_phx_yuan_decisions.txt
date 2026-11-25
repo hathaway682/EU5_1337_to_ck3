@@ -64,11 +64,14 @@ phx_yuan_zhizheng_reform_decision = {
 			modifier = phx_yuan_zhizheng_reforms_modifier
 			years = 25
 		}
-		add_legitimacy = 200
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_imperial_reform_stabilization
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_simmering situation_current_phase = phx_rtr_phase_flood_spark situation_current_phase = phx_rtr_phase_warring_factions } }
+					trigger_situation_catalyst = catalyst_phx_rtr_imperial_reform_stabilization
+				}
 			}
 		}
 		if = {
@@ -77,7 +80,10 @@ phx_yuan_zhizheng_reform_decision = {
 				exists = situation:dynastic_cycle
 			}
 			situation:dynastic_cycle = {
-				trigger_situation_catalyst = catalyst_event_advancement_medium_progress
+				if = {
+					limit = { OR = { situation_current_phase = situation_dynastic_cycle_phase_instability situation_current_phase = situation_dynastic_cycle_phase_instability_conquest } }
+					trigger_situation_catalyst = catalyst_event_advancement_medium_progress
+				}
 			}
 		}
 		custom_tooltip = phx_yuan_zhizheng_reform_effect_tt
@@ -142,11 +148,14 @@ phx_yuan_tame_yellow_river_decision = {
 				years = 25
 			}
 		}
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_jialu_corvee_spark
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_simmering situation_current_phase = phx_rtr_phase_flood_spark } }
+					trigger_situation_catalyst = catalyst_phx_rtr_jialu_corvee_spark
+				}
 			}
 		}
 		if = {
@@ -155,7 +164,10 @@ phx_yuan_tame_yellow_river_decision = {
 				exists = situation:dynastic_cycle
 			}
 			situation:dynastic_cycle = {
-				trigger_situation_catalyst = catalyst_hegemon_natural_disaster_recovered
+				if = {
+					limit = { OR = { situation_current_phase = situation_dynastic_cycle_phase_stability_expansion situation_current_phase = situation_dynastic_cycle_phase_stability_advancement situation_current_phase = situation_dynastic_cycle_phase_instability situation_current_phase = situation_dynastic_cycle_phase_instability_conquest } }
+					trigger_situation_catalyst = catalyst_hegemon_natural_disaster_recovered
+				}
 			}
 		}
 		custom_tooltip = phx_yuan_tame_yellow_river_effect_tt
@@ -337,7 +349,10 @@ phx_yuan_northern_retreat_decision = {
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_northern_retreat
+				if = {
+					limit = { situation_current_phase = phx_rtr_phase_warring_factions }
+					trigger_situation_catalyst = catalyst_phx_rtr_northern_retreat
+				}
 			}
 		}
 		custom_tooltip = phx_yuan_northern_retreat_effect_tt
@@ -358,7 +373,7 @@ phx_yuan_northern_retreat_decision = {
 # 5. Raise the Red Turban Banner
 phx_rtr_raise_red_banner_decision = {
 	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_siege_warfare.dds"
+		reference = "gfx/interface/illustrations/decisions/phx_decision_red_turban_uprising.dds"
 	}
 	decision_group_type = major
 	desc = phx_rtr_raise_red_banner_decision_desc
@@ -376,13 +391,26 @@ phx_rtr_raise_red_banner_decision = {
 	is_shown = {
 		NOT = { has_title = title:h_china }
 		NOT = { has_character_modifier = phx_rtr_red_turban_zeal_modifier }
+		NOT = { has_character_flag = phx_rtr_raised_banner_once }
 		OR = {
 			character:eu5_rtr_han ?= this
 			character:eu5_rtr_zhu ?= this
 			character:eu5_rtr_xu ?= this
 			character:eu5_rtr_chen ?= this
 			character:eu5_rtr_zhang ?= this
+			dynasty ?= dynasty:dyn_eu5_rtr_han
+			dynasty ?= dynasty:dyn_eu5_rtr_zhu
+			dynasty ?= dynasty:dyn_eu5_rtr_xu
+			dynasty ?= dynasty:dyn_eu5_rtr_chen
+			dynasty ?= dynasty:dyn_eu5_rtr_zhang
+			dynasty ?= dynasty:dyn_eu5_rtr_liu
+			dynasty ?= dynasty:dyn_eu5_rtr_mao
+			dynasty ?= dynasty:dyn_eu5_rtr_guo
+			dynasty ?= dynasty:dyn_eu5_rtr_fang
+			dynasty ?= dynasty:dyn_eu5_rtr_ming
+			dynasty ?= dynasty:dyn_eu5_rtr_peng
 			AND = {
+				is_ai = no
 				has_global_variable = phx_red_turban_unrest_begun
 				culture = culture:han
 				OR = {
@@ -411,6 +439,7 @@ phx_rtr_raise_red_banner_decision = {
 	}
 
 	effect = {
+		add_character_flag = phx_rtr_raised_banner_once
 		add_character_modifier = {
 			modifier = phx_rtr_red_turban_zeal_modifier
 			years = 20
@@ -450,7 +479,10 @@ phx_rtr_raise_red_banner_decision = {
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_red_banner_raised
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_simmering situation_current_phase = phx_rtr_phase_flood_spark } }
+					trigger_situation_catalyst = catalyst_phx_rtr_red_banner_raised
+				}
 			}
 		}
 		if = {
@@ -459,7 +491,10 @@ phx_rtr_raise_red_banner_decision = {
 				exists = situation:dynastic_cycle
 			}
 			situation:dynastic_cycle = {
-				trigger_situation_catalyst = catalyst_hegemon_in_civil_war
+				if = {
+					limit = { OR = { situation_current_phase = situation_dynastic_cycle_phase_stability_expansion situation_current_phase = situation_dynastic_cycle_phase_stability_advancement situation_current_phase = situation_dynastic_cycle_phase_instability situation_current_phase = situation_dynastic_cycle_phase_instability_conquest } }
+					trigger_situation_catalyst = catalyst_hegemon_in_civil_war
+				}
 			}
 		}
 		custom_tooltip = phx_rtr_raise_red_banner_effect_tt
@@ -471,10 +506,24 @@ phx_rtr_raise_red_banner_decision = {
 
 	ai_potential = {
 		has_global_variable = phx_red_turban_unrest_begun
+		current_year >= 1348
+		NOT = { has_character_flag = phx_rtr_raised_banner_once }
+		OR = {
+			character:eu5_rtr_han ?= this
+			character:eu5_rtr_zhu ?= this
+			character:eu5_rtr_xu ?= this
+			character:eu5_rtr_chen ?= this
+			character:eu5_rtr_zhang ?= this
+			dynasty ?= dynasty:dyn_eu5_rtr_han
+			dynasty ?= dynasty:dyn_eu5_rtr_zhu
+			dynasty ?= dynasty:dyn_eu5_rtr_xu
+			dynasty ?= dynasty:dyn_eu5_rtr_chen
+			dynasty ?= dynasty:dyn_eu5_rtr_zhang
+		}
 	}
 
 	ai_will_do = {
-		base = 90
+		base = 80
 	}
 }
 
@@ -534,10 +583,13 @@ phx_rtr_high_walls_grain_decision = {
 			modifier = phx_rtr_zhu_virtuous_discipline_modifier
 			years = 25
 		}
-		capital_county = {
-			change_prosperity_progress = 120
+		if = {
+			limit = { exists = capital_county }
+			capital_county = {
+				change_prosperity_progress = 120
+			}
 		}
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		custom_tooltip = phx_rtr_high_walls_grain_effect_tt
 		hidden_effect = {
 			trigger_event = phx_yuan.0210
@@ -557,7 +609,7 @@ phx_rtr_high_walls_grain_decision = {
 # 7. Proclaim the Restoration of the Central Plains (Ming / New Dynasty)
 phx_rtr_proclaim_new_dynasty_decision = {
 	picture = {
-		reference = "gfx/interface/illustrations/decisions/tgp_kowtow.dds"
+		reference = "gfx/interface/illustrations/decisions/phx_decision_celestial_mandate_court.dds"
 	}
 	decision_group_type = dynastic_cycle
 	desc = phx_rtr_proclaim_new_dynasty_decision_desc
@@ -619,12 +671,15 @@ phx_rtr_proclaim_new_dynasty_decision = {
 				years = 35
 			}
 		}
-		add_legitimacy = 400
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 400 }
 		add_prestige = 750
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_dynastic_mandate_decided
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_flood_spark situation_current_phase = phx_rtr_phase_warring_factions } }
+					trigger_situation_catalyst = catalyst_phx_rtr_dynastic_mandate_decided
+				}
 			}
 		}
 		if = {
@@ -633,7 +688,10 @@ phx_rtr_proclaim_new_dynasty_decision = {
 				exists = situation:dynastic_cycle
 			}
 			situation:dynastic_cycle = {
-				trigger_situation_catalyst = catalyst_event_advancement_medium_progress
+				if = {
+					limit = { OR = { situation_current_phase = situation_dynastic_cycle_phase_instability situation_current_phase = situation_dynastic_cycle_phase_instability_conquest } }
+					trigger_situation_catalyst = catalyst_event_advancement_medium_progress
+				}
 			}
 		}
 		custom_tooltip = phx_rtr_proclaim_new_dynasty_effect_tt
@@ -722,11 +780,14 @@ phx_rtr_seize_yingtian_capital_decision = {
 				years = 30
 			}
 		}
-		add_legitimacy = 200
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_contender_seized_base
+				if = {
+					limit = { situation_current_phase = phx_rtr_phase_flood_spark }
+					trigger_situation_catalyst = catalyst_phx_rtr_contender_seized_base
+				}
 			}
 		}
 		custom_tooltip = phx_rtr_seize_yingtian_capital_effect_tt
@@ -888,7 +949,7 @@ phx_rtr_proclaim_great_han_decision = {
 			modifier = phx_rtr_great_han_river_fleet_modifier
 			years = 35
 		}
-		add_legitimacy = 250
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
 		add_prestige = 300
 		spawn_army = {
 			name = phx_rtr_great_han_fleet_name
@@ -907,7 +968,10 @@ phx_rtr_proclaim_great_han_decision = {
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_contender_proclaimed_realm
+				if = {
+					limit = { situation_current_phase = phx_rtr_phase_warring_factions }
+					trigger_situation_catalyst = catalyst_phx_rtr_contender_proclaimed_realm
+				}
 			}
 		}
 		custom_tooltip = phx_rtr_proclaim_great_han_effect_tt
@@ -991,9 +1055,12 @@ phx_rtr_proclaim_great_zhou_decision = {
 			years = 35
 		}
 		add_gold = 300
-		add_legitimacy = 200
-		capital_county = {
-			change_prosperity_progress = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
+		if = {
+			limit = { exists = capital_county }
+			capital_county = {
+				change_prosperity_progress = 150
+			}
 		}
 		spawn_army = {
 			name = phx_rtr_great_zhou_guard_name
@@ -1012,7 +1079,10 @@ phx_rtr_proclaim_great_zhou_decision = {
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_contender_proclaimed_realm
+				if = {
+					limit = { situation_current_phase = phx_rtr_phase_warring_factions }
+					trigger_situation_catalyst = catalyst_phx_rtr_contender_proclaimed_realm
+				}
 			}
 		}
 		custom_tooltip = phx_rtr_proclaim_great_zhou_effect_tt
@@ -1097,7 +1167,7 @@ phx_rtr_proclaim_great_song_decision = {
 			years = 35
 		}
 		add_piety = 350
-		add_legitimacy = 250
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
 		spawn_army = {
 			name = phx_rtr_great_song_host_name
 			location = root.capital_province
@@ -1115,7 +1185,10 @@ phx_rtr_proclaim_great_song_decision = {
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_contender_proclaimed_realm
+				if = {
+					limit = { situation_current_phase = phx_rtr_phase_warring_factions }
+					trigger_situation_catalyst = catalyst_phx_rtr_contender_proclaimed_realm
+				}
 			}
 		}
 		custom_tooltip = phx_rtr_proclaim_great_song_effect_tt
@@ -1211,11 +1284,14 @@ phx_yuan_grand_canal_dredging_decision = {
 				}
 			}
 		}
-		add_legitimacy = 200
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
 		if = {
 			limit = { exists = situation:phx_red_turban_rebellion }
 			situation:phx_red_turban_rebellion = {
-				trigger_situation_catalyst = catalyst_phx_rtr_imperial_reform_stabilization
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_simmering situation_current_phase = phx_rtr_phase_flood_spark situation_current_phase = phx_rtr_phase_warring_factions } }
+					trigger_situation_catalyst = catalyst_phx_rtr_imperial_reform_stabilization
+				}
 			}
 		}
 		if = {
@@ -1224,7 +1300,10 @@ phx_yuan_grand_canal_dredging_decision = {
 				exists = situation:dynastic_cycle
 			}
 			situation:dynastic_cycle = {
-				trigger_situation_catalyst = catalyst_event_advancement_medium_progress
+				if = {
+					limit = { OR = { situation_current_phase = situation_dynastic_cycle_phase_instability situation_current_phase = situation_dynastic_cycle_phase_instability_conquest } }
+					trigger_situation_catalyst = catalyst_event_advancement_medium_progress
+				}
 			}
 		}
 		custom_tooltip = phx_yuan_grand_canal_dredging_effect_tt
