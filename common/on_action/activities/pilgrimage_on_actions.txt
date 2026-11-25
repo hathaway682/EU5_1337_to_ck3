@@ -1,4 +1,4 @@
-# On actions for the Pilgrimage activity
+﻿# On actions for the Pilgrimage activity
 
 # On-action managing possible Pilgrimage journey events
 pilgrimage_journey_events = {
@@ -199,10 +199,10 @@ christian_arrival_events = {
 		religion = religion:christianity_religion
 		involved_activity.activity_location = {
 			OR = {
-				county = title:c_roma # Rome
-				county = title:c_jerusalem # Jerusalem
-				county = title:c_byzantion # Constantinople
-				county = title:c_sullum # Alexandria
+				county = title:c_marittima # Rome
+				county = title:c_filastin # Jerusalem
+				county = title:c_constantinople # Constantinople
+				county = title:c_alexandria # Alexandria
 			}
 		}
 	}
@@ -222,7 +222,7 @@ jewish_arrival_events = {
 		involved_activity.activity_location = {
 			OR = {
 				county = title:c_tih # Mt. Sinai
-				county = title:c_jerusalem # Jerusalem
+				county = title:c_filastin # Jerusalem
 			}
 		}
 	}
@@ -241,7 +241,7 @@ muslim_arrival_events = {
 			OR = {
 				county = title:c_medina # Medina
 				county = title:c_tih # Mt. Sinai
-				county = title:c_jerusalem # Jerusalem
+				county = title:c_filastin # Jerusalem
 			}
 		}
 	}
@@ -261,12 +261,12 @@ hindu_arrival_events = {
 		involved_activity.activity_location = {
 			OR = {
 				county = title:c_varanasi # Varanasi
-				county = title:c_ayodhya # Ayodhya
-				county = title:c_sripatha # Mathura
-				county = title:c_sthanisvara # Haridwar
-				county = title:c_kanchipuram # Kanchipuram
-				county = title:c_dasapura # Ujjayini
-				county = title:c_dhamalpur # Dwarka
+				county = title:c_awadh # Ayodhya
+				county = title:c_braj # Mathura
+				county = title:c_garhwal # Haridwar
+				county = title:c_tondai_nadu # Kanchipuram
+				county = title:c_western_malwa # Ujjayini
+				county = title:c_halar # Dwarka
 			}
 		}
 	}
@@ -288,8 +288,8 @@ buddhist_arrival_events = {
 		religion = religion:buddhism_religion
 		involved_activity.activity_location = {
 			OR = {
-				county = title:c_gaya # Bodh Gaya
-				county = title:c_kusinagara # Kusinagara
+				county = title:c_patna # Bodh Gaya
+				county = title:c_gorakhpur # Kusinagara
 				county = title:c_varanasi # Sarnath
 			}
 		}
@@ -307,7 +307,7 @@ jain_arrival_events = {
 	trigger = {
 		religion = religion:jainism_religion
 		involved_activity.activity_location = {
-			county = title:c_radha # Shikharj
+			county = title:c_hazaribagh # Shikharj
 		}
 	}
 
@@ -321,7 +321,7 @@ zoroastrian_arrival_events = {
 	trigger = {
 		religion = religion:zoroastrianism_religion
 		involved_activity.activity_location = {
-			county = title:c_mazandaran # Ushi-darena
+			county = title:c_rey # Ushi-darena
 		}
 	}
 
