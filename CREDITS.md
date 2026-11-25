@@ -97,3 +97,11 @@ So a full harness is reachable under CC-BY or not at all. Other CC-BY sources wo
 | `DevonLux` | 6 MetaHuman-rigged sets: platemail, heavy, scalemail, bandit 7pc, leather, cloth | pre-split into slots; one fitting pass generalises across all six |
 | `ernst52` | German Munition half-armour, Pikeman's, Harquebusier's, 8 helmets | historically accurate, moderate poly |
 | `Multipainkiller_Studio` | Barbuta 2848 tris, Visored Barbuta 6624, arm guards under 1k | already at game polycount, no decimation needed |
+
+---
+
+## Project Phoenix (PHX) Original Contributions — Wave 5
+
+| asset | author | licence / provenance |
+|---|---|---|
+| `gfx/interface/illustrations/decisions/phx_decision_alhambra_splendor.dds` | `miscos330` (Project Phoenix) | Original artwork contributed for *Universalis Kings* (1100x440 RGBA DDS) |

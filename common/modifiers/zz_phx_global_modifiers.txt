@@ -1,0 +1,195 @@
+﻿##################################################
+# Project Phoenix (PHX) — Wave 5 Global Crises & Eurasia Modifiers
+# CK3 1.21.0.3 (Florin) strictly valid keys only
+# County modifiers contain ONLY county-valid keys
+##################################################
+
+# === 1347 Black Death (DLC011-Independent) ===
+phx_black_death_outbreak_county_modifier = {
+	icon = rat_negative
+	prosperity_growth_factor = -0.75
+	all_tax_mult = -0.45
+	levy_size = -0.40
+	monthly_control_change = -0.40
+	supply_limit_mult = -0.35
+}
+
+phx_black_death_quarantine_modifier = {
+	icon = health_positive
+	health = 0.35
+	monthly_income_mult = -0.15
+	vassal_opinion = -5
+	monthly_control_change = 0.20
+}
+
+phx_black_death_post_plague_boom_modifier = {
+	icon = economy_positive
+	stewardship = 2
+	monthly_income_mult = 0.12
+	build_gold_cost = -0.10
+	direct_vassal_opinion = 5
+	monthly_legitimacy_add = 0.35
+}
+
+# === 1378 Western Schism ===
+phx_schism_avignon_obedience_modifier = {
+	icon = piety_mixed
+	diplomacy = 1
+	monthly_income_mult = 0.08
+	clergy_opinion = -5
+	same_faith_opinion = -5
+}
+
+phx_schism_roman_obedience_modifier = {
+	icon = piety_positive
+	learning = 1
+	monthly_piety_gain_mult = 0.12
+	clergy_opinion = 8
+	same_faith_opinion = 5
+}
+
+phx_schism_conciliar_unity_modifier = {
+	icon = diplomacy_positive
+	diplomacy = 2
+	learning = 2
+	monthly_piety_gain_mult = 0.15
+	same_faith_opinion = 10
+	monthly_legitimacy_add = 0.50
+}
+
+# === Timur & Transoxiana ===
+phx_timur_scourge_modifier = {
+	icon = horse_positive
+	martial = 4
+	prowess = 3
+	dread_baseline_add = 30
+	advantage = 6
+	movement_speed = 0.20
+	knight_effectiveness_mult = 0.20
+}
+
+phx_timur_samarkand_renaissance_modifier = {
+	icon = county_modifier_prosperity_positive
+	prosperity_growth_factor = 0.35
+	all_tax_mult = 0.20
+	build_gold_cost = -0.15
+	monthly_control_change = 0.30
+}
+
+# === Iberia & Maritime Exploration ===
+phx_ibe_strait_mastery_modifier = {
+	icon = martial_positive
+	martial = 2
+	embarkation_cost_mult = -0.25
+	naval_movement_speed_mult = 0.20
+	monthly_income_mult = 0.10
+	monthly_prestige_gain_mult = 0.10
+}
+
+phx_ibe_atlantic_pioneers_modifier = {
+	icon = compass_positive
+	stewardship = 2
+	learning = 1
+	naval_movement_speed_mult = 0.30
+	embarkation_cost_mult = -0.30
+	monthly_income_mult = 0.10
+}
+
+phx_gra_alhambra_golden_age_modifier = {
+	icon = stewardship_positive
+	diplomacy = 2
+	learning = 2
+	defender_advantage = 4
+	monthly_prestige_gain_mult = 0.15
+	monthly_legitimacy_add = 0.50
+}
+
+# === Italy Early Renaissance ===
+phx_ita_early_renaissance_patron_modifier = {
+	icon = learning_positive
+	diplomacy = 2
+	learning = 3
+	monthly_income_mult = 0.10
+	monthly_prestige_gain_mult = 0.15
+	build_gold_cost = -0.10
+}
+
+phx_ita_condottieri_contracts_modifier = {
+	icon = martial_mixed
+	martial = 2
+	mercenary_hire_cost_mult = -0.25
+	advantage = 3
+	monthly_income_mult = -0.05
+}
+
+# === MENA, South Asia, SE Asia, Korea & Africa ===
+phx_mam_red_sea_monopoly_modifier = {
+	icon = economy_positive
+	stewardship = 2
+	monthly_income_mult = 0.18
+	men_at_arms_maintenance = -0.10
+	monthly_prestige_gain_mult = 0.10
+}
+
+phx_dlh_tughluq_turmoil_modifier = {
+	icon = administrative_negative
+	vassal_opinion = -12
+	monthly_income_mult = -0.12
+	levy_size = -0.15
+	monthly_legitimacy_add = -0.35
+}
+
+phx_dlh_reformed_diwan_modifier = {
+	icon = administrative_positive
+	stewardship = 2
+	diplomacy = 1
+	monthly_income_mult = 0.12
+	vassal_opinion = 8
+	monthly_legitimacy_add = 0.45
+}
+
+phx_vij_hampi_bulwark_modifier = {
+	icon = martial_positive
+	martial = 2
+	defender_advantage = 5
+	levy_size = 0.15
+	same_faith_opinion = 10
+	monthly_legitimacy_add = 0.40
+}
+
+phx_maj_palapa_oath_modifier = {
+	icon = prestige_positive
+	martial = 2
+	diplomacy = 2
+	naval_movement_speed_mult = 0.25
+	embarkation_cost_mult = -0.30
+	vassal_opinion = 10
+	monthly_legitimacy_add = 0.50
+}
+
+phx_kor_late_goryeo_reform_modifier = {
+	icon = administrative_positive
+	stewardship = 2
+	learning = 2
+	monthly_income_mult = 0.10
+	defender_advantage = 3
+	monthly_legitimacy_add = 0.40
+}
+
+phx_mal_sankore_scholars_modifier = {
+	icon = learning_positive
+	learning = 3
+	stewardship = 2
+	monthly_piety_gain_mult = 0.15
+	monthly_income_mult = 0.12
+	same_faith_opinion = 10
+}
+
+phx_eth_solomonic_zeal_modifier = {
+	icon = piety_positive
+	martial = 2
+	monthly_piety_gain_mult = 0.20
+	defender_advantage = 4
+	same_faith_opinion = 12
+	monthly_legitimacy_add = 0.50
+}
