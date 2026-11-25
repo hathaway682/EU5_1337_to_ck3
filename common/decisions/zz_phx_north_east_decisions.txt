@@ -8,7 +8,7 @@
 # 1. Teutonic Order — Establish the Eastern Ordensmarks
 phx_teu_organize_ordensmarks_decision = {
 	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+		reference = "gfx/interface/illustrations/decisions/phx_decision_hanseatic_baltic.dds"
 	}
 	decision_group_type = major
 	desc = phx_teu_organize_ordensmarks_decision_desc
@@ -64,7 +64,7 @@ phx_teu_organize_ordensmarks_decision = {
 		title:c_danzig = {
 			change_prosperity_progress = 60
 		}
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		custom_tooltip = phx_teu_organize_ordensmarks_effect_tt
 		hidden_effect = {
 			add_character_flag = phx_teu_ordensmarks_flag
@@ -236,7 +236,7 @@ phx_teu_secularize_prussia_decision = {
 			modifier = phx_teu_secular_prussia_modifier
 			years = 40
 		}
-		add_legitimacy = 250
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
 		custom_tooltip = phx_teu_secularize_prussia_effect_tt
 		hidden_effect = {
 			add_to_global_variable_list = {
@@ -313,7 +313,7 @@ phx_hre_golden_bull_decision = {
 			modifier = phx_hre_golden_bull_modifier
 			years = 50
 		}
-		add_legitimacy = 300
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 300 }
 		add_prestige = 400
 		every_vassal = {
 			limit = {
@@ -401,7 +401,7 @@ phx_pol_statutes_of_casimir_decision = {
 			modifier = phx_pol_casimir_statutes_modifier
 			years = 40
 		}
-		add_legitimacy = 200
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
 		title:c_krakow = {
 			change_prosperity_progress = 100
 		}
@@ -496,7 +496,7 @@ phx_pol_union_of_krewo_decision = {
 			modifier = phx_pol_lithuanian_union_modifier
 			years = 40
 		}
-		add_legitimacy = 250
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
 		add_prestige = 400
 		if = {
 			limit = {
@@ -623,7 +623,7 @@ phx_lit_baptism_of_lithuania_decision = {
 			years = 40
 		}
 		add_piety = 350
-		add_legitimacy = 200
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
 		if = {
 			limit = {
 				exists = title:k_poland.holder
@@ -728,7 +728,7 @@ phx_sca_kalmar_union_decision = {
 			modifier = phx_sca_kalmar_union_modifier
 			years = 50
 		}
-		add_legitimacy = 300
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 300 }
 		add_prestige = 500
 		if = {
 			limit = {
@@ -836,7 +836,7 @@ phx_rus_gather_russian_lands_decision = {
 			modifier = phx_rus_gathering_lands_modifier
 			years = 40
 		}
-		add_legitimacy = 200
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
 		title:c_moscow = {
 			change_prosperity_progress = 100
 		}
@@ -947,7 +947,7 @@ phx_rus_cast_off_tatar_yoke_decision = {
 			modifier = phx_rus_broken_tatar_yoke_modifier
 			years = 50
 		}
-		add_legitimacy = 300
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 300 }
 		add_prestige = 500
 		spawn_army = {
 			name = phx_rus_don_host_army_name
@@ -1060,7 +1060,7 @@ phx_glh_restore_sarai_order_decision = {
 			modifier = phx_glh_sarai_order_restored_modifier
 			years = 40
 		}
-		add_legitimacy = 250
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
 		add_dread = 25
 		title:c_beljamen = {
 			change_prosperity_progress = 75

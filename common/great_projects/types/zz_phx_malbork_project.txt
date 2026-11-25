@@ -88,7 +88,7 @@ phx_malbork_high_castle = {
 		scope:owner ?= {
 			add_prestige = 500
 			add_piety = 250
-			add_legitimacy = 150
+			if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 			hidden_effect = {
 				trigger_event = phx_ne.0105
 			}
