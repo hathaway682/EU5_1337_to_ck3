@@ -1,0 +1,354 @@
+﻿##################################################
+# Project Phoenix (PHX) — Red Turban Uprising Casus Belli
+# CK3 1.21.0.3 (Florin)
+# Allows Red Turban leaders (landless adventurers, merchants, and landed Han
+# contenders) to wage decisive liberation wars against h_china & Mongol lands
+##################################################
+
+phx_rtr_uprising_seizure_cb = {
+	icon = invasion
+	group = independence
+
+	combine_into_one = yes
+	should_show_war_goal_subview = yes
+	mutually_exclusive_titles = { always = yes }
+	allow_hostages = no
+	landless_attacker_needs_armies = no
+
+	allowed_for_character = {
+		NOT = { has_title = title:h_china }
+		OR = {
+			character:eu5_rtr_han ?= this
+			character:eu5_rtr_zhu ?= this
+			character:eu5_rtr_xu ?= this
+			character:eu5_rtr_chen ?= this
+			character:eu5_rtr_zhang ?= this
+			dynasty ?= dynasty:dyn_eu5_rtr_han
+			dynasty ?= dynasty:dyn_eu5_rtr_zhu
+			dynasty ?= dynasty:dyn_eu5_rtr_xu
+			dynasty ?= dynasty:dyn_eu5_rtr_chen
+			dynasty ?= dynasty:dyn_eu5_rtr_zhang
+			has_character_modifier = phx_rtr_red_turban_zeal_modifier
+		}
+		OR = {
+			has_global_variable = phx_red_turban_unrest_begun
+			has_character_modifier = phx_rtr_red_turban_zeal_modifier
+			current_year >= 1348
+		}
+	}
+
+	allowed_against_character = {
+		scope:defender = {
+			OR = {
+				has_title = title:h_china
+				top_liege = { has_title = title:h_china }
+				culture = culture:mongol
+				top_liege = { culture = culture:mongol }
+			}
+			NOT = { government_has_flag = government_is_landless_adventurer }
+		}
+	}
+
+	target_titles = all
+	target_title_tier = all
+	target_de_jure_regions_above = yes
+	ignore_effect = change_title_holder
+
+	ai_can_target_all_titles = { always = yes }
+	ai_score_mult = {
+		value = 1.5
+		add = common_cb_ai_score_mult_additive
+		multiply = aggressive_cb_ai_score_mult
+		multiply = common_cb_ai_score_mult
+	}
+
+	valid_to_start = {
+		scope:target = {
+			is_landless_type_title = no
+			OR = {
+				AND = {
+					tier = tier_county
+					title_province ?= {
+						geographical_region = world_asia_china
+					}
+				}
+				AND = {
+					tier = tier_duchy
+					any_de_jure_county = {
+						title_province ?= {
+							geographical_region = world_asia_china
+						}
+					}
+				}
+				AND = {
+					tier = tier_kingdom
+					scope:attacker = {
+						OR = {
+							is_landed = yes
+							has_character_modifier = phx_rtr_red_turban_zeal_modifier
+						}
+					}
+					any_de_jure_county = {
+						title_province ?= {
+							geographical_region = world_asia_china
+						}
+					}
+				}
+			}
+		}
+	}
+
+	should_invalidate = {
+		war_should_invalidate_defender_lost_target_lands_trigger = yes
+	}
+
+	on_invalidated_desc = {
+		desc = phx_rtr_uprising_seizure_cb_invalidated_desc
+	}
+	on_invalidated = {}
+
+	cost = {
+		prestige = {
+			value = 150
+			multiply = common_cb_prestige_cost_multiplier
+		}
+	}
+
+	on_declaration = {
+		on_declared_war = yes
+		set_global_variable = phx_red_turban_unrest_begun
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				trigger_situation_catalyst = catalyst_phx_rtr_red_banner_raised
+			}
+		}
+		if = {
+			limit = {
+				has_tgp_dlc_trigger = yes
+				exists = situation:dynastic_cycle
+			}
+			situation:dynastic_cycle = {
+				trigger_situation_catalyst = catalyst_hegemon_in_civil_war
+			}
+		}
+	}
+
+	on_victory_desc = {
+		desc = phx_rtr_uprising_seizure_cb_victory_desc
+	}
+
+	on_victory = {
+		on_victory_aggressive_war_effect = yes
+		scope:attacker = {
+			accolade_attacker_war_end_glory_gain_med_effect = yes
+		}
+
+		# Record whether attacker started landless/merchant for government transition
+		if = {
+			limit = {
+				scope:attacker = {
+					OR = {
+						is_landed = no
+						government_has_flag = government_is_landless_adventurer
+						government_has_flag = government_is_merchant
+					}
+				}
+			}
+			scope:attacker = {
+				add_character_flag = {
+					flag = phx_rtr_was_unlanded_contender
+					days = 3
+				}
+			}
+		}
+
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = yes
+		}
+
+		every_in_list = {
+			list = target_titles
+			if = {
+				limit = { tier = tier_county }
+				save_scope_as = phx_captured_capital
+				change_title_holder = {
+					holder = scope:attacker
+					change = scope:change
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						tier = tier_duchy
+						tier = tier_kingdom
+					}
+				}
+				every_de_jure_county = {
+					limit = {
+						holder ?= {
+							OR = {
+								this = scope:defender
+								is_vassal_or_below_of = scope:defender
+							}
+						}
+					}
+					if = {
+						limit = { NOT = { exists = scope:phx_captured_capital } }
+						save_scope_as = phx_captured_capital
+					}
+					change_title_holder = {
+						holder = scope:attacker
+						change = scope:change
+					}
+				}
+				if = {
+					limit = {
+						holder ?= {
+							OR = {
+								this = scope:defender
+								is_vassal_or_below_of = scope:defender
+							}
+						}
+					}
+					change_title_holder = {
+						holder = scope:attacker
+						change = scope:change
+					}
+				}
+			}
+		}
+
+		resolve_title_and_vassal_change = scope:change
+
+		# Transition newly landed rebels cleanly out of adventurer/merchant governments
+		scope:attacker = {
+			if = {
+				limit = {
+					has_character_flag = phx_rtr_was_unlanded_contender
+					is_landed = yes
+				}
+				if = {
+					limit = {
+						OR = {
+							government_has_flag = government_is_landless_adventurer
+							government_has_flag = government_is_merchant
+						}
+					}
+					change_government = feudal_government
+				}
+				if = {
+					limit = { exists = scope:phx_captured_capital }
+					set_realm_capital = scope:phx_captured_capital
+				}
+				if = {
+					limit = { top_liege != this }
+					create_title_and_vassal_change = {
+						type = conquest
+						save_scope_as = ind_change
+						add_claim_on_loss = no
+					}
+					becomes_independent = {
+						change = scope:ind_change
+					}
+					resolve_title_and_vassal_change = scope:ind_change
+				}
+				every_held_title = {
+					limit = { is_landless_type_title = yes }
+					save_temporary_scope_as = old_camp_title
+					scope:attacker = { destroy_title = scope:old_camp_title }
+				}
+			}
+			add_prestige = 350
+			add_legitimacy = 150
+		}
+
+		scope:defender = {
+			add_legitimacy = -150
+		}
+
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				trigger_situation_catalyst = catalyst_phx_rtr_contender_seized_base
+			}
+		}
+
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:attacker
+			FAME_BASE = medium_prestige_value
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+	}
+
+	on_white_peace_desc = {
+		desc = phx_rtr_uprising_seizure_cb_white_peace_desc
+	}
+
+	on_white_peace = {
+		on_white_peace_effect = yes
+		scope:attacker = {
+			add_prestige = -150
+		}
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:attacker
+			FAME_BASE = minor_prestige_value
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+	}
+
+	on_defeat_desc = {
+		desc = phx_rtr_uprising_seizure_cb_defeat_desc
+	}
+
+	on_defeat = {
+		on_defeat_aggressive_war_effect = yes
+		scope:defender = {
+			accolade_defender_war_end_glory_gain_med_effect = yes
+			add_prestige = 250
+			add_legitimacy = 100
+		}
+		scope:attacker = {
+			pay_short_term_gold_reparations_effect = { GOLD_VALUE = 2 }
+			add_prestige = -250
+		}
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				trigger_situation_catalyst = catalyst_phx_rtr_imperial_reform_stabilization
+			}
+		}
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:defender
+			FAME_BASE = medium_prestige_value
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+	}
+
+	transfer_behavior = transfer
+	on_primary_attacker_death = inherit
+	on_primary_defender_death = inherit
+	attacker_allies_inherit = yes
+	defender_allies_inherit = yes
+
+	war_name = "PHX_RTR_UPRISING_WAR_NAME"
+	war_name_base = "PHX_RTR_UPRISING_WAR_NAME_BASE"
+	cb_name = "PHX_RTR_UPRISING_CB_NAME"
+
+	interface_priority = 88
+	use_de_jure_wargoal_only = yes
+	attacker_wargoal_percentage = 0.75
+	attacker_score_from_occupation_scale = 150
+	attacker_score_from_battles_scale = 150
+	defender_score_from_battles_scale = 150
+	max_attacker_score_from_occupation = 150
+	max_defender_score_from_occupation = 150
+}

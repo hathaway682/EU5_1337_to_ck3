@@ -1,0 +1,395 @@
+﻿##################################################
+# Project Phoenix (PHX) — Red Turban Rebellion Native Situation
+# CK3 1.21.0.3 (Florin) Situation Schema
+# Situation ID: phx_red_turban_rebellion
+##################################################
+
+phx_red_turban_rebellion = {
+	window = situation
+	gui_window_name = window_situation
+	gui_participation_window_name = window_situation_participation
+	gui_tooltip_group_focused = no
+	situation_group_type = major
+	sort_order = 180
+	is_unique = yes
+	keep_full_history = yes
+	map_mode = participant_groups
+	use_situation_phase_flat_icons = no
+	illustration = "gfx/interface/illustrations/event_story/tgp_dynastic_cycle_corruption.dds"
+
+	icon = {
+		reference = "gfx/interface/icons/situation_types/dynastic_cycle.dds"
+	}
+
+	##################################################
+	# Regions
+	##################################################
+	sub_regions = {
+		core = {
+			icon = "gfx/interface/icons/situation_types/dynastic_cycle.dds"
+			illustration = "gfx/interface/illustrations/event_scenes/tgp_chinese_city.dds"
+			map_color = { 0.80 0.22 0.18 }
+			geographical_regions = { world_asia_china }
+		}
+	}
+
+	##################################################
+	# On Actions (Strictly O(1), ZERO every_living_character)
+	##################################################
+	on_start = {
+	}
+
+	on_end = {
+	}
+
+	on_monthly = {
+		# Transition 1: Simmering Discontent -> Breach & Spark once Yellow River breaches
+		if = {
+			limit = {
+				situation_current_phase = phx_rtr_phase_simmering
+				has_global_variable = phx_yuan_yellow_river_fired
+				current_year >= 1344
+			}
+			situation_top_sub_region = {
+				change_phase = phx_rtr_phase_flood_spark
+			}
+		}
+		# Transition 2: Breach & Spark -> Warring Contenders once uprisings spread in 1351+
+		else_if = {
+			limit = {
+				situation_current_phase = phx_rtr_phase_flood_spark
+				has_global_variable = phx_red_turban_unrest_begun
+				current_year >= 1351
+			}
+			situation_top_sub_region = {
+				change_phase = phx_rtr_phase_warring_factions
+			}
+		}
+		# Transition 3: Warring Contenders -> Mandate Decided when dynasty proclaimed or Dadu+Nanjing held by Han or 1385+
+		else_if = {
+			limit = {
+				situation_current_phase = phx_rtr_phase_warring_factions
+				OR = {
+					has_global_variable = phx_rtr_new_dynasty_proclaimed_global
+					AND = {
+						title:c_shuntian.holder.top_liege ?= { culture = culture:han }
+						title:c_yingtian.holder.top_liege ?= { culture = culture:han }
+					}
+					current_year >= 1385
+				}
+			}
+			situation_top_sub_region = {
+				change_phase = phx_rtr_phase_resolution
+			}
+		}
+		# Clean conclusion after era of Mandate Decided has settled
+		else_if = {
+			limit = {
+				situation_current_phase = phx_rtr_phase_resolution
+				current_year >= 1405
+			}
+			end_situation = yes
+		}
+	}
+
+	##################################################
+	# Participant Groups (First Valid Match)
+	##################################################
+	participant_groups = {
+		phx_rtr_northern_turbans = {
+			icon = "gfx/interface/icons/situation_types/natural_disaster_generic.dds"
+			auto_add_rulers = yes
+			auto_add_landless_rulers = yes
+			require_realm_in_sub_region = yes
+			require_domicile_in_sub_region = yes
+			map_color = rgb{ 205 42 42 }
+
+			is_character_valid = {
+				NOT = { has_title = title:h_china }
+				OR = {
+					dynasty ?= dynasty:dyn_eu5_rtr_han
+					dynasty ?= dynasty:dyn_eu5_rtr_liu
+					dynasty ?= dynasty:dyn_eu5_rtr_mao
+					dynasty ?= dynasty:dyn_eu5_rtr_guo
+					has_character_flag = phx_rtr_northern_faction
+				}
+			}
+		}
+
+		phx_rtr_southern_contenders = {
+			icon = "gfx/interface/icons/situation_types/silk_road_situation.dds"
+			auto_add_rulers = yes
+			auto_add_landless_rulers = yes
+			require_realm_in_sub_region = yes
+			require_domicile_in_sub_region = yes
+			map_color = rgb{ 230 155 30 }
+
+			is_character_valid = {
+				OR = {
+					dynasty ?= dynasty:dyn_eu5_rtr_zhu
+					dynasty ?= dynasty:dyn_eu5_rtr_xu
+					dynasty ?= dynasty:dyn_eu5_rtr_chen
+					dynasty ?= dynasty:dyn_eu5_rtr_zhang
+					dynasty ?= dynasty:dyn_eu5_rtr_fang
+					dynasty ?= dynasty:dyn_eu5_rtr_ming
+					dynasty ?= dynasty:dyn_eu5_rtr_peng
+					has_character_flag = phx_rtr_southern_faction
+					AND = {
+						culture = culture:han
+						is_independent_ruler = yes
+						OR = {
+							has_character_modifier = phx_rtr_red_turban_zeal_modifier
+							has_character_modifier = phx_rtr_zhu_virtuous_discipline_modifier
+							has_character_modifier = phx_rtr_new_dynasty_mandate_modifier
+						}
+					}
+				}
+			}
+		}
+
+		phx_rtr_yuan_court = {
+			icon = "gfx/interface/icons/situation_types/dynastic_cycle.dds"
+			auto_add_rulers = yes
+			auto_add_landless_rulers = yes
+			require_realm_in_sub_region = yes
+			require_domicile_in_sub_region = yes
+			map_color = rgb{ 55 115 215 }
+
+			is_character_valid = {
+				OR = {
+					has_title = title:h_china
+					dynasty ?= dynasty:mb_yuan_county_dynasty_101946
+					dynasty ?= dynasty:dyn_eu5_rtr_koke
+					dynasty ?= dynasty:dyn_eu5_rtr_he
+					dynasty ?= dynasty:dyn_eu5_rtr_chen_youding
+					dynasty ?= dynasty:dyn_eu5_rtr_li
+					dynasty ?= dynasty:dyn_eu5_yuan_merkid
+					AND = {
+						exists = title:h_china.holder
+						is_vassal_or_below_of = title:h_china.holder
+						highest_held_title_tier >= tier_county
+					}
+				}
+			}
+		}
+	}
+
+	##################################################
+	# Phases
+	##################################################
+	start_phase = phx_rtr_phase_simmering
+
+	phases = {
+		# Phase 1: Simmering Discontent (1337-1344)
+		phx_rtr_phase_simmering = {
+			icon = "gfx/interface/icons/situation_types/dynastic_cycle.dds"
+			illustration = "gfx/interface/illustrations/event_scenes/tgp_asia_throne_room.dds"
+
+			parameters = {
+				phx_rtr_param_simmering_unrest = yes
+			}
+
+			modifier_sets = {
+				phx_rtr_realm_effects = {
+					icon = "gfx/interface/icons/situations/situation_modifier_character.dds"
+					phx_rtr_yuan_court = {
+						character_modifier = {
+							monthly_income_mult = -0.05
+							vassal_opinion = -5
+						}
+					}
+					phx_rtr_northern_turbans = {
+						character_modifier = {
+							intrigue = 1
+							monthly_prestige_gain_mult = 0.05
+						}
+					}
+					phx_rtr_southern_contenders = {
+						character_modifier = {
+							stewardship = 1
+							monthly_income_mult = 0.05
+						}
+					}
+				}
+			}
+
+			future_phases = {
+				phx_rtr_phase_flood_spark = {
+					takeover_type = points
+					takeover_points = 100
+					catalysts = {
+						catalyst_phx_rtr_yellow_river_breach = 60
+						catalyst_phx_rtr_jialu_corvee_spark = 45
+						catalyst_phx_rtr_red_banner_raised = 40
+						catalyst_phx_rtr_imperial_reform_stabilization = -25
+					}
+				}
+			}
+		}
+
+		# Phase 2: Breach & Spark (Yellow River Breach & One-Eyed Stone Man)
+		phx_rtr_phase_flood_spark = {
+			icon = "gfx/interface/icons/situation_types/natural_disaster_flood.dds"
+			illustration = "gfx/interface/illustrations/event_scenes/tgp_overflowing_river.dds"
+
+			on_start = {
+				set_global_variable = phx_red_turban_unrest_begun
+			}
+
+			parameters = {
+				phx_rtr_param_flood_spark = yes
+			}
+
+			modifier_sets = {
+				phx_rtr_military_effects = {
+					icon = "gfx/interface/icons/situations/situation_modifier_military.dds"
+					phx_rtr_yuan_court = {
+						character_modifier = {
+							monthly_legitimacy_add = -0.25
+							levy_reinforcement_rate = -0.10
+						}
+					}
+					phx_rtr_northern_turbans = {
+						character_modifier = {
+							levy_reinforcement_rate = 0.25
+							men_at_arms_maintenance = -0.15
+						}
+					}
+					phx_rtr_southern_contenders = {
+						character_modifier = {
+							levy_reinforcement_rate = 0.20
+							men_at_arms_maintenance = -0.10
+						}
+					}
+				}
+			}
+
+			future_phases = {
+				phx_rtr_phase_warring_factions = {
+					takeover_type = points
+					takeover_points = 100
+					catalysts = {
+						catalyst_phx_rtr_red_banner_raised = 35
+						catalyst_phx_rtr_contender_seized_base = 40
+						catalyst_phx_rtr_jialu_corvee_spark = 30
+						catalyst_phx_rtr_imperial_reform_stabilization = -20
+					}
+				}
+				phx_rtr_phase_resolution = {
+					takeover_type = points
+					takeover_points = 150
+					catalysts = {
+						catalyst_phx_rtr_dynastic_mandate_decided = 150
+						catalyst_phx_rtr_imperial_reform_stabilization = 40
+					}
+				}
+			}
+		}
+
+		# Phase 3: Warring Contenders (Ming vs Han vs Zhou vs Song vs Yuan)
+		phx_rtr_phase_warring_factions = {
+			icon = "gfx/interface/icons/situation_types/natural_disaster_generic.dds"
+			illustration = "gfx/interface/illustrations/event_scenes/mpo_raid_burning_asian.dds"
+
+			parameters = {
+				phx_rtr_param_warring_contenders = yes
+			}
+
+			modifier_sets = {
+				phx_rtr_military_effects = {
+					icon = "gfx/interface/icons/situations/situation_modifier_military.dds"
+					phx_rtr_yuan_court = {
+						character_modifier = {
+							knight_effectiveness_mult = 0.10
+							vassal_opinion = -10
+						}
+					}
+					phx_rtr_northern_turbans = {
+						character_modifier = {
+							advantage = 3
+							men_at_arms_maintenance = -0.20
+						}
+					}
+					phx_rtr_southern_contenders = {
+						character_modifier = {
+							advantage = 3
+							men_at_arms_maintenance = -0.20
+							levy_size = 0.15
+						}
+					}
+				}
+				phx_rtr_realm_effects = {
+					icon = "gfx/interface/icons/situations/situation_modifier_character.dds"
+					all = {
+						county_modifier = {
+							prosperity_growth_factor = -0.10
+						}
+					}
+				}
+			}
+
+			future_phases = {
+				phx_rtr_phase_resolution = {
+					takeover_type = points
+					takeover_points = 100
+					catalysts = {
+						catalyst_phx_rtr_dynastic_mandate_decided = 100
+						catalyst_phx_rtr_contender_proclaimed_realm = 35
+						catalyst_phx_rtr_northern_retreat = 60
+						catalyst_phx_rtr_imperial_reform_stabilization = 25
+					}
+				}
+			}
+		}
+
+		# Phase 4: Mandate Decided (New Dynasty Established or Yuan Restored)
+		phx_rtr_phase_resolution = {
+			icon = "gfx/interface/icons/situation_types/silk_road_situation.dds"
+			illustration = "gfx/interface/illustrations/event_scenes/tgp_chinese_city.dds"
+
+			parameters = {
+				phx_rtr_param_mandate_decided = yes
+			}
+
+			modifier_sets = {
+				phx_rtr_realm_effects = {
+					icon = "gfx/interface/icons/situations/situation_modifier_character.dds"
+					all = {
+						character_modifier = {
+							monthly_legitimacy_add = 0.25
+						}
+						county_modifier = {
+							prosperity_growth_factor = 0.15
+							monthly_control_change = 0.15
+						}
+					}
+				}
+			}
+
+			future_phases = {
+			}
+		}
+	}
+
+	##################################################
+	# Situation Decisions
+	##################################################
+	situation_decisions = {
+		phx_yuan_zhizheng_reform_decision
+		phx_yuan_tame_yellow_river_decision
+		phx_yuan_commission_loyalist_armies_decision
+		phx_yuan_grand_canal_dredging_decision
+		phx_rtr_raise_red_banner_decision
+		phx_rtr_high_walls_grain_decision
+		phx_rtr_seize_yingtian_capital_decision
+		phx_rtr_recruit_huaisi_generals_decision
+	}
+
+	ending_decisions = {
+		phx_rtr_proclaim_new_dynasty_decision
+		phx_rtr_proclaim_great_han_decision
+		phx_rtr_proclaim_great_zhou_decision
+		phx_rtr_proclaim_great_song_decision
+		phx_yuan_northern_retreat_decision
+	}
+}

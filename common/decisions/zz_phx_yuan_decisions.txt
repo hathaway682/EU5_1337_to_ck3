@@ -1,0 +1,1244 @@
+﻿##################################################
+# Project Phoenix (PHX) — Great Yuan & Red Turban 1337 Decisions (13 Total)
+# Preserves all 7 v0.1 decisions + adds 6 Wave 2 Flagship decisions
+# Conforms strictly to AGENTS.md vanilla flavor style
+##################################################
+
+# 1. Proclaim the Zhizheng Reforms
+phx_yuan_zhizheng_reform_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_scholars.dds"
+	}
+	decision_group_type = dynastic_cycle
+	desc = phx_yuan_zhizheng_reform_decision_desc
+	selection_tooltip = phx_yuan_zhizheng_reform_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 60
+	}
+
+	is_shown = {
+		has_title = title:h_china
+		NOT = { has_character_modifier = phx_yuan_zhizheng_reforms_modifier }
+		OR = {
+			has_character_modifier = phx_yuan_bayan_regency_modifier
+			has_character_modifier = phx_yuan_chao_inflation_modifier
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_shuntian
+		OR = {
+			stewardship >= 10
+			diplomacy >= 10
+			prestige_level >= 2
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 350
+		prestige = 300
+	}
+
+	effect = {
+		if = {
+			limit = { has_character_modifier = phx_yuan_bayan_regency_modifier }
+			remove_character_modifier = phx_yuan_bayan_regency_modifier
+		}
+		if = {
+			limit = { has_character_modifier = phx_yuan_chao_inflation_modifier }
+			remove_character_modifier = phx_yuan_chao_inflation_modifier
+		}
+		add_character_modifier = {
+			modifier = phx_yuan_zhizheng_reforms_modifier
+			years = 25
+		}
+		add_legitimacy = 200
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				trigger_situation_catalyst = catalyst_phx_rtr_imperial_reform_stabilization
+			}
+		}
+		if = {
+			limit = {
+				has_tgp_dlc_trigger = yes
+				exists = situation:dynastic_cycle
+			}
+			situation:dynastic_cycle = {
+				trigger_situation_catalyst = catalyst_event_advancement_medium_progress
+			}
+		}
+		custom_tooltip = phx_yuan_zhizheng_reform_effect_tt
+		hidden_effect = {
+			trigger_event = phx_yuan.0100
+		}
+	}
+
+	ai_potential = {
+		has_title = title:h_china
+	}
+
+	ai_will_do = {
+		base = 80
+	}
+}
+
+# 2. Launch the Yellow River Conservation Works (Direct Decree Fallback alongside Great Project)
+phx_yuan_tame_yellow_river_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_great_project.dds"
+	}
+	decision_group_type = dynastic_cycle
+	desc = phx_yuan_tame_yellow_river_decision_desc
+	selection_tooltip = phx_yuan_tame_yellow_river_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 60
+	}
+
+	is_shown = {
+		has_title = title:h_china
+		title:c_kaifeng = {
+			has_county_modifier = phx_yuan_yellow_river_flood_modifier
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_kaifeng
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 400
+	}
+
+	effect = {
+		title:c_kaifeng = {
+			remove_county_modifier = phx_yuan_yellow_river_flood_modifier
+			add_county_modifier = {
+				modifier = phx_yuan_jialu_waterworks_modifier
+				years = 25
+			}
+		}
+		add_legitimacy = 150
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				trigger_situation_catalyst = catalyst_phx_rtr_jialu_corvee_spark
+			}
+		}
+		if = {
+			limit = {
+				has_tgp_dlc_trigger = yes
+				exists = situation:dynastic_cycle
+			}
+			situation:dynastic_cycle = {
+				trigger_situation_catalyst = catalyst_hegemon_natural_disaster_recovered
+			}
+		}
+		custom_tooltip = phx_yuan_tame_yellow_river_effect_tt
+		hidden_effect = {
+			set_global_variable = phx_red_turban_unrest_begun
+			trigger_event = phx_yuan.0110
+		}
+	}
+
+	ai_potential = {
+		has_title = title:h_china
+		gold >= 500
+	}
+
+	ai_will_do = {
+		base = 75
+	}
+}
+
+# 3. Commission Imperial Pacification Armies
+phx_yuan_commission_loyalist_armies_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_dominance.dds"
+	}
+	decision_group_type = dynastic_cycle
+	desc = phx_yuan_commission_loyalist_armies_decision_desc
+	selection_tooltip = phx_yuan_commission_loyalist_armies_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 60
+	}
+
+	is_shown = {
+		has_title = title:h_china
+		has_global_variable = phx_red_turban_unrest_begun
+		NOT = { has_character_modifier = phx_rtr_loyalist_banner_modifier }
+	}
+
+	is_valid = {
+		prestige_level >= 1
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 250
+		prestige = 250
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_rtr_loyalist_banner_modifier
+			years = 20
+		}
+		spawn_army = {
+			name = phx_yuan_loyalist_corps_name
+			location = root.capital_province
+			men_at_arms = {
+				type = heavy_horse_archers
+				men = 300
+			}
+			men_at_arms = {
+				type = palace_guards
+				men = 250
+			}
+			inheritable = no
+		}
+		if = {
+			limit = {
+				character:eu5_rtr_chaghan_temur ?= { is_alive = yes }
+			}
+			character:eu5_rtr_chaghan_temur = {
+				add_character_modifier = {
+					modifier = phx_rtr_loyalist_banner_modifier
+					years = 20
+				}
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 25
+				}
+			}
+		}
+		if = {
+			limit = {
+				character:eu5_rtr_koke ?= { is_alive = yes }
+			}
+			character:eu5_rtr_koke = {
+				add_character_modifier = {
+					modifier = phx_yuan_koke_iron_guard_modifier
+					years = 20
+				}
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 25
+				}
+			}
+		}
+		custom_tooltip = phx_yuan_commission_loyalist_armies_effect_tt
+		hidden_effect = {
+			trigger_event = phx_yuan.0120
+		}
+	}
+
+	ai_potential = {
+		has_title = title:h_china
+	}
+
+	ai_will_do = {
+		base = 85
+	}
+}
+
+# 4. Withdraw to Shangdu and Preserve the Steppe (Northern Yuan)
+phx_yuan_northern_retreat_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_great_wall.dds"
+	}
+	decision_group_type = dynastic_cycle
+	desc = phx_yuan_northern_retreat_decision_desc
+	selection_tooltip = phx_yuan_northern_retreat_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_landed = yes
+		culture = culture:mongol
+		NOT = { completely_controls = title:c_shuntian }
+		completely_controls = title:c_shangdu
+		NOT = { has_character_modifier = phx_yuan_northern_retreat_modifier }
+	}
+
+	is_valid = {
+		completely_controls = title:c_shangdu
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		prestige = 200
+	}
+
+	effect = {
+		set_realm_capital = title:c_shangdu
+		add_character_modifier = {
+			modifier = phx_yuan_northern_retreat_modifier
+			years = 25
+		}
+		spawn_army = {
+			name = phx_yuan_steppe_guard_name
+			location = title:c_shangdu.title_province
+			men_at_arms = {
+				type = horse_archers
+				men = 400
+			}
+			inheritable = no
+		}
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				trigger_situation_catalyst = catalyst_phx_rtr_northern_retreat
+			}
+		}
+		custom_tooltip = phx_yuan_northern_retreat_effect_tt
+		hidden_effect = {
+			trigger_event = phx_yuan.0130
+		}
+	}
+
+	ai_potential = {
+		culture = culture:mongol
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+# 5. Raise the Red Turban Banner
+phx_rtr_raise_red_banner_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_siege_warfare.dds"
+	}
+	decision_group_type = major
+	desc = phx_rtr_raise_red_banner_decision_desc
+	selection_tooltip = phx_rtr_raise_red_banner_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 60
+		duchy = 60
+		kingdom = 60
+		empire = 0
+		hegemony = 0
+	}
+
+	is_shown = {
+		NOT = { has_title = title:h_china }
+		NOT = { has_character_modifier = phx_rtr_red_turban_zeal_modifier }
+		OR = {
+			character:eu5_rtr_han ?= this
+			character:eu5_rtr_zhu ?= this
+			character:eu5_rtr_xu ?= this
+			character:eu5_rtr_chen ?= this
+			character:eu5_rtr_zhang ?= this
+			AND = {
+				has_global_variable = phx_red_turban_unrest_begun
+				culture = culture:han
+				OR = {
+					has_government = landless_adventurer_government
+					highest_held_title_tier <= tier_duchy
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		OR = {
+			has_global_variable = phx_red_turban_unrest_begun
+			current_year >= 1348
+			prestige_level >= 2
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+	}
+
+	cost = {
+		prestige = 150
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_rtr_red_turban_zeal_modifier
+			years = 20
+		}
+		add_prestige = 300
+		hidden_effect = {
+			if = {
+				limit = { exists = capital_province }
+				capital_province = { save_scope_as = phx_spawn_loc }
+			}
+			else_if = {
+				limit = { exists = domicile.domicile_location }
+				domicile.domicile_location = { save_scope_as = phx_spawn_loc }
+			}
+			else = {
+				location = { save_scope_as = phx_spawn_loc }
+			}
+		}
+		spawn_army = {
+			name = phx_rtr_insurgent_host_name
+			location = scope:phx_spawn_loc
+			men_at_arms = {
+				type = light_footmen
+				men = 400
+			}
+			men_at_arms = {
+				type = crossbowmen
+				men = 250
+			}
+			men_at_arms = {
+				type = fire_lancers
+				men = 150
+			}
+			levies = 1200
+			inheritable = no
+		}
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				trigger_situation_catalyst = catalyst_phx_rtr_red_banner_raised
+			}
+		}
+		if = {
+			limit = {
+				has_tgp_dlc_trigger = yes
+				exists = situation:dynastic_cycle
+			}
+			situation:dynastic_cycle = {
+				trigger_situation_catalyst = catalyst_hegemon_in_civil_war
+			}
+		}
+		custom_tooltip = phx_rtr_raise_red_banner_effect_tt
+		hidden_effect = {
+			set_global_variable = phx_red_turban_unrest_begun
+			trigger_event = phx_yuan.0200
+		}
+	}
+
+	ai_potential = {
+		has_global_variable = phx_red_turban_unrest_begun
+	}
+
+	ai_will_do = {
+		base = 90
+	}
+}
+
+# 6. Build High Walls, Store Grain, Delay the Crown
+phx_rtr_high_walls_grain_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_debate.dds"
+	}
+	decision_group_type = major
+	desc = phx_rtr_high_walls_grain_decision_desc
+	selection_tooltip = phx_rtr_high_walls_grain_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 60
+		duchy = 60
+		kingdom = 60
+		empire = 60
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		culture = culture:han
+		NOT = { has_character_modifier = phx_rtr_zhu_virtuous_discipline_modifier }
+		OR = {
+			character:eu5_rtr_zhu ?= this
+			has_character_modifier = phx_rtr_red_turban_zeal_modifier
+			completely_controls = title:c_yingtian
+			completely_controls = title:c_fengyang
+		}
+	}
+
+	is_valid = {
+		OR = {
+			completely_controls = title:c_yingtian
+			completely_controls = title:c_fengyang
+			completely_controls = title:c_wuchang
+			completely_controls = title:c_suzhou
+		}
+		stewardship >= 8
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 200
+		prestige = 200
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_rtr_zhu_virtuous_discipline_modifier
+			years = 25
+		}
+		capital_county = {
+			change_prosperity_progress = 120
+		}
+		add_legitimacy = 150
+		custom_tooltip = phx_rtr_high_walls_grain_effect_tt
+		hidden_effect = {
+			trigger_event = phx_yuan.0210
+		}
+	}
+
+	ai_potential = {
+		is_landed = yes
+		culture = culture:han
+	}
+
+	ai_will_do = {
+		base = 90
+	}
+}
+
+# 7. Proclaim the Restoration of the Central Plains (Ming / New Dynasty)
+phx_rtr_proclaim_new_dynasty_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_kowtow.dds"
+	}
+	decision_group_type = dynastic_cycle
+	desc = phx_rtr_proclaim_new_dynasty_decision_desc
+	selection_tooltip = phx_rtr_proclaim_new_dynasty_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_landed = yes
+		culture = culture:han
+		NOT = { has_character_modifier = phx_rtr_new_dynasty_mandate_modifier }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_rtr_new_dynasty_proclaimed_global
+			}
+		}
+	}
+
+	is_valid = {
+		highest_held_title_tier >= tier_kingdom
+		prestige_level >= 3
+		completely_controls = title:c_yingtian
+		OR = {
+			completely_controls = title:c_shuntian
+			completely_controls = title:c_kaifeng
+			has_title = title:h_china
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 500
+		prestige = 750
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_rtr_new_dynasty_mandate_modifier
+			years = 40
+		}
+		if = {
+			limit = { NOT = { has_character_modifier = phx_rtr_ming_hongwu_admin_modifier } }
+			add_character_modifier = {
+				modifier = phx_rtr_ming_hongwu_admin_modifier
+				years = 35
+			}
+		}
+		add_legitimacy = 400
+		add_prestige = 750
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				trigger_situation_catalyst = catalyst_phx_rtr_dynastic_mandate_decided
+			}
+		}
+		if = {
+			limit = {
+				has_tgp_dlc_trigger = yes
+				exists = situation:dynastic_cycle
+			}
+			situation:dynastic_cycle = {
+				trigger_situation_catalyst = catalyst_event_advancement_medium_progress
+			}
+		}
+		custom_tooltip = phx_rtr_proclaim_new_dynasty_effect_tt
+		hidden_effect = {
+			set_global_variable = phx_rtr_new_dynasty_proclaimed_global
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_rtr_new_dynasty_proclaimed_global
+			}
+			trigger_event = phx_yuan.0220
+		}
+	}
+
+	ai_potential = {
+		culture = culture:han
+		highest_held_title_tier >= tier_kingdom
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+# === Wave 2 New Decisions (8 - 13) ===
+
+# 8. Establish the Imperial Capital at Yingtian (Nanjing)
+phx_rtr_seize_yingtian_capital_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/ep3_decision_city.dds"
+	}
+	decision_group_type = major
+	desc = phx_rtr_seize_yingtian_capital_decision_desc
+	selection_tooltip = phx_rtr_seize_yingtian_capital_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 60
+		duchy = 48
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+
+	is_shown = {
+		is_landed = yes
+		culture = culture:han
+		OR = {
+			character:eu5_rtr_zhu ?= this
+			dynasty ?= dynasty:dyn_eu5_rtr_zhu
+			completely_controls = title:c_yingtian
+		}
+		title:c_yingtian = {
+			NOT = { has_county_modifier = phx_rtr_nanjing_imperial_capital_modifier }
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_yingtian
+		prestige_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 300
+		prestige = 250
+	}
+
+	effect = {
+		set_realm_capital = title:c_yingtian
+		title:c_yingtian = {
+			add_county_modifier = {
+				modifier = phx_rtr_nanjing_imperial_capital_modifier
+				years = 50
+			}
+			change_prosperity_progress = 200
+		}
+		if = {
+			limit = { NOT = { has_character_modifier = phx_rtr_ming_hongwu_admin_modifier } }
+			add_character_modifier = {
+				modifier = phx_rtr_ming_hongwu_admin_modifier
+				years = 30
+			}
+		}
+		add_legitimacy = 200
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				trigger_situation_catalyst = catalyst_phx_rtr_contender_seized_base
+			}
+		}
+		custom_tooltip = phx_rtr_seize_yingtian_capital_effect_tt
+		hidden_effect = {
+			trigger_event = phx_yuan.0230
+		}
+	}
+
+	ai_potential = {
+		is_landed = yes
+		culture = culture:han
+		completely_controls = title:c_yingtian
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+# 9. Summon the Huaisi Generals & Zhedong Sages (Li Shanchang, Liu Ji, Xu Da, Chang Yuchun)
+phx_rtr_recruit_huaisi_generals_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_career.dds"
+	}
+	decision_group_type = major
+	desc = phx_rtr_recruit_huaisi_generals_decision_desc
+	selection_tooltip = phx_rtr_recruit_huaisi_generals_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 0
+	}
+
+	is_shown = {
+		culture = culture:han
+		NOT = { has_character_modifier = phx_rtr_huaisi_generals_modifier }
+		OR = {
+			character:eu5_rtr_zhu ?= this
+			dynasty ?= dynasty:dyn_eu5_rtr_zhu
+			AND = {
+				is_landed = yes
+				has_character_modifier = phx_rtr_red_turban_zeal_modifier
+			}
+		}
+	}
+
+	is_valid = {
+		OR = {
+			is_landed = yes
+			prestige_level >= 2
+		}
+		OR = {
+			has_global_variable = phx_red_turban_unrest_begun
+			current_year >= 1348
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+	}
+
+	cost = {
+		gold = 200
+		prestige = 200
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_rtr_huaisi_generals_modifier
+			years = 30
+		}
+		add_prestige = 200
+		custom_tooltip = phx_rtr_recruit_huaisi_generals_effect_tt
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_global_variable = phx_zhu_inner_circle_recruited } }
+				set_global_variable = phx_zhu_inner_circle_recruited
+				trigger_event = phx_yuan.0310
+			}
+			else = {
+				trigger_event = phx_yuan.0240
+			}
+		}
+	}
+
+	ai_potential = {
+		culture = culture:han
+	}
+
+	ai_will_do = {
+		base = 95
+	}
+}
+
+# 10. Proclaim the Great Han Empire (Chen Youliang / Xu Shouhui / Middle Yangtze)
+phx_rtr_proclaim_great_han_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_dominance.dds"
+	}
+	decision_group_type = major
+	desc = phx_rtr_proclaim_great_han_decision_desc
+	selection_tooltip = phx_rtr_proclaim_great_han_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 60
+		duchy = 48
+		kingdom = 36
+		empire = 36
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		culture = culture:han
+		NOT = { has_character_modifier = phx_rtr_great_han_river_fleet_modifier }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_rtr_great_han_proclaimed_global
+			}
+		}
+		OR = {
+			character:eu5_rtr_chen ?= this
+			dynasty ?= dynasty:dyn_eu5_rtr_chen
+			character:eu5_rtr_xu ?= this
+			dynasty ?= dynasty:dyn_eu5_rtr_xu
+			completely_controls = title:c_wuchang
+		}
+	}
+
+	is_valid = {
+		OR = {
+			completely_controls = title:c_wuchang
+			completely_controls = title:c_jiujiang
+			completely_controls = title:c_hanyang
+		}
+		prestige_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 250
+		prestige = 350
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_rtr_great_han_river_fleet_modifier
+			years = 35
+		}
+		add_legitimacy = 250
+		add_prestige = 300
+		spawn_army = {
+			name = phx_rtr_great_han_fleet_name
+			location = root.capital_province
+			men_at_arms = {
+				type = crossbowmen
+				men = 350
+			}
+			men_at_arms = {
+				type = fire_lancers
+				men = 200
+			}
+			levies = 1500
+			inheritable = no
+		}
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				trigger_situation_catalyst = catalyst_phx_rtr_contender_proclaimed_realm
+			}
+		}
+		custom_tooltip = phx_rtr_proclaim_great_han_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_rtr_great_han_proclaimed_global
+			}
+			trigger_event = phx_yuan.0250
+		}
+	}
+
+	ai_potential = {
+		is_landed = yes
+		culture = culture:han
+	}
+
+	ai_will_do = {
+		base = 95
+	}
+}
+
+# 11. Proclaim the Great Zhou Realm (Zhang Shicheng / Suzhou & Lianghuai Salt)
+phx_rtr_proclaim_great_zhou_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_silk_road.dds"
+	}
+	decision_group_type = major
+	desc = phx_rtr_proclaim_great_zhou_decision_desc
+	selection_tooltip = phx_rtr_proclaim_great_zhou_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 60
+		duchy = 48
+		kingdom = 36
+		empire = 36
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		culture = culture:han
+		NOT = { has_character_modifier = phx_rtr_great_zhou_salt_wealth_modifier }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_rtr_great_zhou_proclaimed_global
+			}
+		}
+		OR = {
+			character:eu5_rtr_zhang ?= this
+			dynasty ?= dynasty:dyn_eu5_rtr_zhang
+			completely_controls = title:c_suzhou
+		}
+	}
+
+	is_valid = {
+		OR = {
+			completely_controls = title:c_suzhou
+			completely_controls = title:c_gaoyou
+			completely_controls = title:c_yangzhou
+		}
+		prestige_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 250
+		prestige = 300
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_rtr_great_zhou_salt_wealth_modifier
+			years = 35
+		}
+		add_gold = 300
+		add_legitimacy = 200
+		capital_county = {
+			change_prosperity_progress = 150
+		}
+		spawn_army = {
+			name = phx_rtr_great_zhou_guard_name
+			location = root.capital_province
+			men_at_arms = {
+				type = armored_footmen
+				men = 300
+			}
+			men_at_arms = {
+				type = crossbowmen
+				men = 250
+			}
+			levies = 1200
+			inheritable = no
+		}
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				trigger_situation_catalyst = catalyst_phx_rtr_contender_proclaimed_realm
+			}
+		}
+		custom_tooltip = phx_rtr_proclaim_great_zhou_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_rtr_great_zhou_proclaimed_global
+			}
+			trigger_event = phx_yuan.0260
+		}
+	}
+
+	ai_potential = {
+		is_landed = yes
+		culture = culture:han
+	}
+
+	ai_will_do = {
+		base = 95
+	}
+}
+
+# 12. Proclaim the Great Song Restoration (Han Shantong / Han Liner / Liu Futong)
+phx_rtr_proclaim_great_song_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_kowtow.dds"
+	}
+	decision_group_type = major
+	desc = phx_rtr_proclaim_great_song_decision_desc
+	selection_tooltip = phx_rtr_proclaim_great_song_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 60
+		duchy = 48
+		kingdom = 36
+		empire = 36
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		culture = culture:han
+		NOT = { has_character_modifier = phx_rtr_song_maitreya_fervor_modifier }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_rtr_great_song_proclaimed_global
+			}
+		}
+		OR = {
+			character:eu5_rtr_han ?= this
+			dynasty ?= dynasty:dyn_eu5_rtr_han
+			character:eu5_rtr_liu ?= this
+			dynasty ?= dynasty:dyn_eu5_rtr_liu
+			completely_controls = title:c_bozhou_nanzhili
+		}
+	}
+
+	is_valid = {
+		OR = {
+			completely_controls = title:c_bozhou_nanzhili
+			completely_controls = title:c_kaifeng
+		}
+		prestige_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 200
+		prestige = 300
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_rtr_song_maitreya_fervor_modifier
+			years = 35
+		}
+		add_piety = 350
+		add_legitimacy = 250
+		spawn_army = {
+			name = phx_rtr_great_song_host_name
+			location = root.capital_province
+			men_at_arms = {
+				type = light_footmen
+				men = 450
+			}
+			men_at_arms = {
+				type = fire_lancers
+				men = 200
+			}
+			levies = 1800
+			inheritable = no
+		}
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				trigger_situation_catalyst = catalyst_phx_rtr_contender_proclaimed_realm
+			}
+		}
+		custom_tooltip = phx_rtr_proclaim_great_song_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_rtr_great_song_proclaimed_global
+			}
+			trigger_event = phx_yuan.0270
+		}
+	}
+
+	ai_potential = {
+		is_landed = yes
+		culture = culture:han
+	}
+
+	ai_will_do = {
+		base = 95
+	}
+}
+
+# 13. Dredge & Reopen the Grand Canal (Yuan / Imperial Grain Transport)
+phx_yuan_grand_canal_dredging_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_great_project.dds"
+	}
+	decision_group_type = dynastic_cycle
+	desc = phx_yuan_grand_canal_dredging_decision_desc
+	selection_tooltip = phx_yuan_grand_canal_dredging_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		has_title = title:h_china
+		title:c_shuntian = {
+			NOT = { has_county_modifier = phx_yuan_grand_canal_restored_modifier }
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_shuntian
+		OR = {
+			completely_controls = title:c_kaifeng
+			completely_controls = title:c_yangzhou
+		}
+		NOT = {
+			title:c_kaifeng = { has_county_modifier = phx_yuan_yellow_river_flood_modifier }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 450
+		prestige = 250
+	}
+
+	effect = {
+		title:c_shuntian = {
+			add_county_modifier = {
+				modifier = phx_yuan_grand_canal_restored_modifier
+				years = 30
+			}
+			change_prosperity_progress = 120
+		}
+		if = {
+			limit = { completely_controls = title:c_kaifeng }
+			title:c_kaifeng = {
+				add_county_modifier = {
+					modifier = phx_yuan_grand_canal_restored_modifier
+					years = 30
+				}
+			}
+		}
+		if = {
+			limit = { completely_controls = title:c_yangzhou }
+			title:c_yangzhou = {
+				add_county_modifier = {
+					modifier = phx_yuan_grand_canal_restored_modifier
+					years = 30
+				}
+			}
+		}
+		add_legitimacy = 200
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				trigger_situation_catalyst = catalyst_phx_rtr_imperial_reform_stabilization
+			}
+		}
+		if = {
+			limit = {
+				has_tgp_dlc_trigger = yes
+				exists = situation:dynastic_cycle
+			}
+			situation:dynastic_cycle = {
+				trigger_situation_catalyst = catalyst_event_advancement_medium_progress
+			}
+		}
+		custom_tooltip = phx_yuan_grand_canal_dredging_effect_tt
+		hidden_effect = {
+			trigger_event = phx_yuan.0280
+		}
+	}
+
+	ai_potential = {
+		has_title = title:h_china
+		gold >= 600
+	}
+
+	ai_will_do = {
+		base = 80
+	}
+}

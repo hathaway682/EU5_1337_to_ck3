@@ -1,0 +1,450 @@
+﻿##################################################
+# Project Phoenix (PHX) — Great Yuan & Red Turban Story Cycles
+# 1. story_phx_zhu_rise — Zhu Yuanzhang's epic trajectory to Ming
+# 2. story_phx_yuan_twilight — Great Yuan survival/collapse track
+##################################################
+
+story_phx_zhu_rise = {
+	visible = yes
+
+	icon = {
+		reference = "gfx/interface/icons/story_cycles/story_icon_conqueror.dds"
+	}
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/tgp_camp_asia.dds"
+	}
+
+	visualization = {
+		custom_string_key = "STORY_PHX_ZHU_RISE_INFO"
+		basic_counter = {
+			variable_name = "zhu_stage"
+			min = 0
+			max = 5
+			label = "STORY_PHX_ZHU_STAGE_LABEL"
+			min_label = "STORY_PHX_ZHU_STAGE_MIN"
+			max_label = "STORY_PHX_ZHU_STAGE_MAX"
+		}
+		decisions = {
+			phx_rtr_raise_red_banner_decision
+			phx_rtr_seize_yingtian_capital_decision
+			phx_rtr_recruit_huaisi_generals_decision
+			phx_rtr_high_walls_grain_decision
+			phx_rtr_proclaim_new_dynasty_decision
+		}
+	}
+
+	on_setup = {
+		set_variable = {
+			name = zhu_stage
+			value = 0
+		}
+	}
+
+	on_end = {
+	}
+
+	on_owner_death = {
+		if = {
+			limit = {
+				exists = var:zhu_stage
+				var:zhu_stage < 5
+				story_owner.primary_heir ?= {
+					is_alive = yes
+					dynasty ?= story_owner.dynasty
+				}
+			}
+			make_story_owner = story_owner.primary_heir
+		}
+		else = {
+			end_story = yes
+		}
+	}
+
+	# Sequential Narrative Trajectory (checked every 90 days — O(1))
+	effect_group = {
+		days = 90
+		trigger = {
+			story_owner = {
+				is_alive = yes
+				is_imprisoned = no
+			}
+		}
+
+		first_valid = {
+			# Stage 0 -> 1: Joining Guo Zixing & Marriage to Lady Ma (1344+ or age >= 16)
+			triggered_effect = {
+				trigger = {
+					var:zhu_stage = 0
+					OR = {
+						current_year >= 1344
+						story_owner = { age >= 16 }
+						has_global_variable = phx_red_turban_unrest_begun
+					}
+				}
+				effect = {
+					set_variable = { name = zhu_stage value = 1 }
+					story_owner = {
+						trigger_event = { id = phx_yuan.0300 days = { 10 40 } }
+					}
+				}
+			}
+
+			# Stage 1 -> 2: Seizing a Base in Huaisi (Fengyang / Chuzhou / Yingtian)
+			triggered_effect = {
+				trigger = {
+					var:zhu_stage = 1
+					OR = {
+						has_global_variable = phx_red_turban_unrest_begun
+						current_year >= 1349
+					}
+					story_owner = { age >= 16 }
+				}
+				effect = {
+					set_variable = { name = zhu_stage value = 2 }
+					story_owner = {
+						trigger_event = { id = phx_yuan.0305 days = { 15 45 } }
+					}
+				}
+			}
+
+			# Stage 2 -> 3: Recruiting the Huaisi & Zhedong Inner Circle (Li Shanchang, Liu Ji, Xu Da, Chang Yuchun)
+			triggered_effect = {
+				trigger = {
+					var:zhu_stage = 2
+					NOT = { has_global_variable = phx_zhu_inner_circle_recruited }
+					OR = {
+						story_owner = { is_landed = yes }
+						current_year >= 1353
+					}
+				}
+				effect = {
+					set_variable = { name = zhu_stage value = 3 }
+					set_global_variable = phx_zhu_inner_circle_recruited
+					story_owner = {
+						trigger_event = { id = phx_yuan.0310 days = { 15 45 } }
+					}
+				}
+			}
+
+			# Bonus Milestone A: Crossing the Yangtze to Jinling (Yingtian) if landed without Yingtian
+			triggered_effect = {
+				trigger = {
+					var:zhu_stage >= 3
+					NOT = { has_variable = phx_zhu_yingtian_fired }
+					story_owner = {
+						is_landed = yes
+						NOT = { completely_controls = title:c_yingtian }
+					}
+				}
+				effect = {
+					set_variable = phx_zhu_yingtian_fired
+					story_owner = {
+						trigger_event = { id = phx_yuan.0315 days = { 20 50 } }
+					}
+				}
+			}
+
+			# Stage 3 -> 4: Poyang Lake Rivalry with Chen Youliang
+			triggered_effect = {
+				trigger = {
+					var:zhu_stage = 3
+					story_owner = {
+						is_landed = yes
+						OR = {
+							completely_controls = title:c_yingtian
+							completely_controls = title:c_fengyang
+							highest_held_title_tier >= tier_duchy
+						}
+					}
+					current_year >= 1356
+				}
+				effect = {
+					set_variable = { name = zhu_stage value = 4 }
+					story_owner = {
+						trigger_event = { id = phx_yuan.0320 days = { 15 45 } }
+					}
+				}
+			}
+
+			# Bonus Milestone B: Pacifying Suzhou & Eastern Wu once Yingtian is held
+			triggered_effect = {
+				trigger = {
+					var:zhu_stage >= 4
+					NOT = { has_variable = phx_zhu_suzhou_fired }
+					story_owner = {
+						is_landed = yes
+						completely_controls = title:c_yingtian
+						NOT = { completely_controls = title:c_suzhou }
+					}
+				}
+				effect = {
+					set_variable = phx_zhu_suzhou_fired
+					story_owner = {
+						trigger_event = { id = phx_yuan.0325 days = { 20 50 } }
+					}
+				}
+			}
+
+			# Stage 4 -> 5: Northern Expedition Manifesto & Road to Ming Foundation
+			triggered_effect = {
+				trigger = {
+					var:zhu_stage = 4
+					story_owner = {
+						is_landed = yes
+						OR = {
+							completely_controls = title:c_yingtian
+							highest_held_title_tier >= tier_kingdom
+						}
+					}
+					OR = {
+						current_year >= 1362
+						story_owner = { has_character_modifier = phx_rtr_poyang_victory_modifier }
+					}
+				}
+				effect = {
+					set_variable = { name = zhu_stage value = 5 }
+					story_owner = {
+						trigger_event = { id = phx_yuan.0330 days = { 15 45 } }
+					}
+				}
+			}
+
+			# Conclude cleanly once Ming / New Dynasty is proclaimed
+			triggered_effect = {
+				trigger = {
+					var:zhu_stage >= 5
+					story_owner = {
+						OR = {
+							has_character_modifier = phx_rtr_new_dynasty_mandate_modifier
+							has_character_modifier = phx_rtr_ming_hongwu_admin_modifier
+						}
+					}
+				}
+				effect = {
+					end_story = yes
+				}
+			}
+		}
+	}
+}
+
+story_phx_yuan_twilight = {
+	visible = yes
+
+	icon = {
+		reference = "gfx/interface/icons/story_cycles/story_icon_palace_politics.dds"
+	}
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/tgp_asia_throne_room.dds"
+	}
+
+	visualization = {
+		custom_string_key = "STORY_PHX_YUAN_TWILIGHT_INFO"
+		basic_counter = {
+			variable_name = "yuan_crisis_stage"
+			min = 0
+			max = 5
+			label = "STORY_PHX_YUAN_STAGE_LABEL"
+			min_label = "STORY_PHX_YUAN_STAGE_MIN"
+			max_label = "STORY_PHX_YUAN_STAGE_MAX"
+		}
+		decisions = {
+			phx_yuan_zhizheng_reform_decision
+			phx_yuan_tame_yellow_river_decision
+			phx_yuan_grand_canal_dredging_decision
+			phx_yuan_commission_loyalist_armies_decision
+			phx_yuan_northern_retreat_decision
+		}
+	}
+
+	on_setup = {
+		set_variable = {
+			name = yuan_crisis_stage
+			value = 0
+		}
+	}
+
+	on_end = {
+	}
+
+	on_owner_death = {
+		if = {
+			limit = {
+				title:h_china.holder ?= {
+					is_alive = yes
+					culture = culture:mongol
+				}
+			}
+			make_story_owner = title:h_china.holder
+		}
+		else_if = {
+			limit = {
+				story_owner.primary_heir ?= {
+					is_alive = yes
+					culture = culture:mongol
+				}
+			}
+			make_story_owner = story_owner.primary_heir
+		}
+		else = {
+			end_story = yes
+		}
+	}
+
+	# Sequential Imperial Crisis Trajectory (checked every 90 days — O(1))
+	effect_group = {
+		days = 90
+		trigger = {
+			story_owner = {
+				is_alive = yes
+			}
+		}
+
+		first_valid = {
+			# Stage 0 -> 1: Bayan's Regency vs Toghtogha's Coup (1339+)
+			triggered_effect = {
+				trigger = {
+					var:yuan_crisis_stage = 0
+					current_year >= 1339
+					story_owner = { has_title = title:h_china }
+				}
+				effect = {
+					set_variable = { name = yuan_crisis_stage value = 1 }
+					if = {
+						limit = { NOT = { has_global_variable = phx_yuan_bayan_crisis_fired } }
+						set_global_variable = phx_yuan_bayan_crisis_fired
+						story_owner = {
+							trigger_event = { id = phx_yuan.0010 days = { 15 45 } }
+						}
+					}
+				}
+			}
+
+			# Stage 1 -> 2: Yellow River Breach & One-Eyed Stone Man (1344+)
+			triggered_effect = {
+				trigger = {
+					var:yuan_crisis_stage = 1
+					current_year >= 1344
+					story_owner = { has_title = title:h_china }
+				}
+				effect = {
+					set_variable = { name = yuan_crisis_stage value = 2 }
+					if = {
+						limit = { NOT = { has_global_variable = phx_yuan_yellow_river_fired } }
+						set_global_variable = phx_yuan_yellow_river_fired
+						set_global_variable = phx_red_turban_unrest_begun
+						story_owner = {
+							trigger_event = { id = phx_yuan.0020 days = { 15 45 } }
+						}
+					}
+				}
+			}
+
+			# Stage 2 -> 3: Full Red Turban Wave (1350+ once unrest begun)
+			triggered_effect = {
+				trigger = {
+					var:yuan_crisis_stage = 2
+					has_global_variable = phx_red_turban_unrest_begun
+					current_year >= 1350
+				}
+				effect = {
+					set_variable = { name = yuan_crisis_stage value = 3 }
+					if = {
+						limit = { NOT = { has_global_variable = phx_yuan_rebellion_alarm_fired } }
+						set_global_variable = phx_yuan_rebellion_alarm_fired
+						story_owner = {
+							trigger_event = { id = phx_yuan.0035 days = { 15 45 } }
+						}
+					}
+					# Trigger historical regional Red Turban uprising events (O(1) direct character lookups)
+					if = {
+						limit = {
+							NOT = { has_global_variable = phx_rtr_han_uprising_fired }
+							character:eu5_rtr_han ?= { is_alive = yes }
+						}
+						set_global_variable = phx_rtr_han_uprising_fired
+						character:eu5_rtr_han = {
+							trigger_event = { id = phx_yuan.0360 days = { 20 60 } }
+						}
+					}
+					if = {
+						limit = {
+							NOT = { has_global_variable = phx_rtr_tianwan_coup_fired }
+							character:eu5_rtr_xu ?= { is_alive = yes }
+						}
+						set_global_variable = phx_rtr_tianwan_coup_fired
+						character:eu5_rtr_xu = {
+							trigger_event = { id = phx_yuan.0370 days = { 45 90 } }
+						}
+					}
+					if = {
+						limit = {
+							NOT = { has_global_variable = phx_rtr_zhang_salt_fired }
+							character:eu5_rtr_zhang ?= { is_alive = yes }
+						}
+						set_global_variable = phx_rtr_zhang_salt_fired
+						character:eu5_rtr_zhang = {
+							trigger_event = { id = phx_yuan.0380 days = { 60 120 } }
+						}
+					}
+				}
+			}
+
+			# Stage 3 -> 4: Chaghan Temur & Koke Temur Loyalist Defense (1354+)
+			triggered_effect = {
+				trigger = {
+					var:yuan_crisis_stage = 3
+					has_global_variable = phx_red_turban_unrest_begun
+					current_year >= 1354
+				}
+				effect = {
+					set_variable = { name = yuan_crisis_stage value = 4 }
+					if = {
+						limit = { NOT = { has_global_variable = phx_yuan_chaghan_loyalist_fired } }
+						set_global_variable = phx_yuan_chaghan_loyalist_fired
+						story_owner = {
+							trigger_event = { id = phx_yuan.0340 days = { 15 45 } }
+						}
+					}
+				}
+			}
+
+			# Stage 4 -> 5: Northern Yuan Steppe Transition if Dadu (c_shuntian) falls!
+			triggered_effect = {
+				trigger = {
+					var:yuan_crisis_stage >= 3
+					var:yuan_crisis_stage < 5
+					NOT = { has_global_variable = phx_yuan_northern_retreat_fired }
+					story_owner = {
+						culture = culture:mongol
+						NOT = { completely_controls = title:c_shuntian }
+					}
+				}
+				effect = {
+					set_variable = { name = yuan_crisis_stage value = 5 }
+					set_global_variable = phx_yuan_northern_retreat_fired
+					story_owner = {
+						trigger_event = { id = phx_yuan.0390 days = { 5 20 } }
+					}
+					end_story = yes
+				}
+			}
+
+			# End cleanly if Yuan survives past 1390 with Dadu intact
+			triggered_effect = {
+				trigger = {
+					current_year >= 1390
+					story_owner = {
+						has_title = title:h_china
+						completely_controls = title:c_shuntian
+					}
+				}
+				effect = {
+					end_story = yes
+				}
+			}
+		}
+	}
+}
