@@ -1,0 +1,257 @@
+﻿##################################################
+# Project Phoenix (PHX) — Hundred Years' War 1337 On-Actions
+# Lightweight O(1) scoped hooks strictly for Western Europe HYW titles:
+#   k_england, k_france, d_burgundy, d_brittany, k_scotland
+##################################################
+
+on_game_start_after_lobby = {
+	on_actions = { phx_hyw_1337_startup }
+}
+
+phx_hyw_1337_startup = {
+	effect = {
+		if = {
+			limit = { game_start_date >= 1337.1.1 }
+
+			# Start the dynastic Hundred Years' War story cycle on k_england's holder
+			if = {
+				limit = {
+					exists = title:k_england.holder
+					NOT = { has_global_variable = phx_hyw_story_active }
+				}
+				title:k_england.holder = {
+					create_story = story_phx_hundred_years_war
+					trigger_event = {
+						id = phx_hyw.0001
+						days = 7
+					}
+				}
+			}
+			if = {
+				limit = { exists = title:k_france.holder }
+				title:k_france.holder = {
+					trigger_event = {
+						id = phx_hyw.0002
+						days = 7
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = title:d_burgundy.holder
+					title:d_burgundy.holder = { is_ai = no }
+				}
+				title:d_burgundy.holder = {
+					trigger_event = {
+						id = phx_hyw.0003
+						days = 10
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = title:d_brittany.holder
+					title:d_brittany.holder = { is_ai = no }
+				}
+				title:d_brittany.holder = {
+					trigger_event = {
+						id = phx_hyw.0004
+						days = 10
+					}
+				}
+			}
+		}
+	}
+}
+
+yearly_playable_pulse = {
+	on_actions = { phx_hyw_yearly_pulse }
+}
+
+phx_hyw_yearly_pulse = {
+	trigger = {
+		is_landed = yes
+		current_year >= 1337
+		current_year <= 1460
+		NOT = { has_global_variable = phx_hyw_resolved }
+		OR = {
+			has_title = title:k_england
+			has_title = title:k_france
+			has_title = title:d_burgundy
+			has_title = title:d_brittany
+			has_title = title:k_scotland
+		}
+	}
+	effect = {
+		# 1. Historic 1337.5.24 Confiscation of Aquitaine Crisis (France -> chains to England)
+		if = {
+			limit = {
+				has_title = title:k_france
+				NOT = { has_title = title:k_england }
+				current_year >= 1337
+				NOT = { has_global_variable = phx_hyw_aquitaine_crisis_fired }
+				exists = title:k_england.holder
+				title:k_france = {
+					any_in_de_jure_hierarchy = {
+						tier = tier_county
+						holder ?= {
+							OR = {
+								this = title:k_england.holder
+								is_vassal_or_below_of = title:k_england.holder
+							}
+						}
+					}
+				}
+			}
+			set_global_variable = phx_hyw_aquitaine_crisis_fired
+			trigger_event = {
+				id = phx_hyw.0010
+				days = { 35 75 }
+			}
+		}
+
+		# 2. Flemish Wool Crisis & Artevelde Revolt (1338+, England)
+		else_if = {
+			limit = {
+				has_title = title:k_england
+				NOT = { has_title = title:k_france }
+				current_year >= 1338
+				NOT = { has_global_variable = phx_hyw_flemish_crisis_fired }
+				exists = title:d_flanders.holder
+			}
+			set_global_variable = phx_hyw_flemish_crisis_fired
+			trigger_event = {
+				id = phx_hyw.0020
+				days = { 30 120 }
+			}
+		}
+
+		# 3. 1341 War of the Breton Succession (Brittany -> chains to England/France proxy struggle)
+		else_if = {
+			limit = {
+				has_title = title:d_brittany
+				NOT = { has_title = title:k_france }
+				NOT = { has_title = title:k_england }
+				current_year >= 1341
+				NOT = { has_global_variable = phx_hyw_breton_crisis_fired }
+			}
+			set_global_variable = phx_hyw_breton_crisis_fired
+			trigger_event = {
+				id = phx_hyw.0030
+				days = { 30 110 }
+			}
+		}
+
+		# 4. The Auld Alliance — Scotland Strikes Northern England (1342+)
+		else_if = {
+			limit = {
+				has_title = title:k_scotland
+				NOT = { has_title = title:k_england }
+				current_year >= 1342
+				NOT = { has_global_variable = phx_hyw_auld_alliance_fired }
+				exists = title:k_england.holder
+				exists = title:k_france.holder
+				title:k_england.holder != title:k_france.holder
+			}
+			set_global_variable = phx_hyw_auld_alliance_fired
+			trigger_event = {
+				id = phx_hyw.0040
+				days = { 30 120 }
+			}
+		}
+
+		# 5. Coming of Age of the Black Prince (1346+, England)
+		else_if = {
+			limit = {
+				has_title = title:k_england
+				current_year >= 1346
+				NOT = { has_global_variable = phx_hyw_black_prince_age_fired }
+				character:eng_edward_the_black_prince ?= {
+					is_alive = yes
+					age >= 16
+				}
+			}
+			set_global_variable = phx_hyw_black_prince_age_fired
+			if = {
+				limit = { character:eng_edward_the_black_prince = { is_ai = no } }
+				character:eng_edward_the_black_prince = {
+					trigger_event = {
+						id = phx_hyw.0045
+						days = { 15 60 }
+					}
+				}
+			}
+			else = {
+				trigger_event = {
+					id = phx_hyw.0045
+					days = { 15 60 }
+				}
+			}
+		}
+
+		# 6. 1358 Jacquerie & Estates-General Crisis (France)
+		else_if = {
+			limit = {
+				has_title = title:k_france
+				NOT = { has_title = title:k_england }
+				current_year >= 1356
+				NOT = { has_global_variable = phx_hyw_jacquerie_fired }
+				OR = {
+					has_global_variable = phx_hyw_war_has_begun
+					current_year >= 1358
+				}
+			}
+			set_global_variable = phx_hyw_jacquerie_fired
+			trigger_event = {
+				id = phx_hyw.0060
+				days = { 30 120 }
+			}
+		}
+
+		# 7. 1381 Peasants' Revolt (England)
+		else_if = {
+			limit = {
+				has_title = title:k_england
+				current_year >= 1380
+				NOT = { has_global_variable = phx_hyw_peasants_revolt_fired }
+				completely_controls = title:c_middlesex
+			}
+			set_global_variable = phx_hyw_peasants_revolt_fired
+			trigger_event = {
+				id = phx_hyw.0070
+				days = { 30 120 }
+			}
+		}
+
+		# 8. Late-War Turnaround: The Maid of Orleans (1385+, France when England holds French soil)
+		else_if = {
+			limit = {
+				has_title = title:k_france
+				NOT = { has_title = title:k_england }
+				current_year >= 1385
+				NOT = { has_global_variable = phx_hyw_maid_of_orleans_fired }
+				exists = title:k_england.holder
+				OR = {
+					has_character_modifier = phx_hyw_war_exhaustion_modifier
+					is_at_war_with = title:k_england.holder
+					title:k_france = {
+						any_in_de_jure_hierarchy = {
+							tier = tier_county
+							holder ?= {
+								OR = {
+									this = title:k_england.holder
+									is_vassal_or_below_of = title:k_england.holder
+								}
+							}
+						}
+					}
+				}
+			}
+			set_global_variable = phx_hyw_maid_of_orleans_fired
+			trigger_event = {
+				id = phx_hyw.0080
+				days = { 20 90 }
+			}
+		}
+	}
+}

@@ -1,0 +1,880 @@
+﻿##################################################
+# Project Phoenix (PHX) — Hundred Years' War 1337 Decisions
+# 10 Decisions across England (4), France (4), Burgundy (1), Brittany (1)
+# Conforms strictly to AGENTS.md vanilla flavor style:
+#   desc = pure narrative flavor; conditions in is_shown/is_valid/cost
+##################################################
+
+# ==================================================
+# ENGLAND (4 Decisions)
+# ==================================================
+
+# 1. Assert the Claim to the French Crown
+phx_hyw_press_french_claim_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_siege_warfare.dds"
+	}
+	decision_group_type = major
+	desc = phx_hyw_press_french_claim_decision_desc
+	selection_tooltip = phx_hyw_press_french_claim_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 60
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:k_england
+		NOT = { has_title = title:k_france }
+		exists = title:k_france.holder
+		NOT = { has_character_flag = phx_hyw_pressed_claim_flag }
+		NOT = { has_global_variable = phx_hyw_resolved }
+	}
+
+	is_valid = {
+		completely_controls = title:c_middlesex
+		prestige_level >= 1
+		NOT = { is_allied_to = title:k_france.holder }
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 200
+		prestige = 250
+	}
+
+	effect = {
+		if = {
+			limit = { NOT = { has_claim_on = title:k_france } }
+			add_pressed_claim = title:k_france
+		}
+		add_character_modifier = {
+			modifier = phx_hyw_longbow_doctrine_modifier
+			years = 25
+		}
+		spawn_army = {
+			name = phx_hyw_english_longbow_host_name
+			location = root.capital_province
+			men_at_arms = {
+				type = longbowmen
+				men = 350
+			}
+			men_at_arms = {
+				type = armored_footmen
+				men = 200
+			}
+			levies = 600
+			inheritable = no
+		}
+		custom_tooltip = phx_hyw_press_french_claim_effect_tt
+		hidden_effect = {
+			add_character_flag = phx_hyw_pressed_claim_flag
+			add_character_flag = phx_hyw_free_throne_cb
+			set_global_variable = phx_hyw_war_has_begun
+			if = {
+				limit = { NOT = { has_global_variable = phx_hyw_story_active } }
+				create_story = story_phx_hundred_years_war
+			}
+		}
+		trigger_event = phx_hyw.0100
+	}
+
+	ai_potential = {
+		has_title = title:k_england
+		NOT = { has_title = title:k_france }
+	}
+
+	ai_will_do = {
+		base = 85
+	}
+}
+
+# 2. Found the Order of the Garter
+phx_hyw_found_order_of_garter_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+	}
+	decision_group_type = realm
+	desc = phx_hyw_found_order_of_garter_decision_desc
+	selection_tooltip = phx_hyw_found_order_of_garter_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 60
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:k_england
+		NOT = { has_character_modifier = phx_hyw_order_of_garter_modifier }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_hyw_garter_founded_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_middlesex
+		prestige_level >= 2
+		OR = {
+			martial >= 10
+			current_year >= 1346
+			has_global_variable = phx_hyw_war_has_begun
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 300
+		prestige = 350
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_hyw_order_of_garter_modifier
+			years = 40
+		}
+		add_prestige = 300
+		add_legitimacy = 150
+		custom_tooltip = phx_hyw_found_order_of_garter_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_hyw_garter_founded_global
+			}
+			trigger_event = phx_hyw.0110
+		}
+	}
+
+	ai_potential = {
+		has_title = title:k_england
+	}
+
+	ai_will_do = {
+		base = 90
+	}
+}
+
+# 3. Enforce the Flemish Wool Staple
+phx_hyw_flemish_wool_embargo_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
+	}
+	decision_group_type = realm
+	desc = phx_hyw_flemish_wool_embargo_decision_desc
+	selection_tooltip = phx_hyw_flemish_wool_embargo_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 60
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:k_england
+		NOT = { has_character_modifier = phx_hyw_flemish_wool_staple_modifier }
+	}
+
+	is_valid = {
+		completely_controls = title:c_middlesex
+		exists = title:d_flanders.holder
+		OR = {
+			stewardship >= 8
+			diplomacy >= 8
+			prestige_level >= 2
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 150
+		prestige = 150
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_hyw_flemish_wool_staple_modifier
+			years = 20
+		}
+		title:c_middlesex = {
+			change_prosperity_progress = 80
+		}
+		if = {
+			limit = {
+				exists = title:d_flanders.holder
+				title:d_flanders.holder = {
+					is_alive = yes
+					this != root
+				}
+			}
+			title:d_flanders.holder = {
+				add_opinion = {
+					target = root
+					modifier = impressed_opinion
+					opinion = 20
+				}
+			}
+		}
+		custom_tooltip = phx_hyw_flemish_wool_embargo_effect_tt
+		hidden_effect = {
+			trigger_event = phx_hyw.0120
+		}
+	}
+
+	ai_potential = {
+		has_title = title:k_england
+	}
+
+	ai_will_do = {
+		base = 80
+	}
+}
+
+# 4. Proclaim the Dual Monarchy of England and France
+phx_hyw_proclaim_dual_monarchy_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = major
+	desc = phx_hyw_proclaim_dual_monarchy_decision_desc
+	selection_tooltip = phx_hyw_proclaim_dual_monarchy_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:k_england
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_hyw_dual_monarchy_global
+			}
+		}
+	}
+
+	is_valid = {
+		has_title = title:k_england
+		has_title = title:k_france
+		completely_controls = title:c_middlesex
+		completely_controls = title:c_pays_france
+		prestige_level >= 3
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 500
+		prestige = 750
+	}
+
+	effect = {
+		if = {
+			limit = { has_character_modifier = phx_hyw_war_exhaustion_modifier }
+			remove_character_modifier = phx_hyw_war_exhaustion_modifier
+		}
+		add_character_modifier = {
+			modifier = phx_hyw_dual_monarchy_crown_modifier
+			years = 50
+		}
+		add_prestige = 800
+		add_legitimacy = 400
+		custom_tooltip = phx_hyw_proclaim_dual_monarchy_effect_tt
+		hidden_effect = {
+			set_global_variable = phx_hyw_resolved
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_hyw_dual_monarchy_global
+			}
+			trigger_event = phx_hyw.0130
+		}
+	}
+
+	ai_potential = {
+		has_title = title:k_england
+		has_title = title:k_france
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+# ==================================================
+# FRANCE (4 Decisions)
+# ==================================================
+
+# 5. Confiscate the Duchy of Aquitaine (1337.5.24 historic spark)
+phx_hyw_confiscate_aquitaine_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	decision_group_type = major
+	desc = phx_hyw_confiscate_aquitaine_decision_desc
+	selection_tooltip = phx_hyw_confiscate_aquitaine_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 60
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:k_france
+		NOT = { has_title = title:k_england }
+		exists = title:k_england.holder
+		NOT = { has_character_flag = phx_hyw_confiscated_aquitaine_flag }
+		NOT = { has_global_variable = phx_hyw_resolved }
+		title:k_france = {
+			any_in_de_jure_hierarchy = {
+				tier = tier_county
+				holder ?= {
+					OR = {
+						this = title:k_england.holder
+						is_vassal_or_below_of = title:k_england.holder
+					}
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_pays_france
+		NOT = { is_allied_to = title:k_england.holder }
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		prestige = 200
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_hyw_valois_chivalry_modifier
+			years = 20
+		}
+		add_legitimacy = 100
+		custom_tooltip = phx_hyw_confiscate_aquitaine_effect_tt
+		hidden_effect = {
+			add_character_flag = phx_hyw_confiscated_aquitaine_flag
+			add_character_flag = phx_hyw_free_aquitaine_cb
+			set_global_variable = phx_hyw_aquitaine_confiscated
+			set_global_variable = phx_hyw_war_has_begun
+		}
+		trigger_event = phx_hyw.0140
+	}
+
+	ai_potential = {
+		has_title = title:k_france
+		NOT = { has_title = title:k_england }
+	}
+
+	ai_will_do = {
+		base = 85
+	}
+}
+
+# 6. Unfurl the Oriflamme of Saint-Denis
+phx_hyw_raise_oriflamme_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
+	}
+	decision_group_type = realm
+	desc = phx_hyw_raise_oriflamme_decision_desc
+	selection_tooltip = phx_hyw_raise_oriflamme_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 60
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:k_france
+		NOT = { has_character_modifier = phx_hyw_oriflamme_banner_modifier }
+	}
+
+	is_valid = {
+		completely_controls = title:c_pays_france
+		piety_level >= 1
+		OR = {
+			is_at_war = yes
+			has_global_variable = phx_hyw_war_has_begun
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 200
+		piety = 200
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_hyw_oriflamme_banner_modifier
+			years = 20
+		}
+		spawn_army = {
+			name = phx_hyw_french_oriflamme_host_name
+			location = title:c_pays_france.title_province
+			men_at_arms = {
+				type = gendarme
+				men = 200
+			}
+			men_at_arms = {
+				type = crossbowmen
+				men = 250
+			}
+			levies = 700
+			inheritable = no
+		}
+		add_legitimacy = 100
+		custom_tooltip = phx_hyw_raise_oriflamme_effect_tt
+		hidden_effect = {
+			trigger_event = phx_hyw.0150
+		}
+	}
+
+	ai_potential = {
+		has_title = title:k_france
+	}
+
+	ai_will_do = {
+		base = 85
+	}
+}
+
+# 7. Establish the Compagnies d'Ordonnance
+phx_hyw_establish_compagnies_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_castle_view.dds"
+	}
+	decision_group_type = major
+	desc = phx_hyw_establish_compagnies_decision_desc
+	selection_tooltip = phx_hyw_establish_compagnies_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 60
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:k_france
+		NOT = { has_character_modifier = phx_hyw_compagnies_ordonnance_modifier }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_hyw_compagnies_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_pays_france
+		prestige_level >= 2
+		OR = {
+			current_year >= 1370
+			martial >= 12
+			has_character_modifier = phx_hyw_maid_of_orleans_modifier
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 400
+		prestige = 400
+	}
+
+	effect = {
+		if = {
+			limit = { has_character_modifier = phx_hyw_war_exhaustion_modifier }
+			remove_character_modifier = phx_hyw_war_exhaustion_modifier
+		}
+		add_character_modifier = {
+			modifier = phx_hyw_compagnies_ordonnance_modifier
+			years = 40
+		}
+		spawn_army = {
+			name = phx_hyw_compagnies_ordonnance_host_name
+			location = title:c_pays_france.title_province
+			men_at_arms = {
+				type = gendarme
+				men = 250
+			}
+			men_at_arms = {
+				type = armored_footmen
+				men = 250
+			}
+			men_at_arms = {
+				type = bombard
+				men = 40
+			}
+			inheritable = no
+		}
+		add_legitimacy = 200
+		custom_tooltip = phx_hyw_establish_compagnies_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_hyw_compagnies_global
+			}
+			trigger_event = phx_hyw.0160
+		}
+	}
+
+	ai_potential = {
+		has_title = title:k_france
+	}
+
+	ai_will_do = {
+		base = 95
+	}
+}
+
+# 8. Proclaim the Liberation of France
+phx_hyw_expel_english_continent_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_legitimacy.dds"
+	}
+	decision_group_type = major
+	desc = phx_hyw_expel_english_continent_decision_desc
+	selection_tooltip = phx_hyw_expel_english_continent_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 60
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:k_france
+		NOT = { has_title = title:k_england }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_hyw_liberation_france_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_pays_france
+		completely_controls = title:c_bordelais
+		completely_controls = title:c_rouennais
+		completely_controls = title:c_orleanais
+		completely_controls = title:c_ponthieu
+		prestige_level >= 3
+		trigger_if = {
+			limit = { exists = title:k_england.holder }
+			NOT = {
+				title:k_france = {
+					any_in_de_jure_hierarchy = {
+						tier = tier_county
+						holder ?= {
+							OR = {
+								this = title:k_england.holder
+								is_vassal_or_below_of = title:k_england.holder
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 400
+		prestige = 600
+	}
+
+	effect = {
+		if = {
+			limit = { has_character_modifier = phx_hyw_war_exhaustion_modifier }
+			remove_character_modifier = phx_hyw_war_exhaustion_modifier
+		}
+		add_character_modifier = {
+			modifier = phx_hyw_treaty_bretigny_modifier
+			years = 40
+		}
+		add_prestige = 800
+		add_legitimacy = 400
+		title:c_pays_france = {
+			change_prosperity_progress = 150
+		}
+		title:c_bordelais = {
+			change_prosperity_progress = 100
+		}
+		custom_tooltip = phx_hyw_expel_english_continent_effect_tt
+		hidden_effect = {
+			set_global_variable = phx_hyw_resolved
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_hyw_liberation_france_global
+			}
+			trigger_event = phx_hyw.0170
+		}
+	}
+
+	ai_potential = {
+		has_title = title:k_france
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+# ==================================================
+# BURGUNDY (1 Decision)
+# ==================================================
+
+# 9. Chart the Third Power — Grand Duchy of Burgundy
+phx_hyw_grand_duchy_burgundy_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	}
+	decision_group_type = major
+	desc = phx_hyw_grand_duchy_burgundy_decision_desc
+	selection_tooltip = phx_hyw_grand_duchy_burgundy_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 60
+		kingdom = 60
+		empire = 0
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:d_burgundy
+		NOT = { has_title = title:k_france }
+		NOT = { has_title = title:k_england }
+		NOT = { has_character_modifier = phx_hyw_burgundian_statecraft_modifier }
+	}
+
+	is_valid = {
+		completely_controls = title:c_dijonnais
+		prestige_level >= 2
+		OR = {
+			diplomacy >= 10
+			stewardship >= 10
+			completely_controls = title:d_burgundy
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+	}
+
+	cost = {
+		gold = 250
+		prestige = 300
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_hyw_burgundian_statecraft_modifier
+			years = 35
+		}
+		title:c_dijonnais = {
+			change_prosperity_progress = 120
+		}
+		add_prestige = 300
+		add_legitimacy = 150
+		custom_tooltip = phx_hyw_grand_duchy_burgundy_effect_tt
+		hidden_effect = {
+			trigger_event = phx_hyw.0180
+		}
+	}
+
+	ai_potential = {
+		has_title = title:d_burgundy
+	}
+
+	ai_will_do = {
+		base = 85
+	}
+}
+
+# ==================================================
+# BRITTANY (1 Decision)
+# ==================================================
+
+# 10. Balance Between Lion and Lily
+phx_hyw_secure_breton_neutrality_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	}
+	decision_group_type = realm
+	desc = phx_hyw_secure_breton_neutrality_decision_desc
+	selection_tooltip = phx_hyw_secure_breton_neutrality_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 60
+		kingdom = 60
+		empire = 0
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:d_brittany
+		NOT = { has_title = title:k_france }
+		NOT = { has_title = title:k_england }
+		NOT = { has_character_modifier = phx_hyw_breton_neutrality_modifier }
+	}
+
+	is_valid = {
+		completely_controls = title:c_nantais
+		OR = {
+			diplomacy >= 9
+			intrigue >= 9
+			prestige_level >= 2
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+	}
+
+	cost = {
+		gold = 150
+		prestige = 200
+	}
+
+	effect = {
+		if = {
+			limit = { has_character_modifier = phx_hyw_breton_succession_divided_modifier }
+			remove_character_modifier = phx_hyw_breton_succession_divided_modifier
+		}
+		add_character_modifier = {
+			modifier = phx_hyw_breton_neutrality_modifier
+			years = 25
+		}
+		add_legitimacy = 100
+		if = {
+			limit = {
+				exists = title:k_england.holder
+				title:k_england.holder = { is_alive = yes this != root }
+			}
+			title:k_england.holder = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 15
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = title:k_france.holder
+				title:k_france.holder = { is_alive = yes this != root }
+			}
+			title:k_france.holder = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 15
+				}
+			}
+		}
+		custom_tooltip = phx_hyw_secure_breton_neutrality_effect_tt
+		hidden_effect = {
+			trigger_event = phx_hyw.0190
+		}
+	}
+
+	ai_potential = {
+		has_title = title:d_brittany
+	}
+
+	ai_will_do = {
+		base = 80
+	}
+}

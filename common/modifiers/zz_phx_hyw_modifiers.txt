@@ -1,0 +1,160 @@
+﻿##################################################
+# Project Phoenix (PHX) — Hundred Years' War 1337 Modifiers
+# CK3 1.21.0.3 (Florin) — Verified character & county keys only
+# Namespace prefix: phx_hyw_
+##################################################
+
+# 1. English Longbow Doctrine
+phx_hyw_longbow_doctrine_modifier = {
+	icon = martial_positive
+	martial = 2
+	archers_damage_mult = 0.25
+	archers_screen_mult = 0.15
+	archers_recruitment_cost_mult = -0.15
+	defender_advantage = 3
+}
+
+# 2. Chevauchee Terror
+phx_hyw_chevauchee_terror_modifier = {
+	icon = dread_positive
+	dread_baseline_add = 15
+	movement_speed = 0.15
+	attacker_advantage = 3
+	raid_speed = 0.25
+	supply_duration = 0.25
+}
+
+# 3. Wool Staple & Flemish Alliance
+phx_hyw_flemish_wool_staple_modifier = {
+	icon = economy_positive
+	stewardship = 2
+	diplomacy = 1
+	monthly_income_mult = 0.15
+	embarkation_cost_mult = -0.25
+}
+
+# 4. Order of the Garter
+phx_hyw_order_of_garter_modifier = {
+	icon = prowess_positive
+	prowess = 2
+	knight_limit = 3
+	knight_effectiveness_mult = 0.20
+	monthly_prestige_gain_mult = 0.15
+	vassal_opinion = 5
+}
+
+# 5. French Oriflamme Banner
+phx_hyw_oriflamme_banner_modifier = {
+	icon = martial_positive
+	martial = 2
+	advantage = 4
+	levy_reinforcement_rate = 0.25
+	knight_effectiveness_mult = 0.15
+	monthly_prestige_gain_mult = 0.10
+}
+
+# 6. Valois Chivalric Muster
+phx_hyw_valois_chivalry_modifier = {
+	icon = horse_positive
+	heavy_cavalry_damage_mult = 0.20
+	heavy_cavalry_toughness_mult = 0.15
+	knight_limit = 2
+	monthly_prestige_gain_mult = 0.10
+}
+
+# 7. Compagnies d'Ordonnance (Late-War Standing Army & Artillery)
+phx_hyw_compagnies_ordonnance_modifier = {
+	icon = martial_positive
+	martial = 2
+	men_at_arms_cap = 2
+	men_at_arms_maintenance = -0.15
+	siege_weapon_siege_value_mult = 0.25
+	heavy_cavalry_damage_mult = 0.15
+}
+
+# 8. Estates-General Concessions
+phx_hyw_estates_general_concessions_modifier = {
+	icon = diplomacy_mixed
+	monthly_income_mult = 0.10
+	direct_vassal_opinion = 10
+	monthly_legitimacy_add = -0.35
+	tyranny_gain_mult = 0.15
+}
+
+# 9. Burgundian Statecraft (Great Duchy Ambition)
+phx_hyw_burgundian_statecraft_modifier = {
+	icon = legitimacy_positive
+	diplomacy = 3
+	stewardship = 2
+	monthly_prestige_gain_mult = 0.20
+	monthly_income_mult = 0.12
+	vassal_opinion = 10
+}
+
+# 10. Breton Succession Divided
+phx_hyw_breton_succession_divided_modifier = {
+	icon = intrigue_negative
+	vassal_opinion = -10
+	direct_vassal_opinion = -5
+	levy_size = -0.15
+	monthly_legitimacy_add = -0.40
+}
+
+# 11. War Exhaustion of the Realm
+phx_hyw_war_exhaustion_modifier = {
+	icon = stress_negative
+	monthly_income_mult = -0.15
+	levy_reinforcement_rate = -0.25
+	vassal_opinion = -10
+	stress_gain_mult = 0.20
+}
+
+# 12. Devastated Countryside (County Modifier — CK3 1.21 county-safe keys only)
+phx_hyw_devastated_countryside_modifier = {
+	icon = county_modifier_prosperity_negative
+	prosperity_growth_factor = -0.45
+	all_tax_mult = -0.30
+	levy_size = -0.25
+	monthly_control_change = -0.35
+}
+
+# 13. Maid of Orleans Inspiration
+phx_hyw_maid_of_orleans_modifier = {
+	icon = piety_positive
+	martial = 3
+	advantage = 6
+	levy_reinforcement_rate = 0.40
+	knight_effectiveness_mult = 0.25
+	monthly_legitimacy_add = 0.75
+	monthly_piety_gain_mult = 0.20
+}
+
+# 14. Treaty of Bretigny (Truce & Reconstruction)
+phx_hyw_treaty_bretigny_modifier = {
+	icon = diplomacy_positive
+	diplomacy = 2
+	monthly_income_mult = 0.10
+	levy_reinforcement_rate = 0.20
+	vassal_opinion = 5
+}
+
+# 15. Dual Monarchy Crown (England + France Union)
+phx_hyw_dual_monarchy_crown_modifier = {
+	icon = legitimacy_positive
+	diplomacy = 3
+	martial = 2
+	monthly_prestige_gain_mult = 0.25
+	monthly_legitimacy_add = 1.0
+	vassal_opinion = 10
+	domain_limit = 1
+}
+
+# 16. Breton Balance Between Lion and Lily
+phx_hyw_breton_neutrality_modifier = {
+	icon = diplomacy_positive
+	diplomacy = 2
+	intrigue = 2
+	defender_advantage = 4
+	monthly_income_mult = 0.10
+	vassal_opinion = 10
+}
