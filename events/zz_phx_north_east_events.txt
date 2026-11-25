@@ -1,0 +1,977 @@
+﻿##################################################
+# Project Phoenix (PHX) — Northern & Central/Eastern Europe 1337 Events
+# Namespace: phx_ne (24 historical & decision-outcome events)
+# Strictly follows AGENTS.md (pure narrative desc, CK3 1.21 verified scopes/effects)
+##################################################
+
+namespace = phx_ne
+
+# ==================================================
+# TEUTONIC ORDER & PRUSSIA EVENTS
+# ==================================================
+
+# 0001 — 1337 Opening: Banners of the Black Cross (Teutonic Order)
+phx_ne.0001 = {
+	type = character_event
+	title = phx_ne.0001.t
+	desc = phx_ne.0001.desc
+	theme = martial
+	override_background = { reference = armory }
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	right_portrait = {
+		trigger = { exists = scope:livonian_master }
+		character = scope:livonian_master
+		animation = marshal
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:liv_eberhard_von_monheim ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:liv_eberhard_von_monheim = { save_scope_as = livonian_master }
+		}
+	}
+
+	# Option A: Sound the call for Western knights to ride on the Reisen
+	option = {
+		name = phx_ne.0001.a
+		add_piety = 120
+		add_prestige = 100
+		if = {
+			limit = { exists = scope:livonian_master }
+			scope:livonian_master = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 20
+				}
+			}
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Strengthen Marienburg's brickworks and the grain trade of Danzig
+	option = {
+		name = phx_ne.0001.b
+		add_gold = 125
+		title:c_upper_prussia = {
+			change_prosperity_progress = 40
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+# 0010 — Prussian Cities & Knightly Estates Tension (Prussian Confederation Prelude)
+phx_ne.0010 = {
+	type = character_event
+	title = phx_ne.0010.t
+	desc = phx_ne.0010.desc
+	theme = stewardship
+	override_background = { reference = council_chamber }
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	# Option A: Confirm urban charters in Danzig and Culm to preserve commercial wealth
+	option = {
+		name = phx_ne.0010.a
+		add_gold = 150
+		add_prestige = -75
+		if = {
+			limit = { completely_controls = title:c_danzig }
+			title:c_danzig = {
+				change_prosperity_progress = 60
+			}
+		}
+		every_vassal = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 15
+			}
+		}
+		ai_chance = { base = 55 }
+	}
+
+	# Option B: Reassert the Grand Master's iron discipline over the Prussian estates
+	option = {
+		name = phx_ne.0010.b
+		add_dread = 20
+		add_legitimacy = 100
+		add_prestige = 100
+		every_vassal = {
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -15
+			}
+		}
+		ai_chance = { base = 45 }
+	}
+}
+
+# 0012 — Existential Crisis for the Order: The Krewo Union & Catholic Lithuania
+phx_ne.0012 = {
+	type = character_event
+	title = phx_ne.0012.t
+	desc = phx_ne.0012.desc
+	theme = war
+	override_background = { reference = council_chamber }
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	right_portrait = {
+		trigger = { exists = scope:polish_monarch }
+		character = scope:polish_monarch
+		animation = personality_bold
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:k_poland.holder
+				title:k_poland.holder = {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			title:k_poland.holder = { save_scope_as = polish_monarch }
+		}
+	}
+
+	# Option A: Denounce the conversion as hollow and fortify the Vistula frontier
+	option = {
+		name = phx_ne.0012.a
+		add_character_modifier = {
+			modifier = phx_teu_northern_crusade_zeal_modifier
+			years = 15
+		}
+		add_prestige = 150
+		if = {
+			limit = { exists = scope:polish_monarch }
+			scope:polish_monarch = {
+				add_opinion = {
+					target = root
+					modifier = angry_opinion
+					opinion = -30
+				}
+			}
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Seek imperial mediation and prepare the Order for a secular future
+	option = {
+		name = phx_ne.0012.b
+		add_gold = 150
+		add_legitimacy = 100
+		if = {
+			limit = {
+				exists = title:e_hre.holder
+				title:e_hre.holder = {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			title:e_hre.holder = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 20
+				}
+			}
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+# ==================================================
+# HOLY ROMAN EMPIRE & BOHEMIA EVENTS
+# ==================================================
+
+# 0020 — 1337 Opening: Emperor Ludwig IV & the Avignon Interdict
+phx_ne.0020 = {
+	type = character_event
+	title = phx_ne.0020.t
+	desc = phx_ne.0020.desc
+	theme = crown
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	right_portrait = {
+		trigger = { exists = scope:pope_rival }
+		character = scope:pope_rival
+		animation = anger
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:pap_benedetto_xii ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:pap_benedetto_xii = { save_scope_as = pope_rival }
+		}
+		else_if = {
+			limit = {
+				exists = title:k_papal_state.holder
+				title:k_papal_state.holder = {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			title:k_papal_state.holder = { save_scope_as = pope_rival }
+		}
+	}
+
+	# Option A: Stand with the Electors at Rhense — the Imperial Crown owes nothing to Avignon
+	option = {
+		name = phx_ne.0020.a
+		add_prestige = 200
+		add_legitimacy = 100
+		every_vassal = {
+			limit = { highest_held_title_tier >= tier_duchy }
+			add_opinion = {
+				target = root
+				modifier = respect_opinion
+				opinion = 10
+			}
+		}
+		if = {
+			limit = { exists = scope:pope_rival }
+			scope:pope_rival = {
+				add_opinion = {
+					target = root
+					modifier = angry_opinion
+					opinion = -25
+				}
+			}
+		}
+		ai_chance = { base = 65 }
+	}
+
+	# Option B: Dispatch penitent envoys to seek reconciliation with the Holy See
+	option = {
+		name = phx_ne.0020.b
+		add_piety = 150
+		add_prestige = -75
+		if = {
+			limit = { exists = scope:pope_rival }
+			scope:pope_rival = {
+				add_opinion = {
+					target = root
+					modifier = pleased_opinion
+					opinion = 25
+				}
+			}
+		}
+		ai_chance = { base = 35 }
+	}
+}
+
+# 0022 — Charles IV & the Founding of Prague University
+phx_ne.0022 = {
+	type = character_event
+	title = phx_ne.0022.t
+	desc = phx_ne.0022.desc
+	theme = learning
+	override_background = { reference = study }
+	left_portrait = {
+		character = root
+		animation = reading
+	}
+	right_portrait = {
+		trigger = { exists = scope:luxembourg_heir }
+		character = scope:luxembourg_heir
+		animation = admiration
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:boh_charles_iv_luxembourg ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:boh_charles_iv_luxembourg = { save_scope_as = luxembourg_heir }
+		}
+	}
+
+	# Option A: Charter the Studium Generale of Prague and summon Europe's finest masters
+	option = {
+		name = phx_ne.0022.a
+		remove_short_term_gold = 150
+		add_character_modifier = {
+			modifier = phx_boh_imperial_renaissance_modifier
+			years = 35
+		}
+		title:c_prague = {
+			change_prosperity_progress = 100
+			add_county_modifier = {
+				modifier = phx_boh_prague_university_modifier
+				years = 50
+			}
+		}
+		add_prestige = 200
+		ai_chance = { base = 85 }
+	}
+
+	# Option B: Patronize Bohemian cathedral schools without committing the royal treasury
+	option = {
+		name = phx_ne.0022.b
+		add_piety = 100
+		title:c_prague = {
+			change_prosperity_progress = 40
+		}
+		ai_chance = { base = 15 }
+	}
+}
+
+# ==================================================
+# POLAND & LITHUANIA EVENTS
+# ==================================================
+
+# 0030 — 1337 Opening: Casimir III — A Kingdom of Timber and Stone
+phx_ne.0030 = {
+	type = character_event
+	title = phx_ne.0030.t
+	desc = phx_ne.0030.desc
+	theme = stewardship
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+
+	# Option A: Build stone fortresses, salt-mine revenues, and royal highways across Lesser Poland
+	option = {
+		name = phx_ne.0030.a
+		add_gold = 125
+		title:c_krakow = {
+			change_prosperity_progress = 60
+		}
+		add_legitimacy = 75
+		ai_chance = { base = 65 }
+	}
+
+	# Option B: Prepare the royal host to contest Pomerania and the border marches
+	option = {
+		name = phx_ne.0030.b
+		add_prestige = 150
+		if = {
+			limit = {
+				exists = title:d_prussia.holder
+				title:d_prussia.holder = {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			title:d_prussia.holder = {
+				add_opinion = {
+					target = root
+					modifier = suspicious_opinion
+					opinion = -20
+				}
+			}
+		}
+		ai_chance = { base = 35 }
+	}
+}
+
+# 0040 — 1337 Opening: Gediminas at the Pagan Crossroads
+phx_ne.0040 = {
+	type = character_event
+	title = phx_ne.0040.t
+	desc = phx_ne.0040.desc
+	theme = diplomacy
+	override_background = { reference = courtyard }
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	right_portrait = {
+		trigger = { exists = scope:son_algirdas }
+		character = scope:son_algirdas
+		animation = personality_bold
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:vbk_algirdas_gediminds ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:vbk_algirdas_gediminds = { save_scope_as = son_algirdas }
+		}
+	}
+
+	# Option A: Keep the sacred groves while welcoming Western artisans and Orthodox boyars alike
+	option = {
+		name = phx_ne.0040.a
+		add_character_modifier = {
+			modifier = phx_lit_gediminas_tolerance_modifier
+			years = 25
+		}
+		title:c_vilnius = {
+			change_prosperity_progress = 60
+		}
+		add_prestige = 100
+		ai_chance = { base = 70 }
+	}
+
+	# Option B: Send conciliatory letters to Catholic Europe to blunt Teutonic recruitment
+	option = {
+		name = phx_ne.0040.b
+		add_gold = 100
+		add_prestige = 125
+		if = {
+			limit = {
+				exists = title:k_poland.holder
+				title:k_poland.holder = {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			title:k_poland.holder = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 20
+				}
+			}
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+# 0042 — Baltic Resistance Along the Nemunas
+phx_ne.0042 = {
+	type = character_event
+	title = phx_ne.0042.t
+	desc = phx_ne.0042.desc
+	theme = war
+	override_background = { reference = wilderness_forest }
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+	right_portrait = {
+		trigger = { exists = scope:brother_kestutis }
+		character = scope:brother_kestutis
+		animation = personality_bold
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:lit_kestutis_gediminds ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:lit_kestutis_gediminds = { save_scope_as = brother_kestutis }
+		}
+	}
+
+	# Option A: Fortify Trakai, Kaunas, and the Samogitian river crossings
+	option = {
+		name = phx_ne.0042.a
+		remove_short_term_gold = 75
+		add_prestige = 150
+		if = {
+			limit = { completely_controls = title:c_kaunas }
+			title:c_kaunas = {
+				change_prosperity_progress = 50
+			}
+		}
+		if = {
+			limit = { exists = scope:brother_kestutis }
+			scope:brother_kestutis = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 25
+				}
+			}
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Muster forest riders for counter-raids into Prussia
+	option = {
+		name = phx_ne.0042.b
+		add_prestige = 175
+		spawn_army = {
+			name = phx_lit_samogitian_riders_name
+			location = title:c_vilnius.title_province
+			men_at_arms = {
+				type = light_horsemen
+				men = 250
+			}
+			levies = 500
+			inheritable = no
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+# ==================================================
+# SCANDINAVIA EVENTS
+# ==================================================
+
+# 0050 — 1337 Opening: Magnus Eriksson's Twin Crowns
+phx_ne.0050 = {
+	type = character_event
+	title = phx_ne.0050.t
+	desc = phx_ne.0050.desc
+	theme = crown
+	override_background = { reference = docks }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	right_portrait = {
+		trigger = { exists = scope:danish_rival }
+		character = scope:danish_rival
+		animation = scheme
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:k_denmark.holder
+				title:k_denmark.holder = {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			title:k_denmark.holder = { save_scope_as = danish_rival }
+		}
+	}
+
+	# Option A: Safeguard the herring ports of Scania and unify Swedish royal law
+	option = {
+		name = phx_ne.0050.a
+		add_gold = 120
+		add_legitimacy = 100
+		if = {
+			limit = { completely_controls = title:c_uppland }
+			title:c_uppland = {
+				change_prosperity_progress = 50
+			}
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Extend Nordic ambition across the Sound and the Gulf of Finland
+	option = {
+		name = phx_ne.0050.b
+		add_prestige = 150
+		if = {
+			limit = { exists = scope:danish_rival }
+			scope:danish_rival = {
+				add_opinion = {
+					target = root
+					modifier = suspicious_opinion
+					opinion = -20
+				}
+			}
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+# ==================================================
+# MUSCOVY & GOLDEN HORDE EVENTS
+# ==================================================
+
+# 0060 — 1337 Opening: Ivan I Kalita and the Moneybag of Moscow
+phx_ne.0060 = {
+	type = character_event
+	title = phx_ne.0060.t
+	desc = phx_ne.0060.desc
+	theme = stewardship
+	override_background = { reference = council_chamber }
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+	}
+	right_portrait = {
+		trigger = { exists = scope:horde_khan }
+		character = scope:horde_khan
+		animation = personality_bold
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:e_golden_horde.holder
+				title:e_golden_horde.holder = {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			title:e_golden_horde.holder = { save_scope_as = horde_khan }
+		}
+	}
+
+	# Option A: Collect the Horde's tribute punctually while filling Moscow's coffers
+	option = {
+		name = phx_ne.0060.a
+		add_gold = 175
+		title:c_moscow = {
+			change_prosperity_progress = 60
+		}
+		if = {
+			limit = { exists = scope:horde_khan }
+			scope:horde_khan = {
+				add_opinion = {
+					target = root
+					modifier = pleased_opinion
+					opinion = 20
+				}
+			}
+		}
+		ai_chance = { base = 70 }
+	}
+
+	# Option B: Use the Grand Prince's patent to rally rival Rus boyars to Moscow's banner
+	option = {
+		name = phx_ne.0060.b
+		add_prestige = 150
+		add_legitimacy = 75
+		ai_chance = { base = 30 }
+	}
+}
+
+# 0062 — Throne of the Orthodox Metropolitan in Moscow (Peter & Theognostus)
+phx_ne.0062 = {
+	type = character_event
+	title = phx_ne.0062.t
+	desc = phx_ne.0062.desc
+	theme = faith
+	override_background = { reference = temple_church }
+	left_portrait = {
+		character = root
+		animation = prayer
+	}
+
+	# Option A: Endow the Dormition Cathedral and anchor the Rus Church in Moscow
+	option = {
+		name = phx_ne.0062.a
+		remove_short_term_gold = 100
+		add_piety = 250
+		add_legitimacy = 150
+		title:c_moscow = {
+			change_prosperity_progress = 80
+		}
+		ai_chance = { base = 80 }
+	}
+
+	# Option B: Honor the Metropolitan while conserving coin for the Moscow Kremlin
+	option = {
+		name = phx_ne.0062.b
+		add_piety = 100
+		add_gold = 75
+		ai_chance = { base = 20 }
+	}
+}
+
+# 0070 — The Great Troubles of the Golden Horde (Post-Oz Beg Crisis)
+phx_ne.0070 = {
+	type = character_event
+	title = phx_ne.0070.t
+	desc = phx_ne.0070.desc
+	theme = intrigue
+	override_background = { reference = mpo_camp_steppe }
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+
+	immediate = {
+		set_global_variable = phx_glh_great_troubles_begun
+		add_character_modifier = {
+			modifier = phx_glh_great_troubles_modifier
+			years = 25
+		}
+	}
+
+	# Option A: Strike down rival Jochid claimants and hold Sarai by terror
+	option = {
+		name = phx_ne.0070.a
+		add_dread = 25
+		add_prestige = 150
+		every_vassal = {
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -15
+			}
+		}
+		ai_chance = { base = 55 }
+	}
+
+	# Option B: Distribute steppe pastures and gifts to the emirs of the Ulus
+	option = {
+		name = phx_ne.0070.b
+		remove_short_term_gold = 150
+		every_vassal = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 15
+			}
+		}
+		ai_chance = { base = 45 }
+	}
+}
+
+# ==================================================
+# DECISION & GREAT PROJECT OUTCOME EVENTS (12 EVENTS)
+# ==================================================
+
+# 0100 — Outcome: Eastern Ordensmarks Organized
+phx_ne.0100 = {
+	type = character_event
+	title = phx_ne.0100.t
+	desc = phx_ne.0100.desc
+	theme = realm
+	override_background = { reference = courtyard }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	option = {
+		name = phx_ne.0100.a
+		add_prestige = 125
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0101 — Outcome: Northern Baltic Crusade Proclaimed
+phx_ne.0101 = {
+	type = character_event
+	title = phx_ne.0101.t
+	desc = phx_ne.0101.desc
+	theme = war
+	override_background = { reference = army_camp }
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+
+	option = {
+		name = phx_ne.0101.a
+		add_piety = 125
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0102 — Outcome: Secular Duchy of Prussia Proclaimed
+phx_ne.0102 = {
+	type = character_event
+	title = phx_ne.0102.t
+	desc = phx_ne.0102.desc
+	theme = crown
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = phx_ne.0102.a
+		add_prestige = 200
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0105 — Great Project Outcome: High Castle of Marienburg Completed
+phx_ne.0105 = {
+	type = character_event
+	title = phx_ne.0105.t
+	desc = phx_ne.0105.desc
+	theme = stewardship
+	override_background = { reference = courtyard }
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	option = {
+		name = phx_ne.0105.a
+		add_prestige = 200
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0110 — Outcome: Golden Bull of 1356 Promulgated
+phx_ne.0110 = {
+	type = character_event
+	title = phx_ne.0110.t
+	desc = phx_ne.0110.desc
+	theme = crown
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = throne_room_ruler
+	}
+
+	option = {
+		name = phx_ne.0110.a
+		add_legitimacy = 100
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0120 — Outcome: Statutes of Wiślica & Kazimierz Reforms Enacted
+phx_ne.0120 = {
+	type = character_event
+	title = phx_ne.0120.t
+	desc = phx_ne.0120.desc
+	theme = stewardship
+	override_background = { reference = council_chamber }
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+
+	option = {
+		name = phx_ne.0120.a
+		add_prestige = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0121 — Outcome: Polish-Lithuanian Union Forged
+phx_ne.0121 = {
+	type = character_event
+	title = phx_ne.0121.t
+	desc = phx_ne.0121.desc
+	theme = alliance
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	option = {
+		name = phx_ne.0121.a
+		add_prestige = 200
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0130 — Outcome: Baptism of Lithuania
+phx_ne.0130 = {
+	type = character_event
+	title = phx_ne.0130.t
+	desc = phx_ne.0130.desc
+	theme = faith
+	override_background = { reference = temple_church }
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+
+	option = {
+		name = phx_ne.0130.a
+		add_piety = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0140 — Outcome: Nordic Union of Kalmar Sealed
+phx_ne.0140 = {
+	type = character_event
+	title = phx_ne.0140.t
+	desc = phx_ne.0140.desc
+	theme = crown
+	override_background = { reference = docks }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = phx_ne.0140.a
+		add_prestige = 200
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0150 — Outcome: Gathering of the Russian Lands
+phx_ne.0150 = {
+	type = character_event
+	title = phx_ne.0150.t
+	desc = phx_ne.0150.desc
+	theme = realm
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	option = {
+		name = phx_ne.0150.a
+		add_prestige = 175
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0151 — Outcome: Stand at the Don — Tatar Yoke Broken (Kulikovo Clash)
+phx_ne.0151 = {
+	type = character_event
+	title = phx_ne.0151.t
+	desc = phx_ne.0151.desc
+	theme = battle
+	override_background = { reference = battlefield }
+	left_portrait = {
+		character = root
+		animation = war_over_win
+	}
+
+	option = {
+		name = phx_ne.0151.a
+		add_prestige = 250
+		add_piety = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0160 — Outcome: Order Restored in Sarai
+phx_ne.0160 = {
+	type = character_event
+	title = phx_ne.0160.t
+	desc = phx_ne.0160.desc
+	theme = crown
+	override_background = { reference = mpo_camp_steppe }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = phx_ne.0160.a
+		add_prestige = 200
+		ai_chance = { base = 100 }
+	}
+}

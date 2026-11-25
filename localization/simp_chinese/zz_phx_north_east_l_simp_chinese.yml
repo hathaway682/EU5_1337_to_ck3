@@ -1,0 +1,235 @@
+﻿l_simp_chinese:
+ ##################################################
+ # Project Phoenix (PHX) — 第四波：1337 北欧与中东欧
+ # 修正、马尔堡伟大工程、11 项决议、24 个历史事件
+ ##################################################
+
+ # --- 修正 ---
+ phx_teu_northern_crusade_zeal_modifier:0 "北方十字军热忱"
+ phx_teu_northern_crusade_zeal_modifier_desc:0 "来自西欧基督教世界的客卿骑士源源不断汇集于维斯瓦河畔，在条顿骑士团的黑十字旗下披挂出征。"
+ phx_teu_ordensmarks_modifier:0 "骑士团东方边区"
+ phx_teu_ordensmarks_modifier_desc:0 "星罗棋布的骑士团辖区、木栅烽燧与红砖城堡将普鲁士东部边疆编织为严密的军事修会国家。"
+ phx_teu_marienburg_fortress_modifier:0 "马尔堡大团长要塞"
+ phx_teu_marienburg_fortress_modifier_desc:0 "巍然矗立在诺加特河畔的红砖高堡，是条顿骑士团大团长的中枢所在，亦为波罗的海沿岸最坚固的要塞。"
+ phx_teu_secular_prussia_modifier:0 "世俗普鲁士公国"
+ phx_teu_secular_prussia_modifier_desc:0 "骑士团卸下无休止北方十字军的修会誓愿，将普鲁士改制为世袭封建公国，迈入全新的欧洲政局。"
+ phx_hre_golden_bull_modifier:0 "1356年黄金诏书"
+ phx_hre_golden_bull_modifier_desc:0 "钤有金印的帝国根本大法确立了七大选帝侯的选举权与特权，为神圣罗马帝国带来宪制秩序与稳定。"
+ phx_boh_imperial_renaissance_modifier:0 "波希米亚帝国文艺复兴"
+ phx_boh_imperial_renaissance_modifier_desc:0 "工匠大师、法学家与学者云集布拉格，将波希米亚王都塑造成中欧学术与帝国艺术的璀璨中心。"
+ phx_boh_prague_university_modifier:0 "布拉格大学"
+ phx_boh_prague_university_modifier_desc:0 "阿尔卑斯山以北第一座大学堂吸引着来自德意志、波希米亚与波兰各地的教士、法学博士与学子。"
+ phx_pol_casimir_statutes_modifier:0 "卡齐米日王室法典"
+ phx_pol_casimir_statutes_modifier_desc:0 "统一的王室成文法、石砌要塞与繁荣的特许城镇，将小波兰与大波兰牢牢凝聚在波兰王冠之下。"
+ phx_pol_lithuanian_union_modifier:0 "波兰-立陶宛联盟"
+ phx_pol_lithuanian_union_modifier_desc:0 "克拉科夫与维尔纽斯结为命运共同体，将波兰的骑士重甲与立陶宛广袤的东方疆土合二为一。"
+ phx_lit_gediminas_tolerance_modifier:0 "格迪米纳斯的多教宽容"
+ phx_lit_gediminas_tolerance_modifier_desc:0 "古老圣林与基督教堂、商馆比邻共存，吸引着四方工匠、商人与武士汇聚立陶宛旗帜之下。"
+ phx_lit_baptism_christendom_modifier:0 "立陶宛受洗皈依"
+ phx_lit_baptism_christendom_modifier_desc:0 "立陶宛自主跨入西方基督教世界，在欧洲诸王国中赢得尊严席位，也令十字军失去了继续征讨的借口。"
+ phx_sca_kalmar_union_modifier:0 "卡尔马北欧联盟"
+ phx_sca_kalmar_union_modifier_desc:0 "北欧诸王国在一位君主旗下同舟共济，共同掌控厄勒海峡与波罗的海航道。"
+ phx_rus_gathering_lands_modifier:0 "莫斯科汇聚罗斯诸地"
+ phx_rus_gathering_lands_modifier_desc:0 "白银、特许状与王公联姻正将四分五裂的东北罗斯分封公国不断拉入莫斯科的轨道。"
+ phx_rus_tatar_yoke_modifier:0 "金帐汗国鞑靼枷锁"
+ phx_rus_tatar_yoke_modifier_desc:0 "年复一年的贡车南驶萨莱，每一道大公敕令都系于草原可汗的一念之间。"
+ phx_rus_broken_tatar_yoke_modifier:0 "挣脱鞑靼枷锁"
+ phx_rus_broken_tatar_yoke_modifier_desc:0 "在顿河原野直面汗国铁骑而不屈之后，罗斯诸王公再也不必向萨莱的征税官低头。"
+ phx_glh_great_troubles_modifier:0 "金帐汗国大动乱"
+ phx_glh_great_troubles_modifier_desc:0 "术赤系诸王争位与权臣伯克倾轧撕裂汗国，萨莱的号令在伏尔加河与克里米亚之间摇摇欲坠。"
+ phx_glh_sarai_order_restored_modifier:0 "萨莱秩序重振"
+ phx_glh_sarai_order_restored_modifier_desc:0 "铁腕整肃与得胜万户平息了伯克内讧，可汗的威权重新笼罩钦察草原。"
+
+ # --- 伟大工程：马尔堡大团长要塞 ---
+ great_project_type_phx_malbork_high_castle:0 "马尔堡大团长要塞"
+ great_project_type_phx_malbork_high_castle_desc:0 "可将条顿骑士团坐落于诺加特河畔的红砖城堡扩建为配得上大团长威仪的宏伟修会总坛，增筑外城瓮城、星形拱顶大食堂与圣母礼拜堂。"
+ great_project_type_tooltip_phx_malbork_high_castle:0 "兴建马尔堡大团长要塞，在普鲁士筑起不可撼动的条顿骑士团总坛。"
+ phx_malbork_target_valid_tt:0 "必须位于你直辖的上普鲁士（马尔堡）或但泽伯爵领首府，且尚未建成马尔堡要塞。"
+ great_project_type_phx_malbork_high_castle_contribution_outer_bailey:0 "红砖城垣与外城瓮城"
+ great_project_type_phx_malbork_high_castle_contribution_outer_bailey_desc:0 "烧制数百万块红砖，在高堡外围修筑瓮城、城门塔楼与深阔护城河。"
+ great_project_type_phx_malbork_high_castle_contribution_grand_refectory:0 "大团长大食堂"
+ great_project_type_phx_malbork_high_castle_contribution_grand_refectory_desc:0 "建造星形肋拱宴会大厅，用以款待远道而来的西欧十字军诸侯与汉萨使节。"
+ great_project_type_phx_malbork_high_castle_contribution_chapel_of_saint_mary:0 "圣母礼拜堂"
+ great_project_type_phx_malbork_high_castle_contribution_chapel_of_saint_mary_desc:0 "以巍峨的圣母镶嵌画装饰要塞礼拜堂，激扬整个骑士团国家的信仰热忱。"
+
+ # --- 决议（11 项） ---
+ phx_teu_organize_ordensmarks_decision:0 "整编东方骑士团边区"
+ phx_teu_organize_ordensmarks_decision_desc:0 "在普鲁士的沼泽与松林之间，我们的骑士修士仍驻守在远离维斯瓦河的孤立木哨之中。唯有敕建新辖区、排涝垦荒，并将边疆管区牢牢系于马尔堡，骑士团国家才能将初定疆土化作磐石堡垒。"
+ phx_teu_organize_ordensmarks_decision_tooltip:0 "整编条顿骑士团在普鲁士的各大辖区与东方边疆防务。"
+ phx_teu_organize_ordensmarks_decision_confirm:0 "整编骑士团边区"
+ phx_teu_organize_ordensmarks_effect_tt:0 "普鲁士各骑士团辖区完成整编，并触发铭记改革的史诗事件。"
+
+ phx_teu_crusade_samogitia_decision:0 "号召北方波罗的海十字军"
+ phx_teu_crusade_samogitia_decision_desc:0 "在萨莫吉希亚冰封的密林沼泽之中，欧洲最后一座庞大的异教堡垒依然抗拒着十字架。向莱茵兰、波希米亚与英格兰宫廷发出召唤，便能吸引热切求功的西欧贵族客卿前来参加冬季远征，推进波罗的海战线。"
+ phx_teu_crusade_samogitia_decision_tooltip:0 "号召西欧十字军骑士集结，向萨莫吉希亚发起北方远征。"
+ phx_teu_crusade_samogitia_decision_confirm:0 "吹响十字军号角"
+ phx_teu_crusade_samogitia_effect_tt:0 "西欧客卿十字军在马尔堡集结，骑士团亦确立对萨莫吉希亚的宣称。"
+
+ phx_teu_secularize_prussia_decision:0 "将骑士团国家世俗化"
+ phx_teu_secularize_prussia_decision_desc:0 "无尽的波罗的海十字军时代正走向尾声，普鲁士等级议会也对独身骑士修会的统治日益不满。若褪去修会白袍、将骑士团国家改制为世袭封建公国，普鲁士便能在新时代的欧洲棋局中觅得生机。"
+ phx_teu_secularize_prussia_decision_tooltip:0 "将条顿骑士团修会政权改制为世俗封建的普鲁士公国。"
+ phx_teu_secularize_prussia_decision_confirm:0 "宣告建立普鲁士公国"
+ phx_teu_secularize_prussia_effect_tt:0 "骑士团国家转为封建制政权，并开启全新的世俗公国篇章。"
+
+ phx_hre_golden_bull_decision:0 "颁布1356年黄金诏书"
+ phx_hre_golden_bull_decision_desc:0 "数代以来，争议选举、双重加冕与教廷禁令屡屡将德意志拖入惨烈内战。若以钤盖金印的帝国宪章明定七大选帝侯的法权，罗马皇冠的尊严便能立足于成文法之上，而不再任由刀剑裁断。"
+ phx_hre_golden_bull_decision_tooltip:0 "颁布确立选帝侯制度的帝国根本法，稳固神圣罗马帝国秩序。"
+ phx_hre_golden_bull_decision_confirm:0 "颁布黄金诏书"
+ phx_hre_golden_bull_effect_tt:0 "帝国选举大法在帝国议会前昭告天下，赢得诸大封臣的敬重。"
+
+ phx_pol_statutes_of_casimir_decision:0 "颁行维希利察法典与王室改革"
+ phx_pol_statutes_of_casimir_decision_desc:0 "历经数代诸侯割据，波兰各省习惯法纷繁杂乱，众多市镇仍只有简陋木栅，国库亦显空虚。唯有以统一的王室法典配以石砌城堡与特许城镇，方能将这座木造王国重铸为石筑强邦。"
+ phx_pol_statutes_of_casimir_decision_tooltip:0 "编纂统一的波兰王室法典，推行行政与城镇兴建改革。"
+ phx_pol_statutes_of_casimir_decision_confirm:0 "颁行王室法典"
+ phx_pol_statutes_of_casimir_effect_tt:0 "小波兰与大波兰的王室法制归于统一，克拉科夫与波兹南随之兴盛。"
+
+ phx_pol_union_of_krewo_decision:0 "缔结波兰-立陶宛联盟"
+ phx_pol_union_of_krewo_decision_desc:0 "北有条顿铁骑虎视眈眈，西有帝国诸侯合纵连横，波兰与立陶宛早已休戚与共。若克拉科夫与维尔纽斯缔结王朝与政治联盟，便能铸就一股足以重塑整个中东欧格局的庞大力量。"
+ phx_pol_union_of_krewo_decision_tooltip:0 "缔结联结波兰与立陶宛的王朝政治大联盟（克雷沃联盟）。"
+ phx_pol_union_of_krewo_decision_confirm:0 "签署克雷沃联盟"
+ phx_pol_union_of_krewo_effect_tt:0 "波兰-立陶宛联盟宣告成立，并在马尔堡的条顿骑士团中掀起剧烈震荡。"
+
+ phx_lit_baptism_of_lithuania_decision:0 "皈依西方基督教"
+ phx_lit_baptism_of_lithuania_decision_desc:0 "只要维尔纽斯的圣火一日不熄，条顿骑士团便能不断从欧洲各国宫廷征募十字军进犯我国边疆。若以自主之姿接受洗礼，而非屈服于德意志骑士的长矛，立陶宛便能完整而体面地跻身基督教诸国之列。"
+ phx_lit_baptism_of_lithuania_decision_tooltip:0 "在维尔纽斯接受天主教洗礼，彻底瓦解条顿骑士团的十字军借口。"
+ phx_lit_baptism_of_lithuania_decision_confirm:0 "受洗步入基督教世界"
+ phx_lit_baptism_of_lithuania_effect_tt:0 "你与维尔纽斯改信天主教，彻底改写与波兰及条顿骑士团的外交格局。"
+
+ phx_sca_kalmar_union_decision:0 "缔造卡尔马北欧联盟"
+ phx_sca_kalmar_union_decision_desc:0 "瑞典、丹麦与挪威各自为战之际，连年边疆争斗消耗了北欧元气，反令汉萨商团左右厄勒海峡的财富。若三顶王冠共戴于一位君主之首，北欧便能掌控从斯卡格拉克直到芬兰湾的每一条海道。"
+ phx_sca_kalmar_union_decision_tooltip:0 "宣告缔结联结斯堪的纳维亚诸王冠的卡尔马北欧联盟。"
+ phx_sca_kalmar_union_decision_confirm:0 "宣告卡尔马联盟"
+ phx_sca_kalmar_union_effect_tt:0 "卡尔马联盟在北欧传扬，并赋予你对尚未握有的其余北欧王冠的宣称。"
+
+ phx_rus_gather_russian_lands_decision:0 "以莫斯科汇聚罗斯诸地"
+ phx_rus_gather_russian_lands_decision_desc:0 "自蒙古铁骑击碎基辅罗斯以来，弗拉基米尔、莫斯科、特维尔与梁赞等东北诸公国便在骨肉相残中耗尽心力。凭借忍耐、财富与大公名分，星散的罗斯世袭领地终将重新凝聚于同一座中心。"
+ phx_rus_gather_russian_lands_decision_tooltip:0 "确立莫斯科在东北罗斯诸公国中的主导地位。"
+ phx_rus_gather_russian_lands_decision_confirm:0 "汇聚罗斯诸地"
+ phx_rus_gather_russian_lands_effect_tt:0 "莫斯科巩固对东北罗斯的掌控，并对周边竞争公国确立宣称。"
+
+ phx_rus_cast_off_tatar_yoke_decision:0 "顿河决战——挣脱鞑靼枷锁"
+ phx_rus_cast_off_tatar_yoke_decision_desc:0 "整整一个世纪，罗斯诸王公不得不谦卑南赴萨莱，用白银赎买统治父祖疆土的敕令。如今莫斯科与弗拉基米尔的兵马已整装待发，决心南下顿河，在上帝与草原面前宣告纳贡岁月的终结。"
+ phx_rus_cast_off_tatar_yoke_decision_tooltip:0 "废除对金帐汗国的纳贡，集结罗斯大军公开抗衡草原霸权。"
+ phx_rus_cast_off_tatar_yoke_decision_confirm:0 "进军顿河！"
+ phx_rus_cast_off_tatar_yoke_effect_tt:0 "解除朝贡关系与鞑靼枷锁，罗斯大军在莫斯科集结，准备迎接汗国雷霆之怒。"
+
+ phx_glh_restore_sarai_order_decision:0 "平息金帐汗国大动乱"
+ phx_glh_restore_sarai_order_decision_desc:0 "术赤系诸王已将萨莱变成短命可汗接连殒命的修罗场，而远在顿河与伏尔加河畔的贡臣们也嗅到了衰弱的气息。唯有铁腕清洗叛逆伯克、重申成吉思汗大扎撒，方能挽救金帐汗国于分崩离析。"
+ phx_glh_restore_sarai_order_decision_tooltip:0 "终结大动乱，自萨莱重新确立可汗的至高权威。"
+ phx_glh_restore_sarai_order_decision_confirm:0 "重申大扎撒！"
+ phx_glh_restore_sarai_order_effect_tt:0 "汗国大动乱告终，萨莱重新统御术赤兀鲁思。"
+
+ # --- 军队与地区决议平衡守卫 ---
+ phx_teu_guest_crusaders_army_name:0 "北方十字军客卿骑士团"
+ phx_lit_samogitian_riders_name:0 "萨莫吉希亚密林轻骑"
+ phx_rus_don_host_army_name:0 "顿河大公军团"
+ phx_glh_greatest_of_khans_1337_guard_tt:0 "年份须不早于1355年，且未陷入“金帐汗国大动乱”。"
+
+ # --- 历史与决议事件（24 个） ---
+ phx_ne.0001.t:0 "黑十字军旗迎风展"
+ phx_ne.0001.desc:0 "春雾自诺加特河面散去，马尔堡的钟声召来身穿白袍黑十字的骑士修士举行团会。在大团长迪特里希·冯·阿尔滕堡统领下，条顿骑士团掌管着从但泽延伸至立陶宛松林边疆的普鲁士全境，北方的利沃尼亚同袍则守护着波罗的海东岸。然而波兰仍对波美拉尼亚耿耿于怀，涅曼河彼岸的异教大军也随每一次春融而愈发强悍。"
+ phx_ne.0001.a:0 "号召西欧骑士前来参与新一季的北方远征。"
+ phx_ne.0001.b:0 "将白银投入马尔堡的砖窑与但泽的粮仓贸易。"
+
+ phx_ne.0010.t:0 "普鲁士市民与骑士等级"
+ phx_ne.0010.desc:0 "来自但泽、埃尔宾以及库尔姆乡绅骑士的使者正候在马尔堡大团长厅外，手中的羊皮纸陈情书缀满蜡印。商人们怨声载道，指责骑士团垄断谷物贸易并屡征战税扼杀了普鲁士城镇生机，而地方贵族也要求在征发军役的议事厅中拥有发言权。"
+ phx_ne.0010.a:0 "确认城镇特许状，保全波罗的海的商贸繁荣。"
+ phx_ne.0010.b:0 "告诫诸等级：普鲁士乃骑士团凭宝剑与教宗诏书所立之国。"
+
+ phx_ne.0012.t:0 "克雷沃联盟的阴影"
+ phx_ne.0012.desc:0 "急报传入马尔堡：波兰与立陶宛正携手并肩，共同站到罗马天主教的旗帜之下。议事大厅里，披挂白袍的骑士团统领们陷入沉重沉默。一旦立陶宛人跪在天主祭坛前并与波兰王冠并肩出战，条顿骑士团作为北方十字军圣剑的立国之本便将迎来生死大考。"
+ phx_ne.0012.a:0 "斥责这场皈依为虚伪伎俩，加固维斯瓦河沿线城堡迎战。"
+ phx_ne.0012.b:0 "吁请皇帝斡旋，并思索骑士团在十字军之后的世俗前路。"
+
+ phx_ne.0020.t:0 "皇帝与阿维尼翁禁令"
+ phx_ne.0020.desc:0 "在慕尼黑与莱茵河畔，帝国传令官宣读了自阿维尼翁发来的最新教廷谴责诏书。尽管路德维希四世头戴罗马皇冠，教廷使节仍坚称德意志国王若未经教宗批准便不得行使皇权。帝国境内，诸位选帝侯与自由市都在拭目以待：皇座究竟是向阿维尼翁屈膝，还是坚守德意志的古老法统。"
+ phx_ne.0020.a:0 "与选帝侯共同宣示：帝国皇权唯源自上帝！"
+ phx_ne.0020.b:0 "密派使者南下阿维尼翁，谋求与教廷和解。"
+
+ phx_ne.0022.t:0 "布拉格大学堂"
+ phx_ne.0022.desc:0 "曾游学巴黎与博洛尼亚的学者们向波希米亚宫廷呈上一纸鎏金宪章，提议在伏尔塔瓦河畔的布拉格兴办莱茵河以东、阿尔卑斯山以北第一座高等大学。法学、神学、医学与博雅艺科的硕儒们只待王室敕令，便要将布拉格铸就为照耀整个帝国的学术灯塔。"
+ phx_ne.0022.a:0 "颁布特许状创办布拉格大学，慷慨资助各学院。"
+ phx_ne.0022.b:0 "将高阶学术留给主教座堂学校，为国库省下开支。"
+
+ phx_ne.0030.t:0 "木造之国与石筑之邦"
+ phx_ne.0030.desc:0 "矗立于克拉科夫瓦维尔山巅，国王卡齐米日三世俯瞰着历经两百年分裂后方才重归统一的波兰王国。西里西亚心向波希米亚，条顿骑士团扼守维斯瓦河口，许多波兰市镇依旧只靠木栅设防。但维利奇卡盐矿蕴藏丰厚，只要励精图治，便能将这座饱经风霜的王国重铸为石砌强邦。"
+ phx_ne.0030.a:0 "大兴石砌城堡、王室法庭与商道驿站。"
+ phx_ne.0030.b:0 "磨砺王室旗帜，时刻准备争夺北方边疆。"
+
+ phx_ne.0040.t:0 "异教十字路口"
+ phx_ne.0040.desc:0 "在维尔纽斯的木构大殿内，方济各会修士、东正教罗斯波雅尔与汉萨商贾同席而议，殿外不远处便是雷神佩尔库纳斯的圣林。大公格迪米纳斯缔造了从波罗的海迷雾延展至第聂伯平原的雄阔大公国，但条顿骑士团在西方步步紧逼，时刻窥伺着其子嗣之间的任何裂隙。"
+ phx_ne.0040.a:0 "守护古神圣林，同时广纳四方工匠与武士汇聚维尔纽斯。"
+ phx_ne.0040.b:0 "致信西欧各国宫廷，瓦解条顿骑士团的十字军宣传。"
+
+ phx_ne.0042.t:0 "涅曼河上的盾墙"
+ phx_ne.0042.desc:0 "每逢寒冬河面冰封、足以承载重甲铁骑之际，条顿骑士团的纵队便沿着萨莫吉希亚密林溯流而上，直逼考纳斯与特拉凯。立陶宛众将围聚松木舆图前，权衡究竟该沿着涅曼河广筑土石壁垒固守，还是以迅捷奇袭深入普鲁士腹地以牙还牙。"
+ phx_ne.0042.a:0 "加固涅曼河渡口与考纳斯城防，抵御冬日围城。"
+ phx_ne.0042.b:0 "征调萨莫吉希亚轻骑越境反击骑士团边疆辖区。"
+
+ phx_ne.0050.t:0 "马格努斯·埃里克松的双王冠"
+ phx_ne.0050.desc:0 "兼领瑞典与挪威两顶王冠，又将盛产鲱鱼的斯科讷纳入版图，国王马格努斯·埃里克松统治着世人记忆中最辽阔的北欧疆域。然而厄勒海峡彼岸的丹麦王权正蠢蠢欲动，国内大贵族固守地方特权，汉萨帆船更几乎垄断了每一座波罗的海港口。"
+ phx_ne.0050.a:0 "统一瑞典王室法典，稳固斯科讷的财税收入。"
+ phx_ne.0050.b:0 "将北欧王威大胆投射至厄勒海峡与东方海域。"
+
+ phx_ne.0060.t:0 "莫斯科的钱袋"
+ phx_ne.0060.desc:0 "莫斯科橡木克里姆林宫内，直至深夜仍响着清脆的银秤声。身为弗拉基米尔大公，伊凡一世“钱袋”赢得萨莱月即别汗的信任，受命代征东北罗斯各地输往金帐汗国的贡赋。世人私下议论莫斯科是在蒙古阴影下聚敛财富，然而每一次安宁丰收，都令特维尔愈弱、莫斯科愈强。"
+ phx_ne.0060.a:0 "按期解送萨莱贡银，同时充实莫斯科自己的库房。"
+ phx_ne.0060.b:0 "借大公敕令之威望，笼络四方罗斯波雅尔归心。"
+
+ phx_ne.0062.t:0 "全罗斯都主教驻跸莫斯科"
+ phx_ne.0062.desc:0 "圣母安息主教座堂烛火辉煌，圣像游行流光溢彩。基辅与全罗斯东正教都主教决意将教座永久安置于莫斯科城墙之内。当其他公国仍在为虚名争斗不休时，俄罗斯教会的精神中枢已悄然扎根于莫斯科河畔。"
+ phx_ne.0062.a:0 "厚赐都主教教座，在城内兴建石砌大教堂。"
+ phx_ne.0062.b:0 "恭敬领受祝福，将白银留作扩建莫斯科城防之用。"
+
+ phx_ne.0070.t:0 "金帐汗国大动乱"
+ phx_ne.0070.desc:0 "随着萨莱强权骤失，一场席卷术赤兀鲁思的风暴轰然爆发。从伏尔加河下游到克里米亚港埠，术赤系诸王手足相残，野心勃勃的伯克权臣待价而沽、屡立傀儡可汗；远在北方的罗斯贡臣遥望草原狼烟，眼中燃起前所未有的希望。"
+ phx_ne.0070.a:0 "以弯刀血洗逆臣伯克，用铁血威慑稳住萨莱。"
+ phx_ne.0070.b:0 "分赐牧场与白银，收买草原诸万户埃米尔的效忠。"
+
+ phx_ne.0100.t:0 "东方骑士团边区整编告成"
+ phx_ne.0100.desc:0 "从维斯瓦河口直至马祖里湖群，统一的章程如今治理着每一座骑士团辖区。粮仓与弩箭库储备充盈，道路将一座座红砖堡垒连向马尔堡，整个骑士团国家如披甲唱诗班般纪律严明。"
+ phx_ne.0100.a:0 "天主所愿——骑士团基业稳如磐石。"
+
+ phx_ne.0101.t:0 "北方波罗的海十字军启程"
+ phx_ne.0101.desc:0 "马尔堡塔楼号角齐鸣，来自西欧的骑士、侍从与弩手沿维斯瓦河登陆，披上白袍汇入东进大军。在圣母与黑十字旗帜引领下，十字军已整装进发，剑指雾霭弥漫的萨莫吉希亚密林。"
+ phx_ne.0101.a:0 "为了十字架与骑士团，前进！"
+
+ phx_ne.0102.t:0 "世俗普鲁士公国宣告成立"
+ phx_ne.0102.desc:0 "在齐聚一堂的普鲁士骑士与市民代表见证下，古老的修会会规被郑重封存，世俗公爵冠冕在马尔堡高高举起。摆脱日渐式微的十字军体制束缚后，崭新的普鲁士公国以世袭邦国之姿步入欧洲舞台。"
+ phx_ne.0102.a:0 "新的普鲁士自骑士团基石上崛起。"
+
+ phx_ne.0105.t:0 "马尔堡大团长要塞落成"
+ phx_ne.0105.desc:0 "马尔堡最后一段红砖雉堞的脚手架已然拆除。巍峨的圣母镶嵌画与星形肋拱大食堂令欧洲各国使节叹为观止——这座基督教世界最宏伟的红砖堡垒，已成为条顿骑士团赫赫威仪的永恒丰碑。"
+ phx_ne.0105.a:0 "愿这座红砖巨城屹立千秋。"
+
+ phx_ne.0110.t:0 "1356年黄金诏书昭告天下"
+ phx_ne.0110.desc:0 "在帝国议会的诸侯、主教与自由市使节注视下，帝国大法官将熠熠生辉的金印钤于神圣罗马帝国根本宪章之上。随着七大选帝侯表决权载入成文法、帝国继承不再受外来干涉，德意志皇权焕发出崭新威仪。"
+ phx_ne.0110.a:0 "帝国法统与威严万岁！"
+
+ phx_ne.0120.t:0 "维希利察王室法典颁行"
+ phx_ne.0120.desc:0 "传令官携带着王室法典抄本奔走于克拉科夫与波兹南之间，以统一的波兰王国成文法取代割裂的地方旧例。石匠在城墙与王室城堡上砌下洁白灰岩；后世编年史家必将传颂，国王接手的是木造波兰，留下的却是石筑波兰。"
+ phx_ne.0120.a:0 "法律与巨石必将守护波兰王冠。"
+
+ phx_ne.0121.t:0 "波兰-立陶宛联盟缔成"
+ phx_ne.0121.desc:0 "当克拉科夫与维尔纽斯的国印并排钤于盟约羊皮纸上，波兰大贵族与立陶宛诸侯举杯同庆。自喀尔巴阡山脉绵延至东方大草原的联合伟力，令波罗的海沿岸一切强敌为之屏息。"
+ phx_ne.0121.a:0 "克拉科夫与维尔纽斯携手，无惧任何强敌。"
+
+ phx_ne.0130.t:0 "立陶宛受洗礼成"
+ phx_ne.0130.desc:0 "往昔古老橡树圣林矗立之处，如今维尔纽斯响起悠扬教堂钟声。在诸位主教见证下，立陶宛君主与宫廷正式接受天主教洗礼。欧洲各国纷纷盛赞最后一座异教王国归化基督——而在马尔堡，条顿骑士团骤然发觉，维系百年的征战借口已在一夜之间烟消云散。"
+ phx_ne.0130.a:0 "立陶宛在基督教世界中赢得应有席位。"
+
+ phx_ne.0140.t:0 "卡尔马北欧联盟缔结"
+ phx_ne.0140.desc:0 "卡尔马海风劲吹，北欧诸邦旗帜猎猎作响，贵族、主教与御前会议大臣齐声宣誓效忠共同的北欧君主。从挪威峡湾到波罗的海群岛，合为一体的北欧王冠正准备主宰北方沧海。"
+ phx_ne.0140.a:0 "北欧诸国共奉一尊！"
+
+ phx_ne.0150.t:0 "罗斯诸地汇聚莫斯科"
+ phx_ne.0150.desc:0 "来自弗拉基米尔、下诺夫哥罗德与伏尔加河上游分封公国的使节齐聚莫斯科大殿，承认莫斯科的领袖尊位。莫斯科不再只是众多争雄公国之一，而已成为四分五裂的罗斯大地重新凝结的核心炉火。"
+ phx_ne.0150.a:0 "全罗斯终将汇聚于莫斯科旗帜之下。"
+
+ phx_ne.0151.t:0 "顿河立誓——鞑靼枷锁粉碎"
+ phx_ne.0151.desc:0 "在绘有基督圣容的绯红战旗下，莫斯科与罗斯联军在顿河原野直面草原骑兵而寸步不退。捷报如春雷般传遍从弗拉基米尔到诺夫哥罗德的每一座钟楼：金帐汗国并非不可战胜，长达百年的纳贡屈辱已被罗斯长剑斩断。"
+ phx_ne.0151.a:0 "自由的罗斯再不向萨莱屈膝！"
+
+ phx_ne.0160.t:0 "萨莱秩序重振"
+ phx_ne.0160.desc:0 "叛逆伯克的首级高悬于萨莱城门之上，效忠大汗的万户马尾纛再次整齐低垂于可汗金帐之前。熬过大动乱劫难的金帐汗国重新抬起鹰目，俯视伏尔加河、克里米亚以及北方躁动不安的罗斯密林。"
+ phx_ne.0160.a:0 "术赤兀鲁思依然屹立不倒。"

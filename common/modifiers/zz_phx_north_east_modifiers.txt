@@ -1,0 +1,174 @@
+﻿##################################################
+# Project Phoenix (PHX) — Northern & Central/Eastern Europe 1337 Modifiers
+# Namespace prefixes: phx_teu_ / phx_hre_ / phx_boh_ / phx_pol_ / phx_lit_ / phx_sca_ / phx_rus_ / phx_glh_
+# CK3 1.21.0.3 (Florin) verified keys & icons only
+##################################################
+
+# --- Teutonic Order & Prussia ---
+
+phx_teu_northern_crusade_zeal_modifier = {
+	icon = martial_positive
+	martial = 2
+	prowess = 2
+	heavy_cavalry_damage_mult = 0.15
+	heavy_cavalry_toughness_mult = 0.10
+	monthly_piety_gain_mult = 0.15
+	advantage = 3
+}
+
+phx_teu_ordensmarks_modifier = {
+	icon = stewardship_positive
+	stewardship = 2
+	levy_size = 0.15
+	men_at_arms_maintenance = -0.10
+	monthly_income_mult = 0.08
+	defender_advantage = 3
+}
+
+# County modifier for Marienburg (Malbork) / Danzig fortress seat
+phx_teu_marienburg_fortress_modifier = {
+	icon = county_modifier_control_positive
+	fort_level = 3
+	garrison_size = 0.35
+	prosperity_growth_factor = 0.25
+	all_tax_mult = 0.15
+	monthly_control_change = 0.35
+}
+
+phx_teu_secular_prussia_modifier = {
+	icon = legitimacy_positive
+	diplomacy = 2
+	stewardship = 2
+	vassal_opinion = 10
+	monthly_income_mult = 0.12
+	monthly_legitimacy_add = 0.5
+}
+
+# --- Holy Roman Empire & Bohemia ---
+
+phx_hre_golden_bull_modifier = {
+	icon = legitimacy_positive
+	diplomacy = 2
+	stewardship = 1
+	direct_vassal_opinion = 12
+	monthly_legitimacy_add = 0.75
+	short_reign_duration_mult = -0.25
+	monthly_prestige_gain_mult = 0.15
+}
+
+phx_boh_imperial_renaissance_modifier = {
+	icon = learning_positive
+	learning = 3
+	stewardship = 2
+	cultural_head_fascination_mult = 0.15
+	monthly_income_mult = 0.10
+	monthly_prestige_gain_mult = 0.12
+}
+
+# County modifier for Charles University in Prague
+phx_boh_prague_university_modifier = {
+	icon = county_modifier_opinion_positive
+	prosperity_growth_factor = 0.20
+	all_tax_mult = 0.10
+	build_gold_cost = -0.10
+	monthly_control_change = 0.20
+}
+
+# --- Poland & Lithuania ---
+
+phx_pol_casimir_statutes_modifier = {
+	icon = stewardship_positive
+	stewardship = 3
+	diplomacy = 1
+	monthly_income_mult = 0.12
+	build_gold_cost = -0.10
+	vassal_opinion = 8
+	monthly_legitimacy_add = 0.5
+}
+
+phx_pol_lithuanian_union_modifier = {
+	icon = diplomacy_positive
+	diplomacy = 3
+	martial = 2
+	levy_size = 0.20
+	knight_effectiveness_mult = 0.15
+	different_culture_opinion = 15
+	monthly_prestige_gain_mult = 0.15
+}
+
+phx_lit_gediminas_tolerance_modifier = {
+	icon = diplomacy_mixed
+	diplomacy = 2
+	martial = 2
+	different_faith_opinion = 15
+	defender_advantage = 4
+	levy_reinforcement_rate = 0.20
+}
+
+phx_lit_baptism_christendom_modifier = {
+	icon = piety_positive
+	diplomacy = 2
+	learning = 2
+	same_faith_opinion = 12
+	monthly_piety_gain_mult = 0.20
+	monthly_legitimacy_add = 0.5
+}
+
+# --- Scandinavia ---
+
+phx_sca_kalmar_union_modifier = {
+	icon = diplomacy_positive
+	diplomacy = 3
+	stewardship = 2
+	naval_movement_speed_mult = 0.25
+	embarkation_cost_mult = -0.35
+	vassal_opinion = 10
+	monthly_legitimacy_add = 0.6
+}
+
+# --- Muscovy & Golden Horde ---
+
+phx_rus_gathering_lands_modifier = {
+	icon = martial_positive
+	stewardship = 2
+	martial = 2
+	monthly_income_mult = 0.10
+	levy_size = 0.15
+	same_culture_opinion = 10
+	monthly_prestige_gain_mult = 0.12
+}
+
+phx_rus_tatar_yoke_modifier = {
+	icon = economy_negative
+	monthly_income_mult = -0.12
+	monthly_prestige_gain_mult = -0.10
+	vassal_opinion = -5
+	monthly_legitimacy_add = -0.25
+}
+
+phx_rus_broken_tatar_yoke_modifier = {
+	icon = prowess_positive
+	martial = 3
+	prowess = 2
+	levy_size = 0.20
+	knight_effectiveness_mult = 0.20
+	monthly_legitimacy_add = 0.75
+	monthly_prestige_gain_mult = 0.20
+}
+
+phx_glh_great_troubles_modifier = {
+	icon = horse_dead_negative
+	vassal_opinion = -15
+	monthly_income_mult = -0.15
+	levy_size = -0.20
+	monthly_legitimacy_add = -0.5
+}
+
+phx_glh_sarai_order_restored_modifier = {
+	icon = horse_positive
+	martial = 2
+	dread_baseline_add = 15
+	vassal_opinion = 10
+	archer_cavalry_damage_mult = 0.15
+	monthly_legitimacy_add = 0.6
+}
