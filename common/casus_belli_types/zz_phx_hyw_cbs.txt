@@ -117,7 +117,7 @@ phx_hyw_french_throne_cb = {
 		scope:attacker = {
 			accolade_attacker_war_end_glory_gain_med_effect = yes
 			add_prestige = 500
-			add_legitimacy = 350
+			if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 350 }
 		}
 		on_victory_claim_cb_effect = yes
 		modify_all_participants_fame_values = {
@@ -177,7 +177,7 @@ phx_hyw_french_throne_cb = {
 		scope:defender = {
 			accolade_defender_war_end_glory_gain_med_effect = yes
 			add_prestige = 400
-			add_legitimacy = 250
+			if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
 		}
 		scope:attacker = {
 			pay_short_term_gold_reparations_effect = {
@@ -327,7 +327,7 @@ phx_hyw_aquitaine_confiscation_cb = {
 		scope:attacker = {
 			accolade_attacker_war_end_glory_gain_med_effect = yes
 			add_prestige = 300
-			add_legitimacy = 150
+			if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		}
 
 		every_in_list = {

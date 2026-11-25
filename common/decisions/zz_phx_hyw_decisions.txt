@@ -156,7 +156,7 @@ phx_hyw_found_order_of_garter_decision = {
 			years = 40
 		}
 		add_prestige = 300
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		custom_tooltip = phx_hyw_found_order_of_garter_effect_tt
 		hidden_effect = {
 			add_to_global_variable_list = {
@@ -319,7 +319,7 @@ phx_hyw_proclaim_dual_monarchy_decision = {
 			years = 50
 		}
 		add_prestige = 800
-		add_legitimacy = 400
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 400 }
 		custom_tooltip = phx_hyw_proclaim_dual_monarchy_effect_tt
 		hidden_effect = {
 			set_global_variable = phx_hyw_resolved
@@ -403,7 +403,7 @@ phx_hyw_confiscate_aquitaine_decision = {
 			modifier = phx_hyw_valois_chivalry_modifier
 			years = 20
 		}
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		custom_tooltip = phx_hyw_confiscate_aquitaine_effect_tt
 		hidden_effect = {
 			add_character_flag = phx_hyw_confiscated_aquitaine_flag
@@ -486,7 +486,7 @@ phx_hyw_raise_oriflamme_decision = {
 			levies = 700
 			inheritable = no
 		}
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		custom_tooltip = phx_hyw_raise_oriflamme_effect_tt
 		hidden_effect = {
 			trigger_event = phx_hyw.0150
@@ -579,7 +579,7 @@ phx_hyw_establish_compagnies_decision = {
 			}
 			inheritable = no
 		}
-		add_legitimacy = 200
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
 		custom_tooltip = phx_hyw_establish_compagnies_effect_tt
 		hidden_effect = {
 			add_to_global_variable_list = {
@@ -676,7 +676,7 @@ phx_hyw_expel_english_continent_decision = {
 			years = 40
 		}
 		add_prestige = 800
-		add_legitimacy = 400
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 400 }
 		title:c_pays_france = {
 			change_prosperity_progress = 150
 		}
@@ -710,7 +710,7 @@ phx_hyw_expel_english_continent_decision = {
 # 9. Chart the Third Power — Grand Duchy of Burgundy
 phx_hyw_grand_duchy_burgundy_decision = {
 	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+		reference = "gfx/interface/illustrations/decisions/phx_decision_burgundy_lotharingia.dds"
 	}
 	decision_group_type = major
 	desc = phx_hyw_grand_duchy_burgundy_decision_desc
@@ -762,7 +762,7 @@ phx_hyw_grand_duchy_burgundy_decision = {
 			change_prosperity_progress = 120
 		}
 		add_prestige = 300
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		custom_tooltip = phx_hyw_grand_duchy_burgundy_effect_tt
 		hidden_effect = {
 			trigger_event = phx_hyw.0180
@@ -836,7 +836,7 @@ phx_hyw_secure_breton_neutrality_decision = {
 			modifier = phx_hyw_breton_neutrality_modifier
 			years = 25
 		}
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		if = {
 			limit = {
 				exists = title:k_england.holder

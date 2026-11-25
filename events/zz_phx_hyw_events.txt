@@ -144,7 +144,7 @@ phx_hyw.0002 = {
 	# Option B: Reconcile the great peers of Burgundy, Brittany, and Flanders
 	option = {
 		name = phx_hyw.0002.b
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		if = {
 			limit = {
 				exists = title:d_burgundy.holder
@@ -216,7 +216,7 @@ phx_hyw.0003 = {
 	# Option B: Pledge ostentatious loyalty to the Valois crown for royal favor
 	option = {
 		name = phx_hyw.0003.b
-		add_legitimacy = 75
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
 		if = {
 			limit = { exists = scope:french_king }
 			scope:french_king = {
@@ -287,7 +287,7 @@ phx_hyw.0004 = {
 	option = {
 		name = phx_hyw.0004.b
 		add_gold = 120
-		add_legitimacy = 50
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 50 }
 		ai_chance = { base = 40 }
 	}
 }
@@ -327,7 +327,7 @@ phx_hyw.0010 = {
 	option = {
 		name = phx_hyw.0010.a
 		add_prestige = 150
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		if = {
 			limit = {
 				exists = scope:english_king
@@ -758,7 +758,7 @@ phx_hyw.0030 = {
 	option = {
 		name = phx_hyw.0030.c
 		remove_short_term_gold = 100
-		add_legitimacy = 75
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
 		add_prestige = 75
 		ai_chance = { base = 15 }
 	}
@@ -796,7 +796,7 @@ phx_hyw.0031 = {
 		name = phx_hyw.0031.a
 		remove_short_term_gold = 125
 		add_prestige = 175
-		add_legitimacy = 75
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
 		if = {
 			limit = { exists = scope:breton_duke }
 			scope:breton_duke = {
@@ -905,7 +905,7 @@ phx_hyw.0040 = {
 	option = {
 		name = phx_hyw.0040.b
 		add_gold = 75
-		add_legitimacy = 50
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 50 }
 		if = {
 			limit = { exists = scope:english_king }
 			scope:english_king = {
@@ -971,7 +971,7 @@ phx_hyw.0045 = {
 	# Option B: Entrust him with chivalric tournaments and the royal council
 	option = {
 		name = phx_hyw.0045.b
-		add_legitimacy = 125
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 125 }
 		if = {
 			limit = { character:eng_edward_the_black_prince ?= { is_alive = yes } }
 			character:eng_edward_the_black_prince = {
@@ -1095,7 +1095,7 @@ phx_hyw.0055 = {
 			modifier = phx_hyw_treaty_bretigny_modifier
 			years = 15
 		}
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		ai_chance = { base = 45 }
 	}
 }
@@ -1120,7 +1120,7 @@ phx_hyw.0060 = {
 			years = 15
 		}
 		add_gold = 150
-		add_legitimacy = -100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = -100 }
 		ai_chance = { base = 45 }
 	}
 
@@ -1128,7 +1128,7 @@ phx_hyw.0060 = {
 	option = {
 		name = phx_hyw.0060.b
 		add_dread = 30
-		add_legitimacy = 75
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
 		title:c_beauvaisis = {
 			add_county_modifier = {
 				modifier = phx_hyw_devastated_countryside_modifier
@@ -1159,7 +1159,7 @@ phx_hyw.0070 = {
 	option = {
 		name = phx_hyw.0070.a
 		add_dread = 25
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		title:c_kent = {
 			add_county_modifier = {
 				modifier = phx_hyw_devastated_countryside_modifier
@@ -1242,7 +1242,7 @@ phx_hyw.0080 = {
 			modifier = phx_hyw_maid_of_orleans_modifier
 			years = 25
 		}
-		add_legitimacy = 250
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
 		add_piety = 250
 		spawn_army = {
 			name = phx_hyw_maid_relief_host_name
@@ -1269,7 +1269,7 @@ phx_hyw.0080 = {
 	option = {
 		name = phx_hyw.0080.b
 		add_piety = 150
-		add_legitimacy = 125
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 125 }
 		add_character_modifier = {
 			modifier = phx_hyw_oriflamme_banner_modifier
 			years = 15
