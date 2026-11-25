@@ -360,7 +360,6 @@ phx_hyw.0010 = {
 			}
 		}
 		hidden_effect = {
-			set_global_variable = phx_hyw_aquitaine_confiscated
 			set_global_variable = phx_hyw_war_has_begun
 			if = {
 				limit = {
@@ -390,7 +389,6 @@ phx_hyw.0010 = {
 		custom_tooltip = phx_hyw_aquitaine_forfeit_cb_tt
 		hidden_effect = {
 			add_character_flag = phx_hyw_free_aquitaine_cb
-			set_global_variable = phx_hyw_aquitaine_confiscated
 			if = {
 				limit = {
 					exists = scope:english_king
@@ -1213,7 +1211,6 @@ phx_hyw.0080 = {
 			name = "Jeanne"
 			age = 17
 			gender = female
-			location = root.capital_province
 			employer = root
 			culture = culture:french
 			faith = faith:catholic

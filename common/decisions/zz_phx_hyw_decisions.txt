@@ -408,7 +408,6 @@ phx_hyw_confiscate_aquitaine_decision = {
 		hidden_effect = {
 			add_character_flag = phx_hyw_confiscated_aquitaine_flag
 			add_character_flag = phx_hyw_free_aquitaine_cb
-			set_global_variable = phx_hyw_aquitaine_confiscated
 			set_global_variable = phx_hyw_war_has_begun
 		}
 		trigger_event = phx_hyw.0140

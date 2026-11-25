@@ -34,10 +34,6 @@ story_phx_hundred_years_war = {
 			name = phx_hyw_war_years
 			value = 0
 		}
-		set_global_variable = {
-			name = phx_hyw_current_phase
-			value = 1
-		}
 		set_global_variable = phx_hyw_story_active
 	}
 
@@ -117,10 +113,6 @@ story_phx_hundred_years_war = {
 					name = phx_hyw_phase
 					value = 2
 				}
-				set_global_variable = {
-					name = phx_hyw_current_phase
-					value = 2
-				}
 				if = {
 					limit = {
 						NOT = { has_global_variable = phx_hyw_longbow_chevauchee_fired }
@@ -158,10 +150,6 @@ story_phx_hundred_years_war = {
 					name = phx_hyw_phase
 					value = 3
 				}
-				set_global_variable = {
-					name = phx_hyw_current_phase
-					value = 3
-				}
 				if = {
 					limit = {
 						exists = title:k_france.holder
@@ -194,10 +182,6 @@ story_phx_hundred_years_war = {
 			effect = {
 				set_variable = {
 					name = phx_hyw_phase
-					value = 4
-				}
-				set_global_variable = {
-					name = phx_hyw_current_phase
 					value = 4
 				}
 			}

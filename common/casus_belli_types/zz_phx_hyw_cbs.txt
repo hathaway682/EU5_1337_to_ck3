@@ -130,9 +130,6 @@ phx_hyw_french_throne_cb = {
 			WINNER_ALLY_FAME_SCALE = 10
 			LOSER_ALLY_FAME_SCALE = 10
 		}
-		hidden_effect = {
-			set_global_variable = phx_hyw_england_won_throne_war
-		}
 	}
 
 	on_white_peace_desc = {
@@ -298,7 +295,6 @@ phx_hyw_aquitaine_confiscation_cb = {
 		on_declared_war = yes
 		hidden_effect = {
 			set_global_variable = phx_hyw_war_has_begun
-			set_global_variable = phx_hyw_aquitaine_confiscated
 			scope:attacker = {
 				if = {
 					limit = { has_character_flag = phx_hyw_free_aquitaine_cb }
