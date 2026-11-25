@@ -2847,14 +2847,6 @@ on_game_start = {
 				character:jap_koumyou_tenno ?= { set_regnal_name = eu5_regnal_komyo }
 			}
 			eu5_setup_vassal_house_relations_effect = yes
-            if = {
-                limit = {
-                    game_start_date = 1337.4.1
-                    exists = title:e_japan.holder
-                    exists = character:jap_go_daigo_tenno
-                }
-                start_situation = { type = nanbokucho }
-            }
 		}
 		#
 		if = {
