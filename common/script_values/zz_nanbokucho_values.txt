@@ -1,14 +1,8 @@
-﻿# Each participating house head contributes its house power score once.
+# Each participating house head contributes its house power score once.
 nanbokucho_north_power = {
     value = 0
     situation:nanbokucho ?= {
         situation_participant_group:nanbokucho_north ?= {
-            every_situation_group_participant = {
-                limit = { is_house_head = yes exists = house }
-                add = house.house_power_score
-            }
-        }
-        situation_participant_group:nanbokucho_north_leader ?= {
             every_situation_group_participant = {
                 limit = { is_house_head = yes exists = house }
                 add = house.house_power_score
@@ -26,12 +20,6 @@ nanbokucho_south_power = {
                 add = house.house_power_score
             }
         }
-        situation_participant_group:nanbokucho_south_leader ?= {
-            every_situation_group_participant = {
-                limit = { is_house_head = yes exists = house }
-                add = house.house_power_score
-            }
-        }
     }
 }
 
@@ -40,12 +28,9 @@ nanbokucho_advantage_threshold = { value = nanbokucho_total_power multiply = 0.7
 nanbokucho_advantage_keep_threshold = { value = nanbokucho_total_power multiply = 0.6 }
 nanbokucho_north_share = {
     value = 0
-    if = { limit = { nanbokucho_total_power > 0 } value = nanbokucho_north_power divide = nanbokucho_total_power multiply = 100 round = yes }
+    if = { limit = { nanbokucho_total_power > 0 } value = nanbokucho_north_power divide = nanbokucho_total_power multiply = 100 }
 }
 nanbokucho_south_share = {
     value = 0
-    if = { limit = { nanbokucho_total_power > 0 } value = nanbokucho_south_power divide = nanbokucho_total_power multiply = 100 round = yes }
+    if = { limit = { nanbokucho_total_power > 0 } value = nanbokucho_south_power divide = nanbokucho_total_power multiply = 100 }
 }
-
-# A non-zero maximum is required by the display bar when no house is eligible.
-nanbokucho_gui_total_power = { value = nanbokucho_total_power min = 1 }
