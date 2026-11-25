@@ -30,15 +30,6 @@ story_phx_byz_civil_war = {
 			value = 0
 		}
 		set_global_variable = phx_byz_civil_war_active
-		if = {
-			limit = {
-				character:byz_john_kantakouzenos ?= { is_alive = yes }
-			}
-			set_variable = {
-				name = kantakouzenos_rival
-				value = character:byz_john_kantakouzenos
-			}
-		}
 	}
 
 	on_end = {
