@@ -1,0 +1,28 @@
+﻿# Original AoD lost-voyage outcome, adapted to the title-owned expedition.
+nwt_voyage_lost_effect = {
+ custom_tooltip = { text = eu5_voyage_lost_tt scope:eu5_voyage_title = { set_variable = eu5_exploration_failed } }
+ scope:nwt_captain = { death = { death_reason = $REASON$ } }
+}
+
+# Appoint a courtier to command each voyage and keep the captain on the voyage title.
+eu5_exploration_appoint_captain_effect = {
+ if = {
+  limit = { any_courtier = { is_adult = yes is_alive = yes is_ruler = no is_imprisoned = no NOT = { has_trait = incapable } NOT = { has_variable = eu5_exploration_command } } }
+  random_courtier = {
+   limit = { is_adult = yes is_alive = yes is_ruler = no is_imprisoned = no NOT = { has_trait = incapable } NOT = { has_variable = eu5_exploration_command } }
+   weight = { base = 1 modifier = { add = martial } modifier = { add = learning } }
+   save_scope_as = nwt_captain
+  }
+ }
+ else = {
+  create_character = { employer = root culture = root.culture faith = root.faith age = { 25 50 } save_scope_as = nwt_captain }
+ }
+ scope:nwt_captain = {
+  set_variable = { name = eu5_exploration_command value = root.primary_title }
+  aod_vs_init_effect = yes
+ }
+ primary_title = {
+  set_variable = { name = eu5_voyage_captain value = scope:nwt_captain }
+  set_variable = { name = eu5_voyage_delay value = 0 }
+ }
+}

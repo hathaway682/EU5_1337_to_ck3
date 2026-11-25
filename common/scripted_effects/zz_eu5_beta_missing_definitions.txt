@@ -1,0 +1,173 @@
+﻿# New Beta definitions absent from overridden files.
+
+complete_frankokratia_story_effect = {
+	scope:attacker = {
+		random_character_war = {
+			limit = {
+				using_cb = crusading_claim_cb
+			}
+			every_war_attacker = {
+				save_temporary_scope_as = war_attackers
+				scope:attacker = {
+					random_owned_story = {
+						type = frankokratia_story
+						add_to_variable_list = {
+							name = frankokratia_leaders
+							target = scope:war_attackers
+						}
+					}
+				}
+			}
+		}
+		random_owned_story = {
+			type = frankokratia_story
+			set_variable = {
+				name = franko_war_complete
+			}
+		}
+	}
+}
+
+leave_confederation_membership_effect = {
+	if = {
+		limit = {
+			any_confederation_member = {
+				count >= 2
+				NOT = { this = $LEAVER$ }
+			}
+		}
+		if = {
+			limit = { is_title_based = yes }
+			remove_confederation_member_title = $LEAVER$.primary_title
+		}
+		else = {
+			remove_confederation_member = $LEAVER$
+		}
+	}
+	else = {
+		# Not enough members would remain, so the whole confederation is dissolved.
+		disband_confederation = yes
+	}
+}
+
+nomad_convert_realm_to_tribal_effect = {
+	every_sub_realm_county = {
+		limit = {
+			title_province = {
+				OR = { 
+					has_holding_type = nomad_holding 
+					has_holding_type = herder_holding 
+				}
+			}
+		}
+		title_province = {
+			set_holding_type = tribal_holding
+		}
+		add_to_list = holding_conversion
+	}
+	change_government = tribal_government
+	every_vassal_or_below = {
+		limit = {
+			has_government = nomad_government
+		}
+		#Nuke tribal authorities.
+		if = {
+			limit = { has_realm_law = nomadic_authority_1 }
+			remove_realm_law = nomadic_authority_1
+		}
+		if = {
+			limit = { has_realm_law = nomadic_authority_2 }
+			remove_realm_law = nomadic_authority_2
+		}
+		if = {
+			limit = { has_realm_law = nomadic_authority_3 }
+			remove_realm_law = nomadic_authority_3
+		}
+		if = {
+			limit = { has_realm_law = nomadic_authority_4 }
+			remove_realm_law = nomadic_authority_4
+		}
+		if = {
+			limit = { has_realm_law = nomadic_authority_5 }
+			remove_realm_law = nomadic_authority_5
+		}
+		change_government = tribal_government
+		if = {
+			limit = {
+				NOT = { has_realm_law = tribal_authority_1 }
+			}
+			add_realm_law_skip_effects = tribal_authority_1
+		}
+	}
+	#Start off tribal authorities.
+	if = {
+		limit = {
+			NOT = { has_realm_law = tribal_authority_2 }
+		}
+		add_realm_law_skip_effects = tribal_authority_2
+	}
+}
+
+take_sub_realm_county_as_new_capital_effect = {
+	if = {
+		limit = {
+			capital_county.title_province = {
+				$EXCLUDE$ = no
+			}
+		}
+		capital_county = {
+			save_scope_as = new_capital
+		}
+	}
+	else = {
+		every_sub_realm_county = {
+			limit = {
+				is_landless_type_title = no
+				title_province = {
+					$EXCLUDE$ = no
+				}
+				# avoid steal player's title
+				trigger_if = {
+					limit = { holder != prev }
+					holder = { is_ai = yes }
+				}
+			}
+			alternative_limit = {
+				is_landless_type_title = no
+				title_province = {
+					$EXCLUDE$ = no
+				}
+			}
+			add_to_list = potential_new_capitals
+		}
+		ordered_in_list = {
+			order_by = title_province.province_size
+			list = potential_new_capitals
+			save_scope_as = new_capital
+		}
+	}
+	if = {
+		limit = {
+			exists = scope:new_capital
+			capital_county != scope:new_capital
+		}
+		if = {
+			limit = {
+				scope:new_capital.holder != root
+			}
+			create_title_and_vassal_change = {
+				type = usurped
+				save_scope_as = change
+				add_claim_on_loss = yes
+			}
+			scope:new_capital = {
+				change_title_holder = {
+					holder = root
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+		set_realm_capital = scope:new_capital
+	}
+}

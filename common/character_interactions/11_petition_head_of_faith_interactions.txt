@@ -110,11 +110,11 @@ petition_head_of_faith_excommunication_setup_interaction = {
 			custom_tooltip = request_excommunication_interaction_not_available
 		}
 		trigger_if = {
-			limit = {
+			limit = { 
 				NOT = {
 					scope:actor = {
 						has_usable_hook = scope:recipient
-					}
+					} 
 				}
 			}
 			custom_tooltip = {

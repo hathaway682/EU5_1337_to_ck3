@@ -1,0 +1,10 @@
+﻿on_game_start = {
+	on_actions = { eu5_restore_lateran_basilica_on_game_start }
+}
+
+eu5_restore_lateran_basilica_on_game_start = {
+	trigger = { has_pam_dlc_trigger = yes game_start_date >= 1066.1.1 }
+	effect = {
+		title:b_velletri.title_province = { add_special_district = pam_lateran_basilica_01_district }
+	}
+}

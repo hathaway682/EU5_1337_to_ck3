@@ -1,0 +1,266 @@
+﻿eu5_scaliger_war_cb = {
+	group = event
+	icon = independence_faction_war
+	war_name = war_eu5_scaliger_war
+	war_name_base = war_eu5_scaliger_war
+
+	target_titles = all
+	target_title_tier = county
+	target_de_jure_regions_above = yes
+	target_top_liege_if_outside_realm = no
+	use_de_jure_wargoal_only = yes
+	check_all_defenders_for_ticking_war_score = yes
+	should_show_war_goal_subview = yes
+	attacker_wargoal_percentage = 0.8
+	max_attacker_score_from_occupation = 150
+	max_defender_score_from_occupation = 150
+
+	valid_to_start = { scope:target = title:c_padua }
+	on_declaration = { on_declared_war = yes }
+	should_invalidate = {
+		OR = {
+			NOT = {
+				title:c_padua.holder ?= {
+					target_is_same_character_or_above = scope:defender
+				}
+			}
+			NOR = {
+				character:pad_marsiglio_carrara = { is_alive = yes }
+				title:c_merchant_eu5_ver_carrara.holder ?= {
+					is_alive = yes
+					dynasty = dynasty:carrara_dynasty
+				}
+			}
+		}
+	}
+	on_invalidated_desc = { desc = eu5_scaliger_war_invalidated_desc }
+
+	on_victory_desc = { desc = eu5_scaliger_war_victory_desc }
+	on_victory = {
+		on_victory_aggressive_war_effect = yes
+		scope:attacker = { accolade_attacker_war_end_glory_gain_med_effect = yes }
+		setup_claim_cb = {
+			titles = target_titles
+			attacker = scope:attacker
+			defender = scope:defender
+			claimant = scope:attacker
+			victory = no
+		}
+		modify_all_participants_fame_values = {
+			WINNER = scope:attacker
+			LOSER = scope:defender
+			FAME_BASE = scope:cb_prestige_factor
+			IS_RELIGIOUS_WAR = no
+			WINNER_FAME_SCALE = 10
+			LOSER_FAME_SCALE = -10
+			WINNER_ALLY_FAME_SCALE = 10
+			LOSER_ALLY_FAME_SCALE = 10
+		}
+		if = {
+			limit = { character:pad_marsiglio_carrara = { is_alive = yes } }
+			character:pad_marsiglio_carrara = { save_scope_as = padua_successor }
+		}
+		else = {
+			title:c_merchant_eu5_ver_carrara.holder = { save_scope_as = padua_successor }
+		}
+
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = padua_grant
+			add_claim_on_loss = no
+		}
+		if = {
+			limit = { NOT = { title:d_commune_padua.holder ?= scope:padua_successor } }
+			title:d_commune_padua = {
+				change_title_holder_include_vassals = {
+					holder = scope:padua_successor
+					government_base = title:c_padua.holder
+					change = scope:padua_grant
+				}
+			}
+		}
+		if = {
+			limit = { title:c_padua.holder != scope:padua_successor }
+			title:c_padua = {
+				change_title_holder_include_vassals = {
+					holder = scope:padua_successor
+					government_base = title:c_padua.holder
+					change = scope:padua_grant
+				}
+			}
+		}
+		resolve_title_and_vassal_change = scope:padua_grant
+
+		scope:padua_successor = { set_primary_title_to = title:d_commune_padua }
+		create_title_and_vassal_change = {
+			type = swear_fealty
+			save_scope_as = padua_fealty
+		}
+		scope:padua_successor = {
+			if = {
+				limit = {
+					title:e_hre.holder ?= { this != scope:padua_successor }
+					NOT = { liege = title:e_hre.holder }
+				}
+				change_liege = {
+					liege = title:e_hre.holder
+					change = scope:padua_fealty
+				}
+			}
+		}
+		title:c_merchant_eu5_ver_carrara = { add_to_list = padua_families }
+		title:c_merchant_eu5_pad_forzate = { add_to_list = padua_families }
+		title:c_merchant_eu5_ver_scrovegni = { add_to_list = padua_families }
+		title:c_merchant_eu5_ver_lozzo = { add_to_list = padua_families }
+		title:c_merchant_eu5_ver_camposampiero = { add_to_list = padua_families }
+		every_in_list = {
+			list = padua_families
+			holder ?= {
+				if = {
+					limit = {
+						primary_title = prev
+						NOR = {
+							this = scope:padua_successor
+							liege = scope:padua_successor
+						}
+					}
+					change_liege = {
+						liege = scope:padua_successor
+						change = scope:padua_fealty
+					}
+				}
+			}
+		}
+		resolve_title_and_vassal_change = scope:padua_fealty
+
+		if = {
+			limit = {
+				has_gdp_dlc_trigger = yes
+				title:k_venice.holder ?= { gdp_is_assembly_head_trigger = yes }
+				scope:padua_successor = { gdp_is_assembly_head_trigger = yes }
+			}
+			title:k_venice.title_confederation ?= {
+				if = {
+					limit = {
+						confederation_type = confederation_type:trade_league
+						leading_title = title:k_venice
+					}
+					save_scope_as = venetian_trade_league
+				}
+				else_if = {
+					limit = { confederation_type = confederation_type:trade_league }
+					remove_confederation_member_title = title:k_venice
+				}
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:venetian_trade_league }
+					title:k_venice.holder = { is_confederation_member = no }
+				}
+				title:k_venice.holder = {
+					create_confederation = {
+						name = eu5_venetian_trade_league_name
+						type = confederation_type:trade_league
+						leading_title = title:k_venice
+					}
+				}
+				scope:new_confederation ?= {
+					save_scope_as = venetian_trade_league
+					set_cohesion = 0
+					set_coa = title:k_venice
+				}
+			}
+			scope:venetian_trade_league ?= {
+				if = {
+					limit = {
+						NOT = { title:d_commune_padua.title_confederation ?= scope:venetian_trade_league }
+					}
+					title:d_commune_padua.title_confederation ?= {
+						remove_confederation_member_title = title:d_commune_padua
+					}
+					add_confederation_member_title = title:d_commune_padua
+				}
+			}
+		}
+
+		title:d_commune_milan.holder ?= { save_scope_as = milanese_ruler }
+		if = {
+			limit = {
+				exists = scope:milanese_ruler
+				war = { is_attacker = scope:milanese_ruler }
+				title:c_brescia.holder ?= {
+					target_is_same_character_or_above = scope:defender
+				}
+			}
+			create_title_and_vassal_change = {
+				type = conquest
+				save_scope_as = brescia_cession
+				add_claim_on_loss = yes
+			}
+			title:c_brescia = {
+				change_title_holder_include_vassals = {
+					holder = scope:milanese_ruler
+					change = scope:brescia_cession
+				}
+			}
+			resolve_title_and_vassal_change = scope:brescia_cession
+		}
+	}
+
+	on_white_peace_desc = { desc = eu5_scaliger_war_status_quo_desc }
+	on_white_peace = {
+		on_white_peace_effect = yes
+		scope:defender = { accolade_defender_war_end_glory_gain_low_effect = yes }
+		setup_claim_cb = {
+			titles = target_titles
+			attacker = scope:attacker
+			defender = scope:defender
+			claimant = scope:attacker
+			victory = no
+		}
+		scope:attacker = {
+			add_prestige = {
+				value = scope:cb_prestige_factor
+				multiply = -5
+			}
+		}
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:attacker
+			FAME_BASE = scope:cb_prestige_factor
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 10
+			LOSER_ALLY_FAME_SCALE = 10
+		}
+	}
+	on_defeat_desc = { desc = eu5_scaliger_war_defeat_desc }
+	on_defeat = {
+		on_defeat_aggressive_war_effect = yes
+		scope:defender = { accolade_defender_war_end_glory_gain_med_effect = yes }
+		scope:attacker = {
+			pay_short_term_gold_reparations_effect = { GOLD_VALUE = 3 }
+		}
+		setup_claim_cb = {
+			titles = target_titles
+			attacker = scope:attacker
+			defender = scope:defender
+			claimant = scope:attacker
+			victory = no
+		}
+		modify_all_participants_fame_values = {
+			WINNER = scope:defender
+			LOSER = scope:attacker
+			FAME_BASE = scope:cb_prestige_factor
+			IS_RELIGIOUS_WAR = no
+			WINNER_FAME_SCALE = scale_10_war_defender_win
+			LOSER_FAME_SCALE = -10
+			WINNER_ALLY_FAME_SCALE = 10
+			LOSER_ALLY_FAME_SCALE = 10
+		}
+	}
+
+	on_primary_attacker_death = inherit
+	on_primary_defender_death = inherit
+	transfer_behavior = transfer
+	attacker_allies_inherit = yes
+	defender_allies_inherit = yes
+}

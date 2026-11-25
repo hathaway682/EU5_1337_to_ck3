@@ -1,0 +1,385 @@
+﻿# AoD v0.72: voyage ship stats on the explorer (0-100): aod_v_supplies, aod_v_crew, aod_v_morale.
+# The change effects work from any scope and act on scope:nwt_captain.
+aod_vs_supplies_add_5 = {
+	custom_tooltip = aod_vs_supplies_add_5_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_supplies add = 5 }
+			clamp_variable = { name = aod_v_supplies min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_supplies_sub_5 = {
+	custom_tooltip = aod_vs_supplies_sub_5_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_supplies add = -5 }
+			clamp_variable = { name = aod_v_supplies min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_supplies_add_10 = {
+	custom_tooltip = aod_vs_supplies_add_10_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_supplies add = 10 }
+			clamp_variable = { name = aod_v_supplies min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_supplies_sub_10 = {
+	custom_tooltip = aod_vs_supplies_sub_10_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_supplies add = -10 }
+			clamp_variable = { name = aod_v_supplies min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_supplies_add_15 = {
+	custom_tooltip = aod_vs_supplies_add_15_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_supplies add = 15 }
+			clamp_variable = { name = aod_v_supplies min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_supplies_sub_15 = {
+	custom_tooltip = aod_vs_supplies_sub_15_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_supplies add = -15 }
+			clamp_variable = { name = aod_v_supplies min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_supplies_add_20 = {
+	custom_tooltip = aod_vs_supplies_add_20_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_supplies add = 20 }
+			clamp_variable = { name = aod_v_supplies min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_supplies_sub_20 = {
+	custom_tooltip = aod_vs_supplies_sub_20_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_supplies add = -20 }
+			clamp_variable = { name = aod_v_supplies min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_supplies_add_25 = {
+	custom_tooltip = aod_vs_supplies_add_25_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_supplies add = 25 }
+			clamp_variable = { name = aod_v_supplies min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_supplies_sub_25 = {
+	custom_tooltip = aod_vs_supplies_sub_25_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_supplies add = -25 }
+			clamp_variable = { name = aod_v_supplies min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_supplies_add_30 = {
+	custom_tooltip = aod_vs_supplies_add_30_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_supplies add = 30 }
+			clamp_variable = { name = aod_v_supplies min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_supplies_sub_30 = {
+	custom_tooltip = aod_vs_supplies_sub_30_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_supplies add = -30 }
+			clamp_variable = { name = aod_v_supplies min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_crew_add_5 = {
+	custom_tooltip = aod_vs_crew_add_5_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_crew add = 5 }
+			clamp_variable = { name = aod_v_crew min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_crew_sub_5 = {
+	custom_tooltip = aod_vs_crew_sub_5_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_crew add = -5 }
+			clamp_variable = { name = aod_v_crew min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_crew_add_10 = {
+	custom_tooltip = aod_vs_crew_add_10_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_crew add = 10 }
+			clamp_variable = { name = aod_v_crew min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_crew_sub_10 = {
+	custom_tooltip = aod_vs_crew_sub_10_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_crew add = -10 }
+			clamp_variable = { name = aod_v_crew min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_crew_add_15 = {
+	custom_tooltip = aod_vs_crew_add_15_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_crew add = 15 }
+			clamp_variable = { name = aod_v_crew min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_crew_sub_15 = {
+	custom_tooltip = aod_vs_crew_sub_15_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_crew add = -15 }
+			clamp_variable = { name = aod_v_crew min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_crew_add_20 = {
+	custom_tooltip = aod_vs_crew_add_20_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_crew add = 20 }
+			clamp_variable = { name = aod_v_crew min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_crew_sub_20 = {
+	custom_tooltip = aod_vs_crew_sub_20_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_crew add = -20 }
+			clamp_variable = { name = aod_v_crew min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_crew_add_25 = {
+	custom_tooltip = aod_vs_crew_add_25_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_crew add = 25 }
+			clamp_variable = { name = aod_v_crew min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_crew_sub_25 = {
+	custom_tooltip = aod_vs_crew_sub_25_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_crew add = -25 }
+			clamp_variable = { name = aod_v_crew min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_crew_add_30 = {
+	custom_tooltip = aod_vs_crew_add_30_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_crew add = 30 }
+			clamp_variable = { name = aod_v_crew min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_crew_sub_30 = {
+	custom_tooltip = aod_vs_crew_sub_30_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_crew add = -30 }
+			clamp_variable = { name = aod_v_crew min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_morale_add_5 = {
+	custom_tooltip = aod_vs_morale_add_5_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_morale add = 5 }
+			clamp_variable = { name = aod_v_morale min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_morale_sub_5 = {
+	custom_tooltip = aod_vs_morale_sub_5_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_morale add = -5 }
+			clamp_variable = { name = aod_v_morale min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_morale_add_10 = {
+	custom_tooltip = aod_vs_morale_add_10_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_morale add = 10 }
+			clamp_variable = { name = aod_v_morale min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_morale_sub_10 = {
+	custom_tooltip = aod_vs_morale_sub_10_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_morale add = -10 }
+			clamp_variable = { name = aod_v_morale min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_morale_add_15 = {
+	custom_tooltip = aod_vs_morale_add_15_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_morale add = 15 }
+			clamp_variable = { name = aod_v_morale min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_morale_sub_15 = {
+	custom_tooltip = aod_vs_morale_sub_15_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_morale add = -15 }
+			clamp_variable = { name = aod_v_morale min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_morale_add_20 = {
+	custom_tooltip = aod_vs_morale_add_20_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_morale add = 20 }
+			clamp_variable = { name = aod_v_morale min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_morale_sub_20 = {
+	custom_tooltip = aod_vs_morale_sub_20_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_morale add = -20 }
+			clamp_variable = { name = aod_v_morale min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_morale_add_25 = {
+	custom_tooltip = aod_vs_morale_add_25_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_morale add = 25 }
+			clamp_variable = { name = aod_v_morale min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_morale_sub_25 = {
+	custom_tooltip = aod_vs_morale_sub_25_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_morale add = -25 }
+			clamp_variable = { name = aod_v_morale min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_morale_add_30 = {
+	custom_tooltip = aod_vs_morale_add_30_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_morale add = 30 }
+			clamp_variable = { name = aod_v_morale min = 0 max = 100 }
+		}
+	}
+}
+aod_vs_morale_sub_30 = {
+	custom_tooltip = aod_vs_morale_sub_30_tt
+	hidden_effect = {
+		scope:nwt_captain ?= {
+			change_variable = { name = aod_v_morale add = -30 }
+			clamp_variable = { name = aod_v_morale min = 0 max = 100 }
+		}
+	}
+}
+# scope: the explorer. Fresh ships, full stores. Old saves: also used to fill in missing stats.
+aod_vs_init_effect = {
+	set_variable = { name = aod_v_supplies value = 100 }
+	set_variable = { name = aod_v_crew value = 100 }
+	set_variable = { name = aod_v_morale value = { value = 50 add = { value = martial multiply = 2 } max = 90 } }
+	remove_variable = aod_v_mutiny_cd
+}
+aod_vs_ensure_effect = {
+	if = {
+		limit = { NOT = { has_variable = aod_v_supplies } }
+		aod_vs_init_effect = yes
+	}
+}
+# scope: the explorer. One stretch of sailing: the stores run down; with none left the men starve.
+aod_vs_sea_tick_effect = {
+	aod_vs_ensure_effect = yes
+	if = {
+		limit = { stewardship >= 12 }
+		change_variable = { name = aod_v_supplies add = -4 }
+	}
+	else = { change_variable = { name = aod_v_supplies add = -7 } }
+	if = {
+		limit = { var:aod_v_supplies <= 0 }
+		change_variable = { name = aod_v_crew add = -8 }
+		change_variable = { name = aod_v_morale add = -10 }
+	}
+	else_if = {
+		limit = { var:aod_v_supplies < 25 }
+		change_variable = { name = aod_v_morale add = -4 }
+	}
+	clamp_variable = { name = aod_v_supplies min = 0 max = 100 }
+	clamp_variable = { name = aod_v_crew min = 0 max = 100 }
+	clamp_variable = { name = aod_v_morale min = 0 max = 100 }
+}
+# scope: the explorer. A march between two stops inland.
+aod_vs_land_tick_effect = {
+	aod_vs_ensure_effect = yes
+	change_variable = { name = aod_v_supplies add = -5 }
+	if = {
+		limit = { var:aod_v_supplies <= 0 }
+		change_variable = { name = aod_v_crew add = -5 }
+		change_variable = { name = aod_v_morale add = -8 }
+	}
+	clamp_variable = { name = aod_v_supplies min = 0 max = 100 }
+	clamp_variable = { name = aod_v_crew min = 0 max = 100 }
+	clamp_variable = { name = aod_v_morale min = 0 max = 100 }
+}
+# scope: the explorer, back home. 3 = rich return, 2 = battered, 1 = half-starved.
+aod_vs_grade_value_effect = {
+	aod_vs_ensure_effect = yes
+	save_scope_value_as = {
+		name = aod_vs_grade
+		value = {
+			value = 2
+			if = { limit = { var:aod_v_crew >= 60 var:aod_v_supplies >= 15 } value = 3 }
+			if = { limit = { var:aod_v_crew < 35 } value = 1 }
+		}
+	}
+}

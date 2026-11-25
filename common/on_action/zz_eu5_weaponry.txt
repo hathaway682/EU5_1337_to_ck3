@@ -1,0 +1,11 @@
+﻿on_game_start = {
+    on_actions = { eu5_weaponry_traditions_on_game_start }
+}
+
+eu5_weaponry_traditions_on_game_start = {
+    effect = {
+        title:b_brescia.title_province = { add_province_modifier = eu5_milan_weaponry_modifier }
+        title:b_milano.title_province = { add_province_modifier = eu5_milan_weaponry_modifier }
+        title:b_damascus.title_province = { add_province_modifier = eu5_damascus_weaponry_modifier }
+    }
+}

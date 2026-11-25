@@ -1,0 +1,255 @@
+﻿# AoD v0.90: resource districts for the New World goods (cloned from base-game districts).
+
+aod_tobacco_district = {
+	primary_building = aod_tobacco_resource_building_1
+	
+	#Fallback
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/ep2_travel_farm.dds"
+	}
+
+	type = resource
+	can_be_replaced = yes
+
+	can_construct_potential = {
+		county = { has_potential_for_trade_good = trade_good_type:trade_good_tobacco }
+	}
+
+	buildings = {
+		compound_perfumery_1
+		#Shared Buildings
+		naphta_pit_1
+		small_mining_pit_1
+		seasonal_labor_shared_1
+
+		#Minor Resource Buildings (from unused potentials)
+		minor_forestry_1
+		minor_cotton_fields_1
+		fishing_villages_1
+		iron_freeminers_1
+		silver_freeminers_1
+		gold_freeminers_1
+		copper_freeminers_1
+		salt_collectors_1
+		minor_alum_mine_1
+		gem_freeminers_1
+		minor_jade_mine_1
+		stone_cutters_1
+		ivory_camp_1
+		dyes_local_1
+		murex_fisheries_1
+		spice_gardens_1
+		fruit_gardens_1
+		small_winery_1
+		small_sugar_plantations_1 # (sugar)
+		local_pottery_1 # (Ceramics)
+		herb_gardens_1 # (medicaments)
+		minor_silk_plantation_1
+		minor_grazing_1 # (cattle)
+		minor_grain_farms_1
+		sheep_pastures_1 #Wool
+		amber_collectors_1
+		trappers_1 # (furs)
+		olive_groves_1 #(oil)
+		millet_fields_1
+		small_rice_paddies_1
+		incense_harvester_1
+		local_hemp_1
+		local_flax_1
+		beehives_1
+		horse_grazing_1
+	}
+}
+
+aod_cacao_district = {
+	primary_building = aod_cacao_resource_building_1
+	
+	#Fallback
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/bp1_jungle.dds"
+	}
+
+	type = resource
+	can_be_replaced = yes
+
+	can_construct_potential = {
+		county = { has_potential_for_trade_good = trade_good_type:trade_good_cacao }
+	}
+
+	buildings = {
+		#Shared Buildings
+		naphta_pit_1
+		small_mining_pit_1
+		#Shared Crop Buildings
+		seasonal_labor_shared_1
+		qanat_system_1
+		irrigation_network_1
+		monsoon_water_management_1
+
+		#Minor Resource Buildings (from unused potentials)
+		minor_forestry_1
+		minor_cotton_fields_1
+		fishing_villages_1
+		iron_freeminers_1
+		silver_freeminers_1
+		gold_freeminers_1
+		copper_freeminers_1
+		salt_collectors_1
+		minor_alum_mine_1
+		gem_freeminers_1
+		minor_jade_mine_1
+		stone_cutters_1
+		dyes_local_1
+		murex_fisheries_1
+		spice_gardens_1
+		tea_gardens_1
+		fruit_gardens_1
+		small_winery_1
+		local_pottery_1 # (Ceramics)
+		herb_gardens_1 # (medicaments)
+		minor_silk_plantation_1
+		minor_grazing_1 # (cattle)
+		minor_grain_farms_1
+		sheep_pastures_1 #Wool
+		amber_collectors_1
+		trappers_1 # (furs)
+		olive_groves_1 #(oil)
+		millet_fields_1
+		small_rice_paddies_1
+		incense_harvester_1
+		local_hemp_1
+		local_flax_1
+		beehives_1
+		horse_grazing_1
+	}
+}
+
+aod_maize_district = {
+	primary_building = aod_maize_resource_building_1
+	
+	#Fallback
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/farms.dds"
+	}
+
+	type = resource
+	can_be_replaced = yes
+
+	can_construct_potential = {
+		county = { has_potential_for_trade_good = trade_good_type:trade_good_maize }
+	}
+
+	buildings = {
+		beer_brewery_1
+		cooper_workshop_1
+		#Shared Buildings
+		naphta_pit_1
+		small_mining_pit_1
+		#Shared Crop Buildings
+		seasonal_labor_shared_1
+		qanat_system_1
+		irrigation_network_1
+		monsoon_water_management_1
+
+		#Minor Resource Buildings (from unused potentials)
+		minor_forestry_1
+		minor_cotton_fields_1
+		fishing_villages_1
+		iron_freeminers_1
+		silver_freeminers_1
+		gold_freeminers_1
+		copper_freeminers_1
+		salt_collectors_1
+		minor_alum_mine_1
+		gem_freeminers_1
+		minor_jade_mine_1
+		stone_cutters_1
+		ivory_camp_1
+		dyes_local_1
+		murex_fisheries_1
+		spice_gardens_1
+		tea_gardens_1
+		fruit_gardens_1
+		small_winery_1
+		small_sugar_plantations_1 # (sugar)
+		local_pottery_1 # (Ceramics)
+		herb_gardens_1 # (medicaments)
+		minor_silk_plantation_1
+		minor_grazing_1 # (cattle)
+		minor_grain_farms_1
+		sheep_pastures_1 #Wool
+		amber_collectors_1
+		trappers_1 # (furs)
+		olive_groves_1 #(oil)
+		small_rice_paddies_1
+		incense_harvester_1
+		local_hemp_1
+		local_flax_1
+		beehives_1
+		horse_grazing_1
+	}
+}
+
+aod_potatoes_district = {
+	primary_building = aod_potatoes_resource_building_1
+	
+	#Fallback
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/ep2_travel_hills.dds"
+	}
+
+	type = resource
+	can_be_replaced = yes
+
+	can_construct_potential = {
+		county = { has_potential_for_trade_good = trade_good_type:trade_good_potatoes }
+	}
+
+	buildings = {
+		#Shared Buildings
+		naphta_pit_1
+		small_mining_pit_1
+		#Shared Crop Buildings
+		seasonal_labor_shared_1
+		qanat_system_1
+		irrigation_network_1
+		monsoon_water_management_1
+
+		#Minor Resource Buildings (from unused potentials)
+		minor_forestry_1
+		minor_cotton_fields_1
+		fishing_villages_1
+		iron_freeminers_1
+		silver_freeminers_1
+		gold_freeminers_1
+		copper_freeminers_1
+		salt_collectors_1
+		minor_alum_mine_1
+		gem_freeminers_1
+		minor_jade_mine_1
+		stone_cutters_1
+		ivory_camp_1
+		dyes_local_1
+		murex_fisheries_1
+		spice_gardens_1
+		tea_gardens_1
+		fruit_gardens_1
+		small_winery_1
+		small_sugar_plantations_1 # (sugar)
+		local_pottery_1 # (Ceramics)
+		herb_gardens_1 # (medicaments)
+		minor_silk_plantation_1
+		minor_grazing_1 # (cattle)
+		minor_grain_farms_1
+		sheep_pastures_1 #Wool
+		amber_collectors_1
+		trappers_1 # (furs)
+		olive_groves_1 #(oil)
+		small_rice_paddies_1
+		incense_harvester_1
+		local_hemp_1
+		local_flax_1
+		beehives_1
+		horse_grazing_1
+	}
+}

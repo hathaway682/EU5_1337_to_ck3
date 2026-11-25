@@ -90,9 +90,9 @@ def main():
                 sys.exit("★ faith %s 未定义" % new)
             pat, patname = C.FAITH_LINE, "faith"
         n, out = 0, []
-        for pid, body, close in C.iter_blocks(lines):
+        for pid, body, start, close in C.iter_blocks(lines):
             if pid is None:
-                out.extend(body)
+                out.extend(lines[start:close + 1])
                 continue
             nb = []
             for line in body:
@@ -102,9 +102,9 @@ def main():
                     n += 1
                 else:
                     nb.append(line)
-            out.append("%d = {" % pid)
+            out.append(lines[start])
             out.extend(nb)
-            out.append("}")
+            out.append(lines[close])
         print("替换 %s = %s -> %s：%d 处" % (patname, old, new, n))
         if not a.apply:
             print("（dry run，加 --apply 才写盘）")
@@ -171,9 +171,9 @@ def main():
     out = []
     stat = {"faith 改写": 0, "faith 新增": 0, "faith 删除": 0,
             "rite 改写": 0, "rite 新增": 0, "rite 删除": 0}
-    for pid, body, _close in C.iter_blocks(lines):
+    for pid, body, start, close in C.iter_blocks(lines):
         if pid is None or pid not in targets:
-            out.extend(body if pid is None else ["%d = {" % pid] + body + ["}"])
+            out.extend(lines[start:close + 1])
             continue
         nb = list(body)
         fi, fm = find_line(nb, C.FAITH_LINE)
@@ -218,9 +218,9 @@ def main():
                 stat["rite 新增"] += 1
 
         plan[pid] = (cur_f, cur_r, a.faith if not a.drop_faith else None, a.rite)
-        out.append("%d = {" % pid)
+        out.append(lines[start])
         out.extend(nb)
-        out.append("}")
+        out.append(lines[close])
 
     print("目标省 %d 个" % len(targets))
     for k, v in stat.items():

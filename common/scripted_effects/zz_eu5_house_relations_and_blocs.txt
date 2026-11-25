@@ -1,0 +1,570 @@
+eu5_setup_historical_house_bloc_effect = {
+    if = {
+        limit = {
+            game_start_date = 1337.4.1
+            has_dlc_feature = all_under_heaven
+        }
+        character:jap_ashikaga_takauji ?= {
+            japanese_become_shogun_reward_effect = yes
+        }
+        character:jap_ashikaga_takauji.house ?= {
+            tgp_create_historical_house_bloc_effect = { TYPE = strength }
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_koumyou_tenno.house } # EU5 NTC
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kou_no_moronao.house } # EU5 KOU
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hosokawa_kazuuji.house } # EU5 HSK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_akamatsu_norimura.house } # EU5 AKM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nitsuki_yoriaki.house } # EU5 NKI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_chuujou_kagenaga.house } # EU5 CJO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_imagawa_norikuni.house } # EU5 IMG
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ishidou_yoshifusa.house } # EU5 ISD
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_takeda_nobutake.house } # EU5 TKD
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_shiba_takatsune.house } # EU5 SBA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_chiba_sadatane.house } # EU5 CBA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_satake_sadayoshi.house } # EU5 STK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kyougoku_douyo.house } # EU5 KGK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_toki_yorisada.house } # EU5 TKI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ogasawara_sadamune.house } # EU5 OGS
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_uesugi_noriaki.house } # EU5 UES
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_togashi_takaie.house } # EU5 TGS
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_yoshimi_yoritaka.house } # EU5 YSM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_momonoi_tadatsune.house } # EU5 MMI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kira_sadayoshi.house } # EU5 KRA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_yamana_masauji.house } # EU5 YMN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_enya_takasada.house } # EU5 ENY
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ueno_yorikane.house } # EU5 UEN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_matsuda_moritomo.house } # EU5 MTD
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_minami_munetsugu.house } # EU5 MNM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_washizu_nagahiro.house } # EU5 WSZ
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kotou_takezane.house } # EU5 KTO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hatakeyama_takakuni.house } # EU5 HTK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_shouni_yorihisa.house } # EU5 SHN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kii_fuyutsuna.house } # EU5 KII
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ootomo_ujiyasu.house } # EU5 OTM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_shimazu_sadahisa.house } # EU5 SMZ
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_souma_chikatane.house } # EU5 SOM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ashina_morimune.house } # EU5 ASN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_yuuki_tomosuke.house } # EU5 YUK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_utsunomiya_kintsuna.house } # EU5 UTN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_isshiki_noriuji.house } # EU5 ISK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_masuda_kanemi.house } # EU5 MSD
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_oouchi_hiroyuki.house } # EU5 OUC
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_yamashiro_hiroshi_ruler.house } # EU5 YSR
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_sagara_yorihiro_later.house } # EU5 SGR
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_sou_morikuni.house } # EU5 SOU
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_waga_nagayoshi.house } # EU5 WAG
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_daihouji_nagamori.house } # EU5 DHJ
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_naganuma_munehide.house } # EU5 NGM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nikaidou_yukitomo.house } # EU5 NKD
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_inawashiro_muneyasu.house } # EU5 IWS
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ishikawa_sadamitsu.house } # EU5 ISW
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_miura_takatsugu.house } # EU5 MIU
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_rokkaku_tokinobu.house } # EU5 RKK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_miya_ruler.house } # EU5 MIY
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kikkawa_tsunemori.house } # EU5 KKW
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_munakata_ujitoshi_younger.house } # EU5 MKT
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_asakura_hirokage.house } # EU5 ASA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_chousokabe_nobuyoshi.house } # EU5 CSK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ise_sadatsugu.house } # EU5 ISE
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ikeda_norimasa.house } # EU5 IKE
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_itou_sukemune.house } # EU5 ITO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_mori_chikahira.house } # EU5 MRI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_oda_yukihiro.house } # EU5 ODA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_daijou_takamoto.house } # EU5 TAK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_mashiko_sadamasa.house } # EU5 MKO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_takou_tomotsune.house } # EU5 TKO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nasu_sukefuji.house } # EU5 NAS
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_oogo_mitsuyuki.house } # EU5 OGO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_honma_yasunori.house } # EU5 HNM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_tooyama_tomokado.house } # EU5 TOY
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_tou_ujimura.house } # EU5 HIG
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ema_ruler.house } # EU5 EMA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nakajima_takaie.house } # EU5 NKJ
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ooba_ruler.house } # EU5 OBA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nagano_sukefusa.house } # EU5 NGN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_takashima_noritsuna.house } # EU5 TKM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_aisu_noritoshi.house } # EU5 AIS
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_yuasa_munefuji.house } # EU5 YUS
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_yabe_tomotsuna.house } # EU5 YAB
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ogamo_ujimoto.house } # EU5 OGA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_suetsugu_takamune.house } # EU5 STU
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_mizawa_tametada.house } # EU5 MZW
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_mitoya_sukeshige.house } # EU5 MTY
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_akana_tsunetsura.house } # EU5 AKN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hiraga_naomune.house } # EU5 HRG
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kobayakawa_tomohira.house } # EU5 KBK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_wachi_sukesane.house } # EU5 WCH
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_sue_hiromasa.house } # EU5 SUE
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_migita_shigesada.house } # EU5 MIG
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kagawa_kagefusa.house } # EU5 KAG
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kouzai_sukeyasu.house } # EU5 KOZ
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kaneko_iehiro_later.house } # EU5 KNE
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_aki_tomochika.house } # EU5 AKI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_oohira_toshikuni.house } # EU5 OHR
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nagano_motomori.house } # EU5 BZG
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_taku_munekiyo.house } # EU5 AKU
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hata_nao.house } # EU5 AHT
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_arima_sumiyo.house } # EU5 ARI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ookura_nagatoshi.house } # EU5 OKR
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_tsuchimochi_nobue.house } # EU5 TMD
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hishikari_atsushige.house } # EU5 HSR
+			house_confederation ?= {
+				every_confederation_member_house = {
+					set_house_aspiration = { type = strength }
+				}
+			}
+        }
+        character:jap_go_daigo_tenno.house ?= {
+            tgp_create_historical_house_bloc_effect = { TYPE = service }
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kitabatake_chikafusa.house } # EU5 KTB
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_houjou_tokiyuki.house } # Hojo Tokiyuki
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_oyama_hidetomo.house } # EU5 OYM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_asayama_kagetsura.house } # EU5 ASY
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kawano_michimori.house } # EU5 KNO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nanbu_nobunaga.house } # EU5 NBU
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kudou_sadayuki.house } # EU5 KDO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kasai_munekiyo.house } # EU5 KSI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_date_yukitomo.house } # EU5 DTE
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ooida_tsunetaka.house } # EU5 OID
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_oguni_masamitsu.house } # EU5 OGU
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ii_yukinao.house } # EU5 IIX
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_anenokouji_takamoto.house } # EU5 AKJ
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kusunoki_masatsura.house } # EU5 KSN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nawa_yoshitaka.house } # EU5 NAW
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_tokuno_tadamasa.house } # EU5 TKN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_doi_michiyo.house } # EU5 DOI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kutsuna_shigeyoshi.house } # EU5 KNT
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_shijou_takamune.house } # EU5 SHJ
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kikuchi_takeshige.house } # EU5 KKC
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_aso_koretoki.house } # EU5 ASO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_ijuuin_hisachika.house } # EU5 IJU
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kimotsuki_kaneshige.house } # EU5 KMT
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nagai_takafuyu.house } # EU5 NAI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hei_chikamitsu.house } # EU5 HEI
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_asonuma_tomotsuna_ii.house } # EU5 ANM
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_tozawa_gensei.house } # EU5 TZW
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hienuki_ieshige.house } # EU5 HIE
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_sagae_motomasa.house } # EU5 SGE
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_tamura_ruler.house } # EU5 TMR
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_suwa_nobutsugu.house } # EU5 SUW
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_andou_morosue.house } # EU5 AKT
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_isa_tokikata.house } # EU5 ISA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kawanobe_sukeshige.house } # EU5 KNB
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_hatta_haruhisa.house } # EU5 HTA
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_nitta_yoshisada.house } # EU5 NIT
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_yamaguchi_ruler.house } # EU5 YMG
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_toshima_tomoyasu.house } # EU5 TOS
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_unnou_yoriyuki.house } # EU5 UNN
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kousaka_shinkaku.house } # EU5 KOK
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_gotou_motoaki.house } # EU5 GTO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_shou_sukeuji.house } # EU5 SHO
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_miyoshi_hirohide.house } # EU5 MYH
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_akizuki_tanetada.house } # EU5 AKZ
+            tgp_join_historical_house_bloc_effect = { JOINER = character:jap_kajiki_masahira.house } # EU5 KJK
+			house_confederation ?= {
+				every_confederation_member_house = {
+					set_house_aspiration = { type = service }
+				}
+			}
+        }
+    }
+}
+
+# EU5 1337 diplomacy: dependency subject_type = vassal.
+eu5_setup_vassal_house_relations_effect = {
+    if = {
+        limit = { game_start_date = 1337.4.1 }
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:dhm_richard_de_bury } # ENG -> DHM
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:eng_edward_the_black_prince } # ENG -> CET
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:eng_henry_lancaster } # ENG -> LAN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sco_edward_balliol VASSAL = character:loi_eoin_mac_aonghais } # SBL -> LOI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sco_david_ii VASSAL = character:ros_william_5th_earl } # SCO -> ROS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sco_david_ii VASSAL = character:moy_john_randolph } # SCO -> MOY
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:eng_john_mowbray } # WLS -> GWR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:eng_hugh_le_despenser } # WLS -> GMG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:eng_roger_mortimer_2nd_earl_of_march } # WLS -> MAC
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:eng_richard_fitzalan_ii } # WLS -> AUD
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:eng_humphrey_de_bohun_6th_earl_of_hereford } # WLS -> BRO
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:eng_john_de_charlton_1st_baron_charlton } # WLS -> POS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:eng_bartholomew_burghersh_the_elder } # WLS -> EWY
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:eng_james_audley_2nd_baron_audley } # WLS -> CMS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:eng_laurence_hastings_1st_earl_of_pembroke } # WLS -> PMB
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:eng_william_montague } # WLS -> DEN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:cwm_edmond_mac_an_iarla_de_burgh } # PLE -> CWM
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:kid_maurice_fitzgerald } # PLE -> KID
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:ord_james_butler_i } # PLE -> ORD
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:dms_maurice_fitzgerald } # PLE -> DMS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:uls_elizabeth_de_burgh_4th_countess_ulster } # PLE -> ULS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:ama_david_mageraghty } # PLE -> AMA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eng_edward_iii VASSAL = character:dci_le_poer } # PLE -> DCI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:try_connor_o_donnell VASSAL = character:ard_domnall_ua_dochartaigh } # TRY -> AMH
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tyr_aodh_the_stout_o_neill VASSAL = character:ini_mac_lochlainn } # TYR -> INI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tyr_aodh_the_stout_o_neill VASSAL = character:kee_o_cahan } # TYR -> KEE
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:lei_domhnall_mac_art_caomhanach VASSAL = character:oss_carroll_mac_gilla_patraic } # LEI -> OSS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mcm_cormac_mac_carthaigh VASSAL = character:bea_diarmaid_o_sullivan } # MCM -> BEA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:swe_magnus_eriksson VASSAL = character:ork_malise_v } # NOR -> ORK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:teu_dietrich_von_altenburg VASSAL = character:liv_eberhard_von_monheim } # TEU -> LIV
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:liv_eberhard_von_monheim VASSAL = character:eu5_regent_rig } # LIV -> RIG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:liv_eberhard_von_monheim VASSAL = character:rig_friedrich_von_pernstein } # LIV -> ARR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:liv_eberhard_von_monheim VASSAL = character:kur_johann_ii } # LIV -> KUR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:liv_eberhard_von_monheim VASSAL = character:bio_jakob_ii } # LIV -> BIO
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:liv_eberhard_von_monheim VASSAL = character:bid_engelbert_von_dolen } # LIV -> BID
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:dan_valdemar_atterdag VASSAL = character:dan_valdemar_iii } # DAN -> SLV
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:bry_gleb_svyatoslavich_rurikovich VASSAL = character:eu5_regent_nvs } # CHR -> NVS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:bry_gleb_svyatoslavich_rurikovich VASSAL = character:eu5_regent_ryl } # CHR -> RYL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:bry_gleb_svyatoslavich_rurikovich VASSAL = character:eu5_regent_sts } # CHR -> STS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:kch_panteleimon_mstislavich_rurikovich VASSAL = character:kzk_titus_mstislavich_rurikovich } # KCH -> KZK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:lit_gediminas_gediminids VASSAL = character:rzh_fedor_yurievich_rurikovich } # LIT -> RZH
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mb_nov_125260 VASSAL = character:psk_aleksandr_mikhailovich_rurikovich } # NOV -> PSK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mb_nov_125260 VASSAL = character:pok_narimantas_gediminds } # NOV -> ORE
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:rya_ivan_ii_korotopol_rurikovich VASSAL = character:prk_mikhail_yaroslavich_rurikovich } # RYA -> PRK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:smo_ivan_alexandrovich_rurikovich VASSAL = character:fmb_fyodor_konstantinovich_krasny_rurikovich } # SMO -> FMB
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:smo_ivan_alexandrovich_rurikovich VASSAL = character:eu5_regent_msv } # SMO -> MSV
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:smo_ivan_alexandrovich_rurikovich VASSAL = character:vya_fedor_svyatoslavich_rurikovich } # SMO -> VYA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tve_konstantin_mikhailovich_rurikovich VASSAL = character:kai_vasily_mikhailovich_rurikovich } # TVE -> KAS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tve_konstantin_mikhailovich_rurikovich VASSAL = character:tve_aleksandr_mikhailovich_rurikovich } # TVE -> ZUB
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yar_vasili_davidovich_rurikovich VASSAL = character:mog_mikhail_davidovich_rurikovich } # YAR -> MOG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:gen_galeotto_spinola VASSAL = character:eu5_regent_gaz } # GEN -> GAZ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:bri_yann_iii_dreux } # FRA -> BRI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:foi_gaston_ii_foix } # FRA -> FOI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:amg_jean_i_armagnac } # FRA -> AMG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:frz_guigues_vii_albon } # FRA -> FRZ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:bar_henry_iv_de_bar } # FRA -> BAR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:bls_guy_i_chatillon } # FRA -> BLS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:ast_centule_iv_astarac } # FRA -> AST
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:com_jean_comminges } # FRA -> COM
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:ijo_bernard_iv_lisle_jourdain } # FRA -> IJO
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:nav_jeanne_ii_capet } # FRA -> MRT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:vln_aymar_v_poitiers } # FRA -> VLN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:per_roger_bernard_perigord } # FRA -> PER
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:ton_jeanne_capet } # FRA -> TON
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:mon_jean_montfort } # FRA -> MON
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:aum_jean_burgundy_castile } # FRA -> AUM
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:rou_jean_v_pierrepont } # FRA -> ROU
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:fla_louis_i_dampierre } # FRA -> FLA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:nrb_amalric_iii_lara } # FRA -> NRB
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:vnt_bernard_de_ventadour } # FRA -> VNT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:rcc_jean_de_rochechouart } # FRA -> RCC
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:clt_renaud_iv_pons } # FRA -> CLT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:aux_jean_ii_chalon } # FRA -> AUX
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:san_louis_ii_sancerre } # FRA -> SAN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:auv_jeanne_auvergne } # FRA -> AUV
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fra_philip_vi_valois VASSAL = character:vdm_bouchard_vi_montoire } # FRA -> VDM
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:fla_louis_i_dampierre VASSAL = character:nam_philippe_iii_dampierre } # FLA -> NAM
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:bur_jeanne_iii_capet VASSAL = character:stp_jean_chatillon } # ARS -> STP
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:nap_robert_i_anjou VASSAL = character:ach_catherine_valois } # NAP -> ACH
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:ach_catherine_valois VASSAL = character:nax_niccolo_sanudo } # ACH -> NAX
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:ach_catherine_valois VASSAL = character:ach_robert_taranto } # ACH -> CEP
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:ach_catherine_valois VASSAL = character:pat_guglielmo_frangipani } # ACH -> PAT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:ven_francesco_dandolo VASSAL = character:eu5_regent_tte } # VEN -> TTE
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:ven_francesco_dandolo VASSAL = character:crt_viago_zeno } # VEN -> CRT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:ven_francesco_dandolo VASSAL = character:rag_filippo_belegno } # VEN -> RAG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:pap_benedetto_xii VASSAL = character:fae_ricciardo_manfredi } # PAP -> FAE
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sav_aymon_savoy VASSAL = character:cev_bonifacio_ii_di_ceva } # SAV -> CEV
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sav_aymon_savoy VASSAL = character:gnv_amedee_iii_geneve } # SAV -> GNV
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sav_aymon_savoy VASSAL = character:sav_jacques_savoy_achaia } # SAV -> PIE
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sav_aymon_savoy VASSAL = character:sav_louis_ii_savoy_vaud } # SAV -> VUD
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:ver_mastino_ii_scala VASSAL = character:pad_marsiglio_carrara } # VER -> PAD
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:ver_mastino_ii_scala VASSAL = character:mb_city_1062102 } # VER -> PAR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:ver_mastino_ii_scala VASSAL = character:ver_arrigo_castracani } # VER -> LUC
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sic_federico_iii_sicily VASSAL = character:ath_william } # SIC -> ATH
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:ath_william VASSAL = character:sao_alfons_frederic_de_arago } # NEO -> SAO
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:ara_peter_iv_arago VASSAL = character:mll_james_iii_mallorca } # ARA -> MLL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:kbo_salmama VASSAL = character:fza_ali_nasur } # KBO -> FZA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mor_abu_al_hasan_ali VASSAL = character:mor_abu_ali_omar } # MOR -> TFL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mor_abu_ali_omar VASSAL = character:eu5_regent_tat } # TFL -> TAT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tun_abu_yahya_abu_bakr_ii VASSAL = character:gbs_makki } # TUN -> GBS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tun_abu_yahya_abu_bakr_ii VASSAL = character:eu5_regent_tgt } # TUN -> TGT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tun_abu_yahya_abu_bakr_ii VASSAL = character:trp_muhammad_ibn_thabit } # TUN -> TRP
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:pal_rudolf_ii_wittelsbach VASSAL = character:eu5_regent_msb } # PAL -> MSB
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:pal_rudolf_ii_wittelsbach VASSAL = character:erb_konrad_iii_erbach } # PAL -> ERB
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:aug_ulrich_von_schonegg VASSAL = character:eu5_regent_agc } # AUG -> AGC
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:bre_burchard_grelle VASSAL = character:eu5_regent_dit } # BRE -> DIT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:lau_albrecht_iv_lauenburg VASSAL = character:rtb_wolderich_lappe } # LAU -> RTB
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:wur_ulrich_iii_wurttemberg VASSAL = character:eu5_regent_hbr } # WUR -> HBR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tri_balduin_von_luxembourg VASSAL = character:eu5_regent_psz } # TRI -> PSZ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:kmm_johann_i_lauenburg VASSAL = character:eu5_regent_nwg } # KMM -> NWG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:byz_andronikos_iii_palaiologos VASSAL = character:epi_theodoros_synadenos } # BYZ -> EPI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:teu_dietrich_von_altenburg VASSAL = character:erm_hermann_of_prague } # TEU -> ERM
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:teu_dietrich_von_altenburg VASSAL = character:sms_johann_clare } # TEU -> SMD
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:teu_dietrich_von_altenburg VASSAL = character:pms_bertold_von_riesenburg } # TEU -> PMS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:teu_dietrich_von_altenburg VASSAL = character:klm_otto } # TEU -> CHL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:lit_gediminas_gediminids VASSAL = character:eu5_regent_dru } # LIT -> DRU
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:lit_gediminas_gediminids VASSAL = character:nrk_karijotas_gediminds } # LIT -> NRK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:lit_gediminas_gediminids VASSAL = character:pok_narimantas_gediminds } # LIT -> PNK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:lit_gediminas_gediminids VASSAL = character:eu5_regent_tps } # LIT -> TPS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:lit_gediminas_gediminids VASSAL = character:tuv_danylo_dmitrovich_rurikovich } # LIT -> TUV
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:lit_gediminas_gediminids VASSAL = character:vbk_algirdas_gediminds } # LIT -> VBK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:boh_john_luxembourg VASSAL = character:boh_charles_iv_luxembourg } # BOH -> MVA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:boh_john_luxembourg VASSAL = character:lgc_boleslaw_iii_the_generous_piast } # BOH -> BRZ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:boh_john_luxembourg VASSAL = character:bym_wladislaw_i_piast } # BOH -> BYM
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:boh_john_luxembourg VASSAL = character:jaw_henryk_i_javorski } # BOH -> GLO
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:boh_john_luxembourg VASSAL = character:nmd_boleslaw_elder } # BOH -> NMD
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:boh_john_luxembourg VASSAL = character:tes_kazimir_piast } # BOH -> NMS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:boh_john_luxembourg VASSAL = character:oel_konrad_i_piast } # BOH -> OEL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:boh_john_luxembourg VASSAL = character:opl_boleslaw_ii_piast } # BOH -> OPL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:boh_john_luxembourg VASSAL = character:opv_mikolaj_ii_premyslid } # BOH -> OPV
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:boh_john_luxembourg VASSAL = character:osw_jan_piast } # BOH -> OSW
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:boh_john_luxembourg VASSAL = character:sci_jan_scinawski } # BOH -> SCI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:boh_john_luxembourg VASSAL = character:stz_albert_strzelce } # BOH -> STZ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:boh_john_luxembourg VASSAL = character:zag_henryk_iv_wierny_piast } # BOH -> ZAG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:boh_john_luxembourg VASSAL = character:zie_bolko_ii_ziebice } # BOH -> ZIE
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:boh_john_luxembourg VASSAL = character:nys_nanker } # WRC -> NYS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:pol_casimir_iii_piast VASSAL = character:sdz_przemysl_i_piast } # POL -> SDZ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:pol_casimir_iii_piast VASSAL = character:lcz_wladyslaw_i_piast } # POL -> LCZ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:pol_casimir_iii_piast VASSAL = character:plk_boleslaw_iii_piast } # POL -> PLK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:pol_casimir_iii_piast VASSAL = character:raw_siemowit_ii_piast } # POL -> RAW
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:pol_casimir_iii_piast VASSAL = character:czk_trojden_i_piast } # POL -> CZK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:nap_robert_i_anjou VASSAL = character:alb_charles_durazzo } # NAP -> ALB
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:alb_charles_durazzo VASSAL = character:mtr_pal_mataranga } # ALB -> MTR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:alb_charles_durazzo VASSAL = character:mzk_andrea_ii_muzaka } # ALB -> MZK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:alb_charles_durazzo VASSAL = character:thp_tanush_thopia } # ALB -> THP
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:hun_karoly_robert VASSAL = character:bos_stephen_kotromanic } # HUN -> BOS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:ayd_umur VASSAL = character:ina_murad_arslan } # AYD -> INA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:bit_dia_al_din VASSAL = character:eu5_regent_hzn } # BIT -> HZN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:bit_dia_al_din VASSAL = character:mus_shams_al_din } # BIT -> MUS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:grm_yakub_i VASSAL = character:krd_yakhshi } # GRM -> KRD
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:grm_yakub_i VASSAL = character:sru_saruhan } # GRM -> SRU
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:grm_yakub_i VASSAL = character:ayd_umur } # GRM -> AYD
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:eu5_regent_ard } # JAL -> ARD
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:eu5_regent_atz } # JAL -> ATZ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:dml_kalti } # JAL -> DML
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:ere_eretna } # JAL -> ERE
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:hbn_abdallah_ibn_shahab_al_din_zani } # JAL -> HBN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:hdr_taj_al_din_hadhur_bin_suleyman } # JAL -> HDR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:eu5_regent_hny } # JAL -> HNY
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:eu5_regent_ihb } # JAL -> IHB
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:eu5_regent_kel } # JAL -> KEL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:eu5_regent_kkl } # JAL -> KKL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:eu5_regent_klr } # JAL -> KLR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:kri_muhammed } # JAL -> KRI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:ktw_sayf_al_din_abu_bakr } # JAL -> KTW
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:eu5_regent_mkw } # JAL -> MKW
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:rkl_jamal_al_din_talan } # JAL -> RKL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:sli_burek_ibn_izz_al_din_resu_ibn_mahmud } # JAL -> SLI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:sut_hajji_taghay } # JAL -> SUT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:syy_shuja_al_din_abu_bakr_ramaki } # JAL -> SYY
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jal_hasan_buzurg VASSAL = character:zbr_shahab_al_din_ibn_badr_al_din } # JAL -> ZBR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mam_an_nasir_bahri VASSAL = character:dul_karaca } # MAM -> DUL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mam_an_nasir_bahri VASSAL = character:eu5_regent_kil } # MAM -> KIL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:men_orkhan VASSAL = character:tvs_ilyas_bey } # MEN -> TVS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sut_hajji_taghay VASSAL = character:bht_izz_al_din } # SUT -> BHT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sut_hajji_taghay VASSAL = character:bin_shap } # SUT -> BIN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sut_hajji_taghay VASSAL = character:bit_dia_al_din } # SUT -> BIT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sut_hajji_taghay VASSAL = character:eu5_regent_cem } # SUT -> CEM
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sut_hajji_taghay VASSAL = character:dil_jalaleddin } # SUT -> DIL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sut_hajji_taghay VASSAL = character:eu5_regent_dmb } # SUT -> DMB
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sut_hajji_taghay VASSAL = character:dsn_ala_al_din_kurk_ibn_ibrahim } # SUT -> DSN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sut_hajji_taghay VASSAL = character:egl_isa } # SUT -> EGL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sut_hajji_taghay VASSAL = character:hkk_xars_al_din } # SUT -> HKK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sut_hajji_taghay VASSAL = character:eu5_regent_hzr } # SUT -> HZR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sut_hajji_taghay VASSAL = character:eu5_regent_jlm } # SUT -> JLM
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sut_hajji_taghay VASSAL = character:mzj_izz_al_din } # SUT -> MZJ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sut_hajji_taghay VASSAL = character:soh_husam } # SUT -> SOH
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sut_hajji_taghay VASSAL = character:zrq_zeyd } # SUT -> ZRQ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:sut_hajji_taghay VASSAL = character:zzr_najm_al_din } # SUT -> ZZR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:hlg_musa_khan VASSAL = character:hll_ahmad_rumaythah } # HLG -> HLL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:grg_togha_temur VASSAL = character:asr_shaikh_ali } # GRG -> ASR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:grg_togha_temur VASSAL = character:hdn_mahmud_qutlugh } # GRG -> HDN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:grg_togha_temur VASSAL = character:jkr_arghun_shah } # GRG -> JKR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:grg_togha_temur VASSAL = character:kht_abd_allah } # GRG -> KHT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:grg_togha_temur VASSAL = character:krt_mu_izz_uddin_husayn_ibn_ghiyath_uddin } # GRG -> KRT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:grg_togha_temur VASSAL = character:ksa_latif_allah } # GRG -> KSA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:grg_togha_temur VASSAL = character:mzn_hasan } # GRG -> MZN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:grg_togha_temur VASSAL = character:qom_tal_al_din_ali } # GRG -> QOM
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:grg_togha_temur VASSAL = character:sbz_ala_ad_din_muhammad } # GRG -> SBZ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:grg_togha_temur VASSAL = character:sfr_shaikh_ali_qushji } # GRG -> SFR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:krt_mu_izz_uddin_husayn_ibn_ghiyath_uddin VASSAL = character:eu5_regent_mrv } # KRT -> MRV
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:krt_mu_izz_uddin_husayn_ibn_ghiyath_uddin VASSAL = character:eu5_regent_khf } # KRT -> KHF
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:arm_zakare_iv VASSAL = character:kcn_ivane_ii } # ARM -> KCN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:arm_zakare_iv VASSAL = character:syu_biurtel } # ARM -> SYU
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:geo_george_v VASSAL = character:sme_qvarqvare } # GEO -> AAI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:geo_george_v VASSAL = character:arm_zakare_iv } # GEO -> ARM
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:geo_george_v VASSAL = character:eu5_regent_ski } # GEO -> SKI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:glh_giyas_al_din_mohammed_oz_beg_borjigin VASSAL = character:eu5_regent_avr } # GLH -> AVR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:glh_giyas_al_din_mohammed_oz_beg_borjigin VASSAL = character:eu5_regent_lek } # GLH -> LEK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:glh_giyas_al_din_mohammed_oz_beg_borjigin VASSAL = character:eu5_regent_sms } # GLH -> SMS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:glh_giyas_al_din_mohammed_oz_beg_borjigin VASSAL = character:eu5_regent_trk } # GLH -> TRK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:syu_biurtel VASSAL = character:eu5_regent_vdz } # SYU -> VDZ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eu5_regent_trk VASSAL = character:eu5_regent_kai } # TRK -> KAI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eu5_regent_trk VASSAL = character:eu5_regent_tba } # TRK -> TBA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:inj_ghiyas_al_din_kai_khusrau VASSAL = character:eu5_regent_khu } # INJ -> KHU
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:lhj_naservand_ruler VASSAL = character:eu5_regent_rnk } # LHJ -> RNK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mkr_ghiyath_al_din_dinar VASSAL = character:eu5_regent_bla } # MKR -> BLA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mkr_ghiyath_al_din_dinar VASSAL = character:eu5_regent_bmp } # MKR -> BMP
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mkr_ghiyath_al_din_dinar VASSAL = character:eu5_regent_klw } # MKR -> KLW
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:orm_kut_al_din_tahamtan VASSAL = character:eu5_regent_fal } # ORM -> FAL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:orm_kut_al_din_tahamtan VASSAL = character:eu5_regent_jsk } # ORM -> JSK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eth_amedee_i_solomon VASSAL = character:hdy_amano } # ETH -> HDY
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eth_amedee_i_solomon VASSAL = character:eu5_regent_ble } # ETH -> BLE
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eth_amedee_i_solomon VASSAL = character:eu5_regent_daw } # ETH -> DAW
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:ifa_jamal_i_walashma VASSAL = character:eu5_regent_hrl } # IFA -> HRL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mal_musa_keita VASSAL = character:eu5_regent_bbk } # MAL -> BBK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mal_musa_keita VASSAL = character:eu5_regent_bmr } # MAL -> BMR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mal_musa_keita VASSAL = character:eu5_regent_dfn } # MAL -> DFN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mal_musa_keita VASSAL = character:eu5_regent_gha } # MAL -> GHA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mal_musa_keita VASSAL = character:jol_ndiadiane_ndiaye } # MAL -> JOL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mal_musa_keita VASSAL = character:eu5_regent_kab } # MAL -> KAB
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mal_musa_keita VASSAL = character:eu5_regent_kbr } # MAL -> KBR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mal_musa_keita VASSAL = character:eu5_regent_sgh } # MAL -> SGH
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mal_musa_keita VASSAL = character:eu5_regent_son } # MAL -> SON
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mal_musa_keita VASSAL = character:eu5_regent_tfk } # MAL -> TFK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mal_musa_keita VASSAL = character:eu5_regent_tkr } # MAL -> TKR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mal_musa_keita VASSAL = character:eu5_regent_tmk } # MAL -> TMK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mal_musa_keita VASSAL = character:eu5_regent_zgh } # MAL -> ZGH
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tep_acolnahuacatl_tepanecatl VASSAL = character:azt_tenoch } # TEP -> TNC
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tep_acolnahuacatl_tepanecatl VASSAL = character:eu5_regent_tcp } # TEP -> TCP
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_hez } # CHI -> HEZ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_jiz } # CHI -> JIZ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:kor_chungsuk } # CHI -> KOR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:tughluq_borjigin } # CHI -> LNG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:mma_hkan_hpa } # CHI -> MMA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_mnz } # CHI -> MNZ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_snp } # CHI -> SNP
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:ssg_jo_rim } # CHI -> SSG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:kor_ko } # CHI -> SYG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_taz } # CHI -> TAZ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:tib_namkha_lekpa } # CHI -> TIB
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_tmn } # CHI -> TMN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tughluq_borjigin VASSAL = character:cld_duan_guang } # LNG -> CDL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:chg_changsi VASSAL = character:eu5_regent_apd } # CHG -> APD
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:chg_changsi VASSAL = character:mb_tribe_248214 } # CHG -> ART
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:chg_changsi VASSAL = character:eu5_regent_bkh } # CHG -> BKH
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:chg_changsi VASSAL = character:chg_taraghai_noyan_borjigin } # CHG -> BRL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:chg_changsi VASSAL = character:eu5_regent_bsd } # CHG -> BSD
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:chg_changsi VASSAL = character:mb_tribe_248234 } # CHG -> DGH
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:chg_changsi VASSAL = character:mb_tribe_217261 } # CHG -> JLY
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:chg_changsi VASSAL = character:eu5_regent_krg } # CHG -> KRG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:chg_changsi VASSAL = character:eu5_regent_ktt } # CHG -> KTT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:chg_changsi VASSAL = character:eu5_regent_ngd } # CHG -> NGD
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:chg_changsi VASSAL = character:qch_uruktemur } # CHG -> QCH
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:chg_changsi VASSAL = character:mb_tribe_248197 } # CHG -> QUN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:chg_changsi VASSAL = character:mb_tribe_217246 } # CHG -> SLD
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:chg_changsi VASSAL = character:eu5_regent_ysu } # CHG -> YSU
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mb_tribe_248234 VASSAL = character:eu5_regent_mnl } # DGH -> MNL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mb_tribe_248234 VASSAL = character:eu5_regent_srl } # DGH -> SRL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_aar } # CHI -> AAR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_aid } # CHI -> AID
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_asu } # CHI -> ASU
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_bay } # CHI -> BAY
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_dla } # CHI -> DLA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_eji } # CHI -> EJI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_fln } # CHI -> FLN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_fut } # CHI -> FUT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_fuy } # CHI -> FUY
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_gil } # CHI -> GIL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_hij } # CHI -> HIJ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_hiy } # CHI -> HIY
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_hln } # CHI -> HLN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_hnc } # CHI -> HNC
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_hot } # CHI -> HOT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_hro } # CHI -> HRO
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_hui } # CHI -> HUI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_hur } # CHI -> HUR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_ilu } # CHI -> ILU
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_imn } # CHI -> IMN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_itu } # CHI -> ITU
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_jht } # CHI -> JHT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_jus } # CHI -> JUS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_lal } # CHI -> LAL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_llu } # CHI -> LLU
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_mah } # CHI -> MAH
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_mic } # CHI -> MIC
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_mre } # CHI -> MRE
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_muh } # CHI -> MUH
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_nal } # CHI -> NAL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_nem } # CHI -> NEM
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_ney } # CHI -> NEY
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_nro } # CHI -> NRO
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_shi } # CHI -> SHI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_sir } # CHI -> SIR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_smn } # CHI -> SMN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_snc } # CHI -> SNC
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_sui } # CHI -> SUI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_tas } # CHI -> TAS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_tod } # CHI -> TOD
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_tox } # CHI -> TOX
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_uss } # CHI -> USS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_wej } # CHI -> WEJ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_wek } # CHI -> WEK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_wuy } # CHI -> WUY
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_yrn } # CHI -> YRN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_yim } # CHI -> YIM
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_yoo } # CHI -> YOO
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:oge_temurchi_borjigin } # CHI -> OGE
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:oge_temurchi_borjigin VASSAL = character:eu5_regent_bat } # OGE -> BAT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:oge_temurchi_borjigin VASSAL = character:eu5_regent_crs } # OGE -> CRS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:oge_temurchi_borjigin VASSAL = character:eu5_regent_khd } # OGE -> KHD
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:oge_temurchi_borjigin VASSAL = character:eu5_regent_trh } # OGE -> TRH
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:bgt_alguncha_borjigin } # CHI -> BGT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:hcn_munanzi_borjigin } # CHI -> HCN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:otc_yanashiri_borjigin } # CHI -> OTC
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:qas_shiliemen_borjigin } # CHI -> QAS
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tib_namkha_lekpa VASSAL = character:eu5_regent_gug } # TIB -> GUG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tib_namkha_lekpa VASSAL = character:pur_punyamalla } # TIB -> PUR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tib_namkha_lekpa VASSAL = character:eu5_regent_mgg } # TIB -> MGG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tib_namkha_lekpa VASSAL = character:eu5_regent_poo } # TIB -> POO
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tib_namkha_lekpa VASSAL = character:eu5_regent_lgt } # TIB -> LGT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tib_namkha_lekpa VASSAL = character:eu5_regent_drg } # TIB -> DRG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tib_namkha_lekpa VASSAL = character:eu5_regent_ncn } # TIB -> NCN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tib_namkha_lekpa VASSAL = character:eu5_regent_gnj } # TIB -> GNJ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tib_namkha_lekpa VASSAL = character:eu5_regent_btg } # TIB -> BTG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tib_namkha_lekpa VASSAL = character:eu5_regent_nbh } # TIB -> NBH
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tib_namkha_lekpa VASSAL = character:eu5_regent_ltn } # TIB -> LTN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tib_namkha_lekpa VASSAL = character:eu5_regent_lmn } # TIB -> LMN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tib_namkha_lekpa VASSAL = character:mar_rinchen } # TIB -> MAR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:tib_namkha_lekpa VASSAL = character:eu5_regent_znk } # TIB -> ZNK
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:pin_uzana VASSAL = character:tng_kayin_ba } # PIN -> TNG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:pin_uzana VASSAL = character:bpr_kyaswa } # PIN -> BPR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:suk_ngua_nam_thum VASSAL = character:pua_phaya_phakong } # SUK -> PUA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:hse_sao_san_noi VASSAL = character:eu5_regent_mgt } # HSE -> MGT
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:yua_togon_temur VASSAL = character:eu5_regent_mlm } # CHI -> MLM
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:suk_ngua_nam_thum VASSAL = character:adh_ramathibodi } # SUK -> PTC
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:suk_ngua_nam_thum VASSAL = character:eu5_regent_tsm } # SUK -> TSM
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:lav_son_sai VASSAL = character:adh_boromracha } # LAV -> ADH
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:maj_tribhuwana VASSAL = character:jmb_akarendrawarman } # MAJ -> JMB
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jmb_akarendrawarman VASSAL = character:eu5_regent_pni } # JMB -> PNI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:maj_tribhuwana VASSAL = character:eu5_regent_inr } # MAJ -> INR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:maj_tribhuwana VASSAL = character:eu5_regent_plb } # MAJ -> PLB
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:maj_tribhuwana VASSAL = character:eu5_regent_tjp } # MAJ -> TJP
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eu5_regent_tjp VASSAL = character:eu5_regent_smb } # TJP -> SMB
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:bei_dewa_emas_kayangan VASSAL = character:eu5_regent_sul } # BEI -> SUL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:bei_dewa_emas_kayangan VASSAL = character:eu5_regent_myi } # BEI -> MYI
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:bei_dewa_emas_kayangan VASSAL = character:eu5_regent_mna } # BEI -> MNA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:bei_dewa_emas_kayangan VASSAL = character:eu5_regent_btu } # BEI -> BTU
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:bei_dewa_emas_kayangan VASSAL = character:eu5_regent_mgd } # BEI -> MGD
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eu5_regent_sul VASSAL = character:eu5_regent_sml } # SUL -> SML
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eu5_regent_sul VASSAL = character:eu5_regent_kml } # SUL -> KML
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mam_an_nasir_bahri VASSAL = character:aal_jumaz_bin_muhammed } # MAM -> AAL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mam_an_nasir_bahri VASSAL = character:amr_shata_bin_ahmad } # MAM -> AMR
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mam_an_nasir_bahri VASSAL = character:bkz_alam_al_din_ali } # MAM -> BKZ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mam_an_nasir_bahri VASSAL = character:bqa_fayed_ibn_muqaddam } # MAM -> BQA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mam_an_nasir_bahri VASSAL = character:eu5_regent_dge } # MAM -> DGE
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mam_an_nasir_bahri VASSAL = character:fdl_muzzaffar_ad_din_musa_ibn_muhanna } # MAM -> FDL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mam_an_nasir_bahri VASSAL = character:skn_zayd_ibn_abi_numayy_ibn_ajlan } # MAM -> SKN
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mam_an_nasir_bahri VASSAL = character:mda_wudayy_bin_jammaz } # MAM -> MDA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:mam_an_nasir_bahri VASSAL = character:mec_rumaythah } # MAM -> MEC
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:orm_kut_al_din_tahamtan VASSAL = character:jrw_jarwan } # ORM -> JRW
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eu5_regent_coc VASSAL = character:eu5_regent_xiu } # COC -> XIU
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:eu5_regent_coc VASSAL = character:eu5_regent_hel } # COC -> HEL
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jap_hosokawa_kazuuji VASSAL = character:jap_kagawa_kagefusa } # HSK -> KAG
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jap_hosokawa_kazuuji VASSAL = character:jap_kouzai_sukeyasu } # HSK -> KOZ
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jap_shiba_takatsune VASSAL = character:jap_asakura_hirokage } # SBA -> ASA
+        eu5_set_vassal_house_relation_effect = { LIEGE = character:jap_shouni_yorihisa VASSAL = character:jap_sou_morikuni } # SHN -> SOU
+    }
+}
+
+eu5_set_vassal_house_relation_effect = {
+    $LIEGE$.house ?= {
+        if = {
+            limit = {
+                exists = $VASSAL$.house
+                NOT = { this = $VASSAL$.house }
+            }
+            set_house_relation = {
+                target = $VASSAL$.house
+                level = friendly
+                description = house_relation_reason_historical_desc
+            }
+        }
+    }
+}

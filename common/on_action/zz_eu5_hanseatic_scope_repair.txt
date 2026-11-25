@@ -1,0 +1,20 @@
+﻿# Clean up the old top-liege-wide Hanseatic county modifiers once per save.
+yearly_global_pulse = {
+	on_actions = { eu5_hanseatic_scope_repair }
+}
+
+eu5_hanseatic_scope_repair = {
+	effect = {
+		if = {
+			limit = {
+				has_gdp_dlc_trigger = yes
+				NOT = { has_global_variable = eu5_hanseatic_scope_repaired }
+			}
+			every_county = {
+				limit = { has_county_modifier = hanseatic_league_county_modifier }
+				hanseatic_sync_county_benefits_effect = { COUNTY = this }
+			}
+			set_global_variable = eu5_hanseatic_scope_repaired
+		}
+	}
+}

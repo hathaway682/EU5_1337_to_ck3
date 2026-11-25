@@ -1,0 +1,9 @@
+﻿# Merge charts in both directions when a ruler receives a kingdom-or-higher title.
+on_title_gain = { on_actions = { eu5_sync_charts_on_title_gain } }
+eu5_sync_charts_on_title_gain = {
+ trigger = { scope:title ?= { tier >= tier_kingdom } }
+ effect = {
+  scope:title = { save_scope_as = eu5_chart_source_title }
+  eu5_sync_realm_charts_effect = yes
+ }
+}

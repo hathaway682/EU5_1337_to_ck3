@@ -1,0 +1,13 @@
+﻿on_game_start_after_lobby = { on_actions = { eu5_beta_player_trade_setup } }
+
+eu5_beta_player_trade_setup = {
+	effect = {
+		every_player = {
+			if = {
+				limit = { government_has_flag = government_is_republic }
+				house = { set_house_aspiration = { type = republic_no_ambition } }
+			}
+			gdp_trade_envoys_resume_idle_traders_effect = yes
+		}
+	}
+}

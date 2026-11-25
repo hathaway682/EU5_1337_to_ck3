@@ -1,0 +1,31 @@
+﻿can_build_external_trade_post = {
+	# Does your government allow you to build trade posts at all?
+	trigger_if = {
+		limit = {
+			government_has_flag = government_has_trade_posts
+		}
+		# If you can build a trade post you need to fulfill the following:
+		# The target county (i.e. its holder) is within diplomatic range
+		custom_tooltip = {
+			text = county_is_not_in_diplomatic_range_desc
+			in_diplomatic_range = scope:province.county.holder
+		}
+		# You are not at your trade post limit
+		custom_tooltip = {
+			text = trade_post_limit_reached_desc
+			trade_post_count < trade_post_limit
+		}
+	}
+	# We explicitly block everyone else - we do this to simplify the tooltip and not show irrelevant information
+	trigger_else = {
+		custom_tooltip = {
+			text = government_does_not_allow_trade_posts_desc
+			always = no
+		}
+	}
+}
+
+can_be_trader = {
+	gdp_can_be_trader_trigger = yes
+}
+

@@ -1,0 +1,13 @@
+# Set starting salt expertise after merchant titles are initialized.
+on_game_start_after_lobby = { on_actions = { eu5_salt_merchant_start } }
+
+eu5_salt_merchant_start = {
+	effect = {
+		title:c_merchant_eu5_rtr_zhang = {
+			add_trade_good_category_xp = { target = trade_good_category:trade_category_salt value = 150 }
+		}
+		title:c_merchant_eu5_rtr_fang = {
+			add_trade_good_category_xp = { target = trade_good_category:trade_category_salt value = 150 }
+		}
+	}
+}

@@ -191,9 +191,12 @@
 							modifier = clerical_chastity_vow_modifier
 							years = 5
 						}
-						add_opinion = {
-							target = scope:puppet_or_actor
-							modifier = resented_forced_chastity_opinion
+						if = {
+							limit = { is_ai = yes }
+							add_opinion = {
+								target = scope:puppet_or_actor
+								modifier = resented_forced_chastity_opinion
+							}
 						}
 						stress_impact = {
 							lustful = medium_stress_impact_gain
@@ -352,6 +355,19 @@
 			add = 25
 			recipient_in_actor_clerical_region_trigger = yes
 		}
+		# Greedy clerics still target childless chaste rulers, to end their line
+		modifier = {
+			factor = 0
+			scope:recipient = { has_trait = chaste }
+			NAND = {
+				scope:puppet_or_actor = { has_trait = greedy }
+				scope:recipient = {
+					NOT = {
+						any_child = { is_alive = yes }
+					}
+				}
+			}
+		}
 	}
 
 	ai_accept = {
@@ -504,3 +520,4 @@
 		}
 	}
 }
+

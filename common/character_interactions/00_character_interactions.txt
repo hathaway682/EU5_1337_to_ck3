@@ -10,6 +10,8 @@ offer_vassalization_interaction = {
 	icon = icon_vassal
 
 	desc = offer_vassalization_interaction_desc
+	greeting = positive
+	notification_text = OFFER_VASSALIZATION_INTERACTION_NOTIFICATION
 
 	ai_targets = {
 		ai_recipients = neighboring_rulers
@@ -118,7 +120,7 @@ offer_vassalization_interaction = {
 				custom_tooltip = {
 					text = was_recently_granted_independence
 					scope:recipient.suzerain = scope:actor
-				}
+				}	
 			}
 			trigger_if = {
 				limit = {
@@ -128,9 +130,6 @@ offer_vassalization_interaction = {
 			}
 		}
 	}
-
-	greeting = positive
-	notification_text = OFFER_VASSALIZATION_INTERACTION_NOTIFICATION
 
 	cost = {
 		influence = {
@@ -257,7 +256,7 @@ offer_vassalization_interaction = {
 
 		modifier = { #Military Strength
 			desc = offer_vassalization_interaction_aibehavior_power_tt
-			add = {
+	  	  	add = {
 				value = 1
 				subtract = {
 					value = scope:recipient.max_military_strength # Intended for recipient to use max, to avoid having vassalizations become too easy for weakened realms
@@ -265,9 +264,9 @@ offer_vassalization_interaction = {
 				}
 				multiply = 20
 				ceiling = yes
-			}
+	  		}
 		}
-
+		
 		# TRAITS/PERSONALITY
 			modifier = { # Ambitious
 				desc = TAKE_THE_VOWS_AMBITIOUS
@@ -393,9 +392,9 @@ offer_vassalization_interaction = {
 				DEVARAJA = scope:actor
 				SUBJECT = scope:recipient
 			}
-
+			
 			#Do they like you?
-			opinion_modifier = {
+			opinion_modifier = { 
 				trigger = {
 					scope:actor = { government_has_flag = government_is_mandala }
 				}
@@ -403,6 +402,16 @@ offer_vassalization_interaction = {
 				opinion_target = scope:actor
 				multiplier = 1
 			}
+
+		#GG modifier
+		modifier = {
+			add = -50
+			OR = {
+				gg_first_and_second_are_opposite_sides_trigger = { FIRST = scope:actor SECOND = scope:recipient }
+				scope:recipient = { is_gg_undecided_trigger = yes }
+			}
+			desc = RECIPIENT_IS_NOT_YOUR_GG
+		}
 	}
 
 	# Low starting obligations
@@ -1173,12 +1182,98 @@ force_vote_in_succession_election_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_gain
 			DESC = clan_unity_voted.desc
 			REVERSE_NON_HOUSE_TARGET = no
+		}
+	}
+}
+
+force_assembly_vote_interaction = {
+	is_valid = {
+		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
+		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
+	}
+
+	is_shown = {
+		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
+		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
+	}
+
+	category = interaction_category_diplomacy
+	filter_tags = { assembly_interaction }
+	special_interaction = force_assembly_vote
+	icon = scroll_scales
+
+	greeting = positive
+	notification_text = FORCE_ASSEMBLY_VOTE_INTERACTION_NOTIFICATION
+	force_notification = yes
+
+	desc = force_assembly_vote_interaction_desc
+
+	auto_accept = yes
+
+	is_valid_showing_failures_only = {
+		custom_description = {
+			text = must_have_usable_hook_blocker
+			subject = scope:actor
+			object = scope:recipient
+
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+
+		custom_description = {
+			text = must_have_ongoing_session
+
+			scope:actor = {
+				ongoing_voting_session = yes
+			}
+		}
+
+		custom_description = {
+			text = target_already_forced
+			object = scope:recipient
+
+			scope:recipient = {
+				is_forced_voter = no
+			}
+		}
+
+		custom_description = {
+			text = target_not_law_proposer
+			object = scope:recipient
+
+			NOT = { scope:actor.law_proposer ?= scope:recipient }
+		}
+	}
+
+	is_highlighted = {
+		scope:actor = {
+			has_usable_hook = scope:recipient
+			ongoing_voting_session = yes
+		}
+	}
+
+	should_use_extra_icon = {
+		scope:actor = { has_usable_hook = scope:recipient }
+	}
+	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
+
+	on_accept = {
+		scope:actor = {
+			send_interface_message = {
+				type = event_title_good
+				title = force_assembly_vote_interaction
+				right_icon = scope:recipient
+
+				use_hook = scope:recipient
+				custom_tooltip = msg_force_assembly_vote_message
+			}
 		}
 	}
 }
@@ -1473,7 +1568,7 @@ grant_independence_interaction = {
 							exists = dynasty
 							NOT = {
 								any_held_title = {
-									 is_de_jure_liege_or_above_target = scope:recipient.primary_title
+ 									is_de_jure_liege_or_above_target = scope:recipient.primary_title
 								}
 							}
 							any_character_struggle = {
@@ -1648,7 +1743,7 @@ grant_independence_interaction = {
 
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = medium_unity_loss
@@ -1768,6 +1863,10 @@ expose_secret_interaction = {
 				every_known_secret = {
 					limit = {
 						secret_owner = scope:recipient
+						NOR = {
+							secret_target ?= scope:puppet_or_actor
+							any_secret_participant = { this = scope:puppet_or_actor }
+						}
 					}
 					expose_secret = scope:puppet_or_actor
 				}
@@ -1838,7 +1937,7 @@ expose_secret_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = major_unity_loss
@@ -1969,5 +2068,23 @@ expose_secret_interaction = {
 		evaluate_action_decreasing_house_unity = {
 			VALUE = 100
 		}
+
+		modifier = {
+			NOT = { exists = scope:target }
+			scope:recipient = {
+				NOT = {
+					any_secret = {
+						is_known_by = scope:puppet_or_actor
+						NOR = {
+							secret_target ?= scope:puppet_or_actor
+							any_secret_participant = { this = scope:puppet_or_actor }
+						}
+					}
+				}
+			}
+			factor = 0
+		}
 	}
 }
+
+

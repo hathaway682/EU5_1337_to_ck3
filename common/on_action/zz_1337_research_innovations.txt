@@ -1,0 +1,1154 @@
+# 1337 culture innovations that require Silk Road registration or span eras.
+on_game_start = {
+	on_actions = { eu5_1337_research_innovations }
+}
+
+eu5_1337_research_innovations = {
+	effect = {
+		if = {
+			limit = { game_start_date = 1337.4.1 }
+			culture:turkmen = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:oirat = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = grenades }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:kirghiz = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+			}
+			culture:bedouin = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+			}
+			culture:acehnese = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = bulkheads }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+			}
+			culture:afghan = {
+				add_innovation = innovation_bricks
+			}
+			culture:andalusian = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = grenades }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:aragonese = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = composite_crossbow }
+				}
+			}
+			culture:armenian = {
+				add_innovation = innovation_machicolations
+				add_innovation = innovation_sappers
+			}
+			culture:ashkenazi = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = double_entry_bookkeeping }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+			}
+			culture:assamese = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = champa_rice }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+			}
+			culture:assyrian = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+			}
+			culture:bai = {
+				add_innovation = innovation_bricks
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquerware }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = tea_culture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:baranis = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:basque = {
+				add_innovation = innovation_pilot_books
+				add_innovation = innovation_tempered_steel
+			}
+			culture:bavarian = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+			}
+			culture:bavlim = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = double_entry_bookkeeping }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+			}
+			culture:bengali = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:bodpa = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquered_armor }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = tea_culture }
+				}
+			}
+			culture:bolghar = {
+				add_innovation = innovation_bricks
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:bosnian = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+			}
+			culture:bouxcuengh = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = champa_rice }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:breton = {
+				add_innovation = innovation_pilot_books
+			}
+			culture:burmese = {
+				add_innovation = innovation_bricks
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = champa_rice }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquerware }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:carantanian = {
+				add_innovation = innovation_deep_mining
+			}
+			culture:catalan = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = composite_crossbow }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = double_entry_bookkeeping }
+				}
+			}
+			culture:cham = {
+				add_innovation = innovation_bricks
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = bulkheads }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = champa_rice }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+			}
+			culture:cisalpine = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = composite_crossbow }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = double_entry_bookkeeping }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+			}
+			culture:cornish = {
+				add_innovation = innovation_deep_mining
+			}
+			culture:croatian = {
+				add_innovation = innovation_currency_04
+				add_innovation = innovation_pilot_books
+			}
+			culture:czech = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+			}
+			culture:danish = {
+				add_innovation = innovation_bricks
+			}
+			culture:daylamite = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+			}
+			culture:egyptian = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = grenades }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:franconian = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+			}
+			culture:frisian = {
+				add_innovation = innovation_wierdijks
+			}
+			culture:gaelic = {
+				add_innovation = innovation_rectilinear_schiltron
+			}
+			culture:galician = {
+				add_innovation = innovation_pilot_books
+			}
+			culture:geatish = {
+				add_innovation = innovation_bricks
+			}
+			culture:goryeo = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = double_entry_bookkeeping }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = dragon_kiln }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = grenades }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquered_armor }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquerware }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = tea_culture }
+				}
+			}
+			culture:greek = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+			}
+			culture:gujarati = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = double_entry_bookkeeping }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:han = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = bulkheads }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = champa_rice }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = coking }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = composite_crossbow }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = double_entry_bookkeeping }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = dragon_kiln }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = grenades }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquered_armor }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquerware }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = tea_culture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:hebrew = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = double_entry_bookkeeping }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+			}
+			culture:hindustani = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:hungarian = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+				add_innovation = innovation_deep_mining
+			}
+			culture:italian = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = composite_crossbow }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = double_entry_bookkeeping }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+			}
+			culture:italo_norman = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+			}
+			culture:japanese = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = champa_rice }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = grenades }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquered_armor }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquerware }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = tea_culture }
+				}
+			}
+			culture:javanese = {
+				add_innovation = innovation_bricks
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = bulkheads }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:jurchen = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = coking }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = grenades }
+				}
+				add_innovation = innovation_gunpowder
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquered_armor }
+				}
+			}
+			culture:kannada = {
+				add_innovation = innovation_deccan_unity
+			}
+			culture:karluk = {
+				add_innovation = innovation_bricks
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:kuzhu_moghol = {
+				add_innovation = innovation_bricks
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:kashmiri = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+			}
+			culture:khitan = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquered_armor }
+				}
+			}
+			culture:khmer = {
+				add_innovation = innovation_bricks
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = champa_rice }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquerware }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:khmu = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = champa_rice }
+				}
+			}
+			culture:khwarezmian = {
+			}
+			culture:kochinim = {
+				add_innovation = innovation_currency_04
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = double_entry_bookkeeping }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+			}
+			culture:kurdish = {
+				add_innovation = innovation_sappers
+			}
+			culture:levantine = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = grenades }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:lhomon = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = tea_culture }
+				}
+			}
+			culture:maghrebi = {
+				add_innovation = innovation_agronomy
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				add_innovation = innovation_machicolations
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:malay = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = bulkheads }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				add_innovation = innovation_pilot_books
+			}
+			culture:mon = {
+				add_innovation = innovation_bricks
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = champa_rice }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquerware }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:mongol = {
+				add_innovation = innovation_standing_armies
+				add_innovation = innovation_currency_04
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = grenades }
+				}
+				add_innovation = innovation_gunpowder
+			}
+			culture:mustaarabi = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = double_entry_bookkeeping }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+			}
+			culture:nepali = {
+				add_innovation = innovation_bricks
+			}
+			culture:novgorodian = {
+				add_innovation = innovation_bricks
+			}
+			culture:occitan = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = double_entry_bookkeeping }
+				}
+			}
+			culture:ongud = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+				}
+			}
+			culture:persian = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:polabian = {
+				add_innovation = innovation_bricks
+			}
+			culture:polish = {
+				add_innovation = innovation_bricks
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+			}
+			culture:pommeranian = {
+				add_innovation = innovation_bricks
+			}
+			culture:portuguese = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+			}
+			culture:punjabi = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:radhanite = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = double_entry_bookkeeping }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+			}
+			culture:ryukyuan = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquerware }
+				}
+				add_innovation = innovation_pilot_books
+			}
+			culture:sardinian = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+				add_innovation = innovation_deep_mining
+			}
+			culture:saxon = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+			}
+			culture:sephardi = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = double_entry_bookkeeping }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+			}
+			culture:serbian = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+				add_innovation = innovation_deep_mining
+			}
+			culture:shatuo = {
+			}
+			culture:sicilian = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:sindhi = {
+				add_innovation = innovation_bricks
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:sinhala = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:slovien = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+				add_innovation = innovation_deep_mining
+			}
+			culture:sogdian = {
+			}
+			culture:somali = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+			}
+			culture:sumpa = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = tea_culture }
+				}
+			}
+			culture:swahili = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				add_innovation = innovation_pilot_books
+			}
+			culture:swedish = {
+				add_innovation = innovation_bricks
+				add_innovation = innovation_deep_mining
+			}
+			culture:tai = {
+				add_innovation = innovation_bricks
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = champa_rice }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquerware }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:tajik = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:tamil = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:tangut = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquered_armor }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+				}
+			}
+			culture:telugu = {
+				add_innovation = innovation_deccan_unity
+			}
+			culture:tocharian = {
+			}
+
+			culture:tuyuhun = {
+			}
+			culture:uyghur = {
+				add_innovation = innovation_agronomy
+				add_innovation = innovation_currency_04
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:viet = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = bulkheads }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = champa_rice }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = dragon_kiln }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = fire_medicine }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = grenades }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquered_armor }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquerware }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = sericulture }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:yemeni = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = compass }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = pharmacopoeia }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = waterworks }
+				}
+			}
+			culture:yi = {
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = cupellation }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = lacquered_armor }
+				}
+				if = {
+					limit = { OR = { has_tgp_dlc_trigger = yes has_gdp_dlc_trigger = yes } }
+					tgp_silk_road_innovation_setup_add_effect = { INNOVATION = tea_culture }
+				}
+			}
+			culture:yughur = {
+			}
+		}
+	}
+}

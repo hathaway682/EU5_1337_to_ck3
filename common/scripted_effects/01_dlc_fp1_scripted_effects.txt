@@ -285,24 +285,24 @@ found_capital_of_rus_scripted_effect = {
 	scope:new_rus_capital = {
 		#Boost local development a few levels; majority of development gain is handled in the modifiers now.
 		if = {
-			limit = { development_level < 5 }
-			change_development_level = {
+			limit = { prosperity_level < 5 }
+			change_prosperity_level = {
 				value = 5
-				subtract = scope:new_rus_capital.development_level
+				subtract = scope:new_rus_capital.prosperity_level
 			}
 		}
 		else_if = {
-			limit = { development_level < 8 }
-			change_development_level = {
+			limit = { prosperity_level < 8 }
+			change_prosperity_level = {
 				value = 8
-				subtract = scope:new_rus_capital.development_level
+				subtract = scope:new_rus_capital.prosperity_level
 			}
 		}
 		else_if = {
-			limit = { development_level < 12 }
-			change_development_level = {
+			limit = { prosperity_level < 12 }
+			change_prosperity_level = {
 				value = 12
-				subtract = scope:new_rus_capital.development_level
+				subtract = scope:new_rus_capital.prosperity_level
 			}
 		}
 		#If control is less than full, boost it to full.
@@ -403,7 +403,7 @@ elevate_mann_and_the_isles_scripted_effect = {
 			add_province_modifier = elevate_mann_and_the_isles_modifier
 		}
 		# And a decent development boost.
-		change_development_level = medium_development_level_gain
+		change_prosperity_level = medium_development_level_gain
 	}
 	# Make it your capital if it wasn't already.
 	if = {

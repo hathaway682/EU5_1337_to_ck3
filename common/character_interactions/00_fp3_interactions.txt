@@ -16,7 +16,7 @@ fp3_demand_submission_interaction = {
 
 	greeting = positive
 	notification_text = DEMAND_SUBMISSION_NOTIFICATION
-
+	
 	is_available = {
 		trigger_if = {
 			limit = { is_ai = yes }
@@ -41,7 +41,7 @@ fp3_demand_submission_interaction = {
 
 	ai_min_reply_days = 2
 	ai_max_reply_days = 7
-
+	
 	ai_accept = {
 		base = 0
 		# This is more flavorful than "base acceptance"
@@ -210,7 +210,7 @@ fp3_demand_submission_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = medium_unity_gain
@@ -237,7 +237,7 @@ fp3_demand_submission_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = medium_unity_loss
@@ -265,7 +265,7 @@ fp3_demand_submission_interaction = {
 		empire = 12
 		hegemony = 12
 	}
-
+	
 	# Very similar to ai_accept, but ignores effects that are < 10 in value for brevity's sake
 	ai_will_do = {
 		# The caliph generally _wants_ to be chucking these out all over the place.
@@ -493,7 +493,7 @@ fp3_request_turkic_invasion_interaction = {
 			}
 		}
 	}
-
+	
 	send_options_exclusive = no
 
 	send_option = {
@@ -508,7 +508,7 @@ fp3_request_turkic_invasion_interaction = {
 					is_allied_to = scope:recipient
 					has_truce = scope:recipient
 				}
-				tgp_is_hegemon_or_below_in_dynastic_cycle_trigger = no
+				tgp_is_hegemon_or_below_in_dynastic_cycle_trigger = no				
 			}
 		}
 	}
@@ -665,7 +665,7 @@ fp3_request_turkic_invasion_interaction = {
 						random_realm_county = { save_scope_as = invasion_target_title }
 					}
 				}
-
+				
 				scope:invasion_target_title.duchy = { save_scope_as = text_title }
 
 				hidden_effect = { # Not worth cluttering the UI with
@@ -764,10 +764,10 @@ fp3_request_turkic_invasion_interaction = {
 				if = {
 					limit = { scope:war_support = yes }
 					custom_tooltip = fp3_request_turkic_invasion_interaction_option_join_war_outcome_tooltip
-					trigger_event = fp3_misc_decisions.0005
+					trigger_event = fp3_misc_decisions.0005 
 				}
 			}
-
+			
 			scope:actor = {
 				hidden_effect = {
 					send_interface_toast = {
@@ -775,7 +775,7 @@ fp3_request_turkic_invasion_interaction = {
 						title = fp3_request_turkic_invasion_interaction_accept_notification.t
 						left_icon = scope:secondary_recipient
 						right_icon = scope:recipient
-
+	
 						show_as_tooltip = {
 							custom_tooltip = fp3_request_turkic_invasion_interaction_accept_notification.desc
 						}
@@ -799,7 +799,7 @@ fp3_request_turkic_invasion_interaction = {
 					}
 				}
 			}
-
+			
 			scope:recipient = {
 				add_character_flag = {
 					flag = incursion_ai_pacing
@@ -811,7 +811,7 @@ fp3_request_turkic_invasion_interaction = {
 						title = fp3_request_turkic_invasion_interaction_accept_notification.t
 						left_icon = scope:secondary_recipient
 						right_icon = scope:actor
-
+	
 						show_as_tooltip = {
 							custom_tooltip = fp3_request_turkic_invasion_interaction_accept_target_notification.desc
 						}
@@ -969,6 +969,15 @@ fp3_request_turkic_invasion_interaction = {
 		empire = 24
 		hegemony = 24
 	}
+	ai_frequency_by_tier_government_override = {
+		government = merchant_government
+		barony = 0
+		county = 216
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
 	ai_targets = {
 		ai_recipients = neighboring_rulers
 		ai_recipients = liege
@@ -1059,7 +1068,7 @@ fp3_challenge_house_head_interaction = {
 	popup_on_receive = yes
 	pause_on_receive = yes
 	use_diplomatic_range = no
-
+	can_send_despite_rejection = yes
 	interface_priority = 107
 
 	desc = fp3_challenge_house_head_interaction_desc
@@ -1073,11 +1082,11 @@ fp3_challenge_house_head_interaction = {
 			desc = fp3_challenge_house_head_interaction_notification
 		}
 	}
-
+	
 	greeting = positive
 
 	ai_maybe = yes
-
+	
 	cooldown_against_recipient = { years = 10 }
 
 	is_available = {
@@ -1095,16 +1104,22 @@ fp3_challenge_house_head_interaction = {
 	is_shown = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
-		has_fp3_dlc_trigger = yes
 		scope:actor = {
 			this != scope:recipient
 			house ?= {
 				house_head ?= scope:recipient
 				OR = {
-					has_house_unity_parameter = unity_can_challenge_house_head
-					house_head ?= { government_is_japanese_trigger = yes }
+					OR = {
+						has_house_unity_parameter = unity_can_challenge_house_head
+						has_house_unity_parameter = unity_much_more_likely_to_challenge_house_head
+						has_house_unity_parameter = unity_more_likely_to_challenge_house_head
+					}
 					scope:actor = {
 						any_character_struggle = { has_struggle_phase_parameter = unlocks_challenge_house_head_for_clans }
+					}
+					AND = {
+						scope:actor = { government_is_japanese_trigger = yes }
+						house_head = { government_is_japanese_trigger = yes }
 					}
 				}
 			}
@@ -1119,12 +1134,17 @@ fp3_challenge_house_head_interaction = {
 		scope:recipient = {
 			is_at_war = no
 			is_available_adult = yes
-			# Stop challenges from barons and counts against kings
-			custom_tooltip = {
-				text = fp3_challenge_house_head_interaction_tier_tt
-				tier_difference = {
-					target = scope:actor
-					value <= 1
+			trigger_if = {
+				limit = {
+					scope:actor = { is_landed = yes }
+				}
+				# Stop challenges from barons and counts against kings
+				custom_tooltip = {
+					text = fp3_challenge_house_head_interaction_tier_tt
+					tier_difference = {
+						target = scope:actor
+						value <= 1
+					}
 				}
 			}
 			# Give some respite after a recent challenge
@@ -1135,7 +1155,7 @@ fp3_challenge_house_head_interaction = {
 			tgp_is_ceremonial_liege_trigger = no
 		}
 	}
-
+	
 	auto_accept = {
 		trigger_if = {
 			limit = {
@@ -1169,7 +1189,7 @@ fp3_challenge_house_head_interaction = {
 		}
 		trigger_else = { always = no }
 	}
-
+	
 	can_send = {
 		scope:actor = {
 			# Do not allow house heads who accepted a challenge to ping pong back and forth
@@ -1224,7 +1244,7 @@ fp3_challenge_house_head_interaction = {
 					trigger_event = fp3_misc_decisions.0026
 					scope:house_head = { custom_tooltip = fp3_challenge_house_head_interaction_tooltip_recipient.diplomacy }
 					house = {
-						add_clan_unity_interaction_effect = {
+						add_house_unity_interaction_effect = {
 							CHARACTER = scope:house_challenger
 							TARGET = scope:house_head
 							VALUE = minor_unity_loss
@@ -1239,7 +1259,7 @@ fp3_challenge_house_head_interaction = {
 						custom_tooltip = fp3_challenge_house_head_interaction_tooltip_actor.a
 						scope:house_head = { custom_tooltip = fp3_challenge_house_head_interaction_tooltip_recipient.b }
 						house = {
-							add_clan_unity_interaction_effect = {
+							add_house_unity_interaction_effect = {
 								CHARACTER = scope:house_challenger
 								TARGET = scope:house_head
 								VALUE = minor_unity_loss
@@ -1247,12 +1267,12 @@ fp3_challenge_house_head_interaction = {
 								REVERSE_NON_HOUSE_TARGET = yes
 							}
 						}
-					}
+					} 
 					else = {
 						custom_tooltip = fp3_challenge_house_head_interaction_tooltip_actor.a.lethal
 						scope:house_head = { custom_tooltip = fp3_challenge_house_head_interaction_tooltip_recipient.b.lethal }
 						house = {
-							add_clan_unity_interaction_effect = {
+							add_house_unity_interaction_effect = {
 								CHARACTER = scope:house_challenger
 								TARGET = scope:house_head
 								VALUE = major_unity_loss
@@ -1436,8 +1456,14 @@ fp3_challenge_house_head_interaction = {
 			opinion_target = scope:actor
 			multiplier = 0.5
 		}
+		modifier = {
+			add = -150
+			scope:actor = { is_ruler = no }
+			scope:recipient = { is_ruler = yes }
+			desc = AI_NOT_A_RULER
+		}
 	}
-
+	
 	ai_frequency_by_tier = {
 		barony = 0
 		county = 36
@@ -1446,11 +1472,11 @@ fp3_challenge_house_head_interaction = {
 		empire = 1
 		hegemony = 1
 	}
-
+	
 	ai_target_quick_trigger = {
 		adult = yes
 	}
-
+	
 	ai_targets = {
 		ai_recipients = dynasty
 		ai_recipients = family
@@ -1470,11 +1496,11 @@ fp3_challenge_house_head_interaction = {
 		ai_recipients = neighboring_rulers
 		max = 30
 	}
-
+	
 	ai_will_do = {
 		base = 5
 		# Base requirements for AI
-		modifier = {
+		modifier = { 
 			add = -1000
 			AND = {
 				NOT = {
@@ -1580,13 +1606,22 @@ fp3_challenge_house_head_interaction = {
 			scope:recipient = { is_faith_dominant_gender = no }
 			factor = 2
 		}
-		# Stop AI constantly challenging players
+		# Low Unity
 		modifier = {
+			scope:actor.house = { has_house_unity_parameter = unity_more_likely_to_challenge_house_head }
+			factor = 1.5
+		}
+		modifier = {
+			scope:actor.house = { has_house_unity_parameter = unity_much_more_likely_to_challenge_house_head }
+			factor = 2
+		}
+		# Stop AI constantly challenging players
+		modifier = { 
 			scope:recipient = { has_character_flag = ai_cooldown_house_head_challenge_flag }
 			factor = 0
 		}
 		# Stop AI game-overing players
-		modifier = {
+		modifier = { 
 			scope:recipient = {
 				trigger_if = {
 					limit = { is_ai = no }
@@ -1897,7 +1932,7 @@ fp3_change_allegiance = {
 			}
 		}
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = medium_unity_gain
@@ -1984,7 +2019,7 @@ fp3_change_allegiance = {
 	}
 
 	on_decline = {
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = medium_unity_loss
@@ -2077,7 +2112,7 @@ fp3_change_allegiance = {
 			has_title = title:d_sunni
 			add = 200
 		}
-
+		
 		###############
 		## TRAITS
 		###############
@@ -2117,8 +2152,6 @@ fp3_change_allegiance = {
 				OR = {
 					has_relation_friend = scope:actor
 					has_relation_lover = scope:actor
-					has_relation_soulmate = scope:actor
-					has_relation_best_friend = scope:actor
 				}
 			}
 		}
@@ -2136,10 +2169,7 @@ fp3_change_allegiance = {
 		modifier = {
 			add = -1000
 			scope:recipient = {
-				OR = {
-					has_relation_rival = scope:actor
-					has_relation_nemesis = scope:actor
-				}
+				has_relation_rival = scope:actor
 			}
 		}
 
@@ -2237,26 +2267,26 @@ fp3_request_honorary_titles_interaction = {
 				house ?= {
 					NAND = {
 						any_house_member = {
-							has_character_modifier = fp3_honorary_title_intrigue_modifier
+				 			has_character_modifier = fp3_honorary_title_intrigue_modifier
 						}
 						any_house_member = {
-							has_character_modifier = fp3_honorary_title_scholarship_modifier
+				 			has_character_modifier = fp3_honorary_title_scholarship_modifier
 						}
 
 						any_house_member = {
-							has_character_modifier = fp3_honorary_title_stewardship_modifier
+				 			has_character_modifier = fp3_honorary_title_stewardship_modifier
 						}
 						any_house_member = {
-							has_character_modifier = fp3_honorary_title_diplomacy_modifier
+				 			has_character_modifier = fp3_honorary_title_diplomacy_modifier
 						}
 						any_house_member = {
-							has_character_modifier = fp3_honorary_title_piety_modifier
+				 			has_character_modifier = fp3_honorary_title_piety_modifier
 						}
 						any_house_member = {
-							has_character_modifier = fp3_honorary_title_prestige_modifier
+				 			has_character_modifier = fp3_honorary_title_prestige_modifier
 						}
 						any_house_member = {
-							has_character_modifier = fp3_honorary_title_martial_modifier
+				 			has_character_modifier = fp3_honorary_title_martial_modifier
 						}
 					}
 				}
@@ -2272,7 +2302,7 @@ fp3_request_honorary_titles_interaction = {
 				scope:actor = {
 					house ?= {
 						any_house_member = {
-							has_character_modifier = fp3_honorary_title_intrigue_modifier
+				 			has_character_modifier = fp3_honorary_title_intrigue_modifier
 						}
 					}
 				}
@@ -2288,7 +2318,7 @@ fp3_request_honorary_titles_interaction = {
 				scope:actor = {
 					house ?= {
 						any_house_member = {
-							has_character_modifier = fp3_honorary_title_scholarship_modifier
+				 			has_character_modifier = fp3_honorary_title_scholarship_modifier
 						}
 					}
 				}
@@ -2304,7 +2334,7 @@ fp3_request_honorary_titles_interaction = {
 				scope:actor = {
 					house ?= {
 						any_house_member = {
-							has_character_modifier = fp3_honorary_title_stewardship_modifier
+				 			has_character_modifier = fp3_honorary_title_stewardship_modifier
 						}
 					}
 				}
@@ -2320,7 +2350,7 @@ fp3_request_honorary_titles_interaction = {
 				scope:actor = {
 					house ?= {
 						any_house_member = {
-							has_character_modifier = fp3_honorary_title_diplomacy_modifier
+				 			has_character_modifier = fp3_honorary_title_diplomacy_modifier
 						}
 					}
 				}
@@ -2336,7 +2366,7 @@ fp3_request_honorary_titles_interaction = {
 				scope:actor = {
 					house ?= {
 						any_house_member = {
-							has_character_modifier = fp3_honorary_title_piety_modifier
+				 			has_character_modifier = fp3_honorary_title_piety_modifier
 						}
 					}
 				}
@@ -2352,7 +2382,7 @@ fp3_request_honorary_titles_interaction = {
 				scope:actor = {
 					house ?= {
 						any_house_member = {
-							has_character_modifier = fp3_honorary_title_prestige_modifier
+				 			has_character_modifier = fp3_honorary_title_prestige_modifier
 						}
 					}
 				}
@@ -2368,7 +2398,7 @@ fp3_request_honorary_titles_interaction = {
 				scope:actor = {
 					house ?= {
 						any_house_member = {
-							has_character_modifier = fp3_honorary_title_martial_modifier
+				 			has_character_modifier = fp3_honorary_title_martial_modifier
 						}
 					}
 				}

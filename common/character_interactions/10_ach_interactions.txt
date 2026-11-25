@@ -9,6 +9,8 @@
 
 	desc = coronation_anointment_request_desc
 
+	use_diplomatic_range = no
+
 	ai_targets = {
 		ai_recipients = head_of_faith
 		ai_recipients = head_of_rite
@@ -27,7 +29,7 @@
 	}
 	popup_on_receive = yes
 	pause_on_receive = yes
-
+	
 	cooldown_against_recipient = { years = 5 }
 
 	is_available = {
@@ -282,7 +284,7 @@
 				has_trait = murderer
 			}
 		}
-
+		
 		modifier = { # I am Incestous
 			add = -50
 			desc = I_AM_INCESTOUS
@@ -291,7 +293,7 @@
 				has_trait = incestuous
 			}
 		}
-
+			
 		modifier = { # I am a Kinslayer
 			add = -30
 			desc = I_AM_A_KINSLAYER
@@ -404,7 +406,7 @@
 				has_trait = consecrated_blood
 			}
 		}
-
+		
 		modifier = { # You are of the same dynasty as the Head of Faith
 			add = 5
 			desc = YOU_ARE_MY_DYNASTY_MEMBER
@@ -419,7 +421,7 @@
 				}
 			}
 		}
-
+		
 		modifier = { # You are of the same house as the Head of Faith
 			add = 10
 			desc = YOU_ARE_MY_HOUSE_MEMBER
@@ -434,7 +436,7 @@
 				}
 			}
 		}
-
+		
 		modifier = { # Related to the Head of Faith
 			add = 10
 			desc = YOU_ARE_MY_RELATIVE
@@ -446,7 +448,7 @@
 				NOT = { is_child_of = scope:actor }
 			}
 		}
-
+		
 		modifier = { # Parent of the Head of Faith
 			add = 25
 			desc = YOU_ARE_MY_PARENT
@@ -454,7 +456,7 @@
 				is_child_of = scope:actor
 			}
 		}
-
+		
 		modifier = { # Friend of the Head of Faith
 			add = 25
 			desc = WE_ARE_FRIENDS
@@ -462,7 +464,7 @@
 				has_relation_friend = scope:actor
 			}
 		}
-
+		
 		modifier = { # Best Friend of the Head of Faith
 			add = 50
 			desc = WE_ARE_BEST_FRIENDS
@@ -470,7 +472,7 @@
 				has_relation_best_friend = scope:actor
 			}
 		}
-
+		
 		modifier = { # Lover of the Head of Faith
 			add = 10
 			desc = WE_ARE_LOVERS
@@ -478,7 +480,7 @@
 				has_relation_lover = scope:actor
 			}
 		}
-
+		
 		modifier = { # Rival of the Head of Faith
 			add = -100
 			desc = WE_ARE_RIVALS
@@ -486,7 +488,7 @@
 				has_relation_rival = scope:actor
 			}
 		}
-
+		
 		modifier = { # Nemesis of the Head of Faith
 			add = -500
 			desc = WE_ARE_NEMESES
@@ -503,7 +505,7 @@
 			scope:actor.num_virtuous_traits > 0
 			desc = I_AM_VIRTUOUS
 		}
-
+		
 		modifier = {
 			add = {
 				add = 5
@@ -524,7 +526,7 @@
 			scope:actor.piety_level = 1
 			desc = I_HAVE_LOW_PIETY
 		}
-
+		
 		modifier = {
 			add = {
 				add = 5
@@ -534,7 +536,7 @@
 			scope:actor.gold < 0
 			desc = I_AM_PIOUS_AND_BROKE
 		}
-
+		
 		modifier = {
 			add = {
 				add = -10
@@ -639,7 +641,7 @@
 			}
 			desc = I_HAVE_DECADENT_TRAIT
 		}
-
+		
 		modifier = {
 			add = -25
 			desc = BASE_RELUCTANCE
@@ -650,7 +652,7 @@
 				}
 			}
 		}
-
+		
 		modifier = {
 			add = -75
 			desc = BASE_RELUCTANCE
@@ -702,7 +704,7 @@
 		}
 		modifier = {
 			add = -20
-			scope:recipient = {
+			scope:recipient = { 
 				faith_dominant_gender_female_or_equal = no
 			}
 			scope:actor = {
@@ -712,7 +714,7 @@
 		}
 		modifier = {
 			add = -20
-			scope:recipient = {
+			scope:recipient = { 
 				faith_dominant_gender_male_or_equal = no
 			}
 			scope:actor = {
@@ -922,6 +924,17 @@
 	}
 
 	on_decline = {
+		if = {
+			limit = {
+				scope:actor = { has_title = title:e_hre }
+				scope:recipient = { has_title = title:k_papal_state }
+			}
+			gg_triggered_catalyst_effect = {
+				ACTOR = scope:recipient
+				RECIPIENT = scope:actor
+				CATALYST = catalyst_gg_anointment_refused
+			}
+		}
 		scope:actor = {
 			add_opinion = {
 				target = scope:recipient

@@ -66,9 +66,15 @@ invite_to_house_bloc_interaction = {
 			limit = {
 				is_ai = yes
 			}
+			is_at_war = no
 			OR = {
 				is_landed = yes
 				tgp_is_ceremonial_liege_trigger = yes
+			}
+			tgp_house_bloc_interaction_valid_showing_failures_trigger = yes
+			trigger_if = {
+				limit = { exists = confederation }
+				confederation.leading_house = house
 			}
 			trigger_if = {
 				limit = {
@@ -403,23 +409,23 @@ invite_to_house_bloc_interaction = {
 	}
 
 	ai_accept = {
-		 base = -50
-		 # Bribes
-		 modifier = {
-			 scope:gold = yes
-			 add = 25
+ 		base = -50
+ 		# Bribes
+ 		modifier = {
+ 			scope:gold = yes
+ 			add = 25
 			desc = TRADE_GOLD_FOR_BETTER_AI_ACCEPTANCE_TT
-		 }
-		 modifier = {
-			 scope:prestige = yes
-			 add = 25
+ 		}
+ 		modifier = {
+ 			scope:prestige = yes
+ 			add = 25
 			desc = PRESTIGE_INTERACTION_ACCEPTANCE_SEND_OPTION
-		 }
-		 modifier = {
-			 scope:influence = yes
-			 add = 25
+ 		}
+ 		modifier = {
+ 			scope:influence = yes
+ 			add = 25
 			desc = INFLUENCE_INTERACTION_ACCEPTANCE_SEND_OPTION
-		 }
+ 		}
 		modifier = {
 			add = 20
 			scope:offer_hook = yes
@@ -440,18 +446,18 @@ invite_to_house_bloc_interaction = {
 		}
 
 		# Bloc
-		 house_bloc_desire_to_join_modifiers = {
-			 JOINER = scope:recipient
-			 INVITER = scope:actor
-			 MULTIPLIER = 1
-		 }
+ 		house_bloc_desire_to_join_modifiers = {
+ 			JOINER = scope:recipient
+ 			INVITER = scope:actor
+ 			MULTIPLIER = 1
+ 		}
 
-		 # House Relations
-		 house_relation_ai_accept_modifiers = { # House Relations
-			 HOUSE_1_MEMBER = scope:actor
-			 HOUSE_2_MEMBER = scope:recipient
-			 MULTIPLIER = 1
-		 }
+ 		# House Relations
+ 		house_relation_ai_accept_modifiers = { # House Relations
+ 			HOUSE_1_MEMBER = scope:actor
+ 			HOUSE_2_MEMBER = scope:recipient
+ 			MULTIPLIER = 1
+ 		}
 	}
 
 	auto_accept = {
@@ -529,7 +535,7 @@ invite_to_house_bloc_interaction = {
 			add = 100
 		}
 		modifier = { # Encourage large houses to form blocs
-			 NOT = { exists = house.house_confederation }
+ 			NOT = { exists = house.house_confederation }
 			house = {
 				any_house_member = { count >= 20 }
 			}
@@ -540,27 +546,27 @@ invite_to_house_bloc_interaction = {
 			current_military_strength >= scope:recipient.current_military_strength
 			add = -250
 		}
-		 modifier = { # Encourage bringing in vassalized member's house heads
-			 is_independent_ruler = no
-			 any_vassal_or_below = {
-				 is_landed = yes
-				 highest_held_title_tier >= tier_county
-				 house = scope:recipient.house
-			 }
-			 add = 250
-		 }
-		 modifier = { # Encourage independent rulers to have a bloc
-			 is_independent_ruler = yes
-			 NOT = { exists = house.house_confederation }
-			 add = 200
-		 }
+ 		modifier = { # Encourage bringing in vassalized member's house heads
+ 			is_independent_ruler = no
+ 			any_vassal_or_below = {
+ 				is_landed = yes
+ 				highest_held_title_tier >= tier_county
+ 				house = scope:recipient.house
+ 			}
+ 			add = 250
+ 		}
+ 		modifier = { # Encourage independent rulers to have a bloc
+ 			is_independent_ruler = yes
+ 			NOT = { exists = house.house_confederation }
+ 			add = 200
+ 		}
 		modifier = { # Encourage inviting blocless landed rulers to your bloc
 			scope:recipient = {
 				is_landed = yes
 				NOT = { exists = house.house_confederation }
 			}
-			 add = 75
-		 }
+ 			add = 75
+ 		}
 		modifier = { # Cont. - specially if you are the bloc leader
 			scope:recipient = {
 				is_landed = yes
@@ -570,35 +576,35 @@ invite_to_house_bloc_interaction = {
 				exists = house.house_confederation
 				house.house_confederation.leading_house.house_head ?= this
 			}
-			 add = 100
-		 }
+ 			add = 100
+ 		}
 		modifier = { # Don't invite people of different House Aspiration
 			scope:recipient.house ?= {
 				NOT = { has_same_house_aspiration_as = scope:actor.house }
 			}
-			 add = -100
-		 }
+ 			add = -100
+ 		}
 		modifier = { # Cont - esp. if you have low Cohesion
 			exists = scope:recipient.house
 			scope:actor.house ?= {
 				house_confederation ?= { cohesion < 75 }
 				NOT = { has_same_house_aspiration_as = scope:recipient.house }
 			}
-			 add = -150
-		 }
+ 			add = -150
+ 		}
 		modifier = { # ...or different Government Type
 			scope:actor = {
 				NOT = { has_same_government = scope:recipient }
 			}
-			 add = -150
-		 }
+ 			add = -150
+ 		}
 		modifier = { # Cont - esp. if you have low Cohesion
 			scope:actor = {
 				house.house_confederation ?= { cohesion < 75 }
 				NOT = { has_same_government = scope:recipient }
 			}
-			 add = -100
-		 }
+ 			add = -100
+ 		}
 		modifier = { # Encourage creation of one of each type of bloc
 			NOR = {
 				exists = house.house_confederation
@@ -610,33 +616,33 @@ invite_to_house_bloc_interaction = {
 			}
 			add = 150
 		}
-		 modifier = { # Invite houses with good relations
-			 add = {
-				 value = 0
-				 scope:recipient.house = {
-					 every_house_relation = {
-						 limit = {
-							 any_relation_house = {
-								 NOT = { this = scope:recipient.house }
-								 house_confederation = scope:actor.house.house_confederation
-							 }
-						 }
-						 if = {
-							 limit = { has_house_relation_level = cordial }
-							 add = 10
-						 }
-						 else_if = {
-							 limit = { has_house_relation_level = friendly }
-							 add = 20
-						 }
-						 else_if = {
-							 limit = { has_house_relation_level = amity }
-							 add = 30
-						 }
-					 }
-				 }
-			 }
-		 }
+ 		modifier = { # Invite houses with good relations
+ 			add = {
+ 				value = 0
+ 				scope:recipient.house = {
+ 					every_house_relation = {
+ 						limit = {
+ 							any_relation_house = {
+ 								NOT = { this = scope:recipient.house }
+ 								house_confederation = scope:actor.house.house_confederation
+ 							}
+ 						}
+ 						if = {
+ 							limit = { has_house_relation_level = cordial }
+ 							add = 10
+ 						}
+ 						else_if = {
+ 							limit = { has_house_relation_level = friendly }
+ 							add = 20
+ 						}
+ 						else_if = {
+ 							limit = { has_house_relation_level = amity }
+ 							add = 30
+ 						}
+ 					}
+ 				}
+ 			}
+ 		}
 		modifier = { # Try to have a good number of blocs at all times
 			NOT = { exists = house.house_confederation }
 			# From someone that makes sense
@@ -662,7 +668,7 @@ invite_to_house_bloc_interaction = {
 				}
 			}
 			add = {
-				value = 0
+				value = 0 
 				scope:recipient.house = {
 					every_house_member = {
 						limit = {
@@ -733,6 +739,8 @@ join_house_bloc_interaction = {
 				is_landed = yes
 				tgp_is_ceremonial_liege_trigger = yes
 			}
+			tgp_house_bloc_interaction_valid_showing_failures_trigger = yes
+			NOT = { confederation.leading_house ?= house }
 		}
 		house.house_head ?= this
 		tgp_house_bloc_interaction_valid_trigger = yes
@@ -932,33 +940,33 @@ join_house_bloc_interaction = {
 	ai_accept = {
 		base = -25
 		modifier = {
-			 scope:gold = yes
-			 add = 25
+ 			scope:gold = yes
+ 			add = 25
 			desc = TRADE_GOLD_FOR_BETTER_AI_ACCEPTANCE_TT
-		 }
-		 modifier = {
-			 scope:prestige = yes
-			 add = 25
+ 		}
+ 		modifier = {
+ 			scope:prestige = yes
+ 			add = 25
 			desc = PRESTIGE_INTERACTION_ACCEPTANCE_SEND_OPTION
-		 }
-		 modifier = {
-			 scope:influence = yes
-			 add = 25
+ 		}
+ 		modifier = {
+ 			scope:influence = yes
+ 			add = 25
 			desc = INFLUENCE_INTERACTION_ACCEPTANCE_SEND_OPTION
-		 }
-		 opinion_modifier = { # Opinion of Joiner
+ 		}
+ 		opinion_modifier = { # Opinion of Joiner
 			who = scope:recipient
 			opinion_target = scope:actor
 			multiplier = 0.5
 			step = 5
 			max = 50
 		}
-		 house_relation_ai_accept_modifiers = {
-			 HOUSE_1_MEMBER = scope:recipient
-			 HOUSE_2_MEMBER = scope:actor
-			 MULTIPLIER = -1
-		 }
-		 modifier = { # Prefer landed members
+ 		house_relation_ai_accept_modifiers = {
+ 			HOUSE_1_MEMBER = scope:recipient
+ 			HOUSE_2_MEMBER = scope:actor
+ 			MULTIPLIER = -1
+ 		}
+ 		modifier = { # Prefer landed members
 			add = {
 				scope:actor.house = {
 					every_house_member = {
@@ -1113,11 +1121,11 @@ join_house_bloc_interaction = {
 			add = -150
 		}
 		house_relation_ai_accept_confederation_member_modifiers = { MULTIPLIER = 1 }
-		 house_bloc_desire_to_join_modifiers = {
-			 JOINER = scope:actor
-			 INVITER = scope:recipient
-			 MULTIPLIER = 0.5
-		 }
+ 		house_bloc_desire_to_join_modifiers = {
+ 			JOINER = scope:actor
+ 			INVITER = scope:recipient
+ 			MULTIPLIER = 0.5
+ 		}
 	}
 }
 
@@ -1144,6 +1152,7 @@ leave_house_bloc_interaction = {
 	}
 
 	is_available = {
+		government_has_flag = government_has_house_blocs
 		exists = house.house_confederation
 		house.house_head ?= this
 		NOT = { has_character_flag = recently_joined_bloc }
@@ -1247,34 +1256,34 @@ leave_house_bloc_interaction = {
 			add = 1000
 		}
 		modifier = {
-			 exists = scope:actor.house.house_confederation
-			 scope:actor.house.house_confederation.cohesion < 50
-			 add = {
-				 value = scope:actor.house.house_confederation.cohesion
-				 add = -50
-				 multiply = 1.25
-				 if = {
-					 limit = { scope:actor.house.house_confederation.cohesion < 25 }
-					 multiply = 4
-				 }
-			 }
-			 desc = AI_BLOC_COHESION_REASON
-		 }
+ 			exists = scope:actor.house.house_confederation
+ 			scope:actor.house.house_confederation.cohesion < 50
+ 			add = {
+ 				value = scope:actor.house.house_confederation.cohesion
+ 				add = -50
+ 				multiply = 1.25
+ 				if = {
+ 					limit = { scope:actor.house.house_confederation.cohesion < 25 }
+ 					multiply = 4
+ 				}
+ 			}
+ 			desc = AI_BLOC_COHESION_REASON
+ 		}
 		#Opinions
-		 opinion_modifier = {
-			 trigger = {
-				 NOT = { scope:actor.house.house_confederation.leading_house ?= scope:actor.house }
-			 }
-			 opinion_target = scope:actor.house.house_confederation.leading_house.house_head
-			 multiplier = -0.5
-			 step = 5
-			 max = 50
-		 }
-		 house_relation_ai_accept_modifiers = { # House Relations
-			 HOUSE_1_MEMBER = scope:actor
-			 HOUSE_2_MEMBER = scope:actor.house.house_confederation.leading_house.house_head
-			 MULTIPLIER = -2
-		 }
+ 		opinion_modifier = {
+ 			trigger = {
+ 				NOT = { scope:actor.house.house_confederation.leading_house ?= scope:actor.house }
+ 			}
+ 			opinion_target = scope:actor.house.house_confederation.leading_house.house_head
+ 			multiplier = -0.5
+ 			step = 5
+ 			max = 50
+ 		}
+ 		house_relation_ai_accept_modifiers = { # House Relations
+ 			HOUSE_1_MEMBER = scope:actor
+ 			HOUSE_2_MEMBER = scope:actor.house.house_confederation.leading_house.house_head
+ 			MULTIPLIER = -2
+ 		}
 		modifier = { # Different House Aspiration
 			exists = scope:actor.house.house_confederation.leading_house
 			scope:actor.house ?= {
@@ -1375,6 +1384,7 @@ kick_from_house_bloc_interaction = {
 	}
 
 	is_available = {
+		government_has_flag = government_has_house_blocs
 		tgp_house_bloc_interaction_valid_trigger = yes
 		house.house_confederation.leading_house ?= house
 		house.house_head ?= this
@@ -1465,45 +1475,45 @@ kick_from_house_bloc_interaction = {
 	ai_will_do = {
 		base = -75
 		#Opinions
-		 opinion_modifier = {
-			 opinion_target = scope:recipient.house.house_head
-			 multiplier = -0.5
-			 step = 5
-			 max = 25
-		 }
-		 # House Relations
-		 house_relation_ai_accept_modifiers = { # House Relations
-			 HOUSE_1_MEMBER = scope:actor
-			 HOUSE_2_MEMBER = scope:recipient
-			 MULTIPLIER = -1
-		 }
-		 modifier = {
-			 add = {
-				 value = 0
-				 scope:recipient.house = {
-					 every_house_relation = {
-						 limit = {
-							 any_relation_house = {
-								 NOT = { this = scope:recipient.house }
-								 house_confederation = scope:actor.house.house_confederation
-							 }
-						 }
-						 if = {
-							 limit = { has_house_relation_level = quarrel }
-							 add = 10
-						 }
-						 else_if = {
-							 limit = { has_house_relation_level = rivalry }
-							 add = 20
-						 }
-						 else_if = {
-							 limit = { has_house_relation_level = feud }
-							 add = 30
-						 }
-					 }
-				 }
-			 }
-		 }
+ 		opinion_modifier = {
+ 			opinion_target = scope:recipient.house.house_head
+ 			multiplier = -0.5
+ 			step = 5
+ 			max = 25
+ 		}
+ 		# House Relations
+ 		house_relation_ai_accept_modifiers = { # House Relations
+ 			HOUSE_1_MEMBER = scope:actor
+ 			HOUSE_2_MEMBER = scope:recipient
+ 			MULTIPLIER = -1
+ 		}
+ 		modifier = {
+ 			add = {
+ 				value = 0
+ 				scope:recipient.house = {
+ 					every_house_relation = {
+ 						limit = {
+ 							any_relation_house = {
+ 								NOT = { this = scope:recipient.house }
+ 								house_confederation = scope:actor.house.house_confederation
+ 							}
+ 						}
+ 						if = {
+ 							limit = { has_house_relation_level = quarrel }
+ 							add = 10
+ 						}
+ 						else_if = {
+ 							limit = { has_house_relation_level = rivalry }
+ 							add = 20
+ 						}
+ 						else_if = {
+ 							limit = { has_house_relation_level = feud }
+ 							add = 30
+ 						}
+ 					}
+ 				}
+ 			}
+ 		}
 		modifier = { # Kick out landless houses
 			exists = scope:recipient.house
 			scope:recipient = {
@@ -1597,13 +1607,20 @@ assume_house_bloc_leadership_interaction = {
 	}
 
 	is_available = {
-		tgp_house_bloc_interaction_valid_trigger = yes
+		government_has_flag = government_has_house_blocs
 		trigger_if = {
 			limit = {
 				is_ai = yes
 			}
 			is_landed = yes
+			is_at_war = no
+			tgp_house_bloc_interaction_valid_showing_failures_trigger = yes
+			NOR = {
+				house.house_confederation ?= { has_variable = recent_leader_change }
+				house ?= { has_variable = recently_joined_bloc }
+			}
 		}
+		tgp_house_bloc_interaction_valid_trigger = yes
 		house.house_head ?= this
 		exists = house.house_confederation.leading_house
 		house.house_confederation.leading_house != house
@@ -1823,36 +1840,34 @@ assume_house_bloc_leadership_interaction = {
 	}
 
 	ai_targets = {
-		ai_recipients = confederation_house_heads
-		ai_recipients = liege
-		max = 25
+		ai_recipients = self # The redirect always goes to the bloc's leader for every member
 	}
 
 	ai_will_do = {
 		base = -50
 		#Opinions
-		 opinion_modifier = {
-			 opinion_target = scope:recipient.house.house_head
-			 multiplier = -0.5
-			 step = 5
-			 max = 25
-		 }
-		 modifier = {
-			 has_trait = content
-			 add = -25
-		 }
-		 modifier = {
-			 has_trait = generous
-			 add = -25
-		 }
-		 modifier = {
-			 has_trait = ambitious
-			 add = 25
-		 }
-		 modifier = {
-			 has_trait = greedy
-			 add = 25
-		 }
+ 		opinion_modifier = {
+ 			opinion_target = scope:recipient.house.house_head
+ 			multiplier = -0.5
+ 			step = 5
+ 			max = 25
+ 		}
+ 		modifier = {
+ 			has_trait = content
+ 			add = -25
+ 		}
+ 		modifier = {
+ 			has_trait = generous
+ 			add = -25
+ 		}
+ 		modifier = {
+ 			has_trait = ambitious
+ 			add = 25
+ 		}
+ 		modifier = {
+ 			has_trait = greedy
+ 			add = 25
+ 		}
 		modifier = { # Don't leadership away from regent
 			scope:recipient = {
 				has_title = title:e_japan
@@ -1890,13 +1905,13 @@ assume_house_bloc_leadership_interaction = {
 
 	ai_accept = {
 		base = -50
-		 modifier = {
+ 		modifier = {
 			scope:actor = { government_has_flag = government_is_japan_feudal }
 			scope:recipient = { government_has_flag = government_is_japan_feudal }
-			 scope:actor.house != scope:recipient.house
-			 add = {
-				 value = 0
-				 scope:actor.house = {
+ 			scope:actor.house != scope:recipient.house
+ 			add = {
+ 				value = 0
+ 				scope:actor.house = {
 					every_house_member = {
 						limit = {
 							top_liege = scope:actor.top_liege
@@ -1918,19 +1933,19 @@ assume_house_bloc_leadership_interaction = {
 					}
 				}
 				divide = 2000
-			 }
+ 			}
 			desc = AI_RELATIVE_HOUSE_MILITARY_POWER
-		 }
-		 modifier = {
-			 scope:prestige = yes
-			 add = 25
+ 		}
+ 		modifier = {
+ 			scope:prestige = yes
+ 			add = 25
 			desc = PRESTIGE_INTERACTION_ACCEPTANCE_SEND_OPTION
-		 }
-		 modifier = {
-			 scope:influence = yes
-			 add = 25
+ 		}
+ 		modifier = {
+ 			scope:influence = yes
+ 			add = 25
 			desc = INFLUENCE_INTERACTION_ACCEPTANCE_SEND_OPTION
-		 }
+ 		}
 		modifier = {
 			scope:actor.house.house_confederation ?= {
 				any_confederation_member_house = {
@@ -1961,67 +1976,67 @@ assume_house_bloc_leadership_interaction = {
 			add = 50
 			desc = AI_ACCEPT_assume_house_bloc_leadership_interaction_requirement_tt
 		}
-		 modifier = {
-			 exists = scope:actor.house
-			 exists = scope:recipient.house
-			 add = {
-				 # Check house relations within bloc
-				scope:actor.house = {
-					every_house_relation = {
-						limit = {
-							any_relation_house = {
-								NOR = {
-									this = scope:actor.house
-									this = scope:recipient.house
-								}
-								house_confederation = scope:actor.house.house_confederation
-							}
-						}
-						if = {
-							limit = { has_house_relation_parameter = increased_marriage_acceptance }
-							add = 10
-						}
-						else_if = {
-							limit = { has_house_relation_parameter = decreased_marriage_acceptance }
-							add = -10
-						}
-					}
-				}
-				# Versus current leader's
-				 scope:recipient.house = {
-					 every_house_relation = {
-						limit = {
-							any_relation_house = {
-								NOR = {
-									this = scope:actor.house
-									this = scope:actor.house.house_confederation.leading_house
-								}
-								house_confederation = scope:actor.house.house_confederation
-							}
-						}
-						if = {
-							limit = { has_house_relation_parameter = increased_marriage_acceptance }
-							add = -5
-						}
-						else_if = {
-							limit = { has_house_relation_parameter = decreased_marriage_acceptance }
-							add = 5
-						}
-					}
-				 }
-			}
-			desc = "AI_RELATIVE_BLOC_HOUSE_RELATIONS"
-		 }
-		 modifier = {
-			 scope:actor.dynasty != scope:recipient.dynasty
-			 add = {
-				 value = 0
-				 add = scope:actor.dynasty.dynasty_prestige_level
-				 subtract = scope:recipient.dynasty.dynasty_prestige_level
-				 multiply = 5
-			 }
-			 desc = AI_RELATIVE_DYNASTY_PRESTIGE_REASON
-		 }
+ 		modifier = {
+ 			exists = scope:actor.house
+ 			exists = scope:recipient.house
+ 			add = {
+ 				# Check house relations within bloc
+	 			scope:actor.house = {
+	 				every_house_relation = {
+	 					limit = {
+		 					any_relation_house = {
+		 						NOR = {
+		 							this = scope:actor.house
+		 							this = scope:recipient.house
+		 						}
+		 						house_confederation = scope:actor.house.house_confederation
+		 					}
+		 				}
+		 				if = {
+		 					limit = { has_house_relation_parameter = increased_marriage_acceptance }
+			 				add = 10
+		 				}
+		 				else_if = {
+		 					limit = { has_house_relation_parameter = decreased_marriage_acceptance }
+			 				add = -10
+		 				}
+	 				}
+	 			}
+	 			# Versus current leader's
+ 				scope:recipient.house = {
+ 					every_house_relation = {
+	 					limit = {
+		 					any_relation_house = {
+		 						NOR = {
+		 							this = scope:actor.house
+		 							this = scope:actor.house.house_confederation.leading_house
+		 						}
+		 						house_confederation = scope:actor.house.house_confederation
+		 					}
+		 				}
+		 				if = {
+		 					limit = { has_house_relation_parameter = increased_marriage_acceptance }
+			 				add = -5
+		 				}
+		 				else_if = {
+		 					limit = { has_house_relation_parameter = decreased_marriage_acceptance }
+			 				add = 5
+		 				}
+	 				}
+ 				}
+	 		}
+	 		desc = "AI_RELATIVE_BLOC_HOUSE_RELATIONS"
+ 		}
+ 		modifier = {
+ 			scope:actor.dynasty != scope:recipient.dynasty
+ 			add = {
+ 				value = 0
+ 				add = scope:actor.dynasty.dynasty_prestige_level
+ 				subtract = scope:recipient.dynasty.dynasty_prestige_level
+ 				multiply = 5
+ 			}
+ 			desc = AI_RELATIVE_DYNASTY_PRESTIGE_REASON
+ 		}
 	}
 }
 
@@ -2049,6 +2064,7 @@ grant_house_bloc_leadership_interaction = {
 	}
 
 	is_available = {
+		government_has_flag = government_has_house_blocs
 		tgp_house_bloc_interaction_valid_trigger = yes
 		house.house_confederation.leading_house ?= house
 		house.house_head ?= this
@@ -2118,87 +2134,87 @@ grant_house_bloc_leadership_interaction = {
 
 	ai_accept = {
 		base = 25
-		 modifier = {
-			 has_trait = content
-			 add = -25
-		 }
-		 modifier = {
-			 has_trait = generous
-			 add = -25
-		 }
-		 modifier = {
-			 has_trait = ambitious
-			 add = 25
-		 }
-		 modifier = {
-			 has_trait = greedy
-			 add = 25
-		 }
+ 		modifier = {
+ 			has_trait = content
+ 			add = -25
+ 		}
+ 		modifier = {
+ 			has_trait = generous
+ 			add = -25
+ 		}
+ 		modifier = {
+ 			has_trait = ambitious
+ 			add = 25
+ 		}
+ 		modifier = {
+ 			has_trait = greedy
+ 			add = 25
+ 		}
 		modifier = {
 			scope:actor = { is_confederation_member = yes }
 			scope:recipient = { is_confederation_member = yes }
 			add = {
-				 value = scope:recipient.confederation.combined_military_strength
-				 add = {
-					 value = scope:actor.confederation.combined_military_strength
-					 multiply = -1
-				 }
-				 multiply = 100
-			 }
-		 }
+ 				value = scope:recipient.confederation.combined_military_strength
+ 				add = {
+ 					value = scope:actor.confederation.combined_military_strength
+ 					multiply = -1
+ 				}
+ 				multiply = 100
+ 			}
+ 		}
 	}
 
 	ai_will_do = {
 		base = -50
 		#Opinions
-		 opinion_modifier = {
-			 trigger = {
-				 NOT = { scope:actor.house.house_confederation.leading_house ?= scope:actor.house }
-			 }
-			 opinion_target = scope:actor.house.house_confederation.leading_house.house_head
-			 multiplier = -0.5
-			 step = 5
-			 max = 25
-		 }
-		 house_relation_ai_accept_modifiers = { # House Relations
-			 HOUSE_1_MEMBER = scope:actor
-			 HOUSE_2_MEMBER = scope:actor.house.house_confederation.leading_house.house_head
-			 MULTIPLIER = -1
-		 }
-		 modifier = {
-			 has_trait = content
-			 add = 25
-		 }
-		 modifier = {
-			 has_trait = generous
-			 add = 25
-		 }
-		 modifier = {
-			 has_trait = ambitious
-			 add = -25
-		 }
-		 modifier = {
-			 has_trait = greedy
-			 add = -25
-		 }
-		 modifier = {
-			 liege != top_liege
-			 scope:recipient.liege = top_liege
-			 liege = scope:recipient
-			 add = 1000
-		 }
+ 		opinion_modifier = {
+ 			trigger = {
+ 				NOT = { scope:actor.house.house_confederation.leading_house ?= scope:actor.house }
+ 			}
+ 			opinion_target = scope:actor.house.house_confederation.leading_house.house_head
+ 			multiplier = -0.5
+ 			step = 5
+ 			max = 25
+ 		}
+ 		house_relation_ai_accept_modifiers = { # House Relations
+ 			HOUSE_1_MEMBER = scope:actor
+ 			HOUSE_2_MEMBER = scope:actor.house.house_confederation.leading_house.house_head
+ 			MULTIPLIER = -1
+ 		}
+ 		modifier = {
+ 			has_trait = content
+ 			add = 25
+ 		}
+ 		modifier = {
+ 			has_trait = generous
+ 			add = 25
+ 		}
+ 		modifier = {
+ 			has_trait = ambitious
+ 			add = -25
+ 		}
+ 		modifier = {
+ 			has_trait = greedy
+ 			add = -25
+ 		}
+ 		modifier = {
+ 			liege != top_liege
+ 			scope:recipient.liege = top_liege
+ 			liege = scope:recipient
+ 			add = 1000
+ 		}
 		modifier = { # Regent never grants bloc leadership
 			scope:actor = {
 				has_title = title:e_japan
 			}
 			factor = 0
 		}
-		 modifier = {
+ 		modifier = {
 			scope:actor = { is_confederation_member = yes }
 			scope:recipient = { is_confederation_member = yes }
 			scope:recipient.confederation.combined_military_strength <= scope:actor.confederation.combined_military_strength
 			factor = 0
-		 }
+ 		}
 	}
 }
 
@@ -2244,6 +2260,7 @@ improve_house_relation_in_bloc_interaction = {
 
 	is_available = {
 		exists = confederation
+		government_has_flag = government_has_house_blocs
 		dynasty ?= { has_dynasty_perk = tgp_japan_legacy_3 }
 		trigger_if = {
 			limit = { is_ai = yes }
@@ -2344,11 +2361,11 @@ improve_house_relation_in_bloc_interaction = {
 	ai_will_do = {
 		base = -50
 		#Opinions
-		 house_relation_ai_accept_modifiers = { # House Relations
-			 HOUSE_1_MEMBER = scope:actor
-			 HOUSE_2_MEMBER = scope:actor.house.house_confederation.leading_house.house_head
-			 MULTIPLIER = -1
-		 }
+ 		house_relation_ai_accept_modifiers = { # House Relations
+ 			HOUSE_1_MEMBER = scope:actor
+ 			HOUSE_2_MEMBER = scope:actor.house.house_confederation.leading_house.house_head
+ 			MULTIPLIER = -1
+ 		}
 	}
 }
 
@@ -2416,6 +2433,7 @@ demand_aspiration_change_interaction = {
 	}
 
 	is_available = {
+		government_has_flag = government_has_house_blocs
 		tgp_house_bloc_interaction_valid_trigger = yes
 		house.house_confederation.leading_house ?= house
 		is_house_head = yes
@@ -2607,34 +2625,34 @@ demand_aspiration_change_interaction = {
 	}
 
 	ai_accept = {
-		 base = -20
-		 opinion_modifier = {
-			 who = scope:recipient
-			 opinion_target = scope:actor
-			 multiplier = 1
-		 }
-		 # They are a Cadet House of my Dynasty
-		 modifier = {
-			 scope:recipient.dynasty = scope:actor.dynasty
-			 add = 50
+ 		base = -20
+ 		opinion_modifier = {
+ 			who = scope:recipient
+ 			opinion_target = scope:actor
+ 			multiplier = 1
+ 		}
+ 		# They are a Cadet House of my Dynasty
+ 		modifier = {
+ 			scope:recipient.dynasty = scope:actor.dynasty
+ 			add = 50
 			desc = AI_SAME_DYNASTY_REASON
-		 }
-		 # Bribes
-		 modifier = {
-			 scope:gold = yes
-			 add = 25
+ 		}
+ 		# Bribes
+ 		modifier = {
+ 			scope:gold = yes
+ 			add = 25
 			desc = TRADE_GOLD_FOR_BETTER_AI_ACCEPTANCE_TT
-		 }
-		 modifier = {
-			 scope:prestige = yes
-			 add = 25
+ 		}
+ 		modifier = {
+ 			scope:prestige = yes
+ 			add = 25
 			desc = PRESTIGE_INTERACTION_ACCEPTANCE_SEND_OPTION
-		 }
-		 modifier = {
-			 scope:influence = yes
-			 add = 25
+ 		}
+ 		modifier = {
+ 			scope:influence = yes
+ 			add = 25
 			desc = INFLUENCE_INTERACTION_ACCEPTANCE_SEND_OPTION
-		 }
+ 		}
 		modifier = {
 			add = 20
 			scope:offer_hook = yes

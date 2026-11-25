@@ -1,0 +1,22 @@
+﻿on_game_start = {
+	on_actions = {
+		1337_de_jure_set
+	}
+}
+
+1337_de_jure_set = {
+	effect = {
+		title:h_china = {
+			set_title_name_dynamic = dynn_title_yuan
+			set_title_color = { 180 200 200 }
+			tgp_set_wuking_element_effect = { ELEMENT = metal }
+		}
+		title:k_east_francia = { set_title_name = k_germany }
+		#征服者
+		character:tur_orhan = {
+			add_trait = conqueror
+			create_story = story_conqueror
+		}
+		set_global_variable = mongol_empire_has_spawned
+	}
+}

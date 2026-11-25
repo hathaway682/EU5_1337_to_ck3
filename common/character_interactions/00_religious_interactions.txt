@@ -10,6 +10,7 @@ ask_for_conversion_interaction = {
 	popup_on_receive = yes
 
 	desc = compel_conversion_interaction_desc
+	notification_text = demand_conversion_minister_rites_interaction_notice
 
 	hidden = yes
 
@@ -1041,51 +1042,51 @@ demand_conversion_vassal_ruler_interaction = {
 								}
 							}
 							40 = { # They ask to study the faith first
-								trigger = {
-									# Must not already know the faith well
-									knows_rite_level = {
-										target = scope:puppet_or_actor.rite
-										value < 0.9
-									}
-									can_start_scheme = {
-										type = study_faith
-										target_character = scope:puppet_or_actor
-									}
-								}
-								# Higher weight if they would suffer severe penalties
-								modifier = {
-									add = 300
-									knows_rite_level = {
-										target = scope:puppet_or_actor.rite
-										value < 0.7
-									}
-								}
-								# Scholarly/theologian types prefer this
-								modifier = {
-									add = 10
-									has_trait = erudite
-								}
-								modifier = {
-									add = 10
-									has_trait = theologian
-								}
-								modifier = {
-									add = 10
-									OR = {
-										has_trait = education_learning_3
-										has_trait = education_learning_4
-										has_trait = education_learning_5
-									}
-								}
-								modifier = {
-									add = 10
-									learning >= 12
-								}
-								scope:puppet_or_actor = {
-									trigger_event = {
-										id = religious_interaction.2015
-									}
-								}
+							    trigger = {
+							        # Must not already know the faith well
+							        knows_rite_level = {
+							            target = scope:puppet_or_actor.rite
+							            value < 0.9
+							        }
+							        can_start_scheme = {
+							            type = study_faith
+							            target_character = scope:puppet_or_actor
+							        }
+							    }
+							    # Higher weight if they would suffer severe penalties
+							    modifier = {
+							        add = 300
+							        knows_rite_level = {
+							            target = scope:puppet_or_actor.rite
+							            value < 0.7
+							        }
+							    }
+							    # Scholarly/theologian types prefer this
+							    modifier = {
+							        add = 10
+							        has_trait = erudite
+							    }
+							    modifier = {
+							        add = 10
+							        has_trait = theologian
+							    }
+							    modifier = {
+							        add = 10
+							        OR = {
+							        	has_trait = education_learning_3
+							        	has_trait = education_learning_4
+							        	has_trait = education_learning_5
+							        }
+							    }
+							    modifier = {
+							        add = 10
+							        learning >= 12
+							    }
+							    scope:puppet_or_actor = {
+							        trigger_event = {
+							            id = religious_interaction.2015
+							        }
+							    }
 							}
 						}
 
@@ -2221,6 +2222,7 @@ convert_to_religion_adventurer_interaction = {
 		scope:actor = {
 			hidden_effect = { faith = { save_scope_as = old_faith } }
 			set_character_faith = scope:recipient.faith
+			set_character_rite = scope:recipient.rite
 			trigger_event = {
 				on_action = on_faith_conversion
 			}
@@ -2526,6 +2528,16 @@ seek_indulgences_interaction = {
 			}
 			scope:puppet_or_actor ?= { is_following_religious_head_challenger = no }
 		}
+		scope:actor = {
+			trigger_if = {
+				limit = {
+					cp:councillor_court_chaplain ?= scope:recipient
+					pam_is_archbishop_or_higher_trigger = no
+					actor_has_capital_archbishop_trigger = yes
+				}
+				seek_indulgences_recipient_trigger = yes
+			}
+		}
 	}
 
 	cooldown = { years = 5 }
@@ -2673,7 +2685,7 @@ seek_indulgences_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = medium_unity_gain
@@ -2694,7 +2706,7 @@ seek_indulgences_interaction = {
 
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_loss
@@ -2720,6 +2732,15 @@ seek_indulgences_interaction = {
 		kingdom = 36
 		empire = 36
 		hegemony = 36
+	}
+	ai_frequency_by_tier_government_override = {
+		government = merchant_government
+		barony = 0
+		county = 108
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
 	}
 
 	ai_will_do = {
@@ -3152,6 +3173,16 @@ declaration_of_repentance_interaction = {
 		evaluate_action_decreasing_house_unity = {
 			VALUE = -100
 		}
+		modifier = {
+			add = 40
+			scope:actor = { has_character_modifier = favored_by_pope_modifier }
+			desc = FAVORED_BY_POPE
+		}
+		modifier = {
+			add = -40
+			scope:actor = { has_character_modifier = scorned_pope_modifier }
+			desc = HAS_SCORNED_POPE
+		}
 	}
 
 	ai_min_reply_days = 1
@@ -3175,7 +3206,7 @@ declaration_of_repentance_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = medium_unity_gain
@@ -3194,7 +3225,7 @@ declaration_of_repentance_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_loss
@@ -3378,7 +3409,10 @@ excommunicate_interaction = {
 					}
 					situation:the_christian_church = { trigger_situation_catalyst = catalyst_excommunicate }
 				}
-				else = {
+				else_if = {
+					limit = {
+						situation:the_christian_church = { situation_top_has_catalyst = catalyst_excommunicate_minor }
+					}
 					situation:the_christian_church = { trigger_situation_catalyst = catalyst_excommunicate_minor }
 				}
 			}
@@ -3388,7 +3422,6 @@ excommunicate_interaction = {
 			REQUESTING_CHARACTER = scope:puppet_or_actor
 			TARGET_CHARACTER = scope:recipient
 		}
-
 		scope:recipient = {
 			# Letter arrives a few days later; gives time for the trait to land before the player reads it.
 			trigger_event = {
@@ -3396,9 +3429,8 @@ excommunicate_interaction = {
 				days = 5
 			}
 		}
-
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = medium_unity_loss
@@ -3440,7 +3472,6 @@ excommunicate_interaction = {
 			scope:recipient = {
 				NOR = {
 					has_relation_rival = scope:puppet_or_actor
-					has_relation_nemesis = scope:puppet_or_actor
 					is_at_war_with = scope:puppet_or_actor
 					has_character_flag = executed_own_hof_unlawfully
 					has_character_flag = executed_senior_cleric_unlawfully
@@ -3501,6 +3532,11 @@ excommunicate_interaction = {
 				}
 			}
 		}
+
+		modifier = {
+			factor = 0
+			scope:puppet_or_actor.puppeteer ?= scope:recipient
+		}
 	}
 }
 
@@ -3540,11 +3576,11 @@ lift_excommunication_interaction = {
 			NOT = {
 				religious_head_or_challenger ?= scope:recipient
 			}
-		}
-		scope:puppet_or_actor.faith ?= {
-			has_doctrine = doctrine_spiritual_head
-			faith_has_sacraments_central_trigger = yes
-			this = scope:recipient.faith
+			faith ?= {
+				has_doctrine = doctrine_spiritual_head
+				faith_has_sacraments_central_trigger = yes
+				this = scope:recipient.faith
+			}
 		}
 		scope:recipient = {
 			has_trait = excommunicated
@@ -3563,17 +3599,13 @@ lift_excommunication_interaction = {
 	}
 
 	is_valid_showing_failures_only = {
-		trigger_if = {
-			limit = { scope:is_puppet_action ?= yes }
-			scope:puppet_or_actor = {
+		scope:puppet_or_actor = {
+			trigger_if = {
+				limit = { scope:is_puppet_action ?= yes }
 				piety >= lift_excommunication_interaction_cost_value
 			}
-		}
-		scope:puppet_or_actor = {
 			highest_held_title_tier >= tier_duchy
-			NOT = {
-				is_at_war_with = scope:recipient
-			}
+			NOT = { is_at_war_with = scope:recipient }
 			custom_tooltip = {
 				text = HOF_INTERACTION_UNREFORMED_FAITH
 				NOT = {
@@ -3611,21 +3643,13 @@ lift_excommunication_interaction = {
 		scope:puppet_or_actor = {
 			if = {
 				limit = {
-					NOT = {
-						this = scope:recipient
-					}
-					any_character_situation = {
-						situation_type = the_christian_church
-					}
-					situation:the_christian_church ?= {
-						situation_top_has_catalyst = catalyst_lift_excommunication
-					}
+					NOT = { this = scope:recipient }
+					any_character_situation = { situation_type = the_christian_church }
+					situation:the_christian_church ?= { situation_top_has_catalyst = catalyst_lift_excommunication }
 				}
 				if = {
 					limit = {
-						scope:recipient = {
-							highest_held_title_tier >= tier_kingdom
-						}
+						scope:recipient = { highest_held_title_tier >= tier_kingdom }
 					}
 					situation:the_christian_church = { trigger_situation_catalyst = catalyst_lift_excommunication }
 				}
@@ -3636,7 +3660,7 @@ lift_excommunication_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = medium_unity_gain
@@ -3712,7 +3736,6 @@ lift_excommunication_interaction = {
 			scope:recipient = {
 				NOR = { # Only do this for friends
 					has_relation_friend = scope:puppet_or_actor
-					has_relation_best_friend = scope:puppet_or_actor
 					is_allied_to = scope:puppet_or_actor
 					has_variable = pam_turned_the_other_cheek_var
 					scope:puppet_or_actor = { # Unless you are in the Concord phase
@@ -3794,7 +3817,7 @@ request_excommunication_interaction = {
 				save_scope_as = recipient
 			}
 		}
-
+		
 		#Still hasn't been set
 		#stop errors from the above process failing, this should be blocked anyway
 		if = {
@@ -3870,7 +3893,9 @@ request_excommunication_interaction = {
 					any_faith_subordinate = {
 						highest_held_title_tier >= tier_duchy
 						save_temporary_scope_as = cleric_temp
-						pam_valid_excommunication_target_trigger = { EXCOMMUNICATOR = scope:cleric_temp }
+						scope:secondary_recipient = {
+							pam_valid_excommunication_target_trigger = { EXCOMMUNICATOR = scope:cleric_temp }
+						}
 					}
 				}
 			}
@@ -3882,19 +3907,19 @@ request_excommunication_interaction = {
 			scope:secondary_recipient = {
 				NOT = { has_strong_hook = scope:puppet_or_actor }
 			}
-			trigger_if = {
-				limit = {
-					petition_head_of_faith_excommunication_target_requires_petition_trigger = yes
-					NOT = { scope:excommunication_hook = yes }
-				}
-				scope:puppet_or_actor = {
-					piety >= massive_piety_value
-				}
+		}
+		trigger_if = {
+			limit = {
+				petition_head_of_faith_excommunication_target_requires_petition_trigger = yes
+				NOT = { scope:excommunication_hook = yes }
 			}
-			trigger_else = {
-				scope:puppet_or_actor = {
-					piety >= request_excommunication_piety_cost_value
-				}
+			scope:puppet_or_actor = {
+				piety >= massive_piety_value
+			}
+		}
+		trigger_else = {
+			scope:puppet_or_actor = {
+				piety >= request_excommunication_piety_cost_value
 			}
 		}
 
@@ -4073,6 +4098,11 @@ request_excommunication_interaction = {
 			add = 15
 			desc = EXCOMMUNICATION_EXECUTED_HOF
 		}
+		modifier = {
+			scope:secondary_recipient ?= { has_character_modifier = pam_defied_church_peace_modifier }
+			add = 50
+			desc = EXCOMMUNICATION_DEFIED_CHURCH_PEACE
+		}
 		opinion_modifier = {
 			who = scope:recipient
 			opinion_target = scope:puppet_or_actor
@@ -4125,6 +4155,16 @@ request_excommunication_interaction = {
 			}
 		}
 		modifier = {
+			add = 40
+			scope:actor = { has_character_modifier = favored_by_pope_modifier }
+			desc = FAVORED_BY_POPE
+		}
+		modifier = {
+			add = -40
+			scope:actor = { has_character_modifier = scorned_pope_modifier }
+			desc = HAS_SCORNED_POPE
+		}
+		modifier = {
 			add = 20
 			scope:puppet_or_actor = { # PAM - Reform phase
 				top_participant_group:the_christian_church ?= {
@@ -4137,6 +4177,11 @@ request_excommunication_interaction = {
 			add = 100
 			scope:puppet_or_actor.puppet:theological_agent_puppet ?= scope:recipient
 			desc = IS_YOUR_PUPPET
+		}
+		modifier = {
+			add = -1000
+			scope:recipient.puppeteer ?= scope:secondary_recipient
+			desc = EXCOMMUNICATION_TARGET_IS_PUPPETEER
 		}
 		secular_to_ecclesiastical_pam_factors_acceptance_modifier = yes
 	}
@@ -4199,11 +4244,10 @@ request_excommunication_interaction = {
 						add_piety = {
 							value = {
 								value = request_excommunication_piety_cost_value
-								max = piety
 								multiply = -1
 							}
 						}
-					}
+					}				
 
 					#Letter event to inform character the pope agreed to their request.
 					trigger_event = {
@@ -4244,7 +4288,7 @@ request_excommunication_interaction = {
 					}
 				}
 				# If we're a clan this interaction affects unity
-				add_clan_unity_interaction_effect = {
+				add_house_unity_interaction_effect = {
 					CHARACTER = scope:puppet_or_actor
 					TARGET = scope:recipient
 					VALUE = medium_unity_loss
@@ -4283,7 +4327,7 @@ request_excommunication_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = miniscule_unity_gain
@@ -4311,6 +4355,15 @@ request_excommunication_interaction = {
 		empire = 12
 		hegemony = 12
 	}
+	ai_frequency_by_tier_government_override = {
+		government = merchant_government
+		barony = 0
+		county = 144
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
 
 	ai_will_do = {
 		base = 25
@@ -4325,7 +4378,6 @@ request_excommunication_interaction = {
 			scope:secondary_recipient = {
 				NOR = {
 					has_relation_rival = scope:puppet_or_actor
-					has_relation_nemesis = scope:puppet_or_actor
 					is_at_war_with = scope:puppet_or_actor
 					has_character_flag = executed_own_hof_unlawfully
 					has_character_flag = executed_senior_cleric_unlawfully
@@ -4373,6 +4425,11 @@ request_excommunication_interaction = {
 				faith_has_existing_empire_holder_trigger = yes
 				faith = scope:puppet_or_actor.faith
 			}
+		}
+
+		modifier = {
+			factor = 0
+			scope:puppet_or_actor.puppeteer ?= scope:secondary_recipient
 		}
 	}
 }
@@ -4463,6 +4520,7 @@ send_to_holy_order_interaction = {
 			limit = { scope:is_puppet_action ?= yes }
 			scope:puppet_or_actor = {
 				dynasty ?= { dynasty_prestige >= take_vows_dynasty_prestige_cost_value }
+				prestige >= take_vows_prestige_cost_value
 			}
 		}
 		scope:recipient = {
@@ -4569,6 +4627,13 @@ send_to_holy_order_interaction = {
 				multiply = 0
 			}
 		}
+		prestige = {
+			value = take_vows_prestige_cost_value
+			if = {
+				limit = { scope:is_puppet_action ?= yes }
+				multiply = 0
+			}
+		}
 	}
 
 	on_send = {
@@ -4600,6 +4665,15 @@ send_to_holy_order_interaction = {
 								value = take_vows_dynasty_prestige_cost_value
 								multiply = -1
 							}
+						}
+					}
+				}
+				if = {
+					limit = { take_vows_prestige_cost_value > 0 }
+					add_prestige = {
+						value = {
+							value = take_vows_prestige_cost_value
+							multiply = -1
 						}
 					}
 				}
@@ -4657,12 +4731,17 @@ send_to_holy_order_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
-			CHARACTER = scope:puppet_or_actor
-			TARGET = scope:recipient
-			VALUE = minor_unity_gain
-			DESC = clan_unity_send_to_holy_order.desc
-			REVERSE_NON_HOUSE_TARGET = no
+		if = {
+			limit = {
+				scope:puppet_or_actor = { government_has_flag = government_uses_house_unity }
+			}
+			add_house_unity_interaction_effect = {
+				CHARACTER = scope:puppet_or_actor
+				TARGET = scope:recipient
+				VALUE = minor_unity_gain
+				DESC = clan_unity_send_to_holy_order.desc
+				REVERSE_NON_HOUSE_TARGET = no
+			}
 		}
 	}
 
@@ -4707,28 +4786,28 @@ send_to_holy_order_interaction = {
 				limit = {
 					scope:recipient = {
 						has_variable = vows_piety_spent
-					 }
+ 					}
 				}
 				scope:puppet_or_actor = {
 					add_piety_no_experience = {
 						value = scope:recipient.var:vows_piety_spent
-					 }
-				 }
+ 					}
+ 				}
 				scope:recipient = {
 					remove_variable = vows_piety_spent
 				}
-			 }
-		 }
+ 			}
+ 		}
 
-		 # If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+ 		# If we're a clan this interaction affects unity
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_loss
 			DESC = clan_unity_join_holy_order_refusal.desc
 			REVERSE_NON_HOUSE_TARGET = no
 		}
-	 }
+ 	}
 
 	auto_accept = no
 
@@ -4808,8 +4887,6 @@ send_to_holy_order_interaction = {
 					has_relation_lover = scope:puppet_or_actor.cp:councillor_court_chaplain
 					has_relation_friend = scope:puppet_or_actor.cp:councillor_court_chaplain
 					has_secret_relation_lover = scope:puppet_or_actor.cp:councillor_court_chaplain
-					has_relation_soulmate = scope:puppet_or_actor.cp:councillor_court_chaplain
-					has_relation_best_friend = scope:puppet_or_actor.cp:councillor_court_chaplain
 					opinion = {
 						target = scope:puppet_or_actor.cp:councillor_court_chaplain
 						value >= very_high_positive_opinion
@@ -5107,6 +5184,15 @@ send_to_holy_order_interaction = {
 		empire = 24
 		hegemony = 24
 	}
+	ai_frequency_by_tier_government_override = {
+		government = merchant_government
+		barony = 0
+		county = 432
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
 
 	ai_will_do = {
 		base = 0
@@ -5119,10 +5205,7 @@ send_to_holy_order_interaction = {
 		modifier = { # Try to send rivals
 			add = 100
 			scope:puppet_or_actor = {
-				OR = {
-					has_relation_rival = scope:recipient
-					has_relation_nemesis = scope:recipient
-				}
+				has_relation_rival = scope:recipient
 			}
 		}
 
@@ -5366,6 +5449,7 @@ take_vows_interaction = {
 			limit = { scope:is_puppet_action ?= yes }
 			scope:puppet_or_actor = {
 				dynasty ?= { dynasty_prestige >= take_vows_dynasty_prestige_cost_value }
+				prestige >= take_vows_prestige_cost_value
 			}
 		}
 		scope:recipient = {
@@ -5483,6 +5567,13 @@ take_vows_interaction = {
 				multiply = 0
 			}
 		}
+		prestige = {
+			value = take_vows_prestige_cost_value
+			if = {
+				limit = { scope:is_puppet_action ?= yes }
+				multiply = 0
+			}
+		}
 		gold = {
 			value = 0
 			if = {
@@ -5498,9 +5589,9 @@ take_vows_interaction = {
 				name = vows_piety_spent
 				value = ask_to_take_vows_piety_cost
 				days = 10
-			 }
-		 }
-	 }
+ 			}
+ 		}
+ 	}
 
 	on_accept = {
 		if = {
@@ -5521,6 +5612,15 @@ take_vows_interaction = {
 								value = take_vows_dynasty_prestige_cost_value
 								multiply = -1
 							}
+						}
+					}
+				}
+				if = {
+					limit = { take_vows_prestige_cost_value > 0 }
+					add_prestige = {
+						value = {
+							value = take_vows_prestige_cost_value
+							multiply = -1
 						}
 					}
 				}
@@ -5663,7 +5763,7 @@ take_vows_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_gain
@@ -5714,28 +5814,28 @@ take_vows_interaction = {
 				limit = {
 					scope:recipient = {
 						has_variable = vows_piety_spent
-					 }
-				 }
+ 					}
+ 				}
 				scope:puppet_or_actor = {
 					add_piety_no_experience = {
 						value = scope:recipient.var:vows_piety_spent
-					 }
+ 					}
 				}
 				scope:recipient = {
 					remove_variable = vows_piety_spent
-				 }
-			 }
-		 }
+ 				}
+ 			}
+ 		}
 
-		 # If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+ 		# If we're a clan this interaction affects unity
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_loss
 			DESC = clan_unity_refused_to_take_vows.desc
 			REVERSE_NON_HOUSE_TARGET = no
 		}
-	 }
+ 	}
 
 	auto_accept = no
 
@@ -5832,8 +5932,6 @@ take_vows_interaction = {
 					has_relation_lover = scope:puppet_or_actor.cp:councillor_court_chaplain
 					has_relation_friend = scope:puppet_or_actor.cp:councillor_court_chaplain
 					has_secret_relation_lover = scope:puppet_or_actor.cp:councillor_court_chaplain
-					has_relation_soulmate = scope:puppet_or_actor.cp:councillor_court_chaplain
-					has_relation_best_friend = scope:puppet_or_actor.cp:councillor_court_chaplain
 					opinion = {
 						target = scope:puppet_or_actor.cp:councillor_court_chaplain
 						value >= very_high_positive_opinion
@@ -6300,10 +6398,7 @@ take_vows_interaction = {
 		modifier = { # Try to send rivals
 			add = 100
 			scope:puppet_or_actor = {
-				OR = {
-					has_relation_rival = scope:recipient
-					has_relation_nemesis = scope:recipient
-				}
+				has_relation_rival = scope:recipient
 			}
 		}
 
@@ -6600,7 +6695,7 @@ temporal_condemnation_interaction = {
 					}
 
 					# If we're a clan this interaction affects unity
-					add_clan_unity_interaction_effect = {
+					add_house_unity_interaction_effect = {
 						CHARACTER = scope:puppet_or_actor
 						TARGET = scope:recipient
 						VALUE = medium_unity_gain
@@ -6679,7 +6774,16 @@ host_honored_guest_interaction = {
 	is_available = {
 		trigger_if = {
 			limit = { is_ai = yes }
-			piety >= major_piety_value
+			OR = {
+				AND = {
+					rite ?= { rite_has_parameter = host_honored_guests_active }
+					piety >= major_piety_value
+				}
+				AND = {
+					NOT = { rite ?= { rite_has_parameter = host_honored_guests_active } }
+					prestige >= major_prestige_value
+				}
+			}
 		}
 	}
 
@@ -6688,8 +6792,13 @@ host_honored_guest_interaction = {
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
 		scope:recipient != scope:puppet_or_actor
 		scope:puppet_or_actor ?= {
-			rite ?= {
-				rite_has_parameter = host_honored_guests_active
+			is_playable_character = yes
+			is_adult = yes
+			OR = {
+				rite ?= {
+					rite_has_parameter = host_honored_guests_active
+				}
+				culture = { has_cultural_parameter = caravanserai_hospitality }
 			}
 			is_playable_character = yes
 			is_adult = yes
@@ -6791,9 +6900,20 @@ host_honored_guest_interaction = {
 			}
 			# Spend piety based on recipient's tier.
 			scope:puppet_or_actor = {
-				add_piety = {
-					value = 0
-					subtract = scope:recipient.tier_scaled_piety_value
+				if = {
+					limit = {
+						rite = { rite_has_parameter = host_honored_guests_active }
+					}
+					add_piety = {
+						value = 0
+						subtract = scope:recipient.tier_scaled_piety_value
+					}
+				}
+				else = {
+					add_prestige = {
+						value = 0
+						subtract = scope:recipient.tier_scaled_prestige_value
+					}
 				}
 			}
 
@@ -6817,10 +6937,11 @@ host_honored_guest_interaction = {
 						limit = {
 							OR = {
 								has_trait = cynical
-								NOT = {
+								NOR = {
 									rite = {
 										rite_has_parameter = host_honored_guests_active
 									}
+									culture = { has_cultural_parameter = caravanserai_hospitality }
 								}
 							}
 						}
@@ -6839,7 +6960,7 @@ host_honored_guest_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = miniscule_unity_gain
@@ -7002,6 +7123,16 @@ hof_ask_for_gold_interaction = {
 				scope:recipient ?= scope:puppet_or_actor.faith.religious_head
 			}
 			scope:puppet_or_actor ?= { is_following_religious_head_challenger = no }
+		}
+		scope:actor = {
+			trigger_if = {
+				limit = {
+					cp:councillor_court_chaplain ?= scope:recipient
+					pam_is_archbishop_or_higher_trigger = no
+					actor_has_capital_archbishop_trigger = yes
+				}
+				capital_county.clerical_region_title.holder ?= scope:recipient
+			}
 		}
 	}
 
@@ -8136,7 +8267,7 @@ hof_ask_for_claim_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:secondary_recipient
 			VALUE = minor_unity_loss
@@ -8573,7 +8704,7 @@ sun_trial_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = major_unity_loss
@@ -8695,7 +8826,7 @@ literalist_debate_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = medium_unity_loss
@@ -9134,34 +9265,34 @@ attempt_conversion_of_local_ruler_interaction = {
 			scope:provisions = yes
 			desc = USING_PROVISIONS
 		}
-		 modifier = {
+ 		modifier = {
 			scope:recipient = {
 				has_trait = trusting
 			}
-			 add = 20
-			 desc = DEMAND_SUBMISSION_RECIPIENT_IS_TRUSTING
-		 }
-		 modifier = {
+ 			add = 20
+ 			desc = DEMAND_SUBMISSION_RECIPIENT_IS_TRUSTING
+ 		}
+ 		modifier = {
 			scope:recipient = {
 				has_relation_lover = scope:puppet_or_actor
 			}
-			 add = 25
-			 desc = AI_YOUR_LOVER
-		 }
-		 modifier = {
+ 			add = 25
+ 			desc = AI_YOUR_LOVER
+ 		}
+ 		modifier = {
 			scope:recipient = {
 				has_relation_friend = scope:puppet_or_actor
 			}
-			 add = 25
-			 desc = AI_YOUR_FRIEND
-		 }
-		 modifier = {
+ 			add = 25
+ 			desc = AI_YOUR_FRIEND
+ 		}
+ 		modifier = {
 			scope:recipient = {
 				is_child_of = scope:puppet_or_actor
 			}
-			 add = 50
-			 desc = AI_YOUR_CHILD
-		 }
+ 			add = 50
+ 			desc = AI_YOUR_CHILD
+ 		}
 		modifier = {
 			add = {
 				value = scope:puppet_or_actor.piety_level
@@ -9657,15 +9788,15 @@ take_monastic_vows_interaction = {
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
 		#have a monastic order to send char to
 		 scope:puppet_or_actor ?= {
-			faith ?= {
-				any_faith_holy_order = {
-					take_the_vows_valid_monastic_order_trigger = { CHARACTER = scope:puppet_or_actor }
-				}
-			}
+            faith ?= {
+                any_faith_holy_order = {
+                    take_the_vows_valid_monastic_order_trigger = { CHARACTER = scope:puppet_or_actor }
+                }
+            }
 			#Not your bishop
 			NOT = {	any_learning_councillor = { this = scope:recipient } }
 			take_vows_available_trigger = yes
-		}
+        }
 		scope:recipient = {
 			is_courtier_of = scope:puppet_or_actor
 			NOR = {
@@ -9701,6 +9832,7 @@ take_monastic_vows_interaction = {
 			limit = { scope:is_puppet_action ?= yes }
 			scope:puppet_or_actor = {
 				dynasty ?= { dynasty_prestige >= take_vows_dynasty_prestige_cost_value }
+				prestige >= take_vows_prestige_cost_value
 			}
 		}
 		scope:recipient = {
@@ -9726,8 +9858,8 @@ take_monastic_vows_interaction = {
 			custom_tooltip = {
 				text = female_monastic_order_not_female_tt
 				scope:recipient = {
-					is_female = yes
-				}
+    				is_female = yes
+    			}
 			}
 		}
 		trigger_if = {
@@ -9739,8 +9871,8 @@ take_monastic_vows_interaction = {
 			custom_tooltip = {
 				text = male_monastic_order_not_male_tt
 				scope:recipient = {
-					is_male = yes
-				}
+    				is_male = yes
+    			}
 			}
 		}
 	}
@@ -9843,6 +9975,13 @@ take_monastic_vows_interaction = {
 				multiply = 0
 			}
 		}
+		prestige = {
+			value = take_vows_prestige_cost_value
+			if = {
+				limit = { scope:is_puppet_action ?= yes }
+				multiply = 0
+			}
+		}
 		gold = {
 			value = 0
 			if = {
@@ -9861,9 +10000,9 @@ take_monastic_vows_interaction = {
 				name = vows_piety_spent
 				value = ask_to_take_vows_piety_cost
 				days = 10
-			 }
-		 }
-	 }
+ 			}
+ 		}
+ 	}
 
 	on_accept = {
 		if = {
@@ -9884,6 +10023,15 @@ take_monastic_vows_interaction = {
 								value = take_vows_dynasty_prestige_cost_value
 								multiply = -1
 							}
+						}
+					}
+				}
+				if = {
+					limit = { take_vows_prestige_cost_value > 0 }
+					add_prestige = {
+						value = {
+							value = take_vows_prestige_cost_value
+							multiply = -1
 						}
 					}
 				}
@@ -9915,10 +10063,10 @@ take_monastic_vows_interaction = {
 			}
 			take_vows_faith_opinion_effect = yes
 			reverse_add_opinion = {
-				target = scope:archabbot
-				modifier = pleased_opinion
-				opinion = 25
-			}
+                target = scope:archabbot
+                modifier = pleased_opinion
+                opinion = 25
+            }
 			scope:recipient = {
 				if = {
 					limit = {
@@ -9958,7 +10106,7 @@ take_monastic_vows_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_gain
@@ -10038,28 +10186,28 @@ take_monastic_vows_interaction = {
 				limit = {
 					scope:recipient = {
 						has_variable = vows_piety_spent
-					 }
-				 }
+ 					}
+ 				}
 				scope:puppet_or_actor = {
 					add_piety_no_experience = {
 						value = scope:recipient.var:vows_piety_spent
-					 }
+ 					}
 				}
 				scope:recipient = {
 					remove_variable = vows_piety_spent
-				 }
-			 }
-		 }
+ 				}
+ 			}
+ 		}
 
-		 # If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+ 		# If we're a clan this interaction affects unity
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_loss
 			DESC = clan_unity_refused_to_take_vows.desc
 			REVERSE_NON_HOUSE_TARGET = no
 		}
-	 }
+ 	}
 
 	auto_accept = no
 
@@ -10179,8 +10327,6 @@ take_monastic_vows_interaction = {
 					has_relation_lover = scope:puppet_or_actor.cp:councillor_court_chaplain
 					has_relation_friend = scope:puppet_or_actor.cp:councillor_court_chaplain
 					has_secret_relation_lover = scope:puppet_or_actor.cp:councillor_court_chaplain
-					has_relation_soulmate = scope:puppet_or_actor.cp:councillor_court_chaplain
-					has_relation_best_friend = scope:puppet_or_actor.cp:councillor_court_chaplain
 					opinion = {
 						target = scope:puppet_or_actor.cp:councillor_court_chaplain
 						value >= very_high_positive_opinion
@@ -10625,6 +10771,15 @@ take_monastic_vows_interaction = {
 		empire = 24
 		hegemony = 24
 	}
+	ai_frequency_by_tier_government_override = {
+		government = merchant_government
+		barony = 0
+		county = 432
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
 
 	ai_will_do = {
 		base = 0
@@ -10648,10 +10803,7 @@ take_monastic_vows_interaction = {
 		modifier = { # Try to send rivals
 			add = 100
 			scope:puppet_or_actor = {
-				OR = {
-					has_relation_rival = scope:recipient
-					has_relation_nemesis = scope:recipient
-				}
+				has_relation_rival = scope:recipient
 			}
 		}
 		modifier = { # Has cloister to send the child to
@@ -10770,6 +10922,7 @@ take_monastic_vows_interaction = {
 						county.holder.top_liege = scope:puppet_or_actor.top_liege
 					}
 					any_leased_title = {
+						exists = scope:puppet_or_actor.capital_county.kingdom
 						kingdom ?= scope:puppet_or_actor.capital_county.kingdom
 					}
 				}
@@ -10866,6 +11019,7 @@ take_monastic_vows_interaction = {
 								empire = scope:target.empire
 							}
 							trigger_else = {
+								exists = scope:puppet_or_actor.capital_county.empire
 								empire = scope:puppet_or_actor.capital_county.empire
 							}
 						}
@@ -10907,7 +11061,7 @@ monastic_donation_interaction = {
 
 	ai_min_reply_days = 3
 	ai_max_reply_days = 6
-	common_interaction = yes
+	common_interaction = no
 
 	cooldown_against_recipient = { years = 5 }
 
@@ -10958,7 +11112,7 @@ monastic_donation_interaction = {
 			trigger_else = {
 				gold >= monastic_donation_value
 			}
-
+			
 		}
 		#Monastic holding's leases are all in realms actor is at war with
 		custom_tooltip = {
@@ -11101,7 +11255,7 @@ monastic_donation_interaction = {
 	}
 
 	on_send = {
-	 }
+ 	}
 
 	on_accept = {
 		show_as_tooltip = {
@@ -11124,7 +11278,7 @@ monastic_donation_interaction = {
 				id = holy_order.2031
 			}
 		}
-	 }
+ 	}
 
 	auto_accept = no
 
@@ -11395,7 +11549,7 @@ monastic_donation_interaction = {
 	ai_target_quick_trigger = {
 		adult = yes
 	}
-
+	
 	ai_targets = {
 		ai_recipients = neighboring_rulers
 		ai_recipients = faith_holy_order_leaders
@@ -11408,6 +11562,15 @@ monastic_donation_interaction = {
 		kingdom = 12
 		empire = 12
 		hegemony = 12
+	}
+	ai_frequency_by_tier_government_override = {
+		government = merchant_government
+		barony = 0
+		county = 144
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
 	}
 
 	ai_will_do = {
@@ -11445,6 +11608,7 @@ monastic_donation_interaction = {
 							county.holder.top_liege = scope:puppet_or_actor.top_liege
 						}
 						any_leased_title = {
+							exists = scope:puppet_or_actor.capital_county
 							kingdom ?= scope:puppet_or_actor.capital_county.kingdom
 						}
 					}
@@ -11499,6 +11663,8 @@ monastic_donation_interaction = {
 
 		modifier = {
 			factor = 1.25
+			exists = capital_county.kingdom
+			exists = scope:recipient.capital_county.kingdom
 			capital_county.kingdom = scope:recipient.capital_county.kingdom
 		}
 
@@ -11537,6 +11703,7 @@ monastic_donation_interaction = {
 								empire = scope:target.empire
 							}
 							trigger_else = {
+								exists = scope:puppet_or_actor.capital_county
 								empire = scope:puppet_or_actor.capital_county.empire
 							}
 						}
@@ -11602,7 +11769,7 @@ lease_title_to_existing_monastic_order_interaction = {
 
 	ai_min_reply_days = 3
 	ai_max_reply_days = 6
-	common_interaction = yes
+	common_interaction = no
 
 	desc = lease_title_to_existing_monastic_order_interaction_desc
 
@@ -11614,12 +11781,12 @@ lease_title_to_existing_monastic_order_interaction = {
 		trigger_if = {
 			limit = { is_ai = yes }
 			any_held_title = {
-				count >= 2
-				tier = tier_county
-				any_county_province = {
-					has_holding_type = church_holding
-					barony ?= {
-						trigger_if = {
+			 	count >= 2
+			 	tier = tier_county
+			 	any_county_province = {
+			 		has_holding_type = church_holding
+			 		barony ?= {
+			 			trigger_if = {
 							limit = {
 								exists = barony.lessee
 							}
@@ -11629,8 +11796,8 @@ lease_title_to_existing_monastic_order_interaction = {
 								}
 							}
 						}
-					}
-				}
+			 		}
+			 	}
 			}
 			#either needs spiritual fulfillment or a monastic holy order to patron
 			OR = {
@@ -11686,6 +11853,13 @@ lease_title_to_existing_monastic_order_interaction = {
 							government_has_flag = government_is_monastic_holy_order
 						}
 					}
+				}
+			}
+			custom_tooltip = {
+				text = already_has_monastic_lease_tt
+				trigger_if = {
+					limit = { has_variable = pending_monastic_order_lease }
+					var:pending_monastic_order_lease = scope:recipient
 				}
 			}
 			is_landless_type_title = no
@@ -11794,7 +11968,16 @@ lease_title_to_existing_monastic_order_interaction = {
 	}
 
 	on_send = {
-	 }
+		hidden_effect = {
+			scope:target = {
+				set_variable = {
+					name = pending_monastic_order_lease
+					value = scope:recipient
+					days = 30 # Cleared in holy_order.2040/2041 as soon as the monastic order answers; the timeout is only a fallback
+				}
+			}
+		}
+	}
 
 	on_accept = {
 		# Must search puppet_or_actor.faith like is_valid, or a different-faith barony finds no order
@@ -11830,7 +12013,7 @@ lease_title_to_existing_monastic_order_interaction = {
 				id = holy_order.2041
 			}
 		}
-	 }
+ 	}
 
 	auto_accept = no
 
@@ -12103,7 +12286,7 @@ lease_title_to_existing_monastic_order_interaction = {
 	ai_target_quick_trigger = {
 		adult = yes
 	}
-
+	
 	ai_targets = {
 		ai_recipients = neighboring_rulers
 		ai_recipients = faith_holy_order_leaders
@@ -12180,6 +12363,8 @@ lease_title_to_existing_monastic_order_interaction = {
 
 		modifier = {
 			factor = 1.25
+			exists = capital_county.kingdom
+			exists = scope:recipient.capital_county.kingdom
 			capital_county.kingdom = scope:recipient.capital_county.kingdom
 		}
 
@@ -12271,7 +12456,7 @@ lease_title_to_existing_monastic_order_interaction = {
 					}
 				}
 			}
-		}
+		}	
 		modifier = { # shares the order's rite
 			add = 20
 			scope:puppet_or_actor.rite = scope:recipient.rite
@@ -12307,7 +12492,7 @@ offer_bedside_support_interaction = {
 	is_available = {
 		rite ?= {
 			rite_has_parameter = tenet_sacred_childbirth_offer_bedside_support
-		}
+		}		
 	}
 
 	is_shown = {
@@ -12472,7 +12657,7 @@ monastic_espouse_beliefs_interaction = {
 				text = recipient_clerical_puppet_req_tt
 				puppeteer ?= scope:actor
 			}
-
+			
 			is_physically_able_adult = yes
 			custom_tooltip = {
 				text = espoused_order_beliefs_recently
@@ -12582,7 +12767,7 @@ monastic_espouse_beliefs_interaction = {
 					any_personal_tenet = {
 						this = scope:recipient.holy_order.order_tenet
 					}
-				}
+				}	
 			}
 		}
 		modifier = {

@@ -1,0 +1,29 @@
+# CK3 1.21 regional innovations, adapted to this map's duchies and counties.
+
+world_innovation_carpets = {
+	regions = {
+		world_middle_east world_asia_minor world_india_rajastan
+		world_africa_north world_steppe world_tibet
+	}
+}
+
+world_innovation_mead = {
+	regions = {
+		world_europe_north world_europe_east
+	}
+}
+
+# The vanilla steel belt covers Syria, Jazira, Mesopotamia and Persia.
+# The Levant duchy includes southern Palestine, so use counties for Syria.
+custom_damascus_steel_region = {
+	duchies = {
+		d_jazira d_iraq_arabi d_kordestan
+	}
+	counties = {
+		c_antakya c_ayntab c_deir c_halab c_hawran c_hims
+		c_latakia c_lebanon c_shaam c_tadmur
+	}
+	regions = {
+		world_middle_east_persia
+	}
+}

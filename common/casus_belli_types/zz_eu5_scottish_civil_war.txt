@@ -1,0 +1,141 @@
+﻿eu5_scottish_claimant_faction_war = {
+	group = civil_war
+	icon = claim_cb
+	war_name = war_eu5_scottish_civil_war
+	war_name_base = war_eu5_scottish_civil_war
+
+	target_titles = claim
+	target_title_tier = kingdom
+	target_de_jure_regions_above = yes
+	target_top_liege_if_outside_realm = no
+	use_de_jure_wargoal_only = yes
+	allow_hostages = no
+
+	attacker_wargoal_percentage = 0.8
+	max_attacker_score_from_battles = 50
+	max_defender_score_from_battles = 100
+	max_attacker_score_from_occupation = 150
+	max_defender_score_from_occupation = 150
+
+	valid_to_start = { scope:target = title:k_scotland }
+	should_invalidate = {
+		OR = {
+			scope:claimant = { is_alive = no }
+			title:k_scotland.holder ?= scope:claimant
+			war_should_invalidate_defender_lost_target_titles_trigger = yes
+		}
+	}
+	on_invalidated_desc = { desc = eu5_scottish_civil_war_invalidated_desc }
+
+	on_victory_desc = { desc = eu5_scottish_civil_war_victory_desc }
+	on_victory = {
+		on_victory_faction_war_effect = yes
+		scope:attacker = { accolade_attacker_war_end_glory_gain_med_effect = yes }
+		hidden_effect = {
+			scope:attacker = {
+				add_truce_both_ways = {
+					character = scope:defender
+					days = 1825
+					war = root.war
+					result = victory
+				}
+			}
+		}
+		title:k_scotland = { save_scope_as = target_title }
+		scope:claimant = {
+			save_scope_as = the_claimant
+			if = {
+				limit = { is_imprisoned_by = scope:defender }
+				release_from_prison = yes
+			}
+		}
+		war = {
+			every_war_attacker = {
+				limit = {
+					this != scope:claimant
+					is_vassal_or_below_of = scope:defender
+				}
+				add_to_list = scottish_claimant_supporters
+				add_opinion = {
+					modifier = claimant_faction_member_opinion
+					target = scope:claimant
+				}
+				reverse_add_opinion = {
+					modifier = claimant_faction_claimant_opinion
+					target = scope:claimant
+				}
+				if = {
+					limit = { can_add_hook = { type = favor_hook target = scope:claimant } }
+					add_hook = { type = favor_hook target = scope:claimant }
+				}
+				if = {
+					limit = {
+						culture = scope:claimant.culture
+						any_character_struggle = {
+							involvement = involved
+							has_struggle_phase_parameter = struggle_prestige_install_same_culture_claimant
+						}
+					}
+					add_prestige = major_prestige_gain
+				}
+			}
+		}
+		create_title_and_vassal_change = {
+			type = faction_demand
+			save_scope_as = scottish_claim_change
+			add_claim_on_loss = yes
+		}
+		setup_claim_cb = {
+			titles = target_titles
+			attacker = scope:attacker
+			defender = scope:defender
+			claimant = scope:claimant
+			change = scope:scottish_claim_change
+			civil_war = yes
+		}
+		save_grandeur_for_claimant = yes
+		resolve_title_and_vassal_change = scope:scottish_claim_change
+		scope:claimant = {
+			if = {
+				limit = { is_valid_for_legitimacy_change = yes }
+				add_legitimacy = {
+					value = 750
+					multiply = nomadic_legitimacy_claimant_multiplier
+					add = {
+						value = list_size:scottish_claimant_supporters
+						multiply = 50
+					}
+				}
+			}
+		}
+		set_grandeur_for_claimant = yes
+	}
+
+	on_white_peace_desc = { desc = eu5_scottish_civil_war_status_quo_desc }
+	on_white_peace = {
+		on_white_peace_faction_war_effect = yes
+		war = {
+			every_war_attacker = {
+				limit = {
+					is_vassal_or_below_of = scope:defender
+					liege != scope:defender
+				}
+				add_faction_cooldown_effect = { YEARS = faction_war_white_peace_cooldown }
+			}
+		}
+	}
+	on_defeat_desc = { desc = eu5_scottish_civil_war_defeat_desc }
+	on_defeat = {
+		on_defeat_faction_war_effect = yes
+		scope:defender = {
+			add_dread = medium_dread_gain
+			add_achievement_flag_effect = { FLAG = achievement_know_your_place_flag }
+		}
+	}
+
+	on_primary_attacker_death = invalidate
+	on_primary_defender_death = inherit
+	transfer_behavior = transfer
+	attacker_allies_inherit = no
+	defender_allies_inherit = yes
+}

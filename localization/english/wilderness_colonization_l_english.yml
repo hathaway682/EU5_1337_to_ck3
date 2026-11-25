@@ -46,8 +46,8 @@ l_english:
  # This key is defined in C#, not here: WildernessMap.TitleKey in MapGen/Wilderness.cs. It is the
  # only place a file in this set names something the generator owns, so if that constant changes
  # this string silently stops resolving and the map shows the raw key.
- k_gen_wilderness:0 "Wilderness"
- k_gen_wilderness_adj:0 "Wild"
+ k_gen_wilderness:0 ""
+ k_gen_wilderness_adj:0 ""
  trait_wilderness_desc:0 "Vast and untamed nothingness."
 
  wilderness_government:0 "Wilderness"

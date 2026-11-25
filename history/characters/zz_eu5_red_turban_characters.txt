@@ -1,0 +1,566 @@
+# Fixed historical characters from EU5 red_turban_rebellions and flavor_chi.123.
+eu5_rtr_peng = {
+	# MB+ attributes at 1337.4.1, character MB_peng_yingyu.
+	trait = devoted
+	trait = zealous
+	trait = brave
+	trait = education_learning_3
+	name = "eu5_rtr_peng_name"
+	dynasty = dyn_eu5_rtr_peng
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1310.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_han = {
+	# MB+ attributes at 1337.4.1, character 1337Unlanded7.
+	martial = 4
+	diplomacy = 6
+	stewardship = 3
+	intrigue = 5
+	learning = 6
+	trait = education_diplomacy_3
+	trait = zealous
+	trait = ambitious
+	trait = gregarious
+	trait = heresiarch
+	name = "eu5_rtr_han_name"
+	dynasty = dyn_eu5_rtr_han
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1320.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_liu = {
+	# MB+ attributes at 1337.4.1, character MB_liu_futong.
+	trait = brave
+	trait = ambitious
+	trait = zealous
+	trait = education_martial_3
+	name = "eu5_rtr_liu_name"
+	dynasty = dyn_eu5_rtr_liu
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1321.1.1 = { birth = yes }
+	1337.4.1 = {
+		employer = eu5_rtr_han
+		effect = {
+			if = {
+				limit = { NOT = { liege_or_court_owner ?= character:eu5_rtr_han } }
+				set_employer = character:eu5_rtr_han
+			}
+		}
+	}
+}
+
+
+eu5_rtr_zou = {
+	name = "eu5_rtr_zou_name"
+	dynasty = dyn_eu5_rtr_zou
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1320.1.1 = { birth = yes }
+	1337.4.1 = {
+		employer = eu5_rtr_xu
+		effect = {
+			if = {
+				limit = { NOT = { liege_or_court_owner ?= character:eu5_rtr_xu } }
+				set_employer = character:eu5_rtr_xu
+			}
+		}
+	}
+}
+
+
+eu5_rtr_xu = {
+	# MB+ attributes at 1337.4.1, character MB_xu_shouhui.
+	trait = trusting
+	trait = beauty_good_1
+	trait = education_stewardship_1
+	name = "eu5_rtr_xu_name"
+	dynasty = dyn_eu5_rtr_xu
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1320.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_ni = {
+	name = "eu5_rtr_ni_name"
+	dynasty = dyn_eu5_rtr_ni
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1320.1.1 = { birth = yes }
+	1337.4.1 = {
+		employer = eu5_rtr_xu
+		effect = {
+			if = {
+				limit = { NOT = { liege_or_court_owner ?= character:eu5_rtr_xu } }
+				set_employer = character:eu5_rtr_xu
+			}
+		}
+	}
+}
+
+
+eu5_rtr_chen = {
+	# MB+ attributes at 1337.4.1, character 1337Unlanded10.
+	martial = 6
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 8
+	learning = 3
+	trait = education_intrigue_3
+	trait = ambitious
+	trait = deceitful
+	trait = reaver
+	name = "eu5_rtr_chen_name"
+	dynasty = dyn_eu5_rtr_chen
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1320.1.1 = { birth = yes }
+	1337.4.1 = {
+		employer = eu5_rtr_xu
+		effect = {
+			if = {
+				limit = { NOT = { liege_or_court_owner ?= character:eu5_rtr_xu } }
+				set_employer = character:eu5_rtr_xu
+			}
+		}
+	}
+}
+
+
+eu5_rtr_zhang = {
+	# MB+ attributes at 1337.4.1, character 1337Unlanded12.
+	martial = 5
+	diplomacy = 8
+	stewardship = 8
+	intrigue = 6
+	learning = 4
+	trait = education_stewardship_4
+	trait = administrator
+	trait = ambitious
+	trait = avaricious
+	name = "eu5_rtr_zhang_name"
+	dynasty = dyn_eu5_rtr_zhang
+	culture = han
+	religion = confucian_faith
+	1321.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_fang = {
+	# MB+ attributes at 1337.4.1, character 1337Unlanded11.
+	martial = 6
+	diplomacy = 7
+	stewardship = 5
+	intrigue = 8
+	learning = 3
+	trait = education_intrigue_3
+	trait = flexible_leader
+	trait = deceitful
+	trait = reaver
+	name = "eu5_rtr_fang_name"
+	dynasty = dyn_eu5_rtr_fang
+	culture = han
+	religion = confucian_faith
+	1319.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_mao = {
+	name = "eu5_rtr_mao_name"
+	dynasty = dyn_eu5_rtr_mao
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1320.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_ming = {
+	# MB+ attributes at 1337.4.1, character 1337Unlanded9.
+	martial = 7
+	diplomacy = 6
+	stewardship = 6
+	intrigue = 5
+	learning = 4
+	trait = education_martial_3
+	trait = ambitious
+	trait = brave
+	trait = strategist
+	name = "eu5_rtr_ming_name"
+	dynasty = dyn_eu5_rtr_ming
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1328.10.2 = { birth = yes }
+	1337.4.1 = {
+		employer = eu5_rtr_xu
+		effect = {
+			if = {
+				limit = { NOT = { liege_or_court_owner ?= character:eu5_rtr_xu } }
+				set_employer = character:eu5_rtr_xu
+			}
+		}
+	}
+}
+
+
+eu5_rtr_guo = {
+	# MB+ attributes at 1337.4.1, character MB_guo_zixing.
+	trait = generous
+	trait = gregarious
+	trait = wrathful
+	trait = education_martial_2
+	name = "eu5_rtr_guo_name"
+	dynasty = dyn_eu5_rtr_guo
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1302.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_zhu = {
+	name = "eu5_rtr_zhu_name"
+	dynasty = dyn_eu5_rtr_zhu
+	culture = han
+	religion = mahayana_faith
+	rite = dhyana
+	1328.10.21 = { birth = yes }
+}
+
+
+eu5_rtr_ma = {
+	name = "eu5_rtr_ma_name"
+	dynasty = dyn_eu5_rtr_ma
+	culture = han
+	religion = confucian_faith
+	female = yes
+	1332.7.18 = { birth = yes }
+	1337.4.1 = {
+		employer = eu5_rtr_guo
+		effect = {
+			if = {
+				limit = { NOT = { liege_or_court_owner ?= character:eu5_rtr_guo } }
+				set_employer = character:eu5_rtr_guo
+			}
+		}
+	}
+}
+
+
+eu5_rtr_chen_youding = {
+	# MB+ attributes at 1337.4.1, character Youding.
+	martial = 7
+	diplomacy = 5
+	stewardship = 4
+	intrigue = 6
+	learning = 4
+	trait = education_martial_3
+	trait = flexible_leader
+	trait = deceitful
+	trait = ambitious
+	name = "eu5_rtr_chen_youding_name"
+	dynasty = dyn_eu5_rtr_chen_youding
+	culture = han
+	religion = confucian_faith
+	1330.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_he = {
+	name = "eu5_rtr_he_name"
+	dynasty = dyn_eu5_rtr_he
+	culture = han
+	religion = confucian_faith
+	1321.1.1 = { birth = yes }
+}
+
+
+eu5_rtr_li = {
+	name = "eu5_rtr_li_name"
+	dynasty = dyn_eu5_rtr_li
+	culture = han
+	religion = confucian_faith
+	1323.1.1 = { birth = yes }
+}
+
+
+# Chaghan Temur, adapted from MB+ ChaghanTemur.
+eu5_rtr_chaghan_temur = {
+	name = "eu5_rtr_chaghan_temur_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	father = eu5_rtr_mb_ancestor_166862M27
+	culture = mongol
+	religion = vajrayana_faith
+	rite = lamaism
+	martial = 8
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 5
+	learning = 4
+	trait = education_martial_4
+	trait = brave
+	trait = aggressive_attacker
+	trait = flexible_leader
+	trait = zealous
+	1310.1.1 = { birth = yes }
+	1362.1.1 = { death = yes }
+}
+
+eu5_rtr_koke = {
+	name = "eu5_rtr_koke_name"
+	dynasty = dyn_eu5_rtr_koke
+	father = eu5_rtr_chaghan_temur
+	culture = mongol
+	religion = vajrayana_faith
+	1330.1.1 = { birth = yes }
+	1337.4.1 = {
+		employer = eu5_rtr_chaghan_temur
+		effect = {
+			if = {
+				limit = { NOT = { liege_or_court_owner ?= character:eu5_rtr_chaghan_temur } }
+				set_employer = character:eu5_rtr_chaghan_temur
+			}
+		}
+	}
+}
+
+
+eu5_rtr_han_liner = {
+	name = "eu5_rtr_han_liner_name"
+	dynasty = dyn_eu5_rtr_han
+	father = eu5_rtr_han
+	culture = han
+	religion = maitreya_faith
+	rite = maitreya
+	1339.2.23 = { birth = yes }
+}
+
+
+eu5_rtr_zhu_biao = {
+	name = "eu5_rtr_zhu_biao_name"
+	dynasty = dyn_eu5_rtr_zhu
+	father = eu5_rtr_zhu
+	culture = han
+	religion = confucian_faith
+	1355.10.10 = { birth = yes }
+}
+
+
+eu5_rtr_naghachu = {
+	name = "eu5_rtr_naghachu_name"
+	culture = mongol
+	religion = vajrayana_faith
+	1340.1.1 = { birth = yes }
+}
+
+# MB+ Chaghan Temur paternal ancestry; source IDs preserved in comments.
+# MB+ 166862M27
+eu5_rtr_mb_ancestor_166862M27 = {
+	name = "eu5_rtr_mb_ancestor_166862M27_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_166862M25
+	1274.1.1 = { birth = yes }
+	1334.1.1 = { death = yes }
+}
+
+# MB+ 166862M25
+eu5_rtr_mb_ancestor_166862M25 = {
+	name = "eu5_rtr_mb_ancestor_166862M25_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_166862M2
+	1248.1.1 = { birth = yes }
+	1290.1.1 = { death = yes }
+}
+
+# MB+ 166862M2
+eu5_rtr_mb_ancestor_166862M2 = {
+	name = "eu5_rtr_mb_ancestor_166862M2_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_166862M
+	1191.1.1 = { birth = yes }
+	1272.1.1 = { death = yes }
+}
+
+# MB+ 166862M
+eu5_rtr_mb_ancestor_166862M = {
+	name = "eu5_rtr_mb_ancestor_166862M_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_166862
+	1172.1.1 = { birth = yes }
+	1248.1.1 = { death = yes }
+}
+
+# MB+ 166862
+eu5_rtr_mb_ancestor_166862 = {
+	name = "eu5_rtr_mb_ancestor_166862_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_166859
+	1125.1.1 = { birth = yes }
+	1189.1.1 = { death = yes }
+}
+
+# MB+ 166859
+eu5_rtr_mb_ancestor_166859 = {
+	name = "eu5_rtr_mb_ancestor_166859_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_Olkhunut12
+	1108.1.1 = { birth = yes }
+	1155.1.1 = { death = yes }
+}
+
+# MB+ Olkhunut12
+eu5_rtr_mb_ancestor_Olkhunut12 = {
+	name = "eu5_rtr_mb_ancestor_Olkhunut12_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_Olkhunut11
+	1068.12.17 = { birth = yes }
+	1131.5.4 = { death = yes }
+}
+
+# MB+ Olkhunut11
+eu5_rtr_mb_ancestor_Olkhunut11 = {
+	name = "eu5_rtr_mb_ancestor_Olkhunut11_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_Olkhunut10
+	1037.9.8 = { birth = yes }
+	1099.3.21 = { death = yes }
+}
+
+# MB+ Olkhunut10
+eu5_rtr_mb_ancestor_Olkhunut10 = {
+	name = "eu5_rtr_mb_ancestor_Olkhunut10_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_Olkhunut9
+	1006.2.25 = { birth = yes }
+	1069.8.12 = { death = yes }
+}
+
+# MB+ Olkhunut9
+eu5_rtr_mb_ancestor_Olkhunut9 = {
+	name = "eu5_rtr_mb_ancestor_Olkhunut9_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_Olkhunut8
+	974.11.3 = { birth = yes }
+	1039.4.18 = { death = yes }
+}
+
+# MB+ Olkhunut8
+eu5_rtr_mb_ancestor_Olkhunut8 = {
+	name = "eu5_rtr_mb_ancestor_Olkhunut8_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_Olkhunut7
+	943.5.14 = { birth = yes }
+	1005.9.30 = { death = yes }
+}
+
+# MB+ Olkhunut7
+eu5_rtr_mb_ancestor_Olkhunut7 = {
+	name = "eu5_rtr_mb_ancestor_Olkhunut7_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_Olkhunut6
+	912.8.9 = { birth = yes }
+	976.12.27 = { death = yes }
+}
+
+# MB+ Olkhunut6
+eu5_rtr_mb_ancestor_Olkhunut6 = {
+	name = "eu5_rtr_mb_ancestor_Olkhunut6_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_Olkhunut5
+	881.4.18 = { birth = yes }
+	944.2.5 = { death = yes }
+}
+
+# MB+ Olkhunut5
+eu5_rtr_mb_ancestor_Olkhunut5 = {
+	name = "eu5_rtr_mb_ancestor_Olkhunut5_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_Olkhunut4
+	850.7.23 = { birth = yes }
+	914.10.11 = { death = yes }
+}
+
+# MB+ Olkhunut4
+eu5_rtr_mb_ancestor_Olkhunut4 = {
+	name = "eu5_rtr_mb_ancestor_Olkhunut4_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_Olkhunut3
+	819.11.5 = { birth = yes }
+	883.3.16 = { death = yes }
+}
+
+# MB+ Olkhunut3
+eu5_rtr_mb_ancestor_Olkhunut3 = {
+	name = "eu5_rtr_mb_ancestor_Olkhunut3_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_Olkhunut2
+	788.9.10 = { birth = yes }
+	850.6.27 = { death = yes }
+}
+
+# MB+ Olkhunut2
+eu5_rtr_mb_ancestor_Olkhunut2 = {
+	name = "eu5_rtr_mb_ancestor_Olkhunut2_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	father = eu5_rtr_mb_ancestor_Olkhunut1
+	758.5.19 = { birth = yes }
+	821.12.4 = { death = yes }
+}
+
+# MB+ Olkhunut1
+eu5_rtr_mb_ancestor_Olkhunut1 = {
+	name = "eu5_rtr_mb_ancestor_Olkhunut1_name"
+	dynasty = mb_yuan_county_dynasty_101946
+	culture = mongol
+	religion = tengri_pagan
+	730.3.14 = { birth = yes }
+	794.8.22 = { death = yes }
+}

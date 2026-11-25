@@ -1,0 +1,145 @@
+﻿# Age of Discovery: the market window's need-category row from CK3 1.21 (gui/window_trade_market.gui),
+# registered before the base game's copy so this one is used. Only change: the Cereals row wraps after
+# three goods, because AoD adds maize and potatoes to Cereals and the row was pushing the market window
+# wider than its background. Re-copy from the base game after each game patch.
+types AoDTradeMarketTypes
+{
+	type hbox_trade_market_need_category = hbox {
+		visible = "[NotEqualTo_int32( GetDataModelSize( TradeGoodCategory.GetTradeGoodTypes ), '(int32)1')]"
+		layoutpolicy_horizontal = expanding
+
+		vbox = {
+			visible = "[Or3( LessThan_CFixedPoint( TradeMarketWindow.GetDisplayBalanceForCategory( TradeGoodCategory.Self ), '(CFixedPoint)0' ), TradeMarket.CategoryHasGoodsWithBalance( TradeGoodCategory.Self ), Not( GetVariableSystem.Exists( 'market_show_all_goods' ) ) )]"
+			layoutpolicy_horizontal = expanding
+			margin_bottom = 4
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+
+				background = {
+					using = Background_Area
+					color = "[TradeGoodCategory.GetColor]"
+					alpha = 0.1
+				}
+
+				widget = {
+					size = { 70 30 }
+
+					tooltipwidget = {
+						widget_trade_category_needs_tooltip = {}
+					}
+
+					icon = {
+						visible = "[TradeMarketWindow.HasPlayerUnmetNeedsForCategory( TradeGoodCategory.Self )]"
+						texture = "gfx/interface/colors/white.dds"
+						parentanchor = center
+						size = { 102% 102% }
+						using = Mask_Rough_Edges
+						alpha = 0.4
+
+						modify_texture = {
+							texture = "gfx/interface/component_masks/mask_edge_inverted.dds"
+							blend_mode = alphaMultiply
+						}
+					}
+
+					divider = {
+						parentanchor = right
+						size = { 4 100% }
+					}
+
+					flowcontainer = {
+						datacontext = "[TradeMarket.GetCategoryMonopoly( TradeGoodCategory.Self )]"
+						parentanchor = center
+						position = { -2 0 }
+						ignoreinvisible = yes
+
+						widget = {
+							parentanchor = vcenter
+							size = { 24 24 }
+
+							widget = {
+								visible = "[TradeMonopoly.IsValid]"
+								parentanchor = center
+								size = { 28 26 }
+
+								icon = {
+									visible = "[TradeMonopoly.IsExploitative]"
+									size = { 100% 100% }
+									texture = "gfx/interface/icons/trade/icon_trade_monopoly_exploitative_frame.dds"
+								}
+
+								icon = {
+									visible = "[Not( TradeMonopoly.IsExploitative )]"
+									size = { 100% 100% }
+									texture = "gfx/interface/icons/trade/icon_trade_monopoly_frame.dds"
+								}
+							}
+
+							icon = {
+								parentanchor = center
+								size = { 24 24 }
+								texture = "[TradeGoodCategory.GetSmallIcon]"
+								alpha = "[Select_float( Or( LessThan_CFixedPoint( TradeMarketWindow.GetDisplayBalanceForCategory( TradeGoodCategory.Self ), '(CFixedPoint)0' ), And4( TradeMarketWindow.IsNetBalanceMode, GreaterThan_CFixedPoint( TradeMarket.GetNeedForCategory( TradeGoodCategory.Self ), '(CFixedPoint)0' ), GreaterThan_CFixedPoint( TradeMarketWindow.GetDisplayBalanceForCategory( TradeGoodCategory.Self ), '(CFixedPoint)-0.1' ), Not( TradeMarketWindow.HasUnmetNeedsForCategory( TradeGoodCategory.Self ) ) ) ), '(float)1.0', '(float)0.4' )]"
+							}
+
+							container_monopoly_access = {}
+						}
+
+						flowcontainer = {
+							visible = "[Or( LessThan_CFixedPoint( TradeMarketWindow.GetDisplayBalanceForCategory( TradeGoodCategory.Self ), '(CFixedPoint)0' ), And4( TradeMarketWindow.IsNetBalanceMode, GreaterThan_CFixedPoint( TradeMarket.GetNeedForCategory( TradeGoodCategory.Self ), '(CFixedPoint)0' ), GreaterThan_CFixedPoint( TradeMarketWindow.GetDisplayBalanceForCategory( TradeGoodCategory.Self ), '(CFixedPoint)-0.1' ), Not( TradeMarketWindow.HasUnmetNeedsForCategory( TradeGoodCategory.Self ) ) ) )]"
+							parentanchor = vcenter
+							ignoreinvisible = yes
+
+							# Fulfilled need: replaces a balance that would display as zero
+							icon = {
+								visible = "[And4( TradeMarketWindow.IsNetBalanceMode, GreaterThan_CFixedPoint( TradeMarket.GetNeedForCategory( TradeGoodCategory.Self ), '(CFixedPoint)0' ), GreaterThan_CFixedPoint( TradeMarketWindow.GetDisplayBalanceForCategory( TradeGoodCategory.Self ), '(CFixedPoint)-0.1' ), Not( TradeMarketWindow.HasUnmetNeedsForCategory( TradeGoodCategory.Self ) ) )]"
+								parentanchor = vcenter
+								size = { 20 20 }
+								texture = "gfx/interface/icons/symbols/icon_check.dds"
+							}
+
+							text_single = {
+								visible = "[And( Not( And4( TradeMarketWindow.IsNetBalanceMode, GreaterThan_CFixedPoint( TradeMarket.GetNeedForCategory( TradeGoodCategory.Self ), '(CFixedPoint)0' ), GreaterThan_CFixedPoint( TradeMarketWindow.GetDisplayBalanceForCategory( TradeGoodCategory.Self ), '(CFixedPoint)-0.1' ), Not( TradeMarketWindow.HasUnmetNeedsForCategory( TradeGoodCategory.Self ) ) ) ), GreaterThan_CFixedPoint( TradeMarketWindow.GetDisplayBalanceForCategory( TradeGoodCategory.Self ), '(CFixedPoint)-100' ) )]"
+								parentanchor = vcenter
+								text = "[GetColoredValueString( TradeMarketWindow.GetDisplayBalanceForCategory( TradeGoodCategory.Self ), 'trade', '(int32)0' )]"
+								align = nobaseline
+							}
+
+							# No decimal from -100 down: the basic goods row has no width left to grow this cell
+							text_single = {
+								visible = "[LessThanOrEqualTo_CFixedPoint( TradeMarketWindow.GetDisplayBalanceForCategory( TradeGoodCategory.Self ), '(CFixedPoint)-100' )]"
+								parentanchor = vcenter
+								text = "[GetColoredValueString( TradeMarketWindow.GetDisplayBalanceForCategory( TradeGoodCategory.Self ), 'trade', '(int32)0' )]"
+								align = nobaseline
+							}
+						}
+					}
+				}
+
+				# AoD: Cereals holds maize and potatoes too, so it wraps after 3 goods to fit the basic goods column
+				flowcontainer = {
+					visible = "[Not( EqualTo_string( TradeGoodCategory.GetNameNoTooltip, Localize( 'trade_category_cereals' ) ) )]"
+					datamodel = "[TradeGoodCategory.GetTradeGoodTypes]"
+					wrap_count = 7
+
+					item = {
+						button_trade_market_good = {}
+					}
+				}
+
+				flowcontainer = {
+					visible = "[EqualTo_string( TradeGoodCategory.GetNameNoTooltip, Localize( 'trade_category_cereals' ) )]"
+					datamodel = "[TradeGoodCategory.GetTradeGoodTypes]"
+					wrap_count = 3
+
+					item = {
+						button_trade_market_good = {}
+					}
+				}
+
+				expand = {}
+			}
+		}
+	}
+}

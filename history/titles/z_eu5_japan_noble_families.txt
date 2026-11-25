@@ -1,0 +1,5117 @@
+﻿# The house of every daimyo of the EU5 shogunate, held beside his own land.
+# Written by _fix_politics_output.py.
+
+c_nf_yamato = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_koumyou_tenno
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_yamato_stc = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_go_daigo_tenno
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kou = {
+	1281.1.1 = {
+		holder = jap_kou_no_shigeuji
+	}
+	1282.1.1 = {
+		holder = jap_kou_no_morouji
+	}
+	1301.5.18 = {
+		holder = jap_kou_no_moroshige
+	}
+	1333.1.1 = {
+		holder = jap_kou_no_moronao
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kou_no_moronao
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_hosokawa = {
+	1230.1.1 = {
+		holder = jap_hosokawa_yoshisue
+	}
+	1260.1.1 = {
+		holder = jap_hosokawa_toshiuji
+	}
+	1320.1.1 = {
+		holder = jap_hosokawa_kimiyori
+	}
+	1330.1.1 = {
+		holder = jap_hosokawa_kimiyori
+	}
+	1335.7.1 = {
+		holder = jap_hosokawa_kazuuji
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_hosokawa_kazuuji
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_akamatsu = {
+	1190.1.1 = {
+		holder = jap_akamatsu_ienori
+	}
+	1245.1.1 = {
+		holder = jap_akamatsu_hisanori
+	}
+	1280.1.1 = {
+		holder = jap_akamatsu_shigenori
+	}
+	1300.1.1 = {
+		holder = jap_akamatsu_norimura
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_akamatsu_norimura
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_nitsuki = {
+	1210.1.1 = {
+		holder = jap_nitsuki_sanekuni
+	}
+	1240.1.1 = {
+		holder = jap_nitsuki_yoshitoshi
+	}
+	1260.1.1 = {
+		holder = jap_nitsuki_yoshitsugu
+	}
+	1280.1.1 = {
+		holder = jap_nitsuki_moroyoshi
+	}
+	1320.1.1 = {
+		holder = jap_nitsuki_yoshikatsu
+	}
+	1330.1.1 = {
+		holder = jap_nitsuki_yoriaki
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_nitsuki_yoriaki
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kitabatake = {
+	1230.1.1 = {
+		holder = jap_kitabatake_masaie
+	}
+	1274.4.24 = {
+		holder = jap_kitabatake_morochika
+	}
+	1315.11.3 = {
+		holder = jap_kitabatake_moroshige
+	}
+	1322.1.30 = {
+		holder = jap_kitabatake_chikafusa
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kitabatake_chikafusa
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_chuujou = {
+	1165.1.1 = {
+		holder = jap_chuujou_narihiro
+	}
+	1205.1.1 = {
+		holder = jap_chuujou_ienaga
+	}
+	1236.9.26 = {
+		holder = jap_chuujou_tokiyasu
+	}
+	1265.1.1 = {
+		holder = jap_chuujou_iehira
+	}
+	1285.1.1 = {
+		holder = jap_chuujou_yorihira
+	}
+	1320.1.1 = {
+		holder = jap_chuujou_kagenaga
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_chuujou_kagenaga
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_imagawa = {
+	1265.1.1 = {
+		holder = jap_imagawa_kuniuji
+	}
+	1282.4.3 = {
+		holder = jap_imagawa_motouji
+	}
+	1323.5.13 = {
+		holder = jap_imagawa_norikuni
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_imagawa_norikuni
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_ishidou = {
+	1270.1.1 = {
+		holder = jap_ishidou_yorishige
+	}
+	1320.1.1 = {
+		holder = jap_ishidou_yoshifusa
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_ishidou_yoshifusa
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_takeda = {
+	1180.4.1 = {
+		holder = jap_takeda_nobuyoshi
+	}
+	1186.3.31 = {
+		holder = jap_takeda_nobumitsu
+	}
+	1239.1.1 = {
+		holder = jap_takeda_nobumasa
+	}
+	1265.1.24 = {
+		holder = jap_takeda_nobutoki
+	}
+	1289.3.2 = {
+		holder = jap_takeda_tokitsuna
+	}
+	1307.8.1 = {
+		holder = jap_takeda_nobumune
+	}
+	1330.12.19 = {
+		holder = jap_takeda_nobutake
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_takeda_nobutake
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_shiba = {
+	1253.1.1 = {
+		holder = jap_shiba_ieuji
+	}
+	1300.1.1 = {
+		holder = jap_shiba_muneie
+	}
+	1305.1.1 = {
+		holder = jap_shiba_muneuji
+	}
+	1312.12.1 = {
+		holder = jap_shiba_takatsune
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_shiba_takatsune
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_chiba = {
+	1070.1.1 = {
+		holder = jap_taira_tsunekane
+	}
+	1126.4.4 = {
+		holder = jap_chiba_tsuneshige
+	}
+	1180.5.28 = {
+		holder = jap_chiba_tsunetane
+	}
+	1201.4.28 = {
+		holder = jap_chiba_tanemasa
+	}
+	1203.8.28 = {
+		holder = jap_chiba_naritane
+	}
+	1218.5.6 = {
+		holder = jap_chiba_tanetsuna
+	}
+	1228.7.1 = {
+		holder = jap_chiba_tokitane
+	}
+	1241.10.23 = {
+		holder = jap_chiba_yoritane
+	}
+	1275.9.7 = {
+		holder = jap_chiba_munetane
+	}
+	1294.2.12 = {
+		holder = jap_chiba_munetane
+	}
+	1312.5.5 = {
+		holder = jap_chiba_sadatane
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_chiba_sadatane
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_satake = {
+	1100.1.1 = {
+		holder = jap_satake_masayoshi
+	}
+	1147.1.1 = {
+		holder = jap_satake_takayoshi
+	}
+	1183.6.11 = {
+		holder = jap_satake_hideyoshi
+	}
+	1226.1.17 = {
+		holder = jap_satake_yoshishige
+	}
+	1252.4.5 = {
+		holder = jap_satake_nagayoshi
+	}
+	1272.8.21 = {
+		holder = jap_satake_yoshitane
+	}
+	1278.5.15 = {
+		holder = jap_satake_yukiyoshi
+	}
+	1305.10.30 = {
+		holder = jap_satake_sadayoshi
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_satake_sadayoshi
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kyougoku = {
+	1220.1.1 = {
+		holder = jap_kyougoku_ujinobu
+	}
+	1242.4.7 = {
+		holder = jap_kyougoku_munetsuna
+	}
+	1297.10.27 = {
+		holder = jap_kyougoku_sadamune
+	}
+	1305.5.31 = {
+		holder = jap_kyougoku_muneuji
+	}
+	1329.8.11 = {
+		holder = jap_kyougoku_douyo
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kyougoku_douyo
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_toki = {
+	1180.1.1 = {
+		holder = jap_toki_mitsuhira
+	}
+	1206.5.4 = {
+		holder = jap_toki_mitsuyuki
+	}
+	1249.10.26 = {
+		holder = jap_toki_mitsusada
+	}
+	1281.9.25 = {
+		holder = jap_toki_yorisada
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_toki_yorisada
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_ogasawara = {
+	1175.1.1 = {
+		holder = jap_ogasawara_nagakiyo
+	}
+	1242.8.12 = {
+		holder = jap_ogasawara_nagatsune
+	}
+	1247.12.3 = {
+		holder = jap_ogasawara_nagatada
+	}
+	1264.11.23 = {
+		holder = jap_ogasawara_nagamasa
+	}
+	1285.1.1 = {
+		holder = jap_ogasawara_nagauji
+	}
+	1300.1.1 = {
+		holder = jap_ogasawara_munenaga
+	}
+	1330.10.26 = {
+		holder = jap_ogasawara_sadamune
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_ogasawara_sadamune
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_uesugi = {
+	1252.1.1 = {
+		holder = jap_uesugi_shigefusa
+	}
+	1310.1.1 = {
+		holder = jap_uesugi_yorishige
+	}
+	1330.1.1 = {
+		holder = jap_uesugi_norifusa
+	}
+	1336.3.10 = {
+		holder = jap_uesugi_noriaki
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_uesugi_noriaki
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_oyama = {
+	1150.1.1 = {
+		holder = jap_oyama_masamitsu
+	}
+	1198.1.1 = {
+		holder = jap_oyama_tomomasa
+	}
+	1221.7.1 = {
+		holder = jap_oyama_tomonaga
+	}
+	1229.12.4 = {
+		holder = jap_oyama_nagamura
+	}
+	1269.9.12 = {
+		holder = jap_oyama_tokinaga
+	}
+	1300.1.1 = {
+		holder = jap_oyama_munenaga
+	}
+	1320.1.1 = {
+		holder = jap_oyama_sadatomo
+	}
+	1330.11.11 = {
+		holder = jap_oyama_hidetomo
+	}
+	1335.8.2 = {
+		holder = jap_oyama_tomosato
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_oyama_tomosato
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_togashi = {
+	1035.1.1 = {
+		holder = jap_togashi_iekuni
+	}
+	1075.1.1 = {
+		holder = jap_togashi_nobuie
+	}
+	1100.1.1 = {
+		holder = jap_togashi_iemichi
+	}
+	1145.1.1 = {
+		holder = jap_togashi_ietsune
+	}
+	1180.1.1 = {
+		holder = jap_togashi_ienao
+	}
+	1205.1.1 = {
+		holder = jap_togashi_yasuie
+	}
+	1240.1.1 = {
+		holder = jap_togashi_yasuharu
+	}
+	1270.1.1 = {
+		holder = jap_togashi_ienao_hachidaime
+	}
+	1300.1.1 = {
+		holder = jap_togashi_yasuaki
+	}
+	1330.1.1 = {
+		holder = jap_togashi_takaie
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_togashi_takaie
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_yoshimi = {
+	1240.1.1 = {
+		holder = jap_yoshimi_tameyori
+	}
+	1290.1.1 = {
+		holder = jap_yoshimi_yorimune
+	}
+	1330.1.1 = {
+		holder = jap_yoshimi_yoritaka
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_yoshimi_yoritaka
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_momonoi = {
+	1220.1.1 = {
+		holder = jap_momonoi_yoshitane
+	}
+	1260.1.1 = {
+		holder = jap_momonoi_yoriuji
+	}
+	1280.1.1 = {
+		holder = jap_momonoi_yorinao
+	}
+	1300.1.1 = {
+		holder = jap_momonoi_sadayori
+	}
+	1330.1.1 = {
+		holder = jap_momonoi_tadatsune
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_momonoi_tadatsune
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kira = {
+	1230.1.1 = {
+		holder = jap_kira_osauji
+	}
+	1290.7.25 = {
+		holder = jap_kira_sadayoshi
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kira_sadayoshi
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_yamana = {
+	1175.1.1 = {
+		holder = jap_yamana_yoshinori
+	}
+	1200.1.1 = {
+		holder = jap_yamana_yoshisada
+	}
+	1215.1.1 = {
+		holder = jap_yamana_shigekuni
+	}
+	1235.1.1 = {
+		holder = jap_yamana_shigemura
+	}
+	1270.1.1 = {
+		holder = jap_yamana_yoshinaga
+	}
+	1300.1.1 = {
+		holder = jap_yamana_yoshitoshi
+	}
+	1320.1.1 = {
+		holder = jap_yamana_masauji
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_yamana_masauji
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_enya = {
+	1278.1.1 = {
+		holder = jap_enya_yoriyasu
+	}
+	1300.1.1 = {
+		holder = jap_enya_sadakiyo
+	}
+	1326.5.1 = {
+		holder = jap_enya_takasada
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_enya_takasada
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_ueno = {
+	1260.1.1 = {
+		holder = jap_ueno_giben
+	}
+	1300.1.1 = {
+		holder = jap_ueno_yoritoo
+	}
+	1320.1.1 = {
+		holder = jap_ueno_yorikane
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_ueno_yorikane
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_matsuda = {
+	1188.4.3 = {
+		holder = jap_matsuda_aritsune
+	}
+	1240.1.1 = {
+		holder = jap_matsuda_yoshimoto
+	}
+	1270.1.1 = {
+		holder = jap_matsuda_tsunemoto
+	}
+	1300.1.1 = {
+		holder = jap_matsuda_moritsune
+	}
+	1335.1.1 = {
+		holder = jap_matsuda_moritomo
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_matsuda_moritomo
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_minami = {
+	1250.1.1 = {
+		holder = jap_minami_yorimoto
+	}
+	1290.1.1 = {
+		holder = jap_minami_koremune
+	}
+	1330.1.1 = {
+		holder = jap_minami_munetsugu
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_minami_munetsugu
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_asayama = {
+	836.1.1 = {
+		holder = jap_asayama_masamochi
+	}
+	870.1.1 = {
+		holder = jap_asayama_masatoyo
+	}
+	890.1.1 = {
+		holder = jap_asayama_masayuki
+	}
+	920.1.1 = {
+		holder = jap_asayama_masatsugu
+	}
+	940.1.1 = {
+		holder = jap_asayama_masakatsu
+	}
+	960.1.1 = {
+		holder = jap_asayama_masatomo
+	}
+	990.1.1 = {
+		holder = jap_asayama_masatane
+	}
+	1020.1.1 = {
+		holder = jap_asayama_masatoku
+	}
+	1050.1.1 = {
+		holder = jap_asayama_masamori
+	}
+	1070.1.1 = {
+		holder = jap_asayama_masahisa
+	}
+	1100.1.1 = {
+		holder = jap_asayama_masaie
+	}
+	1130.1.1 = {
+		holder = jap_asayama_masakore
+	}
+	1160.1.1 = {
+		holder = jap_asayama_koremoto
+	}
+	1180.1.1 = {
+		holder = jap_asayama_koretsuna
+	}
+	1190.1.1 = {
+		holder = jap_asayama_koreyoshi
+	}
+	1210.1.1 = {
+		holder = jap_asayama_yoshimura
+	}
+	1240.1.1 = {
+		holder = jap_asayama_yoshikatsu
+	}
+	1270.1.1 = {
+		holder = jap_asayama_yoshitsugi
+	}
+	1300.1.1 = {
+		holder = jap_asayama_yoshimura_ii
+	}
+	1330.1.1 = {
+		holder = jap_asayama_kagetsura
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_asayama_kagetsura
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_washizu = {
+	1180.1.1 = {
+		holder = jap_washizu_moriyasu
+	}
+	1210.1.1 = {
+		holder = jap_washizu_chikamori
+	}
+	1260.1.1 = {
+		holder = jap_washizu_zeneni
+	}
+	1300.1.1 = {
+		holder = jap_washizu_nagahiro
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_washizu_nagahiro
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kotou = {
+	1010.1.1 = {
+		holder = jap_kotou_taketada
+	}
+	1060.1.1 = {
+		holder = jap_kotou_takemoto
+	}
+	1070.1.1 = {
+		holder = jap_kotou_takemichi
+	}
+	1100.1.1 = {
+		holder = jap_kotou_taketsuna
+	}
+	1130.1.1 = {
+		holder = jap_kotou_takehito
+	}
+	1155.1.1 = {
+		holder = jap_kotou_takeharu
+	}
+	1180.1.1 = {
+		holder = jap_kotou_takemitsu
+	}
+	1200.1.1 = {
+		holder = jap_kotou_takekage
+	}
+	1220.1.1 = {
+		holder = jap_kotou_takeyoshi
+	}
+	1250.1.1 = {
+		holder = jap_kotou_taketomo
+	}
+	1260.1.1 = {
+		holder = jap_kotou_taketoki
+	}
+	1280.1.1 = {
+		holder = jap_kotou_takemasa
+	}
+	1300.1.1 = {
+		holder = jap_kotou_takenaka
+	}
+	1305.1.1 = {
+		holder = jap_kotou_takezane
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kotou_takezane
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_hatakeyama = {
+	1205.1.1 = {
+		holder = jap_hatakeyama_yoshizumi
+	}
+	1210.10.26 = {
+		holder = jap_hatakeyama_yasukuni
+	}
+	1260.1.1 = {
+		holder = jap_hatakeyama_tokikuni
+	}
+	1300.1.1 = {
+		holder = jap_hatakeyama_takakuni
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_hatakeyama_takakuni
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kawano = {
+	1160.1.1 = {
+		holder = jap_kawano_chikakiyo
+	}
+	1170.1.1 = {
+		holder = jap_kawano_michikiyo
+	}
+	1181.1.1 = {
+		holder = jap_kawano_michinobu
+	}
+	1223.6.19 = {
+		holder = jap_kawano_michihisa
+	}
+	1267.1.1 = {
+		holder = jap_kawano_michitsugu
+	}
+	1272.1.1 = {
+		holder = jap_kawano_michiari
+	}
+	1311.8.28 = {
+		holder = jap_kawano_michimori
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kawano_michimori
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_shouni = {
+	1226.1.1 = {
+		holder = jap_mutou_sukeyori
+	}
+	1228.9.24 = {
+		holder = jap_shouni_sukeyoshi
+	}
+	1281.8.28 = {
+		holder = jap_shouni_tsunesuke
+	}
+	1292.9.14 = {
+		holder = jap_shouni_moritsune
+	}
+	1308.2.17 = {
+		holder = jap_shouni_sadatsune
+	}
+	1336.4.11 = {
+		holder = jap_shouni_yorihisa
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_shouni_yorihisa
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kii = {
+	1130.1.1 = {
+		holder = jap_nakahara_munefusa
+	}
+	1160.1.1 = {
+		holder = jap_kii_nobufusa
+	}
+	1234.8.27 = {
+		holder = jap_kii_kagefusa
+	}
+	1240.1.1 = {
+		holder = jap_kii_nobukage
+	}
+	1260.1.1 = {
+		holder = jap_kii_michifusa
+	}
+	1290.1.1 = {
+		holder = jap_kii_yorifusa
+	}
+	1320.1.1 = {
+		holder = jap_kii_fuyutsuna
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kii_fuyutsuna
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_ootomo = {
+	1196.11.1 = {
+		holder = jap_ootomo_yoshinao
+	}
+	1223.12.20 = {
+		holder = jap_ootomo_chikahide
+	}
+	1248.11.10 = {
+		holder = jap_ootomo_yoriyasu
+	}
+	1281.1.1 = {
+		holder = jap_ootomo_chikatoki
+	}
+	1295.7.5 = {
+		holder = jap_ootomo_sadachika
+	}
+	1311.9.2 = {
+		holder = jap_ootomo_sadamune
+	}
+	1334.1.9 = {
+		holder = jap_ootomo_ujiyasu
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_ootomo_ujiyasu
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_shimazu = {
+	1186.1.1 = {
+		holder = jap_shimazu_tadahisa
+	}
+	1227.8.1 = {
+		holder = jap_shimazu_tadatoki
+	}
+	1272.5.8 = {
+		holder = jap_shimazu_hisatsune
+	}
+	1284.5.7 = {
+		holder = jap_shimazu_tadamune
+	}
+	1325.12.17 = {
+		holder = jap_shimazu_sadahisa
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_shimazu_sadahisa
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_nanbu = {
+	1180.1.1 = {
+		holder = jap_nanbu_mitsuyuki
+	}
+	1236.4.25 = {
+		holder = jap_nanbu_sanemitsu
+	}
+	1255.2.3 = {
+		holder = jap_nanbu_tokizane
+	}
+	1263.1.1 = {
+		holder = jap_nanbu_masamitsu
+	}
+	1265.9.3 = {
+		holder = jap_nanbu_munetsune
+	}
+	1283.6.13 = {
+		holder = jap_nanbu_muneyuki
+	}
+	1295.1.1 = {
+		holder = jap_nanbu_hiroyuki
+	}
+	1300.1.1 = {
+		holder = jap_nanbu_masatsura
+	}
+	1310.1.1 = {
+		holder = jap_nanbu_sukemasa
+	}
+	1315.1.1 = {
+		holder = jap_nanbu_shigetoki
+	}
+	1333.7.4 = {
+		holder = jap_nanbu_nobunaga
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_nanbu_nobunaga
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kudou = {
+	939.1.1 = {
+		holder = jap_kudou_tamenori
+	}
+	980.1.1 = {
+		holder = jap_kudou_tokisato
+	}
+	1000.1.1 = {
+		holder = jap_kudou_korekage
+	}
+	1025.1.1 = {
+		holder = jap_kudou_kagetou
+	}
+	1065.1.1 = {
+		holder = jap_kudou_sukehiro
+	}
+	1105.1.1 = {
+		holder = jap_kudou_yukikage
+	}
+	1145.1.1 = {
+		holder = jap_kudou_kagesumi
+	}
+	1190.1.1 = {
+		holder = jap_kudou_kagemitsu
+	}
+	1220.1.1 = {
+		holder = jap_kudou_shigemitsu
+	}
+	1250.1.1 = {
+		holder = jap_kudou_takamitsu
+	}
+	1280.1.1 = {
+		holder = jap_kudou_tokimitsu
+	}
+	1310.1.1 = {
+		holder = jap_kudou_sadasuke
+	}
+	1335.1.1 = {
+		holder = jap_kudou_sadayuki
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kudou_sadayuki
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_oosaki = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_oosaki_tadamochi
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_mogami = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_mogami_kaneyori
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kasai = {
+	1200.1.1 = {
+		holder = jap_kasai_kiyoshige
+	}
+	1238.10.23 = {
+		holder = jap_kasai_kiyochika
+	}
+	1250.1.1 = {
+		holder = jap_kasai_tokikiyo
+	}
+	1290.1.1 = {
+		holder = jap_kasai_kiyotsune
+	}
+	1310.1.1 = {
+		holder = jap_kasai_munekiyo
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kasai_munekiyo
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_souma = {
+	1189.1.1 = {
+		holder = jap_souma_morotsune
+	}
+	1201.1.1 = {
+		holder = jap_souma_yoshitane
+	}
+	1230.1.1 = {
+		holder = jap_souma_tanetsuna
+	}
+	1260.1.1 = {
+		holder = jap_souma_tanemura
+	}
+	1290.1.1 = {
+		holder = jap_souma_morotane
+	}
+	1320.1.1 = {
+		holder = jap_souma_shigetane
+	}
+	1335.1.1 = {
+		holder = jap_souma_chikatane
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_souma_chikatane
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_date = {
+	1189.1.1 = {
+		holder = jap_date_tomomune
+	}
+	1199.10.23 = {
+		holder = jap_date_munemura
+	}
+	1251.11.17 = {
+		holder = jap_date_yoshihiro
+	}
+	1256.10.12 = {
+		holder = jap_date_masayori
+	}
+	1301.8.13 = {
+		holder = jap_date_munetsuna
+	}
+	1317.3.20 = {
+		holder = jap_date_motomune
+	}
+	1335.8.28 = {
+		holder = jap_date_yukitomo
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_date_yukitomo
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_ashina = {
+	1189.1.1 = {
+		holder = jap_sahara_yoshitsura
+	}
+	1200.1.1 = {
+		holder = jap_sahara_moritsura
+	}
+	1233.7.1 = {
+		holder = jap_sahara_mitsumori
+	}
+	1250.1.1 = {
+		holder = jap_sahara_tokitsura
+	}
+	1255.1.1 = {
+		holder = jap_ashina_yasumori
+	}
+	1295.1.1 = {
+		holder = jap_ashina_morimune
+	}
+	1330.1.1 = {
+		holder = jap_ashina_morikazu
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_ashina_naomori
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_yuuki = {
+	1183.2.23 = {
+		holder = jap_yuuki_tomomitsu
+	}
+	1254.3.14 = {
+		holder = jap_yuuki_tomohiro
+	}
+	1274.1.1 = {
+		holder = jap_yuuki_hirotsuna
+	}
+	1278.7.14 = {
+		holder = jap_yuuki_tokihiro
+	}
+	1290.8.7 = {
+		holder = jap_yuuki_sadahiro
+	}
+	1309.12.15 = {
+		holder = jap_yuuki_tomosuke
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_yuuki_naotomo
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_ooida = {
+	1220.1.1 = {
+		holder = jap_ooida_yoshitsugu
+	}
+	1275.1.1 = {
+		holder = jap_ooida_yoshitaka
+	}
+	1310.1.1 = {
+		holder = jap_ooida_tsunetaka
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_ooida_tsunetaka
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_oguni = {
+	1212.1.11 = {
+		holder = jap_oguni_yoritsugu
+	}
+	1230.1.1 = {
+		holder = jap_oguni_yoritaka
+	}
+	1250.1.1 = {
+		holder = jap_oguni_yorimura
+	}
+	1270.1.1 = {
+		holder = jap_oguni_yoriatsu
+	}
+	1310.1.1 = {
+		holder = jap_oguni_masamitsu
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_oguni_masamitsu
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_utsunomiya = {
+	1063.1.1 = {
+		holder = jap_utsunomiya_souen
+	}
+	1111.11.20 = {
+		holder = jap_utsunomiya_munetsuna
+	}
+	1162.9.30 = {
+		holder = jap_utsunomiya_tomotsuna
+	}
+	1189.9.8 = {
+		holder = jap_utsunomiya_tomotsuna
+	}
+	1192.4.8 = {
+		holder = jap_utsunomiya_tomotsuna
+	}
+	1194.5.1 = {
+		holder = jap_utsunomiya_yoritsuna
+	}
+	1259.12.26 = {
+		holder = jap_utsunomiya_yasutsuna
+	}
+	1260.11.24 = {
+		holder = jap_utsunomiya_kagetsuna
+	}
+	1298.6.10 = {
+		holder = jap_utsunomiya_sadatsuna
+	}
+	1316.8.13 = {
+		holder = jap_utsunomiya_kintsuna
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_utsunomiya_kintsuna
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_ii = {
+	1032.1.1 = {
+		holder = jap_ii_tomoyasu
+	}
+	1093.9.8 = {
+		holder = jap_ii_tomomune
+	}
+	1100.1.1 = {
+		holder = jap_ii_munetsuna
+	}
+	1120.1.1 = {
+		holder = jap_ii_tomoaki
+	}
+	1140.1.1 = {
+		holder = jap_ii_tomoie
+	}
+	1160.1.1 = {
+		holder = jap_ii_tomonao
+	}
+	1180.1.1 = {
+		holder = jap_ii_korenao
+	}
+	1200.1.1 = {
+		holder = jap_ii_morinao
+	}
+	1220.1.1 = {
+		holder = jap_ii_yoshinao
+	}
+	1240.1.1 = {
+		holder = jap_ii_yanao
+	}
+	1270.1.1 = {
+		holder = jap_ii_yasunao
+	}
+	1315.1.1 = {
+		holder = jap_ii_yukinao
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_ii_yukinao
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_anenokouji = {
+	962.1.1 = {
+		holder = jap_fujiwara_naritoki
+	}
+	995.5.29 = {
+		holder = jap_fujiwara_michitou
+	}
+	1039.6.1 = {
+		holder = jap_fujiwara_moronari
+	}
+	1081.10.5 = {
+		holder = jap_fujiwara_morosue
+	}
+	1110.1.1 = {
+		holder = jap_fujiwara_tadatoki
+	}
+	1150.1.1 = {
+		holder = jap_fujiwara_morotsuna
+	}
+	1172.9.25 = {
+		holder = jap_fujiwara_chikatsuna
+	}
+	1230.1.1 = {
+		holder = jap_fujiwara_ietoki
+	}
+	1270.1.1 = {
+		holder = jap_fujiwara_morohira
+	}
+	1300.1.1 = {
+		holder = jap_fujiwara_yorimoto
+	}
+	1335.1.1 = {
+		holder = jap_anenokouji_takamoto
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_anenokouji_takamoto
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kusunoki = {
+	1285.11.17 = {
+		holder = jap_kusunoki_masatoo
+	}
+	1325.1.1 = {
+		holder = jap_kusunoki_masashige
+	}
+	1336.7.4 = {
+		holder = jap_kusunoki_masatsura
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kusunoki_masatsura
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_isshiki = {
+	1290.1.1 = {
+		holder = jap_isshiki_kimifuka
+	}
+	1330.3.7 = {
+		holder = jap_isshiki_noriuji
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_isshiki_noriuji
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_nawa = {
+	1290.1.1 = {
+		holder = jap_nawa_yukitaka
+	}
+	1325.1.1 = {
+		holder = jap_nawa_nagatoshi
+	}
+	1336.8.7 = {
+		holder = jap_nawa_yoshitaka
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_nawa_yoshitaka
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_masuda = {
+	1192.1.1 = {
+		holder = jap_masuda_kanetaka
+	}
+	1225.1.1 = {
+		holder = jap_masuda_kanesue
+	}
+	1245.1.1 = {
+		holder = jap_masuda_kanetoki
+	}
+	1265.1.1 = {
+		holder = jap_masuda_kanehisa
+	}
+	1285.1.1 = {
+		holder = jap_masuda_kanetane
+	}
+	1305.1.1 = {
+		holder = jap_masuda_kanehiro
+	}
+	1325.1.1 = {
+		holder = jap_masuda_kanekata
+	}
+	1335.1.1 = {
+		holder = jap_masuda_kanemi
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_masuda_kanemi
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_oouchi = {
+	1178.1.1 = {
+		holder = jap_oouchi_morifusa
+	}
+	1190.1.1 = {
+		holder = jap_oouchi_hiromori
+	}
+	1210.1.1 = {
+		holder = jap_oouchi_mitsumori
+	}
+	1230.1.1 = {
+		holder = jap_oouchi_hironari
+	}
+	1244.10.21 = {
+		holder = jap_oouchi_hirosada
+	}
+	1286.7.29 = {
+		holder = jap_oouchi_hiroie
+	}
+	1300.4.17 = {
+		holder = jap_oouchi_shigehiro
+	}
+	1320.4.15 = {
+		holder = jap_oouchi_hiroyuki
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_oouchi_hiroyuki
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_tokunou = {
+	1220.1.1 = {
+		holder = jap_tokuno_michitoshi
+	}
+	1260.1.1 = {
+		holder = jap_tokuno_michihide
+	}
+	1285.1.1 = {
+		holder = jap_tokuno_michizumi
+	}
+	1300.1.1 = {
+		holder = jap_tokuno_michimura
+	}
+	1330.1.1 = {
+		holder = jap_tokuno_michitsuna
+	}
+	1337.3.1 = {
+		holder = jap_tokuno_tadamasa
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_tokuno_tadamasa
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_doi = {
+	1275.1.1 = {
+		holder = jap_doi_michinari
+	}
+	1320.1.1 = {
+		holder = jap_doi_michimasu
+	}
+	1336.11.14 = {
+		holder = jap_doi_michiyo
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_doi_michiyo
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kutsuna = {
+	1170.1.1 = {
+		holder = jap_kutsuna_toshihira
+	}
+	1200.1.1 = {
+		holder = jap_kutsuna_kanehira
+	}
+	1230.1.1 = {
+		holder = jap_kutsuna_kunishige
+	}
+	1260.1.1 = {
+		holder = jap_kutsuna_shigetoshi
+	}
+	1290.1.1 = {
+		holder = jap_kutsuna_hisashige
+	}
+	1330.1.1 = {
+		holder = jap_kutsuna_shigeyoshi
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kutsuna_shigeyoshi
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_shijou = {
+	1163.1.1 = {
+		holder = jap_shijou_takasue
+	}
+	1185.2.12 = {
+		holder = jap_shijou_takafusa
+	}
+	1209.1.1 = {
+		holder = jap_shijou_takahira
+	}
+	1255.1.27 = {
+		holder = jap_shijou_takachika
+	}
+	1279.10.12 = {
+		holder = jap_shijou_fusana
+	}
+	1288.7.14 = {
+		holder = jap_shijou_takana
+	}
+	1322.1.1 = {
+		holder = jap_shijou_takamune
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_shijou_takamune
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_yamashiro = {
+	1183.1.1 = {
+		holder = jap_yamashiro_kakoi
+	}
+	1210.1.1 = {
+		holder = jap_yamashiro_katashi
+	}
+	1240.1.1 = {
+		holder = jap_yamashiro_hiroshi
+	}
+	1260.1.1 = {
+		holder = jap_yamashiro_kai
+	}
+	1274.11.19 = {
+		holder = jap_yamashiro_sakai
+	}
+	1320.1.1 = {
+		holder = jap_yamashiro_tadashi
+	}
+	1330.1.1 = {
+		holder = jap_yamashiro_hiroshi_ruler
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_yamashiro_hiroshi_ruler
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kikuchi = {
+	1019.1.1 = {
+		holder = jap_kikuchi_noritaka
+	}
+	1064.1.1 = {
+		holder = jap_kikuchi_tsunetaka
+	}
+	1100.1.1 = {
+		holder = jap_kikuchi_tsuneyori
+	}
+	1130.1.1 = {
+		holder = jap_kikuchi_tsunemune
+	}
+	1150.1.1 = {
+		holder = jap_kikuchi_tsunenao
+	}
+	1180.1.1 = {
+		holder = jap_kikuchi_takanao
+	}
+	1185.11.1 = {
+		holder = jap_kikuchi_takasada
+	}
+	1215.1.1 = {
+		holder = jap_kikuchi_yoshitaka
+	}
+	1260.1.1 = {
+		holder = jap_kikuchi_takayasu
+	}
+	1270.1.1 = {
+		holder = jap_kikuchi_takefusa
+	}
+	1285.5.2 = {
+		holder = jap_kikuchi_tokitaka
+	}
+	1304.1.1 = {
+		holder = jap_kikuchi_taketoki
+	}
+	1333.4.27 = {
+		holder = jap_kikuchi_takeshige
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kikuchi_takeshige
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_aso = {
+	1120.1.1 = {
+		holder = jap_aso_korenobu
+	}
+	1160.1.1 = {
+		holder = jap_aso_sukenaga
+	}
+	1190.1.1 = {
+		holder = jap_aso_koreyasu
+	}
+	1220.1.1 = {
+		holder = jap_aso_koretsugu
+	}
+	1250.1.1 = {
+		holder = jap_aso_koreyoshi
+	}
+	1280.1.1 = {
+		holder = jap_aso_korekage
+	}
+	1310.1.1 = {
+		holder = jap_aso_korekuni
+	}
+	1319.1.1 = {
+		holder = jap_aso_koretoki
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_aso_koretoki
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_sagara = {
+	1193.1.1 = {
+		holder = jap_sagara_nagayori
+	}
+	1254.3.30 = {
+		holder = jap_sagara_yorichika
+	}
+	1255.1.1 = {
+		holder = jap_sagara_yoritoshi
+	}
+	1287.1.1 = {
+		holder = jap_sagara_nagauji
+	}
+	1326.11.25 = {
+		holder = jap_sagara_yorihiro_later
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_sagara_yorihiro_later
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_ijuuin = {
+	1260.1.1 = {
+		holder = jap_ijuuin_toshitada
+	}
+	1320.1.1 = {
+		holder = jap_ijuuin_hisakane
+	}
+	1330.1.1 = {
+		holder = jap_ijuuin_hisachika
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_ijuuin_hisachika
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kimotsuki = {
+	1160.1.1 = {
+		holder = jap_kimotsuki_kanetoshi
+	}
+	1210.1.1 = {
+		holder = jap_kimotsuki_kanetsune
+	}
+	1240.1.1 = {
+		holder = jap_kimotsuki_kanemasu
+	}
+	1270.1.1 = {
+		holder = jap_kimotsuki_kanekazu
+	}
+	1290.1.1 = {
+		holder = jap_kimotsuki_kaneishi
+	}
+	1320.1.1 = {
+		holder = jap_kimotsuki_kanefuji
+	}
+	1330.1.1 = {
+		holder = jap_kimotsuki_kanehisa
+	}
+	1335.1.1 = {
+		holder = jap_kimotsuki_kaneshige
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kimotsuki_kaneshige
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_sou = {
+	1246.1.1 = {
+		holder = jap_sou_shigehisa
+	}
+	1270.1.1 = {
+		holder = jap_sou_sukekuni
+	}
+	1274.11.5 = {
+		holder = jap_sou_moriakira
+	}
+	1300.1.1 = {
+		holder = jap_sou_morikuni
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_sou_morikuni
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_nagai = {
+	1218.1.1 = {
+		holder = jap_nagai_tokihiro
+	}
+	1241.7.8 = {
+		holder = jap_nagai_yasuhide
+	}
+	1254.1.11 = {
+		holder = jap_nagai_tokihide
+	}
+	1300.1.1 = {
+		holder = jap_nagai_munehide
+	}
+	1327.12.20 = {
+		holder = jap_nagai_takafuyu
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_nagai_takafuyu
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_hei = {
+	1190.1.1 = {
+		holder = jap_hei_yorimoto
+	}
+	1220.1.1 = {
+		holder = jap_hei_ieasa
+	}
+	1250.1.1 = {
+		holder = jap_hei_tameyori
+	}
+	1270.1.1 = {
+		holder = jap_hei_mitsutomo
+	}
+	1290.1.1 = {
+		holder = jap_hei_mitsuyori
+	}
+	1334.1.1 = {
+		holder = jap_hei_chikamitsu
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_hei_chikamitsu
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_asonuma = {
+	1189.1.1 = {
+		holder = jap_asonuma_hirotsuna
+	}
+	1200.1.1 = {
+		holder = jap_asonuma_tomotsuna
+	}
+	1230.1.1 = {
+		holder = jap_asonuma_mitsutsuna
+	}
+	1250.1.1 = {
+		holder = jap_asonuma_kintsuna
+	}
+	1260.1.1 = {
+		holder = jap_asonuma_kimisato
+	}
+	1280.1.1 = {
+		holder = jap_asonuma_ujitsuna
+	}
+	1310.1.1 = {
+		holder = jap_asonuma_tomotsuna_ii
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_asonuma_tomotsuna_ii
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_tozawa = {
+	1206.1.1 = {
+		holder = jap_tozawa_hidemori
+	}
+	1240.1.1 = {
+		holder = jap_tozawa_kanemori
+	}
+	1270.1.1 = {
+		holder = jap_tozawa_chikamori
+	}
+	1290.1.1 = {
+		holder = jap_tozawa_katsumori
+	}
+	1330.1.1 = {
+		holder = jap_tozawa_gensei
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_tozawa_gensei
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_waga = {
+	1219.1.1 = {
+		holder = jap_waga_yoshiyuki
+	}
+	1243.2.1 = {
+		holder = jap_waga_yasuyoshi
+	}
+	1290.1.1 = {
+		holder = jap_waga_moriyoshi
+	}
+	1320.1.1 = {
+		holder = jap_waga_nagayoshi
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_waga_nagayoshi
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_hienuki = {
+	1197.1.1 = {
+		holder = jap_hienuki_tameshige
+	}
+	1260.1.1 = {
+		holder = jap_hienuki_mitsuie
+	}
+	1280.1.1 = {
+		holder = jap_hienuki_shigeyasu
+	}
+	1310.1.1 = {
+		holder = jap_hienuki_tamemasa
+	}
+	1335.1.1 = {
+		holder = jap_hienuki_ieshige
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_hienuki_ieshige
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_sagae = {
+	1192.1.1 = {
+		holder = jap_sagae_chikahiro
+	}
+	1242.1.17 = {
+		holder = jap_sagae_hirotoki
+	}
+	1262.8.4 = {
+		holder = jap_sagae_masahiro
+	}
+	1277.7.17 = {
+		holder = jap_sagae_mototaka
+	}
+	1322.4.4 = {
+		holder = jap_sagae_motomasa
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_sagae_motomasa
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_daihouji = {
+	1209.1.1 = {
+		holder = jap_daihouji_ujihira
+	}
+	1230.1.1 = {
+		holder = jap_daihouji_moriuji
+	}
+	1260.1.1 = {
+		holder = jap_daihouji_ujikage
+	}
+	1290.1.1 = {
+		holder = jap_daihouji_akiuji
+	}
+	1320.1.1 = {
+		holder = jap_daihouji_nagamori
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_daihouji_nagamori
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_naganuma = {
+	1162.1.1 = {
+		holder = jap_naganuma_munemasa
+	}
+	1230.8.13 = {
+		holder = jap_naganuma_tokimune
+	}
+	1250.1.1 = {
+		holder = jap_naganuma_muneyasu
+	}
+	1299.12.6 = {
+		holder = jap_naganuma_munehide
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_naganuma_munehide
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_nikaidou = {
+	1192.11.25 = {
+		holder = jap_nikaidou_yukimasa
+	}
+	1219.1.27 = {
+		holder = jap_nikaidou_yukimitsu
+	}
+	1219.10.17 = {
+		holder = jap_nikaidou_yukimori
+	}
+	1253.12.30 = {
+		holder = jap_nikaidou_yukiyasu
+	}
+	1262.1.1 = {
+		holder = jap_nikaidou_yukiyori
+	}
+	1263.12.12 = {
+		holder = jap_nikaidou_yukiyasu
+	}
+	1265.11.11 = {
+		holder = jap_nikaidou_yukizane
+	}
+	1269.8.12 = {
+		holder = jap_nikaidou_yukitsuna
+	}
+	1281.6.24 = {
+		holder = jap_nikaidou_yoritsuna
+	}
+	1283.11.14 = {
+		holder = jap_nikaidou_yukitada
+	}
+	1290.12.24 = {
+		holder = jap_nikaidou_yukisada
+	}
+	1293.10.1 = {
+		holder = jap_nikaidou_yukifuji
+	}
+	1302.9.14 = {
+		holder = jap_nikaidou_yukisada
+	}
+	1329.3.3 = {
+		holder = jap_nikaidou_sadahira
+	}
+	1332.2.3 = {
+		holder = jap_nikaidou_sadafuji
+	}
+	1333.5.22 = {
+		holder = jap_nikaidou_tokitsuna
+	}
+	1335.1.1 = {
+		holder = jap_nikaidou_yukitomo
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_nikaidou_yukitomo
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_tamura = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_tamura_ruler
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_inawashiro = {
+	1245.1.1 = {
+		holder = jap_inawashiro_tsunetsura
+	}
+	1295.1.1 = {
+		holder = jap_inawashiro_tsuneyasu
+	}
+	1300.1.1 = {
+		holder = jap_inawashiro_moriyasu
+	}
+	1330.1.1 = {
+		holder = jap_inawashiro_muneyasu
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_inawashiro_muneyasu
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_ishikawa = {
+	1051.1.1 = {
+		holder = jap_ishikawa_yoritoo
+	}
+	1062.10.15 = {
+		holder = jap_ishikawa_arimitsu
+	}
+	1086.11.10 = {
+		holder = jap_ishikawa_motomitsu
+	}
+	1099.9.20 = {
+		holder = jap_ishikawa_mitsuyoshi
+	}
+	1121.4.19 = {
+		holder = jap_ishikawa_yoshisue
+	}
+	1177.8.1 = {
+		holder = jap_ishikawa_motomitsu_alternative
+	}
+	1199.4.29 = {
+		holder = jap_ishikawa_hirosue
+	}
+	1248.3.30 = {
+		holder = jap_ishikawa_mitsusada
+	}
+	1269.3.13 = {
+		holder = jap_ishikawa_mitsunaga
+	}
+	1291.1.9 = {
+		holder = jap_ishikawa_motomori
+	}
+	1307.7.5 = {
+		holder = jap_ishikawa_moriyoshi
+	}
+	1318.8.28 = {
+		holder = jap_ishikawa_iemitsu
+	}
+	1330.4.20 = {
+		holder = jap_ishikawa_tokimitsu
+	}
+	1335.4.24 = {
+		holder = jap_ishikawa_sadamitsu
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_ishikawa_sadamitsu
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_miura = {
+	1050.1.1 = {
+		holder = jap_miura_tamemichi
+	}
+	1083.4.3 = {
+		holder = jap_miura_tametsugu
+	}
+	1100.1.1 = {
+		holder = jap_miura_yoshitsugu
+	}
+	1159.3.12 = {
+		holder = jap_miura_yoshiaki
+	}
+	1180.9.18 = {
+		holder = jap_miura_yoshizumi
+	}
+	1200.2.9 = {
+		holder = jap_miura_yoshimura
+	}
+	1239.12.31 = {
+		holder = jap_miura_yasumura
+	}
+	1247.7.9 = {
+		holder = jap_miura_moritoki
+	}
+	1290.1.1 = {
+		holder = jap_miura_yorimori
+	}
+	1310.1.1 = {
+		holder = jap_miura_tokiaki
+	}
+	1330.1.1 = {
+		holder = jap_miura_tokitsugu
+	}
+	1335.1.1 = {
+		holder = jap_miura_takatsugu
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_miura_takatsugu
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_suwa = {
+	1220.1.1 = {
+		holder = jap_suwa_morishige
+	}
+	1267.4.1 = {
+		holder = jap_suwa_yorishige
+	}
+	1335.7.1 = {
+		holder = jap_suwa_tokitsugu
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_suwa_yoritsugu
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_rokkaku = {
+	1234.1.1 = {
+		holder = jap_rokkaku_yasutsuna
+	}
+	1276.6.30 = {
+		holder = jap_rokkaku_yoritsuna
+	}
+	1311.1.22 = {
+		holder = jap_rokkaku_tokinobu
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_rokkaku_tokinobu
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_miya = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_miya_ruler
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kikkawa = {
+	1183.1.1 = {
+		holder = jap_kikkawa_tsuneyoshi
+	}
+	1193.6.28 = {
+		holder = jap_kikkawa_tomokane
+	}
+	1200.2.7 = {
+		holder = jap_kikkawa_tomotsune
+	}
+	1240.10.19 = {
+		holder = jap_kikkawa_tsunemitsu
+	}
+	1267.10.6 = {
+		holder = jap_kikkawa_tsunetaka
+	}
+	1319.12.8 = {
+		holder = jap_kikkawa_tsunemori
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kikkawa_tsunemori
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_munakata = {
+	914.1.1 = {
+		holder = jap_munakata_kiyouji
+	}
+	939.1.1 = {
+		holder = jap_munakata_ujio
+	}
+	964.1.1 = {
+		holder = jap_munakata_ujiyo
+	}
+	987.1.1 = {
+		holder = jap_munakata_ujino
+	}
+	1013.1.1 = {
+		holder = jap_munakata_munetoki
+	}
+	1033.1.1 = {
+		holder = jap_munakata_munetoki
+	}
+	1051.1.1 = {
+		holder = jap_munakata_munetoki
+	}
+	1072.1.1 = {
+		holder = jap_munakata_ujisuke
+	}
+	1094.1.1 = {
+		holder = jap_munakata_ujisue
+	}
+	1107.1.1 = {
+		holder = jap_munakata_ujimichi
+	}
+	1109.1.1 = {
+		holder = jap_munakata_ujinao
+	}
+	1120.1.1 = {
+		holder = jap_munakata_ujifusa
+	}
+	1123.1.1 = {
+		holder = jap_munakata_ujinaga
+	}
+	1124.1.1 = {
+		holder = jap_munakata_ujifusa
+	}
+	1130.1.1 = {
+		holder = jap_munakata_ujihira
+	}
+	1131.1.1 = {
+		holder = jap_munakata_ujitoshi
+	}
+	1131.7.1 = {
+		holder = jap_munakata_ujihira
+	}
+	1132.1.1 = {
+		holder = jap_munakata_ujifusa
+	}
+	1132.12.1 = {
+		holder = jap_munakata_ujitoshi
+	}
+	1138.1.1 = {
+		holder = jap_munakata_ujinobu
+	}
+	1144.1.1 = {
+		holder = jap_munakata_ujihira
+	}
+	1146.1.1 = {
+		holder = jap_munakata_ujinobu
+	}
+	1151.1.1 = {
+		holder = jap_munakata_ujihira
+	}
+	1154.1.1 = {
+		holder = jap_munakata_ujitoshi
+	}
+	1160.1.1 = {
+		holder = jap_munakata_ujisane
+	}
+	1162.1.1 = {
+		holder = jap_munakata_ujikatsu
+	}
+	1163.1.1 = {
+		holder = jap_munakata_ujiyuki
+	}
+	1165.1.1 = {
+		holder = jap_munakata_ujisane
+	}
+	1173.1.1 = {
+		holder = jap_munakata_ujiyuki
+	}
+	1176.1.1 = {
+		holder = jap_munakata_ujisane
+	}
+	1183.1.1 = {
+		holder = jap_munakata_ujiie
+	}
+	1183.7.1 = {
+		holder = jap_munakata_ujisane
+	}
+	1184.1.1 = {
+		holder = jap_munakata_ujiie
+	}
+	1185.1.1 = {
+		holder = jap_munakata_ujinaga
+	}
+	1185.12.1 = {
+		holder = jap_munakata_ujisane
+	}
+	1189.1.1 = {
+		holder = jap_munakata_ujikuni
+	}
+	1198.1.1 = {
+		holder = jap_munakata_ujinaka
+	}
+	1199.1.1 = {
+		holder = jap_munakata_ujikuni
+	}
+	1212.1.1 = {
+		holder = jap_munakata_ujishige_younger
+	}
+	1212.12.1 = {
+		holder = jap_munakata_ujikuni
+	}
+	1216.1.1 = {
+		holder = jap_munakata_ujino_younger
+	}
+	1217.1.1 = {
+		holder = jap_munakata_ujikuni
+	}
+	1232.1.1 = {
+		holder = jap_munakata_ujitsune
+	}
+	1236.1.1 = {
+		holder = jap_munakata_ujiakira
+	}
+	1248.1.1 = {
+		holder = jap_munakata_ujisumi
+	}
+	1249.1.1 = {
+		holder = jap_munakata_ujitsune
+	}
+	1250.1.1 = {
+		holder = jap_munakata_ujinari
+	}
+	1251.1.1 = {
+		holder = jap_munakata_nagauji
+	}
+	1265.1.1 = {
+		holder = jap_munakata_ujimori
+	}
+	1277.1.1 = {
+		holder = jap_munakata_ujinori
+	}
+	1278.1.1 = {
+		holder = jap_munakata_ujimasa
+	}
+	1291.1.1 = {
+		holder = jap_munakata_ujitoshi_younger
+	}
+	1325.1.1 = {
+		holder = jap_munakata_ujina
+	}
+	1336.1.1 = {
+		holder = jap_munakata_ujitoshi_younger
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_munakata_ujitoshi_younger
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_asakura = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_asakura_hirokage
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_chousokabe = {
+	1150.1.1 = {
+		holder = jap_chousokabe_yoshitoshi
+	}
+	1190.1.1 = {
+		holder = jap_chousokabe_toshimune
+	}
+	1225.1.1 = {
+		holder = jap_chousokabe_tadatoshi
+	}
+	1265.1.1 = {
+		holder = jap_chousokabe_shigeuji
+	}
+	1270.1.1 = {
+		holder = jap_chousokabe_ujiyuki
+	}
+	1280.1.1 = {
+		holder = jap_chousokabe_mitsuyuki
+	}
+	1290.1.1 = {
+		holder = jap_chousokabe_kanemitsu
+	}
+	1305.1.1 = {
+		holder = jap_chousokabe_shigetoshi
+	}
+	1310.1.1 = {
+		holder = jap_chousokabe_shigetaka
+	}
+	1325.1.1 = {
+		holder = jap_chousokabe_shigemune
+	}
+	1330.1.1 = {
+		holder = jap_chousokabe_nobuyoshi
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_chousokabe_nobuyoshi
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_ise = {
+	1280.1.1 = {
+		holder = jap_ise_toshitsugu
+	}
+	1310.1.1 = {
+		holder = jap_ise_moritsugu
+	}
+	1330.1.1 = {
+		holder = jap_ise_sadatsugu
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_ise_sadatsugu
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_ikeda = {
+	950.1.1 = {
+		holder = jap_ikeda_korezane
+	}
+	970.1.1 = {
+		holder = jap_ikeda_koremochi
+	}
+	1020.1.1 = {
+		holder = jap_ikeda_koresada
+	}
+	1060.1.1 = {
+		holder = jap_ikeda_kimisada
+	}
+	1100.1.1 = {
+		holder = jap_ikeda_yasusada
+	}
+	1150.1.1 = {
+		holder = jap_ikeda_yasumasa
+	}
+	1200.1.1 = {
+		holder = jap_ikeda_yasumitsu
+	}
+	1220.1.1 = {
+		holder = jap_ikeda_yasunaga
+	}
+	1240.1.1 = {
+		holder = jap_ikeda_yasutsugu
+	}
+	1260.1.1 = {
+		holder = jap_ikeda_yasutada
+	}
+	1280.1.1 = {
+		holder = jap_ikeda_kagemasa
+	}
+	1310.1.1 = {
+		holder = jap_ikeda_norie
+	}
+	1330.1.1 = {
+		holder = jap_ikeda_norimasa
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_ikeda_norimasa
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_itou = {
+	1205.1.1 = {
+		holder = jap_itou_suketoki
+	}
+	1252.7.24 = {
+		holder = jap_itou_sukemitsu
+	}
+	1280.1.1 = {
+		holder = jap_itou_sukemune
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_itou_sukemune
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_mori = {
+	1221.1.1 = {
+		holder = jap_mori_suemitsu
+	}
+	1247.7.8 = {
+		holder = jap_mori_tsunemitsu
+	}
+	1270.1.1 = {
+		holder = jap_mori_tokichika
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_mori_motoharu
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_oda = {
+	1233.1.1 = {
+		holder = jap_oda_chikazane
+	}
+	1260.3.31 = {
+		holder = jap_oda_chikamoto
+	}
+	1290.1.1 = {
+		holder = jap_oda_chikayuki
+	}
+	1310.1.1 = {
+		holder = jap_oda_yukihiro
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_oda_yukihiro
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_andou = {
+	1290.1.1 = {
+		holder = jap_andou_munesue
+	}
+	1335.11.15 = {
+		holder = jap_andou_morosue
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_andou_morosue
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_isa = {
+	1189.1.1 = {
+		holder = jap_date_tomomune
+	}
+	1199.10.23 = {
+		holder = jap_isa_tamemune
+	}
+	1221.7.5 = {
+		holder = jap_isa_tametsuna
+	}
+	1270.1.1 = {
+		holder = jap_isa_muneyuki
+	}
+	1290.1.1 = {
+		holder = jap_isa_yukikata
+	}
+	1330.1.1 = {
+		holder = jap_isa_tokikata
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_isa_tokikata
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_daijou = {
+	1190.1.1 = {
+		holder = jap_daijou_sukemoto
+	}
+	1227.1.1 = {
+		holder = jap_daijou_tomomoto
+	}
+	1240.1.1 = {
+		holder = jap_daijou_suemoto
+	}
+	1289.4.27 = {
+		holder = jap_daijou_mitsumoto
+	}
+	1300.1.1 = {
+		holder = jap_daijou_tsunemoto
+	}
+	1320.1.1 = {
+		holder = jap_daijou_mochimoto
+	}
+	1325.1.1 = {
+		holder = jap_daijou_morimoto
+	}
+	1330.1.1 = {
+		holder = jap_daijou_takamoto
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_daijou_takamoto
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kawanobe = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kawanobe_sukeshige
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_hatta = {
+	1170.1.1 = {
+		holder = jap_hatta_tomoie
+	}
+	1225.1.1 = {
+		holder = jap_hatta_tomoshige
+	}
+	1240.1.1 = {
+		holder = jap_hatta_yasutomo
+	}
+	1270.1.1 = {
+		holder = jap_hatta_tokitomo
+	}
+	1310.1.1 = {
+		holder = jap_hatta_munetomo
+	}
+	1330.1.1 = {
+		holder = jap_hatta_sadamune
+	}
+	1335.1.1 = {
+		holder = jap_hatta_haruhisa
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_hatta_haruhisa
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_mashiko = {
+	1060.1.1 = {
+		holder = jap_mashiko_masataka
+	}
+	1080.1.1 = {
+		holder = jap_mashiko_masayori
+	}
+	1100.1.1 = {
+		holder = jap_mashiko_yukimune
+	}
+	1120.1.1 = {
+		holder = jap_mashiko_tomomune
+	}
+	1170.1.1 = {
+		holder = jap_mashiko_masashige
+	}
+	1200.1.1 = {
+		holder = jap_mashiko_muneshige
+	}
+	1220.1.1 = {
+		holder = jap_mashiko_tomosada
+	}
+	1250.1.1 = {
+		holder = jap_mashiko_munetomo
+	}
+	1270.1.1 = {
+		holder = jap_mashiko_masatsuna
+	}
+	1300.1.1 = {
+		holder = jap_mashiko_sadashige
+	}
+	1330.1.1 = {
+		holder = jap_mashiko_sadamasa
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_mashiko_sadamasa
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_takou = {
+	1248.1.1 = {
+		holder = jap_takou_munetomo
+	}
+	1292.2.9 = {
+		holder = jap_takou_tomotsugu
+	}
+	1330.1.1 = {
+		holder = jap_takou_tomotsune
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_takou_tomotsune
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_nasu = {
+	1185.1.1 = {
+		holder = jap_nasu_suketaka
+	}
+	1187.1.1 = {
+		holder = jap_nasu_yoichi
+	}
+	1189.9.19 = {
+		holder = jap_nasu_sukeyuki
+	}
+	1190.1.1 = {
+		holder = jap_nasu_yorisuke
+	}
+	1195.1.1 = {
+		holder = jap_nasu_mitsusuke
+	}
+	1250.1.1 = {
+		holder = jap_nasu_sukemura
+	}
+	1268.1.1 = {
+		holder = jap_nasu_sukeie_younger
+	}
+	1280.1.1 = {
+		holder = jap_nasu_suketada
+	}
+	1330.1.1 = {
+		holder = jap_nasu_sukefuji
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_nasu_sukefuji
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_oogo = {
+	1150.1.1 = {
+		holder = jap_oogo_shigetoshi
+	}
+	1180.1.1 = {
+		holder = jap_oogo_nariie
+	}
+	1210.1.1 = {
+		holder = jap_oogo_toshiyuki
+	}
+	1240.1.1 = {
+		holder = jap_oogo_toshimitsu
+	}
+	1270.1.1 = {
+		holder = jap_oogo_mitsukane
+	}
+	1300.1.1 = {
+		holder = jap_oogo_mitsushige
+	}
+	1330.1.1 = {
+		holder = jap_oogo_mitsuyuki
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_oogo_mitsuyuki
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_nitta = {
+	1157.1.1 = {
+		holder = jap_nitta_yoshishige
+	}
+	1160.1.1 = {
+		holder = jap_nitta_yoshikane
+	}
+	1170.1.1 = {
+		holder = jap_nitta_yoshifusa
+	}
+	1195.12.9 = {
+		holder = jap_nitta_masayoshi
+	}
+	1257.1.1 = {
+		holder = jap_nitta_masauji
+	}
+	1271.3.30 = {
+		holder = jap_nitta_motouji
+	}
+	1315.1.1 = {
+		holder = jap_nitta_tomouji
+	}
+	1318.1.21 = {
+		holder = jap_nitta_yoshisada
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_nitta_yoshisada
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_yamaguchi = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_yamaguchi_ruler
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_toshima = {
+	1090.1.1 = {
+		holder = jap_toshima_yasuie
+	}
+	1160.1.1 = {
+		holder = jap_toshima_kiyomoto
+	}
+	1200.1.1 = {
+		holder = jap_toshima_tomotsune
+	}
+	1203.11.20 = {
+		holder = jap_toshima_aritsune
+	}
+	1240.1.1 = {
+		holder = jap_toshima_tsuneyasu
+	}
+	1260.1.1 = {
+		holder = jap_toshima_yasutomo
+	}
+	1320.1.1 = {
+		holder = jap_toshima_yasukage
+	}
+	1330.1.1 = {
+		holder = jap_toshima_tomoyasu
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_toshima_tomoyasu
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_honma = {
+	1185.1.1 = {
+		holder = jap_honma_yoshitada
+	}
+	1210.1.1 = {
+		holder = jap_honma_tadaie
+	}
+	1230.1.1 = {
+		holder = jap_honma_yoshihisa
+	}
+	1240.1.1 = {
+		holder = jap_honma_tadatsuna
+	}
+	1260.1.1 = {
+		holder = jap_honma_munetada
+	}
+	1280.1.1 = {
+		holder = jap_honma_yasusada
+	}
+	1300.1.1 = {
+		holder = jap_honma_yorinao
+	}
+	1320.1.1 = {
+		holder = jap_honma_yasunori
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_honma_yasunori
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_unnou = {
+	1120.1.1 = {
+		holder = jap_unnou_shigemichi
+	}
+	1160.1.1 = {
+		holder = jap_unnou_hiromichi
+	}
+	1170.1.1 = {
+		holder = jap_unnou_yukimichi
+	}
+	1180.1.1 = {
+		holder = jap_unnou_yukichika
+	}
+	1184.3.5 = {
+		holder = jap_unnou_yukinaga
+	}
+	1220.1.1 = {
+		holder = jap_unnou_yukiuji
+	}
+	1255.1.1 = {
+		holder = jap_unnou_shigeuji
+	}
+	1290.1.1 = {
+		holder = jap_unnou_yukinao
+	}
+	1320.1.1 = {
+		holder = jap_unnou_yoriyuki
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_unnou_yoriyuki
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kousaka = {
+	1260.1.1 = {
+		holder = jap_kousaka_munekiyo
+	}
+	1270.1.1 = {
+		holder = jap_kousaka_muneatsu
+	}
+	1280.1.1 = {
+		holder = jap_kousaka_munezane
+	}
+	1300.1.1 = {
+		holder = jap_kousaka_akishu
+	}
+	1320.1.1 = {
+		holder = jap_kousaka_dewashu
+	}
+	1330.1.1 = {
+		holder = jap_kousaka_muneatsu_younger
+	}
+	1335.1.1 = {
+		holder = jap_kousaka_shinkaku
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kousaka_shinkaku
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_tooyama = {
+	1220.1.1 = {
+		holder = jap_tooyama_kagetomo
+	}
+	1247.1.1 = {
+		holder = jap_tooyama_kageshige
+	}
+	1260.1.1 = {
+		holder = jap_tooyama_kagenaga
+	}
+	1290.1.1 = {
+		holder = jap_tooyama_tomokado
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_tooyama_tomokado
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_tou = {
+	1185.1.1 = {
+		holder = jap_tou_taneyori
+	}
+	1190.1.1 = {
+		holder = jap_tou_shigetane
+	}
+	1219.2.13 = {
+		holder = jap_tou_taneyuki
+	}
+	1273.10.3 = {
+		holder = jap_tou_yukiuji
+	}
+	1300.10.2 = {
+		holder = jap_tou_sadatsune
+	}
+	1310.1.1 = {
+		holder = jap_tou_tokitsune
+	}
+	1314.1.1 = {
+		holder = jap_tou_ujimura
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_tou_ujimura
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_ema = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_ema_ruler
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_nakajima = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_nakajima_takaie
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_ooba = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_ooba_ruler
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_nagano = {
+	1250.1.1 = {
+		holder = jap_nagano_sukemasa
+	}
+	1280.1.1 = {
+		holder = jap_nagano_sukefuji
+	}
+	1310.1.1 = {
+		holder = jap_nagano_sukefusa
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_nagano_sukefusa
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_takashima = {
+	1235.1.1 = {
+		holder = jap_takashima_takanobu
+	}
+	1285.1.1 = {
+		holder = jap_takashima_yasunobu
+	}
+	1320.1.1 = {
+		holder = jap_takashima_noritsuna
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_takashima_noritsuna
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_aisu = {
+	1190.1.1 = {
+		holder = jap_aisu_masataka
+	}
+	1240.1.1 = {
+		holder = jap_aisu_noritsugu
+	}
+	1250.1.1 = {
+		holder = jap_aisu_mitsutsugu
+	}
+	1270.1.1 = {
+		holder = jap_aisu_mitsutaka
+	}
+	1280.1.1 = {
+		holder = jap_aisu_sadamitsu
+	}
+	1285.1.1 = {
+		holder = jap_aisu_nobutoshi
+	}
+	1290.1.1 = {
+		holder = jap_aisu_tsunenobu
+	}
+	1300.1.1 = {
+		holder = jap_aisu_toshihide
+	}
+	1305.1.1 = {
+		holder = jap_aisu_tsunemichi
+	}
+	1310.1.1 = {
+		holder = jap_aisu_nobuhide
+	}
+	1320.1.1 = {
+		holder = jap_aisu_suetoshi
+	}
+	1325.1.1 = {
+		holder = jap_aisu_noritoshi
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_aisu_noritoshi
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_yuasa = {
+	1143.1.1 = {
+		holder = jap_yuasa_muneshige
+	}
+	1190.1.1 = {
+		holder = jap_yuasa_munemitsu
+	}
+	1240.1.1 = {
+		holder = jap_yuasa_muneuji
+	}
+	1273.1.1 = {
+		holder = jap_yuasa_munechika
+	}
+	1300.1.1 = {
+		holder = jap_yuasa_munekuni
+	}
+	1320.1.1 = {
+		holder = jap_yuasa_munefuji
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_yuasa_munefuji
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_yabe = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_yabe_tomotsuna
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_ogamo = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_ogamo_ujimoto
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_suetsugu = {
+	1250.1.1 = {
+		holder = jap_suetsugu_tanekiyo
+	}
+	1300.1.1 = {
+		holder = jap_suetsugu_kiyoshige
+	}
+	1320.1.1 = {
+		holder = jap_suetsugu_takamune
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_suetsugu_takamune
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_mizawa = {
+	1240.1.1 = {
+		holder = jap_mizawa_hirotada
+	}
+	1270.1.1 = {
+		holder = jap_mizawa_tamefusa
+	}
+	1300.1.1 = {
+		holder = jap_mizawa_tamenaga
+	}
+	1320.1.1 = {
+		holder = jap_mizawa_tametsune
+	}
+	1330.1.1 = {
+		holder = jap_mizawa_tametada
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_mizawa_tametada
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_mitoya = {
+	1180.1.1 = {
+		holder = jap_mitoya_yukisuke
+	}
+	1210.1.1 = {
+		holder = jap_mitoya_sukenaga
+	}
+	1250.1.1 = {
+		holder = jap_mitoya_sukemori
+	}
+	1270.1.1 = {
+		holder = jap_mitoya_sukechika
+	}
+	1290.1.1 = {
+		holder = jap_mitoya_sukemitsu
+	}
+	1320.1.1 = {
+		holder = jap_mitoya_sukeshige
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_mitoya_sukeshige
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_akana = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_akana_tsunetsura
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_gotou = {
+	1000.1.1 = {
+		holder = jap_gotou_kiminori
+	}
+	1040.1.1 = {
+		holder = jap_gotou_noritsune
+	}
+	1080.1.1 = {
+		holder = jap_gotou_kimihiro
+	}
+	1110.1.1 = {
+		holder = jap_gotou_sanenobu
+	}
+	1130.1.1 = {
+		holder = jap_gotou_sanetoo
+	}
+	1160.1.1 = {
+		holder = jap_gotou_motokiyo
+	}
+	1221.7.22 = {
+		holder = jap_gotou_mototsuna
+	}
+	1256.12.16 = {
+		holder = jap_gotou_mototaka
+	}
+	1290.1.1 = {
+		holder = jap_gotou_motohide
+	}
+	1320.1.1 = {
+		holder = jap_gotou_motoaki
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_gotou_motoaki
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_shou = {
+	1150.1.1 = {
+		holder = jap_shou_iehiro
+	}
+	1170.1.1 = {
+		holder = jap_shou_ienaga
+	}
+	1180.1.1 = {
+		holder = jap_shou_yoriie
+	}
+	1184.1.1 = {
+		holder = jap_shou_ietsugu
+	}
+	1260.1.1 = {
+		holder = jap_shou_tomotsugu
+	}
+	1290.1.1 = {
+		holder = jap_shou_aritsugu
+	}
+	1310.1.1 = {
+		holder = jap_shou_sukefusa
+	}
+	1333.1.1 = {
+		holder = jap_shou_sukeuji
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_shou_sukeuji
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_hiraga = {
+	1180.1.1 = {
+		holder = jap_hiraga_sukemune
+	}
+	1230.1.1 = {
+		holder = jap_hiraga_koreyasu
+	}
+	1260.1.1 = {
+		holder = jap_hiraga_korekane
+	}
+	1300.1.1 = {
+		holder = jap_hiraga_kanemune
+	}
+	1330.1.1 = {
+		holder = jap_hiraga_naomune
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_hiraga_naomune
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kobayakawa = {
+	1206.1.1 = {
+		holder = jap_kobayakawa_kagehira
+	}
+	1244.8.18 = {
+		holder = jap_kobayakawa_shigehira
+	}
+	1264.3.14 = {
+		holder = jap_kobayakawa_masahira
+	}
+	1300.1.1 = {
+		holder = jap_kobayakawa_tomohira
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kobayakawa_tomohira
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_wachi = {
+	1270.1.1 = {
+		holder = jap_wachi_sanenari
+	}
+	1310.1.1 = {
+		holder = jap_wachi_sukesane
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_wachi_sukesane
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_miyoshi = {
+	1050.1.1 = {
+		holder = jap_miyoshi_kanemune
+	}
+	1100.1.1 = {
+		holder = jap_miyoshi_kaneie
+	}
+	1130.1.1 = {
+		holder = jap_miyoshi_nobukane
+	}
+	1160.1.1 = {
+		holder = jap_miyoshi_hidetaka
+	}
+	1190.1.1 = {
+		holder = jap_miyoshi_mitsutaka
+	}
+	1220.1.1 = {
+		holder = jap_miyoshi_takaie
+	}
+	1250.1.1 = {
+		holder = jap_miyoshi_iehide
+	}
+	1280.1.1 = {
+		holder = jap_miyoshi_hideaki
+	}
+	1300.1.1 = {
+		holder = jap_miyoshi_teruhide
+	}
+	1330.1.1 = {
+		holder = jap_miyoshi_hirohide
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_miyoshi_hirohide
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_sue = {
+	1280.1.1 = {
+		holder = jap_sue_hirokata
+	}
+	1320.1.1 = {
+		holder = jap_sue_hiromasa
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_sue_hiromasa
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_migita = {
+	1180.1.1 = {
+		holder = jap_migita_morinaga
+	}
+	1200.1.1 = {
+		holder = jap_migita_moritsuna
+	}
+	1220.1.1 = {
+		holder = jap_migita_morihide
+	}
+	1270.1.1 = {
+		holder = jap_migita_hirohide
+	}
+	1280.1.1 = {
+		holder = jap_migita_shigetoshi
+	}
+	1310.1.1 = {
+		holder = jap_migita_shigesada
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_migita_shigesada
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kagawa = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kagawa_kagefusa
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kouzai = {
+	1221.1.1 = {
+		holder = jap_kouzai_sukemura
+	}
+	1235.8.22 = {
+		holder = jap_kouzai_tadasuke
+	}
+	1280.1.1 = {
+		holder = jap_kouzai_sukeuji
+	}
+	1310.1.1 = {
+		holder = jap_kouzai_sukeyasu
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kouzai_sukeyasu
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kaneko = {
+	1150.1.1 = {
+		holder = jap_kaneko_ienori
+	}
+	1190.1.1 = {
+		holder = jap_kaneko_ietada
+	}
+	1216.3.6 = {
+		holder = jap_kaneko_iehiro
+	}
+	1230.1.1 = {
+		holder = jap_kaneko_ieshige
+	}
+	1240.1.1 = {
+		holder = jap_kaneko_tadahiro
+	}
+	1270.1.1 = {
+		holder = jap_kaneko_tadashige
+	}
+	1290.1.1 = {
+		holder = jap_kaneko_tadachika
+	}
+	1330.1.1 = {
+		holder = jap_kaneko_iehiro_later
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kaneko_iehiro_later
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_aki = {
+	1250.1.1 = {
+		holder = jap_aki_sanenobu
+	}
+	1288.1.1 = {
+		holder = jap_aki_tomonobu
+	}
+	1310.1.1 = {
+		holder = jap_aki_tomochika
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_aki_tomochika
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_oohira = {
+	1199.1.1 = {
+		holder = jap_oohira_kuninobu
+	}
+	1240.1.1 = {
+		holder = jap_oohira_katsukuni
+	}
+	1270.1.1 = {
+		holder = jap_oohira_kunitsugu
+	}
+	1300.1.1 = {
+		holder = jap_oohira_toshikuni
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_oohira_toshikuni
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_buzen_nagano = {
+	1157.1.1 = {
+		holder = jap_nagano_yasumori
+	}
+	1191.12.30 = {
+		holder = jap_nagano_nagamori
+	}
+	1230.1.1 = {
+		holder = jap_nagano_naomori
+	}
+	1260.1.1 = {
+		holder = jap_nagano_tsunemori
+	}
+	1270.1.1 = {
+		holder = jap_nagano_tanemori
+	}
+	1300.1.1 = {
+		holder = jap_nagano_takamori
+	}
+	1320.1.1 = {
+		holder = jap_nagano_yoshifusa
+	}
+	1330.1.1 = {
+		holder = jap_nagano_motomori
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_nagano_motomori
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_akizuki = {
+	1203.1.1 = {
+		holder = jap_akizuki_taneo
+	}
+	1230.1.1 = {
+		holder = jap_akizuki_taneyuki
+	}
+	1250.1.1 = {
+		holder = jap_akizuki_taneie
+	}
+	1270.1.1 = {
+		holder = jap_akizuki_taneyori
+	}
+	1290.1.1 = {
+		holder = jap_akizuki_tanesuke
+	}
+	1300.1.1 = {
+		holder = jap_akizuki_tanesada
+	}
+	1310.1.1 = {
+		holder = jap_akizuki_tanetaka
+	}
+	1320.1.1 = {
+		holder = jap_akizuki_taneaki
+	}
+	1330.1.1 = {
+		holder = jap_akizuki_tanemichi
+	}
+	1336.4.13 = {
+		holder = jap_akizuki_tanetada
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_akizuki_tanetada
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_taku = {
+	1191.1.1 = {
+		holder = jap_taku_munenao
+	}
+	1240.1.1 = {
+		holder = jap_taku_munemasu
+	}
+	1270.1.1 = {
+		holder = jap_taku_muneyuki
+	}
+	1290.1.1 = {
+		holder = jap_taku_sukemune
+	}
+	1310.1.1 = {
+		holder = jap_taku_muneharu
+	}
+	1330.1.1 = {
+		holder = jap_taku_munekiyo
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_taku_munekiyo
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_hata = {
+	1102.1.1 = {
+		holder = jap_hata_mochi
+	}
+	1150.1.1 = {
+		holder = jap_hata_chikashi
+	}
+	1170.1.1 = {
+		holder = jap_hata_isamu
+	}
+	1200.1.1 = {
+		holder = jap_hata_karage
+	}
+	1230.1.1 = {
+		holder = jap_hata_katashi
+	}
+	1260.1.1 = {
+		holder = jap_hata_takeshi
+	}
+	1290.1.1 = {
+		holder = jap_hata_shigeru
+	}
+	1320.1.1 = {
+		holder = jap_hata_nao
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_hata_nao
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_arima = {
+	1213.1.1 = {
+		holder = jap_arima_tsunezumi
+	}
+	1240.1.1 = {
+		holder = jap_arima_tomosumi
+	}
+	1270.1.1 = {
+		holder = jap_arima_iesumi
+	}
+	1300.1.1 = {
+		holder = jap_arima_tsurasumi
+	}
+	1310.1.1 = {
+		holder = jap_arima_sadazumi
+	}
+	1330.1.1 = {
+		holder = jap_arima_sumiyo
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_arima_sumiyo
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_ookura = {
+	1080.1.1 = {
+		holder = jap_ookura_nagasue
+	}
+	1104.1.1 = {
+		holder = jap_ookura_hidehira
+	}
+	1140.1.1 = {
+		holder = jap_ookura_nagahira
+	}
+	1150.1.1 = {
+		holder = jap_ookura_nagamune
+	}
+	1160.1.1 = {
+		holder = jap_ookura_nagahide
+	}
+	1200.1.1 = {
+		holder = jap_ookura_nagatsuna
+	}
+	1230.1.1 = {
+		holder = jap_ookura_naganobu
+	}
+	1260.1.1 = {
+		holder = jap_ookura_nagamoto
+	}
+	1290.1.1 = {
+		holder = jap_ookura_nagashide
+	}
+	1320.1.1 = {
+		holder = jap_ookura_nagasada
+	}
+	1330.1.1 = {
+		holder = jap_ookura_nagatoshi
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_ookura_nagatoshi
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_tsuchimochi = {
+	1157.1.1 = {
+		holder = jap_tsuchimochi_nobutsuna
+	}
+	1225.1.1 = {
+		holder = jap_tsuchimochi_michitsuna
+	}
+	1230.1.1 = {
+		holder = jap_tsuchimochi_koretsuna
+	}
+	1260.1.1 = {
+		holder = jap_tsuchimochi_masatsuna
+	}
+	1290.1.1 = {
+		holder = jap_tsuchimochi_kunitsuna
+	}
+	1320.1.1 = {
+		holder = jap_tsuchimochi_nobue
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_tsuchimochi_nobue
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_kajiki = {
+	1006.1.1 = {
+		holder = jap_kajiki_tsunehira
+	}
+	1040.1.1 = {
+		holder = jap_kajiki_tsuneyori
+	}
+	1060.1.1 = {
+		holder = jap_kajiki_yorinaga
+	}
+	1080.1.1 = {
+		holder = jap_kajiki_yorimitsu
+	}
+	1100.1.1 = {
+		holder = jap_kajiki_sukemitsu
+	}
+	1120.1.1 = {
+		holder = jap_kajiki_sukefusa
+	}
+	1150.1.1 = {
+		holder = jap_kajiki_sukehira
+	}
+	1180.1.1 = {
+		holder = jap_kajiki_chikahira
+	}
+	1210.1.1 = {
+		holder = jap_kajiki_tsunehira_alternative
+	}
+	1230.1.1 = {
+		holder = jap_kajiki_sanehira
+	}
+	1260.1.1 = {
+		holder = jap_kajiki_mochihira
+	}
+	1290.1.1 = {
+		holder = jap_kajiki_ujihira
+	}
+	1320.1.1 = {
+		holder = jap_kajiki_sadahira
+	}
+	1330.1.1 = {
+		holder = jap_kajiki_masahira
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_kajiki_masahira
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+c_nf_hishikari = {
+	1193.1.1 = {
+		holder = jap_hishikari_shigetae
+	}
+	1230.1.1 = {
+		holder = jap_hishikari_shigezane
+	}
+	1270.1.1 = {
+		holder = jap_hishikari_takaharu
+	}
+	1280.1.1 = {
+		holder = jap_hishikari_shigenobu
+	}
+	1330.1.1 = {
+		holder = jap_hishikari_atsushige
+	}
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_hishikari_atsushige
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+		effect = {
+			holder.dynasty ?= {
+				while = {
+					limit = { dynasty_prestige_level < 9 }
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
+	}
+}
+
+
+c_nf_ashikaga = {
+	1337.4.1 = {
+		holder = jap_ashikaga_takauji
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+	}
+}
+
+
+c_nf_houjou = {
+	1337.4.1 = {
+		liege = e_japan
+		holder = jap_houjou_tokiyuki
+		government = japan_feudal_government
+		succession_laws = { noble_family_succession_law }
+	}
+}

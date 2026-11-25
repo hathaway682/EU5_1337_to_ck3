@@ -12,7 +12,7 @@
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -37,7 +37,7 @@ rome = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -48,7 +48,7 @@ rome = {
 
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		character_travel_speed_mult = 0.01
 	}
 }
@@ -89,7 +89,7 @@ santiago = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -167,7 +167,7 @@ alexandria = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -215,7 +215,7 @@ aksum = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_county_control_growth_factor = 0.01
 	}
 
@@ -230,31 +230,6 @@ aksum = {
 	barony = b_axum
 }
 
-suenik = {
-	county = c_yerevan #Site of the biggest Armenian church in Dvin
-
-	county_holder_character_modifier = {
-		learning = 1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		travel_danger = -1
-	}
-
-	faith_character_modifier = {
-		learning = 1
-		monthly_piety_gain_mult = 0.05
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_piety_gain_mult = 0.01
-	}
-	barony = b_yerevan
-}
-
 dvin = {
 	county = c_yerevan #Site of the biggest Armenian church in Dvin
 
@@ -264,7 +239,7 @@ dvin = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -277,7 +252,7 @@ dvin = {
 		scale = holy_site_total_artifact_rarity
 		monthly_piety_gain_mult = 0.01
 	}
-	barony = b_yerevan
+	barony = b_khor_virap
 }
 
 beirut = {
@@ -289,7 +264,7 @@ beirut = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -309,7 +284,7 @@ baghdad = {
 
 	county_holder_character_modifier = {
 		learning = 1
-		development_growth_factor = 0.05
+		prosperity_growth_factor = 0.05
 	}
 
 	county_modifier_scaled = {
@@ -325,7 +300,7 @@ baghdad = {
 
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_income_mult = 0.005
 	}
 	barony = b_baghdad
@@ -340,7 +315,7 @@ farz = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -384,36 +359,6 @@ kerala = {
 	barony = b_edappaly
 }
 
-iona = {
-	county = c_inner_hebrides
-
-	parameters = {
-		iona_conversion_bonus # +20% County Conversion Speed in the British Isles
-	}
-
-	county_holder_character_modifier = {
-		monthly_piety_gain_mult = 0.025
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		travel_danger = -1
-	}
-
-	faith_character_modifier = {
-		clergy_opinion = 5
-		monthly_piety_gain_mult = 0.05
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		faith_conversion_piety_cost_mult = -0.01
-		monthly_piety_gain_mult = 0.01
-	}
-	barony = b_mull
-}
-
 visoki = {
 	county = c_bosnia
 
@@ -427,7 +372,7 @@ visoki = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_county_control_growth_factor = 0.01
 	}
 
@@ -452,7 +397,7 @@ ragusa = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -502,7 +447,7 @@ albi = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -552,7 +497,7 @@ carthage_adoptionist = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -577,7 +522,7 @@ lyon = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -602,7 +547,7 @@ mecca = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -628,7 +573,7 @@ medina = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -656,7 +601,7 @@ cordoba = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -666,7 +611,7 @@ cordoba = {
 
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_county_control_growth_factor = 0.01
 	}
 	barony = b_cordoba
@@ -732,7 +677,7 @@ fes = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -756,7 +701,7 @@ nadjaf = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -830,7 +775,7 @@ basra = { # Location where the Ibadi school of thought originated.
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -928,7 +873,7 @@ sinjar = { # Location of great communal importance, with multiple shrines.
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		hostile_raid_time = 0.02
 	}
 
@@ -952,7 +897,7 @@ baalbek = { # Birthplace of Sheikh Adi, who was renowned his great asceticism as
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -977,7 +922,7 @@ lalish = { # Tomb of Sheikh Adi. Considered by some to be the holiest site is Ya
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -1013,7 +958,7 @@ nishapur = { #See also Behafaridism, since it was Behafar's birthplace.
 
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 	}
 	barony = b_nishapur
 }
@@ -1027,7 +972,7 @@ dashtestan = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -1052,7 +997,7 @@ zozan = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_county_control_growth_factor = 0.01
 	}
 
@@ -1104,7 +1049,7 @@ sufed = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_county_control_growth_factor = 0.01
 	}
 
@@ -1130,7 +1075,7 @@ gerizim = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -1164,7 +1109,7 @@ panticapaeum = { #Major Radhanite settlement on the Steppe
 
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_income_mult = 0.005
 	}
 	barony = b_vosporo
@@ -1179,7 +1124,7 @@ itil = { #Khazar capital
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_travel_danger = -1
 	}
 
@@ -1205,7 +1150,7 @@ kochi = { #Place from which the Kochin Jews get their name
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -1256,7 +1201,7 @@ hamadan = { # Tomb of Esther and Modechai
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -1277,12 +1222,12 @@ babylon = { # Babylon was very important in early Judaism, where the Babylonian 
 
 	county_holder_character_modifier = {
 		learning = 1
-		development_growth_factor = 0.05
+		prosperity_growth_factor = 0.05
 	}
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -1292,7 +1237,7 @@ babylon = { # Babylon was very important in early Judaism, where the Babylonian 
 
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 	}
 }
 
@@ -1341,13 +1286,13 @@ samarkand = {
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
 		monthly_income_mult = 0.005
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 	}
 	barony = b_samarkand
 }
 
 udabhanda = {
-	county = c_peshawar
+	county = c_kashmir
 
 	county_holder_character_modifier = {
 		learning = 1
@@ -1355,7 +1300,7 @@ udabhanda = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -1367,7 +1312,7 @@ udabhanda = {
 		scale = holy_site_total_artifact_rarity
 		monthly_lifestyle_xp_gain_mult = 0.01
 	}
-	barony = b_attock
+	barony = b_udabhanda
 }
 
 toledo = {
@@ -1379,7 +1324,7 @@ toledo = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -1428,7 +1373,7 @@ bodh_gaya = { # Where Buddha reached enlightenment
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -1453,7 +1398,7 @@ sarnath = { # Where Buddha first taught his diciples. Also the #1 most holy site
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -1470,7 +1415,7 @@ sarnath = { # Where Buddha first taught his diciples. Also the #1 most holy site
 
 sanchi = { # Important temple complex
 	county = c_eastern_malwa
-	barony = b_bhopal
+	barony = b_bhilsa
 
 	county_holder_character_modifier = {
 		diplomacy = 1
@@ -1478,7 +1423,7 @@ sanchi = { # Important temple complex
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -1501,7 +1446,7 @@ ajanta = { # Caves & stone-cut temples, proto-Indian cave art.
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -1563,7 +1508,7 @@ pagan = { # Shwedagon Pagoda - A sacred stupa built around year 500
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
 		monthly_prestige_gain_mult = 0.01
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 	}
 	barony = b_pagan
 }
@@ -1588,7 +1533,7 @@ atamasthana = { # Atamasthana, or the Eight sacred places, are locations visited
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
 		monthly_income_mult = 0.005
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 	}
 	barony = b_anuradhapura
 }
@@ -1628,7 +1573,7 @@ varanasi = { # Sarnath, where Buddha first taught his disciples. Also a holy sit
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -1678,7 +1623,7 @@ mathura = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -1695,7 +1640,7 @@ mathura = {
 }
 
 haridwar = {
-	county = c_puadh
+	county = c_garhwal
 
 	county_holder_character_modifier = {
 		health = 0.05
@@ -1703,7 +1648,7 @@ haridwar = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -1716,7 +1661,7 @@ haridwar = {
 		health = 0.01
 		stress_loss_mult = 0.01
 	}
-	barony = b_thanesar
+	barony = b_gangadvara
 }
 
 kanchipuram = {
@@ -1728,7 +1673,7 @@ kanchipuram = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_travel_danger = -1
 	}
 
@@ -1799,7 +1744,7 @@ konarak = {
 	barony = b_puri
 
 	county_holder_character_modifier = {
-		development_growth_factor = 0.05
+		prosperity_growth_factor = 0.05
 	}
 
 	county_modifier_scaled = {
@@ -1814,7 +1759,7 @@ konarak = {
 
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		build_gold_cost = -0.005
 	}
 }
@@ -1840,7 +1785,7 @@ angkor = { #Shaivism
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
 		monthly_income_mult = 0.005
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 	}
 	barony = b_angkor
 }
@@ -1866,7 +1811,7 @@ bantey_srei = { #Vaishnavism
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
 		monthly_prestige_gain_mult = 0.01
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 	}
 	barony = b_angkor
 }
@@ -1932,7 +1877,7 @@ kalasan = { #Vajrayana & Mahayana
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -2000,8 +1945,8 @@ bayon = { #Mahayana
 }
 
 khao_khlang_nai = { #Vaishnavism
-	county = c_phraek
-	barony = b_chai_nat
+	county = c_sri_thep
+	barony = b_sri_thep
 
 	county_holder_character_modifier = {
 		tributary_opinion = 3
@@ -2021,7 +1966,7 @@ khao_khlang_nai = { #Vaishnavism
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
 		monthly_income_mult = 0.005
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 	}
 }
 
@@ -2035,7 +1980,7 @@ bupaya = { #Theravada
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -2059,7 +2004,7 @@ palitana = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -2076,7 +2021,7 @@ palitana = {
 }
 
 shikharj = {
-	county = c_pandua
+	county = c_hazaribagh
 
 	county_holder_character_modifier = {
 		stress_loss_mult = 0.05
@@ -2084,7 +2029,7 @@ shikharj = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -2098,7 +2043,7 @@ shikharj = {
 		stress_loss_mult = 0.01
 		health = 0.01
 	}
-	barony = b_baragram
+	barony = b_katrasgarh
 }
 
 ranakpur = {
@@ -2124,11 +2069,11 @@ ranakpur = {
 		monthly_income_mult = 0.005
 		build_gold_cost = -0.005
 	}
-	barony = b_kurki
+	barony = b_pali
 }
 
 ellora = {
-	county = c_lower_vidarbha
+	county = c_upper_marathwada
 
 	county_holder_character_modifier = {
 		different_culture_opinion = 3
@@ -2136,7 +2081,7 @@ ellora = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -2150,7 +2095,7 @@ ellora = {
 		cultural_head_acceptance_gain_mult = 0.015
 		monthly_piety_gain_mult = 0.01
 	}
-	barony = b_mahagaon
+	barony = b_daulatabad
 }
 
 sittannavasal = {
@@ -2162,7 +2107,7 @@ sittannavasal = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_county_control_growth_factor = 0.01
 	}
 
@@ -2186,7 +2131,7 @@ itanagar = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_county_control_growth_factor = 0.01
 	}
 
@@ -2211,7 +2156,7 @@ pemako = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_travel_danger = -1
 	}
 
@@ -2236,7 +2181,7 @@ rima = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_county_control_growth_factor = 0.01
 	}
 
@@ -2285,7 +2230,7 @@ kathmandu = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -2336,7 +2281,7 @@ garwhal = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -2410,7 +2355,7 @@ ngawa = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -2445,7 +2390,7 @@ chakla = {
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
 		build_gold_cost = -0.005
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 	}
 	barony = b_dartsedo
 }
@@ -2459,7 +2404,7 @@ gyaitang = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -2472,7 +2417,7 @@ gyaitang = {
 		cultural_head_acceptance_gain_mult = 0.015
 		monthly_prestige_gain_mult = 0.01
 	}
-	barony = b_nixi
+	barony = b_dadandang
 }
 
 rebgong = {
@@ -2484,7 +2429,7 @@ rebgong = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -2509,7 +2454,7 @@ xingqing = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		hostile_raid_time = 0.02
 	}
 
@@ -2584,7 +2529,7 @@ yazd = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		hostile_raid_time = 0.02
 	}
 
@@ -2636,7 +2581,7 @@ adur_farnbag = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -2672,7 +2617,7 @@ adur_burzen_mihr = {
 
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_income_mult = 0.005
 	}
 }
@@ -2687,7 +2632,7 @@ takht-i-sangin = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -2703,7 +2648,7 @@ takht-i-sangin = {
 }
 
 takht-e_soleyman = {
-	county = c_urmia
+	county = c_barza
 
 	county_holder_character_modifier = {
 		knight_effectiveness_mult = 0.05
@@ -2723,7 +2668,7 @@ takht-e_soleyman = {
 		scale = holy_site_total_artifact_rarity
 		knight_effectiveness_mult = 0.015
 	}
-	barony = b_urmia
+	barony = b_takht_e_soleyman
 }
 
 ushi-darena = {
@@ -2735,7 +2680,7 @@ ushi-darena = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -2761,7 +2706,7 @@ mount_damavand = { #A mountain in ancient Iranian legend, where the hero Faridun
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_travel_danger = -1
 	}
 
@@ -2803,7 +2748,7 @@ badd = { #Site of Babak Khorammdin Fort, and the khurramite last stand
 
 ctesiphon = { #Important site for Mazdakism
 	county = c_baghdad
-	barony = b_baghdad
+	barony = b_dayr_aqul
 
 	county_holder_character_modifier = {
 		prestige_standalone_gain_mult = 0.025
@@ -2811,7 +2756,7 @@ ctesiphon = { #Important site for Mazdakism
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -2836,7 +2781,7 @@ ani = { #Great temple site in Zoroastrian Armenia
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -2852,7 +2797,7 @@ ani = { #Great temple site in Zoroastrian Armenia
 
 mizdahqan = { #Zoroastrian centre in Khwarezmia, large necropolis
 	county = c_kath
-	barony = b_shimbay
+	barony = b_xojeli
 
 	county_holder_character_modifier = {
 		learning = 1
@@ -2860,7 +2805,7 @@ mizdahqan = { #Zoroastrian centre in Khwarezmia, large necropolis
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -2936,7 +2881,7 @@ paderborn = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -2948,7 +2893,7 @@ paderborn = {
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
 		fertility = 0.01
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 	}
 	barony = b_paderborn
 }
@@ -2975,7 +2920,7 @@ ranaheim = {
 		men_at_arms_maintenance = -0.005
 		monthly_income_mult = 0.005
 	}
-	barony = b_orkdal
+	barony = b_nidaros
 }
 
 jorvik = {
@@ -3038,7 +2983,7 @@ raivola = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -3176,7 +3121,7 @@ novgorod = {
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
 		monthly_income_mult = 0.005
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 	}
 }
 
@@ -3214,7 +3159,7 @@ plock = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -3393,7 +3338,7 @@ olvia = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -3617,7 +3562,7 @@ olympus = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -3690,7 +3635,7 @@ bost = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		hostile_raid_time = 0.02
 	}
 
@@ -3716,7 +3661,7 @@ khotan = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -3740,7 +3685,7 @@ balkh = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -3839,7 +3784,7 @@ surgut = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_travel_danger = -1
 	}
 
@@ -3864,7 +3809,7 @@ ob = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -3889,7 +3834,7 @@ olkhon = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -4066,7 +4011,7 @@ kukiya = { # Capital of the historic Kawkaw Empire.
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -4167,7 +4112,7 @@ igbo = { # The location of the city of Igbo-Ukwu, an important political and rel
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -4266,7 +4211,7 @@ sherbro = { # Specifically Sherbro Island, another place with some evidence of c
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_county_control_growth_factor = 0.01
 	}
 
@@ -4316,7 +4261,7 @@ kasa = { # An important regional centre.
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -4391,7 +4336,7 @@ ife = { # Central to the Yoruba religion & mythology.
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -4416,7 +4361,7 @@ nikki = { # Political and religious capital for the Borgu people.
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -4518,7 +4463,7 @@ sennar = { # Potentially historically important region for these cults.
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_county_control_growth_factor = 0.01
 	}
 
@@ -4671,7 +4616,7 @@ harar = { # Generally considered a holy place by many faiths in the region, so m
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -4696,7 +4641,7 @@ makhir = { # A place of pilgrimage for two rather important Somali clans.
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -4745,7 +4690,7 @@ kirinyaga = { # Mount Kenya. Central to Kikuyu worship of Ngai
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -4772,7 +4717,7 @@ mangea = { # Significant mythical origin of the Mijikenda
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_county_control_growth_factor = 0.01
 	}
 
@@ -4787,7 +4732,7 @@ mangea = { # Significant mythical origin of the Mijikenda
 }
 
 kilimanjaro = { # Central to Chagga worship of Ngai
-	county = c_upper_pangani
+	county = c_ichera
 
 	county_holder_character_modifier = {
 		prowess = 2
@@ -4808,7 +4753,7 @@ kilimanjaro = { # Central to Chagga worship of Ngai
 		scale = holy_site_total_artifact_rarity
 		controlled_province_advantage = 0.5
 	}
-	barony = b_usangi
+	barony = b_moshi
 }
 
 gilgit = {
@@ -4900,7 +4845,7 @@ mount_heng = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -4952,7 +4897,7 @@ mount_qingcheng = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_travel_danger = -1
 	}
 
@@ -4980,7 +4925,7 @@ mount_tai = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -5058,7 +5003,7 @@ mount_qiyung = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -5084,7 +5029,7 @@ luyi = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -5110,7 +5055,7 @@ fuji = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -5134,7 +5079,7 @@ ise_jingu = { # Ise Grand Shrine, home of the Saigu
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -5207,7 +5152,7 @@ wutai = { # Mount Wutai
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -5219,7 +5164,7 @@ wutai = { # Mount Wutai
 		scale = holy_site_total_artifact_rarity
 		monthly_lifestyle_xp_gain_mult = 0.01
 	}
-	barony = b_daizhou
+	barony = b_jianzhou_daizhou
 }
 
 wenang = {
@@ -5406,7 +5351,7 @@ chang_an = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -5456,7 +5401,7 @@ biri_larosa = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -5764,7 +5709,7 @@ amandee = {
 
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_income_mult = 0.005
 	}
 }
@@ -6015,7 +5960,7 @@ amparita = {
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
 		monthly_income_mult = 0.005
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 	}
 }
 
@@ -6099,7 +6044,7 @@ hoanya = {
 	county = c_west_taiwan
 
 	county_holder_character_modifier = {
-		development_growth_factor = 0.05
+		prosperity_growth_factor = 0.05
 	}
 
 	county_modifier_scaled = {
@@ -6109,12 +6054,12 @@ hoanya = {
 	}
 
 	faith_character_modifier = {
-		development_growth_factor = 0.1
+		prosperity_growth_factor = 0.1
 	}
 
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_income_mult = 0.005
 	}
 	barony = b_arikun
@@ -6129,7 +6074,7 @@ sonba_i = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -6153,7 +6098,7 @@ riak_nan_berbedur = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_county_control_growth_factor = 0.01
 	}
 
@@ -6192,7 +6137,7 @@ gangganegara = {
 		same_faith_opinion = 0.5
 		monthly_county_control_growth_factor = 0.01
 	}
-	barony = b_manjung
+	barony = b_beruas
 }
 
 nutapkauspe = {
@@ -6256,7 +6201,7 @@ tarayka = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		hostile_raid_time = 0.02
 	}
 
@@ -6276,7 +6221,7 @@ kamuykotan = {
 	barony = b_uryuu
 
 	county_holder_character_modifier = {
-		development_growth_factor = 0.05
+		prosperity_growth_factor = 0.05
 	}
 
 	county_modifier_scaled = {
@@ -6286,12 +6231,12 @@ kamuykotan = {
 	}
 
 	faith_character_modifier = {
-		development_growth_factor = 0.1
+		prosperity_growth_factor = 0.1
 	}
 
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_income_mult = 0.005
 	}
 }
@@ -6306,7 +6251,7 @@ hitakami = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -6354,7 +6299,7 @@ muze = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -6379,7 +6324,7 @@ sizhou = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -6399,7 +6344,7 @@ daozhou = {
 	county = c_daozhou
 
 	county_holder_character_modifier = {
-		development_growth_factor = 0.05
+		prosperity_growth_factor = 0.05
 	}
 
 	county_modifier_scaled = {
@@ -6409,12 +6354,12 @@ daozhou = {
 	}
 
 	faith_character_modifier = {
-		development_growth_factor = 0.1
+		prosperity_growth_factor = 0.1
 	}
 
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_income_mult = 0.005
 	}
 	barony = b_yingdao
@@ -6453,7 +6398,7 @@ haripunjaya = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -6477,7 +6422,7 @@ nguu_hong = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -6502,7 +6447,7 @@ yangtze = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		hostile_raid_time = 0.02
 	}
 
@@ -6571,7 +6516,7 @@ baekdu = { # Mount Paektu/Baekdu
 }
 
 taebaek = { # Mount Taebaek
-	county = c_gangneung
+	county = c_gapsan
 
 	county_holder_character_modifier = {
 		prestige_standalone_gain_mult = 0.05
@@ -6579,7 +6524,7 @@ taebaek = { # Mount Taebaek
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		county_opinion_add = 1
 	}
 
@@ -6593,7 +6538,7 @@ taebaek = { # Mount Taebaek
 		monthly_prestige_gain_mult = 0.01
 		same_faith_opinion = 0.5
 	}
-	barony = b_samcheok
+	barony = b_gapsan
 }
 
 halla = { # Mount Halla
@@ -6605,7 +6550,7 @@ halla = { # Mount Halla
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_travel_danger = -1
 	}
 
@@ -6644,7 +6589,7 @@ mani = { # Mount Mani
 		legitimacy_gain_mult = 0.01
 		monthly_prestige_gain_mult = 0.01
 	}
-	barony = b_kaesong
+	barony = b_inju
 }
 
 seorak = { # Mount Geumgang
@@ -6656,7 +6601,7 @@ seorak = { # Mount Geumgang
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		travel_danger = -1
 	}
 
@@ -6731,7 +6676,7 @@ nara = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		monthly_county_control_growth_factor = 0.01
 	}
 
@@ -6757,7 +6702,7 @@ vaishali = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -6792,33 +6737,8 @@ luoyang = {
 
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 	}
-}
-
-tiantai = {
-	# Origin of Tiantai Buddhism, birthplace of Zhiyi
-	county = c_taizhou
-
-	county_holder_character_modifier = {
-		learning = 1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		county_opinion_add = 1
-	}
-
-	faith_character_modifier = {
-		learning = 2
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_lifestyle_xp_gain_mult = 0.01
-	}
-	barony = b_tiantai
 }
 
 kizuki = {
@@ -6831,7 +6751,7 @@ kizuki = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
+		prosperity_growth_factor = 0.01
 		epidemic_resistance = 1
 	}
 
@@ -6867,1210 +6787,5 @@ kashima = {
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
 		monthly_income_mult = 0.005
-	}
-}
-
-napata = {
-	barony = b_ed_debba
-	county = c_bayuda #Nubian Coptic Church
-
-	county_holder_character_modifier = {
-		stewardship = 1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		tax_mult = 0.01
-		county_opinion_add = 1
-	}
-
-	faith_character_modifier = {
-		stewardship = 1
-		domain_tax_same_faith_mult = 0.05
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_income_mult = 0.005
-	}
-}
-
-colonea = {
-	barony = b_sebinkarahisar
-	county = c_erzurum #Where St. Gregory the Illuminator's body was taken after his death(he died close to Dwin).
-
-	county_holder_character_modifier = {
-		direct_vassal_opinion = 3
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		hostile_raid_time = 0.02
-	}
-
-	faith_character_modifier = {
-		direct_vassal_opinion = 5
-		same_faith_opinion = 5
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_prestige_gain_mult = 0.01
-	}
-}
-
-armagh = {
-	barony = b_armagh
-	county = c_oriel
-
-	county_holder_character_modifier = {
-		learning = 1
-		clergy_opinion = 5
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		epidemic_resistance = 1
-	}
-
-	faith_character_modifier = {
-		learning_per_piety_level = 1
-		monthly_piety_gain_mult = 0.05
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_piety_gain_mult = 0.01
-	}
-}
-
-yamama = {
-	barony = b_al_yamamah
-	county = c_yamama
-
-	county_holder_character_modifier = {
-		martial = 1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		desert_development_growth_factor = 0.01
-		supply_limit_mult = 0.02
-	}
-
-	faith_character_modifier = {
-		desert_advantage = 5
-		supply_duration = 0.1
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		desert_advantage = 0.5
-		supply_duration = 0.01
-	}
-}
-
-qom = {
-	barony = b_qom
-	county = c_qom
-
-	county_holder_character_modifier = {
-		intrigue = 1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		tax_mult = 0.01
-		county_opinion_add = 1
-	}
-
-	faith_character_modifier = {
-		intrigue_per_piety_level = 1
-		owned_personal_scheme_success_chance_add = 5
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		owned_hostile_scheme_success_chance_growth_add = 0.5
-	}
-}
-
-puri = {
-	barony = b_puri
-	county = c_rajabandi
-
-	county_holder_character_modifier = {
-		monthly_piety_gain_mult = 0.025
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		travel_danger = -1
-	}
-
-	faith_character_modifier = {
-		learning_per_piety_level = 1
-		monthly_piety_gain_mult = 0.05
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_piety_gain_mult = 0.01
-		monthly_prestige_gain_mult = 0.01
-	}
-}
-
-badrinath = {
-	county = c_garhwal
-	barony = b_badrinath
-
-	county_holder_character_modifier = {
-		vassal_opinion = 2
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		tax_mult = 0.01
-		county_opinion_add = 1
-	}
-
-	faith_character_modifier = {
-		short_reign_duration_mult = -0.25
-		vassal_opinion = 3
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		long_reign_bonus_mult = 0.01
-		monthly_prestige_gain_mult = 0.01
-	}
-}
-
-shringeri = {
-	county = c_banavasi
-	barony = b_sringeri
-
-	county_holder_character_modifier = {
-		stewardship = 1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		tax_mult = 0.01
-		county_opinion_add = 1
-	}
-
-	faith_character_modifier = {
-		stewardship_per_piety_level = 1
-		learning = 1
-	}
-}
-
-prambanan = { #Shaivism & Krishnaism
-	county = c_mataram
-	barony = b_mataram
-
-	county_holder_character_modifier = {
-		different_culture_opinion = 5
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		epidemic_travel_danger = -1
-	}
-
-	faith_character_modifier = {
-		different_culture_opinion = 10
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		cultural_head_acceptance_gain_mult = 0.015
-		monthly_prestige_gain_mult = 0.01
-	}
-}
-
-preah_vihear = { #Shaivism
-	county = c_ishanapura
-	barony = b_preah_vihear
-
-	county_holder_character_modifier = {
-		county_opinion_add = 3
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		jungle_development_growth_factor = 0.01
-		garrison_size = 0.02
-	}
-
-	faith_character_modifier = {
-		county_opinion_add = 5
-		jungle_advantage = 3
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		monthly_county_control_growth_factor = 0.01
-	}
-}
-
-bumiayu = { #Shaivism
-	county = c_ogan
-	barony = b_bumi_ayu
-
-	county_holder_character_modifier = {
-		clergy_opinion = 3
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		county_opinion_add = 1
-	}
-
-	faith_character_modifier = {
-		clergy_opinion = 5
-		monthly_piety_gain_mult = 0.05
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_piety_gain_mult = 0.01
-	}
-}
-
-lejre = {
-	barony = b_roskilde
-	county = c_zealand
-
-	county_holder_character_modifier = {
-		knight_effectiveness_mult = 0.05
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		build_speed = -0.01
-		defender_holding_advantage = 0.5
-	}
-
-	faith_character_modifier = {
-		prowess_per_piety_level = 1
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		knight_effectiveness_mult = 0.015
-		monthly_prestige_gain_mult = 0.01
-	}
-}
-
-zeeland = {
-	barony = b_middelburg
-	county = c_south_holland
-
-	county_holder_character_modifier = {
-		prowess = 2
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		build_speed = -0.01
-		levy_size = 0.02
-	}
-
-	faith_character_modifier = {
-		prowess_per_piety_level = 1
-		supply_duration = 0.2
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		supply_duration = 0.015
-		embarkation_cost_mult = -0.01
-	}
-}
-
-sparta = {
-	barony = b_mystras
-	county = c_laconia
-
-	county_holder_character_modifier = {
-		prowess = 1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		build_speed = -0.01
-		garrison_size = 0.02
-	}
-
-	faith_character_modifier = {
-		martial = 1
-		prowess = 1
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		knight_effectiveness_mult = 0.01
-	}
-}
-
-suzhou = {
-	barony = b_wuxian
-	county = c_suzhou
-
-	county_holder_character_modifier = {
-		diplomacy = 1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		tax_mult = 0.01
-		county_opinion_add = 1
-	}
-
-	faith_character_modifier = {
-		diplomacy = 1
-		courtier_and_guest_opinion = 5
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_income_mult = 0.005
-	}
-}
-
-mount_kunyu = {
-	barony = b_wendeng
-	#Location where the quanzhen school was founded
-	#Curated by emperors and Taoist monks
-	county = c_ninghai
-
-	county_holder_character_modifier = {
-		stress_loss_mult = 0.05
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		epidemic_resistance = 1
-	}
-
-	faith_character_modifier = {
-		stress_loss_mult = 0.1
-		life_expectancy = 1 #Connection to Eternal Life
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		stress_loss_mult = 0.01
-		health = 0.01
-	}
-}
-
-ishizuchi = {
-	# Ishizuchi, sacred Shugendo mountain
-	county = c_iyo
-	barony = b_iyo
-
-	county_holder_character_modifier = {
-		learning = 1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		travel_danger = -1
-	}
-
-	faith_character_modifier = {
-		cultural_head_fascination_mult = 0.15
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		cultural_head_fascination_mult = 0.01
-	}
-}
-
-haku = {
-	# Hakusan, sacred Shugendo mountain
-	county = c_kaga
-	barony = b_kaga
-
-	county_holder_character_modifier = {
-		vassal_levy_contribution_add = 0.05
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		build_speed = -0.01
-		hostile_raid_time = 0.02
-	}
-
-	faith_character_modifier = {
-		vassal_levy_contribution_add = 0.15
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		vassal_levy_contribution_mult = 0.01
-		levy_size = 0.005
-	}
-}
-
-koya = { # Mount Koya
-	county = c_kii
-	barony = b_naga
-
-	county_holder_character_modifier = {
-		clergy_opinion = 3
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		travel_danger = -1
-	}
-
-	faith_character_modifier = {
-		clergy_opinion = 5
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_piety_gain_mult = 0.01
-	}
-}
-
-haguro = { # Mount Haguro
-	county = c_uzen
-	barony = b_tagawa
-
-	county_holder_character_modifier = {
-		mountains_development_growth_factor = 0.1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		forest_development_growth_factor = 0.01
-		levy_reinforcement_rate = 0.02
-	}
-
-	faith_character_modifier = {
-		mountains_advantage = 5
-		mountains_development_growth_factor = 0.2
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		mountains_advantage = 0.5
-		supply_duration = 0.01
-	}
-}
-
-shaolin = {
-	county = c_henan
-	barony = b_dengfeng
-
-	county_holder_character_modifier = {
-		prowess = 2
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		build_speed = -0.01
-		garrison_size = 0.02
-	}
-
-	faith_character_modifier = {
-		prowess_per_piety_level = 1
-		clergy_opinion = 5
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		knight_effectiveness_mult = 0.01
-	}
-}
-
-hangzhou = {
-	barony = b_hangzhou
-	county = c_hangzhou
-
-	county_holder_character_modifier = {
-		councillor_opinion = 3
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		tax_mult = 0.01
-		supply_limit_mult = 0.02
-	}
-
-	faith_character_modifier = {
-		diplomacy = 1
-		councillor_opinion = 5
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_income_mult = 0.005
-	}
-}
-
-emei = { # Mount Emei
-	county = c_jiading
-	barony = b_emei
-
-	county_holder_character_modifier = {
-		development_growth_factor = 0.05
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		tax_mult = 0.01
-		county_opinion_add = 1
-	}
-
-	faith_character_modifier = {
-		development_growth_factor = 0.1
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		monthly_income_mult = 0.005
-	}
-}
-
-jiuhua = {
-	barony = b_qingyang
-	county = c_chizhou
-
-	county_holder_character_modifier = {
-		diplomacy = 1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		tax_mult = 0.01
-		monthly_county_control_growth_factor = 0.01
-	}
-
-	faith_character_modifier = {
-		owned_personal_scheme_success_chance_add = 5
-		diplomacy = 1
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		owned_personal_scheme_success_chance_growth_add = 0.5
-	}
-}
-
-putuo = {
-	county = c_ningbo
-	barony = b_changguo
-
-	county_holder_character_modifier = {
-		county_opinion_add = 3
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		epidemic_resistance = 1
-	}
-
-	faith_character_modifier = {
-		county_opinion_add = 5 #Center of Worship for Guanyin - Boddhisatva of Compassion
-		different_faith_opinion = 5
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		different_faith_opinion = 0.5
-		stress_loss_mult = 0.01
-	}
-}
-
-shicheng = {
-	barony = b_nanning
-	county = c_qujing
-
-	county_holder_character_modifier = {
-		powerful_vassal_opinion = 3
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		monthly_county_control_growth_factor = 0.01
-	}
-
-	faith_character_modifier = {
-		diplomacy = 1
-		powerful_vassal_opinion = 5
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_prestige_gain_mult = 0.01
-	}
-}
-
-jianchang = {
-	barony = b_nancheng
-	county = c_jianchang
-
-	county_holder_character_modifier = {
-		learning = 1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		travel_danger = -1
-	}
-
-	faith_character_modifier = {
-		learning = 1
-		clergy_opinion = 5
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_piety_gain_mult = 0.01
-	}
-}
-
-bulguksa = {
-	barony = b_gyeongju
-	county = c_gyeongju
-
-	county_holder_character_modifier = {
-		monthly_county_control_growth_factor = 0.05
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		forest_development_growth_factor = 0.01
-		supply_limit_mult = 0.02
-	}
-
-	faith_character_modifier = {
-		controlled_province_advantage = 5
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		controlled_province_advantage = 0.5
-		monthly_county_control_growth_factor = 0.01
-	}
-}
-
-donggang = {
-	barony = b_jangheung
-	county = c_naju
-
-	county_holder_character_modifier = {
-		health = 0.05
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		epidemic_resistance = 1
-	}
-
-	faith_character_modifier = {
-		learning = 1
-		health = 0.1
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		health = 0.01
-	}
-}
-
-danai = {
-	barony = b_myitkyina
-	county = c_mongkawng
-
-	county_holder_character_modifier = {
-		intrigue = 1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		tax_mult = 0.01
-		county_opinion_add = 1
-	}
-
-	faith_character_modifier = {
-		owned_personal_scheme_success_chance_add = 5
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		owned_personal_scheme_success_chance_growth_add = 0.5
-	}
-}
-
-magadha = {
-	barony = b_rajgir
-	county = c_patna
-
-	county_holder_character_modifier = {
-		short_reign_duration_mult = -0.1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		tax_mult = 0.01
-		county_opinion_add = 1
-	}
-
-	faith_character_modifier = {
-		short_reign_duration_mult = -0.25
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		long_reign_bonus_mult = 0.01
-		monthly_prestige_gain_mult = 0.01
-	}
-}
-
-tate = {
-	barony = b_niikawa
-	county = c_ecchuu
-
-	county_holder_character_modifier = {
-		levy_size = 0.05
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		build_speed = -0.01
-		levy_reinforcement_rate = 0.02
-	}
-
-	faith_character_modifier = {
-		levy_size = 0.1
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		levy_size = 0.005
-		levy_reinforcement_rate = 0.01
-	}
-}
-
-awa = {
-	barony = b_nakata
-	county = c_awa
-
-	county_holder_character_modifier = {
-		title_creation_cost_mult = -0.05
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		tax_mult = 0.01
-		garrison_size = 0.02
-	}
-
-	faith_character_modifier = {
-		title_creation_cost_mult = -0.15
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		title_creation_cost_mult = -0.01
-		monthly_prestige_gain_mult = 0.01
-	}
-}
-
-quanzhou = {
-	barony = b_jinjiang
-	county = c_quanzhou
-
-	county_holder_character_modifier = {
-		monthly_piety_gain_mult = 0.05
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		epidemic_resistance = 1
-	}
-
-	faith_character_modifier = {
-		monthly_piety_gain_mult = 0.1
-		stress_loss_per_piety_level = 0.05
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_piety_gain_mult = 0.01
-		stress_loss_mult = 0.01
-	}
-}
-
-turpan = {
-	county = c_turpan
-	barony = b_turpan
-
-	county_holder_character_modifier = {
-		development_growth_factor = 0.05
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		tax_mult = 0.01
-		hostile_raid_time = 0.02
-	}
-
-	faith_character_modifier = {
-		development_growth_factor = 0.1
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		monthly_income_mult = 0.005
-	}
-}
-
-quzhou = {
-	barony = b_xian_quzhou
-	county = c_quzhou
-
-	county_holder_character_modifier = {
-		learning = 1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		epidemic_resistance = 1
-	}
-
-	faith_character_modifier = {
-		negate_learning_penalty_add = 4
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_lifestyle_xp_gain_mult = 0.01
-	}
-}
-
-linzi = {
-	barony = b_zichuan
-	county = c_qingzhou
-
-	county_holder_character_modifier = {
-		monthly_prestige_gain_mult = 0.025
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		county_opinion_add = 1
-	}
-
-	faith_character_modifier = {
-		monthly_piety_gain_mult = 0.1
-		monthly_prestige_gain_mult = 0.05
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_piety_gain_mult = 0.01
-		monthly_prestige_gain_mult = 0.01
-	}
-}
-
-zhuolu = {
-	barony = b_baoan_baoan
-	county = c_baoan
-
-	county_holder_character_modifier = {
-		county_opinion_add = 3
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		tax_mult = 0.01
-		garrison_size = 0.02
-	}
-
-	faith_character_modifier = {
-		county_opinion_add = 5
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_county_control_growth_factor = 0.01
-		monthly_prestige_gain_mult = 0.01
-	}
-}
-
-dongting = {
-	barony = b_baling
-	county = c_yuezhou
-
-	county_holder_character_modifier = {
-		levy_reinforcement_rate = 0.1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		build_speed = -0.01
-		supply_limit_mult = 0.02
-	}
-
-	faith_character_modifier = {
-		levy_reinforcement_rate_same_faith = 0.2
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		levy_size = 0.005
-		same_faith_opinion = 0.5
-	}
-}
-
-wehale = {
-	barony = b_likusaen
-	county = c_timor
-
-	county_holder_character_modifier = {
-		learning = 1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		epidemic_resistance = 1
-	}
-
-	faith_character_modifier = {
-		cultural_head_fascination_mult = 0.15
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		cultural_head_fascination_mult = 0.01
-	}
-}
-
-cheongju = {
-	barony = b_cheongju
-	county = c_gongju
-
-	county_holder_character_modifier = {
-		direct_vassal_opinion = 3
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		monthly_county_control_growth_factor = 0.01
-	}
-
-	faith_character_modifier = {
-		direct_vassal_opinion = 5
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_prestige_gain_mult = 0.01
-	}
-}
-
-goseong = {
-	barony = b_goseong
-	county = c_gangneung
-
-	county_holder_character_modifier = {
-		monthly_piety_gain_mult = 0.05
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		epidemic_travel_danger = -1
-	}
-
-	faith_character_modifier = {
-		monthly_piety = 1
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_piety_gain_mult = 0.01
-		stress_loss_mult = 0.01
-	}
-}
-
-nanhua = {
-	barony = b_qujiang
-	county = c_shaozhou
-
-	county_holder_character_modifier = {
-		monthly_piety_gain_mult = 0.05
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		epidemic_resistance = 1
-	}
-
-	faith_character_modifier = {
-		monthly_piety_gain_mult = 0.1
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_piety_gain_mult = 0.01
-		piety_level_impact_mult = 0.01
-	}
-}
-
-sarasvati = {
-	county = c_bhattiana
-	barony = b_sarsuti
-
-	county_holder_character_modifier = {
-		learning = 1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		county_opinion_add = 1
-	}
-
-	faith_character_modifier = {
-		learning = 1
-		monthly_lifestyle_xp_gain_mult = 0.1
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_lifestyle_xp_gain_mult = 0.01
-	}
-}
-
-mogao = {
-	county = c_shazhou
-	barony = b_shazhou
-
-	county_holder_character_modifier = {
-		cultural_head_fascination_mult = 0.025
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		artifact_decay_reduction_mult = 0.02
-	}
-
-	faith_character_modifier = {
-		development_growth_factor = 0.1
-		cultural_head_fascination_mult = 0.05
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		artifact_decay_reduction_mult = 0.01
-	}
-}
-
-gaeseong = {
-	county = c_kaesong
-	barony = b_kaesong
-
-	county_holder_character_modifier = {
-		monthly_county_control_growth_factor = 0.05
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		tax_mult = 0.01
-		garrison_size = 0.02
-	}
-
-	faith_character_modifier = {
-		monthly_county_control_growth_factor = 0.1
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_county_control_growth_factor = 0.01
-		monthly_income_mult = 0.005
-	}
-}
-
-hiei = {
-	# Main Tendai temple overlooking Kyoto
-	county = c_oumi
-	barony = b_kurita
-
-	county_holder_character_modifier = {
-		monthly_piety_gain_mult = 0.05
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		build_speed = -0.01
-		levy_size = 0.02
-	}
-
-	faith_character_modifier = {
-		monthly_piety_gain_mult = 0.1
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_piety_gain_mult = 0.01
-	}
-}
-
-heiankyo = {
-	county = c_yamashiro
-	barony = b_kyoto
-
-	county_holder_character_modifier = {
-		monthly_piety_gain_mult = 0.05
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		travel_danger = -1
-	}
-
-	faith_character_modifier = {
-		monthly_piety_gain_mult = 0.1
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		monthly_piety_gain_mult = 0.01
-		cultural_head_fascination_mult = 0.01
 	}
 }

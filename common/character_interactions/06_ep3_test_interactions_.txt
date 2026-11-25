@@ -6,8 +6,7 @@ make_noble_family_interaction = {
 	}
 
 
-	category = interaction_debug_admin
-	common_interaction = no
+	category = interaction_debug_extra
 	icon = powerful_family_shield
 
 	is_shown = {
@@ -35,8 +34,7 @@ destroy_noble_family_interaction = {
 	}
 
 
-	category = interaction_debug_admin
-	common_interaction = no
+	category = interaction_debug_extra
 	icon = icon_cross
 
 	is_shown = {
@@ -75,8 +73,7 @@ invest_appointment_interaction = {
 	}
 
 
-	category = interaction_debug_admin
-	common_interaction = yes
+	category = interaction_debug_extra
 	icon = byzantine_crown_positive
 
 	target_type = title
@@ -110,7 +107,7 @@ transfer_title_army_maa_interaction = {
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
 	}
 
-	category = interaction_debug_admin
+	category = interaction_debug_extra
 	target_type = title
 	target_filter = actor_domain_titles
 	icon = request_maa_interaction

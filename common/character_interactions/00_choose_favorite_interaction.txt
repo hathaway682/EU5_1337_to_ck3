@@ -12,13 +12,13 @@ choose_favorite_interaction = {
 	desc = choose_favorite_interaction_desc
 
 	is_available = {
-		is_ai = no
+		is_ai = no 
 	}
 
 	is_shown = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
-		scope:actor = {
+		scope:actor = { 
 			NOT = { has_relation_favorite_child = scope:recipient }
 		}
 		scope:recipient.dynasty ?= scope:actor.dynasty
@@ -57,8 +57,14 @@ choose_favorite_interaction = {
 			custom_tooltip = {
 				text = no_republic_or_theocracy_tt
 				NOR = {
-					government_has_flag = government_is_republic
-					government_has_flag = government_is_theocracy
+					AND = {
+						has_gdp_dlc_trigger = no
+						government_has_flag = government_is_republic
+					}
+					AND = {
+						has_pam_dlc_trigger = no
+						government_has_flag = government_is_theocracy
+					}
 				}
 			}
 			trigger_if = {
@@ -114,14 +120,14 @@ remove_favorite_interaction = {
 	desc = remove_favorite_interaction_desc
 
 	is_available = {
-		is_alive = yes
+		is_alive = yes 
 	}
 
 	is_shown = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
-		scope:actor = {
-			has_relation_favorite_child = scope:recipient
+		scope:actor = { 
+			has_relation_favorite_child = scope:recipient 
 		}
 	}
 
@@ -147,7 +153,7 @@ remove_favorite_interaction = {
 			}
 			send_interface_toast = {
 				title = remove_favorite_interaction_notification
-				left_icon = scope:actor
+				left_icon = scope:actor					
 				right_icon = scope:recipient
 				if = {
 					limit = {
@@ -179,8 +185,8 @@ remove_favorite_interaction = {
 						modifier = no_more_favorite_opinion
 					}
 				}
-			}
-		}
+			} 
+		}		
 	}
 
 	auto_accept = yes

@@ -7,7 +7,7 @@
 	category = interaction_category_religion
 	icon = icon_request_priest
 	interface_priority = 35
-	common_interaction = yes
+	common_interaction = no
 
 	use_diplomatic_range = yes
 	ai_maybe = no
@@ -241,7 +241,7 @@
 
 	ai_will_do = {
 		base = 25
-
+		
 		modifier = {
 			add = 100
 			scope:actor = {
@@ -258,7 +258,7 @@
 				}
 			}
 		}
-
+		
 		modifier = {
 			add = 25
 			recipient_in_actor_clerical_region_trigger = yes

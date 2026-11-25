@@ -868,6 +868,8 @@ celestial_give_treasury_interaction = {
 		}
 	}
 
+	cooldown_against_recipient = { years = 5 }
+
 	is_highlighted = { # Highlight the interaction if they have a very small treasury
 		scope:recipient = {
 			treasury < 50
@@ -1076,10 +1078,7 @@ celestial_give_treasury_interaction = {
 		# Don't support bad relations
 		modifier = {
 			factor = 0
-			OR = {
-				has_relation_rival = scope:recipient
-				has_relation_nemesis = scope:recipient
-			}
+			has_relation_rival = scope:recipient
 		}
 
 		# Don't support characters who doesn't need it
@@ -2436,23 +2435,7 @@ change_career_path_for_family_member_interaction = {
 				is_grandchild_of = scope:actor
 				is_great_grandchild_of = scope:actor
 			}
-			trigger_if = {
-				limit = {
-					scope:actor = {
-						rite = { rite_has_doctrine = doctrine_gender_female_dominated }
-					}
-				}
-				is_female = yes
-			}
-			trigger_else_if = {
-				limit = {
-					scope:actor = {
-						rite = { rite_has_doctrine = doctrine_gender_male_dominated }
-					}
-				}
-				is_female = no
-			}
-			trigger_else = { always = yes }
+			scope:actor.rite = { rite_has_dominant_ruling_gender = prev }
 		}
 	}
 
@@ -2641,23 +2624,7 @@ send_child_to_examination_interaction = {
 				is_grandchild_of = scope:actor
 				is_great_grandchild_of = scope:actor
 			}
-			trigger_if = {
-				limit = {
-					scope:actor = {
-						rite = { rite_has_doctrine = doctrine_gender_female_dominated }
-					}
-				}
-				is_female = yes
-			}
-			trigger_else_if = {
-				limit = {
-					scope:actor = {
-						rite = { rite_has_doctrine = doctrine_gender_male_dominated }
-					}
-				}
-				is_female = no
-			}
-			trigger_else = { always = yes }
+			scope:actor.rite = { rite_has_dominant_ruling_gender = prev }
 			age < 16
 			is_landed = no
 			NOT = {
@@ -4240,17 +4207,19 @@ influence_meritorious_career_interaction = {
 	desc = influence_meritorious_career_interaction_desc
 
 	is_available = {
+		government_has_flag = government_has_merit
 		government_has_mechanic = administrative
 		trigger_if = {
 			limit = { is_ai = yes }
 			influence >= monumental_influence_value # Only consider doing this if you have the influence to spare
 			government_allows = merit
+			is_adult = yes
 			OR = {
 				is_landed_or_landless_administrative_or_theocratic = yes
 				highest_held_title_tier >= tier_empire
+				tgp_has_minister_title = yes
 			}
 		}
-		government_has_flag = government_has_merit
 	}
 
 	is_shown = {
@@ -4811,6 +4780,9 @@ influence_meritorious_career_interaction = {
 	ai_targets = {
 		ai_recipients = peer_vassals
 		max = 10
+	}
+	ai_target_quick_trigger = {
+		adult = yes
 	}
 
 	ai_frequency_by_tier = {
@@ -5420,8 +5392,7 @@ celestial_request_treasury_interaction = {
 				}
 				if = {
 					limit = {
-						highest_held_title_tier >= tier_hegemony
-						government_has_flag = government_is_celestial
+						tgp_has_access_to_ministry_trigger = yes
 						scope:actor = {
 							vassal_contract_has_flag = celestial_military_appointment
 							NOT = { is_councillor_of = top_liege }
@@ -5432,8 +5403,7 @@ celestial_request_treasury_interaction = {
 				}
 				else_if = {
 					limit = {
-						highest_held_title_tier >= tier_hegemony
-						government_has_flag = government_is_celestial
+						tgp_has_access_to_ministry_trigger = yes
 						scope:actor = {
 							NOR = {
 								vassal_contract_has_flag = celestial_military_appointment
@@ -5485,25 +5455,19 @@ celestial_request_treasury_interaction = {
 					AND = {
 						has_title = title:e_minister_of_war
 						liege ?= {
-							highest_held_title_tier >= tier_hegemony
-							government_has_flag = government_is_celestial
+							tgp_has_access_to_ministry_trigger = yes
 						}
 						scope:actor = {
 							vassal_contract_has_flag = celestial_military_appointment
-							NOT = { is_councillor_of = top_liege }
 						}
 					}
 					AND = {
 						has_title = title:e_minister_of_revenue
 						liege ?= {
-							highest_held_title_tier >= tier_hegemony
-							government_has_flag = government_is_celestial
+							tgp_has_access_to_ministry_trigger = yes
 						}
 						scope:actor = {
-							NOR = {
-								vassal_contract_has_flag = celestial_military_appointment
-								is_councillor_of = top_liege
-							}
+							NOT = { vassal_contract_has_flag = celestial_military_appointment }
 						}
 					}
 				}
@@ -6709,7 +6673,7 @@ celestial_send_military_aid_interaction = {
 
 	pre_answer_yes_key = ACCEPT
 	pre_answer_no_key = DECLINE
-
+	
 	shows_military_strength = yes
 
 	cost = {
@@ -7081,13 +7045,13 @@ set_favored_minister_interaction = {
 
 	is_available = {
 		highest_held_title_tier >= tier_hegemony
+		government_has_flag = government_is_celestial
 		trigger_if = {
 			limit = { is_ai = yes }
 			NOT = {
 				employs_court_position = favored_minister_court_position
 			}
 		}
-		government_has_flag = government_is_celestial
 	}
 
 	is_shown = {
@@ -8237,10 +8201,13 @@ celestial_request_elders_support_interaction = {
 	is_available = {
 		trigger_if = {
 			limit = { is_ai = yes }
+			government_has_flag = government_has_merit
 			OR = {
-				is_any_movement_leader = no
-				num_of_relation_disciple > 0
 				num_of_relation_elder > 0
+				num_of_relation_disciple > 0
+				num_of_relation_fellow_disciple > 0
+				top_participant_group:dynastic_cycle ?= { exists = var:movement_leader }
+				is_in_pro_hegemon_or_hegemon_movement = yes
 			}
 		}
 	}
@@ -8333,6 +8300,7 @@ celestial_request_elders_support_interaction = {
 						artifact_can_be_gift_to_trigger = { RECIPIENT = scope:actor }
 						NOR = {
 							rarity = illustrious
+							is_equipped = yes
 						}
 						scope:actor = { can_benefit_from_artifact = prev }
 					}
@@ -8699,6 +8667,7 @@ celestial_request_elders_support_interaction = {
 								artifact_can_be_gift_to_trigger = { RECIPIENT = scope:actor }
 								NOR = {
 									rarity = illustrious
+									is_equipped = yes
 								}
 								scope:actor = { can_benefit_from_artifact = prev }
 							}
@@ -8714,7 +8683,7 @@ celestial_request_elders_support_interaction = {
 						}
 					}
 					scope:actor = {
-						scope:artifact_to_take = {
+						scope:artifact_to_take ?= { # None of their artifacts may qualify
 							set_owner = {
 								target = scope:actor
 								history = {
@@ -8864,12 +8833,13 @@ celestial_request_elders_support_interaction = {
 		## Troops, if they don't have gold.
 		modifier = {
 			add = 50
-			scope:recipient.gold < 50
 			scope:request_maa = yes
+			scope:recipient.gold < 50
 		}
 		## Book if you have non and they have some
 		modifier = {
 			add = 50
+			scope:request_artifacts = yes
 			scope:actor = {
 				any_character_artifact = {
 					artifact_slot_type = book
@@ -8882,11 +8852,11 @@ celestial_request_elders_support_interaction = {
 					count >= 1
 				}
 			}
-			scope:request_artifacts = yes
 		}
 		## Scholar if you have non and they have some
 		modifier = {
 			add = 50
+			scope:request_scholars = yes
 			scope:actor = {
 				any_courtier = {
 					has_trait = confucian_education
@@ -8906,7 +8876,6 @@ celestial_request_elders_support_interaction = {
 					count >= 1
 				}
 			}
-			scope:request_scholars = yes
 		}
 		## Don't increase score if you already have it boosted.
 		modifier = {
@@ -9293,6 +9262,7 @@ request_great_project_contribution_interaction = {
 
 	special_interaction = request_great_project_contribution
 	hidden = yes
+	notification_text = request_great_project_contribution_interaction_notification
 
 	on_accept = {
 		scope:actor = {
@@ -9963,10 +9933,10 @@ force_abdication_interaction = {
 	target_type = title
 	target_filter = recipient_domain_titles
 	can_be_picked_title = {
-		scope:target = scope:recipient.top_liege.primary_title.var:administrative_ui_special_title
+		scope:target = scope:recipient.ceremonial_liege_title
 	}
 	has_valid_target_showing_failures_only = {
-		scope:target = scope:recipient.top_liege.primary_title.var:administrative_ui_special_title
+		scope:target = scope:recipient.ceremonial_liege_title
 	}
 	ai_targets = {
 		ai_recipients = vassals
@@ -10133,9 +10103,9 @@ force_abdication_interaction = {
 					}
 					if = {
 						limit = { can_set_relation_rival_trigger = { CHARACTER = scope:actor } }
-						set_relation_rival = {
-							target = scope:actor
-							reason = rival_forced_my_abdication_reason
+						set_relation_rival_effect = {
+							TARGET = scope:actor
+							REASON = rival_forced_my_abdication_reason
 						}
 					}
 					hidden_effect = {
@@ -10144,7 +10114,7 @@ force_abdication_interaction = {
 							save_scope_as = change
 							add_claim_on_loss = yes
 						}
-						scope:recipient.top_liege.primary_title.var:administrative_ui_special_title = {
+						scope:recipient.ceremonial_liege_title = {
 							change_title_holder_include_vassals = {
 								holder = scope:recipient.primary_heir
 								change = scope:change
@@ -10197,9 +10167,9 @@ force_abdication_interaction = {
 					}
 					if = {
 						limit = { can_set_relation_rival_trigger = { CHARACTER = scope:actor } }
-						set_relation_rival = {
-							target = scope:actor
-							reason = rival_attempted_to_force_my_abdication_reason
+						set_relation_rival_effect = {
+							TARGET = scope:actor
+							REASON = rival_attempted_to_force_my_abdication_reason
 						}
 					}
 				}
@@ -10542,7 +10512,7 @@ create_ceremonial_claimant_faction_against_interaction = {
 	interface = create_claimant_faction_against
 
 	redirect = {
-		scope:actor.top_liege.primary_title.var:administrative_ui_special_title.holder ?= { save_scope_as = secondary_actor }
+		scope:actor.ceremonial_liege ?= { save_scope_as = secondary_actor }
 	}
 
 	is_available = {
@@ -10568,7 +10538,7 @@ create_ceremonial_claimant_faction_against_interaction = {
 	}
 
 	is_valid_showing_failures_only = {
-		scope:actor.top_liege.primary_title.var:administrative_ui_special_title = {
+		scope:actor.ceremonial_liege_title = {
 			save_temporary_scope_as = title_temp
 			any_claimant = { save_temporary_scope_as = heir_temp }
 		}
@@ -10632,7 +10602,7 @@ create_ceremonial_claimant_faction_against_interaction = {
 
 	on_send = {
 		scope:actor = {
-			top_liege.primary_title.var:administrative_ui_special_title = { save_scope_as = landed_title }
+			ceremonial_liege_title = { save_scope_as = landed_title }
 			set_variable = {
 				name = claiming_title
 				value = scope:landed_title
@@ -11794,7 +11764,7 @@ celestial_extinguish_noble_family_interaction = {
 								}
 								trigger_situation_catalyst = {
 									catalyst = catalyst_tyrannical_extinguish_noble_family
-									character = root
+									character = scope:actor
 								}
 							}
 						}
@@ -11879,6 +11849,7 @@ pay_treasury_debt_interaction = {
 	is_shown = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
+		scope:actor != scope:recipient
 		scope:actor = {
 			OR = {
 				has_title = title:e_minister_of_war
@@ -11908,7 +11879,7 @@ pay_treasury_debt_interaction = {
 	}
 
 	is_valid_showing_failures_only = {
-		scope:recipient = { treasury <= 0 }
+		scope:recipient = { treasury < 0 }
 		scope:actor = {
 			treasury >= {
 				value = scope:recipient.treasury
@@ -11951,11 +11922,11 @@ pay_treasury_debt_interaction = {
 		flag = kindness
 		localization = pay_treasury_debt_interaction_request_kindness
 		is_shown = {
-			scope:actor = {
+			scope:actor = { 
 				OR = {
 					has_trait = generous
 					has_trait = compassionate
-				}
+				} 
 			}
 		}
 	}
@@ -11963,13 +11934,17 @@ pay_treasury_debt_interaction = {
 	send_options_exclusive = yes
 
 	on_accept = {
+		save_scope_value_as = {
+			name = relieved_debt_value
+			value = {
+				value = scope:recipient.treasury
+				multiply = -1
+			}
+		}
 		scope:actor = {
 			pay_short_term_treasury	= {
 				target = scope:recipient
-				treasury = {
-					value = scope:recipient.treasury
-					multiply = -1
-				}
+				treasury = scope:relieved_debt_value
 			}
 			if = {
 				limit = {
@@ -12001,7 +11976,10 @@ pay_treasury_debt_interaction = {
 					}
 				}
 			}
-			change_influence = major_influence_value
+			change_influence = {
+				value = scope:relieved_debt_value
+				max = major_influence_value
+			}
 		}
 		situation:dynastic_cycle ?= {
 			if = {
@@ -12022,11 +12000,11 @@ pay_treasury_debt_interaction = {
 	ai_accept = {
 		base = 20
 		# Don't want to give hooks to rivals
-		 house_relation_ai_accept_modifiers = { # House Relations
-			 HOUSE_1_MEMBER = scope:actor
-			 HOUSE_2_MEMBER = scope:recipient
-			 MULTIPLIER = 1
-		 }
+ 		house_relation_ai_accept_modifiers = { # House Relations
+ 			HOUSE_1_MEMBER = scope:actor
+ 			HOUSE_2_MEMBER = scope:recipient
+ 			MULTIPLIER = 1
+ 		}
 		modifier = { # Rivalry modifier.
 			desc = offer_vassalization_interaction_aibehavior_rival_tt
 			trigger = {
@@ -12175,10 +12153,7 @@ pay_treasury_debt_interaction = {
 		# Don't support bad relations
 		modifier = {
 			factor = 0
-			OR = {
-				has_relation_rival = scope:recipient
-				has_relation_nemesis = scope:recipient
-			}
+			has_relation_rival = scope:recipient
 		}
 
 		# Avoid sending treasury multiple times

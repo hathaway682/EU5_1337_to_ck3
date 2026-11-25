@@ -59,6 +59,12 @@
 				piety >= pam_request_elevation_title_cost_value
 			}
 		}
+		scope:puppet_or_actor = {
+			is_available_quick = {
+				imprisoned = no
+				incapable = no
+			}
+		}
 		pam_not_antipope_when_recipient_is_hof_tt = { CHARACTER = scope:puppet_or_actor }
 	}
 
@@ -313,14 +319,14 @@
 		base = 25
 
 		# I dislike my superior
-		opinion_modifier = {
+		opinion_modifier = { 
 			trigger = { exists = scope:puppet_or_actor.superior }
 			opinion_target = scope:puppet_or_actor.superior
 			who = scope:puppet_or_actor
 			multiplier = -1
 		}
 		# My superior dislikes me
-		opinion_modifier = {
+		opinion_modifier = { 
 			trigger = { exists = scope:puppet_or_actor.superior }
 			opinion_target = scope:puppet_or_actor
 			who = scope:puppet_or_actor.superior
@@ -383,6 +389,7 @@ request_ecclesiastical_title_creation_interaction = {
 					limit = {
 						exists = cp:councillor_court_chaplain
 						cp:councillor_court_chaplain = {
+							faith = scope:puppet_or_actor.faith
 							NOT = { any_held_title = { has_clerical_region = yes } }
 						}
 					}
@@ -409,7 +416,10 @@ request_ecclesiastical_title_creation_interaction = {
 		scope:puppet_or_actor = {
 			cp:councillor_court_chaplain ?= {
 				if = {
-					limit = { NOT = { any_held_title = { has_clerical_region = yes } } }
+					limit = {
+						faith = scope:puppet_or_actor.faith
+						NOT = { any_held_title = { has_clerical_region = yes } }
+					}
 					add_to_list = characters
 				}
 			}
@@ -435,7 +445,13 @@ request_ecclesiastical_title_creation_interaction = {
 	is_shown = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
-		scope:puppet_or_actor.faith ?= { has_doctrine_parameter = has_clerical_regions }
+		scope:puppet_or_actor.faith ?= {
+			has_doctrine_parameter = has_clerical_regions
+			OR = {
+				NOT = { has_doctrine_parameter = temporal_head_of_faith }
+				NOT = { exists = religious_head }
+			}
+		}
 		OR = {
 			scope:puppet_or_actor ?= {
 				highest_held_title_tier >= tier_duchy
@@ -510,6 +526,7 @@ request_ecclesiastical_title_creation_interaction = {
 			text = pam_request_ecclesiastical_title_creation_needs_free_cleric_tt
 			exists = scope:secondary_recipient
 			scope:secondary_recipient = {
+				faith = scope:puppet_or_actor.faith
 				NOT = { any_held_title = { has_clerical_region = yes } }
 			}
 		}
@@ -634,6 +651,7 @@ request_ecclesiastical_title_creation_interaction = {
 							set_capital_county = scope:clerical_region_anchor_county
 							set_landless_title = yes
 							set_no_automatic_claims = yes
+							set_always_follows_primary_heir = yes
 							change_title_holder = {
 								holder = scope:new_ecclesiastical_holder
 								change = scope:change
@@ -1019,7 +1037,13 @@ request_ecclesiastical_title_expansion_interaction = {
 		}
 		pam_recipient_is_clerical_title_authority_trigger = yes # HoF, or the Head of Rites when the faith has no HoF
 		has_pam_dlc_trigger = yes
-		scope:puppet_or_actor.faith ?= { has_doctrine_parameter = has_clerical_regions }
+		scope:puppet_or_actor.faith ?= {
+			has_doctrine_parameter = has_clerical_regions
+			OR = {
+				NOT = { has_doctrine_parameter = temporal_head_of_faith }
+				NOT = { exists = religious_head }
+			}
+		}
 		scope:recipient != scope:puppet_or_actor
 	}
 
@@ -1372,7 +1396,13 @@ request_ecclesiastical_title_merger_interaction = {
 	is_shown = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
-		scope:puppet_or_actor.faith ?= { has_doctrine_parameter = has_clerical_regions }
+		scope:puppet_or_actor.faith ?= {
+			has_doctrine_parameter = has_clerical_regions
+			OR = {
+				NOT = { has_doctrine_parameter = temporal_head_of_faith }
+				NOT = { exists = religious_head }
+			}
+		}
 		pam_recipient_is_clerical_title_authority_trigger = yes # HoF, or the Head of Rites when the faith has no HoF
 		has_pam_dlc_trigger = yes
 		scope:puppet_or_actor ?= {
@@ -1694,7 +1724,13 @@ request_ecclesiastical_title_split_interaction = {
 	is_shown = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
-		scope:puppet_or_actor.faith ?= { has_doctrine_parameter = has_clerical_regions }
+		scope:puppet_or_actor.faith ?= {
+			has_doctrine_parameter = has_clerical_regions
+			OR = {
+				NOT = { has_doctrine_parameter = temporal_head_of_faith }
+				NOT = { exists = religious_head }
+			}
+		}
 		OR = {
 			# Clergy branch: county-tier (or landless) clergy splitting off from their superior
 			scope:puppet_or_actor ?= {
@@ -1974,6 +2010,7 @@ request_ecclesiastical_title_split_interaction = {
 				set_capital_county = scope:puppet_or_actor.capital_county
 				set_landless_title = yes
 				set_no_automatic_claims = yes
+				set_always_follows_primary_heir = yes
 				change_title_holder = {
 					holder = scope:new_ecclesiastical_holder
 					change = scope:change
@@ -2086,6 +2123,7 @@ request_ecclesiastical_title_split_interaction = {
 				set_capital_county = scope:puppet_or_actor.liege.capital_county
 				set_landless_title = yes
 				set_no_automatic_claims = yes
+				set_always_follows_primary_heir = yes
 				change_title_holder = {
 					holder = scope:new_ecclesiastical_holder
 					change = scope:change
@@ -2212,13 +2250,13 @@ request_ecclesiastical_title_split_interaction = {
 		base = 10
 
 		# I dislike the affected superior/region holder
-		opinion_modifier = {
+		opinion_modifier = { 
 			opinion_target = scope:secondary_recipient
 			who = scope:puppet_or_actor
 			multiplier = -1
 		}
 		# The affected superior/region holder dislikes me
-		opinion_modifier = {
+		opinion_modifier = { 
 			opinion_target = scope:puppet_or_actor
 			who = scope:secondary_recipient
 			multiplier = -1
@@ -2232,13 +2270,13 @@ request_ecclesiastical_title_split_interaction = {
 			add = 25
 		}
 		# Clergy actors take the new title themselves, so there is no third party to weigh opinion against
-		opinion_modifier = {
+		opinion_modifier = { 
 			trigger = { scope:secondary_actor != scope:actor }
 			opinion_target = scope:secondary_actor
 			who = scope:actor
 			multiplier = 0.1
 		}
-		opinion_modifier = {
+		opinion_modifier = { 
 			trigger = { scope:secondary_actor != scope:actor }
 			opinion_target = scope:actor
 			who = scope:secondary_actor
@@ -2278,7 +2316,7 @@ request_ecclesiastical_title_split_interaction = {
 	}
 }
 
-#Ask to be a Cardinal
+#Ask to be a Cardinal 
 request_clerical_elector_title_interaction = {
 	is_valid = {
 		scope:actor ?= { tnh_non_wilderness_character_trigger = yes }
@@ -2317,13 +2355,13 @@ request_clerical_elector_title_interaction = {
 				faith.religious_head ?= scope:recipient
 				AND = {
 					NOT = { exists = faith.religious_head }
-					rite = scope:recipient.rite
+					faith = scope:recipient.faith
 					scope:recipient = { pam_leads_college_of_cardinals_trigger = yes }
 				}
 			}
 		}
 	}
-
+	
 	is_valid_showing_failures_only = {
 		trigger_if = {
 			limit = { scope:is_puppet_action ?= yes }
@@ -2396,7 +2434,7 @@ request_clerical_elector_title_interaction = {
 		}
 	}
 
-
+	
 	on_accept = {
 		if = {
 			limit = { scope:is_puppet_action ?= yes }
@@ -2422,6 +2460,14 @@ request_clerical_elector_title_interaction = {
 					}
 				}
 			}
+		}
+		if = {
+			limit = {
+				scope:puppet_or_actor = { is_ai = no }
+				scope:actor != scope:puppet_or_actor
+			}
+			scope:recipient = { save_scope_as = head_of_faith }
+			scope:puppet_or_actor = { pam_notify_player_became_cardinal_effect = yes }
 		}
 	}
 
@@ -2458,7 +2504,7 @@ request_clerical_elector_title_interaction = {
 	}
 
 	ai_accept = {
-
+		
 		base = -50
 		celestial_hierarchy_acceptance_modifier = {
 			ACTOR = scope:puppet_or_actor
@@ -2515,13 +2561,19 @@ request_clerical_elector_title_interaction = {
 		}
 	}
 
-	ai_will_do = {
+	ai_will_do = { 
 		# AI clergy should rarely want to do this, leaving most appointments to the Pope
 		base = 0
 		modifier = {
 			add = 25
 			scope:actor = {
 				has_trait = ambitious
+			}
+		} 
+		modifier = {
+			factor = 0
+			scope:puppet_or_actor = {
+				pam_ai_cardinal_candidate_is_immersive_trigger = no
 			}
 		}
 	}

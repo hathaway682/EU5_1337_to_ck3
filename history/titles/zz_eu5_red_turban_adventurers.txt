@@ -1,0 +1,158 @@
+# Historical landless adventurers at the 1337 bookmark.
+d_laamp_eu5_rtr_peng = {
+	1337.4.1 = {
+		liege = 0
+		holder = eu5_rtr_peng
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+}
+
+
+d_laamp_eu5_rtr_han = {
+	1337.4.1 = {
+		liege = 0
+		holder = eu5_rtr_han
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+}
+
+
+d_laamp_eu5_rtr_xu = {
+	1337.4.1 = {
+		liege = 0
+		holder = eu5_rtr_xu
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+}
+
+
+d_laamp_eu5_rtr_mao = {
+	1337.4.1 = {
+		liege = 0
+		holder = eu5_rtr_mao
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+}
+
+
+d_laamp_eu5_rtr_guo = {
+	1337.4.1 = {
+		liege = 0
+		holder = eu5_rtr_guo
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+}
+
+
+d_laamp_eu5_rtr_zhu = {
+	1337.4.1 = {
+		liege = 0
+		holder = eu5_rtr_zhu
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+}
+
+# Historical 1337 salt merchants.
+c_merchant_eu5_rtr_zhang = {
+	1337.4.1 = {
+		holder = eu5_rtr_zhang
+		government = merchant_government
+	}
+}
+
+
+c_merchant_eu5_rtr_fang = {
+	1337.4.1 = {
+		holder = eu5_rtr_fang
+		government = merchant_government
+	}
+}
+
+# Yuan loyalist family heads at the 1337 bookmark.
+c_nf_eu5_yuan_chen_youding = {
+	1337.4.1 = {
+		liege = h_china
+		holder = eu5_rtr_chen_youding
+		government = celestial_government
+		succession_laws = { noble_family_succession_law }
+	}
+}
+
+
+c_nf_eu5_yuan_he = {
+	1337.4.1 = {
+		liege = h_china
+		holder = eu5_rtr_he
+		government = celestial_government
+		succession_laws = { noble_family_succession_law }
+	}
+}
+
+
+c_nf_eu5_yuan_li = {
+	1337.4.1 = {
+		liege = h_china
+		holder = eu5_rtr_li
+		government = celestial_government
+		succession_laws = { noble_family_succession_law }
+	}
+}
+
+
+c_nf_eu5_yuan_chaghan = {
+	1337.4.1 = {
+		liege = h_china
+		holder = eu5_rtr_chaghan_temur
+		government = celestial_government
+		succession_laws = { noble_family_succession_law }
+	}
+}
+
+# Yuan central appointments at the 1337 bookmark.
+e_minister_chancellor = {
+	1337.4.1 = {
+		holder = yua_bayan_merkid
+		liege = h_china
+		government = celestial_government
+		succession_laws = { celestial_ministry_appointment_succession_law }
+	}
+}
+
+e_minister_grand_marshal = {
+	1337.4.1 = {
+		holder = yua_majartai
+		liege = h_china
+		government = celestial_government
+		succession_laws = { celestial_grand_marshal_appointment_succession_law }
+	}
+}

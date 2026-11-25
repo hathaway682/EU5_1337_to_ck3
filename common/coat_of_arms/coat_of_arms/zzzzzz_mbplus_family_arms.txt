@@ -1,0 +1,2178 @@
+﻿# MB+ authored dynasty and house coats, under the imported local family IDs.
+
+# MB+ korean_hong_namyang, resolved from 92_NB_dynasties.txt
+mb_yuan_dynasty_namyang_hong = {
+	pattern="pattern_solid.dds"
+	color1=red
+	colored_emblem={
+		color1=yellow
+		texture="ce_seal_frame_full.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+	colored_emblem={
+		color1=red
+		texture="ce_seal_name_hong_6d2a.dds"
+		instance={
+			scale={ 0.650000 0.650000 }
+		}
+	}
+}
+
+# MB+ 1000102400, resolved from 92_NB_dynasties.txt
+mb_yuan_dynasty_yelu = { # Liao
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	colored_emblem = {
+		texture = "ce_buddhist_moon.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.5 0.31 } scale = { 0.48 0.48 }  }		
+	}		
+	colored_emblem = {
+		texture = "ce_crescent.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.5 0.55 } scale = { 1.0 1.0 }  }				
+	}		
+}
+
+# MB+ 9512, resolved from 92_NB_dynasties.txt
+mb_city_warendorp = { # Warendorp 1140~1337 Warendorf
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "black"
+		instance = { position = { 0.5 0.35 } scale = { 0.4 0.4 }  }				
+	}
+	colored_emblem = {
+		texture = "mbcoa_cat_castle_wall02.dds"
+		color1 = "red"
+		instance = { position = { 0.5 0.625 } rotation = 20 scale = { 1.6 1.6 }  }
+		instance = { position = { 0.5 0.625 } rotation = -20 scale = { 1.6 1.6 }  }	
+		instance = { position = { 0.5 0.55 } rotation = 20 scale = { 1.6 1.6 }  }
+		instance = { position = { 0.5 0.55 } rotation = -20 scale = { 1.6 1.6 }  }
+	}	
+	colored_emblem = {
+		texture = "ce_tower.dds"
+		color1 = "red"
+		instance = { position = { 0.5 0.6 } scale = { 1.1 1.1 }  }				
+	}
+	colored_emblem = {
+		texture = "ce_portcullis.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.5 0.6 } scale = { 0.3 0.3 }  }				
+	}
+	colored_emblem = {
+		texture = "ce_shield_portugal.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { position = { 0.5 0.9 } scale = { 0.4 -0.4 }  }
+		instance = { position = { 0.5 0.85 } scale = { 0.4 -0.4 }  }	
+	}	
+}
+
+# MB+ 1042017, resolved from 90_dynasties.txt
+mb_city_monte_santa_maria = { # Guidi (del Monte S. Maria)
+	pattern = "pattern_checkers_diagonal_01.dds"
+	color1 = "white"
+	color2 = "red"
+	colored_emblem = {
+		texture = "ce_lion_rampant.dds"
+		color1 = "red"
+		color2 = "red"
+		color3 = "white"
+		instance = { position = { 0.5 0.50 } scale = { 1.0 1.0 }  }
+	}
+	colored_emblem = {
+		texture = "ce_lion_rampant.dds"
+		color1 = "white"
+		color2 = "white"
+		color3 = "black"
+		instance = { position = { 0.5 0.50 } scale = { 1.0 1.0 }  }
+		mask = { 2 }
+	}
+}
+
+# MB+ 4010, resolved from 90_dynasties.txt
+mb_eng_clifford_dynasty = { # Clifford
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "blue"
+	colored_emblem = {
+		texture = "ce_checky_04.dds"
+		color1 = "yellow"
+		color2 = "blue"
+	}
+	colored_emblem = {
+		texture = "ce_checky_04.dds"
+		color1 = "yellow"
+		color2 = "blue"
+		instance = { position = { 0.5 1.05 } scale = { 1.0 1.0 }  }
+	}
+	colored_emblem = {
+		texture = "ce_ordinary_fess_5.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 }  }
+	}
+}
+
+# MB+ 4037, resolved from 90_dynasties.txt
+mb_eng_lacy_dynasty = {
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	colored_emblem = {
+		texture = "ce_lion_rampant.dds"
+		color1 = "purple"
+		color2 = "white"
+		color3 = "white"
+		instance = { scale = { 0.9 0.9 } }
+	}
+}
+
+# MB+ 385, resolved from 92_NB_dynasties.txt
+mb_eng_tosny_dynasty = { # Tosny # work-around dynasty oc donut steel Ellery Herraman 2020 big up the West Staines massif
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "yellow"		
+	colored_emblem = {
+		texture = "ce_maunch.dds"
+		color1 = "red"
+		color2 = "yellow"
+		instance = { position = { 0.5 0.45 } scale = { 0.8 0.8 }  }					
+	}	
+}
+
+# MB+ 4036, resolved from 92_NB_dynasties.txt
+mb_eng_ufford_dynasty = { #Ufford
+	pattern="pattern_solid.dds"
+	color1=black
+	colored_emblem={
+		color1=yellow
+		texture="ce_cross_engrailed.dds"
+	}
+
+}
+
+# MB+ 9114, resolved from 91_NB_landed_titles.txt
+mb_eng_umfraville_dynasty = { #Umfraville
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "red"
+	colored_emblem = {
+		texture = "ce_cross_crosslet.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { position = { 0.10 0.00 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.30 0.00 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.50 0.00 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.70 0.00 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.90 0.00 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.00 0.20 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.20 0.20 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.40 0.20 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.60 0.20 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.80 0.20 } scale = { 0.23 0.26 }  }
+		instance = { position = { 1.00 0.20 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.10 0.40 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.30 0.40 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.50 0.40 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.70 0.40 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.90 0.40 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.00 0.60 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.20 0.60 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.40 0.60 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.60 0.60 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.80 0.60 } scale = { 0.23 0.26 }  }
+		instance = { position = { 1.00 0.60 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.10 0.80 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.30 0.80 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.50 0.80 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.70 0.80 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.90 0.80 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.00 1.00 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.20 1.00 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.40 1.00 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.60 1.00 } scale = { 0.23 0.26 }  }
+		instance = { position = { 0.80 1.00 } scale = { 0.23 0.26 }  }
+		instance = { position = { 1.00 1.00 } scale = { 0.23 0.26 }  }
+	}
+	colored_emblem = {
+		texture = "ce_cinquefoil_01.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+}
+
+# MB+ 365, resolved from 92_NB_dynasties.txt
+mb_eng_vere_dynasty = { #de Vere
+	pattern="pattern_solid.dds"
+	color1=red
+	colored_emblem={
+		color1=red
+		color2=yellow
+		texture="ce_quarterly.dds"
+	}
+
+	colored_emblem={
+		color1=white
+		texture="ce_star_05.dds"
+		instance={
+			position={ 0.280000 0.270000 }
+			scale={ 0.400000 0.400000 }
+		}
+
+	}
+
+}
+
+# MB+ 100280, resolved from 92_NB_dynasties.txt
+mb_scand_dynasty_100280 = { # 1066 스웨덴 위 백작
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow_light"
+	colored_emblem = {
+		texture = "ce_religion_pagan_germanic.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 }  }
+	}		
+}
+
+# MB+ 100281, resolved from 92_NB_dynasties.txt
+mb_scand_dynasty_100281 = { #  2차 1066에 스웨덴 위에 작은 백작, 노스디엘씨로 교체고려
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+	colored_emblem = {
+		texture = "ce_religion_pagan_germanic.dds"
+		color1 = "yellow"
+		color2 = "white"
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 }  }
+	}		
+}
+
+# MB+ 100283, resolved from 92_NB_dynasties.txt
+mb_scand_dynasty_100283 = { # Ekeblad 스웨덴 노스 봉신 1066
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+
+	colored_emblem = {
+		texture = "ce_block_02.dds"
+		color1 = "red"
+		instance = { position = { 0.5 1.12 } scale = { 1.0 1.0 }  }			
+	}	
+	colored_emblem = {
+		texture = "ce_waves_04.dds"
+		color1 = "white"	
+		instance = { position = { 0.5 0.68 } scale = { 1.0 1.0 }  }		
+	}
+	colored_emblem = { # 중간
+		texture = "ce_ship_lymphad.dds"
+		color1 = "orange"
+		color2 = "yellow"
+		color3 = "white"		
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 }  }		
+	}
+	colored_emblem = {
+		texture = "ce_block_02.dds"
+		color1 = "red"
+		instance = { position = { 0.5 1.24 } scale = { 1.0 1.0 }  }			
+	}	
+	colored_emblem = {
+		texture = "ce_waves_04.dds"
+		color1 = "white"	
+		instance = { position = { 0.5 0.8 } scale = { 1.0 1.0 }  }		
+	}
+}
+
+# MB+ 108, resolved from 92_NB_dynasties.txt
+mb_scand_dynasty_108 = { #af Island
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	colored_emblem = {
+		texture = "ce_horizontal_stripes_04.dds"
+		color1 = "white"
+		color2 = "blue"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }		
+	}
+}
+
+# MB+ 121, resolved from 92_NB_dynasties.txt
+mb_scand_dynasty_121 = { # grip
+
+	textured_emblem = {
+		texture = "mbcoa_grip.dds"
+
+
+	}
+}
+
+# MB+ 381, resolved from 92_NB_dynasties.txt
+mb_scand_dynasty_381 = { # "dynn_Erik" 1120~1187 스웨덴 왕가 에릭이 성인인듯>?
+	pattern = "pattern_solid.dds"	
+	color1 = "blue"
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "black"
+		instance = { position = { 0.5 0.5 } scale = { 0.5 0.5 }  }		
+	}	
+	colored_emblem = {
+		texture = "mbcoa_cat_nurnberg_head_man_harpy.dds"
+		color1 = "yellow"
+		color2 = "yellow_light"
+		color3 = "yellow_light"
+		instance = { position = { 0.5 0.5 } scale = { 1.2 1.2 }  }		
+	}				
+}
+
+# MB+ 444, resolved from 90_dynasties.txt
+mb_scand_dynasty_444 = { # Freysey
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	colored_emblem = {
+		texture = "ce_cinquefoil_01.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.315 0.30 } scale = { 0.48 0.48 }  }
+		instance = { position = { 0.685 0.30 } scale = { 0.48 0.48 }  }
+		instance = { position = { 0.5 0.64 } scale = { 0.48 0.48 }  }
+	}
+}
+
+# MB+ 495, resolved from 92_NB_dynasties.txt
+mb_scand_dynasty_495 = { # 고틀란트1066
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	colored_emblem = {
+		texture = "ce_goat.dds"
+		color1 = "white"
+		color2 = "yellow"
+		instance = { position = { 0.5 0.5 } scale = { -0.9 0.9 }  }			
+	}
+	colored_emblem = {
+		texture = "ce_gotland_banner.dds"
+		color1 = "yellow"
+		color2 = "red"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }			
+	}	
+}
+
+# MB+ 497, resolved from 92_NB_dynasties.txt
+mb_scand_dynasty_497 = { # horn
+
+	textured_emblem = {
+		texture = "mbcoa_horn.dds"
+
+
+	}
+}
+
+# MB+ zhao_8D99_1, resolved from 90_dynasties.txt
+mb_yuan_county_dynasty_zhao_8D99_1 = {
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=white
+	color3=blue
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_zhao_8d99.dds"
+		instance={
+			position={ 0.66 0.51 }
+			scale={ 0.56 0.56 }
+			depth=1.01
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_pictorial_vertical_dragon.dds"
+		instance={
+			position={ 0.33 0.51 }
+			scale={ 0.65 0.65 }
+			depth=2.01
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.79 0.79 }
+		}
+	}
+}
+
+# MB+ peiguo_han_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_peiguo_han_dyn = {
+	pattern="pattern_solid.dds"
+	color1=black
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="mbcoa_baijia252.dds"
+		instance={
+			scale={ 1.750000 1.750000 }
+		}
+	}
+}
+
+# MB+ 1000050373, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_1000050373 = {
+	pattern = "pattern_chevron_01.dds"
+	color1 = "green"
+	color2 = "blue_light"
+	color3 = "green_light"
+	colored_emblem = {
+		texture = "mbcoa_baijia_out_circle.dds"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia_circle.dds"
+		color1 = "green_light"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia72.dds"
+		color1 = "purple"
+	}
+}
+
+# MB+ chen_9673_101, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_chen_9673_101 = {
+	pattern="pattern_solid.dds"
+	color1=blue
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_chen_9673.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ jia_8CC8_13, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_jia_8CC8_13 = {
+	pattern="pattern_solid.dds"
+	color1=green
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_jia_8cc8.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ luoyuan_yu_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_luoyuan_yu_dyn = {
+	pattern="pattern_solid.dds"
+	color1=red
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_yu_4f59.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ wujun_lu_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_wujun_lu_dyn = { # ?
+    pattern="pattern_solid.dds"
+	color1=red
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_lu_9678.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ song_5B8B_1, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_song_5B8B_1 = {
+	pattern="pattern_solid.dds"
+	color1=red
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_song_5b8b.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ wang_6C6A_12, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_wang_6C6A_12 = {
+	pattern="pattern_solid.dds"
+	color1=black
+	color2=white
+	color3=black
+	colored_emblem={
+		color1=black
+		texture="ce_seal_name_wang_738b.dds"
+		instance={
+			scale={ 0.680000 0.680000 }
+		}
+	}
+
+	colored_emblem={
+		color1=white
+		texture="ce_seal_pictorial_frame_circle_full.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+			depth=1.010000
+		}
+	}
+}
+
+# MB+ 1000050364, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_1000050364 = {
+	pattern="pattern_solid.dds"
+	color1=black
+	color2=white
+	color3=black
+	colored_emblem={
+		color1=black
+		texture="ce_seal_name_guo_90ed.dds"
+		instance={
+			scale={ 0.680000 0.680000 }
+		}
+	}
+
+	colored_emblem={
+		color1=white
+		texture="ce_seal_pictorial_frame_circle_full.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+			depth=1.010000
+		}
+	}
+}
+
+# MB+ wanquan_xue_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_wanquan_xue_dyn = {
+	pattern = "pattern_chief.dds"
+	color1 = "green_light"
+	color2 = "red"
+	color3 = "green_light"
+	colored_emblem = {
+		texture = "mbcoa_baijia_out_circle.dds"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia_circle.dds"
+		color1 = "green_light"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia68.dds"
+		color1 = "brown"
+	}
+}
+
+# MB+ zhou_5468_10, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_zhou_5468_10 = {
+	pattern="pattern_solid.dds"
+	color1=blue
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_zhou_5468.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ han_97D3_12, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_han_97D3_12 = {
+	pattern="pattern_solid.dds"
+	color1=sable
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_han_6f22.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ runan_fan_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_runan_fan_dyn = {
+	pattern="pattern_solid.dds"
+	color1=red
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_fan_8303.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ sun_5B6B_10, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_sun_5B6B_10 = {
+	pattern="pattern_solid.dds"
+	color1=red
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_sun_5b6b.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ zeng_66FE_1, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_zeng_66FE_1 = {
+	pattern="pattern_solid.dds"
+	color1=red
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_zeng_66fe.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ shangrao_yu_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_shangrao_yu_dyn = {
+	pattern="pattern_solid.dds"
+	color1=green
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_yu_4f59.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ chenliu_cai_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_chenliu_cai_dyn = {
+	pattern="pattern_solid.dds"
+	color1=prussian
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_cai_8521.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ linan_qian_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_linan_qian_dyn = { # ?
+    pattern="pattern_solid.dds"
+	color1=red
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_qian_9322.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ 105818, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_105818 = {
+	pattern = "pattern_chief.dds"
+	color1 = "purple"
+	color2 = "white"
+	color3 = "white"
+	colored_emblem = {
+		texture = "mbcoa_baijia_out_circle.dds"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia_circle.dds"
+		color1 = "white"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia436.dds"
+		color1 = "purple"
+	}
+}
+
+# MB+ jingzhao_du_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_jingzhao_du_dyn = { 
+    pattern="pattern_solid.dds"
+	color1=grey_dark
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_du_675c.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ linchuan_wang_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_linchuan_wang_dyn = {
+	pattern = "pattern_barruly_08.dds"
+	color1 = "white"
+	color2 = "purple"
+	color3 = "brown"
+	colored_emblem = {
+		texture = "mbcoa_baijia_out_circle.dds"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia_circle.dds"
+		color1 = "brown"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia8.dds"
+		color1 = "white"
+	}
+}
+
+# MB+ hongnong_yang_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_hongnong_yang_dyn = {
+	pattern="pattern_solid.dds"
+	color1=red
+	colored_emblem={
+		color1=yellow
+		texture="ce_seal_frame_full.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+	colored_emblem={
+		color1=red
+		texture="ce_seal_name_yang_694a.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ xinyu_yang_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_xinyu_yang_dyn = {
+	pattern = "pattern_tricolor_bend_02.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "white"
+	colored_emblem = {
+		texture = "mbcoa_baijia_out_circle.dds"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia_circle.dds"
+		color1 = "white"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia16.dds"
+		color1 = "blue"
+	}
+}
+
+# MB+ bohai_diao_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_bohai_diao_dyn = { # ?
+    pattern = "pattern_cross_01.dds"
+    color1 = "green"
+    color2 = "black"
+    color3 = "red"
+    colored_emblem = {
+    texture = "mbcoa_baijia_out_circle.dds"
+    }
+    colored_emblem = {
+    texture = "mbcoa_baijia_circle.dds" 
+    color1 = white
+   }
+colored_emblem = {
+    texture = "mbcoa_baijia148.dds"
+    color1 = black
+    
+    }
+}
+
+# MB+ chengwu_pang_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_chengwu_pang_dyn = {
+	pattern="pattern_solid.dds"
+	color1=rust
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="mbcoa_baijia119.dds"
+		instance={
+			scale={ 1.750000 1.750000 }
+		}
+	}
+}
+
+# MB+ 1000050261, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_1000050261 = {
+	pattern="pattern_solid.dds"
+	color1=sinople
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_mao_6bdb.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ li_674E_87, resolved from 90_dynasties.txt
+mb_yuan_county_dynasty_li_674E_87 = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 166 110 26 }
+	color2=white
+	color3=blue
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_li_674e.dds"
+		instance={
+			position={ 0.66 0.51 }
+			scale={ 0.53 0.53 }
+			depth=1.01
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_pictorial_vertical_dragon.dds"
+		instance={
+			position={ 0.38 0.51 }
+			scale={ 0.57 0.57 }
+			depth=2.01
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.79 0.79 }
+		}
+	}
+}
+
+# MB+ chao_5DE2_1, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_chao_5DE2_1 = {
+	pattern="pattern_solid.dds"
+	color1=red
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_chao_671d.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ 1051112, resolved from 90_dynasties.txt
+mb_yuan_county_dynasty_1051112 = { # Wanyan
+	pattern = "pattern_solid.dds"
+	color1 = "blue_light"
+	color2 = "red"
+	colored_emblem = {
+		texture = "ce_tamgha_wanyan.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.5 0.46 } scale = { 1.0 1.0 }  }
+	}
+}
+
+# MB+ wannian_wang_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_wannian_wang_dyn = { # ?
+    pattern = "pattern_barruly_special.dds"
+    color1 = "yellow"
+    color2 = "blue"
+    color3 = "black"
+    colored_emblem = {
+    texture = "mbcoa_baijia_out_circle.dds"
+    }
+    colored_emblem = {
+    texture = "mbcoa_baijia_circle.dds" 
+    color1 = brown
+   }
+colored_emblem = {
+    texture = "mbcoa_baijia8.dds"
+    color1 = white
+    
+    }
+}
+
+# MB+ zeng_66FE_13, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_zeng_66FE_13 = {
+	pattern="pattern_solid.dds"
+	color1=blue
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_zeng_66fe.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ gaoyang_xu_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_gaoyang_xu_dyn = {
+	pattern="pattern_solid.dds"
+	color1=blue
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_xu_8a31.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ anding_liang_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_anding_liang_dyn = {
+    pattern="pattern_solid.dds"
+	color1=rust
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_liang_51c9.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ xiangfu_ding_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_xiangfu_ding_dyn = {
+	pattern="pattern_solid.dds"
+	color1=mid_red
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_ding_4e01.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ zhongjiang_deng_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_zhongjiang_deng_dyn = {
+	pattern="pattern_solid.dds"
+	color1=grey
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_deng_9127.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ yanan_han_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_yanan_han_dyn = { # ?
+    pattern = "pattern_barruly_special.dds"
+    color1 = "brown"
+    color2 = "yellow"
+    color3 = "black"
+    colored_emblem = {
+    texture = "mbcoa_baijia_out_circle.dds"
+    }
+    colored_emblem = {
+    texture = "mbcoa_baijia_circle.dds" 
+    color1 = black
+   }
+colored_emblem = {
+    texture = "mbcoa_baijia15.dds"
+    color1 = white
+    
+    }
+}
+
+# MB+ huang_9EC3_16, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_huang_9EC3_16 = {
+	pattern="pattern_solid.dds"
+	color1=red
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_huang_9ec3.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ 1000048353, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_1000048353 = {
+	pattern = "pattern_horizontal_split_01.dds"
+	color1 = "purple"
+	color2 = "black"
+	color3 = "green_light"
+	colored_emblem = {
+		texture = "mbcoa_baijia_out_circle.dds"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia_circle.dds"
+		color1 = "green_light"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia1.dds"
+		color1 = "blue"
+	}
+}
+
+# MB+ goushi_xie_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_goushi_xie_dyn = {
+	pattern="pattern_solid.dds"
+	color1=green_light
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_xie_8b1d.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ henei_sima_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_henei_sima_dyn = {
+		pattern="pattern_solid.dds"
+		color1=yellow
+		color2=white
+		color3=red
+		color4=black
+		color5=red
+		colored_emblem={
+			color1=red
+			color2=black
+			color3=red
+			texture="mbcoa_baijia410.dds"
+			instance={
+				position={ 0.500000 0.450000 }
+			}
+	
+		}
+}
+
+# MB+ 1000050313, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_1000050313 = {
+	pattern = "pattern_barruly_12.dds"
+	color1 = "purple"
+	color2 = "orange"
+	color3 = "brown"
+	colored_emblem = {
+		texture = "mbcoa_baijia_out_circle.dds"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia_circle.dds"
+		color1 = "brown"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia40.dds"
+		color1 = "blue"
+	}
+}
+
+# MB+ su_82CF, resolved from 90_dynasties.txt
+mb_yuan_county_dynasty_su_82CF = {
+	pattern="pattern_solid.dds"
+	color1=blue_light
+	color2=yellow
+	color3=red
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_su_8607.dds"
+		instance={
+			position={ 0.64 0.50 }
+			scale={ 0.44 0.44 }
+			depth=2.01
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_pictorial_vertical_pig.dds"
+		instance={
+			position={ 0.37 0.50 }
+			scale={ 0.57 0.57 }
+			depth=1.01
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.73 0.73 }
+		}
+	}
+}
+
+# MB+ 1000048939, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_1000048939 = {
+	pattern="pattern_solid.dds"
+	color1=rust
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="mbcoa_baijia86.dds"
+		instance={
+			scale={ 1.750000 1.750000 }
+		}
+	}
+}
+
+# MB+ xihe_song_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_xihe_song_dyn = {
+	pattern="pattern_solid.dds"
+	color1=prussian
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_song_5b8b.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ bohai_ouyang_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_bohai_ouyang_dyn = {
+	pattern = "pattern_vertical_stripes_01.dds"
+	color1 = "green_light"
+	color2 = "red"
+	color3 = "black"
+	colored_emblem = {
+		texture = "mbcoa_baijia_out_circle.dds"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia_circle.dds"
+		color1 = "black"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia412.dds"
+		color1 = "white"
+	}
+}
+
+# MB+ linchuan_wu_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_linchuan_wu_dyn = {
+	pattern="pattern_solid.dds"
+	color1=yellow
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_wu_5433.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ kaifeng_xiang_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_kaifeng_xiang_dyn = {
+	pattern = "pattern_vertical_stripes_02.dds"
+	color1 = "green_light"
+	color2 = "blue_light"
+	color3 = "green_light"
+	colored_emblem = {
+		texture = "mbcoa_baijia_out_circle.dds"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia_circle.dds"
+		color1 = "green_light"
+	}
+	colored_emblem = {
+		texture = "mbcoa_baijia337.dds"
+		color1 = "red"
+	}
+}
+
+# MB+ henan_lv_dyn, resolved from 92_NB_dynasties.txt
+mb_yuan_county_dynasty_henan_lv_dyn = {
+	pattern="pattern_solid.dds"
+	color1=blue
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_luo_6d1b.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ 1000027803, resolved from 92_NB_dynasties.txt
+mb_eastasia_dynasty_1000027803 = {
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=yellow
+	color3=yellow
+	colored_emblem={
+		color1=yellow
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		texture="ce_seal_name_huang_9ec3.dds"
+		instance={
+			position={ 0.650000 0.500000 }
+			scale={ 0.600000 0.600000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		texture="ce_seal_pictorial_vertical_ox.dds"
+		instance={
+			position={ 0.350000 0.500000 }
+			scale={ -0.650000 0.650000 }
+			depth=1.010000
+		}
+
+	}
+
+}
+
+# MB+ 1000155206, resolved from 92_NB_dynasties.txt
+mb_eastasia_dynasty_1000155206 = {
+	pattern="pattern_solid.dds"
+	color1=blue
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_cui_5d14.dds"
+		instance={
+			position={ 0.350000 0.500000 }
+			scale={ 0.450000 0.600000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_pictorial_vertical_rooster.dds"
+		instance={
+			position={ 0.650000 0.500000 }
+			scale={ 0.650000 0.650000 }
+		}
+	}
+}
+
+# MB+ 1000062005, resolved from 92_NB_dynasties.txt
+mb_eastasia_dynasty_1000062005 = {
+	pattern="pattern_solid.dds"
+	color1=red
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame_full.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+	colored_emblem={
+		color1=red
+		texture="ce_seal_name_jin_91d1.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ 1000027813, resolved from 92_NB_dynasties.txt
+mb_eastasia_dynasty_1000027813 = {
+	pattern="pattern_solid.dds"
+	color1=blue
+	colored_emblem={
+		color1=yellow
+		texture="ce_seal_frame_full.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+	colored_emblem={
+		color1=blue
+		texture="ce_seal_name_jiang_59dc.dds"
+		instance={
+			position={ 0.350000 0.500000 }
+			scale={ 0.450000 0.600000 }
+		}
+	}
+	colored_emblem={
+		color1=blue
+		texture="ce_seal_pictorial_vertical_dragon.dds"
+		instance={
+			position={ 0.650000 0.500000 }
+			scale={ 0.650000 0.650000 }
+		}
+	}
+}
+
+# MB+ 1000027801, resolved from 92_NB_dynasties.txt
+mb_eastasia_dynasty_1000027801 = {
+	pattern="pattern_solid.dds"
+	color1=blue
+	color2=white
+	color3=white
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame_divided.dds"
+		instance={
+			scale={ -0.700000 0.700000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=blue
+		texture="mbcoa_baijia91.dds"
+		instance={
+			position={ 0.670000 0.500000 }
+			scale={ 1.300000 1.300000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=white
+		texture="ce_seal_pictorial_vertical_goat.dds"
+		instance={
+			position={ 0.340000 0.500000 }
+			scale={ -0.650000 0.650000 }
+			depth=1.010000
+		}
+
+	}
+
+}
+
+# MB+ 1000155017, resolved from 92_NB_dynasties.txt
+mb_eastasia_dynasty_1000155017 = {
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=yellow
+	color3=white
+	colored_emblem={
+		color1=yellow
+		texture="ce_seal_frame_divided.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=red
+		texture="mbcoa_baijia75.dds"
+		instance={
+			position={ 0.330000 0.500000 }
+			scale={ 1.300000 1.300000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		texture="ce_seal_pictorial_vertical_rabbit.dds"
+		instance={
+			position={ 0.660000 0.500000 }
+			scale={ 0.650000 0.650000 }
+		}
+
+	}
+
+}
+
+# MB+ viet_d003, resolved from 92_NB_dynasties.txt
+mb_eastasia_dynasty_viet_d003 = {
+	pattern="pattern_solid.dds"
+	color1=blue
+	color2=white
+	color3=white
+	colored_emblem={
+		color1=white
+		texture="ce_seal_pictorial_frame_oval.dds"
+		instance={
+			scale={ 0.750000 0.750000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_fan_8303.dds"
+		instance={
+			scale={ -0.510000 0.510000 }
+		}
+
+	}
+
+}
+
+# MB+ viet_d007, resolved from 92_NB_dynasties.txt
+mb_eastasia_dynasty_viet_d007 = {
+	pattern="pattern_solid.dds"
+	color1=blue
+	color2=yellow
+	color3=yellow
+	colored_emblem={
+		color1=yellow
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		texture="ce_seal_name_hu_80e1.dds"
+		instance={
+			position={ 0.650000 0.500000 }
+			scale={ 0.600000 0.600000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		texture="ce_seal_pictorial_vertical_ox.dds"
+		instance={
+			position={ 0.350000 0.500000 }
+			scale={ -0.650000 0.650000 }
+			depth=1.010000
+		}
+
+	}
+
+}
+
+# MB+ 1000060005, resolved from 92_NB_dynasties.txt
+mb_eastasia_dynasty_1000060005 = {
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=yellow
+	color3=yellow
+	colored_emblem={
+		color1=yellow
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		texture="mbcoa_ce_chuhannam_dinh.dds"
+		instance={
+			position={ 0.510000 0.540000 }
+			scale={ 0.970000 0.970000 }
+		}
+
+	}
+
+}
+
+# MB+ VietDoan, resolved from 92_NB_dynasties.txt
+mb_eastasia_dynasty_VietDoan = {
+	pattern="pattern_solid.dds"
+	color1=red
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_duan_6bb5.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+# MB+ nha_tian_le_dyn, resolved from 92_NB_dynasties.txt
+mb_eastasia_dynasty_nha_tian_le_dyn = {
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=yellow
+	color3=yellow
+	colored_emblem={
+		color1=yellow
+		texture="mbcoa_ce_chuhannom_le.dds"
+		instance={
+			position={ 0.510000 0.540000 }
+			scale={ 0.860000 0.860000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+			depth=1.010000
+		}
+
+	}
+
+}
+
+# MB+ 1000155220, resolved from 92_NB_dynasties.txt
+mb_eastasia_dynasty_1000155220 = {
+	pattern="pattern_solid.dds"
+	color1=blue
+	color2=white
+	color3=white
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_he_6cb3.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+			depth=1.010000
+		}
+
+	}
+
+}
+
+# MB+ 1000155181, resolved from 92_NB_dynasties.txt
+mb_eastasia_dynasty_1000155181 = {
+	pattern="pattern_solid.dds"
+	color1=black
+	color2=white
+	color3=yellow
+	colored_emblem={
+		color1=white
+		texture="ce_seal_pictorial_frame_oval_full.dds"
+		instance={
+			scale={ 0.750000 0.750000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=black
+		texture="ce_seal_name_lin_6797.dds"
+		instance={
+			scale={ -0.570000 0.570000 }
+		}
+
+	}
+
+}
+
+# MB+ muong_d004, resolved from 92_NB_dynasties.txt
+mb_eastasia_dynasty_muong_d004 = {
+	pattern="pattern_solid.dds"
+	color1=green
+	color2=white
+	color3=white
+	colored_emblem={
+		color1=white
+		texture="ce_seal_frame_divided.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=green
+		texture="mbcoa_baijia145.dds"
+		instance={
+			position={ 0.330000 0.500000 }
+			scale={ 1.300000 1.300000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=white
+		texture="ce_seal_pictorial_vertical_rabbit.dds"
+		instance={
+			position={ 0.660000 0.500000 }
+			scale={ 0.650000 0.650000 }
+		}
+
+	}
+
+}
+
+# MB+ 10005800, resolved from 92_NB_dynasties.txt
+mb_genealogy_dynasty_10005800 = {
+	pattern="pattern_solid.dds"
+	color1=grey
+	color2=white
+	color3=red
+	colored_emblem={
+		color1=white
+		texture="mbcoa_ce_hanabishi_cn_2.dds"
+		instance={
+			scale={ 0.470000 0.470000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=white
+		texture="mbcoa_circular_combo_54.dds"
+	}
+
+}
+
+# MB+ 12271, resolved from 92_NB_dynasties.txt
+mb_steppe_dynasty_12271 = { # Burtasid 812~867~900 / 1042~1066~ 하자르 봉신 공작
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	colored_emblem = {
+		texture = "mbcoa_cat_chuvash.dds"
+		color1 = "red"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }		
+				   
+															 
+	}
+}
+
+# MB+ 2001139, resolved from 90_dynasties.txt
+mb_steppe_dynasty_2001139 = { # Shor
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+	colored_emblem = {
+		texture = "ce_tamgha_shor.dds"
+		color1 = "blue"
+		color2 = "blue"
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 }  }
+	}
+}
+
+# MB+ 591, resolved from 92_NB_dynasties.txt
+mb_steppe_dynasty_591 = { # dulo
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	colored_emblem = {
+		texture = "ce_tamgha_dulo.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+}
+
+# MB+ 100603, resolved from 92_NB_dynasties.txt
+mb_steppe_dynasty_100603 = { # Oseti 977~1066~ 오세티아 남 코카셔스 알란족 정교회 독립 공작
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	colored_emblem = {
+		texture = "mbcoa_cat_ossetien_panther.dds"
+		color1 = "white"
+		color2 = "black"
+		instance = { position = { 0.5 0.5 } scale = { 0.85 0.85 }  }		
+	}	
+	colored_emblem = {
+		texture = "ce_cross_patty.dds"
+		color1 = "white"
+		instance = { position = { 0.50 0.17 } scale = { 0.22 0.22 }  }
+	}	
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "white"
+		instance = { position = { 0.5 0.32 } scale = { 0.12 0.12 }  }
+	}			
+}
+
+# MB+ house_montfort, resolved from 92_NB_dynasties.txt
+mb_genealogy_house_house_montfort = { # Montfort
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	colored_emblem = {
+		texture = "ce_lion_rampant_forked.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+}
+
+# MB+ house_fitzgerald, resolved from 92_NB_dynasties.txt
+mb_genealogy_house_house_fitzgerald = {
+	pattern="pattern_solid.dds"
+	color1=white
+	colored_emblem={
+		color1=red
+		texture="ce_ordinary_saltire_5.dds"
+		instance={
+			position={ 0.500000 0.450000 }
+		}
+
+	}
+
+}
+
+# MB+ house_akazawa_clan, resolved from 92_NB_dynasties.txt
+mb_genealogy_house_house_akazawa_clan = {
+	pattern="pattern_solid.dds"
+	color1=white
+	color2=red
+	color3=black
+	colored_emblem={
+		color1=blue
+		texture="ce_kamon_butterfly_laurel.dds"
+		instance={
+			scale={ 0.800000 0.800000 }
+			depth=1.010000
+			rotation=180
+		}
+
+	}
+
+	colored_emblem={
+		color1=blue
+		texture="ce_kamon_square_perforated_02.dds"
+		instance={
+			position={ 0.500000 0.610000 }
+			scale={ 0.400000 0.400000 }
+		}
+
+	}
+
+}
+
+# MB+ house_yoshida_clan, resolved from 92_NB_dynasties.txt
+mb_genealogy_house_house_yoshida_clan = {
+	pattern="pattern_solid.dds"
+	color1=purple
+	color2=yellow
+	color3=white
+	colored_emblem={
+		color1=white
+		texture="ce_kamon_paulownia_bloom.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+			depth=4.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=white
+		texture="ce_kamon_paulownia_secondary.dds"
+		instance={
+			position={ 0.670000 0.340000 }
+			scale={ 0.320000 0.320000 }
+		}
+
+		instance={
+			position={ 0.500000 0.260000 }
+			scale={ 0.340000 0.340000 }
+			depth=1.010000
+		}
+
+		instance={
+			position={ 0.500000 0.360000 }
+			scale={ 0.340000 0.340000 }
+			depth=2.010000
+		}
+
+		instance={
+			position={ 0.330000 0.340000 }
+			scale={ 0.320000 0.320000 }
+			depth=3.010000
+		}
+
+	}
+
+}
+
+# MB+ house_Artois, resolved from 92_NB_dynasties.txt
+mb_genealogy_house_house_Artois = {
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	colored_emblem = {
+		texture = "ce_fleur.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { position = { 0.10 0.00 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.30 0.00 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.50 0.00 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.70 0.00 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.90 0.00 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.00 0.20 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.20 0.20 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.40 0.20 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.60 0.20 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.80 0.20 } scale = { 0.25 0.25 } }
+		instance = { position = { 1.00 0.20 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.10 0.40 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.30 0.40 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.50 0.40 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.70 0.40 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.90 0.40 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.00 0.60 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.20 0.60 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.40 0.60 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.60 0.60 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.80 0.60 } scale = { 0.25 0.25 } }
+		instance = { position = { 1.00 0.60 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.10 0.80 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.30 0.80 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.50 0.80 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.70 0.80 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.90 0.80 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.00 1.00 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.20 1.00 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.40 1.00 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.60 1.00 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.80 1.00 } scale = { 0.25 0.25 } }
+		instance = { position = { 1.00 1.00 } scale = { 0.25 0.25 } }
+	}
+	colored_emblem = {
+		texture = "ce_label_03.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.50 0.5 } scale = { 1.0 1.0 }  }
+	}
+	colored_emblem = {
+		texture = "ce_castle.dds"
+		color1 = "yellow"
+		color2 = "red"
+		instance = { position = { 0.25 0.155 } scale = { 0.09 0.09 }  }
+		instance = { position = { 0.25 0.235 } scale = { 0.09 0.09 }  }
+		instance = { position = { 0.25 0.315 } scale = { 0.09 0.09 }  }
+		instance = { position = { 0.5 0.155 } scale = { 0.09 0.09 }  }
+		instance = { position = { 0.5 0.235 } scale = { 0.09 0.09 }  }
+		instance = { position = { 0.5 0.315 } scale = { 0.09 0.09 }  }
+		instance = { position = { 0.75 0.155 } scale = { 0.09 0.09 }  }
+		instance = { position = { 0.75 0.235 } scale = { 0.09 0.09 }  }
+		instance = { position = { 0.75 0.315 } scale = { 0.09 0.09 }  }
+	}
+}
+
+# MB+ house_savoie, resolved from 92_NB_dynasties.txt
+mb_genealogy_house_house_savoie = { 
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	colored_emblem = {
+		texture = "mbcoa_ce_cross_latin_empire.dds"								
+		color1 = "white"
+		color2 = "yellow"
+		instance = { position = { 0.5 0.5 } scale = { 1 1 }  }		
+			  
+	}		
+}
+
+# MB+ house_Chagatayid, resolved from 91_NB_landed_titles.txt
+mb_borjigin_house_Chagatayid = { # Bulgaria
+	pattern="pattern_solid.dds"
+	color1=white
+	color2=yellow_light
+	color3=red
+	colored_emblem={
+		color1=yellow_light
+		texture="ce_block_02.dds"
+		instance={
+			scale={ 0.400000 0.400000 }
+		}
+
+	}
+
+}
+
+# MB+ house_Jochid, resolved from 92_NB_dynasties.txt
+mb_borjigin_house_Jochid = { # 
+
+		colored_emblem = {
+		texture = "mbcoa_e_golden_horde.dds"
+		color1 = "black"			
+	}	
+		textured_emblem = {
+		texture = "mbcoa_e_golden_horde.dds"
+	}
+}
+
+# MB+ house_Kublaid, resolved from 92_NB_dynasties.txt
+mb_borjigin_house_Kublaid = { #Song dynasty
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	colored_emblem = {
+		texture = "mbcoa_ce_seal_yuan.dds"
+		color1 = "red"
+		instance = { position = { 0.5 0.45 } scale = { 1.0 1.0 }  }
+	}
+	
+}
+
+# MB+ house_Ogodeid, resolved from 91_NB_landed_titles.txt
+mb_borjigin_house_Ogodeid = {
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	colored_emblem = {
+		texture = "ce_fess_dancetty.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.5 0.02 } scale = { 1.0 0.8 }  }
+		instance = { position = { 0.5 0.9 } scale = { 1.0 -0.8 }  }
+	}
+	colored_emblem = {
+		texture = "mbcoa_ce_mongol_eagle.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.45 0.45 } scale = { 0.9 0.8 }  }
+	}
+}
+
+# MB+ house_Toluid, resolved from 91_NB_landed_titles.txt
+mb_borjigin_house_Toluid = { # Bulgaria
+	pattern="pattern_solid.dds"
+	color1=yellow_light
+	color2=red
+	color3=red
+	colored_emblem={
+		color1=red
+		texture="ce_block_02.dds"
+		instance={
+			scale={ 0.400000 0.400000 }
+		}
+
+	}
+
+}
+
+# MB+ house_timurid, resolved from 92_NB_dynasties.txt
+mb_borjigin_house_timurid = { # Timurid
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "black"
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.315 0.32 } scale = { 0.55 0.55 }  }
+		instance = { position = { 0.685 0.32 } scale = { 0.55 0.55 }  }
+		instance = { position = { 0.5 0.68 } scale = { 0.55 0.55 }  }
+	}	
+}

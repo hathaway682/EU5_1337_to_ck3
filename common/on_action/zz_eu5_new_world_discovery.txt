@@ -1,0 +1,15 @@
+﻿# Schedule the discovery for new campaigns; the yearly hook also covers existing saves.
+on_game_start = { on_actions = { eu5_new_world_schedule } }
+yearly_global_pulse = { on_actions = { eu5_new_world_schedule } }
+
+eu5_new_world_schedule = {
+ trigger = { NOT = { has_global_variable = eu5_new_world_discovery_scheduled } }
+ effect = {
+  set_global_variable = eu5_new_world_discovery_scheduled
+  if = {
+   limit = { current_date < 1492.10.12 }
+   trigger_event = { id = eu5_new_world_discovery.0001 trigger_on_next_date = 1492.10.12 }
+  }
+  else = { trigger_event = { id = eu5_new_world_discovery.0001 } }
+ }
+}

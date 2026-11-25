@@ -58,7 +58,7 @@ def main():
     if st["lone_lf"]:
         print("  ★ 存在裸 LF，说明某次写盘没保住 CRLF")
     print("  省份块 %d 个 | 有 faith %d | 有 rite %d"
-          % (len({p for p, _b, _i in C.iter_blocks(lines) if p is not None}),
+          % (len({p for p, _b, _s, _i in C.iter_blocks(lines) if p is not None}),
              len(faith), len(rite)))
 
     # ---------- 2) 统计 ----------

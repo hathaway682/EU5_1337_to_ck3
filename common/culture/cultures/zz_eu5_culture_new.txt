@@ -23,7 +23,7 @@
 khoisan = {
 	color = { 186 148 96 }
 
-	ethos = ethos_egalitarian
+	ethos = ethos_communal
 	heritage = khoisan_group
 	language = eu5_heritage_khoisan_group
 	martial_custom = martial_custom_male_only
@@ -48,25 +48,25 @@ khoisan = {
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		100 = gen_ethnicity_283_nama_culture_0
+		100 = african
 	}
 }
 
 malagasy = {
 	color = { 152 76 52 }
 
-	ethos = ethos_spiritual
-	heritage = malagasy_group
-	language = eu5_heritage_malagasy_group
+	ethos = ethos_egalitarian
+	heritage = heritage_austronesian
+	language = language_austronesian
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
-	# 高地水稻农耕 / 梯田灌溉 / 祖先崇拜 / 南岛先民渡海传统 / andriana 贵族等级
+	# 稻作农耕 / 海上人生 / 祖先崇拜 / 季风贸易 / andriana 贵族等级
 	traditions = {
-		tradition_agrarian
-		tradition_polders
+		tradition_tgp_rice_cultivators
+		tradition_maritime_way_of_life
 		tradition_mystical_ancestors
-		tradition_seafaring
+		tradition_monsoon_traders
 		tradition_ruling_caste
 	}
 
@@ -79,6 +79,7 @@ malagasy = {
 	house_coa_frame = house_frame_20
 
 	ethnicities = {
-		100 = gen_ethnicity_294_sakalava_culture_0
+		50 = african
+		50 = asian_austronesian
 	}
 }

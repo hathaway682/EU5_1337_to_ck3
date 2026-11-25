@@ -1,1 +1,77 @@
-﻿
+﻿###################
+# CHRISTIAN CHURCH  #
+###################
+
+-1.1.1 = {
+	effect = {
+		if = {
+			limit = { has_pam_dlc_trigger = yes } 
+			start_situation = {
+				type = the_christian_church
+			}
+		}		
+	}
+}
+
+867.1.1 = {
+	effect = {
+		if = {
+			limit = { has_pam_dlc_trigger = yes }
+			situation:the_christian_church = {
+				situation_top_sub_region = {
+					change_phase = { phase = fragile_unity }
+				}
+			}
+		}		
+	}
+}
+
+1054.7.16 = {
+	effect = {
+		if = {
+			limit = { has_pam_dlc_trigger = yes }
+			set_global_variable = pam_great_schism_decision_taken
+		}
+	}
+}
+
+1066.1.1 = {
+	effect = {
+		if = {
+			limit = { has_pam_dlc_trigger = yes }
+			situation:the_christian_church = {
+				situation_top_sub_region = {
+					change_phase = { phase = reform_phase }
+				}
+			}
+		}		
+	}
+}
+
+1178.1.1 = {
+	effect = {
+		if = {
+			limit = { has_pam_dlc_trigger = yes }
+			situation:the_christian_church = {
+				situation_top_sub_region = {
+					change_phase = { phase = crusade_phase }
+				}
+			}
+		}
+	}
+}
+
+
+# Avignon papacy: use the dark-age phase for the 1337 bookmark.
+1337.4.1 = {
+	effect = {
+		if = {
+			limit = { has_pam_dlc_trigger = yes game_start_date = 1337.4.1 }
+			situation:the_christian_church = {
+				situation_top_sub_region = {
+					change_phase = { phase = saeculum_obscurum }
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+# Files and folders the Paradox Modding Toolkit leaves out when it uploads this
+# mod to the Steam Workshop. gitignore syntax: one pattern per line, "!" to
+# keep something a line above excluded, "/" at the end for folders only.
+#
+# This only works for uploads made through the toolkit. The Paradox launcher
+# uploads the whole folder, so it would ship everything listed here.
+#
+# The toolkit's own files (.pxignore, .px-toolkit/) are always left out, and
+# descriptor.mod / .metadata/ are always uploaded.
+
+# version control
+.git/
+.gitignore
+.gitattributes
+.github/
+
+# editors and agents
+.vscode/
+.idea/
+.claude/
+CLAUDE.md
+AGENTS.md
+
+# tooling
+node_modules/
+*-tiger.conf
+*.psd
+*.xcf
+*.kra
+*.blend
+*.zip
+*.7z
+*.rar
+
+# operating system noise
+Thumbs.db
+.DS_Store
+desktop.ini

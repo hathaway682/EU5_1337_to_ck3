@@ -1,0 +1,22 @@
+# EU5 1337 Swiss Confederation; Schwyz and Bern are represented as counties.
+on_game_start = { on_actions = { eu5_swiss_confederation_setup } }
+
+eu5_swiss_confederation_setup = {
+	effect = {
+		if = {
+			limit = { has_gdp_dlc_trigger = yes }
+			character:eu5_regent_syz = {
+				create_confederation = {
+					name = EU5_SWISS_CONFEDERATION_NAME
+					type = confederation_type:trade_league
+					leading_title = title:c_waldstatte
+				}
+			}
+			scope:new_confederation ?= {
+				add_confederation_member_title = title:c_bern
+				set_cohesion = 0
+				set_coa = k_switzerland
+			}
+		}
+	}
+}

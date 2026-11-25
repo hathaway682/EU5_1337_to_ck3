@@ -17,6 +17,9 @@
 # the moment it is held. The list is gen_debug/_title_overrides.csv, country scope, title_key.
 # Regenerating with Ck3MapGen writes those shims back — re-apply the prune afterwards.
 
+@correct_culture_primary_score = 100
+@better_than_the_alternatives_score = 50
+
 h_roman_empire = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -25,6 +28,11 @@ h_roman_empire = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
+	can_be_named_after_dynasty = no
+
 }
 h_eastern_roman_empire = {
 	landless = yes
@@ -34,6 +42,11 @@ h_eastern_roman_empire = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
+	can_be_named_after_dynasty = no
+
 }
 h_dar_al_islam = {
 	landless = yes
@@ -43,6 +56,21 @@ h_dar_al_islam = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+	#ruler_uses_title_name = no
+
+	always_follows_primary_heir = yes
+
+	destroy_if_invalid_heir = yes
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	can_destroy = {
+	}
+
 }
 h_india = {
 	landless = yes
@@ -61,6 +89,15 @@ k_fashion = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	destroy_on_succession = yes
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	de_jure_drift_disabled = yes
+
 }
 d_iconoclast = {
 	landless = yes
@@ -97,6 +134,9 @@ k_danelaw = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	de_jure_drift_disabled = yes
+
 }
 k_daneland = {
 	landless = yes
@@ -109,7 +149,7 @@ k_daneland = {
 }
 d_sunni = {
 	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_cairo
 	color = { 40 160 40 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
@@ -196,6 +236,13 @@ e_red_horde = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_white_horde = {
 	landless = yes
@@ -205,6 +252,13 @@ e_white_horde = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_aarlud_khanate = {
 	landless = yes
@@ -214,6 +268,13 @@ e_aarlud_khanate = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_togskol_khanate = {
 	landless = yes
@@ -223,6 +284,13 @@ e_togskol_khanate = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_baruun_khanate = {
 	landless = yes
@@ -232,15 +300,13 @@ e_baruun_khanate = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
-}
-e_great_yuan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 204 201 180 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_blue_horde = {
 	landless = yes
@@ -250,6 +316,13 @@ e_blue_horde = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_omnod_dalai_khanate = {
 	landless = yes
@@ -259,6 +332,13 @@ e_omnod_dalai_khanate = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_uyghur_khanate = {
 	landless = yes
@@ -268,6 +348,11 @@ e_uyghur_khanate = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_kirghiz_khanate = {
 	landless = yes
@@ -277,6 +362,11 @@ e_kirghiz_khanate = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 e_mongol_empire = {
 	landless = yes
@@ -286,6 +376,21 @@ e_mongol_empire = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
 }
 e_great_liao = {
 	landless = yes
@@ -295,15 +400,9 @@ e_great_liao = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
-}
-e_kara_khitai = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 10 10 10 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
+
+	can_use_nomadic_naming = no
+
 }
 e_jin = {
 	landless = yes
@@ -313,6 +412,9 @@ e_jin = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_use_nomadic_naming = no
+
 }
 e_timurids = {
 	landless = yes
@@ -322,6 +424,11 @@ e_timurids = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_use_nomadic_naming = no
+
+	definite_form = yes
+
 }
 k_bosporan_kingdom = {
 	landless = yes
@@ -331,15 +438,9 @@ k_bosporan_kingdom = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
-}
-k_naiman = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 180 180 180 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
 }
 d_karaism = {
 	landless = yes
@@ -457,6 +558,17 @@ k_sakya_trizin = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
+	ruler_uses_title_name = no
+
+	always_follows_primary_heir = yes
+
+	destroy_if_invalid_heir = yes
+
+	can_use_nomadic_naming = no
+
 }
 k_guiyi = {
 	landless = yes
@@ -475,6 +587,9 @@ k_switzerland = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
 }
 k_austria = {
 	landless = yes
@@ -502,6 +617,9 @@ k_visigoths = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
 }
 e_outremer = {
 	landless = yes
@@ -520,6 +638,12 @@ k_toledo = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	cultural_names = {
+		name_list_roman = cn_toletum
+		name_list_greek = cn_toletum
+	}
+
 }
 d_knights_templar = {
 	landless = yes
@@ -532,7 +656,7 @@ d_knights_templar = {
 }
 d_teutonic_order = {
 	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_upper_prussia
 	color = { 50 50 50 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
@@ -766,7 +890,7 @@ d_knights_alcantara = {
 }
 d_knights_calatrava = {
 	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_west_mancha
 	color = { 230 100 0 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
@@ -1530,13 +1654,12 @@ d_bahr_al_maghrib_raiders = {
 	ai_primary_priority = { add = -1000 }
 }
 e_latin_empire = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_constantinople
 	color = { 150 105 56 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
+	definite_form = yes
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
 }
 e_beth_nahrain = {
 	landless = yes
@@ -1582,6 +1705,12 @@ e_ruucuu = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	cultural_names = {
+		name_list_yamato = cn_ryukyu
+		name_list_emishi = cn_ryukyu
+	}
+
 }
 e_north_sea = {
 	landless = yes
@@ -1591,6 +1720,9 @@ e_north_sea = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
 }
 e_carthage = {
 	landless = yes
@@ -1600,6 +1732,11 @@ e_carthage = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
+	can_be_named_after_dynasty = no
+
 }
 k_pechenegs = {
 	landless = yes
@@ -1727,15 +1864,6 @@ k_hansa = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_britannia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 172 22 22 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_bedford = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -1755,13 +1883,8 @@ d_northumberland = {
 	ai_primary_priority = { add = -1000 }
 }
 d_lancaster = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_lancashire
 	color = { 255 48 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_york = {
 	landless = yes
@@ -1773,13 +1896,8 @@ d_york = {
 	ai_primary_priority = { add = -1000 }
 }
 d_norfolk = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_norfolk
 	color = { 200 90 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_hereford = {
 	landless = yes
@@ -1818,31 +1936,12 @@ d_somerset = {
 	ai_primary_priority = { add = -1000 }
 }
 d_cornwall = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_cornwall
 	color = { 181 60 10 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_wales = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 135 25 3 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_gwynedd = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_gwynedd
 	color = { 100 0 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_powys = {
 	landless = yes
@@ -2015,15 +2114,6 @@ d_ostfalen = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_frisia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 245 100 20 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_gelre = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -2046,15 +2136,6 @@ d_frisia = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 190 90 10 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_lotharingia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 110 110 160 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -2100,15 +2181,6 @@ d_bar = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 24 95 226 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_bavaria = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 70 80 80 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -2163,15 +2235,6 @@ d_krain = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 95 120 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_east_francia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 160 160 160 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -2276,6 +2339,7 @@ e_africa = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
+<<<<<<< HEAD
 k_rum = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -2294,14 +2358,11 @@ k_thessalonika = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
+=======
+>>>>>>> no_innovation
 d_strymon = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_lower_macedonia
 	color = { 49 43 135 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_aegean_islands = {
 	landless = yes
@@ -2313,31 +2374,12 @@ d_aegean_islands = {
 	ai_primary_priority = { add = -1000 }
 }
 d_thessalonika = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_chalkidiki
 	color = { 189 19 130 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_thessaly = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_thessaly
 	color = { 170 30 165 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_epirus = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 139 68 114 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_epirus = {
 	landless = yes
@@ -2361,15 +2403,6 @@ d_cephalonia = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 180 110 85 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_hellas = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 210 70 165 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -2401,6 +2434,11 @@ k_krete = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	cultural_names = {
+		name_list_italian = cn_candia
+	}
+
 }
 d_krete = {
 	landless = yes
@@ -2412,13 +2450,8 @@ d_krete = {
 	ai_primary_priority = { add = -1000 }
 }
 d_dalmatia = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_zagreb
 	color = { 162 53 53 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_bosna = {
 	landless = yes
@@ -2439,13 +2472,8 @@ d_lower_bosna = {
 	ai_primary_priority = { add = -1000 }
 }
 d_usora = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_hum
 	color = { 170 70 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_ragusa = {
 	landless = yes
@@ -2475,13 +2503,8 @@ d_macva = {
 	ai_primary_priority = { add = -1000 }
 }
 d_duklja = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_zeta
 	color = { 129 94 13 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 k_bosnia = {
 	landless = yes
@@ -2493,13 +2516,8 @@ k_bosnia = {
 	ai_primary_priority = { add = -1000 }
 }
 d_vidin = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_vidin
 	color = { 120 105 85 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_turnovo = {
 	landless = yes
@@ -2511,36 +2529,17 @@ d_turnovo = {
 	ai_primary_priority = { add = -1000 }
 }
 d_dobrudja = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_north_dobruja
 	color = { 75 100 80 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_philippopolis = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_zagore
 	color = { 75 100 110 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_cyprus = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 215 215 20 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_nikaea = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 136 37 120 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -2618,15 +2617,6 @@ d_charsianon = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_pontus = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 205 130 85 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_paphlagonia = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -2663,15 +2653,6 @@ d_chaldia = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_armenia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 203 76 76 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_mesopotamia = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -2703,33 +2684,6 @@ d_tao-klarjeti = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 216 95 254 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_galicia-volhynia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 131 233 34 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-e_caspian-pontic_steppe = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 226 18 164 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-e_volga-ural = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 166 135 218 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -2772,13 +2726,8 @@ d_ili-alatau = {
 	ai_primary_priority = { add = -1000 }
 }
 d_kush-murun = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_kulykol
 	color = { 137 138 175 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_tobol-ishim = {
 	landless = yes
@@ -2817,22 +2766,8 @@ d_al-wahat = {
 	ai_primary_priority = { add = -1000 }
 }
 d_al-said = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_asyut
 	color = { 62 198 121 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_igbo-benue = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 38 95 227 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_BAL_parhae = {
 	landless = yes
@@ -3149,15 +3084,6 @@ d_PHI_sandao = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_kabisay-an = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 8 248 3 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_PHI_visayas = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -3339,17 +3265,12 @@ d_salerno = {
 	ai_primary_priority = { add = -1000 }
 }
 d_calabria = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_bari
 	color = { 170 142 70 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 k_venice = {
 	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_venice
 	color = { 54 167 156 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
@@ -3373,6 +3294,13 @@ k_armenian_principality = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	de_jure_drift_disabled = yes
+
+	always_follows_primary_heir = yes
+
+	definite_form = yes
+
 }
 k_old_armenia = {
 	landless = yes
@@ -3383,18 +3311,9 @@ k_old_armenia = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_italy = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 234 217 110 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 k_genoa = {
 	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_levante
 	color = { 234 131 110 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
@@ -3403,7 +3322,7 @@ k_genoa = {
 }
 k_pisa = {
 	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_pisa
 	color = { 196 192 140 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
@@ -3482,28 +3401,10 @@ d_istria = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_sardinia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 210 165 255 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_corsica = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 200 200 250 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_romagna = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 215 141 152 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -3545,15 +3446,6 @@ d_latium = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_scandinavia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 62 122 189 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_bergslagen = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -3564,22 +3456,12 @@ d_bergslagen = {
 	ai_primary_priority = { add = -1000 }
 }
 d_vastergotland = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_vastergotland
 	color = { 38 93 163 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_ostergotland = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_ostergotland
 	color = { 44 110 225 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_smaland = {
 	landless = yes
@@ -3594,15 +3476,6 @@ d_gotland = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 0 90 160 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_sapmi = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 5 5 160 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -3663,13 +3536,8 @@ d_sjaelland = {
 	ai_primary_priority = { add = -1000 }
 }
 d_skane = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_malmohus
 	color = { 210 2 2 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_jylland = {
 	landless = yes
@@ -3690,13 +3558,8 @@ d_slesvig = {
 	ai_primary_priority = { add = -1000 }
 }
 d_viken = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_akershus
 	color = { 220 4 40 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_agder = {
 	landless = yes
@@ -3735,31 +3598,12 @@ d_dalir = {
 	ai_primary_priority = { add = -1000 }
 }
 d_halogaland = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_nordland
 	color = { 210 150 255 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_jamtland = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_jamtland
 	color = { 75 20 70 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_finland = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 180 110 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_savo = {
 	landless = yes
@@ -3774,24 +3618,6 @@ d_pohjanmaa = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 140 125 25 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-e_wendish_empire = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 130 10 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_pomerania = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 145 130 40 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -3879,13 +3705,8 @@ k_esthonia = {
 	ai_primary_priority = { add = -1000 }
 }
 d_esthonia = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_estonia
 	color = { 150 75 75 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_livonia = {
 	landless = yes
@@ -3896,24 +3717,7 @@ d_livonia = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_livonia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 110 80 168 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-e_west_slavia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 130 20 50 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
+
 k_moravia = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -3985,6 +3789,12 @@ k_sorbia = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	cultural_names = {
+		name_list_polabian = cn_polabia
+		#Kingdom of Polabia
+	}
+
 }
 d_meissen = {
 	landless = yes
@@ -3999,15 +3809,6 @@ d_lausitz = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 215 150 145 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-e_russia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 50 150 55 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -4059,22 +3860,8 @@ d_karachev = {
 	ai_primary_priority = { add = -1000 }
 }
 d_novosil = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_tula_russia
 	color = { 180 201 36 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_novgorod = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 137 194 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_novgorod = {
 	landless = yes
@@ -4098,15 +3885,6 @@ d_luki = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 137 174 120 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_white_rus = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 180 205 170 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -4157,15 +3935,6 @@ d_opolye = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_bjarmaland = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 188 238 234 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_biarmia = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -4202,15 +3971,6 @@ d_ustyug = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_pontic_steppe = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 85 40 5 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_kizilyedisan = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -4221,63 +3981,29 @@ d_kizilyedisan = {
 	ai_primary_priority = { add = -1000 }
 }
 d_levedia = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_donetsk
 	color = { 210 160 69 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_red_levedia = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_berda
 	color = { 196 140 49 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_don_valley = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_beljamen
 	color = { 227 201 98 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_khazaria = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_chyorny_yar
 	color = { 143 92 21 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_alania = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_alania
 	color = { 110 65 29 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_ciscaucasia = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 168 59 34 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_caspian_steppe = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 166 82 10 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -4293,13 +4019,8 @@ d_itil = {
 	ai_primary_priority = { add = -1000 }
 }
 d_pecheneg = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_taskala
 	color = { 186 38 11 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_mugodzhar_hills = {
 	landless = yes
@@ -4311,31 +4032,16 @@ d_mugodzhar_hills = {
 	ai_primary_priority = { add = -1000 }
 }
 d_aqtobe = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_baytak
 	color = { 179 45 29 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_atyrau = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_shagiz
 	color = { 173 54 54 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_manatau = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_kalmyk
 	color = { 200 100 80 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 k_magyar = {
 	landless = yes
@@ -4345,33 +4051,19 @@ k_magyar = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
-}
-k_volga_bulgaria = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 97 56 55 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
+	de_jure_drift_disabled = yes
+
 }
 d_volga_bulgaria = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_bolghar
 	color = { 87 66 55 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_jalmat = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_bavly
 	color = { 56 31 56 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_bugurslan = {
 	landless = yes
@@ -4383,31 +4075,12 @@ d_bugurslan = {
 	ai_primary_priority = { add = -1000 }
 }
 d_martyuba = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_uren
 	color = { 56 55 97 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_mordvinia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 38 66 71 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_mordvinia = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_cheboksary
 	color = { 26 46 50 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_saran = {
 	landless = yes
@@ -4419,36 +4092,17 @@ d_saran = {
 	ai_primary_priority = { add = -1000 }
 }
 d_voronezh = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_lipetsk
 	color = { 26 52 24 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_chuvashia = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_atkarsk
 	color = { 50 40 76 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_khopyor = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 46 52 24 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_permia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 204 188 127 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -4473,13 +4127,8 @@ k_bashkiria = {
 	ai_primary_priority = { add = -1000 }
 }
 d_sakmara = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_meleuz
 	color = { 20 16 38 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_uraltau = {
 	landless = yes
@@ -4491,31 +4140,8 @@ d_uraltau = {
 	ai_primary_priority = { add = -1000 }
 }
 d_vogulia = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_yetkul
 	color = { 100 120 92 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-e_siberia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 205 212 250 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_yugra = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 210 245 210 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_ostyaki = {
 	landless = yes
@@ -4548,15 +4174,6 @@ d_kazym = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 175 230 180 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_sibir = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 180 210 245 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -4598,23 +4215,9 @@ d_lanikaz = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_ob = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 180 180 250 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_salair = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_suzun
 	color = { 164 164 252 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_aley = {
 	landless = yes
@@ -4670,24 +4273,6 @@ d_kulyndy_steppe = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_mongolia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 90 90 240 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_otuken = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 20 65 25 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_orkhon = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -4710,15 +4295,6 @@ d_selenga_valley = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 10 56 10 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_naimania = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 190 230 15 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -4782,15 +4358,6 @@ d_khovd = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 106 161 118 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_tuva = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 45 112 100 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -4860,13 +4427,8 @@ d_blue_khakassia = {
 	ai_primary_priority = { add = -1000 }
 }
 d_shoria = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_kuznetsk
 	color = { 165 140 171 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_kargassia = {
 	landless = yes
@@ -4881,15 +4443,6 @@ d_eastern_sayan = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 132 164 171 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_buryatia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 50 115 160 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -4940,15 +4493,6 @@ d_tsagaanbaigal = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_angara = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 55 55 55 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_yenisei_kan = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -4971,15 +4515,6 @@ d_lena = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 71 79 94 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_gobi = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 180 110 10 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -5030,15 +4565,6 @@ d_gobi_ongi = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_tartaria = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 205 5 5 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 k_zhetysu = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -5066,23 +4592,9 @@ d_tarbagatai = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_cuman = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 131 84 50 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_turgay = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_sarykopa
 	color = { 138 78 34 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_kokturgay = {
 	landless = yes
@@ -5094,58 +4606,24 @@ d_kokturgay = {
 	ai_primary_priority = { add = -1000 }
 }
 d_saryarka = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_tengiz
 	color = { 207 121 72 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_qyzylsaryarka = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_ulytau
 	color = { 227 90 52 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_kazakh = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_bayanaul
 	color = { 214 147 141 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_qara_dala = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 81 34 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_atbasar = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_arykbalyk
 	color = { 180 145 135 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_kurgan = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_almenevo
 	color = { 171 105 75 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 k_saryarka = {
 	landless = yes
@@ -5157,13 +4635,8 @@ k_saryarka = {
 	ai_primary_priority = { add = -1000 }
 }
 d_karkaraly = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_karasor
 	color = { 153 133 24 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_tokumbay = {
 	landless = yes
@@ -5175,31 +4648,12 @@ d_tokumbay = {
 	ai_primary_priority = { add = -1000 }
 }
 d_karabas = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_nura
 	color = { 245 189 78 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_betpa = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_karagau
 	color = { 250 150 50 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_kipchak = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 200 150 50 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_semey = {
 	landless = yes
@@ -5229,13 +4683,8 @@ d_degelen = {
 	ai_primary_priority = { add = -1000 }
 }
 d_kentarlau = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_bakanas
 	color = { 181 128 11 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_kara_khoja = {
 	landless = yes
@@ -5274,36 +4723,13 @@ d_akaltay = {
 	ai_primary_priority = { add = -1000 }
 }
 d_gurbantunggut = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_gurbantunggut
 	color = { 150 106 87 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_naiman_gobi = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 61 66 184 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-e_turan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 175 237 135 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_khotan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 150 120 200 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -5364,13 +4790,8 @@ k_oghuz_il = {
 	ai_primary_priority = { add = -1000 }
 }
 d_transcaspiana = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_mangistau
 	color = { 194 27 27 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_garabogazkol = {
 	landless = yes
@@ -5382,22 +4803,12 @@ d_garabogazkol = {
 	ai_primary_priority = { add = -1000 }
 }
 d_jemba = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_lower_emba
 	color = { 186 13 53 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_aral_il = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_yangikent
 	color = { 250 50 50 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_barsuki = {
 	landless = yes
@@ -5417,55 +4828,22 @@ d_aral_karakum = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_syr_darya = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 194 214 62 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_syr_darya = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_sarysu
 	color = { 185 180 60 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_chah = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_chach
 	color = { 177 186 45 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_muyunkum = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_akkol
 	color = { 250 210 90 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_talas_alatau = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 190 125 30 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_transoxiana = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 35 175 75 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -5499,22 +4877,12 @@ d_osrushana = {
 	ai_primary_priority = { add = -1000 }
 }
 d_ferghana = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_akhsikath
 	color = { 11 100 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_khorezm = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_ust_yurt
 	color = { 70 198 103 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_uzboy = {
 	landless = yes
@@ -5533,15 +4901,9 @@ e_bactria = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
-}
-e_persia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 30 240 230 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
 }
 d_isfahan = {
 	landless = yes
@@ -5669,15 +5031,6 @@ d_kohestan = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_daylam = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 10 175 165 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_daylam = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -5705,15 +5058,6 @@ d_gurgan = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_makran = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 25 105 85 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_makran = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -5732,15 +5076,6 @@ d_jabal_kufs = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_kabulistan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 100 120 220 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_kabul = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -5754,15 +5089,6 @@ d_zabulistan = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 115 125 205 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_mesopotamia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 55 135 90 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -5813,15 +5139,6 @@ d_baghdad = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_jazira = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 10 205 90 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_diyarrabia = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -5867,24 +5184,6 @@ d_kurdistan = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_carpathia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 210 115 35 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_dacia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 237 147 52 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_transylvanian_alps = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -5912,15 +5211,6 @@ d_oltenia = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_moldavia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 180 150 20}
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_bukovina = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -5940,13 +5230,8 @@ d_moldova = {
 	ai_primary_priority = { add = -1000 }
 }
 d_bugeac = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_basarabia
 	color = { 165 220 30 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_visegrad = {
 	landless = yes
@@ -5958,49 +5243,24 @@ d_visegrad = {
 	ai_primary_priority = { add = -1000 }
 }
 d_somogy = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_somogy
 	color = { 170 40 65 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_nyitra = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_pozsony
 	color = { 228 62 90 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_ungvar = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_zemplen
 	color = { 156 15 15 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_transcarpathia = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_zemplen
 	color = { 217 11 26 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_bihar = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_bihar
 	color = { 241 58 58 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_temes = {
 	landless = yes
@@ -6012,13 +5272,8 @@ d_temes = {
 	ai_primary_priority = { add = -1000 }
 }
 d_bacs = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_bacs
 	color = { 145 90 85 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_gyor = {
 	landless = yes
@@ -6033,15 +5288,6 @@ d_syrmia = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 179 43 111 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-e_france = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 11 22 170 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -6082,6 +5328,12 @@ k_aquitaine = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	cultural_names = {
+		name_list_roman = cn_aquitania
+		name_list_greek = cn_aquitania
+	}
+
 }
 d_gascogne = {
 	landless = yes
@@ -6128,24 +5380,6 @@ d_bourbon = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_brittany = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 197 215 217 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_burgundy = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 134 0 37 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_savoie = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -6182,41 +5416,13 @@ d_transjurania = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_spain = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 233 200 20 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_andalusia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 31 138 40 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_cordoba = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_cordoba
 	color = { 60 180 12 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_sevilla = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_sevilla
 	color = { 150 218 21 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 k_badajoz = {
 	landless = yes
@@ -6226,6 +5432,21 @@ k_badajoz = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	cultural_names = {
+		name_list_bedouin = cn_xenxir
+		name_list_baranis = cn_xenxir
+		name_list_butr = cn_xenxir
+		name_list_zaghawa = cn_xenxir
+		name_list_levantine = cn_xenxir
+		name_list_egyptian = cn_xenxir
+		name_list_maghrebi = cn_xenxir
+		name_list_andalusian = cn_xenxir
+		name_list_yemeni = cn_xenxir
+	}
+
 }
 d_beja = {
 	landless = yes
@@ -6262,6 +5483,23 @@ k_valencia = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	cultural_names = {
+		name_list_roman = cn_carthaginensis
+		# Al Sarq means "the Levant", but was the contemporary name for eastern Iberia amongst Arabic speakers.
+		name_list_bedouin = cn_al_sarq
+		name_list_baranis = cn_al_sarq
+		name_list_butr = cn_al_sarq
+		name_list_zaghawa = cn_al_sarq
+		name_list_levantine = cn_al_sarq
+		name_list_egyptian = cn_al_sarq
+		name_list_maghrebi = cn_al_sarq
+		name_list_andalusian = cn_al_sarq
+		name_list_yemeni = cn_al_sarq
+	}
+
 }
 d_mallorca = {
 	landless = yes
@@ -6325,56 +5563,23 @@ k_asturias = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
-}
-k_leon = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 253 158 51 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
 }
 d_asturias = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_west_asturias
 	color = { 207 104 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
-k_spanish_galicia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 255 224 94 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
+
 d_porto = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_tras_os_montes
 	color = { 192 98 5 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_coimbra = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 182 108 45 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-e_maghreb = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 209 63 44 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -6442,15 +5647,11 @@ k_canarias = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
-}
-k_tahert = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 210 235 87 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
+
+	cultural_names = {
+		name_list_guanches = cn_guanac
+	}
+
 }
 d_tlemcen = {
 	landless = yes
@@ -6506,15 +5707,6 @@ d_mzab = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_africa = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 67 96 179 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_kairouan = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -6560,15 +5752,6 @@ d_syrte = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_anbiya = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 102 99 95 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_zammour = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -6600,15 +5783,6 @@ d_taghaza = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 135 123 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_sahara = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 199 144 56 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -6659,15 +5833,6 @@ d_fezzan = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_arabia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 32 150 85 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 k_israel = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -6705,13 +5870,8 @@ d_shammar = {
 	ai_primary_priority = { add = -1000 }
 }
 d_medina = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_medina
 	color = { 160 250 50 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_mecca = {
 	landless = yes
@@ -6795,13 +5955,8 @@ d_socotra = {
 	ai_primary_priority = { add = -1000 }
 }
 d_alexandria = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_alexandria
 	color = { 100 219 134 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_delta = {
 	landless = yes
@@ -6830,15 +5985,7 @@ d_eastern_desert = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_jerusalem = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 180 180 180 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
+
 d_oultrejourdain = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -6849,27 +5996,13 @@ d_oultrejourdain = {
 	ai_primary_priority = { add = -1000 }
 }
 d_palestine = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_filastin
 	color = { 160 160 200 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_urdunn = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 225 200 160 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_syria = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 145 130 88 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -6933,15 +6066,6 @@ d_palmyra = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 35 232 20 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_abyssinia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 120 62 20 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -7082,15 +6206,6 @@ d_baqlin = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_damot = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 166 68 208 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_damot = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -7113,15 +6228,6 @@ d_sharka = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 190 90 200 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_adal = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 136 28 28 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -7181,15 +6287,6 @@ d_sanaag = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_azania = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 218 86 25 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_hafun = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -7217,15 +6314,6 @@ d_west_ajuraan = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_bale = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 32 116 126 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_shabelle = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -7248,15 +6336,6 @@ d_samalo = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 70 170 200 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_zanj = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 252 209 22 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -7298,28 +6377,10 @@ d_zanzibar = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_kanem = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 124 184 124 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_kagha = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 110 195 110 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_sao = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 10 200 205 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -7347,15 +6408,6 @@ d_wandala = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 25 190 215 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_hausaland = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 240 95 20 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -7397,15 +6449,6 @@ d_gobir = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_darfur = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 186 52 99 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_west_darfur = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -7424,15 +6467,6 @@ d_kordofan = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_songhay = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 193 42 93 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_kawkaw = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -7446,15 +6480,6 @@ d_dendi = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 200 50 80 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_gurma = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 172 102 68 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -7482,15 +6507,6 @@ d_yatenga = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 160 110 75 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_ghana = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 209 144 4 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -7541,15 +6557,6 @@ d_kaniaga = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_mali = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 253 225 3 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_manding = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -7581,15 +6588,6 @@ d_loma = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 148 139 13 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_takrur = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 48 168 135 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -7649,15 +6647,6 @@ d_bobo = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_kaabu = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 214 93 48 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_kaabu = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -7680,15 +6669,6 @@ d_kasa = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 230 90 55 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-e_guinea = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 175 173 90 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -7739,15 +6719,6 @@ d_wenyon = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_kong = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 178 28 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_worodugu = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -7761,15 +6732,6 @@ d_lobi = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 198 48 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_akan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 225 25 25 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -7815,15 +6777,6 @@ d_eweland = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 205 45 45 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_gur = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 146 130 158 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -7883,15 +6836,6 @@ d_savalu = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_yorubaland = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 38 43 209 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_ibadan = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -7946,6 +6890,7 @@ d_kwararafa = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
+<<<<<<< HEAD
 e_rajastan = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -7964,6 +6909,8 @@ k_sindh = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
+=======
+>>>>>>> no_innovation
 d_sauvira = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -7982,32 +6929,13 @@ d_bhakkar = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_punjab = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 255 90 20 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_multan = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_bari_doab
 	color = { 234 100 21 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_lahore = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_jech_doab
 	color = { 180 110 41 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_gandhara = {
 	landless = yes
@@ -8046,22 +6974,8 @@ d_mathura = {
 	ai_primary_priority = { add = -1000 }
 }
 d_vodamayutja = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_bareilly
 	color = { 195 90 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_gujarat = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 155 80 28 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_gurjara_mandala = {
 	landless = yes
@@ -8090,15 +7004,6 @@ d_lata = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_rajputana = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 200 70 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_maru = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -8109,13 +7014,8 @@ d_maru = {
 	ai_primary_priority = { add = -1000 }
 }
 d_jangladesh = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_nagaur
 	color = { 144 47 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_stravani = {
 	landless = yes
@@ -8136,40 +7036,16 @@ d_medapata = {
 	ai_primary_priority = { add = -1000 }
 }
 d_ajmer = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_mewat
 	color = { 230 190 51 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_malwa = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 255 200 25 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_dadhipadra = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_khandesh
 	color = { 245 200 20 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_akara_dasarna = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_eastern_malwa
 	color = { 210 150 15 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_anupa = {
 	landless = yes
@@ -8180,50 +7056,17 @@ d_anupa = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_kosala = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 205 60 10 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_kanyakubja = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_central_doab
 	color = { 225 155 77 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_saryupara = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_awadh
 	color = { 180 110 40 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_jejakabhukti = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_akara
 	color = { 120 50 10 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_himalaya = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 250 40 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_kurmanchal = {
 	landless = yes
@@ -8252,15 +7095,6 @@ d_limbuwan = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_kashmir = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 245 155 31 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_kasmira = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -8279,23 +7113,9 @@ d_pamir = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_bengal = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 0 120 40 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_gauda = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_bhagalpur
 	color = { 60 200 60 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_varendra = {
 	landless = yes
@@ -8333,15 +7153,6 @@ d_suhma = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_kamarupa = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 6 127 80 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_kamarupanagara = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -8369,15 +7180,6 @@ d_para_lauhitya = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_bihar = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 68 208 51 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_magadha = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -8397,27 +7199,13 @@ d_tirabhukti = {
 	ai_primary_priority = { add = -1000 }
 }
 d_kasi = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_varanasi
 	color = { 123 181 56 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_jharkand = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 48 138 31 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_gondwana = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 32 128 55 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -8436,15 +7224,6 @@ d_ratanpur = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 36 175 65 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_orissa = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 110 145 40 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -8486,28 +7265,10 @@ d_dandakaranya = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_deccan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 190 20 50 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 k_bene_israel = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 255 20 20 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_maharastra = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 150 0 20 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -8541,40 +7302,16 @@ d_konkana = {
 	ai_primary_priority = { add = -1000 }
 }
 d_nasikya = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_baglana
 	color = { 120 50 90 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_rattapadi = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_lower_marathwada
 	color = { 220 99 85 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_karnata = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 150 20 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_kalyani = {
-	landless = yes
-	capital = c_gen_buamu_4
+	capital = c_kalyana_karnakassala
 	color = { 110 25 2 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
 }
 d_gangavadi = {
 	landless = yes
@@ -8598,15 +7335,6 @@ d_raichur_doab = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 145 40 5 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_tamilakam = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 200 25 65 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -8648,15 +7376,6 @@ d_tondai_nadu = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_andhra = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 110 0 20 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_udayagiri = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -8675,15 +7394,6 @@ d_vengi = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_telingana = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 185 39 45 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_warangal = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -8697,15 +7407,6 @@ d_racakonda = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 190 60 60 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_lanka = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 221 187 80 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -8783,15 +7484,6 @@ d_conyi = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_tsang = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 10 235 255 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_xigaze = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -8823,15 +7515,6 @@ d_nyima = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 40 140 130 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_kham = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 150 10 0 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -8918,15 +7601,6 @@ d_litang = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_amdo = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 70 40 105 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_xining = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -8989,6 +7663,13 @@ k_gyalrong = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	cultural_names = {
+		name_list_han = cn_jiarong
+		name_list_tangut = cn_ryarong
+		name_list_qiang = cn_ryarong
+	}
+
 }
 d_gyalrong = {
 	landless = yes
@@ -9035,15 +7716,6 @@ d_gainlho = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_guge = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 197 255 198 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_kinnaur = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -9057,15 +7729,6 @@ d_purang = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 217 255 158 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_maryul = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 140 140 180 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -9116,15 +7779,6 @@ d_rutog = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_lhomon = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 150 196 35 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_bumthang = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -9161,55 +7815,10 @@ d_dzayul = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_andong = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 50 50 50 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_balhae = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 112 51 232 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_shiwei = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 240 115 155 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 k_khitan = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 115 135 30 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_luzhen = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 180 50 140 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_raole = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 120 110 100 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -9228,24 +7837,6 @@ d_yanyun_yuyi = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 217 211 91 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-e_amur = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 108 65 15 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_amur = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 0 85 65  }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -9305,15 +7896,6 @@ d_eman_bureya = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_aynumosir = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 141 70 23 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_sahaliyan = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -9341,15 +7923,6 @@ d_sum = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_hitakami = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 45 15 125 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_hitakami = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -9368,24 +7941,6 @@ d_nushiro = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_srivijaya = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 15 105 125 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_yavakadvipa = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 109 216 219 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_nias = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -9399,15 +7954,6 @@ d_handumans = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 140 9 8 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_hujung_medini = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 15 55 75 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -9549,12 +8095,16 @@ d_nf_maurikios = {
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_melissenos = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_pastillas = {
@@ -9603,12 +8153,16 @@ d_nf_arcruni = {
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_argyros = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_basiliakos = {
@@ -9630,21 +8184,29 @@ d_nf_botaneiates = {
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_bryennios = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_diogenes = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_dragosevic = {
@@ -9729,12 +8291,16 @@ d_nf_pahlavuni = {
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_palaiologos = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_pegonites = {
@@ -9747,12 +8313,16 @@ d_nf_pegonites = {
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_phokas = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_pleustes = {
@@ -9765,30 +8335,42 @@ d_nf_pleustes = {
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_synadenos = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_tarchaneiotes = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_taronites = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_varajnuni = {
@@ -9846,30 +8428,42 @@ d_nf_durres = {
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_angelos = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_batatzes = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_branas = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_gabras = {
@@ -9882,39 +8476,55 @@ d_nf_gabras = {
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_kamytzes = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_kantakouzenos = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_komnenos_doukas = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_kontostephanos = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_lampardas = {
@@ -9936,30 +8546,42 @@ d_nf_macrodoukas = {
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_petraliphas = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_raoul = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_nf_rogerios = {
-	landless = yes
-	capital = c_gen_buamu_4
 	color = { 100 100 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
+	capital = c_constantinople
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	always_follows_primary_heir = yes
 	no_automatic_claims = yes
+	noble_family = yes
+	destroy_if_invalid_heir = yes
+	dlc_feature = roads_to_power
 	ai_primary_priority = { add = -1000 }
 }
 d_laamp_anangapida = {
@@ -10285,15 +8907,9 @@ k_cossack = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
-}
-k_yamato = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 96 3 6 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
 }
 d_nankaido = {
 	landless = yes
@@ -10335,15 +8951,6 @@ d_east_sanyodo = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 163 112 113 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_azuma = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 125 15 65 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -10394,15 +9001,6 @@ d_hokurikudo = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_tsukushi = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 210 145 30 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_north_saikaido = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -10416,15 +9014,6 @@ d_south_saikaido = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 250 142 13 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_chrysanthemum_throne = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 96 3 42 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -10628,24 +9217,6 @@ d_laamp_ordinators = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_zhongyuan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 230 200 10 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_henan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 255 250 5 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_dongji = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -10691,15 +9262,6 @@ d_chenxu = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_qingxu = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 240 140 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_ziqing = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -10731,15 +9293,6 @@ d_yuncao = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 240 170 40 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_hebei = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 210 220 100 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -10790,15 +9343,6 @@ d_heyang = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_hedong = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 190 150 70 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_hedong = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -10835,15 +9379,6 @@ d_zelu = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_youji = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 160 80 60 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_youzhou = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -10871,15 +9406,6 @@ d_yingmo = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_daibei = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 60 35 10 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_yunshuo = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -10902,24 +9428,6 @@ d_xinan = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 40 25 10 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-e_yongliang = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 180 180 190 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_guannei = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 150 150 140 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -10997,15 +9505,6 @@ d_xingfeng = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_hexi = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 150 110 70 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_qilian = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -11019,15 +9518,6 @@ d_guasha = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 124 146 92 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_xia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 55 55 50 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -11087,24 +9577,6 @@ d_juyan = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_jingyang = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 169 40 40 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_jiangdong = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 180 70 110 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_jiangdong = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -11123,15 +9595,6 @@ d_xuanshe = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_liangzhe = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 120 30 120 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_zhexi = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -11145,15 +9608,6 @@ d_zhedong = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 70 10 60 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_fujian = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 70 100 240 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -11186,28 +9640,10 @@ d_jianning = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_huainan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 150 120 190 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_huainan = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 150 122 190 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_jiangxi = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 200 130 120 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -11226,15 +9662,6 @@ d_zhaoxin = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 150 60 50 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_shannan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 250 30 30 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -11267,28 +9694,10 @@ d_eyue = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_hunan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 250 100 40 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_lingling = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 255 69 37 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-e_liangyi = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 60 150 190 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -11321,15 +9730,6 @@ d_qiongnan = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_xingyuan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 27 149 167 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_xingyuan = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -11357,15 +9757,6 @@ d_baqu = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_dongchuan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 138 204 226 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_dongchuan = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -11379,15 +9770,6 @@ d_wuxin = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 1 91 91 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_kuizhou = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 26 73 82 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -11415,15 +9797,6 @@ d_wuxi = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 15 92 127 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_qianzhong = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 22 201 165 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -11474,15 +9847,6 @@ d_xiyuan = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_dali = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 240 240 220 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_jianchuan = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -11528,24 +9892,6 @@ d_tonghai = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_lingnan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 0 120 31 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_lingnan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 0 120 21 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_lingnan = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -11577,15 +9923,6 @@ d_qiongguan = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 18 166 42 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_lingxi = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 81 127 99 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -11662,150 +9999,6 @@ d_thang_long = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
-}
-e_minister_chancellor = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 228 237 113 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-	allow_domicile = no
-	destroy_if_invalid_heir = yes
-	de_jure_drift_disabled = yes
-	can_use_nomadic_naming = no
-	can_be_named_after_dynasty = no
-	definite_form = yes
-	ruler_uses_title_name = no
-}
-e_minister_censor = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 185 192 35 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-	allow_domicile = no
-	destroy_if_invalid_heir = yes
-	de_jure_drift_disabled = yes
-	can_use_nomadic_naming = no
-	can_be_named_after_dynasty = no
-	definite_form = yes
-	ruler_uses_title_name = no
-}
-e_minister_grand_marshal = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 212 150 69 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-	allow_domicile = no
-	destroy_if_invalid_heir = yes
-	de_jure_drift_disabled = yes
-	can_use_nomadic_naming = no
-	can_be_named_after_dynasty = no
-	definite_form = yes
-	ruler_uses_title_name = no
-}
-e_minister_of_personnel = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 228 237 59 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-	allow_domicile = no
-	destroy_if_invalid_heir = yes
-	de_jure_drift_disabled = yes
-	can_use_nomadic_naming = no
-	can_be_named_after_dynasty = no
-	definite_form = yes
-	ruler_uses_title_name = no
-}
-e_minister_of_revenue = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 206 247 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-	allow_domicile = no
-	destroy_if_invalid_heir = yes
-	de_jure_drift_disabled = yes
-	can_use_nomadic_naming = no
-	can_be_named_after_dynasty = no
-	definite_form = yes
-	ruler_uses_title_name = no
-}
-e_minister_of_rites = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 248 247 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-	allow_domicile = no
-	destroy_if_invalid_heir = yes
-	de_jure_drift_disabled = yes
-	can_use_nomadic_naming = no
-	can_be_named_after_dynasty = no
-	definite_form = yes
-	ruler_uses_title_name = no
-}
-e_minister_of_war = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 255 168 10 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-	allow_domicile = no
-	destroy_if_invalid_heir = yes
-	de_jure_drift_disabled = yes
-	can_use_nomadic_naming = no
-	can_be_named_after_dynasty = no
-	definite_form = yes
-	ruler_uses_title_name = no
-}
-e_minister_of_justice = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 255 237 13 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-	allow_domicile = no
-	destroy_if_invalid_heir = yes
-	de_jure_drift_disabled = yes
-	can_use_nomadic_naming = no
-	can_be_named_after_dynasty = no
-	definite_form = yes
-	ruler_uses_title_name = no
-}
-e_minister_of_works = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 239 255 13 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-	allow_domicile = no
-	destroy_if_invalid_heir = yes
-	de_jure_drift_disabled = yes
-	can_use_nomadic_naming = no
-	can_be_named_after_dynasty = no
-	definite_form = yes
-	ruler_uses_title_name = no
 }
 d_laamp_xuanji = {
 	landless = yes
@@ -11897,24 +10090,6 @@ d_laamp_eastern_sculptors = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-e_suvarnabhumi = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 227 108 3 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_pagan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 143 70 136 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_pagan = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -11987,15 +10162,6 @@ d_tengchong = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_dvaravati = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 227 118 5 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_lop_buri = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -12050,15 +10216,7 @@ d_sipsongpanna = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_siam = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 88 137 172 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
+
 e_brunei = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -12072,15 +10230,6 @@ k_brunei = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 255 255 0 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_funan = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 0 50 150 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -12131,15 +10280,6 @@ d_angkor_borey = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_chenla = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 30 70 60 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_phonsavan = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -12171,15 +10311,6 @@ d_vijaya = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 113 57 183 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_goguryeo = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 55 85 190 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -12239,15 +10370,6 @@ d_gwangju = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-k_silla = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 120 45 40 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
 d_gyeongju = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -12270,15 +10392,6 @@ d_donggye = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 178 69 17 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_baekje = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 90 160 115 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -12328,74 +10441,38 @@ k_yongson_throne = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
-}
-e_nusantara = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 107 160 60 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_lusung = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 243 151 142 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_liuqiu = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 71 160 60 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
+
+	can_be_named_after_dynasty = no
+
+	figurehead = yes
+
+	allow_domicile = no
+
+	always_follows_primary_heir = yes
+
+	definite_form = yes
+
+	personal_relation_entry = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:target
+					scope:liege ?= scope:target
+				}
+				desc = japan_personal_relation_ceremonial_liege_same
+			}
+			triggered_desc = {
+				trigger = { exists = scope:liege }
+				desc = japan_personal_relation_ceremonial_liege_other
+			}
+		}
+	}
+
 }
 d_liuqiu = {
 	landless = yes
 	capital = c_gen_buamu_4
 	color = { 85 149 57 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_tanjungnagara = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 0 29 29 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_sulawesi = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 225 193 110 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_maluku = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 160 40 40 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-k_ruucuu = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 0 130 60 }
 	can_create = { always = no }
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
@@ -12410,1194 +10487,138 @@ d_ruucuu = {
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
 }
-d_cd_ostia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 115 218 76 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_porto = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 171 83 253 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_velletri = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 226 205 174 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_frascati = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 26 71 95 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_albano = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 81 193 16 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_palestrina = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 137 58 193 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_sabina = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 192 180 114 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_ciriaco = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 248 46 35 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_lorenzo = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 47 167 212 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santa_cecilia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 103 33 133 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santa_balbina = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 158 155 54 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_pietro = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 214 20 231 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santa_anastasia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 13 142 152 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_damaso = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 69 8 73 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santa_rufina = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 124 129 250 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santa_sabina = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 179 251 171 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santa_maria = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 235 117 92 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santa_prassede = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 34 239 13 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santi_cosma_e_damiano = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 90 104 190 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_stefano = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 145 226 111 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_clemente = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 201 92 32 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_trastevere = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 0 213 209 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santi_silvestro_e_martino = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 56 79 130 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santi_nereo_ed_achilleo = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 111 201 51 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_eustachio = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 167 66 228 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santa_maria_nuova = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 222 188 149 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_teodoro = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 22 54 70 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_adriano = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 77 175 247 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_marcello = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 133 41 168 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_vitale = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 188 163 89 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_angelo = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 244 29 10 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santa_croce = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 43 150 187 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_portico_octaviae = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 99 16 108 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_crisogono = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 154 138 29 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_giorgio = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 210 3 206 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_cosmedin = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 9 125 127 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_marco = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 64 247 48 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santi_apostoli = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 120 112 225 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santa_pudenziana = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 175 234 146 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_eusebio = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 231 100 67 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santi_sergio_e_bacco = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 30 221 244 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_nicola = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 86 87 165 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santa_prisca = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 141 209 86 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santi_giovanni_e_paolo = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 197 75 7 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_quattro_coronati = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 252 196 184 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santa_agata = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 52 62 105 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_sisto = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 107 184 26 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santa_susanna = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 163 49 203 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santa_lucia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 218 171 124 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_via = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 18 37 45 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_apollinare = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 73 158 222 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_callisto = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 129 24 143 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_santa_agnese = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 184 146 64 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_cd_san_bartolomeo = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 240 11 241 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_toledo = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 247 112 71 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_santiago = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 204 149 128 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_tarragona = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 95 144 20 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_sevilla = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 195 187 75 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_braga = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 210 55 47 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_merida = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 150 140 10 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_tingitana = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 162 32 93 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_york = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 187 147 77 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_tuam = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 105 175 104 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_dublin = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 23 198 142 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_cashel = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 48 77 55 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_armagh = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 63 140 81 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_canterbury = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 255 75 40 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_rouen = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 25 25 145 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_reims = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 45 118 105 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_sens = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 73 31 176 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_tours = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 83 124 175 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_bourges = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 83 80 218 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_bordeaux = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 160 15 223 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_lyon = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 95 20 90 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_tarentaise = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 32 59 75 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_vienne = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 84 55 26 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_eauze = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 181 82 215 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_auch = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 181 82 215 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_narbonne = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 39 84 180 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_besancon = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 106 70 83 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_arles = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 234 79 22 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_aix = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 206 11 147 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_embrun = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 225 58 122 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_milano = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 152 83 150 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_genoa = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 141 174 245 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_cagliari = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 250 123 190 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_torres = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 132 242 179 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_oristano = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 162 135 203 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_reggio_calabria = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 201 176 118 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_cosenza = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 219 78 135 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_messina = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 121 162 158 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_palermo = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 98 211 135 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_santa_severina = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 150 100 80 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_ravenna = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 188 115 76 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_roma = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 183 197 216 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_pisa = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 125 137 66 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_capua = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 185 244 132 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_napoli = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 185 194 47 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_salerno = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 196 244 249 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_benevento = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 248 104 16 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_bari = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 130 213 28 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_trani = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 96 125 14 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_brindisi = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 247 222 35 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_aquileia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 113 200 139 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_esztergom = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 210 15 47 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_kalocsa = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 196 163 105 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_split = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 173 64 74 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_ohrid = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 94 48 169 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_ragusa = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 204 44 66 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_salzburg = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 108 112 152 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_trier = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 23 139 161 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_gniezno = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 91 65 41 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_mainz = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 224 161 238 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_magdeburg = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 130 68 127 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_cologne = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 115 160 180 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_hamburg = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 172 219 90 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_lund = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 246 35 43 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_uppsala = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 79 150 162 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_nidaros = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 173 78 128 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_kyiv = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 11 64 123 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_constantinople = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 239 95 149 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_jerusalem = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 64 195 223 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_antioch = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 152 69 13 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_cyprus = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 249 169 57 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_georgia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 114 77 173 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_kartli = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 72 150 174 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_armenia = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 147 25 139 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_seleucia_ctesiphon = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 70 195 100 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_tyre = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 210 210 210 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_alexandria = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 57 182 114 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_axum = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 156 195 110 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
-d_et_africa = {
-	landless = yes
-	capital = c_gen_buamu_4
-	color = { 43 45 115 }
-	can_create = { always = no }
-	can_create_on_partition = { always = no }
-	no_automatic_claims = yes
-	ai_primary_priority = { add = -1000 }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 h_kingdom_of_heaven = {
 	landless = yes
 	capital = c_gen_buamu_4
@@ -13606,4 +10627,18 @@ h_kingdom_of_heaven = {
 	can_create_on_partition = { always = no }
 	no_automatic_claims = yes
 	ai_primary_priority = { add = -1000 }
+
+	definite_form = yes
+
+	always_follows_primary_heir = yes
+
+	destroy_if_invalid_heir = yes
+
+	can_be_named_after_dynasty = no
+
+	can_use_nomadic_naming = no
+
+	can_destroy = {
+	}
+
 }

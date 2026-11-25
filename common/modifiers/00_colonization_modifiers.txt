@@ -109,7 +109,7 @@ settlement_overseen = {
 
 
 
-	development_growth_factor = 0.15
+	prosperity_growth_factor = 0.15
 
 	monthly_county_control_growth_add = 0.5
 	county_opinion_add = 20
@@ -134,7 +134,7 @@ settlement_overseen = {
 settlement_well_provisioned = {
 	icon = county_modifier_development_positive
 
-	development_growth_factor = 0.10
+	prosperity_growth_factor = 0.10
 	monthly_county_control_growth_add = 0.25
 	county_opinion_add = 15
 }
@@ -151,7 +151,7 @@ settlement_hardened_winter = {
 colony_rich_seam = {
 	icon = county_modifier_development_positive
 
-	development_growth_factor = 0.15
+	prosperity_growth_factor = 0.15
 	build_speed = -0.20
 	build_gold_cost = -0.15
 }
@@ -161,14 +161,14 @@ colony_purged_quarter = {
 	icon = county_modifier_control_negative
 
 	county_opinion_add = -25
-	development_growth_factor = -0.10
+	prosperity_growth_factor = -0.10
 }
 
 
 settlers_freeholder_charter = {
 	icon = county_modifier_development_positive
 	tax_mult = -0.15
-	development_growth_factor = 0.25
+	prosperity_growth_factor = 0.25
 	county_opinion_add = 20
 	monthly_county_control_growth_add = 0.2
 }
@@ -176,7 +176,7 @@ settlers_freeholder_charter = {
 
 settlers_commuted_settlement = {
 	icon = county_modifier_development_positive
-	development_growth_factor = 0.10
+	prosperity_growth_factor = 0.10
 	county_opinion_add = 5
 }
 

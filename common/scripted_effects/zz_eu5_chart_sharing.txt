@@ -1,0 +1,96 @@
+﻿# CHARACTER scope: merge charts on this ruler's and the top liege's kingdom-or-higher titles.
+# Optional eu5_chart_source_title includes the title just acquired or the voyage title.
+eu5_sync_realm_charts_effect = {
+ if = {
+  limit = {
+   OR = {
+    scope:eu5_chart_source_title ?= { has_variable = eu5_charted_europe }
+    any_held_title = { tier >= tier_kingdom has_variable = eu5_charted_europe }
+    top_liege ?= { any_held_title = { tier >= tier_kingdom has_variable = eu5_charted_europe } }
+   }
+  }
+  scope:eu5_chart_source_title ?= { set_variable = eu5_charted_europe }
+  every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_europe }
+  top_liege ?= { every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_europe } }
+ }
+ if = {
+  limit = {
+   OR = {
+    scope:eu5_chart_source_title ?= { has_variable = eu5_charted_africa }
+    any_held_title = { tier >= tier_kingdom has_variable = eu5_charted_africa }
+    top_liege ?= { any_held_title = { tier >= tier_kingdom has_variable = eu5_charted_africa } }
+   }
+  }
+  scope:eu5_chart_source_title ?= { set_variable = eu5_charted_africa }
+  every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_africa }
+  top_liege ?= { every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_africa } }
+ }
+ if = {
+  limit = {
+   OR = {
+    scope:eu5_chart_source_title ?= { has_variable = eu5_charted_asia }
+    any_held_title = { tier >= tier_kingdom has_variable = eu5_charted_asia }
+    top_liege ?= { any_held_title = { tier >= tier_kingdom has_variable = eu5_charted_asia } }
+   }
+  }
+  scope:eu5_chart_source_title ?= { set_variable = eu5_charted_asia }
+  every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_asia }
+  top_liege ?= { every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_asia } }
+ }
+ if = {
+  limit = {
+   OR = {
+    scope:eu5_chart_source_title ?= { has_variable = eu5_charted_north_america }
+    any_held_title = { tier >= tier_kingdom has_variable = eu5_charted_north_america }
+    top_liege ?= { any_held_title = { tier >= tier_kingdom has_variable = eu5_charted_north_america } }
+   }
+  }
+  scope:eu5_chart_source_title ?= { set_variable = eu5_charted_north_america }
+  every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_north_america }
+  top_liege ?= { every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_north_america } }
+ }
+ if = {
+  limit = {
+   OR = {
+    scope:eu5_chart_source_title ?= { has_variable = eu5_charted_south_america }
+    any_held_title = { tier >= tier_kingdom has_variable = eu5_charted_south_america }
+    top_liege ?= { any_held_title = { tier >= tier_kingdom has_variable = eu5_charted_south_america } }
+   }
+  }
+  scope:eu5_chart_source_title ?= { set_variable = eu5_charted_south_america }
+  every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_south_america }
+  top_liege ?= { every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_south_america } }
+ }
+ if = {
+  limit = {
+   OR = {
+    scope:eu5_chart_source_title ?= { has_variable = eu5_charted_oceania }
+    any_held_title = { tier >= tier_kingdom has_variable = eu5_charted_oceania }
+    top_liege ?= { any_held_title = { tier >= tier_kingdom has_variable = eu5_charted_oceania } }
+   }
+  }
+  scope:eu5_chart_source_title ?= { set_variable = eu5_charted_oceania }
+  every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_oceania }
+  top_liege ?= { every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_oceania } }
+ }
+ if = {
+  limit = {
+   OR = {
+    scope:eu5_chart_source_title ?= { has_variable = eu5_charted_atlantic }
+    any_held_title = { tier >= tier_kingdom has_variable = eu5_charted_atlantic }
+    top_liege ?= { any_held_title = { tier >= tier_kingdom has_variable = eu5_charted_atlantic } }
+   }
+  }
+  scope:eu5_chart_source_title ?= { set_variable = eu5_charted_atlantic }
+  every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_atlantic }
+  top_liege ?= { every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_atlantic } }
+ }
+}
+
+# CHARACTER scope: grant charts of both Americas to the holder and the top liege.
+eu5_award_american_charts_effect = {
+ every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_north_america }
+ top_liege ?= { every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_north_america } }
+ every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_south_america }
+ top_liege ?= { every_held_title = { limit = { tier >= tier_kingdom } set_variable = eu5_charted_south_america } }
+}

@@ -11,7 +11,7 @@ abandon_hook_interaction = {
 	icon = forgiving
 
 	desc = abandon_hook_interaction_desc
-
+	
 	is_available = {
 		trigger_if = {
 			limit = { is_ai = yes }
@@ -50,7 +50,7 @@ abandon_hook_interaction = {
 						target = scope:recipient
 						type = house_head_hook
 					}
-				}
+				}	
 			}
 			text = need_non_house_head_hook
 		}
@@ -66,15 +66,15 @@ abandon_hook_interaction = {
 			text = need_non_best_friend_hook
 		}
 	}
-
+	
 	on_accept = {
-		scope:actor = {
+		scope:actor = {	
 			send_interface_toast = {
 				type = event_toast_effect_neutral
 				title =  msg_abandon_hook_interaction_title
 				left_icon = scope:actor
 				right_icon = scope:recipient
-
+				
 				use_hook = scope:recipient
 				if = {
 					limit = {
@@ -89,7 +89,7 @@ abandon_hook_interaction = {
 						forgiving = medium_stress_impact_loss
 					}
 				}
-
+		
 				scope:recipient = {
 					add_opinion = {
 						target = scope:actor
@@ -100,7 +100,7 @@ abandon_hook_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_gain
@@ -162,7 +162,7 @@ abandon_hook_interaction = {
 	ai_target_quick_trigger = {
 		adult = yes
 	}
-
+	
 	ai_will_do = {
 		base = 100
 	}
@@ -182,33 +182,37 @@ dismiss_strong_hook_interaction = {
 	category = interaction_category_hostile
 	icon = arbitrary
 
-	cost = {
+	cost = { 
 		influence = {
 			value = 0
-			if = {
-				limit = {
-					exists = var:movement_power
-					government_has_flag = government_is_celestial
+			scope:actor = {
+				if = {
+					limit = {
+						exists = var:movement_power
+						government_has_flag = government_is_celestial
+					}
+					add = monumental_influence_value
 				}
-				add = monumental_influence_value
 			}
 		}
 		prestige = {
 			value = 0
-			if = {
-				limit = {
-					NAND = {
-						exists = var:movement_power
-						government_has_flag = government_is_celestial
+			scope:actor = {
+				if = {
+					limit = {
+						NAND = {
+							exists = var:movement_power
+							government_has_flag = government_is_celestial
+						}
 					}
+					add = monumental_prestige_value
 				}
-				add = monumental_prestige_value
 			}
 		}
 	}
 
 	desc = dismiss_strong_hook_interaction_desc
-
+	
 	is_available = {
 		OR = {
 			has_trait = arbitrary
@@ -266,7 +270,7 @@ dismiss_strong_hook_interaction = {
 			}
 		}
 	}
-
+	
 	on_accept = {
 		scope:actor = {
 			send_interface_toast = {
@@ -274,21 +278,21 @@ dismiss_strong_hook_interaction = {
 				title =  msg_dismiss_hook_interaction_title
 				left_icon = scope:actor
 				right_icon = scope:recipient
-
-				scope:recipient = {
+		
+				scope:recipient = {	
 					remove_hook  =  { target = scope:actor }
 					add_opinion = {
 						target = scope:actor
 						modifier = lost_strong_hook_opinion
 					}
-				}
+				}	
 
-				add_tyranny = 35
+				add_tyranny = 35	
 			}
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = medium_unity_gain
@@ -305,7 +309,7 @@ dismiss_strong_hook_interaction = {
 		empire = 60
 		hegemony = 60
 	}
-
+	
 	ai_will_do = {
 		base = 100
 	}
@@ -346,30 +350,34 @@ dismiss_weak_hook_interaction = {
 	cost = {
 		influence = {
 			value = 0
-			if = {
-				limit = {
-					exists = var:movement_power
-					government_has_flag = government_is_celestial
+			scope:actor = {
+				if = {
+					limit = {
+						exists = var:movement_power
+						government_has_flag = government_is_celestial
+					}
+					add = major_influence_value
 				}
-				add = major_influence_value
 			}
 		}
 		prestige = {
 			value = 0
-			if = {
-				limit = {
-					NAND = {
-						exists = var:movement_power
-						government_has_flag = government_is_celestial
+			scope:actor = {
+				if = {
+					limit = {
+						NAND = {
+							exists = var:movement_power
+							government_has_flag = government_is_celestial
+						}
 					}
+					add = major_prestige_value
 				}
-				add = major_prestige_value
 			}
 		}
-	}
+	} 
 
 	desc = dismiss_weak_hook_interaction_desc
-
+	
 	is_available = {
 		OR = {
 			has_trait = arbitrary
@@ -427,7 +435,7 @@ dismiss_weak_hook_interaction = {
 			}
 		}
 	}
-
+	
 	on_accept = {
 		scope:actor = {
 			send_interface_toast = {
@@ -436,7 +444,7 @@ dismiss_weak_hook_interaction = {
 				left_icon = scope:actor
 				right_icon = scope:recipient
 
-				scope:recipient = {
+				scope:recipient = {	
 					remove_hook  =  { target = scope:actor }
 					add_opinion = {
 						target = scope:actor
@@ -445,7 +453,7 @@ dismiss_weak_hook_interaction = {
 					progress_towards_rival_effect = {
 						CHARACTER = scope:actor
 						REASON = rival_dismissed_weak_hook
-						 OPINION = default_rival_opinion
+ 						OPINION = default_rival_opinion
 					}
 				}
 
@@ -454,7 +462,7 @@ dismiss_weak_hook_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_gain
@@ -481,7 +489,7 @@ dismiss_weak_hook_interaction = {
 	ai_target_quick_trigger = {
 		adult = yes
 	}
-
+	
 	ai_frequency_by_tier = {
 		barony = 0
 		county = 120
@@ -490,7 +498,7 @@ dismiss_weak_hook_interaction = {
 		empire = 60
 		hegemony = 60
 	}
-
+	
 	ai_will_do = {
 		base = 100
 	}
@@ -572,7 +580,7 @@ force_duel_criminals_interaction = {
 			}
 		}
 	}
-
+	
 	cooldown_against_recipient = { years = 10 }
 
 	on_send = {
@@ -603,7 +611,7 @@ force_duel_criminals_interaction = {
 				FATALITY = no
 				FIXED = no
 				LOCALE = terrain_scope
-				OUTPUT_EVENT = trait_specific_interactions.0155
+				OUTPUT_EVENT = trait_specific_interactions.0155 
 				INVALIDATION_EVENT = fp1_tbc.0102
 			}
 		}
@@ -646,7 +654,7 @@ force_duel_criminals_interaction = {
 				INVALIDATION_EVENT = fp1_tbc.0102
 			}
 		}
-
+		
 	}
 
 	auto_accept = yes
@@ -670,7 +678,7 @@ force_duel_criminals_interaction = {
 		ai_recipients = family
 		max = 10
 	}
-
+	
 	ai_frequency_by_tier = {
 		barony = 0
 		county = 0
@@ -682,7 +690,7 @@ force_duel_criminals_interaction = {
 
 	ai_will_do = {
 		base = -50
-
+		
 		# Factor for personality (excluding realism).
 		modifier = {
 			add = {
@@ -804,7 +812,7 @@ force_duel_anyone_interaction = {
 			}
 		}
 	}
-
+	
 	cost = { prestige = medium_prestige_value }
 	cooldown_against_recipient = { years = 10 }
 
@@ -840,7 +848,7 @@ force_duel_anyone_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
 			VALUE = medium_unity_loss
@@ -883,7 +891,7 @@ force_duel_anyone_interaction = {
 
 	ai_will_do = {
 		base = -50
-
+		
 		# Factor for personality (excluding realism).
 		modifier = {
 			add = {
@@ -931,5 +939,5 @@ force_duel_anyone_interaction = {
 			add = -1000
 		}
 	}
-
+	
 }

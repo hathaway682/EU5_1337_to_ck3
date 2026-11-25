@@ -59,7 +59,7 @@
 				limit = { tier <= tier_county }
 				title_province = {
 					barony_controller = scope:actor
-					has_ongoing_construction = no
+					has_ongoing_holding_construction = no
 				}
 			}
 		}
@@ -83,7 +83,7 @@
 				scope:target.title_province ?= {
 					holding_pre_feudalize_effect = yes
 					set_holding_type = castle_holding
-				}
+				}	
 			}
 		}
 	}
@@ -153,7 +153,7 @@ tribalize_holding_interaction = {
 				limit = { tier <= tier_county }
 				title_province = {
 					barony_controller = scope:actor
-					has_ongoing_construction = no
+					has_ongoing_holding_construction = no
 				}
 			}
 		}
@@ -232,7 +232,7 @@ tribalize_holding_interaction = {
 				scope:target.title_province ?= {
 					holding_pre_tribalize_effect = yes
 					set_holding_type = tribal_holding
-				}
+				}		
 			}
 		}
 	}
@@ -274,7 +274,7 @@ support_feudalize_tribal_holding_interaction = {
 			# Warring AI don't do this - They want to spend their gold on war!
 			ai_has_warlike_personality = no
 		}
-		NOR = {
+		NOR = { 
 			government_has_flag = government_is_tribal
 			government_has_flag = government_is_nomadic
 		}
@@ -285,7 +285,7 @@ support_feudalize_tribal_holding_interaction = {
 		scope:recipient ?= { tnh_non_wilderness_character_trigger = yes }
 		scope:recipient = {
 			target_is_liege_or_above = scope:actor
-			NOR = {
+			NOR = { 
 				government_has_flag = government_is_tribal
 				government_has_flag = government_is_nomadic
 			}
@@ -306,12 +306,12 @@ support_feudalize_tribal_holding_interaction = {
 	can_be_picked_title = {
 		scope:target = {
 			is_capital_barony = no # we'll use the county in that case
-
+			
 			trigger_if = {
 				limit = { tier <= tier_county }
 				title_province = {
 					barony_controller = scope:recipient
-					has_ongoing_construction = no
+					has_ongoing_holding_construction = no
 				}
 			}
 		}
@@ -423,8 +423,8 @@ support_feudalize_tribal_holding_interaction = {
 								}
 							}
 						}
-					}
-				}
+					}	
+				}	
 			}
 		}
 		scope:actor = {
@@ -435,7 +435,7 @@ support_feudalize_tribal_holding_interaction = {
 			}
 		}
 	}
-
+	
 	# The AI doesn't check this very often - So if they have more important expenses, they will put their gold to better use first.
 	ai_frequency_by_tier = {
 		barony = 0
@@ -445,12 +445,12 @@ support_feudalize_tribal_holding_interaction = {
 		empire = 72
 		hegemony = 72
 	}
-
+	
 	ai_targets = {
 		ai_recipients = vassals
 		max = 10
 	}
-
+	
 	ai_will_do = {
 		base = 25
 		modifier = {
@@ -538,7 +538,7 @@ turn_subject_into_mandala_interaction = {
 	is_valid_showing_failures_only = {
 		#Dharmic Mandalas require Dharmic converts
 		#Reformed Pagan Mandalas require reformed faiths
-		scope:actor.religion = {
+		scope:actor.religion = { 
 			switch = {
 				trigger = is_in_family
 				rf_eastern = {
@@ -663,3 +663,4 @@ turn_subject_into_mandala_interaction = {
 		turn_subject_into_mandala_acceptance_modifier = yes
 	}
 }
+

@@ -1,16 +1,161 @@
-﻿on_game_start = {
-    on_actions = { cu_corridor_apply_permanent_modifiers }
-}
-on_game_start_after_lobby = {
-    on_actions = { cu_corridor_initialize_holdings }
-}
-yearly_global_pulse = {
-    on_actions = { cu_corridor_apply_permanent_modifiers }
+﻿on_game_start_after_lobby = {
+	on_actions = { cu_corridor_apply_modifiers_on_start }
 }
 
-cu_corridor_apply_permanent_modifiers = {
-    effect = { cu_corridor_apply_permanent_modifiers_effect = yes }
-}
-cu_corridor_initialize_holdings = {
-    effect = { cu_corridor_initialize_holdings_effect = yes }
+cu_corridor_apply_modifiers_on_start = {
+	effect = {
+		province:6013 = { cu_corridor_apply_modifier_effect = yes } # tharthar
+		province:6173 = { cu_corridor_apply_modifier_effect = yes } # rumah_jarrarah_corridor
+		province:6285 = { cu_corridor_apply_modifier_effect = yes } # tanumah_mashdhubah_corridor
+		province:6343 = { cu_corridor_apply_modifier_effect = yes } # mirbat_masirah_corridor1
+		province:6344 = { cu_corridor_apply_modifier_effect = yes } # mirbat_masirah_corridor2
+		province:6345 = { cu_corridor_apply_modifier_effect = yes } # mirbat_masirah_corridor3
+		province:6364 = { cu_corridor_apply_modifier_effect = yes } # syrian_desert_corridor1
+		province:6365 = { cu_corridor_apply_modifier_effect = yes } # syrian_desert_corridor2
+		province:6366 = { cu_corridor_apply_modifier_effect = yes } # syrian_desert_corridor3
+		province:6367 = { cu_corridor_apply_modifier_effect = yes } # syrian_desert_corridor4
+		province:6368 = { cu_corridor_apply_modifier_effect = yes } # syrian_desert_corridor5
+		province:6369 = { cu_corridor_apply_modifier_effect = yes } # syrian_desert_corridor6
+		province:6370 = { cu_corridor_apply_modifier_effect = yes } # syrian_desert_corridor7
+		province:6371 = { cu_corridor_apply_modifier_effect = yes } # syrian_desert_corridor8
+		province:6372 = { cu_corridor_apply_modifier_effect = yes } # syrian_desert_corridor9
+		province:6373 = { cu_corridor_apply_modifier_effect = yes } # syrian_desert_corridor10
+		province:6374 = { cu_corridor_apply_modifier_effect = yes } # syrian_desert_corridor11
+		province:6375 = { cu_corridor_apply_modifier_effect = yes } # syrian_desert_corridor12
+		province:6376 = { cu_corridor_apply_modifier_effect = yes } # syrian_desert_corridor13
+		province:6383 = { cu_corridor_apply_modifier_effect = yes } # ash_shamli_tayma_corridor
+		province:6384 = { cu_corridor_apply_modifier_effect = yes } # bir_fajr_tayma_corridor
+		province:6392 = { cu_corridor_apply_modifier_effect = yes } # bir_fajr_basithah_corridor
+		province:6804 = { cu_corridor_apply_modifier_effect = yes } # ravar_nayband_corridor
+		province:6933 = { cu_corridor_apply_modifier_effect = yes } # anarak_jondaq_corridor
+		province:6934 = { cu_corridor_apply_modifier_effect = yes } # ribat_ushturan_jondaq_corridor
+		province:6935 = { cu_corridor_apply_modifier_effect = yes } # tabas_al_tamr_ribat_ushturan_corridor
+		province:10397 = { cu_corridor_apply_modifier_effect = yes } # puur_trail
+		province:10451 = { cu_corridor_apply_modifier_effect = yes } # chona_trail
+		province:10452 = { cu_corridor_apply_modifier_effect = yes } # markhaya_trail
+		province:10467 = { cu_corridor_apply_modifier_effect = yes } # tunguska_trail6
+		province:10468 = { cu_corridor_apply_modifier_effect = yes } # tunguska_trail5
+		province:10469 = { cu_corridor_apply_modifier_effect = yes } # vilyuy_trail
+		province:10475 = { cu_corridor_apply_modifier_effect = yes } # tunguska_trail1
+		province:10476 = { cu_corridor_apply_modifier_effect = yes } # tunguska_trail2
+		province:10477 = { cu_corridor_apply_modifier_effect = yes } # tunguska_trail3
+		province:10478 = { cu_corridor_apply_modifier_effect = yes } # tunguska_trail4
+		province:10485 = { cu_corridor_apply_modifier_effect = yes } # chauchu_trail1
+		province:10492 = { cu_corridor_apply_modifier_effect = yes } # chauchu_trail2
+		province:10493 = { cu_corridor_apply_modifier_effect = yes } # chauchu_trail3
+		province:10502 = { cu_corridor_apply_modifier_effect = yes } # anadyr_trail
+		province:10541 = { cu_corridor_apply_modifier_effect = yes } # yeropol_river
+		province:10542 = { cu_corridor_apply_modifier_effect = yes } # anadyr_river
+		province:10558 = { cu_corridor_apply_modifier_effect = yes } # kamchatka_trail1
+		province:10559 = { cu_corridor_apply_modifier_effect = yes } # kamchatka_trail2
+		province:10591 = { cu_corridor_apply_modifier_effect = yes } # anjuj_river
+		province:10616 = { cu_corridor_apply_modifier_effect = yes } # kolyma_river
+		province:10654 = { cu_corridor_apply_modifier_effect = yes } # soyangi_trail
+		province:10667 = { cu_corridor_apply_modifier_effect = yes } # indigiir_trail
+		province:10668 = { cu_corridor_apply_modifier_effect = yes } # orgulaax_trail
+		province:10675 = { cu_corridor_apply_modifier_effect = yes } # kolyma_trail
+		province:10893 = { cu_corridor_apply_modifier_effect = yes } # dulgalaax_trail
+		province:10967 = { cu_corridor_apply_modifier_effect = yes } # uyandina_trail
+		province:10975 = { cu_corridor_apply_modifier_effect = yes } # ol_de_trail
+		province:10987 = { cu_corridor_apply_modifier_effect = yes } # lena_trail1
+		province:10988 = { cu_corridor_apply_modifier_effect = yes } # lena_trail2
+		province:10989 = { cu_corridor_apply_modifier_effect = yes } # lena_trail3
+		province:11004 = { cu_corridor_apply_modifier_effect = yes } # uolya_trail
+		province:14041 = { cu_corridor_apply_modifier_effect = yes } # horn_desert_corridor1
+		province:14042 = { cu_corridor_apply_modifier_effect = yes } # horn_desert_corridor2
+		province:14043 = { cu_corridor_apply_modifier_effect = yes } # horn_desert_corridor3
+		province:14045 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt5
+		province:14046 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt13
+		province:14047 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor26
+		province:14048 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor27
+		province:14049 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor28
+		province:14050 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor29
+		province:14051 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor30
+		province:14480 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt11
+		province:14501 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt17
+		province:14514 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt9
+		province:14522 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt6
+		province:14523 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt8
+		province:14524 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt10
+		province:14525 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt12
+		province:14526 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt16
+		province:14538 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt1
+		province:14539 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt2
+		province:14540 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt3
+		province:14541 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt4
+		province:14542 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt7
+		province:14543 = { cu_corridor_apply_modifier_effect = yes } # connector_libya7
+		province:14544 = { cu_corridor_apply_modifier_effect = yes } # connector_libya14
+		province:14545 = { cu_corridor_apply_modifier_effect = yes } # connector_libya16
+		province:14559 = { cu_corridor_apply_modifier_effect = yes } # connector_libya9
+		province:14569 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt14
+		province:14570 = { cu_corridor_apply_modifier_effect = yes } # connector_egypt15
+		province:14703 = { cu_corridor_apply_modifier_effect = yes } # moulouya_corridor1
+		province:14704 = { cu_corridor_apply_modifier_effect = yes } # moulouya_corridor2
+		province:14705 = { cu_corridor_apply_modifier_effect = yes } # moulouya_corridor3
+		province:14849 = { cu_corridor_apply_modifier_effect = yes } # ain_abalessa_corridor
+		province:14850 = { cu_corridor_apply_modifier_effect = yes } # abalessa_djanet_corridor
+		province:14851 = { cu_corridor_apply_modifier_effect = yes } # djanet_ghadames_corridor
+		province:14852 = { cu_corridor_apply_modifier_effect = yes } # ghadames_ouargla_corridor
+		province:14853 = { cu_corridor_apply_modifier_effect = yes } # tozeur_ghadames_corridor
+		province:14854 = { cu_corridor_apply_modifier_effect = yes } # connector_libya1
+		province:14855 = { cu_corridor_apply_modifier_effect = yes } # connector_libya8
+		province:14861 = { cu_corridor_apply_modifier_effect = yes } # connector_libya11
+		province:14862 = { cu_corridor_apply_modifier_effect = yes } # connector_libya15
+		province:14863 = { cu_corridor_apply_modifier_effect = yes } # connector_libya10
+		province:14864 = { cu_corridor_apply_modifier_effect = yes } # connector_libya12
+		province:14865 = { cu_corridor_apply_modifier_effect = yes } # connector_libya3
+		province:14866 = { cu_corridor_apply_modifier_effect = yes } # connector_libya6
+		province:14867 = { cu_corridor_apply_modifier_effect = yes } # connector_libya13
+		province:14875 = { cu_corridor_apply_modifier_effect = yes } # connector_libya4
+		province:14876 = { cu_corridor_apply_modifier_effect = yes } # connector_libya2
+		province:14877 = { cu_corridor_apply_modifier_effect = yes } # connector_libya5
+		province:14878 = { cu_corridor_apply_modifier_effect = yes } # connector_libya17
+		province:14883 = { cu_corridor_apply_modifier_effect = yes } # ain_salah_el_golea_corridor
+		province:14884 = { cu_corridor_apply_modifier_effect = yes } # timimoun_qulaia_corridor
+		province:14892 = { cu_corridor_apply_modifier_effect = yes } # ghardaia_el_golea_corridor
+		province:14893 = { cu_corridor_apply_modifier_effect = yes } # ouargla_el_golea_corridor
+		province:14899 = { cu_corridor_apply_modifier_effect = yes } # beni_sabih_tabelbala_corridor
+		province:14900 = { cu_corridor_apply_modifier_effect = yes } # ksar_es_souk_bechar_corridor
+		province:14901 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor08
+		province:14902 = { cu_corridor_apply_modifier_effect = yes } # tabelbala_charouine_corridor
+		province:14903 = { cu_corridor_apply_modifier_effect = yes } # tabelbala_taghaza_corridor1
+		province:14904 = { cu_corridor_apply_modifier_effect = yes } # tabelbala_taghaza_corridor2
+		province:14909 = { cu_corridor_apply_modifier_effect = yes } # touggourt_ouargla_corridor
+		province:14914 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor31
+		province:14915 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor32
+		province:14916 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor33
+		province:14921 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor07
+		province:14922 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor34
+		province:15504 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor01
+		province:15505 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor21
+		province:15506 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor22
+		province:15575 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor12
+		province:15577 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor23
+		province:15601 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor06
+		province:15602 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor05
+		province:15603 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor04
+		province:15604 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor02
+		province:15637 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor14
+		province:15638 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor20
+		province:15649 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor03
+		province:15650 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor13
+		province:15651 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor19
+		province:15652 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor17
+		province:15653 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor15
+		province:15654 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor16
+		province:15655 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor18
+		province:15737 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor25
+		province:15741 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor09
+		province:15742 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor24
+		province:15743 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor10
+		province:15744 = { cu_corridor_apply_modifier_effect = yes } # sahel_corridor11
+		province:18386 = { cu_corridor_apply_modifier_effect = yes } # dezadeash_trail
+		province:18387 = { cu_corridor_apply_modifier_effect = yes } # chilkootg_trail
+		province:18478 = { cu_corridor_apply_modifier_effect = yes } # kechika_trail
+		province:18479 = { cu_corridor_apply_modifier_effect = yes } # kahntah_trail
+		province:18482 = { cu_corridor_apply_modifier_effect = yes } # tses_kiya_trail
+		province:18483 = { cu_corridor_apply_modifier_effect = yes } # ediziza_trail
+		province:18484 = { cu_corridor_apply_modifier_effect = yes } # kinaskan_trail
+	}
 }
