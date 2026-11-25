@@ -1,0 +1,145 @@
+﻿l_simp_chinese:
+ # === 宣战理由 ===
+ phx_ottoman_ghazi_crossing_cb:0 "奥斯曼加齐渡海征伐"
+ PHX_OTTOMAN_GHAZI_CROSSING_WAR_NAME:0 "$ORDER$$FIRST_ADJ$征讨$DEFENDER$加齐渡海之战"
+ PHX_OTTOMAN_GHAZI_CROSSING_WAR_NAME_BASE:0 "$FIRST_ADJ$$SECOND_NAME$"
+ PHX_OTTOMAN_GHAZI_CROSSING_CB_NAME:0 "发动鲁米利亚加齐渡海征伐"
+ phx_ottoman_ghazi_crossing_cb_victory_desc_attacker:0 "你的加齐战旗横渡海峡踏入巴尔干，将目标公国纳入奥斯曼治下。"
+ phx_ottoman_ghazi_crossing_cb_victory_desc:0 "[attacker.GetShortUIName|U]率加齐大军渡过海峡，将目标巴尔干公国收入奥斯曼版图。"
+ phx_ottoman_ghazi_crossing_cb_white_peace_desc:0 "加齐远征军撤回海峡彼岸，未能在欧洲夺取永久领土。"
+ phx_ottoman_ghazi_crossing_cb_defeat_desc:0 "奥斯曼渡海攻势受挫，[attacker.GetShortUIName]被迫赔款并折损威名。"
+ phx_ottoman_ghazi_crossing_cb_invalidated_desc:0 "因目标领土易主，本次奥斯曼加齐渡海征伐宣告失效。"
+
+ # === 修正 ===
+ phx_ott_ghazi_zeal_modifier:0 "奥斯曼加齐狂热"
+ phx_ott_ghazi_zeal_modifier_desc:0 "边疆突骑与虔诚勇士齐聚奥斯曼战旗之下，马蹄如风，渴望在西方开辟新的边疆封土。"
+ phx_ott_gallipoli_bridgehead_modifier:0 "加里波利海峡桥头堡"
+ phx_ott_gallipoli_bridgehead_modifier_desc:0 "加固的船坞、渡船队与前线驻军牢牢扼守着连接小亚细亚与鲁米利亚的咽喉渡口。"
+ phx_ott_janissary_corps_modifier:0 "耶尼切里新军营团"
+ phx_ott_janissary_corps_modifier_desc:0 "直属君主炉灶的常备精锐步兵纪律严明，为奥斯曼大军注入了强悍的攻城与阵战铁壁。"
+ phx_ott_edirne_capital_modifier:0 "埃迪尔内帝都气象"
+ phx_ott_edirne_capital_modifier_desc:0 "新建的清真寺、石桥、兵营与巴扎将埃迪尔内塑造成奥斯曼欧洲霸权跳动的心脏。"
+ phx_ser_dusan_code_modifier:0 "杜尚沙皇法典"
+ phx_ser_dusan_code_modifier_desc:0 "气势恢宏的帝国法典熔铸塞尔维亚古俗与拜占庭法理，巩固王权法度与重甲骑士战力。"
+ phx_bal_anti_ottoman_league_modifier:0 "多瑙河防卫壁垒"
+ phx_bal_anti_ottoman_league_modifier_desc:0 "巴尔干山口的烽火台与同舟共济的正教意志，令多瑙河下游诸邦凝成抵御外侮的坚盾。"
+ phx_bul_tarnovo_school_modifier:0 "特尔诺沃文学学派"
+ phx_bul_tarnovo_school_modifier_desc:0 "修道院抄经室、鎏金福音手抄本与静修派学者令特尔诺沃绽放为南斯拉夫正教文化的璀璨灯塔。"
+ phx_wal_carpathian_defiance_modifier:0 "喀尔巴阡不屈之志"
+ phx_wal_carpathian_defiance_modifier_desc:0 "山地伏击破敌的骄傲记忆激励着瓦拉几亚军民，将每一处隘口与密林化作令入侵者胆寒的绝境。"
+
+ # === 部队名称 ===
+ phx_ott_ghazi_vanguard_name:0 "赫勒斯滂加齐先锋"
+ phx_ott_janissary_ocagi_name:0 "御前耶尼切里新军"
+ phx_ott_gallipoli_raiders_name:0 "苏莱曼鲁米利亚先锋"
+ phx_ott_beylik_horsemen_name:0 "安纳托利亚边疆西帕希"
+ phx_ser_vlastela_cavalry_name:0 "塞尔维亚贵族重骑团"
+ phx_wal_carpathian_levies_name:0 "喀尔巴阡山地弓手"
+
+ # === 决议 ===
+ phx_ott_cross_hellespont_decision:0 "夺占加里波利并横渡海峡"
+ phx_ott_cross_hellespont_decision_desc:0 "立于比提尼亚的丘陵之巅，我军骑手隔着银带般的赫勒斯滂海峡，已能遥望色雷斯富饶的沃野。开辟稳固的渡海通道，将令奥斯曼王室从安纳托利亚边疆贝伊国跃上欧洲逐鹿的宏大舞台。"
+ phx_ott_cross_hellespont_decision_tooltip:0 "建立跨越赫勒斯滂海峡的永久渡口，开启向鲁米利亚进军的征程。"
+ phx_ott_cross_hellespont_decision_confirm:0 "挥师横渡欧洲彼岸"
+ phx_ott_cross_hellespont_effect_tt:0 "激起奥斯曼加齐热忱，加固海峡桥头堡或获得加里波利与色雷斯宣称，并集结加齐渡海先锋。"
+
+ phx_ott_move_capital_edirne_decision:0 "定都埃迪尔内"
+ phx_ott_move_capital_edirne_decision_desc:0 "埃迪尔内雄踞马里查河、通贾河与阿尔达河交汇之处，扼守君士坦丁堡通往巴尔干腹地的每一条干道。将王庭自布尔萨迁往埃迪尔内，便向天下宣示：奥斯曼人在欧洲的统治并非一时劫掠，而是万年基业。"
+ phx_ott_move_capital_edirne_decision_tooltip:0 "将奥斯曼王国都城迁至埃迪尔内，确立面向巴尔干的欧洲中枢。"
+ phx_ott_move_capital_edirne_decision_confirm:0 "诏告天下定都埃迪尔内"
+ phx_ott_move_capital_edirne_effect_tt:0 "迁都埃迪尔内，极大推动此城的繁荣建设、城防与王室威望。"
+
+ phx_ott_found_janissary_corps_decision:0 "组建耶尼切里新军营团"
+ phx_ott_found_janissary_corps_decision_desc:0 "部族弓骑虽能在旷野迅捷破敌，但面对高城深池与桀骜的边疆贝伊，君主亟需一支只效忠于王庭的常备铁军。创立纪律森严的御前步兵营团，将为奥斯曼武功奠定数百年根基。"
+ phx_ott_found_janissary_corps_decision_tooltip:0 "建立直属君主节制的常备耶尼切里御前步兵营团。"
+ phx_ott_found_janissary_corps_decision_confirm:0 "竖起新军炉灶战旗"
+ phx_ott_found_janissary_corps_effect_tt:0 "建立耶尼切里新军制度，获得持久的重步兵与攻城优势，并在首都编成御前新军。"
+
+ phx_ser_proclaim_serbian_empire_decision:0 "加冕塞尔维亚与希腊人之沙皇"
+ phx_ser_proclaim_serbian_empire_decision_desc:0 "从拉什卡高地直到马其顿肥沃的河谷，塞尔维亚的战旗已令日渐衰微的君士坦丁堡黯然失色。在斯科普里召集大主教与众贵族举行帝冕大典并颁行宏大法典，塞尔维亚必将成为巴尔干群雄之首。"
+ phx_ser_proclaim_serbian_empire_decision_tooltip:0 "在巴尔干宣告塞尔维亚沙皇帝位并颁布《杜尚法典》。"
+ phx_ser_proclaim_serbian_empire_decision_confirm:0 "登基称帝颁布法典"
+ phx_ser_proclaim_serbian_empire_effect_tt:0 "施行《杜尚法典》，促进斯科普里繁荣，并确立塞尔维亚对马其顿与希腊的帝国雄图。"
+
+ phx_bal_danubian_bulwark_decision:0 "宣告巴尔干防卫壁垒"
+ phx_bal_danubian_bulwark_decision_desc:0 "巴尔干山口以南风雷骤起，各方兵马正围绕风雨飘摇的色雷斯激烈厮杀。加固大河渡口并号召周边基督教诸邦捐弃前嫌、守望相助，多瑙河下游诸领主方能铸起抵御外敌的钢铁长堤。"
+ phx_bal_danubian_bulwark_decision_tooltip:0 "加固多瑙河下游核心防务，并联合邻近巴尔干朝廷共筑防线。"
+ phx_bal_danubian_bulwark_decision_confirm:0 "高举防卫壁垒战旗"
+ phx_bal_danubian_bulwark_effect_tt:0 "大幅提升本国防御战备，加固首都边区城防，并增进与周边巴尔干君主的睦邻关系。"
+
+ # === 事件（16项巴尔干与奥斯曼事件） ===
+ phx_bal.0001.t:0 "奥斯曼嗣君之旗"
+ phx_bal.0001.desc:0 "乌卢达山麓之下，布尔萨城内甲坊叮当、托钵僧道堂香火不断，来自安纳托利亚草原的新锐骑手络绎而至。自罗马人手中夺下尼西亚与尼科米底亚后，奥斯曼王室已巍然立于马尔马拉海门前——南有散落诸贝伊国，对岸则是日薄西山的古老帝国。"
+ phx_bal.0001.a:0 "鞍不离背——加齐的西进才刚刚开始。"
+ phx_bal.0001.b:0 "铸造银币、整饬布尔萨，以法治奠定王基。"
+
+ phx_bal.0005.t:0 "加里波利断壁残垣"
+ phx_bal.0005.desc:0 "深夜时分，一场剧烈地震震撼了赫勒斯滂海峡两岸。拂晓时渡海归来的斥候带回惊人消息：加里波利的石砌城墙轰然倾圮，惊惶的守民已四散逃入内陆。这扇通往欧洲的大门，百年难逢一开。"
+ phx_bal.0005.a:0 "即刻渡海插旗，牢牢扼守海峡渡口！"
+ phx_bal.0005.b:0 "劫掠防务空虚的海岸，满载白银而归。"
+ phx_ott_gallipoli_seize_tt:0 "开启向鲁米利亚扩张的大门，集结渡海先锋，并加固加里波利或获得海峡两岸宣称。"
+
+ phx_bal.0010.t:0 "铁蹄踏上欧陆"
+ phx_bal.0010.desc:0 "漆黑的赫勒斯滂海峡上灯火点点，木筏与桨船源源不断将战马、劲弓与新月旌旗送上色雷斯滩头。身后是比提尼亚故土，眼前则是富庶的鲁米利亚平原与遥远的阿德里安堡城垣。"
+ phx_bal.0010.a:0 "鲁米利亚沃野已向奥斯曼王室敞开！"
+
+ phx_bal.0020.t:0 "埃迪尔内的苏丹门槛"
+ phx_bal.0020.desc:0 "蜿蜒的通贾河畔，大匠们正为新皇宫划定基石，各地使节、法官与骑兵将领齐聚埃迪尔内。从这座控扼要冲的新都出发，君主的敕令如今直抵多瑙河与亚得里亚海。"
+ phx_bal.0020.a:0 "愿埃迪尔内成为鲁米利亚巍峨的王座。"
+
+ phx_bal.0030.t:0 "新军之灶"
+ phx_bal.0030.desc:0 "头戴挺括白毡高帽、步伐整齐划一的耶尼切里新军方阵在御前议事厅前列队受阅。他们围聚军团大锅立下誓言，领取王室俸饷，不效命任何部族贝伊，唯听君主一人号令。"
+ phx_bal.0030.a:0 "世间再无高墙能阻我新军铁步。"
+
+ phx_bal.0040.t:0 "安纳托利亚边疆群雄"
+ phx_bal.0040.desc:0 "来自周边突厥贝伊国——尤其是陷入分裂的卡雷西海滨——的悍将与老练骑手纷纷驰入我营，愿献出刀剑与舟楫以奉明主。吞并其沿海据点，便能令我军骑兵直抵达达尼尔渡口。"
+ phx_bal.0040.a:0 "收编卡雷西边疆及其精骑归入我旗。"
+ phx_bal.0040.b:0 "礼待安纳托利亚诸邻，共享太平财利。"
+
+ phx_bal.0100.t:0 "尼曼雅王朝之冠"
+ phx_bal.0100.desc:0 "新布尔多的银矿滚滚产出雪亮白银，披坚执锐的塞尔维亚贵族骑士云集于斯科普里与普里兹伦的殿堂。南方昔日强盛的拜占庭边防正因宫廷党争而日渐空虚——正待雄主南下，问鼎马其顿与爱琴海门户。"
+ phx_bal.0100.a:0 "整顿重骑大军，蓄势南下马其顿。"
+ phx_bal.0100.b:0 "兴修新布尔多银矿与皇家造币厂。"
+
+ phx_bal.0110.t:0 "通往塞萨洛尼基之路"
+ phx_bal.0110.desc:0 "瓦尔达尔河边防斥候回报：君士坦丁堡内斗正酣，拜占庭沿线要塞兵力空虚。朝中大贵族纷纷请战，力主趁罗马双鹰自相残杀之际顺河谷直取塞雷斯与塞萨洛尼基。"
+ phx_bal.0110.a:0 "吹响战号——马其顿当归塞尔维亚所有！"
+ phx_bal.0110.b:0 "约束边将，以同奉正教之谊与君士坦丁堡修好。"
+
+ phx_bal.0120.t:0 "塞尔维亚与希腊人之沙皇"
+ phx_bal.0120.desc:0 "斯科普里大教堂内斯拉夫语与希腊语圣歌交相回荡，帝国皇冠庄严加于你的额首，宣令官朗声诵读新颁宏大法典的条文。从多瑙河到爱琴海丘陵，塞尔维亚以法度、信仰与铁血宣告帝国崛起。"
+ phx_bal.0120.a:0 "塞尔维亚与希腊人之沙皇万岁！"
+
+ phx_bal.0130.t:0 "斯科普里文书院与阿索斯圣山"
+ phx_bal.0130.desc:0 "通晓希腊语与斯拉夫语的博学书记官与携礼来朝的阿索斯山修道院院长齐聚宫廷。资助圣山隐修院并将王室律令与罗马法统熔于一炉，能令治下万民共归庄严秩序。"
+ phx_bal.0130.a:0 "布施圣山修院，设立统一修法文书院。"
+ phx_bal.0130.b:0 "将恩赏分赐边疆贵族以固军心。"
+
+ phx_bal.0200.t:0 "特尔诺沃的金色暮光"
+ phx_bal.0200.desc:0 "查雷维茨山巅，特尔诺沃的钟声回荡在一座底蕴深厚却强敌环伺的王国上空。西面塞尔维亚如日中天，南方拜占庭权谋暗涌，海上更有突厥帆影频频窥伺色雷斯海岸。唯有审慎治国，方能护持保加利亚王冠。"
+ phx_bal.0200.a:0 "加固巴尔干诸隘口与特尔诺沃城垣。"
+ phx_bal.0200.b:0 "振兴皇家作坊与黑海粮贸。"
+
+ phx_bal.0210.t:0 "特尔诺沃文学学派"
+ phx_bal.0210.desc:0 "恪守静修清规的修士、抄经大师与细密画家云集于特尔诺沃周边修院，译注神学典籍并以金箔彩绘福音手抄本。资助他们的著述，必将为整个南斯拉夫世界开启璀璨不朽的文化黄金时代。"
+ phx_bal.0210.a:0 "大力赞助特尔诺沃抄经室与学派名宿。"
+ phx_bal.0210.b:0 "节省银两，优先修筑烽燧与边堡。"
+
+ phx_bal.0220.t:0 "多瑙河下游之盾"
+ phx_bal.0220.desc:0 "烽火自山脊燃至河堡，各地使节在巴尔干边疆缔结守望之盟。无论海峡方向卷来何等风暴，多瑙河下游诸邦都绝不轻言屈服。"
+ phx_bal.0220.a:0 "同心协力，死守山关与大河。"
+
+ phx_bal.0300.t:0 "喀尔巴阡隘口之大公"
+ phx_bal.0300.desc:0 "波萨达峡谷大破匈牙利王师至今不过七载，瓦拉几亚已用铁血向世人证明绝不甘作异邦附庸。然而山外有匈牙利王室虎视，东有鞑靼铁骑游弋，南岸巴尔干风云诡谲，每一季自由皆须枕戈待旦。"
+ phx_bal.0300.a:0 "严守山地隘口，令弓手时刻备战。"
+ phx_bal.0300.b:0 "振兴蒙特尼亚市集与多瑙河水运。"
+
+ phx_bal.0310.t:0 "波萨达的回响"
+ phx_bal.0310.desc:0 "大贵族与乡老齐聚阿尔杰什大公宫廷，追忆波萨达大捷并共商立国长策。有人主张兴建石砌修道院并向君士坦丁堡请设正教都主教区，有人则力主整训轻捷山地弓骑以震慑强邻。"
+ phx_bal.0310.a:0 "修筑石砌教堂，为瓦拉几亚求设都主教区。"
+ phx_bal.0310.b:0 "征募轻捷的喀尔巴阡山地弓手与轻骑。"
+
+ phx_bal.0320.t:0 "多瑙河下游守望"
+ phx_bal.0320.desc:0 "宽阔多瑙河上的渡工与巡船接连带回南岸消息：保加利亚合纵连横，巴尔干山南战云愈烈。瓦拉几亚的存续之道，在于抢在强敌兵临河岸前看清大河潮流的走向。"
+ phx_bal.0320.a:0 "跨河与特尔诺沃深结守望之谊。"
+ phx_bal.0320.b:0 "加固己方渡口，独掌多瑙河航运关税。"

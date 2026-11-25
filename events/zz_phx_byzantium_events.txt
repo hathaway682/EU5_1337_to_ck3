@@ -1,0 +1,1268 @@
+﻿##################################################
+# Project Phoenix (PHX) — Byzantium 1337–1460 Events (v1.0)
+# Namespace: phx_byz (24 events)
+# Strictly follows AGENTS.md (pure narrative desc,
+# clean CK3 1.21 effects, guarded right_portrait scopes)
+##################################################
+
+namespace = phx_byz
+
+# 0001 — Opening 1337: Twilight of the Palaiologoi
+phx_byz.0001 = {
+	type = character_event
+	title = phx_byz.0001.t
+	desc = phx_byz.0001.desc
+	theme = crown
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	right_portrait = {
+		trigger = { exists = scope:kantakouzenos }
+		character = scope:kantakouzenos
+		animation = chancellor
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:byz_john_kantakouzenos ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:byz_john_kantakouzenos = { save_scope_as = kantakouzenos }
+		}
+	}
+
+	# Option A: Rally the thematic garrisons and face the storm
+	option = {
+		name = phx_byz.0001.a
+		add_prestige = 100
+		add_legitimacy = 50
+		if = {
+			limit = { exists = scope:kantakouzenos }
+			scope:kantakouzenos = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 15
+				}
+			}
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Husband the treasury and rebuild civic trade in Constantinople
+	option = {
+		name = phx_byz.0001.b
+		add_gold = 100
+		title:c_constantinople = {
+			change_prosperity_progress = 40
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+# 0010 — 1338+: The Grand Domestic's Counsel (Palaiologos-Kantakouzenos Concord)
+phx_byz.0010 = {
+	type = character_event
+	title = phx_byz.0010.t
+	desc = phx_byz.0010.desc
+	theme = diplomacy
+	override_background = { reference = council_chamber }
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		trigger = { exists = scope:kantakouzenos }
+		character = scope:kantakouzenos
+		animation = admiration
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:byz_john_kantakouzenos ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:byz_john_kantakouzenos = { save_scope_as = kantakouzenos }
+		}
+	}
+
+	# Option A: Bind the two houses in formal regency concord
+	option = {
+		name = phx_byz.0010.a
+		add_character_modifier = {
+			modifier = phx_byz_kantakouzenos_accord_modifier
+			years = 20
+		}
+		if = {
+			limit = { exists = scope:kantakouzenos }
+			scope:kantakouzenos = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 30
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_ep3_dlc_trigger = yes
+				government_has_mechanic = administrative
+			}
+			change_influence = 150
+		}
+		ai_chance = { base = 65 }
+	}
+
+	# Option B: Curb aristocratic ambition and centralize court authority
+	option = {
+		name = phx_byz.0010.b
+		add_character_modifier = {
+			modifier = phx_byz_dynastic_centralization_modifier
+			years = 20
+		}
+		add_dread = 20
+		if = {
+			limit = { exists = scope:kantakouzenos }
+			scope:kantakouzenos = {
+				add_opinion = {
+					target = root
+					modifier = angry_opinion
+					opinion = -30
+				}
+			}
+		}
+		ai_chance = { base = 35 }
+	}
+}
+
+# 0015 — Succession Crisis after Andronikos III's Death (Civil War Confrontation)
+phx_byz.0015 = {
+	type = character_event
+	title = phx_byz.0015.t
+	desc = phx_byz.0015.desc
+	theme = intrigue
+	override_background = { reference = corridor_day }
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	right_portrait = {
+		trigger = { exists = scope:kantakouzenos }
+		character = scope:kantakouzenos
+		animation = scheme
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:byz_john_kantakouzenos ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:byz_john_kantakouzenos = { save_scope_as = kantakouzenos }
+		}
+	}
+
+	# Option A: Honor the late Emperor's friendship and confirm Kantakouzenos as regent
+	option = {
+		name = phx_byz.0015.a
+		add_character_modifier = {
+			modifier = phx_byz_kantakouzenos_accord_modifier
+			years = 15
+		}
+		if = {
+			limit = { exists = scope:kantakouzenos }
+			scope:kantakouzenos = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 40
+				}
+			}
+		}
+		add_prestige = -100
+		if = {
+			limit = { owns_story_of_type = story_phx_byz_civil_war }
+			random_owned_story = {
+				limit = { story_type = story_phx_byz_civil_war }
+				end_story = yes
+			}
+		}
+		custom_tooltip = phx_byz_civil_war_averted_tt
+		ai_chance = { base = 40 }
+	}
+
+	# Option B: Assert direct Palaiologan rule and break with Kantakouzenos (Civil War)
+	option = {
+		name = phx_byz.0015.b
+		add_character_modifier = {
+			modifier = phx_byz_dynastic_centralization_modifier
+			years = 15
+		}
+		add_character_modifier = {
+			modifier = phx_byz_civil_war_scar_modifier
+			years = 10
+		}
+		add_legitimacy = 100
+		if = {
+			limit = {
+				NOT = { owns_story_of_type = story_phx_byz_civil_war }
+				NOT = { has_global_variable = phx_byz_civil_war_resolved }
+			}
+			create_story = story_phx_byz_civil_war
+		}
+		if = {
+			limit = { exists = scope:kantakouzenos }
+			scope:kantakouzenos = {
+				add_opinion = {
+					target = root
+					modifier = insulted_opinion
+					opinion = -60
+				}
+				add_unpressed_claim = title:e_byzantium
+				if = {
+					limit = {
+						is_landed = yes
+						is_imprisoned = no
+						NOT = { has_title = title:e_byzantium }
+						NOT = { is_at_war_with = root }
+					}
+					start_war = {
+						cb = claim_cb
+						target = root
+						claimant = scope:kantakouzenos
+						target_title = title:e_byzantium
+					}
+				}
+			}
+		}
+		custom_tooltip = phx_byz_civil_war_erupts_tt
+		ai_chance = { base = 60 }
+	}
+}
+
+# 0020 — Shadow Across the Hellespont (Ottoman Pressure)
+phx_byz.0020 = {
+	type = character_event
+	title = phx_byz.0020.t
+	desc = phx_byz.0020.desc
+	theme = war
+	override_background = { reference = battlefield }
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+	right_portrait = {
+		trigger = { exists = scope:ottoman_ruler }
+		character = scope:ottoman_ruler
+		animation = anger
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:k_ottoman.holder
+				title:k_ottoman.holder != root
+			}
+			title:k_ottoman.holder = { save_scope_as = ottoman_ruler }
+		}
+	}
+
+	# Option A: Fortify the Thracian Straits and drill the Akritai
+	option = {
+		name = phx_byz.0020.a
+		remove_short_term_gold = 100
+		title:c_constantinople = {
+			add_county_modifier = {
+				modifier = phx_byz_balkan_march_modifier
+				years = 15
+			}
+		}
+		if = {
+			limit = { completely_controls = title:c_dardanelles }
+			title:c_dardanelles = {
+				add_county_modifier = {
+					modifier = phx_byz_balkan_march_modifier
+					years = 15
+				}
+			}
+		}
+		add_prestige = 75
+		ai_chance = { base = 55 }
+	}
+
+	# Option B: Muster frontier Akritai to contest Bithynia
+	option = {
+		name = phx_byz.0020.b
+		add_prestige = 120
+		spawn_army = {
+			name = phx_byz_akritai_vanguard_name
+			location = title:c_constantinople.title_province
+			men_at_arms = {
+				type = akritai
+				men = 250
+			}
+			levies = 600
+			inheritable = no
+		}
+		if = {
+			limit = { exists = scope:ottoman_ruler }
+			scope:ottoman_ruler = {
+				add_opinion = {
+					target = root
+					modifier = angry_opinion
+					opinion = -25
+				}
+			}
+		}
+		ai_chance = { base = 35 }
+	}
+
+	# Option C: Buy time through envoy diplomacy
+	option = {
+		name = phx_byz.0020.c
+		add_gold = 75
+		add_prestige = -50
+		if = {
+			limit = { exists = scope:ottoman_ruler }
+			scope:ottoman_ruler = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 15
+				}
+			}
+		}
+		ai_chance = { base = 10 }
+	}
+}
+
+# 0030 — The Serbian Crown and the Macedonian Frontier
+phx_byz.0030 = {
+	type = character_event
+	title = phx_byz.0030.t
+	desc = phx_byz.0030.desc
+	theme = martial
+	override_background = { reference = council_chamber }
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	right_portrait = {
+		trigger = { exists = scope:serbian_king }
+		character = scope:serbian_king
+		animation = personality_bold
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:k_serbia.holder
+				title:k_serbia.holder != root
+			}
+			title:k_serbia.holder = { save_scope_as = serbian_king }
+		}
+	}
+
+	# Option A: Garrison Macedonia and proclaim imperial vigilance
+	option = {
+		name = phx_byz.0030.a
+		remove_short_term_gold = 75
+		add_prestige = 100
+		if = {
+			limit = { completely_controls = title:c_edirne }
+			title:c_edirne = {
+				add_county_modifier = {
+					modifier = phx_byz_balkan_march_modifier
+					years = 15
+				}
+			}
+		}
+		ai_chance = { base = 50 }
+	}
+
+	# Option B: Seek Orthodox fraternity with the Serbian court
+	option = {
+		name = phx_byz.0030.b
+		add_piety = 75
+		if = {
+			limit = { exists = scope:serbian_king }
+			scope:serbian_king = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 25
+				}
+			}
+			add_opinion = {
+				target = scope:serbian_king
+				modifier = respect_opinion
+				opinion = 15
+			}
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+# 0040 — Dawn Over the Queen of Cities (Constantinople Renaissance)
+phx_byz.0040 = {
+	type = character_event
+	title = phx_byz.0040.t
+	desc = phx_byz.0040.desc
+	theme = stewardship
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	option = {
+		name = phx_byz.0040.a
+		title:c_constantinople = {
+			change_prosperity_progress = 150
+			add_county_modifier = {
+				modifier = phx_byz_constantinople_renaissance_modifier
+				years = 25
+			}
+		}
+		add_legitimacy = 150
+		add_prestige = 200
+		ai_chance = { base = 100 }
+	}
+}
+
+# ==================================================
+# BYZANTIUM v1.0 NEW STORY & HISTORICAL EVENTS (8)
+# ==================================================
+
+# 0050 — Civil War Story Stage 1: The Zealot Revolt of Thessalonica
+phx_byz.0050 = {
+	type = character_event
+	title = phx_byz.0050.t
+	desc = phx_byz.0050.desc
+	theme = dread
+	override_background = { reference = alley_day }
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	right_portrait = {
+		trigger = { exists = scope:apokaukos }
+		character = scope:apokaukos
+		animation = spymaster
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:byz_alexios_apokaukos ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:byz_alexios_apokaukos = { save_scope_as = apokaukos }
+		}
+	}
+
+	# Option A: Grant temporary civic liberties to the Thessalonican commune
+	option = {
+		name = phx_byz.0050.a
+		add_prestige = -100
+		add_dread = -10
+		if = {
+			limit = { title:c_chalkidiki.holder.top_liege = root }
+			title:c_chalkidiki = {
+				add_county_modifier = {
+					modifier = phx_byz_zealot_unrest_modifier
+					years = 6
+				}
+			}
+		}
+		else = {
+			capital_county = {
+				add_county_modifier = {
+					modifier = phx_byz_zealot_unrest_modifier
+					years = 5
+				}
+			}
+		}
+		custom_tooltip = phx_byz_zealot_compromise_tt
+		ai_chance = { base = 55 }
+	}
+
+	# Option B: Dispatch imperial troops to crush the Zealot commune
+	option = {
+		name = phx_byz.0050.b
+		remove_short_term_gold = 125
+		add_dread = 20
+		add_legitimacy = 75
+		if = {
+			limit = { title:c_chalkidiki.holder.top_liege = root }
+			title:c_chalkidiki = {
+				change_county_control = -25
+				add_county_modifier = {
+					modifier = phx_byz_zealot_unrest_modifier
+					years = 3
+				}
+			}
+		}
+		else = {
+			capital_county = {
+				change_county_control = -15
+			}
+		}
+		custom_tooltip = phx_byz_zealot_crackdown_tt
+		ai_chance = { base = 45 }
+	}
+}
+
+# 0055 — Civil War Story Stage 2: The Devil's Bargain (Ottoman or Serbian Mercenaries)
+phx_byz.0055 = {
+	type = character_event
+	title = phx_byz.0055.t
+	desc = phx_byz.0055.desc
+	theme = war
+	override_background = { reference = army_camp }
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	right_portrait = {
+		trigger = { exists = scope:foreign_broker }
+		character = scope:foreign_broker
+		animation = personality_cynical
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:k_ottoman.holder
+				title:k_ottoman.holder != root
+			}
+			title:k_ottoman.holder = { save_scope_as = ottoman_broker }
+		}
+		if = {
+			limit = {
+				exists = title:k_serbia.holder
+				title:k_serbia.holder != root
+			}
+			title:k_serbia.holder = { save_scope_as = serbian_broker }
+		}
+		if = {
+			limit = { exists = scope:ottoman_broker }
+			scope:ottoman_broker = { save_scope_as = foreign_broker }
+		}
+		else_if = {
+			limit = { exists = scope:serbian_broker }
+			scope:serbian_broker = { save_scope_as = foreign_broker }
+		}
+	}
+
+	# Option A: Invite Turkish horsemen across the straits for gold and coastal concessions
+	option = {
+		name = phx_byz.0055.a
+		trigger = { exists = scope:ottoman_broker }
+		add_piety = -100
+		add_legitimacy = -75
+		spawn_army = {
+			name = phx_byz_turkic_mercenary_band_name
+			location = root.capital_province
+			men_at_arms = {
+				type = horse_archers
+				men = 250
+			}
+			men_at_arms = {
+				type = light_horsemen
+				men = 150
+			}
+			inheritable = no
+		}
+		scope:ottoman_broker = {
+			add_gold = 100
+			add_unpressed_claim = title:c_dardanelles
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 20
+			}
+		}
+		custom_tooltip = phx_byz_bargain_ottoman_tt
+		ai_chance = { base = 40 }
+	}
+
+	# Option B: Court Serbian heavy cavalry in exchange for Macedonian frontier concessions
+	option = {
+		name = phx_byz.0055.b
+		trigger = { exists = scope:serbian_broker }
+		add_prestige = -100
+		add_legitimacy = -50
+		spawn_army = {
+			name = phx_byz_serbian_mercenary_band_name
+			location = root.capital_province
+			men_at_arms = {
+				type = armored_horsemen
+				men = 150
+			}
+			men_at_arms = {
+				type = armored_footmen
+				men = 200
+			}
+			inheritable = no
+		}
+		scope:serbian_broker = {
+			add_prestige = 150
+			add_unpressed_claim = title:c_central_macedonia
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 20
+			}
+		}
+		custom_tooltip = phx_byz_bargain_serbia_tt
+		ai_chance = { base = 30 }
+	}
+
+	# Option C: Refuse foreign blades and muster loyal Roman levies
+	option = {
+		name = phx_byz.0055.c
+		remove_short_term_gold = 150
+		add_legitimacy = 100
+		add_prestige = 100
+		spawn_army = {
+			name = phx_byz_loyalist_levies_name
+			location = root.capital_province
+			levies = 700
+			inheritable = no
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+# 0060 — Civil War Story Stage 3: Ashes and Purple (Resolution of the Civil War)
+phx_byz.0060 = {
+	type = character_event
+	title = phx_byz.0060.t
+	desc = phx_byz.0060.desc
+	theme = crown
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	# Option A: Proclaim imperial amnesty and rebuild the exhausted provinces
+	option = {
+		name = phx_byz.0060.a
+		if = {
+			limit = { has_character_modifier = phx_byz_civil_war_scar_modifier }
+			remove_character_modifier = phx_byz_civil_war_scar_modifier
+		}
+		add_legitimacy = 150
+		add_prestige = 150
+		if = {
+			limit = { completely_controls = title:c_constantinople }
+			title:c_constantinople = {
+				change_prosperity_progress = 60
+			}
+		}
+		ai_chance = { base = 65 }
+	}
+
+	# Option B: Confiscate rebel estates to replenish the imperial fisc
+	option = {
+		name = phx_byz.0060.b
+		if = {
+			limit = { has_character_modifier = phx_byz_civil_war_scar_modifier }
+			remove_character_modifier = phx_byz_civil_war_scar_modifier
+		}
+		add_gold = 250
+		add_dread = 20
+		add_legitimacy = 75
+		ai_chance = { base = 35 }
+	}
+}
+
+# 0065 — The Light of Mount Tabor: The Hesychast Controversy
+phx_byz.0065 = {
+	type = character_event
+	title = phx_byz.0065.t
+	desc = phx_byz.0065.desc
+	theme = faith
+	override_background = { reference = temple_church }
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		trigger = { exists = scope:palamas }
+		character = scope:palamas
+		animation = prayer
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:byz_gregory_palamas ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:byz_gregory_palamas = { save_scope_as = palamas }
+		}
+		if = {
+			limit = {
+				character:byz_barlaam_of_seminara ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:byz_barlaam_of_seminara = { save_scope_as = barlaam }
+		}
+	}
+
+	# Option A: Uphold Gregory Palamas and the Hesychast monks of Mount Athos
+	option = {
+		name = phx_byz.0065.a
+		add_piety = 150
+		add_character_modifier = {
+			modifier = phx_byz_hesychasm_triumph_modifier
+			years = 15
+		}
+		if = {
+			limit = { exists = scope:palamas }
+			scope:palamas = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 35
+				}
+			}
+		}
+		ai_chance = { base = 65 }
+	}
+
+	# Option B: Shield the scholastic humanists and philosophical inquiry
+	option = {
+		name = phx_byz.0065.b
+		add_prestige = 100
+		add_character_modifier = {
+			modifier = phx_byz_humanist_inquiry_modifier
+			years = 15
+		}
+		if = {
+			limit = { exists = scope:barlaam }
+			scope:barlaam = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 35
+				}
+			}
+		}
+		ai_chance = { base = 35 }
+	}
+}
+
+# 0070 — Customs of Galata: The Genoese Shadow
+phx_byz.0070 = {
+	type = character_event
+	title = phx_byz.0070.t
+	desc = phx_byz.0070.desc
+	theme = stewardship
+	override_background = { reference = docks }
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+	right_portrait = {
+		trigger = { exists = scope:genoese_doge }
+		character = scope:genoese_doge
+		animation = dismissal
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:k_genoa.holder
+				title:k_genoa.holder != root
+			}
+			title:k_genoa.holder = { save_scope_as = genoese_doge }
+		}
+	}
+
+	# Option A: Lower Greek tariffs in Constantinople to draw trade back from Galata
+	option = {
+		name = phx_byz.0070.a
+		remove_short_term_gold = 100
+		title:c_constantinople = {
+			change_prosperity_progress = 80
+		}
+		add_prestige = 100
+		if = {
+			limit = { exists = scope:genoese_doge }
+			scope:genoese_doge = {
+				add_opinion = {
+					target = root
+					modifier = angry_opinion
+					opinion = -25
+				}
+			}
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Confirm Genoese commercial charters in exchange for immediate silver
+	option = {
+		name = phx_byz.0070.b
+		add_gold = 175
+		add_prestige = -75
+		if = {
+			limit = { exists = scope:genoese_doge }
+			scope:genoese_doge = {
+				add_opinion = {
+					target = root
+					modifier = pleased_opinion
+					opinion = 25
+				}
+			}
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+# 0075 — Envoys from the Grand Komnenoi of Trebizond
+phx_byz.0075 = {
+	type = character_event
+	title = phx_byz.0075.t
+	desc = phx_byz.0075.desc
+	theme = diplomacy
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	right_portrait = {
+		trigger = { exists = scope:trebizond_ruler }
+		character = scope:trebizond_ruler
+		animation = chancellor
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:k_trebizond.holder
+				title:k_trebizond.holder != root
+			}
+			title:k_trebizond.holder = { save_scope_as = trebizond_ruler }
+		}
+	}
+
+	# Option A: Welcome the Pontic envoys and revive Black Sea commercial ties
+	option = {
+		name = phx_byz.0075.a
+		add_gold = 100
+		add_prestige = 75
+		if = {
+			limit = { exists = scope:trebizond_ruler }
+			scope:trebizond_ruler = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 30
+				}
+			}
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Assert Constantinople's sole claim to the imperial diadem
+	option = {
+		name = phx_byz.0075.b
+		add_legitimacy = 100
+		add_unpressed_claim = title:k_trebizond
+		if = {
+			limit = { exists = scope:trebizond_ruler }
+			scope:trebizond_ruler = {
+				add_opinion = {
+					target = root
+					modifier = insulted_opinion
+					opinion = -30
+				}
+			}
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+# 0080 — The Peloponnese & Latin Greece
+phx_byz.0080 = {
+	type = character_event
+	title = phx_byz.0080.t
+	desc = phx_byz.0080.desc
+	theme = martial
+	override_background = { reference = hills }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	right_portrait = {
+		trigger = { exists = scope:latin_lord }
+		character = scope:latin_lord
+		animation = anger
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:d_morea.holder
+				title:d_morea.holder.top_liege != root
+			}
+			title:d_morea.holder = { save_scope_as = latin_lord }
+		}
+	}
+
+	# Option A: Back the Mistra garrisons and assert Roman claims over Achaea and Attica
+	option = {
+		name = phx_byz.0080.a
+		add_prestige = 120
+		if = {
+			limit = { NOT = { completely_controls = title:d_morea } }
+			add_unpressed_claim = title:d_morea
+		}
+		if = {
+			limit = { NOT = { completely_controls = title:d_northern_greece } }
+			add_unpressed_claim = title:d_northern_greece
+		}
+		title:c_laconia = {
+			change_prosperity_progress = 60
+		}
+		ai_chance = { base = 70 }
+	}
+
+	# Option B: Maintain a profitable Aegean truce with the Frankish baronies
+	option = {
+		name = phx_byz.0080.b
+		add_gold = 125
+		if = {
+			limit = { exists = scope:latin_lord }
+			scope:latin_lord = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 25
+				}
+			}
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+# 0085 — Stones of Theodosius: Repairing the Triple Walls
+phx_byz.0085 = {
+	type = character_event
+	title = phx_byz.0085.t
+	desc = phx_byz.0085.desc
+	theme = stewardship
+	override_background = { reference = courtyard }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	# Option A: Rebuild the towers, moats, and sea-walls of Constantinople
+	option = {
+		name = phx_byz.0085.a
+		remove_short_term_gold = 200
+		title:c_constantinople = {
+			add_county_modifier = {
+				modifier = phx_byz_theodosian_walls_modifier
+				years = 30
+			}
+		}
+		add_legitimacy = 100
+		ai_chance = { base = 75 }
+	}
+
+	# Option B: Patch only the worst breaches and keep funds for field troops
+	option = {
+		name = phx_byz.0085.b
+		add_prestige = 75
+		title:c_constantinople = {
+			change_prosperity_progress = 40
+		}
+		ai_chance = { base = 25 }
+	}
+}
+
+# ==================================================
+# DECISION OUTCOME EVENTS (10)
+# ==================================================
+
+# 0100 — Decision Outcome: Imperial Themes Reformed
+phx_byz.0100 = {
+	type = character_event
+	title = phx_byz.0100.t
+	desc = phx_byz.0100.desc
+	theme = realm
+	override_background = { reference = council_chamber }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	option = {
+		name = phx_byz.0100.a
+		add_prestige = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0110 — Decision Outcome: Imperial Dromon Fleet Reborn
+phx_byz.0110 = {
+	type = character_event
+	title = phx_byz.0110.t
+	desc = phx_byz.0110.desc
+	theme = stewardship
+	override_background = { reference = docks }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = phx_byz.0110.a
+		add_prestige = 100
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0120 — Decision Outcome: Varangian Guard Reconstituted
+phx_byz.0120 = {
+	type = character_event
+	title = phx_byz.0120.t
+	desc = phx_byz.0120.desc
+	theme = martial
+	override_background = { reference = armory }
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+
+	option = {
+		name = phx_byz.0120.a
+		add_prestige = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0130 — Decision Outcome: Triumph of the Anatolian Heartland
+phx_byz.0130 = {
+	type = character_event
+	title = phx_byz.0130.t
+	desc = phx_byz.0130.desc
+	theme = crown
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	option = {
+		name = phx_byz.0130.a
+		if = {
+			limit = { completely_controls = title:c_hudavendigar }
+			title:c_hudavendigar = {
+				change_prosperity_progress = 75
+			}
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0140 — Decision Outcome: Council of Church Union
+phx_byz.0140 = {
+	type = character_event
+	title = phx_byz.0140.t
+	desc = phx_byz.0140.desc
+	theme = faith
+	override_background = { reference = temple_church }
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	# Option A: Pursue diplomatic union with Rome for Western military relief
+	option = {
+		name = phx_byz.0140.a
+		add_character_modifier = {
+			modifier = phx_byz_council_union_modifier
+			years = 25
+		}
+		add_gold = 250
+		add_piety = -150
+		custom_tooltip = phx_byz_church_union_west_tt
+		ai_chance = { base = 35 }
+	}
+
+	# Option B: Stand firm in unbroken Orthodoxy
+	option = {
+		name = phx_byz.0140.b
+		add_character_modifier = {
+			modifier = phx_byz_orthodox_bulwark_modifier
+			years = 25
+		}
+		add_piety = 250
+		add_legitimacy = 100
+		custom_tooltip = phx_byz_church_union_east_tt
+		ai_chance = { base = 65 }
+	}
+}
+
+# 0150 — Decision Outcome: Authority of the Pentarchy Affirmed
+phx_byz.0150 = {
+	type = character_event
+	title = phx_byz.0150.t
+	desc = phx_byz.0150.desc
+	theme = faith
+	override_background = { reference = temple_church }
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+
+	option = {
+		name = phx_byz.0150.a
+		add_piety = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0160 — Decision Outcome: Despotate of the Morea Established
+phx_byz.0160 = {
+	type = character_event
+	title = phx_byz.0160.t
+	desc = phx_byz.0160.desc
+	theme = realm
+	override_background = { reference = courtyard }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	option = {
+		name = phx_byz.0160.a
+		add_prestige = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0170 — Decision Outcome: Galata Customs Reclaimed
+phx_byz.0170 = {
+	type = character_event
+	title = phx_byz.0170.t
+	desc = phx_byz.0170.desc
+	theme = stewardship
+	override_background = { reference = docks }
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+
+	option = {
+		name = phx_byz.0170.a
+		add_gold = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0180 — Decision Outcome: Hesychast Synod of Blachernae
+phx_byz.0180 = {
+	type = character_event
+	title = phx_byz.0180.t
+	desc = phx_byz.0180.desc
+	theme = faith
+	override_background = { reference = temple_church }
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	right_portrait = {
+		trigger = { exists = scope:gregoras }
+		character = scope:gregoras
+		animation = reading
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:byz_nikephoros_gregoras ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:byz_nikephoros_gregoras = { save_scope_as = gregoras }
+		}
+	}
+
+	# Option A: Proclaim the Tomos of Hesychasm as Orthodox doctrine
+	option = {
+		name = phx_byz.0180.a
+		if = {
+			limit = { has_character_modifier = phx_byz_humanist_inquiry_modifier }
+			remove_character_modifier = phx_byz_humanist_inquiry_modifier
+		}
+		add_character_modifier = {
+			modifier = phx_byz_hesychasm_triumph_modifier
+			years = 30
+		}
+		add_piety = 250
+		add_legitimacy = 100
+		custom_tooltip = phx_byz_hesychasm_triumph_tt
+		ai_chance = { base = 65 }
+	}
+
+	# Option B: Champion classical philosophy and imperial humanist academies
+	option = {
+		name = phx_byz.0180.b
+		if = {
+			limit = { has_character_modifier = phx_byz_hesychasm_triumph_modifier }
+			remove_character_modifier = phx_byz_hesychasm_triumph_modifier
+		}
+		add_character_modifier = {
+			modifier = phx_byz_humanist_inquiry_modifier
+			years = 30
+		}
+		add_prestige = 200
+		add_piety = -100
+		custom_tooltip = phx_byz_humanist_inquiry_tt
+		ai_chance = { base = 35 }
+	}
+}
+
+# 0190 — Decision Outcome: Praetorian Prefectures of the East and Illyricum Reborn
+phx_byz.0190 = {
+	type = character_event
+	title = phx_byz.0190.t
+	desc = phx_byz.0190.desc
+	theme = emperor
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	option = {
+		name = phx_byz.0190.a
+		add_legitimacy = 150
+		ai_chance = { base = 100 }
+	}
+}

@@ -1,0 +1,258 @@
+﻿##################################################
+# Project Phoenix (PHX) — Wave 1 Modifiers
+# Byzantium v1.0 Flagship + Ottoman & Balkan Rivals
+# All county modifiers strictly use pure county keys only.
+##################################################
+
+# === Byzantium v0.1 Core Modifiers ===
+
+phx_byz_1337_twilight_modifier = {
+	icon = byzantine_crown_negative
+	monthly_income_mult = -0.10
+	levy_size = -0.15
+	vassal_opinion = -5
+	monthly_legitimacy_add = -0.25
+}
+
+phx_byz_kantakouzenos_accord_modifier = {
+	icon = byzantine_crown_positive
+	diplomacy = 2
+	stewardship = 1
+	vassal_opinion = 10
+	monthly_legitimacy_add = 0.5
+}
+
+phx_byz_dynastic_centralization_modifier = {
+	icon = byzantine_eagle_positive
+	intrigue = 2
+	dread_baseline_add = 15
+	direct_vassal_opinion = -5
+	monthly_prestige_gain_mult = 0.10
+}
+
+phx_byz_theme_reform_modifier = {
+	icon = administrative_positive
+	martial = 2
+	stewardship = 1
+	levy_size = 0.15
+	men_at_arms_maintenance = -0.10
+	monthly_legitimacy_add = 0.5
+}
+
+phx_byz_imperial_navy_modifier = {
+	icon = economy_positive
+	embarkation_cost_mult = -0.35
+	naval_movement_speed_mult = 0.25
+	monthly_income_mult = 0.08
+	advantage = 2
+}
+
+phx_byz_varangian_revived_modifier = {
+	icon = prowess_positive
+	prowess = 3
+	enemy_hostile_scheme_phase_duration_add = 30
+	heavy_infantry_damage_mult = 0.12
+	heavy_infantry_toughness_mult = 0.12
+}
+
+phx_byz_anatolian_themes_restored_modifier = {
+	icon = byzantine_eagle_positive
+	martial = 2
+	levy_size = 0.20
+	knight_effectiveness_mult = 0.15
+	monthly_prestige_gain_mult = 0.15
+	monthly_legitimacy_add = 0.75
+}
+
+phx_byz_pentarchy_guardian_modifier = {
+	icon = byzantine_crown_positive
+	learning = 2
+	monthly_piety_gain_mult = 0.20
+	same_faith_opinion = 10
+	clergy_opinion = 10
+}
+
+phx_byz_council_union_modifier = {
+	icon = diplomacy_mixed
+	diplomacy = 2
+	mercenary_hire_cost_mult = -0.20
+	same_faith_opinion = -10
+	monthly_prestige_gain_mult = 0.05
+}
+
+phx_byz_orthodox_bulwark_modifier = {
+	icon = diplomacy_positive
+	monthly_piety_gain_mult = 0.15
+	same_faith_opinion = 15
+	defender_advantage = 4
+	monthly_legitimacy_add = 0.4
+}
+
+# County modifier (pure county keys)
+phx_byz_balkan_march_modifier = {
+	icon = martial_positive
+	fort_level = 2
+	garrison_size = 0.25
+	levy_reinforcement_rate = 0.20
+	monthly_control_change = 0.25
+}
+
+# County modifier (pure county keys)
+phx_byz_constantinople_renaissance_modifier = {
+	icon = stewardship_positive
+	prosperity_growth_factor = 0.25
+	all_tax_mult = 0.15
+	build_gold_cost = -0.10
+	monthly_control_change = 0.25
+}
+
+# === Byzantium v1.0 Expansion Modifiers ===
+
+phx_byz_morea_despotate_modifier = {
+	icon = byzantine_crown_positive
+	stewardship = 1
+	learning = 1
+	domain_tax_mult = 0.08
+	cultural_head_fascination_mult = 0.10
+	monthly_legitimacy_add = 0.35
+}
+
+phx_byz_hesychasm_triumph_modifier = {
+	icon = learning_positive
+	learning = 2
+	monthly_piety_gain_mult = 0.15
+	same_faith_opinion = 10
+	clergy_opinion = 10
+	zealot_opinion = 10
+}
+
+phx_byz_humanist_inquiry_modifier = {
+	icon = learning_mixed
+	learning = 3
+	diplomacy = 1
+	cultural_head_fascination_mult = 0.15
+	monthly_lifestyle_xp_gain_mult = 0.10
+	clergy_opinion = -10
+}
+
+phx_byz_galata_customs_modifier = {
+	icon = economy_positive
+	stewardship = 2
+	monthly_income_mult = 0.15
+	domain_tax_mult = 0.10
+	embarkation_cost_mult = -0.15
+}
+
+# County modifier (pure county keys)
+phx_byz_zealot_unrest_modifier = {
+	icon = intrigue_negative
+	all_tax_mult = -0.35
+	levy_size = -0.30
+	monthly_control_change = -0.75
+	prosperity_growth_factor = -0.25
+}
+
+phx_byz_praetorian_prefectures_modifier = {
+	icon = byzantine_eagle_positive
+	stewardship = 2
+	diplomacy = 2
+	domain_limit = 1
+	vassal_opinion = 10
+	monthly_income_mult = 0.12
+	monthly_legitimacy_add = 0.75
+}
+
+# County modifier (pure county keys)
+phx_byz_theodosian_walls_modifier = {
+	icon = martial_positive
+	fort_level = 3
+	garrison_size = 0.35
+	hostile_county_attrition = 0.20
+	monthly_control_change = 0.20
+}
+
+phx_byz_civil_war_scar_modifier = {
+	icon = byzantine_crown_negative
+	monthly_income_mult = -0.12
+	vassal_opinion = -10
+	levy_size = -0.15
+	monthly_legitimacy_add = -0.35
+}
+
+# === Ottoman & Balkan Rival Modifiers ===
+
+phx_ott_ghazi_zeal_modifier = {
+	icon = martial_positive
+	martial = 2
+	monthly_piety_gain_mult = 0.15
+	archer_cavalry_damage_mult = 0.15
+	movement_speed = 0.10
+	knight_effectiveness_mult = 0.10
+}
+
+# County modifier (pure county keys)
+phx_ott_gallipoli_bridgehead_modifier = {
+	icon = martial_positive
+	fort_level = 2
+	garrison_size = 0.25
+	levy_reinforcement_rate = 0.25
+	prosperity_growth_factor = 0.15
+	monthly_control_change = 0.30
+}
+
+phx_ott_janissary_corps_modifier = {
+	icon = prowess_positive
+	martial = 2
+	prowess = 2
+	heavy_infantry_damage_mult = 0.15
+	heavy_infantry_toughness_mult = 0.15
+	siege_phase_time = -0.15
+	men_at_arms_maintenance = -0.08
+}
+
+# County modifier (pure county keys)
+phx_ott_edirne_capital_modifier = {
+	icon = stewardship_positive
+	prosperity_growth_factor = 0.30
+	all_tax_mult = 0.15
+	build_gold_cost = -0.10
+	fort_level = 1
+	monthly_control_change = 0.30
+}
+
+phx_ser_dusan_code_modifier = {
+	icon = byzantine_crown_positive
+	stewardship = 2
+	diplomacy = 2
+	domain_tax_mult = 0.12
+	vassal_opinion = 10
+	monthly_legitimacy_add = 0.60
+	heavy_cavalry_damage_mult = 0.12
+}
+
+phx_bal_anti_ottoman_league_modifier = {
+	icon = diplomacy_positive
+	martial = 2
+	diplomacy = 1
+	defender_advantage = 5
+	levy_size = 0.15
+	same_faith_opinion = 10
+}
+
+phx_bul_tarnovo_school_modifier = {
+	icon = learning_positive
+	learning = 2
+	monthly_piety_gain_mult = 0.15
+	cultural_head_fascination_mult = 0.15
+	same_faith_opinion = 10
+	monthly_legitimacy_add = 0.30
+}
+
+phx_wal_carpathian_defiance_modifier = {
+	icon = martial_positive
+	martial = 2
+	intrigue = 1
+	defender_advantage = 6
+	supply_duration = 0.25
+	retreat_losses = -0.20
+}
