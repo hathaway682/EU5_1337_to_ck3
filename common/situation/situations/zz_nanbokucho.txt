@@ -1,4 +1,5 @@
-nanbokucho = {
+﻿nanbokucho = {
+    gui_window_name = "window_nanbokucho"
     situation_group_type = minor
     is_unique = yes
     keep_full_history = yes
@@ -6,7 +7,7 @@ nanbokucho = {
     illustration = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
     sub_regions = {
         nanbokucho_japan = {
-            landed_titles = { e_japan }
+            geographical_regions = { nanbokucho_japan_region }
             icon = "gfx/interface/icons/flat_icons/declare_war.dds"
         }
     }
@@ -61,12 +62,30 @@ nanbokucho = {
         }
     }
     participant_groups = {
+        nanbokucho_north_leader = {
+            icon = "gfx/interface/icons/situations/guelph_ghibelline/ghibelline_leader_group.dds"
+            require_realm_in_sub_region = yes
+            require_domicile_in_sub_region = yes
+            map_color = { 180 35 50 }
+            opposite_participant_group = { nanbokucho_south nanbokucho_south_leader }
+            opposite_participant_group_opinion = -20
+            is_character_valid = { is_house_head = yes house ?= { this = house:house_ashikaga } }
+        }
+        nanbokucho_south_leader = {
+            icon = "gfx/interface/icons/situations/guelph_ghibelline/guelph_leader_group.dds"
+            require_realm_in_sub_region = yes
+            require_domicile_in_sub_region = yes
+            map_color = { 245 210 90 }
+            opposite_participant_group = { nanbokucho_north nanbokucho_north_leader }
+            opposite_participant_group_opinion = -20
+            is_character_valid = { is_house_head = yes house ?= { this = house:house_daikakuji } }
+        }
         nanbokucho_north = {
             icon = "gfx/interface/icons/situations/guelph_ghibelline/ghibelline_member_group.dds"
             require_realm_in_sub_region = yes
             require_domicile_in_sub_region = yes
             map_color = { 180 35 50 }
-            opposite_participant_group = { nanbokucho_south }
+            opposite_participant_group = { nanbokucho_south nanbokucho_south_leader }
             opposite_participant_group_opinion = -20
             is_character_valid = {
                 house ?= {
@@ -90,7 +109,7 @@ nanbokucho = {
             require_realm_in_sub_region = yes
             require_domicile_in_sub_region = yes
             map_color = { 245 210 90 }
-            opposite_participant_group = { nanbokucho_north }
+            opposite_participant_group = { nanbokucho_north nanbokucho_north_leader }
             opposite_participant_group_opinion = -20
             is_character_valid = {
                 house ?= {
@@ -119,10 +138,20 @@ nanbokucho = {
         nanbokucho_divided = {
             icon = "gfx/interface/icons/situations/guelph_ghibelline/guelph_ghibelline_dictatus_papae.dds"
             modifier_sets = {
-                nanbokucho_rivalry_effects = {
+                nanbokucho_military_effects = {
+                    icon = "gfx/interface/icons/situations/situation_modifier_military.dds"
+                    all = { character_modifier = { mercenary_hire_cost_mult = -0.25 } }
+                }
+                nanbokucho_character_effects = {
                     icon = "gfx/interface/icons/situations/situation_modifier_character.dds"
                     nanbokucho_north = { character_modifier = { monthly_prestige_gain_mult = 0.05 } }
+                    nanbokucho_north_leader = { character_modifier = { monthly_prestige_gain_mult = 0.05 } }
                     nanbokucho_south = { character_modifier = { monthly_prestige_gain_mult = 0.05 } }
+                    nanbokucho_south_leader = { character_modifier = { monthly_prestige_gain_mult = 0.05 } }
+                }
+                nanbokucho_situation_effects = {
+                    icon = "gfx/interface/icons/situations/guelph_ghibelline/situation_modifier_dictatus_papae.dds"
+                    all = { parameters = { nanbokucho_courts_hostile = yes } }
                 }
             }
             future_phases = {
@@ -136,10 +165,20 @@ nanbokucho = {
         nanbokucho_warfare = {
             icon = "gfx/interface/icons/situations/guelph_ghibelline/guelph_ghibelline_agitation.dds"
             modifier_sets = {
-                nanbokucho_warfare_effects = {
+                nanbokucho_military_effects = {
+                    icon = "gfx/interface/icons/situations/situation_modifier_military.dds"
+                    all = { character_modifier = { mercenary_hire_cost_mult = -0.5 army_maintenance_mult = -0.1 } }
+                }
+                nanbokucho_character_effects = {
                     icon = "gfx/interface/icons/situations/situation_modifier_character.dds"
+                    all = { character_modifier = { max_hostile_schemes_add = 1 } }
+                }
+                nanbokucho_situation_effects = {
+                    icon = "gfx/interface/icons/situations/guelph_ghibelline/situation_modifier_agitation.dds"
                     nanbokucho_north = { county_modifier = { prosperity_growth_factor = -0.1 } }
+                    nanbokucho_north_leader = { county_modifier = { prosperity_growth_factor = -0.1 } }
                     nanbokucho_south = { county_modifier = { prosperity_growth_factor = -0.1 } }
+                    nanbokucho_south_leader = { county_modifier = { prosperity_growth_factor = -0.1 } }
                 }
             }
             future_phases = {
@@ -155,12 +194,22 @@ nanbokucho = {
         nanbokucho_north_advantage = {
             icon = "gfx/interface/icons/situations/guelph_ghibelline/ghibelline_advantage.dds"
             modifier_sets = {
-                nanbokucho_north_advantage_effects = {
+                nanbokucho_military_effects = {
+                    icon = "gfx/interface/icons/situations/situation_modifier_military.dds"
+                    nanbokucho_south = { character_modifier = { mercenary_hire_cost_mult = 0.25 } }
+                    nanbokucho_south_leader = { character_modifier = { mercenary_hire_cost_mult = 0.25 } }
+                }
+                nanbokucho_character_effects = {
                     icon = "gfx/interface/icons/situations/situation_modifier_character.dds"
-                    nanbokucho_north = {
-                        character_modifier = { monthly_prestige_gain_mult = 0.1 prosperity_growth = 0.1 }
-                    }
+                    nanbokucho_north = { character_modifier = { monthly_prestige_gain_mult = 0.1 prosperity_growth = 0.1 } }
+                    nanbokucho_north_leader = { character_modifier = { monthly_prestige_gain_mult = 0.1 prosperity_growth = 0.1 } }
+                    nanbokucho_south = { character_modifier = { max_hostile_schemes_add = 1 } }
+                    nanbokucho_south_leader = { character_modifier = { max_hostile_schemes_add = 1 } }
+                }
+                nanbokucho_situation_effects = {
+                    icon = "gfx/interface/icons/situations/guelph_ghibelline/situation_modifier_ghibelline_advantage.dds"
                     nanbokucho_south = { county_modifier = { prosperity_growth_factor = -0.1 } }
+                    nanbokucho_south_leader = { county_modifier = { prosperity_growth_factor = -0.1 } }
                 }
             }
             future_phases = { nanbokucho_warfare = {} nanbokucho_south_advantage = {} }
@@ -168,12 +217,22 @@ nanbokucho = {
         nanbokucho_south_advantage = {
             icon = "gfx/interface/icons/situations/guelph_ghibelline/guelph_advantage.dds"
             modifier_sets = {
-                nanbokucho_south_advantage_effects = {
+                nanbokucho_military_effects = {
+                    icon = "gfx/interface/icons/situations/situation_modifier_military.dds"
+                    nanbokucho_north = { character_modifier = { mercenary_hire_cost_mult = 0.25 } }
+                    nanbokucho_north_leader = { character_modifier = { mercenary_hire_cost_mult = 0.25 } }
+                }
+                nanbokucho_character_effects = {
                     icon = "gfx/interface/icons/situations/situation_modifier_character.dds"
-                    nanbokucho_south = {
-                        character_modifier = { monthly_prestige_gain_mult = 0.1 prosperity_growth = 0.1 }
-                    }
+                    nanbokucho_south = { character_modifier = { monthly_prestige_gain_mult = 0.1 prosperity_growth = 0.1 } }
+                    nanbokucho_south_leader = { character_modifier = { monthly_prestige_gain_mult = 0.1 prosperity_growth = 0.1 } }
+                    nanbokucho_north = { character_modifier = { max_hostile_schemes_add = 1 } }
+                    nanbokucho_north_leader = { character_modifier = { max_hostile_schemes_add = 1 } }
+                }
+                nanbokucho_situation_effects = {
+                    icon = "gfx/interface/icons/situations/guelph_ghibelline/situation_modifier_guelph_advantage.dds"
                     nanbokucho_north = { county_modifier = { prosperity_growth_factor = -0.1 } }
+                    nanbokucho_north_leader = { county_modifier = { prosperity_growth_factor = -0.1 } }
                 }
             }
             future_phases = { nanbokucho_warfare = {} nanbokucho_north_advantage = {} }

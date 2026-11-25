@@ -1,4 +1,4 @@
-nanbokucho_support_north_decision = {
+﻿nanbokucho_support_north_decision = {
     picture = { reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds" }
     desc = nanbokucho_support_north_decision_desc
     selection_tooltip = nanbokucho_support_north_decision_tooltip
@@ -9,7 +9,7 @@ nanbokucho_support_north_decision = {
         is_house_head = yes
         house ?= { NOT = { this = house:house_daikakuji } }
         OR = {
-            top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south }
+            OR = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south } top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south_leader } }
             top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_unaligned }
         }
     }
@@ -18,6 +18,10 @@ nanbokucho_support_north_decision = {
         house = {
             remove_variable = nanbokucho_support_south
             set_variable = { name = nanbokucho_support_north value = yes }
+            every_house_member = {
+                limit = { is_alive = yes is_ruler = yes }
+                recalculate_participant_group = situation:nanbokucho
+            }
         }
         situation:nanbokucho = { trigger_situation_catalyst = catalyst_nanbokucho_alignment }
         custom_tooltip = nanbokucho_support_north_effect_tt
@@ -35,7 +39,7 @@ nanbokucho_support_south_decision = {
         is_house_head = yes
         house ?= { NOT = { this = house:house_ashikaga } }
         OR = {
-            top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north }
+            OR = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north } top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north_leader } }
             top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_unaligned }
         }
     }
@@ -44,6 +48,10 @@ nanbokucho_support_south_decision = {
         house = {
             remove_variable = nanbokucho_support_north
             set_variable = { name = nanbokucho_support_south value = yes }
+            every_house_member = {
+                limit = { is_alive = yes is_ruler = yes }
+                recalculate_participant_group = situation:nanbokucho
+            }
         }
         situation:nanbokucho = { trigger_situation_catalyst = catalyst_nanbokucho_alignment }
         custom_tooltip = nanbokucho_support_south_effect_tt
@@ -62,8 +70,8 @@ nanbokucho_seek_peace_decision = {
         situation:nanbokucho = { situation_current_phase = nanbokucho_warfare }
         is_house_head = yes
         OR = {
-            top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north }
-            top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south }
+            OR = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north } top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north_leader } }
+            OR = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south } top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south_leader } }
         }
     }
     is_valid = { is_adult = yes is_at_war = no }
@@ -85,8 +93,8 @@ nanbokucho_end_division_decision = {
     is_shown = {
         exists = situation:nanbokucho
         OR = {
-            top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north }
-            top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south }
+            OR = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north } top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north_leader } }
+            OR = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south } top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south_leader } }
         }
     }
     is_valid = { has_title = title:e_japan has_title = title:k_chrysanthemum_throne is_at_war = no }

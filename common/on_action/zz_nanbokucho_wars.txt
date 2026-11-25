@@ -1,17 +1,19 @@
-# A war between the two camps intensifies the dispute.
-on_war_started = {
+﻿# A war between the two camps intensifies the dispute.
+on_war_started = { on_actions = { nanbokucho_war_started } }
+
+nanbokucho_war_started = {
     effect = {
         if = {
             limit = {
                 exists = situation:nanbokucho
                 OR = {
                     AND = {
-                        scope:attacker = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north } }
-                        scope:defender = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south } }
+                        scope:attacker = { OR = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north } top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north_leader } } }
+                        scope:defender = { OR = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south } top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south_leader } } }
                     }
                     AND = {
-                        scope:attacker = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south } }
-                        scope:defender = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north } }
+                        scope:attacker = { OR = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south } top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south_leader } } }
+                        scope:defender = { OR = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north } top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north_leader } } }
                     }
                 }
             }
