@@ -1,0 +1,1313 @@
+﻿window = {
+	name = "window_nanbokucho"
+	widgetid = "window_nanbokucho"
+	datacontext = "[SituationWindow.GetSituation]"
+	datacontext = "[GetVariableSystem]"
+	datacontext = "[GetPlayer]"
+	parentanchor = top|right
+	layer = windows_layer
+	movable = no
+	allow_outside = yes
+
+	using = Window_Size_MainTab
+
+	state = {
+		name = on_create
+		trigger_on_create = yes
+		on_start = "[GetVariableSystem.Clear( 'nanbokucho_endings' )]"
+		on_start = "[GetVariableSystem.Clear( 'nanbokucho_catalysts' )]"
+	}
+
+	state = {
+		name = _show
+		using = Animation_FadeIn_Quick
+		using = Sound_WindowShow_Standard
+		using = Window_Position_MainTab
+	}
+
+	state = {
+		name = _hide
+		using = Animation_FadeOut_Quick
+		using = Sound_WindowHide_Standard
+		using = Window_Position_MainTab_Hide
+	}
+
+	margin_widget = {
+		size = { 100% 100% }
+		margin = { 0 26 }
+		margin_right = 13
+
+		widget = {
+			size = { 100% 100% }
+
+			vbox = {
+				using = Window_Margins
+
+				layoutpolicy_vertical = expanding
+				layoutpolicy_horizontal = expanding
+
+				vbox = {
+					layoutpolicy_horizontal = expanding
+					spacing = 6
+
+					header_pattern = {
+						layoutpolicy_horizontal = expanding
+
+						blockoverride "header_text"
+						{
+							text = "[Situation.GetNameNoTooltip]"
+						}
+
+						blockoverride "button_back"
+						{
+							onclick = "[OpenGameView( 'situations' )]"
+						}
+
+						blockoverride "button_close"
+						{
+							onclick = "[SituationWindow.Close]"
+						}
+					}
+				}
+
+
+				vbox  = {
+					datacontext = "[SituationWindow.GetSelectedSubRegion]"
+					datacontext = "[SituationSubRegion.GetCurrentPhase]"
+					layoutpolicy_horizontal = expanding
+					margin_bottom = 42
+
+					# Reserved space for current
+					widget = {
+						name = "current_phase_area"
+						size = { 560 88 }
+					}
+
+					# Leaders
+					widget = {
+						size = { 560 225 }
+
+						### Ghibellines Pattern
+						background = {
+							texture = "gfx/interface/colors/white.dds"
+							color = { 0.32 0.25 0.1 1 }
+							margin = { 0 12 }
+
+							alpha = 0.5
+
+							modify_texture = {
+								texture = "gfx/interface/component_overlay/overlay_texture.dds"
+
+								texture_density = 2
+								spriteType = Corneredtiled
+
+								alpha = 0.7
+							}
+
+							modify_texture = {
+								texture = "gfx/interface/component_overlay/seamless_noise.dds"
+
+								texture_density = 2
+								spriteType = Corneredtiled
+
+								alpha = 0.7
+							}
+
+							modify_texture = {
+								texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
+								blend_mode = alphaMultiply
+							}
+
+							using = Mask_Rough_Edges
+						}
+
+						background = {
+							texture = "gfx/interface/window_guelph_ghibelline/ghibelline_pattern.dds"
+							margin = { 0 12 }
+
+							texture_density = 5
+							spriteType = Corneredtiled
+
+							alpha = 0.5
+
+							modify_texture = {
+								texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
+								blend_mode = alphaMultiply
+							}
+
+							modify_texture = {
+								texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
+								blend_mode = alphaMultiply
+								alpha = 0.6
+							}
+
+							modify_texture = {
+								texture = "gfx/interface/component_masks/mask_scratches.dds"
+								blend_mode = alphaMultiply
+							}
+
+							using = Mask_Rough_Edges
+						}
+
+						### Guelph Pattern
+						background = {
+							texture = "gfx/interface/colors/white.dds"
+							color = { 0.1 0.16 0.25 1 }
+							alpha = 0.5
+							margin = { 0 12 }
+
+							modify_texture = {
+								texture = "gfx/interface/component_overlay/overlay_texture.dds"
+
+								texture_density = 2
+								spriteType = Corneredtiled
+
+								alpha = 0.7
+							}
+
+							modify_texture = {
+								texture = "gfx/interface/component_overlay/seamless_noise.dds"
+
+								texture_density = 2
+								spriteType = Corneredtiled
+
+								alpha = 0.7
+							}
+
+							modify_texture = {
+								texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
+								blend_mode = alphaMultiply
+								mirror = horizontal
+							}
+
+							modify_texture = {
+								texture = "gfx/interface/component_masks/mask_scratches.dds"
+								blend_mode = alphaMultiply
+								alpha = 0.5
+							}
+
+							using = Mask_Rough_Edges
+						}
+
+						background = {
+							texture = "gfx/interface/window_guelph_ghibelline/guelph_pattern.dds"
+							margin = { 0 12 }
+							texture_density = 5
+							spriteType = Corneredtiled
+
+							alpha = 0.16
+
+							modify_texture = {
+								texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
+								blend_mode = alphaMultiply
+								mirror = horizontal
+							}
+
+							modify_texture = {
+								texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
+								blend_mode = alphaMultiply
+								mirror = horizontal
+							}
+
+							modify_texture = {
+								texture = "gfx/interface/component_masks/mask_scratches.dds"
+								blend_mode = alphaMultiply
+								alpha = 1
+							}
+
+							using = Mask_Rough_Edges
+						}
+
+						background = {
+							texture = "gfx/interface/colors/black.dds"
+							margin = { 0 12 }
+
+							modify_texture = {
+								texture = "gfx/interface/component_masks/mask_vignette.dds"
+								blend_mode = alphaMultiply
+								alpha = 0.8
+							}
+
+							using = Mask_Rough_Edges
+						}
+
+						group_banner = {
+							parentanchor = left
+							position = { 12 -16 }
+
+							blockoverride "group_text" {
+								datacontext = "[GetSituationType('nanbokucho').GetPhaseType('nanbokucho_south_advantage')]"
+
+								text = "NANBOKUCHO_SOUTH_LABEL"
+							}
+							blockoverride "group_icon" {
+								texture = "gfx/interface/icons/situations/nanbokucho/south_member_group.dds"
+							}
+							blockoverride "group_banner_texture" {
+								texture = "gfx/interface/window_guelph_ghibelline/group_banner.dds"
+								color = { 0.4 0.5 0.6 1}
+							}
+						}
+
+						group_banner = {
+							parentanchor = right
+							position = { -12 -16 }
+
+							blockoverride "group_text" {
+								datacontext = "[GetSituationType('nanbokucho').GetPhaseType('nanbokucho_north_advantage')]"
+
+								text = "NANBOKUCHO_NORTH_LABEL"
+							}
+							blockoverride "group_icon" {
+								texture = "gfx/interface/icons/situations/nanbokucho/north_member_group.dds"
+							}
+							blockoverride "group_banner_texture" {
+								texture = "gfx/interface/window_guelph_ghibelline/group_banner.dds"
+								color = { 0.65 0.55 0.4 1}
+							}
+						}
+
+
+						widget = {
+							size = { 50% 100% }
+							datacontext = "[GetTitleByKey( 'k_nancho_throne' )]"
+							datacontext = "[Title.GetHolder]"
+							visible = "[Character.IsValid]"
+
+
+								widget = {
+									size = { 100% 100% }
+
+									portrait_button = {
+										size = { 180 280 }
+										parentanchor = center
+										position = { 60 0 }
+										using = portrait_base
+
+										blockoverride "portrait_transformation"
+										{
+											portrait_scale = {  1.0 1.0 }
+											portrait_offset = { 0 0 }
+										}
+
+										portrait_texture = "[Character.GetAnimatedPortrait( 'environment_body', 'camera_body_right_gg', 'war_defender', PdxGetWidgetScreenSize( PdxGuiWidget.Self ) )]"
+										background_texture = "gfx/portraits/portrait_transparent.dds"
+										effectname = "NoHighlight"
+										texture = "gfx/portraits/portrait_transparent.dds"
+										mask = "gfx/portraits/portrait_mask_body.dds"
+									}
+
+									widget = {
+										size = { 100% 50 }
+										parentanchor = bottom|hcenter
+
+										allow_outside = yes
+
+										hbox = {
+											layoutpolicy_horizontal = expanding
+											spacing = 12
+
+											expand = {}
+
+											widget = {
+												allow_outside = yes
+												size = { 50 0 }
+
+												widget = {
+													size = { 50 70 }
+													position = { 0 -46 }
+													allow_outside = yes
+
+													vbox = {
+														spacing = 8
+														layoutpolicy_vertical = expanding
+														portrait_opinion = {
+															blockoverride "opinion_bg_alpha" {
+																alpha = 0.6
+															}
+														}
+
+														button_round = {
+															visible = "[Not( ObjectsEqual( Character.Self, GetPlayer.Self ) )]"
+															onclick = "[ToggleFilteredCharacterInteractionMenu(Character.Self, 'interaction_category_situation')]"
+															tooltip = "SITUATION_INTERACTION_BUTTON"
+
+															button_icon = {
+																alwaystransparent = yes
+																parentanchor = center
+																size = { 30 30 }
+																texture = "gfx/interface/icons/flat_icons/character_interactions.dds"
+															}
+
+															text_single = {
+																position = { 0 -8 }
+																parentanchor = top|hcenter
+																text = "[GetNumberOfValidInteractionsWithFilter(Character.Self, 'interaction_category_situation')]"
+																default_format = "#glow_color:{0.1,0.1,0.1,1.0}"
+
+																background = {
+																	margin = { 6 0 }
+																	using = Background_Area_Dark
+																}
+															}
+														}
+													}
+												}
+											}
+
+											widget = {
+												allow_outside = yes
+												size = { 34 20 }
+
+												coa_realm_tiny_crown = {
+													position = { 0 -24 }
+													visible = "[Character.HasLandedTitles]"
+												}
+											}
+
+											text_single = {
+												text = "[Character.GetShortUINameNoTooltip]"
+												default_format = "#glow_color:{0.1,0.1,0.1,1.0}"
+												align = nobaseline
+
+												background = {
+													margin = { 12 4 }
+													using = Mask_Rough_Edges
+													using = Background_Area_Dark
+												}
+											}
+											expand = {}
+										}
+									}
+								}
+							
+						}
+
+						widget = {
+							size = { 50% 100% }
+							datacontext = "[GetTitleByKey( 'k_chrysanthemum_throne' )]"
+							datacontext = "[Title.GetHolder]"
+							visible = "[Character.IsValid]"
+							parentanchor = right
+							position = { 0 0}
+
+
+
+								widget = {
+									size = { 100% 100% }
+
+									portrait_button = {
+										size = { 180 280 }
+										parentanchor = center
+										position = { -50 0 }
+										using = portrait_base
+
+										blockoverride "portrait_transformation"
+										{
+											portrait_scale = {  1.0 1.0 }
+											portrait_offset = { 0 0 }
+										}
+
+										portrait_texture = "[Character.GetAnimatedPortrait( 'environment_body', 'camera_body_left_gg', 'war_defender', PdxGetWidgetScreenSize( PdxGuiWidget.Self ) )]"
+										background_texture = "gfx/portraits/portrait_transparent.dds"
+										effectname = "NoHighlight"
+										texture = "gfx/portraits/portrait_transparent.dds"
+										mask = "gfx/portraits/portrait_mask_body.dds"
+									}
+
+									widget = {
+										size = { 100% 50 }
+										parentanchor = bottom|hcenter
+
+										allow_outside = yes
+
+										hbox = {
+											layoutpolicy_horizontal = expanding
+											spacing = 12
+
+											expand = {}
+
+											text_single = {
+												text = "[Character.GetShortUINameNoTooltip]"
+												default_format = "#glow_color:{0.1,0.1,0.1,1.0}"
+												align = nobaseline
+
+												background = {
+													margin = { 12 4 }
+													using = Mask_Rough_Edges
+													using = Background_Area_Dark
+												}
+											}
+
+
+											widget = {
+												allow_outside = yes
+												size = { 34 20 }
+
+												coa_realm_tiny_crown = {
+													position = { 0 -24 }
+													visible = "[Character.HasLandedTitles]"
+												}
+											}
+
+											widget = {
+												allow_outside = yes
+												size = { 50 0 }
+
+												widget = {
+													size = { 50 70 }
+													position = { 0 -46 }
+													allow_outside = yes
+
+													vbox = {
+														spacing = 8
+														layoutpolicy_vertical = expanding
+														portrait_opinion = {
+															blockoverride "opinion_bg_alpha" {
+																alpha = 0.6
+															}
+														}
+
+														button_round = {
+															visible = "[Not( ObjectsEqual( Character.Self, GetPlayer.Self ) )]"
+															onclick = "[ToggleFilteredCharacterInteractionMenu(Character.Self, 'interaction_category_situation')]"
+															tooltip = "SITUATION_INTERACTION_BUTTON"
+
+															button_icon = {
+																alwaystransparent = yes
+																parentanchor = center
+																size = { 30 30 }
+																texture = "gfx/interface/icons/flat_icons/character_interactions.dds"
+															}
+
+															text_single = {
+																position = { 0 -8 }
+																parentanchor = top|hcenter
+																text = "[GetNumberOfValidInteractionsWithFilter(Character.Self, 'interaction_category_situation')]"
+																default_format = "#glow_color:{0.1,0.1,0.1,1.0}"
+
+																background = {
+																	margin = { 6 0 }
+																	using = Background_Area_Dark
+																}
+															}
+														}
+													}
+												}
+											}
+											expand = {}
+										}
+									}
+								}
+							
+						}
+					}
+
+					widget = {
+						allow_outside = yes
+						widget = { # Current Phase area
+							name = "current_phase_area"
+							size = { 560 105 }
+							position = { 0 -330}
+
+							visible = "[Not( SituationWindow.GetSelectedFuturePhaseType.IsValid )]"
+
+							background = {
+								texture = "gfx/interface/window_guelph_ghibelline/phase_banner.dds"
+							}
+
+							vbox = {
+								name = "current_phase_widget"
+								datacontext = "[SituationWindow.GetSelectedSubRegion.GetCurrentPhase]"
+								datacontext = "[GetPlayer]"
+								allow_outside = yes
+								layoutpolicy_horizontal = expanding
+
+								expand = {}
+
+								hbox = {
+									layoutpolicy_horizontal = expanding
+
+									hbox = {
+										name = "current_phase_header"
+										layoutpolicy_horizontal = expanding
+										layoutpolicy_vertical = expanding
+										maximumsize = { 250 114 }
+										margin_left = 25
+
+										container = {
+											name = "icon"
+
+											icon = {
+												size = { 74 74 }
+												texture = "gfx/interface/icons/struggle_banners/icon_background_01.dds"
+											}
+
+											icon = {
+												size = { 74 74 }
+												texture = "[SituationSubRegion.GetCurrentPhase.GetType.GetIcon]"
+											}
+										}
+
+										spacer = {
+											size = { 5 10 }
+										}
+
+										vbox = {
+											name = "text"
+											layoutpolicy_horizontal = expanding
+											minimumsize = { 170 1 }
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												text = "CURRENT_PHASE"
+												max_width = 170
+												margin_bottom = -8
+												align = center
+											}
+
+											text_multi = {
+												layoutpolicy_horizontal = expanding
+												text = "[SituationWindow.GetSelectedSubRegion.GetCurrentPhase.GetType.GetName]"
+												max_width = 140
+												using = Font_Size_Medium
+												default_format = "#high"
+												autoresize = yes
+												align = center
+												margin = { 0 6  }
+											}
+										}
+									}
+
+									spacer = {
+										size = { 45 10 }
+									}
+
+									vbox = {
+										name = "current_phase_effects"
+										layoutpolicy_horizontal = expanding
+										layoutpolicy_vertical = expanding
+										maximumsize = { 125 1 }
+										margin_left = 35
+
+										text_label_center = {
+											text = "PHASE_EFFECTS_HEADER"
+											default_format = "#high"
+										}
+
+										hbox = {
+											name = "phase icons"
+											layoutpolicy_vertical = expanding
+											spacing = 6
+
+											hbox = {
+												layoutpolicy_horizontal = expanding
+
+												fixedgridbox = {
+													name = "named_effect_sets"
+													layoutpolicy_horizontal = expanding
+
+													addcolumn = 48
+													addrow = 48
+													setitemsizefromcell = yes
+													datamodel_wrap = 6
+													maxhorizontalslots = 6
+													maxverticalslots = 2
+													flipdirection = yes
+													layoutanchor = topleft
+
+													datamodel = "[SituationSubRegion.GetCurrentPhase.GetType.GetModifierNamedSets]"
+													item = {
+														button_phase_named_set_item = {}
+													}
+												}
+											}
+										}
+									}
+									expand = {}
+								}
+
+								expand = {}
+							}
+						}
+					}
+
+					widget = { # Current Progress Bar
+						allow_outside = yes
+						layoutpolicy_horizontal = expanding
+						size = { 515 40 }
+
+						progressbar_standard = {
+							parentanchor = center
+							position = { 0 2 }
+							size = { 80% 26 }
+							#visible = no
+
+							blockoverride "progress_textures"
+							{
+								progresstexture = "gfx/interface/progressbars/progress_standard.dds"
+								noprogresstexture = "gfx/interface/progressbars/progress_domicile_banner.dds"
+							}
+
+							value = "[EmptyScope.ScriptValue('nanbokucho_south_power')]"
+							max = "[EmptyScope.ScriptValue('nanbokucho_gui_total_power')]"
+
+							tooltipwidget = {
+								widget_value_breakdown_tooltip = {
+									datacontext = "[EmptyScope.GetScriptValueBreakdown('nanbokucho_gui_total_power')]"
+								}
+								blockoverride "header_text" {
+									text = NANBOKUCHO_TOTAL_POWER
+								}
+							}
+						}
+
+						group_score = {
+							blockoverride "text" {
+								raw_text = "#E [EmptyScope.ScriptValue('nanbokucho_south_share')|0]%#!"
+							}
+
+							tooltipwidget = {
+								widget_value_breakdown_tooltip = {
+									datacontext = "[EmptyScope.GetScriptValueBreakdown('nanbokucho_south_power')]"
+								}
+								blockoverride "header_text" {
+									text = NANBOKUCHO_SOUTH_POWER
+								}
+							}
+						}
+
+						icon = {
+							size = { 132 25 }
+							position = { 58 15 }
+							texture = "gfx/interface/window_guelph_ghibelline/guelph_wall.dds"
+						}
+
+						group_score = {
+							parentanchor = right
+							blockoverride "text" {
+								raw_text = "#Clickable [EmptyScope.ScriptValue('nanbokucho_north_share')|0]%#!"
+							}
+
+							tooltipwidget = {
+								widget_value_breakdown_tooltip = {
+									datacontext = "[EmptyScope.GetScriptValueBreakdown('nanbokucho_north_power')]"
+								}
+								blockoverride "header_text" {
+									text = NANBOKUCHO_NORTH_POWER
+								}
+							}
+						}
+
+						icon = {
+							size = { 132 25 }
+							position = { -58 15 }
+							parentanchor = right
+							texture = "gfx/interface/window_guelph_ghibelline/ghibelline_wall.dds"
+						}
+
+						icon = {
+							size = { 38 38 }
+							position = { -175 40 }
+							parentanchor = right
+							datacontext = "[GetSituationType('nanbokucho').GetPhaseType('nanbokucho_south_advantage')]"
+							texture = "[SituationPhaseType.GetIcon]"
+							tooltipwidget = {
+								using = situation_phase_type_tooltip
+							}
+
+							visible = "[ObjectsEqual( SituationWindow.GetSelectedSubRegion.GetCurrentPhase.GetType, GetSituationType('nanbokucho').GetPhaseType('nanbokucho_warfare') )]"
+
+							background = {
+								texture = "gfx/interface/window_regency/regency_level_bg.dds"
+								margin = { 5 5 }
+							}
+						}
+
+						icon = {
+							size = { 38 38 }
+							position = { 175 40 }
+							parentanchor = left
+							datacontext = "[GetSituationType('nanbokucho').GetPhaseType('nanbokucho_north_advantage')]"
+							texture = "[SituationPhaseType.GetIcon]"
+							tooltipwidget = {
+								using = situation_phase_type_tooltip
+							}
+
+							visible = "[ObjectsEqual( SituationWindow.GetSelectedSubRegion.GetCurrentPhase.GetType, GetSituationType('nanbokucho').GetPhaseType('nanbokucho_warfare') )]"
+
+							background = {
+								texture = "gfx/interface/window_regency/regency_level_bg.dds"
+								margin = { 5 5 }
+							}
+						}
+
+						icon = {
+							size = { 38 38 }
+							position = { -175 40 }
+							parentanchor = right
+							datacontext = "[GetSituationType('nanbokucho').GetPhaseType('nanbokucho_south_advantage')]"
+							texture = "[SituationPhaseType.GetIcon]"
+							tooltip = "nanbokucho_need_warfare_tt"
+
+							visible = "[Not( Or( ObjectsEqual( SituationWindow.GetSelectedSubRegion.GetCurrentPhase.GetType, GetSituationType('nanbokucho').GetPhaseType('nanbokucho_warfare') ), ObjectsEqual( SituationWindow.GetSelectedSubRegion.GetCurrentPhase.GetType, GetSituationType('nanbokucho').GetPhaseType('nanbokucho_south_advantage') ) ) )]"
+							enabled = no
+
+							background = {
+								texture = "gfx/interface/window_regency/regency_level_bg.dds"
+								margin = { 5 5 }
+							}
+						}
+
+						icon = {
+							size = { 38 38 }
+							position = { 175 40 }
+							parentanchor = left
+							datacontext = "[GetSituationType('nanbokucho').GetPhaseType('nanbokucho_north_advantage')]"
+							texture = "[SituationPhaseType.GetIcon]"
+							tooltip = "nanbokucho_need_warfare_tt"
+
+							visible = "[Not( Or( ObjectsEqual( SituationWindow.GetSelectedSubRegion.GetCurrentPhase.GetType, GetSituationType('nanbokucho').GetPhaseType('nanbokucho_warfare') ), ObjectsEqual( SituationWindow.GetSelectedSubRegion.GetCurrentPhase.GetType, GetSituationType('nanbokucho').GetPhaseType('nanbokucho_north_advantage') ) ) )]"
+							enabled = no
+
+							background = {
+								texture = "gfx/interface/window_regency/regency_level_bg.dds"
+								margin = { 5 5 }
+							}
+						}
+
+						icon = {
+							size = { 38 38 }
+							position = { -218 40 }
+							parentanchor = right
+							datacontext = "[GetSituationType('nanbokucho').GetPhaseType('nanbokucho_warfare')]"
+							texture = "[SituationPhaseType.GetIcon]"
+							tooltip = "nanbokucho_return_warfare_tt"
+
+							visible = "[ObjectsEqual( SituationWindow.GetSelectedSubRegion.GetCurrentPhase.GetType, GetSituationType('nanbokucho').GetPhaseType('nanbokucho_south_advantage') ) ]"
+
+							background = {
+								texture = "gfx/interface/window_regency/regency_level_bg.dds"
+								margin = { 5 5 }
+							}
+						}
+
+						icon = {
+							size = { 38 38 }
+							position = { 218 40 }
+							parentanchor = left
+							datacontext = "[GetSituationType('nanbokucho').GetPhaseType('nanbokucho_warfare')]"
+							texture = "[SituationPhaseType.GetIcon]"
+							tooltip = "nanbokucho_return_warfare_tt"
+
+							visible = "[ObjectsEqual( SituationWindow.GetSelectedSubRegion.GetCurrentPhase.GetType, GetSituationType('nanbokucho').GetPhaseType('nanbokucho_north_advantage') ) ]"
+
+							background = {
+								texture = "gfx/interface/window_regency/regency_level_bg.dds"
+								margin = { 5 5 }
+							}
+						}
+					}
+
+					widget = {
+						size = { 1 1}
+
+						divider = {
+							parentanchor = bottom
+							size = { 4 320 }
+							position = { 0 46 }
+						}
+
+						divider = {
+							parentanchor = bottom
+							size = { 4 26 }
+							position = { -92 -6 }
+
+							visible = "[Not(ObjectsEqual( SituationWindow.GetSelectedSubRegion.GetCurrentPhase.GetType, GetSituationType('nanbokucho').GetPhaseType('nanbokucho_north_advantage') )) ]"
+						}
+
+						divider = {
+							parentanchor = bottom
+							size = { 4 26 }
+							position = { 88 -6 }
+
+							visible = "[Not(ObjectsEqual( SituationWindow.GetSelectedSubRegion.GetCurrentPhase.GetType, GetSituationType('nanbokucho').GetPhaseType('nanbokucho_south_advantage') )) ]"
+						}
+
+						divider = {
+							parentanchor = bottom
+							size = { 4 26 }
+							position = { -46 -6 }
+
+							visible = "[ObjectsEqual( SituationWindow.GetSelectedSubRegion.GetCurrentPhase.GetType, GetSituationType('nanbokucho').GetPhaseType('nanbokucho_north_advantage') ) ]"
+						}
+
+						divider = {
+							parentanchor = bottom
+							size = { 4 26 }
+							position = { 42 -6 }
+
+							visible = "[ObjectsEqual( SituationWindow.GetSelectedSubRegion.GetCurrentPhase.GetType, GetSituationType('nanbokucho').GetPhaseType('nanbokucho_south_advantage') ) ]"
+						}
+					}
+	
+				}
+
+				scrollbox = {
+					name = "sub_region_scrollbox"
+
+					visible = "[Situation.HasMultipleSubRegions]"
+
+					using = Animation_Tab_Switch
+
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+
+					min_height = 185
+					max_height = 185
+
+					blockoverride "scrollbox_content"
+					{
+						layoutpolicy_horizontal = expanding
+						layoutpolicy_vertical = expanding
+
+						vbox = {
+							name = "sub_regions"
+							layoutpolicy_horizontal = expanding
+							spacing = 2
+
+							datamodel = "[Situation.GetSubRegions]"
+
+							item = {
+								button_situation_subregion = { }
+							}
+						}
+
+						blockoverride "scrollbox_expand" {
+							expand = {}
+						}
+					}
+				}
+
+
+				scrollbox = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					blockoverride "scrollbox_content" {
+						vbox = {
+						layoutpolicy_horizontal = expanding
+
+				vbox = {
+					name = "current_sub_region"
+					margin_top = 2
+					layoutpolicy_horizontal = expanding
+
+					datacontext = "[SituationWindow.GetSelectedSubRegion]"
+					datacontext = "[SituationSubRegion.GetCurrentPhase]"
+
+					visible = "[SituationSubRegion.IsValid]"
+
+					text_label_center = {
+						layoutpolicy_horizontal = expanding
+						margin = { 10 5 }
+						using = Background_Area_Dark
+						visible = "[Situation.HasMultipleSubRegions]"
+
+						text = "[SituationSubRegion.GetNameNoTooltip]"
+						using = Font_Size_Medium
+						align = nobaseline
+					}
+
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						layoutpolicy_vertical = expanding
+
+						min_height = 75
+
+						margin = { 15 15 }
+
+						datacontext = "[SituationSubRegion.GetCharacterParticipantGroup( GetPlayer )]"
+
+						background = {
+							using = Background_Area
+						}
+
+						hbox = {
+							layoutpolicy_horizontal = expanding
+							layoutpolicy_vertical = expanding
+
+							text_multi = {
+								visible = "[Not( SituationParticipantGroup.IsValid )]"
+								layoutpolicy_horizontal = expanding
+
+								text = "SITUATION_WINDOW_NO_REGION_PARTICIPANT_GROUP"
+								default_format = "#low"
+								align = nobaseline
+							}
+
+							icon = {
+								visible = "[SituationParticipantGroup.IsValid]"
+
+								size = { 40 40 }
+								texture = "[SituationParticipantGroup.GetType.GetIcon]"
+
+								background = {
+									texture = "gfx/interface/buttons/button_lifestyles_base.dds"
+									margin = { 5 5 }
+								}
+							}
+
+							vbox = {
+								visible = "[SituationParticipantGroup.IsValid]"
+
+								margin_left = 10
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[SituationParticipantGroup.GetName]"
+									align = nobaseline
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+
+									text = "[SelectLocalization( Situation.HasMultipleSubRegions, 'SITUATION_WINDOW_YOUR_PARTICIPANT_GROUP_MULTI_SUBREGION', 'SITUATION_WINDOW_YOUR_PARTICIPANT_GROUP' ) ]"
+
+									align = nobaseline
+									default_format = "#Weak"
+								}
+							}
+
+							expand = {}
+
+							button_standard_small = {
+								onclick = "[SituationWindow.AccessParticipantCharacterList.Toggle]"
+								text = "SITUATION_WINDOW_VIEW_PARTICIPANT_GROUPS"
+							}
+						}
+					}
+
+
+                    # Potential phases, following the dedicated Guelph-Ghibelline window.
+                    vbox = {
+                        layoutpolicy_horizontal = expanding
+                        margin = { 15 10 }
+                        background = { using = Background_Area_Solid alpha = 0.4 }
+                        hbox = {
+                            layoutpolicy_horizontal = expanding
+                            divider_light = { layoutpolicy_horizontal = expanding }
+                            button_primary = {
+                                margin = { 12 4 }
+                                text = "NANBOKUCHO_SEE_ENDINGS"
+                                visible = "[Not( GetVariableSystem.Exists( 'nanbokucho_endings' ) )]"
+                                onclick = "[GetVariableSystem.Set( 'nanbokucho_endings', 'true' )]"
+                            }
+                            button_primary = {
+                                margin = { 12 4 }
+                                text = "NANBOKUCHO_SEE_PHASES"
+                                visible = "[GetVariableSystem.Exists( 'nanbokucho_endings' )]"
+                                onclick = "[GetVariableSystem.Clear( 'nanbokucho_endings' )]"
+                            }
+                            divider_light = { layoutpolicy_horizontal = expanding }
+                        }
+                        vbox = {
+                            visible = "[Not( GetVariableSystem.Exists( 'nanbokucho_endings' ) )]"
+                            layoutpolicy_horizontal = expanding
+                            text_label_center = { layoutpolicy_horizontal = expanding text = "POTENTIAL_PHASES_HEADER" }
+                            widget = {
+                                size = { 560 40 }
+                                progressbar_standard = {
+                                    size = { 420 24 }
+                                    parentanchor = center
+                                    value = "[SituationSubRegion.GetCurrentPhase.GetPhaseRelativeProgressPercent]"
+                                    visible = "[Or( ObjectsEqual( SituationSubRegion.GetCurrentPhase.GetType, GetSituationType('nanbokucho').GetPhaseType('nanbokucho_divided') ), ObjectsEqual( SituationSubRegion.GetCurrentPhase.GetType, GetSituationType('nanbokucho').GetPhaseType('nanbokucho_warfare') ) )]"
+                                    text_single = {
+                                        datacontext = "[SituationSubRegion.GetCurrentPhase.GetFuturePhaseByType( GetSituationType('nanbokucho').GetPhaseType('nanbokucho_warfare') )]"
+                                        visible = "[ObjectsEqual( SituationSubRegion.GetCurrentPhase.GetType, GetSituationType('nanbokucho').GetPhaseType('nanbokucho_divided') )]"
+                                        text = "NANBOKUCHO_CATALYST_COUNT"
+                                        parentanchor = center
+                                        align = nobaseline
+                                    }
+                                    text_single = {
+                                        datacontext = "[SituationSubRegion.GetCurrentPhase.GetFuturePhaseByType( GetSituationType('nanbokucho').GetPhaseType('nanbokucho_divided') )]"
+                                        visible = "[ObjectsEqual( SituationSubRegion.GetCurrentPhase.GetType, GetSituationType('nanbokucho').GetPhaseType('nanbokucho_warfare') )]"
+                                        text = "NANBOKUCHO_CATALYST_COUNT"
+                                        parentanchor = center
+                                        align = nobaseline
+                                    }
+                                    blockoverride "progress_textures" {
+                                        progresstexture = "gfx/interface/progressbars/progress_grandeur_decrease.dds"
+                                        noprogresstexture = "gfx/interface/progressbars/progress_gray_bg.dds"
+                                    }
+                                }
+                                widget = {
+                                    size = { 42 42 }
+                                    position = { 36 0 }
+                                    datacontext = "[GetSituationType('nanbokucho').GetPhaseType('nanbokucho_divided')]"
+                                    tooltipwidget = { using = situation_phase_type_tooltip }
+                                    background = { texture = "gfx/interface/window_regency/regency_level_bg.dds" margin = { 5 5 } }
+                                    icon = { size = { 38 38 } parentanchor = center texture = "[SituationPhaseType.GetIcon]" }
+                                }
+                                widget = {
+                                    size = { 42 42 }
+                                    parentanchor = right
+                                    position = { -36 0 }
+                                    datacontext = "[GetSituationType('nanbokucho').GetPhaseType('nanbokucho_warfare')]"
+                                    tooltipwidget = { using = situation_phase_type_tooltip }
+                                    background = { texture = "gfx/interface/window_regency/regency_level_bg.dds" margin = { 5 5 } }
+                                    icon = { size = { 38 38 } parentanchor = center texture = "[SituationPhaseType.GetIcon]" }
+                                }
+                            }
+                            hbox = {
+                                margin_top = 8
+                                spacing = 12
+                                expand = {}
+                                button_decision_entry = {
+                                    datacontext = "[GetDecisionWithKey('nanbokucho_seek_peace_decision')]"
+                                    visible = "[Decision.IsShownForPlayer]"
+                                    onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+                                    size = { 180 30 }
+                                    using = tooltip_se
+                                    blockoverride "size_illustration" {}
+                                    blockoverride "text" { text = "[Decision.GetTitleForPlayer]" }
+                                }
+                                button_standard = {
+                                    size = { 180 30 }
+                                    text = "NANBOKUCHO_CATALYSTS"
+                                    onclick = "[GetVariableSystem.Toggle( 'nanbokucho_catalysts' )]"
+                                }
+                                expand = {}
+                            }
+                            hbox = {
+                                margin = { 20 12 }
+                                spacing = 20
+                                text_multi = { text = "NANBOKUCHO_ADVANTAGE_EXPLANATION" max_width = 350 autoresize = yes align = right }
+                                vbox = {
+                                    spacing = 8
+                                    icon = {
+                                        size = { 38 38 }
+                                        datacontext = "[GetSituationType('nanbokucho').GetPhaseType('nanbokucho_south_advantage')]"
+                                        texture = "[SituationPhaseType.GetIcon]"
+                                        tooltipwidget = { using = situation_phase_type_tooltip }
+                                        background = { texture = "gfx/interface/window_regency/regency_level_bg.dds" margin = { 5 5 } }
+                                    }
+                                    icon = {
+                                        size = { 38 38 }
+                                        datacontext = "[GetSituationType('nanbokucho').GetPhaseType('nanbokucho_north_advantage')]"
+                                        texture = "[SituationPhaseType.GetIcon]"
+                                        tooltipwidget = { using = situation_phase_type_tooltip }
+                                        background = { texture = "gfx/interface/window_regency/regency_level_bg.dds" margin = { 5 5 } }
+                                    }
+                                }
+                            }
+                            text_label_center = { layoutpolicy_horizontal = expanding using = Background_Area_Dark text = "RELATED_ACTIONS_SITUATION" }
+                            vbox = {
+                                datamodel = "[SituationWindow.GetSituationDecisions]"
+                                layoutpolicy_horizontal = expanding
+                                item = {
+                                    button_decision_entry = {
+                                        visible = "[Decision.IsShownForPlayer]"
+                                        onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+                                        size = { 360 30 }
+                                        blockoverride "size_illustration" {}
+                                        blockoverride "text" { text = "[Decision.GetTitleForPlayer]" }
+                                    }
+                                }
+                            }
+                        }
+                        vbox = {
+                            visible = "[GetVariableSystem.Exists( 'nanbokucho_endings' )]"
+                            layoutpolicy_horizontal = expanding
+                            text_label_center = { layoutpolicy_horizontal = expanding text = "NANBOKUCHO_ENDINGS_HEADER" }
+                            vbox = {
+                                datamodel = "[SituationWindow.GetEndingDecisions]"
+                                layoutpolicy_horizontal = expanding
+                                item = {
+                                    button_decision_entry = {
+                                        onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+                                        size = { 360 30 }
+                                        blockoverride "size_illustration" {}
+                                        blockoverride "text" { text = "[Decision.GetTitleForPlayer]" }
+                                    }
+                                }
+                            }
+                        }
+                    }
+				}
+
+
+				vbox = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+
+					datacontext = "[SituationWindow.GetSelectedOrLeadingFuturePhaseType]"
+
+					visible = "[And( GetVariableSystem.Exists( 'nanbokucho_catalysts' ), Not( IsDataModelEmpty( SituationWindow.GetCatalystsForSelectedPhase ) ) )]"
+
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						layoutpolicy_vertical = expanding
+
+						margin = { 15 15 }
+						margin_top = 10
+
+						background = {
+							using = Background_Area
+						}
+
+						vbox = {
+							name = "catalyst_information_area"
+
+							layoutpolicy_horizontal = expanding
+							layoutpolicy_vertical = expanding
+
+							text_label_center = {
+								layoutpolicy_horizontal = expanding
+								text = "SITUATION_WINDOW_FUTURE_CATALYSTS_HEADER"
+							}
+
+							scrollbox = {
+								layoutpolicy_vertical = expanding
+								layoutpolicy_horizontal = expanding
+
+								blockoverride "scrollbox_background" {}
+								blockoverride "scrollbox_background_fade" {}
+								blockoverride "scrollbox_margins" {}
+
+								blockoverride "scrollbox_content"
+								{
+									vbox = {
+										name = "catalyst_entries"
+										datamodel = "[SituationWindow.GetCatalystsForSelectedPhase]"
+
+										datacontext = "[SituationWindow.GetSelectedSubRegion.GetCurrentPhase]"
+
+										layoutpolicy_vertical = expanding
+										layoutpolicy_horizontal = expanding
+
+										maximumsize = { 1000 50 }
+
+										item = {
+											hbox = {
+												layoutpolicy_vertical = expanding
+												layoutpolicy_horizontal = expanding
+
+												hbox = {
+													layoutpolicy_vertical = expanding
+
+													background = {
+														using = Background_Area_Dark
+														using = Color_Green
+														alpha = 0.1
+														margin_left = 4
+														margin_right = 6
+
+													}
+
+													background = {
+														using = Background_Frame
+														using = Color_Green
+														alpha = 0.3
+														margin_left = 4
+														margin_right = 6
+
+													}
+
+													hbox = {
+														layoutpolicy_horizontal = expanding
+														icon = {
+															size = { 25 25 }
+															texture = "[SituationWindow.GetSelectedOrLeadingFuturePhaseType.GetIcon]"
+														}
+														text_single = {
+															text = "[SituationCatalystEntry.GetPoints|+=]"
+															align = nobaseline
+														}
+													}
+												}
+
+												text_multi = {
+													layoutpolicy_horizontal = expanding
+													layoutpolicy_vertical = expanding
+													text = "[SituationCatalystEntry.GetCatalystDescription]"
+													autoresize = no
+													align = left|nobaseline
+													max_width = 400
+													margin = { 10 5 }
+												}
+
+												background = {
+													using = Background_Area_Dark
+												}
+
+												hbox = {
+													layoutpolicy_vertical = expanding
+													min_width = 70
+
+													background = {
+														visible = "[GreaterThan_int32( SituationPhase.GetNumCompletionsOfCatalystForPhase( SituationWindow.GetSelectedOrLeadingFuturePhaseType, SituationCatalystEntry.GetCatalyst ), '(int32)0' )]"
+														using = Background_Frame
+														color = { 0.4 0.603 0.298 1 }
+														alpha = 0.6
+													}
+
+													background = {
+														visible = "[GreaterThan_int32( SituationPhase.GetNumCompletionsOfCatalystForPhase( SituationWindow.GetSelectedOrLeadingFuturePhaseType, SituationCatalystEntry.GetCatalyst ), '(int32)0' )]"
+														using = Background_Area
+														color = { 0.4 0.603 0.298 1 }
+														alpha = 0.1
+													}
+
+													background = {
+														visible = "[EqualTo_int32( SituationPhase.GetNumCompletionsOfCatalystForPhase( SituationWindow.GetSelectedOrLeadingFuturePhaseType, SituationCatalystEntry.GetCatalyst ), '(int32)0' )]"
+														using = Background_Frame
+														using = Color_Grey
+														alpha = 0.4
+													}
+
+													background = {
+														visible = "[EqualTo_int32( SituationPhase.GetNumCompletionsOfCatalystForPhase( SituationWindow.GetSelectedFuturePhaseType, SituationCatalystEntry.GetCatalyst ), '(int32)0' )]"
+														using = Background_Area
+														using = Color_Grey
+														alpha = 0.1
+													}
+
+													text_single = {
+														min_width = 70
+														layoutpolicy_vertical = expanding
+
+														align = nobaseline|center
+														raw_text = "[Select_CString(GreaterThan_int32( SituationPhase.GetNumCompletionsOfCatalystForPhase( SituationWindow.GetSelectedOrLeadingFuturePhaseType, SituationCatalystEntry.GetCatalyst ), '(int32)0'), '#COLOR_GREEN ', '#COLOR_GRAY ')]x[SituationPhase.GetNumCompletionsOfCatalystForPhase(SituationWindow.GetSelectedOrLeadingFuturePhaseType, SituationCatalystEntry.GetCatalyst)]#!"
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+						}
+					}
+				}
+
+				expand = {
+					visible = "[IsDataModelEmpty( SituationWindow.GetCatalystsForSelectedPhase )]"
+				}
+			}
+		}
+	}
+
+	window_situation_participant_groups = {
+		datacontext = "[SituationWindow.AccessParticipantCharacterList]"
+		datacontext = "[SituationParticipantCharacterList.AccessCharacterList]"
+		visible = "[SituationParticipantCharacterList.IsVisible]"
+
+		datacontext = "[SituationWindow.GetSelectedSubRegion]"
+		blockoverride "header_text"
+		{
+			text = "[SituationWindow.GetParticipationWindowHeader]"
+		}
+	}
+}
