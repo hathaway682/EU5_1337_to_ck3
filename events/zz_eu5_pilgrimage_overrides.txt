@@ -1,0 +1,1458 @@
+﻿namespace = pilgrimage
+
+pilgrimage.1110 = {
+	id_override_priority = 1000
+	type = character_event
+	title = pilgrimage.1110.t
+	desc = {
+		desc = pilgrimage.1110.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:shared_holy_site ?= {
+						this = title:b_mecca
+						this = root.involved_activity.activity_location.barony
+						county.county_controller.religion = scope:heathen_raider.religion
+					}
+				}
+				desc = pilgrimage.1110.shared_target_heathen_hajj
+			}
+			triggered_desc = {
+				trigger = {
+					scope:shared_holy_site ?= {
+						this = title:b_mecca
+						this = root.involved_activity.activity_location.barony
+						county.county_controller.religion = root.religion
+						county.county_controller.religion != scope:heathen_raider.religion
+					}
+				}
+				desc = pilgrimage.1110.shared_target_controlled_hajj
+			}
+			triggered_desc = {
+				trigger = {
+					scope:shared_holy_site ?= {
+						this = title:b_jerusalem
+						this = root.involved_activity.activity_location.barony
+						county.county_controller.religion = scope:heathen_raider.religion
+					}
+				}
+				desc = pilgrimage.1110.shared_target_heathen_jerusalem
+			}
+			triggered_desc = {
+				trigger = {
+					scope:shared_holy_site ?= {
+						this = title:b_jerusalem
+						this = root.involved_activity.activity_location.barony
+						county.county_controller.religion = root.religion
+						county.county_controller.religion != scope:heathen_raider.religion
+					}
+				}
+				desc = pilgrimage.1110.shared_target_controlled_jerusalem
+			}
+			triggered_desc = {
+				trigger = {
+					scope:shared_holy_site ?= {
+						this = root.involved_activity.activity_location.barony
+						county.county_controller.religion = scope:heathen_raider.religion
+					}
+				}
+				desc = pilgrimage.1110.shared_target_heathen
+			}
+			triggered_desc = {
+				trigger = {
+					scope:shared_holy_site ?= {
+						this = root.involved_activity.activity_location.barony
+						county.county_controller.religion = root.religion
+						county.county_controller.religion != scope:heathen_raider.religion
+					}
+				}
+				desc = pilgrimage.1110.shared_target_controlled
+			}
+			desc = pilgrimage.1110.fallback
+		}
+	}
+	theme = travel_pilgrimage
+	override_background = { reference = terrain }
+	right_portrait = {
+		character = scope:heathen_raider
+		animation = marshal
+	}
+	cooldown = { years = 1 }
+
+	trigger = {
+		is_travelling = yes
+		is_location_valid_for_travel_event_on_land = yes
+		location.county = {
+			faith = {
+				faith_hostility_level = { target = root.faith value > 1 }
+			}
+			holder = {
+				NOR = {
+					this = root
+					any_liege_or_above = { this = root }
+				}
+			}
+		}
+		current_travel_plan = {
+			any_entourage_character = {
+				this != root
+				count >= 2
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 0.5
+			location.county.rite = { rite_has_tenet = tenet_dharmic_pacifism }
+		}
+	}
+
+	immediate = {
+		location.county = { save_scope_as = heathen_raider_county }
+		location.county.holder.top_liege = { save_scope_as = county_liege }
+		# Save or create a heathen raider
+		random_list = {
+			9 = {
+				trigger = { # Does a valid heather raider exist in the county?
+					any_pool_character = {
+						province = root.location
+						pilgrim_heathen_raider_trigger = yes
+					}
+				}
+				random_pool_character = {
+					province = root.location
+					limit = { pilgrim_heathen_raider_trigger = yes }
+					weight = {
+						base = 1
+						modifier = {
+							add = 10
+							has_trait = reaver
+						}
+					}
+					save_scope_as = heathen_raider
+					if = {
+						limit = {
+							location != root.location
+						}
+						hidden_effect = { move_to_pool_at = root.location }
+					}
+				}
+			}
+			1 = {
+				create_character = {
+					template = new_raider_character
+					culture = root.location.culture
+					faith = root.location.faith
+					rite = root.location.rite
+					dynasty = none
+					location = root.location
+					gender_female_chance = scope:county_liege.root_soldier_female_chance
+					save_scope_as = heathen_raider
+				}
+			}
+		}
+		scope:heathen_raider = {
+			add_character_flag = wear_armor
+		}
+		# Save potential victim
+		current_travel_plan = {
+			random_entourage_character = {
+				limit = {
+					this != root
+					can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = root }
+				}
+				alternative_limit = {
+					this != root
+				}
+				weight = {
+					base = 1
+					modifier = {
+						factor = 2
+						prowess < decent_skill_rating
+					}
+					modifier = {
+						factor = 0
+						has_trait = wounded
+					}
+				}
+				save_scope_as = victim_pilgrim_1
+			}
+			if = {
+				limit = { exists = scope:victim_pilgrim_1 }
+				random_entourage_character = {
+					limit = {
+						NOR = {
+							this = root
+							this = scope:victim_pilgrim_1
+						}
+						can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = root }
+					}
+					alternative_limit = {
+						this != root
+					}
+					weight = {
+						base = 1
+						modifier = {
+							factor = 2
+							prowess < decent_skill_rating
+						}
+						modifier = {
+							factor = 0
+							has_trait = wounded
+						}
+					}
+					save_scope_as = victim_pilgrim_2
+				}
+			}
+		}
+		# Does raider faith share the holy site?
+		involved_activity.activity_location.barony = {
+			if = {
+				limit = { is_holy_site_of = scope:heathen_raider.faith }
+				save_scope_as = shared_holy_site
+			}
+		}
+		save_scope_value_as = {
+			name = duel_variety
+			value = { 1 4 }
+		}
+	}
+	# Come on then
+	option = { 
+		name = pilgrimage.1110.a
+		duel = {
+			skill = martial
+			target = scope:heathen_raider
+			20 = {
+				desc = pilgrimage.1110.a.fled
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+					min = 5
+				}
+				modifier = {
+					add = {
+						value = dread
+						divide = 6
+					}
+				}
+				modifier = {
+					current_travel_plan = {	num_entourage_characters >= 15 }
+					factor = 1.5
+				}
+				modifier = {
+					current_travel_plan = {	
+						num_entourage_characters < 15
+						num_entourage_characters > 8 
+					}
+					factor = 1.3
+				}
+				modifier = {
+					current_travel_plan = {	
+						num_entourage_characters < 8
+						num_entourage_characters > 4 
+					}
+					factor = 1.1
+				}
+				send_interface_toast = {
+					title = pilgrimage.1110.a.fled
+					left_icon = scope:heathen_raider
+					add_dread = minor_dread_gain
+					add_prestige = minor_prestige_gain
+				}
+			}
+			20 = {
+				desc = pilgrimage.1110.a.skirmish
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = 5
+				}
+				show_as_tooltip = { add_prestige = miniscule_prestige_gain }
+				if = {
+					limit = { exists = scope:victim_pilgrim_2 }
+					custom_tooltip = two_entourage_members_wounded_tt
+				}
+				else = { custom_tooltip = one_entourage_members_wounded_tt }
+				hidden_effect = {
+					send_interface_toast = {
+						title = pilgrimage.1110.a.skirmish
+						left_icon = scope:victim_pilgrim_1
+						right_icon = scope:victim_pilgrim_2
+						add_prestige = miniscule_prestige_gain
+						if = {
+							limit = { exists = scope:victim_pilgrim_2 }
+							scope:victim_pilgrim_2 = {
+								random = {
+									chance = 50
+									modifier = {
+										add = {
+											value = 0
+											subtract = prowess
+										}
+									}
+									change_trait_rank = {
+										trait = wounded
+										rank = 1
+										max = 3
+									}
+								}
+							}
+						}
+						if = {
+							limit = { exists = scope:victim_pilgrim_1 }
+							scope:victim_pilgrim_1 = {
+								random = {
+									chance = 50
+									modifier = {
+										add = {
+											value = 0
+											subtract = prowess
+										}
+									}
+									change_trait_rank = {
+										trait = wounded
+										rank = 1
+										max = 3
+									}
+								}
+							}
+						}
+						else = {
+							random = {
+								chance = 50
+								modifier = {
+									add = {
+										value = 0
+										subtract = prowess
+									}
+								}
+								change_trait_rank = {
+									trait = wounded
+									rank = 1
+									max = 3
+								}
+							}
+						}
+					}
+				}
+			}
+			5 = {
+				desc = pilgrimage.1110.a.beaten
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = 5
+				}
+				modifier = {
+					current_travel_plan = {	num_entourage_characters >= 15 }
+					factor = 0.5
+				}
+				modifier = {
+					current_travel_plan = {	
+						num_entourage_characters < 15
+						num_entourage_characters > 8 
+					}
+					factor = 0.7
+				}
+				modifier = {
+					current_travel_plan = {	
+						num_entourage_characters < 8
+						num_entourage_characters > 4 
+					}
+					factor = 0.9
+				}
+				show_as_tooltip = {
+					add_prestige = minor_prestige_loss
+					pay_short_term_gold = {
+						target = scope:heathen_raider
+						gold = {
+							value = medium_gold_value
+							max = 50
+						}
+					}
+				}
+				if = {
+					limit = { exists = scope:victim_pilgrim_2 }
+					custom_tooltip = two_entourage_members_die_tt
+				}
+				else = { custom_tooltip = one_entourage_members_die_tt }
+				hidden_effect = {
+					send_interface_toast = {
+						title = pilgrimage.1110.a.beaten
+						left_icon = scope:victim_pilgrim_1
+						right_icon = scope:victim_pilgrim_2
+						add_prestige = minor_prestige_loss
+						pay_short_term_gold = {
+							target = scope:heathen_raider
+							gold = {
+								value = medium_gold_value
+								max = 50
+							}
+						}
+						if = {
+							limit = { exists = scope:victim_pilgrim_2 }
+							scope:victim_pilgrim_2 = {
+								random_list = {
+									50 = {
+										modifier = { add = prowess }
+										change_trait_rank = {
+											trait = wounded
+											rank = 1
+											max = 3
+										}
+									}
+									50 = {
+										death = { death_reason = death_pilgrimage_bandit_attack }
+									}
+								}
+							}
+						}
+						if = {
+							limit = { exists = scope:victim_pilgrim_1 }
+							scope:victim_pilgrim_1 = {
+								random_list = {
+									50 = {
+										modifier = { add = prowess }
+										change_trait_rank = {
+											trait = wounded
+											rank = 1
+											max = 3
+										}
+									}
+									50 = {
+										death = { death_reason = death_pilgrimage_bandit_attack }
+									}
+								}
+							}
+						}
+						else = {
+							random_list = {
+								50 = {
+									modifier = { add = prowess }
+									change_trait_rank = {
+										trait = wounded
+										rank = 1
+										max = 3
+									}
+								}
+								50 = {
+									death = { death_reason = death_pilgrimage_bandit_attack }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		add_internal_flag = dangerous
+		stress_and_fulfillment_impact = {
+			craven = minor_stress_impact_gain
+			patient = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_zeal = 0.5
+				ai_boldness = 1
+			}
+		}
+	}
+	# Leave us in peace
+	option = { 
+		name = {
+			trigger = { religion = scope:heathen_raider.religion }
+			text = pilgrimage.1110.b.religion
+		}
+		name = {
+			trigger = {
+				NOT = {
+					faith = { has_doctrine = unreformed_faith_doctrine }
+				}
+				scope:heathen_raider.faith = { has_doctrine = unreformed_faith_doctrine }
+			}
+			text = pilgrimage.1110.b.unreformed
+		}
+		name = {
+			trigger = {
+				religion != scope:heathen_raider.religion
+				NAND = {
+					NOT = {
+						faith = { has_doctrine = unreformed_faith_doctrine }
+					}
+					scope:heathen_raider.faith = { has_doctrine = unreformed_faith_doctrine }
+				}
+			}
+			text = pilgrimage.1110.b
+		}
+		duel = {
+			skill = diplomacy
+			target = scope:heathen_raider
+			5 = {
+				desc = pilgrimage.1110.c.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = 5
+				}
+				modifier = {
+					has_perk = zealous_proselytizer_perk
+					factor = 2
+				}
+				send_interface_toast = {
+					title = pilgrimage.1110.c.success
+					left_icon = scope:heathen_raider
+					add_piety = minor_piety_gain
+				}
+			}
+			5 = {
+				desc = pilgrimage.1110.c.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = 5
+				}
+				send_interface_toast = {
+					title = pilgrimage.1110.c.failure
+					left_icon = scope:heathen_raider
+					pay_short_term_gold = {
+						target = scope:heathen_raider
+						gold = {
+							value = medium_gold_value
+							max = 50
+						}
+					}
+				}
+			}
+		}
+		stress_and_fulfillment_impact = {
+			wrathful = minor_stress_impact_gain
+			zealous = minor_stress_impact_loss
+			arrogant = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_zeal = 1
+				ai_boldness = -0.5
+			}
+		}
+	}
+	# Join me, God is pretty cool
+	option = { 
+		name = pilgrimage.1110.c
+		trigger = {
+			OR = {
+				AND = {
+					NOT = {
+						faith = { has_doctrine = unreformed_faith_doctrine }
+					}
+					scope:heathen_raider.faith = { has_doctrine = unreformed_faith_doctrine }
+				}
+				scope:heathen_raider.religion = root.religion
+			}
+		}
+		duel = {
+			skill = learning
+			target = scope:heathen_raider
+			10 = {
+				desc = pilgrimage.1110.c.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = 5
+				}
+				modifier = {
+					scope:heathen_raider = { has_trait = cynical }
+					add = 5
+				}
+				send_interface_toast = {
+					title = pilgrimage.1110.c.success
+					left_icon = scope:heathen_raider
+					scope:heathen_raider = {
+						hidden_effect = { set_character_faith_with_conversion = root.faith }
+						set_character_faith = root.faith
+						set_character_rite = root.rite
+					}
+					add_to_entourage_court_and_activity_effect = { 
+						CHAR_TO_ADD = scope:heathen_raider 
+						NEW_COURT_OWNER = root 
+					}
+					spawn_army = {
+						name = event_troop_default_name
+						levies = 250
+						location = root.location
+						origin = root.location
+					}
+				}
+			}
+			10 = {
+				desc = pilgrimage.1110.c.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = 5
+				}
+				modifier = {
+					scope:heathen_raider = { has_trait = zealous }
+					add = 5
+				}
+				send_interface_toast = {
+					title = pilgrimage.1110.c.failure
+					left_icon = scope:heathen_raider
+					add_prestige = minor_prestige_loss
+					pay_short_term_gold = {
+						target = scope:heathen_raider
+						gold = {
+							value = medium_gold_value
+							max = 50
+						}
+					}
+				}
+			}
+		}
+		stress_and_fulfillment_impact = {
+			cynical = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_boldness = 0.5
+				ai_sociability = 0.5
+				ai_rationality = 0.5
+			}
+		}
+	}
+
+	option = { # Take your damned money
+		name = pilgrimage.1110.d
+		pay_short_term_gold = {
+			target = scope:heathen_raider
+			gold = {
+				value = medium_gold_value
+				max = 25
+			}
+		}
+		stress_and_fulfillment_impact = {
+			brave = medium_stress_impact_gain
+			greedy = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_greed = -1
+				ai_rationality = 0.5
+			}
+		}
+	}
+	after = {
+		scope:heathen_raider = {
+			remove_character_flag = wear_armor
+		}
+	}
+}
+
+pilgrimage.5001 = {
+	id_override_priority = 1000
+	type = activity_event
+	title = pilgrimage.5001.t
+	desc = pilgrimage.5001.desc
+	theme = pilgrimage_destination
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			animation = sadness
+		}
+		animation = happiness
+	}
+	trigger = { scope:activity.activity_location.county = title:c_marittima }
+	immediate = {
+		play_music_cue = mx_cue_pilgrimage_arrival
+	}
+	#Alright
+	option = {
+		name = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			text = pilgrimage.4001.a_dead
+		}
+		name = {
+			trigger = { has_trait = cynical }
+			text = pilgrimage.4001.a_cynical
+		}
+		name = pilgrimage.4001.a
+		give_pilgrim_trait_or_xp_effect = yes
+		pilgrimage_arrival_stress_loss_effect = yes
+	}
+	#Wanna buy a _ROME_ pilgrimage badge?
+	after = {
+		if = {
+			limit = {
+				NOT = {
+					any_character_artifact = { has_variable = is_rome_pilgrim_badge }
+				}
+			}
+			trigger_event = {
+				id = pilgrimage.4100
+				days = 1
+			}
+		}
+	}
+}
+
+pilgrimage.5011 = {
+	id_override_priority = 1000
+	type = activity_event
+	title = pilgrimage.5011.t
+	desc = {
+		desc = pilgrimage.5011.desc.beginning
+		first_valid = {
+			triggered_desc = {
+				trigger = { religion = religion:islam_religion }
+				desc = pilgrimage.5011.desc.muslim
+			}
+			triggered_desc = {
+				trigger = { religion = religion:judaism_religion }
+				desc = pilgrimage.5011.desc.jewish
+			}
+			desc = pilgrimage.5011.desc.christian
+		}
+		desc = pilgrimage.5011.desc.end
+	}
+	theme = pilgrimage_destination
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			animation = sadness
+		}
+		animation = ecstasy
+	}
+	trigger = { scope:activity.activity_location.county = title:c_filastin }
+	immediate = {
+		play_music_cue = mx_cue_pilgrimage_arrival
+	}
+	#Alright
+	option = {
+		name = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			text = pilgrimage.4001.a_dead
+		}
+		name = {
+			trigger = { has_trait = cynical }
+			text = pilgrimage.4001.a_cynical
+		}
+		name = pilgrimage.4001.a
+		give_pilgrim_trait_or_xp_effect = yes
+		pilgrimage_arrival_stress_loss_effect = yes
+	}
+	#Wanna buy a _JERUSALEM_ pilgrimage badge?
+	after = {
+		if = {
+			limit = {
+				NOT = {
+					any_character_artifact = { has_variable = is_jerusalem_pilgrim_badge }
+				}
+			}
+			trigger_event = {
+				id = pilgrimage.4100
+				days = 1
+			}
+		}
+	}
+}
+
+pilgrimage.5021 = {
+	id_override_priority = 1000
+	type = activity_event
+	title = pilgrimage.5021.t
+	desc = pilgrimage.5021.desc
+	theme = pilgrimage_destination
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			animation = sadness
+		}
+		animation = happiness
+	}
+	trigger = { scope:activity.activity_location.county = title:c_constantinople }
+	immediate = {
+		play_music_cue = mx_cue_pilgrimage_arrival
+	}
+	#Alright
+	option = {
+		name = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			text = pilgrimage.4001.a_dead
+		}
+		name = {
+			trigger = { has_trait = cynical }
+			text = pilgrimage.4001.a_cynical
+		}
+		name = pilgrimage.4001.a
+		give_pilgrim_trait_or_xp_effect = yes
+		pilgrimage_arrival_stress_loss_effect = yes
+	}
+}
+
+pilgrimage.5101 = {
+	id_override_priority = 1000
+	type = activity_event
+	title = pilgrimage.5101.t
+	desc = pilgrimage.5101.desc
+	theme = pilgrimage_destination
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			animation = sadness
+		}
+		animation = happiness
+	}
+	trigger = { scope:activity.activity_location.county = title:c_tih }
+	immediate = {
+		play_music_cue = mx_cue_pilgrimage_arrival
+	}
+	#Alright
+	option = {
+		name = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			text = pilgrimage.4001.a_dead
+		}
+		name = {
+			trigger = { has_trait = cynical }
+			text = pilgrimage.4001.a_cynical
+		}
+		name = pilgrimage.4001.a
+		give_pilgrim_trait_or_xp_effect = yes
+		pilgrimage_arrival_stress_loss_effect = yes
+	}
+}
+
+pilgrimage.5311 = {
+	id_override_priority = 1000
+	type = activity_event
+	title = pilgrimage.5311.t
+	desc = pilgrimage.5311.desc
+	theme = pilgrimage_destination
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			animation = sadness
+		}
+		animation = happiness
+	}
+	trigger = { scope:activity.activity_location.county = title:c_awadh }
+	immediate = {
+		play_music_cue = mx_cue_pilgrimage_arrival
+	}
+	#Alright
+	option = {
+		name = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			text = pilgrimage.4001.a_dead
+		}
+		name = {
+			trigger = { has_trait = cynical }
+			text = pilgrimage.4001.a_cynical
+		}
+		name = pilgrimage.4001.a
+		give_pilgrim_trait_or_xp_effect = yes
+		pilgrimage_arrival_stress_loss_effect = yes
+	}
+}
+
+pilgrimage.5321 = {
+	id_override_priority = 1000
+	type = activity_event
+	title = pilgrimage.5321.t
+	desc = pilgrimage.5321.desc
+	theme = pilgrimage_destination
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			animation = sadness
+		}
+		animation = happiness
+	}
+	trigger = { scope:activity.activity_location.county = title:c_braj }
+	immediate = {
+		play_music_cue = mx_cue_pilgrimage_arrival
+	}
+	#Alright
+	option = {
+		name = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			text = pilgrimage.4001.a_dead
+		}
+		name = {
+			trigger = { has_trait = cynical }
+			text = pilgrimage.4001.a_cynical
+		}
+		name = pilgrimage.4001.a
+		give_pilgrim_trait_or_xp_effect = yes
+		pilgrimage_arrival_stress_loss_effect = yes
+	}
+}
+
+pilgrimage.5331 = {
+	id_override_priority = 1000
+	type = activity_event
+	title = pilgrimage.5331.t
+	desc = pilgrimage.5331.desc
+	theme = pilgrimage_destination
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			animation = sadness
+		}
+		animation = happiness
+	}
+	trigger = { scope:activity.activity_location.county = title:c_garhwal }
+	immediate = {
+		play_music_cue = mx_cue_pilgrimage_arrival
+	}
+	#Alright
+	option = {
+		name = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			text = pilgrimage.4001.a_dead
+		}
+		name = {
+			trigger = { has_trait = cynical }
+			text = pilgrimage.4001.a_cynical
+		}
+		name = pilgrimage.4001.a
+		give_pilgrim_trait_or_xp_effect = yes
+		pilgrimage_arrival_stress_loss_effect = yes
+	}
+}
+
+pilgrimage.5341 = {
+	id_override_priority = 1000
+	type = activity_event
+	title = pilgrimage.5341.t
+	desc = pilgrimage.5341.desc
+	theme = pilgrimage_destination
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			animation = sadness
+		}
+		animation = happiness
+	}
+	trigger = { scope:activity.activity_location.county = title:c_tondai_nadu }
+	immediate = {
+		play_music_cue = mx_cue_pilgrimage_arrival
+	}
+	#Alright
+	option = {
+		name = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			text = pilgrimage.4001.a_dead
+		}
+		name = {
+			trigger = { has_trait = cynical }
+			text = pilgrimage.4001.a_cynical
+		}
+		name = pilgrimage.4001.a
+		give_pilgrim_trait_or_xp_effect = yes
+		pilgrimage_arrival_stress_loss_effect = yes
+	}
+}
+
+pilgrimage.5351 = {
+	id_override_priority = 1000
+	type = activity_event
+	title = pilgrimage.5351.t
+	desc = pilgrimage.5351.desc
+	theme = pilgrimage_destination
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			animation = sadness
+		}
+		animation = happiness
+	}
+	trigger = { scope:activity.activity_location.county = title:c_western_malwa }
+	immediate = {
+		play_music_cue = mx_cue_pilgrimage_arrival
+	}
+	#Alright
+	option = {
+		name = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			text = pilgrimage.4001.a_dead
+		}
+		name = {
+			trigger = { has_trait = cynical }
+			text = pilgrimage.4001.a_cynical
+		}
+		name = pilgrimage.4001.a
+		give_pilgrim_trait_or_xp_effect = yes
+		pilgrimage_arrival_stress_loss_effect = yes
+	}
+}
+
+pilgrimage.5361 = {
+	id_override_priority = 1000
+	type = activity_event
+	title = pilgrimage.5361.t
+	desc = pilgrimage.5361.desc
+	theme = pilgrimage_destination
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			animation = sadness
+		}
+		animation = happiness
+	}
+	trigger = { scope:activity.activity_location.county = title:c_halar }
+	immediate = {
+		play_music_cue = mx_cue_pilgrimage_arrival
+	}
+	#Alright
+	option = {
+		name = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			text = pilgrimage.4001.a_dead
+		}
+		name = {
+			trigger = { has_trait = cynical }
+			text = pilgrimage.4001.a_cynical
+		}
+		name = pilgrimage.4001.a
+		give_pilgrim_trait_or_xp_effect = yes
+		pilgrimage_arrival_stress_loss_effect = yes
+	}
+}
+
+pilgrimage.5401 = {
+	id_override_priority = 1000
+	type = activity_event
+	title = pilgrimage.5401.t
+	desc = pilgrimage.5401.desc
+	theme = pilgrimage_destination
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			animation = sadness
+		}
+		animation = happiness
+	}
+	trigger = { scope:activity.activity_location.county = title:c_patna }
+	immediate = {
+		play_music_cue = mx_cue_pilgrimage_arrival
+	}
+	#Alright
+	option = {
+		name = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			text = pilgrimage.4001.a_dead
+		}
+		name = {
+			trigger = { has_trait = cynical }
+			text = pilgrimage.4001.a_cynical
+		}
+		name = pilgrimage.4001.a
+		give_pilgrim_trait_or_xp_effect = yes
+		pilgrimage_arrival_stress_loss_effect = yes
+	}
+}
+
+pilgrimage.5411 = {
+	id_override_priority = 1000
+	type = activity_event
+	title = pilgrimage.5411.t
+	desc = pilgrimage.5411.desc
+	theme = pilgrimage_destination
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			animation = sadness
+		}
+		animation = happiness
+	}
+	trigger = { scope:activity.activity_location.county = title:c_gorakhpur }
+	immediate = {
+		play_music_cue = mx_cue_pilgrimage_arrival
+	}
+	#Alright
+	option = {
+		name = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			text = pilgrimage.4001.a_dead
+		}
+		name = {
+			trigger = { has_trait = cynical }
+			text = pilgrimage.4001.a_cynical
+		}
+		name = pilgrimage.4001.a
+		give_pilgrim_trait_or_xp_effect = yes
+		pilgrimage_arrival_stress_loss_effect = yes
+	}
+}
+
+pilgrimage.5501 = {
+	id_override_priority = 1000
+	type = activity_event
+	title = pilgrimage.5501.t
+	desc = pilgrimage.5501.desc
+	theme = pilgrimage_destination
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			animation = sadness
+		}
+		animation = happiness
+	}
+	trigger = { scope:activity.activity_location.county = title:c_hazaribagh }
+	immediate = {
+		play_music_cue = mx_cue_pilgrimage_arrival
+	}
+	#Alright
+	option = {
+		name = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			text = pilgrimage.4001.a_dead
+		}
+		name = {
+			trigger = { has_trait = cynical }
+			text = pilgrimage.4001.a_cynical
+		}
+		name = pilgrimage.4001.a
+		give_pilgrim_trait_or_xp_effect = yes
+		pilgrimage_arrival_stress_loss_effect = yes
+	}
+}
+
+pilgrimage.5601 = {
+	id_override_priority = 1000
+	type = activity_event
+	title = pilgrimage.5601.t
+	desc = pilgrimage.5601.desc
+	theme = pilgrimage_destination
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			animation = sadness
+		}
+		animation = happiness
+	}
+	trigger = { scope:activity.activity_location.county = title:c_rey }
+	immediate = {
+		play_music_cue = mx_cue_pilgrimage_arrival
+	}
+	#Alright
+	option = {
+		name = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			text = pilgrimage.4001.a_dead
+		}
+		name = {
+			trigger = { has_trait = cynical }
+			text = pilgrimage.4001.a_cynical
+		}
+		name = pilgrimage.4001.a
+		give_pilgrim_trait_or_xp_effect = yes
+		pilgrimage_arrival_stress_loss_effect = yes
+	}
+}
+
+pilgrimage.5901 = {
+	id_override_priority = 1000
+	type = activity_event
+	title = pilgrimage.5901.t
+	desc = pilgrimage.5901.desc
+	theme = pilgrimage_destination
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			animation = sadness
+		}
+		animation = happiness
+	}
+	trigger = { scope:activity.activity_location.county = title:c_lippe }
+	immediate = {
+		play_music_cue = mx_cue_pilgrimage_arrival
+	}
+	#Alright
+	option = {
+		name = {
+			trigger = { has_variable = pilgrimage_death_bury_home }
+			text = pilgrimage.4001.a_dead
+		}
+		name = {
+			trigger = { has_trait = cynical }
+			text = pilgrimage.4001.a_cynical
+		}
+		name = pilgrimage.4001.a
+		give_pilgrim_trait_or_xp_effect = yes
+		pilgrimage_arrival_stress_loss_effect = yes
+	}
+}
+
+namespace = hajj
+
+hajj.0010 = {
+	id_override_priority = 1000
+	hidden = yes 
+	scope = faith
+	trigger = {
+		main_rite = { rite_has_doctrine = doctrine_pilgrimage_mandatory_hajj }
+		any_faith_ruler = {
+			is_landed = yes
+			capital_province.barony ?= title:b_mecca
+			NOT = { has_trait = hajjaj }
+		}
+	}
+	immediate = {
+		random_faith_ruler = {
+			limit = {
+				is_landed = yes
+				capital_province.barony ?= title:b_mecca
+				NOT = { has_trait = hajjaj }
+			}
+			trigger_event = hajj.0011
+		}
+	}
+}
+
+hajj.0011 = {
+	id_override_priority = 1000
+	type = character_event
+	title = hajj.0011.t
+	desc = hajj.0011.desc
+	theme = faith
+	override_background = { reference = holy_site_mecca }
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = {
+				OR = {
+					has_trait = cynical
+					any_secret = { type = secret_non_believer }
+				}
+			}
+			animation = boredom
+		}
+		animation = personality_content
+	}
+	immediate = {
+		add_trait = hajjaj
+		# Full SF parity with a completed hajj (major under mandatory-pilgrimage doctrines).
+		pilgrimage_sp_reward_effect = yes
+		#Set up the memory in case we change capital and want to go on a second Hajj
+		create_character_memory = { type = completed_hajj_memory }
+		scope:new_memory ?= {
+			set_variable = {
+				name = first_hajj
+				value = flag:completed_hajj
+			}
+			set_variable = {
+				name = hajj_destination
+				value = title:b_mecca.title_province
+			}
+			# Keep holy-site cooldown tracking consistent with pilgrimage activity memories.
+			set_variable = {
+				name = pilgrimage_destination
+				value = title:b_mecca.title_province
+			}
+			set_variable = {
+				name = pilgrimage_holy_site_cooldown
+				years = 5
+			}
+			if = {
+				limit = { exists = var:hajj_destination }
+				#To prevent 'unused except in loc' errors :catto:
+			}
+		}
+	}
+	#Guess that's done
+	option = {
+		name = {
+			trigger = {
+				OR = {
+					has_trait = cynical
+					any_secret = { type = secret_non_believer }
+				}
+			}
+			text = hajj.0011.a_cynical
+		}
+		name = hajj.0011.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+hajj.0500 = {
+	id_override_priority = 1000
+	type = character_event
+	title = hajj.0500.t
+	desc = hajj.0500.desc
+	theme = death
+	override_background = { reference = bedchamber }
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	right_portrait = {
+		character = scope:hajj_dying_relative
+		animation = sick
+	}
+	cooldown = { years = 10 }
+	trigger = {
+		is_available_healthy_adult = yes
+		#Needs to be a mandatory Hajj religion
+		rite = { rite_has_parameter = mandatory_hajj }
+		faith = {
+			any_holy_site_barony = { this = title:b_mecca }
+		}
+		#This really should take care of most Hajj/Pilgrim-related trigger checks - if you don't have this trait, you really shouldn't have a Hajj cooldown etc
+		NOT = { has_trait = hajjaj }
+		#Only one modifier for _you_
+		NOR = {
+			has_character_modifier = ghost_pilgrimage_promised_modifier
+			has_character_modifier = hajj_promised_modifier
+			has_character_modifier = pilgrimage_promised_modifier
+		}
+		any_close_family_member = {
+			OR = {
+				has_any_good_relationship_with_character_trigger = { CHARACTER = root }
+				has_any_best_good_relationship_with_character_trigger = { CHARACTER = root }
+				opinion = {
+					target = root
+					value >= 40
+				}
+			}
+			OR = {
+				health <= death_chance_dying_health
+				has_trait = incapable
+				has_trait = infirm
+			}
+			OR = {
+				AND = {
+					has_trait = zealous
+					NOT = {
+						any_secret = { type = secret_non_believer }
+					}
+				}
+				ai_zeal >= 50
+			}
+			is_adult = yes
+			faith = root.faith
+			has_trait = hajjaj
+		}
+		#Don't want to be standing in the holy site already / have Mecca as our (invalid) capital
+		NOR = { 
+			root.location.barony = title:b_mecca
+			capital_province.barony ?= title:b_mecca 
+		}
+	}
+	immediate = {
+		random_close_family_member = {
+			limit = {
+				OR = {
+					has_any_good_relationship_with_character_trigger = { CHARACTER = root }
+					has_any_best_good_relationship_with_character_trigger = { CHARACTER = root }
+				}
+				OR = {
+					health <= death_chance_dying_health
+					has_trait = incapable
+					has_trait = infirm
+				}
+				is_adult = yes
+				faith = root.faith
+				has_trait = hajjaj
+			}
+			save_scope_as = hajj_dying_relative
+		}
+		scope:hajj_dying_relative = {
+			if = {
+				limit = {
+					NOT = { has_character_flag = use_sickness_clothes }
+				}
+				add_character_flag = use_sickness_clothes
+			}
+		}
+	}
+	#Hajj it is
+	option = {
+		name = hajj.0500.a
+		scope:hajj_dying_relative = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 15
+			}
+		}
+		custom_tooltip = {
+			text = hajj.0500.a.tt_hajj
+			add_character_modifier = hajj_promised_modifier
+		}
+		add_piety = minor_piety_gain
+		stress_and_fulfillment_impact = {
+			cynical = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				has_trait = cynical
+				factor = 0
+			}
+		}
+	}
+	#Erm... no.
+	option = {
+		name = hajj.0500.b
+		scope:hajj_dying_relative = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -5
+			}
+		}
+		stress_and_fulfillment_impact = {
+			sadistic = medium_stress_impact_loss
+			callous = minor_stress_impact_loss
+			compassionate = major_stress_impact_gain
+			zealous = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				OR = {
+					has_trait = compassionate
+					has_trait = zealous
+				}
+				factor = 0
+			}
+		}
+	}
+	after = {
+		scope:hajj_dying_relative ?= {
+			if = {
+				limit = {
+					has_character_flag = use_sickness_clothes
+				}
+				remove_character_flag = use_sickness_clothes
+			}
+		}
+	}
+}
