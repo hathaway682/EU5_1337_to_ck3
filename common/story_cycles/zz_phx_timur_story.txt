@@ -11,7 +11,6 @@ story_phx_timur_rise = {
 			value = 1
 		}
 		story_owner = {
-			add_character_flag = phx_timur_story_active
 			if = {
 				limit = { NOT = { has_character_modifier = phx_timur_scourge_modifier } }
 				add_character_modifier = {
@@ -36,7 +35,6 @@ story_phx_timur_rise = {
 	}
 
 	on_owner_death = {
-		set_global_variable = phx_timur_deceased_global
 		scope:story = {
 			end_story = yes
 		}
