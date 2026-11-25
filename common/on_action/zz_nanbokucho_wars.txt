@@ -1,0 +1,21 @@
+# A war between the two camps intensifies the dispute.
+on_war_started = {
+    effect = {
+        if = {
+            limit = {
+                exists = situation:nanbokucho
+                OR = {
+                    AND = {
+                        scope:attacker = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north } }
+                        scope:defender = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south } }
+                    }
+                    AND = {
+                        scope:attacker = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south } }
+                        scope:defender = { top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north } }
+                    }
+                }
+            }
+            situation:nanbokucho = { trigger_situation_catalyst = catalyst_nanbokucho_war }
+        }
+    }
+}

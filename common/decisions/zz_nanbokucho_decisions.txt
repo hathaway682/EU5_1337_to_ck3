@@ -1,0 +1,99 @@
+nanbokucho_support_north_decision = {
+    picture = { reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds" }
+    desc = nanbokucho_support_north_decision_desc
+    selection_tooltip = nanbokucho_support_north_decision_tooltip
+    decision_group_type = realm
+    ai_check_interval = 0
+    is_shown = {
+        exists = situation:nanbokucho
+        is_house_head = yes
+        house ?= { NOT = { this = house:house_daikakuji } }
+        OR = {
+            top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south }
+            top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_unaligned }
+        }
+    }
+    is_valid = { is_adult = yes }
+    effect = {
+        house = {
+            remove_variable = nanbokucho_support_south
+            set_variable = { name = nanbokucho_support_north value = yes }
+        }
+        situation:nanbokucho = { trigger_situation_catalyst = catalyst_nanbokucho_alignment }
+        custom_tooltip = nanbokucho_support_north_effect_tt
+    }
+}
+
+nanbokucho_support_south_decision = {
+    picture = { reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds" }
+    desc = nanbokucho_support_south_decision_desc
+    selection_tooltip = nanbokucho_support_south_decision_tooltip
+    decision_group_type = realm
+    ai_check_interval = 0
+    is_shown = {
+        exists = situation:nanbokucho
+        is_house_head = yes
+        house ?= { NOT = { this = house:house_ashikaga } }
+        OR = {
+            top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north }
+            top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_unaligned }
+        }
+    }
+    is_valid = { is_adult = yes }
+    effect = {
+        house = {
+            remove_variable = nanbokucho_support_north
+            set_variable = { name = nanbokucho_support_south value = yes }
+        }
+        situation:nanbokucho = { trigger_situation_catalyst = catalyst_nanbokucho_alignment }
+        custom_tooltip = nanbokucho_support_south_effect_tt
+    }
+}
+
+nanbokucho_seek_peace_decision = {
+    picture = { reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds" }
+    desc = nanbokucho_seek_peace_decision_desc
+    selection_tooltip = nanbokucho_seek_peace_decision_tooltip
+    decision_group_type = realm
+    cooldown = { years = 5 }
+    ai_check_interval = 60
+    is_shown = {
+        exists = situation:nanbokucho
+        situation:nanbokucho = { situation_current_phase = nanbokucho_warfare }
+        is_house_head = yes
+        OR = {
+            top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north }
+            top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south }
+        }
+    }
+    is_valid = { is_adult = yes is_at_war = no }
+    cost = { prestige = 100 }
+    effect = {
+        situation:nanbokucho = { trigger_situation_catalyst = catalyst_nanbokucho_reconciliation }
+        custom_tooltip = nanbokucho_seek_peace_effect_tt
+    }
+    ai_potential = { always = yes }
+    ai_will_do = { base = 5 }
+}
+
+nanbokucho_end_division_decision = {
+    picture = { reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds" }
+    desc = nanbokucho_end_division_decision_desc
+    selection_tooltip = nanbokucho_end_division_decision_tooltip
+    decision_group_type = major
+    ai_check_interval = 12
+    is_shown = {
+        exists = situation:nanbokucho
+        OR = {
+            top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_north }
+            top_participant_group:nanbokucho ?= { participant_group_type = nanbokucho_south }
+        }
+    }
+    is_valid = { has_title = title:e_japan has_title = title:k_chrysanthemum_throne is_at_war = no }
+    effect = {
+        situation:nanbokucho = { end_situation = yes }
+        custom_tooltip = nanbokucho_end_division_effect_tt
+    }
+    ai_potential = { always = yes }
+    ai_will_do = { base = 100 }
+}
