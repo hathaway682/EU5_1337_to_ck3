@@ -1,0 +1,52 @@
+﻿on_war_started = {
+	on_actions = { MOH_on_war_started }
+}
+
+MOH_on_war_started = {
+	effect = {
+		if = {
+			limit = {
+				moh_hyw_tours_crowns_trigger = yes
+				OR = {
+					AND = {
+						scope:attacker = title:k_england.holder
+						scope:defender = title:k_france.holder
+					}
+					AND = {
+						scope:attacker = title:k_france.holder
+						scope:defender = title:k_england.holder
+					}
+				}
+			}
+			if = {
+				limit = { has_global_variable = moh_hyw_maine_pending }
+				remove_global_variable = moh_hyw_maine_pending
+			}
+			moh_hyw_end_tours_interlude_effect = yes
+			if = {
+				limit = {
+					scope:war = { NOT = { using_cb = moh_hundred_years_war_border_raid } }
+					any_in_list = {
+						list = target_titles
+						OR = {
+							this = title:k_france
+							this = title:d_normandy
+							this = title:d_gascogne
+							this = title:c_rouen
+							this = title:c_bordeaux
+						}
+					}
+					struggle:Hundred_Years_War_struggle = {
+						phase_has_catalyst = catalyst_MOH_declared_war
+					}
+				}
+				struggle:Hundred_Years_War_struggle = {
+					activate_struggle_catalyst = {
+						catalyst = catalyst_MOH_declared_war
+						character = scope:attacker
+					}
+				}
+			}
+		}
+	}
+}

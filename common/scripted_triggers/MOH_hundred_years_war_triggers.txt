@@ -1,0 +1,123 @@
+﻿struggle_france_england_ending_regional_decision_percent_region_trigger = {
+	any_county_in_region = {
+		region = MOH_Hundred_Years_War_struggle_region
+		percent >= 0.75
+		holder.top_liege = root
+	}
+}
+
+
+
+MOH_character_any_involvement_Hundred_Years_War_struggle_trigger = {
+	OR = {
+		MOH_character_involved_in_Hundred_Years_War_struggle_trigger = yes
+		MOH_character_interloper_in_Hundred_Years_War_struggle_trigger = yes
+	}
+}
+
+MOH_character_involved_in_Hundred_Years_War_struggle_trigger = {
+	any_character_struggle = {
+		involvement = involved
+		is_struggle_type = Hundred_Years_War_struggle
+	}
+}
+
+MOH_character_interloper_in_Hundred_Years_War_struggle_trigger = {
+	any_character_struggle = {
+		involvement = interloper
+		is_struggle_type = Hundred_Years_War_struggle
+	}
+}
+
+moh_hyw_france_english_footholds_cleared_trigger = {
+	NOT = {
+		any_county_in_region = {
+			region = MOH_Hundred_Years_War_struggle_region
+			this != title:c_guines
+			title_province = {
+				NOT = { geographical_region = world_europe_west_britannia }
+			}
+			exists = title:k_england.holder
+			holder.top_liege = title:k_england.holder
+		}
+	}
+}
+
+moh_hyw_tours_crowns_trigger = {
+	NOT = { has_game_rule = Hundred_Years_War_struggle_disabled }
+	exists = struggle:Hundred_Years_War_struggle
+	exists = title:k_england.holder
+	exists = title:k_france.holder
+	title:k_england.holder ?= {
+		is_alive = yes
+		is_independent_ruler = yes
+	}
+	title:k_france.holder ?= {
+		is_alive = yes
+		is_independent_ruler = yes
+		this != title:k_england.holder
+	}
+}
+
+moh_hyw_maine_disputed_trigger = {
+	moh_hyw_tours_crowns_trigger = yes
+	title:k_france.holder = { NOT = { is_at_war_with = title:k_england.holder } }
+	struggle:Hundred_Years_War_struggle = {
+		NOT = { is_struggle_phase = struggle_england_france_phase_campaign }
+	}
+	exists = title:c_maine.holder
+	title:c_maine.holder ?= { top_liege = title:k_england.holder }
+	title:c_maine.title_province = { is_occupied = no }
+}
+
+moh_hyw_maine_request_current_trigger = {
+	moh_hyw_maine_disputed_trigger = yes
+	has_global_variable = moh_hyw_maine_pending
+	global_var:moh_hyw_maine_round = scope:moh_hyw_maine_round
+	title:k_france.holder = scope:moh_hyw_france
+	title:k_england.holder = scope:moh_hyw_england
+	title:c_maine.holder = scope:moh_hyw_maine_holder
+}
+
+moh_hyw_rene_can_mediate_trigger = {
+	exists = character:renier_house_anjouvalois_i
+	character:renier_house_anjouvalois_i ?= {
+		is_alive = yes
+		has_title = title:d_anjou
+		is_vassal_or_below_of = title:k_france.holder
+	}
+}
+
+# A county can be handed over directly, or a count holding only Maine can change liege.
+moh_hyw_maine_can_yield_trigger = {
+	exists = title:c_maine.holder
+	title:c_maine.holder ?= {
+		OR = {
+			AND = {
+				this = scope:moh_hyw_england
+				capital_county != title:c_maine
+			}
+			AND = {
+				is_vassal_of = scope:moh_hyw_england
+				has_primary_title = title:c_maine
+				NOT = {
+					any_sub_realm_county = {
+						this != title:c_maine
+					}
+				}
+				NOT = {
+					any_held_title = {
+						OR = {
+							tier >= tier_duchy
+							AND = {
+								tier = tier_barony
+								county != title:c_maine
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

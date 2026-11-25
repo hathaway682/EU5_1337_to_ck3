@@ -1,0 +1,465 @@
+﻿Hundred_Years_War_struggle_apply_ai_agenda_effect = {
+	add_character_flag = {
+		flag = agenda_towards_$INTENT$
+	}
+	root = {
+		change_variable = {
+			name = agents_for_$INTENT$
+			add = 1
+		}
+	}
+}
+
+moh_hyw_initialize_tours_effect = {
+	if = {
+		limit = {
+			game_start_date = 1444.11.11
+			moh_hyw_tours_crowns_trigger = yes
+			NOT = { has_global_variable = moh_hyw_tours_initialized }
+			title:k_france.holder = { NOT = { is_at_war_with = title:k_england.holder } }
+		}
+		set_global_variable = moh_hyw_tours_initialized
+		set_global_variable = moh_hyw_tours_truce
+		set_global_variable = { name = moh_hyw_maine_cooldown days = 90 }
+		set_global_variable = { name = moh_hyw_maine_round value = 0 }
+		title:k_france.holder = {
+			add_truce_both_ways = {
+				character = title:k_england.holder
+				months = 18
+				override = no
+				name = moh_hyw_truce_of_tours
+			}
+		}
+		struggle:Hundred_Years_War_struggle = {
+			change_struggle_phase = struggle_england_france_phase_interlude
+		}
+	}
+}
+
+moh_hyw_review_tours_effect = {
+	if = {
+		limit = {
+			has_global_variable = moh_hyw_tours_truce
+			moh_hyw_tours_crowns_trigger = yes
+			title:k_france.holder = { NOT = { has_truce = title:k_england.holder } }
+			title:k_england.holder = { NOT = { has_truce = title:k_france.holder } }
+		}
+		moh_hyw_end_tours_interlude_effect = yes
+	}
+
+	if = {
+		limit = {
+			has_global_variable = moh_hyw_tours_initialized
+			NOR = {
+				has_global_variable = moh_hyw_maine_pending
+				has_global_variable = moh_hyw_maine_cooldown
+				has_global_variable = moh_hyw_maine_settled
+			}
+			moh_hyw_maine_disputed_trigger = yes
+		}
+		title:k_france.holder = { save_scope_as = moh_hyw_france }
+		title:k_england.holder = { save_scope_as = moh_hyw_england }
+		title:c_maine.holder = { save_scope_as = moh_hyw_maine_holder }
+		change_global_variable = { name = moh_hyw_maine_round add = 1 }
+		save_scope_value_as = { name = moh_hyw_maine_round value = global_var:moh_hyw_maine_round }
+		# Let unresolved offers lapse before the native multiplayer event timeout.
+		set_global_variable = { name = moh_hyw_maine_pending days = 75 }
+		# Match the native ten-year recipient cooldown for land purchases and truces.
+		set_global_variable = { name = moh_hyw_maine_cooldown days = 3650 }
+		scope:moh_hyw_france = { trigger_event = Hundred_Years_War_struggle.1100 }
+	}
+}
+
+moh_hyw_end_tours_interlude_effect = {
+	if = {
+		limit = { has_global_variable = moh_hyw_tours_truce }
+		remove_global_variable = moh_hyw_tours_truce
+	}
+	struggle:Hundred_Years_War_struggle ?= {
+		if = {
+			limit = { is_struggle_phase = struggle_england_france_phase_interlude }
+			change_struggle_phase = struggle_england_france_phase_contention
+		}
+	}
+}
+
+moh_hyw_settle_maine_effect = {
+	if = {
+		limit = {
+			moh_hyw_maine_request_current_trigger = yes
+			moh_hyw_maine_can_yield_trigger = yes
+		}
+		moh_hyw_execute_maine_settlement_effect = { RECIPIENT = $RECIPIENT$ }
+	}
+}
+
+moh_hyw_execute_maine_settlement_effect = {
+	create_title_and_vassal_change = {
+		type = granted
+		save_scope_as = moh_hyw_maine_change
+		add_claim_on_loss = no
+	}
+	if = {
+		limit = { title:c_maine.holder = scope:moh_hyw_england }
+		title:c_maine = {
+			change_title_holder = {
+				holder = $RECIPIENT$
+				change = scope:moh_hyw_maine_change
+			}
+		}
+	}
+	else = {
+		title:c_maine.holder = {
+			change_liege = {
+				liege = $RECIPIENT$
+				change = scope:moh_hyw_maine_change
+			}
+		}
+	}
+	resolve_title_and_vassal_change = scope:moh_hyw_maine_change
+	show_as_tooltip = { moh_hyw_add_maine_truce_effect = yes }
+	if = {
+		limit = {
+			struggle:Hundred_Years_War_struggle = {
+				NOT = { is_struggle_phase = struggle_england_france_phase_interlude }
+			}
+		}
+		custom_tooltip = moh_hyw_maine_interlude_tt
+	}
+	hidden_effect = {
+		# Commit the truce only if the engine actually moved Maine into the French realm.
+		if = {
+			limit = { title:c_maine.holder.top_liege = scope:moh_hyw_france }
+			moh_hyw_add_maine_truce_effect = yes
+			remove_global_variable = moh_hyw_maine_pending
+			set_global_variable = moh_hyw_maine_settled
+			set_global_variable = moh_hyw_tours_truce
+			struggle:Hundred_Years_War_struggle = {
+				if = {
+					limit = { NOT = { is_struggle_phase = struggle_england_france_phase_interlude } }
+					change_struggle_phase = struggle_england_france_phase_interlude
+				}
+			}
+			scope:moh_hyw_france = { trigger_event = Hundred_Years_War_struggle.1103 }
+		}
+	}
+}
+
+moh_hyw_add_maine_truce_effect = {
+	add_truce_both_ways = {
+		character = scope:moh_hyw_france
+		years = 3
+		override = no
+		name = moh_hyw_maine_truce
+	}
+}
+
+MOH_Hundred_Years_War_struggle_ending_involved_list_effect = {
+	save_scope_as = struggle_ender
+	struggle:Hundred_Years_War_struggle = {
+		every_involved_ruler = {
+			limit = {
+				is_independent_ruler = yes
+				primary_title = { is_mercenary_company = no }
+			}
+			add_to_list = struggle_involvees
+		}
+	}
+	# Add all involved cultures with counties to a list, for war checks
+	MOH_Hundred_Years_War_struggle_ending_culture_list_effect = yes
+	# Add all involved faiths with counties to a list, for marriage and holy war checks
+	MOH_Hundred_Years_War_struggle_ending_faith_list_effect = yes
+}
+
+# Add all Involved cultures with counties to a list
+MOH_Hundred_Years_War_struggle_ending_culture_list_effect = {
+	every_culture_global = {		
+		limit = {
+			save_temporary_scope_as = this_culture
+			struggle:Hundred_Years_War_struggle = { is_culture_involved_in_struggle = scope:this_culture }
+			culture_number_of_counties > 0
+		}
+		save_scope_as = culture_scope
+		add_to_global_variable_list = {
+			name = MOH_Hundred_Years_War_struggle_ending_culture_list
+			target = scope:culture_scope
+		}
+	}
+}
+
+# Add all Involved independent rulers to a list
+MOH_Hundred_Years_War_struggle_ending_involved_list_effect = {
+	save_scope_as = struggle_ender
+	struggle:Hundred_Years_War_struggle = {
+		every_involved_ruler = {
+			limit = {
+				is_independent_ruler = yes
+				primary_title = { is_mercenary_company = no }
+			}
+			add_to_list = struggle_involvees
+		}
+	}
+	# Add all involved cultures with counties to a list, for war checks
+	MOH_Hundred_Years_War_struggle_ending_culture_list_effect = yes
+	# Add all involved faiths with counties to a list, for marriage and holy war checks
+	MOH_Hundred_Years_War_struggle_ending_faith_list_effect = yes
+}
+
+# Add all Involved faiths with counties to a list
+MOH_Hundred_Years_War_struggle_ending_faith_list_effect = {
+	every_religion_global = {
+		limit = {
+			any_faith = {
+				save_temporary_scope_as = this_faith
+				struggle:Hundred_Years_War_struggle = { is_faith_involved_in_struggle = scope:this_faith }
+				num_county_followers > 0
+			}
+		}
+		every_faith = {
+			limit = {
+				struggle:Hundred_Years_War_struggle = { is_faith_involved_in_struggle = prev }
+				num_county_followers > 0
+			}
+			save_scope_as = faith_scope
+			add_to_global_variable_list = {
+				name = MOH_Hundred_Years_War_struggle_ending_faith_list
+				target = scope:faith_scope
+			}
+		}
+	}
+}
+MOH_france_england_union_effect = {
+	add_prestige = medium_prestige_gain
+	add_piety = medium_piety_gain
+
+	title:e_angevin = {
+		save_scope_as = angevin_title
+	}
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = change
+		add_claim_on_loss = no
+	}
+	title:e_angevin = {
+		change_title_holder = {
+			holder = root
+			change = scope:change
+		}
+	}
+	title:k_france = {
+		set_de_jure_liege_title = title:e_angevin
+	}
+	title:k_england = {
+		set_de_jure_liege_title = title:e_angevin
+	}
+	title:k_wales = {
+		set_de_jure_liege_title = title:e_angevin
+	}
+	title:k_burgundy = {
+		set_de_jure_liege_title = title:e_angevin
+	}
+	title:k_brittany = {
+		set_de_jure_liege_title = title:e_angevin
+	}
+	resolve_title_and_vassal_change = scope:change
+	hidden_effect = { set_primary_title_to = title:e_angevin }
+
+	# 文化混合部分
+	culture = { save_scope_as = former_culture }
+	capital_county.title_province.culture = { save_scope_as = capital_culture }
+
+	# 如果首都文化是法兰克传承，且当前文化不是法兰克传承，则以首都文化为基础混合
+	if = {
+		limit = {
+			scope:capital_culture != scope:former_culture
+			NOT = { scope:former_culture = { has_cultural_pillar = heritage_frankish } }
+			scope:capital_culture = { has_cultural_pillar = heritage_frankish }
+			culture = {
+				OR = {
+					is_hybrid_culture = no
+					AND = {
+						NOT = { has_cultural_pillar = heritage_frankish }
+						NOT = { any_parent_culture = { has_cultural_pillar = heritage_frankish } }
+					}
+				}
+			}
+		}
+		scope:capital_culture = { save_scope_as = hybrid_culture }
+		create_hybrid_culture = scope:capital_culture
+	}
+
+	# 如果当前文化不是法兰克传承，则以法兰西文化为基础混合
+	else_if = {
+		limit = {
+			NOT = { scope:former_culture = { has_cultural_pillar = heritage_frankish } }
+			culture = {
+				OR = {
+					is_hybrid_culture = no
+					AND = {
+						NOT = { has_cultural_pillar = heritage_frankish }
+						NOT = { any_parent_culture = { has_cultural_pillar = heritage_frankish } }
+					}
+				}
+			}
+		}
+		culture:french = { save_scope_as = hybrid_culture }
+		create_hybrid_culture = culture:french
+	}
+
+	# 如果当前文化已经是法兰克传承（如法兰西），则以英格兰文化为基础混合
+	else_if = {
+		limit = {
+			culture = {
+				OR = {
+					is_hybrid_culture = no
+					AND = {
+						NOT = { has_cultural_pillar = heritage_frankish }
+						NOT = { any_parent_culture = { has_cultural_pillar = heritage_frankish } }
+					}
+				}
+			}
+		}
+		culture:english = { save_scope_as = hybrid_culture }
+		create_hybrid_culture = culture:english
+	}
+
+	# 如果已经是混合文化，则直接保存
+	else = {
+		scope:former_culture = { save_scope_as = new_culture }
+	}
+
+	if = {
+		limit = { exists = scope:new_culture }
+		capital_county = { set_county_culture = scope:new_culture }
+		scope:new_culture = {
+			# 如果混合文化包含法兰克传承，设置安茹姓名列表
+			if = {
+				limit = {
+					OR = {
+						has_cultural_pillar = heritage_frankish
+						any_parent_culture = { has_cultural_pillar = heritage_frankish }
+					}
+				}
+				set_name_list = name_list_angevin
+			}
+			# 添加安茹特色创新
+			#if = {
+			#	limit = {
+			#		NOT = { has_innovation = innovation_angevin_chivalry }
+			#	}
+			#	add_innovation = innovation_angevin_chivalry
+			#}
+			#if = {
+			#	limit = {
+			#		NOT = { has_innovation = innovation_angevin_administration }
+			#	}
+			#	add_innovation = innovation_angevin_administration
+			#}
+			hidden_effect = {
+				# 保留当前文化的语言
+				if = {
+					limit = {
+						NOT = { has_same_culture_language = scope:former_culture }
+					}
+					set_language_from = scope:former_culture
+				}
+				# 如果存在混合文化，保留其传承
+				if = {
+					limit = {
+						exists = scope:hybrid_culture
+						NOT = { has_same_culture_heritage = scope:hybrid_culture }
+					}
+					set_heritage_from = scope:hybrid_culture
+				}
+			}
+		}
+	}
+	else = {
+		show_as_tooltip = {
+			if = {
+				limit = { exists = scope:hybrid_culture }
+				custom_tooltip = angevin_decision_hybrid_tt
+			}
+		}
+	}
+}
+# every_in_de_jure_hierarchy
+
+MOH_Hundred_Years_War_struggle_de_jure_change_roman_effect = {
+	if = {
+		limit = {
+			has_title = title:h_roman_empire
+		}		
+		every_kingdom = {
+			limit = {
+				is_titular = no
+				title_capital_county.title_province = { geographical_region = MOH_Hundred_Years_War_struggle_region }
+			}
+			set_de_jure_liege_title = title:h_roman_empire
+		}
+	}
+	else_if = {
+		limit = {
+			has_title = title:e_byzantium
+		}		
+		every_kingdom = {
+			limit = {
+				is_titular = no
+				title_capital_county.title_province = { geographical_region = MOH_Hundred_Years_War_struggle_region }
+			}
+			set_de_jure_liege_title = title:e_byzantium
+		}
+	}
+	else_if = {
+		limit = {
+			has_title = title:e_western_roman_empire
+		}
+		every_kingdom = {
+			limit = {
+				is_titular = no
+				title_capital_county.title_province = { geographical_region = MOH_Hundred_Years_War_struggle_region }
+			}
+			set_de_jure_liege_title = title:e_western_roman_empire
+		}
+	}
+	else_if = {
+		limit = {
+			has_title = title:e_western_roman_empire
+		}
+		every_kingdom = {
+			limit = {
+				is_titular = no
+				title_capital_county.title_province = { geographical_region = MOH_Hundred_Years_War_struggle_region }
+			}
+			set_de_jure_liege_title = title:e_western_roman_empire
+		}
+	}
+}
+
+MOH_Hundred_Years_War_struggle_de_jure_change_persian_effect = {
+	if = {
+		limit = {
+			has_title = title:e_persia
+		}		
+		every_kingdom = {
+			limit = {
+				is_titular = no
+				title_capital_county.title_province = { geographical_region = MOH_Hundred_Years_War_struggle_region }
+			}
+			set_de_jure_liege_title = title:e_persia
+		}
+	}
+}
+
+MOH_Hundred_Years_War_struggle_de_jure_change_regional_effect = {
+	every_kingdom = {
+		limit = {
+			is_titular = no
+			root = { completely_controls = prev }
+			title_capital_county.title_province = {
+				geographical_region = MOH_Hundred_Years_War_struggle_region
+			}
+		}
+		set_de_jure_liege_title = root.primary_title
+	}
+}

@@ -1,0 +1,84 @@
+﻿on_title_gain_usurpation = {
+	on_actions = { MOH_on_title_gain_usurpation }
+}
+
+MOH_on_title_gain_usurpation = {
+	effect = {
+		if = {
+			limit = { # MOH
+				scope:title = {
+					tier = tier_county
+					title_province = { geographical_region = MOH_Hundred_Years_War_struggle_region }
+				}
+				root = {
+					any_character_struggle = {
+						involvement = involved
+						is_struggle_type = Hundred_Years_War_struggle
+						activate_struggle_catalyst_secondary_character_involvement_involved_trigger = {
+							CATALYST = catalyst_usurp_title
+							CHAR = root
+						}
+					}
+				}
+			}
+			root = {
+				every_character_struggle = {
+					involvement = involved
+					limit = {
+						activate_struggle_catalyst_secondary_character_involvement_involved_trigger = {
+							CATALYST = catalyst_usurp_title
+							CHAR = root
+						}
+					}
+					activate_struggle_catalyst = {
+						catalyst = catalyst_usurp_title
+						character = root
+					}
+				}
+			}
+		}
+	}
+}
+
+on_explicit_claim_gain = {
+	on_actions = { MOH_on_explicit_claim_gain }
+}
+
+MOH_on_explicit_claim_gain = {
+	effect = {
+		if = { # Fallen Eagle Struggles
+			limit = {
+				NOT = { scope:transfer_type = flag:inheritance }
+				scope:title = {
+					tier = tier_county
+					title_province = { geographical_region = MOH_Hundred_Years_War_struggle_region }
+				}
+				root = {
+					any_character_struggle = {
+						involvement = involved
+						is_struggle_type = Hundred_Years_War_struggle
+						activate_struggle_catalyst_secondary_character_involvement_involved_trigger = {
+							CATALYST = catalyst_gain_claim_on_title
+							CHAR = root
+						}
+					}
+				}
+			}
+			root = {
+				every_character_struggle = {
+					involvement = involved
+					limit = {
+						activate_struggle_catalyst_secondary_character_involvement_involved_trigger = {
+							CATALYST = catalyst_gain_claim_on_title
+							CHAR = root
+						}
+					}
+					activate_struggle_catalyst = {
+						catalyst = catalyst_gain_claim_on_title
+						character = root
+					}
+				}
+			}
+		}
+	}
+}
