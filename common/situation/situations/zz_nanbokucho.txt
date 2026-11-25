@@ -8,7 +8,7 @@
     sub_regions = {
         nanbokucho_japan = {
             geographical_regions = { nanbokucho_japan_region }
-            icon = "gfx/interface/icons/situation_types/nanbokucho.dds"
+            icon = "gfx/interface/icons/flat_icons/declare_war.dds"
         }
     }
     # Like the Guelph-Ghibelline situation, enter advantage at 70% and retain it at 60%.
@@ -63,25 +63,25 @@
     }
     participant_groups = {
         nanbokucho_north_leader = {
-            icon = "gfx/interface/icons/situations/nanbokucho/north_leader_group.dds"
+            icon = "gfx/interface/icons/situations/guelph_ghibelline/ghibelline_leader_group.dds"
             require_realm_in_sub_region = yes
             require_domicile_in_sub_region = yes
             map_color = { 180 35 50 }
             opposite_participant_group = { nanbokucho_south nanbokucho_south_leader }
             opposite_participant_group_opinion = -20
-            is_character_valid = { this = title:k_chrysanthemum_throne.holder }
+            is_character_valid = { is_house_head = yes house ?= { this = house:house_ashikaga } }
         }
         nanbokucho_south_leader = {
-            icon = "gfx/interface/icons/situations/nanbokucho/south_leader_group.dds"
+            icon = "gfx/interface/icons/situations/guelph_ghibelline/guelph_leader_group.dds"
             require_realm_in_sub_region = yes
             require_domicile_in_sub_region = yes
             map_color = { 245 210 90 }
             opposite_participant_group = { nanbokucho_north nanbokucho_north_leader }
             opposite_participant_group_opinion = -20
-            is_character_valid = { this = title:k_nancho_throne.holder }
+            is_character_valid = { is_house_head = yes house ?= { this = house:house_daikakuji } }
         }
         nanbokucho_north = {
-            icon = "gfx/interface/icons/situations/nanbokucho/north_member_group.dds"
+            icon = "gfx/interface/icons/situations/guelph_ghibelline/ghibelline_member_group.dds"
             require_realm_in_sub_region = yes
             require_domicile_in_sub_region = yes
             map_color = { 180 35 50 }
@@ -105,7 +105,7 @@
             }
         }
         nanbokucho_south = {
-            icon = "gfx/interface/icons/situations/nanbokucho/south_member_group.dds"
+            icon = "gfx/interface/icons/situations/guelph_ghibelline/guelph_member_group.dds"
             require_realm_in_sub_region = yes
             require_domicile_in_sub_region = yes
             map_color = { 245 210 90 }
