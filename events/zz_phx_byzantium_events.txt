@@ -40,7 +40,7 @@ phx_byz.0001 = {
 	option = {
 		name = phx_byz.0001.a
 		add_prestige = 100
-		add_legitimacy = 50
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 50 }
 		if = {
 			limit = { exists = scope:kantakouzenos }
 			scope:kantakouzenos = {
@@ -212,7 +212,7 @@ phx_byz.0015 = {
 			modifier = phx_byz_civil_war_scar_modifier
 			years = 10
 		}
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		if = {
 			limit = {
 				NOT = { owns_story_of_type = story_phx_byz_civil_war }
@@ -434,7 +434,7 @@ phx_byz.0040 = {
 				years = 25
 			}
 		}
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		add_prestige = 200
 		ai_chance = { base = 100 }
 	}
@@ -488,10 +488,13 @@ phx_byz.0050 = {
 			}
 		}
 		else = {
-			capital_county = {
-				add_county_modifier = {
-					modifier = phx_byz_zealot_unrest_modifier
-					years = 5
+			if = {
+				limit = { exists = capital_county }
+				capital_county = {
+					add_county_modifier = {
+						modifier = phx_byz_zealot_unrest_modifier
+						years = 5
+					}
 				}
 			}
 		}
@@ -504,7 +507,7 @@ phx_byz.0050 = {
 		name = phx_byz.0050.b
 		remove_short_term_gold = 125
 		add_dread = 20
-		add_legitimacy = 75
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
 		if = {
 			limit = { title:c_chalkidiki.holder.top_liege = root }
 			title:c_chalkidiki = {
@@ -516,8 +519,11 @@ phx_byz.0050 = {
 			}
 		}
 		else = {
-			capital_county = {
-				change_county_control = -15
+			if = {
+				limit = { exists = capital_county }
+				capital_county = {
+					change_county_control = -15
+				}
 			}
 		}
 		custom_tooltip = phx_byz_zealot_crackdown_tt
@@ -572,7 +578,7 @@ phx_byz.0055 = {
 		name = phx_byz.0055.a
 		trigger = { exists = scope:ottoman_broker }
 		add_piety = -100
-		add_legitimacy = -75
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = -75 }
 		spawn_army = {
 			name = phx_byz_turkic_mercenary_band_name
 			location = root.capital_province
@@ -604,7 +610,7 @@ phx_byz.0055 = {
 		name = phx_byz.0055.b
 		trigger = { exists = scope:serbian_broker }
 		add_prestige = -100
-		add_legitimacy = -50
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = -50 }
 		spawn_army = {
 			name = phx_byz_serbian_mercenary_band_name
 			location = root.capital_province
@@ -635,7 +641,7 @@ phx_byz.0055 = {
 	option = {
 		name = phx_byz.0055.c
 		remove_short_term_gold = 150
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		add_prestige = 100
 		spawn_army = {
 			name = phx_byz_loyalist_levies_name
@@ -666,7 +672,7 @@ phx_byz.0060 = {
 			limit = { has_character_modifier = phx_byz_civil_war_scar_modifier }
 			remove_character_modifier = phx_byz_civil_war_scar_modifier
 		}
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		add_prestige = 150
 		if = {
 			limit = { completely_controls = title:c_constantinople }
@@ -686,7 +692,7 @@ phx_byz.0060 = {
 		}
 		add_gold = 250
 		add_dread = 20
-		add_legitimacy = 75
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
 		ai_chance = { base = 35 }
 	}
 }
@@ -887,7 +893,7 @@ phx_byz.0075 = {
 	# Option B: Assert Constantinople's sole claim to the imperial diadem
 	option = {
 		name = phx_byz.0075.b
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		add_unpressed_claim = title:k_trebizond
 		if = {
 			limit = { exists = scope:trebizond_ruler }
@@ -981,15 +987,21 @@ phx_byz.0085 = {
 	# Option A: Rebuild the towers, moats, and sea-walls of Constantinople
 	option = {
 		name = phx_byz.0085.a
-		remove_short_term_gold = 200
+		remove_short_term_gold = 150
 		title:c_constantinople = {
 			add_county_modifier = {
 				modifier = phx_byz_theodosian_walls_modifier
 				years = 30
 			}
 		}
-		add_legitimacy = 100
-		ai_chance = { base = 75 }
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
+		ai_chance = {
+			base = 75
+			modifier = {
+				factor = 0
+				gold < 150
+			}
+		}
 	}
 
 	# Option B: Patch only the worst breaches and keep funds for field troops
@@ -1121,7 +1133,7 @@ phx_byz.0140 = {
 			years = 25
 		}
 		add_piety = 250
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		custom_tooltip = phx_byz_church_union_east_tt
 		ai_chance = { base = 65 }
 	}
@@ -1225,7 +1237,7 @@ phx_byz.0180 = {
 			years = 30
 		}
 		add_piety = 250
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		custom_tooltip = phx_byz_hesychasm_triumph_tt
 		ai_chance = { base = 65 }
 	}
@@ -1262,7 +1274,7 @@ phx_byz.0190 = {
 
 	option = {
 		name = phx_byz.0190.a
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		ai_chance = { base = 100 }
 	}
 }

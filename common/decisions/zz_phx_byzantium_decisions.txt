@@ -73,7 +73,7 @@ phx_byz_reform_imperial_themes_decision = {
 			modifier = phx_byz_theme_reform_modifier
 			years = 30
 		}
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		if = {
 			limit = {
 				has_ep3_dlc_trigger = yes
@@ -312,7 +312,7 @@ phx_byz_reclaim_anatolian_heartland_decision = {
 			years = 40
 		}
 		add_prestige = 750
-		add_legitimacy = 300
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 300 }
 		if = {
 			limit = {
 				has_ep3_dlc_trigger = yes
@@ -452,7 +452,7 @@ phx_byz_restore_pentarchy_authority_decision = {
 			years = 40
 		}
 		add_piety = 400
-		add_legitimacy = 200
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
 		custom_tooltip = phx_byz_restore_pentarchy_authority_effect_tt
 		hidden_effect = {
 			trigger_event = phx_byz.0150
@@ -539,7 +539,7 @@ phx_byz_establish_morea_despotate_decision = {
 				years = 20
 			}
 		}
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		custom_tooltip = phx_byz_establish_morea_despotate_effect_tt
 		hidden_effect = {
 			add_to_global_variable_list = {
@@ -775,7 +775,7 @@ phx_byz_restore_praetorian_prefectures_decision = {
 			years = 40
 		}
 		add_prestige = 500
-		add_legitimacy = 350
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 350 }
 		if = {
 			limit = {
 				has_ep3_dlc_trigger = yes
@@ -968,7 +968,7 @@ phx_ott_move_capital_edirne_decision = {
 			}
 		}
 		add_prestige = 300
-		add_legitimacy = 200
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
 		custom_tooltip = phx_ott_move_capital_edirne_effect_tt
 		hidden_effect = {
 			add_to_global_variable_list = {
@@ -1059,7 +1059,7 @@ phx_ott_found_janissary_corps_decision = {
 			}
 			inheritable = no
 		}
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		custom_tooltip = phx_ott_found_janissary_corps_effect_tt
 		hidden_effect = {
 			add_to_global_variable_list = {
@@ -1155,7 +1155,7 @@ phx_ser_proclaim_serbian_empire_decision = {
 		}
 		add_prestige = 500
 		add_piety = 250
-		add_legitimacy = 350
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 350 }
 		custom_tooltip = phx_ser_proclaim_serbian_empire_effect_tt
 		hidden_effect = {
 			add_to_global_variable_list = {
@@ -1230,10 +1230,13 @@ phx_bal_danubian_bulwark_decision = {
 			modifier = phx_bal_anti_ottoman_league_modifier
 			years = 25
 		}
-		capital_county = {
-			add_county_modifier = {
-				modifier = phx_byz_balkan_march_modifier
-				years = 20
+		if = {
+			limit = { exists = capital_county }
+			capital_county = {
+				add_county_modifier = {
+					modifier = phx_byz_balkan_march_modifier
+					years = 20
+				}
 			}
 		}
 		if = {
@@ -1275,7 +1278,7 @@ phx_bal_danubian_bulwark_decision = {
 				}
 			}
 		}
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		custom_tooltip = phx_bal_danubian_bulwark_effect_tt
 		hidden_effect = {
 			trigger_event = phx_bal.0220

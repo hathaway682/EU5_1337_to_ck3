@@ -133,7 +133,7 @@ phx_byz_theme_reconquest_cb = {
 		resolve_title_and_vassal_change = scope:change
 
 		scope:attacker = {
-			add_legitimacy = 50
+			if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 50 }
 			add_prestige_experience = medium_prestige_value
 		}
 

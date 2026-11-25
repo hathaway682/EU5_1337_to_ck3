@@ -179,7 +179,7 @@ phx_bal.0020 = {
 
 	option = {
 		name = phx_bal.0020.a
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		ai_chance = { base = 100 }
 	}
 }
@@ -295,7 +295,7 @@ phx_bal.0100 = {
 	option = {
 		name = phx_bal.0100.a
 		add_prestige = 150
-		add_legitimacy = 75
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
 		ai_chance = { base = 65 }
 	}
 
@@ -402,7 +402,7 @@ phx_bal.0120 = {
 
 	option = {
 		name = phx_bal.0120.a
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		ai_chance = { base = 100 }
 	}
 }
@@ -424,7 +424,7 @@ phx_bal.0130 = {
 		name = phx_bal.0130.a
 		remove_short_term_gold = 100
 		add_piety = 150
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		if = {
 			limit = { completely_controls = title:c_vardar }
 			title:c_vardar = {
@@ -592,8 +592,11 @@ phx_bal.0300 = {
 	option = {
 		name = phx_bal.0300.b
 		add_gold = 100
-		capital_county = {
-			change_prosperity_progress = 60
+		if = {
+			limit = { exists = capital_county }
+			capital_county = {
+				change_prosperity_progress = 60
+			}
 		}
 		ai_chance = { base = 30 }
 	}
@@ -616,9 +619,12 @@ phx_bal.0310 = {
 		name = phx_bal.0310.a
 		remove_short_term_gold = 75
 		add_piety = 150
-		add_legitimacy = 125
-		capital_county = {
-			change_prosperity_progress = 50
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 125 }
+		if = {
+			limit = { exists = capital_county }
+			capital_county = {
+				change_prosperity_progress = 50
+			}
 		}
 		ai_chance = { base = 65 }
 	}
@@ -697,10 +703,13 @@ phx_bal.0320 = {
 	option = {
 		name = phx_bal.0320.b
 		add_gold = 125
-		capital_county = {
-			add_county_modifier = {
-				modifier = phx_byz_balkan_march_modifier
-				years = 15
+		if = {
+			limit = { exists = capital_county }
+			capital_county = {
+				add_county_modifier = {
+					modifier = phx_byz_balkan_march_modifier
+					years = 15
+				}
 			}
 		}
 		ai_chance = { base = 35 }
