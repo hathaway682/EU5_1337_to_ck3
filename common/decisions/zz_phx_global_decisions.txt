@@ -8,7 +8,7 @@
 # 1. Enact Harbor & Gate Quarantine (1347 Black Death)
 phx_plague_enact_quarantine_decision = {
 	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_black_plague.dds"
+		reference = "gfx/interface/illustrations/decisions/phx_decision_black_death_quarantine.dds"
 	}
 	decision_group_type = realm
 	desc = phx_plague_enact_quarantine_decision_desc
@@ -31,7 +31,10 @@ phx_plague_enact_quarantine_decision = {
 
 	is_valid = {
 		OR = {
-			capital_county = { has_county_modifier = phx_black_death_outbreak_county_modifier }
+			AND = {
+				exists = capital_county
+				capital_county = { has_county_modifier = phx_black_death_outbreak_county_modifier }
+			}
 			any_sub_realm_county = { has_county_modifier = phx_black_death_outbreak_county_modifier }
 			has_character_flag = phx_black_death_threatened
 		}
@@ -54,14 +57,20 @@ phx_plague_enact_quarantine_decision = {
 		}
 		if = {
 			limit = {
-				capital_county = { has_county_modifier = phx_black_death_outbreak_county_modifier }
+				AND = {
+					exists = capital_county
+					capital_county = { has_county_modifier = phx_black_death_outbreak_county_modifier }
+				}
 			}
-			capital_county = {
-				remove_county_modifier = phx_black_death_outbreak_county_modifier
-				change_prosperity_progress = 25
+			if = {
+				limit = { exists = capital_county }
+				capital_county = {
+					remove_county_modifier = phx_black_death_outbreak_county_modifier
+					change_prosperity_progress = 25
+				}
 			}
 		}
-		add_legitimacy = 50
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 50 }
 		custom_tooltip = phx_plague_enact_quarantine_effect_tt
 		hidden_effect = {
 			trigger_event = phx_glb.0004
@@ -81,7 +90,7 @@ phx_plague_enact_quarantine_decision = {
 # 2. Champion the Council of Constance (Heal the 1378 Western Schism)
 phx_schism_convene_constance_council_decision = {
 	picture = {
-		reference = "gfx/interface/illustrations/decisions/pam_decision_shape_the_christian_church.dds"
+		reference = "gfx/interface/illustrations/decisions/phx_decision_western_schism_papacy.dds"
 	}
 	decision_group_type = major
 	desc = phx_schism_convene_constance_council_decision_desc
@@ -147,7 +156,7 @@ phx_schism_convene_constance_council_decision = {
 			modifier = phx_schism_conciliar_unity_modifier
 			years = 25
 		}
-		add_legitimacy = 250
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
 		add_piety = 300
 		custom_tooltip = phx_schism_convene_constance_council_effect_tt
 		hidden_effect = {
@@ -226,7 +235,7 @@ phx_ibe_secure_strait_of_gibraltar_decision = {
 			modifier = phx_ibe_strait_mastery_modifier
 			years = 25
 		}
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		if = {
 			limit = { completely_controls = title:c_sevilla }
 			title:c_sevilla = { change_prosperity_progress = 60 }
@@ -322,10 +331,13 @@ phx_ibe_sponsor_atlantic_navigators_decision = {
 				add_innovation = innovation_pilot_books
 			}
 		}
-		capital_county = {
-			change_prosperity_progress = 60
+		if = {
+			limit = { exists = capital_county }
+			capital_county = {
+				change_prosperity_progress = 60
+			}
 		}
-		add_legitimacy = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
 		custom_tooltip = phx_ibe_sponsor_atlantic_navigators_effect_tt
 		hidden_effect = {
 			trigger_event = phx_eur.0102
@@ -403,7 +415,7 @@ phx_gra_complete_alhambra_palaces_decision = {
 		title:c_granada = {
 			change_prosperity_progress = 100
 		}
-		add_legitimacy = 200
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
 		custom_tooltip = phx_gra_complete_alhambra_palaces_effect_tt
 		hidden_effect = {
 			add_to_global_variable_list = {
@@ -480,10 +492,13 @@ phx_ita_patronize_humanist_renaissance_decision = {
 			modifier = phx_ita_early_renaissance_patron_modifier
 			years = 25
 		}
-		capital_county = {
-			change_prosperity_progress = 80
+		if = {
+			limit = { exists = capital_county }
+			capital_county = {
+				change_prosperity_progress = 80
+			}
 		}
-		add_legitimacy = 120
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 120 }
 		custom_tooltip = phx_ita_patronize_humanist_renaissance_effect_tt
 		hidden_effect = {
 			trigger_event = phx_eur.0104
@@ -547,7 +562,7 @@ phx_mam_red_sea_spice_hegemony_decision = {
 		}
 		title:c_cairo = { change_prosperity_progress = 60 }
 		title:c_alexandria = { change_prosperity_progress = 60 }
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		custom_tooltip = phx_mam_red_sea_spice_hegemony_effect_tt
 		hidden_effect = {
 			trigger_event = phx_eur.0105
@@ -622,7 +637,7 @@ phx_dlh_stabilize_tughluq_sultanate_decision = {
 			years = 25
 		}
 		title:c_delhi = { change_prosperity_progress = 75 }
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		custom_tooltip = phx_dlh_stabilize_tughluq_sultanate_effect_tt
 		hidden_effect = {
 			trigger_event = phx_eur.0106
@@ -686,7 +701,7 @@ phx_maj_proclaim_palapa_oath_decision = {
 			years = 30
 		}
 		title:c_trowulan = { change_prosperity_progress = 70 }
-		add_legitimacy = 200
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
 		custom_tooltip = phx_maj_proclaim_palapa_oath_effect_tt
 		hidden_effect = {
 			trigger_event = phx_eur.0107
@@ -706,7 +721,7 @@ phx_maj_proclaim_palapa_oath_decision = {
 # 10. Endow the Great Mosque & Sankore Academy of Timbuktu (Mali)
 phx_mal_expand_sankore_university_decision = {
 	picture = {
-		reference = "gfx/interface/illustrations/decisions/tgp_scholars.dds"
+		reference = "gfx/interface/illustrations/decisions/phx_decision_sankore_timbuktu.dds"
 	}
 	decision_group_type = major
 	desc = phx_mal_expand_sankore_university_decision_desc
@@ -752,7 +767,7 @@ phx_mal_expand_sankore_university_decision = {
 			years = 30
 		}
 		title:c_timbuktu = { change_prosperity_progress = 100 }
-		add_legitimacy = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
 		custom_tooltip = phx_mal_expand_sankore_university_effect_tt
 		hidden_effect = {
 			trigger_event = phx_eur.0108
@@ -818,7 +833,7 @@ phx_eth_affirm_solomonic_chronicle_decision = {
 			modifier = phx_eth_solomonic_zeal_modifier
 			years = 25
 		}
-		add_legitimacy = 200
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
 		add_prestige = 200
 		custom_tooltip = phx_eth_affirm_solomonic_chronicle_effect_tt
 		hidden_effect = {
@@ -838,7 +853,7 @@ phx_eth_affirm_solomonic_chronicle_decision = {
 # 12. Proclaim the Gurkani Throne of Samarkand (Timurid / Transoxiana)
 phx_timur_claim_samarkand_throne_decision = {
 	picture = {
-		reference = "gfx/interface/illustrations/decisions/mpo_decision_great_khan.dds"
+		reference = "gfx/interface/illustrations/decisions/phx_decision_timurid_samarkand.dds"
 	}
 	decision_group_type = major
 	desc = phx_timur_claim_samarkand_throne_decision_desc
@@ -927,7 +942,7 @@ phx_timur_claim_samarkand_throne_decision = {
 			}
 			resolve_title_and_vassal_change = scope:gurkani_change
 		}
-		add_legitimacy = 250
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
 		custom_tooltip = phx_timur_claim_samarkand_throne_effect_tt
 		hidden_effect = {
 			add_to_global_variable_list = {
