@@ -52,6 +52,10 @@ phx_yuan_1337_startup = {
 			limit = { game_start_date >= 1337.1.1 }
 			character:eu5_rtr_zhu ?= {
 				if = {
+					limit = { is_alive = yes }
+					add_character_flag = phx_rtr_southern_faction
+				}
+				if = {
 					limit = {
 						is_alive = yes
 						NOT = { any_owned_story = { type = story_phx_zhu_rise } }
@@ -65,17 +69,39 @@ phx_yuan_1337_startup = {
 			}
 			character:eu5_rtr_han ?= {
 				if = {
+					limit = { is_alive = yes }
+					add_character_flag = phx_rtr_northern_faction
+				}
+				if = {
 					limit = { is_alive = yes is_ai = no }
 					trigger_event = { id = phx_yuan.0005 days = 25 }
 				}
 			}
 			character:eu5_rtr_xu ?= {
 				if = {
+					limit = { is_alive = yes }
+					add_character_flag = phx_rtr_southern_faction
+				}
+				if = {
+					limit = { is_alive = yes is_ai = no }
+					trigger_event = { id = phx_yuan.0005 days = 25 }
+				}
+			}
+			character:eu5_rtr_chen ?= {
+				if = {
+					limit = { is_alive = yes }
+					add_character_flag = phx_rtr_southern_faction
+				}
+				if = {
 					limit = { is_alive = yes is_ai = no }
 					trigger_event = { id = phx_yuan.0005 days = 25 }
 				}
 			}
 			character:eu5_rtr_zhang ?= {
+				if = {
+					limit = { is_alive = yes }
+					add_character_flag = phx_rtr_southern_faction
+				}
 				if = {
 					limit = { is_alive = yes is_ai = no }
 					trigger_event = { id = phx_yuan.0005 days = 25 }
