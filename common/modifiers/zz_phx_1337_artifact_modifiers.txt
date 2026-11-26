@@ -1,0 +1,101 @@
+﻿##################################################
+# Project Phoenix (PHX) — 1337 Historical Artifact Modifiers
+# CK3 1.21.0.3 (Florin) | Universalis Kings
+# All modifier keys verified against vanilla common/modifiers/
+##################################################
+
+# 1. e_byzantium — Diadem of the Palaiologoi
+phx_art_palaiologoi_diadem_modifier = {
+	monthly_prestige = 0.75
+	monthly_legitimacy_add = 0.35
+	court_grandeur_baseline_add = 5
+	vassal_opinion = 5
+}
+
+# 2. h_china — Imperial Jade Seal of the Great Yuan
+phx_art_yuan_jade_seal_modifier = {
+	monthly_prestige = 0.80
+	monthly_legitimacy_add = 0.50
+	monthly_influence_mult = 0.10
+	vassal_opinion = 6
+}
+
+# 3. k_ottoman — Sword of Osman
+phx_art_sword_of_osman_modifier = {
+	prowess_no_portrait = 6
+	martial = 2
+	knight_effectiveness_mult = 0.15
+	monthly_prestige = 0.50
+}
+
+# 4. k_france — The Oriflamme of Saint-Denis
+phx_art_oriflamme_modifier = {
+	advantage = 4
+	heavy_cavalry_damage_mult = 0.10
+	monthly_prestige = 0.60
+	dread_baseline_add = 10
+}
+
+# 5. k_england — Crown of St. Edward
+phx_art_st_edward_crown_modifier = {
+	monthly_prestige = 0.65
+	monthly_legitimacy_add = 0.35
+	vassal_opinion = 6
+	short_reign_duration_mult = -0.20
+}
+
+# 6. e_hre — Imperial Regalia of Charlemagne
+phx_art_charlemagne_regalia_modifier = {
+	monthly_prestige = 0.80
+	monthly_dynasty_prestige_mult = 0.08
+	court_grandeur_baseline_add = 6
+	vassal_opinion = 5
+}
+
+# 7. k_bohemia — Crown of Saint Wenceslas
+phx_art_st_wenceslas_crown_modifier = {
+	monthly_prestige = 0.50
+	monthly_piety = 0.40
+	same_faith_opinion = 6
+	domain_tax_mult = 0.05
+}
+
+# 8. d_prussia — Grand Master's Teutonic Cross
+phx_art_teutonic_cross_modifier = {
+	monthly_piety = 0.60
+	martial = 2
+	heavy_cavalry_damage_mult = 0.10
+	same_faith_opinion = 5
+}
+
+# 9. k_serbia — Scepter of the Nemanjići
+phx_art_nemanjic_scepter_modifier = {
+	monthly_prestige = 0.55
+	monthly_legitimacy_add = 0.30
+	diplomacy = 2
+	vassal_opinion = 5
+}
+
+# 10. k_egypt — Mamluk Sword of al-Nasir
+phx_art_al_nasir_sword_modifier = {
+	prowess_no_portrait = 6
+	heavy_cavalry_damage_mult = 0.12
+	dread_baseline_add = 10
+	monthly_prestige = 0.50
+}
+
+# 11. e_mali — Golden Staff of Mansa Musa
+phx_art_mansa_musa_staff_modifier = {
+	domain_tax_mult = 0.10
+	stewardship = 2
+	monthly_prestige = 0.70
+	monthly_piety = 0.50
+}
+
+# 12. e_majapahit — Kris of Gajah Mada
+phx_art_gajah_mada_kris_modifier = {
+	prowess_no_portrait = 5
+	intrigue = 2
+	martial = 2
+	monthly_prestige = 0.50
+}

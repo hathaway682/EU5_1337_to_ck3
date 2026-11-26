@@ -1,0 +1,321 @@
+﻿##################################################
+# Project Phoenix (PHX) — 1337 Historical Artifacts Startup On-Action
+# CK3 1.21.0.3 (Florin) | Universalis Kings
+# Awards 12 iconic 1337 historical artifacts once at game start (1337+)
+##################################################
+
+on_game_start_after_lobby = {
+	on_actions = { phx_1337_historical_artifacts_startup }
+}
+
+phx_1337_historical_artifacts_startup = {
+	effect = {
+		if = {
+			limit = {
+				game_start_date >= 1337.1.1
+				NOT = { has_global_variable = phx_1337_artifacts_spawned }
+			}
+			set_global_variable = phx_1337_artifacts_spawned
+
+			# 1. e_byzantium — Diadem of the Palaiologoi
+			if = {
+				limit = { exists = title:e_byzantium.holder }
+				title:e_byzantium.holder = {
+					create_artifact = {
+						name = phx_art_palaiologoi_diadem_name
+						description = phx_art_palaiologoi_diadem_desc
+						type = regalia
+						template = general_unique_template
+						visuals = pedestal_justinian
+						rarity = illustrious
+						modifier = phx_art_palaiologoi_diadem_modifier
+						wealth = 100
+						quality = 100
+						decaying = no
+						generate_history = no
+						save_scope_as = newly_created_artifact
+					}
+					scope:newly_created_artifact ?= {
+						set_variable = { name = historical_unique_artifact value = yes }
+						equip_artifact_to_owner = yes
+					}
+				}
+			}
+
+			# 2. h_china — Imperial Jade Seal of the Great Yuan
+			if = {
+				limit = { exists = title:h_china.holder }
+				title:h_china.holder = {
+					create_artifact = {
+						name = phx_art_yuan_jade_seal_name
+						description = phx_art_yuan_jade_seal_desc
+						type = seal_of_investiture
+						template = general_unique_template
+						visuals = imperial_seal
+						rarity = illustrious
+						modifier = phx_art_yuan_jade_seal_modifier
+						wealth = 100
+						quality = 100
+						decaying = no
+						generate_history = no
+						save_scope_as = newly_created_artifact
+					}
+					scope:newly_created_artifact ?= {
+						set_variable = { name = historical_unique_artifact value = yes }
+						equip_artifact_to_owner = yes
+					}
+				}
+			}
+
+			# 3. k_ottoman — Sword of Osman
+			if = {
+				limit = { exists = title:k_ottoman.holder }
+				title:k_ottoman.holder = {
+					create_artifact = {
+						name = phx_art_sword_of_osman_name
+						description = phx_art_sword_of_osman_desc
+						type = sword
+						template = general_unique_template
+						visuals = sword
+						rarity = illustrious
+						modifier = phx_art_sword_of_osman_modifier
+						wealth = 90
+						quality = 90
+						decaying = no
+						generate_history = no
+						save_scope_as = newly_created_artifact
+					}
+					scope:newly_created_artifact ?= {
+						set_variable = { name = historical_unique_artifact value = yes }
+						equip_artifact_to_owner = yes
+					}
+				}
+			}
+
+			# 4. k_france — The Oriflamme of Saint-Denis
+			if = {
+				limit = { exists = title:k_france.holder }
+				title:k_france.holder = {
+					create_artifact = {
+						name = phx_art_oriflamme_name
+						description = phx_art_oriflamme_desc
+						type = regalia
+						template = general_unique_template
+						visuals = banner
+						rarity = illustrious
+						modifier = phx_art_oriflamme_modifier
+						wealth = 90
+						quality = 90
+						decaying = no
+						generate_history = no
+						save_scope_as = newly_created_artifact
+					}
+					scope:newly_created_artifact ?= {
+						set_variable = { name = historical_unique_artifact value = yes }
+						equip_artifact_to_owner = yes
+					}
+				}
+			}
+
+			# 5. k_england — Crown of St. Edward
+			if = {
+				limit = { exists = title:k_england.holder }
+				title:k_england.holder = {
+					create_artifact = {
+						name = phx_art_st_edward_crown_name
+						description = phx_art_st_edward_crown_desc
+						type = regalia
+						template = general_unique_template
+						visuals = crown
+						rarity = illustrious
+						modifier = phx_art_st_edward_crown_modifier
+						wealth = 95
+						quality = 95
+						decaying = no
+						generate_history = no
+						save_scope_as = newly_created_artifact
+					}
+					scope:newly_created_artifact ?= {
+						set_variable = { name = historical_unique_artifact value = yes }
+						equip_artifact_to_owner = yes
+					}
+				}
+			}
+
+			# 6. e_hre — Imperial Regalia of Charlemagne
+			if = {
+				limit = { exists = title:e_hre.holder }
+				title:e_hre.holder = {
+					create_artifact = {
+						name = phx_art_charlemagne_regalia_name
+						description = phx_art_charlemagne_regalia_desc
+						type = regalia
+						template = general_unique_template
+						visuals = hre_crown
+						rarity = illustrious
+						modifier = phx_art_charlemagne_regalia_modifier
+						wealth = 100
+						quality = 100
+						decaying = no
+						generate_history = no
+						save_scope_as = newly_created_artifact
+					}
+					scope:newly_created_artifact ?= {
+						set_variable = { name = historical_unique_artifact value = yes }
+						equip_artifact_to_owner = yes
+					}
+				}
+			}
+
+			# 7. k_bohemia — Crown of Saint Wenceslas
+			if = {
+				limit = { exists = title:k_bohemia.holder }
+				title:k_bohemia.holder = {
+					create_artifact = {
+						name = phx_art_st_wenceslas_crown_name
+						description = phx_art_st_wenceslas_crown_desc
+						type = regalia
+						template = general_unique_template
+						visuals = crown
+						rarity = famed
+						modifier = phx_art_st_wenceslas_crown_modifier
+						wealth = 85
+						quality = 85
+						decaying = no
+						generate_history = no
+						save_scope_as = newly_created_artifact
+					}
+					scope:newly_created_artifact ?= {
+						set_variable = { name = historical_unique_artifact value = yes }
+						equip_artifact_to_owner = yes
+					}
+				}
+			}
+
+			# 8. d_prussia — Grand Master's Teutonic Cross
+			if = {
+				limit = { exists = title:d_prussia.holder }
+				title:d_prussia.holder = {
+					create_artifact = {
+						name = phx_art_teutonic_cross_name
+						description = phx_art_teutonic_cross_desc
+						type = regalia
+						template = general_unique_template
+						visuals = cross
+						rarity = famed
+						modifier = phx_art_teutonic_cross_modifier
+						wealth = 80
+						quality = 80
+						decaying = no
+						generate_history = no
+						save_scope_as = newly_created_artifact
+					}
+					scope:newly_created_artifact ?= {
+						set_variable = { name = historical_unique_artifact value = yes }
+						equip_artifact_to_owner = yes
+					}
+				}
+			}
+
+			# 9. k_serbia — Scepter of the Nemanjici
+			if = {
+				limit = { exists = title:k_serbia.holder }
+				title:k_serbia.holder = {
+					create_artifact = {
+						name = phx_art_nemanjic_scepter_name
+						description = phx_art_nemanjic_scepter_desc
+						type = regalia
+						template = general_unique_template
+						visuals = regalia
+						rarity = famed
+						modifier = phx_art_nemanjic_scepter_modifier
+						wealth = 85
+						quality = 85
+						decaying = no
+						generate_history = no
+						save_scope_as = newly_created_artifact
+					}
+					scope:newly_created_artifact ?= {
+						set_variable = { name = historical_unique_artifact value = yes }
+						equip_artifact_to_owner = yes
+					}
+				}
+			}
+
+			# 10. k_egypt — Mamluk Sword of al-Nasir
+			if = {
+				limit = { exists = title:k_egypt.holder }
+				title:k_egypt.holder = {
+					create_artifact = {
+						name = phx_art_al_nasir_sword_name
+						description = phx_art_al_nasir_sword_desc
+						type = sword
+						template = general_unique_template
+						visuals = sword
+						rarity = illustrious
+						modifier = phx_art_al_nasir_sword_modifier
+						wealth = 90
+						quality = 90
+						decaying = no
+						generate_history = no
+						save_scope_as = newly_created_artifact
+					}
+					scope:newly_created_artifact ?= {
+						set_variable = { name = historical_unique_artifact value = yes }
+						equip_artifact_to_owner = yes
+					}
+				}
+			}
+
+			# 11. e_mali — Golden Staff of Mansa Musa
+			if = {
+				limit = { exists = title:e_mali.holder }
+				title:e_mali.holder = {
+					create_artifact = {
+						name = phx_art_mansa_musa_staff_name
+						description = phx_art_mansa_musa_staff_desc
+						type = regalia
+						template = general_unique_template
+						visuals = regalia
+						rarity = illustrious
+						modifier = phx_art_mansa_musa_staff_modifier
+						wealth = 100
+						quality = 100
+						decaying = no
+						generate_history = no
+						save_scope_as = newly_created_artifact
+					}
+					scope:newly_created_artifact ?= {
+						set_variable = { name = historical_unique_artifact value = yes }
+						equip_artifact_to_owner = yes
+					}
+				}
+			}
+
+			# 12. e_majapahit — Kris of Gajah Mada
+			if = {
+				limit = { exists = title:e_majapahit.holder }
+				title:e_majapahit.holder = {
+					create_artifact = {
+						name = phx_art_gajah_mada_kris_name
+						description = phx_art_gajah_mada_kris_desc
+						type = dagger
+						template = general_unique_template
+						visuals = dagger_kris
+						rarity = illustrious
+						modifier = phx_art_gajah_mada_kris_modifier
+						wealth = 90
+						quality = 90
+						decaying = no
+						generate_history = no
+						save_scope_as = newly_created_artifact
+					}
+					scope:newly_created_artifact ?= {
+						set_variable = { name = historical_unique_artifact value = yes }
+						equip_artifact_to_owner = yes
+					}
+				}
+			}
+		}
+	}
+}

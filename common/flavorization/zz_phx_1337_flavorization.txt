@@ -1,0 +1,493 @@
+﻿##################################################
+# Project Phoenix (PHX) — 1337 Global Historical Flavorization
+# CK3 1.21.0.3 (Florin) | Universalis Kings
+# High-precision title/government/heritage/name_list filters
+# Priorities calibrated above vanilla defaults (39-600) and below wilderness (1000)
+##################################################
+
+### 1. Teutonic Order (d_prussia — Hochmeister / Ordensstaat) ###
+
+phx_teutonic_hochmeister_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 150
+	titles = { d_prussia }
+	governments = { ecclesiastical_government holy_order_government monastic_holy_order_government theocracy_government }
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+	}
+}
+
+phx_teutonic_hochmeister_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 150
+	titles = { d_prussia }
+	governments = { ecclesiastical_government holy_order_government monastic_holy_order_government theocracy_government }
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+	}
+}
+
+phx_teutonic_ordensstaat_title = {
+	type = title
+	tier = duchy
+	priority = 150
+	titles = { d_prussia }
+	governments = { ecclesiastical_government holy_order_government monastic_holy_order_government theocracy_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+### 2. Byzantine Despotate of Morea (d_morea greek) & Imperial Despots ###
+
+phx_byz_morea_despot_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 140
+	titles = { d_morea }
+	name_lists = { name_list_greek }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_byz_morea_despot_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 140
+	titles = { d_morea }
+	name_lists = { name_list_greek }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_byz_morea_despotate_title = {
+	type = title
+	tier = duchy
+	priority = 140
+	titles = { d_morea }
+	name_lists = { name_list_greek }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_byz_imperial_despot_male = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = empire
+	priority = 120
+	titles = { e_byzantium }
+	name_lists = { name_list_greek }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_byz_imperial_despot_female = {
+	type = character
+	gender = female
+	special = ruler_child
+	tier = empire
+	priority = 120
+	titles = { e_byzantium }
+	name_lists = { name_list_greek }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+### 3. Grand Principalities of Vladimir & Muscovy (d_vladimir / d_moscow russian) ###
+
+phx_rus_grand_prince_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 140
+	titles = { d_vladimir d_moscow }
+	name_lists = { name_list_russian }
+	governments = { feudal_government administrative_government tribal_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_rus_grand_prince_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 140
+	titles = { d_vladimir d_moscow }
+	name_lists = { name_list_russian }
+	governments = { feudal_government administrative_government tribal_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_rus_grand_principality_title = {
+	type = title
+	tier = duchy
+	priority = 140
+	titles = { d_vladimir d_moscow }
+	name_lists = { name_list_russian }
+	governments = { feudal_government administrative_government tribal_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+### 4. Tsardoms of Serbia & Bulgaria (k_serbia, k_bulgaria) ###
+
+phx_south_slavic_tsar_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 140
+	titles = { k_serbia k_bulgaria }
+	heritages = { heritage_south_slavic }
+	governments = { feudal_government administrative_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_south_slavic_tsar_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 140
+	titles = { k_serbia k_bulgaria }
+	heritages = { heritage_south_slavic }
+	governments = { feudal_government administrative_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_south_slavic_tsardom_title = {
+	type = title
+	tier = kingdom
+	priority = 140
+	titles = { k_serbia k_bulgaria }
+	heritages = { heritage_south_slavic }
+	governments = { feudal_government administrative_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+### 5. Ottoman Beylik (k_ottoman — Bey / Beylik) ###
+
+phx_ottoman_bey_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 150
+	titles = { k_ottoman }
+	religions = { islam_religion }
+	governments = { clan_government feudal_government administrative_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_ottoman_hatun_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 150
+	titles = { k_ottoman }
+	religions = { islam_religion }
+	governments = { clan_government feudal_government administrative_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_ottoman_beylik_title = {
+	type = title
+	tier = kingdom
+	priority = 150
+	titles = { k_ottoman }
+	religions = { islam_religion }
+	governments = { clan_government feudal_government administrative_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+### 6. Royal Heir of France (k_france ruler_child — Dauphin) ###
+
+phx_france_dauphin_male = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = kingdom
+	priority = 120
+	titles = { k_france }
+	heritages = { heritage_frankish }
+	governments = { feudal_government administrative_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_france_dauphine_female = {
+	type = character
+	gender = female
+	special = ruler_child
+	tier = kingdom
+	priority = 120
+	titles = { k_france }
+	heritages = { heritage_frankish }
+	governments = { feudal_government administrative_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+### 7. Great Yuan Grand Chancellor (e_minister_chancellor — overrides vanilla prio 500) ###
+
+phx_yuan_grand_chancellor_male = {
+	type = character
+	gender = male
+	priority = 620
+	titles = { e_minister_chancellor }
+	governments = { celestial_government steppe_admin_government }
+	flavourization_rules = {
+		only_holder = yes
+		spouse_takes_title = no
+		top_liege = no
+	}
+}
+
+phx_yuan_grand_chancellor_female = {
+	type = character
+	gender = female
+	priority = 620
+	titles = { e_minister_chancellor }
+	governments = { celestial_government steppe_admin_government }
+	flavourization_rules = {
+		only_holder = yes
+		spouse_takes_title = no
+		top_liege = no
+	}
+}
+
+### 8. Red Turban Leaders (d_laamp_eu5_rtr_han / zhu / xu) ###
+
+phx_rtr_righteous_commander_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 180
+	titles = { d_laamp_eu5_rtr_han d_laamp_eu5_rtr_zhu d_laamp_eu5_rtr_xu }
+	governments = { landless_adventurer_government }
+	flavourization_rules = {
+		only_holder = yes
+		spouse_takes_title = no
+		top_liege = no
+	}
+}
+
+phx_rtr_righteous_commander_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 180
+	titles = { d_laamp_eu5_rtr_han d_laamp_eu5_rtr_zhu d_laamp_eu5_rtr_xu }
+	governments = { landless_adventurer_government }
+	flavourization_rules = {
+		only_holder = yes
+		spouse_takes_title = no
+		top_liege = no
+	}
+}
+
+phx_rtr_righteous_host_title = {
+	type = title
+	tier = duchy
+	priority = 180
+	titles = { d_laamp_eu5_rtr_han d_laamp_eu5_rtr_zhu d_laamp_eu5_rtr_xu }
+	governments = { landless_adventurer_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+### 9. Mamluk Sultanate (k_egypt) & Delhi Sultanate (e_hindustan — overrides vanilla prio 600) ###
+
+phx_mamluk_sultan_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 160
+	titles = { k_egypt }
+	religions = { islam_religion }
+	governments = { clan_government feudal_government administrative_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_mamluk_sultana_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 160
+	titles = { k_egypt }
+	religions = { islam_religion }
+	governments = { clan_government feudal_government administrative_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_mamluk_sultanate_title = {
+	type = title
+	tier = kingdom
+	priority = 160
+	titles = { k_egypt }
+	religions = { islam_religion }
+	governments = { clan_government feudal_government administrative_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_delhi_sultan_male = {
+	type = character
+	gender = male
+	priority = 650
+	titles = { e_hindustan }
+	religions = { islam_religion }
+	governments = { administrative_government clan_government feudal_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_delhi_sultana_female = {
+	type = character
+	gender = female
+	priority = 650
+	titles = { e_hindustan }
+	religions = { islam_religion }
+	governments = { administrative_government clan_government feudal_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_delhi_sultanate_title = {
+	type = title
+	tier = empire
+	priority = 650
+	titles = { e_hindustan }
+	religions = { islam_religion }
+	governments = { administrative_government clan_government feudal_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+### 10. Maritime Republics of Venice & Genoa (d_venice, d_genoa & 1337 k_venice, k_genoa — Doge) ###
+
+phx_maritime_doge_duchy_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 140
+	titles = { d_venice d_genoa }
+	governments = { republic_government merchant_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_maritime_doge_duchy_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 140
+	titles = { d_venice d_genoa }
+	governments = { republic_government merchant_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_maritime_republic_duchy_title = {
+	type = title
+	tier = duchy
+	priority = 140
+	titles = { d_venice d_genoa }
+	governments = { republic_government merchant_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_maritime_doge_kingdom_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 140
+	titles = { k_venice k_genoa }
+	governments = { republic_government merchant_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_maritime_doge_kingdom_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 140
+	titles = { k_venice k_genoa }
+	governments = { republic_government merchant_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
+phx_maritime_republic_kingdom_title = {
+	type = title
+	tier = kingdom
+	priority = 140
+	titles = { k_venice k_genoa }
+	governments = { republic_government merchant_government }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
