@@ -3602,7 +3602,7 @@ k_tekke = {
 	}
 }
 
-k_trebizond = {
+e_trebizond = {
 	1204.4.1 = {
 		holder = tre_alexios_i_komnenos
 	}
@@ -3643,7 +3643,16 @@ k_trebizond = {
 		holder = tre_basil_komnenos
 	}
 	1337.4.1 = {
-		government = feudal_government
+		government = administrative_government
+	}
+}
+
+k_pontus = {
+	1337.1.1 = {
+		holder = tre_basil_komnenos
+	}
+	1337.4.1 = {
+		government = administrative_government
 	}
 }
 
