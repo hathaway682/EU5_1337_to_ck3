@@ -1,0 +1,1081 @@
+﻿##################################################
+# Project Phoenix (PHX) — Northern & Central/Eastern Europe 1337 Decisions
+# 11 historical decisions across Teutonic Order, HRE, Poland, Lithuania,
+# Scandinavia, Muscovy/Vladimir, and the Golden Horde.
+# Strictly AGENTS.md compliant: pure narrative desc; conditions in is_shown/is_valid/cost
+##################################################
+
+# 1. Teutonic Order — Establish the Eastern Ordensmarks
+phx_teu_organize_ordensmarks_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/phx_decision_hanseatic_baltic.dds"
+	}
+	decision_group_type = major
+	desc = phx_teu_organize_ordensmarks_decision_desc
+	selection_tooltip = phx_teu_organize_ordensmarks_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 60
+		kingdom = 60
+		empire = 0
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:d_prussia
+		NOT = { has_character_flag = phx_teu_ordensmarks_flag }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_teu_ordensmarks_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_upper_prussia
+		completely_controls = title:c_danzig
+		prestige_level >= 1
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 200
+		prestige = 200
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_teu_ordensmarks_modifier
+			years = 30
+		}
+		title:c_upper_prussia = {
+			change_prosperity_progress = 60
+		}
+		title:c_danzig = {
+			change_prosperity_progress = 60
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
+		custom_tooltip = phx_teu_organize_ordensmarks_effect_tt
+		hidden_effect = {
+			add_character_flag = phx_teu_ordensmarks_flag
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_teu_ordensmarks_global
+			}
+			trigger_event = phx_ne.0100
+		}
+	}
+
+	ai_potential = {
+		has_title = title:d_prussia
+	}
+
+	ai_will_do = {
+		base = 90
+	}
+}
+
+# 2. Teutonic Order — Call the Northern Baltic Crusade
+phx_teu_crusade_samogitia_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+	}
+	decision_group_type = major
+	desc = phx_teu_crusade_samogitia_decision_desc
+	selection_tooltip = phx_teu_crusade_samogitia_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 60
+		kingdom = 60
+		empire = 0
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:d_prussia
+		faith = faith:catholic
+		NOT = { has_character_modifier = phx_teu_northern_crusade_zeal_modifier }
+	}
+
+	is_valid = {
+		piety_level >= 2
+		OR = {
+			NOT = { completely_controls = title:d_samogitia }
+			AND = {
+				exists = title:k_lithuania.holder
+				title:k_lithuania.holder = {
+					NOT = { faith = faith:catholic }
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 250
+		piety = 300
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_teu_northern_crusade_zeal_modifier
+			years = 20
+		}
+		spawn_army = {
+			name = phx_teu_guest_crusaders_army_name
+			location = title:c_upper_prussia.title_province
+			men_at_arms = {
+				type = armored_horsemen
+				men = 200
+			}
+			men_at_arms = {
+				type = armored_footmen
+				men = 300
+			}
+			inheritable = no
+		}
+		if = {
+			limit = {
+				NOT = { has_title = title:d_samogitia }
+				NOT = { has_claim_on = title:d_samogitia }
+			}
+			add_unpressed_claim = title:d_samogitia
+		}
+		custom_tooltip = phx_teu_crusade_samogitia_effect_tt
+		hidden_effect = {
+			trigger_event = phx_ne.0101
+		}
+	}
+
+	ai_potential = {
+		has_title = title:d_prussia
+		gold >= 350
+	}
+
+	ai_will_do = {
+		base = 80
+	}
+}
+
+# 3. Teutonic Order — Secularize the Monastic State into Ducal Prussia
+phx_teu_secularize_prussia_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = major
+	desc = phx_teu_secularize_prussia_decision_desc
+	selection_tooltip = phx_teu_secularize_prussia_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 120
+		kingdom = 120
+		empire = 0
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:d_prussia
+		OR = {
+			has_government = ecclesiastical_government
+			government_has_flag = government_is_theocracy
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_teu_secularized_global
+			}
+		}
+	}
+
+	is_valid = {
+		OR = {
+			current_year >= 1385
+			has_global_variable = phx_pol_lit_union_formed
+		}
+		completely_controls = title:d_prussia
+		prestige_level >= 3
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 350
+		prestige = 500
+		piety = 250
+	}
+
+	effect = {
+		change_government = feudal_government
+		add_character_modifier = {
+			modifier = phx_teu_secular_prussia_modifier
+			years = 40
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
+		custom_tooltip = phx_teu_secularize_prussia_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_teu_secularized_global
+			}
+			trigger_event = phx_ne.0102
+		}
+	}
+
+	ai_potential = {
+		has_title = title:d_prussia
+		current_year >= 1410
+	}
+
+	ai_will_do = {
+		base = 40
+	}
+}
+
+# 4. Holy Roman Empire — Promulgate the Golden Bull of 1356
+phx_hre_golden_bull_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/ep3_cerimonial_decision.dds"
+	}
+	decision_group_type = major
+	desc = phx_hre_golden_bull_decision_desc
+	selection_tooltip = phx_hre_golden_bull_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:e_hre
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_hre_golden_bull_global
+			}
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 3
+		OR = {
+			current_year >= 1350
+			diplomacy >= 14
+			learning >= 14
+			has_title = title:k_bohemia
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 400
+		prestige = 500
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_hre_golden_bull_modifier
+			years = 50
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 300 }
+		add_prestige = 400
+		every_vassal = {
+			limit = {
+				highest_held_title_tier >= tier_duchy
+			}
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 15
+			}
+		}
+		custom_tooltip = phx_hre_golden_bull_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_hre_golden_bull_global
+			}
+			trigger_event = phx_ne.0110
+		}
+	}
+
+	ai_potential = {
+		has_title = title:e_hre
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+# 5. Poland — Enact the Statutes of Wiślica & Kazimierz Reforms
+phx_pol_statutes_of_casimir_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	}
+	decision_group_type = major
+	desc = phx_pol_statutes_of_casimir_decision_desc
+	selection_tooltip = phx_pol_statutes_of_casimir_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 60
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:k_poland
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_pol_casimir_statutes_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_krakow
+		completely_controls = title:d_lesser_poland
+		prestige_level >= 2
+		OR = {
+			stewardship >= 10
+			learning >= 10
+			current_year >= 1345
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 300
+		prestige = 300
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_pol_casimir_statutes_modifier
+			years = 40
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
+		title:c_krakow = {
+			change_prosperity_progress = 100
+		}
+		if = {
+			limit = { completely_controls = title:c_poznan }
+			title:c_poznan = {
+				change_prosperity_progress = 75
+			}
+		}
+		custom_tooltip = phx_pol_statutes_of_casimir_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_pol_casimir_statutes_global
+			}
+			trigger_event = phx_ne.0120
+		}
+	}
+
+	ai_potential = {
+		has_title = title:k_poland
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+# 6. Poland — Propose the Polish-Lithuanian Union (Union of Krewo)
+phx_pol_union_of_krewo_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	}
+	decision_group_type = major
+	desc = phx_pol_union_of_krewo_decision_desc
+	selection_tooltip = phx_pol_union_of_krewo_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 60
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:k_poland
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_pol_krewo_union_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_krakow
+		prestige_level >= 3
+		OR = {
+			has_title = title:k_lithuania
+			completely_controls = title:c_vilnius
+			AND = {
+				exists = title:k_lithuania.holder
+				title:k_lithuania.holder = {
+					is_alive = yes
+					NOT = { this = root }
+					opinion = {
+						target = root
+						value >= 25
+					}
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 350
+		prestige = 500
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_pol_lithuanian_union_modifier
+			years = 40
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
+		add_prestige = 400
+		if = {
+			limit = {
+				exists = title:k_lithuania.holder
+				title:k_lithuania.holder = {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			title:k_lithuania.holder = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 35
+				}
+			}
+		}
+		custom_tooltip = phx_pol_union_of_krewo_effect_tt
+		hidden_effect = {
+			set_global_variable = {
+				name = phx_pol_lit_union_formed
+				value = yes
+			}
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_pol_krewo_union_global
+			}
+			trigger_event = phx_ne.0121
+			if = {
+				limit = {
+					exists = title:d_prussia.holder
+					NOT = { has_global_variable = phx_teu_krewo_crisis_fired }
+					title:d_prussia.holder = {
+						is_alive = yes
+						NOT = { this = root }
+					}
+				}
+				set_global_variable = phx_teu_krewo_crisis_fired
+				title:d_prussia.holder = {
+					trigger_event = {
+						id = phx_ne.0012
+						days = 10
+					}
+				}
+			}
+		}
+	}
+
+	ai_potential = {
+		has_title = title:k_poland
+	}
+
+	ai_will_do = {
+		base = 90
+	}
+}
+
+# 7. Lithuania — Embrace Western Christendom & Foil the Teutonic Pretext
+phx_lit_baptism_of_lithuania_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	}
+	decision_group_type = major
+	desc = phx_lit_baptism_of_lithuania_decision_desc
+	selection_tooltip = phx_lit_baptism_of_lithuania_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 120
+		kingdom = 120
+		empire = 120
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:k_lithuania
+			has_title = title:d_lithuania
+		}
+		faith = faith:baltic_pagan
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_lit_baptism_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_vilnius
+		prestige_level >= 2
+		OR = {
+			current_year >= 1350
+			learning >= 10
+			diplomacy >= 12
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 200
+		prestige = 300
+	}
+
+	effect = {
+		if = {
+			limit = { has_character_modifier = phx_lit_gediminas_tolerance_modifier }
+			remove_character_modifier = phx_lit_gediminas_tolerance_modifier
+		}
+		set_character_faith = faith:catholic
+		title:c_vilnius = {
+			set_county_faith = faith:catholic
+		}
+		add_character_modifier = {
+			modifier = phx_lit_baptism_christendom_modifier
+			years = 40
+		}
+		add_piety = 350
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
+		if = {
+			limit = {
+				exists = title:k_poland.holder
+				title:k_poland.holder = {
+					is_alive = yes
+					faith = faith:catholic
+					NOT = { this = root }
+				}
+			}
+			title:k_poland.holder = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 30
+				}
+			}
+		}
+		custom_tooltip = phx_lit_baptism_of_lithuania_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_lit_baptism_global
+			}
+			trigger_event = phx_ne.0130
+		}
+	}
+
+	ai_potential = {
+		OR = {
+			has_title = title:k_lithuania
+			has_title = title:d_lithuania
+		}
+		current_year >= 1380
+	}
+
+	ai_will_do = {
+		base = 60
+	}
+}
+
+# 8. Scandinavia — Forge the Nordic Union of Kalmar
+phx_sca_kalmar_union_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+	}
+	decision_group_type = major
+	desc = phx_sca_kalmar_union_decision_desc
+	selection_tooltip = phx_sca_kalmar_union_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 60
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:k_sweden
+			has_title = title:k_denmark
+			has_title = title:k_norway
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_sca_kalmar_union_global
+			}
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 3
+		calc_true_if = {
+			amount >= 2
+			has_title = title:k_sweden
+			has_title = title:k_denmark
+			has_title = title:k_norway
+		}
+		OR = {
+			completely_controls = title:c_uppland
+			completely_controls = title:c_zealand
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 400
+		prestige = 600
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_sca_kalmar_union_modifier
+			years = 50
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 300 }
+		add_prestige = 500
+		if = {
+			limit = {
+				NOT = { has_title = title:k_sweden }
+				NOT = { has_claim_on = title:k_sweden }
+			}
+			add_unpressed_claim = title:k_sweden
+		}
+		if = {
+			limit = {
+				NOT = { has_title = title:k_denmark }
+				NOT = { has_claim_on = title:k_denmark }
+			}
+			add_unpressed_claim = title:k_denmark
+		}
+		if = {
+			limit = {
+				NOT = { has_title = title:k_norway }
+				NOT = { has_claim_on = title:k_norway }
+			}
+			add_unpressed_claim = title:k_norway
+		}
+		custom_tooltip = phx_sca_kalmar_union_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_sca_kalmar_union_global
+			}
+			trigger_event = phx_ne.0140
+		}
+	}
+
+	ai_potential = {
+		OR = {
+			has_title = title:k_sweden
+			has_title = title:k_denmark
+			has_title = title:k_norway
+		}
+	}
+
+	ai_will_do = {
+		base = 90
+	}
+}
+
+# 9. Muscovy / Vladimir — Gather the Russian Lands under Moscow
+phx_rus_gather_russian_lands_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = major
+	desc = phx_rus_gather_russian_lands_decision_desc
+	selection_tooltip = phx_rus_gather_russian_lands_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 60
+		kingdom = 60
+		empire = 60
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:d_moscow
+			has_title = title:d_vladimir
+			has_title = title:k_opolye
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_rus_gathered_lands_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_moscow
+		completely_controls = title:c_vladimir
+		prestige_level >= 2
+		OR = {
+			completely_controls = title:d_tver
+			completely_controls = title:d_ryazan
+			completely_controls = title:d_nizhny_novgorod
+			sub_realm_size >= 25
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 300
+		prestige = 400
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_rus_gathering_lands_modifier
+			years = 40
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
+		title:c_moscow = {
+			change_prosperity_progress = 100
+		}
+		if = {
+			limit = {
+				NOT = { has_title = title:d_tver }
+				NOT = { has_claim_on = title:d_tver }
+			}
+			add_unpressed_claim = title:d_tver
+		}
+		if = {
+			limit = {
+				NOT = { has_title = title:d_ryazan }
+				NOT = { has_claim_on = title:d_ryazan }
+			}
+			add_unpressed_claim = title:d_ryazan
+		}
+		custom_tooltip = phx_rus_gather_russian_lands_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_rus_gathered_lands_global
+			}
+			trigger_event = phx_ne.0150
+		}
+	}
+
+	ai_potential = {
+		OR = {
+			has_title = title:d_moscow
+			has_title = title:d_vladimir
+			has_title = title:k_opolye
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+# 10. Muscovy / Vladimir — Stand at the Don (Cast Off the Golden Horde Yoke)
+phx_rus_cast_off_tatar_yoke_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
+	}
+	decision_group_type = major
+	desc = phx_rus_cast_off_tatar_yoke_decision_desc
+	selection_tooltip = phx_rus_cast_off_tatar_yoke_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 60
+		kingdom = 60
+		empire = 60
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:d_moscow
+			has_title = title:d_vladimir
+			has_title = title:k_opolye
+			has_title = title:e_russia
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_rus_tatar_yoke_broken_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_moscow
+		prestige_level >= 3
+		OR = {
+			has_character_modifier = phx_rus_gathering_lands_modifier
+			has_global_variable = phx_glh_great_troubles_begun
+			current_year >= 1365
+			sub_realm_size >= 30
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 350
+		prestige = 500
+		piety = 200
+	}
+
+	effect = {
+		if = {
+			limit = { is_tributary = yes }
+			end_tributary = yes
+		}
+		if = {
+			limit = { has_character_modifier = phx_rus_tatar_yoke_modifier }
+			remove_character_modifier = phx_rus_tatar_yoke_modifier
+		}
+		add_character_modifier = {
+			modifier = phx_rus_broken_tatar_yoke_modifier
+			years = 50
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 300 }
+		add_prestige = 500
+		spawn_army = {
+			name = phx_rus_don_host_army_name
+			location = title:c_moscow.title_province
+			men_at_arms = {
+				type = druzhina
+				men = 300
+			}
+			men_at_arms = {
+				type = armored_horsemen
+				men = 150
+			}
+			inheritable = no
+		}
+		if = {
+			limit = {
+				exists = title:e_golden_horde.holder
+				title:e_golden_horde.holder = {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			title:e_golden_horde.holder = {
+				add_opinion = {
+					target = root
+					modifier = angry_opinion
+					opinion = -60
+				}
+			}
+		}
+		custom_tooltip = phx_rus_cast_off_tatar_yoke_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_rus_tatar_yoke_broken_global
+			}
+			trigger_event = phx_ne.0151
+		}
+	}
+
+	ai_potential = {
+		OR = {
+			has_title = title:d_moscow
+			has_title = title:d_vladimir
+			has_title = title:k_opolye
+		}
+	}
+
+	ai_will_do = {
+		base = 90
+	}
+}
+
+# 11. Golden Horde — Quell the Great Troubles of the Horde
+phx_glh_restore_sarai_order_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/mpo_decision_great_khan.dds"
+	}
+	decision_group_type = major
+	desc = phx_glh_restore_sarai_order_decision_desc
+	selection_tooltip = phx_glh_restore_sarai_order_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:e_golden_horde
+		OR = {
+			has_character_modifier = phx_glh_great_troubles_modifier
+			has_global_variable = phx_glh_great_troubles_begun
+		}
+		NOT = { has_character_modifier = phx_glh_sarai_order_restored_modifier }
+	}
+
+	is_valid = {
+		completely_controls = title:c_beljamen
+		prestige_level >= 3
+		OR = {
+			martial >= 12
+			dread >= 40
+			current_year >= 1365
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 400
+		prestige = 500
+	}
+
+	effect = {
+		if = {
+			limit = { has_character_modifier = phx_glh_great_troubles_modifier }
+			remove_character_modifier = phx_glh_great_troubles_modifier
+		}
+		add_character_modifier = {
+			modifier = phx_glh_sarai_order_restored_modifier
+			years = 40
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
+		add_dread = 25
+		title:c_beljamen = {
+			change_prosperity_progress = 75
+		}
+		custom_tooltip = phx_glh_restore_sarai_order_effect_tt
+		hidden_effect = {
+			trigger_event = phx_ne.0160
+		}
+	}
+
+	ai_potential = {
+		has_title = title:e_golden_horde
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

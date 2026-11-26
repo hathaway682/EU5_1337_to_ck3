@@ -1,0 +1,235 @@
+﻿l_english:
+ ##################################################
+ # Project Phoenix (PHX) — Wave 4: Northern & Central/Eastern Europe 1337
+ # Modifiers, Great Project (Marienburg), 11 Decisions, 24 Events
+ ##################################################
+
+ # --- Modifiers ---
+ phx_teu_northern_crusade_zeal_modifier:0 "Northern Crusade Zeal"
+ phx_teu_northern_crusade_zeal_modifier_desc:0 "Guest knights from across Western Christendom flock to the Vistula to ride under the black cross of the Teutonic Order."
+ phx_teu_ordensmarks_modifier:0 "Ordensstaat Frontier Marks"
+ phx_teu_ordensmarks_modifier_desc:0 "Commanderies, timber palisades, and disciplined brick castles knit Prussia's eastern marches into a single monastic war machine."
+ phx_teu_marienburg_fortress_modifier:0 "High Castle of Marienburg"
+ phx_teu_marienburg_fortress_modifier_desc:0 "Rising in red brick above the Nogat, the Grand Master's fortress stands as the mightiest stronghold of the Baltic coast."
+ phx_teu_secular_prussia_modifier:0 "Secular Duchy of Prussia"
+ phx_teu_secular_prussia_modifier_desc:0 "The monastic state has laid aside its vows of perpetual crusade to govern Prussia as a hereditary feudal duchy."
+ phx_hre_golden_bull_modifier:0 "Golden Bull of 1356"
+ phx_hre_golden_bull_modifier_desc:0 "Sealed in gold by imperial decree, the fundamental law of the seven Prince-Electors brings constitutional order to the Holy Roman Empire."
+ phx_boh_imperial_renaissance_modifier:0 "Bohemian Imperial Renaissance"
+ phx_boh_imperial_renaissance_modifier_desc:0 "Master masons, jurists, and scholars turn Prague into a radiant seat of learning and imperial artistry."
+ phx_boh_prague_university_modifier:0 "Studium Generale of Prague"
+ phx_boh_prague_university_modifier_desc:0 "The first university north of the Alps draws clerks, doctors, and students from Germany, Bohemia, and Poland alike."
+ phx_pol_casimir_statutes_modifier:0 "Statutes of Casimir"
+ phx_pol_casimir_statutes_modifier_desc:0 "Codified royal law, stone fortifications, and flourishing royal towns bind Lesser and Greater Poland under a single crown."
+ phx_pol_lithuanian_union_modifier:0 "Polish-Lithuanian Union"
+ phx_pol_lithuanian_union_modifier_desc:0 "Krakow and Vilnius stand bound in common purpose, uniting the chivalry of Poland with the vast eastern domains of Lithuania."
+ phx_lit_gediminas_tolerance_modifier:0 "Gediminas's Pagan Tolerance"
+ phx_lit_gediminas_tolerance_modifier_desc:0 "Sacred groves endure beside Christian chapels and merchant quarters, drawing artisans and warriors to Lithuania's banner."
+ phx_lit_baptism_christendom_modifier:0 "Baptism of Lithuania"
+ phx_lit_baptism_christendom_modifier_desc:0 "By entering Western Christendom of its own free will, Lithuania claims an honored seat among Christian realms and strips crusaders of their pretext."
+ phx_sca_kalmar_union_modifier:0 "Nordic Union of Kalmar"
+ phx_sca_kalmar_union_modifier_desc:0 "The realms of the North sail and govern in concert, guarding the Sound and the Baltic sea lanes under one sovereign."
+ phx_rus_gathering_lands_modifier:0 "Gathering of the Rus Lands"
+ phx_rus_gathering_lands_modifier_desc:0 "Silver, charters, and princely marriages draw the fragmented appanages of northeastern Rus steadily into Moscow's orbit."
+ phx_rus_tatar_yoke_modifier:0 "Yoke of the Golden Horde"
+ phx_rus_tatar_yoke_modifier_desc:0 "Annual tribute carts roll southward to Sarai, and every grand princely patent depends upon the Khan's favor."
+ phx_rus_broken_tatar_yoke_modifier:0 "Broken Tatar Yoke"
+ phx_rus_broken_tatar_yoke_modifier_desc:0 "Having defied the Horde upon the southern steppe, the princes of Rus no longer bow before the Khan's tax-gatherers."
+ phx_glh_great_troubles_modifier:0 "Great Troubles of the Horde"
+ phx_glh_great_troubles_modifier_desc:0 "Rival Jochid claimants and ambitious begs tear at the Ulus of Jochi, shaking the authority of Sarai from the Volga to the Crimea."
+ phx_glh_sarai_order_restored_modifier:0 "Order Restored in Sarai"
+ phx_glh_sarai_order_restored_modifier_desc:0 "Iron discipline and victorious tumens have silenced the feuding begs, reasserting the Khan's command across the Kipchak steppe."
+
+ # --- Great Project: High Castle of Marienburg (Malbork) ---
+ great_project_type_phx_malbork_high_castle:0 "High Castle of Marienburg"
+ great_project_type_phx_malbork_high_castle_desc:0 "The Teutonic Order's brick citadel on the Nogat can be expanded into a vast monastic headquarters worthy of the Grand Master, complete with an outer bailey, a vaulted refectory, and the Chapel of Saint Mary."
+ great_project_type_tooltip_phx_malbork_high_castle:0 "Construct the High Castle of Marienburg to establish an impregnable Teutonic headquarters in Prussia."
+ phx_malbork_target_valid_tt:0 "Must be the county capital of Upper Prussia (Malbork) or Danzig, directly held by you, and not yet fortified as Marienburg."
+ great_project_type_phx_malbork_high_castle_contribution_outer_bailey:0 "Brick Curtain Walls & Outer Bailey"
+ great_project_type_phx_malbork_high_castle_contribution_outer_bailey_desc:0 "Bake millions of red bricks to raise outer barbicans, gatehouses, and deep moats around the High Castle."
+ great_project_type_phx_malbork_high_castle_contribution_grand_refectory:0 "Grand Master's Refectory"
+ great_project_type_phx_malbork_high_castle_contribution_grand_refectory_desc:0 "Construct a star-vaulted banquet hall to host visiting crusading princes and Hanseatic envoys."
+ great_project_type_phx_malbork_high_castle_contribution_chapel_of_saint_mary:0 "Chapel of Saint Mary"
+ great_project_type_phx_malbork_high_castle_contribution_chapel_of_saint_mary_desc:0 "Adorn the fortress chapel with a towering mosaic of the Virgin, inspiring devotion across the Ordensstaat."
+
+ # --- Decisions (11) ---
+ phx_teu_organize_ordensmarks_decision:0 "Establish the Eastern Ordensmarks"
+ phx_teu_organize_ordensmarks_decision_desc:0 "Across the marshlands and pine forests of Prussia, our brother-knights hold lonely timber watchtowers far from the Vistula. By chartering new commanderies, draining the lowlands, and binding the frontier bailiwicks to Marienburg, the Ordensstaat can turn a raw conquest into an enduring bulwark."
+ phx_teu_organize_ordensmarks_decision_tooltip:0 "Reorganize the Teutonic commanderies and frontier marches across Prussia."
+ phx_teu_organize_ordensmarks_decision_confirm:0 "Charter the Ordensmarks"
+ phx_teu_organize_ordensmarks_effect_tt:0 "Prussia's commanderies are formally reorganized and a chronicle event commemorates the reform."
+
+ phx_teu_crusade_samogitia_decision:0 "Call the Northern Baltic Crusade"
+ phx_teu_crusade_samogitia_decision_desc:0 "Along the frozen marshes of Samogitia, the last great pagan stronghold of Europe still defies the cross. Word sent to the courts of the Rhineland, Bohemia, and England will draw eager noble guests to ride on our winter Reisen and press the Baltic frontier."
+ phx_teu_crusade_samogitia_decision_tooltip:0 "Summon Western crusading knights for a northern campaign toward Samogitia."
+ phx_teu_crusade_samogitia_decision_confirm:0 "Sound the Crusade Horn"
+ phx_teu_crusade_samogitia_effect_tt:0 "Western crusading knights assemble at Marienburg and the Order asserts its claim over Samogitia."
+
+ phx_teu_secularize_prussia_decision:0 "Secularize the Monastic State"
+ phx_teu_secularize_prussia_decision_desc:0 "The age of endless Baltic crusades is waning, and the estates of Prussia chafe under the rule of celibate knights answerable to a distant crusading vocation. By laying down the monastic habit and transforming the Ordensstaat into a hereditary feudal duchy, Prussia may secure a new place in European statecraft."
+ phx_teu_secularize_prussia_decision_tooltip:0 "Transform the Teutonic Order's monastic realm into a secular feudal Duchy of Prussia."
+ phx_teu_secularize_prussia_decision_confirm:0 "Proclaim Ducal Prussia"
+ phx_teu_secularize_prussia_effect_tt:0 "The Ordensstaat becomes a feudal realm and enters a new secular era."
+
+ phx_hre_golden_bull_decision:0 "Promulgate the Golden Bull of 1356"
+ phx_hre_golden_bull_decision_desc:0 "For generations, disputed elections, double coronations, and papal interdicts have plunged Germany into ruinous civil wars. By fixing the rights of the seven Prince-Electors in an immutable imperial charter sealed in gold, the majesty of the Roman crown can rest upon law rather than swordplay."
+ phx_hre_golden_bull_decision_tooltip:0 "Issue an imperial constitution codifying the Prince-Electors and stabilizing the Holy Roman Empire."
+ phx_hre_golden_bull_decision_confirm:0 "Seal the Golden Bull"
+ phx_hre_golden_bull_effect_tt:0 "Imperial electoral law is promulgated before the Diet, winning the esteem of the realm's great princes."
+
+ phx_pol_statutes_of_casimir_decision:0 "Enact the Statutes of Wiślica"
+ phx_pol_statutes_of_casimir_decision_desc:0 "Poland has emerged from generations of princely fragmentation with a tangle of local customs, wooden palisades, and depleted coffers. A unified royal legal code, backed by stone castles and chartered towns, will remake the realm from timber into stone."
+ phx_pol_statutes_of_casimir_decision_tooltip:0 "Codify Polish royal law and launch sweeping administrative and urban reforms."
+ phx_pol_statutes_of_casimir_decision_confirm:0 "Proclaim the Royal Statutes"
+ phx_pol_statutes_of_casimir_effect_tt:0 "Royal law is harmonized across Lesser and Greater Poland, spurring urban growth in Krakow and Poznan."
+
+ phx_pol_union_of_krewo_decision:0 "Propose the Polish-Lithuanian Union"
+ phx_pol_union_of_krewo_decision_desc:0 "Hemmed in by Teutonic steel in the north and imperial intrigue in the west, Poland and Lithuania share both enemies and destiny. A dynastic and political union between Krakow and Vilnius would forge a power capable of reshaping all of Central and Eastern Europe."
+ phx_pol_union_of_krewo_decision_tooltip:0 "Seal a grand political and dynastic union linking Poland and Lithuania."
+ phx_pol_union_of_krewo_decision_confirm:0 "Seal the Union of Krewo"
+ phx_pol_union_of_krewo_effect_tt:0 "The Polish-Lithuanian Union is proclaimed, sending shockwaves through the Teutonic Order in Marienburg."
+
+ phx_lit_baptism_of_lithuania_decision:0 "Embrace Western Christendom"
+ phx_lit_baptism_of_lithuania_decision_desc:0 "So long as the sacred fires burn in Vilnius, the Teutonic Knights can summon crusaders from every court in Europe against our borders. By accepting baptism on our own terms rather than at the point of a German lance, Lithuania can enter the Christian commonwealth intact and unbowed."
+ phx_lit_baptism_of_lithuania_decision_tooltip:0 "Adopt the Catholic faith in Vilnius and deprive the Teutonic Order of its crusading pretext."
+ phx_lit_baptism_of_lithuania_decision_confirm:0 "Receive the Crown of Baptism"
+ phx_lit_baptism_of_lithuania_effect_tt:0 "You and Vilnius embrace Catholicism, reshaping diplomatic relations with Poland and the Teutonic Order."
+
+ phx_sca_kalmar_union_decision:0 "Forge the Nordic Union of Kalmar"
+ phx_sca_kalmar_union_decision_desc:0 "Divided, the kingdoms of Sweden, Denmark, and Norway bleed away their strength in endless border wars while Hanseatic merchants dictate the wealth of the Sound. United under a single sovereign, the three crowns of the North can command every strait from the Skagerrak to the Gulf of Finland."
+ phx_sca_kalmar_union_decision_tooltip:0 "Proclaim a grand Nordic union binding the crowns of Scandinavia."
+ phx_sca_kalmar_union_decision_confirm:0 "Proclaim the Union of Kalmar"
+ phx_sca_kalmar_union_effect_tt:0 "The Union of Kalmar is celebrated across the North, granting claims on any remaining unheld Scandinavian crown."
+
+ phx_rus_gather_russian_lands_decision:0 "Gather the Russian Lands"
+ phx_rus_gather_russian_lands_decision_desc:0 "Since the Mongol storm shattered Kievan Rus, the northeastern principalities have squandered their strength in fratricidal feuds between Vladimir, Moscow, Tver, and Ryazan. Through patience, coin, and the prestige of the Grand Principality, the scattered patrimonies of Rus can be drawn once more beneath a single center."
+ phx_rus_gather_russian_lands_decision_tooltip:0 "Assert Moscow's preeminence over the northeastern principalities of Rus."
+ phx_rus_gather_russian_lands_decision_confirm:0 "Gather the Lands of Rus"
+ phx_rus_gather_russian_lands_effect_tt:0 "Moscow strengthens its grip on northeastern Rus and asserts claims against rival Russian principalities."
+
+ phx_rus_cast_off_tatar_yoke_decision:0 "Stand at the Don — Cast Off the Yoke"
+ phx_rus_cast_off_tatar_yoke_decision_desc:0 "For a century the princes of Rus have ridden cap in hand to Sarai, paying silver for the right to rule their own fathers' lands. Now the regiments of Moscow and Vladimir stand ready to march southward to the Don and declare before God and the steppe that the days of tribute are finished."
+ phx_rus_cast_off_tatar_yoke_decision_tooltip:0 "Renounce tribute to the Golden Horde and rally the hosts of Rus for open defiance."
+ phx_rus_cast_off_tatar_yoke_decision_confirm:0 "March to the Don!"
+ phx_rus_cast_off_tatar_yoke_effect_tt:0 "Any tributary bond is broken, the Tatar Yoke ends, and a Rus host musters in Moscow to face the Horde's wrath."
+
+ phx_glh_restore_sarai_order_decision:0 "Quell the Great Troubles of the Horde"
+ phx_glh_restore_sarai_order_decision_desc:0 "Rival princes of the house of Jochi have turned Sarai into a slaughterhouse of short-lived khans, while distant tributaries sense weakness along the Don and the Volga. Only a ruthless purge of rebellious begs and a triumphal renewal of the Yassa can save the Golden Horde from dissolution."
+ phx_glh_restore_sarai_order_decision_tooltip:0 "End the Great Troubles and reimpose the Khan's supreme authority from Sarai."
+ phx_glh_restore_sarai_order_decision_confirm:0 "Reassert the Yassa!"
+ phx_glh_restore_sarai_order_effect_tt:0 "The Great Troubles end and Sarai's command over the Ulus of Jochi is restored."
+
+ # --- Spawned Armies & Regional Guard ---
+ phx_teu_guest_crusaders_army_name:0 "Northern Crusade Guest Knights"
+ phx_lit_samogitian_riders_name:0 "Samogitian Forest Riders"
+ phx_rus_don_host_army_name:0 "Grand Princely Host of the Don"
+ phx_glh_greatest_of_khans_1337_guard_tt:0 "The year must be at least 1355 and you must not suffer from the Great Troubles of the Horde."
+
+ # --- Events (24) ---
+ phx_ne.0001.t:0 "Banners of the Black Cross"
+ phx_ne.0001.desc:0 "Spring mist lifts from the Nogat as the bells of Marienburg call the knight-brothers to chapter. Under Grand Master Dietrich von Altenburg, the Teutonic Order commands Prussia from Danzig to the pine-dark frontier of Lithuania, while our Livonian brethren guard the northern Baltic shores. Yet Poland nurses bitter memories over Pomerelia, and the pagan host beyond the Nemunas grows bolder with every winter thaw."
+ phx_ne.0001.a:0 "Summon Western knights for a new season of Reisen."
+ phx_ne.0001.b:0 "Pour our silver into Marienburg's kilns and Danzig's granaries."
+
+ phx_ne.0010.t:0 "Burghers and Estates of Prussia"
+ phx_ne.0010.desc:0 "Envoys from Danzig, Elbing, and the country knights of Culm wait outside the Grand Master's chamber, their parchment grievances heavy with wax seals. The merchants complain that the Order's own grain monopolies and extraordinary war taxes choke the Prussian towns, while the landed gentry demand a voice in the councils that summon them to battle."
+ phx_ne.0010.a:0 "Confirm their municipal charters to keep Baltic trade flowing."
+ phx_ne.0010.b:0 "Remind the estates that Prussia belongs to the Order by sword and papal bull."
+
+ phx_ne.0012.t:0 "Shadow of the Krewo Union"
+ phx_ne.0012.desc:0 "Grave dispatches have arrived in Marienburg: Poland and Lithuania are drawing together under a single Christian banner. Across the chapter hall, white-cloaked commanders stare in grim silence. If the Lithuanians kneel before Roman altars and march beside the Polish crown, the Order's sacred mandate as the northern crusading sword faces its gravest hour."
+ phx_ne.0012.a:0 "Denounce their pact as a ruse and brace the Vistula castles for war."
+ phx_ne.0012.b:0 "Appeal to the Emperor and consider how Prussia may endure beyond the crusade."
+
+ phx_ne.0020.t:0 "The Emperor and the Avignon Interdict"
+ phx_ne.0020.desc:0 "In Munich and along the Rhine, imperial heralds read aloud the latest fulminations dispatched from Avignon. Though Ludwig IV wears the Roman crown, papal legates still insist that no German king may wield imperial authority without the Pontiff's confirmation. Across the Empire, electors and free cities watch closely to see whether the throne bends to Avignon or stands upon German custom."
+ phx_ne.0020.a:0 "Declare with the Electors that the Empire comes from God alone!"
+ phx_ne.0020.b:0 "Send discreet envoys southward to seek reconciliation with the Curia."
+
+ phx_ne.0022.t:0 "Studium Generale of Prague"
+ phx_ne.0022.desc:0 "Scholars trained in Paris and Bologna have laid a gilded charter before the Bohemian court: a proposal to found the first great university east of the Rhine and north of the Alps, right beside the Vltava in Prague. Masters of law, theology, medicine, and the liberal arts await only royal patronage to turn the city into a beacon of learning for the entire Empire."
+ phx_ne.0022.a:0 "Charter the University of Prague and endow its colleges richly."
+ phx_ne.0022.b:0 "Leave higher study to the cathedral chapters and spare the treasury."
+
+ phx_ne.0030.t:0 "A Kingdom of Timber and Stone"
+ phx_ne.0030.desc:0 "From Wawel Hill above Krakow, King Casimir III surveys a realm only recently stitched back together after two centuries of division. Silesia leans toward Bohemia, the Teutonic Knights hold the mouth of the Vistula, and wooden palisades still guard too many Polish market towns. Yet the salt mines of Wieliczka run deep, and wise governance may turn this battered kingdom into a fortress of stone."
+ phx_ne.0030.a:0 "Invest in royal stoneworks, courts, and trade highways."
+ phx_ne.0030.b:0 "Keep the royal banners sharp for the struggle over the northern marches."
+
+ phx_ne.0040.t:0 "At the Pagan Crossroads"
+ phx_ne.0040.desc:0 "In the timber halls of Vilnius, Franciscan friars, Orthodox Ruthenian boyars, and Hanseatic factors sit within earshot of the sacred groves of Perkunas. Grand Duke Gediminas has carved an astonishing realm stretching from the Baltic mists to the Dnieper plains, yet the Teutonic Order presses relentlessly from the west, waiting for any sign of division among his sons."
+ phx_ne.0040.a:0 "Guard the old gods while welcoming every craftsman and warrior to Vilnius."
+ phx_ne.0040.b:0 "Dispatch diplomatic letters to Western courts to disarm the Order's propaganda."
+
+ phx_ne.0042.t:0 "Shields of the Nemunas"
+ phx_ne.0042.desc:0 "Every winter when the rivers freeze hard enough to bear armored chargers, Teutonic columns push upriver through the forests of Samogitia toward Kaunas and Trakai. Lithuanian commanders gather around pinewood maps to decide whether to anchor the realm behind earthen ramparts along the Nemunas or answer iron with swift raids deep into Prussia."
+ phx_ne.0042.a:0 "Fortify the river crossings and strengthen Kaunas against winter sieges."
+ phx_ne.0042.b:0 "Call out the Samogitian riders to harry the Order's border commanderies."
+
+ phx_ne.0050.t:0 "Magnus Eriksson's Twin Crowns"
+ phx_ne.0050.desc:0 "Holding both the crown of Sweden and the crown of Norway, King Magnus Eriksson presides over the broadest Nordic domain in living memory, now enlarged by the rich herring markets of Scania. Yet the Danish crown stirs across the Sound, restless magnates guard their provincial liberties, and Hanseatic cogs dominate every Baltic harbor."
+ phx_ne.0050.a:0 "Harmonize Swedish royal law and safeguard the Scanian revenues."
+ phx_ne.0050.b:0 "Project royal authority boldly across the Sound and the eastern seas."
+
+ phx_ne.0060.t:0 "The Moneybag of Moscow"
+ phx_ne.0060.desc:0 "Silver scales clink late into the night inside the oak-walled Kremlin of Moscow. As Grand Prince of Vladimir, Ivan I Kalita has earned the trust of Oz Beg Khan in Sarai to gather the Golden Horde's tribute across northeastern Rus. Critics whisper that Moscow grows rich beneath a Mongol shadow, yet every peaceful harvest leaves Tver weaker and Moscow stronger."
+ phx_ne.0060.a:0 "Deliver Sarai's tribute cleanly while filling Moscow's own strongboxes."
+ phx_ne.0060.b:0 "Spend our standing to rally Rus boyars to the Grand Prince's court."
+
+ phx_ne.0062.t:0 "Throne of the Metropolitan in Moscow"
+ phx_ne.0062.desc:0 "Processional icons glint in the candlelight of the Dormition Cathedral as the Orthodox Metropolitan of Kiev and All Rus chooses to keep his seat permanently within Moscow's walls. While other principalities fight over ruined titles, the spiritual heart of the Russian Church has anchored itself beside the Moskva River."
+ phx_ne.0062.a:0 "Endow the Metropolitan's see and raise stone churches in his honor."
+ phx_ne.0062.b:0 "Receive his blessing humbly and keep our silver for Moscow's walls."
+
+ phx_ne.0070.t:0 "The Great Troubles of the Horde"
+ phx_ne.0070.desc:0 "The death of strong central rule in Sarai has unleashed a storm across the Ulus of Jochi. From the lower Volga to the Crimean ports, Jochid princes poison kinsmen, rival begs auction the throne to whichever claimant opens the treasury widest, and distant Russian tributaries watch the smoke rising above the steppe with growing hope."
+ phx_ne.0070.a:0 "Purge the plotting begs and rule Sarai by the edge of the saber."
+ phx_ne.0070.b:0 "Buy the loyalty of the steppe emirs with pasture grants and silver."
+
+ phx_ne.0100.t:0 "The Eastern Ordensmarks Organized"
+ phx_ne.0100.desc:0 "Standardized charters now govern every commandery from the Vistula estuary to the Masurian lakes. Storehouses stand full of grain and quarrels, roads link the brick castles to Marienburg, and the Ordensstaat functions with the precision of a monastic choir under arms."
+ phx_ne.0100.a:0 "Deus vult — the Order's realm stands firm."
+
+ phx_ne.0101.t:0 "Northern Baltic Crusade Proclaimed"
+ phx_ne.0101.desc:0 "Trumpets sound from the towers of Marienburg as Western knights, squires, and crossbowmen disembark along the Vistula to take the white mantle and ride eastward. Under the banner of the Virgin and the black cross, the host prepares to march toward the misty woods of Samogitia."
+ phx_ne.0101.a:0 "Forward for the Cross and the Order!"
+
+ phx_ne.0102.t:0 "Secular Duchy of Prussia Proclaimed"
+ phx_ne.0102.desc:0 "Before the assembled knights and burghers of Prussia, the monastic statutes are formally laid to rest and a secular ducal coronet is raised above Marienburg. Freed from the constraints of a fading crusading vocation, the new Duchy of Prussia steps onto the European stage as a dynastic state."
+ phx_ne.0102.a:0 "A new Prussia rises from the Order's foundations."
+
+ phx_ne.0105.t:0 "High Castle of Marienburg Completed"
+ phx_ne.0105.desc:0 "The scaffolding has come down from the last red-brick battlements of Marienburg. Beneath its towering Virgin mosaic and star-vaulted Grand Refectory, envoys from across Europe marvel at the largest brick fortress in Christendom, an enduring monument to the might of the Teutonic Order."
+ phx_ne.0105.a:0 "Let its red walls defy the centuries."
+
+ phx_ne.0110.t:0 "The Golden Bull Promulgated"
+ phx_ne.0110.desc:0 "Before the princes, bishops, and free-city envoys of the Imperial Diet, the chancellors affix the gleaming Golden Bull to the fundamental charter of the Holy Roman Empire. With the seven electoral voices fixed in law and imperial succession safeguarded against outside meddling, the majesty of the Reich shines anew."
+ phx_ne.0110.a:0 "Long live the law and majesty of the Empire!"
+
+ phx_ne.0120.t:0 "Statutes of Wiślica Enacted"
+ phx_ne.0120.desc:0 "Criers carry copies of the royal statutes from Krakow to Poznan, replacing fragmented local decrees with a single Polish law of the land. Masons lay fresh limestone courses along town walls and royal castles alike; future chroniclers will say the king found Poland built of wood and left it built of stone."
+ phx_ne.0120.a:0 "Law and stone shall preserve the Polish Crown."
+
+ phx_ne.0121.t:0 "The Polish-Lithuanian Union Proclaimed"
+ phx_ne.0121.desc:0 "Polish magnates and Lithuanian lords raise their goblets together as the seals of Krakow and Vilnius are pressed side by side onto the act of union. Stretching from the Carpathians to the eastern steppes, the joint strength of the two realms casts a long shadow over every rival in the Baltic."
+ phx_ne.0121.a:0 "United, Krakow and Vilnius fear no foe."
+
+ phx_ne.0130.t:0 "Baptism of Lithuania"
+ phx_ne.0130.desc:0 "Church bells ring over Vilnius where sacred oak groves once stood, as the Lithuanian ruler and court receive Catholic baptism before witnessing prelates. Across Europe, courts acclaim the conversion of the last pagan realm — and in Marienburg, the Teutonic Order realizes its ancient justification for war has vanished overnight."
+ phx_ne.0130.a:0 "Lithuania takes its rightful place in Christendom."
+
+ phx_ne.0140.t:0 "The Nordic Union of Kalmar"
+ phx_ne.0140.desc:0 "Banners of the North snap in the sea breeze above Kalmar as nobles, bishops, and royal councillors swear fealty to a single Nordic sovereign. From the Norwegian fjords to the Baltic archipelagos, the united crowns of Scandinavia stand poised to master the northern seas."
+ phx_ne.0140.a:0 "One sovereign for the kingdoms of the North!"
+
+ phx_ne.0150.t:0 "Gathering of the Russian Lands"
+ phx_ne.0150.desc:0 "Envoys from Vladimir, Nizhny Novgorod, and the upper Volga appanages acknowledge Moscow's primacy in the Grand Prince's hall. No longer merely one rival principality among many, Moscow now stands as the undisputed hearth around which the fractured lands of Rus are coalescing."
+ phx_ne.0150.a:0 "All Rus shall gather around Moscow."
+
+ phx_ne.0151.t:0 "Stand at the Don — The Yoke Broken"
+ phx_ne.0151.desc:0 "Beneath crimson banners bearing the face of Christ, the regiments of Moscow and allied Rus princes have met the steppe horsemen near the Don and refused to yield. Word races north to every bell tower from Vladimir to Novgorod: the Golden Horde is not invincible, and the century of tribute has been shattered by Russian steel."
+ phx_ne.0151.a:0 "Free Rus bows to Sarai no more!"
+
+ phx_ne.0160.t:0 "Order Restored in Sarai"
+ phx_ne.0160.desc:0 "The heads of the rebellious begs hang above the gates of Sarai, and the horsetail standards of the loyal tumens once more bow in unison before the Khan's pavilion. Having survived the Great Troubles, the Golden Horde lifts its gaze back toward the Volga, the Crimea, and the defiant forests of the north."
+ phx_ne.0160.a:0 "The Ulus of Jochi endures unbroken."

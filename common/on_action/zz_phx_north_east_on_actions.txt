@@ -1,0 +1,264 @@
+﻿##################################################
+# Project Phoenix (PHX) — Northern & Central/Eastern Europe 1337 On-Actions
+# Lightweight O(1) scoped hooks strictly for:
+#   d_prussia, e_hre, k_bohemia, k_poland, d_lithuania/k_lithuania,
+#   k_sweden, d_vladimir/d_moscow, e_golden_horde
+##################################################
+
+on_game_start_after_lobby = {
+	on_actions = { phx_ne_1337_startup }
+}
+
+phx_ne_1337_startup = {
+	effect = {
+		if = {
+			limit = { game_start_date >= 1337.1.1 }
+
+			# Teutonic Order opening (Dietrich von Altenburg / d_prussia)
+			if = {
+				limit = { exists = title:d_prussia.holder }
+				title:d_prussia.holder = {
+					trigger_event = {
+						id = phx_ne.0001
+						days = 18
+					}
+				}
+			}
+
+			# Holy Roman Empire opening (Ludwig IV / e_hre)
+			if = {
+				limit = { exists = title:e_hre.holder }
+				title:e_hre.holder = {
+					trigger_event = {
+						id = phx_ne.0020
+						days = 22
+					}
+				}
+			}
+
+			# Kingdom of Poland opening (Casimir III / k_poland)
+			if = {
+				limit = { exists = title:k_poland.holder }
+				title:k_poland.holder = {
+					trigger_event = {
+						id = phx_ne.0030
+						days = 26
+					}
+				}
+			}
+
+			# Grand Duchy of Lithuania opening (Gediminas / k_lithuania or d_lithuania)
+			if = {
+				limit = { exists = title:k_lithuania.holder }
+				title:k_lithuania.holder = {
+					trigger_event = {
+						id = phx_ne.0040
+						days = 30
+					}
+				}
+			}
+			else_if = {
+				limit = { exists = title:d_lithuania.holder }
+				title:d_lithuania.holder = {
+					trigger_event = {
+						id = phx_ne.0040
+						days = 30
+					}
+				}
+			}
+
+			# Kingdom of Sweden opening (Magnus Eriksson / k_sweden)
+			if = {
+				limit = { exists = title:k_sweden.holder }
+				title:k_sweden.holder = {
+					trigger_event = {
+						id = phx_ne.0050
+						days = 34
+					}
+				}
+			}
+
+			# Grand Principality of Vladimir / Moscow opening (Ivan I Kalita)
+			if = {
+				limit = { exists = title:d_vladimir.holder }
+				title:d_vladimir.holder = {
+					add_character_modifier = {
+						modifier = phx_rus_tatar_yoke_modifier
+						years = 25
+					}
+					trigger_event = {
+						id = phx_ne.0060
+						days = 38
+					}
+				}
+			}
+			else_if = {
+				limit = { exists = title:d_moscow.holder }
+				title:d_moscow.holder = {
+					add_character_modifier = {
+						modifier = phx_rus_tatar_yoke_modifier
+						years = 25
+					}
+					trigger_event = {
+						id = phx_ne.0060
+						days = 38
+					}
+				}
+			}
+		}
+	}
+}
+
+yearly_playable_pulse = {
+	on_actions = { phx_ne_yearly_pulse }
+}
+
+phx_ne_yearly_pulse = {
+	trigger = {
+		is_landed = yes
+		current_year >= 1338
+		current_year <= 1460
+		OR = {
+			has_title = title:d_prussia
+			has_title = title:e_hre
+			has_title = title:k_bohemia
+			has_title = title:k_poland
+			has_title = title:k_lithuania
+			has_title = title:d_lithuania
+			has_title = title:k_sweden
+			has_title = title:d_vladimir
+			has_title = title:d_moscow
+			has_title = title:e_golden_horde
+		}
+	}
+	effect = {
+		# 1. Teutonic Order — Prussian Cities & Burgher Estates Tension (1345+)
+		if = {
+			limit = {
+				has_title = title:d_prussia
+				current_year >= 1345
+				NOT = { has_global_variable = phx_teu_prussian_estates_fired }
+			}
+			set_global_variable = phx_teu_prussian_estates_fired
+			trigger_event = {
+				id = phx_ne.0010
+				days = { 30 120 }
+			}
+		}
+		# 2. Teutonic Order — Krewo Union / Catholic Lithuania Existential Crisis
+		else_if = {
+			limit = {
+				has_title = title:d_prussia
+				NOT = { has_global_variable = phx_teu_krewo_crisis_fired }
+				OR = {
+					has_global_variable = phx_pol_lit_union_formed
+					AND = {
+						exists = title:k_lithuania.holder
+						title:k_lithuania.holder = { faith = faith:catholic }
+					}
+				}
+			}
+			set_global_variable = phx_teu_krewo_crisis_fired
+			trigger_event = {
+				id = phx_ne.0012
+				days = { 20 90 }
+			}
+		}
+		# 3. Bohemia / HRE — Foundation of Charles University in Prague (1347+)
+		else_if = {
+			limit = {
+				OR = {
+					has_title = title:k_bohemia
+					AND = {
+						has_title = title:e_hre
+						completely_controls = title:c_prague
+					}
+				}
+				current_year >= 1347
+				completely_controls = title:c_prague
+				NOT = { has_global_variable = phx_boh_prague_university_fired }
+			}
+			set_global_variable = phx_boh_prague_university_fired
+			trigger_event = {
+				id = phx_ne.0022
+				days = { 30 120 }
+			}
+		}
+		# 4. Lithuania — Baltic Resistance Along the Nemunas (1342+)
+		else_if = {
+			limit = {
+				OR = {
+					has_title = title:k_lithuania
+					has_title = title:d_lithuania
+				}
+				current_year >= 1342
+				NOT = { has_global_variable = phx_lit_baltic_resistance_fired }
+				exists = title:d_prussia.holder
+				title:d_prussia.holder = {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			set_global_variable = phx_lit_baltic_resistance_fired
+			trigger_event = {
+				id = phx_ne.0042
+				days = { 30 120 }
+			}
+		}
+		# 5. Muscovy / Vladimir — Seat of the Orthodox Metropolitan in Moscow (1340+)
+		else_if = {
+			limit = {
+				OR = {
+					has_title = title:d_vladimir
+					has_title = title:d_moscow
+				}
+				completely_controls = title:c_moscow
+				faith = faith:orthodox
+				current_year >= 1340
+				NOT = { has_global_variable = phx_rus_metropolitan_seat_fired }
+			}
+			set_global_variable = phx_rus_metropolitan_seat_fired
+			trigger_event = {
+				id = phx_ne.0062
+				days = { 30 120 }
+			}
+		}
+		# 6. Golden Horde — Great Troubles Fallback Trigger (1357+ if Oz Beg survived or death check missed)
+		else_if = {
+			limit = {
+				has_title = title:e_golden_horde
+				current_year >= 1357
+				NOT = { has_global_variable = phx_glh_great_troubles_begun }
+			}
+			set_global_variable = phx_glh_great_troubles_begun
+			trigger_event = {
+				id = phx_ne.0070
+				days = { 30 120 }
+			}
+		}
+	}
+}
+
+on_death = {
+	on_actions = { phx_ne_oz_beg_death_check }
+}
+
+phx_ne_oz_beg_death_check = {
+	trigger = {
+		this = character:glh_giyas_al_din_mohammed_oz_beg_borjigin
+		has_title = title:e_golden_horde
+		NOT = { has_global_variable = phx_glh_great_troubles_begun }
+	}
+	effect = {
+		set_global_variable = phx_glh_great_troubles_begun
+		if = {
+			limit = { exists = primary_heir }
+			primary_heir = {
+				trigger_event = {
+					id = phx_ne.0070
+					days = 20
+				}
+			}
+		}
+	}
+}
