@@ -5201,30 +5201,6 @@ d_et_aquileia = {
 	}
 }
 
-# d_eu5_ars = {
-# 	1237.1.1 = {
-# 		holder = ars_robert_i_artois
-# 	}
-# 	1250.9.1 = {
-# 		holder = ars_robert_ii_artois
-# 	}
-# 	1302.7.11 = {
-# 		holder = ars_mahaut_artois
-# 	}
-# 	1329.11.27 = {
-# 		holder = fra_jeanne_ii_chalon_burgundy
-# 	}
-# 	1330.1.21 = {
-# 		holder = bur_jeanne_iii_capet
-# 	}
-# 	1337.1.1 = {
-# 		liege = k_france
-# 	}
-# 	1337.4.1 = {
-# 		government = feudal_government
-# 	}
-# }
-
 d_northern_greece = {
 	1308.10.5 = {
 		holder = ath_gautier_v_brienne
@@ -6652,81 +6628,6 @@ d_flanders = {
 		government = feudal_government
 	}
 }
-
-# d_franche_comte = {
-# 	982.1.1 = {
-# 		holder = fcb_othon_guillaume_burgundy
-# 	}
-# 	1027.9.21 = {
-# 		holder = fcb_renaud_i_burgundy
-# 	}
-# 	1057.9.4 = {
-# 		holder = fcb_guillaume_i_burgundy
-# 	}
-# 	1087.11.12 = {
-# 		holder = fcb_renaud_ii_burgundy
-# 	}
-# 	1097.1.1 = {
-# 		holder = fcb_etienne_i_burgundy
-# 	}
-# 	1102.5.27 = {
-# 		holder = fcb_guillaume_ii_burgundy
-# 	}
-# 	1125.1.1 = {
-# 		holder = fcb_renaud_iii_burgundy
-# 	}
-# 	1127.3.1 = {
-# 		holder = fcb_renaud_iii_burgundy
-# 	}
-# 	1148.2.12 = {
-# 		holder = ogk_beatrice_burgundy
-# 	}
-# 	1190.6.10 = {
-# 		holder = fcb_otton_hohenstaufen
-# 	}
-# 	1200.1.14 = {
-# 		holder = fcb_jeanne_i_hohenstaufen
-# 	}
-# 	1205.1.1 = {
-# 		holder = fcb_beatrice_ii_hohenstaufen
-# 	}
-# 	1208.6.21 = {
-# 		holder = fcb_beatrice_ii_hohenstaufen
-# 	}
-# 	1231.5.7 = {
-# 		holder = fcb_otton_iii_andechs
-# 	}
-# 	1248.6.19 = {
-# 		holder = fcb_adelaide_i_andechs
-# 	}
-# 	1266.11.12 = {
-# 		holder = fcb_adelaide_i_andechs
-# 	}
-# 	1267.6.11 = {
-# 		holder = fcb_adelaide_i_andechs
-# 	}
-# 	1279.3.8 = {
-# 		holder = fcb_othon_iv_chalon_burgundy
-# 	}
-# 	1303.3.17 = {
-# 		holder = fra_jeanne_ii_chalon_burgundy
-# 	}
-# 	1307.1.21 = {
-# 		holder = fra_jeanne_ii_chalon_burgundy
-# 	}
-# 	1322.1.3 = {
-# 		holder = fra_jeanne_ii_chalon_burgundy
-# 	}
-# 	1330.1.21 = {
-# 		holder = bur_jeanne_iii_capet
-# 	}
-# 	1337.1.1 = {
-# 		liege = k_france
-# 	}
-# 	1337.4.1 = {
-# 		government = feudal_government
-# 	}
-# }
 
 d_friesland = {
 	1337.1.1 = {
@@ -29641,6 +29542,21 @@ c_lower_argun = {
 }
 
 c_lower_artois = {
+	1237.1.1 = {
+		holder = ars_robert_i_artois
+	}
+	1250.9.1 = {
+		holder = ars_robert_ii_artois
+	}
+	1302.7.11 = {
+		holder = ars_mahaut_artois
+	}
+	1329.11.27 = {
+		holder = fra_jeanne_ii_chalon_burgundy
+	}
+	1330.1.21 = {
+		holder = bur_jeanne_iii_capet
+	}
 	1337.1.1 = {
 		liege = d_burgundy
 	}
@@ -29648,7 +29564,6 @@ c_lower_artois = {
 		change_prosperity_level = 28
 	}
 	1337.4.1 = {
-		holder = bur_jeanne_iii_capet
 		government = feudal_government
 	}
 }
