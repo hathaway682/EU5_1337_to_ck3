@@ -1,0 +1,282 @@
+﻿##################################################
+# Project Phoenix (PHX) — Jia Lu's Yellow River Embankment Works
+# CK3 1.21.0.3 (Florin) Native Great Project
+# Buildable by h_china holder at c_kaifeng when Yellow River flood is active
+##################################################
+
+phx_jialu_yellow_river_works = {
+	icon = {
+		reference = "gfx/interface/icons/great_projects/grand_canals.dds"
+	}
+	illustration = {
+		reference = "gfx/interface/illustrations/event_scenes/tgp_overflowing_river.dds"
+	}
+
+	name = {
+		desc = great_project_type_phx_jialu_yellow_river_works
+	}
+
+	is_important = yes
+	show_in_list = yes
+	group = major_project
+	target_title_tier = county
+	owner = province_owner_top_liege
+
+	province_filter = top_realm
+
+	is_shown = {
+		OR = {
+			has_title = title:h_china
+			AND = {
+				top_liege = { has_title = title:h_china }
+				OR = {
+					has_title = title:e_minister_of_works
+					has_title = title:e_minister_chancellor
+				}
+			}
+		}
+		title:c_kaifeng = {
+			has_county_modifier = phx_yuan_yellow_river_flood_modifier
+		}
+	}
+
+	can_start_planning = {
+		title:c_kaifeng = {
+			has_county_modifier = phx_yuan_yellow_river_flood_modifier
+		}
+		top_liege = {
+			completely_controls = title:c_kaifeng
+		}
+		NOR = {
+			is_planning_great_project = phx_jialu_yellow_river_works
+			custom_tooltip = {
+				text = only_single_great_project_type_allowed
+				any_great_project = {
+					great_project_type = phx_jialu_yellow_river_works
+				}
+			}
+		}
+	}
+
+	is_location_valid = {
+		scope:province = {
+			is_county_capital = yes
+			county = title:c_kaifeng
+		}
+	}
+
+	is_valid = {
+		scope:province.county = title:c_kaifeng
+		scope:owner ?= { is_alive = yes }
+	}
+
+	cost = {
+		treasury_or_gold = 300
+	}
+
+	construction_time = 540
+	contributor_cooldown = 30
+
+	allowed_contributor_filter = {
+		owner = yes
+		vassals = yes
+		tributaries = yes
+	}
+
+	on_start_build = {
+		set_global_variable = phx_red_turban_unrest_begun
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_simmering situation_current_phase = phx_rtr_phase_flood_spark } }
+					trigger_situation_catalyst = catalyst_phx_rtr_jialu_corvee_spark
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		title:c_kaifeng = {
+			if = {
+				limit = { has_county_modifier = phx_yuan_yellow_river_flood_modifier }
+				remove_county_modifier = phx_yuan_yellow_river_flood_modifier
+			}
+			add_county_modifier = {
+				modifier = phx_yuan_jialu_waterworks_modifier
+				years = 30
+			}
+			change_prosperity_progress = 150
+		}
+		scope:owner ?= {
+			if = {
+				limit = { is_alive = yes }
+				if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
+				add_prestige = 300
+				trigger_event = phx_yuan.0350
+			}
+		}
+		if = {
+			limit = {
+				has_tgp_dlc_trigger = yes
+				exists = situation:dynastic_cycle
+			}
+			situation:dynastic_cycle = {
+				if = {
+					limit = { OR = { situation_current_phase = situation_dynastic_cycle_phase_stability_expansion situation_current_phase = situation_dynastic_cycle_phase_stability_advancement situation_current_phase = situation_dynastic_cycle_phase_instability situation_current_phase = situation_dynastic_cycle_phase_instability_conquest } }
+					trigger_situation_catalyst = catalyst_hegemon_natural_disaster_recovered
+				}
+			}
+		}
+		set_global_variable = phx_red_turban_unrest_begun
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_simmering situation_current_phase = phx_rtr_phase_flood_spark } }
+					trigger_situation_catalyst = catalyst_phx_rtr_jialu_corvee_spark
+				}
+			}
+		}
+	}
+
+	on_cancel = {
+		scope:owner ?= {
+			if = {
+				limit = { is_alive = yes }
+				add_prestige = -150
+			}
+		}
+	}
+
+	project_contributions = {
+		stone_gabions = {
+			contributor_is_valid = {
+				OR = {
+					this = scope:owner
+					is_vassal_or_below_of = scope:owner
+					is_tributary_of = scope:owner
+				}
+			}
+			cost = {
+				treasury_or_gold = 150
+			}
+			contributor_cooldown = 30
+			is_required = yes
+			on_contribution_funded = {
+				great_project_notify_contribution = yes
+			}
+			on_complete = {
+				if = {
+					limit = { is_alive = yes }
+					add_prestige = 200
+					add_stewardship_lifestyle_xp = 250
+				}
+			}
+			ai_will_do = {
+				value = 250
+			}
+			ai_check_interval_by_tier = {
+				barony = 0
+				county = 12
+				duchy = 6
+				kingdom = 3
+				empire = 3
+				hegemony = 2
+			}
+		}
+
+		corvee_labor_corps = {
+			contributor_is_valid = {
+				OR = {
+					this = scope:owner
+					is_vassal_or_below_of = scope:owner
+					is_tributary_of = scope:owner
+				}
+			}
+			cost = {
+				treasury_or_gold = 150
+			}
+			contributor_cooldown = 30
+			is_required = yes
+			on_contribution_funded = {
+				great_project_notify_contribution = yes
+			}
+			on_complete = {
+				if = {
+					limit = { is_alive = yes }
+					add_prestige = 200
+					add_diplomacy_lifestyle_xp = 250
+				}
+			}
+			ai_will_do = {
+				value = 250
+			}
+			ai_check_interval_by_tier = {
+				barony = 0
+				county = 12
+				duchy = 6
+				kingdom = 3
+				empire = 3
+				hegemony = 2
+			}
+		}
+
+		hydraulic_surveyors = {
+			contributor_is_valid = {
+				OR = {
+					this = scope:owner
+					is_vassal_or_below_of = scope:owner
+					is_tributary_of = scope:owner
+				}
+			}
+			cost = {
+				treasury_or_gold = 120
+			}
+			contributor_cooldown = 30
+			is_required = no
+			on_contribution_funded = {
+				great_project_notify_contribution = yes
+			}
+			on_complete = {
+				title:c_kaifeng = {
+					change_prosperity_progress = 100
+				}
+				if = {
+					limit = { is_alive = yes }
+					add_learning_lifestyle_xp = 300
+					add_prestige = 150
+				}
+			}
+			ai_will_do = {
+				value = 120
+			}
+			ai_check_interval_by_tier = {
+				barony = 0
+				county = 18
+				duchy = 12
+				kingdom = 6
+				empire = 6
+				hegemony = 3
+			}
+		}
+	}
+
+	ai_target_quick_trigger = {
+		adult = yes
+		rank = hegemony
+	}
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 2
+	}
+	ai_will_do = {
+		value = 500
+	}
+
+	completion_sound_effect = "event:/DLC/EP4/SFX/Stingers/China/tgp_mx_sting_finishing_great_project_generic"
+}

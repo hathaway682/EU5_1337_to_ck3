@@ -1,0 +1,1697 @@
+﻿##################################################
+# Project Phoenix (PHX) — Great Yuan & Red Turban 1337 Events (32 Total)
+# Namespace: phx_yuan
+# Preserves all 13 v0.1 events + adds 19 Wave 2 Flagship events
+# Strictly follows AGENTS.md (pure narrative desc, clean CK3 1.21 effects,
+# DLC-guarded dynastic cycle hooks, guarded optional portrait scopes)
+##################################################
+
+namespace = phx_yuan
+
+# ==================================================
+# PART I — v0.1 Core Imperial & Red Turban Events (13)
+# ==================================================
+
+# 1. 0001 — Opening 1337: Court of Dadu under Bayan's Shadow
+phx_yuan.0001 = {
+	type = character_event
+	title = phx_yuan.0001.t
+	desc = phx_yuan.0001.desc
+	theme = crown
+	override_background = { reference = throne_room_east }
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		trigger = { exists = scope:bayan }
+		character = scope:bayan
+		animation = personality_bold
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:yua_bayan_merkid ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:yua_bayan_merkid = { save_scope_as = bayan }
+		}
+	}
+
+	option = {
+		name = phx_yuan.0001.a
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
+		if = {
+			limit = {
+				character:yua_toqto ?= { is_alive = yes }
+			}
+			character:yua_toqto = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 25
+				}
+			}
+		}
+		ai_chance = { base = 65 }
+	}
+
+	option = {
+		name = phx_yuan.0001.b
+		add_dread = 15
+		add_gold = 120
+		if = {
+			limit = { exists = scope:bayan }
+			scope:bayan = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 20
+				}
+			}
+		}
+		ai_chance = { base = 35 }
+	}
+}
+
+# 2. 0005 — Opening 1337 for Playable Red Turban / Late-Yuan Protagonists
+phx_yuan.0005 = {
+	type = character_event
+	title = phx_yuan.0005.t
+	desc = phx_yuan.0005.desc
+	theme = realm
+	override_background = { reference = market_east }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = phx_yuan.0005.a
+		add_prestige = 100
+		add_gold = 75
+		ai_chance = { base = 100 }
+	}
+}
+
+# 3. 0010 — 1339+: The Fall of Bayan and Toghtogha's Rise
+phx_yuan.0010 = {
+	type = character_event
+	title = phx_yuan.0010.t
+	desc = phx_yuan.0010.desc
+	theme = intrigue
+	override_background = { reference = council_chamber }
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	right_portrait = {
+		trigger = { exists = scope:toghtogha }
+		character = scope:toghtogha
+		animation = chancellor
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:yua_toqto ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:yua_toqto = { save_scope_as = toghtogha }
+		}
+		if = {
+			limit = {
+				character:yua_bayan_merkid ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:yua_bayan_merkid = { save_scope_as = bayan }
+		}
+	}
+
+	option = {
+		name = phx_yuan.0010.a
+		if = {
+			limit = { has_character_modifier = phx_yuan_bayan_regency_modifier }
+			remove_character_modifier = phx_yuan_bayan_regency_modifier
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
+		if = {
+			limit = { exists = scope:toghtogha }
+			scope:toghtogha = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 35
+				}
+			}
+		}
+		if = {
+			limit = { exists = scope:bayan }
+			scope:bayan = {
+				add_opinion = {
+					target = root
+					modifier = angry_opinion
+					opinion = -40
+				}
+			}
+		}
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = phx_yuan.0010.b
+		add_dread = 20
+		add_prestige = 100
+		if = {
+			limit = { exists = scope:bayan }
+			scope:bayan = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 25
+				}
+			}
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+# 4. 0020 — 1344+: The Yellow River Breaches and the One-Eyed Stone Man
+phx_yuan.0020 = {
+	type = character_event
+	title = phx_yuan.0020.t
+	desc = phx_yuan.0020.desc
+	theme = stewardship
+	override_background = { reference = tgp_overflowing_river }
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+
+	immediate = {
+		title:c_kaifeng = {
+			add_county_modifier = {
+				modifier = phx_yuan_yellow_river_flood_modifier
+				years = 20
+			}
+		}
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				if = {
+					limit = { situation_current_phase = phx_rtr_phase_simmering }
+					trigger_situation_catalyst = catalyst_phx_rtr_yellow_river_breach
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_tgp_dlc_trigger = yes
+				exists = situation:dynastic_cycle
+			}
+			situation:dynastic_cycle = {
+				if = {
+					limit = { OR = { situation_current_phase = situation_dynastic_cycle_phase_stability_expansion situation_current_phase = situation_dynastic_cycle_phase_stability_advancement situation_current_phase = situation_dynastic_cycle_phase_instability situation_current_phase = situation_dynastic_cycle_phase_instability_conquest } }
+					trigger_situation_catalyst = catalyst_hegemon_natural_disaster
+				}
+			}
+		}
+	}
+
+	option = {
+		name = phx_yuan.0020.a
+		remove_short_term_gold = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
+		custom_tooltip = phx_yuan_yellow_river_unrest_tt
+		ai_chance = { base = 55 }
+	}
+
+	option = {
+		name = phx_yuan.0020.b
+		add_gold = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = -100 }
+		custom_tooltip = phx_yuan_yellow_river_unrest_tt
+		ai_chance = { base = 45 }
+	}
+}
+
+# 5. 0030 — Red Turban Protagonist Event: The Prophecy Spreads Across the Huai
+phx_yuan.0030 = {
+	type = character_event
+	title = phx_yuan.0030.t
+	desc = phx_yuan.0030.desc
+	theme = war
+	override_background = { reference = battlefield }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = phx_yuan.0030.a
+		add_prestige = 200
+		add_gold = 100
+		if = {
+			limit = { NOT = { has_character_modifier = phx_rtr_red_turban_zeal_modifier } }
+			add_character_modifier = {
+				modifier = phx_rtr_red_turban_zeal_modifier
+				years = 15
+			}
+		}
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_simmering situation_current_phase = phx_rtr_phase_flood_spark } }
+					trigger_situation_catalyst = catalyst_phx_rtr_red_banner_raised
+				}
+			}
+		}
+		ai_chance = { base = 85 }
+	}
+
+	option = {
+		name = phx_yuan.0030.b
+		add_gold = 175
+		add_prestige = 75
+		ai_chance = { base = 15 }
+	}
+}
+
+# 6. 0035 — Imperial Court Alarm: Red Banners Along the Huai and Yangtze
+phx_yuan.0035 = {
+	type = character_event
+	title = phx_yuan.0035.t
+	desc = phx_yuan.0035.desc
+	theme = war
+	override_background = { reference = throne_room_east }
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+
+	immediate = {
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_simmering situation_current_phase = phx_rtr_phase_flood_spark } }
+					trigger_situation_catalyst = catalyst_phx_rtr_red_banner_raised
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_tgp_dlc_trigger = yes
+				exists = situation:dynastic_cycle
+			}
+			situation:dynastic_cycle = {
+				if = {
+					limit = { OR = { situation_current_phase = situation_dynastic_cycle_phase_stability_expansion situation_current_phase = situation_dynastic_cycle_phase_stability_advancement situation_current_phase = situation_dynastic_cycle_phase_instability situation_current_phase = situation_dynastic_cycle_phase_instability_conquest } }
+					trigger_situation_catalyst = catalyst_hegemon_in_civil_war
+				}
+			}
+		}
+	}
+
+	option = {
+		name = phx_yuan.0035.a
+		add_prestige = 100
+		ai_chance = { base = 100 }
+	}
+}
+
+# 7. 0100 — Decision Outcome: Zhizheng Reforms Proclaimed
+phx_yuan.0100 = {
+	type = character_event
+	title = phx_yuan.0100.t
+	desc = phx_yuan.0100.desc
+	theme = realm
+	override_background = { reference = throne_room_east }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	option = {
+		name = phx_yuan.0100.a
+		add_prestige = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 8. 0110 — Decision Outcome: Jia Lu Restores the Yellow River Dikes
+phx_yuan.0110 = {
+	type = character_event
+	title = phx_yuan.0110.t
+	desc = phx_yuan.0110.desc
+	theme = stewardship
+	override_background = { reference = council_chamber }
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	option = {
+		name = phx_yuan.0110.a
+		add_prestige = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 9. 0120 — Decision Outcome: Imperial Loyalist Banners Commissioned
+phx_yuan.0120 = {
+	type = character_event
+	title = phx_yuan.0120.t
+	desc = phx_yuan.0120.desc
+	theme = martial
+	override_background = { reference = battlefield }
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+
+	option = {
+		name = phx_yuan.0120.a
+		add_prestige = 100
+		ai_chance = { base = 100 }
+	}
+}
+
+# 10. 0130 — Decision Outcome: Retreat to Shangdu and the Northern Steppe
+phx_yuan.0130 = {
+	type = character_event
+	title = phx_yuan.0130.t
+	desc = phx_yuan.0130.desc
+	theme = crown
+	override_background = { reference = mpo_camp_steppe }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = phx_yuan.0130.a
+		add_prestige = 200
+		ai_chance = { base = 100 }
+	}
+}
+
+# 11. 0200 — Decision Outcome: The Red Turban Banner Rises
+phx_yuan.0200 = {
+	type = character_event
+	title = phx_yuan.0200.t
+	desc = phx_yuan.0200.desc
+	theme = war
+	override_background = { reference = battlefield }
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+
+	option = {
+		name = phx_yuan.0200.a
+		add_prestige = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 12. 0210 — Decision Outcome: High Walls, Full Granaries, Deferred Crown
+phx_yuan.0210 = {
+	type = character_event
+	title = phx_yuan.0210.t
+	desc = phx_yuan.0210.desc
+	theme = stewardship
+	override_background = { reference = tgp_study_asia }
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = phx_yuan.0210.a
+		add_stewardship_lifestyle_xp = 300
+		ai_chance = { base = 100 }
+	}
+}
+
+# 13. 0220 — Decision Outcome: Restoration of the Central Plains Proclaimed
+phx_yuan.0220 = {
+	type = character_event
+	title = phx_yuan.0220.t
+	desc = phx_yuan.0220.desc
+	theme = crown
+	override_background = { reference = tgp_asia_throne_room }
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	option = {
+		name = phx_yuan.0220.a
+		add_prestige = 250
+		ai_chance = { base = 100 }
+	}
+}
+
+# ==================================================
+# PART II — Wave 2 Decision Outcome Events (6)
+# ==================================================
+
+# 14. 0230 — Decision Outcome: Imperial Capital Established at Yingtian (Nanjing)
+phx_yuan.0230 = {
+	type = character_event
+	title = phx_yuan.0230.t
+	desc = phx_yuan.0230.desc
+	theme = crown
+	override_background = { reference = tgp_chinese_city }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	option = {
+		name = phx_yuan.0230.a
+		add_prestige = 200
+		ai_chance = { base = 100 }
+	}
+}
+
+# 15. 0240 — Decision Outcome: Huaisi Generals & Zhedong Scholars Gather
+phx_yuan.0240 = {
+	type = character_event
+	title = phx_yuan.0240.t
+	desc = phx_yuan.0240.desc
+	theme = diplomacy
+	override_background = { reference = tgp_courtyard_asia }
+	left_portrait = {
+		character = root
+		animation = chancellor
+	}
+
+	option = {
+		name = phx_yuan.0240.a
+		add_martial_lifestyle_xp = 250
+		ai_chance = { base = 100 }
+	}
+}
+
+# 16. 0250 — Decision Outcome: Great Han Proclaimed Along the Yangtze
+phx_yuan.0250 = {
+	type = character_event
+	title = phx_yuan.0250.t
+	desc = phx_yuan.0250.desc
+	theme = war
+	override_background = { reference = tgp_docks_asia }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = phx_yuan.0250.a
+		add_prestige = 200
+		ai_chance = { base = 100 }
+	}
+}
+
+# 17. 0260 — Decision Outcome: Great Zhou Proclaimed in Jiangnan
+phx_yuan.0260 = {
+	type = character_event
+	title = phx_yuan.0260.t
+	desc = phx_yuan.0260.desc
+	theme = stewardship
+	override_background = { reference = tgp_market_asia }
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+
+	option = {
+		name = phx_yuan.0260.a
+		add_gold = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 18. 0270 — Decision Outcome: Great Song Restoration Proclaimed
+phx_yuan.0270 = {
+	type = character_event
+	title = phx_yuan.0270.t
+	desc = phx_yuan.0270.desc
+	theme = faith
+	override_background = { reference = tgp_temple_asia }
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	option = {
+		name = phx_yuan.0270.a
+		add_piety = 200
+		ai_chance = { base = 100 }
+	}
+}
+
+# 19. 0280 — Decision Outcome: Grand Canal Dredging Completed
+phx_yuan.0280 = {
+	type = character_event
+	title = phx_yuan.0280.t
+	desc = phx_yuan.0280.desc
+	theme = stewardship
+	override_background = { reference = tgp_docks_asia }
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	option = {
+		name = phx_yuan.0280.a
+		add_stewardship_lifestyle_xp = 250
+		ai_chance = { base = 100 }
+	}
+}
+
+# ==================================================
+# PART III — Zhu Yuanzhang Epic Story Arc Events (7)
+# ==================================================
+
+# 20. 0300 — Guo Zixing's Banner & Lady Ma at Haozhou
+phx_yuan.0300 = {
+	type = character_event
+	title = phx_yuan.0300.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:guo_zixing
+					exists = scope:lady_ma
+				}
+				desc = phx_yuan.0300.desc
+			}
+			desc = phx_yuan.0300.desc_fallback
+		}
+	}
+	theme = marriage
+	override_background = { reference = tgp_camp_asia }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	right_portrait = {
+		trigger = { exists = scope:lady_ma }
+		character = scope:lady_ma
+		animation = admiration
+	}
+	lower_left_portrait = {
+		trigger = { exists = scope:guo_zixing }
+		character = scope:guo_zixing
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:eu5_rtr_guo ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:eu5_rtr_guo = { save_scope_as = guo_zixing }
+		}
+		if = {
+			limit = {
+				character:eu5_rtr_ma ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:eu5_rtr_ma = { save_scope_as = lady_ma }
+		}
+	}
+
+	# Option A: Pledge fealty to Guo Zixing's camp and wed/betroth Lady Ma
+	option = {
+		name = phx_yuan.0300.a
+		add_prestige = 200
+		add_gold = 100
+		if = {
+			limit = {
+				exists = scope:lady_ma
+				is_married = no
+				is_betrothed = no
+				scope:lady_ma = {
+					is_married = no
+					is_betrothed = no
+				}
+			}
+			if = {
+				limit = {
+					is_adult = yes
+					scope:lady_ma = { is_adult = yes }
+				}
+				marry = scope:lady_ma
+			}
+			else = {
+				create_betrothal = scope:lady_ma
+			}
+		}
+		if = {
+			limit = { exists = scope:guo_zixing }
+			scope:guo_zixing = {
+				add_opinion = {
+					target = root
+					modifier = trust_opinion
+					opinion = 35
+				}
+			}
+		}
+		ai_chance = { base = 90 }
+	}
+
+	# Option B: Keep an independent band across the Huai
+	option = {
+		name = phx_yuan.0300.b
+		add_martial_lifestyle_xp = 300
+		add_prestige = 150
+		ai_chance = { base = 10 }
+	}
+}
+
+# 21. 0305 — Carving a Base in Huaisi (Fengyang / Chuzhou Uprising)
+phx_yuan.0305 = {
+	type = character_event
+	title = phx_yuan.0305.t
+	desc = phx_yuan.0305.desc
+	theme = war
+	override_background = { reference = tgp_camp_asia }
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+
+	immediate = {
+		set_global_variable = phx_red_turban_unrest_begun
+		if = {
+			limit = { exists = capital_province }
+			capital_province = { save_scope_as = phx_zhu_loc }
+		}
+		else_if = {
+			limit = { exists = domicile.domicile_location }
+			domicile.domicile_location = { save_scope_as = phx_zhu_loc }
+		}
+		else = {
+			title:c_fengyang.title_province = { save_scope_as = phx_zhu_loc }
+		}
+		if = {
+			limit = {
+				title:c_fengyang.holder ?= {
+					NOT = { this = root }
+					top_liege = {
+						NOT = { this = root }
+					}
+				}
+			}
+			title:c_fengyang.holder.top_liege = { save_scope_as = phx_fengyang_enemy }
+		}
+	}
+
+	# Option A: Strike Fengyang & Chuzhou in an open liberation uprising
+	option = {
+		name = phx_yuan.0305.a
+		if = {
+			limit = { NOT = { has_character_modifier = phx_rtr_red_turban_zeal_modifier } }
+			add_character_modifier = {
+				modifier = phx_rtr_red_turban_zeal_modifier
+				years = 20
+			}
+		}
+		spawn_army = {
+			name = phx_rtr_huaisi_vanguard_name
+			location = scope:phx_zhu_loc
+			men_at_arms = {
+				type = light_footmen
+				men = 500
+			}
+			men_at_arms = {
+				type = crossbowmen
+				men = 300
+			}
+			men_at_arms = {
+				type = fire_lancers
+				men = 200
+			}
+			levies = 2000
+			inheritable = no
+		}
+		if = {
+			limit = {
+				exists = scope:phx_fengyang_enemy
+				NOT = { is_at_war_with = scope:phx_fengyang_enemy }
+				can_declare_war = {
+					defender = scope:phx_fengyang_enemy
+					casus_belli = phx_rtr_uprising_seizure_cb
+					target_titles = { title:c_fengyang }
+				}
+			}
+			start_war = {
+				cb = phx_rtr_uprising_seizure_cb
+				target = scope:phx_fengyang_enemy
+				target_title = title:c_fengyang
+			}
+		}
+		else = {
+			add_pressed_claim = title:c_fengyang
+			add_pressed_claim = title:c_chuzhou
+		}
+		ai_chance = { base = 85 }
+	}
+
+	# Option B: Recruit quietly and prepare for crossing the Yangtze
+	option = {
+		name = phx_yuan.0305.b
+		add_gold = 200
+		add_prestige = 150
+		add_pressed_claim = title:c_fengyang
+		add_pressed_claim = title:c_yingtian
+		ai_chance = { base = 15 }
+	}
+}
+
+# 22. 0310 — Inner Circle of Ming: Li Shanchang, Liu Ji, Xu Da & Chang Yuchun
+phx_yuan.0310 = {
+	type = character_event
+	title = phx_yuan.0310.t
+	desc = phx_yuan.0310.desc
+	theme = diplomacy
+	override_background = { reference = tgp_study_asia }
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	right_portrait = {
+		trigger = { exists = scope:liu_ji }
+		character = scope:liu_ji
+		animation = chancellor
+	}
+	lower_left_portrait = {
+		trigger = { exists = scope:xu_da }
+		character = scope:xu_da
+	}
+	lower_right_portrait = {
+		trigger = { exists = scope:chang_yuchun }
+		character = scope:chang_yuchun
+	}
+
+	immediate = {
+		# 1. Li Shanchang (Grand Administrator & Quartermaster)
+		create_character = {
+			name = "phx_name_li_shanchang"
+			dynasty = none
+			age = 38
+			gender = male
+			culture = culture:han
+			faith = root.faith
+			employer = root
+			stewardship = 21
+			diplomacy = 15
+			intrigue = 14
+			learning = 13
+			martial = 8
+			trait = education_stewardship_4
+			trait = administrator
+			trait = diligent
+			trait = patient
+			trait = ambitious
+			save_scope_as = li_shanchang
+		}
+
+		# 2. Liu Ji / Liu Bowen (Master Strategist of Zhedong)
+		create_character = {
+			name = "phx_name_liu_ji"
+			dynasty = none
+			age = 41
+			gender = male
+			culture = culture:han
+			faith = root.faith
+			employer = root
+			learning = 22
+			diplomacy = 16
+			intrigue = 18
+			stewardship = 15
+			martial = 13
+			trait = education_learning_4
+			trait = shrewd
+			trait = patient
+			trait = just
+			trait = strategist
+			save_scope_as = liu_ji
+		}
+
+		# 3. Xu Da (Supreme General of the Ming)
+		create_character = {
+			name = "phx_name_xu_da"
+			dynasty = none
+			age = 24
+			gender = male
+			culture = culture:han
+			faith = root.faith
+			employer = root
+			martial = 23
+			prowess = 18
+			stewardship = 13
+			diplomacy = 14
+			trait = education_martial_4
+			trait = strategist
+			trait = organizer
+			trait = temperate
+			trait = brave
+			save_scope_as = xu_da
+		}
+
+		# 4. Chang Yuchun (Ten-Thousand-Man Vanguard)
+		create_character = {
+			name = "phx_name_chang_yuchun"
+			dynasty = none
+			age = 25
+			gender = male
+			culture = culture:han
+			faith = root.faith
+			employer = root
+			martial = 21
+			prowess = 24
+			trait = education_martial_4
+			trait = aggressive_attacker
+			trait = brave
+			trait = gallant
+			trait = physique_good_2
+			save_scope_as = chang_yuchun
+		}
+	}
+
+	option = {
+		name = phx_yuan.0310.a
+		if = {
+			limit = { NOT = { has_character_modifier = phx_rtr_huaisi_generals_modifier } }
+			add_character_modifier = {
+				modifier = phx_rtr_huaisi_generals_modifier
+				years = 30
+			}
+		}
+		if = {
+			limit = { exists = scope:li_shanchang }
+			scope:li_shanchang = {
+				add_opinion = { target = root modifier = loyal_servant opinion = 50 }
+			}
+		}
+		if = {
+			limit = { exists = scope:liu_ji }
+			scope:liu_ji = {
+				add_opinion = { target = root modifier = loyal_servant opinion = 50 }
+			}
+		}
+		if = {
+			limit = { exists = scope:xu_da }
+			scope:xu_da = {
+				add_opinion = { target = root modifier = loyal_servant opinion = 50 }
+			}
+		}
+		if = {
+			limit = { exists = scope:chang_yuchun }
+			scope:chang_yuchun = {
+				add_opinion = { target = root modifier = loyal_servant opinion = 50 }
+			}
+		}
+		custom_tooltip = phx_yuan_0310_recruited_tt
+		ai_chance = { base = 100 }
+	}
+}
+
+# 23. 0315 — Crossing the Yangtze to Jinling (Yingtian Assault)
+phx_yuan.0315 = {
+	type = character_event
+	title = phx_yuan.0315.t
+	desc = phx_yuan.0315.desc
+	theme = war
+	override_background = { reference = tgp_docks_asia }
+	left_portrait = {
+		character = root
+		animation = war_attacker
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				title:c_yingtian.holder ?= {
+					NOT = { this = root }
+					top_liege = { NOT = { this = root } }
+				}
+			}
+			title:c_yingtian.holder.top_liege = { save_scope_as = phx_yingtian_enemy }
+		}
+	}
+
+	# Option A: Cross at Caishi and seize Jinling (Yingtian)
+	option = {
+		name = phx_yuan.0315.a
+		add_pressed_claim = title:c_yingtian
+		add_prestige = 200
+		if = {
+			limit = {
+				exists = scope:phx_yingtian_enemy
+				NOT = { is_at_war_with = scope:phx_yingtian_enemy }
+				can_declare_war = {
+					defender = scope:phx_yingtian_enemy
+					casus_belli = phx_rtr_uprising_seizure_cb
+					target_titles = { title:c_yingtian }
+				}
+			}
+			start_war = {
+				cb = phx_rtr_uprising_seizure_cb
+				target = scope:phx_yingtian_enemy
+				target_title = title:c_yingtian
+			}
+		}
+		ai_chance = { base = 85 }
+	}
+
+	# Option B: Consolidate the northern bank first
+	option = {
+		name = phx_yuan.0315.b
+		add_pressed_claim = title:c_yingtian
+		add_gold = 150
+		ai_chance = { base = 15 }
+	}
+}
+
+# 24. 0320 — Fire Ships at Poyang Lake (Showdown with Chen Youliang)
+phx_yuan.0320 = {
+	type = character_event
+	title = phx_yuan.0320.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { exists = scope:chen_youliang }
+				desc = phx_yuan.0320.desc
+			}
+			desc = phx_yuan.0320.desc_fallback
+		}
+	}
+	theme = war
+	override_background = { reference = tgp_docks_asia }
+	left_portrait = {
+		character = root
+		animation = war_attacker
+	}
+	right_portrait = {
+		trigger = { exists = scope:chen_youliang }
+		character = scope:chen_youliang
+		animation = anger
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:eu5_rtr_chen ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:eu5_rtr_chen = { save_scope_as = chen_youliang }
+		}
+	}
+
+	# Option A: Unleash fire-ships with the northeast wind against the chained Han tower-ships
+	option = {
+		name = phx_yuan.0320.a
+		add_character_modifier = {
+			modifier = phx_rtr_poyang_victory_modifier
+			years = 25
+		}
+		add_prestige = 350
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
+		if = {
+			limit = { exists = scope:chen_youliang }
+			scope:chen_youliang = {
+				add_prestige = -250
+				add_opinion = {
+					target = root
+					modifier = hate_opinion
+					opinion = -60
+				}
+			}
+		}
+		ai_chance = { base = 80 }
+	}
+
+	# Option B: Blockade the Hukou narrows and starve the Han armada
+	option = {
+		name = phx_yuan.0320.b
+		add_stewardship_lifestyle_xp = 300
+		add_martial_lifestyle_xp = 300
+		add_gold = 200
+		add_prestige = 200
+		ai_chance = { base = 20 }
+	}
+}
+
+# 25. 0325 — Fall of Wu: Pacifying Suzhou and the Eastern Delta
+phx_yuan.0325 = {
+	type = character_event
+	title = phx_yuan.0325.t
+	desc = phx_yuan.0325.desc
+	theme = war
+	override_background = { reference = tgp_chinese_city }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	right_portrait = {
+		trigger = { exists = scope:zhang_shicheng }
+		character = scope:zhang_shicheng
+		animation = worry
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:eu5_rtr_zhang ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:eu5_rtr_zhang = { save_scope_as = zhang_shicheng }
+		}
+	}
+
+	option = {
+		name = phx_yuan.0325.a
+		add_pressed_claim = title:c_suzhou
+		add_pressed_claim = title:c_hangzhou
+		add_prestige = 250
+		ai_chance = { base = 85 }
+	}
+
+	option = {
+		name = phx_yuan.0325.b
+		add_gold = 250
+		add_diplomacy_lifestyle_xp = 250
+		ai_chance = { base = 15 }
+	}
+}
+
+# 26. 0330 — The Northern Expedition Manifesto ("Expel the Barbarians, Restore China")
+phx_yuan.0330 = {
+	type = character_event
+	title = phx_yuan.0330.t
+	desc = phx_yuan.0330.desc
+	theme = crown
+	override_background = { reference = battlefield }
+	left_portrait = {
+		character = root
+		animation = war_over_win
+	}
+
+	option = {
+		name = phx_yuan.0330.a
+		add_character_modifier = {
+			modifier = phx_rtr_northern_expedition_modifier
+			years = 25
+		}
+		add_pressed_claim = title:k_henan
+		add_pressed_claim = title:k_hebei
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
+		add_prestige = 400
+		spawn_army = {
+			name = phx_rtr_northern_expedition_host_name
+			location = root.capital_province
+			men_at_arms = {
+				type = armored_footmen
+				men = 400
+			}
+			men_at_arms = {
+				type = crossbowmen
+				men = 350
+			}
+			men_at_arms = {
+				type = fire_lancers
+				men = 250
+			}
+			levies = 2500
+			inheritable = no
+		}
+		ai_chance = { base = 90 }
+	}
+
+	option = {
+		name = phx_yuan.0330.b
+		add_stewardship_lifestyle_xp = 350
+		add_gold = 350
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
+		ai_chance = { base = 10 }
+	}
+}
+
+# ==================================================
+# PART IV — Yuan Loyalist, Regional Contenders & Great Project Events (6)
+# ==================================================
+
+# 27. 0340 — Chaghan Temur & Koke Temur's Loyalist Campaigns
+phx_yuan.0340 = {
+	type = character_event
+	title = phx_yuan.0340.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:chaghan_temur
+					exists = scope:koke_temur
+				}
+				desc = phx_yuan.0340.desc
+			}
+			desc = phx_yuan.0340.desc_fallback
+		}
+	}
+	theme = martial
+	override_background = { reference = mpo_camp_steppe }
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+	right_portrait = {
+		trigger = { exists = scope:koke_temur }
+		character = scope:koke_temur
+		animation = personality_bold
+	}
+	lower_left_portrait = {
+		trigger = { exists = scope:chaghan_temur }
+		character = scope:chaghan_temur
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:eu5_rtr_chaghan_temur ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:eu5_rtr_chaghan_temur = { save_scope_as = chaghan_temur }
+		}
+		if = {
+			limit = {
+				character:eu5_rtr_koke ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:eu5_rtr_koke = { save_scope_as = koke_temur }
+		}
+	}
+
+	option = {
+		name = phx_yuan.0340.a
+		add_character_modifier = {
+			modifier = phx_yuan_koke_iron_guard_modifier
+			years = 20
+		}
+		spawn_army = {
+			name = phx_yuan_koke_cavalry_name
+			location = root.capital_province
+			men_at_arms = {
+				type = heavy_horse_archers
+				men = 350
+			}
+			men_at_arms = {
+				type = horse_archers
+				men = 350
+			}
+			inheritable = no
+		}
+		if = {
+			limit = { exists = scope:chaghan_temur }
+			scope:chaghan_temur = {
+				add_character_modifier = {
+					modifier = phx_yuan_koke_iron_guard_modifier
+					years = 20
+				}
+				add_opinion = { target = root modifier = grateful_opinion opinion = 30 }
+			}
+		}
+		if = {
+			limit = { exists = scope:koke_temur }
+			scope:koke_temur = {
+				add_character_modifier = {
+					modifier = phx_yuan_koke_iron_guard_modifier
+					years = 20
+				}
+				add_opinion = { target = root modifier = grateful_opinion opinion = 30 }
+			}
+		}
+		ai_chance = { base = 85 }
+	}
+
+	option = {
+		name = phx_yuan.0340.b
+		add_gold = 200
+		add_dread = 15
+		ai_chance = { base = 15 }
+	}
+}
+
+# 28. 0350 — Jia Lu Great Project Completed: The Dikes Hold, Yet the Spark Ignites
+phx_yuan.0350 = {
+	type = character_event
+	title = phx_yuan.0350.t
+	desc = phx_yuan.0350.desc
+	theme = stewardship
+	override_background = { reference = tgp_chinese_city }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	option = {
+		name = phx_yuan.0350.a
+		add_prestige = 200
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
+		custom_tooltip = phx_yuan_0350_labor_spark_tt
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = phx_yuan.0350.b
+		remove_short_term_gold = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				if = {
+					limit = { OR = { situation_current_phase = phx_rtr_phase_simmering situation_current_phase = phx_rtr_phase_flood_spark situation_current_phase = phx_rtr_phase_warring_factions } }
+					trigger_situation_catalyst = catalyst_phx_rtr_imperial_reform_stabilization
+				}
+			}
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+# 29. 0360 — Han Shantong & Liu Futong: Yingzhou Uprising (Bozhou Base Seizure)
+phx_yuan.0360 = {
+	type = character_event
+	title = phx_yuan.0360.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { exists = scope:liu_futong }
+				desc = phx_yuan.0360.desc
+			}
+			desc = phx_yuan.0360.desc_fallback
+		}
+	}
+	theme = war
+	override_background = { reference = battlefield }
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	right_portrait = {
+		trigger = { exists = scope:liu_futong }
+		character = scope:liu_futong
+		animation = marshal
+	}
+
+	immediate = {
+		set_global_variable = phx_red_turban_unrest_begun
+		if = {
+			limit = {
+				character:eu5_rtr_liu ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:eu5_rtr_liu = { save_scope_as = liu_futong }
+		}
+		if = {
+			limit = { exists = capital_province }
+			capital_province = { save_scope_as = phx_han_loc }
+		}
+		else_if = {
+			limit = { exists = domicile.domicile_location }
+			domicile.domicile_location = { save_scope_as = phx_han_loc }
+		}
+		else = {
+			title:c_bozhou_nanzhili.title_province = { save_scope_as = phx_han_loc }
+		}
+		if = {
+			limit = {
+				title:c_bozhou_nanzhili.holder ?= {
+					NOT = { this = root }
+					top_liege = { NOT = { this = root } }
+				}
+			}
+			title:c_bozhou_nanzhili.holder.top_liege = { save_scope_as = phx_bozhou_enemy }
+		}
+	}
+
+	# Option A: Burn white-lotus incense, bind red turbans, and storm Yingzhou / Bozhou!
+	option = {
+		name = phx_yuan.0360.a
+		if = {
+			limit = { NOT = { has_character_modifier = phx_rtr_red_turban_zeal_modifier } }
+			add_character_modifier = {
+				modifier = phx_rtr_red_turban_zeal_modifier
+				years = 20
+			}
+		}
+		spawn_army = {
+			name = phx_rtr_yingzhou_host_name
+			location = scope:phx_han_loc
+			men_at_arms = {
+				type = light_footmen
+				men = 500
+			}
+			men_at_arms = {
+				type = crossbowmen
+				men = 250
+			}
+			men_at_arms = {
+				type = fire_lancers
+				men = 150
+			}
+			levies = 2200
+			inheritable = no
+		}
+		if = {
+			limit = {
+				exists = scope:phx_bozhou_enemy
+				NOT = { is_at_war_with = scope:phx_bozhou_enemy }
+				can_declare_war = {
+					defender = scope:phx_bozhou_enemy
+					casus_belli = phx_rtr_uprising_seizure_cb
+					target_titles = { title:c_bozhou_nanzhili }
+				}
+			}
+			start_war = {
+				cb = phx_rtr_uprising_seizure_cb
+				target = scope:phx_bozhou_enemy
+				target_title = title:c_bozhou_nanzhili
+			}
+		}
+		else = {
+			add_pressed_claim = title:c_bozhou_nanzhili
+		}
+		ai_chance = { base = 90 }
+	}
+
+	# Option B: Spread the Maitreya prophecy underground before striking
+	option = {
+		name = phx_yuan.0360.b
+		add_piety = 250
+		add_gold = 150
+		add_pressed_claim = title:c_bozhou_nanzhili
+		ai_chance = { base = 10 }
+	}
+}
+
+# 30. 0370 — Xu Shouhui & Chen Youliang: Tianwan Rising & The Yangtze Coup
+phx_yuan.0370 = {
+	type = character_event
+	title = phx_yuan.0370.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { exists = scope:chen_youliang }
+				desc = phx_yuan.0370.desc
+			}
+			desc = phx_yuan.0370.desc_fallback
+		}
+	}
+	theme = intrigue
+	override_background = { reference = tgp_docks_asia }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	right_portrait = {
+		trigger = { exists = scope:chen_youliang }
+		character = scope:chen_youliang
+		animation = scheme
+	}
+
+	immediate = {
+		set_global_variable = phx_red_turban_unrest_begun
+		if = {
+			limit = {
+				character:eu5_rtr_chen ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:eu5_rtr_chen = { save_scope_as = chen_youliang }
+		}
+		if = {
+			limit = { exists = capital_province }
+			capital_province = { save_scope_as = phx_xu_loc }
+		}
+		else_if = {
+			limit = { exists = domicile.domicile_location }
+			domicile.domicile_location = { save_scope_as = phx_xu_loc }
+		}
+		else = {
+			title:c_wuchang.title_province = { save_scope_as = phx_xu_loc }
+		}
+		if = {
+			limit = {
+				title:c_wuchang.holder ?= {
+					NOT = { this = root }
+					top_liege = { NOT = { this = root } }
+				}
+			}
+			title:c_wuchang.holder.top_liege = { save_scope_as = phx_wuchang_enemy }
+		}
+	}
+
+	# Option A: Seize Wuchang and unleash the Yangtze Red Turbans
+	option = {
+		name = phx_yuan.0370.a
+		if = {
+			limit = { NOT = { has_character_modifier = phx_rtr_red_turban_zeal_modifier } }
+			add_character_modifier = {
+				modifier = phx_rtr_red_turban_zeal_modifier
+				years = 20
+			}
+		}
+		spawn_army = {
+			name = phx_rtr_tianwan_host_name
+			location = scope:phx_xu_loc
+			men_at_arms = {
+				type = crossbowmen
+				men = 350
+			}
+			men_at_arms = {
+				type = fire_lancers
+				men = 200
+			}
+			levies = 2000
+			inheritable = no
+		}
+		if = {
+			limit = {
+				exists = scope:phx_wuchang_enemy
+				NOT = { is_at_war_with = scope:phx_wuchang_enemy }
+				can_declare_war = {
+					defender = scope:phx_wuchang_enemy
+					casus_belli = phx_rtr_uprising_seizure_cb
+					target_titles = { title:c_wuchang }
+				}
+			}
+			start_war = {
+				cb = phx_rtr_uprising_seizure_cb
+				target = scope:phx_wuchang_enemy
+				target_title = title:c_wuchang
+			}
+		}
+		else = {
+			add_pressed_claim = title:c_wuchang
+		}
+		ai_chance = { base = 85 }
+	}
+
+	# Option B: Curb ambitious captains like Chen Youliang and consolidate slowly
+	option = {
+		name = phx_yuan.0370.b
+		add_gold = 175
+		add_prestige = 150
+		if = {
+			limit = { exists = scope:chen_youliang }
+			scope:chen_youliang = {
+				add_opinion = { target = root modifier = angry_opinion opinion = -35 }
+			}
+		}
+		ai_chance = { base = 15 }
+	}
+}
+
+# 31. 0380 — Zhang Shicheng's Salt Rebellion at Gaoyou & Suzhou
+phx_yuan.0380 = {
+	type = character_event
+	title = phx_yuan.0380.t
+	desc = phx_yuan.0380.desc
+	theme = stewardship
+	override_background = { reference = tgp_market_asia }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		set_global_variable = phx_red_turban_unrest_begun
+		if = {
+			limit = { exists = capital_province }
+			capital_province = { save_scope_as = phx_zhang_loc }
+		}
+		else_if = {
+			limit = { exists = domicile.domicile_location }
+			domicile.domicile_location = { save_scope_as = phx_zhang_loc }
+		}
+		else = {
+			title:c_suzhou.title_province = { save_scope_as = phx_zhang_loc }
+		}
+		if = {
+			limit = {
+				title:c_suzhou.holder ?= {
+					NOT = { this = root }
+					top_liege = { NOT = { this = root } }
+				}
+			}
+			title:c_suzhou.holder.top_liege = { save_scope_as = phx_suzhou_enemy }
+		}
+	}
+
+	# Option A: Rally the eighteen salt-boat captains and march on Suzhou!
+	option = {
+		name = phx_yuan.0380.a
+		if = {
+			limit = { NOT = { has_character_modifier = phx_rtr_red_turban_zeal_modifier } }
+			add_character_modifier = {
+				modifier = phx_rtr_red_turban_zeal_modifier
+				years = 20
+			}
+		}
+		add_gold = 250
+		spawn_army = {
+			name = phx_rtr_salt_rebels_name
+			location = scope:phx_zhang_loc
+			men_at_arms = {
+				type = light_footmen
+				men = 400
+			}
+			men_at_arms = {
+				type = crossbowmen
+				men = 300
+			}
+			levies = 1800
+			inheritable = no
+		}
+		if = {
+			limit = {
+				exists = scope:phx_suzhou_enemy
+				NOT = { is_at_war_with = scope:phx_suzhou_enemy }
+				can_declare_war = {
+					defender = scope:phx_suzhou_enemy
+					casus_belli = phx_rtr_uprising_seizure_cb
+					target_titles = { title:c_suzhou }
+				}
+			}
+			start_war = {
+				cb = phx_rtr_uprising_seizure_cb
+				target = scope:phx_suzhou_enemy
+				target_title = title:c_suzhou
+			}
+		}
+		else = {
+			add_pressed_claim = title:c_suzhou
+		}
+		ai_chance = { base = 85 }
+	}
+
+	# Option B: Expand the salt syndicate quietly and await the Yuan collapse
+	option = {
+		name = phx_yuan.0380.b
+		add_gold = 350
+		add_stewardship_lifestyle_xp = 250
+		ai_chance = { base = 15 }
+	}
+}
+
+# 32. 0390 — Night Flight from Dadu: Transition to the Northern Yuan
+phx_yuan.0390 = {
+	type = character_event
+	title = phx_yuan.0390.t
+	desc = phx_yuan.0390.desc
+	theme = crown
+	override_background = { reference = mpo_camp_steppe }
+	left_portrait = {
+		character = root
+		animation = grief
+	}
+
+	immediate = {
+		if = {
+			limit = { exists = situation:phx_red_turban_rebellion }
+			situation:phx_red_turban_rebellion = {
+				if = {
+					limit = { situation_current_phase = phx_rtr_phase_warring_factions }
+					trigger_situation_catalyst = catalyst_phx_rtr_northern_retreat
+				}
+			}
+		}
+	}
+
+	# Option A: Retire north of the passes to Shangdu and preserve the Borjigin steppe throne
+	option = {
+		name = phx_yuan.0390.a
+		if = {
+			limit = { completely_controls = title:c_shangdu }
+			set_realm_capital = title:c_shangdu
+		}
+		if = {
+			limit = { NOT = { has_character_modifier = phx_yuan_northern_retreat_modifier } }
+			add_character_modifier = {
+				modifier = phx_yuan_northern_retreat_modifier
+				years = 30
+			}
+		}
+		spawn_army = {
+			name = phx_yuan_steppe_guard_name
+			location = root.capital_province
+			men_at_arms = {
+				type = horse_archers
+				men = 500
+			}
+			men_at_arms = {
+				type = heavy_horse_archers
+				men = 250
+			}
+			inheritable = no
+		}
+		add_prestige = 250
+		ai_chance = { base = 85 }
+	}
+
+	# Option B: Vow a swift counter-march upon the Central Plains
+	option = {
+		name = phx_yuan.0390.b
+		add_pressed_claim = title:c_shuntian
+		add_dread = 20
+		add_martial_lifestyle_xp = 350
+		ai_chance = { base = 15 }
+	}
+}

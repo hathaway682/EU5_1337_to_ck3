@@ -1,0 +1,19 @@
+﻿##################################################
+# Project Phoenix (PHX) — Red Turban Rebellion History
+# Starts at 1337.4.1 (Universalis Kings bookmark)
+# Compatible with replace_path="history/situations"
+##################################################
+
+1337.4.1 = {
+	effect = {
+		if = {
+			limit = {
+				NOT = { exists = situation:phx_red_turban_rebellion }
+			}
+			start_situation = {
+				type = phx_red_turban_rebellion
+				start_phase = phx_rtr_phase_simmering
+			}
+		}
+	}
+}

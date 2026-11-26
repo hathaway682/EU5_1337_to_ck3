@@ -1,0 +1,182 @@
+﻿##################################################
+# Project Phoenix (PHX) — Great Yuan & Red Turban 1337 Modifiers
+# Namespace prefix: phx_yuan_ / phx_rtr_
+# CK3 1.21.0.3 (Florin) verified character & county modifier keys
+##################################################
+
+# === v0.1 Core Modifiers (Preserved) ===
+
+phx_yuan_bayan_regency_modifier = {
+	icon = dragon_seal_mixed
+	martial = 1
+	dread_baseline_add = 10
+	vassal_opinion = -10
+	monthly_legitimacy_add = -0.35
+}
+
+phx_yuan_chao_inflation_modifier = {
+	icon = economy_negative
+	monthly_income_mult = -0.15
+	build_gold_cost = 0.15
+	vassal_opinion = -5
+}
+
+phx_yuan_zhizheng_reforms_modifier = {
+	icon = dragon_seal_positive
+	stewardship = 2
+	diplomacy = 2
+	monthly_income_mult = 0.10
+	vassal_opinion = 10
+	monthly_legitimacy_add = 0.6
+}
+
+phx_yuan_yellow_river_flood_modifier = {
+	icon = dragon_seal_negative
+	prosperity_growth_factor = -0.50
+	all_tax_mult = -0.35
+	levy_size = -0.30
+	monthly_control_change = -0.5
+}
+
+phx_yuan_jialu_waterworks_modifier = {
+	icon = stewardship_positive
+	prosperity_growth_factor = 0.25
+	all_tax_mult = 0.15
+	monthly_control_change = 0.25
+}
+
+phx_yuan_northern_retreat_modifier = {
+	icon = martial_positive
+	martial = 2
+	movement_speed = 0.15
+	retreat_losses = -0.25
+	monthly_prestige_gain_mult = 0.10
+}
+
+phx_rtr_red_turban_zeal_modifier = {
+	icon = martial_positive
+	martial = 3
+	prowess = 2
+	men_at_arms_maintenance = -0.30
+	levy_reinforcement_rate = 0.35
+	advantage = 4
+}
+
+phx_rtr_zhu_virtuous_discipline_modifier = {
+	icon = stewardship_positive
+	stewardship = 3
+	diplomacy = 2
+	vassal_opinion = 10
+	prosperity_growth_factor = 0.20
+	men_at_arms_maintenance = -0.15
+}
+
+phx_rtr_loyalist_banner_modifier = {
+	icon = prowess_positive
+	martial = 2
+	knight_effectiveness_mult = 0.20
+	levy_size = 0.20
+	monthly_prestige_gain_mult = 0.10
+}
+
+phx_rtr_new_dynasty_mandate_modifier = {
+	icon = legitimacy_positive
+	diplomacy = 2
+	stewardship = 2
+	vassal_opinion = 15
+	monthly_legitimacy_add = 1.0
+	monthly_prestige_gain_mult = 0.20
+}
+
+# === Wave 2 Flagship Character Modifiers ===
+
+phx_rtr_ming_hongwu_admin_modifier = {
+	icon = dragon_seal_positive
+	stewardship = 3
+	diplomacy = 2
+	domain_limit = 1
+	monthly_income_mult = 0.15
+	monthly_legitimacy_add = 0.75
+	vassal_opinion = 10
+}
+
+phx_rtr_great_han_river_fleet_modifier = {
+	icon = martial_positive
+	martial = 3
+	naval_movement_speed_mult = 0.25
+	embarkation_cost_mult = -0.35
+	advantage = 4
+	men_at_arms_maintenance = -0.15
+}
+
+phx_rtr_great_zhou_salt_wealth_modifier = {
+	icon = economy_positive
+	stewardship = 3
+	monthly_income_mult = 0.25
+	build_gold_cost = -0.15
+	vassal_opinion = 5
+}
+
+phx_rtr_song_maitreya_fervor_modifier = {
+	icon = piety_positive
+	martial = 2
+	monthly_piety_gain_mult = 0.25
+	levy_reinforcement_rate = 0.35
+	knight_effectiveness_mult = 0.15
+	advantage = 3
+}
+
+phx_yuan_koke_iron_guard_modifier = {
+	icon = martial_positive
+	martial = 3
+	prowess = 2
+	knight_effectiveness_mult = 0.25
+	movement_speed = 0.15
+	advantage = 4
+}
+
+phx_rtr_poyang_victory_modifier = {
+	icon = prestige_positive
+	martial = 2
+	monthly_prestige_gain_mult = 0.20
+	monthly_legitimacy_add = 0.50
+	advantage = 5
+	knight_effectiveness_mult = 0.15
+}
+
+phx_rtr_huaisi_generals_modifier = {
+	icon = diplomacy_positive
+	martial = 2
+	stewardship = 2
+	knight_limit = 2
+	knight_effectiveness_mult = 0.20
+	monthly_prestige_gain_mult = 0.10
+}
+
+phx_rtr_northern_expedition_modifier = {
+	icon = martial_positive
+	martial = 3
+	movement_speed = 0.15
+	siege_phase_time = -0.15
+	men_at_arms_maintenance = -0.20
+	advantage = 4
+}
+
+# === Wave 2 Flagship County Modifiers (Strictly County-Valid Keys Only) ===
+
+phx_yuan_grand_canal_restored_modifier = {
+	icon = county_modifier_prosperity_positive
+	prosperity_growth_factor = 0.30
+	all_tax_mult = 0.20
+	monthly_control_change = 0.20
+	supply_limit_mult = 0.25
+}
+
+phx_rtr_nanjing_imperial_capital_modifier = {
+	icon = county_modifier_control_positive
+	prosperity_growth_factor = 0.35
+	all_tax_mult = 0.20
+	monthly_control_change = 0.30
+	fort_level = 2
+	garrison_size = 0.25
+}

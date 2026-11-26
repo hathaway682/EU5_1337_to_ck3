@@ -1,0 +1,201 @@
+﻿##################################################
+# Project Phoenix (PHX) — Great Yuan & Red Turban 1337 On-Actions
+# Lightweight O(1) scoped hooks for h_china, Red Turban protagonists,
+# Native Situation safety guarantee, and Wave 2 Story Cycles
+##################################################
+
+on_game_start_after_lobby = {
+	on_actions = { phx_yuan_1337_startup }
+}
+
+phx_yuan_1337_startup = {
+	effect = {
+		if = {
+			limit = {
+				game_start_date >= 1337.1.1
+				NOT = { exists = situation:phx_red_turban_rebellion }
+			}
+			start_situation = {
+				type = phx_red_turban_rebellion
+				start_phase = phx_rtr_phase_simmering
+			}
+		}
+
+		if = {
+			limit = {
+				game_start_date >= 1337.1.1
+				exists = title:h_china.holder
+			}
+			title:h_china.holder = {
+				add_character_modifier = {
+					modifier = phx_yuan_bayan_regency_modifier
+					years = 15
+				}
+				add_character_modifier = {
+					modifier = phx_yuan_chao_inflation_modifier
+					years = 20
+				}
+				if = {
+					limit = {
+						NOT = { any_owned_story = { type = story_phx_yuan_twilight } }
+					}
+					create_story = story_phx_yuan_twilight
+				}
+				trigger_event = {
+					id = phx_yuan.0001
+					days = 20
+				}
+			}
+		}
+
+		if = {
+			limit = { game_start_date >= 1337.1.1 }
+			character:eu5_rtr_zhu ?= {
+				if = {
+					limit = { is_alive = yes }
+					add_character_flag = phx_rtr_southern_faction
+				}
+				if = {
+					limit = {
+						is_alive = yes
+						NOT = { any_owned_story = { type = story_phx_zhu_rise } }
+					}
+					create_story = story_phx_zhu_rise
+				}
+				if = {
+					limit = { is_alive = yes is_ai = no }
+					trigger_event = { id = phx_yuan.0005 days = 25 }
+				}
+			}
+			character:eu5_rtr_han ?= {
+				if = {
+					limit = { is_alive = yes }
+					add_character_flag = phx_rtr_northern_faction
+				}
+				if = {
+					limit = { is_alive = yes is_ai = no }
+					trigger_event = { id = phx_yuan.0005 days = 25 }
+				}
+			}
+			character:eu5_rtr_xu ?= {
+				if = {
+					limit = { is_alive = yes }
+					add_character_flag = phx_rtr_southern_faction
+				}
+				if = {
+					limit = { is_alive = yes is_ai = no }
+					trigger_event = { id = phx_yuan.0005 days = 25 }
+				}
+			}
+			character:eu5_rtr_chen ?= {
+				if = {
+					limit = { is_alive = yes }
+					add_character_flag = phx_rtr_southern_faction
+				}
+				if = {
+					limit = { is_alive = yes is_ai = no }
+					trigger_event = { id = phx_yuan.0005 days = 25 }
+				}
+			}
+			character:eu5_rtr_zhang ?= {
+				if = {
+					limit = { is_alive = yes }
+					add_character_flag = phx_rtr_southern_faction
+				}
+				if = {
+					limit = { is_alive = yes is_ai = no }
+					trigger_event = { id = phx_yuan.0005 days = 25 }
+				}
+			}
+			character:eu5_rtr_chaghan_temur ?= {
+				if = {
+					limit = { is_alive = yes is_ai = no }
+					trigger_event = { id = phx_yuan.0005 days = 25 }
+				}
+			}
+		}
+	}
+}
+
+yearly_playable_pulse = {
+	on_actions = { phx_yuan_yearly_pulse }
+}
+
+phx_yuan_yearly_pulse = {
+	trigger = {
+		current_year >= 1338
+		current_year <= 1400
+		OR = {
+			has_title = title:h_china
+			this = character:eu5_rtr_han
+			this = character:eu5_rtr_zhu
+			this = character:eu5_rtr_xu
+			this = character:eu5_rtr_chen
+			this = character:eu5_rtr_zhang
+		}
+	}
+	effect = {
+		# 1. Bayan's Regency vs Toghtogha's Coup (1339+) fallback if story cycle not active
+		if = {
+			limit = {
+				has_title = title:h_china
+				current_year >= 1339
+				NOT = { has_global_variable = phx_yuan_bayan_crisis_fired }
+				has_character_modifier = phx_yuan_bayan_regency_modifier
+			}
+			set_global_variable = phx_yuan_bayan_crisis_fired
+			trigger_event = {
+				id = phx_yuan.0010
+				days = { 30 120 }
+			}
+		}
+		# 2. Great Yellow River Breach & One-Eyed Stone Man Prophecy (1344+) fallback
+		else_if = {
+			limit = {
+				has_title = title:h_china
+				current_year >= 1344
+				NOT = { has_global_variable = phx_yuan_yellow_river_fired }
+			}
+			set_global_variable = phx_yuan_yellow_river_fired
+			set_global_variable = phx_red_turban_unrest_begun
+			trigger_event = {
+				id = phx_yuan.0020
+				days = { 30 120 }
+			}
+		}
+		# 3. Red Turban Uprising Call to Arms (1348+ once unrest begun)
+		else_if = {
+			limit = {
+				has_global_variable = phx_red_turban_unrest_begun
+				current_year >= 1348
+				NOT = { has_character_flag = phx_rtr_uprising_event_fired }
+				OR = {
+					this = character:eu5_rtr_han
+					this = character:eu5_rtr_zhu
+					this = character:eu5_rtr_xu
+					this = character:eu5_rtr_chen
+					this = character:eu5_rtr_zhang
+				}
+			}
+			add_character_flag = phx_rtr_uprising_event_fired
+			trigger_event = {
+				id = phx_yuan.0030
+				days = { 20 90 }
+			}
+		}
+		# 4. Imperial Court Alarm when Red Turbans rise (fallback)
+		else_if = {
+			limit = {
+				has_title = title:h_china
+				has_global_variable = phx_red_turban_unrest_begun
+				current_year >= 1350
+				NOT = { has_global_variable = phx_yuan_rebellion_alarm_fired }
+			}
+			set_global_variable = phx_yuan_rebellion_alarm_fired
+			trigger_event = {
+				id = phx_yuan.0035
+				days = { 30 90 }
+			}
+		}
+	}
+}
