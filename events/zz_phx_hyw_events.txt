@@ -1,0 +1,1564 @@
+﻿##################################################
+# Project Phoenix (PHX) — Hundred Years' War 1337 Events
+# Namespace: phx_hyw (26 historical narrative events)
+# CK3 1.21.0.3 (Florin) — Universalis Kings 1337
+# Strictly follows AGENTS.md (pure narrative desc,
+# clean CK3 1.21 effects, guarded optional portraits)
+##################################################
+
+namespace = phx_hyw
+
+# ==================================================
+# OPENING 1337 EVENTS (0001 - 0004)
+# ==================================================
+
+# 1. phx_hyw.0001 — England 1337: The Lion Gazes Across the Channel
+phx_hyw.0001 = {
+	type = character_event
+	title = phx_hyw.0001.t
+	desc = phx_hyw.0001.desc
+	theme = crown
+	override_background = { reference = throne_room_west }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	right_portrait = {
+		trigger = { exists = scope:black_prince }
+		character = scope:black_prince
+		animation = idle
+	}
+	lower_right_portrait = {
+		trigger = { exists = scope:french_king }
+		character = scope:french_king
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:eng_edward_the_black_prince ?= {
+					is_alive = yes
+					this != root
+				}
+			}
+			character:eng_edward_the_black_prince = { save_scope_as = black_prince }
+		}
+		if = {
+			limit = {
+				exists = title:k_france.holder
+				title:k_france.holder = {
+					is_alive = yes
+					this != root
+				}
+			}
+			title:k_france.holder = { save_scope_as = french_king }
+		}
+	}
+
+	# Option A: Drill the shire archers and prepare for continental war
+	option = {
+		name = phx_hyw.0001.a
+		add_prestige = 120
+		add_character_modifier = {
+			modifier = phx_hyw_longbow_doctrine_modifier
+			years = 15
+		}
+		if = {
+			limit = { exists = scope:french_king }
+			scope:french_king = {
+				add_opinion = {
+					target = root
+					modifier = suspicious_opinion
+					opinion = -20
+				}
+			}
+		}
+		ai_chance = { base = 65 }
+	}
+
+	# Option B: Strengthen the wool customs and Westminster treasury first
+	option = {
+		name = phx_hyw.0001.b
+		add_gold = 150
+		title:c_middlesex = {
+			change_prosperity_progress = 60
+		}
+		ai_chance = { base = 35 }
+	}
+}
+
+# 2. phx_hyw.0002 — France 1337: The Golden Lilies of Valois
+phx_hyw.0002 = {
+	type = character_event
+	title = phx_hyw.0002.t
+	desc = phx_hyw.0002.desc
+	theme = crown
+	override_background = { reference = throne_room_west }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	right_portrait = {
+		trigger = { exists = scope:normandy_heir }
+		character = scope:normandy_heir
+		animation = marshal
+	}
+	lower_right_portrait = {
+		trigger = { exists = scope:english_king }
+		character = scope:english_king
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:fra_jean_ii_valois ?= {
+					is_alive = yes
+					this != root
+				}
+			}
+			character:fra_jean_ii_valois = { save_scope_as = normandy_heir }
+		}
+		if = {
+			limit = {
+				exists = title:k_england.holder
+				title:k_england.holder = {
+					is_alive = yes
+					this != root
+				}
+			}
+			title:k_england.holder = { save_scope_as = english_king }
+		}
+	}
+
+	# Option A: Call the flower of French chivalry to Paris
+	option = {
+		name = phx_hyw.0002.a
+		add_prestige = 120
+		add_character_modifier = {
+			modifier = phx_hyw_valois_chivalry_modifier
+			years = 15
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Reconcile the great peers of Burgundy, Brittany, and Flanders
+	option = {
+		name = phx_hyw.0002.b
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
+		if = {
+			limit = {
+				exists = title:d_burgundy.holder
+				title:d_burgundy.holder = { is_alive = yes this != root }
+			}
+			title:d_burgundy.holder = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 20
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = title:d_flanders.holder
+				title:d_flanders.holder = { is_alive = yes this != root }
+			}
+			title:d_flanders.holder = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 20
+				}
+			}
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+# 3. phx_hyw.0003 — Burgundy 1337: Vineyards and Ambition in Dijon
+phx_hyw.0003 = {
+	type = character_event
+	title = phx_hyw.0003.t
+	desc = phx_hyw.0003.desc
+	theme = diplomacy
+	override_background = { reference = council_chamber }
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	right_portrait = {
+		trigger = { exists = scope:french_king }
+		character = scope:french_king
+		animation = chancellor
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:k_france.holder
+				title:k_france.holder = { is_alive = yes this != root }
+			}
+			title:k_france.holder = { save_scope_as = french_king }
+		}
+	}
+
+	# Option A: Cultivate Burgundian wealth and diplomatic leverage
+	option = {
+		name = phx_hyw.0003.a
+		add_gold = 120
+		add_prestige = 100
+		title:c_dijonnais = {
+			change_prosperity_progress = 60
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Pledge ostentatious loyalty to the Valois crown for royal favor
+	option = {
+		name = phx_hyw.0003.b
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
+		if = {
+			limit = { exists = scope:french_king }
+			scope:french_king = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 25
+				}
+			}
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+# 4. phx_hyw.0004 — Brittany 1337: The Ermine Banner Without an Heir
+phx_hyw.0004 = {
+	type = character_event
+	title = phx_hyw.0004.t
+	desc = phx_hyw.0004.desc
+	theme = intrigue
+	override_background = { reference = council_chamber }
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	right_portrait = {
+		trigger = { exists = scope:jean_montfort }
+		character = scope:jean_montfort
+		animation = personality_bold
+	}
+	lower_right_portrait = {
+		trigger = { exists = scope:charles_blois }
+		character = scope:charles_blois
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:mon_jean_montfort ?= {
+					is_alive = yes
+					this != root
+				}
+			}
+			character:mon_jean_montfort = { save_scope_as = jean_montfort }
+		}
+		if = {
+			limit = {
+				character:bri_charles_chatillon ?= {
+					is_alive = yes
+					this != root
+				}
+			}
+			character:bri_charles_chatillon = { save_scope_as = charles_blois }
+		}
+	}
+
+	# Option A: Guard Breton autonomy between Paris and London
+	option = {
+		name = phx_hyw.0004.a
+		add_prestige = 100
+		title:c_nantais = {
+			change_prosperity_progress = 50
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Stockpile ducal silver and fortify the Breton coasts
+	option = {
+		name = phx_hyw.0004.b
+		add_gold = 120
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 50 }
+		ai_chance = { base = 40 }
+	}
+}
+
+# ==================================================
+# HISTORICAL CRISIS & STORY ARC EVENTS (0010 - 0080)
+# ==================================================
+
+# 5. phx_hyw.0010 — 1337.5.24 Confiscation of Aquitaine (France)
+phx_hyw.0010 = {
+	type = character_event
+	title = phx_hyw.0010.t
+	desc = phx_hyw.0010.desc
+	theme = war
+	override_background = { reference = throne_room_west }
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	right_portrait = {
+		trigger = { exists = scope:english_king }
+		character = scope:english_king
+		animation = dismissal
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:k_england.holder
+				title:k_england.holder = { is_alive = yes this != root }
+			}
+			title:k_england.holder = { save_scope_as = english_king }
+		}
+	}
+
+	# Option A: Declare Aquitaine forfeit and march on Guyenne at once!
+	option = {
+		name = phx_hyw.0010.a
+		add_prestige = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
+		if = {
+			limit = {
+				exists = scope:english_king
+				top_liege = this
+				scope:english_king = { top_liege = this }
+				NOT = { is_at_war_with = scope:english_king }
+				NOT = { is_allied_to = scope:english_king }
+				title:d_guyenne = {
+					any_in_de_jure_hierarchy = {
+						tier = tier_county
+						holder ?= {
+							OR = {
+								this = scope:english_king
+								is_vassal_or_below_of = scope:english_king
+							}
+						}
+					}
+				}
+			}
+			start_war = {
+				cb = phx_hyw_aquitaine_confiscation_cb
+				target = scope:english_king
+				target_title = title:d_guyenne
+			}
+		}
+		else = {
+			custom_tooltip = phx_hyw_aquitaine_forfeit_cb_tt
+			hidden_effect = {
+				add_character_flag = phx_hyw_free_aquitaine_cb
+			}
+		}
+		hidden_effect = {
+			set_global_variable = phx_hyw_war_has_begun
+			if = {
+				limit = {
+					exists = scope:english_king
+					NOT = { has_global_variable = phx_hyw_edward_claim_event_fired }
+				}
+				set_global_variable = phx_hyw_edward_claim_event_fired
+				scope:english_king = {
+					trigger_event = {
+						id = phx_hyw.0011
+						days = 14
+					}
+				}
+			}
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Issue the royal decree of confiscation and summon the feudal host first
+	option = {
+		name = phx_hyw.0010.b
+		add_prestige = 100
+		add_character_modifier = {
+			modifier = phx_hyw_valois_chivalry_modifier
+			years = 15
+		}
+		custom_tooltip = phx_hyw_aquitaine_forfeit_cb_tt
+		hidden_effect = {
+			add_character_flag = phx_hyw_free_aquitaine_cb
+			if = {
+				limit = {
+					exists = scope:english_king
+					NOT = { has_global_variable = phx_hyw_edward_claim_event_fired }
+				}
+				set_global_variable = phx_hyw_edward_claim_event_fired
+				scope:english_king = {
+					trigger_event = {
+						id = phx_hyw.0011
+						days = 14
+					}
+				}
+			}
+		}
+		ai_chance = { base = 30 }
+	}
+
+	# Option C: Delay seizure and accept feudal homage talks
+	option = {
+		name = phx_hyw.0010.c
+		add_gold = 100
+		add_prestige = -75
+		if = {
+			limit = { exists = scope:english_king }
+			scope:english_king = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 15
+				}
+			}
+		}
+		ai_chance = { base = 10 }
+	}
+}
+
+# 6. phx_hyw.0011 — Edward III's Formal Claim to France (England)
+phx_hyw.0011 = {
+	type = character_event
+	title = phx_hyw.0011.t
+	desc = phx_hyw.0011.desc
+	theme = war
+	override_background = { reference = throne_room_west }
+	left_portrait = {
+		character = root
+		animation = aggressive_sword
+	}
+	right_portrait = {
+		trigger = { exists = scope:french_king }
+		character = scope:french_king
+		animation = anger
+	}
+	lower_left_portrait = {
+		trigger = { exists = scope:robert_artois }
+		character = scope:robert_artois
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:k_france.holder
+				title:k_france.holder = { is_alive = yes this != root }
+			}
+			title:k_france.holder = { save_scope_as = french_king }
+		}
+		if = {
+			limit = {
+				character:eng_robert_iii_artois ?= {
+					is_alive = yes
+					this != root
+				}
+			}
+			character:eng_robert_iii_artois = { save_scope_as = robert_artois }
+		}
+	}
+
+	# Option A: Quarter the lilies upon our shield and claim the French throne by war!
+	option = {
+		name = phx_hyw.0011.a
+		if = {
+			limit = { NOT = { has_claim_on = title:k_france } }
+			add_pressed_claim = title:k_france
+		}
+		add_prestige = 200
+		spawn_army = {
+			name = phx_hyw_english_longbow_host_name
+			location = root.capital_province
+			men_at_arms = {
+				type = longbowmen
+				men = 300
+			}
+			levies = 600
+			inheritable = no
+		}
+		if = {
+			limit = {
+				exists = scope:french_king
+				top_liege = this
+				scope:french_king = { top_liege = this }
+				NOT = { is_at_war_with = scope:french_king }
+				NOT = { is_allied_to = scope:french_king }
+			}
+			start_war = {
+				cb = phx_hyw_french_throne_cb
+				target = scope:french_king
+				claimant = root
+				target_title = title:k_france
+			}
+		}
+		else = {
+			custom_tooltip = phx_hyw_throne_claim_ready_tt
+			hidden_effect = {
+				add_character_flag = phx_hyw_free_throne_cb
+			}
+		}
+		hidden_effect = {
+			set_global_variable = phx_hyw_war_has_begun
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Proclaim the dynastic claim and first forge Low Countries alliances
+	option = {
+		name = phx_hyw.0011.b
+		if = {
+			limit = { NOT = { has_claim_on = title:k_france } }
+			add_pressed_claim = title:k_france
+		}
+		add_gold = 150
+		add_prestige = 100
+		custom_tooltip = phx_hyw_throne_claim_ready_tt
+		hidden_effect = {
+			add_character_flag = phx_hyw_free_throne_cb
+		}
+		ai_chance = { base = 30 }
+	}
+
+	# Option C: Defend Gascony quietly without claiming the French crown
+	option = {
+		name = phx_hyw.0011.c
+		add_prestige = -100
+		add_character_modifier = {
+			modifier = phx_hyw_treaty_bretigny_modifier
+			years = 10
+		}
+		ai_chance = { base = 10 }
+	}
+}
+
+# 7. phx_hyw.0020 — 1338+ Flemish Wool Crisis & Jacob van Artevelde (England)
+phx_hyw.0020 = {
+	type = character_event
+	title = phx_hyw.0020.t
+	desc = phx_hyw.0020.desc
+	theme = stewardship
+	override_background = { reference = docks }
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+	right_portrait = {
+		trigger = { exists = scope:artevelde }
+		character = scope:artevelde
+		animation = chancellor
+	}
+	lower_right_portrait = {
+		trigger = { exists = scope:flanders_count }
+		character = scope:flanders_count
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:fla_jacob_van_artevelde ?= {
+					is_alive = yes
+					this != root
+				}
+			}
+			character:fla_jacob_van_artevelde = { save_scope_as = artevelde }
+		}
+		if = {
+			limit = {
+				exists = title:d_flanders.holder
+				title:d_flanders.holder = { is_alive = yes this != root }
+			}
+			title:d_flanders.holder = { save_scope_as = flanders_count }
+		}
+	}
+
+	# Option A: Cut off Flemish looms until Ghent and Bruges hail our banner
+	option = {
+		name = phx_hyw.0020.a
+		remove_short_term_gold = 100
+		add_character_modifier = {
+			modifier = phx_hyw_flemish_wool_staple_modifier
+			years = 15
+		}
+		add_prestige = 150
+		if = {
+			limit = {
+				exists = title:k_france.holder
+				title:k_france.holder = { is_alive = yes this != root }
+			}
+			title:k_france.holder = {
+				add_opinion = {
+					target = root
+					modifier = angry_opinion
+					opinion = -25
+				}
+			}
+		}
+		title:c_east_flanders = {
+			change_county_control = -20
+		}
+		title:c_west_flanders = {
+			change_county_control = -20
+		}
+		ai_chance = { base = 65 }
+	}
+
+	# Option B: Sell special wool licenses directly to the Flemish guilds for silver
+	option = {
+		name = phx_hyw.0020.b
+		add_gold = 225
+		title:c_middlesex = {
+			change_prosperity_progress = 60
+		}
+		ai_chance = { base = 35 }
+	}
+}
+
+# 8. phx_hyw.0030 — 1341 War of the Breton Succession (Brittany)
+phx_hyw.0030 = {
+	type = character_event
+	title = phx_hyw.0030.t
+	desc = phx_hyw.0030.desc
+	theme = intrigue
+	override_background = { reference = council_chamber }
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	right_portrait = {
+		trigger = { exists = scope:jean_montfort }
+		character = scope:jean_montfort
+		animation = marshal
+	}
+	lower_left_portrait = {
+		trigger = { exists = scope:charles_blois }
+		character = scope:charles_blois
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:mon_jean_montfort ?= { is_alive = yes this != root }
+			}
+			character:mon_jean_montfort = { save_scope_as = jean_montfort }
+		}
+		if = {
+			limit = {
+				character:bri_charles_chatillon ?= { is_alive = yes this != root }
+			}
+			character:bri_charles_chatillon = { save_scope_as = charles_blois }
+		}
+	}
+
+	# Option A: Lean toward the Blois-Penthievre party and Paris
+	option = {
+		name = phx_hyw.0030.a
+		add_character_modifier = {
+			modifier = phx_hyw_breton_succession_divided_modifier
+			years = 12
+		}
+		if = {
+			limit = {
+				exists = title:k_france.holder
+				title:k_france.holder = { is_alive = yes this != root }
+			}
+			title:k_france.holder = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 25
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = title:k_england.holder
+					title:k_england.holder = { is_alive = yes }
+				}
+				title:k_england.holder = {
+					trigger_event = {
+						id = phx_hyw.0031
+						days = 20
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = title:k_france.holder
+					title:k_france.holder = { is_alive = yes }
+				}
+				title:k_france.holder = {
+					trigger_event = {
+						id = phx_hyw.0031
+						days = 20
+					}
+				}
+			}
+		}
+		ai_chance = { base = 45 }
+	}
+
+	# Option B: Favor the Montfort cause and seek English naval backing
+	option = {
+		name = phx_hyw.0030.b
+		add_character_modifier = {
+			modifier = phx_hyw_breton_succession_divided_modifier
+			years = 12
+		}
+		if = {
+			limit = {
+				exists = title:k_england.holder
+				title:k_england.holder = { is_alive = yes this != root }
+			}
+			title:k_england.holder = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 25
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = title:k_england.holder
+					title:k_england.holder = { is_alive = yes }
+				}
+				title:k_england.holder = {
+					trigger_event = {
+						id = phx_hyw.0031
+						days = 20
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = title:k_france.holder
+					title:k_france.holder = { is_alive = yes }
+				}
+				title:k_france.holder = {
+					trigger_event = {
+						id = phx_hyw.0031
+						days = 20
+					}
+				}
+			}
+		}
+		ai_chance = { base = 40 }
+	}
+
+	# Option C: Enforce an impartial Estates settlement in Nantes
+	option = {
+		name = phx_hyw.0030.c
+		remove_short_term_gold = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
+		add_prestige = 75
+		ai_chance = { base = 15 }
+	}
+}
+
+# 9. phx_hyw.0031 — Proxy Struggle in Brittany (England / France)
+phx_hyw.0031 = {
+	type = character_event
+	title = phx_hyw.0031.t
+	desc = phx_hyw.0031.desc
+	theme = diplomacy
+	override_background = { reference = army_camp }
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+	right_portrait = {
+		trigger = { exists = scope:breton_duke }
+		character = scope:breton_duke
+		animation = worry
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:d_brittany.holder
+				title:d_brittany.holder = { is_alive = yes this != root }
+			}
+			title:d_brittany.holder = { save_scope_as = breton_duke }
+		}
+	}
+
+	# Option A: Dispatch coin and captains to secure a Breton foothold
+	option = {
+		name = phx_hyw.0031.a
+		remove_short_term_gold = 125
+		add_prestige = 175
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
+		if = {
+			limit = { exists = scope:breton_duke }
+			scope:breton_duke = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 25
+				}
+			}
+		}
+		ai_chance = { base = 65 }
+	}
+
+	# Option B: Husband our troops for the main theatre
+	option = {
+		name = phx_hyw.0031.b
+		add_gold = 75
+		add_prestige = -25
+		ai_chance = { base = 35 }
+	}
+}
+
+# 10. phx_hyw.0040 — The Auld Alliance: Scotland Strikes Northern England
+phx_hyw.0040 = {
+	type = character_event
+	title = phx_hyw.0040.t
+	desc = phx_hyw.0040.desc
+	theme = war
+	override_background = { reference = army_camp }
+	left_portrait = {
+		character = root
+		animation = aggressive_sword
+	}
+	right_portrait = {
+		trigger = { exists = scope:french_king }
+		character = scope:french_king
+		animation = admiration
+	}
+	lower_right_portrait = {
+		trigger = { exists = scope:english_king }
+		character = scope:english_king
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:k_france.holder
+				title:k_france.holder = { is_alive = yes this != root }
+			}
+			title:k_france.holder = { save_scope_as = french_king }
+		}
+		if = {
+			limit = {
+				exists = title:k_england.holder
+				title:k_england.holder = { is_alive = yes this != root }
+			}
+			title:k_england.holder = { save_scope_as = english_king }
+		}
+	}
+
+	# Option A: Honor the Auld Alliance and raid across the Tweed!
+	option = {
+		name = phx_hyw.0040.a
+		add_gold = 150
+		add_prestige = 200
+		spawn_army = {
+			name = phx_hyw_scottish_auld_alliance_host_name
+			location = root.capital_province
+			men_at_arms = {
+				type = schiltron
+				men = 300
+			}
+			levies = 600
+			inheritable = no
+		}
+		if = {
+			limit = { exists = scope:french_king }
+			scope:french_king = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 35
+				}
+			}
+		}
+		if = {
+			limit = { exists = scope:english_king }
+			scope:english_king = {
+				add_opinion = {
+					target = root
+					modifier = angry_opinion
+					opinion = -35
+				}
+			}
+		}
+		title:c_northumberland = {
+			add_county_modifier = {
+				modifier = phx_hyw_devastated_countryside_modifier
+				years = 5
+			}
+		}
+		ai_chance = { base = 65 }
+	}
+
+	# Option B: Keep peace on the Borders and rebuild Scotland's strength
+	option = {
+		name = phx_hyw.0040.b
+		add_gold = 75
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 50 }
+		if = {
+			limit = { exists = scope:english_king }
+			scope:english_king = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 15
+				}
+			}
+		}
+		ai_chance = { base = 35 }
+	}
+}
+
+# 11. phx_hyw.0045 — Coming of Age of the Black Prince
+phx_hyw.0045 = {
+	type = character_event
+	title = phx_hyw.0045.t
+	desc = phx_hyw.0045.desc
+	theme = martial
+	override_background = { reference = armory }
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+	right_portrait = {
+		trigger = { exists = scope:black_prince }
+		character = scope:black_prince
+		animation = celebrate_sword
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:eng_edward_the_black_prince ?= {
+					is_alive = yes
+					this != root
+				}
+			}
+			character:eng_edward_the_black_prince = { save_scope_as = black_prince }
+		}
+	}
+
+	# Option A: Let him win his spurs at the vanguard of the continental host
+	option = {
+		name = phx_hyw.0045.a
+		add_prestige = 200
+		if = {
+			limit = { character:eng_edward_the_black_prince ?= { is_alive = yes } }
+			character:eng_edward_the_black_prince = {
+				add_martial_skill = 2
+				add_prowess_skill = 3
+				add_prestige = 250
+			}
+		}
+		add_character_modifier = {
+			modifier = phx_hyw_chevauchee_terror_modifier
+			years = 15
+		}
+		ai_chance = { base = 75 }
+	}
+
+	# Option B: Entrust him with chivalric tournaments and the royal council
+	option = {
+		name = phx_hyw.0045.b
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 125 }
+		if = {
+			limit = { character:eng_edward_the_black_prince ?= { is_alive = yes } }
+			character:eng_edward_the_black_prince = {
+				add_diplomacy_skill = 2
+				add_stewardship_skill = 2
+				add_prestige = 150
+			}
+		}
+		ai_chance = { base = 25 }
+	}
+}
+
+# 12. phx_hyw.0050 — Phase 2 High War (England): Yew Bows and the Smoke of Chevauchee
+phx_hyw.0050 = {
+	type = character_event
+	title = phx_hyw.0050.t
+	desc = phx_hyw.0050.desc
+	theme = battle
+	override_background = { reference = battlefield }
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+	right_portrait = {
+		trigger = { exists = scope:french_king }
+		character = scope:french_king
+		animation = anger
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:k_france.holder
+				title:k_france.holder = { is_alive = yes this != root }
+			}
+			title:k_france.holder = { save_scope_as = french_king }
+		}
+	}
+
+	# Option A: Unleash the chevauchee across Normandy to break Valois prestige
+	option = {
+		name = phx_hyw.0050.a
+		add_character_modifier = {
+			modifier = phx_hyw_chevauchee_terror_modifier
+			years = 20
+		}
+		add_gold = 150
+		add_dread = 20
+		title:c_caennais = {
+			add_county_modifier = {
+				modifier = phx_hyw_devastated_countryside_modifier
+				years = 8
+			}
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Perfect combined-arms longbow and dismounted knight formations
+	option = {
+		name = phx_hyw.0050.b
+		add_character_modifier = {
+			modifier = phx_hyw_longbow_doctrine_modifier
+			years = 20
+		}
+		add_prestige = 200
+		ai_chance = { base = 40 }
+	}
+}
+
+# 13. phx_hyw.0055 — Phase 2 High War (France): Chivalry Against the Arrow Storm
+phx_hyw.0055 = {
+	type = character_event
+	title = phx_hyw.0055.t
+	desc = phx_hyw.0055.desc
+	theme = battle
+	override_background = { reference = battlefield }
+	left_portrait = {
+		character = root
+		animation = marshal_shield
+	}
+	right_portrait = {
+		trigger = { exists = scope:english_king }
+		character = scope:english_king
+		animation = personality_bold
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:k_england.holder
+				title:k_england.holder = { is_alive = yes this != root }
+			}
+			title:k_england.holder = { save_scope_as = english_king }
+		}
+	}
+
+	# Option A: Trust in heavy cavalry charges and the noble ban of France
+	option = {
+		name = phx_hyw.0055.a
+		add_character_modifier = {
+			modifier = phx_hyw_valois_chivalry_modifier
+			years = 20
+		}
+		spawn_army = {
+			name = phx_hyw_valois_chivalry_host_name
+			location = root.capital_province
+			men_at_arms = {
+				type = armored_horsemen
+				men = 200
+			}
+			levies = 600
+			inheritable = no
+		}
+		ai_chance = { base = 55 }
+	}
+
+	# Option B: Deny pitched battle and bleed the invaders with fortress garrisons
+	option = {
+		name = phx_hyw.0055.b
+		add_character_modifier = {
+			modifier = phx_hyw_treaty_bretigny_modifier
+			years = 15
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
+		ai_chance = { base = 45 }
+	}
+}
+
+# 14. phx_hyw.0060 — 1358 Jacquerie & Estates-General Crisis (France)
+phx_hyw.0060 = {
+	type = character_event
+	title = phx_hyw.0060.t
+	desc = phx_hyw.0060.desc
+	theme = disaster
+	override_background = { reference = burning_building_west }
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+
+	# Option A: Grant Estates-General concessions to steady the cities and treasury
+	option = {
+		name = phx_hyw.0060.a
+		add_character_modifier = {
+			modifier = phx_hyw_estates_general_concessions_modifier
+			years = 15
+		}
+		add_gold = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = -100 }
+		ai_chance = { base = 45 }
+	}
+
+	# Option B: Crush the Jacquerie mercilessly with mounted knights
+	option = {
+		name = phx_hyw.0060.b
+		add_dread = 30
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
+		title:c_beauvaisis = {
+			add_county_modifier = {
+				modifier = phx_hyw_devastated_countryside_modifier
+				years = 10
+			}
+		}
+		add_character_modifier = {
+			modifier = phx_hyw_war_exhaustion_modifier
+			years = 8
+		}
+		ai_chance = { base = 55 }
+	}
+}
+
+# 15. phx_hyw.0070 — 1381 Peasants' Revolt (England)
+phx_hyw.0070 = {
+	type = character_event
+	title = phx_hyw.0070.t
+	desc = phx_hyw.0070.desc
+	theme = disaster
+	override_background = { reference = burning_building_west }
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+
+	# Option A: Ride out to Smithfield and crush the rebels by royal authority
+	option = {
+		name = phx_hyw.0070.a
+		add_dread = 25
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
+		title:c_kent = {
+			add_county_modifier = {
+				modifier = phx_hyw_devastated_countryside_modifier
+				years = 8
+			}
+		}
+		add_character_modifier = {
+			modifier = phx_hyw_war_exhaustion_modifier
+			years = 6
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Repeal the harsh poll tax and issue charters of relief
+	option = {
+		name = phx_hyw.0070.b
+		remove_short_term_gold = 150
+		add_prestige = -75
+		if = {
+			limit = { has_character_modifier = phx_hyw_war_exhaustion_modifier }
+			remove_character_modifier = phx_hyw_war_exhaustion_modifier
+		}
+		title:c_middlesex = {
+			change_prosperity_progress = 50
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+# 16. phx_hyw.0080 — Late-War Turnaround: The Maid of Orleans (France, 1385+)
+phx_hyw.0080 = {
+	type = character_event
+	title = phx_hyw.0080.t
+	desc = phx_hyw.0080.desc
+	theme = faith
+	override_background = { reference = throne_room_west }
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+	right_portrait = {
+		trigger = { exists = scope:maid_of_orleans }
+		character = scope:maid_of_orleans
+		animation = personality_zealous
+	}
+
+	immediate = {
+		create_character = {
+			name = "Jeanne"
+			age = 17
+			gender = female
+			employer = root
+			culture = culture:french
+			faith = faith:catholic
+			dynasty = none
+			random_traits = no
+			martial = 18
+			prowess = 14
+			diplomacy = 12
+			learning = 10
+			trait = education_martial_4
+			trait = zealous
+			trait = brave
+			trait = humble
+			trait = chaste
+			trait = holy_warrior
+			trait = strategist
+			save_scope_as = maid_of_orleans
+		}
+	}
+
+	# Option A: Give her armor, a white banner, and command of the relief host for Orleans!
+	option = {
+		name = phx_hyw.0080.a
+		if = {
+			limit = { has_character_modifier = phx_hyw_war_exhaustion_modifier }
+			remove_character_modifier = phx_hyw_war_exhaustion_modifier
+		}
+		add_character_modifier = {
+			modifier = phx_hyw_maid_of_orleans_modifier
+			years = 25
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
+		add_piety = 250
+		spawn_army = {
+			name = phx_hyw_maid_relief_host_name
+			location = root.capital_province
+			men_at_arms = {
+				type = gendarme
+				men = 250
+			}
+			men_at_arms = {
+				type = armored_footmen
+				men = 300
+			}
+			men_at_arms = {
+				type = crossbowmen
+				men = 250
+			}
+			levies = 1000
+			inheritable = no
+		}
+		ai_chance = { base = 90 }
+	}
+
+	# Option B: Have the theologians examine her carefully while rallying the faithful
+	option = {
+		name = phx_hyw.0080.b
+		add_piety = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 125 }
+		add_character_modifier = {
+			modifier = phx_hyw_oriflamme_banner_modifier
+			years = 15
+		}
+		ai_chance = { base = 10 }
+	}
+}
+
+# ==================================================
+# DECISION OUTCOME EVENTS (0100 - 0190)
+# ==================================================
+
+# 17. phx_hyw.0100 — Decision Outcome: Assert the Claim to the French Crown
+phx_hyw.0100 = {
+	type = character_event
+	title = phx_hyw.0100.t
+	desc = phx_hyw.0100.desc
+	theme = war
+	override_background = { reference = army_camp }
+	left_portrait = {
+		character = root
+		animation = aggressive_sword
+	}
+	right_portrait = {
+		trigger = { exists = scope:french_king }
+		character = scope:french_king
+		animation = anger
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:k_france.holder
+				title:k_france.holder = { is_alive = yes this != root }
+			}
+			title:k_france.holder = { save_scope_as = french_king }
+		}
+	}
+
+	# Option A: Cross the Channel at once and press the claim to France!
+	option = {
+		name = phx_hyw.0100.a
+		trigger = {
+			exists = scope:french_king
+			top_liege = this
+			scope:french_king = { top_liege = this }
+			NOT = { is_at_war_with = scope:french_king }
+			NOT = { is_allied_to = scope:french_king }
+		}
+		start_war = {
+			cb = phx_hyw_french_throne_cb
+			target = scope:french_king
+			claimant = root
+			target_title = title:k_france
+		}
+		ai_chance = { base = 70 }
+	}
+
+	# Option B: Keep the fleets poised and choose the hour of invasion ourselves
+	option = {
+		name = phx_hyw.0100.b
+		add_prestige = 100
+		custom_tooltip = phx_hyw_throne_claim_ready_tt
+		ai_chance = { base = 30 }
+	}
+}
+
+# 18. phx_hyw.0110 — Decision Outcome: Order of the Garter
+phx_hyw.0110 = {
+	type = character_event
+	title = phx_hyw.0110.t
+	desc = phx_hyw.0110.desc
+	theme = court
+	override_background = { reference = feast }
+	left_portrait = {
+		character = root
+		animation = celebrate_sword
+	}
+	right_portrait = {
+		trigger = { exists = scope:black_prince }
+		character = scope:black_prince
+		animation = admiration
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:eng_edward_the_black_prince ?= {
+					is_alive = yes
+					this != root
+				}
+			}
+			character:eng_edward_the_black_prince = { save_scope_as = black_prince }
+		}
+	}
+
+	option = {
+		name = phx_hyw.0110.a
+		add_prestige = 100
+	}
+}
+
+# 19. phx_hyw.0120 — Decision Outcome: Flemish Wool Staple
+phx_hyw.0120 = {
+	type = character_event
+	title = phx_hyw.0120.t
+	desc = phx_hyw.0120.desc
+	theme = stewardship
+	override_background = { reference = docks }
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+
+	option = {
+		name = phx_hyw.0120.a
+		add_gold = 75
+	}
+}
+
+# 20. phx_hyw.0130 — Decision Outcome: Dual Monarchy of England and France
+phx_hyw.0130 = {
+	type = character_event
+	title = phx_hyw.0130.t
+	desc = phx_hyw.0130.desc
+	theme = coronation
+	override_background = { reference = throne_room_west }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = phx_hyw.0130.a
+		add_prestige = 250
+	}
+}
+
+# 21. phx_hyw.0140 — Decision Outcome: Confiscate the Duchy of Aquitaine
+phx_hyw.0140 = {
+	type = character_event
+	title = phx_hyw.0140.t
+	desc = phx_hyw.0140.desc
+	theme = war
+	override_background = { reference = council_chamber }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	right_portrait = {
+		trigger = { exists = scope:english_king }
+		character = scope:english_king
+		animation = anger
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:k_england.holder
+				title:k_england.holder = { is_alive = yes this != root }
+			}
+			title:k_england.holder = { save_scope_as = english_king }
+		}
+	}
+
+	# Option A: Enforce the confiscation by arms immediately
+	option = {
+		name = phx_hyw.0140.a
+		trigger = {
+			exists = scope:english_king
+			top_liege = this
+			scope:english_king = { top_liege = this }
+			NOT = { is_at_war_with = scope:english_king }
+			NOT = { is_allied_to = scope:english_king }
+			title:d_guyenne = {
+				any_in_de_jure_hierarchy = {
+					tier = tier_county
+					holder ?= {
+						OR = {
+							this = scope:english_king
+							is_vassal_or_below_of = scope:english_king
+						}
+					}
+				}
+			}
+		}
+		start_war = {
+			cb = phx_hyw_aquitaine_confiscation_cb
+			target = scope:english_king
+			target_title = title:d_guyenne
+		}
+		ai_chance = { base = 70 }
+	}
+
+	# Option B: Serve the royal writ and mobilize at our own choosing
+	option = {
+		name = phx_hyw.0140.b
+		add_prestige = 100
+		custom_tooltip = phx_hyw_aquitaine_forfeit_cb_tt
+		ai_chance = { base = 30 }
+	}
+}
+
+# 22. phx_hyw.0150 — Decision Outcome: Oriflamme of Saint-Denis
+phx_hyw.0150 = {
+	type = character_event
+	title = phx_hyw.0150.t
+	desc = phx_hyw.0150.desc
+	theme = faith
+	override_background = { reference = temple_church }
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	option = {
+		name = phx_hyw.0150.a
+		add_piety = 100
+	}
+}
+
+# 23. phx_hyw.0160 — Decision Outcome: Compagnies d'Ordonnance
+phx_hyw.0160 = {
+	type = character_event
+	title = phx_hyw.0160.t
+	desc = phx_hyw.0160.desc
+	theme = martial
+	override_background = { reference = armory }
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+
+	option = {
+		name = phx_hyw.0160.a
+		add_prestige = 150
+	}
+}
+
+# 24. phx_hyw.0170 — Decision Outcome: Liberation of France
+phx_hyw.0170 = {
+	type = character_event
+	title = phx_hyw.0170.t
+	desc = phx_hyw.0170.desc
+	theme = coronation
+	override_background = { reference = throne_room_west }
+	left_portrait = {
+		character = root
+		animation = celebrate_sword
+	}
+
+	option = {
+		name = phx_hyw.0170.a
+		add_prestige = 250
+	}
+}
+
+# 25. phx_hyw.0180 — Decision Outcome: Grand Duchy of Burgundy
+phx_hyw.0180 = {
+	type = character_event
+	title = phx_hyw.0180.t
+	desc = phx_hyw.0180.desc
+	theme = court
+	override_background = { reference = feast }
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = phx_hyw.0180.a
+		add_prestige = 150
+	}
+}
+
+# 26. phx_hyw.0190 — Decision Outcome: Balance Between Lion and Lily (Brittany)
+phx_hyw.0190 = {
+	type = character_event
+	title = phx_hyw.0190.t
+	desc = phx_hyw.0190.desc
+	theme = diplomacy
+	override_background = { reference = docks }
+	left_portrait = {
+		character = root
+		animation = chancellor
+	}
+
+	option = {
+		name = phx_hyw.0190.a
+		add_prestige = 100
+	}
+}

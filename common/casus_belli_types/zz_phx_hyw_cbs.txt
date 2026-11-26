@@ -1,0 +1,452 @@
+﻿##################################################
+# Project Phoenix (PHX) — Hundred Years' War Casus Belli Types
+# CK3 1.21.0.3 (Florin) — Universalis Kings 1337
+# Namespace prefix: phx_hyw_
+##################################################
+
+phx_hyw_french_throne_cb = {
+	icon = claim_cb
+	group = claim
+	interface_priority = 95
+
+	war_name = "PHX_HYW_FRENCH_THRONE_WAR_NAME"
+	my_war_name = "PHX_HYW_FRENCH_THRONE_WAR_NAME_MY"
+	war_name_base = "PHX_HYW_FRENCH_THRONE_WAR_NAME_BASE"
+	cb_name = "PHX_HYW_FRENCH_THRONE_CB_NAME"
+
+	mutually_exclusive_titles = { always = yes }
+	should_show_war_goal_subview = yes
+	target_titles = claim
+	target_title_tier = all
+	target_de_jure_regions_above = yes
+
+	allowed_for_character = {
+		scope:attacker = {
+			has_title = title:k_england
+			NOT = { has_title = title:k_france }
+			has_claim_on = title:k_france
+			NOR = {
+				government_has_flag = government_is_landless_adventurer
+				government_has_flag = government_is_nomadic
+			}
+		}
+	}
+
+	allowed_for_character_display_regardless = {
+		tgp_japan_offensive_wars_ban_trigger = yes
+	}
+
+	allowed_against_character = {
+		scope:attacker.top_liege != scope:defender.top_liege
+		scope:defender = {
+			has_title = title:k_france
+		}
+	}
+
+	is_allowed_claim_title = {
+		this = title:k_france
+		scope:claimant = scope:attacker
+		holder = scope:defender
+		scope:claimant = {
+			is_incapable = no
+			is_hostage = no
+		}
+	}
+
+	cost = {
+		piety = {
+			value = 0
+			add = common_cb_impious_piety_cost
+		}
+		prestige = {
+			value = 400
+			multiply = common_cb_prestige_cost_multiplier
+			if = {
+				limit = {
+					scope:attacker = {
+						has_character_flag = phx_hyw_free_throne_cb
+					}
+				}
+				multiply = {
+					value = 0
+					desc = "free_cost"
+				}
+			}
+		}
+	}
+
+	on_declaration = {
+		on_declared_war = yes
+		hidden_effect = {
+			set_global_variable = phx_hyw_war_has_begun
+			scope:attacker = {
+				if = {
+					limit = { has_character_flag = phx_hyw_free_throne_cb }
+					remove_character_flag = phx_hyw_free_throne_cb
+				}
+				if = {
+					limit = {
+						NOT = { has_global_variable = phx_hyw_story_active }
+						NOT = { has_global_variable = phx_hyw_resolved }
+					}
+					create_story = story_phx_hundred_years_war
+				}
+			}
+		}
+	}
+
+	should_invalidate = {
+		OR = {
+			war_should_invalidate_defender_lost_target_titles_trigger = yes
+			scope:attacker = { has_title = title:k_france }
+		}
+	}
+
+	on_invalidated_desc = {
+		desc = phx_hyw_french_throne_cb_invalidated_desc
+	}
+
+	on_invalidated = {}
+
+	on_victory_desc = {
+		desc = phx_hyw_french_throne_cb_victory_desc
+	}
+
+	on_victory = {
+		on_victory_aggressive_war_effect = yes
+		scope:attacker = {
+			accolade_attacker_war_end_glory_gain_med_effect = yes
+			add_prestige = 500
+			if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 350 }
+		}
+		on_victory_claim_cb_effect = yes
+		modify_all_participants_fame_values = {
+			WINNER = scope:attacker
+			LOSER = scope:defender
+			FAME_BASE = scope:cb_prestige_factor
+			IS_RELIGIOUS_WAR = no
+			WINNER_FAME_SCALE = 15
+			LOSER_FAME_SCALE = -15
+			WINNER_ALLY_FAME_SCALE = 10
+			LOSER_ALLY_FAME_SCALE = 10
+		}
+	}
+
+	on_white_peace_desc = {
+		desc = phx_hyw_french_throne_cb_white_peace_desc
+	}
+
+	on_white_peace = {
+		on_white_peace_effect = yes
+		on_white_peace_claim_cb_effect = yes
+		scope:defender = {
+			accolade_defender_war_end_glory_gain_low_effect = yes
+		}
+		scope:attacker = {
+			add_prestige = {
+				value = scope:cb_prestige_factor
+				multiply = -5.0
+			}
+			add_character_modifier = {
+				modifier = phx_hyw_treaty_bretigny_modifier
+				years = 10
+			}
+		}
+		scope:defender = {
+			add_character_modifier = {
+				modifier = phx_hyw_treaty_bretigny_modifier
+				years = 10
+			}
+		}
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:attacker
+			FAME_BASE = scope:cb_prestige_factor
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 10
+			LOSER_ALLY_FAME_SCALE = 10
+		}
+	}
+
+	on_defeat_desc = {
+		desc = phx_hyw_french_throne_cb_defeat_desc
+	}
+
+	on_defeat = {
+		on_defeat_aggressive_war_effect = yes
+		on_defeat_claim_cb_effect = yes
+		scope:defender = {
+			accolade_defender_war_end_glory_gain_med_effect = yes
+			add_prestige = 400
+			if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
+		}
+		scope:attacker = {
+			pay_short_term_gold_reparations_effect = {
+				GOLD_VALUE = 3
+			}
+		}
+		modify_all_participants_fame_values = {
+			WINNER = scope:defender
+			LOSER = scope:attacker
+			FAME_BASE = scope:cb_prestige_factor
+			IS_RELIGIOUS_WAR = no
+			WINNER_FAME_SCALE = scale_10_war_defender_win
+			LOSER_FAME_SCALE = -15
+			WINNER_ALLY_FAME_SCALE = 10
+			LOSER_ALLY_FAME_SCALE = 10
+		}
+	}
+
+	on_primary_attacker_death = inherit
+	on_primary_defender_death = inherit
+	transfer_behavior = transfer
+	attacker_allies_inherit = yes
+	defender_allies_inherit = yes
+
+	attacker_wargoal_percentage = 0.75
+	max_attacker_score_from_battles = 100
+	max_defender_score_from_battles = 100
+	max_attacker_score_from_occupation = 150
+	max_defender_score_from_occupation = 150
+	max_ai_diplo_distance_to_title = 1000
+
+	ai_score_mult = {
+		value = 1.5
+		add = common_cb_ai_score_mult_additive
+		multiply = aggressive_cb_ai_score_mult
+		multiply = common_cb_ai_score_mult
+	}
+}
+
+phx_hyw_aquitaine_confiscation_cb = {
+	icon = individual_duchy_de_jure_cb
+	group = de_jure
+	interface_priority = 96
+
+	war_name = "PHX_HYW_AQUITAINE_WAR_NAME"
+	my_war_name = "PHX_HYW_AQUITAINE_WAR_NAME_MY"
+	war_name_base = "PHX_HYW_AQUITAINE_WAR_NAME_BASE"
+	cb_name = "PHX_HYW_AQUITAINE_CB_NAME"
+	cb_name_no_target = "PHX_HYW_AQUITAINE_CB_NAME_GENERIC"
+
+	combine_into_one = yes
+	should_show_war_goal_subview = yes
+	mutually_exclusive_titles = { always = yes }
+	target_titles = de_jure
+	target_title_tier = duchy
+	ignore_effect = change_title_holder
+
+	allowed_for_character = {
+		scope:attacker = {
+			has_title = title:k_france
+			NOT = { has_title = title:k_england }
+			NOR = {
+				government_has_flag = government_is_landless_adventurer
+				government_has_flag = government_is_nomadic
+			}
+		}
+	}
+
+	allowed_for_character_display_regardless = {
+		tgp_japan_offensive_wars_ban_trigger = yes
+	}
+
+	allowed_against_character = {
+		scope:attacker.top_liege != scope:defender.top_liege
+		scope:defender = {
+			has_title = title:k_england
+		}
+		scope:attacker = {
+			has_de_jure_claim_on = scope:defender
+		}
+	}
+
+	valid_to_start = {
+		scope:target = {
+			tier = tier_duchy
+			any_this_title_or_de_jure_above = {
+				this = title:k_france
+			}
+		}
+	}
+
+	cost = {
+		piety = {
+			value = 0
+			add = common_cb_impious_piety_cost
+		}
+		prestige = {
+			value = 200
+			multiply = common_cb_prestige_cost_multiplier
+			if = {
+				limit = {
+					scope:attacker = {
+						has_character_flag = phx_hyw_free_aquitaine_cb
+					}
+				}
+				multiply = {
+					value = 0
+					desc = "free_cost"
+				}
+			}
+		}
+	}
+
+	on_declaration = {
+		on_declared_war = yes
+		hidden_effect = {
+			set_global_variable = phx_hyw_war_has_begun
+			scope:attacker = {
+				if = {
+					limit = { has_character_flag = phx_hyw_free_aquitaine_cb }
+					remove_character_flag = phx_hyw_free_aquitaine_cb
+				}
+			}
+		}
+	}
+
+	should_invalidate = {
+		NOT = {
+			scope:attacker = {
+				has_de_jure_claim_on = scope:defender
+			}
+		}
+	}
+
+	on_invalidated_desc = {
+		desc = phx_hyw_aquitaine_cb_invalidated_desc
+	}
+
+	on_invalidated = {}
+
+	on_victory_desc = {
+		desc = phx_hyw_aquitaine_cb_victory_desc
+	}
+
+	on_victory = {
+		on_victory_aggressive_war_effect = yes
+		scope:attacker = {
+			accolade_attacker_war_end_glory_gain_med_effect = yes
+			add_prestige = 300
+			if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
+		}
+
+		every_in_list = {
+			list = target_titles
+			save_temporary_scope_as = target
+		}
+
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = yes
+		}
+
+		setup_de_jure_cb = {
+			attacker = scope:attacker
+			defender = scope:defender
+			change = scope:change
+			title = scope:target
+		}
+		resolve_title_and_vassal_change = scope:change
+
+		modify_all_participants_fame_values = {
+			WINNER = scope:attacker
+			LOSER = scope:defender
+			FAME_BASE = scope:cb_prestige_factor
+			IS_RELIGIOUS_WAR = no
+			WINNER_FAME_SCALE = 10
+			LOSER_FAME_SCALE = -10
+			WINNER_ALLY_FAME_SCALE = 10
+			LOSER_ALLY_FAME_SCALE = 10
+		}
+	}
+
+	on_white_peace_desc = {
+		desc = phx_hyw_aquitaine_cb_white_peace_desc
+	}
+
+	on_white_peace = {
+		on_white_peace_effect = yes
+		scope:defender = {
+			accolade_defender_war_end_glory_gain_low_effect = yes
+		}
+		every_in_list = {
+			list = target_titles
+			save_temporary_scope_as = target
+		}
+		setup_de_jure_cb = {
+			attacker = scope:attacker
+			defender = scope:defender
+			victory = no
+			title = scope:target
+		}
+		scope:attacker = {
+			add_prestige = {
+				value = scope:cb_prestige_factor
+				multiply = -5.0
+			}
+		}
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:attacker
+			FAME_BASE = scope:cb_prestige_factor
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 10
+			LOSER_ALLY_FAME_SCALE = 10
+		}
+	}
+
+	on_defeat_desc = {
+		desc = phx_hyw_aquitaine_cb_defeat_desc
+	}
+
+	on_defeat = {
+		on_defeat_aggressive_war_effect = yes
+		scope:defender = {
+			accolade_defender_war_end_glory_gain_med_effect = yes
+			add_prestige = 250
+		}
+		scope:attacker = {
+			pay_short_term_gold_reparations_effect = {
+				GOLD_VALUE = 3
+			}
+		}
+		every_in_list = {
+			list = target_titles
+			save_temporary_scope_as = target
+		}
+		setup_de_jure_cb = {
+			attacker = scope:attacker
+			defender = scope:defender
+			victory = no
+			title = scope:target
+		}
+		modify_all_participants_fame_values = {
+			WINNER = scope:defender
+			LOSER = scope:attacker
+			FAME_BASE = scope:cb_prestige_factor
+			IS_RELIGIOUS_WAR = no
+			WINNER_FAME_SCALE = scale_10_war_defender_win
+			LOSER_FAME_SCALE = -10
+			WINNER_ALLY_FAME_SCALE = 10
+			LOSER_ALLY_FAME_SCALE = 10
+		}
+	}
+
+	on_primary_attacker_death = inherit
+	on_primary_defender_death = inherit
+	transfer_behavior = transfer
+	attacker_allies_inherit = yes
+	defender_allies_inherit = yes
+
+	attacker_wargoal_percentage = 0.75
+	max_attacker_score_from_occupation = 150
+	max_defender_score_from_occupation = 150
+	max_ai_diplo_distance_to_title = 750
+
+	ai_score_mult = {
+		value = 1.5
+		add = common_cb_ai_score_mult_additive
+		multiply = aggressive_cb_ai_score_mult
+		multiply = common_cb_ai_score_mult
+	}
+}

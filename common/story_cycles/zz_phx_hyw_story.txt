@@ -1,0 +1,275 @@
+﻿##################################################
+# Project Phoenix (PHX) — Hundred Years' War Story Cycle
+# CK3 1.21.0.3 (Florin) — Universalis Kings 1337
+# Multi-decade dynastic struggle between England and France
+# Phases:
+#   1: Opening Escalation (1337-1345)
+#   2: High War & Chevauchees (1346-1360)
+#   3: Caroline Counteroffensive (1361-1384)
+#   4: Late-War Exhaustion & Maid of Orleans (1385-1453)
+##################################################
+
+story_phx_hundred_years_war = {
+	visible = yes
+
+	icon = {
+		trigger = { always = yes }
+		reference = "gfx/interface/icons/story_cycles/story_icon_conqueror.dds"
+	}
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/battlefield.dds"
+	}
+
+	visualization = {
+		custom_string_key = "PHX_HYW_STORY_PRACTICAL_INFORMATION_STRING"
+	}
+
+	on_setup = {
+		set_variable = {
+			name = phx_hyw_phase
+			value = 1
+		}
+		set_variable = {
+			name = phx_hyw_war_years
+			value = 0
+		}
+		set_global_variable = phx_hyw_story_active
+	}
+
+	on_end = {
+		remove_global_variable = phx_hyw_story_active
+	}
+
+	on_owner_death = {
+		if = {
+			limit = {
+				has_global_variable = phx_hyw_resolved
+			}
+			end_story = yes
+		}
+		else_if = {
+			limit = {
+				exists = title:k_england.holder
+				title:k_england.holder = {
+					is_alive = yes
+					this != root.story_owner
+				}
+			}
+			make_story_owner = title:k_england.holder
+		}
+		else_if = {
+			limit = {
+				exists = title:k_france.holder
+				title:k_france.holder = {
+					is_alive = yes
+					this != root.story_owner
+				}
+			}
+			make_story_owner = title:k_france.holder
+		}
+		else_if = {
+			limit = {
+				exists = story_owner.primary_heir
+				story_owner.primary_heir = { is_alive = yes }
+			}
+			make_story_owner = story_owner.primary_heir
+		}
+		else = {
+			end_story = yes
+		}
+	}
+
+	# Annual historical phase progression & war exhaustion pulse
+	effect_group = {
+		days = { 320 410 }
+
+		# Check resolution conditions first
+		triggered_effect = {
+			trigger = {
+				OR = {
+					has_global_variable = phx_hyw_resolved
+					current_year >= 1465
+					NOT = { exists = title:k_england.holder }
+					NOT = { exists = title:k_france.holder }
+				}
+			}
+			effect = {
+				set_global_variable = phx_hyw_resolved
+				end_story = yes
+			}
+		}
+
+		# Phase 1 -> Phase 2: High War & Chevauchees (1346+)
+		triggered_effect = {
+			trigger = {
+				NOT = { has_global_variable = phx_hyw_resolved }
+				exists = var:phx_hyw_phase
+				var:phx_hyw_phase = 1
+				current_year >= 1346
+			}
+			effect = {
+				set_variable = {
+					name = phx_hyw_phase
+					value = 2
+				}
+				if = {
+					limit = {
+						NOT = { has_global_variable = phx_hyw_longbow_chevauchee_fired }
+						exists = title:k_england.holder
+						exists = title:k_france.holder
+						title:k_england.holder != title:k_france.holder
+					}
+					set_global_variable = phx_hyw_longbow_chevauchee_fired
+					title:k_england.holder = {
+						trigger_event = {
+							id = phx_hyw.0050
+							days = { 15 45 }
+						}
+					}
+					title:k_france.holder = {
+						trigger_event = {
+							id = phx_hyw.0055
+							days = { 20 60 }
+						}
+					}
+				}
+			}
+		}
+
+		# Phase 2 -> Phase 3: Caroline Counteroffensive (1361+)
+		triggered_effect = {
+			trigger = {
+				NOT = { has_global_variable = phx_hyw_resolved }
+				exists = var:phx_hyw_phase
+				var:phx_hyw_phase = 2
+				current_year >= 1361
+			}
+			effect = {
+				set_variable = {
+					name = phx_hyw_phase
+					value = 3
+				}
+				if = {
+					limit = {
+						exists = title:k_france.holder
+						exists = title:k_england.holder
+						title:k_france.holder != title:k_england.holder
+					}
+					title:k_france.holder = {
+						if = {
+							limit = {
+								NOT = { has_character_modifier = phx_hyw_valois_chivalry_modifier }
+							}
+							add_character_modifier = {
+								modifier = phx_hyw_valois_chivalry_modifier
+								years = 15
+							}
+						}
+					}
+				}
+			}
+		}
+
+		# Phase 3 -> Phase 4: Late-War Exhaustion & Maid of Orleans Era (1385+)
+		triggered_effect = {
+			trigger = {
+				NOT = { has_global_variable = phx_hyw_resolved }
+				exists = var:phx_hyw_phase
+				var:phx_hyw_phase = 3
+				current_year >= 1385
+			}
+			effect = {
+				set_variable = {
+					name = phx_hyw_phase
+					value = 4
+				}
+			}
+		}
+
+		# Active Franco-English war attrition heartbeat
+		triggered_effect = {
+			trigger = {
+				NOT = { has_global_variable = phx_hyw_resolved }
+				exists = title:k_england.holder
+				exists = title:k_france.holder
+				title:k_england.holder != title:k_france.holder
+				title:k_england.holder = {
+					is_at_war_with = title:k_france.holder
+				}
+			}
+			effect = {
+				change_variable = {
+					name = phx_hyw_war_years
+					add = 1
+				}
+				if = {
+					limit = {
+						exists = var:phx_hyw_war_years
+						var:phx_hyw_war_years >= 4
+					}
+					title:k_england.holder = {
+						if = {
+							limit = {
+								NOT = { has_character_modifier = phx_hyw_war_exhaustion_modifier }
+								NOT = { has_character_modifier = phx_hyw_dual_monarchy_crown_modifier }
+							}
+							add_character_modifier = {
+								modifier = phx_hyw_war_exhaustion_modifier
+								years = 6
+							}
+						}
+					}
+					title:k_france.holder = {
+						if = {
+							limit = {
+								NOT = { has_character_modifier = phx_hyw_war_exhaustion_modifier }
+								NOT = { has_character_modifier = phx_hyw_maid_of_orleans_modifier }
+							}
+							add_character_modifier = {
+								modifier = phx_hyw_war_exhaustion_modifier
+								years = 6
+							}
+						}
+					}
+					# Devastate a frontline French county during prolonged campaigns
+					random_list = {
+						35 = {
+							title:c_rouennais = {
+								if = {
+									limit = { NOT = { has_county_modifier = phx_hyw_devastated_countryside_modifier } }
+									add_county_modifier = {
+										modifier = phx_hyw_devastated_countryside_modifier
+										years = 8
+									}
+								}
+							}
+						}
+						35 = {
+							title:c_ponthieu = {
+								if = {
+									limit = { NOT = { has_county_modifier = phx_hyw_devastated_countryside_modifier } }
+									add_county_modifier = {
+										modifier = phx_hyw_devastated_countryside_modifier
+										years = 8
+									}
+								}
+							}
+						}
+						30 = {
+							title:c_orleanais = {
+								if = {
+									limit = { NOT = { has_county_modifier = phx_hyw_devastated_countryside_modifier } }
+									add_county_modifier = {
+										modifier = phx_hyw_devastated_countryside_modifier
+										years = 8
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
