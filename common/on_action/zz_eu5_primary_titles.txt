@@ -81,6 +81,12 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_barrois
 			}
 		}
+		character:bds_jalal_al_dawla_iskandar = {
+			if = {
+				limit = { is_alive = yes }
+				set_primary_title_to = title:c_rustamdar
+			}
+		}
 		character:bls_guy_i_chatillon = {
 			if = {
 				limit = { is_alive = yes }
@@ -1125,16 +1131,10 @@ eu5_start_primary_titles = {
 				set_primary_title_to = title:c_yazd
 			}
 		}
-		character:mzn_hasan = {
-			if = {
-				limit = { is_alive = yes }
-				set_primary_title_to = title:c_rustamdar
-			}
-		}
 		character:nav_philip_iii_evreux = {
 			if = {
 				limit = { is_alive = yes }
-				set_primary_title_to = title:c_angouleme
+				set_primary_title_to = title:c_ebroicien
 			}
 		}
 		character:nrk_karijotas_gediminds = {
