@@ -1,0 +1,1298 @@
+﻿##################################################
+# Project Phoenix (PHX) — Wave 1 Decisions
+# Byzantium v1.0 Flagship (10) + Ottoman (3) + Serbia (1) + Bulgaria/Wallachia (1)
+# Conforms strictly to AGENTS.md vanilla flavor style:
+#   desc = narrative flavor only; conditions in is_shown/is_valid/cost
+##################################################
+
+# ==================================================
+# BYZANTIUM v0.1 CORE DECISIONS (6)
+# ==================================================
+
+phx_byz_reform_imperial_themes_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/phx_decision_constantinople_revival.dds"
+	}
+	decision_group_type = roman
+	desc = phx_byz_reform_imperial_themes_decision_desc
+	selection_tooltip = phx_byz_reform_imperial_themes_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:e_byzantium
+			has_title = title:h_roman_empire
+		}
+		NOT = { has_character_flag = phx_byz_reformed_themes_flag }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_byz_themes_reformed_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_constantinople
+		completely_controls = title:d_thrace
+		prestige_level >= 2
+		OR = {
+			martial >= 10
+			stewardship >= 10
+			has_character_modifier = phx_byz_kantakouzenos_accord_modifier
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 250
+		prestige = 300
+	}
+
+	effect = {
+		if = {
+			limit = { has_character_modifier = phx_byz_1337_twilight_modifier }
+			remove_character_modifier = phx_byz_1337_twilight_modifier
+		}
+		add_character_modifier = {
+			modifier = phx_byz_theme_reform_modifier
+			years = 30
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
+		if = {
+			limit = {
+				has_ep3_dlc_trigger = yes
+				government_has_mechanic = administrative
+			}
+			change_influence = 250
+		}
+		custom_tooltip = phx_byz_reform_imperial_themes_effect_tt
+		hidden_effect = {
+			add_character_flag = phx_byz_reformed_themes_flag
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_byz_themes_reformed_global
+			}
+			trigger_event = phx_byz.0100
+		}
+	}
+
+	ai_potential = {
+		has_title = title:e_byzantium
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+phx_byz_rebuild_imperial_navy_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/ep3_decision_city.dds"
+	}
+	decision_group_type = roman
+	desc = phx_byz_rebuild_imperial_navy_decision_desc
+	selection_tooltip = phx_byz_rebuild_imperial_navy_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:e_byzantium
+			has_title = title:h_roman_empire
+		}
+		NOT = { has_character_modifier = phx_byz_imperial_navy_modifier }
+	}
+
+	is_valid = {
+		completely_controls = title:c_constantinople
+		OR = {
+			completely_controls = title:c_biga
+			completely_controls = title:c_chios
+			completely_controls = title:c_lemnos
+			completely_controls = title:c_dardanelles
+		}
+		prestige_level >= 1
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 300
+		prestige = 200
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_byz_imperial_navy_modifier
+			years = 25
+		}
+		title:c_constantinople = {
+			change_prosperity_progress = 100
+			add_county_modifier = {
+				modifier = phx_byz_constantinople_renaissance_modifier
+				years = 20
+			}
+		}
+		custom_tooltip = phx_byz_rebuild_imperial_navy_effect_tt
+		hidden_effect = {
+			trigger_event = phx_byz.0110
+		}
+	}
+
+	ai_potential = {
+		has_title = title:e_byzantium
+	}
+
+	ai_will_do = {
+		base = 80
+	}
+}
+
+phx_byz_reconstitute_varangians_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/ep3_decision_varangian_guard.dds"
+	}
+	decision_group_type = roman
+	desc = phx_byz_reconstitute_varangians_decision_desc
+	selection_tooltip = phx_byz_reconstitute_varangians_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:e_byzantium
+			has_title = title:h_roman_empire
+		}
+		NOT = { has_character_modifier = phx_byz_varangian_revived_modifier }
+	}
+
+	is_valid = {
+		completely_controls = title:c_constantinople
+		prestige_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 350
+		prestige = 400
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_byz_varangian_revived_modifier
+			years = 25
+		}
+		spawn_army = {
+			name = phx_byz_varangian_regiment_name
+			location = title:c_constantinople.title_province
+			men_at_arms = {
+				type = varangian_guards
+				men = 300
+			}
+			men_at_arms = {
+				type = cataphract
+				men = 150
+			}
+			inheritable = no
+		}
+		custom_tooltip = phx_byz_reconstitute_varangians_effect_tt
+		hidden_effect = {
+			trigger_event = phx_byz.0120
+		}
+	}
+
+	ai_potential = {
+		has_title = title:e_byzantium
+		gold >= 500
+	}
+
+	ai_will_do = {
+		base = 75
+	}
+}
+
+phx_byz_reclaim_anatolian_heartland_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/ep3_decision_hold_triumph.dds"
+	}
+	decision_group_type = roman
+	desc = phx_byz_reclaim_anatolian_heartland_decision_desc
+	selection_tooltip = phx_byz_reclaim_anatolian_heartland_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:e_byzantium
+			has_title = title:h_roman_empire
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_byz_anatolia_reclaimed_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_constantinople
+		completely_controls = title:d_marmara
+		completely_controls = title:d_west_anatolia
+		prestige_level >= 3
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 400
+		prestige = 600
+	}
+
+	effect = {
+		if = {
+			limit = { has_character_modifier = phx_byz_1337_twilight_modifier }
+			remove_character_modifier = phx_byz_1337_twilight_modifier
+		}
+		add_character_modifier = {
+			modifier = phx_byz_anatolian_themes_restored_modifier
+			years = 40
+		}
+		add_prestige = 750
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 300 }
+		if = {
+			limit = {
+				has_ep3_dlc_trigger = yes
+				government_has_mechanic = administrative
+			}
+			change_influence = 500
+		}
+		custom_tooltip = phx_byz_reclaim_anatolian_heartland_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_byz_anatolia_reclaimed_global
+			}
+			trigger_event = phx_byz.0130
+		}
+	}
+
+	ai_potential = {
+		has_title = title:e_byzantium
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+phx_byz_church_union_council_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	}
+	decision_group_type = roman
+	desc = phx_byz_church_union_council_decision_desc
+	selection_tooltip = phx_byz_church_union_council_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 120
+		hegemony = 0
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:e_byzantium
+		faith = faith:orthodox
+		NOT = { has_character_flag = phx_byz_church_council_held }
+	}
+
+	is_valid = {
+		completely_controls = title:c_constantinople
+		piety_level >= 1
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		piety = 250
+	}
+
+	effect = {
+		custom_tooltip = phx_byz_church_union_council_effect_tt
+		hidden_effect = {
+			add_character_flag = phx_byz_church_council_held
+		}
+		trigger_event = phx_byz.0140
+	}
+
+	ai_potential = {
+		has_title = title:e_byzantium
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}
+
+phx_byz_restore_pentarchy_authority_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/phx_decision_roman_senate_revival.dds"
+	}
+	decision_group_type = roman
+	desc = phx_byz_restore_pentarchy_authority_decision_desc
+	selection_tooltip = phx_byz_restore_pentarchy_authority_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:e_byzantium
+			has_title = title:h_roman_empire
+		}
+		faith.religion = faith:orthodox.religion
+		NOT = { has_character_modifier = phx_byz_pentarchy_guardian_modifier }
+	}
+
+	is_valid = {
+		completely_controls = title:c_constantinople
+		piety_level >= 3
+		calc_true_if = {
+			amount >= 3
+			completely_controls = title:c_constantinople
+			completely_controls = title:c_antakya
+			completely_controls = title:c_filastin
+			completely_controls = title:c_alexandria
+			completely_controls = title:c_marittima
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		piety = 500
+		prestige = 400
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_byz_pentarchy_guardian_modifier
+			years = 40
+		}
+		add_piety = 400
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
+		custom_tooltip = phx_byz_restore_pentarchy_authority_effect_tt
+		hidden_effect = {
+			trigger_event = phx_byz.0150
+		}
+	}
+
+	ai_potential = {
+		OR = {
+			has_title = title:e_byzantium
+			has_title = title:h_roman_empire
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+# ==================================================
+# BYZANTIUM v1.0 EXPANSION DECISIONS (4)
+# ==================================================
+
+phx_byz_establish_morea_despotate_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/ep3_decision_estate.dds"
+	}
+	decision_group_type = roman
+	desc = phx_byz_establish_morea_despotate_decision_desc
+	selection_tooltip = phx_byz_establish_morea_despotate_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:e_byzantium
+			has_title = title:h_roman_empire
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_byz_morea_despotate_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_laconia
+		OR = {
+			completely_controls = title:c_arcadia
+			completely_controls = title:d_morea
+		}
+		prestige_level >= 1
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 200
+		prestige = 250
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_byz_morea_despotate_modifier
+			years = 30
+		}
+		title:c_laconia = {
+			change_prosperity_progress = 100
+			add_county_modifier = {
+				modifier = phx_byz_balkan_march_modifier
+				years = 20
+			}
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
+		custom_tooltip = phx_byz_establish_morea_despotate_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_byz_morea_despotate_global
+			}
+			trigger_event = phx_byz.0160
+		}
+	}
+
+	ai_potential = {
+		has_title = title:e_byzantium
+	}
+
+	ai_will_do = {
+		base = 80
+	}
+}
+
+phx_byz_reclaim_galata_customs_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/phx_decision_constantinople_revival.dds"
+	}
+	decision_group_type = roman
+	desc = phx_byz_reclaim_galata_customs_decision_desc
+	selection_tooltip = phx_byz_reclaim_galata_customs_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:e_byzantium
+			has_title = title:h_roman_empire
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_byz_galata_customs_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_constantinople
+		OR = {
+			has_character_modifier = phx_byz_imperial_navy_modifier
+			stewardship >= 12
+			prestige_level >= 2
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 250
+		prestige = 300
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_byz_galata_customs_modifier
+			years = 30
+		}
+		title:c_constantinople = {
+			change_prosperity_progress = 120
+		}
+		if = {
+			limit = {
+				exists = title:k_genoa.holder
+				title:k_genoa.holder != root
+			}
+			title:k_genoa.holder = {
+				add_opinion = {
+					target = root
+					modifier = angry_opinion
+					opinion = -30
+				}
+			}
+		}
+		custom_tooltip = phx_byz_reclaim_galata_customs_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_byz_galata_customs_global
+			}
+			trigger_event = phx_byz.0170
+		}
+	}
+
+	ai_potential = {
+		has_title = title:e_byzantium
+	}
+
+	ai_will_do = {
+		base = 85
+	}
+}
+
+phx_byz_hesychast_synod_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+	decision_group_type = roman
+	desc = phx_byz_hesychast_synod_decision_desc
+	selection_tooltip = phx_byz_hesychast_synod_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 90
+		hegemony = 90
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:e_byzantium
+			has_title = title:h_roman_empire
+		}
+		faith = faith:orthodox
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_byz_hesychast_synod_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_constantinople
+		piety_level >= 1
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		piety = 200
+	}
+
+	effect = {
+		custom_tooltip = phx_byz_hesychast_synod_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_byz_hesychast_synod_global
+			}
+		}
+		trigger_event = phx_byz.0180
+	}
+
+	ai_potential = {
+		has_title = title:e_byzantium
+	}
+
+	ai_will_do = {
+		base = 70
+	}
+}
+
+phx_byz_restore_praetorian_prefectures_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/phx_decision_pax_romana.dds"
+	}
+	decision_group_type = roman
+	desc = phx_byz_restore_praetorian_prefectures_decision_desc
+	selection_tooltip = phx_byz_restore_praetorian_prefectures_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:e_byzantium
+			has_title = title:h_roman_empire
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_byz_praetorian_prefectures_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_constantinople
+		completely_controls = title:d_thrace
+		completely_controls = title:d_macedonia
+		completely_controls = title:d_morea
+		completely_controls = title:d_marmara
+		prestige_level >= 3
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 500
+		prestige = 750
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_byz_praetorian_prefectures_modifier
+			years = 40
+		}
+		add_prestige = 500
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 350 }
+		if = {
+			limit = {
+				has_ep3_dlc_trigger = yes
+				government_has_mechanic = administrative
+			}
+			change_influence = 500
+		}
+		custom_tooltip = phx_byz_restore_praetorian_prefectures_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_byz_praetorian_prefectures_global
+			}
+			trigger_event = phx_byz.0190
+		}
+	}
+
+	ai_potential = {
+		has_title = title:e_byzantium
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+# ==================================================
+# OTTOMAN DECISIONS (3)
+# ==================================================
+
+phx_ott_cross_hellespont_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_siege_warfare.dds"
+	}
+	decision_group_type = major
+	desc = phx_ott_cross_hellespont_decision_desc
+	selection_tooltip = phx_ott_cross_hellespont_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 48
+		empire = 48
+		hegemony = 48
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:k_ottoman
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_ott_hellespont_crossed_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_hudavendigar
+		OR = {
+			completely_controls = title:c_dardanelles
+			completely_controls = title:c_biga
+			completely_controls = title:c_kocaeli
+		}
+		prestige_level >= 1
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 200
+		prestige = 250
+	}
+
+	effect = {
+		add_character_flag = phx_ott_straits_crossed
+		add_character_modifier = {
+			modifier = phx_ott_ghazi_zeal_modifier
+			years = 25
+		}
+		if = {
+			limit = { completely_controls = title:c_dardanelles }
+			title:c_dardanelles = {
+				add_county_modifier = {
+					modifier = phx_ott_gallipoli_bridgehead_modifier
+					years = 25
+				}
+			}
+		}
+		else = {
+			add_unpressed_claim = title:c_dardanelles
+			add_unpressed_claim = title:d_thrace
+			title:c_hudavendigar = {
+				add_county_modifier = {
+					modifier = phx_ott_gallipoli_bridgehead_modifier
+					years = 20
+				}
+			}
+		}
+		spawn_army = {
+			name = phx_ott_ghazi_vanguard_name
+			location = root.capital_province
+			men_at_arms = {
+				type = horse_archers
+				men = 250
+			}
+			men_at_arms = {
+				type = light_horsemen
+				men = 200
+			}
+			inheritable = no
+		}
+		custom_tooltip = phx_ott_cross_hellespont_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_ott_hellespont_crossed_global
+			}
+			trigger_event = phx_bal.0010
+		}
+	}
+
+	ai_potential = {
+		has_title = title:k_ottoman
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+phx_ott_move_capital_edirne_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/ep3_decision_city.dds"
+	}
+	decision_group_type = major
+	desc = phx_ott_move_capital_edirne_decision_desc
+	selection_tooltip = phx_ott_move_capital_edirne_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 48
+		empire = 48
+		hegemony = 48
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:k_ottoman
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_ott_edirne_capital_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_edirne
+		title:c_edirne.holder = root
+		prestige_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 300
+		prestige = 350
+	}
+
+	effect = {
+		set_realm_capital = title:c_edirne
+		title:c_edirne = {
+			change_prosperity_progress = 150
+			add_county_modifier = {
+				modifier = phx_ott_edirne_capital_modifier
+				years = 30
+			}
+		}
+		add_prestige = 300
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
+		custom_tooltip = phx_ott_move_capital_edirne_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_ott_edirne_capital_global
+			}
+			trigger_event = phx_bal.0020
+		}
+	}
+
+	ai_potential = {
+		has_title = title:k_ottoman
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+phx_ott_found_janissary_corps_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	}
+	decision_group_type = major
+	desc = phx_ott_found_janissary_corps_decision_desc
+	selection_tooltip = phx_ott_found_janissary_corps_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:k_ottoman
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_ott_janissary_corps_global
+			}
+		}
+	}
+
+	is_valid = {
+		OR = {
+			completely_controls = title:c_edirne
+			completely_controls = title:c_dardanelles
+			completely_controls = title:d_thrace
+		}
+		prestige_level >= 2
+		OR = {
+			martial >= 10
+			stewardship >= 10
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 350
+		prestige = 400
+		piety = 150
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_ott_janissary_corps_modifier
+			years = 40
+		}
+		spawn_army = {
+			name = phx_ott_janissary_ocagi_name
+			location = root.capital_province
+			men_at_arms = {
+				type = armored_footmen
+				men = 350
+			}
+			men_at_arms = {
+				type = bowmen
+				men = 250
+			}
+			inheritable = no
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
+		custom_tooltip = phx_ott_found_janissary_corps_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_ott_janissary_corps_global
+			}
+			trigger_event = phx_bal.0030
+		}
+	}
+
+	ai_potential = {
+		has_title = title:k_ottoman
+		gold >= 450
+	}
+
+	ai_will_do = {
+		base = 95
+	}
+}
+
+# ==================================================
+# SERBIA DECISION (1)
+# ==================================================
+
+phx_ser_proclaim_serbian_empire_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/phx_decision_imperial_federation.dds"
+	}
+	decision_group_type = major
+	desc = phx_ser_proclaim_serbian_empire_decision_desc
+	selection_tooltip = phx_ser_proclaim_serbian_empire_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:k_serbia
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_ser_empire_proclaimed_global
+			}
+		}
+	}
+
+	is_valid = {
+		faith = faith:orthodox
+		completely_controls = title:d_serbia
+		completely_controls = title:c_vardar
+		OR = {
+			completely_controls = title:d_macedonia
+			completely_controls = title:c_central_macedonia
+			completely_controls = title:c_chalkidiki
+		}
+		prestige_level >= 3
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 400
+		prestige = 600
+		piety = 300
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_ser_dusan_code_modifier
+			years = 40
+		}
+		title:c_vardar = {
+			change_prosperity_progress = 120
+		}
+		if = {
+			limit = { NOT = { completely_controls = title:d_macedonia } }
+			add_unpressed_claim = title:d_macedonia
+		}
+		if = {
+			limit = { NOT = { completely_controls = title:d_northern_greece } }
+			add_unpressed_claim = title:d_northern_greece
+		}
+		add_prestige = 500
+		add_piety = 250
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 350 }
+		custom_tooltip = phx_ser_proclaim_serbian_empire_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_ser_empire_proclaimed_global
+			}
+			trigger_event = phx_bal.0120
+		}
+	}
+
+	ai_potential = {
+		has_title = title:k_serbia
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+# ==================================================
+# BULGARIA / WALLACHIA DECISION (1)
+# ==================================================
+
+phx_bal_danubian_bulwark_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_castle_view.dds"
+	}
+	decision_group_type = major
+	desc = phx_bal_danubian_bulwark_decision_desc
+	selection_tooltip = phx_bal_danubian_bulwark_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 60
+		kingdom = 60
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:k_bulgaria
+			has_title = title:d_wallachia
+		}
+		NOT = { has_character_modifier = phx_bal_anti_ottoman_league_modifier }
+	}
+
+	is_valid = {
+		OR = {
+			completely_controls = title:c_tarnovo
+			completely_controls = title:c_west_muntenia
+			completely_controls = title:c_north_muntenia
+		}
+		prestige_level >= 1
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 200
+		prestige = 250
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_bal_anti_ottoman_league_modifier
+			years = 25
+		}
+		if = {
+			limit = { exists = capital_county }
+			capital_county = {
+				add_county_modifier = {
+					modifier = phx_byz_balkan_march_modifier
+					years = 20
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = title:k_bulgaria.holder
+				title:k_bulgaria.holder != root
+			}
+			title:k_bulgaria.holder = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 25
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = title:d_wallachia.holder
+				title:d_wallachia.holder != root
+			}
+			title:d_wallachia.holder = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 25
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = title:k_serbia.holder
+				title:k_serbia.holder != root
+			}
+			title:k_serbia.holder = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 20
+				}
+			}
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
+		custom_tooltip = phx_bal_danubian_bulwark_effect_tt
+		hidden_effect = {
+			trigger_event = phx_bal.0220
+		}
+	}
+
+	ai_potential = {
+		OR = {
+			has_title = title:k_bulgaria
+			has_title = title:d_wallachia
+		}
+	}
+
+	ai_will_do = {
+		base = 85
+	}
+}

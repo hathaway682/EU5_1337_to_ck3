@@ -1,0 +1,717 @@
+﻿##################################################
+# Project Phoenix (PHX) — Balkans & Ottoman Rival Events
+# Namespace: phx_bal (16 events)
+# Ottoman (6) + Serbia (4) + Bulgaria (3) + Wallachia (3)
+##################################################
+
+namespace = phx_bal
+
+# ==================================================
+# OTTOMAN PERSPECTIVE (k_ottoman — 6 events)
+# ==================================================
+
+# 0001 — Opening 1337: Banner of Osman's Heir
+phx_bal.0001 = {
+	type = character_event
+	title = phx_bal.0001.t
+	desc = phx_bal.0001.desc
+	theme = war
+	override_background = { reference = army_camp }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	right_portrait = {
+		trigger = { exists = scope:ottoman_prince }
+		character = scope:ottoman_prince
+		animation = marshal
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:tur_suleyman ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:tur_suleyman = { save_scope_as = ottoman_prince }
+		}
+		else_if = {
+			limit = {
+				character:tur_alaeddin_pasha ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:tur_alaeddin_pasha = { save_scope_as = ottoman_prince }
+		}
+	}
+
+	# Option A: Rally the Ghazi riders of Bithynia for the western frontier
+	option = {
+		name = phx_bal.0001.a
+		add_character_modifier = {
+			modifier = phx_ott_ghazi_zeal_modifier
+			years = 15
+		}
+		add_prestige = 120
+		ai_chance = { base = 65 }
+	}
+
+	# Option B: Build up Bursa's bazaars, coinage, and pious endowments
+	option = {
+		name = phx_bal.0001.b
+		add_gold = 125
+		if = {
+			limit = { completely_controls = title:c_hudavendigar }
+			title:c_hudavendigar = {
+				change_prosperity_progress = 60
+			}
+		}
+		add_piety = 75
+		ai_chance = { base = 35 }
+	}
+}
+
+# 0005 — The Shattered Walls of Gallipoli (1354 Earthquake Crossing)
+phx_bal.0005 = {
+	type = character_event
+	title = phx_bal.0005.t
+	desc = phx_bal.0005.desc
+	theme = disaster
+	override_background = { reference = docks }
+	left_portrait = {
+		character = root
+		animation = war_attacker
+	}
+	right_portrait = {
+		trigger = { exists = scope:byzantine_emperor }
+		character = scope:byzantine_emperor
+		animation = shock
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:e_byzantium.holder
+				title:e_byzantium.holder != root
+			}
+			title:e_byzantium.holder = { save_scope_as = byzantine_emperor }
+		}
+	}
+
+	# Option A: Ferry Ghazi regiments across the Hellespont and claim Gallipoli
+	option = {
+		name = phx_bal.0005.a
+		add_character_flag = phx_ott_straits_crossed
+		add_prestige = 150
+		add_piety = 100
+		if = {
+			limit = { completely_controls = title:c_dardanelles }
+			title:c_dardanelles = {
+				add_county_modifier = {
+					modifier = phx_ott_gallipoli_bridgehead_modifier
+					years = 25
+				}
+			}
+		}
+		else = {
+			add_unpressed_claim = title:c_dardanelles
+			add_unpressed_claim = title:d_thrace
+		}
+		spawn_army = {
+			name = phx_ott_gallipoli_raiders_name
+			location = root.capital_province
+			men_at_arms = {
+				type = horse_archers
+				men = 250
+			}
+			men_at_arms = {
+				type = light_horsemen
+				men = 150
+			}
+			inheritable = no
+		}
+		custom_tooltip = phx_ott_gallipoli_seize_tt
+		ai_chance = { base = 85 }
+	}
+
+	# Option B: Loot the ruined Thracian coast and return with silver
+	option = {
+		name = phx_bal.0005.b
+		add_gold = 200
+		add_prestige = 75
+		ai_chance = { base = 15 }
+	}
+}
+
+# 0010 — Decision Outcome: Across the Hellespont
+phx_bal.0010 = {
+	type = character_event
+	title = phx_bal.0010.t
+	desc = phx_bal.0010.desc
+	theme = martial
+	override_background = { reference = battlefield }
+	left_portrait = {
+		character = root
+		animation = war_over_win
+	}
+
+	option = {
+		name = phx_bal.0010.a
+		add_prestige = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0020 — Decision Outcome: The Sultan's Threshold at Edirne
+phx_bal.0020 = {
+	type = character_event
+	title = phx_bal.0020.t
+	desc = phx_bal.0020.desc
+	theme = crown
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	option = {
+		name = phx_bal.0020.a
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0030 — Decision Outcome: Hearth of the New Soldiers (Janissary Ocagi)
+phx_bal.0030 = {
+	type = character_event
+	title = phx_bal.0030.t
+	desc = phx_bal.0030.desc
+	theme = martial
+	override_background = { reference = armory }
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+
+	option = {
+		name = phx_bal.0030.a
+		add_prestige = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0040 — Submission of the Anatolian Beyliks
+phx_bal.0040 = {
+	type = character_event
+	title = phx_bal.0040.t
+	desc = phx_bal.0040.desc
+	theme = diplomacy
+	override_background = { reference = council_chamber }
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	right_portrait = {
+		trigger = { exists = scope:anatolian_bey }
+		character = scope:anatolian_bey
+		animation = admiration
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:ayd_umur ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:ayd_umur = { save_scope_as = anatolian_bey }
+		}
+	}
+
+	# Option A: Absorb Karesi and frontier captains directly into Ottoman banners
+	option = {
+		name = phx_bal.0040.a
+		add_prestige = 125
+		if = {
+			limit = { NOT = { completely_controls = title:c_karasi } }
+			add_unpressed_claim = title:c_karasi
+		}
+		if = {
+			limit = { NOT = { completely_controls = title:c_biga } }
+			add_unpressed_claim = title:c_biga
+		}
+		spawn_army = {
+			name = phx_ott_beylik_horsemen_name
+			location = root.capital_province
+			men_at_arms = {
+				type = horse_archers
+				men = 200
+			}
+			inheritable = no
+		}
+		ai_chance = { base = 65 }
+	}
+
+	# Option B: Honor fraternal bonds among the western Anatolian Ghazi lords
+	option = {
+		name = phx_bal.0040.b
+		add_piety = 125
+		add_gold = 100
+		if = {
+			limit = { exists = scope:anatolian_bey }
+			scope:anatolian_bey = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 30
+				}
+			}
+		}
+		ai_chance = { base = 35 }
+	}
+}
+
+# ==================================================
+# SERBIAN PERSPECTIVE (k_serbia — 4 events)
+# ==================================================
+
+# 0100 — Opening 1337: Crown of the Nemanjici
+phx_bal.0100 = {
+	type = character_event
+	title = phx_bal.0100.t
+	desc = phx_bal.0100.desc
+	theme = crown
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	# Option A: Marshal the heavy knights of Raska and look south toward Macedonia
+	option = {
+		name = phx_bal.0100.a
+		add_prestige = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
+		ai_chance = { base = 65 }
+	}
+
+	# Option B: Expand the silver mines of Novo Brdo and royal customs
+	option = {
+		name = phx_bal.0100.b
+		add_gold = 150
+		if = {
+			limit = { completely_controls = title:c_kosovo }
+			title:c_kosovo = {
+				change_prosperity_progress = 60
+			}
+		}
+		ai_chance = { base = 35 }
+	}
+}
+
+# 0110 — The Road to Thessalonica (Macedonian Ambition)
+phx_bal.0110 = {
+	type = character_event
+	title = phx_bal.0110.t
+	desc = phx_bal.0110.desc
+	theme = war
+	override_background = { reference = army_camp }
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+	right_portrait = {
+		trigger = { exists = scope:byzantine_ruler }
+		character = scope:byzantine_ruler
+		animation = worry
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:e_byzantium.holder
+				title:e_byzantium.holder != root
+			}
+			title:e_byzantium.holder = { save_scope_as = byzantine_ruler }
+		}
+	}
+
+	# Option A: Press Serbian claims down the Vardar toward Thessalonica
+	option = {
+		name = phx_bal.0110.a
+		add_prestige = 150
+		if = {
+			limit = { NOT = { completely_controls = title:d_macedonia } }
+			add_unpressed_claim = title:d_macedonia
+		}
+		spawn_army = {
+			name = phx_ser_vlastela_cavalry_name
+			location = root.capital_province
+			men_at_arms = {
+				type = armored_horsemen
+				men = 200
+			}
+			inheritable = no
+		}
+		if = {
+			limit = { exists = scope:byzantine_ruler }
+			scope:byzantine_ruler = {
+				add_opinion = {
+					target = root
+					modifier = angry_opinion
+					opinion = -30
+				}
+			}
+		}
+		ai_chance = { base = 75 }
+	}
+
+	# Option B: Pursue an Orthodox accord with Constantinople
+	option = {
+		name = phx_bal.0110.b
+		add_piety = 125
+		if = {
+			limit = { exists = scope:byzantine_ruler }
+			scope:byzantine_ruler = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 25
+				}
+			}
+		}
+		ai_chance = { base = 25 }
+	}
+}
+
+# 0120 — Decision Outcome: Tsar of the Serbs and Greeks & Dusan's Code
+phx_bal.0120 = {
+	type = character_event
+	title = phx_bal.0120.t
+	desc = phx_bal.0120.desc
+	theme = coronation
+	override_background = { reference = temple_church }
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	option = {
+		name = phx_bal.0120.a
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0130 — Patron of Mount Athos and Skopje's Lawgivers
+phx_bal.0130 = {
+	type = character_event
+	title = phx_bal.0130.t
+	desc = phx_bal.0130.desc
+	theme = learning
+	override_background = { reference = study }
+	left_portrait = {
+		character = root
+		animation = writing
+	}
+
+	# Option A: Endow Mount Athos and commission jurists to draft a unified code
+	option = {
+		name = phx_bal.0130.a
+		remove_short_term_gold = 100
+		add_piety = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
+		if = {
+			limit = { completely_controls = title:c_vardar }
+			title:c_vardar = {
+				change_prosperity_progress = 75
+			}
+		}
+		ai_chance = { base = 70 }
+	}
+
+	# Option B: Reward loyal border vlastela with estates and tax privileges
+	option = {
+		name = phx_bal.0130.b
+		add_prestige = 125
+		add_gold = 75
+		ai_chance = { base = 30 }
+	}
+}
+
+# ==================================================
+# BULGARIAN PERSPECTIVE (k_bulgaria — 3 events)
+# ==================================================
+
+# 0200 — Opening 1337: Golden Twilight of Tarnovo
+phx_bal.0200 = {
+	type = character_event
+	title = phx_bal.0200.t
+	desc = phx_bal.0200.desc
+	theme = realm
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	# Option A: Fortify the Balkan passes and drill the boyar retinues
+	option = {
+		name = phx_bal.0200.a
+		add_prestige = 100
+		if = {
+			limit = { completely_controls = title:c_tarnovo }
+			title:c_tarnovo = {
+				add_county_modifier = {
+					modifier = phx_byz_balkan_march_modifier
+					years = 15
+				}
+			}
+		}
+		ai_chance = { base = 55 }
+	}
+
+	# Option B: Cultivate Tarnovo's workshops and Black Sea trade
+	option = {
+		name = phx_bal.0200.b
+		add_gold = 125
+		if = {
+			limit = { completely_controls = title:c_tarnovo }
+			title:c_tarnovo = {
+				change_prosperity_progress = 60
+			}
+		}
+		ai_chance = { base = 45 }
+	}
+}
+
+# 0210 — The Tarnovo Literary School
+phx_bal.0210 = {
+	type = character_event
+	title = phx_bal.0210.t
+	desc = phx_bal.0210.desc
+	theme = learning
+	override_background = { reference = study }
+	left_portrait = {
+		character = root
+		animation = reading
+	}
+
+	# Option A: Patronize the illuminated scriptoria and Hesychast scholars of Tarnovo
+	option = {
+		name = phx_bal.0210.a
+		remove_short_term_gold = 100
+		add_character_modifier = {
+			modifier = phx_bul_tarnovo_school_modifier
+			years = 30
+		}
+		add_piety = 150
+		title:c_tarnovo = {
+			change_prosperity_progress = 75
+		}
+		ai_chance = { base = 75 }
+	}
+
+	# Option B: Direct monastic revenues toward frontier border towers
+	option = {
+		name = phx_bal.0210.b
+		add_gold = 100
+		add_prestige = 75
+		ai_chance = { base = 25 }
+	}
+}
+
+# 0220 — Decision Outcome: The Danubian Bulwark Proclaimed (Bulgaria / Wallachia)
+phx_bal.0220 = {
+	type = character_event
+	title = phx_bal.0220.t
+	desc = phx_bal.0220.desc
+	theme = alliance
+	override_background = { reference = council_chamber }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	option = {
+		name = phx_bal.0220.a
+		add_prestige = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# ==================================================
+# WALLACHIAN PERSPECTIVE (d_wallachia — 3 events)
+# ==================================================
+
+# 0300 — Opening 1337: Voivode of the Carpathian Passes
+phx_bal.0300 = {
+	type = character_event
+	title = phx_bal.0300.t
+	desc = phx_bal.0300.desc
+	theme = martial
+	override_background = { reference = hills }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	right_portrait = {
+		trigger = { exists = scope:wallachian_heir }
+		character = scope:wallachian_heir
+		animation = admiration
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:wal_nicolae_alexandru ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:wal_nicolae_alexandru = { save_scope_as = wallachian_heir }
+		}
+	}
+
+	# Option A: Guard the mountain defiles and preserve hard-won independence
+	option = {
+		name = phx_bal.0300.a
+		add_character_modifier = {
+			modifier = phx_wal_carpathian_defiance_modifier
+			years = 20
+		}
+		add_prestige = 100
+		ai_chance = { base = 70 }
+	}
+
+	# Option B: Encourage Danubian river trade and town charters in Muntenia
+	option = {
+		name = phx_bal.0300.b
+		add_gold = 100
+		if = {
+			limit = { exists = capital_county }
+			capital_county = {
+				change_prosperity_progress = 60
+			}
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+# 0310 — Echoes of Posada: Sovereign Voivodate
+phx_bal.0310 = {
+	type = character_event
+	title = phx_bal.0310.t
+	desc = phx_bal.0310.desc
+	theme = realm
+	override_background = { reference = courtyard }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	# Option A: Erect stone monasteries and assert a Metropolitan see for Wallachia
+	option = {
+		name = phx_bal.0310.a
+		remove_short_term_gold = 75
+		add_piety = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 125 }
+		if = {
+			limit = { exists = capital_county }
+			capital_county = {
+				change_prosperity_progress = 50
+			}
+		}
+		ai_chance = { base = 65 }
+	}
+
+	# Option B: Train agile mountain archers and light horse for border defense
+	option = {
+		name = phx_bal.0310.b
+		add_prestige = 100
+		spawn_army = {
+			name = phx_wal_carpathian_levies_name
+			location = root.capital_province
+			men_at_arms = {
+				type = bowmen
+				men = 200
+			}
+			men_at_arms = {
+				type = light_horsemen
+				men = 150
+			}
+			inheritable = no
+		}
+		ai_chance = { base = 35 }
+	}
+}
+
+# 0320 — Watch on the Lower Danube
+phx_bal.0320 = {
+	type = character_event
+	title = phx_bal.0320.t
+	desc = phx_bal.0320.desc
+	theme = diplomacy
+	override_background = { reference = farmland }
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		trigger = { exists = scope:bulgarian_tsar }
+		character = scope:bulgarian_tsar
+		animation = chancellor
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = title:k_bulgaria.holder
+				title:k_bulgaria.holder != root
+			}
+			title:k_bulgaria.holder = { save_scope_as = bulgarian_tsar }
+		}
+	}
+
+	# Option A: Forge a defensive understanding across the Danube with Tarnovo
+	option = {
+		name = phx_bal.0320.a
+		add_prestige = 100
+		if = {
+			limit = { exists = scope:bulgarian_tsar }
+			scope:bulgarian_tsar = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 30
+				}
+			}
+			add_opinion = {
+				target = scope:bulgarian_tsar
+				modifier = respect_opinion
+				opinion = 20
+			}
+		}
+		ai_chance = { base = 65 }
+	}
+
+	# Option B: Fortify the Danubian crossings and collect river tolls alone
+	option = {
+		name = phx_bal.0320.b
+		add_gold = 125
+		if = {
+			limit = { exists = capital_county }
+			capital_county = {
+				add_county_modifier = {
+					modifier = phx_byz_balkan_march_modifier
+					years = 15
+				}
+			}
+		}
+		ai_chance = { base = 35 }
+	}
+}

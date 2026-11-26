@@ -1,0 +1,205 @@
+﻿##################################################
+# Project Phoenix (PHX) — Byzantine Civil War Story Cycle
+# Tracks the 1341–1347 Palaiologos vs Kantakouzenos struggle
+##################################################
+
+story_phx_byz_civil_war = {
+	visible = yes
+
+	icon = {
+		trigger = { always = yes }
+		reference = "gfx/interface/icons/story_cycles/story_icon_palace_politics.dds"
+	}
+
+	background = {
+		trigger = { always = yes }
+		reference = "gfx/interface/illustrations/event_scenes/corridor_day.dds"
+	}
+
+	visualization = {
+		custom_string_key = "phx_byz_civil_war_story_status"
+	}
+
+	on_setup = {
+		set_variable = {
+			name = civil_war_stage
+			value = 0
+		}
+		set_variable = {
+			name = civil_war_ticks
+			value = 0
+		}
+		set_global_variable = phx_byz_civil_war_active
+	}
+
+	on_end = {
+		remove_global_variable = phx_byz_civil_war_active
+		set_global_variable = phx_byz_civil_war_resolved
+	}
+
+	on_owner_death = {
+		if = {
+			limit = {
+				exists = title:e_byzantium.holder
+				title:e_byzantium.holder != story_owner
+			}
+			make_story_owner = title:e_byzantium.holder
+		}
+		else_if = {
+			limit = { exists = story_owner.primary_heir }
+			make_story_owner = story_owner.primary_heir
+		}
+		else = {
+			end_story = yes
+		}
+	}
+
+	# Maintenance: ensure the Byzantine Emperor owns the story cycle, or end cleanly
+	effect_group = {
+		months = 2
+
+		trigger = {
+			OR = {
+				story_owner = { is_playable_character = no }
+				story_owner = {
+					NOT = { has_title = title:e_byzantium }
+				}
+			}
+		}
+
+		first_valid = {
+			triggered_effect = {
+				trigger = {
+					exists = title:e_byzantium.holder
+					title:e_byzantium.holder != story_owner
+					title:e_byzantium.holder = { is_playable_character = yes }
+				}
+				effect = {
+					make_story_owner = title:e_byzantium.holder
+				}
+			}
+			triggered_effect = {
+				trigger = { always = yes }
+				effect = {
+					end_story = yes
+				}
+			}
+		}
+	}
+
+	# Stage 1: The Zealot Revolt of Thessalonica
+	effect_group = {
+		months = { 4 8 }
+
+		trigger = {
+			NOT = { has_variable = zealot_revolt_fired }
+			story_owner = {
+				is_alive = yes
+				has_title = title:e_byzantium
+			}
+		}
+
+		triggered_effect = {
+			trigger = { always = yes }
+			effect = {
+				set_variable = {
+					name = zealot_revolt_fired
+					value = yes
+				}
+				change_variable = {
+					name = civil_war_stage
+					add = 1
+				}
+				story_owner = {
+					trigger_event = phx_byz.0050
+				}
+			}
+		}
+	}
+
+	# Stage 2: Mercenary Bargain with Orhan or Serbia
+	effect_group = {
+		months = { 6 12 }
+
+		trigger = {
+			has_variable = zealot_revolt_fired
+			NOT = { has_variable = mercenary_bargain_fired }
+			story_owner = {
+				is_alive = yes
+				has_title = title:e_byzantium
+			}
+		}
+
+		triggered_effect = {
+			trigger = { always = yes }
+			effect = {
+				set_variable = {
+					name = mercenary_bargain_fired
+					value = yes
+				}
+				change_variable = {
+					name = civil_war_stage
+					add = 1
+				}
+				story_owner = {
+					trigger_event = phx_byz.0055
+				}
+			}
+		}
+	}
+
+	# Stage 3: Resolution of the Civil War
+	effect_group = {
+		months = { 6 12 }
+
+		trigger = {
+			story_owner = {
+				is_alive = yes
+				has_title = title:e_byzantium
+			}
+			OR = {
+				AND = {
+					has_variable = mercenary_bargain_fired
+					story_owner = { is_at_war = no }
+				}
+				AND = {
+					has_variable = zealot_revolt_fired
+					story_owner = { is_at_war = no }
+					NOT = {
+						character:byz_john_kantakouzenos ?= { is_alive = yes }
+					}
+				}
+				var:civil_war_ticks >= 12
+			}
+		}
+
+		triggered_effect = {
+			trigger = { always = yes }
+			effect = {
+				story_owner = {
+					trigger_event = phx_byz.0060
+				}
+				end_story = yes
+			}
+		}
+	}
+
+	# Safeguard tick counter so the struggle always resolves cleanly
+	effect_group = {
+		months = 6
+
+		trigger = {
+			always = yes
+		}
+
+		triggered_effect = {
+			trigger = { always = yes }
+			effect = {
+				change_variable = {
+					name = civil_war_ticks
+					add = 1
+				}
+			}
+		}
+	}
+}

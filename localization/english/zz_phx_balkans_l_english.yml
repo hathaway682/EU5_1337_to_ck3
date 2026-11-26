@@ -1,0 +1,145 @@
+﻿l_english:
+ # === Casus Belli ===
+ phx_ottoman_ghazi_crossing_cb:0 "Ottoman Ghazi Crossing"
+ PHX_OTTOMAN_GHAZI_CROSSING_WAR_NAME:0 "$ORDER$$FIRST_ADJ$ Ghazi Crossing against $DEFENDER$"
+ PHX_OTTOMAN_GHAZI_CROSSING_WAR_NAME_BASE:0 "$FIRST_ADJ$$SECOND_NAME$"
+ PHX_OTTOMAN_GHAZI_CROSSING_CB_NAME:0 "Launch Ghazi Crossing into Rumelia"
+ phx_ottoman_ghazi_crossing_cb_victory_desc_attacker:0 "Your Ghazi banners cross into the Balkans and bring the targeted duchy under Ottoman dominion."
+ phx_ottoman_ghazi_crossing_cb_victory_desc:0 "[attacker.GetShortUIName|U] extends Ottoman dominion across the straits into the targeted Balkan duchy."
+ phx_ottoman_ghazi_crossing_cb_white_peace_desc:0 "The Ghazi expedition withdraws without gaining permanent territory across the straits."
+ phx_ottoman_ghazi_crossing_cb_defeat_desc:0 "The Ottoman crossing is repelled, forcing [attacker.GetShortUIName] to pay reparations and suffer a setback in prestige."
+ phx_ottoman_ghazi_crossing_cb_invalidated_desc:0 "The Ottoman Ghazi Crossing war has become invalid because the target territory changed hands."
+
+ # === Modifiers ===
+ phx_ott_ghazi_zeal_modifier:0 "Ottoman Ghazi Zeal"
+ phx_ott_ghazi_zeal_modifier_desc:0 "Frontier raiders and devout warriors rally beneath Osman's banners, swift on horseback and eager to carve new marches in the West."
+ phx_ott_gallipoli_bridgehead_modifier:0 "Gallipoli Straits Bridgehead"
+ phx_ott_gallipoli_bridgehead_modifier_desc:0 "Fortified dockyards, ferry fleets, and frontier garrisons secure the vital crossing between Anatolia and Rumelia."
+ phx_ott_janissary_corps_modifier:0 "The Janissary Ocagi"
+ phx_ott_janissary_corps_modifier_desc:0 "Disciplined household infantry sworn directly to the sovereign bring siegecraft and unyielding steadiness to the Ottoman battle line."
+ phx_ott_edirne_capital_modifier:0 "Imperial Seat of Edirne"
+ phx_ott_edirne_capital_modifier_desc:0 "New mosques, bridges, barracks, and markets transform Edirne into the beating heart of Ottoman power in Europe."
+ phx_ser_dusan_code_modifier:0 "Code of Tsar Dusan"
+ phx_ser_dusan_code_modifier_desc:0 "A monumental imperial law code harmonizes Serbian custom and Byzantine jurisprudence, strengthening crown justice and heavy knightly retinues."
+ phx_bal_anti_ottoman_league_modifier:0 "Danubian Defensive Bulwark"
+ phx_bal_anti_ottoman_league_modifier_desc:0 "Watchtowers along the Balkan ridges and shared Orthodox resolve steel the realms of the Lower Danube against encroaching invaders."
+ phx_bul_tarnovo_school_modifier:0 "Tarnovo Literary School"
+ phx_bul_tarnovo_school_modifier_desc:0 "Monastic scriptoria, illuminated gospels, and Hesychast scholars make Tarnovo a radiant beacon of Slavic Orthodox culture."
+ phx_wal_carpathian_defiance_modifier:0 "Carpathian Defiance"
+ phx_wal_carpathian_defiance_modifier_desc:0 "Memories of ambush in the mountain defiles inspire Wallachian levies to turn every pass and woodland into a deadly fortress."
+
+ # === Regiments ===
+ phx_ott_ghazi_vanguard_name:0 "Hellespont Ghazi Vanguard"
+ phx_ott_janissary_ocagi_name:0 "Imperial Janissary Ocagi"
+ phx_ott_gallipoli_raiders_name:0 "Suleyman's Rumelian Vanguard"
+ phx_ott_beylik_horsemen_name:0 "Anatolian Frontier Sipahis"
+ phx_ser_vlastela_cavalry_name:0 "Vlastela Heavy Retinue"
+ phx_wal_carpathian_levies_name:0 "Carpathian Mountain Archers"
+
+ # === Decisions ===
+ phx_ott_cross_hellespont_decision:0 "Seize Gallipoli and Cross the Straits"
+ phx_ott_cross_hellespont_decision_desc:0 "From the hills of Bithynia, our riders look across the silver ribbon of the Hellespont toward the rich plains of Thrace. Establishing a permanent crossing will carry the house of Osman from an Anatolian frontier emirate onto the European stage."
+ phx_ott_cross_hellespont_decision_tooltip:0 "Organize a permanent Ottoman crossing over the Hellespont and launch expansion into Rumelia."
+ phx_ott_cross_hellespont_decision_confirm:0 "Cross to the European Shore"
+ phx_ott_cross_hellespont_effect_tt:0 "Ignites Ottoman Ghazi fervor, fortifies the straits bridgehead or presses claims on Gallipoli and Thrace, and rallies a Ghazi vanguard."
+
+ phx_ott_move_capital_edirne_decision:0 "Establish the Imperial Seat at Edirne"
+ phx_ott_move_capital_edirne_decision_desc:0 "Seated where the Maritsa, Tundzha, and Arda meet, Edirne commands every highway linking Constantinople to the Balkans. Moving the royal court from Bursa to Edirne proclaims that Ottoman dominion in Europe is no passing raid, but an enduring realm."
+ phx_ott_move_capital_edirne_decision_tooltip:0 "Transfer the Ottoman capital to Edirne and transform it into your European seat of power."
+ phx_ott_move_capital_edirne_decision_confirm:0 "Proclaim Edirne the Capital"
+ phx_ott_move_capital_edirne_effect_tt:0 "Moves your realm capital to Edirne and accelerates its urban growth, fortifications, and prestige."
+
+ phx_ott_found_janissary_corps_decision:0 "Organize the Janissary Ocagi"
+ phx_ott_found_janissary_corps_decision_desc:0 "Tribal horse-archers win swift victories in the open field, yet walled cities and proud frontier beys demand a standing force bound solely to the ruler's hearth. Founding a disciplined infantry corps of household soldiers will anchor Ottoman arms for centuries."
+ phx_ott_found_janissary_corps_decision_tooltip:0 "Establish the standing Janissary household infantry corps under direct royal command."
+ phx_ott_found_janissary_corps_decision_confirm:0 "Raise the Hearth Banners"
+ phx_ott_found_janissary_corps_effect_tt:0 "Establishes the Janissary Ocagi, granting lasting infantry prowess and raising a royal household regiment."
+
+ phx_ser_proclaim_serbian_empire_decision:0 "Proclaim Tsar of the Serbs and Greeks"
+ phx_ser_proclaim_serbian_empire_decision_desc:0 "From the highlands of Raska to the rich valleys of Macedonia, Serbian banners now overshadow the fading strength of Constantinople. Summoning an assembly of bishops and nobles at Skopje to adopt the imperial title and promulgate a grand code of laws will crown Serbia as the pre-eminent power of the Balkans."
+ phx_ser_proclaim_serbian_empire_decision_tooltip:0 "Proclaim the Serbian imperial dignity and enact Dusan's Code across your Balkan domains."
+ phx_ser_proclaim_serbian_empire_decision_confirm:0 "Ascend as Tsar and Autocrat"
+ phx_ser_proclaim_serbian_empire_effect_tt:0 "Enacts the Code of Tsar Dusan, elevates Skopje's prosperity, and presses Serbian imperial ambitions across Macedonia and Greece."
+
+ phx_bal_danubian_bulwark_decision:0 "Proclaim the Balkan Defensive Bulwark"
+ phx_bal_danubian_bulwark_decision_desc:0 "Storm clouds gather south of the Balkan passes as armies clash over the dying remnants of Thrace. By fortifying the river crossings and calling upon neighboring Christian crowns to set aside petty quarrels, the lords of the Lower Danube can forge a shield against foreign conquest."
+ phx_bal_danubian_bulwark_decision_tooltip:0 "Fortify the Lower Danube heartland and rally neighboring Balkan courts to a common defensive front."
+ phx_bal_danubian_bulwark_decision_confirm:0 "Raise the Bulwark Banners"
+ phx_bal_danubian_bulwark_effect_tt:0 "Strengthens defensive readiness, fortifies your capital march, and improves standing with neighboring Balkan rulers."
+
+ # === Events (16 Balkans & Ottoman) ===
+ phx_bal.0001.t:0 "Banner of Osman's Heir"
+ phx_bal.0001.desc:0 "In the shadow of Mount Uludag, Bursa hums with armories, dervish lodges, and riders freshly arrived from the Anatolian steppe. Having wrested Nicaea and Nicomedia from the Romans, the house of Osman now stands at the very threshold of the Marmara—with fragile beyliks to the south and an aging empire across the water."
+ phx_bal.0001.a:0 "Keep the stirrups warm—the Ghazi march has only begun."
+ phx_bal.0001.b:0 "Strike silver coin and anchor Bursa as a seat of order."
+
+ phx_bal.0005.t:0 "The Shattered Walls of Gallipoli"
+ phx_bal.0005.desc:0 "In the dead of night, a violent earthquake shakes the shores of the Hellespont. By dawn, scouts returning across the strait bring astonishing tidings: the stone ramparts of Gallipoli lie tumbled in heaps, and the terrified inhabitants have fled inland. Such a doorway into Europe may not open again in a hundred years."
+ phx_bal.0005.a:0 "Ferry our Ghazi banners across at once and claim the strait!"
+ phx_bal.0005.b:0 "Plunder the exposed shore and return laden with silver."
+ phx_ott_gallipoli_seize_tt:0 "Unlocks Rumelian ambitions, raises a crossing vanguard, and fortifies Gallipoli or grants claims across the straits."
+
+ phx_bal.0010.t:0 "Hooves on European Soil"
+ phx_bal.0010.desc:0 "Lanterns bob across the dark current of the Hellespont as rafts and galleys discharge horses, bows, and crescent standards onto the Thracian beach. Behind lies Bithynia; ahead stretch the fertile valleys of Rumelia and the distant walls of Adrianople."
+ phx_bal.0010.a:0 "Rumelia lies open before the house of Osman!"
+
+ phx_bal.0020.t:0 "The Sultan's Threshold at Edirne"
+ phx_bal.0020.desc:0 "Master builders trace the foundations of a new palace beside the winding Tundzha as envoys, kadis, and cavalry commanders gather in Edirne. From this strategic crossroads, the sovereign's decrees now echo all the way to the Danube and the Adriatic."
+ phx_bal.0020.a:0 "Let Edirne stand as the proud throne of Rumelia."
+
+ phx_bal.0030.t:0 "Hearth of the New Soldiers"
+ phx_bal.0030.desc:0 "In crisp white felt caps and disciplined ranks, the newly formed Janissary companies parade before the royal divan. Bound by oath, stipend, and brotherhood around their regimental kettles, they answer to no tribal bey—only to the sovereign's command."
+ phx_bal.0030.a:0 "No fortress wall shall withstand our new corps."
+
+ phx_bal.0040.t:0 "Lords of the Anatolian March"
+ phx_bal.0040.desc:0 "Captains and veteran horsemen from neighboring Turkic beyliks—especially the fractured coast of Karesi—ride into our camp offering swords and ships in return for bold leadership. Absorbing their coastal strongholds would give our horsemen direct access to the Dardanelles."
+ phx_bal.0040.a:0 "Draw the Karesi frontier and its horsemen under our banner."
+ phx_bal.0040.b:0 "Honor fraternal ties with our Anatolian neighbors and grow rich in peace."
+
+ phx_bal.0100.t:0 "Crown of the Nemanjici"
+ phx_bal.0100.desc:0 "Silver pours from the Saxon-worked shafts of Novo Brdo, and mailed vlastela crowd the timbered halls of Skopje and Prizren. To the south, the once-mighty Byzantine frontier groans beneath factional intrigue—inviting a bold Serbian king to claim mastery over Macedonia and the Adriatic coast."
+ phx_bal.0100.a:0 "Prepare the knightly host for the march south."
+ phx_bal.0100.b:0 "Invest in Novo Brdo's silver mines and royal mints."
+
+ phx_bal.0110.t:0 "The Road to Thessalonica"
+ phx_bal.0110.desc:0 "Messengers from the Vardar border report Byzantine garrisons stripped bare by palace quarrels in Constantinople. Great lords of the realm urge you to ride down the river valley toward Serres and Thessalonica while the imperial eagles are turned against one another."
+ phx_bal.0110.a:0 "Sound the trumpets—Macedonia shall answer to Serbia!"
+ phx_bal.0110.b:0 "Restrain the border lords and seek Orthodox concord with Constantinople."
+
+ phx_bal.0120.t:0 "Tsar of the Serbs and Greeks"
+ phx_bal.0120.desc:0 "Amid resonant Slavonic and Greek chanting in Skopje, the imperial crown settles upon your brow as heralds read aloud the articles of a sweeping new law code. From the Danube to the Aegean foothills, Serbia stands proclaimed an empire of law, faith, and iron."
+ phx_bal.0120.a:0 "Long live the Tsar of the Serbs and Greeks!"
+
+ phx_bal.0130.t:0 "Chancery of Skopje and Mount Athos"
+ phx_bal.0130.desc:0 "Learned scribes fluent in Greek and Slavonic gather at your court alongside Athonite abbots bearing gifts and petitions. By patronizing the Holy Mountain and harmonizing royal statutes with Roman legal tradition, the crown can bind diverse subjects under one majestic order."
+ phx_bal.0130.a:0 "Endow the monasteries and commission a unified legal chancery."
+ phx_bal.0130.b:0 "Distribute patronage among the frontier vlastela instead."
+
+ phx_bal.0200.t:0 "Golden Twilight of Tarnovo"
+ phx_bal.0200.desc:0 "High atop Tsarevets hill, the bells of Tarnovo ring over a kingdom proud in heritage yet ringed by ambitious powers. Serbia grows mighty to the west, Byzantine factions maneuver to the south, and across the seas Turkish sails already raid Thracian shores. Steady statecraft must guard Bulgaria's crown."
+ phx_bal.0200.a:0 "Strengthen the Balkan passes and Tarnovo's ramparts."
+ phx_bal.0200.b:0 "Enrich the royal workshops and Black Sea grain trade."
+
+ phx_bal.0210.t:0 "The Tarnovo Literary School"
+ phx_bal.0210.desc:0 "Monks trained in Hesychast discipline, calligraphers, and miniaturists flock to the monasteries around Tarnovo, translating theological treatises and illuminating manuscripts in gold leaf. Patronizing their labors could usher in a lasting cultural golden age for all the South Slavs."
+ phx_bal.0210.a:0 "Sponsor the scriptoria and scholars of Tarnovo."
+ phx_bal.0210.b:0 "Conserve silver for watchtowers and border garrisons."
+
+ phx_bal.0220.t:0 "Shield of the Lower Danube"
+ phx_bal.0220.desc:0 "Beacons flare from ridge to river fortress as envoys seal pledges of mutual vigilance across the Balkan marches. Whatever storm sweeps up from the straits, the realms of the Lower Danube will not yield without a bitter reckoning."
+ phx_bal.0220.a:0 "Together we hold the passes and the river."
+
+ phx_bal.0300.t:0 "Voivode of the Carpathian Passes"
+ phx_bal.0300.desc:0 "Barely seven years have passed since the steep gorge of Posada broke a royal Hungarian army and proved that Wallachia bows to no foreign master. Yet between the Hungarian crown over the mountains, Tartar riders to the east, and shifting Balkan tides across the Danube, every season of freedom must be guarded with vigilance."
+ phx_bal.0300.a:0 "Keep the passes watched and our archers ready."
+ phx_bal.0300.b:0 "Foster river trade and market towns across Muntenia."
+
+ phx_bal.0310.t:0 "Echoes of Posada"
+ phx_bal.0310.desc:0 "Boyars and village elders gather at the princely court at Arges to honor the memory of Posada and weigh how best to anchor the young voivodate. Some urge founding stone monasteries and seeking an Orthodox Metropolitan directly from Constantinople; others call for drilling nimble mountain troops to deter any fresh invasion."
+ phx_bal.0310.a:0 "Raise stone churches and seek a Metropolitan see for Wallachia."
+ phx_bal.0310.b:0 "Muster agile Carpathian archers and light horsemen."
+
+ phx_bal.0320.t:0 "Watch on the Lower Danube"
+ phx_bal.0320.desc:0 "Ferrymen and river patrols along the broad Danube bring news of shifting alliances in Bulgaria and rising turmoil south of the Balkan mountains. Wallachia's survival depends on reading the currents of the river before rival armies arrive at its banks."
+ phx_bal.0320.a:0 "Deepen fraternal ties across the river with Tarnovo."
+ phx_bal.0320.b:0 "Fortify our own crossings and levy strict Danubian tolls."

@@ -1,0 +1,408 @@
+﻿##################################################
+# Project Phoenix (PHX) — Wave 1 On-Actions
+# Strictly O(1) scoped hooks for e_byzantium, k_ottoman,
+# k_serbia, k_bulgaria, and d_wallachia (zero global loops)
+##################################################
+
+on_game_start_after_lobby = {
+	on_actions = {
+		phx_byz_1337_startup
+		phx_bal_1337_startup
+	}
+}
+
+phx_byz_1337_startup = {
+	effect = {
+		if = {
+			limit = {
+				game_start_date >= 1337.1.1
+				exists = title:e_byzantium.holder
+			}
+			title:e_byzantium.holder = {
+				add_character_modifier = {
+					modifier = phx_byz_1337_twilight_modifier
+					years = 20
+				}
+				trigger_event = {
+					id = phx_byz.0001
+					days = 15
+				}
+			}
+		}
+	}
+}
+
+phx_bal_1337_startup = {
+	effect = {
+		if = {
+			limit = { game_start_date >= 1337.1.1 }
+			if = {
+				limit = { exists = title:k_ottoman.holder }
+				title:k_ottoman.holder = {
+					trigger_event = {
+						id = phx_bal.0001
+						days = 18
+					}
+				}
+			}
+			if = {
+				limit = { exists = title:k_serbia.holder }
+				title:k_serbia.holder = {
+					trigger_event = {
+						id = phx_bal.0100
+						days = 20
+					}
+				}
+			}
+			if = {
+				limit = { exists = title:k_bulgaria.holder }
+				title:k_bulgaria.holder = {
+					trigger_event = {
+						id = phx_bal.0200
+						days = 22
+					}
+				}
+			}
+			if = {
+				limit = { exists = title:d_wallachia.holder }
+				title:d_wallachia.holder = {
+					trigger_event = {
+						id = phx_bal.0300
+						days = 24
+					}
+				}
+			}
+		}
+	}
+}
+
+yearly_playable_pulse = {
+	on_actions = {
+		phx_byz_yearly_pulse
+		phx_bal_yearly_pulse
+	}
+}
+
+phx_byz_yearly_pulse = {
+	trigger = {
+		is_landed = yes
+		has_title = title:e_byzantium
+		current_year >= 1337
+		current_year <= 1460
+	}
+	effect = {
+		# 1. Palaiologos-Kantakouzenos Court Concord / Regency Dilemma (1338+)
+		if = {
+			limit = {
+				current_year >= 1338
+				NOT = { has_global_variable = phx_byz_kantakouzenos_event_fired }
+				character:byz_john_kantakouzenos ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			set_global_variable = phx_byz_kantakouzenos_event_fired
+			trigger_event = {
+				id = phx_byz.0010
+				days = { 30 120 }
+			}
+		}
+		# 2. Ottoman Pressure on the Straits (1339+)
+		else_if = {
+			limit = {
+				current_year >= 1339
+				NOT = { has_global_variable = phx_byz_ottoman_crisis_fired }
+				exists = title:k_ottoman.holder
+				title:k_ottoman.holder = {
+					is_alive = yes
+					NOT = { is_vassal_of = root }
+					NOT = { this = root }
+				}
+			}
+			set_global_variable = phx_byz_ottoman_crisis_fired
+			trigger_event = {
+				id = phx_byz.0020
+				days = { 45 150 }
+			}
+		}
+		# 3. Hesychast Controversy: Gregory Palamas & Barlaam (1340+)
+		else_if = {
+			limit = {
+				current_year >= 1340
+				faith = faith:orthodox
+				NOT = { has_global_variable = phx_byz_hesychasm_event_fired }
+			}
+			set_global_variable = phx_byz_hesychasm_event_fired
+			trigger_event = {
+				id = phx_byz.0065
+				days = { 30 140 }
+			}
+		}
+		# 4. Serbian Advance in Macedonia (1341+)
+		else_if = {
+			limit = {
+				current_year >= 1341
+				NOT = { has_global_variable = phx_byz_serbian_march_fired }
+				exists = title:k_serbia.holder
+				title:k_serbia.holder = {
+					is_alive = yes
+					NOT = { is_vassal_of = root }
+					NOT = { this = root }
+				}
+			}
+			set_global_variable = phx_byz_serbian_march_fired
+			trigger_event = {
+				id = phx_byz.0030
+				days = { 45 150 }
+			}
+		}
+		# 5. Civil War Story Cycle fallback if Andronikos III died without concord
+		else_if = {
+			limit = {
+				has_global_variable = phx_byz_andronikos_died_without_concord
+				NOT = { has_global_variable = phx_byz_civil_war_active }
+				NOT = { has_global_variable = phx_byz_civil_war_resolved }
+				NOT = { has_character_modifier = phx_byz_kantakouzenos_accord_modifier }
+				NOT = { owns_story_of_type = story_phx_byz_civil_war }
+			}
+			create_story = story_phx_byz_civil_war
+		}
+		# 6. Galata Customs Crisis with Genoa (1344+)
+		else_if = {
+			limit = {
+				current_year >= 1344
+				completely_controls = title:c_constantinople
+				NOT = { has_global_variable = phx_byz_galata_crisis_fired }
+				NOT = { has_character_modifier = phx_byz_galata_customs_modifier }
+			}
+			set_global_variable = phx_byz_galata_crisis_fired
+			trigger_event = {
+				id = phx_byz.0070
+				days = { 40 160 }
+			}
+		}
+		# 7. Envoys from Trebizond (1346+)
+		else_if = {
+			limit = {
+				current_year >= 1346
+				NOT = { has_global_variable = phx_byz_trebizond_envoy_fired }
+				exists = title:k_trebizond.holder
+				title:k_trebizond.holder = {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			set_global_variable = phx_byz_trebizond_envoy_fired
+			trigger_event = {
+				id = phx_byz.0075
+				days = { 40 160 }
+			}
+		}
+		# 8. Latin Greece & the Peloponnese (1348+)
+		else_if = {
+			limit = {
+				current_year >= 1348
+				NOT = { has_global_variable = phx_byz_latin_greece_fired }
+				completely_controls = title:c_laconia
+			}
+			set_global_variable = phx_byz_latin_greece_fired
+			trigger_event = {
+				id = phx_byz.0080
+				days = { 40 160 }
+			}
+		}
+		# 9. Restoration of the Theodosian Walls (1350+)
+		else_if = {
+			limit = {
+				current_year >= 1350
+				completely_controls = title:c_constantinople
+				NOT = { has_global_variable = phx_byz_theodosian_walls_fired }
+			}
+			set_global_variable = phx_byz_theodosian_walls_fired
+			trigger_event = {
+				id = phx_byz.0085
+				days = { 30 120 }
+			}
+		}
+		# 10. Dawn of Constantinople's Renewal
+		else_if = {
+			limit = {
+				NOT = { has_global_variable = phx_byz_renaissance_fired }
+				completely_controls = title:c_constantinople
+				OR = {
+					has_character_modifier = phx_byz_theme_reform_modifier
+					completely_controls = title:d_marmara
+				}
+				NOT = { has_character_modifier = phx_byz_1337_twilight_modifier }
+			}
+			set_global_variable = phx_byz_renaissance_fired
+			trigger_event = {
+				id = phx_byz.0040
+				days = { 30 90 }
+			}
+		}
+	}
+}
+
+phx_bal_yearly_pulse = {
+	trigger = {
+		is_landed = yes
+		current_year >= 1337
+		current_year <= 1460
+		OR = {
+			has_title = title:k_ottoman
+			has_title = title:k_serbia
+			has_title = title:k_bulgaria
+			has_title = title:d_wallachia
+		}
+	}
+	effect = {
+		# === Ottoman (k_ottoman) ===
+		if = {
+			limit = { has_title = title:k_ottoman }
+			if = {
+				limit = {
+					current_year >= 1339
+					NOT = { has_global_variable = phx_ott_beylik_submission_fired }
+				}
+				set_global_variable = phx_ott_beylik_submission_fired
+				trigger_event = {
+					id = phx_bal.0040
+					days = { 30 140 }
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_global_variable = phx_ott_gallipoli_earthquake_fired }
+					OR = {
+						current_year >= 1354
+						AND = {
+							current_year >= 1346
+							OR = {
+								completely_controls = title:c_biga
+								completely_controls = title:c_karasi
+								has_global_variable = phx_byz_civil_war_active
+							}
+						}
+					}
+				}
+				set_global_variable = phx_ott_gallipoli_earthquake_fired
+				trigger_event = {
+					id = phx_bal.0005
+					days = { 20 90 }
+				}
+			}
+		}
+		# === Serbia (k_serbia) ===
+		else_if = {
+			limit = { has_title = title:k_serbia }
+			if = {
+				limit = {
+					current_year >= 1340
+					NOT = { has_global_variable = phx_ser_macedonia_ambition_fired }
+				}
+				set_global_variable = phx_ser_macedonia_ambition_fired
+				trigger_event = {
+					id = phx_bal.0110
+					days = { 30 140 }
+				}
+			}
+			else_if = {
+				limit = {
+					current_year >= 1344
+					NOT = { has_global_variable = phx_ser_athos_chancery_fired }
+				}
+				set_global_variable = phx_ser_athos_chancery_fired
+				trigger_event = {
+					id = phx_bal.0130
+					days = { 30 140 }
+				}
+			}
+		}
+		# === Bulgaria (k_bulgaria) ===
+		else_if = {
+			limit = { has_title = title:k_bulgaria }
+			if = {
+				limit = {
+					current_year >= 1340
+					completely_controls = title:c_tarnovo
+					NOT = { has_global_variable = phx_bul_tarnovo_school_fired }
+				}
+				set_global_variable = phx_bul_tarnovo_school_fired
+				trigger_event = {
+					id = phx_bal.0210
+					days = { 30 140 }
+				}
+			}
+		}
+		# === Wallachia (d_wallachia) ===
+		else_if = {
+			limit = { has_title = title:d_wallachia }
+			if = {
+				limit = {
+					current_year >= 1340
+					NOT = { has_global_variable = phx_wal_posada_legacy_fired }
+				}
+				set_global_variable = phx_wal_posada_legacy_fired
+				trigger_event = {
+					id = phx_bal.0310
+					days = { 30 140 }
+				}
+			}
+			else_if = {
+				limit = {
+					current_year >= 1346
+					NOT = { has_global_variable = phx_wal_danube_watch_fired }
+				}
+				set_global_variable = phx_wal_danube_watch_fired
+				trigger_event = {
+					id = phx_bal.0320
+					days = { 40 160 }
+				}
+			}
+		}
+	}
+}
+
+on_death = {
+	on_actions = { phx_byz_andronikos_death_check }
+}
+
+phx_byz_andronikos_death_check = {
+	trigger = {
+		this = character:byz_andronikos_iii_palaiologos
+		has_title = title:e_byzantium
+		NOT = { has_global_variable = phx_byz_succession_crisis_fired }
+	}
+	effect = {
+		set_global_variable = phx_byz_succession_crisis_fired
+		if = {
+			limit = {
+				NOT = { has_character_modifier = phx_byz_kantakouzenos_accord_modifier }
+			}
+			set_global_variable = phx_byz_andronikos_died_without_concord
+		}
+		if = {
+			limit = {
+				exists = primary_heir
+				character:byz_john_kantakouzenos ?= {
+					is_alive = yes
+					NOT = { this = root.primary_heir }
+				}
+			}
+			primary_heir = {
+				if = {
+					limit = {
+						has_global_variable = phx_byz_andronikos_died_without_concord
+						NOT = { owns_story_of_type = story_phx_byz_civil_war }
+					}
+					create_story = story_phx_byz_civil_war
+				}
+				trigger_event = {
+					id = phx_byz.0015
+					days = 10
+				}
+			}
+		}
+	}
+}
