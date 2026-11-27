@@ -30,7 +30,8 @@
    15 = {
     custom_tooltip = eu5_research_critical_tt
     hidden_effect = {
-     if = { limit = { culture = { eu5_research_next_available_trigger = yes } } culture = { eu5_research_award_next_effect = yes } }
+     if = { limit = { culture = { eu5_research_final_breakthrough_available_trigger = yes } } culture = { eu5_research_final_breakthrough_effect = yes } }
+     else_if = { limit = { culture = { eu5_research_next_available_trigger = yes } } culture = { eu5_research_award_next_effect = yes } }
      else = { eu5_research_random_treatise_effect = yes }
     }
    }

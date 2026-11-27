@@ -216,3 +216,11 @@ eu5_research_next_available_trigger = {
   AND = { has_cultural_era_or_later = culture_era_eu5_absolutism NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } eu5_research_has_eu5_revolutions_innovation_trigger = yes }
  }
 }
+
+eu5_research_final_breakthrough_available_trigger = {
+ has_cultural_era_or_later = culture_era_eu5_revolutions
+ OR = {
+  NOT = { has_innovation = innovation_eu5_congreve_rocket }
+  NOT = { has_innovation = innovation_eu5_newcomen_steam_engine }
+ }
+}

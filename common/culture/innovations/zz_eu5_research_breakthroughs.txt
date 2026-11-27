@@ -1,0 +1,24 @@
+﻿# These innovations are awarded only by a critical research success in the final era.
+innovation_eu5_congreve_rocket = {
+ skill = learning
+ group = culture_group_military
+ culture_era = culture_era_eu5_revolutions
+ icon = "gfx/interface/icons/culture_innovations/innovation_rocket_cart.dds"
+ can_progress = { always = no }
+ unlock_maa = rocket_carts
+ province_modifier = { defender_holding_advantage = 5 }
+ ai_weight_for_fascination = { value = 0 }
+}
+
+innovation_eu5_newcomen_steam_engine = {
+ skill = learning
+ group = culture_group_civic
+ culture_era = culture_era_eu5_revolutions
+ icon = "gfx/interface/icons/culture_innovations/innovation_misc_inventions.dds"
+ can_progress = { always = no }
+ county_modifier = {
+  mining_tax_mult = 0.10
+  trade_category_minerals_production_mult = 0.50
+ }
+ ai_weight_for_fascination = { value = 0 }
+}

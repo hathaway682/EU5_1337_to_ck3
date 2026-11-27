@@ -237,3 +237,16 @@ eu5_research_award_next_effect = {
  else_if = { limit = { has_cultural_era_or_later = culture_era_early_medieval } if = { limit = { eu5_research_has_high_medieval_innovation_trigger = yes } eu5_research_award_high_medieval_effect = yes } else = { eu5_research_award_early_medieval_effect = yes } }
  else_if = { limit = { has_cultural_era_or_later = culture_era_tribal } if = { limit = { eu5_research_has_early_medieval_innovation_trigger = yes } eu5_research_award_early_medieval_effect = yes } else = { eu5_research_award_tribal_effect = yes } }
 }
+
+eu5_research_final_breakthrough_effect = {
+ random_list = {
+  1 = {
+   trigger = { NOT = { has_innovation = innovation_eu5_congreve_rocket } }
+   add_innovation = innovation_eu5_congreve_rocket
+  }
+  1 = {
+   trigger = { NOT = { has_innovation = innovation_eu5_newcomen_steam_engine } }
+   add_innovation = innovation_eu5_newcomen_steam_engine
+  }
+ }
+}
