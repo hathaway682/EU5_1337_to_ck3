@@ -3,7 +3,7 @@ tags={
 	"Total Conversion"
 	"Map"
 }
-name="Universalis Kings"
+name="Universalis Kings Alpha"
 picture="universalis_kings_cover.png"
 replace_path="gfx/map/map_object_data"
 replace_path="gfx/map/map_object_data/generated"
