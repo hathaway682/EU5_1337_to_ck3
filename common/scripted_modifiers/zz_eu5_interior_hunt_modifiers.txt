@@ -1,0 +1,42 @@
+﻿hunt_activity_sighting_building_modifier = {
+	modifier = {
+		add = 0.5
+		$PROVINCE$ = { has_building = watchtowers_1 }
+	}
+	modifier = {
+		add = 1
+		$PROVINCE$ = { has_building = watchtowers_2 }
+	}
+	modifier = {
+		add = 1.5
+		$PROVINCE$ = { has_building = watchtowers_3 }
+	}
+	modifier = {
+		add = 2
+		$PROVINCE$ = { has_building = watchtowers_4 }
+	}
+	modifier = {
+		add = 2.5
+		$PROVINCE$ = { has_building_or_higher = watchtowers_5 }
+	}
+	modifier = {
+		add = 0.5
+		$PROVINCE$ = { has_building = scout_camps_1 }
+	}
+	modifier = {
+		add = 1
+		$PROVINCE$ = { has_building = scout_camps_2 }
+	}
+	modifier = {
+		add = 1.5
+		$PROVINCE$ = { has_building = scout_camps_3 }
+	}
+	modifier = {
+		add = 2
+		$PROVINCE$ = { has_building = scout_camps_4 }
+	}
+	modifier = {
+		add = 2.5
+		$PROVINCE$ = { has_building_or_higher = scout_camps_5 }
+	}
+}
