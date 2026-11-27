@@ -1,0 +1,107 @@
+﻿eu5_falconet = {
+	type = siege_weapon
+	fights_in_main_phase = no
+	damage = 0
+	toughness = 12
+	siege_tier = 5
+	siege_value = 0.8
+	can_recruit = {
+		culture = { has_innovation = innovation_eu5_unlock_falconet_advance }
+		NOR = {
+			government_has_flag = government_is_in_steppe
+			government_has_flag = government_is_merchant
+		}
+	}
+	should_show_when_unavailable = {
+		government_allows = subject_men_at_arms
+		culture = { has_cultural_era_or_later = culture_era_eu5_discovery }
+	}
+	buy_cost = { gold = eu5_falconet_recruitment_cost }
+	low_maintenance_cost = { gold = eu5_falconet_low_maint_cost }
+	high_maintenance_cost = { gold = eu5_falconet_high_maint_cost }
+	provision_cost = 24
+	stack = 10
+	allowed_in_hired_troops = no
+	illustration = { reference = eu5_falconet }
+}
+
+eu5_chambered_cannon = {
+	type = siege_weapon
+	fights_in_main_phase = no
+	damage = 0
+	toughness = 12
+	siege_tier = 6
+	siege_value = 1.0
+	can_recruit = {
+		culture = { has_innovation = innovation_eu5_artillery_institution_advance }
+		NOR = {
+			government_has_flag = government_is_in_steppe
+			government_has_flag = government_is_merchant
+		}
+	}
+	should_show_when_unavailable = {
+		government_allows = subject_men_at_arms
+		culture = { has_cultural_era_or_later = culture_era_eu5_reformation }
+	}
+	buy_cost = { gold = eu5_chambered_cannon_recruitment_cost }
+	low_maintenance_cost = { gold = eu5_chambered_cannon_low_maint_cost }
+	high_maintenance_cost = { gold = eu5_chambered_cannon_high_maint_cost }
+	provision_cost = 24
+	stack = 10
+	allowed_in_hired_troops = no
+	illustration = { reference = eu5_chambered_cannon }
+}
+
+eu5_siege_cannon = {
+	type = siege_weapon
+	fights_in_main_phase = no
+	damage = 0
+	toughness = 12
+	siege_tier = 7
+	siege_value = 1.25
+	can_recruit = {
+		culture = { has_innovation = innovation_eu5_artillery_vs_fort_age_5_absolutism }
+		NOR = {
+			government_has_flag = government_is_in_steppe
+			government_has_flag = government_is_merchant
+		}
+	}
+	should_show_when_unavailable = {
+		government_allows = subject_men_at_arms
+		culture = { has_cultural_era_or_later = culture_era_eu5_absolutism }
+	}
+	buy_cost = { gold = eu5_siege_cannon_recruitment_cost }
+	low_maintenance_cost = { gold = eu5_siege_cannon_low_maint_cost }
+	high_maintenance_cost = { gold = eu5_siege_cannon_high_maint_cost }
+	provision_cost = 24
+	stack = 10
+	allowed_in_hired_troops = no
+	illustration = { reference = eu5_siege_cannon }
+}
+
+eu5_advanced_howitzer = {
+	type = siege_weapon
+	fights_in_main_phase = no
+	damage = 0
+	toughness = 12
+	siege_tier = 8
+	siege_value = 1.5
+	can_recruit = {
+		culture = { has_innovation = innovation_eu5_artillery_vs_fort_age_6_revolutions }
+		NOR = {
+			government_has_flag = government_is_in_steppe
+			government_has_flag = government_is_merchant
+		}
+	}
+	should_show_when_unavailable = {
+		government_allows = subject_men_at_arms
+		culture = { has_cultural_era_or_later = culture_era_eu5_revolutions }
+	}
+	buy_cost = { gold = eu5_advanced_howitzer_recruitment_cost }
+	low_maintenance_cost = { gold = eu5_advanced_howitzer_low_maint_cost }
+	high_maintenance_cost = { gold = eu5_advanced_howitzer_high_maint_cost }
+	provision_cost = 24
+	stack = 10
+	allowed_in_hired_troops = no
+	illustration = { reference = eu5_advanced_howitzer }
+}

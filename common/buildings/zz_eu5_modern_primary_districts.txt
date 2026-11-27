@@ -1,0 +1,4187 @@
+﻿pb_guild_04 = {
+	construction_time = district_tier_4_construction_time
+	cost_gold = district_tier_4_cost
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+		monthly_artisan_tax = 1
+	}
+	province_terrain_modifier = {
+		parameter = silk_road_oasis_urban_building_slots
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = artisans_guild_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	province_culture_modifier = {
+		parameter = civic_religion_guild_building_slots
+		building_slots_for_host_district = 2
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = basic_resource_need
+		culture_parameter = civic_religion_guild_building_slots
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = province_size_tier_1
+			}
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	ai_value = {
+		base = 10.6
+		modifier = {
+			add = 0.8
+			province_has_district = military_district
+		}
+		ai_economical_building_preference_modifier = yes
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_medium }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_guild_05
+}
+
+eu5_pb_guild_05 = {
+	type_icon = "district_buildings/guild_district.dds"
+	construction_time = 420
+
+	cost_gold = 450
+
+	province_modifier = {
+		artisan_tax_mult = 0.05
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+		monthly_artisan_tax = 1
+	}
+	province_terrain_modifier = {
+		parameter = silk_road_oasis_urban_building_slots
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = artisans_guild_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	province_culture_modifier = {
+		parameter = civic_religion_guild_building_slots
+		building_slots_for_host_district = 2
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = basic_resource_need
+		culture_parameter = civic_religion_guild_building_slots
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = province_size_tier_1
+			}
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_burgher_privileges }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	ai_value = {
+		base = 10.6
+		modifier = {
+			add = 0.8
+			province_has_district = military_district
+		}
+		ai_economical_building_preference_modifier = yes
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_medium }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_guild_06
+
+}
+
+eu5_pb_guild_06 = {
+	type_icon = "district_buildings/guild_district.dds"
+	construction_time = 480
+
+	cost_gold = 600
+
+	province_modifier = {
+		artisan_tax_mult = 0.1
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+		monthly_artisan_tax = 1
+	}
+	province_terrain_modifier = {
+		parameter = silk_road_oasis_urban_building_slots
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = artisans_guild_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	province_culture_modifier = {
+		parameter = civic_religion_guild_building_slots
+		building_slots_for_host_district = 2
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = basic_resource_need
+		culture_parameter = civic_religion_guild_building_slots
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = province_size_tier_1
+			}
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_rgo_size_advance_reformation }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	ai_value = {
+		base = 10.6
+		modifier = {
+			add = 0.8
+			province_has_district = military_district
+		}
+		ai_economical_building_preference_modifier = yes
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_medium }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_guild_07
+
+}
+
+eu5_pb_guild_07 = {
+	type_icon = "district_buildings/guild_district.dds"
+	construction_time = 540
+
+	cost_gold = 800
+
+	province_modifier = {
+		artisan_tax_mult = 0.15
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+		monthly_artisan_tax = 1
+	}
+	province_terrain_modifier = {
+		parameter = silk_road_oasis_urban_building_slots
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = artisans_guild_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	province_culture_modifier = {
+		parameter = civic_religion_guild_building_slots
+		building_slots_for_host_district = 2
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = basic_resource_need
+		culture_parameter = civic_religion_guild_building_slots
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = province_size_tier_1
+			}
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_manufactories_advance }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	ai_value = {
+		base = 10.6
+		modifier = {
+			add = 0.8
+			province_has_district = military_district
+		}
+		ai_economical_building_preference_modifier = yes
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_medium }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_guild_08
+
+}
+
+eu5_pb_guild_08 = {
+	type_icon = "district_buildings/guild_district.dds"
+	construction_time = 600
+
+	cost_gold = 1000
+
+	province_modifier = {
+		artisan_tax_mult = 0.2
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+		monthly_artisan_tax = 1
+	}
+	province_terrain_modifier = {
+		parameter = silk_road_oasis_urban_building_slots
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = artisans_guild_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	province_culture_modifier = {
+		parameter = civic_religion_guild_building_slots
+		building_slots_for_host_district = 2
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = basic_resource_need
+		culture_parameter = civic_religion_guild_building_slots
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = province_size_tier_1
+			}
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_industrialization_advance }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	ai_value = {
+		base = 10.6
+		modifier = {
+			add = 0.8
+			province_has_district = military_district
+		}
+		ai_economical_building_preference_modifier = yes
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_medium }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+}
+
+pb_market_04 = {
+	construction_time = district_tier_4_construction_time
+	cost_gold = district_tier_4_cost
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = market_primary_province_size_baseline_tier_4
+		monthly_commerce_tax = 1.25
+		prosperity_per_province_size_level = 0.02
+	}
+
+	can_construct_showing_failures_only = {
+		building_commerce_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+
+	ai_value = {
+		base = 10.4
+		ai_economical_building_preference_modifier = yes
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_soft }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		modifier = {
+			factor = 0.3
+			province_size_level < 4
+		}
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_market_05
+}
+
+eu5_pb_market_05 = {
+	type_icon = "district_buildings/market_district.dds"
+	construction_time = 420
+
+	cost_gold = 450
+
+	province_modifier = {
+		commerce_tax_mult = 0.05
+		building_slots_for_host_district = 4
+		province_size_baseline_add = market_primary_province_size_baseline_tier_4
+		monthly_commerce_tax = 1.25
+		prosperity_per_province_size_level = 0.02
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_basic_financial_instruments }
+		building_commerce_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+
+	ai_value = {
+		base = 10.4
+		ai_economical_building_preference_modifier = yes
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_soft }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		modifier = {
+			factor = 0.3
+			province_size_level < 4
+		}
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_market_06
+
+}
+
+eu5_pb_market_06 = {
+	type_icon = "district_buildings/market_district.dds"
+	construction_time = 480
+
+	cost_gold = 600
+
+	province_modifier = {
+		commerce_tax_mult = 0.1
+		building_slots_for_host_district = 4
+		province_size_baseline_add = market_primary_province_size_baseline_tier_4
+		monthly_commerce_tax = 1.25
+		prosperity_per_province_size_level = 0.02
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_chartered_companies }
+		building_commerce_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+
+	ai_value = {
+		base = 10.4
+		ai_economical_building_preference_modifier = yes
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_soft }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		modifier = {
+			factor = 0.3
+			province_size_level < 4
+		}
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_market_07
+
+}
+
+eu5_pb_market_07 = {
+	type_icon = "district_buildings/market_district.dds"
+	construction_time = 540
+
+	cost_gold = 800
+
+	province_modifier = {
+		commerce_tax_mult = 0.15
+		building_slots_for_host_district = 4
+		province_size_baseline_add = market_primary_province_size_baseline_tier_4
+		monthly_commerce_tax = 1.25
+		prosperity_per_province_size_level = 0.02
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_central_bank_advance }
+		building_commerce_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+
+	ai_value = {
+		base = 10.4
+		ai_economical_building_preference_modifier = yes
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_soft }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		modifier = {
+			factor = 0.3
+			province_size_level < 4
+		}
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_market_08
+
+}
+
+eu5_pb_market_08 = {
+	type_icon = "district_buildings/market_district.dds"
+	construction_time = 600
+
+	cost_gold = 1000
+
+	province_modifier = {
+		commerce_tax_mult = 0.2
+		building_slots_for_host_district = 4
+		province_size_baseline_add = market_primary_province_size_baseline_tier_4
+		monthly_commerce_tax = 1.25
+		prosperity_per_province_size_level = 0.02
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_the_gold_standard }
+		building_commerce_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+
+	ai_value = {
+		base = 10.4
+		ai_economical_building_preference_modifier = yes
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_soft }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		modifier = {
+			factor = 0.3
+			province_size_level < 4
+		}
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+}
+
+pb_port_04 = {
+	construction_time = district_tier_4_construction_time
+	cost_gold = district_tier_4_cost
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = port_primary_province_size_baseline_tier_4
+		monthly_maritime_tax = port_primary_maritime_tax_tier_4
+		epidemic_resistance = port_primary_epidemic_resistance
+		additional_fort_level = port_primary_fort_level
+	}
+	province_culture_modifier = {
+		parameter = seafarers_port_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = seafarers_port_maa_control
+		stationed_maa_control_value_add = 3
+	}
+	province_culture_modifier = {
+		parameter = port_district_stationed_maa_bonus
+		stationed_maa_toughness_mult = normal_maa_toughness_tier_4
+	}
+	province_culture_modifier = {
+		parameter = maritime_way_of_life_port_maa_maintenance
+		stationed_maa_maintenance_high_modifier = -0.02
+	}
+
+	can_construct_showing_failures_only = {
+		trigger_if = {
+			limit = {
+				culture = { has_cultural_parameter = next_level_port_districts }
+			}
+			building_maritime_high_medieval_trigger = yes
+			holding_district_level_3_trigger = yes
+		}
+		trigger_else = {
+			building_maritime_late_medieval_trigger = yes
+			holding_district_level_4_trigger = yes
+		}
+	}
+	ai_value = {
+		base = 10
+		modifier = {
+			add = 1.5
+			province_size_level >= 5
+		}
+		ai_economical_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		modifier = {
+			factor = 0.4
+			province_has_district = walls_district
+			province_size_level < 4
+			NOT = { scope:holder.capital_province = this }
+		}
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_port_05
+}
+
+eu5_pb_port_05 = {
+	type_icon = "district_buildings/port_district.dds"
+	construction_time = 420
+
+	cost_gold = 450
+	province_modifier = {
+		maritime_tax_mult = 0.05
+		building_slots_for_host_district = 4
+		province_size_baseline_add = port_primary_province_size_baseline_tier_4
+		monthly_maritime_tax = port_primary_maritime_tax_tier_4
+		epidemic_resistance = port_primary_epidemic_resistance
+		additional_fort_level = port_primary_fort_level
+	}
+	province_culture_modifier = {
+		parameter = seafarers_port_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = seafarers_port_maa_control
+		stationed_maa_control_value_add = 3
+	}
+	province_culture_modifier = {
+		parameter = port_district_stationed_maa_bonus
+		stationed_maa_toughness_mult = normal_maa_toughness_tier_4
+	}
+	province_culture_modifier = {
+		parameter = maritime_way_of_life_port_maa_maintenance
+		stationed_maa_maintenance_high_modifier = -0.02
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_trade_range_advance_age_3 }
+		trigger_if = {
+			limit = {
+				culture = { has_cultural_parameter = next_level_port_districts }
+			}
+			building_maritime_high_medieval_trigger = yes
+			holding_district_level_3_trigger = yes
+		}
+		trigger_else = {
+			building_maritime_late_medieval_trigger = yes
+			holding_district_level_4_trigger = yes
+		}
+	}
+	ai_value = {
+		base = 10
+		modifier = {
+			add = 1.5
+			province_size_level >= 5
+		}
+		ai_economical_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		modifier = {
+			factor = 0.4
+			province_has_district = walls_district
+			province_size_level < 4
+			NOT = { scope:holder.capital_province = this }
+		}
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_port_06
+
+}
+
+eu5_pb_port_06 = {
+	type_icon = "district_buildings/port_district.dds"
+	construction_time = 480
+
+	cost_gold = 600
+	province_modifier = {
+		maritime_tax_mult = 0.1
+		building_slots_for_host_district = 4
+		province_size_baseline_add = port_primary_province_size_baseline_tier_4
+		monthly_maritime_tax = port_primary_maritime_tax_tier_4
+		epidemic_resistance = port_primary_epidemic_resistance
+		additional_fort_level = port_primary_fort_level
+	}
+	province_culture_modifier = {
+		parameter = seafarers_port_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = seafarers_port_maa_control
+		stationed_maa_control_value_add = 3
+	}
+	province_culture_modifier = {
+		parameter = port_district_stationed_maa_bonus
+		stationed_maa_toughness_mult = normal_maa_toughness_tier_4
+	}
+	province_culture_modifier = {
+		parameter = maritime_way_of_life_port_maa_maintenance
+		stationed_maa_maintenance_high_modifier = -0.02
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_global_trade_routes_advance }
+		trigger_if = {
+			limit = {
+				culture = { has_cultural_parameter = next_level_port_districts }
+			}
+			building_maritime_high_medieval_trigger = yes
+			holding_district_level_3_trigger = yes
+		}
+		trigger_else = {
+			building_maritime_late_medieval_trigger = yes
+			holding_district_level_4_trigger = yes
+		}
+	}
+	ai_value = {
+		base = 10
+		modifier = {
+			add = 1.5
+			province_size_level >= 5
+		}
+		ai_economical_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		modifier = {
+			factor = 0.4
+			province_has_district = walls_district
+			province_size_level < 4
+			NOT = { scope:holder.capital_province = this }
+		}
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_port_07
+
+}
+
+eu5_pb_port_07 = {
+	type_icon = "district_buildings/port_district.dds"
+	construction_time = 540
+
+	cost_gold = 800
+	province_modifier = {
+		maritime_tax_mult = 0.15
+		building_slots_for_host_district = 4
+		province_size_baseline_add = port_primary_province_size_baseline_tier_4
+		monthly_maritime_tax = port_primary_maritime_tax_tier_4
+		epidemic_resistance = port_primary_epidemic_resistance
+		additional_fort_level = port_primary_fort_level
+	}
+	province_culture_modifier = {
+		parameter = seafarers_port_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = seafarers_port_maa_control
+		stationed_maa_control_value_add = 3
+	}
+	province_culture_modifier = {
+		parameter = port_district_stationed_maa_bonus
+		stationed_maa_toughness_mult = normal_maa_toughness_tier_4
+	}
+	province_culture_modifier = {
+		parameter = maritime_way_of_life_port_maa_maintenance
+		stationed_maa_maintenance_high_modifier = -0.02
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_maritime_advance_age_5 }
+		trigger_if = {
+			limit = {
+				culture = { has_cultural_parameter = next_level_port_districts }
+			}
+			building_maritime_high_medieval_trigger = yes
+			holding_district_level_3_trigger = yes
+		}
+		trigger_else = {
+			building_maritime_late_medieval_trigger = yes
+			holding_district_level_4_trigger = yes
+		}
+	}
+	ai_value = {
+		base = 10
+		modifier = {
+			add = 1.5
+			province_size_level >= 5
+		}
+		ai_economical_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		modifier = {
+			factor = 0.4
+			province_has_district = walls_district
+			province_size_level < 4
+			NOT = { scope:holder.capital_province = this }
+		}
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_port_08
+
+}
+
+eu5_pb_port_08 = {
+	type_icon = "district_buildings/port_district.dds"
+	construction_time = 600
+
+	cost_gold = 1000
+	province_modifier = {
+		maritime_tax_mult = 0.2
+		building_slots_for_host_district = 4
+		province_size_baseline_add = port_primary_province_size_baseline_tier_4
+		monthly_maritime_tax = port_primary_maritime_tax_tier_4
+		epidemic_resistance = port_primary_epidemic_resistance
+		additional_fort_level = port_primary_fort_level
+	}
+	province_culture_modifier = {
+		parameter = seafarers_port_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = seafarers_port_maa_control
+		stationed_maa_control_value_add = 3
+	}
+	province_culture_modifier = {
+		parameter = port_district_stationed_maa_bonus
+		stationed_maa_toughness_mult = normal_maa_toughness_tier_4
+	}
+	province_culture_modifier = {
+		parameter = maritime_way_of_life_port_maa_maintenance
+		stationed_maa_maintenance_high_modifier = -0.02
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_maritime_advance_age_6 }
+		trigger_if = {
+			limit = {
+				culture = { has_cultural_parameter = next_level_port_districts }
+			}
+			building_maritime_high_medieval_trigger = yes
+			holding_district_level_3_trigger = yes
+		}
+		trigger_else = {
+			building_maritime_late_medieval_trigger = yes
+			holding_district_level_4_trigger = yes
+		}
+	}
+	ai_value = {
+		base = 10
+		modifier = {
+			add = 1.5
+			province_size_level >= 5
+		}
+		ai_economical_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		modifier = {
+			factor = 0.4
+			province_has_district = walls_district
+			province_size_level < 4
+			NOT = { scope:holder.capital_province = this }
+		}
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+}
+
+pb_border_forts_04 = {
+	construction_time = district_tier_4_construction_time
+	cost_gold = district_tier_4_cost
+
+	county_modifier = {
+		hostile_raid_time = 1
+	}
+
+	province_modifier = {
+		province_size_baseline_add = military_primary_province_size_baseline_tier_4
+		building_slots_for_host_district = 4
+	}
+
+	can_construct_showing_failures_only = {
+		building_fortification_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	ai_value = {
+		base = 9.7
+		ai_defensive_need_modifier = yes
+		culture_likely_to_fortify_modifier = yes
+		directive_to_fortify_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_border_forts_05
+}
+
+eu5_pb_border_forts_05 = {
+	type_icon = "district_buildings/border_forts_district.dds"
+	construction_time = 420
+
+	cost_gold = 450
+
+	county_modifier = {
+		hostile_raid_time = 1
+	}
+
+	province_modifier = {
+		additional_fort_level = 1
+		province_size_baseline_add = military_primary_province_size_baseline_tier_4
+		building_slots_for_host_district = 4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_fort_limit_3_advance }
+		building_fortification_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	ai_value = {
+		base = 9.7
+		ai_defensive_need_modifier = yes
+		culture_likely_to_fortify_modifier = yes
+		directive_to_fortify_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_border_forts_06
+
+}
+
+eu5_pb_border_forts_06 = {
+	type_icon = "district_buildings/border_forts_district.dds"
+	construction_time = 480
+
+	cost_gold = 600
+
+	county_modifier = {
+		hostile_raid_time = 1
+	}
+
+	province_modifier = {
+		additional_fort_level = 2
+		province_size_baseline_add = military_primary_province_size_baseline_tier_4
+		building_slots_for_host_district = 4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_fort_limit_4_advance }
+		building_fortification_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	ai_value = {
+		base = 9.7
+		ai_defensive_need_modifier = yes
+		culture_likely_to_fortify_modifier = yes
+		directive_to_fortify_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_border_forts_07
+
+}
+
+eu5_pb_border_forts_07 = {
+	type_icon = "district_buildings/border_forts_district.dds"
+	construction_time = 540
+
+	cost_gold = 800
+
+	county_modifier = {
+		hostile_raid_time = 1
+	}
+
+	province_modifier = {
+		additional_fort_level = 3
+		province_size_baseline_add = military_primary_province_size_baseline_tier_4
+		building_slots_for_host_district = 4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_fort_limit_5_advance }
+		building_fortification_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	ai_value = {
+		base = 9.7
+		ai_defensive_need_modifier = yes
+		culture_likely_to_fortify_modifier = yes
+		directive_to_fortify_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_border_forts_08
+
+}
+
+eu5_pb_border_forts_08 = {
+	type_icon = "district_buildings/border_forts_district.dds"
+	construction_time = 600
+
+	cost_gold = 1000
+
+	county_modifier = {
+		hostile_raid_time = 1
+	}
+
+	province_modifier = {
+		additional_fort_level = 4
+		province_size_baseline_add = military_primary_province_size_baseline_tier_4
+		building_slots_for_host_district = 4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_fort_limit_6_advance }
+		building_fortification_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	ai_value = {
+		base = 9.7
+		ai_defensive_need_modifier = yes
+		culture_likely_to_fortify_modifier = yes
+		directive_to_fortify_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+}
+
+pb_walls_04 = {
+	construction_time = district_tier_4_construction_time
+	cost_gold = district_tier_4_cost
+	levy = poor_building_levy_tier_4
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = walls_primary_province_size_baseline_tier_4
+		additional_fort_level = 4
+		control_baseline_add = 40
+		defender_holding_advantage = 6
+	}
+	province_culture_modifier = {
+		parameter = castle_keepers_walls_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = stalwart_defenders_walls_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		building_fortification_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+
+	ai_value = {
+		base = 10
+		ai_defensive_need_modifier = yes
+		ai_walls_building_modifier = yes
+		ai_control_baseline_building_modifier = { VALUE = 40 }
+		directive_to_fortify_modifier = yes
+		ai_general_building_modifier = yes
+		ai_control_need_modifier = yes
+		modifier = {
+			factor = 0.3
+			province_size_level < 4
+			NOR = {
+				province_has_district = urban_housing_district
+				ai_kingdom_or_above_capital_trigger = yes
+			}
+		}
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_walls_05
+}
+
+eu5_pb_walls_05 = {
+	type_icon = "district_buildings/walls_district.dds"
+	construction_time = 420
+
+	cost_gold = 450
+	levy = poor_building_levy_tier_4
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = walls_primary_province_size_baseline_tier_4
+		additional_fort_level = 5
+		control_baseline_add = 40
+		defender_holding_advantage = 6
+	}
+	province_culture_modifier = {
+		parameter = castle_keepers_walls_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = stalwart_defenders_walls_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_fort_limit_3_advance }
+		building_fortification_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+
+	ai_value = {
+		base = 10
+		ai_defensive_need_modifier = yes
+		ai_walls_building_modifier = yes
+		ai_control_baseline_building_modifier = { VALUE = 40 }
+		directive_to_fortify_modifier = yes
+		ai_general_building_modifier = yes
+		ai_control_need_modifier = yes
+		modifier = {
+			factor = 0.3
+			province_size_level < 4
+			NOR = {
+				province_has_district = urban_housing_district
+				ai_kingdom_or_above_capital_trigger = yes
+			}
+		}
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_walls_06
+
+}
+
+eu5_pb_walls_06 = {
+	type_icon = "district_buildings/walls_district.dds"
+	construction_time = 480
+
+	cost_gold = 600
+	levy = poor_building_levy_tier_4
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = walls_primary_province_size_baseline_tier_4
+		additional_fort_level = 6
+		control_baseline_add = 40
+		defender_holding_advantage = 6
+	}
+	province_culture_modifier = {
+		parameter = castle_keepers_walls_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = stalwart_defenders_walls_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_fort_limit_4_advance }
+		building_fortification_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+
+	ai_value = {
+		base = 10
+		ai_defensive_need_modifier = yes
+		ai_walls_building_modifier = yes
+		ai_control_baseline_building_modifier = { VALUE = 40 }
+		directive_to_fortify_modifier = yes
+		ai_general_building_modifier = yes
+		ai_control_need_modifier = yes
+		modifier = {
+			factor = 0.3
+			province_size_level < 4
+			NOR = {
+				province_has_district = urban_housing_district
+				ai_kingdom_or_above_capital_trigger = yes
+			}
+		}
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_walls_07
+
+}
+
+eu5_pb_walls_07 = {
+	type_icon = "district_buildings/walls_district.dds"
+	construction_time = 540
+
+	cost_gold = 800
+	levy = poor_building_levy_tier_4
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = walls_primary_province_size_baseline_tier_4
+		additional_fort_level = 7
+		control_baseline_add = 40
+		defender_holding_advantage = 6
+	}
+	province_culture_modifier = {
+		parameter = castle_keepers_walls_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = stalwart_defenders_walls_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_fort_limit_5_advance }
+		building_fortification_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+
+	ai_value = {
+		base = 10
+		ai_defensive_need_modifier = yes
+		ai_walls_building_modifier = yes
+		ai_control_baseline_building_modifier = { VALUE = 40 }
+		directive_to_fortify_modifier = yes
+		ai_general_building_modifier = yes
+		ai_control_need_modifier = yes
+		modifier = {
+			factor = 0.3
+			province_size_level < 4
+			NOR = {
+				province_has_district = urban_housing_district
+				ai_kingdom_or_above_capital_trigger = yes
+			}
+		}
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_walls_08
+
+}
+
+eu5_pb_walls_08 = {
+	type_icon = "district_buildings/walls_district.dds"
+	construction_time = 600
+
+	cost_gold = 1000
+	levy = poor_building_levy_tier_4
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = walls_primary_province_size_baseline_tier_4
+		additional_fort_level = 8
+		control_baseline_add = 40
+		defender_holding_advantage = 6
+	}
+	province_culture_modifier = {
+		parameter = castle_keepers_walls_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = stalwart_defenders_walls_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_fort_limit_6_advance }
+		building_fortification_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+
+	ai_value = {
+		base = 10
+		ai_defensive_need_modifier = yes
+		ai_walls_building_modifier = yes
+		ai_control_baseline_building_modifier = { VALUE = 40 }
+		directive_to_fortify_modifier = yes
+		ai_general_building_modifier = yes
+		ai_control_need_modifier = yes
+		modifier = {
+			factor = 0.3
+			province_size_level < 4
+			NOR = {
+				province_has_district = urban_housing_district
+				ai_kingdom_or_above_capital_trigger = yes
+			}
+		}
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+}
+
+pb_military_04 = {
+	construction_time = district_tier_4_construction_time
+	cost_gold = district_tier_4_cost
+	levy = normal_building_levy_tier_4
+
+	is_enabled = {
+		is_county_capital = yes
+	}
+
+	county_modifier = {
+		stationed_maa_damage_mult = low_maa_damage_tier_4
+		stationed_maa_toughness_mult = low_maa_toughness_tier_4
+	}
+
+	province_modifier = {
+		province_size_baseline_add = military_primary_province_size_baseline_tier_4
+		building_slots_for_host_district = 4
+		monthly_civic_tax = poor_building_tax_tier_4
+	}
+
+	can_construct_showing_failures_only = {
+		building_recruitment_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	market_culture_modifier = {
+		parameter = imported_war_horses
+		trade_good_horses_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_horses
+		amount = war_horse_military_need
+		culture_parameter = imported_war_horses
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			county_modifier = {
+				stationed_light_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_light_cavalry_toughness_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_toughness_mult = imported_horses_cavalry_mult
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = song_horse_shortage
+		trade_good_horses_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_horses
+		amount = song_horse_need
+		culture_parameter = song_horse_shortage
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			county_modifier = {
+				stationed_light_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_light_cavalry_toughness_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_toughness_mult = imported_horses_cavalry_mult
+			}
+		}
+	}
+	ai_value = {
+		base = 10
+		ai_military_context_modifier = yes
+		ai_general_building_modifier = yes
+		ai_military_district_upgrade_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_military_05
+}
+
+eu5_pb_military_05 = {
+	type_icon = "district_buildings/military_district.dds"
+	construction_time = 420
+
+	cost_gold = 450
+	levy = normal_building_levy_tier_4
+
+	is_enabled = {
+		is_county_capital = yes
+	}
+
+	county_modifier = {
+		stationed_maa_damage_mult = low_maa_damage_tier_4
+		stationed_maa_toughness_mult = low_maa_toughness_tier_4
+	}
+
+	province_modifier = {
+		levy_size = 0.05
+		province_size_baseline_add = military_primary_province_size_baseline_tier_4
+		building_slots_for_host_district = 4
+		monthly_civic_tax = poor_building_tax_tier_4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_training_ground }
+		building_recruitment_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	market_culture_modifier = {
+		parameter = imported_war_horses
+		trade_good_horses_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_horses
+		amount = war_horse_military_need
+		culture_parameter = imported_war_horses
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			county_modifier = {
+				stationed_light_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_light_cavalry_toughness_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_toughness_mult = imported_horses_cavalry_mult
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = song_horse_shortage
+		trade_good_horses_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_horses
+		amount = song_horse_need
+		culture_parameter = song_horse_shortage
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			county_modifier = {
+				stationed_light_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_light_cavalry_toughness_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_toughness_mult = imported_horses_cavalry_mult
+			}
+		}
+	}
+	ai_value = {
+		base = 10
+		ai_military_context_modifier = yes
+		ai_general_building_modifier = yes
+		ai_military_district_upgrade_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_military_06
+
+}
+
+eu5_pb_military_06 = {
+	type_icon = "district_buildings/military_district.dds"
+	construction_time = 480
+
+	cost_gold = 600
+	levy = normal_building_levy_tier_4
+
+	is_enabled = {
+		is_county_capital = yes
+	}
+
+	county_modifier = {
+		stationed_maa_damage_mult = low_maa_damage_tier_4
+		stationed_maa_toughness_mult = low_maa_toughness_tier_4
+	}
+
+	province_modifier = {
+		levy_size = 0.1
+		province_size_baseline_add = military_primary_province_size_baseline_tier_4
+		building_slots_for_host_district = 4
+		monthly_civic_tax = poor_building_tax_tier_4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_barracks }
+		building_recruitment_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	market_culture_modifier = {
+		parameter = imported_war_horses
+		trade_good_horses_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_horses
+		amount = war_horse_military_need
+		culture_parameter = imported_war_horses
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			county_modifier = {
+				stationed_light_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_light_cavalry_toughness_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_toughness_mult = imported_horses_cavalry_mult
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = song_horse_shortage
+		trade_good_horses_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_horses
+		amount = song_horse_need
+		culture_parameter = song_horse_shortage
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			county_modifier = {
+				stationed_light_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_light_cavalry_toughness_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_toughness_mult = imported_horses_cavalry_mult
+			}
+		}
+	}
+	ai_value = {
+		base = 10
+		ai_military_context_modifier = yes
+		ai_general_building_modifier = yes
+		ai_military_district_upgrade_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_military_07
+
+}
+
+eu5_pb_military_07 = {
+	type_icon = "district_buildings/military_district.dds"
+	construction_time = 540
+
+	cost_gold = 800
+	levy = normal_building_levy_tier_4
+
+	is_enabled = {
+		is_county_capital = yes
+	}
+
+	county_modifier = {
+		stationed_maa_damage_mult = low_maa_damage_tier_4
+		stationed_maa_toughness_mult = low_maa_toughness_tier_4
+	}
+
+	province_modifier = {
+		levy_size = 0.15
+		province_size_baseline_add = military_primary_province_size_baseline_tier_4
+		building_slots_for_host_district = 4
+		monthly_civic_tax = poor_building_tax_tier_4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_legion_camp }
+		building_recruitment_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	market_culture_modifier = {
+		parameter = imported_war_horses
+		trade_good_horses_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_horses
+		amount = war_horse_military_need
+		culture_parameter = imported_war_horses
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			county_modifier = {
+				stationed_light_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_light_cavalry_toughness_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_toughness_mult = imported_horses_cavalry_mult
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = song_horse_shortage
+		trade_good_horses_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_horses
+		amount = song_horse_need
+		culture_parameter = song_horse_shortage
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			county_modifier = {
+				stationed_light_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_light_cavalry_toughness_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_toughness_mult = imported_horses_cavalry_mult
+			}
+		}
+	}
+	ai_value = {
+		base = 10
+		ai_military_context_modifier = yes
+		ai_general_building_modifier = yes
+		ai_military_district_upgrade_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_military_08
+
+}
+
+eu5_pb_military_08 = {
+	type_icon = "district_buildings/military_district.dds"
+	construction_time = 600
+
+	cost_gold = 1000
+	levy = normal_building_levy_tier_4
+
+	is_enabled = {
+		is_county_capital = yes
+	}
+
+	county_modifier = {
+		stationed_maa_damage_mult = low_maa_damage_tier_4
+		stationed_maa_toughness_mult = low_maa_toughness_tier_4
+	}
+
+	province_modifier = {
+		levy_size = 0.2
+		province_size_baseline_add = military_primary_province_size_baseline_tier_4
+		building_slots_for_host_district = 4
+		monthly_civic_tax = poor_building_tax_tier_4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_recruitment_center }
+		building_recruitment_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	market_culture_modifier = {
+		parameter = imported_war_horses
+		trade_good_horses_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_horses
+		amount = war_horse_military_need
+		culture_parameter = imported_war_horses
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			county_modifier = {
+				stationed_light_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_light_cavalry_toughness_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_toughness_mult = imported_horses_cavalry_mult
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = song_horse_shortage
+		trade_good_horses_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_horses
+		amount = song_horse_need
+		culture_parameter = song_horse_shortage
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			county_modifier = {
+				stationed_light_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_light_cavalry_toughness_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_damage_mult = imported_horses_cavalry_mult
+				stationed_heavy_cavalry_toughness_mult = imported_horses_cavalry_mult
+			}
+		}
+	}
+	ai_value = {
+		base = 10
+		ai_military_context_modifier = yes
+		ai_general_building_modifier = yes
+		ai_military_district_upgrade_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+}
+
+pb_bureaucratic_04 = {
+	construction_time = district_tier_4_construction_time
+
+	cost_gold = royal_district_tier_4_cost
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = bureaucratic_primary_province_size_baseline_tier_4
+		control_baseline_add = 35
+	}
+	province_culture_modifier = {
+		parameter = scholar_officials_bureaucratic_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	character_modifier = {
+		vassal_tax_contribution_mult = bureaucratic_primary_vassal_tax_tier_4
+	}
+
+	can_construct_showing_failures_only = {
+		scope:holder.highest_held_title_tier >= tier_kingdom
+		scope:holder.capital_province = this
+		building_administrative_late_medieval_trigger = yes
+		province_size_level >= 3
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		government_flag = government_has_influence
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			character_modifier = {
+				monthly_influence_mult = bureaucratic_primary_influence_mult_per_paper_need
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10.5
+		ai_civic_context_modifier = yes
+		ai_control_baseline_building_modifier = { VALUE = 35 }
+		modifier = {
+			add = 1
+			scope:holder = { vassal_limit_available <= 2 }
+		}
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_control_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_bureaucratic_05
+}
+
+eu5_pb_bureaucratic_05 = {
+	type_icon = "district_buildings/bureaucratic_district.dds"
+	construction_time = 420
+
+	cost_gold = 450
+
+	province_modifier = {
+		civic_tax_mult = 0.05
+		building_slots_for_host_district = 4
+		province_size_baseline_add = bureaucratic_primary_province_size_baseline_tier_4
+		control_baseline_add = 35
+	}
+	province_culture_modifier = {
+		parameter = scholar_officials_bureaucratic_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	character_modifier = {
+		vassal_tax_contribution_mult = bureaucratic_primary_vassal_tax_tier_4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_government_size_discovery }
+		scope:holder.highest_held_title_tier >= tier_kingdom
+		scope:holder.capital_province = this
+		building_administrative_late_medieval_trigger = yes
+		province_size_level >= 3
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		government_flag = government_has_influence
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			character_modifier = {
+				monthly_influence_mult = bureaucratic_primary_influence_mult_per_paper_need
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10.5
+		ai_civic_context_modifier = yes
+		ai_control_baseline_building_modifier = { VALUE = 35 }
+		modifier = {
+			add = 1
+			scope:holder = { vassal_limit_available <= 2 }
+		}
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_control_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_bureaucratic_06
+
+}
+
+eu5_pb_bureaucratic_06 = {
+	type_icon = "district_buildings/bureaucratic_district.dds"
+	construction_time = 480
+
+	cost_gold = 600
+
+	province_modifier = {
+		civic_tax_mult = 0.1
+		building_slots_for_host_district = 4
+		province_size_baseline_add = bureaucratic_primary_province_size_baseline_tier_4
+		control_baseline_add = 35
+	}
+	province_culture_modifier = {
+		parameter = scholar_officials_bureaucratic_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	character_modifier = {
+		vassal_tax_contribution_mult = bureaucratic_primary_vassal_tax_tier_4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_generic_bureaucracy_4_advance }
+		scope:holder.highest_held_title_tier >= tier_kingdom
+		scope:holder.capital_province = this
+		building_administrative_late_medieval_trigger = yes
+		province_size_level >= 3
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		government_flag = government_has_influence
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			character_modifier = {
+				monthly_influence_mult = bureaucratic_primary_influence_mult_per_paper_need
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10.5
+		ai_civic_context_modifier = yes
+		ai_control_baseline_building_modifier = { VALUE = 35 }
+		modifier = {
+			add = 1
+			scope:holder = { vassal_limit_available <= 2 }
+		}
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_control_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_bureaucratic_07
+
+}
+
+eu5_pb_bureaucratic_07 = {
+	type_icon = "district_buildings/bureaucratic_district.dds"
+	construction_time = 540
+
+	cost_gold = 800
+
+	province_modifier = {
+		civic_tax_mult = 0.15
+		building_slots_for_host_district = 4
+		province_size_baseline_add = bureaucratic_primary_province_size_baseline_tier_4
+		control_baseline_add = 35
+	}
+	province_culture_modifier = {
+		parameter = scholar_officials_bureaucratic_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	character_modifier = {
+		vassal_tax_contribution_mult = bureaucratic_primary_vassal_tax_tier_4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_government_size_absolutism }
+		scope:holder.highest_held_title_tier >= tier_kingdom
+		scope:holder.capital_province = this
+		building_administrative_late_medieval_trigger = yes
+		province_size_level >= 3
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		government_flag = government_has_influence
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			character_modifier = {
+				monthly_influence_mult = bureaucratic_primary_influence_mult_per_paper_need
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10.5
+		ai_civic_context_modifier = yes
+		ai_control_baseline_building_modifier = { VALUE = 35 }
+		modifier = {
+			add = 1
+			scope:holder = { vassal_limit_available <= 2 }
+		}
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_control_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_bureaucratic_08
+
+}
+
+eu5_pb_bureaucratic_08 = {
+	type_icon = "district_buildings/bureaucratic_district.dds"
+	construction_time = 600
+
+	cost_gold = 1000
+
+	province_modifier = {
+		civic_tax_mult = 0.2
+		building_slots_for_host_district = 4
+		province_size_baseline_add = bureaucratic_primary_province_size_baseline_tier_4
+		control_baseline_add = 35
+	}
+	province_culture_modifier = {
+		parameter = scholar_officials_bureaucratic_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	character_modifier = {
+		vassal_tax_contribution_mult = bureaucratic_primary_vassal_tax_tier_4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_modern_bureaucracy }
+		scope:holder.highest_held_title_tier >= tier_kingdom
+		scope:holder.capital_province = this
+		building_administrative_late_medieval_trigger = yes
+		province_size_level >= 3
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		government_flag = government_has_influence
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			character_modifier = {
+				monthly_influence_mult = bureaucratic_primary_influence_mult_per_paper_need
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10.5
+		ai_civic_context_modifier = yes
+		ai_control_baseline_building_modifier = { VALUE = 35 }
+		modifier = {
+			add = 1
+			scope:holder = { vassal_limit_available <= 2 }
+		}
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_control_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+}
+
+pb_urban_housing_04 = {
+	construction_time = district_tier_4_construction_time
+	cost_gold = district_tier_4_cost
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = 120
+		monthly_province_size_change_when_below_baseline_add = 0.4
+	}
+	province_terrain_modifier = {
+		parameter = silk_road_oasis_urban_building_slots
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = city_keepers_urban_housing_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hidden_cities_urban_housing_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_clothes
+		amount = basic_resource_need
+
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = clothes_need_suppressed
+
+		modifiers = {
+			province_modifier = {
+				monthly_province_size_change_when_below_baseline_add = 0.1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = basic_resource_need
+
+		can_be_filled_multiple_times = 4
+		rite_parameter = leather_forbidden
+
+		modifiers = {
+			province_modifier = {
+				monthly_province_size_change_when_below_baseline_add = 0.1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_olive_oil_demand
+		trade_good_oil_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = housing_comfort_need
+		culture_parameter = housing_olive_oil_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_tea_demand
+		trade_good_tea_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_tea
+		amount = housing_comfort_need
+		culture_parameter = housing_tea_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_fruit_demand
+		trade_good_fruit_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = housing_comfort_need
+		culture_parameter = housing_fruit_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_honey_demand
+		trade_good_honey_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_honey
+		amount = housing_comfort_need
+		culture_parameter = housing_honey_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_cheese_demand
+		trade_good_cheese_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_cheese
+		amount = housing_comfort_need
+		culture_parameter = housing_cheese_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10
+		#Do I have Food? If so build this.
+		ai_urban_housing_modifier = yes
+		ai_economical_building_preference_modifier = yes
+
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_strong }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_urban_housing_05
+}
+
+eu5_pb_urban_housing_05 = {
+	type_icon = "district_buildings/urban_housing_district.dds"
+	construction_time = 420
+
+	cost_gold = 450
+
+	province_modifier = {
+
+building_slots_for_host_district = 4
+		province_size_baseline_add = 120
+		monthly_province_size_change_when_below_baseline_add = 0.5
+	}
+	province_terrain_modifier = {
+		parameter = silk_road_oasis_urban_building_slots
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = city_keepers_urban_housing_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hidden_cities_urban_housing_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_town_rights_enable }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_clothes
+		amount = basic_resource_need
+
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = clothes_need_suppressed
+
+		modifiers = {
+			province_modifier = {
+				monthly_province_size_change_when_below_baseline_add = 0.1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = basic_resource_need
+
+		can_be_filled_multiple_times = 4
+		rite_parameter = leather_forbidden
+
+		modifiers = {
+			province_modifier = {
+				monthly_province_size_change_when_below_baseline_add = 0.1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_olive_oil_demand
+		trade_good_oil_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = housing_comfort_need
+		culture_parameter = housing_olive_oil_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_tea_demand
+		trade_good_tea_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_tea
+		amount = housing_comfort_need
+		culture_parameter = housing_tea_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_fruit_demand
+		trade_good_fruit_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = housing_comfort_need
+		culture_parameter = housing_fruit_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_honey_demand
+		trade_good_honey_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_honey
+		amount = housing_comfort_need
+		culture_parameter = housing_honey_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_cheese_demand
+		trade_good_cheese_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_cheese
+		amount = housing_comfort_need
+		culture_parameter = housing_cheese_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10
+		#Do I have Food? If so build this.
+		ai_urban_housing_modifier = yes
+		ai_economical_building_preference_modifier = yes
+
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_strong }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_urban_housing_06
+
+}
+
+eu5_pb_urban_housing_06 = {
+	type_icon = "district_buildings/urban_housing_district.dds"
+	construction_time = 480
+
+	cost_gold = 600
+
+	province_modifier = {
+
+building_slots_for_host_district = 4
+		province_size_baseline_add = 120
+		monthly_province_size_change_when_below_baseline_add = 0.6
+	}
+	province_terrain_modifier = {
+		parameter = silk_road_oasis_urban_building_slots
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = city_keepers_urban_housing_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hidden_cities_urban_housing_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_town_rights_ref_advance }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_clothes
+		amount = basic_resource_need
+
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = clothes_need_suppressed
+
+		modifiers = {
+			province_modifier = {
+				monthly_province_size_change_when_below_baseline_add = 0.1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = basic_resource_need
+
+		can_be_filled_multiple_times = 4
+		rite_parameter = leather_forbidden
+
+		modifiers = {
+			province_modifier = {
+				monthly_province_size_change_when_below_baseline_add = 0.1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_olive_oil_demand
+		trade_good_oil_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = housing_comfort_need
+		culture_parameter = housing_olive_oil_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_tea_demand
+		trade_good_tea_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_tea
+		amount = housing_comfort_need
+		culture_parameter = housing_tea_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_fruit_demand
+		trade_good_fruit_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = housing_comfort_need
+		culture_parameter = housing_fruit_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_honey_demand
+		trade_good_honey_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_honey
+		amount = housing_comfort_need
+		culture_parameter = housing_honey_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_cheese_demand
+		trade_good_cheese_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_cheese
+		amount = housing_comfort_need
+		culture_parameter = housing_cheese_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10
+		#Do I have Food? If so build this.
+		ai_urban_housing_modifier = yes
+		ai_economical_building_preference_modifier = yes
+
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_strong }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_urban_housing_07
+
+}
+
+eu5_pb_urban_housing_07 = {
+	type_icon = "district_buildings/urban_housing_district.dds"
+	construction_time = 540
+
+	cost_gold = 800
+
+	province_modifier = {
+
+building_slots_for_host_district = 4
+		province_size_baseline_add = 120
+		monthly_province_size_change_when_below_baseline_add = 0.7
+	}
+	province_terrain_modifier = {
+		parameter = silk_road_oasis_urban_building_slots
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = city_keepers_urban_housing_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hidden_cities_urban_housing_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_town_rights_abs_advance }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_clothes
+		amount = basic_resource_need
+
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = clothes_need_suppressed
+
+		modifiers = {
+			province_modifier = {
+				monthly_province_size_change_when_below_baseline_add = 0.1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = basic_resource_need
+
+		can_be_filled_multiple_times = 4
+		rite_parameter = leather_forbidden
+
+		modifiers = {
+			province_modifier = {
+				monthly_province_size_change_when_below_baseline_add = 0.1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_olive_oil_demand
+		trade_good_oil_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = housing_comfort_need
+		culture_parameter = housing_olive_oil_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_tea_demand
+		trade_good_tea_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_tea
+		amount = housing_comfort_need
+		culture_parameter = housing_tea_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_fruit_demand
+		trade_good_fruit_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = housing_comfort_need
+		culture_parameter = housing_fruit_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_honey_demand
+		trade_good_honey_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_honey
+		amount = housing_comfort_need
+		culture_parameter = housing_honey_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_cheese_demand
+		trade_good_cheese_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_cheese
+		amount = housing_comfort_need
+		culture_parameter = housing_cheese_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10
+		#Do I have Food? If so build this.
+		ai_urban_housing_modifier = yes
+		ai_economical_building_preference_modifier = yes
+
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_strong }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_urban_housing_08
+
+}
+
+eu5_pb_urban_housing_08 = {
+	type_icon = "district_buildings/urban_housing_district.dds"
+	construction_time = 600
+
+	cost_gold = 1000
+
+	province_modifier = {
+
+building_slots_for_host_district = 4
+		province_size_baseline_add = 120
+		monthly_province_size_change_when_below_baseline_add = 0.8
+	}
+	province_terrain_modifier = {
+		parameter = silk_road_oasis_urban_building_slots
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = city_keepers_urban_housing_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hidden_cities_urban_housing_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_urbanization }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_clothes
+		amount = basic_resource_need
+
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = clothes_need_suppressed
+
+		modifiers = {
+			province_modifier = {
+				monthly_province_size_change_when_below_baseline_add = 0.1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = basic_resource_need
+
+		can_be_filled_multiple_times = 4
+		rite_parameter = leather_forbidden
+
+		modifiers = {
+			province_modifier = {
+				monthly_province_size_change_when_below_baseline_add = 0.1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_olive_oil_demand
+		trade_good_oil_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = housing_comfort_need
+		culture_parameter = housing_olive_oil_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_tea_demand
+		trade_good_tea_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_tea
+		amount = housing_comfort_need
+		culture_parameter = housing_tea_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_fruit_demand
+		trade_good_fruit_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = housing_comfort_need
+		culture_parameter = housing_fruit_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_honey_demand
+		trade_good_honey_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_honey
+		amount = housing_comfort_need
+		culture_parameter = housing_honey_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_cheese_demand
+		trade_good_cheese_sell_price_mult = housing_comfort_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_cheese
+		amount = housing_comfort_need
+		culture_parameter = housing_cheese_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = housing_comfort_popular_opinion
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10
+		#Do I have Food? If so build this.
+		ai_urban_housing_modifier = yes
+		ai_economical_building_preference_modifier = yes
+
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_strong }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+}
+
+pb_manor_houses_04 = {
+	construction_time = district_tier_4_construction_time
+	cost_gold = district_tier_4_cost
+	levy = poor_building_levy_tier_4
+	triggered_name = {
+		trigger = { culture = { has_cultural_pillar = heritage_west_germanic } }
+		reference = "pb_manor_houses_04_west_germanic"
+	}
+	effect_desc = manor_houses_marshal_control_effect_desc
+	province_modifier = {
+		building_slots_for_host_district = 4
+		agricultural_tax_mult = manor_primary_agricultural_tax_mult_tier_4
+		supply_limit = normal_building_supply_limit_tier_4
+		province_size_baseline_add = -40
+	}
+	province_terrain_modifier = {
+		parameter = oasis_villages_building_slot
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		building_rural_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+	market_culture_modifier = {
+		parameter = housing_olive_oil_demand
+		trade_good_oil_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = manor_comfort_need
+		culture_parameter = housing_olive_oil_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_tea_demand
+		trade_good_tea_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_tea
+		amount = manor_comfort_need
+		culture_parameter = housing_tea_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_fruit_demand
+		trade_good_fruit_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = manor_comfort_need
+		culture_parameter = housing_fruit_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_honey_demand
+		trade_good_honey_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_honey
+		amount = manor_comfort_need
+		culture_parameter = housing_honey_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_cheese_demand
+		trade_good_cheese_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_cheese
+		amount = manor_comfort_need
+		culture_parameter = housing_cheese_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = rural_resource_need
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				district_build_gold_cost = manor_primary_stone_cost_reduction_tier_1
+			}
+		}
+	}
+	ai_value = {
+		base = 10
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_rural_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_manor_houses_05
+}
+
+eu5_pb_manor_houses_05 = {
+	type_icon = "district_buildings/manor_houses_district.dds"
+	construction_time = 420
+
+	cost_gold = 450
+	levy = poor_building_levy_tier_4
+	triggered_name = {
+		trigger = { culture = { has_cultural_pillar = heritage_west_germanic } }
+		reference = "pb_manor_houses_04_west_germanic"
+	}
+	effect_desc = manor_houses_marshal_control_effect_desc
+	province_modifier = {
+		monthly_agricultural_tax = 0.1
+		building_slots_for_host_district = 4
+		agricultural_tax_mult = manor_primary_agricultural_tax_mult_tier_4
+		supply_limit = normal_building_supply_limit_tier_4
+		province_size_baseline_add = -40
+	}
+	province_terrain_modifier = {
+		parameter = oasis_villages_building_slot
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_new_world_crops }
+		building_rural_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+	market_culture_modifier = {
+		parameter = housing_olive_oil_demand
+		trade_good_oil_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = manor_comfort_need
+		culture_parameter = housing_olive_oil_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_tea_demand
+		trade_good_tea_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_tea
+		amount = manor_comfort_need
+		culture_parameter = housing_tea_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_fruit_demand
+		trade_good_fruit_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = manor_comfort_need
+		culture_parameter = housing_fruit_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_honey_demand
+		trade_good_honey_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_honey
+		amount = manor_comfort_need
+		culture_parameter = housing_honey_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_cheese_demand
+		trade_good_cheese_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_cheese
+		amount = manor_comfort_need
+		culture_parameter = housing_cheese_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = rural_resource_need
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				district_build_gold_cost = manor_primary_stone_cost_reduction_tier_1
+			}
+		}
+	}
+	ai_value = {
+		base = 10
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_rural_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_manor_houses_06
+
+}
+
+eu5_pb_manor_houses_06 = {
+	type_icon = "district_buildings/manor_houses_district.dds"
+	construction_time = 480
+
+	cost_gold = 600
+	levy = poor_building_levy_tier_4
+	triggered_name = {
+		trigger = { culture = { has_cultural_pillar = heritage_west_germanic } }
+		reference = "pb_manor_houses_04_west_germanic"
+	}
+	effect_desc = manor_houses_marshal_control_effect_desc
+	province_modifier = {
+		monthly_agricultural_tax = 0.2
+		building_slots_for_host_district = 4
+		agricultural_tax_mult = manor_primary_agricultural_tax_mult_tier_4
+		supply_limit = normal_building_supply_limit_tier_4
+		province_size_baseline_add = -40
+	}
+	province_terrain_modifier = {
+		parameter = oasis_villages_building_slot
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_food_advance_reformation }
+		building_rural_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+	market_culture_modifier = {
+		parameter = housing_olive_oil_demand
+		trade_good_oil_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = manor_comfort_need
+		culture_parameter = housing_olive_oil_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_tea_demand
+		trade_good_tea_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_tea
+		amount = manor_comfort_need
+		culture_parameter = housing_tea_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_fruit_demand
+		trade_good_fruit_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = manor_comfort_need
+		culture_parameter = housing_fruit_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_honey_demand
+		trade_good_honey_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_honey
+		amount = manor_comfort_need
+		culture_parameter = housing_honey_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_cheese_demand
+		trade_good_cheese_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_cheese
+		amount = manor_comfort_need
+		culture_parameter = housing_cheese_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = rural_resource_need
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				district_build_gold_cost = manor_primary_stone_cost_reduction_tier_1
+			}
+		}
+	}
+	ai_value = {
+		base = 10
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_rural_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_manor_houses_07
+
+}
+
+eu5_pb_manor_houses_07 = {
+	type_icon = "district_buildings/manor_houses_district.dds"
+	construction_time = 540
+
+	cost_gold = 800
+	levy = poor_building_levy_tier_4
+	triggered_name = {
+		trigger = { culture = { has_cultural_pillar = heritage_west_germanic } }
+		reference = "pb_manor_houses_04_west_germanic"
+	}
+	effect_desc = manor_houses_marshal_control_effect_desc
+	province_modifier = {
+		monthly_agricultural_tax = 0.3
+		building_slots_for_host_district = 4
+		agricultural_tax_mult = manor_primary_agricultural_tax_mult_tier_4
+		supply_limit = normal_building_supply_limit_tier_4
+		province_size_baseline_add = -40
+	}
+	province_terrain_modifier = {
+		parameter = oasis_villages_building_slot
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_food_advance_absolutism }
+		building_rural_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+	market_culture_modifier = {
+		parameter = housing_olive_oil_demand
+		trade_good_oil_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = manor_comfort_need
+		culture_parameter = housing_olive_oil_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_tea_demand
+		trade_good_tea_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_tea
+		amount = manor_comfort_need
+		culture_parameter = housing_tea_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_fruit_demand
+		trade_good_fruit_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = manor_comfort_need
+		culture_parameter = housing_fruit_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_honey_demand
+		trade_good_honey_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_honey
+		amount = manor_comfort_need
+		culture_parameter = housing_honey_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_cheese_demand
+		trade_good_cheese_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_cheese
+		amount = manor_comfort_need
+		culture_parameter = housing_cheese_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = rural_resource_need
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				district_build_gold_cost = manor_primary_stone_cost_reduction_tier_1
+			}
+		}
+	}
+	ai_value = {
+		base = 10
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_rural_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_manor_houses_08
+
+}
+
+eu5_pb_manor_houses_08 = {
+	type_icon = "district_buildings/manor_houses_district.dds"
+	construction_time = 600
+
+	cost_gold = 1000
+	levy = poor_building_levy_tier_4
+	triggered_name = {
+		trigger = { culture = { has_cultural_pillar = heritage_west_germanic } }
+		reference = "pb_manor_houses_04_west_germanic"
+	}
+	effect_desc = manor_houses_marshal_control_effect_desc
+	province_modifier = {
+		monthly_agricultural_tax = 0.4
+		building_slots_for_host_district = 4
+		agricultural_tax_mult = manor_primary_agricultural_tax_mult_tier_4
+		supply_limit = normal_building_supply_limit_tier_4
+		province_size_baseline_add = -40
+	}
+	province_terrain_modifier = {
+		parameter = oasis_villages_building_slot
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_rotherham_plough }
+		building_rural_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+	market_culture_modifier = {
+		parameter = housing_olive_oil_demand
+		trade_good_oil_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = manor_comfort_need
+		culture_parameter = housing_olive_oil_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_tea_demand
+		trade_good_tea_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_tea
+		amount = manor_comfort_need
+		culture_parameter = housing_tea_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_fruit_demand
+		trade_good_fruit_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = manor_comfort_need
+		culture_parameter = housing_fruit_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_honey_demand
+		trade_good_honey_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_honey
+		amount = manor_comfort_need
+		culture_parameter = housing_honey_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = housing_cheese_demand
+		trade_good_cheese_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_cheese
+		amount = manor_comfort_need
+		culture_parameter = housing_cheese_demand
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = rural_resource_need
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				district_build_gold_cost = manor_primary_stone_cost_reduction_tier_1
+			}
+		}
+	}
+	ai_value = {
+		base = 10
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_rural_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+}
+
+pb_villages_04 = {
+	construction_time = district_tier_4_construction_time
+
+	cost_gold = district_tier_4_cost
+	levy = poor_building_levy_tier_4
+
+	province_modifier = {
+		building_slots_for_host_district = 5
+		agricultural_tax_mult = 0.2
+		woodland_tax_mult = 0.2
+		mining_tax_mult = 0.2
+	}
+	province_culture_modifier = {
+		parameter = agrarian_villages_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = agrarian_villages_maa_maintenance
+		stationed_maa_maintenance_low_modifier = 0.1
+		stationed_maa_maintenance_high_modifier = 0.1
+	}
+	province_culture_modifier = {
+		parameter = collective_lands_villages_maa_bonuses
+		stationed_maa_toughness_mult = low_maa_toughness_tier_4
+		stationed_maa_damage_mult = low_maa_damage_tier_4
+	}
+	province_culture_modifier = {
+		parameter = collective_lands_villages_control_penalty
+		control_baseline_add = -10
+	}
+	province_terrain_modifier = {
+		parameter = polders_coastal_villages_building_slot
+		is_coastal = yes
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hills_villages_building_slot
+		terrain = hills
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hills_villages_defender_bonuses
+		terrain = hills
+		defender_holding_advantage = 8
+		stationed_maa_control_value_add = 1
+	}
+	province_terrain_modifier = {
+		parameter = mountains_villages_building_slot
+		terrain = mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = mountains_villages_stationed_toughness
+		terrain = mountains
+		stationed_maa_toughness_mult = low_maa_toughness_tier_4
+	}
+	province_terrain_modifier = {
+		parameter = forest_villages_building_slot
+		terrain = forest
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = forest_villages_building_slot
+		terrain = taiga
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = jungle_villages_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = desert_villages_building_slot
+		terrain = desert
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = desert_villages_building_slot
+		terrain = drylands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = oasis_villages_building_slot
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = desert_villages_camel_control
+		terrain = desert
+		stationed_camel_cavalry_control_value_add = 1
+	}
+	province_terrain_modifier = {
+		parameter = wetlands_villages_building_slot
+		terrain = wetlands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = wetlands_villages_building_slot
+		terrain = floodplains
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		#building_rural_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = rural_resource_need
+
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				villages_district_district_build_gold_cost = -0.03
+			}
+		}
+	}
+
+	market_modifier = {
+		trade_good_textiles_sell_price_mult = price_village_building_need
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = villages_textiles_need
+
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				monthly_agricultural_tax = villages_textiles_need_agricultural_tax
+			}
+			market_modifier = {
+				trade_category_agricultural_goods_buy_price_mult = villages_textiles_need_agricultural_goods_buy_price_reduction
+			}
+		}
+	}
+
+	market_culture_modifier = {
+		parameter = saharan_salt_reliance
+		trade_good_salt_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_salt
+		amount = sahel_salt_need
+		culture_parameter = saharan_salt_reliance
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				agricultural_tax_mult = regional_tax_mult_per_need
+			}
+		}
+	}
+	ai_value = {
+		base = 10
+		ai_economical_building_preference_modifier = yes
+
+		ai_rural_building_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_villages_05
+}
+
+eu5_pb_villages_05 = {
+	type_icon = "district_buildings/villages_district.dds"
+	construction_time = 420
+
+	cost_gold = 450
+	levy = poor_building_levy_tier_4
+
+	province_modifier = {
+		monthly_agricultural_tax = 0.1
+		building_slots_for_host_district = 5
+		agricultural_tax_mult = 0.2
+		woodland_tax_mult = 0.2
+		mining_tax_mult = 0.2
+	}
+	province_culture_modifier = {
+		parameter = agrarian_villages_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = agrarian_villages_maa_maintenance
+		stationed_maa_maintenance_low_modifier = 0.1
+		stationed_maa_maintenance_high_modifier = 0.1
+	}
+	province_culture_modifier = {
+		parameter = collective_lands_villages_maa_bonuses
+		stationed_maa_toughness_mult = low_maa_toughness_tier_4
+		stationed_maa_damage_mult = low_maa_damage_tier_4
+	}
+	province_culture_modifier = {
+		parameter = collective_lands_villages_control_penalty
+		control_baseline_add = -10
+	}
+	province_terrain_modifier = {
+		parameter = polders_coastal_villages_building_slot
+		is_coastal = yes
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hills_villages_building_slot
+		terrain = hills
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hills_villages_defender_bonuses
+		terrain = hills
+		defender_holding_advantage = 8
+		stationed_maa_control_value_add = 1
+	}
+	province_terrain_modifier = {
+		parameter = mountains_villages_building_slot
+		terrain = mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = mountains_villages_stationed_toughness
+		terrain = mountains
+		stationed_maa_toughness_mult = low_maa_toughness_tier_4
+	}
+	province_terrain_modifier = {
+		parameter = forest_villages_building_slot
+		terrain = forest
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = forest_villages_building_slot
+		terrain = taiga
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = jungle_villages_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = desert_villages_building_slot
+		terrain = desert
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = desert_villages_building_slot
+		terrain = drylands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = oasis_villages_building_slot
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = desert_villages_camel_control
+		terrain = desert
+		stationed_camel_cavalry_control_value_add = 1
+	}
+	province_terrain_modifier = {
+		parameter = wetlands_villages_building_slot
+		terrain = wetlands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = wetlands_villages_building_slot
+		terrain = floodplains
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_new_world_crops }
+		#building_rural_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = rural_resource_need
+
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				villages_district_district_build_gold_cost = -0.03
+			}
+		}
+	}
+
+	market_modifier = {
+		trade_good_textiles_sell_price_mult = price_village_building_need
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = villages_textiles_need
+
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				monthly_agricultural_tax = villages_textiles_need_agricultural_tax
+			}
+			market_modifier = {
+				trade_category_agricultural_goods_buy_price_mult = villages_textiles_need_agricultural_goods_buy_price_reduction
+			}
+		}
+	}
+
+	market_culture_modifier = {
+		parameter = saharan_salt_reliance
+		trade_good_salt_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_salt
+		amount = sahel_salt_need
+		culture_parameter = saharan_salt_reliance
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				agricultural_tax_mult = regional_tax_mult_per_need
+			}
+		}
+	}
+	ai_value = {
+		base = 10
+		ai_economical_building_preference_modifier = yes
+
+		ai_rural_building_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_villages_06
+
+}
+
+eu5_pb_villages_06 = {
+	type_icon = "district_buildings/villages_district.dds"
+	construction_time = 480
+
+	cost_gold = 600
+	levy = poor_building_levy_tier_4
+
+	province_modifier = {
+		monthly_agricultural_tax = 0.2
+		building_slots_for_host_district = 5
+		agricultural_tax_mult = 0.2
+		woodland_tax_mult = 0.2
+		mining_tax_mult = 0.2
+	}
+	province_culture_modifier = {
+		parameter = agrarian_villages_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = agrarian_villages_maa_maintenance
+		stationed_maa_maintenance_low_modifier = 0.1
+		stationed_maa_maintenance_high_modifier = 0.1
+	}
+	province_culture_modifier = {
+		parameter = collective_lands_villages_maa_bonuses
+		stationed_maa_toughness_mult = low_maa_toughness_tier_4
+		stationed_maa_damage_mult = low_maa_damage_tier_4
+	}
+	province_culture_modifier = {
+		parameter = collective_lands_villages_control_penalty
+		control_baseline_add = -10
+	}
+	province_terrain_modifier = {
+		parameter = polders_coastal_villages_building_slot
+		is_coastal = yes
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hills_villages_building_slot
+		terrain = hills
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hills_villages_defender_bonuses
+		terrain = hills
+		defender_holding_advantage = 8
+		stationed_maa_control_value_add = 1
+	}
+	province_terrain_modifier = {
+		parameter = mountains_villages_building_slot
+		terrain = mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = mountains_villages_stationed_toughness
+		terrain = mountains
+		stationed_maa_toughness_mult = low_maa_toughness_tier_4
+	}
+	province_terrain_modifier = {
+		parameter = forest_villages_building_slot
+		terrain = forest
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = forest_villages_building_slot
+		terrain = taiga
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = jungle_villages_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = desert_villages_building_slot
+		terrain = desert
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = desert_villages_building_slot
+		terrain = drylands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = oasis_villages_building_slot
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = desert_villages_camel_control
+		terrain = desert
+		stationed_camel_cavalry_control_value_add = 1
+	}
+	province_terrain_modifier = {
+		parameter = wetlands_villages_building_slot
+		terrain = wetlands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = wetlands_villages_building_slot
+		terrain = floodplains
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_food_advance_reformation }
+		#building_rural_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = rural_resource_need
+
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				villages_district_district_build_gold_cost = -0.03
+			}
+		}
+	}
+
+	market_modifier = {
+		trade_good_textiles_sell_price_mult = price_village_building_need
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = villages_textiles_need
+
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				monthly_agricultural_tax = villages_textiles_need_agricultural_tax
+			}
+			market_modifier = {
+				trade_category_agricultural_goods_buy_price_mult = villages_textiles_need_agricultural_goods_buy_price_reduction
+			}
+		}
+	}
+
+	market_culture_modifier = {
+		parameter = saharan_salt_reliance
+		trade_good_salt_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_salt
+		amount = sahel_salt_need
+		culture_parameter = saharan_salt_reliance
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				agricultural_tax_mult = regional_tax_mult_per_need
+			}
+		}
+	}
+	ai_value = {
+		base = 10
+		ai_economical_building_preference_modifier = yes
+
+		ai_rural_building_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_villages_07
+
+}
+
+eu5_pb_villages_07 = {
+	type_icon = "district_buildings/villages_district.dds"
+	construction_time = 540
+
+	cost_gold = 800
+	levy = poor_building_levy_tier_4
+
+	province_modifier = {
+		monthly_agricultural_tax = 0.3
+		building_slots_for_host_district = 5
+		agricultural_tax_mult = 0.2
+		woodland_tax_mult = 0.2
+		mining_tax_mult = 0.2
+	}
+	province_culture_modifier = {
+		parameter = agrarian_villages_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = agrarian_villages_maa_maintenance
+		stationed_maa_maintenance_low_modifier = 0.1
+		stationed_maa_maintenance_high_modifier = 0.1
+	}
+	province_culture_modifier = {
+		parameter = collective_lands_villages_maa_bonuses
+		stationed_maa_toughness_mult = low_maa_toughness_tier_4
+		stationed_maa_damage_mult = low_maa_damage_tier_4
+	}
+	province_culture_modifier = {
+		parameter = collective_lands_villages_control_penalty
+		control_baseline_add = -10
+	}
+	province_terrain_modifier = {
+		parameter = polders_coastal_villages_building_slot
+		is_coastal = yes
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hills_villages_building_slot
+		terrain = hills
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hills_villages_defender_bonuses
+		terrain = hills
+		defender_holding_advantage = 8
+		stationed_maa_control_value_add = 1
+	}
+	province_terrain_modifier = {
+		parameter = mountains_villages_building_slot
+		terrain = mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = mountains_villages_stationed_toughness
+		terrain = mountains
+		stationed_maa_toughness_mult = low_maa_toughness_tier_4
+	}
+	province_terrain_modifier = {
+		parameter = forest_villages_building_slot
+		terrain = forest
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = forest_villages_building_slot
+		terrain = taiga
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = jungle_villages_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = desert_villages_building_slot
+		terrain = desert
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = desert_villages_building_slot
+		terrain = drylands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = oasis_villages_building_slot
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = desert_villages_camel_control
+		terrain = desert
+		stationed_camel_cavalry_control_value_add = 1
+	}
+	province_terrain_modifier = {
+		parameter = wetlands_villages_building_slot
+		terrain = wetlands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = wetlands_villages_building_slot
+		terrain = floodplains
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_food_advance_absolutism }
+		#building_rural_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = rural_resource_need
+
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				villages_district_district_build_gold_cost = -0.03
+			}
+		}
+	}
+
+	market_modifier = {
+		trade_good_textiles_sell_price_mult = price_village_building_need
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = villages_textiles_need
+
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				monthly_agricultural_tax = villages_textiles_need_agricultural_tax
+			}
+			market_modifier = {
+				trade_category_agricultural_goods_buy_price_mult = villages_textiles_need_agricultural_goods_buy_price_reduction
+			}
+		}
+	}
+
+	market_culture_modifier = {
+		parameter = saharan_salt_reliance
+		trade_good_salt_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_salt
+		amount = sahel_salt_need
+		culture_parameter = saharan_salt_reliance
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				agricultural_tax_mult = regional_tax_mult_per_need
+			}
+		}
+	}
+	ai_value = {
+		base = 10
+		ai_economical_building_preference_modifier = yes
+
+		ai_rural_building_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_villages_08
+
+}
+
+eu5_pb_villages_08 = {
+	type_icon = "district_buildings/villages_district.dds"
+	construction_time = 600
+
+	cost_gold = 1000
+	levy = poor_building_levy_tier_4
+
+	province_modifier = {
+		monthly_agricultural_tax = 0.4
+		building_slots_for_host_district = 5
+		agricultural_tax_mult = 0.2
+		woodland_tax_mult = 0.2
+		mining_tax_mult = 0.2
+	}
+	province_culture_modifier = {
+		parameter = agrarian_villages_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = agrarian_villages_maa_maintenance
+		stationed_maa_maintenance_low_modifier = 0.1
+		stationed_maa_maintenance_high_modifier = 0.1
+	}
+	province_culture_modifier = {
+		parameter = collective_lands_villages_maa_bonuses
+		stationed_maa_toughness_mult = low_maa_toughness_tier_4
+		stationed_maa_damage_mult = low_maa_damage_tier_4
+	}
+	province_culture_modifier = {
+		parameter = collective_lands_villages_control_penalty
+		control_baseline_add = -10
+	}
+	province_terrain_modifier = {
+		parameter = polders_coastal_villages_building_slot
+		is_coastal = yes
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hills_villages_building_slot
+		terrain = hills
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hills_villages_defender_bonuses
+		terrain = hills
+		defender_holding_advantage = 8
+		stationed_maa_control_value_add = 1
+	}
+	province_terrain_modifier = {
+		parameter = mountains_villages_building_slot
+		terrain = mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = mountains_villages_stationed_toughness
+		terrain = mountains
+		stationed_maa_toughness_mult = low_maa_toughness_tier_4
+	}
+	province_terrain_modifier = {
+		parameter = forest_villages_building_slot
+		terrain = forest
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = forest_villages_building_slot
+		terrain = taiga
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = jungle_villages_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = desert_villages_building_slot
+		terrain = desert
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = desert_villages_building_slot
+		terrain = drylands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = oasis_villages_building_slot
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = desert_villages_camel_control
+		terrain = desert
+		stationed_camel_cavalry_control_value_add = 1
+	}
+	province_terrain_modifier = {
+		parameter = wetlands_villages_building_slot
+		terrain = wetlands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = wetlands_villages_building_slot
+		terrain = floodplains
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_rotherham_plough }
+		#building_rural_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = rural_resource_need
+
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				villages_district_district_build_gold_cost = -0.03
+			}
+		}
+	}
+
+	market_modifier = {
+		trade_good_textiles_sell_price_mult = price_village_building_need
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = villages_textiles_need
+
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				monthly_agricultural_tax = villages_textiles_need_agricultural_tax
+			}
+			market_modifier = {
+				trade_category_agricultural_goods_buy_price_mult = villages_textiles_need_agricultural_goods_buy_price_reduction
+			}
+		}
+	}
+
+	market_culture_modifier = {
+		parameter = saharan_salt_reliance
+		trade_good_salt_sell_price_mult = regional_demand_price_mult
+	}
+	trade_good_need = {
+		trade_good = trade_good_salt
+		amount = sahel_salt_need
+		culture_parameter = saharan_salt_reliance
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				agricultural_tax_mult = regional_tax_mult_per_need
+			}
+		}
+	}
+	ai_value = {
+		base = 10
+		ai_economical_building_preference_modifier = yes
+
+		ai_rural_building_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+}
