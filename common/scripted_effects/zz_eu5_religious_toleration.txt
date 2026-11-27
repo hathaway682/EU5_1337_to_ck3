@@ -1,0 +1,18 @@
+﻿eu5_toleration_apply_protection_effect = {
+ if = {
+  limit = {
+   exists = liege
+   faith != liege.faith
+   vassal_contract_has_modifiable_obligations = yes
+   OR = { government_has_flag = government_is_feudal government_has_flag = government_is_clan }
+   NOT = { vassal_contract_has_flag = religiously_protected }
+   liege = {
+    NOT = { OR = {
+      rite = { rite_has_tenet = tenet_tax_nonbelievers }
+      faith = { has_doctrine = special_doctrine_jizya }
+    } }
+   }
+  }
+  vassal_contract_set_obligation_level = { type = religious_rights level = 1 }
+ }
+}

@@ -1,0 +1,72 @@
+﻿religious_rights = {
+	display_mode = checkbox
+	is_shown = {
+		scope:subject.faith != scope:liege.faith
+		OR = {
+			NOT = {
+				scope:liege = {
+					OR = {
+						rite = { rite_has_tenet = tenet_tax_nonbelievers }
+						faith = { has_doctrine = special_doctrine_jizya }
+					}
+				}
+			}
+			scope:subject = {
+				NOT = {
+					vassal_contract_has_flag = vassal_contract_cannot_revoke_titles
+				}
+				vassal_contract_has_flag = religiously_protected
+			}
+		}
+	}
+	obligation_levels = {
+		religious_rights_none = {
+			is_valid = {
+				NOT = {
+					scope:liege = { has_realm_law = eu5_religious_toleration_on }
+					scope:subject = { vassal_contract_has_flag = religiously_protected }
+				}
+			}
+			default = yes
+			position = { 0 0 }
+
+			ai_liege_desire = @ai_standard_liege_desire
+			ai_subject_desire = 0
+		}
+		religious_rights_protected = {
+			is_valid = {
+				scope:subject.faith != scope:liege.faith
+				OR = {
+					NOT = {
+						scope:liege = {
+							OR = {
+								rite = { rite_has_tenet = tenet_tax_nonbelievers }
+								faith = { has_doctrine = special_doctrine_jizya }
+							}
+						}
+					}
+					scope:subject = {
+						NOT = {
+							vassal_contract_has_flag = vassal_contract_cannot_revoke_titles
+						}
+						vassal_contract_has_flag = religiously_protected
+					}
+				}
+			}
+			parent = religious_rights_none
+			position = { 1 0 }
+
+			subject_opinion = 5
+
+			subject_modifier = {
+				popular_opinion_add = 5
+			}
+
+			flag = religiously_protected
+
+			ai_liege_desire = 0
+			ai_subject_desire = 10
+			score = 3
+		}
+	}
+}

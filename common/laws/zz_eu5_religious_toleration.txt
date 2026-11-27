@@ -1,0 +1,26 @@
+﻿eu5_religious_toleration_off = {
+ law_group_type = eu5_religious_toleration_laws
+ index = 0
+ can_realm_have = { is_landed = yes }
+ can_have = { is_landed = yes }
+ can_keep = { always = yes }
+ can_pass = { is_landed = yes }
+ ai_will_do = { value = 20 }
+}
+eu5_religious_toleration_on = {
+ law_group_type = eu5_religious_toleration_laws
+ index = 1
+ can_realm_have = { is_landed = yes }
+ can_have = { culture = { has_innovation = innovation_eu5_religious_toleration } }
+ can_keep = { always = yes }
+ can_pass = { is_landed = yes }
+ pass_cost = { prestige = medium_prestige_value }
+ modifier = {
+  ignore_different_faith_opinion = yes
+  ignore_opinion_of_different_faith = yes
+  minority_opinion = 10
+  zealot_opinion = -10
+ }
+ on_pass = { custom_tooltip = eu5_religious_toleration_on_effects hidden_effect = { every_vassal = { eu5_toleration_apply_protection_effect = yes } } }
+ ai_will_do = { value = 50 }
+}

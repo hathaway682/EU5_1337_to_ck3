@@ -1,0 +1,22 @@
+﻿on_vassal_gained = { on_actions = { eu5_toleration_vassal_gained } }
+eu5_toleration_vassal_gained = {
+ effect = {
+  if = {
+   limit = { has_realm_law = eu5_religious_toleration_on exists = scope:vassal }
+   scope:vassal = { eu5_toleration_apply_protection_effect = yes }
+  }
+ }
+}
+on_faith_conversion = { on_actions = { eu5_toleration_faith_conversion } }
+eu5_toleration_faith_conversion = {
+ effect = {
+  if = {
+   limit = { exists = liege liege = { has_realm_law = eu5_religious_toleration_on } }
+   eu5_toleration_apply_protection_effect = yes
+  }
+  if = {
+   limit = { has_realm_law = eu5_religious_toleration_on }
+   every_vassal = { eu5_toleration_apply_protection_effect = yes }
+  }
+ }
+}
