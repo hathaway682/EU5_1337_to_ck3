@@ -29,7 +29,15 @@ can_edit_rite = {
 # Also handles reforming a rite, check for the unreformed doctrine to enable those additional checks
 # Root is the rite creator
 can_create_rite = {
-	can_create_rite_trigger = yes
+ can_create_rite_trigger = yes
+ custom_tooltip = {
+  text = eu5_rite_creation_innovation_requirement_tt
+  OR = {
+   culture = { has_innovation = innovation_eu5_confessionalism_advance }
+   has_character_modifier = religious_reformer_modifier
+   faith = { has_doctrine_parameter = unreformed }
+  }
+ }
 }
 
 # Determines if a character can convert faith via the convert faith UI, on top of the piety requirement

@@ -882,6 +882,9 @@ innovation_eu5_scientific_experimentation = {
 	group = culture_group_civic
 	culture_era = culture_era_eu5_reformation
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_scientific_experimentation.dds"
+	unlock_decision = eu5_sponsor_research_decision
+	custom = eu5_patronage_scholar_tt
+	custom = eu5_scientific_experimentation_research_tt
 	character_modifier = {
 		monthly_learning_lifestyle_xp_gain_mult = 0.05
 	}
@@ -922,6 +925,7 @@ innovation_eu5_confessionalism_advance = {
 	group = culture_group_civic
 	culture_era = culture_era_eu5_reformation
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_confessionalism_advance.dds"
+	custom = eu5_confessionalism_rite_tt
 	character_modifier = {
 		same_faith_opinion = 5
 	}

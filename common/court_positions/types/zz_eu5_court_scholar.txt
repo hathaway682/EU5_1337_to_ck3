@@ -132,7 +132,7 @@
 	# Only Kingdoms+ can attract prominent enough scholars, cathedral schools aside
 	valid_position = {
 		is_landed_or_landless_administrative_or_theocratic = yes
-		culture = { has_innovation = innovation_eu5_patronage }
+		culture = { OR = { has_innovation = innovation_eu5_patronage has_innovation = innovation_eu5_scientific_experimentation } }
 		trigger_if = { # Archbishops - the cathedral schools are theirs to staff
 			limit = {
 				government_has_flag = government_is_ecclesiastical

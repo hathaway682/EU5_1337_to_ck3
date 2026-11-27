@@ -4,7 +4,7 @@
  selection_tooltip = eu5_sponsor_research_decision_tooltip
  sort_order = 999
  is_shown = {
-  culture = { has_innovation = innovation_eu5_patronage }
+  culture = { OR = { has_innovation = innovation_eu5_patronage has_innovation = innovation_eu5_scientific_experimentation } }
  }
  is_valid = {
   employs_court_position = eu5_court_scholar_court_position
@@ -19,7 +19,10 @@
  cooldown = { years = 5 }
  effect = {
   random_list = {
-   25 = { custom_tooltip = eu5_research_failure_tt }
+   25 = {
+    modifier = { add = -10 culture = { has_innovation = innovation_eu5_scientific_experimentation } }
+    custom_tooltip = eu5_research_failure_tt
+   }
    60 = {
     custom_tooltip = eu5_research_success_tt
     hidden_effect = {
@@ -28,6 +31,7 @@
     }
    }
    15 = {
+    modifier = { add = 10 culture = { has_innovation = innovation_eu5_scientific_experimentation } }
     custom_tooltip = eu5_research_critical_tt
     hidden_effect = {
      if = { limit = { culture = { eu5_research_final_breakthrough_available_trigger = yes } } culture = { eu5_research_final_breakthrough_effect = yes } }
