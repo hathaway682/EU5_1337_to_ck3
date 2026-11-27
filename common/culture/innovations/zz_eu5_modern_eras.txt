@@ -21,6 +21,7 @@
 
 innovation_eu5_unlock_falconet_advance = {
 	unlock_maa = eu5_falconet
+	unlock_maa = eu5_early_field_artillery
 
 	skill = martial
 	group = culture_group_military
@@ -91,9 +92,11 @@ innovation_eu5_matchlock_gun = {
 	group = culture_group_military
 	culture_era = culture_era_eu5_discovery
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_matchlock_gun.dds"
+	unlock_maa = eu5_musketeers
+	unlock_building = eu5_interior_gunsmiths_5_discovery
 	character_modifier = {
-		gunpowder_damage_mult = 0.05
-		gunpowder_maintenance_mult = 0.05
+		gunpowder_damage_mult = 0.10
+		gunpowder_maintenance_mult = 0.10
 	}
 	flag = global_regular
 	flag = eu5_discovery_era_regular
@@ -517,6 +520,7 @@ innovation_eu5_fort_limit_4_advance = {
 
 innovation_eu5_artillery_institution_advance = {
 	unlock_maa = eu5_chambered_cannon
+	unlock_maa = eu5_field_artillery
 
 	skill = martial
 	group = culture_group_military
@@ -587,9 +591,10 @@ innovation_eu5_flintlock_gun = {
 	group = culture_group_military
 	culture_era = culture_era_eu5_reformation
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_flintlock_gun.dds"
+	unlock_building = eu5_interior_gunsmiths_5_reformation
 	character_modifier = {
-		gunpowder_damage_mult = 0.05
-		gunpowder_maintenance_mult = 0.05
+		gunpowder_damage_mult = 0.10
+		gunpowder_maintenance_mult = 0.10
 	}
 	flag = global_regular
 	flag = eu5_reformation_era_regular
@@ -1014,6 +1019,7 @@ innovation_eu5_fort_limit_5_advance = {
 
 innovation_eu5_artillery_vs_fort_age_5_absolutism = {
 	unlock_maa = eu5_siege_cannon
+	unlock_maa = eu5_improved_field_artillery
 
 	skill = martial
 	group = culture_group_military
@@ -1084,9 +1090,11 @@ innovation_eu5_line_infantry = {
 	group = culture_group_military
 	culture_era = culture_era_eu5_absolutism
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_line_infantry.dds"
+	unlock_maa = eu5_line_infantry
+	unlock_building = eu5_interior_gunsmiths_5_absolutism
 	character_modifier = {
-		gunpowder_toughness_mult = 0.05
-		gunpowder_maintenance_mult = 0.05
+		gunpowder_toughness_mult = 0.10
+		gunpowder_maintenance_mult = 0.10
 	}
 	flag = global_regular
 	flag = eu5_absolutism_era_regular
@@ -1502,6 +1510,7 @@ innovation_eu5_fort_limit_6_advance = {
 
 innovation_eu5_artillery_vs_fort_age_6_revolutions = {
 	unlock_maa = eu5_advanced_howitzer
+	unlock_maa = eu5_advanced_field_artillery
 
 	skill = martial
 	group = culture_group_military
@@ -1572,9 +1581,10 @@ innovation_eu5_long_rifle = {
 	group = culture_group_military
 	culture_era = culture_era_eu5_revolutions
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_long_rifle.dds"
+	unlock_building = eu5_interior_gunsmiths_5_revolutions
 	character_modifier = {
-		gunpowder_damage_mult = 0.05
-		gunpowder_maintenance_mult = 0.05
+		gunpowder_damage_mult = 0.10
+		gunpowder_maintenance_mult = 0.10
 	}
 	flag = global_regular
 	flag = eu5_revolutions_era_regular

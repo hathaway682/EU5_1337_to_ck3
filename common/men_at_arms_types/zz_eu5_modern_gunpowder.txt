@@ -1,0 +1,55 @@
+﻿eu5_musketeers = {
+ type = gunpowder
+ damage = 65
+ toughness = 16
+ pursuit = 0
+ screen = 5
+ control_value = 4
+ can_recruit = {
+  gunpowder_raise_limit_existing_gunpowder_units < gunpowder_raise_limit_existing_gunpowder_buildings
+  culture = { has_innovation = innovation_eu5_matchlock_gun }
+  NOT = { government_has_flag = government_is_merchant }
+ }
+ terrain_bonus = {
+  wetlands = { damage = -10 }
+  floodplains = { damage = -5 }
+ }
+ counters = { heavy_infantry = 1 }
+ buy_cost = { gold = handgunner_recruitment_cost }
+ low_maintenance_cost = { gold = handgunner_low_maint_cost }
+ high_maintenance_cost = { gold = handgunner_high_maint_cost }
+ provision_cost = 7
+ ai_quality = { value = counter_synergy_ai_weight_gunpowder }
+ stack = 100
+ icon = handgonne
+}
+
+eu5_line_infantry = {
+ type = gunpowder
+ damage = 80
+ toughness = 25
+ pursuit = 0
+ screen = 10
+ control_value = 4
+ can_recruit = {
+  gunpowder_raise_limit_existing_gunpowder_units < gunpowder_raise_limit_existing_gunpowder_buildings
+  culture = { has_innovation = innovation_eu5_line_infantry }
+  NOT = { government_has_flag = government_is_merchant }
+ }
+ terrain_bonus = {
+  wetlands = { damage = -10 }
+  floodplains = { damage = -5 }
+ }
+ counters = {heavy_infantry = 1
+    light_cavalry = 1
+	heavy_cavalry = 1
+	camel_cavalry = 1
+	elephant_cavalry = 1 }
+ buy_cost = { gold = handgunner_recruitment_cost }
+ low_maintenance_cost = { gold = handgunner_low_maint_cost }
+ high_maintenance_cost = { gold = handgunner_high_maint_cost }
+ provision_cost = 7
+ ai_quality = { value = counter_synergy_ai_weight_gunpowder }
+ stack = 100
+ icon = handgonne
+}

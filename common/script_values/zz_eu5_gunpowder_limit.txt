@@ -1,0 +1,15 @@
+﻿gunpowder_raise_limit_existing_gunpowder_units = {
+ value = 0
+ every_maa_regiment = {
+  limit = {
+   is_personal_maa_regiment = yes
+   OR = {
+    is_maa_type = handgunners
+    is_maa_type = fire_lancers
+    is_maa_type = eu5_musketeers
+    is_maa_type = eu5_line_infantry
+   }
+  }
+  add = 1
+ }
+}

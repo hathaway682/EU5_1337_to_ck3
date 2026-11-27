@@ -17972,7 +17972,7 @@ gunsmiths_5 = {
 
 eu5_interior_gunsmiths_5_discovery = {
 	type_icon = old_buildings/powder_magazine.dds
-	cost_gold = eu5_interior_scaled_regular_building_cost_tier_5_1
+	cost_gold = 576
 	construction_time = construction_time_5_years
 	district_level_requirement = 5
 	can_construct = {
@@ -17980,7 +17980,7 @@ eu5_interior_gunsmiths_5_discovery = {
 	can_construct_potential = {
 	}
 	can_construct_showing_failures_only = {
-		culture = { has_innovation = innovation_eu5_training_ground }
+		culture = { has_innovation = innovation_eu5_matchlock_gun }
 		building_gunpowder_trigger = yes
 	}
 	is_enabled = {
@@ -17989,14 +17989,14 @@ eu5_interior_gunsmiths_5_discovery = {
 	character_modifier = {
 	}
 	county_modifier = {
-		stationed_gunpowder_damage_mult = eu5_interior_scaled_normal_maa_damage_tier_5_1
-		stationed_gunpowder_toughness_mult = eu5_interior_scaled_normal_maa_toughness_tier_5_1
-		stationed_gunpowder_screen_mult = eu5_interior_scaled_normal_maa_screen_tier_5_1
+		stationed_gunpowder_damage_mult = 0.3
+		stationed_gunpowder_toughness_mult = 0.3
+		stationed_gunpowder_screen_mult = 0.42
 	}
 	province_modifier = {
 	}
 	market_modifier = {
-		trade_good_copper_sell_price_mult = eu5_interior_scaled_price_basic_building_1_1
+		trade_good_copper_sell_price_mult = 0.006
 	}
 	trade_good_need = {
 		trade_good = trade_good_copper
@@ -18025,7 +18025,7 @@ eu5_interior_gunsmiths_5_discovery = {
 
 eu5_interior_gunsmiths_5_reformation = {
 	type_icon = old_buildings/powder_magazine.dds
-	cost_gold = eu5_interior_scaled_regular_building_cost_tier_5_2
+	cost_gold = 672
 	construction_time = construction_time_5_years
 	district_level_requirement = 6
 	can_construct = {
@@ -18033,7 +18033,7 @@ eu5_interior_gunsmiths_5_reformation = {
 	can_construct_potential = {
 	}
 	can_construct_showing_failures_only = {
-		culture = { has_innovation = innovation_eu5_barracks }
+		culture = { has_innovation = innovation_eu5_flintlock_gun }
 		building_gunpowder_trigger = yes
 	}
 	is_enabled = {
@@ -18042,14 +18042,14 @@ eu5_interior_gunsmiths_5_reformation = {
 	character_modifier = {
 	}
 	county_modifier = {
-		stationed_gunpowder_damage_mult = eu5_interior_scaled_normal_maa_damage_tier_5_2
-		stationed_gunpowder_toughness_mult = eu5_interior_scaled_normal_maa_toughness_tier_5_2
-		stationed_gunpowder_screen_mult = eu5_interior_scaled_normal_maa_screen_tier_5_2
+		stationed_gunpowder_damage_mult = 0.35
+		stationed_gunpowder_toughness_mult = 0.35
+		stationed_gunpowder_screen_mult = 0.49
 	}
 	province_modifier = {
 	}
 	market_modifier = {
-		trade_good_copper_sell_price_mult = eu5_interior_scaled_price_basic_building_1_2
+		trade_good_copper_sell_price_mult = 0.007
 	}
 	trade_good_need = {
 		trade_good = trade_good_copper
@@ -18078,7 +18078,7 @@ eu5_interior_gunsmiths_5_reformation = {
 
 eu5_interior_gunsmiths_5_absolutism = {
 	type_icon = old_buildings/powder_magazine.dds
-	cost_gold = eu5_interior_scaled_regular_building_cost_tier_5_3
+	cost_gold = 768
 	construction_time = construction_time_5_years
 	district_level_requirement = 7
 	can_construct = {
@@ -18086,7 +18086,7 @@ eu5_interior_gunsmiths_5_absolutism = {
 	can_construct_potential = {
 	}
 	can_construct_showing_failures_only = {
-		culture = { has_innovation = innovation_eu5_legion_camp }
+		culture = { has_innovation = innovation_eu5_line_infantry }
 		building_gunpowder_trigger = yes
 	}
 	is_enabled = {
@@ -18095,14 +18095,14 @@ eu5_interior_gunsmiths_5_absolutism = {
 	character_modifier = {
 	}
 	county_modifier = {
-		stationed_gunpowder_damage_mult = eu5_interior_scaled_normal_maa_damage_tier_5_3
-		stationed_gunpowder_toughness_mult = eu5_interior_scaled_normal_maa_toughness_tier_5_3
-		stationed_gunpowder_screen_mult = eu5_interior_scaled_normal_maa_screen_tier_5_3
+		stationed_gunpowder_damage_mult = 0.4
+		stationed_gunpowder_toughness_mult = 0.4
+		stationed_gunpowder_screen_mult = 0.56
 	}
 	province_modifier = {
 	}
 	market_modifier = {
-		trade_good_copper_sell_price_mult = eu5_interior_scaled_price_basic_building_1_3
+		trade_good_copper_sell_price_mult = 0.008
 	}
 	trade_good_need = {
 		trade_good = trade_good_copper
@@ -18131,7 +18131,7 @@ eu5_interior_gunsmiths_5_absolutism = {
 
 eu5_interior_gunsmiths_5_revolutions = {
 	type_icon = old_buildings/powder_magazine.dds
-	cost_gold = eu5_interior_scaled_regular_building_cost_tier_5_4
+	cost_gold = 864
 	construction_time = construction_time_5_years
 	district_level_requirement = 8
 	can_construct = {
@@ -18139,7 +18139,7 @@ eu5_interior_gunsmiths_5_revolutions = {
 	can_construct_potential = {
 	}
 	can_construct_showing_failures_only = {
-		culture = { has_innovation = innovation_eu5_recruitment_center }
+		culture = { has_innovation = innovation_eu5_long_rifle }
 		building_gunpowder_trigger = yes
 	}
 	is_enabled = {
@@ -18148,14 +18148,14 @@ eu5_interior_gunsmiths_5_revolutions = {
 	character_modifier = {
 	}
 	county_modifier = {
-		stationed_gunpowder_damage_mult = eu5_interior_scaled_normal_maa_damage_tier_5_4
-		stationed_gunpowder_toughness_mult = eu5_interior_scaled_normal_maa_toughness_tier_5_4
-		stationed_gunpowder_screen_mult = eu5_interior_scaled_normal_maa_screen_tier_5_4
+		stationed_gunpowder_damage_mult = 0.45
+		stationed_gunpowder_toughness_mult = 0.45
+		stationed_gunpowder_screen_mult = 0.63
 	}
 	province_modifier = {
 	}
 	market_modifier = {
-		trade_good_copper_sell_price_mult = eu5_interior_scaled_price_basic_building_1_4
+		trade_good_copper_sell_price_mult = 0.009
 	}
 	trade_good_need = {
 		trade_good = trade_good_copper
