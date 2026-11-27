@@ -16,8 +16,8 @@
  }
  counters = { heavy_infantry = 1 }
  buy_cost = { gold = handgunner_recruitment_cost }
- low_maintenance_cost = { gold = handgunner_low_maint_cost }
- high_maintenance_cost = { gold = handgunner_high_maint_cost }
+ low_maintenance_cost = { gold = 0.55 }
+ high_maintenance_cost = { gold = 1.375 }
  provision_cost = 7
  ai_quality = { value = counter_synergy_ai_weight_gunpowder }
  stack = 100
@@ -46,8 +46,8 @@ eu5_line_infantry = {
 	camel_cavalry = 1
 	elephant_cavalry = 1 }
  buy_cost = { gold = handgunner_recruitment_cost }
- low_maintenance_cost = { gold = handgunner_low_maint_cost }
- high_maintenance_cost = { gold = handgunner_high_maint_cost }
+ low_maintenance_cost = { gold = 0.75 }
+ high_maintenance_cost = { gold = 1.875 }
  provision_cost = 7
  ai_quality = { value = counter_synergy_ai_weight_gunpowder }
  stack = 100

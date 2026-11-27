@@ -115,8 +115,14 @@ eu5_early_field_artillery = {
 	pursuit = 0
 	screen = 0
 	control_value = 2
+	counters = {
+		pikemen = 0.5
+		peasant_militia = 1
+		heavy_infantry = 0.5
+	}
 	siege_value = 0.1
 	can_recruit = {
+		gunpowder_raise_limit_existing_gunpowder_units < gunpowder_raise_limit_existing_gunpowder_buildings
 		culture = { has_innovation = innovation_eu5_unlock_falconet_advance }
 		NOR = {
 			government_has_flag = government_is_in_steppe
@@ -127,9 +133,9 @@ eu5_early_field_artillery = {
 		government_allows = subject_men_at_arms
 		culture = { has_cultural_era_or_later = culture_era_eu5_discovery }
 	}
-	buy_cost = { gold = eu5_falconet_recruitment_cost }
-	low_maintenance_cost = { gold = eu5_falconet_low_maint_cost }
-	high_maintenance_cost = { gold = eu5_falconet_high_maint_cost }
+	buy_cost = { gold = 60 }
+	low_maintenance_cost = { gold = 0.6 }
+	high_maintenance_cost = { gold = 1.5 }
 	provision_cost = 24
 	stack = 50
 	allowed_in_hired_troops = no
@@ -144,8 +150,14 @@ eu5_field_artillery = {
 	pursuit = 0
 	screen = 0
 	control_value = 2
+	counters = {
+		pikemen = 0.5
+		peasant_militia = 1
+		heavy_infantry = 0.5
+	}
 	siege_value = 0.1
 	can_recruit = {
+		gunpowder_raise_limit_existing_gunpowder_units < gunpowder_raise_limit_existing_gunpowder_buildings
 		culture = { has_innovation = innovation_eu5_artillery_institution_advance }
 		NOR = {
 			government_has_flag = government_is_in_steppe
@@ -156,9 +168,9 @@ eu5_field_artillery = {
 		government_allows = subject_men_at_arms
 		culture = { has_cultural_era_or_later = culture_era_eu5_reformation }
 	}
-	buy_cost = { gold = eu5_chambered_cannon_recruitment_cost }
-	low_maintenance_cost = { gold = eu5_chambered_cannon_low_maint_cost }
-	high_maintenance_cost = { gold = eu5_chambered_cannon_high_maint_cost }
+	buy_cost = { gold = 75 }
+	low_maintenance_cost = { gold = 0.75 }
+	high_maintenance_cost = { gold = 1.875 }
 	provision_cost = 24
 	stack = 50
 	allowed_in_hired_troops = no
@@ -173,8 +185,14 @@ eu5_improved_field_artillery = {
 	pursuit = 0
 	screen = 0
 	control_value = 2
+	counters = {
+		pikemen = 0.5
+		peasant_militia = 1
+		heavy_infantry = 0.5
+	}
 	siege_value = 0.1
 	can_recruit = {
+		gunpowder_raise_limit_existing_gunpowder_units < gunpowder_raise_limit_existing_gunpowder_buildings
 		culture = { has_innovation = innovation_eu5_artillery_vs_fort_age_5_absolutism }
 		NOR = {
 			government_has_flag = government_is_in_steppe
@@ -185,9 +203,9 @@ eu5_improved_field_artillery = {
 		government_allows = subject_men_at_arms
 		culture = { has_cultural_era_or_later = culture_era_eu5_absolutism }
 	}
-	buy_cost = { gold = eu5_siege_cannon_recruitment_cost }
-	low_maintenance_cost = { gold = eu5_siege_cannon_low_maint_cost }
-	high_maintenance_cost = { gold = eu5_siege_cannon_high_maint_cost }
+	buy_cost = { gold = 90 }
+	low_maintenance_cost = { gold = 0.9 }
+	high_maintenance_cost = { gold = 2.25 }
 	provision_cost = 24
 	stack = 50
 	allowed_in_hired_troops = no
@@ -202,8 +220,14 @@ eu5_advanced_field_artillery = {
 	pursuit = 0
 	screen = 0
 	control_value = 2
+	counters = {
+		pikemen = 0.5
+		peasant_militia = 1
+		heavy_infantry = 0.5
+	}
 	siege_value = 0.1
 	can_recruit = {
+		gunpowder_raise_limit_existing_gunpowder_units < gunpowder_raise_limit_existing_gunpowder_buildings
 		culture = { has_innovation = innovation_eu5_artillery_vs_fort_age_6_revolutions }
 		NOR = {
 			government_has_flag = government_is_in_steppe
@@ -214,9 +238,9 @@ eu5_advanced_field_artillery = {
 		government_allows = subject_men_at_arms
 		culture = { has_cultural_era_or_later = culture_era_eu5_revolutions }
 	}
-	buy_cost = { gold = eu5_advanced_howitzer_recruitment_cost }
-	low_maintenance_cost = { gold = eu5_advanced_howitzer_low_maint_cost }
-	high_maintenance_cost = { gold = eu5_advanced_howitzer_high_maint_cost }
+	buy_cost = { gold = 105 }
+	low_maintenance_cost = { gold = 1.05 }
+	high_maintenance_cost = { gold = 2.625 }
 	provision_cost = 24
 	stack = 50
 	allowed_in_hired_troops = no
