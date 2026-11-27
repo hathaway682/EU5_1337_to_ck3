@@ -472,6 +472,9 @@ innovation_eu5_surgery_advance = {
 	group = culture_group_civic
 	culture_era = culture_era_eu5_discovery
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_surgery_advance.dds"
+	parameters = {
+		physician_pharmacopoeia_bonus = yes
+	}
 	character_modifier = {
 		health = 0.1
 	}
