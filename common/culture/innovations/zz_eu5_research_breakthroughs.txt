@@ -4,6 +4,7 @@ innovation_eu5_congreve_rocket = {
  group = culture_group_military
  culture_era = culture_era_eu5_revolutions
  icon = "gfx/interface/icons/culture_innovations/innovation_rocket_cart.dds"
+ potential = { has_innovation = innovation_eu5_congreve_rocket }
  can_progress = { always = no }
  unlock_maa = rocket_carts
  province_modifier = { defender_holding_advantage = 5 }
@@ -15,6 +16,7 @@ innovation_eu5_newcomen_steam_engine = {
  group = culture_group_civic
  culture_era = culture_era_eu5_revolutions
  icon = "gfx/interface/icons/culture_innovations/innovation_misc_inventions.dds"
+ potential = { has_innovation = innovation_eu5_newcomen_steam_engine }
  can_progress = { always = no }
  county_modifier = {
   mining_tax_mult = 0.10
