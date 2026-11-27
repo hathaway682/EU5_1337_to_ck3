@@ -410,6 +410,9 @@ innovation_eu5_overseas_expeditions = {
 	group = culture_group_military
 	culture_era = culture_era_eu5_discovery
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_overseas_expeditions.dds"
+	custom = eu5_overseas_expeditions_unlock_tt
+	unlock_casus_belli = eu5_overseas_county_conquest_cb
+	unlock_casus_belli = eu5_overseas_duchy_conquest_cb
 	character_modifier = {
 		supply_duration = 0.25
 	}
@@ -905,6 +908,9 @@ innovation_eu5_letters_of_marque = {
 	group = culture_group_military
 	culture_era = culture_era_eu5_reformation
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_letters_of_marque.dds"
+	parameters = {
+		culture_can_raid_at_sea_even_if_feudal = yes
+	}
 	character_modifier = {
 		naval_movement_speed_mult = 0.1
 	}
