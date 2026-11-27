@@ -20,7 +20,7 @@ eu5_ai_plan_colonial_enterprise = {
       tier = tier_county
       eu5_colonial_project_target_trigger = { RULER = root }
       OR = {
-       root = { any_tributary = { is_landless_merchant = yes gold >= 100 } }
+       root = { culture ?= { has_innovation = innovation_eu5_colonial_charters } any_tributary = { is_landless_merchant = yes gold >= 100 } }
        duchy ?= {
         any_de_jure_county = {
          is_wilderness_county_trigger = yes

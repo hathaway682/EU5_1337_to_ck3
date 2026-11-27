@@ -62,7 +62,7 @@
     custom_tooltip = {
      text = eu5_colonial_settlement_investor_tt
      OR = {
-      AND = { is_landless_merchant = yes suzerain ?= scope:owner }
+      AND = { is_landless_merchant = yes suzerain ?= scope:owner scope:owner ?= { culture ?= { has_innovation = innovation_eu5_colonial_charters } } }
       AND = {
        is_landed = yes
        OR = { this = scope:owner is_vassal_or_below_of = scope:owner }
@@ -95,7 +95,7 @@
    ai_check_interval = 3
   }
   supplies = {
-   contributor_is_valid = { OR = { this = scope:owner is_vassal_or_below_of = scope:owner AND = { is_landless_merchant = yes suzerain ?= scope:owner } } }
+   contributor_is_valid = { OR = { this = scope:owner is_vassal_or_below_of = scope:owner AND = { is_landless_merchant = yes suzerain ?= scope:owner scope:owner ?= { culture ?= { has_innovation = innovation_eu5_colonial_charters } } } } }
    cost = { gold = 100 }
    is_required = no
    contributor_cooldown = 0
@@ -105,7 +105,7 @@
    ai_check_interval = 12
   }
   settlers = {
-   contributor_is_valid = { OR = { this = scope:owner is_vassal_or_below_of = scope:owner AND = { is_landless_merchant = yes suzerain ?= scope:owner } } }
+   contributor_is_valid = { OR = { this = scope:owner is_vassal_or_below_of = scope:owner AND = { is_landless_merchant = yes suzerain ?= scope:owner scope:owner ?= { culture ?= { has_innovation = innovation_eu5_colonial_charters } } } } }
    cost = { gold = 100 }
    is_required = no
    contributor_cooldown = 0
@@ -115,7 +115,7 @@
    ai_check_interval = 12
   }
   defenses = {
-   contributor_is_valid = { OR = { this = scope:owner is_vassal_or_below_of = scope:owner AND = { is_landless_merchant = yes suzerain ?= scope:owner } } }
+   contributor_is_valid = { OR = { this = scope:owner is_vassal_or_below_of = scope:owner AND = { is_landless_merchant = yes suzerain ?= scope:owner scope:owner ?= { culture ?= { has_innovation = innovation_eu5_colonial_charters } } } } }
    cost = { gold = 100 }
    is_required = no
    contributor_cooldown = 0

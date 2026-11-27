@@ -10,7 +10,7 @@
   NOT = { government_has_flag = government_is_wilderness }
  }
  is_valid = {
-  culture ?= { has_innovation = innovation_pilot_books }
+  culture ?= { has_innovation = innovation_eu5_open_sea_exploration }
   custom_tooltip = {
    text = eu5_chart_seas_coast_requirement_tt
    any_sub_realm_county = { title_province = { is_coastal = yes } }

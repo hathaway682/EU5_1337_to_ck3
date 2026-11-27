@@ -1,0 +1,1689 @@
+﻿innovation_eu5_fort_limit_3_advance = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_fort_limit_3_advance.dds"
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_unlock_falconet_advance = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_unlock_falconet_advance.dds"
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_training_ground = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_training_ground.dds"
+	character_modifier = {
+		levy_reinforcement_rate = 0.15
+	}
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_correct_box_advance_discovery = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_correct_box_advance_discovery.dds"
+	character_modifier = {
+		men_at_arms_cap = 1
+		men_at_arms_limit = 5
+		men_at_arms_title_limit = 1
+	}
+	county_modifier = {
+		stationed_maa_control_value_mult = 0.1
+	}
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_matchlock_gun = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_matchlock_gun.dds"
+	character_modifier = {
+		gunpowder_damage_mult = 0.05
+		gunpowder_maintenance_mult = 0.05
+	}
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_regiment_reinforcement_speed_discovery = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_regiment_reinforcement_speed_discovery.dds"
+	character_modifier = {
+		levy_reinforcement_rate = 0.15
+	}
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_government_size_discovery = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_government_size_discovery.dds"
+	character_modifier = {
+		domain_limit = 1
+		tax_slot_add = 1
+	}
+	county_modifier = {
+		civic_tax_mult = 0.025
+	}
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_town_rights_enable = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_town_rights_enable.dds"
+	character_modifier = {
+		trade_competitiveness_add = 5
+	}
+	county_modifier = {
+		trade_good_books_paper_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_basic_financial_instruments = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_basic_financial_instruments.dds"
+	character_modifier = {
+		prosperity_growth_factor = 0.05
+		trade_expertise_growth_mult = 0.05
+	}
+	county_modifier = {
+		commerce_tax_mult = 0.025
+	}
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_power_projection_advance_4 = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_power_projection_advance_4.dds"
+	character_modifier = {
+		title_creation_cost_mult = -0.2
+	}
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_new_world_crops = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_new_world_crops.dds"
+	county_modifier = {
+		agricultural_tax_mult = 0.025
+		trade_category_cereals_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_blast_furnace = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_blast_furnace.dds"
+	county_modifier = {
+		mining_tax_mult = 0.025
+		trade_category_minerals_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_burgher_privileges = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_burgher_privileges.dds"
+	character_modifier = {
+		villages_district_district_build_gold_cost = -0.1
+	}
+	county_modifier = {
+		trade_category_guild_goods_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_construction_speed_discovery = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_construction_speed_discovery.dds"
+	character_modifier = {
+		build_speed = -0.15
+	}
+	county_modifier = {
+		trade_good_stone_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_trade_range_advance_age_3 = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_trade_range_advance_age_3.dds"
+	character_modifier = {
+		trade_route_length_add = 2
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.025
+	}
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_print_culture = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_print_culture.dds"
+	character_modifier = {
+		monthly_learning_lifestyle_xp_gain_mult = 0.05
+	}
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_overseas_expeditions = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_overseas_expeditions.dds"
+	character_modifier = {
+		supply_duration = 0.25
+	}
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_special
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_open_sea_exploration = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_open_sea_exploration.dds"
+	character_modifier = {
+		trade_route_length_add = 1
+	}
+	custom = eu5_innovation_unlock_exploration_tt
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_special
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_colonial_charters = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_colonial_charters.dds"
+	character_modifier = {
+		trade_capacity_add = 1
+	}
+	custom = eu5_innovation_unlock_colonial_charters_tt
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_special
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_surgery_advance = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_discovery
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_surgery_advance.dds"
+	character_modifier = {
+		health = 0.1
+	}
+	flag = global_regular
+	flag = eu5_discovery_era_regular
+	flag = eu5_special
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_fort_limit_4_advance = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_fort_limit_4_advance.dds"
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_artillery_institution_advance = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_artillery_institution_advance.dds"
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_barracks = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_barracks.dds"
+	character_modifier = {
+		levy_reinforcement_rate = 0.15
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_correct_box_advance_reformation = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_correct_box_advance_reformation.dds"
+	character_modifier = {
+		men_at_arms_cap = 1
+		men_at_arms_limit = 5
+		men_at_arms_title_limit = 1
+	}
+	county_modifier = {
+		stationed_maa_control_value_mult = 0.1
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_flintlock_gun = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_flintlock_gun.dds"
+	character_modifier = {
+		gunpowder_damage_mult = 0.05
+		gunpowder_maintenance_mult = 0.05
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_military_administration = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_military_administration.dds"
+	character_modifier = {
+		levy_reinforcement_rate = 0.15
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_generic_bureaucracy_4_advance = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_generic_bureaucracy_4_advance.dds"
+	character_modifier = {
+		domain_limit = 1
+		tax_slot_add = 1
+	}
+	county_modifier = {
+		civic_tax_mult = 0.025
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_town_rights_ref_advance = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_town_rights_ref_advance.dds"
+	character_modifier = {
+		trade_competitiveness_add = 5
+	}
+	county_modifier = {
+		trade_good_books_paper_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_chartered_companies = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_chartered_companies.dds"
+	character_modifier = {
+		prosperity_growth_factor = 0.05
+		trade_expertise_growth_mult = 0.05
+	}
+	county_modifier = {
+		commerce_tax_mult = 0.025
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_war_score_reformations_advance = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_war_score_reformations_advance.dds"
+	character_modifier = {
+		title_creation_cost_mult = -0.2
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_food_advance_reformation = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_food_advance_reformation.dds"
+	county_modifier = {
+		agricultural_tax_mult = 0.025
+		trade_category_cereals_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_bole_smelting = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_bole_smelting.dds"
+	county_modifier = {
+		mining_tax_mult = 0.025
+		trade_category_minerals_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_rgo_size_advance_reformation = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_rgo_size_advance_reformation.dds"
+	character_modifier = {
+		villages_district_district_build_gold_cost = -0.1
+	}
+	county_modifier = {
+		trade_category_guild_goods_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_construction_speed_reformation = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_construction_speed_reformation.dds"
+	character_modifier = {
+		build_speed = -0.15
+	}
+	county_modifier = {
+		trade_good_stone_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_global_trade_routes_advance = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_global_trade_routes_advance.dds"
+	character_modifier = {
+		trade_route_length_add = 2
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.025
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_scientific_experimentation = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_scientific_experimentation.dds"
+	character_modifier = {
+		monthly_learning_lifestyle_xp_gain_mult = 0.05
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_letters_of_marque = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_letters_of_marque.dds"
+	character_modifier = {
+		naval_movement_speed_mult = 0.1
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_special
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_confessionalism_advance = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_confessionalism_advance.dds"
+	character_modifier = {
+		same_faith_opinion = 5
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_special
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_religious_toleration = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_religious_toleration.dds"
+	character_modifier = {
+		different_faith_opinion = 5
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_special
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_development_of_maritime_law = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_reformation
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_development_of_maritime_law.dds"
+	character_modifier = {
+		trade_capacity_add = 1
+	}
+	flag = global_regular
+	flag = eu5_reformation_era_regular
+	flag = eu5_special
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_fort_limit_5_advance = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_fort_limit_5_advance.dds"
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_artillery_vs_fort_age_5_absolutism = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_artillery_vs_fort_age_5_absolutism.dds"
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_legion_camp = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_legion_camp.dds"
+	character_modifier = {
+		levy_reinforcement_rate = 0.15
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_correct_box_advance_absolutism = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_correct_box_advance_absolutism.dds"
+	character_modifier = {
+		men_at_arms_cap = 1
+		men_at_arms_limit = 5
+		men_at_arms_title_limit = 1
+	}
+	county_modifier = {
+		stationed_maa_control_value_mult = 0.1
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_line_infantry = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_line_infantry.dds"
+	character_modifier = {
+		gunpowder_toughness_mult = 0.05
+		gunpowder_maintenance_mult = 0.05
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_improved_supply_lines = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_improved_supply_lines.dds"
+	character_modifier = {
+		levy_reinforcement_rate = 0.15
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_government_size_absolutism = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_government_size_absolutism.dds"
+	character_modifier = {
+		domain_limit = 1
+		tax_slot_add = 1
+	}
+	county_modifier = {
+		civic_tax_mult = 0.025
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_town_rights_abs_advance = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_town_rights_abs_advance.dds"
+	character_modifier = {
+		trade_competitiveness_add = 5
+	}
+	county_modifier = {
+		trade_good_books_paper_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_central_bank_advance = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_central_bank_advance.dds"
+	character_modifier = {
+		prosperity_growth_factor = 0.05
+		trade_expertise_growth_mult = 0.05
+	}
+	county_modifier = {
+		commerce_tax_mult = 0.025
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_national_sovereignty = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_national_sovereignty.dds"
+	character_modifier = {
+		title_creation_cost_mult = -0.2
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_food_advance_absolutism = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_food_advance_absolutism.dds"
+	county_modifier = {
+		agricultural_tax_mult = 0.025
+		trade_category_cereals_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_coke_blast_furnace = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_coke_blast_furnace.dds"
+	county_modifier = {
+		mining_tax_mult = 0.025
+		trade_category_minerals_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_manufactories_advance = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_manufactories_advance.dds"
+	character_modifier = {
+		villages_district_district_build_gold_cost = -0.1
+	}
+	county_modifier = {
+		trade_category_guild_goods_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_construction_speed_absolutism = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_construction_speed_absolutism.dds"
+	character_modifier = {
+		build_speed = -0.15
+	}
+	county_modifier = {
+		trade_good_stone_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_maritime_advance_age_5 = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_maritime_advance_age_5.dds"
+	character_modifier = {
+		trade_route_length_add = 2
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.025
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_scientific_revolution_advance = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_scientific_revolution_advance.dds"
+	character_modifier = {
+		monthly_learning_lifestyle_xp_gain_mult = 0.05
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_naval_doctrines_advance = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_naval_doctrines_advance.dds"
+	character_modifier = {
+		naval_movement_speed_mult = 0.1
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_special
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_newspapers_advance = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_newspapers_advance.dds"
+	character_modifier = {
+		monthly_prestige_gain_mult = 0.05
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_special
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_the_constitution = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_the_constitution.dds"
+	character_modifier = {
+		vassal_limit = 5
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_special
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_sanitation_advance = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_absolutism
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_sanitation_advance.dds"
+	character_modifier = {
+		health = 0.1
+	}
+	flag = global_regular
+	flag = eu5_absolutism_era_regular
+	flag = eu5_special
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_fort_limit_6_advance = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_fort_limit_6_advance.dds"
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_artillery_vs_fort_age_6_revolutions = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_artillery_vs_fort_age_6_revolutions.dds"
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_recruitment_center = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_recruitment_center.dds"
+	character_modifier = {
+		levy_reinforcement_rate = 0.15
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_correct_box_advance_revolutions = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_correct_box_advance_revolutions.dds"
+	character_modifier = {
+		men_at_arms_cap = 1
+		men_at_arms_limit = 5
+		men_at_arms_title_limit = 1
+	}
+	county_modifier = {
+		stationed_maa_control_value_mult = 0.1
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_long_rifle = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_long_rifle.dds"
+	character_modifier = {
+		gunpowder_damage_mult = 0.05
+		gunpowder_maintenance_mult = 0.05
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_combined_arms_advance_revolutions = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_combined_arms_advance_revolutions.dds"
+	character_modifier = {
+		levy_reinforcement_rate = 0.15
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_modern_bureaucracy = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_modern_bureaucracy.dds"
+	character_modifier = {
+		domain_limit = 1
+		tax_slot_add = 1
+	}
+	county_modifier = {
+		civic_tax_mult = 0.025
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_urbanization = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_urbanization.dds"
+	character_modifier = {
+		trade_competitiveness_add = 5
+	}
+	county_modifier = {
+		trade_good_books_paper_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_the_gold_standard = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_the_gold_standard.dds"
+	character_modifier = {
+		prosperity_growth_factor = 0.05
+		trade_expertise_growth_mult = 0.05
+	}
+	county_modifier = {
+		commerce_tax_mult = 0.025
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_war_score_revolutions_advance = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_war_score_revolutions_advance.dds"
+	character_modifier = {
+		title_creation_cost_mult = -0.2
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_rotherham_plough = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_rotherham_plough.dds"
+	county_modifier = {
+		agricultural_tax_mult = 0.025
+		trade_category_cereals_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_hot_blast_furnace = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_hot_blast_furnace.dds"
+	county_modifier = {
+		mining_tax_mult = 0.025
+		trade_category_minerals_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_industrialization_advance = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_industrialization_advance.dds"
+	character_modifier = {
+		villages_district_district_build_gold_cost = -0.1
+	}
+	county_modifier = {
+		trade_category_guild_goods_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_construction_speed_revolutions = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_construction_speed_revolutions.dds"
+	character_modifier = {
+		build_speed = -0.15
+	}
+	county_modifier = {
+		trade_good_stone_production_mult = 0.25
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_maritime_advance_age_6 = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_maritime_advance_age_6.dds"
+	character_modifier = {
+		trade_route_length_add = 2
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.025
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_enlightenment_advance = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_enlightenment_advance.dds"
+	character_modifier = {
+		monthly_learning_lifestyle_xp_gain_mult = 0.05
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_common
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_levee_en_masse_advance = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_levee_en_masse_advance.dds"
+	character_modifier = {
+		levy_size = 0.1
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_special
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_rights_of_man = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_rights_of_man.dds"
+	character_modifier = {
+		different_faith_opinion = 5
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_special
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_vaccination_advance = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_vaccination_advance.dds"
+	character_modifier = {
+		health = 0.1
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_special
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
+
+innovation_eu5_joint_stock_companies = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_eu5_revolutions
+	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_joint_stock_companies.dds"
+	character_modifier = {
+		trade_capacity_add = 2
+	}
+	flag = global_regular
+	flag = eu5_revolutions_era_regular
+	flag = eu5_special
+	ai_weight_for_fascination = {
+		value = 100
+		if = {
+			limit = { NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } }
+			multiply = 0
+		}
+	}
+}
