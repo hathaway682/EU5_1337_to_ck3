@@ -369,7 +369,7 @@ innovation_eu5_trade_range_advance_age_3 = {
 	culture_era = culture_era_eu5_discovery
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_trade_range_advance_age_3.dds"
 	character_modifier = {
-		trade_route_length_add = 2
+		trade_route_length_mult = 0.2
 	}
 	county_modifier = {
 		maritime_tax_mult = 0.025
@@ -435,7 +435,7 @@ innovation_eu5_open_sea_exploration = {
 	culture_era = culture_era_eu5_discovery
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_open_sea_exploration.dds"
 	character_modifier = {
-		trade_route_length_add = 1
+		trade_route_length_mult = 0.1
 	}
 	custom = eu5_innovation_unlock_exploration_tt
 	flag = global_regular
@@ -456,7 +456,7 @@ innovation_eu5_colonial_charters = {
 	culture_era = culture_era_eu5_discovery
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_colonial_charters.dds"
 	character_modifier = {
-		trade_capacity_add = 1
+		trade_capacity_mult = 0.1
 	}
 	custom = eu5_innovation_unlock_colonial_charters_tt
 	flag = global_regular
@@ -865,7 +865,7 @@ innovation_eu5_global_trade_routes_advance = {
 	culture_era = culture_era_eu5_reformation
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_global_trade_routes_advance.dds"
 	character_modifier = {
-		trade_route_length_add = 2
+		trade_route_length_mult = 0.2
 	}
 	county_modifier = {
 		maritime_tax_mult = 0.025
@@ -977,7 +977,7 @@ innovation_eu5_development_of_maritime_law = {
 	culture_era = culture_era_eu5_reformation
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_development_of_maritime_law.dds"
 	character_modifier = {
-		trade_capacity_add = 1
+		trade_capacity_mult = 0.1
 	}
 	flag = global_regular
 	flag = eu5_reformation_era_regular
@@ -1850,7 +1850,7 @@ innovation_eu5_maritime_advance_age_6 = {
 	culture_era = culture_era_eu5_revolutions
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_maritime_advance_age_6.dds"
 	character_modifier = {
-		trade_route_length_add = 2
+		trade_route_length_mult = 0.2
 	}
 	county_modifier = {
 		maritime_tax_mult = 0.025
@@ -1953,7 +1953,7 @@ innovation_eu5_joint_stock_companies = {
 	culture_era = culture_era_eu5_revolutions
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_joint_stock_companies.dds"
 	character_modifier = {
-		trade_capacity_add = 2
+		trade_capacity_mult = 0.2
 	}
 	flag = global_regular
 	flag = eu5_revolutions_era_regular
