@@ -1,0 +1,45 @@
+﻿eu5_research_random_treatise_effect = {
+ random_list = {
+  30 = {
+   trigger = { exists = house house = { NOT = { has_house_modifier = eu5_research_treatise_on_prosperity_modifier } } }
+   house = { add_house_modifier = { modifier = eu5_research_treatise_on_prosperity_modifier years = 30 } }
+  }
+  30 = {
+   trigger = { exists = house house = { NOT = { has_house_modifier = eu5_research_treatise_on_building_modifier } } }
+   house = { add_house_modifier = { modifier = eu5_research_treatise_on_building_modifier years = 30 } }
+  }
+  30 = {
+   trigger = { exists = house house = { NOT = { has_house_modifier = eu5_research_treatise_on_control_modifier } } }
+   house = { add_house_modifier = { modifier = eu5_research_treatise_on_control_modifier years = 30 } }
+  }
+  30 = {
+   trigger = { exists = house house = { NOT = { has_house_modifier = eu5_research_treatise_on_mathematics_modifier } } }
+   house = { add_house_modifier = { modifier = eu5_research_treatise_on_mathematics_modifier years = 30 } }
+  }
+  30 = {
+   trigger = { exists = house house = { NOT = { has_house_modifier = eu5_research_treatise_on_taxation_modifier } } }
+   house = { add_house_modifier = { modifier = eu5_research_treatise_on_taxation_modifier years = 30 } }
+  }
+  30 = {
+   trigger = { exists = house house = { NOT = { has_house_modifier = eu5_research_treatise_on_light_warfare_modifier } } }
+   house = { add_house_modifier = { modifier = eu5_research_treatise_on_light_warfare_modifier years = 30 } }
+  }
+  30 = {
+   trigger = { exists = house house = { NOT = { has_house_modifier = eu5_research_treatise_on_heavy_warfare_modifier } } }
+   house = { add_house_modifier = { modifier = eu5_research_treatise_on_heavy_warfare_modifier years = 30 } }
+  }
+  30 = {
+   trigger = { exists = house house = { NOT = { has_house_modifier = eu5_research_treatise_on_cavalry_modifier } } }
+   house = { add_house_modifier = { modifier = eu5_research_treatise_on_cavalry_modifier years = 30 } }
+  }
+  30 = {
+   trigger = { exists = house house = { NOT = { has_house_modifier = eu5_research_treatise_on_siege_modifier } } }
+   house = { add_house_modifier = { modifier = eu5_research_treatise_on_siege_modifier years = 30 } }
+  }
+  30 = {
+   trigger = { exists = house house = { NOT = { has_house_modifier = eu5_research_treatise_on_strategy_modifier } } }
+   house = { add_house_modifier = { modifier = eu5_research_treatise_on_strategy_modifier years = 30 } }
+  }
+  1 = { add_prestige = massive_prestige_value }
+ }
+}

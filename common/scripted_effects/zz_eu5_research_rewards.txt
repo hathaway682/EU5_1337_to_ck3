@@ -1,0 +1,239 @@
+﻿eu5_research_award_tribal_effect = {
+ if = {
+  limit = { eu5_research_has_tribal_innovation_trigger = yes }
+  random_list = {
+  1 = { trigger = { NOT = { has_innovation = innovation_motte } } add_innovation = innovation_motte }
+  1 = { trigger = { NOT = { has_innovation = innovation_catapult } } add_innovation = innovation_catapult }
+  1 = { trigger = { NOT = { has_innovation = innovation_barracks } } add_innovation = innovation_barracks }
+  1 = { trigger = { NOT = { has_innovation = innovation_mustering_grounds } } add_innovation = innovation_mustering_grounds }
+  1 = { trigger = { NOT = { has_innovation = innovation_bannus } } add_innovation = innovation_bannus }
+  1 = { trigger = { NOT = { has_innovation = innovation_quilted_armor } } add_innovation = innovation_quilted_armor }
+  1 = { trigger = { NOT = { has_innovation = innovation_pattern_welding } } add_innovation = innovation_pattern_welding }
+  1 = { trigger = { NOT = { has_innovation = innovation_prosperity_01 } } add_innovation = innovation_prosperity_01 }
+  1 = { trigger = { NOT = { has_innovation = innovation_currency_01 } } add_innovation = innovation_currency_01 }
+  1 = { trigger = { NOT = { has_innovation = innovation_gavelkind } } add_innovation = innovation_gavelkind }
+  1 = { trigger = { NOT = { has_innovation = innovation_crop_rotation } } add_innovation = innovation_crop_rotation }
+  1 = { trigger = { NOT = { has_innovation = innovation_city_planning } } add_innovation = innovation_city_planning }
+  1 = { trigger = { NOT = { has_innovation = innovation_casus_belli } } add_innovation = innovation_casus_belli }
+  1 = { trigger = { NOT = { has_innovation = innovation_plenary_assemblies } } add_innovation = innovation_plenary_assemblies }
+  1 = { trigger = { NOT = { has_innovation = innovation_ledger } } add_innovation = innovation_ledger }
+  }
+ }
+}
+
+eu5_research_award_early_medieval_effect = {
+ if = {
+  limit = { eu5_research_has_early_medieval_innovation_trigger = yes }
+  random_list = {
+  1 = { trigger = { NOT = { has_innovation = innovation_battlements } } add_innovation = innovation_battlements }
+  1 = { trigger = { NOT = { has_innovation = innovation_mangonel } } add_innovation = innovation_mangonel }
+  1 = { trigger = { NOT = { has_innovation = innovation_burhs } } add_innovation = innovation_burhs }
+  1 = { trigger = { NOT = { has_innovation = innovation_house_soldiers } } add_innovation = innovation_house_soldiers }
+  1 = { trigger = { NOT = { has_innovation = innovation_horseshoes } } add_innovation = innovation_horseshoes }
+  1 = { trigger = { NOT = { has_innovation = innovation_arched_saddle } } add_innovation = innovation_arched_saddle }
+  1 = { trigger = { NOT = { has_innovation = innovation_riveted_mail } } add_innovation = innovation_riveted_mail }
+  1 = { trigger = { NOT = { has_innovation = innovation_hereditary_rule } } add_innovation = innovation_hereditary_rule }
+  1 = { trigger = { NOT = { has_innovation = innovation_manorialism } } add_innovation = innovation_manorialism }
+  1 = { trigger = { NOT = { has_innovation = innovation_prosperity_02 } } add_innovation = innovation_prosperity_02 }
+  1 = { trigger = { NOT = { has_innovation = innovation_currency_02 } } add_innovation = innovation_currency_02 }
+  1 = { trigger = { NOT = { has_innovation = innovation_royal_prerogative } } add_innovation = innovation_royal_prerogative }
+  1 = { trigger = { NOT = { has_innovation = innovation_chronicle_writing } } add_innovation = innovation_chronicle_writing }
+  1 = { trigger = { NOT = { has_innovation = innovation_armilary_sphere } } add_innovation = innovation_armilary_sphere }
+  1 = { trigger = { NOT = { has_innovation = innovation_baliffs } } add_innovation = innovation_baliffs }
+  1 = { trigger = { NOT = { has_innovation = innovation_heavy_plow } } add_innovation = innovation_heavy_plow }
+  1 = { trigger = { NOT = { has_innovation = innovation_prospecting } } add_innovation = innovation_prospecting }
+  1 = { trigger = { NOT = { has_innovation = innovation_coppicing } } add_innovation = innovation_coppicing }
+  1 = { trigger = { NOT = { has_innovation = innovation_monasticism } } add_innovation = innovation_monasticism }
+  1 = { trigger = { NOT = { has_innovation = innovation_craft_ordinances } } add_innovation = innovation_craft_ordinances }
+  }
+ }
+}
+
+eu5_research_award_high_medieval_effect = {
+ if = {
+  limit = { eu5_research_has_high_medieval_innovation_trigger = yes }
+  random_list = {
+  1 = { trigger = { NOT = { has_innovation = innovation_hoardings } } add_innovation = innovation_hoardings }
+  1 = { trigger = { NOT = { has_innovation = innovation_trebuchet } } add_innovation = innovation_trebuchet }
+  1 = { trigger = { NOT = { has_innovation = innovation_castle_baileys } } add_innovation = innovation_castle_baileys }
+  1 = { trigger = { NOT = { has_innovation = innovation_men_at_arms } } add_innovation = innovation_men_at_arms }
+  1 = { trigger = { NOT = { has_innovation = innovation_knighthood } } add_innovation = innovation_knighthood }
+  1 = { trigger = { NOT = { has_innovation = innovation_advanced_bowmaking } } add_innovation = innovation_advanced_bowmaking }
+  1 = { trigger = { NOT = { has_innovation = innovation_coat_of_plates } } add_innovation = innovation_coat_of_plates }
+  1 = { trigger = { NOT = { has_innovation = innovation_heraldry } } add_innovation = innovation_heraldry }
+  1 = { trigger = { NOT = { has_innovation = innovation_windmills } } add_innovation = innovation_windmills }
+  1 = { trigger = { NOT = { has_innovation = innovation_divine_right } } add_innovation = innovation_divine_right }
+  1 = { trigger = { NOT = { has_innovation = innovation_land_grants } } add_innovation = innovation_land_grants }
+  1 = { trigger = { NOT = { has_innovation = innovation_scutage } } add_innovation = innovation_scutage }
+  1 = { trigger = { NOT = { has_innovation = innovation_guilds } } add_innovation = innovation_guilds }
+  1 = { trigger = { NOT = { has_innovation = innovation_prosperity_03 } } add_innovation = innovation_prosperity_03 }
+  1 = { trigger = { NOT = { has_innovation = innovation_currency_03 } } add_innovation = innovation_currency_03 }
+  1 = { trigger = { NOT = { has_innovation = innovation_blast_furnaces } } add_innovation = innovation_blast_furnaces }
+  1 = { trigger = { NOT = { has_innovation = innovation_merchant_law } } add_innovation = innovation_merchant_law }
+  1 = { trigger = { NOT = { has_innovation = innovation_vaulting } } add_innovation = innovation_vaulting }
+  1 = { trigger = { NOT = { has_innovation = innovation_glassmaking } } add_innovation = innovation_glassmaking }
+  }
+ }
+}
+
+eu5_research_award_late_medieval_effect = {
+ if = {
+  limit = { eu5_research_has_late_medieval_innovation_trigger = yes }
+  random_list = {
+  1 = { trigger = { NOT = { has_innovation = innovation_machicolations } } add_innovation = innovation_machicolations }
+  1 = { trigger = { NOT = { has_innovation = innovation_gunpowder } } add_innovation = innovation_gunpowder }
+  1 = { trigger = { NOT = { has_innovation = innovation_royal_armory } } add_innovation = innovation_royal_armory }
+  1 = { trigger = { NOT = { has_innovation = innovation_standing_armies } } add_innovation = innovation_standing_armies }
+  1 = { trigger = { NOT = { has_innovation = innovation_sappers } } add_innovation = innovation_sappers }
+  1 = { trigger = { NOT = { has_innovation = innovation_plate_armor } } add_innovation = innovation_plate_armor }
+  1 = { trigger = { NOT = { has_innovation = innovation_tempered_steel } } add_innovation = innovation_tempered_steel }
+  1 = { trigger = { NOT = { has_innovation = innovation_primogeniture } } add_innovation = innovation_primogeniture }
+  1 = { trigger = { NOT = { has_innovation = innovation_cranes } } add_innovation = innovation_cranes }
+  1 = { trigger = { NOT = { has_innovation = innovation_noblesse_oblige } } add_innovation = innovation_noblesse_oblige }
+  1 = { trigger = { NOT = { has_innovation = innovation_rightful_ownership } } add_innovation = innovation_rightful_ownership }
+  1 = { trigger = { NOT = { has_innovation = innovation_ermine_cloaks } } add_innovation = innovation_ermine_cloaks }
+  1 = { trigger = { NOT = { has_innovation = innovation_court_officials } } add_innovation = innovation_court_officials }
+  1 = { trigger = { NOT = { has_innovation = innovation_prosperity_04 } } add_innovation = innovation_prosperity_04 }
+  1 = { trigger = { NOT = { has_innovation = innovation_currency_04 } } add_innovation = innovation_currency_04 }
+  1 = { trigger = { NOT = { has_innovation = innovation_putting_out_system } } add_innovation = innovation_putting_out_system }
+  1 = { trigger = { NOT = { has_innovation = innovation_deep_mining } } add_innovation = innovation_deep_mining }
+  1 = { trigger = { NOT = { has_innovation = innovation_pilot_books } } add_innovation = innovation_pilot_books }
+  1 = { trigger = { NOT = { has_innovation = innovation_agronomy } } add_innovation = innovation_agronomy }
+  1 = { trigger = { NOT = { has_innovation = innovation_bricks } } add_innovation = innovation_bricks }
+  }
+ }
+}
+
+eu5_research_award_eu5_discovery_effect = {
+ if = {
+  limit = { eu5_research_has_eu5_discovery_innovation_trigger = yes }
+  random_list = {
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_fort_limit_3_advance } } add_innovation = innovation_eu5_fort_limit_3_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_unlock_falconet_advance } } add_innovation = innovation_eu5_unlock_falconet_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_training_ground } } add_innovation = innovation_eu5_training_ground }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_correct_box_advance_discovery } } add_innovation = innovation_eu5_correct_box_advance_discovery }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_matchlock_gun } } add_innovation = innovation_eu5_matchlock_gun }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_regiment_reinforcement_speed_discovery } } add_innovation = innovation_eu5_regiment_reinforcement_speed_discovery }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_government_size_discovery } } add_innovation = innovation_eu5_government_size_discovery }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_town_rights_enable } } add_innovation = innovation_eu5_town_rights_enable }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_basic_financial_instruments } } add_innovation = innovation_eu5_basic_financial_instruments }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_power_projection_advance_4 } } add_innovation = innovation_eu5_power_projection_advance_4 }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_new_world_crops } } add_innovation = innovation_eu5_new_world_crops }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_blast_furnace } } add_innovation = innovation_eu5_blast_furnace }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_burgher_privileges } } add_innovation = innovation_eu5_burgher_privileges }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_construction_speed_discovery } } add_innovation = innovation_eu5_construction_speed_discovery }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_trade_range_advance_age_3 } } add_innovation = innovation_eu5_trade_range_advance_age_3 }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_print_culture } } add_innovation = innovation_eu5_print_culture }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_overseas_expeditions } } add_innovation = innovation_eu5_overseas_expeditions }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_open_sea_exploration } } add_innovation = innovation_eu5_open_sea_exploration }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_colonial_charters } } add_innovation = innovation_eu5_colonial_charters }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_surgery_advance } } add_innovation = innovation_eu5_surgery_advance }
+  }
+ }
+}
+
+eu5_research_award_eu5_reformation_effect = {
+ if = {
+  limit = { eu5_research_has_eu5_reformation_innovation_trigger = yes }
+  random_list = {
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_fort_limit_4_advance } } add_innovation = innovation_eu5_fort_limit_4_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_artillery_institution_advance } } add_innovation = innovation_eu5_artillery_institution_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_barracks } } add_innovation = innovation_eu5_barracks }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_correct_box_advance_reformation } } add_innovation = innovation_eu5_correct_box_advance_reformation }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_flintlock_gun } } add_innovation = innovation_eu5_flintlock_gun }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_military_administration } } add_innovation = innovation_eu5_military_administration }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_generic_bureaucracy_4_advance } } add_innovation = innovation_eu5_generic_bureaucracy_4_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_town_rights_ref_advance } } add_innovation = innovation_eu5_town_rights_ref_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_chartered_companies } } add_innovation = innovation_eu5_chartered_companies }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_war_score_reformations_advance } } add_innovation = innovation_eu5_war_score_reformations_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_food_advance_reformation } } add_innovation = innovation_eu5_food_advance_reformation }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_bole_smelting } } add_innovation = innovation_eu5_bole_smelting }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_rgo_size_advance_reformation } } add_innovation = innovation_eu5_rgo_size_advance_reformation }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_construction_speed_reformation } } add_innovation = innovation_eu5_construction_speed_reformation }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_global_trade_routes_advance } } add_innovation = innovation_eu5_global_trade_routes_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_scientific_experimentation } } add_innovation = innovation_eu5_scientific_experimentation }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_letters_of_marque } } add_innovation = innovation_eu5_letters_of_marque }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_confessionalism_advance } } add_innovation = innovation_eu5_confessionalism_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_religious_toleration } } add_innovation = innovation_eu5_religious_toleration }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_development_of_maritime_law } } add_innovation = innovation_eu5_development_of_maritime_law }
+  }
+ }
+}
+
+eu5_research_award_eu5_absolutism_effect = {
+ if = {
+  limit = { eu5_research_has_eu5_absolutism_innovation_trigger = yes }
+  random_list = {
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_fort_limit_5_advance } } add_innovation = innovation_eu5_fort_limit_5_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_artillery_vs_fort_age_5_absolutism } } add_innovation = innovation_eu5_artillery_vs_fort_age_5_absolutism }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_legion_camp } } add_innovation = innovation_eu5_legion_camp }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_correct_box_advance_absolutism } } add_innovation = innovation_eu5_correct_box_advance_absolutism }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_line_infantry } } add_innovation = innovation_eu5_line_infantry }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_improved_supply_lines } } add_innovation = innovation_eu5_improved_supply_lines }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_government_size_absolutism } } add_innovation = innovation_eu5_government_size_absolutism }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_town_rights_abs_advance } } add_innovation = innovation_eu5_town_rights_abs_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_central_bank_advance } } add_innovation = innovation_eu5_central_bank_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_national_sovereignty } } add_innovation = innovation_eu5_national_sovereignty }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_food_advance_absolutism } } add_innovation = innovation_eu5_food_advance_absolutism }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_coke_blast_furnace } } add_innovation = innovation_eu5_coke_blast_furnace }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_manufactories_advance } } add_innovation = innovation_eu5_manufactories_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_construction_speed_absolutism } } add_innovation = innovation_eu5_construction_speed_absolutism }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_maritime_advance_age_5 } } add_innovation = innovation_eu5_maritime_advance_age_5 }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_scientific_revolution_advance } } add_innovation = innovation_eu5_scientific_revolution_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_naval_doctrines_advance } } add_innovation = innovation_eu5_naval_doctrines_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_newspapers_advance } } add_innovation = innovation_eu5_newspapers_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_the_constitution } } add_innovation = innovation_eu5_the_constitution }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_sanitation_advance } } add_innovation = innovation_eu5_sanitation_advance }
+  }
+ }
+}
+
+eu5_research_award_eu5_revolutions_effect = {
+ if = {
+  limit = { eu5_research_has_eu5_revolutions_innovation_trigger = yes }
+  random_list = {
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_fort_limit_6_advance } } add_innovation = innovation_eu5_fort_limit_6_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_artillery_vs_fort_age_6_revolutions } } add_innovation = innovation_eu5_artillery_vs_fort_age_6_revolutions }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_recruitment_center } } add_innovation = innovation_eu5_recruitment_center }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_correct_box_advance_revolutions } } add_innovation = innovation_eu5_correct_box_advance_revolutions }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_long_rifle } } add_innovation = innovation_eu5_long_rifle }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_combined_arms_advance_revolutions } } add_innovation = innovation_eu5_combined_arms_advance_revolutions }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_modern_bureaucracy } } add_innovation = innovation_eu5_modern_bureaucracy }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_urbanization } } add_innovation = innovation_eu5_urbanization }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_the_gold_standard } } add_innovation = innovation_eu5_the_gold_standard }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_war_score_revolutions_advance } } add_innovation = innovation_eu5_war_score_revolutions_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_rotherham_plough } } add_innovation = innovation_eu5_rotherham_plough }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_hot_blast_furnace } } add_innovation = innovation_eu5_hot_blast_furnace }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_industrialization_advance } } add_innovation = innovation_eu5_industrialization_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_construction_speed_revolutions } } add_innovation = innovation_eu5_construction_speed_revolutions }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_maritime_advance_age_6 } } add_innovation = innovation_eu5_maritime_advance_age_6 }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_enlightenment_advance } } add_innovation = innovation_eu5_enlightenment_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_levee_en_masse_advance } } add_innovation = innovation_eu5_levee_en_masse_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_rights_of_man } } add_innovation = innovation_eu5_rights_of_man }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_vaccination_advance } } add_innovation = innovation_eu5_vaccination_advance }
+  1 = { trigger = { NOT = { has_innovation = innovation_eu5_joint_stock_companies } } add_innovation = innovation_eu5_joint_stock_companies }
+  }
+ }
+}
+
+eu5_research_award_current_effect = {
+ if = { limit = { has_cultural_era_or_later = culture_era_eu5_revolutions } eu5_research_award_eu5_revolutions_effect = yes }
+ else_if = { limit = { has_cultural_era_or_later = culture_era_eu5_absolutism } eu5_research_award_eu5_absolutism_effect = yes }
+ else_if = { limit = { has_cultural_era_or_later = culture_era_eu5_reformation } eu5_research_award_eu5_reformation_effect = yes }
+ else_if = { limit = { has_cultural_era_or_later = culture_era_eu5_discovery } eu5_research_award_eu5_discovery_effect = yes }
+ else_if = { limit = { has_cultural_era_or_later = culture_era_late_medieval } eu5_research_award_late_medieval_effect = yes }
+ else_if = { limit = { has_cultural_era_or_later = culture_era_high_medieval } eu5_research_award_high_medieval_effect = yes }
+ else_if = { limit = { has_cultural_era_or_later = culture_era_early_medieval } eu5_research_award_early_medieval_effect = yes }
+ else_if = { limit = { has_cultural_era_or_later = culture_era_tribal } eu5_research_award_tribal_effect = yes }
+}
+
+eu5_research_award_next_effect = {
+ if = { limit = { has_cultural_era_or_later = culture_era_eu5_revolutions } eu5_research_award_eu5_revolutions_effect = yes }
+ else_if = { limit = { has_cultural_era_or_later = culture_era_eu5_absolutism } if = { limit = { eu5_research_has_eu5_revolutions_innovation_trigger = yes } eu5_research_award_eu5_revolutions_effect = yes } else = { eu5_research_award_eu5_absolutism_effect = yes } }
+ else_if = { limit = { has_cultural_era_or_later = culture_era_eu5_reformation } if = { limit = { eu5_research_has_eu5_absolutism_innovation_trigger = yes } eu5_research_award_eu5_absolutism_effect = yes } else = { eu5_research_award_eu5_reformation_effect = yes } }
+ else_if = { limit = { has_cultural_era_or_later = culture_era_eu5_discovery } if = { limit = { eu5_research_has_eu5_reformation_innovation_trigger = yes } eu5_research_award_eu5_reformation_effect = yes } else = { eu5_research_award_eu5_discovery_effect = yes } }
+ else_if = { limit = { has_cultural_era_or_later = culture_era_late_medieval } if = { limit = { eu5_research_has_eu5_discovery_innovation_trigger = yes } eu5_research_award_eu5_discovery_effect = yes } else = { eu5_research_award_late_medieval_effect = yes } }
+ else_if = { limit = { has_cultural_era_or_later = culture_era_high_medieval } if = { limit = { eu5_research_has_late_medieval_innovation_trigger = yes } eu5_research_award_late_medieval_effect = yes } else = { eu5_research_award_high_medieval_effect = yes } }
+ else_if = { limit = { has_cultural_era_or_later = culture_era_early_medieval } if = { limit = { eu5_research_has_high_medieval_innovation_trigger = yes } eu5_research_award_high_medieval_effect = yes } else = { eu5_research_award_early_medieval_effect = yes } }
+ else_if = { limit = { has_cultural_era_or_later = culture_era_tribal } if = { limit = { eu5_research_has_early_medieval_innovation_trigger = yes } eu5_research_award_early_medieval_effect = yes } else = { eu5_research_award_tribal_effect = yes } }
+}

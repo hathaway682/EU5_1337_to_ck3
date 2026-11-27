@@ -1,0 +1,12 @@
+﻿eu5_court_scholar_validity_trigger = {
+ base_court_position_validity_trigger = { EMPLOYER = $EMPLOYER$ }
+ is_adult = yes
+ is_landed = no
+ custom_tooltip = {
+  text = none_does_not_have_a_full_time_job
+  trigger_if = {
+   limit = { NOT = { has_court_position = eu5_court_scholar_court_position } }
+   court_position_does_not_already_have_a_job_trigger = yes
+  }
+ }
+}

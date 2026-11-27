@@ -1,0 +1,218 @@
+﻿eu5_research_has_tribal_innovation_trigger = {
+ OR = {
+  NOT = { has_innovation = innovation_motte }
+  NOT = { has_innovation = innovation_catapult }
+  NOT = { has_innovation = innovation_barracks }
+  NOT = { has_innovation = innovation_mustering_grounds }
+  NOT = { has_innovation = innovation_bannus }
+  NOT = { has_innovation = innovation_quilted_armor }
+  NOT = { has_innovation = innovation_pattern_welding }
+  NOT = { has_innovation = innovation_prosperity_01 }
+  NOT = { has_innovation = innovation_currency_01 }
+  NOT = { has_innovation = innovation_gavelkind }
+  NOT = { has_innovation = innovation_crop_rotation }
+  NOT = { has_innovation = innovation_city_planning }
+  NOT = { has_innovation = innovation_casus_belli }
+  NOT = { has_innovation = innovation_plenary_assemblies }
+  NOT = { has_innovation = innovation_ledger }
+ }
+}
+
+eu5_research_has_early_medieval_innovation_trigger = {
+ OR = {
+  NOT = { has_innovation = innovation_battlements }
+  NOT = { has_innovation = innovation_mangonel }
+  NOT = { has_innovation = innovation_burhs }
+  NOT = { has_innovation = innovation_house_soldiers }
+  NOT = { has_innovation = innovation_horseshoes }
+  NOT = { has_innovation = innovation_arched_saddle }
+  NOT = { has_innovation = innovation_riveted_mail }
+  NOT = { has_innovation = innovation_hereditary_rule }
+  NOT = { has_innovation = innovation_manorialism }
+  NOT = { has_innovation = innovation_prosperity_02 }
+  NOT = { has_innovation = innovation_currency_02 }
+  NOT = { has_innovation = innovation_royal_prerogative }
+  NOT = { has_innovation = innovation_chronicle_writing }
+  NOT = { has_innovation = innovation_armilary_sphere }
+  NOT = { has_innovation = innovation_baliffs }
+  NOT = { has_innovation = innovation_heavy_plow }
+  NOT = { has_innovation = innovation_prospecting }
+  NOT = { has_innovation = innovation_coppicing }
+  NOT = { has_innovation = innovation_monasticism }
+  NOT = { has_innovation = innovation_craft_ordinances }
+ }
+}
+
+eu5_research_has_high_medieval_innovation_trigger = {
+ OR = {
+  NOT = { has_innovation = innovation_hoardings }
+  NOT = { has_innovation = innovation_trebuchet }
+  NOT = { has_innovation = innovation_castle_baileys }
+  NOT = { has_innovation = innovation_men_at_arms }
+  NOT = { has_innovation = innovation_knighthood }
+  NOT = { has_innovation = innovation_advanced_bowmaking }
+  NOT = { has_innovation = innovation_coat_of_plates }
+  NOT = { has_innovation = innovation_heraldry }
+  NOT = { has_innovation = innovation_windmills }
+  NOT = { has_innovation = innovation_divine_right }
+  NOT = { has_innovation = innovation_land_grants }
+  NOT = { has_innovation = innovation_scutage }
+  NOT = { has_innovation = innovation_guilds }
+  NOT = { has_innovation = innovation_prosperity_03 }
+  NOT = { has_innovation = innovation_currency_03 }
+  NOT = { has_innovation = innovation_blast_furnaces }
+  NOT = { has_innovation = innovation_merchant_law }
+  NOT = { has_innovation = innovation_vaulting }
+  NOT = { has_innovation = innovation_glassmaking }
+ }
+}
+
+eu5_research_has_late_medieval_innovation_trigger = {
+ OR = {
+  NOT = { has_innovation = innovation_machicolations }
+  NOT = { has_innovation = innovation_gunpowder }
+  NOT = { has_innovation = innovation_royal_armory }
+  NOT = { has_innovation = innovation_standing_armies }
+  NOT = { has_innovation = innovation_sappers }
+  NOT = { has_innovation = innovation_plate_armor }
+  NOT = { has_innovation = innovation_tempered_steel }
+  NOT = { has_innovation = innovation_primogeniture }
+  NOT = { has_innovation = innovation_cranes }
+  NOT = { has_innovation = innovation_noblesse_oblige }
+  NOT = { has_innovation = innovation_rightful_ownership }
+  NOT = { has_innovation = innovation_ermine_cloaks }
+  NOT = { has_innovation = innovation_court_officials }
+  NOT = { has_innovation = innovation_prosperity_04 }
+  NOT = { has_innovation = innovation_currency_04 }
+  NOT = { has_innovation = innovation_putting_out_system }
+  NOT = { has_innovation = innovation_deep_mining }
+  NOT = { has_innovation = innovation_pilot_books }
+  NOT = { has_innovation = innovation_agronomy }
+  NOT = { has_innovation = innovation_bricks }
+ }
+}
+
+eu5_research_has_eu5_discovery_innovation_trigger = {
+ OR = {
+  NOT = { has_innovation = innovation_eu5_fort_limit_3_advance }
+  NOT = { has_innovation = innovation_eu5_unlock_falconet_advance }
+  NOT = { has_innovation = innovation_eu5_training_ground }
+  NOT = { has_innovation = innovation_eu5_correct_box_advance_discovery }
+  NOT = { has_innovation = innovation_eu5_matchlock_gun }
+  NOT = { has_innovation = innovation_eu5_regiment_reinforcement_speed_discovery }
+  NOT = { has_innovation = innovation_eu5_government_size_discovery }
+  NOT = { has_innovation = innovation_eu5_town_rights_enable }
+  NOT = { has_innovation = innovation_eu5_basic_financial_instruments }
+  NOT = { has_innovation = innovation_eu5_power_projection_advance_4 }
+  NOT = { has_innovation = innovation_eu5_new_world_crops }
+  NOT = { has_innovation = innovation_eu5_blast_furnace }
+  NOT = { has_innovation = innovation_eu5_burgher_privileges }
+  NOT = { has_innovation = innovation_eu5_construction_speed_discovery }
+  NOT = { has_innovation = innovation_eu5_trade_range_advance_age_3 }
+  NOT = { has_innovation = innovation_eu5_print_culture }
+  NOT = { has_innovation = innovation_eu5_overseas_expeditions }
+  NOT = { has_innovation = innovation_eu5_open_sea_exploration }
+  NOT = { has_innovation = innovation_eu5_colonial_charters }
+  NOT = { has_innovation = innovation_eu5_surgery_advance }
+ }
+}
+
+eu5_research_has_eu5_reformation_innovation_trigger = {
+ OR = {
+  NOT = { has_innovation = innovation_eu5_fort_limit_4_advance }
+  NOT = { has_innovation = innovation_eu5_artillery_institution_advance }
+  NOT = { has_innovation = innovation_eu5_barracks }
+  NOT = { has_innovation = innovation_eu5_correct_box_advance_reformation }
+  NOT = { has_innovation = innovation_eu5_flintlock_gun }
+  NOT = { has_innovation = innovation_eu5_military_administration }
+  NOT = { has_innovation = innovation_eu5_generic_bureaucracy_4_advance }
+  NOT = { has_innovation = innovation_eu5_town_rights_ref_advance }
+  NOT = { has_innovation = innovation_eu5_chartered_companies }
+  NOT = { has_innovation = innovation_eu5_war_score_reformations_advance }
+  NOT = { has_innovation = innovation_eu5_food_advance_reformation }
+  NOT = { has_innovation = innovation_eu5_bole_smelting }
+  NOT = { has_innovation = innovation_eu5_rgo_size_advance_reformation }
+  NOT = { has_innovation = innovation_eu5_construction_speed_reformation }
+  NOT = { has_innovation = innovation_eu5_global_trade_routes_advance }
+  NOT = { has_innovation = innovation_eu5_scientific_experimentation }
+  NOT = { has_innovation = innovation_eu5_letters_of_marque }
+  NOT = { has_innovation = innovation_eu5_confessionalism_advance }
+  NOT = { has_innovation = innovation_eu5_religious_toleration }
+  NOT = { has_innovation = innovation_eu5_development_of_maritime_law }
+ }
+}
+
+eu5_research_has_eu5_absolutism_innovation_trigger = {
+ OR = {
+  NOT = { has_innovation = innovation_eu5_fort_limit_5_advance }
+  NOT = { has_innovation = innovation_eu5_artillery_vs_fort_age_5_absolutism }
+  NOT = { has_innovation = innovation_eu5_legion_camp }
+  NOT = { has_innovation = innovation_eu5_correct_box_advance_absolutism }
+  NOT = { has_innovation = innovation_eu5_line_infantry }
+  NOT = { has_innovation = innovation_eu5_improved_supply_lines }
+  NOT = { has_innovation = innovation_eu5_government_size_absolutism }
+  NOT = { has_innovation = innovation_eu5_town_rights_abs_advance }
+  NOT = { has_innovation = innovation_eu5_central_bank_advance }
+  NOT = { has_innovation = innovation_eu5_national_sovereignty }
+  NOT = { has_innovation = innovation_eu5_food_advance_absolutism }
+  NOT = { has_innovation = innovation_eu5_coke_blast_furnace }
+  NOT = { has_innovation = innovation_eu5_manufactories_advance }
+  NOT = { has_innovation = innovation_eu5_construction_speed_absolutism }
+  NOT = { has_innovation = innovation_eu5_maritime_advance_age_5 }
+  NOT = { has_innovation = innovation_eu5_scientific_revolution_advance }
+  NOT = { has_innovation = innovation_eu5_naval_doctrines_advance }
+  NOT = { has_innovation = innovation_eu5_newspapers_advance }
+  NOT = { has_innovation = innovation_eu5_the_constitution }
+  NOT = { has_innovation = innovation_eu5_sanitation_advance }
+ }
+}
+
+eu5_research_has_eu5_revolutions_innovation_trigger = {
+ OR = {
+  NOT = { has_innovation = innovation_eu5_fort_limit_6_advance }
+  NOT = { has_innovation = innovation_eu5_artillery_vs_fort_age_6_revolutions }
+  NOT = { has_innovation = innovation_eu5_recruitment_center }
+  NOT = { has_innovation = innovation_eu5_correct_box_advance_revolutions }
+  NOT = { has_innovation = innovation_eu5_long_rifle }
+  NOT = { has_innovation = innovation_eu5_combined_arms_advance_revolutions }
+  NOT = { has_innovation = innovation_eu5_modern_bureaucracy }
+  NOT = { has_innovation = innovation_eu5_urbanization }
+  NOT = { has_innovation = innovation_eu5_the_gold_standard }
+  NOT = { has_innovation = innovation_eu5_war_score_revolutions_advance }
+  NOT = { has_innovation = innovation_eu5_rotherham_plough }
+  NOT = { has_innovation = innovation_eu5_hot_blast_furnace }
+  NOT = { has_innovation = innovation_eu5_industrialization_advance }
+  NOT = { has_innovation = innovation_eu5_construction_speed_revolutions }
+  NOT = { has_innovation = innovation_eu5_maritime_advance_age_6 }
+  NOT = { has_innovation = innovation_eu5_enlightenment_advance }
+  NOT = { has_innovation = innovation_eu5_levee_en_masse_advance }
+  NOT = { has_innovation = innovation_eu5_rights_of_man }
+  NOT = { has_innovation = innovation_eu5_vaccination_advance }
+  NOT = { has_innovation = innovation_eu5_joint_stock_companies }
+ }
+}
+
+eu5_research_current_available_trigger = {
+ OR = {
+  AND = { has_cultural_era_or_later = culture_era_tribal NOT = { has_cultural_era_or_later = culture_era_early_medieval } eu5_research_has_tribal_innovation_trigger = yes }
+  AND = { has_cultural_era_or_later = culture_era_early_medieval NOT = { has_cultural_era_or_later = culture_era_high_medieval } eu5_research_has_early_medieval_innovation_trigger = yes }
+  AND = { has_cultural_era_or_later = culture_era_high_medieval NOT = { has_cultural_era_or_later = culture_era_late_medieval } eu5_research_has_high_medieval_innovation_trigger = yes }
+  AND = { has_cultural_era_or_later = culture_era_late_medieval NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } eu5_research_has_late_medieval_innovation_trigger = yes }
+  AND = { has_cultural_era_or_later = culture_era_eu5_discovery NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } eu5_research_has_eu5_discovery_innovation_trigger = yes }
+  AND = { has_cultural_era_or_later = culture_era_eu5_reformation NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } eu5_research_has_eu5_reformation_innovation_trigger = yes }
+  AND = { has_cultural_era_or_later = culture_era_eu5_absolutism NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } eu5_research_has_eu5_absolutism_innovation_trigger = yes }
+  AND = { has_cultural_era_or_later = culture_era_eu5_revolutions eu5_research_has_eu5_revolutions_innovation_trigger = yes }
+ }
+}
+
+eu5_research_next_available_trigger = {
+ OR = {
+  AND = { has_cultural_era_or_later = culture_era_tribal NOT = { has_cultural_era_or_later = culture_era_early_medieval } eu5_research_has_early_medieval_innovation_trigger = yes }
+  AND = { has_cultural_era_or_later = culture_era_early_medieval NOT = { has_cultural_era_or_later = culture_era_high_medieval } eu5_research_has_high_medieval_innovation_trigger = yes }
+  AND = { has_cultural_era_or_later = culture_era_high_medieval NOT = { has_cultural_era_or_later = culture_era_late_medieval } eu5_research_has_late_medieval_innovation_trigger = yes }
+  AND = { has_cultural_era_or_later = culture_era_late_medieval NOT = { has_cultural_era_or_later = culture_era_eu5_discovery } eu5_research_has_eu5_discovery_innovation_trigger = yes }
+  AND = { has_cultural_era_or_later = culture_era_eu5_discovery NOT = { has_cultural_era_or_later = culture_era_eu5_reformation } eu5_research_has_eu5_reformation_innovation_trigger = yes }
+  AND = { has_cultural_era_or_later = culture_era_eu5_reformation NOT = { has_cultural_era_or_later = culture_era_eu5_absolutism } eu5_research_has_eu5_absolutism_innovation_trigger = yes }
+  AND = { has_cultural_era_or_later = culture_era_eu5_absolutism NOT = { has_cultural_era_or_later = culture_era_eu5_revolutions } eu5_research_has_eu5_revolutions_innovation_trigger = yes }
+ }
+}

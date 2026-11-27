@@ -1,0 +1,66 @@
+﻿eu5_research_treatise_on_prosperity_modifier = {
+	icon = prestige_positive
+	prosperity_growth_factor = 0.1
+	learning = 1
+}
+
+eu5_research_treatise_on_building_modifier = {
+	icon = economy_positive
+	castle_holding_holding_build_speed = -0.1
+	castle_holding_holding_build_gold_cost = -0.1
+}
+
+eu5_research_treatise_on_control_modifier = {
+	icon = county_modifier_control_positive
+	monthly_control_change_when_below_baseline_add = 0.3
+	popular_opinion_add = 5
+}
+
+eu5_research_treatise_on_mathematics_modifier = {
+	icon = learning_positive
+	learning = 1
+	stewardship = 1
+}
+
+eu5_research_treatise_on_taxation_modifier = {
+	icon = stewardship_positive
+	civic_tax_mult = 0.15
+	stewardship = 1
+}
+
+eu5_research_treatise_on_light_warfare_modifier = {
+	icon = hunt_positive
+	skirmishers_damage_add = 3
+	archers_damage_add = 3
+	skirmishers_screen_add = 5
+	archers_screen_add = 5
+}
+
+eu5_research_treatise_on_heavy_warfare_modifier = {
+	icon = prowess_positive
+	pikemen_damage_add = 3
+	heavy_infantry_damage_add = 3
+	pikemen_toughness_add = 5
+	heavy_infantry_toughness_add = 5
+}
+
+eu5_research_treatise_on_cavalry_modifier = {
+	icon = horse_positive
+	light_cavalry_damage_add = 3
+	heavy_cavalry_damage_add = 3
+	light_cavalry_pursuit_add = 5
+	heavy_cavalry_pursuit_add = 5
+}
+
+eu5_research_treatise_on_siege_modifier = {
+	icon = martial_positive
+	maa_siege_value_add = 0.1
+	siege_weapon_siege_value_mult = 0.1
+	siege_weapon_maintenance_mult = -0.05	
+}
+
+eu5_research_treatise_on_strategy_modifier = {
+	icon = martial_positive
+	martial = 1
+	advantage = 3
+}

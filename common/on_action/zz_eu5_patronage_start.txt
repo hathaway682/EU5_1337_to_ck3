@@ -1,0 +1,18 @@
+﻿on_game_start = { on_actions = { eu5_patronage_start } }
+eu5_patronage_start = {
+ effect = {
+  if = {
+   limit = { game_start_date = 1337.4.1 }
+   culture:french = { add_innovation = innovation_eu5_patronage }
+   culture:english = { add_innovation = innovation_eu5_patronage }
+   culture:castilian = { add_innovation = innovation_eu5_patronage }
+   culture:catalan = { add_innovation = innovation_eu5_patronage }
+   culture:portuguese = { add_innovation = innovation_eu5_patronage }
+   culture:italian = { add_innovation = innovation_eu5_patronage }
+   culture:cisalpine = { add_innovation = innovation_eu5_patronage }
+   culture:dutch = { add_innovation = innovation_eu5_patronage }
+   culture:saxon = { add_innovation = innovation_eu5_patronage }
+   culture:occitan = { add_innovation = innovation_eu5_patronage }
+  }
+ }
+}
