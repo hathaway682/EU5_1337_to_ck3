@@ -1,8 +1,6 @@
 ﻿innovation_eu5_fort_limit_3_advance = {
+	custom = eu5_unlock_fort_limit_3_advance_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_border_forts_05
-	unlock_building = eu5_pb_walls_05
-
 	skill = martial
 	group = culture_group_military
 	culture_era = culture_era_eu5_discovery
@@ -40,9 +38,8 @@ innovation_eu5_unlock_falconet_advance = {
 }
 
 innovation_eu5_training_ground = {
+	custom = eu5_unlock_training_ground_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_military_05
-
 	skill = martial
 	group = culture_group_military
 	culture_era = culture_era_eu5_discovery
@@ -88,12 +85,12 @@ innovation_eu5_correct_box_advance_discovery = {
 }
 
 innovation_eu5_matchlock_gun = {
+	custom = eu5_unlock_matchlock_gun_buildings_tt
 	skill = martial
 	group = culture_group_military
 	culture_era = culture_era_eu5_discovery
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_matchlock_gun.dds"
 	unlock_maa = eu5_musketeers
-	unlock_building = eu5_interior_gunsmiths_5_discovery
 	character_modifier = {
 		gunpowder_damage_mult = 0.10
 		gunpowder_maintenance_mult = 0.10
@@ -131,9 +128,8 @@ innovation_eu5_regiment_reinforcement_speed_discovery = {
 }
 
 innovation_eu5_government_size_discovery = {
+	custom = eu5_unlock_government_size_discovery_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_bureaucratic_05
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_discovery
@@ -158,9 +154,8 @@ innovation_eu5_government_size_discovery = {
 }
 
 innovation_eu5_town_rights_enable = {
+	custom = eu5_unlock_town_rights_enable_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_urban_housing_05
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_discovery
@@ -184,9 +179,8 @@ innovation_eu5_town_rights_enable = {
 }
 
 innovation_eu5_basic_financial_instruments = {
+	custom = eu5_unlock_basic_financial_instruments_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_market_05
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_discovery
@@ -232,40 +226,8 @@ innovation_eu5_power_projection_advance_4 = {
 }
 
 innovation_eu5_new_world_crops = {
+	custom = eu5_unlock_new_world_crops_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_manor_houses_05
-	unlock_building = eu5_pb_villages_05
-	unlock_building = eu5_forestry_resource_building_11
-	unlock_building = eu5_grain_resource_building_11
-	unlock_building = eu5_wool_resource_building_11
-	unlock_building = eu5_cattle_resource_building_11
-	unlock_building = eu5_cotton_resource_building_11
-	unlock_building = eu5_fish_resource_building_11
-	unlock_building = eu5_wine_resource_building_11
-	unlock_building = eu5_oil_resource_building_11
-	unlock_building = eu5_rice_resource_building_11
-	unlock_building = eu5_millet_resource_building_11
-	unlock_building = eu5_silk_resource_building_11
-	unlock_building = eu5_furs_resource_building_11
-	unlock_building = eu5_spices_resource_building_11
-	unlock_building = eu5_tea_resource_building_11
-	unlock_building = eu5_dyes_resource_building_11
-	unlock_building = eu5_ivory_resource_building_11
-	unlock_building = eu5_sugar_resource_building_11
-	unlock_building = eu5_incense_resource_building_11
-	unlock_building = eu5_medicaments_resource_building_11
-	unlock_building = eu5_hemp_resource_building_11
-	unlock_building = eu5_flax_resource_building_11
-	unlock_building = eu5_honey_resource_building_11
-	unlock_building = eu5_fruit_resource_building_11
-	unlock_building = eu5_horses_resource_building_11
-	unlock_building = eu5_aod_tobacco_resource_building_11
-	unlock_building = eu5_aod_cacao_resource_building_11
-	unlock_building = eu5_aod_maize_resource_building_11
-	unlock_building = eu5_aod_potatoes_resource_building_11
-	unlock_building = eu5_eu5_coffee_resource_building_11
-	unlock_building = eu5_legume_resource_building_11
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_discovery
@@ -287,12 +249,8 @@ innovation_eu5_new_world_crops = {
 }
 
 innovation_eu5_blast_furnace = {
+	custom = eu5_unlock_blast_furnace_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_stone_resource_building_11
-	unlock_building = eu5_mine_tier_11
-	unlock_building = eu5_salt_resource_building_11
-	unlock_building = eu5_amber_resource_building_11
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_discovery
@@ -314,10 +272,8 @@ innovation_eu5_blast_furnace = {
 }
 
 innovation_eu5_burgher_privileges = {
+	custom = eu5_unlock_burgher_privileges_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_guild_05
-	unlock_building = eu5_ceramics_resource_building_11
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_discovery
@@ -341,6 +297,7 @@ innovation_eu5_burgher_privileges = {
 }
 
 innovation_eu5_construction_speed_discovery = {
+	custom = eu5_unlock_construction_speed_discovery_buildings_tt
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_discovery
@@ -364,9 +321,8 @@ innovation_eu5_construction_speed_discovery = {
 }
 
 innovation_eu5_trade_range_advance_age_3 = {
+	custom = eu5_unlock_trade_range_advance_age_3_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_port_05
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_discovery
@@ -504,10 +460,8 @@ innovation_eu5_surgery_advance = {
 }
 
 innovation_eu5_fort_limit_4_advance = {
+	custom = eu5_unlock_fort_limit_4_advance_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_border_forts_06
-	unlock_building = eu5_pb_walls_06
-
 	skill = martial
 	group = culture_group_military
 	culture_era = culture_era_eu5_reformation
@@ -545,9 +499,8 @@ innovation_eu5_artillery_institution_advance = {
 }
 
 innovation_eu5_barracks = {
+	custom = eu5_unlock_barracks_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_military_06
-
 	skill = martial
 	group = culture_group_military
 	culture_era = culture_era_eu5_reformation
@@ -593,11 +546,11 @@ innovation_eu5_correct_box_advance_reformation = {
 }
 
 innovation_eu5_flintlock_gun = {
+	custom = eu5_unlock_flintlock_gun_buildings_tt
 	skill = martial
 	group = culture_group_military
 	culture_era = culture_era_eu5_reformation
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_flintlock_gun.dds"
-	unlock_building = eu5_interior_gunsmiths_5_reformation
 	character_modifier = {
 		gunpowder_damage_mult = 0.10
 		gunpowder_maintenance_mult = 0.10
@@ -635,9 +588,8 @@ innovation_eu5_military_administration = {
 }
 
 innovation_eu5_generic_bureaucracy_4_advance = {
+	custom = eu5_unlock_generic_bureaucracy_4_advance_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_bureaucratic_06
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_reformation
@@ -662,9 +614,8 @@ innovation_eu5_generic_bureaucracy_4_advance = {
 }
 
 innovation_eu5_town_rights_ref_advance = {
+	custom = eu5_unlock_town_rights_ref_advance_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_urban_housing_06
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_reformation
@@ -688,9 +639,8 @@ innovation_eu5_town_rights_ref_advance = {
 }
 
 innovation_eu5_chartered_companies = {
+	custom = eu5_unlock_chartered_companies_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_market_06
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_reformation
@@ -736,40 +686,8 @@ innovation_eu5_war_score_reformations_advance = {
 }
 
 innovation_eu5_food_advance_reformation = {
+	custom = eu5_unlock_food_advance_reformation_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_manor_houses_06
-	unlock_building = eu5_pb_villages_06
-	unlock_building = eu5_forestry_resource_building_12
-	unlock_building = eu5_grain_resource_building_12
-	unlock_building = eu5_wool_resource_building_12
-	unlock_building = eu5_cattle_resource_building_12
-	unlock_building = eu5_cotton_resource_building_12
-	unlock_building = eu5_fish_resource_building_12
-	unlock_building = eu5_wine_resource_building_12
-	unlock_building = eu5_oil_resource_building_12
-	unlock_building = eu5_rice_resource_building_12
-	unlock_building = eu5_millet_resource_building_12
-	unlock_building = eu5_silk_resource_building_12
-	unlock_building = eu5_furs_resource_building_12
-	unlock_building = eu5_spices_resource_building_12
-	unlock_building = eu5_tea_resource_building_12
-	unlock_building = eu5_dyes_resource_building_12
-	unlock_building = eu5_ivory_resource_building_12
-	unlock_building = eu5_sugar_resource_building_12
-	unlock_building = eu5_incense_resource_building_12
-	unlock_building = eu5_medicaments_resource_building_12
-	unlock_building = eu5_hemp_resource_building_12
-	unlock_building = eu5_flax_resource_building_12
-	unlock_building = eu5_honey_resource_building_12
-	unlock_building = eu5_fruit_resource_building_12
-	unlock_building = eu5_horses_resource_building_12
-	unlock_building = eu5_aod_tobacco_resource_building_12
-	unlock_building = eu5_aod_cacao_resource_building_12
-	unlock_building = eu5_aod_maize_resource_building_12
-	unlock_building = eu5_aod_potatoes_resource_building_12
-	unlock_building = eu5_eu5_coffee_resource_building_12
-	unlock_building = eu5_legume_resource_building_12
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_reformation
@@ -791,12 +709,8 @@ innovation_eu5_food_advance_reformation = {
 }
 
 innovation_eu5_bole_smelting = {
+	custom = eu5_unlock_bole_smelting_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_stone_resource_building_12
-	unlock_building = eu5_mine_tier_12
-	unlock_building = eu5_salt_resource_building_12
-	unlock_building = eu5_amber_resource_building_12
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_reformation
@@ -818,10 +732,8 @@ innovation_eu5_bole_smelting = {
 }
 
 innovation_eu5_rgo_size_advance_reformation = {
+	custom = eu5_unlock_rgo_size_advance_reformation_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_guild_06
-	unlock_building = eu5_ceramics_resource_building_12
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_reformation
@@ -845,6 +757,7 @@ innovation_eu5_rgo_size_advance_reformation = {
 }
 
 innovation_eu5_construction_speed_reformation = {
+	custom = eu5_unlock_construction_speed_reformation_buildings_tt
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_reformation
@@ -868,9 +781,8 @@ innovation_eu5_construction_speed_reformation = {
 }
 
 innovation_eu5_global_trade_routes_advance = {
+	custom = eu5_unlock_global_trade_routes_advance_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_port_06
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_reformation
@@ -1003,10 +915,8 @@ innovation_eu5_development_of_maritime_law = {
 }
 
 innovation_eu5_fort_limit_5_advance = {
+	custom = eu5_unlock_fort_limit_5_advance_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_border_forts_07
-	unlock_building = eu5_pb_walls_07
-
 	skill = martial
 	group = culture_group_military
 	culture_era = culture_era_eu5_absolutism
@@ -1044,9 +954,8 @@ innovation_eu5_artillery_vs_fort_age_5_absolutism = {
 }
 
 innovation_eu5_legion_camp = {
+	custom = eu5_unlock_legion_camp_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_military_07
-
 	skill = martial
 	group = culture_group_military
 	culture_era = culture_era_eu5_absolutism
@@ -1092,12 +1001,12 @@ innovation_eu5_correct_box_advance_absolutism = {
 }
 
 innovation_eu5_line_infantry = {
+	custom = eu5_unlock_line_infantry_buildings_tt
 	skill = martial
 	group = culture_group_military
 	culture_era = culture_era_eu5_absolutism
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_line_infantry.dds"
 	unlock_maa = eu5_line_infantry
-	unlock_building = eu5_interior_gunsmiths_5_absolutism
 	character_modifier = {
 		gunpowder_toughness_mult = 0.10
 		gunpowder_maintenance_mult = 0.10
@@ -1135,9 +1044,8 @@ innovation_eu5_improved_supply_lines = {
 }
 
 innovation_eu5_government_size_absolutism = {
+	custom = eu5_unlock_government_size_absolutism_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_bureaucratic_07
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_absolutism
@@ -1162,9 +1070,8 @@ innovation_eu5_government_size_absolutism = {
 }
 
 innovation_eu5_town_rights_abs_advance = {
+	custom = eu5_unlock_town_rights_abs_advance_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_urban_housing_07
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_absolutism
@@ -1188,9 +1095,8 @@ innovation_eu5_town_rights_abs_advance = {
 }
 
 innovation_eu5_central_bank_advance = {
+	custom = eu5_unlock_central_bank_advance_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_market_07
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_absolutism
@@ -1236,40 +1142,8 @@ innovation_eu5_national_sovereignty = {
 }
 
 innovation_eu5_food_advance_absolutism = {
+	custom = eu5_unlock_food_advance_absolutism_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_manor_houses_07
-	unlock_building = eu5_pb_villages_07
-	unlock_building = eu5_forestry_resource_building_13
-	unlock_building = eu5_grain_resource_building_13
-	unlock_building = eu5_wool_resource_building_13
-	unlock_building = eu5_cattle_resource_building_13
-	unlock_building = eu5_cotton_resource_building_13
-	unlock_building = eu5_fish_resource_building_13
-	unlock_building = eu5_wine_resource_building_13
-	unlock_building = eu5_oil_resource_building_13
-	unlock_building = eu5_rice_resource_building_13
-	unlock_building = eu5_millet_resource_building_13
-	unlock_building = eu5_silk_resource_building_13
-	unlock_building = eu5_furs_resource_building_13
-	unlock_building = eu5_spices_resource_building_13
-	unlock_building = eu5_tea_resource_building_13
-	unlock_building = eu5_dyes_resource_building_13
-	unlock_building = eu5_ivory_resource_building_13
-	unlock_building = eu5_sugar_resource_building_13
-	unlock_building = eu5_incense_resource_building_13
-	unlock_building = eu5_medicaments_resource_building_13
-	unlock_building = eu5_hemp_resource_building_13
-	unlock_building = eu5_flax_resource_building_13
-	unlock_building = eu5_honey_resource_building_13
-	unlock_building = eu5_fruit_resource_building_13
-	unlock_building = eu5_horses_resource_building_13
-	unlock_building = eu5_aod_tobacco_resource_building_13
-	unlock_building = eu5_aod_cacao_resource_building_13
-	unlock_building = eu5_aod_maize_resource_building_13
-	unlock_building = eu5_aod_potatoes_resource_building_13
-	unlock_building = eu5_eu5_coffee_resource_building_13
-	unlock_building = eu5_legume_resource_building_13
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_absolutism
@@ -1291,12 +1165,8 @@ innovation_eu5_food_advance_absolutism = {
 }
 
 innovation_eu5_coke_blast_furnace = {
+	custom = eu5_unlock_coke_blast_furnace_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_stone_resource_building_13
-	unlock_building = eu5_mine_tier_13
-	unlock_building = eu5_salt_resource_building_13
-	unlock_building = eu5_amber_resource_building_13
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_absolutism
@@ -1318,10 +1188,8 @@ innovation_eu5_coke_blast_furnace = {
 }
 
 innovation_eu5_manufactories_advance = {
+	custom = eu5_unlock_manufactories_advance_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_guild_07
-	unlock_building = eu5_ceramics_resource_building_13
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_absolutism
@@ -1345,6 +1213,7 @@ innovation_eu5_manufactories_advance = {
 }
 
 innovation_eu5_construction_speed_absolutism = {
+	custom = eu5_unlock_construction_speed_absolutism_buildings_tt
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_absolutism
@@ -1368,9 +1237,8 @@ innovation_eu5_construction_speed_absolutism = {
 }
 
 innovation_eu5_maritime_advance_age_5 = {
+	custom = eu5_unlock_maritime_advance_age_5_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_port_07
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_absolutism
@@ -1436,11 +1304,11 @@ innovation_eu5_naval_doctrines_advance = {
 }
 
 innovation_eu5_newspapers_advance = {
+	custom = eu5_unlock_newspapers_advance_buildings_tt
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_absolutism
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_newspapers_advance.dds"
-	unlock_building = eu5_newsstand_1
 	character_modifier = {
 		monthly_prestige_gain_mult = 0.05
 	}
@@ -1500,10 +1368,8 @@ innovation_eu5_sanitation_advance = {
 }
 
 innovation_eu5_fort_limit_6_advance = {
+	custom = eu5_unlock_fort_limit_6_advance_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_border_forts_08
-	unlock_building = eu5_pb_walls_08
-
 	skill = martial
 	group = culture_group_military
 	culture_era = culture_era_eu5_revolutions
@@ -1541,9 +1407,8 @@ innovation_eu5_artillery_vs_fort_age_6_revolutions = {
 }
 
 innovation_eu5_recruitment_center = {
+	custom = eu5_unlock_recruitment_center_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_military_08
-
 	skill = martial
 	group = culture_group_military
 	culture_era = culture_era_eu5_revolutions
@@ -1589,11 +1454,11 @@ innovation_eu5_correct_box_advance_revolutions = {
 }
 
 innovation_eu5_long_rifle = {
+	custom = eu5_unlock_long_rifle_buildings_tt
 	skill = martial
 	group = culture_group_military
 	culture_era = culture_era_eu5_revolutions
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_long_rifle.dds"
-	unlock_building = eu5_interior_gunsmiths_5_revolutions
 	character_modifier = {
 		gunpowder_damage_mult = 0.10
 		gunpowder_maintenance_mult = 0.10
@@ -1632,9 +1497,8 @@ innovation_eu5_combined_arms_advance_revolutions = {
 }
 
 innovation_eu5_modern_bureaucracy = {
+	custom = eu5_unlock_modern_bureaucracy_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_bureaucratic_08
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_revolutions
@@ -1659,9 +1523,8 @@ innovation_eu5_modern_bureaucracy = {
 }
 
 innovation_eu5_urbanization = {
+	custom = eu5_unlock_urbanization_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_urban_housing_08
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_revolutions
@@ -1685,9 +1548,8 @@ innovation_eu5_urbanization = {
 }
 
 innovation_eu5_the_gold_standard = {
+	custom = eu5_unlock_the_gold_standard_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_market_08
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_revolutions
@@ -1733,40 +1595,8 @@ innovation_eu5_war_score_revolutions_advance = {
 }
 
 innovation_eu5_rotherham_plough = {
+	custom = eu5_unlock_rotherham_plough_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_manor_houses_08
-	unlock_building = eu5_pb_villages_08
-	unlock_building = eu5_forestry_resource_building_14
-	unlock_building = eu5_grain_resource_building_14
-	unlock_building = eu5_wool_resource_building_14
-	unlock_building = eu5_cattle_resource_building_14
-	unlock_building = eu5_cotton_resource_building_14
-	unlock_building = eu5_fish_resource_building_14
-	unlock_building = eu5_wine_resource_building_14
-	unlock_building = eu5_oil_resource_building_14
-	unlock_building = eu5_rice_resource_building_14
-	unlock_building = eu5_millet_resource_building_14
-	unlock_building = eu5_silk_resource_building_14
-	unlock_building = eu5_furs_resource_building_14
-	unlock_building = eu5_spices_resource_building_14
-	unlock_building = eu5_tea_resource_building_14
-	unlock_building = eu5_dyes_resource_building_14
-	unlock_building = eu5_ivory_resource_building_14
-	unlock_building = eu5_sugar_resource_building_14
-	unlock_building = eu5_incense_resource_building_14
-	unlock_building = eu5_medicaments_resource_building_14
-	unlock_building = eu5_hemp_resource_building_14
-	unlock_building = eu5_flax_resource_building_14
-	unlock_building = eu5_honey_resource_building_14
-	unlock_building = eu5_fruit_resource_building_14
-	unlock_building = eu5_horses_resource_building_14
-	unlock_building = eu5_aod_tobacco_resource_building_14
-	unlock_building = eu5_aod_cacao_resource_building_14
-	unlock_building = eu5_aod_maize_resource_building_14
-	unlock_building = eu5_aod_potatoes_resource_building_14
-	unlock_building = eu5_eu5_coffee_resource_building_14
-	unlock_building = eu5_legume_resource_building_14
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_revolutions
@@ -1788,12 +1618,8 @@ innovation_eu5_rotherham_plough = {
 }
 
 innovation_eu5_hot_blast_furnace = {
+	custom = eu5_unlock_hot_blast_furnace_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_stone_resource_building_14
-	unlock_building = eu5_mine_tier_14
-	unlock_building = eu5_salt_resource_building_14
-	unlock_building = eu5_amber_resource_building_14
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_revolutions
@@ -1815,10 +1641,8 @@ innovation_eu5_hot_blast_furnace = {
 }
 
 innovation_eu5_industrialization_advance = {
+	custom = eu5_unlock_industrialization_advance_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_guild_08
-	unlock_building = eu5_ceramics_resource_building_14
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_revolutions
@@ -1842,6 +1666,7 @@ innovation_eu5_industrialization_advance = {
 }
 
 innovation_eu5_construction_speed_revolutions = {
+	custom = eu5_unlock_construction_speed_revolutions_buildings_tt
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_revolutions
@@ -1865,9 +1690,8 @@ innovation_eu5_construction_speed_revolutions = {
 }
 
 innovation_eu5_maritime_advance_age_6 = {
+	custom = eu5_unlock_maritime_advance_age_6_buildings_tt
 	custom = eu5_interior_buildings_unlocked_tt
-	unlock_building = eu5_pb_port_08
-
 	skill = stewardship
 	group = culture_group_civic
 	culture_era = culture_era_eu5_revolutions

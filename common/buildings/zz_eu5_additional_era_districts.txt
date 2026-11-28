@@ -1,0 +1,6192 @@
+﻿pb_royal_palace_04 = {
+	construction_time = district_tier_4_construction_time
+	cost_gold = capital_district_tier_4_cost
+	triggered_name = {
+		trigger = { province_owner ?= { government_has_flag = government_is_japan_administrative } }
+		reference = "dairi_04"
+	}
+	triggered_name = {
+		trigger = { province_owner ?= { government_has_flag = government_is_japan_feudal } }
+		reference = "yakata_04"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_byzantine } }
+		reference = "magnaura_04"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_iranian } }
+		reference = "ayvan_of_state_04"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_indo_aryan } }
+		reference = "darbar_hall_04"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_dravidian } }
+		reference = "darbar_hall_04"
+	}
+	triggered_name = {
+		trigger = { province_owner ?= { highest_held_title_tier >= tier_empire } }
+		reference = "imperial_palace_04"
+	}
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = royal_palace_province_size_baseline_tier_4
+		monthly_civic_tax = poor_building_tax_tier_4
+	}
+	province_culture_modifier = {
+		parameter = astute_diplomats_household_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	character_modifier = {
+		monthly_prestige = 0.4
+	}
+	county_modifier = {
+		civic_tax_mult = 0.2
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_noblesse_oblige }
+		holding_district_level_4_trigger = yes
+	}
+
+	market_modifier = {
+		trade_good_jewelry_sell_price_mult = price_basic_building_1
+		trade_category_alcohol_sell_price_mult = price_basic_building_1
+	}
+	market_culture_modifier = {
+		parameter = court_finery_furs_demand
+		trade_good_furs_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_furs
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_furs_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = court_finery_silk_demand
+		trade_good_silk_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_silk
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_silk_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = court_finery_textiles_demand
+		trade_good_textiles_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_textiles_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_jewelry
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_legitimacy_add = 0.05
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_jewelry
+		amount = ascetic_rural_resource_need
+
+		can_be_filled_multiple_times = 4
+		rite_parameter = luxury_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_legitimacy_add = 0.05
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good_category = trade_category_alcohol
+		amount = basic_resource_need
+
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = alcohol_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_prestige = 0.02
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good_category = trade_category_luxury_consumption
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		rite_parameter = alcohol_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_prestige = 0.02
+			}
+		}
+	}
+
+	ai_value = {
+		base = 11
+		ai_civic_context_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_royal_palace_05
+}
+
+eu5_pb_royal_palace_05 = {
+	type_icon = "regular_buildings/leisure_palace.dds"
+	construction_time = 420
+	cost_gold = 675
+	triggered_name = {
+		trigger = { province_owner ?= { government_has_flag = government_is_japan_administrative } }
+		reference = "eu5_dairi_04_era_5"
+	}
+	triggered_name = {
+		trigger = { province_owner ?= { government_has_flag = government_is_japan_feudal } }
+		reference = "eu5_yakata_04_era_5"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_byzantine } }
+		reference = "eu5_magnaura_04_era_5"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_iranian } }
+		reference = "eu5_ayvan_of_state_04_era_5"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_indo_aryan } }
+		reference = "eu5_darbar_hall_04_era_5"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_dravidian } }
+		reference = "eu5_darbar_hall_04_era_5"
+	}
+	triggered_name = {
+		trigger = { province_owner ?= { highest_held_title_tier >= tier_empire } }
+		reference = "eu5_imperial_palace_04_era_5"
+	}
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = royal_palace_province_size_baseline_tier_4
+		monthly_civic_tax = poor_building_tax_tier_4
+	}
+	province_culture_modifier = {
+		parameter = astute_diplomats_household_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	character_modifier = {
+		monthly_prestige = 0.4
+	}
+	county_modifier = {
+		civic_tax_mult = 0.24
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_government_size_discovery }
+		culture = { has_innovation = innovation_noblesse_oblige }
+		holding_district_level_4_trigger = yes
+	}
+
+	market_modifier = {
+		trade_good_jewelry_sell_price_mult = price_basic_building_1
+		trade_category_alcohol_sell_price_mult = price_basic_building_1
+	}
+	market_culture_modifier = {
+		parameter = court_finery_furs_demand
+		trade_good_furs_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_furs
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_furs_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = court_finery_silk_demand
+		trade_good_silk_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_silk
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_silk_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = court_finery_textiles_demand
+		trade_good_textiles_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_textiles_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_jewelry
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_legitimacy_add = 0.05
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_jewelry
+		amount = ascetic_rural_resource_need
+
+		can_be_filled_multiple_times = 4
+		rite_parameter = luxury_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_legitimacy_add = 0.05
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good_category = trade_category_alcohol
+		amount = basic_resource_need
+
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = alcohol_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_prestige = 0.02
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good_category = trade_category_luxury_consumption
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		rite_parameter = alcohol_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_prestige = 0.02
+			}
+		}
+	}
+
+	ai_value = {
+		base = 11
+		ai_civic_context_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_royal_palace_06
+}
+
+eu5_pb_royal_palace_06 = {
+	type_icon = "regular_buildings/leisure_palace.dds"
+	construction_time = 480
+	cost_gold = 900
+	triggered_name = {
+		trigger = { province_owner ?= { government_has_flag = government_is_japan_administrative } }
+		reference = "eu5_dairi_04_era_6"
+	}
+	triggered_name = {
+		trigger = { province_owner ?= { government_has_flag = government_is_japan_feudal } }
+		reference = "eu5_yakata_04_era_6"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_byzantine } }
+		reference = "eu5_magnaura_04_era_6"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_iranian } }
+		reference = "eu5_ayvan_of_state_04_era_6"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_indo_aryan } }
+		reference = "eu5_darbar_hall_04_era_6"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_dravidian } }
+		reference = "eu5_darbar_hall_04_era_6"
+	}
+	triggered_name = {
+		trigger = { province_owner ?= { highest_held_title_tier >= tier_empire } }
+		reference = "eu5_imperial_palace_04_era_6"
+	}
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = royal_palace_province_size_baseline_tier_4
+		monthly_civic_tax = poor_building_tax_tier_4
+	}
+	province_culture_modifier = {
+		parameter = astute_diplomats_household_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	character_modifier = {
+		monthly_prestige = 0.4
+	}
+	county_modifier = {
+		civic_tax_mult = 0.28
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_generic_bureaucracy_4_advance }
+		culture = { has_innovation = innovation_noblesse_oblige }
+		holding_district_level_4_trigger = yes
+	}
+
+	market_modifier = {
+		trade_good_jewelry_sell_price_mult = price_basic_building_1
+		trade_category_alcohol_sell_price_mult = price_basic_building_1
+	}
+	market_culture_modifier = {
+		parameter = court_finery_furs_demand
+		trade_good_furs_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_furs
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_furs_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = court_finery_silk_demand
+		trade_good_silk_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_silk
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_silk_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = court_finery_textiles_demand
+		trade_good_textiles_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_textiles_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_jewelry
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_legitimacy_add = 0.05
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_jewelry
+		amount = ascetic_rural_resource_need
+
+		can_be_filled_multiple_times = 4
+		rite_parameter = luxury_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_legitimacy_add = 0.05
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good_category = trade_category_alcohol
+		amount = basic_resource_need
+
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = alcohol_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_prestige = 0.02
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good_category = trade_category_luxury_consumption
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		rite_parameter = alcohol_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_prestige = 0.02
+			}
+		}
+	}
+
+	ai_value = {
+		base = 11
+		ai_civic_context_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_royal_palace_07
+}
+
+eu5_pb_royal_palace_07 = {
+	type_icon = "regular_buildings/leisure_palace.dds"
+	construction_time = 540
+	cost_gold = 1200
+	triggered_name = {
+		trigger = { province_owner ?= { government_has_flag = government_is_japan_administrative } }
+		reference = "eu5_dairi_04_era_7"
+	}
+	triggered_name = {
+		trigger = { province_owner ?= { government_has_flag = government_is_japan_feudal } }
+		reference = "eu5_yakata_04_era_7"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_byzantine } }
+		reference = "eu5_magnaura_04_era_7"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_iranian } }
+		reference = "eu5_ayvan_of_state_04_era_7"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_indo_aryan } }
+		reference = "eu5_darbar_hall_04_era_7"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_dravidian } }
+		reference = "eu5_darbar_hall_04_era_7"
+	}
+	triggered_name = {
+		trigger = { province_owner ?= { highest_held_title_tier >= tier_empire } }
+		reference = "eu5_imperial_palace_04_era_7"
+	}
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = royal_palace_province_size_baseline_tier_4
+		monthly_civic_tax = poor_building_tax_tier_4
+	}
+	province_culture_modifier = {
+		parameter = astute_diplomats_household_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	character_modifier = {
+		monthly_prestige = 0.4
+	}
+	county_modifier = {
+		civic_tax_mult = 0.32
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_government_size_absolutism }
+		culture = { has_innovation = innovation_noblesse_oblige }
+		holding_district_level_4_trigger = yes
+	}
+
+	market_modifier = {
+		trade_good_jewelry_sell_price_mult = price_basic_building_1
+		trade_category_alcohol_sell_price_mult = price_basic_building_1
+	}
+	market_culture_modifier = {
+		parameter = court_finery_furs_demand
+		trade_good_furs_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_furs
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_furs_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = court_finery_silk_demand
+		trade_good_silk_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_silk
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_silk_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = court_finery_textiles_demand
+		trade_good_textiles_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_textiles_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_jewelry
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_legitimacy_add = 0.05
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_jewelry
+		amount = ascetic_rural_resource_need
+
+		can_be_filled_multiple_times = 4
+		rite_parameter = luxury_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_legitimacy_add = 0.05
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good_category = trade_category_alcohol
+		amount = basic_resource_need
+
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = alcohol_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_prestige = 0.02
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good_category = trade_category_luxury_consumption
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		rite_parameter = alcohol_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_prestige = 0.02
+			}
+		}
+	}
+
+	ai_value = {
+		base = 11
+		ai_civic_context_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_royal_palace_08
+}
+
+eu5_pb_royal_palace_08 = {
+	type_icon = "regular_buildings/leisure_palace.dds"
+	construction_time = 600
+	cost_gold = 1500
+	triggered_name = {
+		trigger = { province_owner ?= { government_has_flag = government_is_japan_administrative } }
+		reference = "eu5_dairi_04_era_8"
+	}
+	triggered_name = {
+		trigger = { province_owner ?= { government_has_flag = government_is_japan_feudal } }
+		reference = "eu5_yakata_04_era_8"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_byzantine } }
+		reference = "eu5_magnaura_04_era_8"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_iranian } }
+		reference = "eu5_ayvan_of_state_04_era_8"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_indo_aryan } }
+		reference = "eu5_darbar_hall_04_era_8"
+	}
+	triggered_name = {
+		trigger = { culture ?= { has_cultural_pillar = heritage_dravidian } }
+		reference = "eu5_darbar_hall_04_era_8"
+	}
+	triggered_name = {
+		trigger = { province_owner ?= { highest_held_title_tier >= tier_empire } }
+		reference = "eu5_imperial_palace_04_era_8"
+	}
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = royal_palace_province_size_baseline_tier_4
+		monthly_civic_tax = poor_building_tax_tier_4
+	}
+	province_culture_modifier = {
+		parameter = astute_diplomats_household_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	character_modifier = {
+		monthly_prestige = 0.4
+	}
+	county_modifier = {
+		civic_tax_mult = 0.36
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_modern_bureaucracy }
+		culture = { has_innovation = innovation_noblesse_oblige }
+		holding_district_level_4_trigger = yes
+	}
+
+	market_modifier = {
+		trade_good_jewelry_sell_price_mult = price_basic_building_1
+		trade_category_alcohol_sell_price_mult = price_basic_building_1
+	}
+	market_culture_modifier = {
+		parameter = court_finery_furs_demand
+		trade_good_furs_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_furs
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_furs_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = court_finery_silk_demand
+		trade_good_silk_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_silk
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_silk_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	market_culture_modifier = {
+		parameter = court_finery_textiles_demand
+		trade_good_textiles_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_textiles_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_jewelry
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_legitimacy_add = 0.05
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_jewelry
+		amount = ascetic_rural_resource_need
+
+		can_be_filled_multiple_times = 4
+		rite_parameter = luxury_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_legitimacy_add = 0.05
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good_category = trade_category_alcohol
+		amount = basic_resource_need
+
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = alcohol_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_prestige = 0.02
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good_category = trade_category_luxury_consumption
+		amount = luxury_resource_need
+
+		can_be_filled_multiple_times = 4
+		rite_parameter = alcohol_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_prestige = 0.02
+			}
+		}
+	}
+
+	ai_value = {
+		base = 11
+		ai_civic_context_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+}
+
+pb_temple_04 = {
+	construction_time = district_tier_4_construction_time
+
+	cost_gold = district_tier_4_cost
+
+	triggered_name = {
+		trigger = {
+			faith.religion = religion:christianity_religion
+		}
+		reference = "building_type_pb_temple_04_christian"
+	}
+	triggered_name = {
+		trigger = {
+			faith.religion = religion:islam_religion
+		}
+		reference = "building_type_pb_temple_04_muslim"
+	}
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = temple_primary_province_size_baseline_tier_4
+		popular_opinion_add = 8
+	}
+	province_rite_modifier = {
+		parameter = tenet_be_fruitful_and_multiply_temple_growth
+		province_size_baseline_add = province_size_tier_4
+		monthly_province_size_change_when_below_baseline_add = regular_building_province_size_baseline_increase_tier_4
+	}
+	province_culture_modifier = {
+		parameter = esoteric_power_stationed_skirmisher_control
+		stationed_skirmishers_control_value_add = 1
+	}
+	province_culture_modifier = {
+		parameter = lords_of_the_elephant_temple_elephant_control
+		stationed_elephant_cavalry_control_value_add = 1
+	}
+	province_culture_modifier = {
+		parameter = zealous_people_religious_district_popular_opinion
+		popular_opinion_add = 10
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = desert_mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = forest
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = taiga
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = wetlands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = terraced_hills
+		building_slots_for_host_district = 1
+	}
+	province_government_modifier = {
+		parameter = government_extra_temple_district_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	character_modifier = {
+		monthly_piety = 0.6
+	}
+	character_rite_modifier = {
+		parameter = tenet_philanthropia_district_piety
+		monthly_piety = 0.2
+	}
+
+	county_modifier = {
+		epidemic_resistance = 10
+	}
+
+	can_construct_showing_failures_only = {
+		trigger_if = {
+			limit = {
+				culture = { has_cultural_parameter = temple_next_level }
+			}
+			building_stonework_high_medieval_trigger = yes
+			holding_district_level_3_trigger = yes
+		}
+		trigger_else = {
+			building_masonry_late_medieval_trigger = yes
+			holding_district_level_4_trigger = yes
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wine
+		amount = basic_resource_need
+		rite_parameter = communion_wine
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = alcohol_forbidden
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = building_tiny_popular_opinion_gain
+			}
+		}
+	}
+	market_rite_modifier = {
+		not_parameter = communion_wine
+		trade_good_incense_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = basic_resource_need
+		not_rite_parameter = communion_wine
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = building_tiny_popular_opinion_gain
+			}
+		}
+	}
+	market_rite_modifier = {
+		parameter = tenet_legalism_temple_district_control
+		trade_good_books_paper_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		rite_parameter = tenet_legalism_temple_district_control
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = 5
+			}
+		}
+	}
+	province_rite_modifier = {
+		parameter = clerical_function_temple_district_popular_opinion_penalty
+		popular_opinion_add = clerical_function_temple_district_popular_opinion
+	}
+	market_rite_modifier = {
+		parameter = clerical_function_temple_district_books_control
+		trade_good_books_paper_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		rite_parameter = clerical_function_temple_district_books_control
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = clerical_function_temple_district_control_per_books_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = housing_comfort_need
+		culture_parameter = housing_olive_oil_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_tea
+		amount = housing_comfort_need
+		culture_parameter = housing_tea_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = housing_comfort_need
+		culture_parameter = housing_fruit_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_honey
+		amount = housing_comfort_need
+		culture_parameter = housing_honey_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_cheese
+		amount = housing_comfort_need
+		culture_parameter = housing_cheese_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = votive_offering_need
+		culture_parameter = votive_incense_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_gold
+		amount = votive_offering_need
+		culture_parameter = votive_gold_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_silver
+		amount = votive_offering_need
+		culture_parameter = votive_silver_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_gems
+		amount = votive_offering_need
+		culture_parameter = votive_gems_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_ceramics
+		amount = votive_offering_need
+		culture_parameter = votive_ceramics_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_lacquerware
+		amount = votive_offering_need
+		culture_parameter = votive_lacquerware_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_amber
+		amount = votive_offering_need
+		culture_parameter = votive_amber_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_copper
+		amount = votive_offering_need
+		culture_parameter = votive_copper_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_ivory
+		amount = votive_offering_need
+		culture_parameter = votive_ivory_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = votive_offering_need
+		culture_parameter = votive_spices_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_medicaments
+		amount = votive_offering_need
+		culture_parameter = votive_medicaments_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+		ai_opinion_baseline_building_modifier = { VALUE = 8 }
+		ai_urban_input_modifier = { GOOD = trade_good_incense }
+
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_soft }
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_temple_05
+}
+
+eu5_pb_temple_05 = {
+	type_icon = "district_buildings/temple_district.dds"
+	construction_time = 420
+
+	cost_gold = 450
+
+	triggered_name = {
+		trigger = {
+			faith.religion = religion:christianity_religion
+		}
+		reference = "eu5_building_type_pb_temple_04_christian_era_5"
+	}
+	triggered_name = {
+		trigger = {
+			faith.religion = religion:islam_religion
+		}
+		reference = "eu5_building_type_pb_temple_04_muslim_era_5"
+	}
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = temple_primary_province_size_baseline_tier_4
+		popular_opinion_add = 8
+	}
+	province_rite_modifier = {
+		parameter = tenet_be_fruitful_and_multiply_temple_growth
+		province_size_baseline_add = province_size_tier_4
+		monthly_province_size_change_when_below_baseline_add = regular_building_province_size_baseline_increase_tier_4
+	}
+	province_culture_modifier = {
+		parameter = esoteric_power_stationed_skirmisher_control
+		stationed_skirmishers_control_value_add = 1
+	}
+	province_culture_modifier = {
+		parameter = lords_of_the_elephant_temple_elephant_control
+		stationed_elephant_cavalry_control_value_add = 1
+	}
+	province_culture_modifier = {
+		parameter = zealous_people_religious_district_popular_opinion
+		popular_opinion_add = 10
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = desert_mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = forest
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = taiga
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = wetlands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = terraced_hills
+		building_slots_for_host_district = 1
+	}
+	province_government_modifier = {
+		parameter = government_extra_temple_district_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	character_modifier = {
+		monthly_piety = 0.72
+	}
+	character_rite_modifier = {
+		parameter = tenet_philanthropia_district_piety
+		monthly_piety = 0.2
+	}
+
+	county_modifier = {
+		epidemic_resistance = 10
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_construction_speed_discovery }
+		trigger_if = {
+			limit = {
+				culture = { has_cultural_parameter = temple_next_level }
+			}
+			building_stonework_high_medieval_trigger = yes
+			holding_district_level_3_trigger = yes
+		}
+		trigger_else = {
+			building_masonry_late_medieval_trigger = yes
+			holding_district_level_4_trigger = yes
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wine
+		amount = basic_resource_need
+		rite_parameter = communion_wine
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = alcohol_forbidden
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = building_tiny_popular_opinion_gain
+			}
+		}
+	}
+	market_rite_modifier = {
+		not_parameter = communion_wine
+		trade_good_incense_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = basic_resource_need
+		not_rite_parameter = communion_wine
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = building_tiny_popular_opinion_gain
+			}
+		}
+	}
+	market_rite_modifier = {
+		parameter = tenet_legalism_temple_district_control
+		trade_good_books_paper_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		rite_parameter = tenet_legalism_temple_district_control
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = 5
+			}
+		}
+	}
+	province_rite_modifier = {
+		parameter = clerical_function_temple_district_popular_opinion_penalty
+		popular_opinion_add = clerical_function_temple_district_popular_opinion
+	}
+	market_rite_modifier = {
+		parameter = clerical_function_temple_district_books_control
+		trade_good_books_paper_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		rite_parameter = clerical_function_temple_district_books_control
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = clerical_function_temple_district_control_per_books_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = housing_comfort_need
+		culture_parameter = housing_olive_oil_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_tea
+		amount = housing_comfort_need
+		culture_parameter = housing_tea_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = housing_comfort_need
+		culture_parameter = housing_fruit_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_honey
+		amount = housing_comfort_need
+		culture_parameter = housing_honey_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_cheese
+		amount = housing_comfort_need
+		culture_parameter = housing_cheese_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = votive_offering_need
+		culture_parameter = votive_incense_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_gold
+		amount = votive_offering_need
+		culture_parameter = votive_gold_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_silver
+		amount = votive_offering_need
+		culture_parameter = votive_silver_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_gems
+		amount = votive_offering_need
+		culture_parameter = votive_gems_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_ceramics
+		amount = votive_offering_need
+		culture_parameter = votive_ceramics_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_lacquerware
+		amount = votive_offering_need
+		culture_parameter = votive_lacquerware_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_amber
+		amount = votive_offering_need
+		culture_parameter = votive_amber_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_copper
+		amount = votive_offering_need
+		culture_parameter = votive_copper_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_ivory
+		amount = votive_offering_need
+		culture_parameter = votive_ivory_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = votive_offering_need
+		culture_parameter = votive_spices_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_medicaments
+		amount = votive_offering_need
+		culture_parameter = votive_medicaments_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+		ai_opinion_baseline_building_modifier = { VALUE = 8 }
+		ai_urban_input_modifier = { GOOD = trade_good_incense }
+
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_soft }
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_temple_06
+}
+
+eu5_pb_temple_06 = {
+	type_icon = "district_buildings/temple_district.dds"
+	construction_time = 480
+
+	cost_gold = 600
+
+	triggered_name = {
+		trigger = {
+			faith.religion = religion:christianity_religion
+		}
+		reference = "eu5_building_type_pb_temple_04_christian_era_6"
+	}
+	triggered_name = {
+		trigger = {
+			faith.religion = religion:islam_religion
+		}
+		reference = "eu5_building_type_pb_temple_04_muslim_era_6"
+	}
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = temple_primary_province_size_baseline_tier_4
+		popular_opinion_add = 8
+	}
+	province_rite_modifier = {
+		parameter = tenet_be_fruitful_and_multiply_temple_growth
+		province_size_baseline_add = province_size_tier_4
+		monthly_province_size_change_when_below_baseline_add = regular_building_province_size_baseline_increase_tier_4
+	}
+	province_culture_modifier = {
+		parameter = esoteric_power_stationed_skirmisher_control
+		stationed_skirmishers_control_value_add = 1
+	}
+	province_culture_modifier = {
+		parameter = lords_of_the_elephant_temple_elephant_control
+		stationed_elephant_cavalry_control_value_add = 1
+	}
+	province_culture_modifier = {
+		parameter = zealous_people_religious_district_popular_opinion
+		popular_opinion_add = 10
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = desert_mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = forest
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = taiga
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = wetlands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = terraced_hills
+		building_slots_for_host_district = 1
+	}
+	province_government_modifier = {
+		parameter = government_extra_temple_district_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	character_modifier = {
+		monthly_piety = 0.84
+	}
+	character_rite_modifier = {
+		parameter = tenet_philanthropia_district_piety
+		monthly_piety = 0.2
+	}
+
+	county_modifier = {
+		epidemic_resistance = 10
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_construction_speed_reformation }
+		trigger_if = {
+			limit = {
+				culture = { has_cultural_parameter = temple_next_level }
+			}
+			building_stonework_high_medieval_trigger = yes
+			holding_district_level_3_trigger = yes
+		}
+		trigger_else = {
+			building_masonry_late_medieval_trigger = yes
+			holding_district_level_4_trigger = yes
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wine
+		amount = basic_resource_need
+		rite_parameter = communion_wine
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = alcohol_forbidden
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = building_tiny_popular_opinion_gain
+			}
+		}
+	}
+	market_rite_modifier = {
+		not_parameter = communion_wine
+		trade_good_incense_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = basic_resource_need
+		not_rite_parameter = communion_wine
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = building_tiny_popular_opinion_gain
+			}
+		}
+	}
+	market_rite_modifier = {
+		parameter = tenet_legalism_temple_district_control
+		trade_good_books_paper_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		rite_parameter = tenet_legalism_temple_district_control
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = 5
+			}
+		}
+	}
+	province_rite_modifier = {
+		parameter = clerical_function_temple_district_popular_opinion_penalty
+		popular_opinion_add = clerical_function_temple_district_popular_opinion
+	}
+	market_rite_modifier = {
+		parameter = clerical_function_temple_district_books_control
+		trade_good_books_paper_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		rite_parameter = clerical_function_temple_district_books_control
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = clerical_function_temple_district_control_per_books_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = housing_comfort_need
+		culture_parameter = housing_olive_oil_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_tea
+		amount = housing_comfort_need
+		culture_parameter = housing_tea_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = housing_comfort_need
+		culture_parameter = housing_fruit_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_honey
+		amount = housing_comfort_need
+		culture_parameter = housing_honey_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_cheese
+		amount = housing_comfort_need
+		culture_parameter = housing_cheese_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = votive_offering_need
+		culture_parameter = votive_incense_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_gold
+		amount = votive_offering_need
+		culture_parameter = votive_gold_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_silver
+		amount = votive_offering_need
+		culture_parameter = votive_silver_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_gems
+		amount = votive_offering_need
+		culture_parameter = votive_gems_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_ceramics
+		amount = votive_offering_need
+		culture_parameter = votive_ceramics_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_lacquerware
+		amount = votive_offering_need
+		culture_parameter = votive_lacquerware_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_amber
+		amount = votive_offering_need
+		culture_parameter = votive_amber_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_copper
+		amount = votive_offering_need
+		culture_parameter = votive_copper_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_ivory
+		amount = votive_offering_need
+		culture_parameter = votive_ivory_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = votive_offering_need
+		culture_parameter = votive_spices_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_medicaments
+		amount = votive_offering_need
+		culture_parameter = votive_medicaments_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+		ai_opinion_baseline_building_modifier = { VALUE = 8 }
+		ai_urban_input_modifier = { GOOD = trade_good_incense }
+
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_soft }
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_temple_07
+}
+
+eu5_pb_temple_07 = {
+	type_icon = "district_buildings/temple_district.dds"
+	construction_time = 540
+
+	cost_gold = 800
+
+	triggered_name = {
+		trigger = {
+			faith.religion = religion:christianity_religion
+		}
+		reference = "eu5_building_type_pb_temple_04_christian_era_7"
+	}
+	triggered_name = {
+		trigger = {
+			faith.religion = religion:islam_religion
+		}
+		reference = "eu5_building_type_pb_temple_04_muslim_era_7"
+	}
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = temple_primary_province_size_baseline_tier_4
+		popular_opinion_add = 8
+	}
+	province_rite_modifier = {
+		parameter = tenet_be_fruitful_and_multiply_temple_growth
+		province_size_baseline_add = province_size_tier_4
+		monthly_province_size_change_when_below_baseline_add = regular_building_province_size_baseline_increase_tier_4
+	}
+	province_culture_modifier = {
+		parameter = esoteric_power_stationed_skirmisher_control
+		stationed_skirmishers_control_value_add = 1
+	}
+	province_culture_modifier = {
+		parameter = lords_of_the_elephant_temple_elephant_control
+		stationed_elephant_cavalry_control_value_add = 1
+	}
+	province_culture_modifier = {
+		parameter = zealous_people_religious_district_popular_opinion
+		popular_opinion_add = 10
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = desert_mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = forest
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = taiga
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = wetlands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = terraced_hills
+		building_slots_for_host_district = 1
+	}
+	province_government_modifier = {
+		parameter = government_extra_temple_district_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	character_modifier = {
+		monthly_piety = 0.96
+	}
+	character_rite_modifier = {
+		parameter = tenet_philanthropia_district_piety
+		monthly_piety = 0.2
+	}
+
+	county_modifier = {
+		epidemic_resistance = 10
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_construction_speed_absolutism }
+		trigger_if = {
+			limit = {
+				culture = { has_cultural_parameter = temple_next_level }
+			}
+			building_stonework_high_medieval_trigger = yes
+			holding_district_level_3_trigger = yes
+		}
+		trigger_else = {
+			building_masonry_late_medieval_trigger = yes
+			holding_district_level_4_trigger = yes
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wine
+		amount = basic_resource_need
+		rite_parameter = communion_wine
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = alcohol_forbidden
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = building_tiny_popular_opinion_gain
+			}
+		}
+	}
+	market_rite_modifier = {
+		not_parameter = communion_wine
+		trade_good_incense_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = basic_resource_need
+		not_rite_parameter = communion_wine
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = building_tiny_popular_opinion_gain
+			}
+		}
+	}
+	market_rite_modifier = {
+		parameter = tenet_legalism_temple_district_control
+		trade_good_books_paper_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		rite_parameter = tenet_legalism_temple_district_control
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = 5
+			}
+		}
+	}
+	province_rite_modifier = {
+		parameter = clerical_function_temple_district_popular_opinion_penalty
+		popular_opinion_add = clerical_function_temple_district_popular_opinion
+	}
+	market_rite_modifier = {
+		parameter = clerical_function_temple_district_books_control
+		trade_good_books_paper_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		rite_parameter = clerical_function_temple_district_books_control
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = clerical_function_temple_district_control_per_books_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = housing_comfort_need
+		culture_parameter = housing_olive_oil_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_tea
+		amount = housing_comfort_need
+		culture_parameter = housing_tea_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = housing_comfort_need
+		culture_parameter = housing_fruit_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_honey
+		amount = housing_comfort_need
+		culture_parameter = housing_honey_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_cheese
+		amount = housing_comfort_need
+		culture_parameter = housing_cheese_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = votive_offering_need
+		culture_parameter = votive_incense_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_gold
+		amount = votive_offering_need
+		culture_parameter = votive_gold_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_silver
+		amount = votive_offering_need
+		culture_parameter = votive_silver_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_gems
+		amount = votive_offering_need
+		culture_parameter = votive_gems_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_ceramics
+		amount = votive_offering_need
+		culture_parameter = votive_ceramics_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_lacquerware
+		amount = votive_offering_need
+		culture_parameter = votive_lacquerware_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_amber
+		amount = votive_offering_need
+		culture_parameter = votive_amber_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_copper
+		amount = votive_offering_need
+		culture_parameter = votive_copper_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_ivory
+		amount = votive_offering_need
+		culture_parameter = votive_ivory_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = votive_offering_need
+		culture_parameter = votive_spices_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_medicaments
+		amount = votive_offering_need
+		culture_parameter = votive_medicaments_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+		ai_opinion_baseline_building_modifier = { VALUE = 8 }
+		ai_urban_input_modifier = { GOOD = trade_good_incense }
+
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_soft }
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_temple_08
+}
+
+eu5_pb_temple_08 = {
+	type_icon = "district_buildings/temple_district.dds"
+	construction_time = 600
+
+	cost_gold = 1000
+
+	triggered_name = {
+		trigger = {
+			faith.religion = religion:christianity_religion
+		}
+		reference = "eu5_building_type_pb_temple_04_christian_era_8"
+	}
+	triggered_name = {
+		trigger = {
+			faith.religion = religion:islam_religion
+		}
+		reference = "eu5_building_type_pb_temple_04_muslim_era_8"
+	}
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = temple_primary_province_size_baseline_tier_4
+		popular_opinion_add = 8
+	}
+	province_rite_modifier = {
+		parameter = tenet_be_fruitful_and_multiply_temple_growth
+		province_size_baseline_add = province_size_tier_4
+		monthly_province_size_change_when_below_baseline_add = regular_building_province_size_baseline_increase_tier_4
+	}
+	province_culture_modifier = {
+		parameter = esoteric_power_stationed_skirmisher_control
+		stationed_skirmishers_control_value_add = 1
+	}
+	province_culture_modifier = {
+		parameter = lords_of_the_elephant_temple_elephant_control
+		stationed_elephant_cavalry_control_value_add = 1
+	}
+	province_culture_modifier = {
+		parameter = zealous_people_religious_district_popular_opinion
+		popular_opinion_add = 10
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = desert_mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = forest
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = taiga
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = wetlands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = terraced_hills
+		building_slots_for_host_district = 1
+	}
+	province_government_modifier = {
+		parameter = government_extra_temple_district_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	character_modifier = {
+		monthly_piety = 1.08
+	}
+	character_rite_modifier = {
+		parameter = tenet_philanthropia_district_piety
+		monthly_piety = 0.2
+	}
+
+	county_modifier = {
+		epidemic_resistance = 10
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_construction_speed_revolutions }
+		trigger_if = {
+			limit = {
+				culture = { has_cultural_parameter = temple_next_level }
+			}
+			building_stonework_high_medieval_trigger = yes
+			holding_district_level_3_trigger = yes
+		}
+		trigger_else = {
+			building_masonry_late_medieval_trigger = yes
+			holding_district_level_4_trigger = yes
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wine
+		amount = basic_resource_need
+		rite_parameter = communion_wine
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = alcohol_forbidden
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = building_tiny_popular_opinion_gain
+			}
+		}
+	}
+	market_rite_modifier = {
+		not_parameter = communion_wine
+		trade_good_incense_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = basic_resource_need
+		not_rite_parameter = communion_wine
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = building_tiny_popular_opinion_gain
+			}
+		}
+	}
+	market_rite_modifier = {
+		parameter = tenet_legalism_temple_district_control
+		trade_good_books_paper_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		rite_parameter = tenet_legalism_temple_district_control
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = 5
+			}
+		}
+	}
+	province_rite_modifier = {
+		parameter = clerical_function_temple_district_popular_opinion_penalty
+		popular_opinion_add = clerical_function_temple_district_popular_opinion
+	}
+	market_rite_modifier = {
+		parameter = clerical_function_temple_district_books_control
+		trade_good_books_paper_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		rite_parameter = clerical_function_temple_district_books_control
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = clerical_function_temple_district_control_per_books_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = housing_comfort_need
+		culture_parameter = housing_olive_oil_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_tea
+		amount = housing_comfort_need
+		culture_parameter = housing_tea_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = housing_comfort_need
+		culture_parameter = housing_fruit_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_honey
+		amount = housing_comfort_need
+		culture_parameter = housing_honey_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_cheese
+		amount = housing_comfort_need
+		culture_parameter = housing_cheese_demand
+		rite_parameter = clerical_function_temple_district_comfort_popular_opinion
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = clerical_function_temple_district_popular_opinion_per_comfort_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = votive_offering_need
+		culture_parameter = votive_incense_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_gold
+		amount = votive_offering_need
+		culture_parameter = votive_gold_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_silver
+		amount = votive_offering_need
+		culture_parameter = votive_silver_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_gems
+		amount = votive_offering_need
+		culture_parameter = votive_gems_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_ceramics
+		amount = votive_offering_need
+		culture_parameter = votive_ceramics_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_lacquerware
+		amount = votive_offering_need
+		culture_parameter = votive_lacquerware_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_amber
+		amount = votive_offering_need
+		culture_parameter = votive_amber_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_copper
+		amount = votive_offering_need
+		culture_parameter = votive_copper_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_ivory
+		amount = votive_offering_need
+		culture_parameter = votive_ivory_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = votive_offering_need
+		culture_parameter = votive_spices_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_medicaments
+		amount = votive_offering_need
+		culture_parameter = votive_medicaments_demand
+		rite_parameter = clerical_function_temple_district_votive_maa_toughness
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				stationed_maa_toughness_mult = clerical_function_temple_district_maa_toughness_per_votive_offering
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+		ai_opinion_baseline_building_modifier = { VALUE = 8 }
+		ai_urban_input_modifier = { GOOD = trade_good_incense }
+
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_soft }
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+}
+
+pb_religious_community_04 = {
+	construction_time = district_tier_4_construction_time
+	can_construct_showing_failures_only = {
+		trigger_if = {
+			limit = {
+				culture = { has_cultural_parameter = temple_next_level }
+			}
+			building_rural_high_medieval_trigger = yes
+		}
+		trigger_else = {
+			building_rural_late_medieval_trigger = yes
+		}
+		trigger_if = {
+			limit = {
+				culture = {
+					OR = {
+						has_cultural_parameter = next_level_monasteries
+						has_cultural_parameter = temple_next_level
+					}
+				}
+			}
+			holding_district_level_3_trigger = yes
+		}
+		trigger_else = {
+			holding_district_level_4_trigger = yes
+		}
+	}
+	cost_gold = district_tier_4_cost
+	triggered_name = {
+		trigger = { faith.religion = religion:christianity_religion }
+		reference = "pb_religious_community_04_christian"
+	}
+	triggered_name = {
+		trigger = { faith.religion = religion:islam_religion }
+		reference = "pb_religious_community_04_muslim"
+	}
+	character_modifier = {
+		monthly_piety = 0.60
+	}
+	character_rite_modifier = {
+		parameter = tenet_philanthropia_district_piety
+		monthly_piety = 0.2
+	}
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = -40
+	}
+	province_terrain_modifier = {
+		parameter = oasis_villages_building_slot
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = esoteric_power_stationed_skirmisher_control
+		stationed_skirmishers_control_value_add = 1
+	}
+	province_culture_modifier = {
+		parameter = warrior_monks_religious_community_pikemen
+		stationed_pikemen_toughness_mult = normal_maa_toughness_tier_4
+	}
+	province_culture_modifier = {
+		parameter = monastic_communities_religious_community_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_rite_modifier = {
+		parameter = tenet_ora_et_labora_religious_community_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = zealous_people_religious_district_popular_opinion
+		popular_opinion_add = 10
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = desert_mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = forest
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = taiga
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = wetlands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = terraced_hills
+		building_slots_for_host_district = 1
+	}
+	province_government_modifier = {
+		parameter = government_gets_theocratic_building_modifiers
+		monthly_religious_tax = normal_building_tax_tier_4
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wine
+		amount = rural_resource_need
+		rite_parameter = communion_wine
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = alcohol_forbidden
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = rural_resource_need
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			character_modifier = {
+				monthly_piety = 0.04
+			}
+		}
+	}
+	on_complete = {
+		mandala_built_piety_building_effect = yes
+	}
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+
+		ai_rural_building_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_religious_community_05
+}
+
+eu5_pb_religious_community_05 = {
+	type_icon = "district_buildings/religious_community_district.dds"
+	construction_time = 420
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_new_world_crops }
+		trigger_if = {
+			limit = {
+				culture = { has_cultural_parameter = temple_next_level }
+			}
+			building_rural_high_medieval_trigger = yes
+		}
+		trigger_else = {
+			building_rural_late_medieval_trigger = yes
+		}
+		trigger_if = {
+			limit = {
+				culture = {
+					OR = {
+						has_cultural_parameter = next_level_monasteries
+						has_cultural_parameter = temple_next_level
+					}
+				}
+			}
+			holding_district_level_3_trigger = yes
+		}
+		trigger_else = {
+			holding_district_level_4_trigger = yes
+		}
+	}
+	cost_gold = 450
+	triggered_name = {
+		trigger = { faith.religion = religion:christianity_religion }
+		reference = "eu5_pb_religious_community_04_christian_era_5"
+	}
+	triggered_name = {
+		trigger = { faith.religion = religion:islam_religion }
+		reference = "eu5_pb_religious_community_04_muslim_era_5"
+	}
+	character_modifier = {
+		monthly_piety = 0.72
+	}
+	character_rite_modifier = {
+		parameter = tenet_philanthropia_district_piety
+		monthly_piety = 0.2
+	}
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = -40
+	}
+	province_terrain_modifier = {
+		parameter = oasis_villages_building_slot
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = esoteric_power_stationed_skirmisher_control
+		stationed_skirmishers_control_value_add = 1
+	}
+	province_culture_modifier = {
+		parameter = warrior_monks_religious_community_pikemen
+		stationed_pikemen_toughness_mult = normal_maa_toughness_tier_4
+	}
+	province_culture_modifier = {
+		parameter = monastic_communities_religious_community_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_rite_modifier = {
+		parameter = tenet_ora_et_labora_religious_community_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = zealous_people_religious_district_popular_opinion
+		popular_opinion_add = 10
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = desert_mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = forest
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = taiga
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = wetlands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = terraced_hills
+		building_slots_for_host_district = 1
+	}
+	province_government_modifier = {
+		parameter = government_gets_theocratic_building_modifiers
+		monthly_religious_tax = normal_building_tax_tier_4
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wine
+		amount = rural_resource_need
+		rite_parameter = communion_wine
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = alcohol_forbidden
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = rural_resource_need
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			character_modifier = {
+				monthly_piety = 0.04
+			}
+		}
+	}
+	on_complete = {
+		mandala_built_piety_building_effect = yes
+	}
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+
+		ai_rural_building_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_religious_community_06
+}
+
+eu5_pb_religious_community_06 = {
+	type_icon = "district_buildings/religious_community_district.dds"
+	construction_time = 480
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_food_advance_reformation }
+		trigger_if = {
+			limit = {
+				culture = { has_cultural_parameter = temple_next_level }
+			}
+			building_rural_high_medieval_trigger = yes
+		}
+		trigger_else = {
+			building_rural_late_medieval_trigger = yes
+		}
+		trigger_if = {
+			limit = {
+				culture = {
+					OR = {
+						has_cultural_parameter = next_level_monasteries
+						has_cultural_parameter = temple_next_level
+					}
+				}
+			}
+			holding_district_level_3_trigger = yes
+		}
+		trigger_else = {
+			holding_district_level_4_trigger = yes
+		}
+	}
+	cost_gold = 600
+	triggered_name = {
+		trigger = { faith.religion = religion:christianity_religion }
+		reference = "eu5_pb_religious_community_04_christian_era_6"
+	}
+	triggered_name = {
+		trigger = { faith.religion = religion:islam_religion }
+		reference = "eu5_pb_religious_community_04_muslim_era_6"
+	}
+	character_modifier = {
+		monthly_piety = 0.84
+	}
+	character_rite_modifier = {
+		parameter = tenet_philanthropia_district_piety
+		monthly_piety = 0.2
+	}
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = -40
+	}
+	province_terrain_modifier = {
+		parameter = oasis_villages_building_slot
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = esoteric_power_stationed_skirmisher_control
+		stationed_skirmishers_control_value_add = 1
+	}
+	province_culture_modifier = {
+		parameter = warrior_monks_religious_community_pikemen
+		stationed_pikemen_toughness_mult = normal_maa_toughness_tier_4
+	}
+	province_culture_modifier = {
+		parameter = monastic_communities_religious_community_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_rite_modifier = {
+		parameter = tenet_ora_et_labora_religious_community_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = zealous_people_religious_district_popular_opinion
+		popular_opinion_add = 10
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = desert_mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = forest
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = taiga
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = wetlands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = terraced_hills
+		building_slots_for_host_district = 1
+	}
+	province_government_modifier = {
+		parameter = government_gets_theocratic_building_modifiers
+		monthly_religious_tax = normal_building_tax_tier_4
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wine
+		amount = rural_resource_need
+		rite_parameter = communion_wine
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = alcohol_forbidden
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = rural_resource_need
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			character_modifier = {
+				monthly_piety = 0.04
+			}
+		}
+	}
+	on_complete = {
+		mandala_built_piety_building_effect = yes
+	}
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+
+		ai_rural_building_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_religious_community_07
+}
+
+eu5_pb_religious_community_07 = {
+	type_icon = "district_buildings/religious_community_district.dds"
+	construction_time = 540
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_food_advance_absolutism }
+		trigger_if = {
+			limit = {
+				culture = { has_cultural_parameter = temple_next_level }
+			}
+			building_rural_high_medieval_trigger = yes
+		}
+		trigger_else = {
+			building_rural_late_medieval_trigger = yes
+		}
+		trigger_if = {
+			limit = {
+				culture = {
+					OR = {
+						has_cultural_parameter = next_level_monasteries
+						has_cultural_parameter = temple_next_level
+					}
+				}
+			}
+			holding_district_level_3_trigger = yes
+		}
+		trigger_else = {
+			holding_district_level_4_trigger = yes
+		}
+	}
+	cost_gold = 800
+	triggered_name = {
+		trigger = { faith.religion = religion:christianity_religion }
+		reference = "eu5_pb_religious_community_04_christian_era_7"
+	}
+	triggered_name = {
+		trigger = { faith.religion = religion:islam_religion }
+		reference = "eu5_pb_religious_community_04_muslim_era_7"
+	}
+	character_modifier = {
+		monthly_piety = 0.96
+	}
+	character_rite_modifier = {
+		parameter = tenet_philanthropia_district_piety
+		monthly_piety = 0.2
+	}
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = -40
+	}
+	province_terrain_modifier = {
+		parameter = oasis_villages_building_slot
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = esoteric_power_stationed_skirmisher_control
+		stationed_skirmishers_control_value_add = 1
+	}
+	province_culture_modifier = {
+		parameter = warrior_monks_religious_community_pikemen
+		stationed_pikemen_toughness_mult = normal_maa_toughness_tier_4
+	}
+	province_culture_modifier = {
+		parameter = monastic_communities_religious_community_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_rite_modifier = {
+		parameter = tenet_ora_et_labora_religious_community_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = zealous_people_religious_district_popular_opinion
+		popular_opinion_add = 10
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = desert_mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = forest
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = taiga
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = wetlands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = terraced_hills
+		building_slots_for_host_district = 1
+	}
+	province_government_modifier = {
+		parameter = government_gets_theocratic_building_modifiers
+		monthly_religious_tax = normal_building_tax_tier_4
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wine
+		amount = rural_resource_need
+		rite_parameter = communion_wine
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = alcohol_forbidden
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = rural_resource_need
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			character_modifier = {
+				monthly_piety = 0.04
+			}
+		}
+	}
+	on_complete = {
+		mandala_built_piety_building_effect = yes
+	}
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+
+		ai_rural_building_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_religious_community_08
+}
+
+eu5_pb_religious_community_08 = {
+	type_icon = "district_buildings/religious_community_district.dds"
+	construction_time = 600
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_rotherham_plough }
+		trigger_if = {
+			limit = {
+				culture = { has_cultural_parameter = temple_next_level }
+			}
+			building_rural_high_medieval_trigger = yes
+		}
+		trigger_else = {
+			building_rural_late_medieval_trigger = yes
+		}
+		trigger_if = {
+			limit = {
+				culture = {
+					OR = {
+						has_cultural_parameter = next_level_monasteries
+						has_cultural_parameter = temple_next_level
+					}
+				}
+			}
+			holding_district_level_3_trigger = yes
+		}
+		trigger_else = {
+			holding_district_level_4_trigger = yes
+		}
+	}
+	cost_gold = 1000
+	triggered_name = {
+		trigger = { faith.religion = religion:christianity_religion }
+		reference = "eu5_pb_religious_community_04_christian_era_8"
+	}
+	triggered_name = {
+		trigger = { faith.religion = religion:islam_religion }
+		reference = "eu5_pb_religious_community_04_muslim_era_8"
+	}
+	character_modifier = {
+		monthly_piety = 1.08
+	}
+	character_rite_modifier = {
+		parameter = tenet_philanthropia_district_piety
+		monthly_piety = 0.2
+	}
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = -40
+	}
+	province_terrain_modifier = {
+		parameter = oasis_villages_building_slot
+		terrain = oasis
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = esoteric_power_stationed_skirmisher_control
+		stationed_skirmishers_control_value_add = 1
+	}
+	province_culture_modifier = {
+		parameter = warrior_monks_religious_community_pikemen
+		stationed_pikemen_toughness_mult = normal_maa_toughness_tier_4
+	}
+	province_culture_modifier = {
+		parameter = monastic_communities_religious_community_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_rite_modifier = {
+		parameter = tenet_ora_et_labora_religious_community_building_slot
+		building_slots_for_host_district = 1
+	}
+	province_culture_modifier = {
+		parameter = zealous_people_religious_district_popular_opinion
+		popular_opinion_add = 10
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_mountains_religious_building_slot
+		terrain = desert_mountains
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = jungle
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = forest
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = sacred_groves_religious_building_slot
+		terrain = taiga
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = wetlands
+		building_slots_for_host_district = 1
+	}
+	province_terrain_modifier = {
+		parameter = hydraulic_builders_religious_building_slot
+		terrain = terraced_hills
+		building_slots_for_host_district = 1
+	}
+	province_government_modifier = {
+		parameter = government_gets_theocratic_building_modifiers
+		monthly_religious_tax = normal_building_tax_tier_4
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wine
+		amount = rural_resource_need
+		rite_parameter = communion_wine
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = alcohol_forbidden
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = regular_building_popular_opinion_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = rural_resource_need
+		can_be_filled_multiple_times = 4
+		modifiers = {
+			character_modifier = {
+				monthly_piety = 0.04
+			}
+		}
+	}
+	on_complete = {
+		mandala_built_piety_building_effect = yes
+	}
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+
+		ai_rural_building_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+}
+
+pb_mandala_04 = {
+	construction_time = district_tier_4_construction_time
+
+	cost_gold = capital_district_tier_4_cost
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+		monthly_religious_tax = normal_building_tax_tier_4
+		additional_fort_level = normal_building_fort_level_tier_4
+	}
+	province_culture_modifier = {
+		parameter = esoteric_power_stationed_skirmisher_control
+		stationed_skirmishers_control_value_add = 4
+	}
+
+	can_construct_showing_failures_only = {
+		building_courtly_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	on_complete = {
+		mandala_built_piety_building_effect = yes
+	}
+
+	ai_value = {
+		base = 10.5
+		ai_civic_context_modifier = yes
+		ai_pious_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_mandala_05
+}
+
+eu5_pb_mandala_05 = {
+	type_icon = "district_buildings/mandala_district.dds"
+	construction_time = 420
+
+	cost_gold = 675
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+		monthly_religious_tax = normal_building_tax_tier_4
+		additional_fort_level = normal_building_fort_level_tier_4
+	}
+	province_culture_modifier = {
+		parameter = esoteric_power_stationed_skirmisher_control
+		stationed_skirmishers_control_value_add = 4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_town_rights_enable }
+		building_courtly_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	on_complete = {
+		mandala_built_piety_building_effect = yes
+	}
+
+	ai_value = {
+		base = 10.5
+		ai_civic_context_modifier = yes
+		ai_pious_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	county_modifier = { religious_tax_mult = 0.05 }
+
+	next_building = eu5_pb_mandala_06
+}
+
+eu5_pb_mandala_06 = {
+	type_icon = "district_buildings/mandala_district.dds"
+	construction_time = 480
+
+	cost_gold = 900
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+		monthly_religious_tax = normal_building_tax_tier_4
+		additional_fort_level = normal_building_fort_level_tier_4
+	}
+	province_culture_modifier = {
+		parameter = esoteric_power_stationed_skirmisher_control
+		stationed_skirmishers_control_value_add = 4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_town_rights_ref_advance }
+		building_courtly_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	on_complete = {
+		mandala_built_piety_building_effect = yes
+	}
+
+	ai_value = {
+		base = 10.5
+		ai_civic_context_modifier = yes
+		ai_pious_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	county_modifier = { religious_tax_mult = 0.1 }
+
+	next_building = eu5_pb_mandala_07
+}
+
+eu5_pb_mandala_07 = {
+	type_icon = "district_buildings/mandala_district.dds"
+	construction_time = 540
+
+	cost_gold = 1200
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+		monthly_religious_tax = normal_building_tax_tier_4
+		additional_fort_level = normal_building_fort_level_tier_4
+	}
+	province_culture_modifier = {
+		parameter = esoteric_power_stationed_skirmisher_control
+		stationed_skirmishers_control_value_add = 4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_town_rights_abs_advance }
+		building_courtly_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	on_complete = {
+		mandala_built_piety_building_effect = yes
+	}
+
+	ai_value = {
+		base = 10.5
+		ai_civic_context_modifier = yes
+		ai_pious_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	county_modifier = { religious_tax_mult = 0.15 }
+
+	next_building = eu5_pb_mandala_08
+}
+
+eu5_pb_mandala_08 = {
+	type_icon = "district_buildings/mandala_district.dds"
+	construction_time = 600
+
+	cost_gold = 1500
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+		monthly_religious_tax = normal_building_tax_tier_4
+		additional_fort_level = normal_building_fort_level_tier_4
+	}
+	province_culture_modifier = {
+		parameter = esoteric_power_stationed_skirmisher_control
+		stationed_skirmishers_control_value_add = 4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_urbanization }
+		building_courtly_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	on_complete = {
+		mandala_built_piety_building_effect = yes
+	}
+
+	ai_value = {
+		base = 10.5
+		ai_civic_context_modifier = yes
+		ai_pious_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	county_modifier = { religious_tax_mult = 0.2 }
+}
+
+pb_patrician_04 = {
+	construction_time = district_tier_4_construction_time
+
+	cost_gold = district_tier_4_cost
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = patrician_primary_province_size_baseline_tier_4
+		prosperity_per_province_size_level = patrician_primary_prosperity_per_size_tier_4
+	}
+	province_culture_modifier = {
+		parameter = palace_politics_patrician_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		province_size_level >= 5
+		culture = { has_innovation = innovation_prosperity_04 }
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_luxury_consumption
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = patrician_primary_popular_opinion_per_luxury_consumption_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_furs
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_furs_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_silk
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_silk_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_textiles_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+
+	ai_value = {
+		base = 9.7
+		ai_civic_context_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_urban_building_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_patrician_05
+}
+
+eu5_pb_patrician_05 = {
+	type_icon = "district_buildings/patrician_district.dds"
+	construction_time = 420
+
+	cost_gold = 450
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = patrician_primary_province_size_baseline_tier_4
+		prosperity_per_province_size_level = patrician_primary_prosperity_per_size_tier_4
+	}
+	province_culture_modifier = {
+		parameter = palace_politics_patrician_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_town_rights_enable }
+		province_size_level >= 5
+		culture = { has_innovation = innovation_prosperity_04 }
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_luxury_consumption
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = patrician_primary_popular_opinion_per_luxury_consumption_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_furs
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_furs_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_silk
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_silk_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_textiles_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+
+	ai_value = {
+		base = 9.7
+		ai_civic_context_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_urban_building_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	county_modifier = { prosperity_growth_factor = 0.05 }
+
+	next_building = eu5_pb_patrician_06
+}
+
+eu5_pb_patrician_06 = {
+	type_icon = "district_buildings/patrician_district.dds"
+	construction_time = 480
+
+	cost_gold = 600
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = patrician_primary_province_size_baseline_tier_4
+		prosperity_per_province_size_level = patrician_primary_prosperity_per_size_tier_4
+	}
+	province_culture_modifier = {
+		parameter = palace_politics_patrician_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_town_rights_ref_advance }
+		province_size_level >= 5
+		culture = { has_innovation = innovation_prosperity_04 }
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_luxury_consumption
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = patrician_primary_popular_opinion_per_luxury_consumption_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_furs
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_furs_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_silk
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_silk_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_textiles_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+
+	ai_value = {
+		base = 9.7
+		ai_civic_context_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_urban_building_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	county_modifier = { prosperity_growth_factor = 0.1 }
+
+	next_building = eu5_pb_patrician_07
+}
+
+eu5_pb_patrician_07 = {
+	type_icon = "district_buildings/patrician_district.dds"
+	construction_time = 540
+
+	cost_gold = 800
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = patrician_primary_province_size_baseline_tier_4
+		prosperity_per_province_size_level = patrician_primary_prosperity_per_size_tier_4
+	}
+	province_culture_modifier = {
+		parameter = palace_politics_patrician_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_town_rights_abs_advance }
+		province_size_level >= 5
+		culture = { has_innovation = innovation_prosperity_04 }
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_luxury_consumption
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = patrician_primary_popular_opinion_per_luxury_consumption_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_furs
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_furs_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_silk
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_silk_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_textiles_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+
+	ai_value = {
+		base = 9.7
+		ai_civic_context_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_urban_building_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	county_modifier = { prosperity_growth_factor = 0.15 }
+
+	next_building = eu5_pb_patrician_08
+}
+
+eu5_pb_patrician_08 = {
+	type_icon = "district_buildings/patrician_district.dds"
+	construction_time = 600
+
+	cost_gold = 1000
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = patrician_primary_province_size_baseline_tier_4
+		prosperity_per_province_size_level = patrician_primary_prosperity_per_size_tier_4
+	}
+	province_culture_modifier = {
+		parameter = palace_politics_patrician_building_slot
+		building_slots_for_host_district = 1
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_urbanization }
+		province_size_level >= 5
+		culture = { has_innovation = innovation_prosperity_04 }
+		holding_district_level_4_trigger = yes
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_luxury_consumption
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				popular_opinion_add = patrician_primary_popular_opinion_per_luxury_consumption_need
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_furs
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_furs_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_silk
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_silk_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = luxury_resource_need
+		can_be_filled_multiple_times = 4
+		culture_parameter = court_finery_textiles_demand
+
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = low_prosperity_tier_1
+			}
+		}
+	}
+
+	ai_value = {
+		base = 9.7
+		ai_civic_context_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_urban_building_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	county_modifier = { prosperity_growth_factor = 0.2 }
+}
+
+pb_entertainment_04 = {
+	construction_time = district_tier_4_construction_time
+
+	cost_gold = district_tier_4_cost
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+		popular_opinion_add = building_medium_popular_opinion_gain
+	}
+
+	can_construct_showing_failures_only = {
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	ai_value = {
+		base = 10
+		ai_opinion_baseline_building_modifier = { VALUE = 20 }
+
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_soft }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_popular_opinion_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_entertainment_05
+}
+
+eu5_pb_entertainment_05 = {
+	type_icon = "district_buildings/entertainment_square_district.dds"
+	construction_time = 420
+
+	cost_gold = 450
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+		popular_opinion_add = 12
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_construction_speed_discovery }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	ai_value = {
+		base = 10
+		ai_opinion_baseline_building_modifier = { VALUE = 20 }
+
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_soft }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_popular_opinion_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_entertainment_06
+}
+
+eu5_pb_entertainment_06 = {
+	type_icon = "district_buildings/entertainment_square_district.dds"
+	construction_time = 480
+
+	cost_gold = 600
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+		popular_opinion_add = 14
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_construction_speed_reformation }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	ai_value = {
+		base = 10
+		ai_opinion_baseline_building_modifier = { VALUE = 20 }
+
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_soft }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_popular_opinion_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_entertainment_07
+}
+
+eu5_pb_entertainment_07 = {
+	type_icon = "district_buildings/entertainment_square_district.dds"
+	construction_time = 540
+
+	cost_gold = 800
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+		popular_opinion_add = 16
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_construction_speed_absolutism }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	ai_value = {
+		base = 10
+		ai_opinion_baseline_building_modifier = { VALUE = 20 }
+
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_soft }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_popular_opinion_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_entertainment_08
+}
+
+eu5_pb_entertainment_08 = {
+	type_icon = "district_buildings/entertainment_square_district.dds"
+	construction_time = 600
+
+	cost_gold = 1000
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+		popular_opinion_add = 18
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_construction_speed_revolutions }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	ai_value = {
+		base = 10
+		ai_opinion_baseline_building_modifier = { VALUE = 20 }
+
+		ai_urban_identity_building_modifier = { WEIGHT = ai_building_priority_soft }
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_popular_opinion_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_district_upgrade_modifier = { LEVEL = 4 }
+	}
+}
+
+governance_district_04 = {
+	construction_time = district_tier_4_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+		scope:holder = { government_has_flag = government_is_celestial }
+	}
+
+	can_construct_showing_failures_only = {
+		building_administrative_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	is_enabled = {
+		scope:holder = { government_has_flag = government_is_celestial }
+	}
+	show_disabled = yes
+
+	cost_gold = district_tier_4_cost
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+	}
+	county_modifier = {
+		control_baseline_add = 5
+	}
+	duchy_capital_county_modifier = {
+		control_baseline_add = 12
+	}
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_governance_district_05
+}
+
+eu5_governance_district_05 = {
+	type_icon = "duchy_buildings/governance_district.dds"
+	construction_time = 420
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+		scope:holder = { government_has_flag = government_is_celestial }
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_government_size_discovery }
+		building_administrative_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	is_enabled = {
+		scope:holder = { government_has_flag = government_is_celestial }
+	}
+	show_disabled = yes
+
+	cost_gold = 450
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+	}
+	county_modifier = {
+		control_baseline_add = 5
+	}
+	duchy_capital_county_modifier = {
+		control_baseline_add = 14
+	}
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_governance_district_06
+}
+
+eu5_governance_district_06 = {
+	type_icon = "duchy_buildings/governance_district.dds"
+	construction_time = 480
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+		scope:holder = { government_has_flag = government_is_celestial }
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_generic_bureaucracy_4_advance }
+		building_administrative_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	is_enabled = {
+		scope:holder = { government_has_flag = government_is_celestial }
+	}
+	show_disabled = yes
+
+	cost_gold = 600
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+	}
+	county_modifier = {
+		control_baseline_add = 5
+	}
+	duchy_capital_county_modifier = {
+		control_baseline_add = 17
+	}
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_governance_district_07
+}
+
+eu5_governance_district_07 = {
+	type_icon = "duchy_buildings/governance_district.dds"
+	construction_time = 540
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+		scope:holder = { government_has_flag = government_is_celestial }
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_government_size_absolutism }
+		building_administrative_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	is_enabled = {
+		scope:holder = { government_has_flag = government_is_celestial }
+	}
+	show_disabled = yes
+
+	cost_gold = 800
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+	}
+	county_modifier = {
+		control_baseline_add = 5
+	}
+	duchy_capital_county_modifier = {
+		control_baseline_add = 19
+	}
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_governance_district_08
+}
+
+eu5_governance_district_08 = {
+	type_icon = "duchy_buildings/governance_district.dds"
+	construction_time = 600
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+		scope:holder = { government_has_flag = government_is_celestial }
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_modern_bureaucracy }
+		building_administrative_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	is_enabled = {
+		scope:holder = { government_has_flag = government_is_celestial }
+	}
+	show_disabled = yes
+
+	cost_gold = 1000
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+	}
+	county_modifier = {
+		control_baseline_add = 5
+	}
+	duchy_capital_county_modifier = {
+		control_baseline_add = 22
+	}
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+}
+
+assay_district_04 = {
+	construction_time = district_tier_4_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		building_mineral_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = district_tier_4_cost
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+	}
+	duchy_capital_county_modifier = {
+		mining_tax_mult = 0.1
+		civic_tax_mult = 0.1
+		monthly_control_change_when_below_baseline_add = 0.8
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_assay_district_05
+}
+
+eu5_assay_district_05 = {
+	type_icon = "duchy_buildings/tax_assessor.dds"
+	construction_time = 420
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_blast_furnace }
+		building_mineral_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 450
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+	}
+	duchy_capital_county_modifier = {
+		mining_tax_mult = 0.12
+		civic_tax_mult = 0.1
+		monthly_control_change_when_below_baseline_add = 0.8
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_assay_district_06
+}
+
+eu5_assay_district_06 = {
+	type_icon = "duchy_buildings/tax_assessor.dds"
+	construction_time = 480
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_bole_smelting }
+		building_mineral_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 600
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+	}
+	duchy_capital_county_modifier = {
+		mining_tax_mult = 0.14
+		civic_tax_mult = 0.1
+		monthly_control_change_when_below_baseline_add = 0.8
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_assay_district_07
+}
+
+eu5_assay_district_07 = {
+	type_icon = "duchy_buildings/tax_assessor.dds"
+	construction_time = 540
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_coke_blast_furnace }
+		building_mineral_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 800
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+	}
+	duchy_capital_county_modifier = {
+		mining_tax_mult = 0.16
+		civic_tax_mult = 0.1
+		monthly_control_change_when_below_baseline_add = 0.8
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_assay_district_08
+}
+
+eu5_assay_district_08 = {
+	type_icon = "duchy_buildings/tax_assessor.dds"
+	construction_time = 600
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_hot_blast_furnace }
+		building_mineral_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 1000
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+	}
+	duchy_capital_county_modifier = {
+		mining_tax_mult = 0.18
+		civic_tax_mult = 0.1
+		monthly_control_change_when_below_baseline_add = 0.8
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+}
+
+bailiwick_04 = {
+	construction_time = district_tier_4_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		building_rural_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = district_tier_4_cost
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+	}
+	duchy_capital_county_modifier = {
+		agricultural_tax_mult = 0.1
+		woodland_tax_mult = 0.1
+	}
+	character_modifier = {
+		max_trade_routes = 1
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_bailiwick_05
+}
+
+eu5_bailiwick_05 = {
+	type_icon = "duchy_buildings/bailiwick.dds"
+	construction_time = 420
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_new_world_crops }
+		building_rural_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 450
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+	}
+	duchy_capital_county_modifier = {
+		agricultural_tax_mult = 0.12
+		woodland_tax_mult = 0.1
+	}
+	character_modifier = {
+		max_trade_routes = 1
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_bailiwick_06
+}
+
+eu5_bailiwick_06 = {
+	type_icon = "duchy_buildings/bailiwick.dds"
+	construction_time = 480
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_food_advance_reformation }
+		building_rural_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 600
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+	}
+	duchy_capital_county_modifier = {
+		agricultural_tax_mult = 0.14
+		woodland_tax_mult = 0.1
+	}
+	character_modifier = {
+		max_trade_routes = 1
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_bailiwick_07
+}
+
+eu5_bailiwick_07 = {
+	type_icon = "duchy_buildings/bailiwick.dds"
+	construction_time = 540
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_food_advance_absolutism }
+		building_rural_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 800
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+	}
+	duchy_capital_county_modifier = {
+		agricultural_tax_mult = 0.16
+		woodland_tax_mult = 0.1
+	}
+	character_modifier = {
+		max_trade_routes = 1
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_bailiwick_08
+}
+
+eu5_bailiwick_08 = {
+	type_icon = "duchy_buildings/bailiwick.dds"
+	construction_time = 600
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_rotherham_plough }
+		building_rural_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 1000
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+	}
+	duchy_capital_county_modifier = {
+		agricultural_tax_mult = 0.18
+		woodland_tax_mult = 0.1
+	}
+	character_modifier = {
+		max_trade_routes = 1
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+}
+
+staple_district_04 = {
+	construction_time = district_tier_4_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = district_tier_4_cost
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+	}
+	duchy_capital_county_modifier = {
+		urban_tax_mult = 0.1
+		commerce_tax_mult = 0.1
+		artisan_tax_mult = 0.1
+		maritime_tax_mult = 0.1
+	}
+	character_modifier = {
+		max_trade_routes = 1
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_staple_district_05
+}
+
+eu5_staple_district_05 = {
+	type_icon = "duchy_buildings/staple_district.dds"
+	construction_time = 420
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_construction_speed_discovery }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 450
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+	}
+	duchy_capital_county_modifier = {
+		urban_tax_mult = 0.12
+		commerce_tax_mult = 0.1
+		artisan_tax_mult = 0.1
+		maritime_tax_mult = 0.1
+	}
+	character_modifier = {
+		max_trade_routes = 1
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_staple_district_06
+}
+
+eu5_staple_district_06 = {
+	type_icon = "duchy_buildings/staple_district.dds"
+	construction_time = 480
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_construction_speed_reformation }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 600
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+	}
+	duchy_capital_county_modifier = {
+		urban_tax_mult = 0.14
+		commerce_tax_mult = 0.1
+		artisan_tax_mult = 0.1
+		maritime_tax_mult = 0.1
+	}
+	character_modifier = {
+		max_trade_routes = 1
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_staple_district_07
+}
+
+eu5_staple_district_07 = {
+	type_icon = "duchy_buildings/staple_district.dds"
+	construction_time = 540
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_construction_speed_absolutism }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 800
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+	}
+	duchy_capital_county_modifier = {
+		urban_tax_mult = 0.16
+		commerce_tax_mult = 0.1
+		artisan_tax_mult = 0.1
+		maritime_tax_mult = 0.1
+	}
+	character_modifier = {
+		max_trade_routes = 1
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_staple_district_08
+}
+
+eu5_staple_district_08 = {
+	type_icon = "duchy_buildings/staple_district.dds"
+	construction_time = 600
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_construction_speed_revolutions }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 1000
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+	}
+	duchy_capital_county_modifier = {
+		urban_tax_mult = 0.18
+		commerce_tax_mult = 0.1
+		artisan_tax_mult = 0.1
+		maritime_tax_mult = 0.1
+	}
+	character_modifier = {
+		max_trade_routes = 1
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+}
+
+endowment_district_04 = {
+	construction_time = district_tier_4_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = district_tier_4_cost
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		monthly_religious_tax = good_building_tax_tier_4
+	}
+	duchy_capital_county_modifier = {
+		religious_tax_mult = 0.1
+		popular_opinion_add = 5
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_endowment_district_05
+}
+
+eu5_endowment_district_05 = {
+	type_icon = "duchy_buildings/endowment_district.dds"
+	construction_time = 420
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_construction_speed_discovery }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 450
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		monthly_religious_tax = good_building_tax_tier_4
+	}
+	duchy_capital_county_modifier = {
+		religious_tax_mult = 0.12
+		popular_opinion_add = 5
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_endowment_district_06
+}
+
+eu5_endowment_district_06 = {
+	type_icon = "duchy_buildings/endowment_district.dds"
+	construction_time = 480
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_construction_speed_reformation }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 600
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		monthly_religious_tax = good_building_tax_tier_4
+	}
+	duchy_capital_county_modifier = {
+		religious_tax_mult = 0.14
+		popular_opinion_add = 5
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_endowment_district_07
+}
+
+eu5_endowment_district_07 = {
+	type_icon = "duchy_buildings/endowment_district.dds"
+	construction_time = 540
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_construction_speed_absolutism }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 800
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		monthly_religious_tax = good_building_tax_tier_4
+	}
+	duchy_capital_county_modifier = {
+		religious_tax_mult = 0.16
+		popular_opinion_add = 5
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_endowment_district_08
+}
+
+eu5_endowment_district_08 = {
+	type_icon = "duchy_buildings/endowment_district.dds"
+	construction_time = 600
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_construction_speed_revolutions }
+		building_masonry_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 1000
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		monthly_religious_tax = good_building_tax_tier_4
+	}
+	duchy_capital_county_modifier = {
+		religious_tax_mult = 0.18
+		popular_opinion_add = 5
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+}
+
+military_duchy_building_04 = {
+	construction_time = district_tier_4_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_royal_armory }
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = district_tier_4_cost
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+	}
+	duchy_capital_county_modifier = {
+		stationed_maa_damage_mult = duchy_normal_maa_damage_tier_4
+		stationed_maa_toughness_mult = duchy_normal_maa_toughness_tier_4
+		levy_size = 0.2
+		additional_fort_level = 4
+		military_district_district_build_speed = -0.2
+		walls_district_district_build_speed = -0.2
+		border_forts_district_district_build_speed = -0.2
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		directive_to_fortify_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_military_duchy_building_05
+}
+
+eu5_military_duchy_building_05 = {
+	type_icon = "district_buildings/mustering_grounds_district.dds"
+	construction_time = 420
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_training_ground }
+		culture = { has_innovation = innovation_royal_armory }
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 450
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+	}
+	duchy_capital_county_modifier = {
+		stationed_maa_damage_mult = duchy_normal_maa_damage_tier_4
+		stationed_maa_toughness_mult = duchy_normal_maa_toughness_tier_4
+		levy_size = 0.24
+		additional_fort_level = 4
+		military_district_district_build_speed = -0.2
+		walls_district_district_build_speed = -0.2
+		border_forts_district_district_build_speed = -0.2
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		directive_to_fortify_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_military_duchy_building_06
+}
+
+eu5_military_duchy_building_06 = {
+	type_icon = "district_buildings/mustering_grounds_district.dds"
+	construction_time = 480
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_barracks }
+		culture = { has_innovation = innovation_royal_armory }
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 600
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+	}
+	duchy_capital_county_modifier = {
+		stationed_maa_damage_mult = duchy_normal_maa_damage_tier_4
+		stationed_maa_toughness_mult = duchy_normal_maa_toughness_tier_4
+		levy_size = 0.28
+		additional_fort_level = 4
+		military_district_district_build_speed = -0.2
+		walls_district_district_build_speed = -0.2
+		border_forts_district_district_build_speed = -0.2
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		directive_to_fortify_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_military_duchy_building_07
+}
+
+eu5_military_duchy_building_07 = {
+	type_icon = "district_buildings/mustering_grounds_district.dds"
+	construction_time = 540
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_legion_camp }
+		culture = { has_innovation = innovation_royal_armory }
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 800
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+	}
+	duchy_capital_county_modifier = {
+		stationed_maa_damage_mult = duchy_normal_maa_damage_tier_4
+		stationed_maa_toughness_mult = duchy_normal_maa_toughness_tier_4
+		levy_size = 0.32
+		additional_fort_level = 4
+		military_district_district_build_speed = -0.2
+		walls_district_district_build_speed = -0.2
+		border_forts_district_district_build_speed = -0.2
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		directive_to_fortify_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_military_duchy_building_08
+}
+
+eu5_military_duchy_building_08 = {
+	type_icon = "district_buildings/mustering_grounds_district.dds"
+	construction_time = 600
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_recruitment_center }
+		culture = { has_innovation = innovation_royal_armory }
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 1000
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+	}
+	duchy_capital_county_modifier = {
+		stationed_maa_damage_mult = duchy_normal_maa_damage_tier_4
+		stationed_maa_toughness_mult = duchy_normal_maa_toughness_tier_4
+		levy_size = 0.36
+		additional_fort_level = 4
+		military_district_district_build_speed = -0.2
+		walls_district_district_build_speed = -0.2
+		border_forts_district_district_build_speed = -0.2
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		directive_to_fortify_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+}
+
+ducal_residence_04 = {
+	construction_time = district_tier_4_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		building_courtly_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = district_tier_4_cost
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+	}
+	duchy_capital_county_modifier = {
+		popular_opinion_add = 4
+		prosperity_growth_factor = 0.1
+	}
+	character_modifier = {
+		monthly_prestige = 0.4
+		court_grandeur_baseline_add = 4
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_opinion_baseline_building_modifier = { VALUE = 5 }
+		ai_popular_opinion_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_ducal_residence_05
+}
+
+eu5_ducal_residence_05 = {
+	type_icon = "duchy_buildings/ducal_residence.dds"
+	construction_time = 420
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_town_rights_enable }
+		building_courtly_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 450
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+	}
+	duchy_capital_county_modifier = {
+		popular_opinion_add = 4
+		prosperity_growth_factor = 0.1
+	}
+	character_modifier = {
+		monthly_prestige = 0.48
+		court_grandeur_baseline_add = 4
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_opinion_baseline_building_modifier = { VALUE = 5 }
+		ai_popular_opinion_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_ducal_residence_06
+}
+
+eu5_ducal_residence_06 = {
+	type_icon = "duchy_buildings/ducal_residence.dds"
+	construction_time = 480
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_town_rights_ref_advance }
+		building_courtly_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 600
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+	}
+	duchy_capital_county_modifier = {
+		popular_opinion_add = 4
+		prosperity_growth_factor = 0.1
+	}
+	character_modifier = {
+		monthly_prestige = 0.56
+		court_grandeur_baseline_add = 4
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_opinion_baseline_building_modifier = { VALUE = 5 }
+		ai_popular_opinion_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_ducal_residence_07
+}
+
+eu5_ducal_residence_07 = {
+	type_icon = "duchy_buildings/ducal_residence.dds"
+	construction_time = 540
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_town_rights_abs_advance }
+		building_courtly_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 800
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+	}
+	duchy_capital_county_modifier = {
+		popular_opinion_add = 4
+		prosperity_growth_factor = 0.1
+	}
+	character_modifier = {
+		monthly_prestige = 0.64
+		court_grandeur_baseline_add = 4
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_opinion_baseline_building_modifier = { VALUE = 5 }
+		ai_popular_opinion_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_ducal_residence_08
+}
+
+eu5_ducal_residence_08 = {
+	type_icon = "duchy_buildings/ducal_residence.dds"
+	construction_time = 600
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_urbanization }
+		building_courtly_late_medieval_trigger = yes
+		holding_district_level_4_trigger = yes
+	}
+
+	show_disabled = yes
+
+	cost_gold = 1000
+
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = urban_regular_size_tier_4
+	}
+	duchy_capital_county_modifier = {
+		popular_opinion_add = 4
+		prosperity_growth_factor = 0.1
+	}
+	character_modifier = {
+		monthly_prestige = 0.72
+		court_grandeur_baseline_add = 4
+	}
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+
+	ai_value = {
+		base = 10
+		ai_opinion_baseline_building_modifier = { VALUE = 5 }
+		ai_popular_opinion_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_duchy_district_upgrade_modifier = { LEVEL = 4 }
+	}
+}
+
+pb_entrepot_04 = {
+	construction_time = district_tier_4_construction_time
+	cost_gold = entrepot_district_tier_4_cost
+	assets = {
+		asset = {
+			type = pdxmesh
+			names = { "gdp_western_entrepot_01_a_mesh" }
+			graphical_regions = { graphical_western graphical_mediterranean graphical_siberia }
+		}
+		asset = {
+			type = pdxmesh
+			names = { "gdp_mena_entrepot_01_a_mesh" }
+			graphical_regions = { graphical_mena graphical_india }
+		}
+		asset = {
+			type = pdxmesh
+			names = { "gdp_eastern_entrepot_01_a_mesh" }
+			graphical_regions = { graphical_east_asia graphical_steppe }
+		}
+	}
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = entrepot_province_size_baseline_tier_4
+	}
+
+	can_construct_showing_failures_only = {
+		building_commerce_late_medieval_trigger = yes
+		custom_tooltip = {
+			text = entrepot_holding_district_level_4_tt
+			OR = {
+				has_building_or_higher = castle_04
+				has_building_or_higher = city_04
+				has_building_or_higher = temple_04
+				has_building_or_higher = temple_citadel_04
+			}
+		}
+	}
+	ai_value = {
+		base = 9.1
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_urban_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		modifier = {
+			factor = 0.3
+			province_size_level < 4
+		}
+		ai_capital_preference_modifier = yes
+		ai_special_district_modifier = { LEVEL = 4 }
+	}
+
+	next_building = eu5_pb_entrepot_05
+}
+
+eu5_pb_entrepot_05 = {
+	type_icon = "district_buildings/entrepot_district.dds"
+	construction_time = 420
+	cost_gold = 1800
+	assets = {
+		asset = {
+			type = pdxmesh
+			names = { "gdp_western_entrepot_01_a_mesh" }
+			graphical_regions = { graphical_western graphical_mediterranean graphical_siberia }
+		}
+		asset = {
+			type = pdxmesh
+			names = { "gdp_mena_entrepot_01_a_mesh" }
+			graphical_regions = { graphical_mena graphical_india }
+		}
+		asset = {
+			type = pdxmesh
+			names = { "gdp_eastern_entrepot_01_a_mesh" }
+			graphical_regions = { graphical_east_asia graphical_steppe }
+		}
+	}
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = entrepot_province_size_baseline_tier_4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_basic_financial_instruments }
+		building_commerce_late_medieval_trigger = yes
+		custom_tooltip = {
+			text = entrepot_holding_district_level_4_tt
+			OR = {
+				has_building_or_higher = castle_04
+				has_building_or_higher = city_04
+				has_building_or_higher = temple_04
+				has_building_or_higher = temple_citadel_04
+			}
+		}
+	}
+	ai_value = {
+		base = 9.1
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_urban_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		modifier = {
+			factor = 0.3
+			province_size_level < 4
+		}
+		ai_capital_preference_modifier = yes
+		ai_special_district_modifier = { LEVEL = 4 }
+	}
+
+	county_modifier = { commerce_tax_mult = 0.05 }
+
+	next_building = eu5_pb_entrepot_06
+}
+
+eu5_pb_entrepot_06 = {
+	type_icon = "district_buildings/entrepot_district.dds"
+	construction_time = 480
+	cost_gold = 2400
+	assets = {
+		asset = {
+			type = pdxmesh
+			names = { "gdp_western_entrepot_01_a_mesh" }
+			graphical_regions = { graphical_western graphical_mediterranean graphical_siberia }
+		}
+		asset = {
+			type = pdxmesh
+			names = { "gdp_mena_entrepot_01_a_mesh" }
+			graphical_regions = { graphical_mena graphical_india }
+		}
+		asset = {
+			type = pdxmesh
+			names = { "gdp_eastern_entrepot_01_a_mesh" }
+			graphical_regions = { graphical_east_asia graphical_steppe }
+		}
+	}
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = entrepot_province_size_baseline_tier_4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_chartered_companies }
+		building_commerce_late_medieval_trigger = yes
+		custom_tooltip = {
+			text = entrepot_holding_district_level_4_tt
+			OR = {
+				has_building_or_higher = castle_04
+				has_building_or_higher = city_04
+				has_building_or_higher = temple_04
+				has_building_or_higher = temple_citadel_04
+			}
+		}
+	}
+	ai_value = {
+		base = 9.1
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_urban_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		modifier = {
+			factor = 0.3
+			province_size_level < 4
+		}
+		ai_capital_preference_modifier = yes
+		ai_special_district_modifier = { LEVEL = 4 }
+	}
+
+	county_modifier = { commerce_tax_mult = 0.1 }
+
+	next_building = eu5_pb_entrepot_07
+}
+
+eu5_pb_entrepot_07 = {
+	type_icon = "district_buildings/entrepot_district.dds"
+	construction_time = 540
+	cost_gold = 3200
+	assets = {
+		asset = {
+			type = pdxmesh
+			names = { "gdp_western_entrepot_01_a_mesh" }
+			graphical_regions = { graphical_western graphical_mediterranean graphical_siberia }
+		}
+		asset = {
+			type = pdxmesh
+			names = { "gdp_mena_entrepot_01_a_mesh" }
+			graphical_regions = { graphical_mena graphical_india }
+		}
+		asset = {
+			type = pdxmesh
+			names = { "gdp_eastern_entrepot_01_a_mesh" }
+			graphical_regions = { graphical_east_asia graphical_steppe }
+		}
+	}
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = entrepot_province_size_baseline_tier_4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_central_bank_advance }
+		building_commerce_late_medieval_trigger = yes
+		custom_tooltip = {
+			text = entrepot_holding_district_level_4_tt
+			OR = {
+				has_building_or_higher = castle_04
+				has_building_or_higher = city_04
+				has_building_or_higher = temple_04
+				has_building_or_higher = temple_citadel_04
+			}
+		}
+	}
+	ai_value = {
+		base = 9.1
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_urban_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		modifier = {
+			factor = 0.3
+			province_size_level < 4
+		}
+		ai_capital_preference_modifier = yes
+		ai_special_district_modifier = { LEVEL = 4 }
+	}
+
+	county_modifier = { commerce_tax_mult = 0.15 }
+
+	next_building = eu5_pb_entrepot_08
+}
+
+eu5_pb_entrepot_08 = {
+	type_icon = "district_buildings/entrepot_district.dds"
+	construction_time = 600
+	cost_gold = 4000
+	assets = {
+		asset = {
+			type = pdxmesh
+			names = { "gdp_western_entrepot_01_a_mesh" }
+			graphical_regions = { graphical_western graphical_mediterranean graphical_siberia }
+		}
+		asset = {
+			type = pdxmesh
+			names = { "gdp_mena_entrepot_01_a_mesh" }
+			graphical_regions = { graphical_mena graphical_india }
+		}
+		asset = {
+			type = pdxmesh
+			names = { "gdp_eastern_entrepot_01_a_mesh" }
+			graphical_regions = { graphical_east_asia graphical_steppe }
+		}
+	}
+	province_modifier = {
+		building_slots_for_host_district = 4
+		province_size_baseline_add = entrepot_province_size_baseline_tier_4
+	}
+
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_the_gold_standard }
+		building_commerce_late_medieval_trigger = yes
+		custom_tooltip = {
+			text = entrepot_holding_district_level_4_tt
+			OR = {
+				has_building_or_higher = castle_04
+				has_building_or_higher = city_04
+				has_building_or_higher = temple_04
+				has_building_or_higher = temple_citadel_04
+			}
+		}
+	}
+	ai_value = {
+		base = 9.1
+		directive_to_build_economy_modifier = yes
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_urban_building_modifier = yes
+		ai_economic_terrain_modifier = yes
+		modifier = {
+			factor = 0.3
+			province_size_level < 4
+		}
+		ai_capital_preference_modifier = yes
+		ai_special_district_modifier = { LEVEL = 4 }
+	}
+
+	county_modifier = { commerce_tax_mult = 0.2 }
+}
