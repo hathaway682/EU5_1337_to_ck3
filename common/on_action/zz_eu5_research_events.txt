@@ -1,0 +1,7 @@
+﻿eu5_research_ongoing_events = {
+ trigger = { exists = scope:inspiration exists = scope:inspiration_owner }
+ random_events = {
+  1000 = 0
+  100 = eu5_research.0002
+ }
+}

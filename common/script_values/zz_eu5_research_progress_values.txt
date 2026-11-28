@@ -1,0 +1,17 @@
+﻿# Inspiration scope; progress chance is evaluated for the sponsor's culture.
+eu5_research_monthly_progress_chance = {
+ value = 65
+ if = {
+  limit = { scope:inspiration_sponsor.culture ?= { has_innovation = innovation_eu5_scientific_experimentation } }
+  add = 10
+ }
+ if = {
+  limit = { scope:inspiration_sponsor.culture ?= { has_innovation = innovation_eu5_scientific_revolution_advance } }
+  add = 10
+ }
+ if = {
+  limit = { scope:inspiration_sponsor.culture ?= { has_innovation = innovation_eu5_enlightenment_advance } }
+  add = 10
+ }
+ max = 100
+}

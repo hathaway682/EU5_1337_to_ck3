@@ -1,0 +1,120 @@
+﻿namespace = eu5_research
+
+eu5_research.0001 = {
+ type = character_event
+ title = eu5_research.0001.t
+ desc = eu5_research.0001.desc
+ theme = education
+ left_portrait = root
+ immediate = {
+  court_position:eu5_court_scholar_court_position ?= { save_scope_as = eu5_research_scholar }
+ }
+ right_portrait = { character = scope:eu5_research_scholar animation = reading }
+ option = { name = eu5_research.0001.a }
+}
+
+eu5_research.0002 = {
+ type = character_event
+ title = eu5_research.0002.t
+ desc = eu5_research.0002.desc
+ theme = education
+ left_portrait = scope:inspiration_owner
+ trigger = {
+  exists = scope:inspiration
+  scope:inspiration_owner = {
+   is_available_healthy_adult = yes
+   NOT = { has_character_flag = eu5_research_library_event }
+  }
+ }
+ immediate = {
+  scope:inspiration_owner = { add_character_flag = { flag = eu5_research_library_event years = 5 } }
+ }
+ option = {
+  name = eu5_research.0002.a
+  scope:inspiration = { invest_gold = 50 }
+  scope:inspiration_owner = { change_variable = { name = eu5_research_success_chance add = 6 } }
+  custom_tooltip = eu5_research_improved_chance_tt
+  ai_chance = { base = 50 modifier = { add = -50 short_term_gold < 50 } }
+ }
+ option = {
+  name = eu5_research.0002.b
+  scope:inspiration_owner = { change_variable = { name = eu5_research_success_chance add = -2 } }
+  custom_tooltip = eu5_research_reduced_chance_tt
+  ai_chance = { base = 25 }
+ }
+}
+
+eu5_research.0004 = {
+ type = character_event
+ title = eu5_research.0004.t
+ desc = eu5_research.0004.desc
+ theme = education
+ option = { name = eu5_research.0004.a }
+}
+
+eu5_research.0099 = {
+ hidden = yes
+ immediate = {
+  random_list = {
+   25 = {
+    modifier = { add = -10 culture = { has_innovation = innovation_eu5_scientific_revolution_advance } }
+    modifier = { add = { value = 0 subtract = scope:inspiration_owner.var:eu5_research_success_chance } }
+    trigger_event = eu5_research.0100
+   }
+   60 = {
+    modifier = { add = { value = scope:inspiration_owner.var:eu5_research_success_chance multiply = 0.75 } }
+    trigger_event = eu5_research.0101
+   }
+   15 = {
+    modifier = { add = 10 culture = { has_innovation = innovation_eu5_scientific_revolution_advance } }
+    modifier = { add = { value = scope:inspiration_owner.var:eu5_research_success_chance multiply = 0.25 } }
+    trigger_event = eu5_research.0102
+   }
+  }
+ }
+}
+
+eu5_research.0100 = {
+ type = character_event
+ title = eu5_research.0100.t
+ desc = eu5_research.0100.desc
+ theme = education
+ left_portrait = scope:inspiration_owner
+ option = { name = eu5_research.0100.a custom_tooltip = eu5_research_failure_tt }
+}
+
+eu5_research.0101 = {
+ type = character_event
+ title = eu5_research.0101.t
+ desc = eu5_research.0101.desc
+ theme = education
+ left_portrait = scope:inspiration_owner
+ option = {
+  name = eu5_research.0101.a
+  if = {
+   limit = { culture = { eu5_research_current_available_trigger = yes } }
+   culture = { eu5_research_award_current_effect = yes }
+  }
+  else = { eu5_research_random_treatise_effect = yes }
+ }
+}
+
+eu5_research.0102 = {
+ type = character_event
+ title = eu5_research.0102.t
+ desc = eu5_research.0102.desc
+ theme = education
+ left_portrait = scope:inspiration_owner
+ option = {
+  name = eu5_research.0102.a
+  if = {
+   limit = { culture = { eu5_research_final_breakthrough_available_trigger = yes } }
+   culture = { eu5_research_final_breakthrough_effect = yes }
+  }
+  else_if = {
+   limit = { culture = { eu5_research_next_available_trigger = yes } }
+   culture = { eu5_research_award_next_effect = yes }
+  }
+  else = { eu5_research_random_treatise_effect = yes }
+ }
+}

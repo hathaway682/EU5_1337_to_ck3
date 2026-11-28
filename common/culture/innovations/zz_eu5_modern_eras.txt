@@ -116,7 +116,7 @@ innovation_eu5_regiment_reinforcement_speed_discovery = {
 	culture_era = culture_era_eu5_discovery
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_regiment_reinforcement_speed_discovery.dds"
 	character_modifier = {
-		levy_reinforcement_rate = 0.15
+		supply_capacity_mult = 1
 	}
 	flag = global_regular
 	flag = eu5_discovery_era_regular
@@ -394,6 +394,9 @@ innovation_eu5_print_culture = {
 	group = culture_group_civic
 	culture_era = culture_era_eu5_discovery
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_print_culture.dds"
+	parameters = {
+		innovation_from_learning_traits = yes
+	}
 	character_modifier = {
 		monthly_learning_lifestyle_xp_gain_mult = 0.05
 	}
@@ -484,6 +487,9 @@ innovation_eu5_surgery_advance = {
 	}
 	character_modifier = {
 		health = 0.1
+	}
+	county_modifier = {
+		epidemic_resistance = 10
 	}
 	flag = global_regular
 	flag = eu5_discovery_era_regular
@@ -614,7 +620,7 @@ innovation_eu5_military_administration = {
 	culture_era = culture_era_eu5_reformation
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_military_administration.dds"
 	character_modifier = {
-		levy_reinforcement_rate = 0.15
+		supply_capacity_mult = 1
 	}
 	flag = global_regular
 	flag = eu5_reformation_era_regular
@@ -1114,7 +1120,7 @@ innovation_eu5_improved_supply_lines = {
 	culture_era = culture_era_eu5_absolutism
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_improved_supply_lines.dds"
 	character_modifier = {
-		levy_reinforcement_rate = 0.15
+		supply_capacity_mult = 1
 	}
 	flag = global_regular
 	flag = eu5_absolutism_era_regular
@@ -1370,7 +1376,7 @@ innovation_eu5_maritime_advance_age_5 = {
 	culture_era = culture_era_eu5_absolutism
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_maritime_advance_age_5.dds"
 	character_modifier = {
-		trade_route_length_add = 2
+		trade_route_length_mult = 0.2
 	}
 	county_modifier = {
 		maritime_tax_mult = 0.025
@@ -1392,6 +1398,8 @@ innovation_eu5_scientific_revolution_advance = {
 	group = culture_group_civic
 	culture_era = culture_era_eu5_absolutism
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_scientific_revolution_advance.dds"
+	custom = eu5_scientific_experimentation_research_tt
+	custom = eu5_scientific_revolution_success_tt
 	character_modifier = {
 		monthly_learning_lifestyle_xp_gain_mult = 0.05
 	}
@@ -1453,7 +1461,7 @@ innovation_eu5_the_constitution = {
 	culture_era = culture_era_eu5_absolutism
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_the_constitution.dds"
 	character_modifier = {
-		vassal_limit = 5
+		vassal_limit = 20
 	}
 	flag = global_regular
 	flag = eu5_absolutism_era_regular
@@ -1474,6 +1482,9 @@ innovation_eu5_sanitation_advance = {
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_sanitation_advance.dds"
 	character_modifier = {
 		health = 0.1
+	}
+	county_modifier = {
+		epidemic_resistance = 20
 	}
 	flag = global_regular
 	flag = eu5_absolutism_era_regular
@@ -1604,7 +1615,8 @@ innovation_eu5_combined_arms_advance_revolutions = {
 	culture_era = culture_era_eu5_revolutions
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_combined_arms_advance_revolutions.dds"
 	character_modifier = {
-		levy_reinforcement_rate = 0.15
+		supply_capacity_mult = 1
+		counter_efficiency = 0.25
 	}
 	flag = global_regular
 	flag = eu5_revolutions_era_regular
@@ -1882,6 +1894,10 @@ innovation_eu5_enlightenment_advance = {
 	group = culture_group_civic
 	culture_era = culture_era_eu5_revolutions
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_enlightenment_advance.dds"
+	custom = eu5_scientific_experimentation_research_tt
+	parameters = {
+		guardian_education_better_outcomes = yes
+	}
 	character_modifier = {
 		monthly_learning_lifestyle_xp_gain_mult = 0.05
 	}
@@ -1945,6 +1961,9 @@ innovation_eu5_vaccination_advance = {
 	custom = eu5_colonial_africa_unlock_tt
 	character_modifier = {
 		health = 0.1
+	}
+	county_modifier = {
+		epidemic_resistance = 20
 	}
 	flag = global_regular
 	flag = eu5_revolutions_era_regular

@@ -1,0 +1,553 @@
+﻿InspirationTypeDescription = {
+	type = character
+
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = book_inspiration
+			}
+			exists = var:book_subject #For this one we look at ArtifactBookSubject so we can use the same loc key here and in the artifact's desc
+		}
+		localization_key = book_subject_inspiration_description
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = book_inspiration
+			}
+		}
+		localization_key = book_inspiration_description
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = weapon_inspiration
+			}
+			exists = var:artifact_weapon_type
+		}
+		localization_key = weapon_set_type_inspiration_description
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = weapon_inspiration
+			}
+		}
+		localization_key = weapon_inspiration_description
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = armor_inspiration
+			}
+			OR = {
+				exists = scope:armor_type
+				exists = var:artifact_armor_type
+			}
+		}
+		localization_key = armor_set_type_inspiration_description
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = armor_inspiration
+			}
+			NOR = {
+				exists = var:artifact_armor_type
+				exists = scope:armor_type
+			}
+		}
+		localization_key = armor_inspiration_description
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = weaver_inspiration
+				inspiration_owner = { has_variable = banner_commission}
+			}
+		}
+		localization_key = weaver_inspiration_description_banner
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = weaver_inspiration
+			}
+			exists = var:artifact_tapestry_scene
+		}
+		localization_key = weaver_inspiration_description_set_scene
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = weaver_inspiration
+			}
+		}
+		localization_key = weaver_inspiration_description
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = adventure_inspiration
+			}
+			exists = var:adventure_destination
+		}
+		localization_key = adventure_inspiration_description_destination
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = adventure_inspiration
+			}
+		}
+		localization_key = adventure_inspiration_description
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = artisan_inspiration
+			}
+			exists = var:artifact_artisan_type
+		}
+		localization_key = artisan_inspiration_description_set_type
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = artisan_inspiration
+			}
+		}
+		localization_key = artisan_inspiration_description
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = smith_inspiration
+			}
+			exists = var:artifact_smith_type
+		}
+		localization_key = smith_inspiration_description_set_type
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = smith_inspiration
+			}
+		}
+		localization_key = smith_inspiration_description
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				OR = { has_inspiration_type = research_inspiration has_inspiration_type = eu5_research_inspiration }
+			}
+		}
+		localization_key = research_inspiration_description
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = religious_inspiration
+			}
+		}
+		localization_key = religious_inspiration_description
+	}
+	#Alchemy is added as separate instances here since they need different sentence starters 
+	text = { 
+		trigger = {
+			inspiration = {
+				has_inspiration_type = alchemy_inspiration
+			}
+			exists = var:artifact_alchemy_type
+			var:artifact_alchemy_type = flag:alchemy_type_elixirs
+		}
+		localization_key = inspiration_alchemy_type_elixirs
+	}
+
+	text = { 
+		trigger = {
+			inspiration = {
+				has_inspiration_type = alchemy_inspiration
+			}
+			exists = var:artifact_alchemy_type
+			var:artifact_alchemy_type = flag:alchemy_type_metals
+		}
+		localization_key = inspiration_alchemy_type_metals
+	}
+
+	text = { 
+		trigger = {
+			inspiration = {
+				has_inspiration_type = alchemy_inspiration
+			}
+			exists = var:artifact_alchemy_type
+			var:artifact_alchemy_type = flag:alchemy_type_panacea
+		}
+		localization_key = inspiration_alchemy_type_panacea
+	}
+	
+	text = { 
+		trigger = {
+			inspiration = {
+				has_inspiration_type = alchemy_inspiration
+			}
+			exists = var:artifact_alchemy_type
+			var:artifact_alchemy_type = flag:alchemy_type_immortality
+		}
+		localization_key = inspiration_alchemy_type_immortality
+	}
+
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = alchemy_inspiration
+			}
+		}
+		localization_key = alchemy_inspiration_description
+	}
+	text = {
+		trigger = {
+			inspiration = { has_inspiration_type = bow_inspiration }
+		}
+		localization_key = bow_inspiration_description
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				has_inspiration_type = religious_artifact_inspiration
+			}
+		}
+		localization_key = religious_artifact_inspiration_description
+	}
+}
+
+GetInspirationOwnerType = {
+	type = character
+
+	text = {
+		trigger = {
+			inspiration = { has_inspiration_type = book_inspiration }
+		}
+		localization_key = inspiration_owner_type_writer
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = weapon_inspiration }
+		}
+		localization_key = inspiration_owner_type_weaponsmith
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = armor_inspiration }
+		}
+		localization_key = inspiration_owner_type_armorer
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = weaver_inspiration }
+		}
+		localization_key = inspiration_owner_type_weaver
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = adventure_inspiration }
+		}
+		localization_key = inspiration_owner_type_adventurer
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = artisan_inspiration }
+		}
+		localization_key = inspiration_owner_type_artisan
+	}
+	text = {
+		trigger = {
+			inspiration = { has_inspiration_type = smith_inspiration }
+		}
+		localization_key = inspiration_owner_type_metalsmith
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = alchemy_inspiration }
+		}
+		localization_key = inspiration_owner_type_alchemist
+	}
+	text = { 
+		trigger = {
+			inspiration = { OR = { has_inspiration_type = research_inspiration has_inspiration_type = eu5_research_inspiration } }
+		}
+		localization_key = inspiration_owner_type_researcher
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = religious_inspiration }
+		}
+		localization_key = inspiration_owner_type_theologian
+	}
+	text = { 
+		trigger = { always = no }
+		fallback = yes
+		localization_key = inspiration_owner_type_fallback
+	}
+}
+
+GetInspirationTypeTool = {
+	type = character
+	random_valid = yes
+
+	text = {
+		trigger = {
+			inspiration = { has_inspiration_type = book_inspiration }
+		}
+		localization_key = inspiration_type_tool_quill
+	}
+	text = { 
+		trigger = {
+			inspiration = {	
+				OR = {
+					has_inspiration_type = weapon_inspiration
+					has_inspiration_type = armor_inspiration
+					has_inspiration_type = smith_inspiration
+				}
+			}
+		}
+		localization_key = inspiration_type_tool_tongs
+	}
+	text = { 
+		trigger = {
+			inspiration = {
+				OR = {
+					has_inspiration_type = weapon_inspiration
+					has_inspiration_type = armor_inspiration
+					has_inspiration_type = smith_inspiration
+				}
+			}
+		}
+		localization_key = inspiration_type_tool_hammer
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = weaver_inspiration }
+		}
+		localization_key = inspiration_type_tool_shuttle
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = weaver_inspiration }
+		}
+		localization_key = inspiration_type_tool_thread
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = adventure_inspiration }
+		}
+		localization_key = inspiration_type_tool_reins
+	}
+	text = { # Custom
+		trigger = {
+			inspiration = { has_inspiration_type = artisan_inspiration }
+		}
+		localization_key = inspiration_type_tool_artisan
+	}
+	text = {
+		trigger = {
+			inspiration = { has_inspiration_type = smith_inspiration }
+		}
+		localization_key = inspiration_type_tool_mold
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = alchemy_inspiration }
+		}
+		localization_key = inspiration_type_tool_pestle
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = alchemy_inspiration }
+		}
+		localization_key = inspiration_type_tool_mortar
+	}
+	text = {
+		trigger = {
+			inspiration = {
+				OR = {
+					OR = { has_inspiration_type = research_inspiration has_inspiration_type = eu5_research_inspiration }
+					has_inspiration_type = religious_inspiration
+				}
+			}
+		}
+		localization_key = inspiration_type_tool_books
+	}
+	text = { 
+		trigger = { always = no }
+		fallback = yes
+		localization_key = inspiration_type_tool_fallback
+	}
+}
+
+GetInspirationTypeStation = {
+	type = character
+
+	text = {
+		trigger = {
+			inspiration = { has_inspiration_type = book_inspiration }
+		}
+		localization_key = inspiration_type_station_desk
+	}
+	text = { 
+		trigger = {
+			inspiration = {
+				OR = {
+					has_inspiration_type = weapon_inspiration 
+					has_inspiration_type = armor_inspiration
+					has_inspiration_type = smith_inspiration
+				}
+			}
+		}
+		localization_key = inspiration_type_station_bellows
+	}
+	text = { 
+		trigger = {
+			inspiration = {
+				OR = {
+					has_inspiration_type = weapon_inspiration 
+					has_inspiration_type = armor_inspiration
+					has_inspiration_type = smith_inspiration
+				}
+			}
+		}
+		localization_key = inspiration_type_station_anvil
+	}
+	text = { 
+		trigger = {
+			inspiration = {
+				OR = {
+					has_inspiration_type = weapon_inspiration 
+					has_inspiration_type = armor_inspiration
+					has_inspiration_type = smith_inspiration
+				}
+			}
+		}
+		localization_key = inspiration_type_station_forge
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = weaver_inspiration }
+		}
+		localization_key = inspiration_type_station_loom
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = adventure_inspiration }
+		}
+		localization_key = inspiration_type_station_maps
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = artisan_inspiration }
+		}
+		localization_key = inspiration_type_station_bench
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = alchemy_inspiration }
+		}
+		localization_key = inspiration_type_station_cauldron
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = alchemy_inspiration }
+		}
+		localization_key = inspiration_type_station_alembic
+	}
+	text = { 
+		trigger = {
+			inspiration = {
+				OR = {
+					OR = { has_inspiration_type = research_inspiration has_inspiration_type = eu5_research_inspiration }
+					has_inspiration_type = religious_inspiration
+				}
+			}
+		}
+		localization_key = inspiration_type_station_library
+	}
+	text = { 
+		trigger = { always = no }
+		fallback = yes
+		localization_key = inspiration_type_station_fallback
+	}
+}
+
+GetInspirationTypeVerb = {
+	type = character
+
+	text = {
+		trigger = {
+			inspiration = { has_inspiration_type = book_inspiration }
+		}
+		localization_key = inspiration_type_verb_write
+	}
+	text = { 
+		trigger = {
+			inspiration = {
+				OR = {
+					has_inspiration_type = weapon_inspiration
+					has_inspiration_type = armor_inspiration
+				}
+			}
+		}
+		localization_key = inspiration_type_verb_forge
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = weaver_inspiration }
+		}
+		localization_key = inspiration_type_verb_weave
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = adventure_inspiration }
+		}
+		localization_key = inspiration_type_verb_go
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = artisan_inspiration }
+		}
+		localization_key = inspiration_type_verb_create
+	}
+	text = {
+		trigger = {
+			inspiration = { has_inspiration_type = smith_inspiration }
+		}
+		localization_key = inspiration_type_verb_make
+	}
+	text = { 
+		trigger = {
+			inspiration = {
+				OR = {
+					has_inspiration_type = alchemy_inspiration
+					has_inspiration_type = religious_inspiration
+				}
+			}
+		}
+		localization_key = inspiration_type_verb_study
+	}
+	text = { 
+		trigger = {
+			inspiration = { OR = { has_inspiration_type = research_inspiration has_inspiration_type = eu5_research_inspiration } }
+		}
+		localization_key = inspiration_type_verb_research
+	}
+	text = { 
+		trigger = {
+			inspiration = { has_inspiration_type = bow_inspiration }
+		}
+		localization_key = inspiration_type_verb_string
+	}
+	text = { 
+		trigger = { always = no }
+		fallback = yes
+		localization_key = inspiration_type_verb_make
+	}
+}

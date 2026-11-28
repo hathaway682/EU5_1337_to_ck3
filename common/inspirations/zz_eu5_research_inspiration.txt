@@ -1,0 +1,35 @@
+﻿eu5_research_inspiration = {
+ gold = medium_gold_value
+ progress_chance = eu5_research_monthly_progress_chance
+ is_valid = {
+  scope:inspiration_owner = {
+   has_court_position = eu5_court_scholar_court_position
+   is_alive = yes
+   NOT = { has_character_flag = eu5_research_invalidated }
+  }
+ }
+ on_monthly = {
+  scope:inspiration_sponsor = { trigger_event = { on_action = eu5_research_ongoing_events } }
+ }
+ on_complete = {
+  scope:inspiration_owner = { add_character_flag = { flag = eu5_research_invalidated days = 1 } }
+  scope:inspiration_sponsor = { trigger_event = eu5_research.0099 }
+ }
+ on_sponsor = { scope:inspiration_sponsor = { on_sponsored_inspiration_effect = yes } }
+ on_owner_death = {
+  if = { limit = { exists = scope:inspiration_sponsor } scope:inspiration_sponsor = { trigger_event = eu5_research.0004 } }
+ }
+ on_invalidated = {
+  if = {
+   limit = {
+    exists = scope:inspiration_sponsor
+    exists = scope:inspiration_owner
+    scope:inspiration_owner = { NOT = { has_character_flag = eu5_research_invalidated } }
+   }
+   scope:inspiration_sponsor = { trigger_event = eu5_research.0004 }
+  }
+ }
+ on_sponsor_invalidated = {
+  if = { limit = { exists = scope:inspiration_sponsor } scope:inspiration_sponsor = { trigger_event = eu5_research.0004 } }
+ }
+}
