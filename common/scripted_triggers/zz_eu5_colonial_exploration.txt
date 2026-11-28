@@ -18,10 +18,11 @@ eu5_colonial_county_charted_trigger = {
   AND = { OR = { duchy ?= title:d_bermuda duchy ?= title:d_atlantic_saint_helena } $RULER$ = { eu5_character_has_chart_trigger = { REGION = atlantic } } }
  }
 }
-# COUNTY scope; the founder's culture governs eligibility for African settlements.
+# COUNTY scope; coastal counties are exempt from the inland African vaccination requirement.
 eu5_colonial_africa_vaccination_trigger = {
  OR = {
   NOT = { title_province = { geographical_region = eu5_continent_africa } }
+  any_county_province = { is_coastal = yes }
   $RULER$ = { culture ?= { has_innovation = innovation_eu5_vaccination_advance } }
  }
 }
