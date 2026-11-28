@@ -116,7 +116,7 @@ innovation_eu5_regiment_reinforcement_speed_discovery = {
 	culture_era = culture_era_eu5_discovery
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_regiment_reinforcement_speed_discovery.dds"
 	character_modifier = {
-		supply_capacity_mult = 1
+		supply_capacity_mult = 0.25
 	}
 	flag = global_regular
 	flag = eu5_discovery_era_regular
@@ -620,7 +620,7 @@ innovation_eu5_military_administration = {
 	culture_era = culture_era_eu5_reformation
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_military_administration.dds"
 	character_modifier = {
-		supply_capacity_mult = 1
+		supply_capacity_mult = 0.25
 	}
 	flag = global_regular
 	flag = eu5_reformation_era_regular
@@ -1120,7 +1120,7 @@ innovation_eu5_improved_supply_lines = {
 	culture_era = culture_era_eu5_absolutism
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_improved_supply_lines.dds"
 	character_modifier = {
-		supply_capacity_mult = 1
+		supply_capacity_mult = 0.25
 	}
 	flag = global_regular
 	flag = eu5_absolutism_era_regular
@@ -1615,7 +1615,7 @@ innovation_eu5_combined_arms_advance_revolutions = {
 	culture_era = culture_era_eu5_revolutions
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_combined_arms_advance_revolutions.dds"
 	character_modifier = {
-		supply_capacity_mult = 1
+		supply_capacity_mult = 0.25
 		counter_efficiency = 0.25
 	}
 	flag = global_regular
@@ -1849,7 +1849,7 @@ innovation_eu5_construction_speed_revolutions = {
 		build_speed = -0.15
 	}
 	county_modifier = {
-		trade_good_stone_production_mult = 0.25
+		trade_good_iron_production_mult = 0.25
 	}
 	flag = global_regular
 	flag = eu5_revolutions_era_regular
@@ -1919,7 +1919,8 @@ innovation_eu5_levee_en_masse_advance = {
 	culture_era = culture_era_eu5_revolutions
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_levee_en_masse_advance.dds"
 	character_modifier = {
-		levy_size = 0.1
+		levy_attack = 10
+		levy_toughness = 10
 	}
 	flag = global_regular
 	flag = eu5_revolutions_era_regular
@@ -1939,7 +1940,8 @@ innovation_eu5_rights_of_man = {
 	culture_era = culture_era_eu5_revolutions
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_rights_of_man.dds"
 	character_modifier = {
-		different_faith_opinion = 5
+		different_culture_opinion = 10
+		different_faith_opinion = 10
 	}
 	flag = global_regular
 	flag = eu5_revolutions_era_regular
