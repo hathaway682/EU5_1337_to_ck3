@@ -1,0 +1,281 @@
+# Newsstand (书报亭) - Entertainment District building chain unlocked by innovation_eu5_newspapers_advance
+# Gives: province: monthly_urban_tax, urban_tax_mult, popular_opinion_add, control_baseline_add, monthly_control_change_when_below_baseline_add
+# Needs: trade_good_books_paper -> province: urban_tax_mult, popular_opinion_add, control_baseline_add
+
+eu5_newsstand_1 = {
+	type_icon = "regular_buildings/printing_press.dds"
+	next_building = eu5_newsstand_2
+	cost_gold = regular_building_cost_tier_1
+	construction_time = construction_time_6_months
+
+	can_construct_potential = {
+		culture = { has_innovation = innovation_eu5_newspapers_advance }
+	}
+	can_construct = {
+	}
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_newspapers_advance }
+	}
+	show_disabled = yes
+
+	province_modifier = {
+		monthly_urban_tax = normal_building_tax_tier_1
+		urban_tax_mult = 0.02
+		popular_opinion_add = 2
+		control_baseline_add = 2
+		monthly_control_change_when_below_baseline_add = 0.02
+	}
+	market_modifier = {
+		trade_good_books_paper_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+
+		modifiers = {
+			province_modifier = {
+				urban_tax_mult = 0.02
+				popular_opinion_add = 1
+				control_baseline_add = 1
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10
+		ai_civic_context_modifier = yes
+		ai_general_building_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_control_baseline_building_modifier = { VALUE = 2 }
+		ai_urban_input_modifier = { GOOD = trade_good_books_paper }
+		ai_income_building_modifier = yes
+		ai_urban_district_building_modifier = yes
+		ai_control_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_new_building_modifier = yes
+	}
+}
+
+eu5_newsstand_2 = {
+	type_icon = "regular_buildings/printing_press.dds"
+	next_building = eu5_newsstand_3
+	cost_gold = regular_building_cost_tier_2
+	construction_time = construction_time_9_months
+	district_level_requirement = 2
+
+	can_construct_potential = {
+	}
+	can_construct = {
+	}
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_newspapers_advance }
+	}
+	show_disabled = yes
+
+	province_modifier = {
+		monthly_urban_tax = normal_building_tax_tier_2
+		urban_tax_mult = 0.04
+		popular_opinion_add = 4
+		control_baseline_add = 4
+		monthly_control_change_when_below_baseline_add = 0.04
+	}
+	market_modifier = {
+		trade_good_books_paper_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		can_be_filled_multiple_times = 2
+
+		modifiers = {
+			province_modifier = {
+				urban_tax_mult = 0.02
+				popular_opinion_add = 1
+				control_baseline_add = 1
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10
+		ai_civic_context_modifier = yes
+		ai_general_building_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_control_baseline_building_modifier = { VALUE = 4 }
+		ai_urban_input_modifier = { GOOD = trade_good_books_paper }
+		ai_income_building_modifier = yes
+		ai_urban_district_building_modifier = yes
+		ai_control_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_building_upgrade_modifier = { LEVEL = 2 }
+	}
+}
+
+eu5_newsstand_3 = {
+	type_icon = "regular_buildings/printing_press.dds"
+	next_building = eu5_newsstand_4
+	cost_gold = regular_building_cost_tier_3
+	construction_time = construction_time_1_year
+	district_level_requirement = 3
+
+	can_construct_potential = {
+	}
+	can_construct = {
+	}
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_newspapers_advance }
+	}
+	show_disabled = yes
+
+	province_modifier = {
+		monthly_urban_tax = normal_building_tax_tier_3
+		urban_tax_mult = 0.06
+		popular_opinion_add = 6
+		control_baseline_add = 6
+		monthly_control_change_when_below_baseline_add = 0.06
+	}
+	market_modifier = {
+		trade_good_books_paper_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		can_be_filled_multiple_times = 3
+
+		modifiers = {
+			province_modifier = {
+				urban_tax_mult = 0.02
+				popular_opinion_add = 1
+				control_baseline_add = 1
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10
+		ai_civic_context_modifier = yes
+		ai_general_building_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_control_baseline_building_modifier = { VALUE = 6 }
+		ai_urban_input_modifier = { GOOD = trade_good_books_paper }
+		ai_income_building_modifier = yes
+		ai_urban_district_building_modifier = yes
+		ai_control_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_building_upgrade_modifier = { LEVEL = 3 }
+	}
+}
+
+eu5_newsstand_4 = {
+	type_icon = "regular_buildings/printing_press.dds"
+	next_building = eu5_newsstand_5
+	cost_gold = regular_building_cost_tier_4
+	construction_time = construction_time_3_years
+	district_level_requirement = 4
+
+	can_construct_potential = {
+	}
+	can_construct = {
+	}
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_newspapers_advance }
+	}
+	show_disabled = yes
+
+	province_modifier = {
+		monthly_urban_tax = normal_building_tax_tier_4
+		urban_tax_mult = 0.08
+		popular_opinion_add = 8
+		control_baseline_add = 8
+		monthly_control_change_when_below_baseline_add = 0.08
+	}
+	market_modifier = {
+		trade_good_books_paper_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		can_be_filled_multiple_times = 4
+
+		modifiers = {
+			province_modifier = {
+				urban_tax_mult = 0.02
+				popular_opinion_add = 1
+				control_baseline_add = 1
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10
+		ai_civic_context_modifier = yes
+		ai_general_building_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_control_baseline_building_modifier = { VALUE = 8 }
+		ai_urban_input_modifier = { GOOD = trade_good_books_paper }
+		ai_income_building_modifier = yes
+		ai_urban_district_building_modifier = yes
+		ai_control_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_building_upgrade_modifier = { LEVEL = 4 }
+	}
+}
+
+eu5_newsstand_5 = {
+	type_icon = "regular_buildings/printing_press.dds"
+	cost_gold = regular_building_cost_tier_5
+	construction_time = construction_time_5_years
+	district_level_requirement = 4
+
+	can_construct_potential = {
+	}
+	can_construct = {
+	}
+	can_construct_showing_failures_only = {
+		culture = { has_innovation = innovation_eu5_newspapers_advance }
+	}
+	show_disabled = yes
+
+	province_modifier = {
+		monthly_urban_tax = normal_building_tax_tier_5
+		urban_tax_mult = 0.10
+		popular_opinion_add = 10
+		control_baseline_add = 10
+		monthly_control_change_when_below_baseline_add = 0.10
+	}
+	market_modifier = {
+		trade_good_books_paper_sell_price_mult = price_basic_building_1
+	}
+	trade_good_need = {
+		trade_good = trade_good_books_paper
+		amount = basic_resource_need
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				urban_tax_mult = 0.02
+				popular_opinion_add = 1
+				control_baseline_add = 1
+			}
+		}
+	}
+
+	ai_value = {
+		base = 10
+		ai_civic_context_modifier = yes
+		ai_general_building_modifier = yes
+		directive_to_build_economy_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		ai_control_baseline_building_modifier = { VALUE = 10 }
+		ai_urban_input_modifier = { GOOD = trade_good_books_paper }
+		ai_income_building_modifier = yes
+		ai_urban_district_building_modifier = yes
+		ai_control_need_modifier = yes
+		ai_capital_preference_modifier = yes
+		ai_regular_building_upgrade_modifier = { LEVEL = 5 }
+	}
+}
