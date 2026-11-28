@@ -1,0 +1,384 @@
+﻿##################################################
+# Project Phoenix (PHX) — Wave 5 Global Crises & Eurasia On-Actions
+# Strictly O(1) scoped hooks — ZERO global character scans
+# Global timeline: 1347 Black Death (DLC011-free), 1368 Timur, 1378 Western Schism
+##################################################
+
+on_game_start_after_lobby = {
+	on_actions = { phx_global_1337_startup }
+}
+
+phx_global_1337_startup = {
+	effect = {
+		if = {
+			limit = { game_start_date >= 1337.1.1 }
+
+			# Iberia & Maghreb Pillars (Castile, Granada, Morocco)
+			if = {
+				limit = { exists = title:k_castille.holder }
+				title:k_castille.holder = {
+					trigger_event = { id = phx_eur.0001 days = 18 }
+				}
+			}
+			if = {
+				limit = { exists = title:d_granada.holder }
+				title:d_granada.holder = {
+					trigger_event = { id = phx_eur.0001 days = 18 }
+				}
+			}
+			if = {
+				limit = { exists = title:k_maghreb.holder }
+				title:k_maghreb.holder = {
+					trigger_event = { id = phx_eur.0001 days = 18 }
+				}
+			}
+
+			# Italy Early Renaissance Opening (Florence & Milan)
+			if = {
+				limit = { exists = title:d_commune_firenze.holder }
+				title:d_commune_firenze.holder = {
+					trigger_event = { id = phx_eur.0020 days = 22 }
+				}
+			}
+			if = {
+				limit = { exists = title:d_commune_milan.holder }
+				title:d_commune_milan.holder = {
+					trigger_event = { id = phx_eur.0020 days = 22 }
+				}
+			}
+
+			# Mamluk Egypt Opening
+			if = {
+				limit = { exists = title:k_egypt.holder }
+				title:k_egypt.holder = {
+					trigger_event = { id = phx_eur.0030 days = 20 }
+				}
+			}
+
+			# Ilkhanate Collapse Opening
+			if = {
+				limit = { exists = title:e_ilkhanate.holder }
+				title:e_ilkhanate.holder = {
+					trigger_event = { id = phx_eur.0035 days = 24 }
+				}
+			}
+
+			# Delhi Sultanate Opening (Tughluq Turmoil)
+			if = {
+				limit = { exists = title:e_hindustan.holder }
+				title:e_hindustan.holder = {
+					add_character_modifier = {
+						modifier = phx_dlh_tughluq_turmoil_modifier
+						years = 15
+					}
+					trigger_event = { id = phx_eur.0040 days = 20 }
+				}
+			}
+
+			# Vijayanagara / Deccan Opening
+			if = {
+				limit = { exists = title:k_eu5_vij.holder }
+				title:k_eu5_vij.holder = {
+					trigger_event = { id = phx_eur.0045 days = 22 }
+				}
+			}
+
+			# Majapahit Opening
+			if = {
+				limit = { exists = title:e_majapahit.holder }
+				title:e_majapahit.holder = {
+					trigger_event = { id = phx_eur.0050 days = 20 }
+				}
+			}
+
+			# Late Goryeo Opening (held by kor_chungsuk via k_goguryeo in 1337)
+			if = {
+				limit = { exists = title:k_goguryeo.holder }
+				title:k_goguryeo.holder = {
+					trigger_event = { id = phx_eur.0055 days = 24 }
+				}
+			}
+			else_if = {
+				limit = { exists = title:e_goryeo.holder }
+				title:e_goryeo.holder = {
+					trigger_event = { id = phx_eur.0055 days = 24 }
+				}
+			}
+
+			# Mali Opening
+			if = {
+				limit = { exists = title:e_mali.holder }
+				title:e_mali.holder = {
+					trigger_event = { id = phx_eur.0060 days = 20 }
+				}
+			}
+
+			# Solomonic Ethiopia Opening
+			if = {
+				limit = { exists = title:e_abyssinia.holder }
+				title:e_abyssinia.holder = {
+					trigger_event = { id = phx_eur.0065 days = 22 }
+				}
+			}
+		}
+	}
+}
+
+yearly_playable_pulse = {
+	on_actions = { phx_global_yearly_pulse }
+}
+
+phx_global_yearly_pulse = {
+	trigger = {
+		is_landed = yes
+		current_year >= 1339
+		current_year <= 1455
+	}
+	effect = {
+		# ==========================================================
+		# 1. 1347 BLACK DEATH GLOBAL CRISIS (DLC011-INDEPENDENT)
+		# ==========================================================
+		if = {
+			limit = {
+				current_year >= 1347
+				NOT = { has_global_variable = phx_black_death_started }
+			}
+			set_global_variable = phx_black_death_started
+			set_global_variable = phx_black_death_active
+			# Seed historic Mediterranean & Black Sea outbreak ports directly O(1)
+			title:c_cafa = {
+				add_county_modifier = { modifier = phx_black_death_outbreak_county_modifier years = 6 }
+			}
+			title:c_constantinople = {
+				add_county_modifier = { modifier = phx_black_death_outbreak_county_modifier years = 6 }
+			}
+			title:c_venice = {
+				add_county_modifier = { modifier = phx_black_death_outbreak_county_modifier years = 6 }
+			}
+			title:c_florence = {
+				add_county_modifier = { modifier = phx_black_death_outbreak_county_modifier years = 6 }
+			}
+			title:c_cairo = {
+				add_county_modifier = { modifier = phx_black_death_outbreak_county_modifier years = 6 }
+			}
+			title:c_alexandria = {
+				add_county_modifier = { modifier = phx_black_death_outbreak_county_modifier years = 6 }
+			}
+			title:c_sevilla = {
+				add_county_modifier = { modifier = phx_black_death_outbreak_county_modifier years = 6 }
+			}
+			title:c_granada = {
+				add_county_modifier = { modifier = phx_black_death_outbreak_county_modifier years = 6 }
+			}
+			if = {
+				limit = { exists = title:c_cafa.holder }
+				title:c_cafa.holder = {
+					trigger_event = { id = phx_glb.0001 days = 10 }
+				}
+			}
+			every_player = {
+				limit = {
+					NOT = { has_title = title:c_cafa }
+				}
+				trigger_event = { id = phx_glb.0001 days = 15 }
+			}
+		}
+
+		# End active Black Death phase in 1353+
+		if = {
+			limit = {
+				current_year >= 1353
+				has_global_variable = phx_black_death_active
+				NOT = { has_global_variable = phx_black_death_ended }
+			}
+			remove_global_variable = phx_black_death_active
+			set_global_variable = phx_black_death_ended
+		}
+
+		# Per-ruler Black Death warning & arrival (human players + kingdom+ rulers in affected macro-regions)
+		if = {
+			limit = {
+				has_global_variable = phx_black_death_active
+				current_year >= 1347
+				current_year <= 1353
+				NOT = { has_character_flag = phx_black_death_struck_ruler }
+				OR = {
+					is_ai = no
+					highest_held_title_tier >= tier_kingdom
+				}
+				capital_province = {
+					OR = {
+						geographical_region = world_europe
+						geographical_region = world_middle_east
+						geographical_region = world_africa_north
+						geographical_region = world_asia_minor
+						geographical_region = world_steppe
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { has_character_flag = phx_black_death_threatened } }
+				add_character_flag = phx_black_death_threatened
+				trigger_event = { id = phx_glb.0002 days = { 20 90 } }
+			}
+			else = {
+				add_character_flag = phx_black_death_struck_ruler
+				trigger_event = { id = phx_glb.0003 days = { 30 120 } }
+			}
+		}
+
+		# Post-Plague Labor Shortage & Commercial Awakening (1354+)
+		if = {
+			limit = {
+				has_global_variable = phx_black_death_ended
+				current_year >= 1354
+				current_year <= 1375
+				has_character_flag = phx_black_death_struck_ruler
+				NOT = { has_character_flag = phx_post_plague_boom_fired }
+				OR = {
+					is_ai = no
+					highest_held_title_tier >= tier_kingdom
+				}
+			}
+			add_character_flag = phx_post_plague_boom_fired
+			trigger_event = { id = phx_glb.0005 days = { 30 150 } }
+		}
+
+		# ==========================================================
+		# 2. 1368 TIMUR'S EMERGENCE IN SAMARKAND
+		# ==========================================================
+		if = {
+			limit = {
+				current_year >= 1366
+				current_year <= 1390
+				NOT = { has_global_variable = phx_timur_emerged }
+				exists = title:c_samarkand.holder
+			}
+			set_global_variable = phx_timur_emerged
+			set_global_variable = phx_timur_rise_active
+			title:c_samarkand.holder = {
+				trigger_event = { id = phx_glb.0020 days = 15 }
+			}
+		}
+
+		# ==========================================================
+		# 3. 1378 WESTERN SCHISM (ROME VS AVIGNON)
+		# ==========================================================
+		if = {
+			limit = {
+				current_year >= 1378
+				NOT = { has_global_variable = phx_western_schism_started }
+				exists = title:k_papal_state.holder
+			}
+			set_global_variable = phx_western_schism_started
+			set_global_variable = phx_western_schism_active
+			title:k_papal_state.holder = {
+				trigger_event = { id = phx_glb.0030 days = 20 }
+			}
+		}
+
+		# Catholic Monarchs choose Roman vs Avignon Obedience
+		if = {
+			limit = {
+				has_global_variable = phx_western_schism_active
+				NOT = { has_global_variable = phx_western_schism_healed }
+				faith = faith:catholic
+				highest_held_title_tier >= tier_duchy
+				NOT = { has_title = title:k_papal_state }
+				NOT = { has_character_flag = phx_schism_obedience_chosen }
+				OR = {
+					is_ai = no
+					highest_held_title_tier >= tier_kingdom
+				}
+			}
+			add_character_flag = phx_schism_obedience_chosen
+			trigger_event = { id = phx_glb.0031 days = { 25 120 } }
+		}
+
+		# 1409+ Three Popes Scandal — Call for the Council of Constance
+		if = {
+			limit = {
+				has_global_variable = phx_western_schism_active
+				NOT = { has_global_variable = phx_western_schism_healed }
+				current_year >= 1409
+				faith = faith:catholic
+				highest_held_title_tier >= tier_kingdom
+				NOT = { has_character_flag = phx_schism_pisa_fired }
+			}
+			add_character_flag = phx_schism_pisa_fired
+			trigger_event = { id = phx_glb.0033 days = { 30 120 } }
+		}
+
+		# ==========================================================
+		# 4. REGIONAL 1340–1365 HISTORICAL MILESTONES (O(1) TITLE GATED)
+		# ==========================================================
+		# 1340 Battle of Rio Salado (Castile / Granada / Morocco)
+		if = {
+			limit = {
+				current_year >= 1340
+				current_year <= 1355
+				NOT = { has_character_flag = phx_eur_rio_salado_fired }
+				OR = {
+					has_title = title:k_castille
+					has_title = title:d_granada
+					has_title = title:k_maghreb
+				}
+			}
+			add_character_flag = phx_eur_rio_salado_fired
+			trigger_event = { id = phx_eur.0005 days = { 30 120 } }
+		}
+		# 1350 Castilian Succession Crisis (Pedro vs Enrique of Trastamara)
+		else_if = {
+			limit = {
+				current_year >= 1350
+				current_year <= 1375
+				has_title = title:k_castille
+				NOT = { has_global_variable = phx_eur_castile_succession_fired }
+			}
+			set_global_variable = phx_eur_castile_succession_fired
+			trigger_event = { id = phx_eur.0010 days = { 30 120 } }
+		}
+		# 1345 Italian Condottieri Companies
+		else_if = {
+			limit = {
+				current_year >= 1345
+				current_year <= 1410
+				NOT = { has_character_flag = phx_eur_condottieri_fired }
+				OR = {
+					has_title = title:d_commune_firenze
+					has_title = title:d_commune_milan
+					has_title = title:k_venice
+					has_title = title:k_genoa
+					has_title = title:k_naples
+				}
+			}
+			add_character_flag = phx_eur_condottieri_fired
+			trigger_event = { id = phx_eur.0025 days = { 30 120 } }
+		}
+		# 1342 Delhi Deccan Revolt & Vijayanagara Rise
+		else_if = {
+			limit = {
+				current_year >= 1342
+				current_year <= 1365
+				has_title = title:e_hindustan
+				NOT = { has_global_variable = phx_eur_deccan_surge_fired }
+			}
+			set_global_variable = phx_eur_deccan_surge_fired
+			trigger_event = { id = phx_eur.0045 days = { 30 120 } }
+		}
+		# 1352 Late Goryeo Reform & Wokou Coastal Crisis
+		else_if = {
+			limit = {
+				current_year >= 1352
+				current_year <= 1392
+				NOT = { has_global_variable = phx_eur_goryeo_wokou_fired }
+				OR = {
+					has_title = title:k_goguryeo
+					has_title = title:e_goryeo
+				}
+			}
+			set_global_variable = phx_eur_goryeo_wokou_fired
+			trigger_event = { id = phx_eur.0056 days = { 30 120 } }
+		}
+	}
+}

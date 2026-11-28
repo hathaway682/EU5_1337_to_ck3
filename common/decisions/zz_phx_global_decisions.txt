@@ -1,0 +1,963 @@
+﻿##################################################
+# Project Phoenix (PHX) — Wave 5 Global & Eurasian Decisions (12)
+# Strictly AGENTS.md compliant:
+#   desc = pure narrative flavor; conditions in is_shown/is_valid/cost
+#   accurate custom_tooltip summaries; DLC011-independent Black Death
+##################################################
+
+# 1. Enact Harbor & Gate Quarantine (1347 Black Death)
+phx_plague_enact_quarantine_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/phx_decision_black_death_quarantine.dds"
+	}
+	decision_group_type = realm
+	desc = phx_plague_enact_quarantine_decision_desc
+	selection_tooltip = phx_plague_enact_quarantine_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 24
+		kingdom = 12
+		empire = 12
+		hegemony = 12
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_global_variable = phx_black_death_active
+		NOT = { has_character_modifier = phx_black_death_quarantine_modifier }
+	}
+
+	is_valid = {
+		OR = {
+			AND = {
+				exists = capital_county
+				capital_county = { has_county_modifier = phx_black_death_outbreak_county_modifier }
+			}
+			any_sub_realm_county = { has_county_modifier = phx_black_death_outbreak_county_modifier }
+			has_character_flag = phx_black_death_threatened
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+	}
+
+	cost = {
+		gold = 120
+		prestige = 75
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_black_death_quarantine_modifier
+			years = 8
+		}
+		if = {
+			limit = {
+				AND = {
+					exists = capital_county
+					capital_county = { has_county_modifier = phx_black_death_outbreak_county_modifier }
+				}
+			}
+			if = {
+				limit = { exists = capital_county }
+				capital_county = {
+					remove_county_modifier = phx_black_death_outbreak_county_modifier
+					change_prosperity_progress = 25
+				}
+			}
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 50 }
+		custom_tooltip = phx_plague_enact_quarantine_effect_tt
+		hidden_effect = {
+			trigger_event = phx_glb.0004
+		}
+	}
+
+	ai_potential = {
+		has_global_variable = phx_black_death_active
+		gold >= 200
+	}
+
+	ai_will_do = {
+		base = 70
+	}
+}
+
+# 2. Champion the Council of Constance (Heal the 1378 Western Schism)
+phx_schism_convene_constance_council_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/phx_decision_western_schism_papacy.dds"
+	}
+	decision_group_type = major
+	desc = phx_schism_convene_constance_council_decision_desc
+	selection_tooltip = phx_schism_convene_constance_council_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 36
+		empire = 24
+		hegemony = 24
+	}
+
+	is_shown = {
+		is_landed = yes
+		faith = faith:catholic
+		has_global_variable = phx_western_schism_active
+		NOT = { has_global_variable = phx_western_schism_healed }
+		highest_held_title_tier >= tier_kingdom
+	}
+
+	is_valid = {
+		prestige_level >= 3
+		piety_level >= 2
+		OR = {
+			has_title = title:e_hre
+			has_title = title:k_france
+			has_title = title:k_england
+			has_title = title:k_castille
+			has_title = title:k_aragon
+			has_title = title:k_hungary
+			has_title = title:k_poland
+			has_title = title:k_naples
+			has_title = title:k_papal_state
+			highest_held_title_tier >= tier_empire
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 400
+		prestige = 400
+		piety = 300
+	}
+
+	effect = {
+		if = {
+			limit = { has_character_modifier = phx_schism_avignon_obedience_modifier }
+			remove_character_modifier = phx_schism_avignon_obedience_modifier
+		}
+		if = {
+			limit = { has_character_modifier = phx_schism_roman_obedience_modifier }
+			remove_character_modifier = phx_schism_roman_obedience_modifier
+		}
+		add_character_modifier = {
+			modifier = phx_schism_conciliar_unity_modifier
+			years = 25
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
+		add_piety = 300
+		custom_tooltip = phx_schism_convene_constance_council_effect_tt
+		hidden_effect = {
+			remove_global_variable = phx_western_schism_active
+			set_global_variable = phx_western_schism_healed
+			trigger_event = phx_glb.0035
+		}
+	}
+
+	ai_potential = {
+		current_year >= 1410
+		gold >= 500
+	}
+
+	ai_will_do = {
+		base = 90
+	}
+}
+
+# 3. Master the Pillars of Hercules (Iberia & Maghreb Strait Hegemony)
+phx_ibe_secure_strait_of_gibraltar_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp2_decision_struggle_hostility.dds"
+	}
+	decision_group_type = major
+	desc = phx_ibe_secure_strait_of_gibraltar_decision_desc
+	selection_tooltip = phx_ibe_secure_strait_of_gibraltar_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 60
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:k_castille
+			has_title = title:k_maghreb
+			has_title = title:d_granada
+			has_title = title:k_portugal
+			has_title = title:k_aragon
+		}
+		NOT = { has_character_modifier = phx_ibe_strait_mastery_modifier }
+	}
+
+	is_valid = {
+		OR = {
+			completely_controls = title:c_sevilla
+			completely_controls = title:c_granada
+		}
+		OR = {
+			completely_controls = title:c_cadiz
+			completely_controls = title:c_almeria
+		}
+		prestige_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 300
+		prestige = 300
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_ibe_strait_mastery_modifier
+			years = 25
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
+		if = {
+			limit = { completely_controls = title:c_sevilla }
+			title:c_sevilla = { change_prosperity_progress = 60 }
+		}
+		if = {
+			limit = { completely_controls = title:c_cadiz }
+			title:c_cadiz = { change_prosperity_progress = 60 }
+		}
+		if = {
+			limit = { completely_controls = title:c_almeria }
+			title:c_almeria = { change_prosperity_progress = 60 }
+		}
+		custom_tooltip = phx_ibe_secure_strait_of_gibraltar_effect_tt
+		hidden_effect = {
+			trigger_event = phx_eur.0101
+		}
+	}
+
+	ai_potential = {
+		gold >= 400
+	}
+
+	ai_will_do = {
+		base = 80
+	}
+}
+
+# 4. Sponsor Atlantic Navigation Schools (Harmonizes with Upstream Exploration)
+phx_ibe_sponsor_atlantic_navigators_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/gdp_republic_trade_ships.dds"
+	}
+	decision_group_type = major
+	desc = phx_ibe_sponsor_atlantic_navigators_decision_desc
+	selection_tooltip = phx_ibe_sponsor_atlantic_navigators_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 48
+		empire = 48
+		hegemony = 48
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:k_portugal
+			has_title = title:k_castille
+			has_title = title:k_aragon
+			has_title = title:e_spain
+		}
+		NOT = { has_character_modifier = phx_ibe_atlantic_pioneers_modifier }
+	}
+
+	is_valid = {
+		current_year >= 1345
+		any_sub_realm_county = {
+			title_province = { is_coastal = yes }
+		}
+		OR = {
+			stewardship >= 10
+			learning >= 10
+			prestige_level >= 2
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 300
+		prestige = 250
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_ibe_atlantic_pioneers_modifier
+			years = 30
+		}
+		if = {
+			limit = {
+				culture ?= {
+					has_cultural_era_or_later = culture_era_late_medieval
+					NOT = { has_innovation = innovation_pilot_books }
+				}
+			}
+			culture = {
+				add_innovation = innovation_pilot_books
+			}
+		}
+		if = {
+			limit = { exists = capital_county }
+			capital_county = {
+				change_prosperity_progress = 60
+			}
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
+		custom_tooltip = phx_ibe_sponsor_atlantic_navigators_effect_tt
+		hidden_effect = {
+			trigger_event = phx_eur.0102
+		}
+	}
+
+	ai_potential = {
+		gold >= 400
+	}
+
+	ai_will_do = {
+		base = 85
+	}
+}
+
+# 5. Crown the Red Fortress of Granada (Alhambra Golden Age — Custom Shared Art DDS)
+phx_gra_complete_alhambra_palaces_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/phx_decision_alhambra_splendor.dds"
+	}
+	decision_group_type = major
+	desc = phx_gra_complete_alhambra_palaces_decision_desc
+	selection_tooltip = phx_gra_complete_alhambra_palaces_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 48
+		kingdom = 48
+		empire = 48
+		hegemony = 48
+	}
+
+	is_shown = {
+		is_landed = yes
+		faith.religion = religion:islam_religion
+		OR = {
+			has_title = title:d_granada
+			completely_controls = title:c_granada
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_gra_alhambra_completed_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_granada
+		OR = {
+			completely_controls = title:c_almeria
+			completely_controls = title:c_malaga
+		}
+		prestige_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 350
+		prestige = 250
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_gra_alhambra_golden_age_modifier
+			years = 30
+		}
+		title:c_granada = {
+			change_prosperity_progress = 100
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
+		custom_tooltip = phx_gra_complete_alhambra_palaces_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_gra_alhambra_completed_global
+			}
+			trigger_event = phx_eur.0103
+		}
+	}
+
+	ai_potential = {
+		gold >= 450
+	}
+
+	ai_will_do = {
+		base = 90
+	}
+}
+
+# 6. Patronize the Early Italian Renaissance
+phx_ita_patronize_humanist_renaissance_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/gdp_decision_culture_italian.dds"
+	}
+	decision_group_type = major
+	desc = phx_ita_patronize_humanist_renaissance_decision_desc
+	selection_tooltip = phx_ita_patronize_humanist_renaissance_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 48
+		kingdom = 48
+		empire = 48
+		hegemony = 48
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:d_commune_firenze
+			has_title = title:d_commune_milan
+			has_title = title:k_venice
+			has_title = title:k_genoa
+			has_title = title:k_naples
+			has_title = title:k_papal_state
+			completely_controls = title:c_florence
+			completely_controls = title:c_milano
+		}
+		NOT = { has_character_modifier = phx_ita_early_renaissance_patron_modifier }
+	}
+
+	is_valid = {
+		OR = {
+			learning >= 10
+			stewardship >= 10
+			diplomacy >= 10
+		}
+		prestige_level >= 1
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+	}
+
+	cost = {
+		gold = 300
+		prestige = 200
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_ita_early_renaissance_patron_modifier
+			years = 25
+		}
+		if = {
+			limit = { exists = capital_county }
+			capital_county = {
+				change_prosperity_progress = 80
+			}
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 120 }
+		custom_tooltip = phx_ita_patronize_humanist_renaissance_effect_tt
+		hidden_effect = {
+			trigger_event = phx_eur.0104
+		}
+	}
+
+	ai_potential = {
+		gold >= 400
+	}
+
+	ai_will_do = {
+		base = 80
+	}
+}
+
+# 7. Consolidate the Red Sea Spice Monopoly (Mamluk Egypt)
+phx_mam_red_sea_spice_hegemony_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_silk_road.dds"
+	}
+	decision_group_type = major
+	desc = phx_mam_red_sea_spice_hegemony_decision_desc
+	selection_tooltip = phx_mam_red_sea_spice_hegemony_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 48
+		empire = 48
+		hegemony = 48
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:k_egypt
+		NOT = { has_character_modifier = phx_mam_red_sea_monopoly_modifier }
+	}
+
+	is_valid = {
+		completely_controls = title:c_cairo
+		completely_controls = title:c_alexandria
+		prestige_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 350
+		prestige = 250
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_mam_red_sea_monopoly_modifier
+			years = 25
+		}
+		title:c_cairo = { change_prosperity_progress = 60 }
+		title:c_alexandria = { change_prosperity_progress = 60 }
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
+		custom_tooltip = phx_mam_red_sea_spice_hegemony_effect_tt
+		hidden_effect = {
+			trigger_event = phx_eur.0105
+		}
+	}
+
+	ai_potential = {
+		has_title = title:k_egypt
+		gold >= 450
+	}
+
+	ai_will_do = {
+		base = 85
+	}
+}
+
+# 8. Reform the Tughluq Diwan (Delhi Sultanate)
+phx_dlh_stabilize_tughluq_sultanate_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3_decision_tax_collector.dds"
+	}
+	decision_group_type = major
+	desc = phx_dlh_stabilize_tughluq_sultanate_decision_desc
+	selection_tooltip = phx_dlh_stabilize_tughluq_sultanate_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 48
+		hegemony = 48
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:e_hindustan
+		OR = {
+			has_character_modifier = phx_dlh_tughluq_turmoil_modifier
+			NOT = { has_character_modifier = phx_dlh_reformed_diwan_modifier }
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_delhi
+		OR = {
+			stewardship >= 10
+			diplomacy >= 10
+			prestige_level >= 2
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 350
+		prestige = 300
+	}
+
+	effect = {
+		if = {
+			limit = { has_character_modifier = phx_dlh_tughluq_turmoil_modifier }
+			remove_character_modifier = phx_dlh_tughluq_turmoil_modifier
+		}
+		add_character_modifier = {
+			modifier = phx_dlh_reformed_diwan_modifier
+			years = 25
+		}
+		title:c_delhi = { change_prosperity_progress = 75 }
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
+		custom_tooltip = phx_dlh_stabilize_tughluq_sultanate_effect_tt
+		hidden_effect = {
+			trigger_event = phx_eur.0106
+		}
+	}
+
+	ai_potential = {
+		has_title = title:e_hindustan
+		gold >= 450
+	}
+
+	ai_will_do = {
+		base = 85
+	}
+}
+
+# 9. Proclaim Gajah Mada's Palapa Oath (Majapahit Archipelago Hegemony)
+phx_maj_proclaim_palapa_oath_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_decision_mandala.dds"
+	}
+	decision_group_type = major
+	desc = phx_maj_proclaim_palapa_oath_decision_desc
+	selection_tooltip = phx_maj_proclaim_palapa_oath_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 48
+		hegemony = 48
+	}
+
+	is_shown = {
+		is_landed = yes
+		has_title = title:e_majapahit
+		NOT = { has_character_modifier = phx_maj_palapa_oath_modifier }
+	}
+
+	is_valid = {
+		completely_controls = title:c_trowulan
+		completely_controls = title:c_surabaya
+		prestige_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 250
+		prestige = 300
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_maj_palapa_oath_modifier
+			years = 30
+		}
+		title:c_trowulan = { change_prosperity_progress = 70 }
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
+		custom_tooltip = phx_maj_proclaim_palapa_oath_effect_tt
+		hidden_effect = {
+			trigger_event = phx_eur.0107
+		}
+	}
+
+	ai_potential = {
+		has_title = title:e_majapahit
+		gold >= 350
+	}
+
+	ai_will_do = {
+		base = 85
+	}
+}
+
+# 10. Endow the Great Mosque & Sankore Academy of Timbuktu (Mali)
+phx_mal_expand_sankore_university_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/phx_decision_sankore_timbuktu.dds"
+	}
+	decision_group_type = major
+	desc = phx_mal_expand_sankore_university_decision_desc
+	selection_tooltip = phx_mal_expand_sankore_university_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 48
+		empire = 48
+		hegemony = 48
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			has_title = title:e_mali
+			completely_controls = title:c_timbuktu
+		}
+		NOT = { has_character_modifier = phx_mal_sankore_scholars_modifier }
+	}
+
+	is_valid = {
+		completely_controls = title:c_timbuktu
+		prestige_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 300
+		piety = 200
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_mal_sankore_scholars_modifier
+			years = 30
+		}
+		title:c_timbuktu = { change_prosperity_progress = 100 }
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 150 }
+		custom_tooltip = phx_mal_expand_sankore_university_effect_tt
+		hidden_effect = {
+			trigger_event = phx_eur.0108
+		}
+	}
+
+	ai_potential = {
+		gold >= 400
+	}
+
+	ai_will_do = {
+		base = 85
+	}
+}
+
+# 11. Proclaim the Kebra Nagast (Solomonic Ethiopia)
+phx_eth_affirm_solomonic_chronicle_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/pam_decision_kingdom_of_heaven.dds"
+	}
+	decision_group_type = major
+	desc = phx_eth_affirm_solomonic_chronicle_decision_desc
+	selection_tooltip = phx_eth_affirm_solomonic_chronicle_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 48
+		empire = 48
+		hegemony = 48
+	}
+
+	is_shown = {
+		is_landed = yes
+		faith.religion = religion:christianity_religion
+		OR = {
+			has_title = title:e_abyssinia
+			has_title = title:k_abyssinia
+		}
+		NOT = { has_character_modifier = phx_eth_solomonic_zeal_modifier }
+	}
+
+	is_valid = {
+		completely_controls = title:c_amhara
+		piety_level >= 2
+		prestige_level >= 1
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 200
+		piety = 250
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = phx_eth_solomonic_zeal_modifier
+			years = 25
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 200 }
+		add_prestige = 200
+		custom_tooltip = phx_eth_affirm_solomonic_chronicle_effect_tt
+		hidden_effect = {
+			trigger_event = phx_eur.0109
+		}
+	}
+
+	ai_potential = {
+		gold >= 300
+	}
+
+	ai_will_do = {
+		base = 85
+	}
+}
+
+# 12. Proclaim the Gurkani Throne of Samarkand (Timurid / Transoxiana)
+phx_timur_claim_samarkand_throne_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/phx_decision_timurid_samarkand.dds"
+	}
+	decision_group_type = major
+	desc = phx_timur_claim_samarkand_throne_decision_desc
+	selection_tooltip = phx_timur_claim_samarkand_throne_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			completely_controls = title:c_samarkand
+			has_title = title:k_eu5_tim
+			has_title = title:e_chagatai
+		}
+		OR = {
+			has_character_flag = phx_timur_character
+			this = character:chg_timur_lame_borjigin
+			culture = culture:kuzhu_moghol
+			culture = culture:mongol
+			culture = culture:turkish
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_timur_samarkand_throne_global
+			}
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:c_samarkand
+		prestige_level >= 2
+		martial >= 12
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	cost = {
+		gold = 300
+		prestige = 400
+	}
+
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = phx_timur_scourge_modifier } }
+			add_character_modifier = {
+				modifier = phx_timur_scourge_modifier
+				years = 25
+			}
+		}
+		title:c_samarkand = {
+			if = {
+				limit = { NOT = { has_county_modifier = phx_timur_samarkand_renaissance_modifier } }
+				add_county_modifier = {
+					modifier = phx_timur_samarkand_renaissance_modifier
+					years = 30
+				}
+			}
+			change_prosperity_progress = 100
+		}
+		if = {
+			limit = {
+				NOT = { exists = title:k_eu5_tim.holder }
+			}
+			create_title_and_vassal_change = {
+				type = created
+				save_scope_as = gurkani_change
+				add_claim_on_loss = no
+			}
+			title:k_eu5_tim = {
+				change_title_holder = {
+					holder = root
+					change = scope:gurkani_change
+				}
+			}
+			resolve_title_and_vassal_change = scope:gurkani_change
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 250 }
+		custom_tooltip = phx_timur_claim_samarkand_throne_effect_tt
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:phx_timur_samarkand_throne_global
+			}
+			trigger_event = phx_glb.0026
+		}
+	}
+
+	ai_potential = {
+		gold >= 400
+	}
+
+	ai_will_do = {
+		base = 95
+	}
+}

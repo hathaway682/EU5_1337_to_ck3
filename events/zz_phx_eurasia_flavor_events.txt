@@ -1,0 +1,815 @@
+﻿##################################################
+# Project Phoenix (PHX) — Wave 5 Regional Eurasia & Africa Events (22)
+# Namespace: phx_eur
+# Covers:
+#   0001–0010 : Iberia & Maghreb (1337 Pillars, Rio Salado, Castile Succession)
+#   0020–0025 : Italy Early Renaissance & Condottieri
+#   0030–0035 : Mamluk Golden Court & Ilkhanate Collapse
+#   0040–0045 : Delhi Tughluq Reforms & Vijayanagara Rise
+#   0050–0056 : Majapahit Palapa & Late Goryeo Reforms/Wokou
+#   0060–0065 : Mali Mansa Musa Legacy & Solomonic Ethiopia
+#   0101–0109 : Regional Major Decision Celebration Events
+##################################################
+
+namespace = phx_eur
+
+# ==========================================================
+# IBERIA & MAGHREB
+# ==========================================================
+
+# 0001 — 1337 Opening: The Three Pillars of the Strait (Castile, Granada, Morocco)
+phx_eur.0001 = {
+	type = character_event
+	title = phx_eur.0001.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_title = title:k_castille }
+				desc = phx_eur.0001.desc_castile
+			}
+			triggered_desc = {
+				trigger = { has_title = title:d_granada }
+				desc = phx_eur.0001.desc_granada
+			}
+			desc = phx_eur.0001.desc_morocco
+		}
+	}
+	theme = crown
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = phx_eur.0001.a
+		add_prestige = 120
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 60 }
+		ai_chance = { base = 55 }
+	}
+
+	option = {
+		name = phx_eur.0001.b
+		add_gold = 100
+		if = {
+			limit = { exists = capital_county }
+			capital_county = {
+				change_prosperity_progress = 40
+			}
+		}
+		ai_chance = { base = 45 }
+	}
+}
+
+# 0005 — 1340 Crisis: Drums Along the Rio Salado
+phx_eur.0005 = {
+	type = character_event
+	title = phx_eur.0005.t
+	desc = phx_eur.0005.desc
+	theme = war
+	override_background = { reference = battlefield }
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+
+	option = {
+		name = phx_eur.0005.a
+		remove_short_term_gold = 100
+		add_prestige = 150
+		spawn_army = {
+			name = phx_eur_strait_vanguard_name
+			location = root.capital_province
+			men_at_arms = {
+				type = caballero
+				men = 250
+			}
+			levies = 750
+			inheritable = no
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = phx_eur.0005.b
+		add_piety = 120
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 80 }
+		ai_chance = { base = 40 }
+	}
+}
+
+# 0010 — 1350+ Crisis: Blood of Burgos (Castilian Succession — Pedro vs Enrique)
+phx_eur.0010 = {
+	type = character_event
+	title = phx_eur.0010.t
+	desc = phx_eur.0010.desc
+	theme = intrigue
+	override_background = { reference = corridor_night }
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		trigger = { exists = scope:enrique_rival }
+		character = scope:enrique_rival
+		animation = anger
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:cas_enrique_ii_trastamara ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:cas_enrique_ii_trastamara = { save_scope_as = enrique_rival }
+		}
+	}
+
+	# Option A: Uphold strict royal prerogative and break rebellious magnates
+	option = {
+		name = phx_eur.0010.a
+		add_dread = 25
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
+		if = {
+			limit = { exists = scope:enrique_rival }
+			scope:enrique_rival = {
+				add_opinion = {
+					target = root
+					modifier = insulted_opinion
+					opinion = -40
+				}
+			}
+		}
+		ai_chance = { base = 55 }
+	}
+
+	# Option B: Reconcile the noble houses with Cortes charters
+	option = {
+		name = phx_eur.0010.b
+		remove_short_term_gold = 100
+		add_prestige = -50
+		if = {
+			limit = { exists = scope:enrique_rival }
+			scope:enrique_rival = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 35
+				}
+			}
+		}
+		ai_chance = { base = 45 }
+	}
+}
+
+# ==========================================================
+# ITALY EARLY RENAISSANCE & CONDOTTIERI
+# ==========================================================
+
+# 0020 — 1337 Italy Opening: Florins, Marble, and Humanist Letters
+phx_eur.0020 = {
+	type = character_event
+	title = phx_eur.0020.t
+	desc = phx_eur.0020.desc
+	theme = republic
+	override_background = { reference = gdp_italian_market }
+	left_portrait = {
+		character = root
+		animation = chancellor
+	}
+
+	option = {
+		name = phx_eur.0020.a
+		remove_short_term_gold = 80
+		add_learning_lifestyle_xp = 300
+		if = {
+			limit = { exists = capital_county }
+			capital_county = {
+				change_prosperity_progress = 50
+			}
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = phx_eur.0020.b
+		add_gold = 120
+		add_stewardship_lifestyle_xp = 200
+		ai_chance = { base = 40 }
+	}
+}
+
+# 0025 — 1345+ Italy: Banners of the Condottieri
+phx_eur.0025 = {
+	type = character_event
+	title = phx_eur.0025.t
+	desc = phx_eur.0025.desc
+	theme = martial
+	override_background = { reference = army_camp }
+	left_portrait = {
+		character = root
+		animation = deliberation
+	}
+
+	option = {
+		name = phx_eur.0025.a
+		remove_short_term_gold = 120
+		add_character_modifier = {
+			modifier = phx_ita_condottieri_contracts_modifier
+			years = 20
+		}
+		spawn_army = {
+			name = phx_ita_condottieri_company_name
+			location = root.capital_province
+			men_at_arms = {
+				type = crossbowmen
+				men = 250
+			}
+			men_at_arms = {
+				type = pikemen_unit
+				men = 200
+			}
+			inheritable = no
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = phx_eur.0025.b
+		add_prestige = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 60 }
+		ai_chance = { base = 40 }
+	}
+}
+
+# ==========================================================
+# MENA: MAMLUKS & ILKHANATE COLLAPSE
+# ==========================================================
+
+# 0030 — 1337 Mamluk Opening: The Golden Court of al-Nasir Muhammad
+phx_eur.0030 = {
+	type = character_event
+	title = phx_eur.0030.t
+	desc = phx_eur.0030.desc
+	theme = crown
+	override_background = { reference = bp1_courtyard_mena }
+	left_portrait = {
+		character = root
+		animation = throne_room_ruler
+	}
+
+	option = {
+		name = phx_eur.0030.a
+		add_gold = 150
+		title:c_cairo = {
+			change_prosperity_progress = 45
+		}
+		ai_chance = { base = 55 }
+	}
+
+	option = {
+		name = phx_eur.0030.b
+		add_prestige = 120
+		spawn_army = {
+			name = phx_mam_royal_mamluks_name
+			location = title:c_cairo.title_province
+			men_at_arms = {
+				type = mubarizun
+				men = 250
+			}
+			men_at_arms = {
+				type = horse_archers
+				men = 200
+			}
+			inheritable = no
+		}
+		ai_chance = { base = 45 }
+	}
+}
+
+# 0035 — 1337 Ilkhanate Collapse: Fractured Banners of Hulegu
+phx_eur.0035 = {
+	type = character_event
+	title = phx_eur.0035.t
+	desc = phx_eur.0035.desc
+	theme = war
+	override_background = { reference = fp3_iranian_throne_room }
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	right_portrait = {
+		trigger = { exists = scope:jalayirid_lord }
+		character = scope:jalayirid_lord
+		animation = scheme
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:jal_hasan_buzurg ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:jal_hasan_buzurg = { save_scope_as = jalayirid_lord }
+		}
+	}
+
+	option = {
+		name = phx_eur.0035.a
+		add_prestige = 150
+		add_dread = 20
+		if = {
+			limit = { exists = scope:jalayirid_lord }
+			scope:jalayirid_lord = {
+				add_opinion = {
+					target = root
+					modifier = angry_opinion
+					opinion = -25
+				}
+			}
+		}
+		ai_chance = { base = 55 }
+	}
+
+	option = {
+		name = phx_eur.0035.b
+		add_gold = 100
+		if = {
+			limit = { exists = scope:jalayirid_lord }
+			scope:jalayirid_lord = {
+				add_opinion = {
+					target = root
+					modifier = respect_opinion
+					opinion = 20
+				}
+			}
+		}
+		ai_chance = { base = 45 }
+	}
+}
+
+# ==========================================================
+# SOUTH ASIA: DELHI SULTANATE & VIJAYANAGARA
+# ==========================================================
+
+# 0040 — 1337 Delhi Opening: The Brilliant Storm of Muhammad bin Tughluq
+phx_eur.0040 = {
+	type = character_event
+	title = phx_eur.0040.t
+	desc = phx_eur.0040.desc
+	theme = administrative
+	override_background = { reference = bp2_study_indian }
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = phx_eur.0040.a
+		add_gold = 200
+		add_dread = 15
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = phx_eur.0040.b
+		remove_short_term_gold = 100
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
+		title:c_delhi = {
+			change_prosperity_progress = 50
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+# 0045 — 1337/1342 Deccan & Vijayanagara: Watchfires Above the Tungabhadra
+phx_eur.0045 = {
+	type = character_event
+	title = phx_eur.0045.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_title = title:e_hindustan }
+				desc = phx_eur.0045.desc_delhi
+			}
+			desc = phx_eur.0045.desc_vijayanagara
+		}
+	}
+	theme = war
+	override_background = { reference = bp1_courtyard_indian }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = phx_eur.0045.a
+		if = {
+			limit = {
+				OR = {
+					has_title = title:k_eu5_vij
+					has_title = title:k_karnata
+				}
+			}
+			add_character_modifier = {
+				modifier = phx_vij_hampi_bulwark_modifier
+				years = 25
+			}
+			if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 120 }
+		}
+		else = {
+			add_prestige = 120
+			add_dread = 15
+		}
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = phx_eur.0045.b
+		add_gold = 120
+		add_diplomacy_lifestyle_xp = 200
+		ai_chance = { base = 30 }
+	}
+}
+
+# ==========================================================
+# SE ASIA & KOREA: MAJAPAHIT & LATE GORYEO
+# ==========================================================
+
+# 0050 — 1337 Majapahit Opening: Tribhuwana and Gajah Mada's Vision
+phx_eur.0050 = {
+	type = character_event
+	title = phx_eur.0050.t
+	desc = phx_eur.0050.desc
+	theme = mandala
+	override_background = { reference = bp3_coast }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	right_portrait = {
+		trigger = { exists = scope:gajah_mada }
+		character = scope:gajah_mada
+		animation = marshal
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				character:maj_gajah_mada ?= {
+					is_alive = yes
+					NOT = { this = root }
+				}
+			}
+			character:maj_gajah_mada = { save_scope_as = gajah_mada }
+		}
+	}
+
+	option = {
+		name = phx_eur.0050.a
+		add_prestige = 150
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
+		if = {
+			limit = { exists = scope:gajah_mada }
+			scope:gajah_mada = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 30
+				}
+			}
+		}
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = phx_eur.0050.b
+		add_gold = 120
+		title:c_trowulan = {
+			change_prosperity_progress = 45
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+# 0055 — 1337 Goryeo Opening: Kaesong Between the Yuan Court and Reform
+phx_eur.0055 = {
+	type = character_event
+	title = phx_eur.0055.t
+	desc = phx_eur.0055.desc
+	theme = court
+	override_background = { reference = council_chamber }
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	option = {
+		name = phx_eur.0055.a
+		add_character_modifier = {
+			modifier = phx_kor_late_goryeo_reform_modifier
+			years = 20
+		}
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 75 }
+		ai_chance = { base = 65 }
+	}
+
+	option = {
+		name = phx_eur.0055.b
+		add_gold = 120
+		add_diplomacy_lifestyle_xp = 200
+		ai_chance = { base = 35 }
+	}
+}
+
+# 0056 — 1352+ Korea: Coastal Beacons Against the Wokou
+phx_eur.0056 = {
+	type = character_event
+	title = phx_eur.0056.t
+	desc = phx_eur.0056.desc
+	theme = war
+	override_background = { reference = docks }
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+
+	option = {
+		name = phx_eur.0056.a
+		remove_short_term_gold = 100
+		add_character_modifier = {
+			modifier = phx_kor_late_goryeo_reform_modifier
+			years = 25
+		}
+		spawn_army = {
+			name = phx_kor_coastal_garrison_name
+			location = root.capital_province
+			men_at_arms = {
+				type = gakgung_archers
+				men = 300
+			}
+			levies = 700
+			inheritable = no
+		}
+		ai_chance = { base = 65 }
+	}
+
+	option = {
+		name = phx_eur.0056.b
+		add_prestige = 100
+		title:c_kaesong = {
+			change_prosperity_progress = 45
+		}
+		ai_chance = { base = 35 }
+	}
+}
+
+# ==========================================================
+# AFRICA: MALI & SOLOMONIC ETHIOPIA
+# ==========================================================
+
+# 0060 — 1337 Mali Opening: Gold of Bure, Ink of Timbuktu
+phx_eur.0060 = {
+	type = character_event
+	title = phx_eur.0060.t
+	desc = phx_eur.0060.desc
+	theme = stewardship
+	override_background = { reference = market_east }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	option = {
+		name = phx_eur.0060.a
+		remove_short_term_gold = 75
+		add_piety = 150
+		title:c_timbuktu = {
+			change_prosperity_progress = 55
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = phx_eur.0060.b
+		add_gold = 200
+		add_prestige = 100
+		ai_chance = { base = 40 }
+	}
+}
+
+# 0065 — 1337 Ethiopia Opening: The Lion of Judah — Amda Seyon
+phx_eur.0065 = {
+	type = character_event
+	title = phx_eur.0065.t
+	desc = phx_eur.0065.desc
+	theme = faith
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	option = {
+		name = phx_eur.0065.a
+		add_prestige = 120
+		add_piety = 120
+		spawn_army = {
+			name = phx_eth_solomonic_guard_name
+			location = root.capital_province
+			men_at_arms = {
+				type = horn_warrior
+				men = 300
+			}
+			levies = 600
+			inheritable = no
+		}
+		ai_chance = { base = 65 }
+	}
+
+	option = {
+		name = phx_eur.0065.b
+		if = { limit = { is_valid_for_legitimacy_change = yes } add_legitimacy = 100 }
+		add_learning_lifestyle_xp = 250
+		ai_chance = { base = 35 }
+	}
+}
+
+# ==========================================================
+# REGIONAL MAJOR DECISION CELEBRATIONS (0101–0109)
+# ==========================================================
+
+# 0101 — Master of the Pillars of Hercules
+phx_eur.0101 = {
+	type = character_event
+	title = phx_eur.0101.t
+	desc = phx_eur.0101.desc
+	theme = war
+	override_background = { reference = bp3_coast }
+	left_portrait = {
+		character = root
+		animation = war_over_win
+	}
+
+	option = {
+		name = phx_eur.0101.a
+		add_prestige = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0102 — Schools of the Atlantic Wind
+phx_eur.0102 = {
+	type = character_event
+	title = phx_eur.0102.t
+	desc = phx_eur.0102.desc
+	theme = travel_sea
+	override_background = { reference = docks }
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+
+	option = {
+		name = phx_eur.0102.a
+		add_stewardship_lifestyle_xp = 250
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0103 — Splendor of the Alhambra
+phx_eur.0103 = {
+	type = character_event
+	title = phx_eur.0103.t
+	desc = phx_eur.0103.desc
+	theme = crown
+	override_background = { reference = garden }
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	option = {
+		name = phx_eur.0103.a
+		add_prestige = 200
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0104 — Dawn of the Italian Renaissance
+phx_eur.0104 = {
+	type = character_event
+	title = phx_eur.0104.t
+	desc = phx_eur.0104.desc
+	theme = learning
+	override_background = { reference = ep3_medi_study }
+	left_portrait = {
+		character = root
+		animation = writing
+	}
+
+	option = {
+		name = phx_eur.0104.a
+		add_learning_lifestyle_xp = 300
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0105 — Masters of the Red Sea Spice Lanes
+phx_eur.0105 = {
+	type = character_event
+	title = phx_eur.0105.t
+	desc = phx_eur.0105.desc
+	theme = trade
+	override_background = { reference = ep3_medi_market }
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+
+	option = {
+		name = phx_eur.0105.a
+		add_gold = 200
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0106 — Order Restored to the Tughluq Diwan
+phx_eur.0106 = {
+	type = character_event
+	title = phx_eur.0106.t
+	desc = phx_eur.0106.desc
+	theme = administrative
+	override_background = { reference = bp1_courtyard_indian }
+	left_portrait = {
+		character = root
+		animation = throne_room_ruler
+	}
+
+	option = {
+		name = phx_eur.0106.a
+		add_prestige = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0107 — The Palapa Oath of Nusantara
+phx_eur.0107 = {
+	type = character_event
+	title = phx_eur.0107.t
+	desc = phx_eur.0107.desc
+	theme = mandala
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = celebrate_sword
+	}
+
+	option = {
+		name = phx_eur.0107.a
+		add_prestige = 200
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0108 — Lanterns of Sankore and Timbuktu
+phx_eur.0108 = {
+	type = character_event
+	title = phx_eur.0108.t
+	desc = phx_eur.0108.desc
+	theme = university
+	override_background = { reference = temple_mosque }
+	left_portrait = {
+		character = root
+		animation = reading
+	}
+
+	option = {
+		name = phx_eur.0108.a
+		add_piety = 150
+		ai_chance = { base = 100 }
+	}
+}
+
+# 0109 — Glory of the Kings: The Kebra Nagast
+phx_eur.0109 = {
+	type = character_event
+	title = phx_eur.0109.t
+	desc = phx_eur.0109.desc
+	theme = faith
+	override_background = { reference = temple_generic }
+	left_portrait = {
+		character = root
+		animation = prayer
+	}
+
+	option = {
+		name = phx_eur.0109.a
+		add_piety = 150
+		ai_chance = { base = 100 }
+	}
+}

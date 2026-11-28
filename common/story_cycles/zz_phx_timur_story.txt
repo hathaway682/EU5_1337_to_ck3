@@ -1,0 +1,403 @@
+﻿##################################################
+# Project Phoenix (PHX) — Wave 5 Timurid Rise Story Cycle
+# Dynamic 1366–1405 Transoxiana -> Persia -> Delhi/Anatolia arc
+# Strictly O(1) title-targeted hooks, cleanly ends on Timur's death
+##################################################
+
+story_phx_timur_rise = {
+	on_setup = {
+		set_variable = {
+			name = timur_campaign_stage
+			value = 1
+		}
+		story_owner = {
+			if = {
+				limit = { NOT = { has_character_modifier = phx_timur_scourge_modifier } }
+				add_character_modifier = {
+					modifier = phx_timur_scourge_modifier
+					years = 35
+				}
+			}
+			if = {
+				limit = { completely_controls = title:c_samarkand }
+				title:c_samarkand = {
+					if = {
+						limit = { NOT = { has_county_modifier = phx_timur_samarkand_renaissance_modifier } }
+						add_county_modifier = {
+							modifier = phx_timur_samarkand_renaissance_modifier
+							years = 30
+						}
+					}
+					change_prosperity_progress = 80
+				}
+			}
+		}
+	}
+
+	on_owner_death = {
+		scope:story = {
+			end_story = yes
+		}
+	}
+
+	on_end = {
+		if = {
+			limit = { has_global_variable = phx_timur_rise_active }
+			remove_global_variable = phx_timur_rise_active
+		}
+	}
+
+	# Maintenance: end cleanly if Timur loses all land or timeline passes 1425
+	effect_group = {
+		days = 180
+
+		trigger = {
+			OR = {
+				story_owner = { is_alive = no }
+				story_owner = { is_landed = no }
+				current_year >= 1425
+			}
+		}
+
+		first_valid = {
+			triggered_effect = {
+				trigger = { always = yes }
+				effect = {
+					end_story = yes
+				}
+			}
+		}
+	}
+
+	# Stage 1 (~18 months after rise): Samarkand Imperial Court & Artisans
+	effect_group = {
+		months = 18
+
+		trigger = {
+			exists = var:timur_campaign_stage
+			var:timur_campaign_stage = 1
+			story_owner = {
+				is_alive = yes
+				is_landed = yes
+			}
+		}
+
+		first_valid = {
+			triggered_effect = {
+				trigger = { always = yes }
+				effect = {
+					set_variable = {
+						name = timur_campaign_stage
+						value = 2
+					}
+					story_owner = {
+						save_scope_as = timur_ruler
+						add_prestige = 500
+						add_gold = 400
+						if = {
+							limit = { completely_controls = title:c_samarkand }
+							title:c_samarkand = {
+								change_prosperity_progress = 60
+								if = {
+									limit = { NOT = { has_county_modifier = phx_timur_samarkand_renaissance_modifier } }
+									add_county_modifier = {
+										modifier = phx_timur_samarkand_renaissance_modifier
+										years = 30
+									}
+								}
+							}
+						}
+						if = {
+							limit = { is_ai = yes }
+							spawn_army = {
+								name = phx_timur_samarkand_guard_name
+								location = capital_province
+								men_at_arms = {
+									type = heavy_horse_archers
+									men = 500
+								}
+								men_at_arms = {
+									type = armored_horsemen
+									men = 300
+								}
+								levies = 1500
+								inheritable = no
+							}
+						}
+						trigger_event = {
+							id = phx_glb.0022
+							days = 10
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# Stage 2 (~30 months later): Persia & Ilkhanate Remnants Campaign
+	effect_group = {
+		months = 30
+
+		trigger = {
+			exists = var:timur_campaign_stage
+			var:timur_campaign_stage = 2
+			story_owner = {
+				is_alive = yes
+				is_landed = yes
+			}
+		}
+
+		first_valid = {
+			triggered_effect = {
+				trigger = { always = yes }
+				effect = {
+					set_variable = {
+						name = timur_campaign_stage
+						value = 3
+					}
+					story_owner = {
+						save_scope_as = timur_ruler
+						add_prestige = 400
+						if = {
+							limit = {
+								is_ai = yes
+								is_at_war = no
+								exists = title:c_tabriz.holder
+								title:c_tabriz.holder.top_liege = {
+									NOT = { this = scope:timur_ruler }
+									NOT = { is_allied_to = scope:timur_ruler }
+								}
+							}
+							add_unpressed_claim = title:c_tabriz
+							spawn_army = {
+								name = phx_timur_iranian_host_name
+								location = capital_province
+								men_at_arms = {
+									type = horse_archers
+									men = 600
+								}
+								men_at_arms = {
+									type = armored_horsemen
+									men = 300
+								}
+								levies = 2000
+								inheritable = no
+							}
+							start_war = {
+								cb = county_conquest_cb
+								target = title:c_tabriz.holder.top_liege
+								target_title = title:c_tabriz
+							}
+						}
+						else_if = {
+							limit = {
+								is_ai = yes
+								is_at_war = no
+								exists = title:c_baghdad.holder
+								title:c_baghdad.holder.top_liege = {
+									NOT = { this = scope:timur_ruler }
+									NOT = { is_allied_to = scope:timur_ruler }
+								}
+							}
+							add_unpressed_claim = title:c_baghdad
+							start_war = {
+								cb = county_conquest_cb
+								target = title:c_baghdad.holder.top_liege
+								target_title = title:c_baghdad
+							}
+						}
+					}
+					# O(1) shockwave notifications to Persia, Iraq, and Mamluk Egypt
+					if = {
+						limit = {
+							exists = title:e_ilkhanate.holder
+							title:e_ilkhanate.holder = {
+								is_alive = yes
+								NOT = { this = scope:timur_ruler }
+								NOT = { has_character_flag = phx_timur_persia_warned }
+							}
+						}
+						title:e_ilkhanate.holder = {
+							add_character_flag = phx_timur_persia_warned
+							trigger_event = { id = phx_glb.0023 days = 15 }
+						}
+					}
+					if = {
+						limit = {
+							exists = title:c_tabriz.holder
+							title:c_tabriz.holder.top_liege = {
+								is_alive = yes
+								NOT = { this = scope:timur_ruler }
+								NOT = { has_character_flag = phx_timur_persia_warned }
+							}
+						}
+						title:c_tabriz.holder.top_liege = {
+							add_character_flag = phx_timur_persia_warned
+							trigger_event = { id = phx_glb.0023 days = 15 }
+						}
+					}
+					if = {
+						limit = {
+							exists = title:c_baghdad.holder
+							title:c_baghdad.holder.top_liege = {
+								is_alive = yes
+								NOT = { this = scope:timur_ruler }
+								NOT = { has_character_flag = phx_timur_persia_warned }
+							}
+						}
+						title:c_baghdad.holder.top_liege = {
+							add_character_flag = phx_timur_persia_warned
+							trigger_event = { id = phx_glb.0023 days = 15 }
+						}
+					}
+					if = {
+						limit = {
+							exists = title:k_egypt.holder
+							title:k_egypt.holder = {
+								is_alive = yes
+								NOT = { this = scope:timur_ruler }
+								NOT = { has_character_flag = phx_timur_persia_warned }
+							}
+						}
+						title:k_egypt.holder = {
+							add_character_flag = phx_timur_persia_warned
+							trigger_event = { id = phx_glb.0023 days = 20 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# Stage 3 (~36 months later): Delhi, Golden Horde & Anatolia Shockwaves
+	effect_group = {
+		months = 36
+
+		trigger = {
+			exists = var:timur_campaign_stage
+			var:timur_campaign_stage = 3
+			story_owner = {
+				is_alive = yes
+				is_landed = yes
+			}
+		}
+
+		first_valid = {
+			triggered_effect = {
+				trigger = { always = yes }
+				effect = {
+					set_variable = {
+						name = timur_campaign_stage
+						value = 4
+					}
+					story_owner = {
+						save_scope_as = timur_ruler
+						add_prestige = 600
+						if = {
+							limit = { is_ai = yes }
+							spawn_army = {
+								name = phx_timur_gurkani_tumen_name
+								location = capital_province
+								men_at_arms = {
+									type = heavy_horse_archers
+									men = 600
+								}
+								men_at_arms = {
+									type = horse_archers
+									men = 400
+								}
+								levies = 2000
+								inheritable = no
+							}
+						}
+					}
+					# Delhi shockwave (O(1))
+					if = {
+						limit = {
+							exists = title:e_hindustan.holder
+							title:e_hindustan.holder = {
+								is_alive = yes
+								NOT = { this = scope:timur_ruler }
+							}
+						}
+						title:e_hindustan.holder = {
+							trigger_event = { id = phx_glb.0024 days = 15 }
+						}
+					}
+					else_if = {
+						limit = {
+							exists = title:c_delhi.holder
+							title:c_delhi.holder.top_liege = {
+								is_alive = yes
+								NOT = { this = scope:timur_ruler }
+							}
+						}
+						title:c_delhi.holder.top_liege = {
+							trigger_event = { id = phx_glb.0024 days = 15 }
+						}
+					}
+					# Golden Horde, Ottoman, and Byzantine shockwaves (O(1))
+					if = {
+						limit = {
+							exists = title:e_golden_horde.holder
+							title:e_golden_horde.holder = {
+								is_alive = yes
+								NOT = { this = scope:timur_ruler }
+							}
+						}
+						title:e_golden_horde.holder = {
+							trigger_event = { id = phx_glb.0025 days = 20 }
+						}
+					}
+					if = {
+						limit = {
+							exists = title:k_ottoman.holder
+							title:k_ottoman.holder = {
+								is_alive = yes
+								NOT = { this = scope:timur_ruler }
+							}
+						}
+						title:k_ottoman.holder = {
+							trigger_event = { id = phx_glb.0025 days = 25 }
+						}
+					}
+					if = {
+						limit = {
+							exists = title:e_byzantium.holder
+							title:e_byzantium.holder = {
+								is_alive = yes
+								NOT = { this = scope:timur_ruler }
+							}
+						}
+						title:e_byzantium.holder = {
+							trigger_event = { id = phx_glb.0025 days = 30 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# Stage 4: Conclude campaign story cleanly in Timur's twilight years
+	effect_group = {
+		years = 5
+
+		trigger = {
+			exists = var:timur_campaign_stage
+			var:timur_campaign_stage >= 4
+			OR = {
+				current_year >= 1405
+				story_owner = { age >= 68 }
+			}
+		}
+
+		first_valid = {
+			triggered_effect = {
+				trigger = { always = yes }
+				effect = {
+					end_story = yes
+				}
+			}
+		}
+	}
+}
