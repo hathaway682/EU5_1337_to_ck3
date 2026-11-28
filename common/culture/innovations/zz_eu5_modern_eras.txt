@@ -838,9 +838,6 @@ innovation_eu5_letters_of_marque = {
 	parameters = {
 		culture_can_raid_at_sea_even_if_feudal = yes
 	}
-	character_modifier = {
-		naval_movement_speed_mult = 0.1
-	}
 	flag = global_regular
 	flag = eu5_reformation_era_regular
 	flag = eu5_special
@@ -1292,7 +1289,7 @@ innovation_eu5_naval_doctrines_advance = {
 	culture_era = culture_era_eu5_absolutism
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_naval_doctrines_advance.dds"
 	character_modifier = {
-		naval_movement_speed_mult = 0.1
+		naval_movement_speed_mult = 1
 	}
 	flag = global_regular
 	flag = eu5_absolutism_era_regular
