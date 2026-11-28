@@ -1,0 +1,36 @@
+﻿hunt_activity_game_building_modifier = {
+	modifier = {
+		add = 1
+		$PROVINCE$ = {
+			OR = {
+				has_building = royal_forest_01
+				has_building = royal_forest_02
+			}
+		}
+	}
+	modifier = {
+		add = 2
+		$PROVINCE$ = {
+			OR = {
+				has_building = royal_forest_03
+				has_building = royal_forest_04
+			}
+		}
+	}
+	modifier = {
+		add = 3
+		$PROVINCE$ = { has_building_or_higher = royal_forest_05 }
+	}
+	modifier = {
+		add = 4
+		$PROVINCE$ = { has_building = rainbow_mountains_01 }
+	}
+	modifier = {
+		add = 4
+		$PROVINCE$ = { has_building = chocolate_hills_01 }
+	}
+	modifier = {
+		add = 4
+		$PROVINCE$ = { has_building = visegrad_castle_01 }
+	}
+}
