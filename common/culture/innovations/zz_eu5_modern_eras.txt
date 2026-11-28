@@ -416,7 +416,7 @@ innovation_eu5_overseas_expeditions = {
 	icon = "gfx/interface/icons/culture_innovations/innovation_misc_inventions.dds"
 	#custom = eu5_overseas_expeditions_unlock_tt
 	unlock_casus_belli = eu5_overseas_county_conquest_cb
-	unlock_casus_belli = eu5_overseas_duchy_conquest_cb
+	#unlock_casus_belli = eu5_overseas_duchy_conquest_cb
 	character_modifier = {
 		supply_duration = 0.25
 	}
@@ -1942,6 +1942,7 @@ innovation_eu5_vaccination_advance = {
 	group = culture_group_civic
 	culture_era = culture_era_eu5_revolutions
 	icon = "gfx/interface/icons/culture_innovations/eu5_eras/eu5_vaccination_advance.dds"
+	custom = eu5_colonial_africa_unlock_tt
 	character_modifier = {
 		health = 0.1
 	}

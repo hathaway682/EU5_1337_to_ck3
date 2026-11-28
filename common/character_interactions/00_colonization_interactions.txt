@@ -48,6 +48,7 @@
 		scope:target = {
 			tier = tier_county
 			county_can_be_claimed_trigger = yes
+			eu5_colonial_africa_vaccination_trigger = { RULER = scope:actor }
 			county_borders_realm_trigger = { CHARACTER = scope:actor }
 		}
 	}
@@ -59,6 +60,10 @@
 		scope:target = {
 			tier = tier_county
 			is_wilderness_county_trigger = yes
+			custom_tooltip = {
+				text = eu5_colonial_africa_vaccination_tt
+				eu5_colonial_africa_vaccination_trigger = { RULER = scope:actor }
+			}
 
 			custom_tooltip = {
 				text = colonize_must_border_realm_tt

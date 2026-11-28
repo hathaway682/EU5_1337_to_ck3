@@ -57,7 +57,7 @@
 	is_location_valid = {
 		custom_tooltip = {
 			text = pioneer_must_be_wilderness_tt
-			county ?= { county_can_be_claimed_trigger = yes }
+			county ?= { county_can_be_claimed_trigger = yes eu5_colonial_africa_vaccination_trigger = { RULER = scope:host } }
 		}
 	}
 

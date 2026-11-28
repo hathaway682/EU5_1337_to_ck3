@@ -223,7 +223,10 @@ eu5_overseas_duchy_conquest_cb = {
 	attacker_score_from_battles_scale = 150
 	defender_score_from_battles_scale = 150
 
-	allowed_for_character = { culture = { has_innovation = innovation_eu5_overseas_expeditions } is_landed = yes }
+	allowed_for_character = {
+		#culture = { has_innovation = innovation_eu5_overseas_expeditions } is_landed = yes
+		always = no
+	}
 
 
 

@@ -152,7 +152,7 @@ wilderness_setup_on_start_effect = {
 wilderness_pick_adjacent_effect = {
 	every_sub_realm_county = {
 		every_title_to_title_neighboring_and_across_water_county = {
-			limit = { county_can_be_claimed_trigger = yes }
+			limit = { county_can_be_claimed_trigger = yes eu5_colonial_africa_vaccination_trigger = { RULER = root } }
 			add_to_list = adjacent_wilderness
 		}
 	}

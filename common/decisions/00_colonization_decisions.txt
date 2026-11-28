@@ -34,7 +34,8 @@ settle_the_wilderness_decision = {
 		# in the list of every ruler in a fully settled part of the map.
 		any_sub_realm_county = {
 			any_title_to_title_neighboring_and_across_water_county = {
-				is_wilderness_county_trigger = yes
+				county_can_be_claimed_trigger = yes
+				eu5_colonial_africa_vaccination_trigger = { RULER = root }
 			}
 		}
 	}

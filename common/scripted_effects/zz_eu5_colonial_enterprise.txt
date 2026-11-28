@@ -14,7 +14,7 @@ eu5_colonial_enterprise_complete_effect = {
   create_title_and_vassal_change = { type = returned save_scope_as = eu5_colonial_title_change }
   scope:eu5_colonial_duchy = {
    every_de_jure_county = {
-    limit = { is_wilderness_county_trigger = yes }
+    limit = { is_wilderness_county_trigger = yes eu5_colonial_africa_vaccination_trigger = { RULER = scope:eu5_colonial_patron } }
     add_to_list = eu5_colonial_wilderness_counties
     change_title_holder = { holder = scope:eu5_colonial_recipient change = scope:eu5_colonial_title_change government_base = scope:eu5_colonial_patron take_baronies = yes }
    }
